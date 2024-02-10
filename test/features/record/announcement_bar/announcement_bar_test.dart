@@ -119,10 +119,14 @@ void main() {
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
-            const Duration(days: 10),
+            const Duration(days: 19),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -546,7 +550,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 10),
+              const Duration(days: 19),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -611,7 +615,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 10),
+              const Duration(days: 19),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -676,7 +680,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 10),
+              const Duration(days: 19),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -741,7 +745,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 10),
+              const Duration(days: 19),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -806,7 +810,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 10),
+              const Duration(days: 19),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -871,7 +875,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 10),
+              const Duration(days: 19),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -937,7 +941,7 @@ void main() {
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
-            const Duration(days: 10),
+            const Duration(days: 19),
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
