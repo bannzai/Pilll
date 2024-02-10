@@ -52,6 +52,7 @@ void main() {
       testWidgets('#DiscountPriceDeadline', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
+
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
@@ -107,7 +108,10 @@ void main() {
       testWidgets('#PremiumTrialLimitAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
+        final n = today();
+
         when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(
@@ -115,14 +119,10 @@ void main() {
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
-            const Duration(days: 15),
+            const Duration(days: 10),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"],
-          pillSheets: [pillSheet],
-          createdAt: now(),
-        );
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -155,17 +155,17 @@ void main() {
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) {
-            print(widget);
-            return widget is PremiumTrialLimitAnnouncementBar;
-          }),
+          find.byWidgetPredicate((widget) => widget is PremiumTrialLimitAnnouncementBar),
           findsOneWidget,
         );
       });
       testWidgets('#EndedPillSheet', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
+        final n = today();
+
         when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(
@@ -218,6 +218,7 @@ void main() {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -278,6 +279,7 @@ void main() {
         testWidgets('today is 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10);
+
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -340,6 +342,7 @@ void main() {
         testWidgets('today is 2022-08-11', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 11);
+
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -402,6 +405,7 @@ void main() {
         testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
+
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -464,6 +468,7 @@ void main() {
         testWidgets('now is 2022-08-24T00:00:00', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 24);
+
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -531,6 +536,8 @@ void main() {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -539,7 +546,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 15),
+              const Duration(days: 10),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -594,6 +601,8 @@ void main() {
         testWidgets('today is 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -602,7 +611,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 15),
+              const Duration(days: 10),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -657,6 +666,8 @@ void main() {
         testWidgets('today is 2022-08-11', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 11);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -665,7 +676,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 15),
+              const Duration(days: 10),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -720,6 +731,8 @@ void main() {
         testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -728,7 +741,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 15),
+              const Duration(days: 10),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -783,6 +796,8 @@ void main() {
         testWidgets('now is 2022-08-23T23:59:59 and already closed', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -791,7 +806,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 15),
+              const Duration(days: 10),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -846,6 +861,8 @@ void main() {
         testWidgets('now is 2022-08-24T00:00:00', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 24);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
 
@@ -854,7 +871,7 @@ void main() {
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(
               // NOTE: Not into rest duration and notification duration
-              const Duration(days: 15),
+              const Duration(days: 10),
             ),
           );
           final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -910,6 +927,8 @@ void main() {
       testWidgets('#RecommendSignupForPremiumAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
+
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
@@ -918,7 +937,7 @@ void main() {
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
 // NOTE: Not into rest duration and notification duration
-            const Duration(days: 15),
+            const Duration(days: 10),
           ),
         );
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
@@ -962,6 +981,8 @@ void main() {
       testWidgets('#RestDurationAnnouncementBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
+
+        when(mockTodayRepository.now()).thenReturn(mockToday);
         when(mockTodayRepository.now()).thenReturn(mockToday);
         todayRepository = mockTodayRepository;
 
@@ -1013,7 +1034,10 @@ void main() {
       testWidgets('#EndedPillSheet', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
+        final n = today();
+
         when(mockTodayRepository.now()).thenReturn(mockToday);
+        when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(
