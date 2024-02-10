@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/last_pill_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -71,12 +72,18 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
-      if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
+      if (latestPillSheetGroup != null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        if (latestPillSheetGroup.activePillSheet == null) {
+          return EndedPillSheet(
+            isPremium: user.isPremium,
+            isTrial: user.isTrial,
+          );
+        }
+        final lastPillSheet = latestPillSheetGroup.pillSheets.lastOrNull;
+        if (lastPillSheet != null && today().difference(lastPillSheet.estimatedEndTakenDate).inDays < 4) {
+          return LastPillSheet(isTrial: user.isTrial, isPremium: user.isPremium);
+        }
       }
 
       if (user.isTrial) {
@@ -101,12 +108,19 @@ class AnnouncementBar extends HookConsumerWidget {
         return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
       }
 
-      if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
+      if (latestPillSheetGroup != null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        if (latestPillSheetGroup.activePillSheet == null) {
+          return EndedPillSheet(
+            isPremium: user.isPremium,
+            isTrial: user.isTrial,
+          );
+        }
+
+        final lastPillSheet = latestPillSheetGroup.pillSheets.lastOrNull;
+        if (lastPillSheet != null && today().difference(lastPillSheet.estimatedEndTakenDate).inDays < 4) {
+          return LastPillSheet(isTrial: user.isTrial, isPremium: user.isPremium);
+        }
       }
     }
 
