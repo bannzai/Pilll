@@ -3,6 +3,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mizuki.Ohashi.Pilll" >
 
+
+    <!-- https://stackoverflow.com/questions/76309215/unhandled-exception-platformexceptionexact-alarms-not-permitted-exact-alarms -->
+    <!-- https://developer.android.com/about/versions/14/changes/schedule-exact-alarms?hl=ja -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
     <uses-permission
         android:name="com.google.android.gms.permission.AD_ID"
         tools:node="remove" />
