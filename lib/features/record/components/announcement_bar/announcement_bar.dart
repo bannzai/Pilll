@@ -81,7 +81,7 @@ class AnnouncementBar extends HookConsumerWidget {
           );
         }
         final lastPillSheet = latestPillSheetGroup.pillSheets.lastOrNull;
-        if (lastPillSheet != null && today().difference(lastPillSheet.estimatedEndTakenDate).inDays < 10) {
+        if (lastPillSheet != null && today().difference(lastPillSheet.estimatedEndTakenDate).inDays.abs() < 10) {
           return LastPillSheet(isTrial: user.isTrial, isPremium: user.isPremium);
         }
       }
