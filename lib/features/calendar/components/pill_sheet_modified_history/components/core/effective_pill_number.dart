@@ -3,8 +3,8 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
-class EffectivePillNumber extends StatelessWidget {
-  const EffectivePillNumber({
+class PillNumber extends StatelessWidget {
+  const PillNumber({
     Key? key,
     required this.effectivePillNumber,
   }) : super(key: key);
@@ -26,7 +26,7 @@ class EffectivePillNumber extends StatelessWidget {
   }
 }
 
-abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
+abstract class PillSheetModifiedHistoryPillNumberOrDate {
   static String hyphen() => "-";
   static String taken({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる

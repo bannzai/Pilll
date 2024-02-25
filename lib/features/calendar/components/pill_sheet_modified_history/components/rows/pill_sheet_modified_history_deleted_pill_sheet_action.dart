@@ -19,8 +19,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen:
-          EffectivePillNumber(effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(pillSheetIDs ?? [])),
+      pillNumbersOrHyphen: PillNumber(effectivePillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(pillSheetIDs ?? [])),
       detail: const Text(
         "ピルシート破棄",
         style: TextStyle(

@@ -25,8 +25,8 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.revert(
+      pillNumbersOrHyphen: PillNumber(
+          effectivePillNumber: PillSheetModifiedHistoryPillNumberOrDate.revert(
         beforeLastTakenPillNumber: beforeLastTakenPillNumber,
         afterLastTakenPillNumber: afterLastTakenPillNumber,
       )),

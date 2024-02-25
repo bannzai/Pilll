@@ -11,7 +11,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return _HeaderLayout(
       day: Container(width: 64),
-      effectiveNumbersOrHyphen: Container(),
+      pillNumbersOrHyphen: Container(),
       detail: const Text(
         "服用時間",
         style: TextStyle(
@@ -39,14 +39,14 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
 // Copied from RowLayout
 class _HeaderLayout extends StatelessWidget {
   final Widget day;
-  final Widget effectiveNumbersOrHyphen;
+  final Widget pillNumbersOrHyphen;
   final Widget detail;
   final Widget takenPillActionOList;
 
   const _HeaderLayout({
     Key? key,
     required this.day,
-    required this.effectiveNumbersOrHyphen,
+    required this.pillNumbersOrHyphen,
     required this.detail,
     required this.takenPillActionOList,
   }) : super(key: key);
@@ -62,7 +62,7 @@ class _HeaderLayout extends StatelessWidget {
           const SizedBox(width: 8),
           SizedBox(
             width: 79,
-            child: effectiveNumbersOrHyphen,
+            child: pillNumbersOrHyphen,
           ),
           const SizedBox(width: 8),
           Expanded(
