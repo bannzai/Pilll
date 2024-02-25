@@ -23,7 +23,7 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphen: PillNumber(effectivePillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(value)),
+      pillNumbersOrHyphen: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(value)),
       detail: const Text(
         "服用日数の終わりを変更",
         style: TextStyle(

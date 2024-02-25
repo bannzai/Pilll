@@ -6,15 +6,15 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 class PillNumber extends StatelessWidget {
   const PillNumber({
     Key? key,
-    required this.effectivePillNumber,
+    required this.pillNumber,
   }) : super(key: key);
 
-  final String effectivePillNumber;
+  final String pillNumber;
 
   @override
   Widget build(BuildContext context) {
     return Text(
-      effectivePillNumber,
+      pillNumber,
       style: const TextStyle(
         color: TextColor.main,
         fontFamily: FontFamily.japanese,
