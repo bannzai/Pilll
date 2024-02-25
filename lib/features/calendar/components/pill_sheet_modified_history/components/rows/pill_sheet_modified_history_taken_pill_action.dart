@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/time.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/taken_pill_action_o_list.dart';
@@ -85,8 +85,8 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       },
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-        effectiveNumbersOrHyphen: EffectivePillNumber(
-            effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.taken(
+        pillNumbersOrHyphen: PillNumber(
+            pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
           beforeLastTakenPillNumber: beforePillSheet.lastTakenPillNumber,
           afterLastTakenPillNumber: afterPillSheet.lastTakenPillNumber,
         )),

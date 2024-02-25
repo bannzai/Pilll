@@ -4,7 +4,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
@@ -18,18 +17,9 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final loadingNext = useState(false);
-    final afterCursor = useState<DateTime?>(null);
-    final histories = useState<List<PillSheetModifiedHistory>>([]);
-    final pillSheetModifiedHistoryAsyncValue = ref.watch(pillSheetModifiedHistoriesProvider(afterCursor: afterCursor.value));
-    useEffect(() {
-      loadingNext.value = false;
-
-      final pillSheetModifiedHistoriesValue = pillSheetModifiedHistoryAsyncValue.asData?.value;
-      if (pillSheetModifiedHistoriesValue != null) {
-        histories.value = [...histories.value, ...pillSheetModifiedHistoriesValue];
-      }
-      return null;
-    }, [pillSheetModifiedHistoryAsyncValue.asData?.value]);
+    final limit = useState(20);
+    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
+    final histories = historiesAsync.asData?.value ?? [];
 
     return ref.watch(userProvider).when(
           error: (error, _) => UniversalErrorPage(
@@ -56,9 +46,9 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
               body: SafeArea(
                 child: NotificationListener<ScrollNotification>(
                   onNotification: (notification) {
-                    if (!loadingNext.value && notification.metrics.pixels >= notification.metrics.maxScrollExtent && histories.value.isNotEmpty) {
+                    if (!loadingNext.value && notification.metrics.pixels >= notification.metrics.maxScrollExtent && histories.isNotEmpty) {
                       loadingNext.value = true;
-                      afterCursor.value = histories.value.last.estimatedEventCausingDate;
+                      limit.value += 20;
                     }
                     return true;
                   },
@@ -74,7 +64,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                             padding: const EdgeInsets.only(bottom: 20),
                             physics: const AlwaysScrollableScrollPhysics(),
                             child: PillSheetModifiedHistoryList(
-                              pillSheetModifiedHistories: histories.value,
+                              pillSheetModifiedHistories: histories,
                               premiumOrTrial: user.premiumOrTrial,
                             ),
                           ),

@@ -7,40 +7,6 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'pill_sheet_modified_history.g.dart';
 
 @Riverpod(dependencies: [database])
-Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistories(PillSheetModifiedHistoriesRef ref, {DateTime? afterCursor}) {
-  if (afterCursor != null) {
-    return ref
-        .watch(databaseProvider)
-        .pillSheetModifiedHistoriesReference()
-        .where(
-          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
-        )
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
-        .startAfter([afterCursor])
-        .limit(20)
-        .snapshots()
-        .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).toList());
-  } else {
-    return ref
-        .watch(databaseProvider)
-        .pillSheetModifiedHistoriesReference()
-        .where(
-          PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
-          isLessThanOrEqualTo: today().add(const Duration(days: 1)),
-          isGreaterThanOrEqualTo: today().subtract(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)),
-        )
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate, descending: true)
-        .limit(20)
-        .snapshots()
-        .map((reference) => reference.docs)
-        .map((docs) => docs.map((doc) => doc.data()).toList());
-  }
-}
-
-@Riverpod(dependencies: [database])
 Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillSheetModifiedHistoriesWithLimitRef ref, {required int limit}) {
   return ref
       .watch(databaseProvider)

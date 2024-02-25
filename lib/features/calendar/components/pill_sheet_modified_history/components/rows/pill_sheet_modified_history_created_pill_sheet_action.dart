@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 
 class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
@@ -19,8 +19,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen:
-          EffectivePillNumber(effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(pillSheetIDs)),
+      pillNumbersOrHyphen: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(pillSheetIDs)),
       detail: const Text(
         "ピルシート追加",
         style: TextStyle(
