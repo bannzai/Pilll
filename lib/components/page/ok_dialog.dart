@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 class OKDialog extends StatelessWidget {
   final String title;
   final String message;
-  final void Function()? ok;
+  final Future<void> Function()? ok;
 
   const OKDialog({
     Key? key,
@@ -68,7 +68,7 @@ Future<void> showOKDialog(
   BuildContext context, {
   required String title,
   required String message,
-  void Function()? ok,
+  Future<void> Function()? ok,
 }) async {
   return showDialog(
     context: context,
