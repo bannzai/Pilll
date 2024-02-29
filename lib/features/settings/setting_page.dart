@@ -82,7 +82,6 @@ class SettingPage extends HookConsumerWidget {
 }
 
 class SettingPageBody extends StatelessWidget {
-  // TODO: [UseLocalNotification-Beta] 2023-11 不要になったらUserを削除
   final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
