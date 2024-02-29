@@ -6,6 +6,7 @@ extension BoolKey on String {
   static const isAlreadyAnsweredPreStoreReviewModal = "isAlreadyAnsweredPreStoreReviewModal";
   static const isPreStoreReviewGoodAnswer = "isPreStoreReviewGoodAnswer";
   static const migrateFrom132IsShown = "migrate_from_132_is_shown_9";
+  static const migrateToLocalNotificationAlert = "migrateToLocalNotificationAlert";
 }
 
 extension StringKey on String {
