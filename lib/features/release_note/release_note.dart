@@ -95,7 +95,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version3_18_0;
+  const String key = ReleaseNoteKey.version20240301;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -112,5 +112,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse("https://pilll.wraptas.site/5882a8acbe874a0b90fa2421a2f9f3d8"), mode: LaunchMode.inAppWebView);
+  launchUrl(Uri.parse("https://pilll.wraptas.site/46787454483746bc8d6ac0fab40612bc"), mode: LaunchMode.inAppWebView);
 }
