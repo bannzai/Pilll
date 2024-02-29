@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "服用通知機能が進化しました",
+                          "服用通知機能が新しくなります",
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-この改善により服用通知の遅延が無くなります。大きな変更のためベータ機能として提供しております。設定タブの「服用通知βを使用する」から有効にできます。詳細はリンクをご覧ください
+多くの方に手伝っていただきありがとうございます。このバージョンから服用通知機能が新しくなります。旧:服用通知β表記されていた機能になります。問題が発生した場合はお手数ですがアプリ内の「お問い合わせ」よりお知らせ ください
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
