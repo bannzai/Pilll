@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -8,10 +7,6 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'pill_sheet_group.g.dart';
 
-// この変数にtrueを入れることでMetadata.hasPendingWritesがfalseの場合=リモートDBに書き込まれた場合にStreamの値を流すように制御できる。
-// Pilllではアプリを開いている時に複数箇所からのDB書き込みが無いので(ごくまれにBackendで書き込みと被る可能性はある)単純なフラグ制御を採用している
-// TODO: [UseLocalNotification-Beta] 2023-11 服用通知での問題は解決するし一回消す
-bool awaitsPillSheetGroupRemoteDBDataChanged = false;
 PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
   if (snapshot.docs.isEmpty) return null;
   if (!snapshot.docs.last.exists) return null;
@@ -42,19 +37,7 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
       .orderBy(PillSheetGroupFirestoreKeys.createdAt)
       .limitToLast(1)
       .snapshots(includeMetadataChanges: true)
-      .skipWhile((snapshot) {
-    if (awaitsPillSheetGroupRemoteDBDataChanged) {
-      if (snapshot.metadata.hasPendingWrites) {
-        debugPrint("[DEBUG] hasPendingWrites: true");
-        return true;
-      } else {
-        debugPrint("[DEBUG] hasPendingWrites: false");
-        // Clear flag and continue to last statement
-        awaitsPillSheetGroupRemoteDBDataChanged = false;
-      }
-    }
-    return false;
-  }).map(((event) => _filter(event)));
+      .map(((event) => _filter(event)));
 }
 
 // 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている
