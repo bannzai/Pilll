@@ -42,7 +42,6 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
-import 'components/rows/toggle_local_notification.dart';
 
 enum SettingSection { account, premium, pill, notification, menstruation, other }
 
@@ -184,8 +183,6 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: "通知",
                       children: [
-                        ToggleLocalNotification(user: user),
-                        _separator(),
                         ToggleReminderNotification(setting: setting),
                         _separator(),
                         NotificationTimeRow(setting: setting),
