@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 
 class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
@@ -25,8 +25,8 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbersOrHyphen: EffectivePillNumber(
-          effectivePillNumber: PillSheetModifiedHistoryDateEffectivePillNumber.changed(
+      pillNumbersOrHyphen: PillNumber(
+          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changed(
         beforeTodayPillNumber: beforeTodayPillNumber,
         afterTodayPillNumber: afterTodayPillNumber,
       )),

@@ -15,7 +15,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 202402.10.195624+1671
+version: 202402.26.063247+1671
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -37,7 +37,7 @@ dependencies:
   firebase_auth: ^4.12.1
   firebase_messaging: ^14.7.3
   cloud_firestore: ^4.12.2
-  url_launcher: ^6.2.4
+  url_launcher: ^6.2.5
   package_info: ^2.0.0
   json_annotation: ^4.0.0
   mockito: ^5.4.4
@@ -45,7 +45,7 @@ dependencies:
   riverpod: ^2.4.4
   hooks_riverpod: ^2.4.10
   riverpod_annotation: 2.3.4
-  flutter_hooks: ^0.20.4
+  flutter_hooks: ^0.20.5
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.1.0
   in_app_review: ^2.0.8
@@ -64,6 +64,7 @@ dependencies:
   crypto:
   timezone:
   firebase_remote_config: ^4.3.3
+  google_mobile_ads: ^3.0.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -78,9 +79,9 @@ dev_dependencies:
   build_runner: 2.4.8
   json_serializable:
   freezed: ^2.4.7
-  custom_lint: 0.5.11
-  riverpod_lint: 2.1.1
-  riverpod_generator: 2.3.3
+  custom_lint: 0.6.2
+  riverpod_lint: 2.3.9
+  riverpod_generator: 2.3.11
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
