@@ -7,6 +7,11 @@ import 'package:timezone/timezone.dart';
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
 class Analytics {
+  void debug({required String name, Map<String, dynamic>? parameters}) async {
+    // TODO: Add early return user is not debug mode
+    logEvent(name: name, parameters: parameters);
+  }
+
   void logEvent({required String name, Map<String, dynamic>? parameters}) async {
     assert(name.length <= 40, "firebase analytics log event name limit length up to 40");
     if (kDebugMode) {
