@@ -1,5 +1,6 @@
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/error_log.dart';
 
@@ -32,6 +33,8 @@ class FakeUser extends Mock implements User {
   DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
   @override
   DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+  @override
+  bool get useLocalNotificationForReminder => false;
 
   @override
   bool get premiumOrTrial => isPremium || isTrial;
