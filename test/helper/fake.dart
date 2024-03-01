@@ -32,6 +32,8 @@ class FakeUser extends Mock implements User {
   DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
   @override
   DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+  @override
+  bool get useLocalNotificationForReminder => false;
 
   @override
   bool get premiumOrTrial => isPremium || isTrial;

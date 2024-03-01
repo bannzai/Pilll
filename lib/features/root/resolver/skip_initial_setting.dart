@@ -10,10 +10,12 @@ import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class SkipInitialSetting extends HookConsumerWidget {
-  final Widget Function(BuildContext, bool) builder;
+  final Widget Function(BuildContext) homePageBuilder;
+  final Widget Function(BuildContext) initialSettingPageBuilder;
   const SkipInitialSetting({
     super.key,
-    required this.builder,
+    required this.homePageBuilder,
+    required this.initialSettingPageBuilder,
   });
 
   @override
@@ -41,6 +43,10 @@ class SkipInitialSetting extends HookConsumerWidget {
       return null;
     }, []);
 
-    return builder(context, remoteConfigParameter.skipInitialSetting);
+    if (remoteConfigParameter.skipInitialSetting) {
+      return homePageBuilder(context);
+    } else {
+      return initialSettingPageBuilder(context);
+    }
   }
 }

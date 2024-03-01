@@ -7,6 +7,7 @@ import 'package:pilll/features/record/components/button/rest_duration_button.dar
 import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
@@ -15,6 +16,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
+import '../../../../helper/fake.dart';
 import '../../../../helper/mock.mocks.dart';
 
 void main() {
@@ -80,6 +82,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
+                  user: FakeUser(),
                 ),
               ),
             ),
@@ -144,6 +147,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
+                  user: FakeUser(),
                 ),
               ),
             ),
@@ -202,13 +206,17 @@ void main() {
 
         await tester.pumpWidget(
           ProviderScope(
-            overrides: [takePillProvider.overrideWith((ref) => MockTakePill())],
+            overrides: [
+              takePillProvider.overrideWith((ref) => MockTakePill()),
+              updateUseLocalNotificationProvider.overrideWith((ref) => MockUpdateUseLocalNotification()),
+            ],
             child: MaterialApp(
               home: Material(
                 child: RecordPageButton(
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
+                  user: FakeUser(),
                 ),
               ),
             ),

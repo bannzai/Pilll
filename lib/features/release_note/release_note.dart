@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "服用通知機能が進化しました",
+                          "服用通知機能が新しくなります",
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-この改善により服用通知の遅延が無くなります。大きな変更のためベータ機能として提供しております。設定タブの「服用通知βを使用する」から有効にできます。詳細はリンクをご覧ください
+多くの方に手伝っていただきありがとうございます。このバージョンから服用通知機能が新しくなります。旧:「服用通知β」表記されていた機能になります。問題が発生した場合はお手数ですがアプリ内の「お問い合わせ」よりお知らせください
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
@@ -95,7 +95,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version3_18_0;
+  const String key = ReleaseNoteKey.version20240301;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -112,5 +112,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse("https://pilll.wraptas.site/5882a8acbe874a0b90fa2421a2f9f3d8"), mode: LaunchMode.inAppWebView);
+  launchUrl(Uri.parse("https://pilll.wraptas.site/46787454483746bc8d6ac0fab40612bc"), mode: LaunchMode.inAppWebView);
 }

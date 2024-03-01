@@ -26,7 +26,7 @@ final activePillSheetProvider =
 
 typedef ActivePillSheetRef = AutoDisposeProviderRef<AsyncValue<PillSheet?>>;
 String _$latestPillSheetGroupHash() =>
-    r'0f6c0a0c8039d84749c9020f5561b75c8c05639b';
+    r'adbedcc318008da31341d1d1f7484b1594464365';
 
 /// See also [latestPillSheetGroup].
 @ProviderFor(latestPillSheetGroup)

@@ -178,12 +178,12 @@ class RegisterReminderLocalNotification {
   //   * `There is a limit imposed by iOS where it will only keep 64 notifications that will fire the soonest.`
   //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
-    analytics.logEvent(name: "call_register_reminder_notification");
+    analytics.debug(name: "call_register_reminder_notification");
     final cancelReminderLocalNotification = CancelReminderLocalNotification();
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
     // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
     await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
-    analytics.logEvent(name: "cancel_reminder_notification");
+    analytics.debug(name: "cancel_reminder_notification");
 
     final pillSheetGroup = ref.read(latestPillSheetGroupProvider).asData?.valueOrNull;
     final activePillSheet = ref.read(activePillSheetProvider).asData?.valueOrNull;
@@ -218,7 +218,7 @@ class RegisterReminderLocalNotification {
       return;
     }
 
-    analytics.logEvent(name: "run_register_reminder_notification", parameters: {
+    analytics.debug(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
       "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
       "lastTakenPillNumber": activePillSheet.lastTakenPillNumber,
@@ -237,7 +237,7 @@ class RegisterReminderLocalNotification {
       for (final dayOffset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
         if (dayOffset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
-          analytics.logEvent(name: "rrrn_skip_already_taken", parameters: {
+          analytics.debug(name: "rrrn_skip_already_taken", parameters: {
             "dayOffset": dayOffset,
             "todayPillIsAlreadyTaken": activePillSheet.todayPillIsAlreadyTaken,
             "reminderTimeHour": reminderTime.hour,
@@ -248,7 +248,7 @@ class RegisterReminderLocalNotification {
 
         final reminderDateTime = tzNow.date().addDays(dayOffset).add(Duration(hours: reminderTime.hour)).add(Duration(minutes: reminderTime.minute));
         if (reminderDateTime.isBefore(tzNow)) {
-          analytics.logEvent(name: "rrrn_is_before_now", parameters: {
+          analytics.debug(name: "rrrn_is_before_now", parameters: {
             "dayOffset": dayOffset,
             "tzNow": tzNow,
             "reminderDateTime": reminderDateTime,
@@ -309,7 +309,7 @@ class RegisterReminderLocalNotification {
 
             case (_, _, _):
               // 次のピルシートグループもピルシートも使用しない場合はループをスキップ
-              analytics.logEvent(name: "rrrn_is_over_active_ps_none", parameters: {
+              analytics.debug(name: "rrrn_is_over_active_ps_none", parameters: {
                 "dayOffset": dayOffset,
                 "isLastPillSheet": isLastPillSheet,
                 "premiumOrTrial": premiumOrTrial,
@@ -324,7 +324,7 @@ class RegisterReminderLocalNotification {
         // 偽薬/休薬期間中の通知がOFFの場合はスキップする
         if (!setting.isOnNotifyInNotTakenDuration) {
           if (pillSheeType.dosingPeriod < pillNumberInPillSheet) {
-            analytics.logEvent(name: "rrrn_is_skip_in_dosing", parameters: {
+            analytics.debug(name: "rrrn_is_skip_in_dosing", parameters: {
               "dayOffset": dayOffset,
               "dosingPeriod": pillSheeType.dosingPeriod,
               "pillNumberInPillSheet": pillNumberInPillSheet,
@@ -409,7 +409,7 @@ class RegisterReminderLocalNotification {
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
-                analytics.logEvent(name: "rrrn_premium", parameters: {
+                analytics.debug(name: "rrrn_premium", parameters: {
                   "dayOffset": dayOffset,
                   "notificationID": notificationID,
                   "reminderTimeHour": reminderTime.hour,
@@ -419,7 +419,7 @@ class RegisterReminderLocalNotification {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
                 errorLogger.recordError(e, st);
-                analytics.logEvent(name: "rrrn_e_premium", parameters: {
+                analytics.debug(name: "rrrn_e_premium", parameters: {
                   "dayOffset": dayOffset,
                   "notificationID": notificationID,
                   "reminderTimeHour": reminderTime.hour,
@@ -462,7 +462,7 @@ class RegisterReminderLocalNotification {
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
-                analytics.logEvent(name: "rrrn_non_premium", parameters: {
+                analytics.debug(name: "rrrn_non_premium", parameters: {
                   "dayOffset": dayOffset,
                   "notificationID": notificationID,
                   "reminderTimeHour": reminderTime.hour,
@@ -473,7 +473,7 @@ class RegisterReminderLocalNotification {
                 debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
                 errorLogger.recordError(e, st);
 
-                analytics.logEvent(name: "rrrn_e_non_premium", parameters: {
+                analytics.debug(name: "rrrn_e_non_premium", parameters: {
                   "dayOffset": dayOffset,
                   "notificationID": notificationID,
                   "reminderTimeHour": reminderTime.hour,
@@ -486,11 +486,11 @@ class RegisterReminderLocalNotification {
       }
     }
 
-    analytics.logEvent(name: "rrrn_e_before_run", parameters: {
+    analytics.debug(name: "rrrn_e_before_run", parameters: {
       "notificationCount": futures.length,
     });
     await Future.wait(futures);
-    analytics.logEvent(name: "rrrn_e_end_run", parameters: {
+    analytics.debug(name: "rrrn_e_end_run", parameters: {
       "notificationCount": futures.length,
     });
     debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}, futures.length:${futures.length}");
@@ -526,7 +526,7 @@ class CancelReminderLocalNotification {
   // これら以外はRegisterReminderLocalNotificationで登録し直す。なおRegisterReminderLocalNotification の内部でこの関数を読んでいる
   Future<void> call() async {
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
-    analytics.logEvent(name: "cancel_reminder_local_notification", parameters: {
+    analytics.debug(name: "cancel_reminder_local_notification", parameters: {
       "length": pendingNotifications.length,
       "ids": pendingNotifications.map((e) => e.id).toList().toString(),
     });

@@ -6,7 +6,17 @@ import 'package:timezone/timezone.dart';
 
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
+// TODO: [UseLocalNotification-Beta]
+// UserのanalyticsDebugIsEnabledを適切なタイミングでセットする
+final analyticsDebugIsEnabled = true;
+
 class Analytics {
+  void debug({required String name, Map<String, dynamic>? parameters}) async {
+    if (analyticsDebugIsEnabled) {
+      logEvent(name: name, parameters: parameters);
+    }
+  }
+
   void logEvent({required String name, Map<String, dynamic>? parameters}) async {
     assert(name.length <= 40, "firebase analytics log event name limit length up to 40");
     if (kDebugMode) {

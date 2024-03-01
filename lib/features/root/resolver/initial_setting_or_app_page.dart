@@ -19,10 +19,12 @@ enum InitialSettingOrAppPageScreenType { initialSetting, app }
 // InitialSettingかAppのメインストリームのWidgetに分岐する
 // 主にdidEndInitialSettingの値によって分岐するが、下位互換や何らかの理由でuser.settingがnullになってしまったユーザーのためにuserの値を見てinitialSettingに分岐するかも決定する
 class InitialSettingOrAppPage extends HookConsumerWidget {
-  final Widget Function(BuildContext, InitialSettingOrAppPageScreenType) builder;
+  final Widget Function(BuildContext) initialSettingPageBuilder;
+  final Widget Function(BuildContext) homePageBuilder;
   const InitialSettingOrAppPage({
     Key? key,
-    required this.builder,
+    required this.homePageBuilder,
+    required this.initialSettingPageBuilder,
   }) : super(key: key);
 
   @override
@@ -51,7 +53,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
         if (screenType == null) {
           return const ScaffoldIndicator();
         }
-        return builder(context, screenType);
+        switch (screenType) {
+          case InitialSettingOrAppPageScreenType.initialSetting:
+            return initialSettingPageBuilder(context);
+          case InitialSettingOrAppPageScreenType.app:
+            return homePageBuilder(context);
+        }
       }(),
     );
   }
