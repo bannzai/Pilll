@@ -6,7 +6,6 @@ import 'package:pilll/features/record/components/button/rest_duration_button.dar
 import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class RecordPageButton extends HookConsumerWidget {
@@ -26,7 +25,6 @@ class RecordPageButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final updateUseLocalNotification = ref.watch(updateUseLocalNotificationProvider);
 
     if (currentPillSheet.activeRestDuration != null) {
       return const RestDurationButton();
@@ -45,7 +43,6 @@ class RecordPageButton extends HookConsumerWidget {
         userIsPremiumOtTrial: userIsPremiumOtTrial,
         registerReminderLocalNotification: registerReminderLocalNotification,
         user: user,
-        updateUseLocalNotification: updateUseLocalNotification,
       );
     }
   }

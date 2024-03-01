@@ -24,7 +24,6 @@ class TakenButton extends HookConsumerWidget {
   final RegisterReminderLocalNotification registerReminderLocalNotification;
 // TODO: [UseLocalNotification-Beta] 2024-04
   final User user;
-  final UpdateUseLocalNotification updateUseLocalNotification;
 
   const TakenButton({
     Key? key,
@@ -34,11 +33,11 @@ class TakenButton extends HookConsumerWidget {
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
     required this.user,
-    required this.updateUseLocalNotification,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final takePill = ref.watch(takePillProvider);
+    final updateUseLocalNotification = ref.watch(updateUseLocalNotificationProvider);
 
     return SizedBox(
       width: 180,
