@@ -168,9 +168,12 @@ mixin _$User {
   List<String> get firebaseCurrentUserIDSets =>
       throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
-  bool get shouldAskCancelReason => throw _privateConstructorUsedError;
+  bool get shouldAskCancelReason =>
+      throw _privateConstructorUsedError; // TODO: [UseLocalNotification-Beta] 2024-04-01 に削除する。
+// バックエンドの方で使っていないかの確認を忘れずに
   bool get useLocalNotificationForReminder =>
       throw _privateConstructorUsedError;
+  bool get analyticsDebugIsEnabled => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -206,6 +209,7 @@ abstract class $UserCopyWith<$Res> {
       bool isPremium,
       bool shouldAskCancelReason,
       bool useLocalNotificationForReminder,
+      bool analyticsDebugIsEnabled,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
@@ -245,6 +249,7 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? isPremium = null,
     Object? shouldAskCancelReason = null,
     Object? useLocalNotificationForReminder = null,
+    Object? analyticsDebugIsEnabled = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
@@ -289,6 +294,10 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
       useLocalNotificationForReminder: null == useLocalNotificationForReminder
           ? _value.useLocalNotificationForReminder
           : useLocalNotificationForReminder // ignore: cast_nullable_to_non_nullable
+              as bool,
+      analyticsDebugIsEnabled: null == analyticsDebugIsEnabled
+          ? _value.analyticsDebugIsEnabled
+          : analyticsDebugIsEnabled // ignore: cast_nullable_to_non_nullable
               as bool,
       beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
@@ -337,6 +346,7 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool isPremium,
       bool shouldAskCancelReason,
       bool useLocalNotificationForReminder,
+      bool analyticsDebugIsEnabled,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
@@ -374,6 +384,7 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? isPremium = null,
     Object? shouldAskCancelReason = null,
     Object? useLocalNotificationForReminder = null,
+    Object? analyticsDebugIsEnabled = null,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
@@ -419,6 +430,10 @@ class __$$UserImplCopyWithImpl<$Res>
           ? _value.useLocalNotificationForReminder
           : useLocalNotificationForReminder // ignore: cast_nullable_to_non_nullable
               as bool,
+      analyticsDebugIsEnabled: null == analyticsDebugIsEnabled
+          ? _value.analyticsDebugIsEnabled
+          : analyticsDebugIsEnabled // ignore: cast_nullable_to_non_nullable
+              as bool,
       beginTrialDate: freezed == beginTrialDate
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
@@ -451,6 +466,7 @@ class _$UserImpl extends _User {
       this.isPremium = false,
       this.shouldAskCancelReason = false,
       this.useLocalNotificationForReminder = false,
+      this.analyticsDebugIsEnabled = false,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
@@ -516,9 +532,14 @@ class _$UserImpl extends _User {
   @override
   @JsonKey()
   final bool shouldAskCancelReason;
+// TODO: [UseLocalNotification-Beta] 2024-04-01 に削除する。
+// バックエンドの方で使っていないかの確認を忘れずに
   @override
   @JsonKey()
   final bool useLocalNotificationForReminder;
+  @override
+  @JsonKey()
+  final bool analyticsDebugIsEnabled;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -537,7 +558,7 @@ class _$UserImpl extends _User {
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, useLocalNotificationForReminder: $useLocalNotificationForReminder, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, useLocalNotificationForReminder: $useLocalNotificationForReminder, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -565,6 +586,9 @@ class _$UserImpl extends _User {
                     useLocalNotificationForReminder) ||
                 other.useLocalNotificationForReminder ==
                     useLocalNotificationForReminder) &&
+            (identical(
+                    other.analyticsDebugIsEnabled, analyticsDebugIsEnabled) ||
+                other.analyticsDebugIsEnabled == analyticsDebugIsEnabled) &&
             (identical(other.beginTrialDate, beginTrialDate) ||
                 other.beginTrialDate == beginTrialDate) &&
             (identical(other.trialDeadlineDate, trialDeadlineDate) ||
@@ -589,6 +613,7 @@ class _$UserImpl extends _User {
       isPremium,
       shouldAskCancelReason,
       useLocalNotificationForReminder,
+      analyticsDebugIsEnabled,
       beginTrialDate,
       trialDeadlineDate,
       discountEntitlementDeadlineDate);
@@ -619,6 +644,7 @@ abstract class _User extends User {
       final bool isPremium,
       final bool shouldAskCancelReason,
       final bool useLocalNotificationForReminder,
+      final bool analyticsDebugIsEnabled,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
@@ -654,8 +680,11 @@ abstract class _User extends User {
   bool get isPremium;
   @override
   bool get shouldAskCancelReason;
-  @override
+  @override // TODO: [UseLocalNotification-Beta] 2024-04-01 に削除する。
+// バックエンドの方で使っていないかの確認を忘れずに
   bool get useLocalNotificationForReminder;
+  @override
+  bool get analyticsDebugIsEnabled;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,

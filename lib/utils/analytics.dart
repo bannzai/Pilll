@@ -6,10 +6,15 @@ import 'package:timezone/timezone.dart';
 
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
+// TODO: [UseLocalNotification-Beta]
+// UserのanalyticsDebugIsEnabledを適切なタイミングでセットする
+final analyticsDebugIsEnabled = true;
+
 class Analytics {
   void debug({required String name, Map<String, dynamic>? parameters}) async {
-    // TODO: Add early return user is not debug mode
-    logEvent(name: name, parameters: parameters);
+    if (analyticsDebugIsEnabled) {
+      logEvent(name: name, parameters: parameters);
+    }
   }
 
   void logEvent({required String name, Map<String, dynamic>? parameters}) async {

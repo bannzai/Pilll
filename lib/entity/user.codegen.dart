@@ -79,7 +79,10 @@ class User with _$User {
     @Default([]) List<String> firebaseCurrentUserIDSets,
     @Default(false) bool isPremium,
     @Default(false) bool shouldAskCancelReason,
+// TODO: [UseLocalNotification-Beta] 2024-04-01 に削除する。
+// バックエンドの方で使っていないかの確認を忘れずに
     @Default(false) bool useLocalNotificationForReminder,
+    @Default(false) bool analyticsDebugIsEnabled,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

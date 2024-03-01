@@ -269,6 +269,22 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
   }
 
   @override
+  void debug({
+    required String? name,
+    Map<String, dynamic>? parameters,
+  }) =>
+      super.noSuchMethod(
+        Invocation.method(
+          #debug,
+          [],
+          {
+            #name: name,
+            #parameters: parameters,
+          },
+        ),
+        returnValueForMissingStub: null,
+      );
+  @override
   void logEvent({
     required String? name,
     Map<String, dynamic>? parameters,
@@ -469,6 +485,11 @@ class MockUser extends _i1.Mock implements _i4.User {
   @override
   bool get useLocalNotificationForReminder => (super.noSuchMethod(
         Invocation.getter(#useLocalNotificationForReminder),
+        returnValue: false,
+      ) as bool);
+  @override
+  bool get analyticsDebugIsEnabled => (super.noSuchMethod(
+        Invocation.getter(#analyticsDebugIsEnabled),
         returnValue: false,
       ) as bool);
   @override
