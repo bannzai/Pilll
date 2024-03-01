@@ -1,27 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/rest_duration_button.dart';
 import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class RecordPageButton extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet currentPillSheet;
   final bool userIsPremiumOtTrial;
+  final User user;
 
   const RecordPageButton({
     Key? key,
     required this.pillSheetGroup,
     required this.currentPillSheet,
     required this.userIsPremiumOtTrial,
+    required this.user,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final updateUseLocalNotification = ref.watch(updateUseLocalNotificationProvider);
 
     if (currentPillSheet.activeRestDuration != null) {
       return const RestDurationButton();
@@ -39,6 +44,8 @@ class RecordPageButton extends HookConsumerWidget {
         activePillSheet: currentPillSheet,
         userIsPremiumOtTrial: userIsPremiumOtTrial,
         registerReminderLocalNotification: registerReminderLocalNotification,
+        user: user,
+        updateUseLocalNotification: updateUseLocalNotification,
       );
     }
   }
