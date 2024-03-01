@@ -15,6 +15,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
+import '../../../../helper/fake.dart';
 import '../../../../helper/mock.mocks.dart';
 
 void main() {
@@ -80,6 +81,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
+                  user: FakeUser(),
                 ),
               ),
             ),
@@ -144,6 +146,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
+                  user: FakeUser(),
                 ),
               ),
             ),
@@ -209,6 +212,7 @@ void main() {
                   pillSheetGroup: pillSheetGroup,
                   currentPillSheet: activePillSheet,
                   userIsPremiumOtTrial: false,
+                  user: FakeUser(),
                 ),
               ),
             ),
