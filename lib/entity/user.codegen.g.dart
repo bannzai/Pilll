@@ -40,6 +40,8 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       shouldAskCancelReason: json['shouldAskCancelReason'] as bool? ?? false,
       useLocalNotificationForReminder:
           json['useLocalNotificationForReminder'] as bool? ?? false,
+      analyticsDebugIsEnabled:
+          json['analyticsDebugIsEnabled'] as bool? ?? false,
       beginTrialDate: TimestampConverter.timestampToDateTime(
           json['beginTrialDate'] as Timestamp?),
       trialDeadlineDate: TimestampConverter.timestampToDateTime(
@@ -61,6 +63,7 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'shouldAskCancelReason': instance.shouldAskCancelReason,
       'useLocalNotificationForReminder':
           instance.useLocalNotificationForReminder,
+      'analyticsDebugIsEnabled': instance.analyticsDebugIsEnabled,
       'beginTrialDate':
           TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),
       'trialDeadlineDate':

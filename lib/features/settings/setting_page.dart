@@ -42,7 +42,6 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
-import 'components/rows/toggle_local_notification.dart';
 
 enum SettingSection { account, premium, pill, notification, menstruation, other }
 
@@ -82,7 +81,6 @@ class SettingPage extends HookConsumerWidget {
 }
 
 class SettingPageBody extends StatelessWidget {
-  // TODO: [UseLocalNotification-Beta] 2023-11 不要になったらUserを削除
   final User user;
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
@@ -185,8 +183,6 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: "通知",
                       children: [
-                        ToggleLocalNotification(user: user),
-                        _separator(),
                         ToggleReminderNotification(setting: setting),
                         _separator(),
                         NotificationTimeRow(setting: setting),
