@@ -10,7 +10,7 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
   if (Platform.isIOS) {
     await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: true, sound: true);
   }
-  await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true);
+  await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
   listenNotificationEvents();
   registerRemotePushNotificationToken(await FirebaseMessaging.instance.getToken());
 }
