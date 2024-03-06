@@ -1,6 +1,5 @@
 import 'dart:math';
 
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
@@ -58,7 +57,7 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
-      timezoneDatabaseName: await FlutterNativeTimezone.getLocalTimezone(),
+      timezoneDatabaseName: null,
       // BEGIN: Release function for trial user
       pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       isAutomaticallyCreatePillSheet: true,
