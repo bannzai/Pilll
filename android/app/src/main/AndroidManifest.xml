@@ -51,6 +51,10 @@
                 <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
             </intent-filter>
         </receiver>
+        
+        <!-- https://pub.dev/packages/flutter_local_notifications#-android-setup -->
+        <!-- To use notification actions, specify <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" /> between the <application> tags so that the plugin can process the actions and trigger the appropriate callback(s) -->
+        <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" />
 
         <activity
             android:name=".MainActivity"
