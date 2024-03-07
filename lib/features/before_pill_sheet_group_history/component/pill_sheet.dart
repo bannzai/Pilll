@@ -24,7 +24,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   final PillSheet pillSheet;
   final Setting setting;
 
-  List<PillSheetType> get pillSheetTypeInfos => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+  List<PillSheetType> get pillSheetTypeInfos => pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList();
 
   const HistoricalPillsheetGroupPagePillSheet({
     Key? key,

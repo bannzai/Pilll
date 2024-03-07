@@ -73,7 +73,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypeInfos: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
+        pillSheetTypeInfos: pillSheets.map((e) => e.typeInfo).toList(), toIndex: activePillSheet.groupIndex);
 
     var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activePillSheet.todayPillNumber;
 
@@ -106,7 +106,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypeInfos: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
+        pillSheetTypeInfos: pillSheets.map((e) => e.typeInfo).toList(), toIndex: activePillSheet.groupIndex);
 
     var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activePillSheet.lastTakenPillNumber;
 
@@ -141,7 +141,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
-        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheets.map((e) => e.typeInfo).toList(), toIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -162,7 +162,7 @@ class PillSheetGroup with _$PillSheetGroup {
     return estimatedEndPillNumber;
   }
 
-  List<PillSheetType> get pillSheetTypeInfos => pillSheets.map((e) => e.pillSheetType).toList();
+  List<PillSheetType> get pillSheetTypeInfos => pillSheets.map((e) => e.typeInfo).toList();
 
   // 日付以外を返す
   String displayPillNumberOnlyNumber({

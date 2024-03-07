@@ -38,7 +38,7 @@ class ChangePillNumber {
   }) async {
     final batch = batchFactory.batch();
 
-    final pillSheetTypeInfos = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final pillSheetTypeInfos = pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList();
     final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
           pillSheetTypeInfos: pillSheetTypeInfos,
           toIndex: pillSheetPageIndex,

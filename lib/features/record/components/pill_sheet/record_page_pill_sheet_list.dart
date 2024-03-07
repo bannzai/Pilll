@@ -33,7 +33,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList()).numberOfLineInPillSheet,
             false,
           ),
           child: PageView(

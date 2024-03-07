@@ -112,7 +112,7 @@ class _Page extends HookConsumerWidget {
             const SizedBox(height: 20),
             SizedBox(
               height: PillSheetViewLayout.calcHeight(
-                PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList()).numberOfLineInPillSheet,
+                PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList()).numberOfLineInPillSheet,
                 false,
               ),
               child: PageView(
