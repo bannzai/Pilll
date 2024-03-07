@@ -34,7 +34,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   final Setting setting;
   final User user;
 
-  List<PillSheetTypeInfo> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList();
+  List<PillSheetTypeInfo> get pillSheetTypeInfos => pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList();
 
   const RecordPagePillSheet({
     Key? key,

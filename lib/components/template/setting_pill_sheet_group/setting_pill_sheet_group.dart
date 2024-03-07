@@ -6,7 +6,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 class SettingPillSheetGroup extends StatelessWidget {
   const SettingPillSheetGroup({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.onAdd,
     required this.onChange,
     required this.onDelete,

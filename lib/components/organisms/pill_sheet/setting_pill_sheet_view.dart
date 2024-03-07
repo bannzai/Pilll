@@ -22,7 +22,7 @@ class SettingPillSheetView extends StatelessWidget {
   const SettingPillSheetView({
     Key? key,
     required this.pageIndex,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.appearanceMode,
     required this.selectedPillNumberIntoPillSheet,
     required this.markSelected,

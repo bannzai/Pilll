@@ -15,7 +15,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
 
   const SettingMenstruationPillSheetList({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.selectedPillNumber,
     required this.appearanceMode,
     required this.markSelected,

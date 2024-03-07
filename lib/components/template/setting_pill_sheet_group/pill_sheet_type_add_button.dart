@@ -10,7 +10,7 @@ class PillSheetTypeAddButton extends StatelessWidget {
   final List<PillSheetType> pillSheetTypes;
   const PillSheetTypeAddButton({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.onAdd,
   }) : super(key: key);
 

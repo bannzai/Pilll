@@ -21,7 +21,7 @@ class PillSheetViewLayout extends StatelessWidget {
   }
 
   static PillSheetType mostLargePillSheetType(List<PillSheetType> pillSheetTypes) {
-    final copied = [...pillSheetTypes];
+    final copied = [...pillSheetTypeInfos];
     copied.sort((a, b) => b.totalCount.compareTo(a.totalCount));
     return copied.first;
   }

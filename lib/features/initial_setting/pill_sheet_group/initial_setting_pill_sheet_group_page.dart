@@ -122,7 +122,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        if (state.pillSheetTypes.isNotEmpty)
+                        if (state.pillSheetTypeInfos.isNotEmpty)
                           SizedBox(
                             width: 180,
                             child: PrimaryButton(
@@ -175,7 +175,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (state.pillSheetTypes.isEmpty) {
+    if (state.pillSheetTypeInfos.isEmpty) {
       return Center(
         child: Column(
           children: [
@@ -205,7 +205,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
         children: [
           const SizedBox(height: 6),
           SettingPillSheetGroup(
-              pillSheetTypes: state.pillSheetTypes,
+              pillSheetTypes: state.pillSheetTypeInfos,
               onAdd: (pillSheetType) {
                 analytics.logEvent(name: "initial_setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
                 store.addPillSheetType(pillSheetType);

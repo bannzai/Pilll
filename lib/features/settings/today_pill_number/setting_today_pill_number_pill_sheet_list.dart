@@ -15,7 +15,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
 
   const SettingTodayPillNumberPillSheetList({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.selectedTodayPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);

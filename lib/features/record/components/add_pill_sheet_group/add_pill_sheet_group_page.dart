@@ -49,18 +49,18 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                 pillSheetTypes: pillSheetTypes.value,
                 onAdd: (pillSheetType) {
                   analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
-                  pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
+                  pillSheetTypes.value = [...pillSheetTypeInfos.value, pillSheetType];
                 },
                 onChange: (index, pillSheetType) {
                   analytics
                       .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
-                  final copied = [...pillSheetTypes.value];
+                  final copied = [...pillSheetTypeInfos.value];
                   copied[index] = pillSheetType;
                   pillSheetTypes.value = copied;
                 },
                 onDelete: (index) {
                   analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
-                  pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
+                  pillSheetTypes.value = [...pillSheetTypeInfos.value]..removeAt(index);
                 },
               ),
               Align(

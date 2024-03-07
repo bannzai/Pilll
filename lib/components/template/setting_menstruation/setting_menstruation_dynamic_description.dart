@@ -21,7 +21,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
 
   const SettingMenstruationDynamicDescription({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.fromMenstruation,
     required this.durationMenstruation,
     required this.fromMenstructionDidDecide,
