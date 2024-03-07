@@ -59,7 +59,7 @@ List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxD
   }
   assert(maxDateRangeCount > 0);
 
-  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
+  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.typeInfo.totalCount).reduce((value, element) => value + element);
   var dateRanges = <DateRange>[];
   for (int i = 0; i < maxDateRangeCount; i++) {
     final offset = totalPillCount * i;

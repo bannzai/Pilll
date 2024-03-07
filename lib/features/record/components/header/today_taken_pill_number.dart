@@ -76,7 +76,7 @@ class TodayTakenPillNumber extends StatelessWidget {
     }
     if (activePillSheet.inNotTakenDuration) {
       return Text(
-        "${activePillSheet.pillSheetType.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}日目",
+        "${activePillSheet.typeInfo.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}日目",
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
