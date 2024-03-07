@@ -39,6 +39,8 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
   }
 
   int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
+
+  PillSheetType? get pillSheetType => pillSheetTypeReferencePath != null ? PillSheetTypeFunctions.fromRawPath(pillSheetTypeReferencePath!) : null;
 }
 
 @freezed

@@ -100,8 +100,8 @@ class SettingPillSheetView extends StatelessWidget {
       return PillMarkType.selected;
     }
 
-    if (pillSheetType.dosingPeriod < pillNumberInPillSheet) {
-      return (pillSheetType == PillSheetType.pillsheet_21 || pillSheetType == PillSheetType.pillsheet_24_rest_4)
+    if (pillSheetTypeInfo.dosingPeriod < pillNumberInPillSheet) {
+      return (pillSheetTypeInfo.pillSheetType == PillSheetType.pillsheet_21 || pillSheetTypeInfo.pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
