@@ -38,7 +38,7 @@ class AddPillSheetGroup {
   Future<void> call({
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
-    required List<PillSheetType> pillSheetTypes,
+    required List<PillSheetTypeInfo> pillSheetTypeInfos,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
@@ -74,7 +74,7 @@ class AddPillSheetGroup {
 PillSheetGroup buildPillSheetGroup({
   required Setting setting,
   required PillSheetGroup? pillSheetGroup,
-  required List<PillSheetType> pillSheetTypes,
+  required List<PillSheetTypeInfo> pillSheetTypeInfos,
   required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
 }) {
   final n = now();

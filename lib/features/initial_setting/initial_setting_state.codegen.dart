@@ -23,7 +23,7 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
-    @Default([]) List<PillSheetType> pillSheetTypes,
+    @Default([]) List<PillSheetTypeInfo> pillSheetTypeInfos,
     InitialSettingTodayPillNumber? todayPillNumber,
     required List<ReminderTime> reminderTimes,
     @Default(true) bool isOnReminder,
@@ -69,7 +69,7 @@ class InitialSettingState with _$InitialSettingState {
   static PillSheet buildPillSheet({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
-    required List<PillSheetType> pillSheetTypes,
+    required List<PillSheetTypeInfo> pillSheetTypeInfos,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
     final beginDate = _beginingDate(
@@ -96,7 +96,7 @@ class InitialSettingState with _$InitialSettingState {
   static DateTime _beginingDate({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
-    required List<PillSheetType> pillSheetTypes,
+    required List<PillSheetTypeInfo> pillSheetTypeInfos,
   }) {
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
@@ -125,7 +125,7 @@ class InitialSettingState with _$InitialSettingState {
   static DateTime? _lastTakenDate({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
-    required List<PillSheetType> pillSheetTypes,
+    required List<PillSheetTypeInfo> pillSheetTypeInfos,
   }) {
     if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberInPillSheet == 1) {
       return null;

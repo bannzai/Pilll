@@ -8,7 +8,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingMenstruationPillSheetList extends HookConsumerWidget {
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final int? Function(int pageIndex) selectedPillNumber;
   final PillSheetAppearanceMode appearanceMode;
   final Function(int pageIndex, int pillNumber) markSelected;

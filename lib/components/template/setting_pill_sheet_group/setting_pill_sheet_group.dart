@@ -12,7 +12,7 @@ class SettingPillSheetGroup extends StatelessWidget {
     required this.onDelete,
   }) : super(key: key);
 
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final Function(PillSheetType) onAdd;
   final Function(int, PillSheetType) onChange;
   final Function(int) onDelete;

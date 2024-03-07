@@ -13,7 +13,7 @@ abstract class SettingMenstruationDynamicDescriptionConstants {
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final int fromMenstruation;
   final int durationMenstruation;
   final void Function(int from) fromMenstructionDidDecide;

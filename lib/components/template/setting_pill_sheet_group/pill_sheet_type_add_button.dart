@@ -7,7 +7,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetTypeAddButton extends StatelessWidget {
   final Function(PillSheetType) onAdd;
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   const PillSheetTypeAddButton({
     Key? key,
     required this.pillSheetTypeInfos,

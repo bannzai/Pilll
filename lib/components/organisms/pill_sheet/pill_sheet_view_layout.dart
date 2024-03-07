@@ -20,7 +20,7 @@ class PillSheetViewLayout extends StatelessWidget {
     return isHideWeekdayLine ? pillMarkListHeight : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  static PillSheetType mostLargePillSheetType(List<PillSheetType> pillSheetTypes) {
+  static PillSheetType mostLargePillSheetType(List<PillSheetTypeInfo> pillSheetTypeInfos) {
     final copied = [...pillSheetTypeInfos];
     copied.sort((a, b) => b.totalCount.compareTo(a.totalCount));
     return copied.first;

@@ -163,7 +163,7 @@ extension PillSheetTypeFunctions on PillSheetType {
   int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
 }
 
-int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetType> pillSheetTypes, required int toIndex}) {
+int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetTypeInfo> pillSheetTypeInfos, required int toIndex}) {
   if (toIndex == 0) {
     return 0;
   }

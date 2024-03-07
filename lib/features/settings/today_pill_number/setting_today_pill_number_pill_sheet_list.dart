@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
 class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
