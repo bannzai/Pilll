@@ -29,7 +29,7 @@ void main() {
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
-        pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillSheetTypeInfos: [PillSheetType.pillsheet_21],
       );
 
       final expected = PillSheet(
@@ -55,9 +55,9 @@ void main() {
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 1,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
-        pillSheetTypes: [
-          PillSheetType.pillsheet_21,
-          PillSheetType.pillsheet_24_0,
+        pillSheetTypeInfos: [
+          PillSheetType.pillsheet_21.typeInfo,
+          PillSheetType.pillsheet_24_0.typeInfo,
         ],
       );
 
@@ -86,9 +86,9 @@ void main() {
       final pillSheet = InitialSettingState.buildPillSheet(
         pageIndex: 0,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1),
-        pillSheetTypes: [
-          PillSheetType.pillsheet_21,
-          PillSheetType.pillsheet_24_0,
+        pillSheetTypeInfos: [
+          PillSheetType.pillsheet_21.typeInfo,
+          PillSheetType.pillsheet_24_0.typeInfo,
         ],
       );
 

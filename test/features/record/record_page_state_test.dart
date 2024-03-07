@@ -79,7 +79,7 @@ void main() {
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       await waitForResetStoreState();
       expect(pillSheetGroup.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
-      for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
+      for (int i = 1; i <= pillSheetEntity.typeInfo.totalCount; i++) {
         expect(
             shouldPillMarkAnimation(
               pillNumberInPillSheet: i,

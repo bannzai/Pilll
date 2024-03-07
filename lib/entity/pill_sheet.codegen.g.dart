@@ -9,7 +9,7 @@ part of 'pill_sheet.codegen.dart';
 _$PillSheetTypeInfoImpl _$$PillSheetTypeInfoImplFromJson(
         Map<String, dynamic> json) =>
     _$PillSheetTypeInfoImpl(
-      pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String,
+      pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String?,
       name: json['name'] as String,
       totalCount: json['totalCount'] as int,
       dosingPeriod: json['dosingPeriod'] as int,

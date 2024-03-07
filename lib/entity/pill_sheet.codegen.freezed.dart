@@ -20,7 +20,7 @@ PillSheetTypeInfo _$PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PillSheetTypeInfo {
-  String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
+  String? get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
   int get totalCount => throw _privateConstructorUsedError;
   int get dosingPeriod => throw _privateConstructorUsedError;
@@ -38,7 +38,7 @@ abstract class $PillSheetTypeInfoCopyWith<$Res> {
       _$PillSheetTypeInfoCopyWithImpl<$Res, PillSheetTypeInfo>;
   @useResult
   $Res call(
-      {String pillSheetTypeReferencePath,
+      {String? pillSheetTypeReferencePath,
       String name,
       int totalCount,
       int dosingPeriod});
@@ -57,16 +57,16 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res, $Val extends PillSheetTypeInfo>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypeReferencePath = null,
+    Object? pillSheetTypeReferencePath = freezed,
     Object? name = null,
     Object? totalCount = null,
     Object? dosingPeriod = null,
   }) {
     return _then(_value.copyWith(
-      pillSheetTypeReferencePath: null == pillSheetTypeReferencePath
+      pillSheetTypeReferencePath: freezed == pillSheetTypeReferencePath
           ? _value.pillSheetTypeReferencePath
           : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -92,7 +92,7 @@ abstract class _$$PillSheetTypeInfoImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String pillSheetTypeReferencePath,
+      {String? pillSheetTypeReferencePath,
       String name,
       int totalCount,
       int dosingPeriod});
@@ -109,16 +109,16 @@ class __$$PillSheetTypeInfoImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypeReferencePath = null,
+    Object? pillSheetTypeReferencePath = freezed,
     Object? name = null,
     Object? totalCount = null,
     Object? dosingPeriod = null,
   }) {
     return _then(_$PillSheetTypeInfoImpl(
-      pillSheetTypeReferencePath: null == pillSheetTypeReferencePath
+      pillSheetTypeReferencePath: freezed == pillSheetTypeReferencePath
           ? _value.pillSheetTypeReferencePath
           : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -138,18 +138,19 @@ class __$$PillSheetTypeInfoImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
+class _$PillSheetTypeInfoImpl extends _PillSheetTypeInfo {
   const _$PillSheetTypeInfoImpl(
       {required this.pillSheetTypeReferencePath,
       required this.name,
       required this.totalCount,
-      required this.dosingPeriod});
+      required this.dosingPeriod})
+      : super._();
 
   factory _$PillSheetTypeInfoImpl.fromJson(Map<String, dynamic> json) =>
       _$$PillSheetTypeInfoImplFromJson(json);
 
   @override
-  final String pillSheetTypeReferencePath;
+  final String? pillSheetTypeReferencePath;
   @override
   final String name;
   @override
@@ -198,18 +199,19 @@ class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
   }
 }
 
-abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
+abstract class _PillSheetTypeInfo extends PillSheetTypeInfo {
   const factory _PillSheetTypeInfo(
-      {required final String pillSheetTypeReferencePath,
+      {required final String? pillSheetTypeReferencePath,
       required final String name,
       required final int totalCount,
       required final int dosingPeriod}) = _$PillSheetTypeInfoImpl;
+  const _PillSheetTypeInfo._() : super._();
 
   factory _PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =
       _$PillSheetTypeInfoImpl.fromJson;
 
   @override
-  String get pillSheetTypeReferencePath;
+  String? get pillSheetTypeReferencePath;
   @override
   String get name;
   @override
@@ -476,7 +478,6 @@ PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
 mixin _$PillSheet {
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
-  @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -510,7 +511,7 @@ abstract class $PillSheetCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? id,
-      @JsonKey() PillSheetTypeInfo typeInfo,
+      PillSheetTypeInfo typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -610,7 +611,7 @@ abstract class _$$PillSheetImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? id,
-      @JsonKey() PillSheetTypeInfo typeInfo,
+      PillSheetTypeInfo typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -697,7 +698,7 @@ class __$$PillSheetImplCopyWithImpl<$Res>
 class _$PillSheetImpl extends _PillSheet {
   const _$PillSheetImpl(
       {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey() required this.typeInfo,
+      required this.typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -726,7 +727,6 @@ class _$PillSheetImpl extends _PillSheet {
   @JsonKey(includeIfNull: false)
   final String? id;
   @override
-  @JsonKey()
   final PillSheetTypeInfo typeInfo;
   @override
   @JsonKey(
@@ -817,7 +817,7 @@ class _$PillSheetImpl extends _PillSheet {
 abstract class _PillSheet extends PillSheet {
   const factory _PillSheet(
       {@JsonKey(includeIfNull: false) required final String? id,
-      @JsonKey() required final PillSheetTypeInfo typeInfo,
+      required final PillSheetTypeInfo typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -845,7 +845,6 @@ abstract class _PillSheet extends PillSheet {
   @JsonKey(includeIfNull: false)
   String? get id;
   @override
-  @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
   @JsonKey(

@@ -61,7 +61,7 @@ void main() {
       final store = container.read(initialSettingStateNotifierProvider.notifier);
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
+      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypeInfos, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -89,14 +89,14 @@ void main() {
       final store = container.read(initialSettingStateNotifierProvider.notifier);
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
+      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypeInfos, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
       ]);
 
       store.changePillSheetType(0, PillSheetType.pillsheet_21_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
+      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypeInfos, [
         PillSheetType.pillsheet_21_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -126,7 +126,7 @@ void main() {
 
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
+      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypeInfos, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -158,7 +158,7 @@ void main() {
       store.selectedFirstPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
+      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypeInfos, [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_24_0,
         PillSheetType.pillsheet_28_0,
@@ -191,7 +191,7 @@ void main() {
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
       store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
       store.removePillSheetType(0);
-      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypes, [
+      expect(container.read(initialSettingStateNotifierProvider).pillSheetTypeInfos, [
         PillSheetType.pillsheet_24_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
@@ -257,7 +257,7 @@ void main() {
     });
   });
   group("#register", () {
-    test("state.pillSheetTypes has one pillSheetType", () async {
+    test("state.pillSheetTypeInfos has one pillSheetType", () async {
       final endInitialSetting = MockEndInitialSetting();
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
@@ -325,7 +325,7 @@ void main() {
 
       await store.register();
     });
-    test("state.pillSheetTypes has two pillSheetType", () async {
+    test("state.pillSheetTypeInfos has two pillSheetType", () async {
       final endInitialSetting = MockEndInitialSetting();
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
@@ -416,7 +416,7 @@ void main() {
     });
 
     // ref: https://github.com/bannzai/Pilll/pull/534
-    test("state.pillSheetTypes is [PillSheetType.pillsheet_24_rest_4]", () async {
+    test("state.pillSheetTypeInfos is [PillSheetType.pillsheet_24_rest_4]", () async {
       const setting = Setting(
         pillNumberForFromMenstruation: 24,
         durationMenstruation: 4,

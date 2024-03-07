@@ -53,7 +53,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         );
 
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [
+    state = state.copyWith(pillSheetTypeInfos: [
       pillSheetType,
       pillSheetType,
       pillSheetType,
@@ -61,19 +61,19 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
+    state = state.copyWith(pillSheetTypeInfos: [...state.pillSheetTypeInfos, pillSheetType]);
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {
-    final copied = [...state.pillSheetTypes];
+    final copied = [...state.pillSheetTypeInfos];
     copied[index] = pillSheetType;
-    state = state.copyWith(pillSheetTypes: copied);
+    state = state.copyWith(pillSheetTypeInfos: copied);
   }
 
   void removePillSheetType(index) {
-    final copied = [...state.pillSheetTypes];
+    final copied = [...state.pillSheetTypeInfos];
     copied.removeAt(index);
-    state = state.copyWith(pillSheetTypes: copied);
+    state = state.copyWith(pillSheetTypeInfos: copied);
   }
 
   void setReminderTime({
@@ -112,11 +112,11 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     final todayPillNumber = state.todayPillNumber;
     PillSheetGroup? createdPillSheetGroup;
     if (todayPillNumber != null) {
-      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
+      final createdPillSheets = state.pillSheetTypeInfos.asMap().keys.map((pageIndex) {
         return InitialSettingState.buildPillSheet(
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
-          pillSheetTypes: state.pillSheetTypes,
+          pillSheetTypeInfos: state.pillSheetTypeInfos,
         );
       }).toList();
 

@@ -38,14 +38,14 @@ class AddPillSheetGroup {
   Future<void> call({
     required Setting setting,
     required PillSheetGroup? pillSheetGroup,
-    required List<PillSheetType> pillSheetTypes,
+    required List<PillSheetTypeInfo> pillSheetTypeInfos,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) async {
     final batch = batchFactory.batch();
     final updatedPillSheetGroup = buildPillSheetGroup(
       setting: setting,
       pillSheetGroup: pillSheetGroup,
-      pillSheetTypes: pillSheetTypes,
+      pillSheetTypeInfos: pillSheetTypeInfos,
       displayNumberSetting: displayNumberSetting,
     );
     final createdPillSheetGroup = batchSetPillSheetGroup(
@@ -64,7 +64,7 @@ class AddPillSheetGroup {
     batchSetSetting(
         batch,
         setting.copyWith(
-          pillSheetTypes: pillSheetTypes,
+          pillSheetTypeInfos: pillSheetTypeInfos,
         ));
 
     await batch.commit();
@@ -74,13 +74,13 @@ class AddPillSheetGroup {
 PillSheetGroup buildPillSheetGroup({
   required Setting setting,
   required PillSheetGroup? pillSheetGroup,
-  required List<PillSheetType> pillSheetTypes,
+  required List<PillSheetTypeInfo> pillSheetTypeInfos,
   required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
 }) {
   final n = now();
-  final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
-    final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+  final createdPillSheets = pillSheetTypeInfos.asMap().keys.map((pageIndex) {
+    final pillSheetType = backportPillSheetTypes(pillSheetTypeInfos)[pageIndex];
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheetTypeInfos, toIndex: pageIndex);
     return PillSheet(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,

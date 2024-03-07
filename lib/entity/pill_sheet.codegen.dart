@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
@@ -22,13 +23,24 @@ class PillSheetFirestoreKey {
 class PillSheetTypeInfo with _$PillSheetTypeInfo {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetTypeInfo({
-    required String pillSheetTypeReferencePath,
+    required String? pillSheetTypeReferencePath,
     required String name,
     required int totalCount,
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
+  PillSheetTypeInfo._();
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) => _$PillSheetTypeInfoFromJson(json);
+
+  bool get isBuiltin => pillSheetTypeReferencePath != null;
+
+  bool get isNotExistsNotTakenDuration {
+    return totalCount == dosingPeriod;
+  }
+
+  int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
+
+  PillSheetType? get pillSheetType => pillSheetTypeReferencePath != null ? PillSheetTypeFunctions.fromRawPath(pillSheetTypeReferencePath!) : null;
 }
 
 @freezed
@@ -59,13 +71,11 @@ class RestDuration with _$RestDuration {
 class PillSheet with _$PillSheet {
   String? get documentID => id;
 
-  PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
-
   const PillSheet._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false) required String? id,
-    @JsonKey() required PillSheetTypeInfo typeInfo,
+    required PillSheetTypeInfo typeInfo,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -108,7 +118,8 @@ class PillSheet with _$PillSheet {
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
 
-  PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType? get pillSheetType =>
+      typeInfo.pillSheetTypeReferencePath != null ? PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath!) : null;
 
   int get todayPillNumber {
     return pillNumberFor(targetDate: today());
@@ -139,7 +150,7 @@ class PillSheet with _$PillSheet {
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration => !typeInfo.isNotExistsNotTakenDuration;
   bool get isActive => isActiveFor(now());
 
   bool isActiveFor(DateTime date) {
@@ -147,7 +158,7 @@ class PillSheet with _$PillSheet {
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
-      .addDays(pillSheetType.totalCount - 1)
+      .addDays(typeInfo.totalCount - 1)
       .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
       .date()
       .add(const Duration(days: 1))

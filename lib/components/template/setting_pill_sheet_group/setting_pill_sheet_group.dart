@@ -6,13 +6,13 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 class SettingPillSheetGroup extends StatelessWidget {
   const SettingPillSheetGroup({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.onAdd,
     required this.onChange,
     required this.onDelete,
   }) : super(key: key);
 
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final Function(PillSheetType) onAdd;
   final Function(int, PillSheetType) onChange;
   final Function(int) onDelete;
@@ -21,19 +21,19 @@ class SettingPillSheetGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        for (var i = 0; i < pillSheetTypes.length; i++) ...[
+        for (var i = 0; i < pillSheetTypeInfos.length; i++) ...[
           const SizedBox(height: 16),
           SettingPillSheetGroupPillSheetTypeSelectRow(
             index: i,
-            pillSheetType: pillSheetTypes[i],
+            pillSheetType: pillSheetTypeInfos[i],
             onSelect: onChange,
             onDelete: onDelete,
           ),
         ],
-        if (pillSheetTypes.length < 7) ...[
+        if (pillSheetTypeInfos.length < 7) ...[
           const SizedBox(height: 24),
           PillSheetTypeAddButton(
-            pillSheetTypes: pillSheetTypes,
+            pillSheetTypeInfos: pillSheetTypeInfos,
             onAdd: (pillSheetType) => onAdd(pillSheetType),
           ),
         ],

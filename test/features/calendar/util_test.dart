@@ -76,7 +76,7 @@ void main() {
         },
       );
       test(
-        "it check to ignore date range for pillSheetType.totalCount > setting.pillNumberFromMenstruation. pillSheetType: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
+        "it check to ignore date range for pillSheetTypeInfo.totalCount > setting.pillNumberFromMenstruation. pillSheetType: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -566,7 +566,7 @@ void main() {
   group("#nextPillSheetDateRanges", () {
     group("multiple pillSheet pattern", () {
       test(
-        "First page with pillSheetTypes: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29]",
+        "First page with pillSheetTypeInfos: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29]",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();

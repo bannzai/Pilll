@@ -13,7 +13,7 @@ abstract class SettingMenstruationDynamicDescriptionConstants {
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final int fromMenstruation;
   final int durationMenstruation;
   final void Function(int from) fromMenstructionDidDecide;
@@ -21,7 +21,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
 
   const SettingMenstruationDynamicDescription({
     Key? key,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.fromMenstruation,
     required this.durationMenstruation,
     required this.fromMenstructionDidDecide,
@@ -139,7 +139,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
   }
 
   void _showFromModalSheet(BuildContext context) {
-    final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final maximumCount = pillSheetTypeInfos.map((e) => e.totalCount).reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
       context: context,

@@ -284,7 +284,7 @@ class RegisterReminderLocalNotification {
               final nextPillSheetGroup = buildPillSheetGroup(
                 setting: setting,
                 pillSheetGroup: pillSheetGroup,
-                pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                pillSheetTypeInfos: pillSheetGroup.pillSheets.map((e) => e.typeInfo).toList(),
                 displayNumberSetting: null,
               );
               pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumberOnlyNumber(

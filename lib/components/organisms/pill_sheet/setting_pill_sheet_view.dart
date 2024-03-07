@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
@@ -13,16 +14,16 @@ import 'package:pilll/entity/weekday.dart';
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
   final PillSheetAppearanceMode appearanceMode;
-  final List<PillSheetType> pillSheetTypes;
+  final List<PillSheetTypeInfo> pillSheetTypeInfos;
   final int? selectedPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
-  PillSheetType get pillSheetType => pillSheetTypes[pageIndex];
+  PillSheetTypeInfo get pillSheetTypeInfo => pillSheetTypeInfos[pageIndex];
 
   const SettingPillSheetView({
     Key? key,
     required this.pageIndex,
-    required this.pillSheetTypes,
+    required this.pillSheetTypeInfos,
     required this.appearanceMode,
     required this.selectedPillNumberIntoPillSheet,
     required this.markSelected,
@@ -33,7 +34,7 @@ class SettingPillSheetView extends StatelessWidget {
     return PillSheetViewLayout(
       weekdayLines: null,
       pillMarkLines: List.generate(
-        pillSheetType.numberOfLineInPillSheet,
+        pillSheetTypeInfo.numberOfLineInPillSheet,
         (index) {
           return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
         },
@@ -47,8 +48,8 @@ class SettingPillSheetView extends StatelessWidget {
   }) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
-    if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
-      int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
+    if (lineNumber * Weekday.values.length > pillSheetTypeInfo.totalCount) {
+      int diff = pillSheetTypeInfo.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
     return List.generate(Weekday.values.length, (index) {
@@ -57,7 +58,7 @@ class SettingPillSheetView extends StatelessWidget {
       }
 
       final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(index, lineIndex);
-      final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+      final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheetTypeInfos, toIndex: pageIndex);
 
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
@@ -99,8 +100,8 @@ class SettingPillSheetView extends StatelessWidget {
       return PillMarkType.selected;
     }
 
-    if (pillSheetType.dosingPeriod < pillNumberInPillSheet) {
-      return (pillSheetType == PillSheetType.pillsheet_21 || pillSheetType == PillSheetType.pillsheet_24_rest_4)
+    if (pillSheetTypeInfo.dosingPeriod < pillNumberInPillSheet) {
+      return (pillSheetTypeInfo.pillSheetType == PillSheetType.pillsheet_21 || pillSheetTypeInfo.pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;
     }

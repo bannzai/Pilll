@@ -47,14 +47,14 @@ class RestDurationAnnouncementBar extends StatelessWidget {
 
     if (activePillSheet.typeInfo.dosingPeriod < activePillSheet.todayPillNumber) {
       final day = activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod;
-      return "${activePillSheet.pillSheetType.notTakenWord}$day日目";
+      return "${activePillSheet.typeInfo.notTakenWord}$day日目";
     }
 
     const threshold = 4;
-    if (activePillSheet.pillSheetType.notTakenWord.isNotEmpty) {
+    if (activePillSheet.typeInfo.notTakenWord.isNotEmpty) {
       if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 < activePillSheet.todayPillNumber) {
         final diff = activePillSheet.typeInfo.dosingPeriod - activePillSheet.todayPillNumber;
-        return "あと${diff + 1}日で${activePillSheet.pillSheetType.notTakenWord}期間です";
+        return "あと${diff + 1}日で${activePillSheet.typeInfo.notTakenWord}期間です";
       }
     }
     return null;

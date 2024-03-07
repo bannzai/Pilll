@@ -27,14 +27,14 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
       children: [
         SizedBox(
           height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes).numberOfLineInPillSheet,
+            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypeInfos).numberOfLineInPillSheet,
             true,
           ),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
             scrollDirection: Axis.horizontal,
-            children: List.generate(state.pillSheetTypes.length, (index) {
+            children: List.generate(state.pillSheetTypeInfos.length, (index) {
               return Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -43,7 +43,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                     child: SettingPillSheetView(
                       pageIndex: index,
                       appearanceMode: PillSheetAppearanceMode.number,
-                      pillSheetTypes: state.pillSheetTypes,
+                      pillSheetTypeInfos: state.pillSheetTypeInfos,
                       selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(pageIndex: index),
                       markSelected: (pageIndex, number) {
                         analytics.logEvent(name: "selected_today_number_initial_setting", parameters: {
@@ -63,11 +63,11 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
             }).toList(),
           ),
         ),
-        if (state.pillSheetTypes.length > 1) ...[
+        if (state.pillSheetTypeInfos.length > 1) ...[
           const SizedBox(height: 16),
           DotsIndicator(
             controller: pageController,
-            itemCount: state.pillSheetTypes.length,
+            itemCount: state.pillSheetTypeInfos.length,
             onDotTapped: (page) {
               pageController.animateToPage(
                 page,

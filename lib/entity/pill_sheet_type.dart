@@ -141,10 +141,6 @@ extension PillSheetTypeFunctions on PillSheetType {
   PillSheetTypeInfo get typeInfo =>
       PillSheetTypeInfo(pillSheetTypeReferencePath: rawPath, name: fullName, totalCount: totalCount, dosingPeriod: dosingPeriod);
 
-  bool get isNotExistsNotTakenDuration {
-    return totalCount == dosingPeriod;
-  }
-
   String get notTakenWord {
     switch (this) {
       case PillSheetType.pillsheet_21:
@@ -163,16 +159,14 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "休薬";
     }
   }
-
-  int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
 }
 
-int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetType> pillSheetTypes, required int toIndex}) {
+int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetTypeInfo> pillSheetTypeInfos, required int toIndex}) {
   if (toIndex == 0) {
     return 0;
   }
 
-  final passed = pillSheetTypes.sublist(0, toIndex);
+  final passed = pillSheetTypeInfos.sublist(0, toIndex);
   final passedTotalCount = passed.map((e) => e.totalCount).reduce((value, element) => value + element);
   return passedTotalCount;
 }

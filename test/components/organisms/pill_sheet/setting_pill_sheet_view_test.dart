@@ -25,7 +25,7 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: const [pillSheetType],
+        pillSheetTypeInfos: [pillSheetType.typeInfo],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
@@ -49,7 +49,7 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: const [pillSheetType],
+        pillSheetTypeInfos: [pillSheetType.typeInfo],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
@@ -73,7 +73,7 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: const [pillSheetType],
+        pillSheetTypeInfos: [pillSheetType.typeInfo],
         selectedPillNumberIntoPillSheet: 10,
         markSelected: (p, i) => {},
       );
@@ -97,7 +97,7 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         appearanceMode: PillSheetAppearanceMode.number,
-        pillSheetTypes: const [pillSheetType],
+        pillSheetTypeInfos: [pillSheetType.typeInfo],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );

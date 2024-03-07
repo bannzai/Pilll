@@ -168,7 +168,8 @@ abstract class _InitialSettingTodayPillNumber
 
 /// @nodoc
 mixin _$InitialSettingState {
-  List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
+  List<PillSheetTypeInfo> get pillSheetTypeInfos =>
+      throw _privateConstructorUsedError;
   InitialSettingTodayPillNumber? get todayPillNumber =>
       throw _privateConstructorUsedError;
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
@@ -189,7 +190,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       _$InitialSettingStateCopyWithImpl<$Res, InitialSettingState>;
   @useResult
   $Res call(
-      {List<PillSheetType> pillSheetTypes,
+      {List<PillSheetTypeInfo> pillSheetTypeInfos,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
@@ -213,7 +214,7 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypes = null,
+    Object? pillSheetTypeInfos = null,
     Object? todayPillNumber = freezed,
     Object? reminderTimes = null,
     Object? isOnReminder = null,
@@ -222,10 +223,10 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState>
     Object? accountType = freezed,
   }) {
     return _then(_value.copyWith(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value.pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType>,
+      pillSheetTypeInfos: null == pillSheetTypeInfos
+          ? _value.pillSheetTypeInfos
+          : pillSheetTypeInfos // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetTypeInfo>,
       todayPillNumber: freezed == todayPillNumber
           ? _value.todayPillNumber
           : todayPillNumber // ignore: cast_nullable_to_non_nullable
@@ -276,7 +277,7 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {List<PillSheetType> pillSheetTypes,
+      {List<PillSheetTypeInfo> pillSheetTypeInfos,
       InitialSettingTodayPillNumber? todayPillNumber,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
@@ -299,7 +300,7 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypes = null,
+    Object? pillSheetTypeInfos = null,
     Object? todayPillNumber = freezed,
     Object? reminderTimes = null,
     Object? isOnReminder = null,
@@ -308,10 +309,10 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res>
     Object? accountType = freezed,
   }) {
     return _then(_$InitialSettingStateImpl(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value._pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType>,
+      pillSheetTypeInfos: null == pillSheetTypeInfos
+          ? _value._pillSheetTypeInfos
+          : pillSheetTypeInfos // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetTypeInfo>,
       todayPillNumber: freezed == todayPillNumber
           ? _value.todayPillNumber
           : todayPillNumber // ignore: cast_nullable_to_non_nullable
@@ -344,24 +345,25 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res>
 
 class _$InitialSettingStateImpl extends _InitialSettingState {
   const _$InitialSettingStateImpl(
-      {final List<PillSheetType> pillSheetTypes = const [],
+      {final List<PillSheetTypeInfo> pillSheetTypeInfos = const [],
       this.todayPillNumber,
       required final List<ReminderTime> reminderTimes,
       this.isOnReminder = true,
       this.isLoading = false,
       this.settingIsExist = false,
       this.accountType})
-      : _pillSheetTypes = pillSheetTypes,
+      : _pillSheetTypeInfos = pillSheetTypeInfos,
         _reminderTimes = reminderTimes,
         super._();
 
-  final List<PillSheetType> _pillSheetTypes;
+  final List<PillSheetTypeInfo> _pillSheetTypeInfos;
   @override
   @JsonKey()
-  List<PillSheetType> get pillSheetTypes {
-    if (_pillSheetTypes is EqualUnmodifiableListView) return _pillSheetTypes;
+  List<PillSheetTypeInfo> get pillSheetTypeInfos {
+    if (_pillSheetTypeInfos is EqualUnmodifiableListView)
+      return _pillSheetTypeInfos;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_pillSheetTypes);
+    return EqualUnmodifiableListView(_pillSheetTypeInfos);
   }
 
   @override
@@ -388,7 +390,7 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillSheetTypeInfos: $pillSheetTypeInfos, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType)';
   }
 
   @override
@@ -397,7 +399,7 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
         (other.runtimeType == runtimeType &&
             other is _$InitialSettingStateImpl &&
             const DeepCollectionEquality()
-                .equals(other._pillSheetTypes, _pillSheetTypes) &&
+                .equals(other._pillSheetTypeInfos, _pillSheetTypeInfos) &&
             (identical(other.todayPillNumber, todayPillNumber) ||
                 other.todayPillNumber == todayPillNumber) &&
             const DeepCollectionEquality()
@@ -415,7 +417,7 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_pillSheetTypes),
+      const DeepCollectionEquality().hash(_pillSheetTypeInfos),
       todayPillNumber,
       const DeepCollectionEquality().hash(_reminderTimes),
       isOnReminder,
@@ -433,7 +435,7 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
 
 abstract class _InitialSettingState extends InitialSettingState {
   const factory _InitialSettingState(
-      {final List<PillSheetType> pillSheetTypes,
+      {final List<PillSheetTypeInfo> pillSheetTypeInfos,
       final InitialSettingTodayPillNumber? todayPillNumber,
       required final List<ReminderTime> reminderTimes,
       final bool isOnReminder,
@@ -443,7 +445,7 @@ abstract class _InitialSettingState extends InitialSettingState {
   const _InitialSettingState._() : super._();
 
   @override
-  List<PillSheetType> get pillSheetTypes;
+  List<PillSheetTypeInfo> get pillSheetTypeInfos;
   @override
   InitialSettingTodayPillNumber? get todayPillNumber;
   @override

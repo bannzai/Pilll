@@ -26,7 +26,7 @@ List<DateRange> scheduledMenstruationDateRanges(PillSheetGroup? pillSheetGroup, 
 
   final scheduledMenstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
   List<DateRange> dateRanges = scheduledMenstruationDateRanges;
-  final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypes.fold(0, (p, e) => p + e.typeInfo.totalCount);
+  final pillSheetGroupTotalPillCount = pillSheetGroup.pillSheetTypeInfos.fold(0, (p, e) => p + e.typeInfo.totalCount);
   for (var i = 1; i <= maxDateRangeCount; i++) {
     final offset = pillSheetGroupTotalPillCount * i;
     final dateRangesWithOffset = scheduledMenstruationDateRanges.map((e) => DateRange(e.begin.addDays(offset), e.end.addDays(offset))).toList();
@@ -59,7 +59,7 @@ List<DateRange> nextPillSheetDateRanges(PillSheetGroup pillSheetGroup, [int maxD
   }
   assert(maxDateRangeCount > 0);
 
-  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.pillSheetType.totalCount).reduce((value, element) => value + element);
+  final totalPillCount = pillSheetGroup.pillSheets.map((e) => e.typeInfo.totalCount).reduce((value, element) => value + element);
   var dateRanges = <DateRange>[];
   for (int i = 0; i < maxDateRangeCount; i++) {
     final offset = totalPillCount * i;

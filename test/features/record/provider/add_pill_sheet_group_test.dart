@@ -76,7 +76,7 @@ void main() {
         batchSetSetting(
           batch,
           setting.copyWith(
-            pillSheetTypes: [
+            pillSheetTypeInfos: [
               PillSheetType.pillsheet_28_0,
             ],
           ),
@@ -93,7 +93,7 @@ void main() {
       await addPillSheetGroup.call(
         setting: setting,
         pillSheetGroup: null,
-        pillSheetTypes: [PillSheetType.pillsheet_28_0],
+        pillSheetTypeInfos: [PillSheetType.pillsheet_28_0.typeInfo],
         displayNumberSetting: null,
       );
     });
@@ -163,7 +163,7 @@ void main() {
         batchSetSetting(
           batch,
           setting.copyWith(
-            pillSheetTypes: [
+            pillSheetTypeInfos: [
               PillSheetType.pillsheet_28_0,
               PillSheetType.pillsheet_21,
             ],
@@ -181,7 +181,10 @@ void main() {
       await addPillSheetGroup.call(
         setting: setting,
         pillSheetGroup: null,
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
+        pillSheetTypeInfos: [
+          PillSheetType.pillsheet_28_0.typeInfo,
+          PillSheetType.pillsheet_21.typeInfo,
+        ],
         displayNumberSetting: null,
       );
     });

@@ -25,13 +25,13 @@ class NotificationInRestDuration extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
+      title: Text("${pillSheet.typeInfo.notTakenWord}期間の通知",
           style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+      subtitle: Text("通知オフの場合は、${pillSheet.typeInfo.notTakenWord}期間の服用記録も自動で付けられます",
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
@@ -50,7 +50,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
           SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(
-              "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
+              "${pillSheet.typeInfo.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
             ),
           ),
         );

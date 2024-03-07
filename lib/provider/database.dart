@@ -31,6 +31,7 @@ abstract class _CollectionPath {
   static String diaries(String userID) => "$users/$userID/diaries";
   static String pillSheetGroups(String userID) => "$users/$userID/pill_sheet_groups";
   static String userPrivates(String userID) => "$users/$userID/privates";
+  static String userPillSheetTypes(String userID) => "$users/$userID/pill_sheet_types";
   static String menstruations(String userID) => "$users/$userID/menstruations";
   static String pillSheetModifiedHistories(String userID) => "$users/$userID/pill_sheet_modified_histories";
   static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";

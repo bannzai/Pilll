@@ -24,7 +24,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final pillSheetTypes = useState(setting.pillSheetEnumTypes);
+    final pillSheetTypeInfos = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
 
     return Scaffold(
@@ -46,21 +46,21 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           child: Stack(
             children: [
               SettingPillSheetGroup(
-                pillSheetTypes: pillSheetTypes.value,
+                pillSheetTypeInfos: pillSheetTypeInfos.value,
                 onAdd: (pillSheetType) {
                   analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
-                  pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
+                  pillSheetTypeInfos.value = [...pillSheetTypeInfos.value, pillSheetType];
                 },
                 onChange: (index, pillSheetType) {
                   analytics
                       .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
-                  final copied = [...pillSheetTypes.value];
+                  final copied = [...pillSheetTypeInfos.value];
                   copied[index] = pillSheetType;
-                  pillSheetTypes.value = copied;
+                  pillSheetTypeInfos.value = copied;
                 },
                 onDelete: (index) {
                   analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
-                  pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
+                  pillSheetTypeInfos.value = [...pillSheetTypeInfos.value]..removeAt(index);
                 },
               ),
               Align(
@@ -84,7 +84,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                           width: 180,
                           child: PrimaryButton(
                             text: "追加",
-                            onPressed: pillSheetTypes.value.isEmpty
+                            onPressed: pillSheetTypeInfos.value.isEmpty
                                 ? null
                                 : () async {
                                     analytics.logEvent(name: "pressed_add_pill_sheet_group");
@@ -92,7 +92,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                     await addPillSheetGroup.call(
                                       setting: setting,
                                       pillSheetGroup: pillSheetGroup,
-                                      pillSheetTypes: pillSheetTypes.value,
+                                      pillSheetTypeInfos: pillSheetTypeInfos.value,
                                       displayNumberSetting: displayNumberSetting.value,
                                     );
                                     await registerReminderLocalNotification();
