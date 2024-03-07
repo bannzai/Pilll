@@ -476,7 +476,6 @@ PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
 mixin _$PillSheet {
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
-  @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -510,7 +509,7 @@ abstract class $PillSheetCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? id,
-      @JsonKey() PillSheetTypeInfo typeInfo,
+      PillSheetTypeInfo typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -610,7 +609,7 @@ abstract class _$$PillSheetImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? id,
-      @JsonKey() PillSheetTypeInfo typeInfo,
+      PillSheetTypeInfo typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -697,7 +696,7 @@ class __$$PillSheetImplCopyWithImpl<$Res>
 class _$PillSheetImpl extends _PillSheet {
   const _$PillSheetImpl(
       {@JsonKey(includeIfNull: false) required this.id,
-      @JsonKey() required this.typeInfo,
+      required this.typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -726,7 +725,6 @@ class _$PillSheetImpl extends _PillSheet {
   @JsonKey(includeIfNull: false)
   final String? id;
   @override
-  @JsonKey()
   final PillSheetTypeInfo typeInfo;
   @override
   @JsonKey(
@@ -817,7 +815,7 @@ class _$PillSheetImpl extends _PillSheet {
 abstract class _PillSheet extends PillSheet {
   const factory _PillSheet(
       {@JsonKey(includeIfNull: false) required final String? id,
-      @JsonKey() required final PillSheetTypeInfo typeInfo,
+      required final PillSheetTypeInfo typeInfo,
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -845,7 +843,6 @@ abstract class _PillSheet extends PillSheet {
   @JsonKey(includeIfNull: false)
   String? get id;
   @override
-  @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
   @JsonKey(

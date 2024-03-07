@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -13,6 +14,11 @@ class UserPillSheetType with _$UserPillSheetType {
     required String name,
     required int totalCount,
     required int dosingPeriod,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime createdDateTime,
   }) = _UserPillSheetType;
   const UserPillSheetType._();
 
