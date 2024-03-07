@@ -59,8 +59,6 @@ class RestDuration with _$RestDuration {
 class PillSheet with _$PillSheet {
   String? get documentID => id;
 
-  PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
-
   const PillSheet._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
