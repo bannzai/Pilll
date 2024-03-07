@@ -33,14 +33,14 @@ void main() {
       final widget = PillSheetViewLayout(
         weekdayLines: weekdayLines,
         pillMarkLines: List.generate(
-          pillSheetType.numberOfLineInPillSheet,
+          pillSheetType.typeInfo.numberOfLineInPillSheet,
           (index) => _TestWidget(),
         ),
       );
       await tester.pumpWidget(
         MaterialApp(
           home: SizedBox(
-            height: PillSheetViewLayout.calcHeight(pillSheetType.numberOfLineInPillSheet, false),
+            height: PillSheetViewLayout.calcHeight(pillSheetType.typeInfo.numberOfLineInPillSheet, false),
             child: widget,
           ),
         ),
@@ -58,14 +58,14 @@ void main() {
     final widget = PillSheetViewLayout(
       weekdayLines: weekdayLines,
       pillMarkLines: List.generate(
-        pillSheetType.numberOfLineInPillSheet,
+        pillSheetType.typeInfo.numberOfLineInPillSheet,
         (index) => _TestWidget(),
       ),
     );
     await tester.pumpWidget(
       MaterialApp(
         home: SizedBox(
-          height: PillSheetViewLayout.calcHeight(pillSheetType.numberOfLineInPillSheet, false),
+          height: PillSheetViewLayout.calcHeight(pillSheetType.typeInfo.numberOfLineInPillSheet, false),
           child: widget,
         ),
       ),
