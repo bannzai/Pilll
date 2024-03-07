@@ -48,13 +48,13 @@ class InitialSettingState with _$InitialSettingState {
 
   Future<Setting> buildSetting() async {
     const menstruationDuration = 4;
-    final maxPillCount = pillSheetTypes.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
+    final maxPillCount = pillSheetTypeInfos.map((e) => e.totalCount).fold(0, (previousValue, element) => previousValue + element);
     final pillNumberForFromMenstruation = max(0, maxPillCount - menstruationDuration);
 
     final setting = Setting(
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
       durationMenstruation: menstruationDuration,
-      pillSheetTypes: pillSheetTypes,
+      pillSheetTypeInfos: pillSheetTypeInfos,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       timezoneDatabaseName: null,
@@ -71,16 +71,16 @@ class InitialSettingState with _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetTypeInfo> pillSheetTypeInfos,
   }) {
-    final pillSheetType = pillSheetTypes[pageIndex];
+    final pillSheetType = pillSheetTypeInfos[pageIndex];
     final beginDate = _beginingDate(
       pageIndex: pageIndex,
       todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
+      pillSheetTypeInfos: pillSheetTypeInfos,
     );
     final lastTakenDate = _lastTakenDate(
       pageIndex: pageIndex,
       todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
+      pillSheetTypeInfos: pillSheetTypeInfos,
     );
 
     return PillSheet(
@@ -101,7 +101,7 @@ class InitialSettingState with _$InitialSettingState {
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
       // Or current pageIndex == todayPillNumber.pageIndex
-      final passedTotalCountElement = pillSheetTypes.sublist(0, todayPillNumber.pageIndex - pageIndex).map((e) => e.totalCount);
+      final passedTotalCountElement = pillSheetTypeInfos.sublist(0, todayPillNumber.pageIndex - pageIndex).map((e) => e.totalCount);
       final int passedTotalCount;
       if (passedTotalCountElement.isEmpty) {
         passedTotalCount = 0;
@@ -115,9 +115,9 @@ class InitialSettingState with _$InitialSettingState {
       final beforePillSheetBeginingDate = _beginingDate(
         pageIndex: pageIndex - 1,
         todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
+        pillSheetTypeInfos: pillSheetTypeInfos,
       );
-      final beforePillSheetType = pillSheetTypes[pageIndex - 1];
+      final beforePillSheetType = pillSheetTypeInfos[pageIndex - 1];
       return beforePillSheetBeginingDate.addDays(beforePillSheetType.totalCount);
     }
   }
@@ -130,7 +130,7 @@ class InitialSettingState with _$InitialSettingState {
     if (pageIndex == 0 && todayPillNumber.pageIndex == 0 && todayPillNumber.pillNumberInPillSheet == 1) {
       return null;
     }
-    final pillSheetType = pillSheetTypes[pageIndex];
+    final pillSheetType = pillSheetTypeInfos[pageIndex];
     if (todayPillNumber.pageIndex < pageIndex) {
       // Right side PillSheet
       return null;
@@ -139,14 +139,14 @@ class InitialSettingState with _$InitialSettingState {
       return _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
+        pillSheetTypeInfos: pillSheetTypeInfos,
       ).addDays(pillSheetType.totalCount - 1);
     } else {
       // Current PillSheet
       return _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
+        pillSheetTypeInfos: pillSheetTypeInfos,
       ).addDays(todayPillNumber.pillNumberInPillSheet - 2);
     }
   }

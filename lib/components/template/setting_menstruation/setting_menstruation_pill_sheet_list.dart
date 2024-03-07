@@ -30,7 +30,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
         Container(
           constraints: BoxConstraints(
             maxHeight: PillSheetViewLayout.calcHeight(
-              PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet,
+              PillSheetViewLayout.mostLargePillSheetType(pillSheetTypeInfos).numberOfLineInPillSheet,
               true,
             ),
           ),
@@ -38,7 +38,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
             clipBehavior: Clip.none,
             controller: pageController,
             scrollDirection: Axis.horizontal,
-            children: List.generate(pillSheetTypes.length, (pageIndex) {
+            children: List.generate(pillSheetTypeInfos.length, (pageIndex) {
               return Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -47,7 +47,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
                       appearanceMode: appearanceMode,
-                      pillSheetTypes: pillSheetTypes,
+                      pillSheetTypeInfos: pillSheetTypeInfos,
                       selectedPillNumberIntoPillSheet: selectedPillNumber(pageIndex),
                       markSelected: (pageIndex, number) => markSelected(pageIndex, number),
                     ),
@@ -58,11 +58,11 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
             }).toList(),
           ),
         ),
-        if (pillSheetTypes.length > 1) ...[
+        if (pillSheetTypeInfos.length > 1) ...[
           const SizedBox(height: 16),
           DotsIndicator(
             controller: pageController,
-            itemCount: pillSheetTypes.length,
+            itemCount: pillSheetTypeInfos.length,
             onDotTapped: (page) {
               pageController.animateToPage(
                 page,

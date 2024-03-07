@@ -64,7 +64,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 56),
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
-                        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                        pillSheetTypeInfos: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                         selectedTodayPillNumberIntoPillSheet: (pageIndex) {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
@@ -119,8 +119,9 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) {
-    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
+    final pillSheetTypeInfos = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final passedTotalCount =
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheetTypeInfos, toIndex: activePillSheet.groupIndex);
     if (passedTotalCount >= activePillSheet.todayPillNumber) {
       return activePillSheet.todayPillNumber;
     }

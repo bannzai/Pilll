@@ -73,7 +73,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
+        pillSheetTypeInfos: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
 
     var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activePillSheet.todayPillNumber;
 
@@ -106,7 +106,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
+        pillSheetTypeInfos: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
 
     var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activePillSheet.lastTakenPillNumber;
 
@@ -141,7 +141,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   int get estimatedEndPillNumber {
     var estimatedEndPillNumber =
-        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
@@ -162,7 +162,7 @@ class PillSheetGroup with _$PillSheetGroup {
     return estimatedEndPillNumber;
   }
 
-  List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
+  List<PillSheetType> get pillSheetTypeInfos => pillSheets.map((e) => e.pillSheetType).toList();
 
   // 日付以外を返す
   String displayPillNumberOnlyNumber({
@@ -204,7 +204,7 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pillNumberInPillSheet,
   }) {
     final offset = summarizedPillCountWithPillSheetTypesToIndex(
-      pillSheetTypes: pillSheetTypes,
+      pillSheetTypeInfos: pillSheetTypeInfos,
       toIndex: pageIndex,
     );
     var number = offset + pillNumberInPillSheet;
@@ -279,7 +279,7 @@ class PillSheetGroup with _$PillSheetGroup {
         final right = left.addDays(setting.durationMenstruation - 1);
         menstruationDateRanges.add(DateRange(left, right));
       } else {
-        final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
+        final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheetTypeInfos, toIndex: pillSheet.groupIndex);
         final begin = offset + 1;
         final end = begin + (pillSheet.typeInfo.totalCount - 1);
 

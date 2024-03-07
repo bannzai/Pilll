@@ -18,14 +18,14 @@ class PillSheetTypeAddButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        if (pillSheetTypes.isEmpty) {
+        if (pillSheetTypeInfos.isEmpty) {
           showSettingPillSheetGroupSelectPillSheetTypePage(
             context: context,
             pillSheetType: null,
             onSelect: (pillSheetType) => onAdd(pillSheetType),
           );
         } else {
-          onAdd(pillSheetTypes.last);
+          onAdd(pillSheetTypeInfos.last);
         }
       },
       child: Container(

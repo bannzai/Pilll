@@ -21,19 +21,19 @@ class SettingPillSheetGroup extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        for (var i = 0; i < pillSheetTypes.length; i++) ...[
+        for (var i = 0; i < pillSheetTypeInfos.length; i++) ...[
           const SizedBox(height: 16),
           SettingPillSheetGroupPillSheetTypeSelectRow(
             index: i,
-            pillSheetType: pillSheetTypes[i],
+            pillSheetType: pillSheetTypeInfos[i],
             onSelect: onChange,
             onDelete: onDelete,
           ),
         ],
-        if (pillSheetTypes.length < 7) ...[
+        if (pillSheetTypeInfos.length < 7) ...[
           const SizedBox(height: 24),
           PillSheetTypeAddButton(
-            pillSheetTypes: pillSheetTypes,
+            pillSheetTypeInfos: pillSheetTypeInfos,
             onAdd: (pillSheetType) => onAdd(pillSheetType),
           ),
         ],

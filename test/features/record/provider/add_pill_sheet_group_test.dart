@@ -67,7 +67,7 @@ void main() {
         isOnReminder: true,
         timezoneDatabaseName: null,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypes: [
+        pillSheetTypeInfos: [
           PillSheetType.pillsheet_24_0,
         ],
       );
@@ -76,7 +76,7 @@ void main() {
         batchSetSetting(
           batch,
           setting.copyWith(
-            pillSheetTypes: [
+            pillSheetTypeInfos: [
               PillSheetType.pillsheet_28_0,
             ],
           ),
@@ -93,7 +93,7 @@ void main() {
       await addPillSheetGroup.call(
         setting: setting,
         pillSheetGroup: null,
-        pillSheetTypes: [PillSheetType.pillsheet_28_0],
+        pillSheetTypeInfos: [PillSheetType.pillsheet_28_0],
         displayNumberSetting: null,
       );
     });
@@ -156,14 +156,14 @@ void main() {
         isOnReminder: true,
         timezoneDatabaseName: null,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_24_0],
+        pillSheetTypeInfos: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_24_0],
       );
       final batchSetSetting = MockBatchSetSetting();
       when(
         batchSetSetting(
           batch,
           setting.copyWith(
-            pillSheetTypes: [
+            pillSheetTypeInfos: [
               PillSheetType.pillsheet_28_0,
               PillSheetType.pillsheet_21,
             ],
@@ -181,7 +181,7 @@ void main() {
       await addPillSheetGroup.call(
         setting: setting,
         pillSheetGroup: null,
-        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
+        pillSheetTypeInfos: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         displayNumberSetting: null,
       );
     });

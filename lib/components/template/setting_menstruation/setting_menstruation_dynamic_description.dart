@@ -139,7 +139,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
   }
 
   void _showFromModalSheet(BuildContext context) {
-    final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final maximumCount = pillSheetTypeInfos.map((e) => e.totalCount).reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
       context: context,

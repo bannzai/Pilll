@@ -38,9 +38,9 @@ class ChangePillNumber {
   }) async {
     final batch = batchFactory.batch();
 
-    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final pillSheetTypeInfos = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
     final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
-          pillSheetTypes: pillSheetTypes,
+          pillSheetTypeInfos: pillSheetTypeInfos,
           toIndex: pillSheetPageIndex,
         ) +
         pillNumberInPillSheet;
@@ -54,7 +54,7 @@ class ChangePillNumber {
       if (index == 0) {
         beginDate = firstPilSheetBeginDate;
       } else {
-        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: index);
+        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: pillSheetTypeInfos, toIndex: index);
         beginDate = firstPilSheetBeginDate.addDays(passedTotalCount);
       }
 

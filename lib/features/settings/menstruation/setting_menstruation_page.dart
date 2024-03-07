@@ -19,10 +19,10 @@ class SettingMenstruationPage extends HookConsumerWidget {
     return SettingMenstruationPageTemplate(
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
-        pillSheetTypes: setting.pillSheetEnumTypes,
+        pillSheetTypeInfos: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,
         selectedPillNumber: (pageIndex) {
-          final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
+          final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: setting.pillSheetEnumTypes, toIndex: pageIndex);
           if (passedTotalCount >= setting.pillNumberForFromMenstruation) {
             return setting.pillNumberForFromMenstruation;
           }
@@ -37,13 +37,13 @@ class SettingMenstruationPage extends HookConsumerWidget {
             "number": fromMenstruation,
             "page": pageIndex,
           });
-          final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
+          final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypeInfos: setting.pillSheetEnumTypes, toIndex: pageIndex);
           final updated = setting.copyWith(pillNumberForFromMenstruation: fromMenstruation + offset);
           await setSetting(updated);
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
-        pillSheetTypes: setting.pillSheetEnumTypes,
+        pillSheetTypeInfos: setting.pillSheetEnumTypes,
         fromMenstruation: setting.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (serializedPillNumberIntoGroup) async {
           analytics.logEvent(name: "from_menstruation_initial_setting", parameters: {"number": serializedPillNumberIntoGroup});
