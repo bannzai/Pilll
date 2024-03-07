@@ -36,7 +36,7 @@ void main() {
 
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
         const setting = Setting(
-          pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+          pillSheetTypes: [PillSheetType.pillsheet_21],
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
@@ -79,7 +79,7 @@ void main() {
 
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
         const setting = Setting(
-          pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+          pillSheetTypes: [PillSheetType.pillsheet_21],
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
@@ -129,7 +129,7 @@ void main() {
           createdAt: now(),
         );
         const setting = Setting(
-          pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+          pillSheetTypes: [PillSheetType.pillsheet_21],
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],
@@ -171,7 +171,7 @@ void main() {
           createdAt: now(),
         );
         const setting = Setting(
-          pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+          pillSheetTypes: [PillSheetType.pillsheet_21],
           pillNumberForFromMenstruation: 22,
           durationMenstruation: 3,
           reminderTimes: [],

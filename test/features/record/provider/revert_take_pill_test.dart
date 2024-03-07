@@ -79,7 +79,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
         );
@@ -151,7 +151,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
         );
@@ -235,7 +235,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
         );
@@ -316,7 +316,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
           ],
         );
@@ -402,7 +402,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_21,
           ],
@@ -487,7 +487,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_21,
           ],
@@ -575,7 +575,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
           reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-          pillSheetTypeInfos: [
+          pillSheetTypes: [
             PillSheetType.pillsheet_28_0,
             PillSheetType.pillsheet_21,
           ],

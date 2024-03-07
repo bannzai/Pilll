@@ -45,7 +45,7 @@ class Setting with _$Setting {
   const Setting._();
   @JsonSerializable(explicitToJson: true)
   const factory Setting({
-    @Default([]) List<PillSheetType?> pillSheetTypeInfos,
+    @Default([]) List<PillSheetType?> pillSheetTypes,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,

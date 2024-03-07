@@ -299,7 +299,7 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 21, minute: 0)],
-        pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         timezoneDatabaseName: null,
       );
       final batchSetSetting = MockBatchSetSetting();
@@ -387,7 +387,7 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypeInfos: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         timezoneDatabaseName: null,
       );
       final batchSetSetting = MockBatchSetSetting();
@@ -422,7 +422,7 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypeInfos: [PillSheetType.pillsheet_24_rest_4],
+        pillSheetTypes: [PillSheetType.pillsheet_24_rest_4],
         timezoneDatabaseName: null,
       );
 

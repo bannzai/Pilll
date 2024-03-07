@@ -28,7 +28,7 @@ void main() {
         durationMenstruation: 2,
         isOnReminder: false,
         timezoneDatabaseName: null,
-        pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [
           ReminderTime(hour: 10, minute: 0),
         ],
@@ -56,7 +56,7 @@ void main() {
         durationMenstruation: 2,
         isOnReminder: false,
         timezoneDatabaseName: null,
-        pillSheetTypeInfos: [PillSheetType.pillsheet_21],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [ReminderTime(hour: 10, minute: 0), ReminderTime(hour: 11, minute: 0), ReminderTime(hour: 12, minute: 0)],
       );
 

@@ -67,7 +67,7 @@ void main() {
         isOnReminder: true,
         timezoneDatabaseName: null,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypeInfos: [
+        pillSheetTypes: [
           PillSheetType.pillsheet_24_0,
         ],
       );
@@ -156,7 +156,7 @@ void main() {
         isOnReminder: true,
         timezoneDatabaseName: null,
         reminderTimes: [ReminderTime(hour: 21, minute: 20), ReminderTime(hour: 22, minute: 0)],
-        pillSheetTypeInfos: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_24_0],
+        pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_24_0],
       );
       final batchSetSetting = MockBatchSetSetting();
       when(
@@ -164,8 +164,8 @@ void main() {
           batch,
           setting.copyWith(
             pillSheetTypeInfos: [
-              PillSheetType.pillsheet_28_0.typeInfo,
-              PillSheetType.pillsheet_21.typeInfo,
+              PillSheetType.pillsheet_28_0,
+              PillSheetType.pillsheet_21,
             ],
           ),
         ),
