@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
@@ -17,7 +18,7 @@ class SettingPillSheetView extends StatelessWidget {
   final int? selectedPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
-  PillSheetType get pillSheetType => pillSheetTypes[pageIndex];
+  PillSheetTypeInfo get pillSheetTypeInfo => pillSheetTypeInfos[pageIndex];
 
   const SettingPillSheetView({
     Key? key,
@@ -33,7 +34,7 @@ class SettingPillSheetView extends StatelessWidget {
     return PillSheetViewLayout(
       weekdayLines: null,
       pillMarkLines: List.generate(
-        pillSheetType.numberOfLineInPillSheet,
+        pillSheetTypeInfo.numberOfLineInPillSheet,
         (index) {
           return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
         },

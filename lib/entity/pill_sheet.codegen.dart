@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
@@ -36,6 +37,8 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
   bool get isNotExistsNotTakenDuration {
     return totalCount == dosingPeriod;
   }
+
+  int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
 }
 
 @freezed

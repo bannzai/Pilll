@@ -159,8 +159,6 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "休薬";
     }
   }
-
-  int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
 }
 
 int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetTypeInfo> pillSheetTypeInfos, required int toIndex}) {
@@ -168,7 +166,7 @@ int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetTypeInf
     return 0;
   }
 
-  final passed = pillSheetTypes.sublist(0, toIndex);
+  final passed = pillSheetTypeInfos.sublist(0, toIndex);
   final passedTotalCount = passed.map((e) => e.totalCount).reduce((value, element) => value + element);
   return passedTotalCount;
 }
