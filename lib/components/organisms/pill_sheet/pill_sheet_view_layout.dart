@@ -1,4 +1,5 @@
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,7 +21,7 @@ class PillSheetViewLayout extends StatelessWidget {
     return isHideWeekdayLine ? pillMarkListHeight : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  static PillSheetType mostLargePillSheetType(List<PillSheetTypeInfo> pillSheetTypeInfos) {
+  static PillSheetTypeInfo mostLargePillSheetType(List<PillSheetTypeInfo> pillSheetTypeInfos) {
     final copied = [...pillSheetTypeInfos];
     copied.sort((a, b) => b.totalCount.compareTo(a.totalCount));
     return copied.first;
