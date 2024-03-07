@@ -56,7 +56,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
         firstWeekday: WeekdayFunctions.weekdayFromDate(weekdayDate),
       ),
       pillMarkLines: List.generate(
-        pillSheet.pillSheetType.numberOfLineInPillSheet,
+        pillSheet.typeInfo.numberOfLineInPillSheet,
         (index) {
           return PillMarkLine(
             pillMarks: _pillMarks(
@@ -83,8 +83,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
-    if (lineNumber * Weekday.values.length > pillSheet.pillSheetType.totalCount) {
-      int diff = pillSheet.pillSheetType.totalCount - lineIndex * Weekday.values.length;
+    if (lineNumber * Weekday.values.length > pillSheet.typeInfo.totalCount) {
+      int diff = pillSheet.typeInfo.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
 
@@ -233,7 +233,7 @@ PillMarkType pillMarkFor({
   required PillSheet pillSheet,
 }) {
   if (pillNumberInPillSheet > pillSheet.typeInfo.dosingPeriod) {
-    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
+    return (pillSheet.typeInfo == PillSheetType.pillsheet_21 || pillSheet.typeInfo == PillSheetType.pillsheet_24_rest_4)
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
