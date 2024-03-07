@@ -524,8 +524,8 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
         returnValue: <_i17.PillSheetType>[],
       ) as List<_i17.PillSheetType>);
   @override
-  List<_i17.PillSheetType?> get pillSheetTypeInfos => (super.noSuchMethod(
-        Invocation.getter(#pillSheetTypeInfos),
+  List<_i17.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
+        Invocation.getter(#pillSheetTypes),
         returnValue: <_i17.PillSheetType?>[],
       ) as List<_i17.PillSheetType?>);
   @override
