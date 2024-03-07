@@ -32,6 +32,10 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) => _$PillSheetTypeInfoFromJson(json);
 
   bool get isBuiltin => pillSheetTypeReferencePath != null;
+
+  bool get isNotExistsNotTakenDuration {
+    return totalCount == dosingPeriod;
+  }
 }
 
 @freezed
@@ -141,7 +145,7 @@ class PillSheet with _$PillSheet {
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration => !typeInfo.isNotExistsNotTakenDuration;
   bool get isActive => isActiveFor(now());
 
   bool isActiveFor(DateTime date) {
@@ -149,7 +153,7 @@ class PillSheet with _$PillSheet {
   }
 
   DateTime get estimatedEndTakenDate => beginingDate
-      .addDays(pillSheetType.totalCount - 1)
+      .addDays(typeInfo.totalCount - 1)
       .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
       .date()
       .add(const Duration(days: 1))
