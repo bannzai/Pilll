@@ -109,7 +109,8 @@ class PillSheet with _$PillSheet {
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
 
-  PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType? get pillSheetType =>
+      typeInfo.pillSheetTypeReferencePath != null ? PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath!) : null;
 
   int get todayPillNumber {
     return pillNumberFor(targetDate: today());
