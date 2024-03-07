@@ -56,8 +56,8 @@ void main() {
         pageIndex: 1,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
         pillSheetTypeInfos: [
-          PillSheetType.pillsheet_21,
-          PillSheetType.pillsheet_24_0,
+          PillSheetType.pillsheet_21.typeInfo,
+          PillSheetType.pillsheet_24_0.typeInfo,
         ],
       );
 
@@ -87,8 +87,8 @@ void main() {
         pageIndex: 0,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 1, pillNumberInPillSheet: 1),
         pillSheetTypeInfos: [
-          PillSheetType.pillsheet_21,
-          PillSheetType.pillsheet_24_0,
+          PillSheetType.pillsheet_21.typeInfo,
+          PillSheetType.pillsheet_24_0.typeInfo,
         ],
       );
 
