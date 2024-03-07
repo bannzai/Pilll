@@ -22,13 +22,16 @@ class PillSheetFirestoreKey {
 class PillSheetTypeInfo with _$PillSheetTypeInfo {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetTypeInfo({
-    required String pillSheetTypeReferencePath,
+    required String? pillSheetTypeReferencePath,
     required String name,
     required int totalCount,
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
+  PillSheetTypeInfo._();
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) => _$PillSheetTypeInfoFromJson(json);
+
+  bool get isBuiltin => pillSheetTypeReferencePath != null;
 }
 
 @freezed
