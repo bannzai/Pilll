@@ -1,4 +1,3 @@
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -46,7 +45,7 @@ class Setting with _$Setting {
   const Setting._();
   @JsonSerializable(explicitToJson: true)
   const factory Setting({
-    @Default([]) List<PillSheetTypeInfo?> pillSheetTypeInfos,
+    @Default([]) List<PillSheetType?> pillSheetTypeInfos,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,

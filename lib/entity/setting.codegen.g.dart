@@ -21,9 +21,7 @@ Map<String, dynamic> _$$ReminderTimeImplToJson(_$ReminderTimeImpl instance) =>
 _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
     _$SettingImpl(
       pillSheetTypeInfos: (json['pillSheetTypeInfos'] as List<dynamic>?)
-              ?.map((e) => e == null
-                  ? null
-                  : PillSheetTypeInfo.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => $enumDecodeNullable(_$PillSheetTypeEnumMap, e))
               .toList() ??
           const [],
       pillNumberForFromMenstruation:
@@ -53,8 +51,9 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) =>
     <String, dynamic>{
-      'pillSheetTypeInfos':
-          instance.pillSheetTypeInfos.map((e) => e?.toJson()).toList(),
+      'pillSheetTypeInfos': instance.pillSheetTypeInfos
+          .map((e) => _$PillSheetTypeEnumMap[e])
+          .toList(),
       'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
       'durationMenstruation': instance.durationMenstruation,
       'reminderTimes': instance.reminderTimes.map((e) => e.toJson()).toList(),
@@ -67,6 +66,16 @@ Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) =>
           instance.reminderNotificationCustomization.toJson(),
       'timezoneDatabaseName': instance.timezoneDatabaseName,
     };
+
+const _$PillSheetTypeEnumMap = {
+  PillSheetType.pillsheet_21: 'pillsheet_21',
+  PillSheetType.pillsheet_28_4: 'pillsheet_28_4',
+  PillSheetType.pillsheet_28_7: 'pillsheet_28_7',
+  PillSheetType.pillsheet_28_0: 'pillsheet_28_0',
+  PillSheetType.pillsheet_24_0: 'pillsheet_24_0',
+  PillSheetType.pillsheet_21_0: 'pillsheet_21_0',
+  PillSheetType.pillsheet_24_rest_4: 'pillsheet_24_rest_4',
+};
 
 const _$PillSheetAppearanceModeEnumMap = {
   PillSheetAppearanceMode.number: 'number',
