@@ -48,8 +48,8 @@ class SettingPillSheetView extends StatelessWidget {
   }) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
-    if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
-      int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
+    if (lineNumber * Weekday.values.length > pillSheetTypeInfo.totalCount) {
+      int diff = pillSheetTypeInfo.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
     return List.generate(Weekday.values.length, (index) {

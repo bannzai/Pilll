@@ -140,7 +140,7 @@ class InitialSettingState with _$InitialSettingState {
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypeInfos: pillSheetTypeInfos,
-      ).addDays(pillSheetType.totalCount - 1);
+      ).addDays(pillSheetTypeInfo.totalCount - 1);
     } else {
       // Current PillSheet
       return _beginingDate(
