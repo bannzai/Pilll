@@ -186,7 +186,8 @@ Setting _$SettingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Setting {
-  List<PillSheetType?> get pillSheetTypes => throw _privateConstructorUsedError;
+  List<PillSheetType?> get pillSheetTypeInfos =>
+      throw _privateConstructorUsedError;
   int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
   int get durationMenstruation => throw _privateConstructorUsedError;
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
@@ -210,7 +211,7 @@ abstract class $SettingCopyWith<$Res> {
       _$SettingCopyWithImpl<$Res, Setting>;
   @useResult
   $Res call(
-      {List<PillSheetType?> pillSheetTypes,
+      {List<PillSheetType?> pillSheetTypeInfos,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -238,7 +239,7 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypes = null,
+    Object? pillSheetTypeInfos = null,
     Object? pillNumberForFromMenstruation = null,
     Object? durationMenstruation = null,
     Object? reminderTimes = null,
@@ -250,9 +251,9 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting>
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_value.copyWith(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value.pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+      pillSheetTypeInfos: null == pillSheetTypeInfos
+          ? _value.pillSheetTypeInfos
+          : pillSheetTypeInfos // ignore: cast_nullable_to_non_nullable
               as List<PillSheetType?>,
       pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
           ? _value.pillNumberForFromMenstruation
@@ -314,7 +315,7 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {List<PillSheetType?> pillSheetTypes,
+      {List<PillSheetType?> pillSheetTypeInfos,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -341,7 +342,7 @@ class __$$SettingImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? pillSheetTypes = null,
+    Object? pillSheetTypeInfos = null,
     Object? pillNumberForFromMenstruation = null,
     Object? durationMenstruation = null,
     Object? reminderTimes = null,
@@ -353,9 +354,9 @@ class __$$SettingImplCopyWithImpl<$Res>
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_$SettingImpl(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value._pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+      pillSheetTypeInfos: null == pillSheetTypeInfos
+          ? _value._pillSheetTypeInfos
+          : pillSheetTypeInfos // ignore: cast_nullable_to_non_nullable
               as List<PillSheetType?>,
       pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
           ? _value.pillNumberForFromMenstruation
@@ -403,7 +404,7 @@ class __$$SettingImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   const _$SettingImpl(
-      {final List<PillSheetType?> pillSheetTypes = const [],
+      {final List<PillSheetType?> pillSheetTypeInfos = const [],
       required this.pillNumberForFromMenstruation,
       required this.durationMenstruation,
       final List<ReminderTime> reminderTimes = const [],
@@ -414,20 +415,21 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       this.reminderNotificationCustomization =
           const ReminderNotificationCustomization(),
       required this.timezoneDatabaseName})
-      : _pillSheetTypes = pillSheetTypes,
+      : _pillSheetTypeInfos = pillSheetTypeInfos,
         _reminderTimes = reminderTimes,
         super._();
 
   factory _$SettingImpl.fromJson(Map<String, dynamic> json) =>
       _$$SettingImplFromJson(json);
 
-  final List<PillSheetType?> _pillSheetTypes;
+  final List<PillSheetType?> _pillSheetTypeInfos;
   @override
   @JsonKey()
-  List<PillSheetType?> get pillSheetTypes {
-    if (_pillSheetTypes is EqualUnmodifiableListView) return _pillSheetTypes;
+  List<PillSheetType?> get pillSheetTypeInfos {
+    if (_pillSheetTypeInfos is EqualUnmodifiableListView)
+      return _pillSheetTypeInfos;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_pillSheetTypes);
+    return EqualUnmodifiableListView(_pillSheetTypeInfos);
   }
 
   @override
@@ -462,7 +464,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, timezoneDatabaseName: $timezoneDatabaseName)';
+    return 'Setting(pillSheetTypeInfos: $pillSheetTypeInfos, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, timezoneDatabaseName: $timezoneDatabaseName)';
   }
 
   @override
@@ -470,7 +472,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
     super.debugFillProperties(properties);
     properties
       ..add(DiagnosticsProperty('type', 'Setting'))
-      ..add(DiagnosticsProperty('pillSheetTypes', pillSheetTypes))
+      ..add(DiagnosticsProperty('pillSheetTypeInfos', pillSheetTypeInfos))
       ..add(DiagnosticsProperty(
           'pillNumberForFromMenstruation', pillNumberForFromMenstruation))
       ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation))
@@ -493,7 +495,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
         (other.runtimeType == runtimeType &&
             other is _$SettingImpl &&
             const DeepCollectionEquality()
-                .equals(other._pillSheetTypes, _pillSheetTypes) &&
+                .equals(other._pillSheetTypeInfos, _pillSheetTypeInfos) &&
             (identical(other.pillNumberForFromMenstruation,
                     pillNumberForFromMenstruation) ||
                 other.pillNumberForFromMenstruation ==
@@ -527,7 +529,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(_pillSheetTypes),
+      const DeepCollectionEquality().hash(_pillSheetTypeInfos),
       pillNumberForFromMenstruation,
       durationMenstruation,
       const DeepCollectionEquality().hash(_reminderTimes),
@@ -554,7 +556,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
 abstract class _Setting extends Setting {
   const factory _Setting(
-      {final List<PillSheetType?> pillSheetTypes,
+      {final List<PillSheetType?> pillSheetTypeInfos,
       required final int pillNumberForFromMenstruation,
       required final int durationMenstruation,
       final List<ReminderTime> reminderTimes,
@@ -569,7 +571,7 @@ abstract class _Setting extends Setting {
   factory _Setting.fromJson(Map<String, dynamic> json) = _$SettingImpl.fromJson;
 
   @override
-  List<PillSheetType?> get pillSheetTypes;
+  List<PillSheetType?> get pillSheetTypeInfos;
   @override
   int get pillNumberForFromMenstruation;
   @override

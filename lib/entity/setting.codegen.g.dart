@@ -20,7 +20,7 @@ Map<String, dynamic> _$$ReminderTimeImplToJson(_$ReminderTimeImpl instance) =>
 
 _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
     _$SettingImpl(
-      pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
+      pillSheetTypeInfos: (json['pillSheetTypeInfos'] as List<dynamic>?)
               ?.map((e) => $enumDecodeNullable(_$PillSheetTypeEnumMap, e))
               .toList() ??
           const [],
@@ -51,7 +51,7 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) =>
     <String, dynamic>{
-      'pillSheetTypes': instance.pillSheetTypes
+      'pillSheetTypeInfos': instance.pillSheetTypeInfos
           .map((e) => _$PillSheetTypeEnumMap[e])
           .toList(),
       'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
