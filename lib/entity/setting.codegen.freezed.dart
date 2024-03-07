@@ -186,7 +186,7 @@ Setting _$SettingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Setting {
-  List<PillSheetType?> get pillSheetTypeInfos =>
+  List<PillSheetTypeInfo?> get pillSheetTypeInfos =>
       throw _privateConstructorUsedError;
   int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
   int get durationMenstruation => throw _privateConstructorUsedError;
@@ -211,7 +211,7 @@ abstract class $SettingCopyWith<$Res> {
       _$SettingCopyWithImpl<$Res, Setting>;
   @useResult
   $Res call(
-      {List<PillSheetType?> pillSheetTypeInfos,
+      {List<PillSheetTypeInfo?> pillSheetTypeInfos,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -254,7 +254,7 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting>
       pillSheetTypeInfos: null == pillSheetTypeInfos
           ? _value.pillSheetTypeInfos
           : pillSheetTypeInfos // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType?>,
+              as List<PillSheetTypeInfo?>,
       pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
@@ -315,7 +315,7 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {List<PillSheetType?> pillSheetTypeInfos,
+      {List<PillSheetTypeInfo?> pillSheetTypeInfos,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -357,7 +357,7 @@ class __$$SettingImplCopyWithImpl<$Res>
       pillSheetTypeInfos: null == pillSheetTypeInfos
           ? _value._pillSheetTypeInfos
           : pillSheetTypeInfos // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType?>,
+              as List<PillSheetTypeInfo?>,
       pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
@@ -404,7 +404,7 @@ class __$$SettingImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   const _$SettingImpl(
-      {final List<PillSheetType?> pillSheetTypeInfos = const [],
+      {final List<PillSheetTypeInfo?> pillSheetTypeInfos = const [],
       required this.pillNumberForFromMenstruation,
       required this.durationMenstruation,
       final List<ReminderTime> reminderTimes = const [],
@@ -422,10 +422,10 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   factory _$SettingImpl.fromJson(Map<String, dynamic> json) =>
       _$$SettingImplFromJson(json);
 
-  final List<PillSheetType?> _pillSheetTypeInfos;
+  final List<PillSheetTypeInfo?> _pillSheetTypeInfos;
   @override
   @JsonKey()
-  List<PillSheetType?> get pillSheetTypeInfos {
+  List<PillSheetTypeInfo?> get pillSheetTypeInfos {
     if (_pillSheetTypeInfos is EqualUnmodifiableListView)
       return _pillSheetTypeInfos;
     // ignore: implicit_dynamic_type
@@ -556,7 +556,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
 abstract class _Setting extends Setting {
   const factory _Setting(
-      {final List<PillSheetType?> pillSheetTypeInfos,
+      {final List<PillSheetTypeInfo?> pillSheetTypeInfos,
       required final int pillNumberForFromMenstruation,
       required final int durationMenstruation,
       final List<ReminderTime> reminderTimes,
@@ -571,7 +571,7 @@ abstract class _Setting extends Setting {
   factory _Setting.fromJson(Map<String, dynamic> json) = _$SettingImpl.fromJson;
 
   @override
-  List<PillSheetType?> get pillSheetTypeInfos;
+  List<PillSheetTypeInfo?> get pillSheetTypeInfos;
   @override
   int get pillNumberForFromMenstruation;
   @override
