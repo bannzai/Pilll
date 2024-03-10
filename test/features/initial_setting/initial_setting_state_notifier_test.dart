@@ -1,3 +1,4 @@
+import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -26,10 +27,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
+  const MethodChannel timezoneChannel = MethodChannel('flutter_native_timezone');
+
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
 
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, (MethodCall methodCall) async {
+      return 'Asia/Tokyo';
+    });
     analytics = MockAnalytics();
     errorLogger = MockErrorLogger();
 
@@ -39,6 +45,9 @@ void main() {
     localNotificationService = mockLocalNotificationService;
   });
 
+  tearDown(() {
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, null);
+  });
   group("#selectedFirstPillSheetType", () {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
