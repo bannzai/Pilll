@@ -48,7 +48,7 @@ class LocalNotificationService {
 
   static Future<void> setupTimeZone() async {
     tz.initializeTimeZones();
-    tz.setLocalLocation(tz.getLocation("Asia/Tokyo"));
+    // tz.setLocalLocation(tz.getLocation(await FlutterNativeTimezone.getLocalTimezone()));
   }
 
   Future<void> initialize() async {
