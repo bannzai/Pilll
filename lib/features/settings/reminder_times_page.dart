@@ -1,8 +1,11 @@
 import 'dart:async';
 
+import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/database.dart';
+import 'package:pilll/features/settings/provider.dart';
+import 'package:pilll/features/settings/timezone_setting_dialog.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -25,21 +28,27 @@ class ReminderTimesPage extends HookConsumerWidget {
     final setSetting = ref.watch(setSettingProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
-    return ref.watch(settingProvider).when(
-          data: (setting) {
-            return ReminderTimesPageBody(
-              setting: setting,
-              setSetting: setSetting,
-              registerReminderLocalNotification: registerReminderLocalNotification,
-            );
-          },
-          error: (error, _) => UniversalErrorPage(
-            error: error,
-            child: null,
-            reload: () => ref.refresh(databaseProvider),
-          ),
-          loading: () => const ScaffoldIndicator(),
+    return AsyncValueGroup.group2(
+      ref.watch(settingProvider),
+      ref.watch(deviceTimezoneNameProvider),
+    ).when(
+      data: (data) {
+        final setting = data.t1;
+        final deviceTimezoneName = data.t2;
+        return ReminderTimesPageBody(
+          setting: setting,
+          deviceTimezoneName: deviceTimezoneName,
+          setSetting: setSetting,
+          registerReminderLocalNotification: registerReminderLocalNotification,
         );
+      },
+      error: (error, _) => UniversalErrorPage(
+        error: error,
+        child: null,
+        reload: () => ref.refresh(databaseProvider),
+      ),
+      loading: () => const ScaffoldIndicator(),
+    );
   }
 }
 
@@ -54,12 +63,14 @@ extension ReminderTimesPageRoute on ReminderTimesPage {
 
 class ReminderTimesPageBody extends StatelessWidget {
   final Setting setting;
+  final String deviceTimezoneName;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
 
   const ReminderTimesPageBody({
     super.key,
     required this.setting,
+    required this.deviceTimezoneName,
     required this.setSetting,
     required this.registerReminderLocalNotification,
   });
@@ -77,6 +88,29 @@ class ReminderTimesPageBody extends StatelessWidget {
           "通知時間",
           style: TextStyle(color: TextColor.black),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              analytics.logEvent(name: "pressed_tz_setting_action");
+              showDialog(
+                context: context,
+                builder: (_) => TimezoneSettingDialog(
+                  setting: setting,
+                  deviceTimezoneName: deviceTimezoneName,
+                  onDone: (tz) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: const Duration(seconds: 2),
+                        content: Text("$tzに変更しました"),
+                      ),
+                    );
+                  },
+                ),
+              );
+            },
+            icon: const Icon(Icons.timer_sharp, color: PilllColors.primary),
+          ),
+        ],
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(

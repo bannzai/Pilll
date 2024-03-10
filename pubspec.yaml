@@ -57,6 +57,10 @@ dependencies:
   cupertino_icons: ^1.0.6
   flutter_app_badger: ^1.2.0
   purchases_flutter: ^5.7.0
+  flutter_native_timezone:
+    git:
+      url: https://github.com/bannzai/flutter_native_timezone.git
+      ref: master
   flutter_local_notifications: ^16.3.3
   webview_flutter: ^4.7.0
   collection: ^1.18.0

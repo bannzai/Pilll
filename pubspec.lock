@@ -507,6 +507,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_native_timezone:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: master
+      resolved-ref: c461a88869c07dee9e00ab794d05e53debde0aca
+      url: "https://github.com/bannzai/flutter_native_timezone.git"
+    source: git
+    version: "2.0.1"
   flutter_riverpod:
     dependency: transitive
     description:
