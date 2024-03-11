@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
 
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
@@ -43,29 +44,35 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 40),
-          child: Stack(
+          child: Column(
             children: [
-              SettingPillSheetGroup(
-                pillSheetTypes: pillSheetTypes.value,
-                onAdd: (pillSheetType) {
-                  analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
+              if (pillSheetTypes.value.isEmpty) ...[
+                const Spacer(),
+                AddPillSheetTypeEmpty(onSelect: (pillSheetType) {
                   pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
-                },
-                onChange: (index, pillSheetType) {
-                  analytics
-                      .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
-                  final copied = [...pillSheetTypes.value];
-                  copied[index] = pillSheetType;
-                  pillSheetTypes.value = copied;
-                },
-                onDelete: (index) {
-                  analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
-                  pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
-                },
-              ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Padding(
+                }),
+                const Spacer(flex: 3),
+              ] else ...[
+                SettingPillSheetGroup(
+                  pillSheetTypes: pillSheetTypes.value,
+                  onAdd: (pillSheetType) {
+                    analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
+                    pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
+                  },
+                  onChange: (index, pillSheetType) {
+                    analytics
+                        .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
+                    final copied = [...pillSheetTypes.value];
+                    copied[index] = pillSheetType;
+                    pillSheetTypes.value = copied;
+                  },
+                  onDelete: (index) {
+                    analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
+                    pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
+                  },
+                ),
+                const Spacer(),
+                Padding(
                   padding: const EdgeInsets.only(bottom: 35),
                   child: Container(
                     color: PilllColors.background,
@@ -104,7 +111,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     ),
                   ),
                 ),
-              ),
+              ],
               const SizedBox(height: 35),
             ],
           ),

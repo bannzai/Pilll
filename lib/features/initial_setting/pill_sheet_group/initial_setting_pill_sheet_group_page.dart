@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -8,7 +8,6 @@ import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
-import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
@@ -176,30 +175,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (state.pillSheetTypes.isEmpty) {
-      return Center(
-        child: Column(
-          children: [
-            const SizedBox(height: 80),
-            SvgPicture.asset("images/empty_pill_sheet_type.svg"),
-            const SizedBox(height: 24),
-            SizedBox(
-              width: 180,
-              child: PrimaryButton(
-                  onPressed: () async {
-                    analytics.logEvent(name: "empty_pill_sheet_type");
-                    showSettingPillSheetGroupSelectPillSheetTypePage(
-                      context: context,
-                      pillSheetType: null,
-                      onSelect: (pillSheetType) {
-                        store.selectedFirstPillSheetType(pillSheetType);
-                      },
-                    );
-                  },
-                  text: "ピルの種類を選ぶ"),
-            ),
-          ],
-        ),
-      );
+      return AddPillSheetTypeEmpty(onSelect: (pillSheetType) => store.selectedFirstPillSheetType(pillSheetType));
     } else {
       return Column(
         children: [
