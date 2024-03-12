@@ -14,7 +14,7 @@ abstract class RemoteConfigKeys {
 abstract class RemoteConfigParameterDefaultValues {
   static const isPaywallFirst = false;
   static const skipInitialSetting = false;
-  static const trialDeadlineDateOffsetDay = 30;
+  static const trialDeadlineDateOffsetDay = 45;
   static const discountEntitlementOffsetDay = 2;
   static const discountCountdownBoundaryHour = 48;
 }
