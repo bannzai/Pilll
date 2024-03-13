@@ -13,16 +13,18 @@ class PilllAds with _$PilllAds {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime startDateTime,
+    required DateTime startDateTime,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime endDateTime,
+    required DateTime endDateTime,
     required String description,
     required String? imageURL,
     required String destinationURL,
     required String hexColor,
+    @Default("FFFFFF") String closeButtonColor,
+    @Default("FFFFFF") String chevronRightColor,
   }) = _PilllAds;
   PilllAds._();
 
