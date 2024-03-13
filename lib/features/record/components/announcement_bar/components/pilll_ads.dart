@@ -60,9 +60,9 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
               children: [
                 IconButton(
                   alignment: Alignment.centerLeft,
-                  icon: const Icon(
+                  icon: Icon(
                     Icons.close,
-                    color: Colors.white,
+                    color: HexColor.fromHex(pilllAds.closeButtonColor),
                     size: 24,
                   ),
                   onPressed: () {
@@ -75,7 +75,10 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                 const Spacer(),
                 SvgPicture.asset(
                   "images/arrow_right.svg",
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  colorFilter: ColorFilter.mode(
+                    HexColor.fromHex(pilllAds.closeButtonColor),
+                    BlendMode.srcIn,
+                  ),
                   height: 20,
                   width: 20,
                 ),
