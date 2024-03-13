@@ -32,6 +32,8 @@ mixin _$PilllAds {
   String? get imageURL => throw _privateConstructorUsedError;
   String get destinationURL => throw _privateConstructorUsedError;
   String get hexColor => throw _privateConstructorUsedError;
+  String get closeButtonColor => throw _privateConstructorUsedError;
+  String get chevronRightColor => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -56,7 +58,9 @@ abstract class $PilllAdsCopyWith<$Res> {
       String description,
       String? imageURL,
       String destinationURL,
-      String hexColor});
+      String hexColor,
+      String closeButtonColor,
+      String chevronRightColor});
 }
 
 /// @nodoc
@@ -78,6 +82,8 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
     Object? imageURL = freezed,
     Object? destinationURL = null,
     Object? hexColor = null,
+    Object? closeButtonColor = null,
+    Object? chevronRightColor = null,
   }) {
     return _then(_value.copyWith(
       startDateTime: null == startDateTime
@@ -104,6 +110,14 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
           ? _value.hexColor
           : hexColor // ignore: cast_nullable_to_non_nullable
               as String,
+      closeButtonColor: null == closeButtonColor
+          ? _value.closeButtonColor
+          : closeButtonColor // ignore: cast_nullable_to_non_nullable
+              as String,
+      chevronRightColor: null == chevronRightColor
+          ? _value.chevronRightColor
+          : chevronRightColor // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -128,7 +142,9 @@ abstract class _$$PilllAdsImplCopyWith<$Res>
       String description,
       String? imageURL,
       String destinationURL,
-      String hexColor});
+      String hexColor,
+      String closeButtonColor,
+      String chevronRightColor});
 }
 
 /// @nodoc
@@ -148,6 +164,8 @@ class __$$PilllAdsImplCopyWithImpl<$Res>
     Object? imageURL = freezed,
     Object? destinationURL = null,
     Object? hexColor = null,
+    Object? closeButtonColor = null,
+    Object? chevronRightColor = null,
   }) {
     return _then(_$PilllAdsImpl(
       startDateTime: null == startDateTime
@@ -174,6 +192,14 @@ class __$$PilllAdsImplCopyWithImpl<$Res>
           ? _value.hexColor
           : hexColor // ignore: cast_nullable_to_non_nullable
               as String,
+      closeButtonColor: null == closeButtonColor
+          ? _value.closeButtonColor
+          : closeButtonColor // ignore: cast_nullable_to_non_nullable
+              as String,
+      chevronRightColor: null == chevronRightColor
+          ? _value.chevronRightColor
+          : chevronRightColor // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -194,7 +220,9 @@ class _$PilllAdsImpl extends _PilllAds {
       required this.description,
       required this.imageURL,
       required this.destinationURL,
-      required this.hexColor})
+      required this.hexColor,
+      this.closeButtonColor = "FFFFFF",
+      this.chevronRightColor = "FFFFFF"})
       : super._();
 
   factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) =>
@@ -218,10 +246,16 @@ class _$PilllAdsImpl extends _PilllAds {
   final String destinationURL;
   @override
   final String hexColor;
+  @override
+  @JsonKey()
+  final String closeButtonColor;
+  @override
+  @JsonKey()
+  final String chevronRightColor;
 
   @override
   String toString() {
-    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor)';
+    return 'PilllAds(startDateTime: $startDateTime, endDateTime: $endDateTime, description: $description, imageURL: $imageURL, destinationURL: $destinationURL, hexColor: $hexColor, closeButtonColor: $closeButtonColor, chevronRightColor: $chevronRightColor)';
   }
 
   @override
@@ -240,13 +274,25 @@ class _$PilllAdsImpl extends _PilllAds {
             (identical(other.destinationURL, destinationURL) ||
                 other.destinationURL == destinationURL) &&
             (identical(other.hexColor, hexColor) ||
-                other.hexColor == hexColor));
+                other.hexColor == hexColor) &&
+            (identical(other.closeButtonColor, closeButtonColor) ||
+                other.closeButtonColor == closeButtonColor) &&
+            (identical(other.chevronRightColor, chevronRightColor) ||
+                other.chevronRightColor == chevronRightColor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, startDateTime, endDateTime,
-      description, imageURL, destinationURL, hexColor);
+  int get hashCode => Object.hash(
+      runtimeType,
+      startDateTime,
+      endDateTime,
+      description,
+      imageURL,
+      destinationURL,
+      hexColor,
+      closeButtonColor,
+      chevronRightColor);
 
   @JsonKey(ignore: true)
   @override
@@ -275,7 +321,9 @@ abstract class _PilllAds extends PilllAds {
       required final String description,
       required final String? imageURL,
       required final String destinationURL,
-      required final String hexColor}) = _$PilllAdsImpl;
+      required final String hexColor,
+      final String closeButtonColor,
+      final String chevronRightColor}) = _$PilllAdsImpl;
   _PilllAds._() : super._();
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) =
@@ -299,6 +347,10 @@ abstract class _PilllAds extends PilllAds {
   String get destinationURL;
   @override
   String get hexColor;
+  @override
+  String get closeButtonColor;
+  @override
+  String get chevronRightColor;
   @override
   @JsonKey(ignore: true)
   _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith =>
