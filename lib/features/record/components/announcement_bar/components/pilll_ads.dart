@@ -76,7 +76,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                 SvgPicture.asset(
                   "images/arrow_right.svg",
                   colorFilter: ColorFilter.mode(
-                    HexColor.fromHex(pilllAds.closeButtonColor),
+                    HexColor.fromHex(pilllAds.chevronRightColor),
                     BlendMode.srcIn,
                   ),
                   height: 20,
