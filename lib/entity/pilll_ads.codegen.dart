@@ -23,6 +23,8 @@ class PilllAds with _$PilllAds {
     required String? imageURL,
     required String destinationURL,
     required String hexColor,
+    @Default("FFFFFF") String closeButtonColor,
+    @Default("FFFFFF") String chevronRightColor,
   }) = _PilllAds;
   PilllAds._();
 
