@@ -39,7 +39,7 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       isPremium: json['isPremium'] as bool? ?? false,
       shouldAskCancelReason: json['shouldAskCancelReason'] as bool? ?? false,
       useLocalNotificationForReminder:
-          json['useLocalNotificationForReminder'] as bool? ?? false,
+          json['useLocalNotificationForReminder'] as bool? ?? true,
       analyticsDebugIsEnabled:
           json['analyticsDebugIsEnabled'] as bool? ?? false,
       beginTrialDate: TimestampConverter.timestampToDateTime(

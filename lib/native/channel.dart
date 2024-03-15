@@ -44,14 +44,12 @@ void definedChannel() {
           final user = (await database.userReference().get()).data();
           final setting = user?.setting;
           if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-            if (user.useLocalNotificationForReminder) {
-              await RegisterReminderLocalNotification.run(
-                pillSheetGroup: pillSheetGroup,
-                activePillSheet: activePillSheet,
-                premiumOrTrial: user.isPremium || user.isTrial,
-                setting: setting,
-              );
-            }
+            await RegisterReminderLocalNotification.run(
+              pillSheetGroup: pillSheetGroup,
+              activePillSheet: activePillSheet,
+              premiumOrTrial: user.isPremium || user.isTrial,
+              setting: setting,
+            );
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);

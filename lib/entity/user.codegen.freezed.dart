@@ -465,7 +465,7 @@ class _$UserImpl extends _User {
       final List<String> firebaseCurrentUserIDSets = const [],
       this.isPremium = false,
       this.shouldAskCancelReason = false,
-      this.useLocalNotificationForReminder = false,
+      this.useLocalNotificationForReminder = true,
       this.analyticsDebugIsEnabled = false,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
