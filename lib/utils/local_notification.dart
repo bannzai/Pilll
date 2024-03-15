@@ -456,8 +456,7 @@ class RegisterReminderLocalNotification {
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
-                                    androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-
+                  androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
