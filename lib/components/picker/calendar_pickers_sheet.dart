@@ -64,12 +64,14 @@ class CalendarPickersSheet extends HookWidget {
 class CalendarPickersSheetRow extends HookWidget {
   final String title;
   final DateTime? dateTime;
+  final SelectableDayPredicate? selectableDayPredicate;
   final Function(DateTime?) onSelect;
 
   const CalendarPickersSheetRow({
     super.key,
     required this.title,
     required this.dateTime,
+    this.selectableDayPredicate,
     required this.onSelect,
   });
 
@@ -95,6 +97,7 @@ class CalendarPickersSheetRow extends HookWidget {
               context: context,
               firstDate: DateTime.parse("2020-01-01"),
               lastDate: now(),
+              selectableDayPredicate: selectableDayPredicate,
             );
             onSelect(dateTime.value);
           },
