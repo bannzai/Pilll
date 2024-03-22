@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/picker/calendar_pickers_sheet.dart';
 import 'package:pilll/features/error/error_alert.dart';
@@ -26,6 +27,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginMenstruation = ref.watch(beginMenstruationProvider);
+    final menstruationBeginDateTime = useState<DateTime?>(now());
     return SizedBox(
       width: 180,
       child: PrimaryButton(
@@ -69,6 +71,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
                   if (context.mounted) {
                     Navigator.of(context).pop();
+
                     showCalendarsPickerSheet(
                       context,
                       CalendarPickersSheet(
@@ -76,12 +79,26 @@ class MenstruationRecordButton extends HookConsumerWidget {
                         rows: [
                           CalendarPickersSheetRow(
                             title: "開始日",
-                            dateTime: now(),
+                            dateTime: menstruationBeginDateTime.value,
                             onSelect: (dateTime) {
-                              debugPrint(dateTime.toString());
+                              menstruationBeginDateTime.value = dateTime;
                             },
                           )
                         ],
+                        onSave: () async {
+                          final menstruationBeginDateTimeValue = menstruationBeginDateTime.value;
+                          if (menstruationBeginDateTimeValue == null) {
+                            return;
+                          }
+
+                          try {
+                            final created = await beginMenstruation(menstruationBeginDateTime.value!, setting: setting);
+                            onRecord(created);
+                            if (context.mounted) Navigator.of(context).pop();
+                          } catch (error) {
+                            if (context.mounted) showErrorAlert(context, error);
+                          }
+                        },
                       ),
                     );
                   }
