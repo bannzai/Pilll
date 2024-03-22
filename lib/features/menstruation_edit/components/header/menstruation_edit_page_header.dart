@@ -46,6 +46,7 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
           onPressed: () async {
             analytics.logEvent(name: "pressed_saving_menstruation_edit");
             if (initialMenstruation != null && editingDateRangeValue == null) {
+              // 削除
               showDialog(
                 context: context,
                 builder: (context) => DiscardDialog(
@@ -77,9 +78,11 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                 ),
               );
             } else if (editingDateRangeValue == null) {
+              // 変更無し
               Navigator.of(context).pop();
             } else {
               if (initialMenstruation == null) {
+                // 新規作成
                 final menstruation = Menstruation(beginDate: editingDateRangeValue.begin, endDate: editingDateRangeValue.end, createdAt: now());
                 try {
                   onSaved(await setMenstruation(menstruation));
@@ -87,6 +90,7 @@ class MenstruationEditPageHeader extends HookConsumerWidget {
                   if (context.mounted) showErrorAlert(context, e);
                 }
               } else {
+                // 編集
                 final menstruation = initialMenstruation.copyWith(beginDate: editingDateRangeValue.begin, endDate: editingDateRangeValue.end);
                 try {
                   onSaved(await setMenstruation(menstruation));
