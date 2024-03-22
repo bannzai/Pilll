@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/picker/calendar_pickers_sheet.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -66,8 +67,24 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
-                  if (context.mounted) Navigator.of(context).pop();
-                  if (context.mounted) return showMenstruationEditPage(context, initialMenstruation: null);
+                  if (context.mounted) {
+                    Navigator.of(context).pop();
+                    showCalendarsPickerSheet(
+                      context,
+                      CalendarPickersSheet(
+                        title: "生理開始日を選択",
+                        rows: [
+                          CalendarPickersSheetRow(
+                            title: "開始日",
+                            dateTime: now(),
+                            onSelect: (dateTime) {
+                              debugPrint(dateTime.toString());
+                            },
+                          )
+                        ],
+                      ),
+                    );
+                  }
               }
             }),
           );
