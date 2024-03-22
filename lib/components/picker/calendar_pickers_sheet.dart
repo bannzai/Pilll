@@ -8,13 +8,11 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 class CalendarPickersSheet extends HookWidget {
   final String title;
   final List<Widget> rows;
-  final void Function(DateTime begin, DateTime end) done;
 
   const CalendarPickersSheet({
     Key? key,
     required this.title,
     required this.rows,
-    required this.done,
   }) : super(key: key);
 
   @override
@@ -76,4 +74,13 @@ class CalendarPickersSheetRow extends HookWidget {
       ],
     );
   }
+}
+
+void showCalendarsPickerSheet(BuildContext context, CalendarPickersSheet sheet) {
+  showModalBottomSheet(
+    context: context,
+    builder: (context) => sheet,
+    backgroundColor: Colors.transparent,
+    isScrollControlled: true,
+  );
 }
