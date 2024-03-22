@@ -17,23 +17,31 @@ class CalendarPickersSheet extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: <Widget>[
-        Text(
-          title,
-          style: const TextStyle(
-            fontSize: 20,
-            color: TextColor.main,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w600,
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 20),
+      height: MediaQuery.of(context).size.height * 0.5,
+      color: Colors.white,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            title,
+            style: const TextStyle(
+              fontSize: 20,
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+            ),
           ),
-        ),
-        for (final row in rows) ...[
-          row,
-          const SizedBox(height: 16),
+          const SizedBox(height: 20),
+          for (final row in rows) ...[
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              child: row,
+            ),
+          ],
         ],
-      ],
+      ),
     );
   }
 }
@@ -52,24 +60,30 @@ class CalendarPickersSheetRow extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dateTimeState = useState(this.dateTime);
-    final dateTime = dateTimeState.value;
+    final dateTime = useState(this.dateTime);
 
     return Row(
       children: [
-        Text(title),
+        Text(
+          title,
+          style: const TextStyle(
+            color: TextColor.main,
+            fontWeight: FontWeight.w500,
+            fontFamily: FontFamily.japanese,
+            fontSize: 16,
+          ),
+        ),
         const Spacer(),
         TextButton(
           onPressed: () async {
-            final dateTime = await showDatePicker(
+            dateTime.value = await showDatePicker(
               context: context,
               firstDate: DateTime.parse("2020-01-01"),
               lastDate: now(),
             );
-            dateTimeState.value = dateTime;
-            onSelect(dateTime);
+            onSelect(dateTime.value);
           },
-          child: dateTime != null ? Text(DateTimeFormatter.yearAndMonthAndDay(dateTime)) : const Text("未選択"),
+          child: dateTime.value != null ? Text(DateTimeFormatter.yearAndMonthAndDay(dateTime.value!)) : const Text("未選択"),
         ),
       ],
     );
