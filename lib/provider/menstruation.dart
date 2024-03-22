@@ -26,8 +26,8 @@ class BeginMenstruation {
   final DatabaseConnection databaseConnection;
   BeginMenstruation(this.databaseConnection);
 
-  Future<Menstruation> call(DateTime begin, {required Setting setting}) async {
-    var menstruation = Menstruation(beginDate: begin, endDate: begin.addDays(setting.durationMenstruation - 1), createdAt: now());
+  Future<Menstruation> call(DateTime begin, DateTime end) async {
+    var menstruation = Menstruation(beginDate: begin, endDate: end, createdAt: now());
     if (await _canHealthkitDataSave()) {
       final healthKitSampleDataUUID = await addMenstruationFlowHealthKitData(menstruation);
       menstruation = menstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);

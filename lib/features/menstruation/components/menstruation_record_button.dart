@@ -10,6 +10,7 @@ import 'package:pilll/features/menstruation/menstruation_select_modify_type_shee
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 class MenstruationRecordButton extends HookConsumerWidget {
@@ -27,7 +28,6 @@ class MenstruationRecordButton extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginMenstruation = ref.watch(beginMenstruationProvider);
-    final menstruationBeginDateTime = useState<DateTime?>(now());
     return SizedBox(
       width: 180,
       child: PrimaryButton(
@@ -49,7 +49,11 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   analytics.logEvent(name: "tapped_menstruation_record_today");
                   final navigator = Navigator.of(context);
                   try {
-                    final created = await beginMenstruation(today(), setting: setting);
+                    final begin = today();
+                    final created = await beginMenstruation(
+                      begin,
+                      begin.addDays(setting.durationMenstruation - 1),
+                    );
                     onRecord(created);
                     navigator.pop();
                     return;
@@ -60,7 +64,11 @@ class MenstruationRecordButton extends HookConsumerWidget {
                 case MenstruationSelectModifyType.yesterday:
                   analytics.logEvent(name: "tapped_menstruation_record_yesterday");
                   try {
-                    final created = await beginMenstruation(yesterday(), setting: setting);
+                    final begin = yesterday();
+                    final created = await beginMenstruation(
+                      begin,
+                      begin.addDays(setting.durationMenstruation - 1),
+                    );
                     onRecord(created);
                     if (context.mounted) Navigator.of(context).pop();
                   } catch (error) {
@@ -72,35 +80,22 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   if (context.mounted) {
                     Navigator.of(context).pop();
 
-                    showCalendarsPickerSheet(
-                      context,
-                      CalendarPickersSheet(
-                        title: "生理開始日を選択",
-                        rows: [
-                          CalendarPickersSheetRow(
-                            title: "開始日",
-                            dateTime: menstruationBeginDateTime.value,
-                            onSelect: (dateTime) {
-                              menstruationBeginDateTime.value = dateTime;
-                            },
-                          )
-                        ],
-                        onSave: () async {
-                          final menstruationBeginDateTimeValue = menstruationBeginDateTime.value;
-                          if (menstruationBeginDateTimeValue == null) {
-                            return;
-                          }
-
-                          try {
-                            final created = await beginMenstruation(menstruationBeginDateTime.value!, setting: setting);
-                            onRecord(created);
-                            if (context.mounted) Navigator.of(context).pop();
-                          } catch (error) {
-                            if (context.mounted) showErrorAlert(context, error);
-                          }
-                        },
-                      ),
+                    final dateTimeRange = await showDateRangePicker(
+                      context: context,
+                      firstDate: DateTime.parse("2020-01-01"),
+                      lastDate: now(),
                     );
+                    if (dateTimeRange == null) {
+                      return;
+                    }
+
+                    try {
+                      final created = await beginMenstruation(dateTimeRange.start, dateTimeRange.end);
+                      onRecord(created);
+                      if (context.mounted) Navigator.of(context).pop();
+                    } catch (error) {
+                      if (context.mounted) showErrorAlert(context, error);
+                    }
                   }
               }
             }),
