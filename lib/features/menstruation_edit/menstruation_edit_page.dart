@@ -11,7 +11,6 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/menstruation_edit/components/calendar/calendar_date_header.dart';
 import 'package:pilll/features/menstruation_edit/components/calendar/month_calendar.dart';
-import 'package:pilll/features/menstruation_edit/components/header/menstruation_edit_page_header.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
@@ -71,12 +70,6 @@ class MenstruationEditPage extends HookConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      MenstruationEditPageHeader(
-                        initialMenstruation: initialMenstruation,
-                        editingDateRange: editingDateRange,
-                        onDeleted: onDeleted,
-                        onSaved: onSaved,
-                      ),
                       if (invalidMessage.value.isNotEmpty) ...[
                         const SizedBox(height: 12),
                         Text(invalidMessage.value,
