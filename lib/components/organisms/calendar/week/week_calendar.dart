@@ -64,11 +64,38 @@ class CalendarWeekLine extends HookConsumerWidget {
                 bandBuilder: (_, width) => CalendarMenstruationBand(
                   menstruation: e.menstruation,
                   width: width,
-                  onTap: (menstruation) {
+                  onTap: (menstruation) async {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
-                    showMenstruationEditPage(
-                      context,
-                      initialMenstruation: menstruation,
+
+                    // final dateTimeRange = await showModalBottomSheet<DateTimeRange?>(
+                    //     context: context,
+                    //     builder: (context) {
+                    //       return DateRangePickerDialog(
+                    //         initialDateRange: DateTimeRange(start: today(), end: today().addDays(3)),
+                    //         firstDate: DateTime.parse("2020-01-01"),
+                    //         lastDate: today().addDays(30),
+                    //         fieldStartLabelText: "生理開始日",
+                    //         fieldEndLabelText: "生理終了予定日",
+                    //         confirmText: "記録する",
+                    //         saveText: "OK",
+                    //       );
+                    //     });
+                    showDateRangePicker(
+                      context: context,
+                      firstDate: DateTime.parse("2020-01-01"),
+                      lastDate: today().addDays(30),
+                      builder: (context, child) {
+                        final themeData = Theme.of(context);
+                        final appBarTheme = themeData.appBarTheme;
+                        return Theme(
+                          data: themeData.copyWith(
+                              appBarTheme: themeData.appBarTheme.copyWith(
+                                backgroundColor: Colors.blue,
+                              ),
+                              colorScheme: ColorScheme.light(onPrimary: Colors.white, primary: Colors.red)),
+                          child: child!,
+                        );
+                      },
                     );
                   },
                 ),

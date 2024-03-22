@@ -80,16 +80,23 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   if (context.mounted) {
                     Navigator.of(context).pop();
 
-                    final dateTimeRange = await showDateRangePicker(
-                      context: context,
-                      initialDateRange: DateTimeRange(start: today(), end: today().addDays(setting.durationMenstruation - 1)),
-                      firstDate: DateTime.parse("2020-01-01"),
-                      lastDate: today().addDays(30),
-                    );
+                    final dateTimeRange = await showModalBottomSheet<DateTimeRange?>(
+                        context: context,
+                        builder: (context) {
+                          return DateRangePickerDialog(
+                            initialDateRange: DateTimeRange(start: today(), end: today().addDays(setting.durationMenstruation - 1)),
+                            firstDate: DateTime.parse("2020-01-01"),
+                            lastDate: today().addDays(30),
+                            fieldStartLabelText: "生理開始日",
+                            fieldEndLabelText: "生理終了予定日",
+                            confirmText: "記録する",
+                            saveText: "OK",
+                          );
+                        });
+
                     if (dateTimeRange == null) {
                       return;
                     }
-
                     try {
                       final created = await beginMenstruation(dateTimeRange.start, dateTimeRange.end);
                       onRecord(created);
