@@ -82,8 +82,9 @@ class MenstruationRecordButton extends HookConsumerWidget {
 
                     final dateTimeRange = await showDateRangePicker(
                       context: context,
+                      initialDateRange: DateTimeRange(start: today(), end: today().addDays(setting.durationMenstruation - 1)),
                       firstDate: DateTime.parse("2020-01-01"),
-                      lastDate: now(),
+                      lastDate: today().addDays(30),
                     );
                     if (dateTimeRange == null) {
                       return;
