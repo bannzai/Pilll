@@ -156,16 +156,9 @@ class MenstruationPageBody extends HookConsumerWidget {
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: MenstruationRecordButton(
-                    latestMenstruation: latestMenstruation,
-                    setting: setting,
-                    onRecord: (menstruation) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: const Duration(seconds: 2),
-                          content: Text("${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
-                        ),
-                      );
-                    }),
+                  latestMenstruation: latestMenstruation,
+                  setting: setting,
+                ),
               ),
             ),
           ],
