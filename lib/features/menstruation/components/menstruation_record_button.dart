@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
+import 'package:pilll/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/menstruation/menstruation_select_modify_type_sheet.dart';
@@ -35,7 +36,12 @@ class MenstruationRecordButton extends HookConsumerWidget {
           final latestMenstruation = this.latestMenstruation;
           if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
             // 生理期間中は、生理期間を編集する
-            return showMenstruationDateRangePicker(context, ref, initialMenstruation: latestMenstruation);
+            return showMenstruationEditSelectionSheet(
+              context,
+              MenstruationEditSelectionSheet(
+                menstruation: latestMenstruation,
+              ),
+            );
           }
           if (setting.durationMenstruation == 0) {
             // 生理期間を設定していないユーザーは、直接日付入力させる

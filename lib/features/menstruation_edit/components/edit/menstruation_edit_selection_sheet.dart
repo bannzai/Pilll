@@ -10,7 +10,7 @@ import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/analytics.dart';
 
 class MenstruationEditSelectionSheet extends HookConsumerWidget {
-  final Menstruation? menstruation;
+  final Menstruation menstruation;
 
   const MenstruationEditSelectionSheet({super.key, required this.menstruation});
 
@@ -77,7 +77,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
 
                               final navigator = Navigator.of(context);
                               try {
-                                await ref.read(deleteMenstruationProvider).call(menstruation!);
+                                await ref.read(deleteMenstruationProvider).call(menstruation);
                               } catch (e) {
                                 if (context.mounted) showErrorAlert(context, e);
                               }
@@ -97,4 +97,13 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
       ),
     );
   }
+}
+
+void showMenstruationEditSelectionSheet(BuildContext context, MenstruationEditSelectionSheet menstruationEditSelectionSheet) {
+  showModalBottomSheet(
+    context: context,
+    builder: (BuildContext context) {
+      return menstruationEditSelectionSheet;
+    },
+  );
 }

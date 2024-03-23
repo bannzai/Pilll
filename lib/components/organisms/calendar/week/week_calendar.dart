@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
+import 'package:pilll/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
@@ -67,7 +67,12 @@ class CalendarWeekLine extends HookConsumerWidget {
                   onTap: (menstruation) async {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
 
-                    showMenstruationDateRangePicker(context, ref, initialMenstruation: e.menstruation);
+                    showMenstruationEditSelectionSheet(
+                      context,
+                      MenstruationEditSelectionSheet(
+                        menstruation: e.menstruation,
+                      ),
+                    );
                   },
                 ),
               ),
