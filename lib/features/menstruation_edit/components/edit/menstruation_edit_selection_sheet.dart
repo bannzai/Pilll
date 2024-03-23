@@ -45,7 +45,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                 color: TextColor.main,
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 16),
             TextButton(
               style: const ButtonStyle(alignment: Alignment.centerLeft),
               onPressed: () {
@@ -55,26 +55,46 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                   initialMenstruation: menstruation,
                 );
               },
-              child: const Text(
-                "生理期間を編集",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                ),
-                textAlign: TextAlign.start,
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.edit,
+                    color: TextColor.main,
+                    size: 20,
+                  ),
+                  SizedBox(width: 16),
+                  Text(
+                    "生理期間を編集",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
               ),
             ),
             TextButton(
               style: const ButtonStyle(alignment: Alignment.centerLeft),
-              child: const Text(
-                "削除",
-                style: TextStyle(
-                  color: TextColor.danger,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 14,
-                ),
-                textAlign: TextAlign.start,
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.delete,
+                    color: TextColor.danger,
+                    size: 20,
+                  ),
+                  SizedBox(width: 16),
+                  Text(
+                    "削除",
+                    style: TextStyle(
+                      color: TextColor.danger,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
               ),
               onPressed: () {
                 showDialog(
