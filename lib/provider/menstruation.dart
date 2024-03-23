@@ -4,9 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
