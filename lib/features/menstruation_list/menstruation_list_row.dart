@@ -1,14 +1,15 @@
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/features/menstruation_edit/components/picker/menstruation_date_time_range_picker.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 
-class MenstruationListRow extends StatelessWidget {
+class MenstruationListRow extends HookConsumerWidget {
   final Menstruation menstruation;
   final Menstruation? previousMenstruation;
 
@@ -19,22 +20,10 @@ class MenstruationListRow extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return GestureDetector(
-      onTap: () async {
-        final dateTimeRange = await showModalBottomSheet<DateTimeRange?>(
-            context: context,
-            builder: (context) {
-              return DateRangePickerDialog(
-                initialDateRange: DateTimeRange(start: today(), end: today().addDays(3)),
-                firstDate: DateTime.parse("2020-01-01"),
-                lastDate: today().addDays(30),
-                fieldStartLabelText: "生理開始日",
-                fieldEndLabelText: "生理終了予定日",
-                confirmText: "記録する",
-                saveText: "OK",
-              );
-            });
+      onTap: () {
+        showMenstruationDateRangePicker(context, ref, initialMenstruation: menstruation);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
