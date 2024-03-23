@@ -11,22 +11,31 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class MenstruationRecordButton extends HookConsumerWidget {
   final Menstruation? latestMenstruation;
   final Setting setting;
-  final Function(Menstruation) onRecord;
 
   const MenstruationRecordButton({
     Key? key,
     required this.latestMenstruation,
     required this.setting,
-    required this.onRecord,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginMenstruation = ref.watch(beginMenstruationProvider);
+
+    void onRecord(Menstruation menstruation) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: const Duration(seconds: 2),
+          content: Text("${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+        ),
+      );
+    }
+
     return SizedBox(
       width: 180,
       child: PrimaryButton(
@@ -87,30 +96,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   if (context.mounted) {
                     Navigator.of(context).pop();
 
-                    final dateTimeRange = await showModalBottomSheet<DateTimeRange?>(
-                        context: context,
-                        builder: (context) {
-                          return DateRangePickerDialog(
-                            initialDateRange: DateTimeRange(start: today(), end: today().addDays(setting.durationMenstruation - 1)),
-                            firstDate: DateTime.parse("2020-01-01"),
-                            lastDate: today().addDays(30),
-                            fieldStartLabelText: "生理開始日",
-                            fieldEndLabelText: "生理終了予定日",
-                            confirmText: "記録する",
-                            saveText: "OK",
-                          );
-                        });
-
-                    if (dateTimeRange == null) {
-                      return;
-                    }
-                    try {
-                      final created = await beginMenstruation(dateTimeRange.start, dateTimeRange.end);
-                      onRecord(created);
-                      if (context.mounted) Navigator.of(context).pop();
-                    } catch (error) {
-                      if (context.mounted) showErrorAlert(context, error);
-                    }
+                    showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
                   }
               }
             }),
