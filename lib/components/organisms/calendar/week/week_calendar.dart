@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/picker/calendar_pickers_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
@@ -67,36 +68,16 @@ class CalendarWeekLine extends HookConsumerWidget {
                   onTap: (menstruation) async {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
 
-                    // final dateTimeRange = await showModalBottomSheet<DateTimeRange?>(
-                    //     context: context,
-                    //     builder: (context) {
-                    //       return DateRangePickerDialog(
-                    //         initialDateRange: DateTimeRange(start: today(), end: today().addDays(3)),
-                    //         firstDate: DateTime.parse("2020-01-01"),
-                    //         lastDate: today().addDays(30),
-                    //         fieldStartLabelText: "生理開始日",
-                    //         fieldEndLabelText: "生理終了予定日",
-                    //         confirmText: "記録する",
-                    //         saveText: "OK",
-                    //       );
-                    //     });
-                    showDateRangePicker(
+                    final dateTimeRange = await showDateRangePicker(
                       context: context,
                       firstDate: DateTime.parse("2020-01-01"),
                       lastDate: today().addDays(30),
                       builder: (context, child) {
-                        final themeData = Theme.of(context);
-                        final appBarTheme = themeData.appBarTheme;
-                        return Theme(
-                          data: themeData.copyWith(
-                              appBarTheme: themeData.appBarTheme.copyWith(
-                                backgroundColor: Colors.blue,
-                              ),
-                              colorScheme: ColorScheme.light(onPrimary: Colors.white, primary: Colors.red)),
-                          child: child!,
-                        );
+                        return DateRangePickerTheme(child: child!);
                       },
                     );
+
+                    print(dateTimeRange);
                   },
                 ),
               ),
