@@ -1,6 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/picker/calendar_pickers_sheet.dart';
+import 'package:pilll/features/menstruation_edit/components/picker/menstruation_calendar_pickers_sheet_save_button.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
@@ -68,20 +69,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                   onTap: (menstruation) async {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
 
-                    final dateTimeRange = await showDateRangePicker(
-                      context: context,
-                      initialEntryMode: DatePickerEntryMode.calendarOnly,
-                      initialDateRange: DateTimeRange(start: e.begin, end: e.end),
-                      firstDate: DateTime.parse("2020-01-01"),
-                      lastDate: today().addDays(30),
-                      fieldStartHintText: "生理開始日",
-                      fieldEndLabelText: "生理終了日",
-                      builder: (context, child) {
-                        return DateRangePickerTheme(child: child!);
-                      },
-                    );
-
-                    print(dateTimeRange);
+                    showMenstruationDateRangePicker(context, ref, initialMenstruation: e.menstruation);
                   },
                 ),
               ),

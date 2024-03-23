@@ -159,6 +159,7 @@ void showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requi
     initialDateRange: initialMenstruation?.dateTimeRange,
     firstDate: DateTime.parse("2020-01-01"),
     lastDate: today().addDays(30),
+    helpText: "生理期間を選択",
     fieldStartHintText: "生理開始日",
     fieldEndLabelText: "生理終了日",
     builder: (context, child) {
