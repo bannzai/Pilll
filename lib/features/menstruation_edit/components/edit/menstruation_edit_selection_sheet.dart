@@ -47,7 +47,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
             ),
             const SizedBox(height: 24),
             TextButton(
-              style: ButtonStyle(alignment: Alignment.centerLeft),
+              style: const ButtonStyle(alignment: Alignment.centerLeft),
               onPressed: () {
                 showMenstruationDateRangePicker(
                   context,
@@ -66,7 +66,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
               ),
             ),
             TextButton(
-              style: ButtonStyle(alignment: Alignment.centerLeft),
+              style: const ButtonStyle(alignment: Alignment.centerLeft),
               child: const Text(
                 "削除",
                 style: TextStyle(
