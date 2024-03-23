@@ -56,21 +56,6 @@ class App extends StatelessWidget {
             secondary: PilllColors.accent,
           ),
         ),
-        bottomSheetTheme: const BottomSheetThemeData(
-          backgroundColor: Colors.blue,
-          elevation: 3,
-        ),
-        datePickerTheme: const DatePickerThemeData(
-          elevation: 100,
-          inputDecorationTheme: InputDecorationTheme(
-            labelStyle: TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w400,
-              fontSize: 16,
-              color: PilllColors.secondary,
-            ),
-          ),
-        ),
         switchTheme: SwitchThemeData(
           thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
             if (states.contains(MaterialState.disabled)) {
