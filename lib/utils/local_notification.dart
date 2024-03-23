@@ -193,9 +193,6 @@ class RegisterReminderLocalNotification {
     if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null || user == null) {
       return;
     }
-    if (!user.useLocalNotificationForReminder) {
-      return;
-    }
 
     await run(
       pillSheetGroup: pillSheetGroup,
@@ -459,6 +456,7 @@ class RegisterReminderLocalNotification {
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
+                  androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 

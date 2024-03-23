@@ -161,7 +161,12 @@ class RedTextButton extends HookWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Text(text, style: TextStyle(color: isProcessing.value ? TextColor.gray : TextColor.primary)),
+            Text(
+              text,
+              style: TextStyle(
+                color: isProcessing.value ? TextColor.gray : TextColor.primary,
+              ),
+            ),
             if (isProcessing.value) _Loading(),
           ],
         ),

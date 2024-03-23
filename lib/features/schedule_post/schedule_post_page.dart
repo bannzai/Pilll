@@ -89,152 +89,155 @@ class _SchedulePostPage extends HookConsumerWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                controller: scrollController,
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    ConstrainedBox(
-                      constraints: BoxConstraints(
-                        minWidth: MediaQuery.of(context).size.width,
-                        maxWidth: MediaQuery.of(context).size.width,
-                        minHeight: 40,
-                        maxHeight: 200,
-                      ),
-                      child: TextFormField(
-                        onChanged: (text) {
-                          title.value = text;
-                        },
-                        decoration: const InputDecoration(
-                          hintText: "通院する",
-                          border: OutlineInputBorder(),
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            children: [
+              Expanded(
+                child: SingleChildScrollView(
+                  controller: scrollController,
+                  child: Column(
+                    children: [
+                      ConstrainedBox(
+                        constraints: BoxConstraints(
+                          minWidth: MediaQuery.of(context).size.width,
+                          maxWidth: MediaQuery.of(context).size.width,
+                          minHeight: 40,
+                          maxHeight: 200,
                         ),
-                        controller: textEditingController,
-                        maxLines: null,
-                        maxLength: 60,
-                        keyboardType: TextInputType.multiline,
-                        focusNode: focusNode,
+                        child: TextFormField(
+                          onChanged: (text) {
+                            title.value = text;
+                          },
+                          decoration: const InputDecoration(
+                            hintText: "通院する",
+                            border: OutlineInputBorder(),
+                          ),
+                          controller: textEditingController,
+                          maxLines: null,
+                          maxLength: 60,
+                          keyboardType: TextInputType.multiline,
+                          focusNode: focusNode,
+                        ),
                       ),
-                    ),
-                    SwitchListTile(
-                      title: const Text("当日9:00に通知を受け取る",
-                          style: TextStyle(
-                            fontFamily: FontFamily.roboto,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 16,
-                          )),
-                      activeColor: PilllColors.secondary,
-                      onChanged: (bool value) {
-                        analytics.logEvent(
-                          name: "schedule_post_remind_toggle",
-                        );
-                        isOnRemind.value = value;
-                      },
-                      value: isOnRemind.value,
-                      // NOTE: when configured subtitle, the space between elements becomes very narrow
-                      contentPadding: const EdgeInsets.all(0),
-                    ),
-                    if (date.date().isAfter(today())) ...[
-                      PrimaryButton(
-                        text: "保存",
-                        onPressed: isInvalid()
-                            ? null
-                            : () async {
-                                analytics.logEvent(name: "schedule_post_pressed");
-                                final navigator = Navigator.of(context);
-
-                                try {
-                                  final localNotificationID = schedule.localNotification?.localNotificationID;
-                                  if (localNotificationID != null) {
-                                    await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
-                                  }
-
-                                  final Schedule newSchedule;
-                                  if (isOnRemind.value) {
-                                    newSchedule = schedule.copyWith(
-                                      title: title.value,
-                                      localNotification: LocalNotification(
-                                        localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                                        remindDateTime: DateTime(date.year, date.month, date.day, 9),
-                                      ),
-                                    );
-                                    await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
-                                  } else {
-                                    newSchedule = schedule.copyWith(
-                                      title: title.value,
-                                      localNotification: null,
-                                    );
-                                  }
-
-                                  await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
-                                        newSchedule,
-                                        SetOptions(merge: true),
-                                      );
-                                  navigator.pop();
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
+                      SwitchListTile(
+                        title: const Text("当日9:00に通知を受け取る",
+                            style: TextStyle(
+                              fontFamily: FontFamily.roboto,
+                              fontWeight: FontWeight.w300,
+                              fontSize: 16,
+                            )),
+                        activeColor: PilllColors.secondary,
+                        onChanged: (bool value) {
+                          analytics.logEvent(
+                            name: "schedule_post_remind_toggle",
+                          );
+                          isOnRemind.value = value;
+                        },
+                        value: isOnRemind.value,
+                        // NOTE: when configured subtitle, the space between elements becomes very narrow
+                        contentPadding: const EdgeInsets.all(0),
                       ),
-                      const SizedBox(height: 10),
-                      if (scheduleID != null)
-                        AppOutlinedButton(
-                          text: "削除",
+                    ],
+                  ),
+                ),
+              ),
+              if (focusNode.hasPrimaryFocus) ...[
+                KeyboardToolbar(
+                  doneButton: AlertButton(
+                    text: '完了',
+                    onPressed: () async {
+                      analytics.logEvent(name: "schedule_post_toolbar_done");
+                      focusNode.unfocus();
+                    },
+                  ),
+                ),
+              ],
+              const Spacer(),
+              if (date.date().isAfter(today())) ...[
+                PrimaryButton(
+                  text: "保存",
+                  onPressed: isInvalid()
+                      ? null
+                      : () async {
+                          analytics.logEvent(name: "schedule_post_pressed");
+                          final navigator = Navigator.of(context);
+
+                          try {
+                            final localNotificationID = schedule.localNotification?.localNotificationID;
+                            if (localNotificationID != null) {
+                              await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                            }
+
+                            final Schedule newSchedule;
+                            if (isOnRemind.value) {
+                              newSchedule = schedule.copyWith(
+                                title: title.value,
+                                localNotification: LocalNotification(
+                                  localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
+                                  remindDateTime: DateTime(date.year, date.month, date.day, 9),
+                                ),
+                              );
+                              await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
+                            } else {
+                              newSchedule = schedule.copyWith(
+                                title: title.value,
+                                localNotification: null,
+                              );
+                            }
+
+                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
+                                  newSchedule,
+                                  SetOptions(merge: true),
+                                );
+                            navigator.pop();
+                          } catch (error) {
+                            if (context.mounted) showErrorAlert(context, error);
+                          }
+                        },
+                ),
+                const SizedBox(height: 10),
+              ],
+              if (scheduleID != null)
+                AppOutlinedButton(
+                  text: "削除",
+                  onPressed: () async {
+                    analytics.logEvent(name: "schedule_delete_pressed");
+                    showDiscardDialog(
+                      context,
+                      title: "予定を削除します",
+                      message: "削除された予定は復元ができません",
+                      actions: [
+                        AlertButton(
+                          text: "キャンセル",
                           onPressed: () async {
-                            analytics.logEvent(name: "schedule_delete_pressed");
-                            showDiscardDialog(
-                              context,
-                              title: "予定を削除します",
-                              message: "削除された予定は復元ができません",
-                              actions: [
-                                AlertButton(
-                                  text: "キャンセル",
-                                  onPressed: () async {
-                                    Navigator.of(context).pop();
-                                  },
-                                ),
-                                AlertButton(
-                                  text: "削除する",
-                                  onPressed: () async {
-                                    final navigator = Navigator.of(context);
-                                    try {
-                                      final localNotificationID = schedule.localNotification?.localNotificationID;
-                                      if (localNotificationID != null) {
-                                        await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
-                                      }
-
-                                      await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
-                                      navigator.popUntil((route) => route.isFirst);
-                                    } catch (error) {
-                                      if (context.mounted) showErrorAlert(context, error);
-                                    }
-                                  },
-                                ),
-                              ],
-                            );
+                            Navigator.of(context).pop();
                           },
                         ),
-                    ],
-                    const SizedBox(height: 20),
-                  ],
-                ),
-              ),
-            ),
-            if (focusNode.hasPrimaryFocus) ...[
-              KeyboardToolbar(
-                doneButton: AlertButton(
-                  text: '完了',
-                  onPressed: () async {
-                    analytics.logEvent(name: "schedule_post_toolbar_done");
-                    focusNode.unfocus();
+                        AlertButton(
+                          text: "削除する",
+                          onPressed: () async {
+                            final navigator = Navigator.of(context);
+                            try {
+                              final localNotificationID = schedule.localNotification?.localNotificationID;
+                              if (localNotificationID != null) {
+                                await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                              }
+
+                              await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
+                              navigator.popUntil((route) => route.isFirst);
+                            } catch (error) {
+                              if (context.mounted) showErrorAlert(context, error);
+                            }
+                          },
+                        ),
+                      ],
+                    );
                   },
                 ),
-              ),
+              const SizedBox(height: 20),
             ],
-          ],
+          ),
         ),
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
@@ -14,7 +15,6 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/diary_post/diary_post_page.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/features/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/features/schedule_post/schedule_post_page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
@@ -64,11 +64,14 @@ class CalendarWeekLine extends HookConsumerWidget {
                 bandBuilder: (_, width) => CalendarMenstruationBand(
                   menstruation: e.menstruation,
                   width: width,
-                  onTap: (menstruation) {
+                  onTap: (menstruation) async {
                     analytics.logEvent(name: "tap_calendar_menstruation_band");
-                    showMenstruationEditPage(
+
+                    showMenstruationEditSelectionSheet(
                       context,
-                      initialMenstruation: menstruation,
+                      MenstruationEditSelectionSheet(
+                        menstruation: e.menstruation,
+                      ),
                     );
                   },
                 ),

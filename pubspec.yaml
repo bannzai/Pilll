@@ -15,7 +15,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 202403.10.122129+1671
+version: 202403.15.165523+1671
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -83,7 +83,7 @@ dev_dependencies:
   json_serializable:
   freezed: ^2.4.7
   custom_lint: 0.6.2
-  riverpod_lint: 2.3.9
+  riverpod_lint: 2.3.10
   riverpod_generator: 2.3.11
 
 # For information on the generic Dart part of this file, see the

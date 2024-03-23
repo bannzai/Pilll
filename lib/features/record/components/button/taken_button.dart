@@ -62,7 +62,7 @@ class TakenButton extends HookConsumerWidget {
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
             await registerReminderLocalNotification();
             if (!user.useLocalNotificationForReminder) {
-              updateUseLocalNotification(user, true);
+              await updateUseLocalNotification(user, true);
             }
           } catch (exception, stack) {
             errorLogger.recordError(exception, stack);

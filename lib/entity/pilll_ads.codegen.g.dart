@@ -16,6 +16,8 @@ _$PilllAdsImpl _$$PilllAdsImplFromJson(Map<String, dynamic> json) =>
       imageURL: json['imageURL'] as String?,
       destinationURL: json['destinationURL'] as String,
       hexColor: json['hexColor'] as String,
+      closeButtonColor: json['closeButtonColor'] as String? ?? "FFFFFF",
+      chevronRightColor: json['chevronRightColor'] as String? ?? "FFFFFF",
     );
 
 Map<String, dynamic> _$$PilllAdsImplToJson(_$PilllAdsImpl instance) =>
@@ -28,4 +30,6 @@ Map<String, dynamic> _$$PilllAdsImplToJson(_$PilllAdsImpl instance) =>
       'imageURL': instance.imageURL,
       'destinationURL': instance.destinationURL,
       'hexColor': instance.hexColor,
+      'closeButtonColor': instance.closeButtonColor,
+      'chevronRightColor': instance.chevronRightColor,
     };

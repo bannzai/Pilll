@@ -56,6 +56,10 @@ class App extends StatelessWidget {
             secondary: PilllColors.accent,
           ),
         ),
+        datePickerTheme: const DatePickerThemeData(
+          backgroundColor: Colors.white,
+          headerBackgroundColor: PilllColors.primary,
+        ),
         switchTheme: SwitchThemeData(
           thumbColor: MaterialStateProperty.resolveWith<Color?>((Set<MaterialState> states) {
             if (states.contains(MaterialState.disabled)) {

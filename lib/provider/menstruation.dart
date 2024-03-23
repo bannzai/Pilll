@@ -4,9 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:collection/collection.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/native/health_care.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -26,8 +24,8 @@ class BeginMenstruation {
   final DatabaseConnection databaseConnection;
   BeginMenstruation(this.databaseConnection);
 
-  Future<Menstruation> call(DateTime begin, {required Setting setting}) async {
-    var menstruation = Menstruation(beginDate: begin, endDate: begin.addDays(setting.durationMenstruation - 1), createdAt: now());
+  Future<Menstruation> call(DateTime begin, DateTime end) async {
+    var menstruation = Menstruation(beginDate: begin, endDate: end, createdAt: now());
     if (await _canHealthkitDataSave()) {
       final healthKitSampleDataUUID = await addMenstruationFlowHealthKitData(menstruation);
       menstruation = menstruation.copyWith(healthKitSampleDataUUID: healthKitSampleDataUUID);
