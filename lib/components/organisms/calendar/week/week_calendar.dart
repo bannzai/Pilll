@@ -75,7 +75,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                       firstDate: DateTime.parse("2020-01-01"),
                       lastDate: today().addDays(30),
                       fieldStartHintText: "生理開始日",
-                      fieldEndLabelText: "生理終了予定日",
+                      fieldEndLabelText: "生理終了日",
                       builder: (context, child) {
                         return DateRangePickerTheme(child: child!);
                       },
