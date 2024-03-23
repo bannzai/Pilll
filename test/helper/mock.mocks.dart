@@ -835,21 +835,25 @@ class MockBeginMenstruation extends _i1.Mock implements _i20.BeginMenstruation {
       ) as _i2.DatabaseConnection);
   @override
   _i9.Future<_i8.Menstruation> call(
-    DateTime? begin, {
-    required _i6.Setting? setting,
-  }) =>
+    DateTime? begin,
+    DateTime? end,
+  ) =>
       (super.noSuchMethod(
         Invocation.method(
           #call,
-          [begin],
-          {#setting: setting},
+          [
+            begin,
+            end,
+          ],
         ),
         returnValue: _i9.Future<_i8.Menstruation>.value(_FakeMenstruation_7(
           this,
           Invocation.method(
             #call,
-            [begin],
-            {#setting: setting},
+            [
+              begin,
+              end,
+            ],
           ),
         )),
       ) as _i9.Future<_i8.Menstruation>);
