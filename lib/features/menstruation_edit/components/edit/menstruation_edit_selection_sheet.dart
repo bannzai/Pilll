@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
@@ -8,6 +9,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class MenstruationEditSelectionSheet extends HookConsumerWidget {
   final Menstruation menstruation;
@@ -34,63 +36,80 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                TextButton(
-                  onPressed: () {
-                    showMenstruationDateRangePicker(
-                      context,
-                      ref,
-                      initialMenstruation: menstruation,
-                    );
-                  },
-                  child: const Text(
-                    "生理期間を編集",
-                    style: TextStyle(
-                      color: TextColor.main,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 14,
-                    ),
-                  ),
+            Text(
+              "${DateTimeFormatter.yearAndMonthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.yearAndMonthAndDay(menstruation.endDate)}",
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.main,
+              ),
+            ),
+            const SizedBox(height: 24),
+            TextButton(
+              style: ButtonStyle(alignment: Alignment.centerLeft),
+              onPressed: () {
+                showMenstruationDateRangePicker(
+                  context,
+                  ref,
+                  initialMenstruation: menstruation,
+                );
+              },
+              child: const Text(
+                "生理期間を編集",
+                style: TextStyle(
+                  color: TextColor.main,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
                 ),
-                RedTextButton(
-                  text: "削除",
-                  onPressed: () async {
-                    showDialog(
-                      context: context,
-                      builder: (context) => DiscardDialog(
-                        title: "生理期間を削除しますか？",
-                        message: const Text(""),
-                        actions: [
-                          AlertButton(
-                            text: "キャンセル",
-                            onPressed: () async {
-                              analytics.logEvent(name: "cancelled_delete_menstruation");
+                textAlign: TextAlign.start,
+              ),
+            ),
+            TextButton(
+              style: ButtonStyle(alignment: Alignment.centerLeft),
+              child: const Text(
+                "削除",
+                style: TextStyle(
+                  color: TextColor.danger,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 14,
+                ),
+                textAlign: TextAlign.start,
+              ),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => DiscardDialog(
+                    title: "生理期間を削除しますか？",
+                    message: const Text(""),
+                    actions: [
+                      AlertButton(
+                        text: "キャンセル",
+                        onPressed: () async {
+                          analytics.logEvent(name: "cancelled_delete_menstruation");
 
-                              Navigator.of(context).pop();
-                            },
-                          ),
-                          AlertButton(
-                            text: "削除する",
-                            onPressed: () async {
-                              analytics.logEvent(name: "pressed_delete_menstruation");
-
-                              final navigator = Navigator.of(context);
-                              try {
-                                await ref.read(deleteMenstruationProvider).call(menstruation);
-                              } catch (e) {
-                                if (context.mounted) showErrorAlert(context, e);
-                              }
-                              onDeleted();
-                              navigator.pop();
-                            },
-                          ),
-                        ],
+                          Navigator.of(context).pop();
+                        },
                       ),
-                    );
-                  },
-                ),
-              ],
+                      AlertButton(
+                        text: "削除する",
+                        onPressed: () async {
+                          analytics.logEvent(name: "pressed_delete_menstruation");
+
+                          final navigator = Navigator.of(context);
+                          try {
+                            await ref.read(deleteMenstruationProvider).call(menstruation);
+                          } catch (e) {
+                            if (context.mounted) showErrorAlert(context, e);
+                          }
+                          onDeleted();
+                          navigator.pop();
+                        },
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
           ],
         ),
