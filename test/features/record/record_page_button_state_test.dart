@@ -1,3 +1,4 @@
+import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
@@ -23,10 +24,12 @@ void main() {
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
-      view: WidgetsBinding.instance.platformDispatcher.views.single,
-      size: const Size(375.0, 667.0),
-    );
+    for (var element in RendererBinding.instance.renderViews) {
+      element.configuration = TestViewConfiguration.fromView(
+        view: WidgetsBinding.instance.platformDispatcher.views.single,
+        size: const Size(375.0, 667.0),
+      );
+    }
   });
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {

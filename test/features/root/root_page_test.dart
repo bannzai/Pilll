@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:flutter/rendering.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -56,10 +57,12 @@ void main() {
     Environment.isTest = true;
     analytics = FakeAnalytics();
     errorLogger = FakeErrorLogger();
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
-      view: WidgetsBinding.instance.platformDispatcher.views.single,
-      size: const Size(375.0, 667.0),
-    );
+    for (var element in RendererBinding.instance.renderViews) {
+      element.configuration = TestViewConfiguration.fromView(
+        view: WidgetsBinding.instance.platformDispatcher.views.single,
+        size: const Size(375.0, 667.0),
+      );
+    }
   });
 
   group('#RootPage', () {
