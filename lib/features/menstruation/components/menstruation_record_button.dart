@@ -93,11 +93,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
-                  if (context.mounted) {
-                    Navigator.of(context).pop();
-
-                    showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
-                  }
+                  showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
               }
             }),
           );
