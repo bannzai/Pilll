@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
@@ -47,6 +48,7 @@ class Menstruation with _$Menstruation {
   }) = _Menstruation;
 
   DateRange get dateRange => DateRange(beginDate, endDate);
+  DateTimeRange get dateTimeRange => DateTimeRange(start: beginDate, end: endDate);
   bool get isActive => dateRange.inRange(today());
 }
 
