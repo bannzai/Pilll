@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/picker/calendar_pickers_sheet.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart';
@@ -93,7 +94,33 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   return;
                 case MenstruationSelectModifyType.begin:
                   analytics.logEvent(name: "tapped_menstruation_record_begin");
-                  showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
+                  final dateTime = await showDatePicker(
+                    context: context,
+                    initialEntryMode: DatePickerEntryMode.calendarOnly,
+                    initialDate: today(),
+                    firstDate: DateTime.parse("2020-01-01"),
+                    lastDate: today().addDays(30),
+                    helpText: "生理開始日を選択",
+                    fieldLabelText: "生理開始日",
+                    builder: (context, child) {
+                      return DateRangePickerTheme(child: child!);
+                    },
+                  );
+                  if (dateTime == null) {
+                    return;
+                  }
+
+                  try {
+                    final begin = dateTime;
+                    final created = await beginMenstruation(
+                      begin,
+                      begin.addDays(setting.durationMenstruation - 1),
+                    );
+                    onRecord(created);
+                    if (context.mounted) Navigator.of(context).pop();
+                  } catch (error) {
+                    if (context.mounted) showErrorAlert(context, error);
+                  }
               }
             }),
           );
