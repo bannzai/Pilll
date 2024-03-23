@@ -28,16 +28,6 @@ void showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requi
     Navigator.of(context).pop();
   }
 
-  void onDeleted() {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        duration: Duration(seconds: 2),
-        content: Text("生理期間を削除しました"),
-      ),
-    );
-    Navigator.of(context).pop();
-  }
-
   final dateTimeRange = await showDateRangePicker(
     context: context,
     initialEntryMode: DatePickerEntryMode.calendarOnly,
