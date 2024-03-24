@@ -29,57 +29,10 @@ class RecordPage extends HookConsumerWidget {
     final user = ref.watch(userProvider);
     final setting = ref.watch(settingProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
+    final isLinked = ref.watch(isLinkedProvider);
+
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    useEffect(() {
-      final f = (() async {
-        if (user.isLoading) {
-          return;
-        }
-        try {
-          syncUserStatus(user: user.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [user.asData?.value]);
-
-    useEffect(() {
-      final f = (() async {
-        if (setting.isLoading) {
-          return;
-        }
-        try {
-          syncSetting(setting: setting.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [setting.asData?.value]);
-
-    useEffect(() {
-      final f = (() async {
-        if (latestPillSheetGroup.isLoading) {
-          return;
-        }
-        try {
-          syncActivePillSheetValue(pillSheetGroup: latestPillSheetGroup.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [latestPillSheetGroup.asData?.value]);
-
-    final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group4(
       latestPillSheetGroup,
       user,
