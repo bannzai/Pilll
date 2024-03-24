@@ -7,6 +7,7 @@ import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
+import 'package:pilll/features/root/resolver/sync_data.dart';
 import 'package:pilll/features/root/resolver/user_setup.dart';
 import 'package:pilll/features/root/resolver/user_sign_in.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -110,14 +111,19 @@ class App extends StatelessWidget {
             builder: (_) => UserSignIn(
               builder: (_, userID) => UserSetup(
                 userID: userID,
-                builder: (_) => InitialSettingOrAppPage(
-                  initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
-                    builder: (_) => SkipInitialSetting(
-                      initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                builder: (_) => Stack(
+                  children: [
+                    const SyncDataResolver(),
+                    InitialSettingOrAppPage(
+                      initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
+                        builder: (_) => SkipInitialSetting(
+                          initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                          homePageBuilder: (_) => const HomePage(),
+                        ),
+                      ),
                       homePageBuilder: (_) => const HomePage(),
                     ),
-                  ),
-                  homePageBuilder: (_) => const HomePage(),
+                  ],
                 ),
               ),
             ),
