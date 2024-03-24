@@ -99,7 +99,31 @@ class RecordPageBody extends HookConsumerWidget {
               children: [
                 const AnnouncementBar(),
                 const SizedBox(height: 37),
-                _content(context),
+                if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived)
+                  AddPillSheetGroupEmptyFrame(
+                    context: context,
+                    pillSheetGroup: pillSheetGroup,
+                    setting: setting,
+                  )
+                else
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      RecordPagePillSheetSupportActions(
+                        pillSheetGroup: pillSheetGroup,
+                        activePillSheet: activePillSheet,
+                        setting: setting,
+                        user: user,
+                      ),
+                      const SizedBox(height: 16),
+                      RecordPagePillSheetList(
+                        pillSheetGroup: pillSheetGroup,
+                        activePillSheet: activePillSheet,
+                        setting: setting,
+                        user: user,
+                      ),
+                    ],
+                  ),
                 const SizedBox(height: 20),
               ],
             ),
@@ -116,36 +140,5 @@ class RecordPageBody extends HookConsumerWidget {
         ],
       ),
     );
-  }
-
-  Widget _content(BuildContext context) {
-    final pillSheetGroup = this.pillSheetGroup;
-    final activePillSheet = pillSheetGroup?.activePillSheet;
-    if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
-      return AddPillSheetGroupEmptyFrame(
-        context: context,
-        pillSheetGroup: pillSheetGroup,
-        setting: setting,
-      );
-    } else {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          RecordPagePillSheetSupportActions(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            setting: setting,
-            user: user,
-          ),
-          const SizedBox(height: 16),
-          RecordPagePillSheetList(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            setting: setting,
-            user: user,
-          ),
-        ],
-      );
-    }
   }
 }
