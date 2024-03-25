@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
-import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_button.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration_button.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/end_manual_rest_duration_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/record/components/setting/sheet.dart';
+import 'package:pilll/utils/analytics.dart';
 
 class RecordPagePillSheetSettingButton extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -25,67 +24,32 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final RestDuration? restDuration = activePillSheet.activeRestDuration;
-
-    return SizedBox(
-      width: PillSheetViewLayout.width,
-      child: Row(
-        children: [
-          SwitchingAppearanceMode(
+    return GestureDetector(
+      child: const Row(children: [
+        Text(
+          "設定",
+          style: TextStyle(
+            color: TextColor.main,
+            fontSize: 12,
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        SizedBox(width: 6),
+        Icon(Icons.settings),
+      ]),
+      onTap: () {
+        analytics.logEvent(name: "did_tapped_record_page_setting");
+        showPillSheetSettingSheet(
+          context,
+          PillSheetSettingSheet(
+            pillSheetGroup: pillSheetGroup,
+            activePillSheet: activePillSheet,
             setting: setting,
             user: user,
           ),
-          const Spacer(),
-          if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) ...[
-            DisplayNumberSettingButton(
-              pillSheetGroup: pillSheetGroup,
-            ),
-          ],
-          const Spacer(),
-          if (restDuration != null) ...[
-            EndManualRestDurationButton(
-              restDuration: restDuration,
-              activePillSheet: activePillSheet,
-              pillSheetGroup: pillSheetGroup,
-              didEndRestDuration: (endedRestDurationPillSheetGroup) {
-                if (endedRestDurationPillSheetGroup.sequentialLastTakenPillNumber > 0 &&
-                    setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-                  showEndRestDurationModal(
-                    context,
-                    endedRestDurationPillSheetGroup: endedRestDurationPillSheetGroup,
-                  );
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      duration: Duration(
-                        seconds: 2,
-                      ),
-                      content: Text("服用のお休み期間が終了しました"),
-                    ),
-                  );
-                }
-              },
-            ),
-          ] else ...[
-            BeginManualRestDurationButton(
-              appearanceMode: setting.pillSheetAppearanceMode,
-              activePillSheet: activePillSheet,
-              pillSheetGroup: pillSheetGroup,
-              didBeginRestDuration: () {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    duration: Duration(
-                      seconds: 2,
-                    ),
-                    content: Text("服用お休みを開始しました"),
-                  ),
-                );
-                Navigator.of(context).pop();
-              },
-            ),
-          ],
-        ],
-      ),
+        );
+      },
     );
   }
 }
