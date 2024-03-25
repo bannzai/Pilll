@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/features/record/components/supports/components/rest_duration/provider.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
-import 'package:pilll/features/record/components/supports/components/rest_duration/invalid_already_taken_pill_dialog.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/invalid_already_taken_pill_dialog.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';

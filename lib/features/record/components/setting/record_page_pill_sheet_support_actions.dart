@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/record/components/supports/components/appearance_mode/switching_appearance_mode.dart';
-import 'package:pilll/features/record/components/supports/components/display_number_setting/display_number_setting_button.dart';
-import 'package:pilll/features/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
-import 'package:pilll/features/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
+import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
+import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_button.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration_button.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/end_manual_rest_duration_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
