@@ -27,8 +27,6 @@ class PillSheetSettingSheet extends StatelessWidget {
     final RestDuration? restDuration = activePillSheet.activeRestDuration;
 
     return DraggableScrollableSheet(
-      initialChildSize: MediaQuery.of(context).size.height / 3,
-      maxChildSize: MediaQuery.of(context).size.height / 3,
       builder: (context, scrollController) {
         return Column(
           children: [

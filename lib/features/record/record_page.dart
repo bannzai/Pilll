@@ -1,6 +1,7 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
@@ -122,11 +123,19 @@ class RecordPageBody extends HookConsumerWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        RecordPagePillSheetSettingButton(
-                          pillSheetGroup: pillSheetGroup,
-                          activePillSheet: activePillSheet,
-                          setting: setting,
-                          user: user,
+                        Container(
+                          width: PillSheetViewLayout.width,
+                          child: Row(
+                            children: [
+                              const Spacer(),
+                              RecordPagePillSheetSettingButton(
+                                pillSheetGroup: pillSheetGroup,
+                                activePillSheet: activePillSheet,
+                                setting: setting,
+                                user: user,
+                              ),
+                            ],
+                          ),
                         ),
                         const SizedBox(height: 16),
                         RecordPagePillSheetList(
