@@ -8,13 +8,13 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
-class RecordPagePillSheetSettingSheet extends StatelessWidget {
+class PillSheetSettingSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
   final User user;
 
-  const RecordPagePillSheetSettingSheet({
+  const PillSheetSettingSheet({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
@@ -88,4 +88,8 @@ class RecordPagePillSheetSettingSheet extends StatelessWidget {
       },
     );
   }
+}
+
+void showPillSheetSettingSheet(BuildContext context, PillSheetSettingSheet sheet) {
+  showModalBottomSheet(context: context, builder: (_) => sheet);
 }
