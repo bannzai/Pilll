@@ -48,7 +48,7 @@ dependencies:
   flutter_hooks: ^0.20.5
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.1.0
-  in_app_review: ^2.0.8
+  in_app_review: ^2.0.9
   uuid: ^3.0.7
   async_value_group: ^1.0.0
 
