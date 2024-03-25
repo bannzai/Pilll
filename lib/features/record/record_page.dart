@@ -5,7 +5,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
-import 'package:pilll/features/record/components/setting/record_page_pill_sheet_support_actions.dart';
+import 'package:pilll/features/record/components/setting/button.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/features/record/components/header/record_page_header.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -122,7 +122,7 @@ class RecordPageBody extends HookConsumerWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        RecordPagePillSheetSupportActions(
+                        RecordPagePillSheetSettingButton(
                           pillSheetGroup: pillSheetGroup,
                           activePillSheet: activePillSheet,
                           setting: setting,

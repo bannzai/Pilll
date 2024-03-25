@@ -9,13 +9,13 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 
-class RecordPagePillSheetSupportActions extends StatelessWidget {
+class RecordPagePillSheetSettingButton extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
   final Setting setting;
   final User user;
 
-  const RecordPagePillSheetSupportActions({
+  const RecordPagePillSheetSettingButton({
     Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
