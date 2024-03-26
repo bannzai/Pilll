@@ -20,8 +20,10 @@ class SwitchingAppearanceMode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Row(children: [
-        const Text(
+      child: const Row(children: [
+        Icon(Icons.display_settings, color: TextColor.main),
+        SizedBox(width: 6),
+        Text(
           "表示モード",
           style: TextStyle(
             color: TextColor.main,
@@ -30,8 +32,6 @@ class SwitchingAppearanceMode extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        const SizedBox(width: 6),
-        SvgPicture.asset("images/switching_appearance_mode.svg"),
       ]),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");

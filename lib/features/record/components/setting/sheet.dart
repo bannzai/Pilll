@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_button.dart';
@@ -24,64 +28,40 @@ class PillSheetSettingSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final RestDuration? restDuration = activePillSheet.activeRestDuration;
-
     return DraggableScrollableSheet(
+      maxChildSize: 0.3,
+      initialChildSize: 0.3,
       builder: (context, scrollController) {
-        return Column(
-          children: [
-            SwitchingAppearanceMode(
-              setting: setting,
-              user: user,
-            ),
-            if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) ...[
+        return Container(
+          color: Colors.white,
+          child: Column(
+            children: [
+              SwitchingAppearanceMode(
+                setting: setting,
+                user: user,
+              ),
               DisplayNumberSettingButton(
                 pillSheetGroup: pillSheetGroup,
               ),
-            ],
-            if (restDuration != null) ...[
-              EndManualRestDurationButton(
-                restDuration: restDuration,
-                activePillSheet: activePillSheet,
-                pillSheetGroup: pillSheetGroup,
-                didEndRestDuration: (endedRestDurationPillSheetGroup) {
-                  if (endedRestDurationPillSheetGroup.sequentialLastTakenPillNumber > 0 &&
-                      setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-                    showEndRestDurationModal(
-                      context,
-                      endedRestDurationPillSheetGroup: endedRestDurationPillSheetGroup,
-                    );
-                  } else {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        duration: Duration(
-                          seconds: 2,
-                        ),
-                        content: Text("服用のお休み期間が終了しました"),
-                      ),
-                    );
-                  }
-                },
-              ),
-            ] else ...[
-              BeginManualRestDurationButton(
-                appearanceMode: setting.pillSheetAppearanceMode,
-                activePillSheet: activePillSheet,
-                pillSheetGroup: pillSheetGroup,
-                didBeginRestDuration: () {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                      duration: Duration(
-                        seconds: 2,
-                      ),
-                      content: Text("服用お休みを開始しました"),
+              GestureDetector(
+                child: const Row(children: [
+                  Icon(Icons.stop_circle, color: PilllColors.primary),
+                  SizedBox(width: 6),
+                  Text(
+                    "服用お休み開始",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontSize: 12,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w700,
                     ),
-                  );
-                  Navigator.of(context).pop();
-                },
+                  ),
+                ]),
+                onTap: () {},
               ),
+              Spacer(),
             ],
-          ],
+          ),
         );
       },
     );
@@ -89,5 +69,9 @@ class PillSheetSettingSheet extends StatelessWidget {
 }
 
 void showPillSheetSettingSheet(BuildContext context, PillSheetSettingSheet sheet) {
-  showModalBottomSheet(context: context, builder: (_) => sheet);
+  showModalBottomSheet(
+    context: context,
+    backgroundColor: Colors.transparent,
+    builder: (_) => sheet,
+  );
 }

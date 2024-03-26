@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -17,8 +18,10 @@ class DisplayNumberSettingButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Row(children: [
-        const Text(
+      child: const Row(children: [
+        Icon(Icons.edit, color: PilllColors.primary),
+        SizedBox(width: 6),
+        Text(
           "服用日数変更",
           style: TextStyle(
             color: TextColor.main,
@@ -27,8 +30,6 @@ class DisplayNumberSettingButton extends StatelessWidget {
             fontWeight: FontWeight.w700,
           ),
         ),
-        const SizedBox(width: 6),
-        SvgPicture.asset("images/display_number_edit_icon.svg"),
       ]),
       onTap: () {
         analytics.logEvent(name: "t_r_p_display_number_setting");
