@@ -49,7 +49,7 @@ bool isLinkedAppleFor(User user) {
 
 Future<void> appleReauthentification() async {
   try {
-    final provider = AppleAuthProvider();
+    final provider = AppleAuthProvider().addScope('email');
     await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意
