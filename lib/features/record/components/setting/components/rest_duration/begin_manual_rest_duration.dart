@@ -18,20 +18,30 @@ class BeginManualRestDuration extends HookConsumerWidget {
   final PillSheetAppearanceMode appearanceMode;
   final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
-  final VoidCallback didBeginRestDuration;
 
   const BeginManualRestDuration({
     super.key,
     required this.appearanceMode,
     required this.activePillSheet,
     required this.pillSheetGroup,
-    required this.didBeginRestDuration,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+
+    void didBeginRestDuration() {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          duration: Duration(
+            seconds: 2,
+          ),
+          content: Text("服用お休みを開始しました"),
+        ),
+      );
+      Navigator.of(context).pop();
+    }
 
     return ListTile(
       leading: const Icon(Icons.stop_circle, color: PilllColors.primary),

@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_button.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration_button.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/end_manual_rest_duration_button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -47,6 +48,7 @@ class PillSheetSettingSheet extends StatelessWidget {
                   pillSheetGroup: pillSheetGroup,
                 ),
               if (restDuration == null)
+                BeginManualRestDuration(appearanceMode: appearanceMode, activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup, didBeginRestDuration: didBeginRestDuration,);
                 GestureDetector(
                   child: const Row(children: [
                     Icon(Icons.stop_circle, color: PilllColors.primary),
