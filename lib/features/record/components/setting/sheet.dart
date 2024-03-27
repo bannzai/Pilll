@@ -4,7 +4,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
 import 'package:pilll/features/record/components/setting/components/delete/pill_sheet_group_delete.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting.dart';
@@ -14,8 +13,6 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/today_number/today_pill_number.dart';
-import 'package:pilll/provider/delete_pill_sheet.dart';
-import 'package:pilll/utils/local_notification.dart';
 
 class PillSheetSettingSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
@@ -35,28 +32,6 @@ class PillSheetSettingSheet extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final RestDuration? restDuration = activePillSheet.activeRestDuration;
     final themeData = Theme.of(context);
-    final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
-
-    Future<void> onDelete(PillSheetGroup pillSheetGroup, PillSheet activePillSheet) async {
-      try {
-        await deletePillSheetGroup(latestPillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet);
-        await cancelReminderLocalNotification();
-        if (context.mounted) {
-          Navigator.of(context).popUntil((route) => route.isFirst);
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              duration: Duration(seconds: 2),
-              content: Text("ピルシートを破棄しました"),
-            ),
-          );
-        }
-      } catch (error) {
-        if (context.mounted) {
-          showErrorAlert(context, error);
-        }
-      }
-    }
 
     return Theme(
       data: themeData.copyWith(
@@ -104,7 +79,6 @@ class PillSheetSettingSheet extends HookConsumerWidget {
                 PillSheetGroupDelete(
                   pillSheetGroup: pillSheetGroup,
                   activePillSheet: activePillSheet,
-                  onDelete: onDelete,
                 ),
               ],
             ),

@@ -15,17 +15,16 @@ import 'package:pilll/utils/local_notification.dart';
 class PillSheetGroupDelete extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
-  final Function(PillSheetGroup, PillSheet) onDelete;
-
   const PillSheetGroupDelete({
     super.key,
     required this.pillSheetGroup,
     required this.activePillSheet,
-    required this.onDelete,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       leading: const Icon(Icons.delete, color: PilllColors.red),
       title: const Text(
@@ -85,7 +84,23 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                 AlertButton(
                   text: "破棄する",
                   onPressed: () async {
-                    onDelete(pillSheetGroup, activePillSheet);
+                    try {
+                      await deletePillSheetGroup(latestPillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet);
+                      await cancelReminderLocalNotification();
+                      if (context.mounted) {
+                        Navigator.of(context).popUntil((route) => route.isFirst);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            duration: Duration(seconds: 2),
+                            content: Text("ピルシートを破棄しました"),
+                          ),
+                        );
+                      }
+                    } catch (error) {
+                      if (context.mounted) {
+                        showErrorAlert(context, error);
+                      }
+                    }
                   },
                 ),
               ],
