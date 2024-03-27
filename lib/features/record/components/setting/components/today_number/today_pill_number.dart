@@ -7,7 +7,7 @@ class TodayPillNumber extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return const ListTile(
-      leading: Icon(Icons.numbers),
+      leading: Icon(Icons.calendar_today),
       title: Text("今日飲むピル番号の変更"),
     );
   }
