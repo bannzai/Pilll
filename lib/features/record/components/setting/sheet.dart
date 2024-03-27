@@ -34,14 +34,13 @@ class PillSheetSettingSheet extends StatelessWidget {
         listTileTheme: themeData.listTileTheme.copyWith(
           titleTextStyle: const TextStyle(
             color: TextColor.main,
-            fontSize: 12,
+            fontSize: 14,
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w700,
           ),
         ),
       ),
       child: DraggableScrollableSheet(
-        initialChildSize: 0.5,
         builder: (context, scrollController) {
           return Container(
             color: Colors.white,
