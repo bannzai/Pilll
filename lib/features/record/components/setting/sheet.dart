@@ -28,6 +28,8 @@ class PillSheetSettingSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final RestDuration? restDuration = activePillSheet.activeRestDuration;
+
     return DraggableScrollableSheet(
       maxChildSize: 0.3,
       initialChildSize: 0.3,
@@ -40,26 +42,44 @@ class PillSheetSettingSheet extends StatelessWidget {
                 setting: setting,
                 user: user,
               ),
-              DisplayNumberSettingButton(
-                pillSheetGroup: pillSheetGroup,
-              ),
-              GestureDetector(
-                child: const Row(children: [
-                  Icon(Icons.stop_circle, color: PilllColors.primary),
-                  SizedBox(width: 6),
-                  Text(
-                    "服用お休み開始",
-                    style: TextStyle(
-                      color: TextColor.main,
-                      fontSize: 12,
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w700,
+              if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
+                DisplayNumberSettingButton(
+                  pillSheetGroup: pillSheetGroup,
+                ),
+              if (restDuration == null)
+                GestureDetector(
+                  child: const Row(children: [
+                    Icon(Icons.stop_circle, color: PilllColors.primary),
+                    SizedBox(width: 6),
+                    Text(
+                      "服用お休み開始",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontSize: 12,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
-                  ),
-                ]),
-                onTap: () {},
-              ),
-              Spacer(),
+                  ]),
+                  onTap: () {},
+                )
+              else
+                GestureDetector(
+                  child: const Row(children: [
+                    Icon(Icons.stop_circle, color: PilllColors.primary),
+                    SizedBox(width: 6),
+                    Text(
+                      "服用お休み終了",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontSize: 12,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                  ]),
+                  onTap: () {},
+                ),
             ],
           ),
         );
