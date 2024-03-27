@@ -40,6 +40,7 @@ class EndManualRestDuration extends HookConsumerWidget {
           endedRestDurationPillSheetGroup: endedRestDurationPillSheetGroup,
         );
       } else {
+        Navigator.of(context).popUntil((route) => route.isFirst);
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             duration: Duration(
@@ -167,10 +168,11 @@ class EndRestDurationModal extends HookConsumerWidget {
                   child: AppOutlinedButton(
                     onPressed: () async {
                       analytics.logEvent(name: "display_number_setting_modal_yes");
-                      final navigator = Navigator.of(context);
                       await _setDisplayNumberSettingEndNumber(setPillSheetGroup,
                           end: lastTakenPillNumber, pillSheetGroup: endedRestDurationPillSheetGroup);
-                      navigator.pop();
+                      if (context.mounted) {
+                        Navigator.of(context).popUntil((route) => route.isFirst);
+                      }
                     },
                     text: "はい",
                   ),

@@ -36,7 +36,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
           content: Text("服用お休みを開始しました"),
         ),
       );
-      Navigator.of(context).pop();
+      Navigator.of(context).popUntil((route) => route.isFirst);
     }
 
     return ListTile(
