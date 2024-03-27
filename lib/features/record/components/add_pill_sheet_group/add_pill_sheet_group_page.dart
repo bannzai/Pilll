@@ -53,66 +53,70 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                 }),
                 const Spacer(flex: 3),
               ] else ...[
-                SettingPillSheetGroup(
-                  pillSheetTypes: pillSheetTypes.value,
-                  onAdd: (pillSheetType) {
-                    analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
-                    pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
-                  },
-                  onChange: (index, pillSheetType) {
-                    analytics
-                        .logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
-                    final copied = [...pillSheetTypes.value];
-                    copied[index] = pillSheetType;
-                    pillSheetTypes.value = copied;
-                  },
-                  onDelete: (index) {
-                    analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
-                    pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
-                  },
-                ),
-                const Spacer(),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 35),
-                  child: Container(
-                    color: PilllColors.background,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (pillSheetGroup != null)
-                          DisplayNumberSetting(
-                              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
-                              pillSheetGroup: pillSheetGroup,
-                              onChanged: (value) {
-                                displayNumberSetting.value = value;
-                              }),
-                        const SizedBox(height: 24),
-                        SizedBox(
-                          width: 180,
-                          child: PrimaryButton(
-                            text: "追加",
-                            onPressed: pillSheetTypes.value.isEmpty
-                                ? null
-                                : () async {
-                                    analytics.logEvent(name: "pressed_add_pill_sheet_group");
-                                    final navigator = Navigator.of(context);
-                                    await addPillSheetGroup.call(
-                                      setting: setting,
-                                      pillSheetGroup: pillSheetGroup,
-                                      pillSheetTypes: pillSheetTypes.value,
-                                      displayNumberSetting: displayNumberSetting.value,
-                                    );
-                                    await registerReminderLocalNotification();
-                                    navigator.pop();
-                                  },
-                          ),
-                        ),
-                      ],
-                    ),
+                Expanded(
+                  child: ListView(
+                    children: [
+                      SettingPillSheetGroup(
+                        pillSheetTypes: pillSheetTypes.value,
+                        onAdd: (pillSheetType) {
+                          analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
+                          pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
+                        },
+                        onChange: (index, pillSheetType) {
+                          analytics.logEvent(
+                              name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
+                          final copied = [...pillSheetTypes.value];
+                          copied[index] = pillSheetType;
+                          pillSheetTypes.value = copied;
+                        },
+                        onDelete: (index) {
+                          analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
+                          pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
+                        },
+                      ),
+                    ],
                   ),
                 ),
               ],
-              const SizedBox(height: 35),
+              Padding(
+                padding: const EdgeInsets.only(bottom: 35),
+                child: Container(
+                  color: PilllColors.background,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (pillSheetGroup != null)
+                        DisplayNumberSetting(
+                            pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                            pillSheetGroup: pillSheetGroup,
+                            onChanged: (value) {
+                              displayNumberSetting.value = value;
+                            }),
+                      const SizedBox(height: 24),
+                      SizedBox(
+                        width: 180,
+                        child: PrimaryButton(
+                          text: "追加",
+                          onPressed: pillSheetTypes.value.isEmpty
+                              ? null
+                              : () async {
+                                  analytics.logEvent(name: "pressed_add_pill_sheet_group");
+                                  final navigator = Navigator.of(context);
+                                  await addPillSheetGroup.call(
+                                    setting: setting,
+                                    pillSheetGroup: pillSheetGroup,
+                                    pillSheetTypes: pillSheetTypes.value,
+                                    displayNumberSetting: displayNumberSetting.value,
+                                  );
+                                  await registerReminderLocalNotification();
+                                  navigator.pop();
+                                },
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
