@@ -53,7 +53,7 @@ class EndManualRestDuration extends HookConsumerWidget {
     }
 
     return ListTile(
-      leading: const Icon(Icons.stop_circle),
+      leading: const Icon(Icons.play_arrow),
       title: const Text(
         "服用再開",
       ),

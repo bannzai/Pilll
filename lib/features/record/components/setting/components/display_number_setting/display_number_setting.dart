@@ -15,7 +15,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      leading: const Icon(Icons.stop_circle),
+      leading: const Icon(Icons.change_circle_outlined),
       title: const Text(
         "服用日数変更",
       ),

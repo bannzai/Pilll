@@ -40,7 +40,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
     }
 
     return ListTile(
-      leading: const Icon(Icons.stop_circle),
+      leading: const Icon(Icons.back_hand),
       title: const Text(
         "服用お休み開始",
       ),
