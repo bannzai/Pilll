@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/auth.dart';
 
@@ -8,7 +9,7 @@ enum SignInWithGoogleState { determined, cancel }
 
 Future<UserCredential?> linkWithGoogle(User user) async {
   try {
-    final provider = GoogleAuthProvider();
+    final provider = GoogleAuthProvider().addScope('email');
     return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
@@ -53,7 +54,7 @@ bool isLinkedGoogleFor(User user) {
 
 Future<void> googleReauthentification() async {
   try {
-    final provider = GoogleAuthProvider();
+    final provider = GoogleAuthProvider().addScope('email');
     await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
