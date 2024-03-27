@@ -1,9 +1,6 @@
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -43,7 +40,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
     }
 
     return ListTile(
-      leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
+      leading: const Icon(Icons.stop_circle),
       title: const Text(
         "服用お休み開始",
       ),

@@ -1,8 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -18,7 +15,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
+      leading: const Icon(Icons.stop_circle),
       title: const Text(
         "服用日数変更",
       ),

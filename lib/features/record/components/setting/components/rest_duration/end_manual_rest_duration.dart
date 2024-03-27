@@ -52,7 +52,7 @@ class EndManualRestDuration extends HookConsumerWidget {
     }
 
     return ListTile(
-      leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
+      leading: const Icon(Icons.stop_circle),
       title: const Text(
         "服用再開",
       ),
