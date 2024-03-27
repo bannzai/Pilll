@@ -49,7 +49,10 @@ class PillSheetSettingSheet extends StatelessWidget {
             color: Colors.white,
             child: Column(
               children: [
-                const TodayPillNumber(),
+                TodayPillNumber(
+                  pillSheetGroup: pillSheetGroup,
+                  activePillSheet: activePillSheet,
+                ),
                 SwitchingAppearanceMode(
                   setting: setting,
                   user: user,
