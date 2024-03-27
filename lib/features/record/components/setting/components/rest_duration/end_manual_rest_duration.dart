@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/features/record/components/supports/components/rest_duration/provider.dart';
+import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -12,30 +13,52 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/local_notification.dart';
 
-class EndManualRestDurationButton extends HookConsumerWidget {
+class EndManualRestDuration extends HookConsumerWidget {
   final RestDuration restDuration;
   final PillSheet activePillSheet;
   final PillSheetGroup pillSheetGroup;
-  final Function(PillSheetGroup) didEndRestDuration;
+  final Setting setting;
 
-  const EndManualRestDurationButton({
+  const EndManualRestDuration({
     Key? key,
     required this.restDuration,
     required this.activePillSheet,
     required this.pillSheetGroup,
-    required this.didEndRestDuration,
+    required this.setting,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final endRestDuration = ref.watch(endRestDurationProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    return SmallAppOutlinedButton(
-      text: "服用再開",
-      onPressed: () async {
-        analytics.logEvent(
-          name: "end_manual_rest_duration_pressed",
+
+    void didEndRestDuration(PillSheetGroup endedRestDurationPillSheetGroup) {
+      if (endedRestDurationPillSheetGroup.sequentialLastTakenPillNumber > 0 &&
+          setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+        showEndRestDurationModal(
+          context,
+          endedRestDurationPillSheetGroup: endedRestDurationPillSheetGroup,
         );
+      } else {
+        Navigator.of(context).popUntil((route) => route.isFirst);
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            duration: Duration(
+              seconds: 2,
+            ),
+            content: Text("服用のお休み期間が終了しました"),
+          ),
+        );
+      }
+    }
+
+    return ListTile(
+      leading: const Icon(Icons.play_arrow),
+      title: const Text(
+        "服用再開",
+      ),
+      onTap: () async {
+        analytics.logEvent(name: "end_manual_rest_duration_pressed");
 
         try {
           final endedRestDurationPillSheetGroup = await endRestDuration(
@@ -145,10 +168,11 @@ class EndRestDurationModal extends HookConsumerWidget {
                   child: AppOutlinedButton(
                     onPressed: () async {
                       analytics.logEvent(name: "display_number_setting_modal_yes");
-                      final navigator = Navigator.of(context);
                       await _setDisplayNumberSettingEndNumber(setPillSheetGroup,
                           end: lastTakenPillNumber, pillSheetGroup: endedRestDurationPillSheetGroup);
-                      navigator.pop();
+                      if (context.mounted) {
+                        Navigator.of(context).popUntil((route) => route.isFirst);
+                      }
                     },
                     text: "はい",
                   ),
