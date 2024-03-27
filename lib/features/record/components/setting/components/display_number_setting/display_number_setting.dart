@@ -7,10 +7,10 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 
-class BeginManualRestDuration extends HookConsumerWidget {
+class DisplayNumberSetting extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
 
-  const BeginManualRestDuration({
+  const DisplayNumberSetting({
     super.key,
     required this.pillSheetGroup,
   });
