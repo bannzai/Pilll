@@ -19,20 +19,17 @@ class SwitchingAppearanceMode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: const Row(children: [
-        Icon(Icons.display_settings, color: TextColor.main),
-        SizedBox(width: 6),
-        Text(
-          "表示モード",
-          style: TextStyle(
-            color: TextColor.main,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-          ),
+    return ListTile(
+      leading: const Icon(Icons.display_settings, color: TextColor.main),
+      title: const Text(
+        "表示モード",
+        style: TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w700,
         ),
-      ]),
+      ),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
         showSelectAppearanceModeModal(context, user: user);
