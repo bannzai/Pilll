@@ -33,20 +33,17 @@ class BeginManualRestDuration extends HookConsumerWidget {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
-    return GestureDetector(
-      child: const Row(children: [
-        Icon(Icons.stop_circle, color: PilllColors.primary),
-        SizedBox(width: 6),
-        Text(
-          "服用お休み開始",
-          style: TextStyle(
-            color: TextColor.main,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-          ),
+    return ListTile(
+      leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
+      title: const Text(
+        "服用お休み開始",
+        style: TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w700,
         ),
-      ]),
+      ),
       onTap: () {
         analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});
 
