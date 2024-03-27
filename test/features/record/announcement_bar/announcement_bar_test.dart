@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
@@ -42,10 +43,12 @@ void main() {
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
-      view: WidgetsBinding.instance.platformDispatcher.views.single,
-      size: const Size(375.0, 667.0),
-    );
+    for (var element in RendererBinding.instance.renderViews) {
+      element.configuration = TestViewConfiguration.fromView(
+        view: WidgetsBinding.instance.platformDispatcher.views.single,
+        size: const Size(375.0, 667.0),
+      );
+    }
   });
 
   group('notification bar appearance content type', () {

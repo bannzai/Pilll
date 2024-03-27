@@ -15,6 +15,7 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
+import 'package:pilll/utils/error_log.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {
   const SettingAccountCooperationListPage({Key? key}) : super(key: key);
@@ -89,6 +90,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               final navigator = Navigator.of(context);
                               analytics.logEvent(name: 'a_c_l_apple_long_press_result');
 
+                              await appleReauthentification();
+
                               messenger.showSnackBar(
                                 const SnackBar(
                                   duration: Duration(seconds: 2),
@@ -140,6 +143,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
                               analytics.logEvent(name: 'a_c_l_google_long_press_result');
+
+                              await googleReauthentification();
 
                               messenger.showSnackBar(
                                 const SnackBar(

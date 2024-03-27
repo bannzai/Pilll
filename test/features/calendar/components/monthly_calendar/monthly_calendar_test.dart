@@ -1,3 +1,4 @@
+import 'package:flutter/rendering.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
 import 'package:pilll/features/calendar/components/month_calendar/month_calendar.dart';
@@ -15,10 +16,12 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    WidgetsBinding.instance.renderView.configuration = TestViewConfiguration.fromView(
-      view: WidgetsBinding.instance.platformDispatcher.views.single,
-      size: const Size(375.0, 667.0),
-    );
+    for (var element in RendererBinding.instance.renderViews) {
+      element.configuration = TestViewConfiguration.fromView(
+        view: WidgetsBinding.instance.platformDispatcher.views.single,
+        size: const Size(375.0, 667.0),
+      );
+    }
   });
   group("Appearance Next Sheet Label", () {
     testWidgets('when showing 新しいシート開始 ▶︎', (WidgetTester tester) async {

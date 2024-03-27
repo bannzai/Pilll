@@ -11,7 +11,7 @@ Future<SignInWithAppleState> callLinkWithApple(LinkApple linkApple) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
     throw AssertionError("Required Firebase user");
-  }
+}
   try {
     final credential = await linkWithApple(user);
     if (credential == null) {
