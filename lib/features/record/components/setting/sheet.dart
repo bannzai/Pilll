@@ -45,45 +45,43 @@ class PillSheetSettingSheet extends HookConsumerWidget {
           ),
         ),
       ),
-      child: DraggableScrollableSheet(
-        builder: (context, scrollController) {
-          return Container(
-            color: Colors.white,
-            child: Column(
-              children: [
-                TodayPillNumber(
-                  pillSheetGroup: pillSheetGroup,
-                  activePillSheet: activePillSheet,
-                ),
-                SwitchingAppearanceMode(
-                  setting: setting,
-                  user: user,
-                ),
-                if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
-                  DisplayNumberSetting(
-                    pillSheetGroup: pillSheetGroup,
-                  ),
-                if (restDuration == null)
-                  BeginManualRestDuration(
-                    appearanceMode: setting.pillSheetAppearanceMode,
-                    activePillSheet: activePillSheet,
-                    pillSheetGroup: pillSheetGroup,
-                  )
-                else
-                  EndManualRestDuration(
-                    restDuration: restDuration,
-                    activePillSheet: activePillSheet,
-                    pillSheetGroup: pillSheetGroup,
-                    setting: setting,
-                  ),
-                PillSheetGroupDelete(
-                  pillSheetGroup: pillSheetGroup,
-                  activePillSheet: activePillSheet,
-                ),
-              ],
+      child: Container(
+        color: Colors.white,
+        padding: const EdgeInsets.only(bottom: 30),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            TodayPillNumber(
+              pillSheetGroup: pillSheetGroup,
+              activePillSheet: activePillSheet,
             ),
-          );
-        },
+            SwitchingAppearanceMode(
+              setting: setting,
+              user: user,
+            ),
+            if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
+              DisplayNumberSetting(
+                pillSheetGroup: pillSheetGroup,
+              ),
+            if (restDuration == null)
+              BeginManualRestDuration(
+                appearanceMode: setting.pillSheetAppearanceMode,
+                activePillSheet: activePillSheet,
+                pillSheetGroup: pillSheetGroup,
+              )
+            else
+              EndManualRestDuration(
+                restDuration: restDuration,
+                activePillSheet: activePillSheet,
+                pillSheetGroup: pillSheetGroup,
+                setting: setting,
+              ),
+            PillSheetGroupDelete(
+              pillSheetGroup: pillSheetGroup,
+              activePillSheet: activePillSheet,
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -93,6 +91,7 @@ void showPillSheetSettingSheet(BuildContext context, PillSheetSettingSheet sheet
   showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,
+    isScrollControlled: true,
     builder: (_) => sheet,
   );
 }
