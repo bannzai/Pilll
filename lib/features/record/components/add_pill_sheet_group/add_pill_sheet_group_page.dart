@@ -46,7 +46,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             children: [
-              if (pillSheetTypes.value.isEmpty) ...[
+              if (pillSheetTypes.value.isNotEmpty) ...[
                 const Spacer(),
                 AddPillSheetTypeEmpty(onSelect: (pillSheetType) {
                   pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
@@ -77,46 +77,46 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     ],
                   ),
                 ),
-              ],
-              Padding(
-                padding: const EdgeInsets.only(bottom: 35),
-                child: Container(
-                  color: PilllColors.background,
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      if (pillSheetGroup != null)
-                        DisplayNumberSetting(
-                            pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
-                            pillSheetGroup: pillSheetGroup,
-                            onChanged: (value) {
-                              displayNumberSetting.value = value;
-                            }),
-                      const SizedBox(height: 24),
-                      SizedBox(
-                        width: 180,
-                        child: PrimaryButton(
-                          text: "追加",
-                          onPressed: pillSheetTypes.value.isEmpty
-                              ? null
-                              : () async {
-                                  analytics.logEvent(name: "pressed_add_pill_sheet_group");
-                                  final navigator = Navigator.of(context);
-                                  await addPillSheetGroup.call(
-                                    setting: setting,
-                                    pillSheetGroup: pillSheetGroup,
-                                    pillSheetTypes: pillSheetTypes.value,
-                                    displayNumberSetting: displayNumberSetting.value,
-                                  );
-                                  await registerReminderLocalNotification();
-                                  navigator.pop();
-                                },
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 35),
+                  child: Container(
+                    color: PilllColors.background,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (pillSheetGroup != null)
+                          DisplayNumberSetting(
+                              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                              pillSheetGroup: pillSheetGroup,
+                              onChanged: (value) {
+                                displayNumberSetting.value = value;
+                              }),
+                        const SizedBox(height: 24),
+                        SizedBox(
+                          width: 180,
+                          child: PrimaryButton(
+                            text: "追加",
+                            onPressed: pillSheetTypes.value.isEmpty
+                                ? null
+                                : () async {
+                                    analytics.logEvent(name: "pressed_add_pill_sheet_group");
+                                    final navigator = Navigator.of(context);
+                                    await addPillSheetGroup.call(
+                                      setting: setting,
+                                      pillSheetGroup: pillSheetGroup,
+                                      pillSheetTypes: pillSheetTypes.value,
+                                      displayNumberSetting: displayNumberSetting.value,
+                                    );
+                                    await registerReminderLocalNotification();
+                                    navigator.pop();
+                                  },
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
-              ),
+              ],
             ],
           ),
         ),
