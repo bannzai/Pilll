@@ -27,8 +27,7 @@ class PillSheetSettingSheet extends StatelessWidget {
     final RestDuration? restDuration = activePillSheet.activeRestDuration;
 
     return DraggableScrollableSheet(
-      maxChildSize: 0.3,
-      initialChildSize: 0.3,
+      initialChildSize: 0.5,
       builder: (context, scrollController) {
         return Container(
           color: Colors.white,
