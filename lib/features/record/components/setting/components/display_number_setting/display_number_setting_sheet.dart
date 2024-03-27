@@ -81,6 +81,14 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     );
                     await registerReminderLocalNotification();
                     if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          duration: Duration(
+                            seconds: 2,
+                          ),
+                          content: Text("始まりと終わりの番号を変更しました"),
+                        ),
+                      );
                       Navigator.of(context).popUntil((route) => route.isFirst);
                     }
                   },
