@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
-import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_button.dart';
+import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting_sheet.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration_button.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/end_manual_rest_duration_button.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/end_manual_rest_duration.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -44,43 +39,21 @@ class PillSheetSettingSheet extends StatelessWidget {
                 user: user,
               ),
               if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
-                DisplayNumberSettingButton(
+                DisplayNumberSettingSheet(
                   pillSheetGroup: pillSheetGroup,
                 ),
               if (restDuration == null)
-                BeginManualRestDuration(appearanceMode: appearanceMode, activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup, didBeginRestDuration: didBeginRestDuration,);
-                GestureDetector(
-                  child: const Row(children: [
-                    Icon(Icons.stop_circle, color: PilllColors.primary),
-                    SizedBox(width: 6),
-                    Text(
-                      "服用お休み開始",
-                      style: TextStyle(
-                        color: TextColor.main,
-                        fontSize: 12,
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ]),
-                  onTap: () {},
+                BeginManualRestDuration(
+                  appearanceMode: setting.pillSheetAppearanceMode,
+                  activePillSheet: activePillSheet,
+                  pillSheetGroup: pillSheetGroup,
                 )
               else
-                GestureDetector(
-                  child: const Row(children: [
-                    Icon(Icons.stop_circle, color: PilllColors.primary),
-                    SizedBox(width: 6),
-                    Text(
-                      "服用お休み終了",
-                      style: TextStyle(
-                        color: TextColor.main,
-                        fontSize: 12,
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w700,
-                      ),
-                    ),
-                  ]),
-                  onTap: () {},
+                EndManualRestDuration(
+                  restDuration: restDuration,
+                  activePillSheet: activePillSheet,
+                  pillSheetGroup: pillSheetGroup,
+                  setting: setting,
                 ),
             ],
           ),
