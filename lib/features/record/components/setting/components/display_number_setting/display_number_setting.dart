@@ -21,12 +21,6 @@ class DisplayNumberSetting extends HookConsumerWidget {
       leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
       title: const Text(
         "服用日数変更",
-        style: TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w700,
-        ),
       ),
       onTap: () {
         analytics.logEvent(name: "t_r_p_display_number_setting");

@@ -55,12 +55,6 @@ class EndManualRestDuration extends HookConsumerWidget {
       leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
       title: const Text(
         "服用再開",
-        style: TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w700,
-        ),
       ),
       onTap: () async {
         analytics.logEvent(name: "end_manual_rest_duration_pressed");

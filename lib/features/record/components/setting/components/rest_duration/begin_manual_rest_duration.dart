@@ -46,12 +46,6 @@ class BeginManualRestDuration extends HookConsumerWidget {
       leading: const Icon(Icons.stop_circle, color: PilllColors.primary),
       title: const Text(
         "服用お休み開始",
-        style: TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w700,
-        ),
       ),
       onTap: () {
         analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/appearance_mode/switching_appearance_mode.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting.dart';
@@ -25,39 +27,52 @@ class PillSheetSettingSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final RestDuration? restDuration = activePillSheet.activeRestDuration;
+    final themeData = Theme.of(context);
 
-    return DraggableScrollableSheet(
-      initialChildSize: 0.5,
-      builder: (context, scrollController) {
-        return Container(
-          color: Colors.white,
-          child: Column(
-            children: [
-              SwitchingAppearanceMode(
-                setting: setting,
-                user: user,
-              ),
-              if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
-                DisplayNumberSettingSheet(
-                  pillSheetGroup: pillSheetGroup,
-                ),
-              if (restDuration == null)
-                BeginManualRestDuration(
-                  appearanceMode: setting.pillSheetAppearanceMode,
-                  activePillSheet: activePillSheet,
-                  pillSheetGroup: pillSheetGroup,
-                )
-              else
-                EndManualRestDuration(
-                  restDuration: restDuration,
-                  activePillSheet: activePillSheet,
-                  pillSheetGroup: pillSheetGroup,
-                  setting: setting,
-                ),
-            ],
+    return Theme(
+      data: themeData.copyWith(
+        listTileTheme: themeData.listTileTheme.copyWith(
+          titleTextStyle: const TextStyle(
+            color: TextColor.main,
+            fontSize: 12,
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w700,
           ),
-        );
-      },
+        ),
+      ),
+      child: DraggableScrollableSheet(
+        initialChildSize: 0.5,
+        builder: (context, scrollController) {
+          return Container(
+            color: Colors.white,
+            child: Column(
+              children: [
+                SwitchingAppearanceMode(
+                  setting: setting,
+                  user: user,
+                ),
+                if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
+                  DisplayNumberSetting(
+                    pillSheetGroup: pillSheetGroup,
+                  ),
+                if (restDuration == null)
+                  BeginManualRestDuration(
+                    appearanceMode: setting.pillSheetAppearanceMode,
+                    activePillSheet: activePillSheet,
+                    pillSheetGroup: pillSheetGroup,
+                  )
+                else
+                  EndManualRestDuration(
+                    restDuration: restDuration,
+                    activePillSheet: activePillSheet,
+                    pillSheetGroup: pillSheetGroup,
+                    setting: setting,
+                  ),
+              ],
+            ),
+          );
+        },
+      ),
     );
   }
 }
