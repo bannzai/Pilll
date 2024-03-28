@@ -295,6 +295,13 @@ class PillSheetGroup with _$PillSheetGroup {
 
     return menstruationDateRanges;
   }
+
+  List<RestDuration> get restDurations {
+    return pillSheets.fold<List<RestDuration>>(
+      [],
+      (previousValue, element) => previousValue + element.restDurations,
+    );
+  }
 }
 
 @freezed
