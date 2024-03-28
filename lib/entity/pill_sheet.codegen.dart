@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
@@ -55,6 +56,8 @@ class RestDuration with _$RestDuration {
   }) = _RestDuration;
 
   factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
+
+  DateTimeRange? get dateTimeRange => endDate == null ? null : DateTimeRange(start: beginDate, end: endDate!);
 }
 
 @freezed
