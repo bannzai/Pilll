@@ -141,7 +141,7 @@ class EndRestDuration {
   }
 }
 
-final changeRestDuration = Provider.autoDispose(
+final changeRestDurationProvider = Provider.autoDispose(
   (ref) => ChangeRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
