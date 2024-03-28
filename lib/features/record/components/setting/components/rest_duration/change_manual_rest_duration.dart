@@ -6,6 +6,7 @@ import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/invalid_already_taken_pill_dialog.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
@@ -32,6 +33,10 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     final end = restDuration.endDate != null ? DateTimeFormatter.monthAndDay(restDuration.endDate!) : null;
 
     void onChanged() {}
+    void onError(Object e) {
+      showErrorAlert(context, e);
+    }
+
     if (end == null) {
       return ListTile(
         leading: const Icon(Icons.date_range),
@@ -66,11 +71,15 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             createdDate: now(),
           );
 
-          await changeRestDuration(
-            fromRestDuration: restDuration,
-            toRestDuration: toRestDuration,
-            pillSheetGroup: pillSheetGroup,
-          );
+          try {
+            await changeRestDuration(
+              fromRestDuration: restDuration,
+              toRestDuration: toRestDuration,
+              pillSheetGroup: pillSheetGroup,
+            );
+          } catch (e) {
+            onError(e);
+          }
 
           onChanged();
         },
@@ -110,11 +119,15 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             createdDate: now(),
           );
 
-          await changeRestDuration(
-            fromRestDuration: restDuration,
-            toRestDuration: toRestDuration,
-            pillSheetGroup: pillSheetGroup,
-          );
+          try {
+            await changeRestDuration(
+              fromRestDuration: restDuration,
+              toRestDuration: toRestDuration,
+              pillSheetGroup: pillSheetGroup,
+            );
+          } catch (e) {
+            onError(e);
+          }
 
           onChanged();
         },
