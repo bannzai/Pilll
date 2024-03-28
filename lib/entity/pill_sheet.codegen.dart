@@ -35,6 +35,8 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 class RestDuration with _$RestDuration {
   @JsonSerializable(explicitToJson: true)
   const factory RestDuration({
+    // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+    required String? id,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
