@@ -157,7 +157,13 @@ class ChangeRestDuration {
     required this.batchSetPillSheetModifiedHistory,
   });
 
-  bool _isTargetRestDuration(PillSheet pillSheet, RestDuration restDuration) {
+  bool _hasRestDuration(PillSheet pillSheet, RestDuration restDuration) {
+    // restDuration.idが2024-03-28の実装時に追加されたものでnullableの可能性がある。
+    // idチェックをしているが後述の期間をチェックする処理でもほぼ問題ない
+    // また、toRestDurationの場合はマッチするIDが無いのでどちらにしてもidではなく期間で絞る必要がある
+    if (pillSheet.restDurations.map((e) => e.id).contains(restDuration.id)) {
+      return true;
+    }
     return !pillSheet.beginingDate.isBefore(restDuration.beginDate) && !pillSheet.estimatedEndTakenDate.isAfter(restDuration.beginDate);
   }
 
@@ -166,7 +172,7 @@ class ChangeRestDuration {
     required RestDuration toRestDuration,
     required PillSheetGroup pillSheetGroup,
   }) async {
-    final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _isTargetRestDuration(e, fromRestDuration));
+    final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, fromRestDuration));
     if (fromRestDurationPillSheetIndex == -1) {
       throw AssertionError("fromRestDurationPillSheetIndex is not found");
     }
@@ -181,7 +187,7 @@ class ChangeRestDuration {
     final updatedFromRestDurationPillSheet =
         fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
 
-    final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _isTargetRestDuration(e, toRestDuration));
+    final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, toRestDuration));
     if (toRestDurationPillSheetIndex == -1) {
       throw AssertionError("toRestDurationPillSheetIndex is not found");
     }
