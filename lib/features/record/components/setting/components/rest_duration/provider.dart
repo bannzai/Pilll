@@ -137,3 +137,96 @@ class EndRestDuration {
     return updatedPillSheetGroup;
   }
 }
+
+final changeRestDuration = Provider.autoDispose(
+  (ref) => ChangeRestDuration(
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+  ),
+);
+
+class ChangeRestDuration {
+  final BatchFactory batchFactory;
+  final BatchSetPillSheetGroup batchSetPillSheetGroup;
+  final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
+
+  ChangeRestDuration({
+    required this.batchFactory,
+    required this.batchSetPillSheetGroup,
+    required this.batchSetPillSheetModifiedHistory,
+  });
+
+  Future<void> call({
+    required RestDuration fromRestDuration,
+    required RestDuration toRestDuration,
+    required PillSheetGroup pillSheetGroup,
+  }) async {
+    final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere(
+      (e) => !e.beginingDate.isBefore(fromRestDuration.beginDate) && !e.estimatedEndTakenDate.isAfter(fromRestDuration.beginDate),
+    );
+    if (fromRestDurationPillSheetIndex == -1) {
+      throw AssertionError("fromRestDurationPillSheetIndex is not found");
+    }
+    final fromRestDurationPillSheet = pillSheetGroup.pillSheets[fromRestDurationPillSheetIndex];
+    if (fromRestDurationPillSheet.restDurations.isEmpty) {
+      throw AssertionError("fromRestDurationPillSheet.restDurations is empty");
+    }
+    final fromRestDurationIndex = fromRestDurationPillSheet.restDurations.indexOf(fromRestDuration);
+    if (fromRestDurationIndex == -1) {
+      throw AssertionError("fromRestDurationIndex is not found");
+    }
+    final updatedFromRestDurationPillSheet =
+        fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
+
+    final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere(
+      (e) => !e.beginingDate.isBefore(toRestDuration.beginDate) && !e.estimatedEndTakenDate.isAfter(toRestDuration.beginDate),
+    );
+    if (toRestDurationPillSheetIndex == -1) {
+      throw AssertionError("toRestDurationPillSheetIndex is not found");
+    }
+    final PillSheet updatedToRestDurationPillSheet;
+    final toRestDurationPillSheet = pillSheetGroup.pillSheets[toRestDurationPillSheetIndex];
+    if (updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id) {
+      // 変更前後のお休み期間対象のピルシートが一緒の場合はupdatedFromRestDurationPillSheetからコピーする
+      updatedToRestDurationPillSheet = updatedFromRestDurationPillSheet.copyWith(
+        restDurations: [...updatedFromRestDurationPillSheet.restDurations, toRestDuration],
+      );
+    } else {
+      updatedToRestDurationPillSheet = toRestDurationPillSheet.copyWith(
+        restDurations: [...toRestDurationPillSheet.restDurations, toRestDuration],
+      );
+    }
+
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      // updatedToRestDurationPillSheet からチェックする。updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id の場合は
+      // if (pillSheet.id == updatedFromRestDurationPillSheet.id)の条件式には引っかからない
+      if (pillSheet.id == updatedToRestDurationPillSheet.id) {
+        updatedPillSheets.add(updatedToRestDurationPillSheet);
+      } else if (pillSheet.id == updatedFromRestDurationPillSheet.id) {
+        updatedPillSheets.add(updatedFromRestDurationPillSheet);
+      } else {
+        updatedPillSheets.add(pillSheet);
+      }
+    }
+
+    final batch = batchFactory.batch();
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
+    batchSetPillSheetModifiedHistory(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: fromRestDurationPillSheet,
+        after: toRestDurationPillSheet,
+        beforeRestDuration: fromRestDuration,
+        afterRestDuration: toRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      ),
+    );
+
+    await batch.commit();
+  }
+}
