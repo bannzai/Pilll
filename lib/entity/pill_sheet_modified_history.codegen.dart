@@ -380,6 +380,35 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     );
   }
 
+  static PillSheetModifiedHistory createChangedRestDurationAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required RestDuration beforeRestDuration,
+    required RestDuration afterRestDuration,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
+  }) {
+    assert(pillSheetGroupID != null);
+
+    return _create(
+      actionType: PillSheetModifiedActionType.endedRestDuration,
+      value: PillSheetModifiedHistoryValue(
+        changedRestDurationValue: ChangedRestDurationValue(
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
+    );
+  }
+
   static PillSheetModifiedHistory createChangedBeginDisplayNumberAction({
     required String? pillSheetGroupID,
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
