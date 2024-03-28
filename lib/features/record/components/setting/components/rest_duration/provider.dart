@@ -167,7 +167,7 @@ class ChangeRestDuration {
     if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
       return true;
     }
-    return !pillSheet.beginingDate.isBefore(restDuration.beginDate) && !pillSheet.estimatedEndTakenDate.isAfter(restDuration.beginDate);
+    return !restDuration.beginDate.isBefore(pillSheet.beginingDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
   }
 
   Future<void> call({

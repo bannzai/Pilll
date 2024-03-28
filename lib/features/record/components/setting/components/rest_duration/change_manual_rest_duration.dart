@@ -32,7 +32,19 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     final begin = DateTimeFormatter.monthAndDay(restDuration.beginDate);
     final end = restDuration.endDate != null ? DateTimeFormatter.monthAndDay(restDuration.endDate!) : null;
 
-    void onChanged() {}
+    void onChanged() {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          duration: Duration(
+            seconds: 2,
+          ),
+          content: Text("服用お休みを変更しました"),
+        ),
+      );
+
+      Navigator.of(context).pop();
+    }
+
     void onError(Object e) {
       debugPrint(e.toString());
       showErrorAlert(context, e);
