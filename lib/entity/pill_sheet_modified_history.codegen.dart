@@ -37,6 +37,8 @@ enum PillSheetModifiedActionType {
   beganRestDuration,
   @JsonValue("endedRestDuration")
   endedRestDuration,
+  @JsonValue("changedRestDuration")
+  changedRestDuration,
   @JsonValue("changedBeginDisplayNumber")
   changedBeginDisplayNumber,
   @JsonValue("changedEndDisplayNumber")
