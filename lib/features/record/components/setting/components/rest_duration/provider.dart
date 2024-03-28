@@ -204,17 +204,31 @@ class ChangeRestDuration {
       );
     }
 
-    final updatedPillSheets = <PillSheet>[];
+    // 先に服用お休み期間を更新する
+    // 後述のループでbeginDateを更新する
+    final updatedRestDurationPillSheets = <PillSheet>[];
     for (final pillSheet in pillSheetGroup.pillSheets) {
       // updatedToRestDurationPillSheet からチェックする。updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id の場合は
       // if (pillSheet.id == updatedFromRestDurationPillSheet.id)の条件式には引っかからない
       if (pillSheet.id == updatedToRestDurationPillSheet.id) {
-        updatedPillSheets.add(updatedToRestDurationPillSheet);
+        updatedRestDurationPillSheets.add(updatedToRestDurationPillSheet);
       } else if (pillSheet.id == updatedFromRestDurationPillSheet.id) {
-        updatedPillSheets.add(updatedFromRestDurationPillSheet);
+        updatedRestDurationPillSheets.add(updatedFromRestDurationPillSheet);
       } else {
-        updatedPillSheets.add(pillSheet);
+        updatedRestDurationPillSheets.add(pillSheet);
       }
+    }
+
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in updatedRestDurationPillSheets) {
+      if (pillSheet.id == updatedRestDurationPillSheets.first.id) {
+        updatedPillSheets.add(pillSheet);
+        continue;
+      }
+      final beforePillSheet = updatedRestDurationPillSheets[pillSheet.groupIndex - 1];
+      updatedPillSheets.add(pillSheet.copyWith(
+        beginingDate: beforePillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+      ));
     }
 
     final batch = batchFactory.batch();
