@@ -1,4 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -39,11 +40,13 @@ class BeginRestDuration {
     if (lastTakenDate == null) {
       // 1番目から服用お休みする場合は、beginDateは今日になる
       restDuration = RestDuration(
+        id: firestoreIDGenerator(),
         beginDate: now(),
         createdDate: now(),
       );
     } else {
       restDuration = RestDuration(
+        id: firestoreIDGenerator(),
         beginDate: lastTakenDate.addDays(1),
         createdDate: now(),
       );
