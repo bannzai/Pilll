@@ -46,7 +46,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Column(
             children: [
-              if (pillSheetTypes.value.isNotEmpty) ...[
+              if (pillSheetTypes.value.isEmpty) ...[
                 const Spacer(),
                 AddPillSheetTypeEmpty(onSelect: (pillSheetType) {
                   pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
