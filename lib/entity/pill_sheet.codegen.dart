@@ -54,6 +54,7 @@ class RestDuration with _$RestDuration {
     )
     required DateTime createdDate,
   }) = _RestDuration;
+  const RestDuration._();
 
   factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
 

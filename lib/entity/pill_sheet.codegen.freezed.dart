@@ -374,7 +374,7 @@ class __$$RestDurationImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$RestDurationImpl implements _RestDuration {
+class _$RestDurationImpl extends _RestDuration {
   const _$RestDurationImpl(
       {required this.id,
       @JsonKey(
@@ -388,7 +388,8 @@ class _$RestDurationImpl implements _RestDuration {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.createdDate});
+      required this.createdDate})
+      : super._();
 
   factory _$RestDurationImpl.fromJson(Map<String, dynamic> json) =>
       _$$RestDurationImplFromJson(json);
@@ -449,7 +450,7 @@ class _$RestDurationImpl implements _RestDuration {
   }
 }
 
-abstract class _RestDuration implements RestDuration {
+abstract class _RestDuration extends RestDuration {
   const factory _RestDuration(
       {required final String? id,
       @JsonKey(
@@ -464,6 +465,7 @@ abstract class _RestDuration implements RestDuration {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdDate}) = _$RestDurationImpl;
+  const _RestDuration._() : super._();
 
   factory _RestDuration.fromJson(Map<String, dynamic> json) =
       _$RestDurationImpl.fromJson;
