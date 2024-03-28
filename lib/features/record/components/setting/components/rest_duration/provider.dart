@@ -164,7 +164,7 @@ class ChangeRestDuration {
     // restDuration.idが2024-03-28の実装時に追加されたものでnullableの可能性がある。
     // idチェックをしているが後述の期間をチェックする処理でもほぼ問題ない
     // また、toRestDurationの場合はマッチするIDが無いのでどちらにしてもidではなく期間で絞る必要がある
-    if (pillSheet.restDurations.map((e) => e.id).contains(restDuration.id)) {
+    if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
       return true;
     }
     return !pillSheet.beginingDate.isBefore(restDuration.beginDate) && !pillSheet.estimatedEndTakenDate.isAfter(restDuration.beginDate);
