@@ -34,6 +34,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
     void onChanged() {}
     void onError(Object e) {
+      debugPrint(e.toString());
       showErrorAlert(context, e);
     }
 
