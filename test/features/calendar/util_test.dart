@@ -836,6 +836,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-08"),
                 endDate: DateTime.parse("2020-09-10"),
                 createdDate: DateTime.parse("2020-09-08"),

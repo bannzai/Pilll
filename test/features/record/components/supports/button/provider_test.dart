@@ -24,6 +24,7 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
         beginDate: now(),
         createdDate: now(),
         endDate: null,
@@ -60,6 +61,7 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final beginRestDuration = BeginRestDuration(
+          id: "rest_duration_id",
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
@@ -79,6 +81,7 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
         beginDate: now().subtract(const Duration(days: 1)),
         createdDate: now().subtract(const Duration(days: 1)),
         endDate: null,
@@ -119,6 +122,7 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final endRestDuration = EndRestDuration(
+          id: "rest_duration_id",
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
@@ -136,6 +140,7 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
         beginDate: now().subtract(const Duration(days: 1)),
         createdDate: now().subtract(const Duration(days: 1)),
         endDate: null,
@@ -216,6 +221,7 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final endRestDuration = EndRestDuration(
+          id: "rest_duration_id",
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
