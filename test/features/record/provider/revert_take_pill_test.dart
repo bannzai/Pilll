@@ -533,7 +533,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           restDurations: [
-            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
+            RestDuration(id: "rest_duration_id", beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
         );

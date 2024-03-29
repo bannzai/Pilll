@@ -281,7 +281,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
         restDurations: [
-          RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: null),
+          RestDuration(id: "rest_duration_id", beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: null),
         ],
       );
       expect(model.isActive, true);
@@ -304,7 +304,11 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
         restDurations: [
-          RestDuration(beginDate: DateTime.parse("2020-09-20"), createdDate: DateTime.parse("2020-09-20"), endDate: DateTime.parse("2020-09-22")),
+          RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-20"),
+              createdDate: DateTime.parse("2020-09-20"),
+              endDate: DateTime.parse("2020-09-22")),
         ],
       );
       expect(model.isActive, true);
