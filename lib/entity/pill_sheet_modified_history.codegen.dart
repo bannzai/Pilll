@@ -384,6 +384,35 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     );
   }
 
+  static PillSheetModifiedHistory createChangedRestDurationBeginDateAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required RestDuration beforeRestDuration,
+    required RestDuration afterRestDuration,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
+  }) {
+    assert(pillSheetGroupID != null);
+
+    return _create(
+      actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
+      value: PillSheetModifiedHistoryValue(
+        changedRestDurationBeginDateValue: ChangedRestDurationBeginDateValue(
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
+    );
+  }
+
   static PillSheetModifiedHistory createChangedRestDurationAction({
     required String? pillSheetGroupID,
     required PillSheet before,
@@ -396,7 +425,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     assert(pillSheetGroupID != null);
 
     return _create(
-      actionType: PillSheetModifiedActionType.endedRestDuration,
+      actionType: PillSheetModifiedActionType.changedRestDuration,
       value: PillSheetModifiedHistoryValue(
         changedRestDurationValue: ChangedRestDurationValue(
           beforeRestDuration: beforeRestDuration,
