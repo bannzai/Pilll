@@ -8,7 +8,7 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final ChangedRestDurationValue? value;
+  final ChangedRestDurationBeginDateValue? value;
 
   const PillSheetModifiedHistoryChangedRestDurationBeginDate({
     Key? key,
