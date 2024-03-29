@@ -13,7 +13,6 @@ import 'package:pilll/features/record/components/setting/components/rest_duratio
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/features/record/components/setting/components/today_number/today_pill_number.dart';
 
 class PillSheetSettingSheet extends HookConsumerWidget {
