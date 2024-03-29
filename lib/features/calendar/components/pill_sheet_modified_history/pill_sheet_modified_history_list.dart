@@ -198,6 +198,14 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 value: history.value.changedEndDisplayNumber,
               ),
+            PillSheetModifiedActionType.changedRestDurationBeginDate => PillSheetModifiedHistoryChangedRestDurationBeginDate(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.changedRestDurationBeginDateValue,
+              ),
+            PillSheetModifiedActionType.changedRestDuration => PillSheetModifiedHistoryChangedRestDuration(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.changedRestDurationValue,
+              ),
             // whereでフィルタリングしているのでありえないパターン
             null => Container(),
           };
