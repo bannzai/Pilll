@@ -3,6 +3,7 @@ import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -141,8 +142,17 @@ class EndRestDuration {
   }
 }
 
+final changeRestDurationBeginDateProvider = Provider.autoDispose(
+  (ref) => ChangeRestDuration(
+    actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+  ),
+);
 final changeRestDurationProvider = Provider.autoDispose(
   (ref) => ChangeRestDuration(
+    actionType: PillSheetModifiedActionType.changedRestDuration,
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
     batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
@@ -150,11 +160,14 @@ final changeRestDurationProvider = Provider.autoDispose(
 );
 
 class ChangeRestDuration {
+  // changedRestDurationBeginDate or changedRestDuration
+  final PillSheetModifiedActionType actionType;
   final BatchFactory batchFactory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
 
   ChangeRestDuration({
+    required this.actionType,
     required this.batchFactory,
     required this.batchSetPillSheetGroup,
     required this.batchSetPillSheetModifiedHistory,
@@ -237,18 +250,36 @@ class ChangeRestDuration {
     final batch = batchFactory.batch();
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
-    batchSetPillSheetModifiedHistory(
-      batch,
-      PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
-        pillSheetGroupID: pillSheetGroup.id,
-        before: fromRestDurationPillSheet,
-        after: toRestDurationPillSheet,
-        beforeRestDuration: fromRestDuration,
-        afterRestDuration: toRestDuration,
-        beforePillSheetGroup: pillSheetGroup,
-        afterPillSheetGroup: updatedPillSheetGroup,
-      ),
-    );
+    switch (actionType) {
+      case PillSheetModifiedActionType.changedRestDurationBeginDate:
+        batchSetPillSheetModifiedHistory(
+          batch,
+          PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+            pillSheetGroupID: pillSheetGroup.id,
+            before: fromRestDurationPillSheet,
+            after: toRestDurationPillSheet,
+            beforeRestDuration: fromRestDuration,
+            afterRestDuration: toRestDuration,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          ),
+        );
+      case PillSheetModifiedActionType.changedRestDuration:
+        batchSetPillSheetModifiedHistory(
+          batch,
+          PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+            pillSheetGroupID: pillSheetGroup.id,
+            before: fromRestDurationPillSheet,
+            after: toRestDurationPillSheet,
+            beforeRestDuration: fromRestDuration,
+            afterRestDuration: toRestDuration,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: updatedPillSheetGroup,
+          ),
+        );
+      default:
+        throw AssertionError("actionType is not supported: $actionType");
+    }
 
     await batch.commit();
   }
