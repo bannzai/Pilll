@@ -141,6 +141,119 @@ class EndRestDuration {
   }
 }
 
+final changeRestDurationBeginDateProvider = Provider.autoDispose(
+  (ref) => ChangeRestDurationBeginDate(
+    batchFactory: ref.watch(batchFactoryProvider),
+    batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+  ),
+);
+
+class ChangeRestDurationBeginDate {
+  final BatchFactory batchFactory;
+  final BatchSetPillSheetGroup batchSetPillSheetGroup;
+  final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
+
+  ChangeRestDurationBeginDate({
+    required this.batchFactory,
+    required this.batchSetPillSheetGroup,
+    required this.batchSetPillSheetModifiedHistory,
+  });
+
+  bool _hasRestDuration(PillSheet pillSheet, RestDuration restDuration) {
+    // restDuration.idが2024-03-28の実装時に追加されたものでnullableの可能性がある。
+    // idチェックをしているが後述の期間をチェックする処理でもほぼ問題ない
+    // また、toRestDurationの場合はマッチするIDが無いのでどちらにしてもidではなく期間で絞る必要がある
+    if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
+      return true;
+    }
+    return !restDuration.beginDate.isBefore(pillSheet.beginingDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
+  }
+
+  Future<void> call({
+    required RestDuration fromRestDuration,
+    required RestDuration toRestDuration,
+    required PillSheetGroup pillSheetGroup,
+  }) async {
+    final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, fromRestDuration));
+    if (fromRestDurationPillSheetIndex == -1) {
+      throw AssertionError("fromRestDurationPillSheetIndex is not found");
+    }
+    final fromRestDurationPillSheet = pillSheetGroup.pillSheets[fromRestDurationPillSheetIndex];
+    if (fromRestDurationPillSheet.restDurations.isEmpty) {
+      throw AssertionError("fromRestDurationPillSheet.restDurations is empty");
+    }
+    final fromRestDurationIndex = fromRestDurationPillSheet.restDurations.indexOf(fromRestDuration);
+    if (fromRestDurationIndex == -1) {
+      throw AssertionError("fromRestDurationIndex is not found");
+    }
+    final updatedFromRestDurationPillSheet =
+        fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
+
+    final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, toRestDuration));
+    if (toRestDurationPillSheetIndex == -1) {
+      throw AssertionError("toRestDurationPillSheetIndex is not found");
+    }
+    final PillSheet updatedToRestDurationPillSheet;
+    final toRestDurationPillSheet = pillSheetGroup.pillSheets[toRestDurationPillSheetIndex];
+    if (updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id) {
+      // 変更前後のお休み期間対象のピルシートが一緒の場合はupdatedFromRestDurationPillSheetからコピーする
+      updatedToRestDurationPillSheet = updatedFromRestDurationPillSheet.copyWith(
+        restDurations: [...updatedFromRestDurationPillSheet.restDurations, toRestDuration],
+      );
+    } else {
+      updatedToRestDurationPillSheet = toRestDurationPillSheet.copyWith(
+        restDurations: [...toRestDurationPillSheet.restDurations, toRestDuration],
+      );
+    }
+
+    // 先に服用お休み期間を更新する
+    // 後述のループでbeginDateを更新する
+    final updatedRestDurationPillSheets = <PillSheet>[];
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      // updatedToRestDurationPillSheet からチェックする。updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id の場合は
+      // if (pillSheet.id == updatedFromRestDurationPillSheet.id)の条件式には引っかからない
+      if (pillSheet.id == updatedToRestDurationPillSheet.id) {
+        updatedRestDurationPillSheets.add(updatedToRestDurationPillSheet);
+      } else if (pillSheet.id == updatedFromRestDurationPillSheet.id) {
+        updatedRestDurationPillSheets.add(updatedFromRestDurationPillSheet);
+      } else {
+        updatedRestDurationPillSheets.add(pillSheet);
+      }
+    }
+
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in updatedRestDurationPillSheets) {
+      if (pillSheet.id == updatedRestDurationPillSheets.first.id) {
+        updatedPillSheets.add(pillSheet);
+        continue;
+      }
+      final beforePillSheet = updatedRestDurationPillSheets[pillSheet.groupIndex - 1];
+      updatedPillSheets.add(pillSheet.copyWith(
+        beginingDate: beforePillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+      ));
+    }
+
+    final batch = batchFactory.batch();
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
+    batchSetPillSheetModifiedHistory(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: fromRestDurationPillSheet,
+        after: toRestDurationPillSheet,
+        beforeRestDuration: fromRestDuration,
+        afterRestDuration: toRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      ),
+    );
+
+    await batch.commit();
+  }
+}
+
 final changeRestDurationProvider = Provider.autoDispose(
   (ref) => ChangeRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
