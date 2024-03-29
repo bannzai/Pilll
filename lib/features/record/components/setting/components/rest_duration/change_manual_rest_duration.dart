@@ -28,6 +28,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final changeRestDurationBeginDate = ref.watch(changeRestDurationBeginDateProvider);
     final changeRestDuration = ref.watch(changeRestDurationProvider);
     final begin = DateTimeFormatter.monthAndDay(restDuration.beginDate);
     final end = restDuration.endDate != null ? DateTimeFormatter.monthAndDay(restDuration.endDate!) : null;
@@ -85,7 +86,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           );
 
           try {
-            await changeRestDuration(
+            await changeRestDurationBeginDate(
               fromRestDuration: restDuration,
               toRestDuration: toRestDuration,
               pillSheetGroup: pillSheetGroup,
