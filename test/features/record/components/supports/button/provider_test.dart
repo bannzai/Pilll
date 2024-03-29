@@ -61,7 +61,6 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final beginRestDuration = BeginRestDuration(
-          id: "rest_duration_id",
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
@@ -122,7 +121,6 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final endRestDuration = EndRestDuration(
-          id: "rest_duration_id",
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
@@ -221,7 +219,6 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       final endRestDuration = EndRestDuration(
-          id: "rest_duration_id",
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
