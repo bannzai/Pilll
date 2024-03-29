@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class PillNumber extends StatelessWidget {
   const PillNumber({
@@ -74,4 +75,20 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
   }
 
   static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? "${pillSheetIDs.length}枚" : hyphen();
+
+  static String changedRestDuration(ChangedRestDurationValue value) {
+    final before = value.beforeRestDuration;
+    final after = value.afterRestDuration;
+    final beforeEnd = before.endDate;
+    final afterEnd = after.endDate;
+
+    assert(beforeEnd == null || afterEnd == null);
+    if (beforeEnd == null || afterEnd == null) {
+      return "";
+    }
+
+    String f(DateTime date) => DateTimeFormatter.slashYearAndMonth(date);
+
+    return "開始日:${f(before.beginDate)}→${f(after.beginDate)}日\n終了日:${f(beforeEnd)}→${f(afterEnd)}";
+  }
 }
