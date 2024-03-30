@@ -82,7 +82,6 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     final beforeEnd = before.endDate;
     final afterEnd = after.endDate;
 
-    assert(beforeEnd == null || afterEnd == null);
     if (beforeEnd == null || afterEnd == null) {
       return "";
     }
