@@ -6,9 +6,7 @@ import 'package:timezone/timezone.dart';
 
 final firebaseAnalytics = FirebaseAnalytics.instance;
 
-// TODO: [UseLocalNotification-Beta]
-// UserのanalyticsDebugIsEnabledを適切なタイミングでセットする
-final analyticsDebugIsEnabled = true;
+var analyticsDebugIsEnabled = false;
 
 class Analytics {
   void debug({required String name, Map<String, dynamic>? parameters}) async {
