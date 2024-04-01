@@ -17,8 +17,6 @@ class PrimaryButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    // Avoid [Once you have called dispose() on a ValueNotifier<bool>, it can no longer be use]
-    final isMounted = useIsMounted();
 
     return Stack(
       alignment: Alignment.center,
@@ -43,7 +41,7 @@ class PrimaryButton extends HookWidget {
                   } catch (error) {
                     rethrow;
                   } finally {
-                    if (isMounted()) isProcessing.value = false;
+                    if (context.mounted) isProcessing.value = false;
                   }
                 },
           child: ConstrainedBox(
@@ -77,7 +75,6 @@ class UndoButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    final isMounted = useIsMounted();
 
     return Stack(
       alignment: Alignment.center,
@@ -102,7 +99,7 @@ class UndoButton extends HookWidget {
                   } catch (error) {
                     rethrow;
                   } finally {
-                    if (isMounted()) isProcessing.value = false;
+                    if (context.mounted) isProcessing.value = false;
                   }
                 },
           child: ConstrainedBox(
@@ -136,7 +133,6 @@ class RedTextButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    final isMounted = useIsMounted();
 
     return SizedBox(
       height: 44,
@@ -155,7 +151,7 @@ class RedTextButton extends HookWidget {
                 } catch (error) {
                   rethrow;
                 } finally {
-                  if (isMounted()) isProcessing.value = false;
+                  if (context.mounted) isProcessing.value = false;
                 }
               },
         child: Stack(
@@ -188,7 +184,6 @@ class InconspicuousButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    final isMounted = useIsMounted();
 
     return SizedBox(
       width: 180,
@@ -208,7 +203,7 @@ class InconspicuousButton extends HookWidget {
                 } catch (error) {
                   rethrow;
                 } finally {
-                  if (isMounted()) isProcessing.value = false;
+                  if (context.mounted) isProcessing.value = false;
                 }
               },
         child: Stack(
@@ -236,7 +231,6 @@ class SmallAppOutlinedButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    final isMounted = useIsMounted();
 
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
@@ -258,7 +252,7 @@ class SmallAppOutlinedButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                if (isMounted()) isProcessing.value = false;
+                if (context.mounted) isProcessing.value = false;
               }
             },
       child: Container(
@@ -296,7 +290,6 @@ class AppOutlinedButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    final isMounted = useIsMounted();
 
     return Stack(
       alignment: Alignment.center,
@@ -321,7 +314,7 @@ class AppOutlinedButton extends HookWidget {
                   } catch (error) {
                     rethrow;
                   } finally {
-                    if (isMounted()) isProcessing.value = false;
+                    if (context.mounted) isProcessing.value = false;
                   }
                 },
           child: Container(
@@ -358,7 +351,6 @@ class AlertButton extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isProcessing = useState(false);
-    final isMounted = useIsMounted();
 
     return TextButton(
       onPressed: onPressed == null
@@ -373,7 +365,7 @@ class AlertButton extends HookWidget {
               } catch (error) {
                 rethrow;
               } finally {
-                if (isMounted()) isProcessing.value = false;
+                if (context.mounted) isProcessing.value = false;
               }
             },
       child: Stack(

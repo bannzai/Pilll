@@ -89,6 +89,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               final navigator = Navigator.of(context);
                               analytics.logEvent(name: 'a_c_l_apple_long_press_result');
 
+                              await appleReauthentification();
+
                               messenger.showSnackBar(
                                 const SnackBar(
                                   duration: Duration(seconds: 2),
@@ -140,6 +142,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
                               analytics.logEvent(name: 'a_c_l_google_long_press_result');
+
+                              await googleReauthentification();
 
                               messenger.showSnackBar(
                                 const SnackBar(

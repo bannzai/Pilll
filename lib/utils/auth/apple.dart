@@ -6,7 +6,7 @@ enum SignInWithAppleState { determined, cancel }
 
 Future<UserCredential?> linkWithApple(User user) async {
   try {
-    final provider = AppleAuthProvider();
+    final provider = AppleAuthProvider().addScope('email');
     return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意
@@ -49,7 +49,7 @@ bool isLinkedAppleFor(User user) {
 
 Future<void> appleReauthentification() async {
   try {
-    final provider = AppleAuthProvider();
+    final provider = AppleAuthProvider().addScope('email');
     await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意

@@ -1,11 +1,12 @@
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_empty_frame.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
-import 'package:pilll/features/record/components/supports/record_page_pill_sheet_support_actions.dart';
+import 'package:pilll/features/record/components/setting/button.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/features/record/components/header/record_page_header.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -14,7 +15,6 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
@@ -29,57 +29,10 @@ class RecordPage extends HookConsumerWidget {
     final user = ref.watch(userProvider);
     final setting = ref.watch(settingProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
+    final isLinked = ref.watch(isLinkedProvider);
+
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    useEffect(() {
-      final f = (() async {
-        if (user.isLoading) {
-          return;
-        }
-        try {
-          syncUserStatus(user: user.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [user.asData?.value]);
-
-    useEffect(() {
-      final f = (() async {
-        if (setting.isLoading) {
-          return;
-        }
-        try {
-          syncSetting(setting: setting.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [setting.asData?.value]);
-
-    useEffect(() {
-      final f = (() async {
-        if (latestPillSheetGroup.isLoading) {
-          return;
-        }
-        try {
-          syncActivePillSheetValue(pillSheetGroup: latestPillSheetGroup.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [latestPillSheetGroup.asData?.value]);
-
-    final isLinked = ref.watch(isLinkedProvider);
     return AsyncValueGroup.group4(
       latestPillSheetGroup,
       user,
@@ -139,60 +92,75 @@ class RecordPageBody extends HookConsumerWidget {
           user: user,
         ),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView(
-              children: [
-                const AnnouncementBar(),
-                const SizedBox(height: 37),
-                _content(context),
-                const SizedBox(height: 20),
-              ],
-            ),
-          ),
-          if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
-            RecordPageButton(
-              pillSheetGroup: pillSheetGroup,
-              currentPillSheet: activePillSheet,
-              userIsPremiumOtTrial: user.premiumOrTrial,
-              user: user,
-            ),
-            const SizedBox(height: 40),
-          ],
-        ],
-      ),
+      body: Builder(builder: (context) {
+        if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
+          return Column(
+            children: [
+              Expanded(
+                child: ListView(
+                  children: [
+                    const AnnouncementBar(),
+                    const SizedBox(height: 37),
+                    AddPillSheetGroupEmptyFrame(
+                      context: context,
+                      pillSheetGroup: pillSheetGroup,
+                      setting: setting,
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                ),
+              ),
+            ],
+          );
+        } else {
+          return Column(
+            children: [
+              Expanded(
+                child: ListView(
+                  children: [
+                    const AnnouncementBar(),
+                    const SizedBox(height: 37),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: PillSheetViewLayout.width,
+                          child: Row(
+                            children: [
+                              const Spacer(),
+                              RecordPagePillSheetSettingButton(
+                                pillSheetGroup: pillSheetGroup,
+                                activePillSheet: activePillSheet,
+                                setting: setting,
+                                user: user,
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(height: 16),
+                        RecordPagePillSheetList(
+                          pillSheetGroup: pillSheetGroup,
+                          activePillSheet: activePillSheet,
+                          setting: setting,
+                          user: user,
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+                  ],
+                ),
+              ),
+              RecordPageButton(
+                pillSheetGroup: pillSheetGroup,
+                currentPillSheet: activePillSheet,
+                userIsPremiumOtTrial: user.premiumOrTrial,
+                user: user,
+              ),
+              const SizedBox(height: 40),
+            ],
+          );
+        }
+      }),
     );
-  }
-
-  Widget _content(BuildContext context) {
-    final pillSheetGroup = this.pillSheetGroup;
-    final activePillSheet = pillSheetGroup?.activePillSheet;
-    if (activePillSheet == null || pillSheetGroup == null || pillSheetGroup.isDeactived) {
-      return AddPillSheetGroupEmptyFrame(
-        context: context,
-        pillSheetGroup: pillSheetGroup,
-        setting: setting,
-      );
-    } else {
-      return Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          RecordPagePillSheetSupportActions(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            setting: setting,
-            user: user,
-          ),
-          const SizedBox(height: 16),
-          RecordPagePillSheetList(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-            setting: setting,
-            user: user,
-          ),
-        ],
-      );
-    }
   }
 }

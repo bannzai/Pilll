@@ -72,7 +72,6 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     analytics.logEvent(
                       name: "sheet_change_display_number_setting",
                     );
-                    final navigator = Navigator.of(context);
                     await _submit(
                       batchFactory: batchFactory,
                       batchSetPillSheetGroup: batchSetPillSheetGroup,
@@ -81,7 +80,17 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       end: end,
                     );
                     await registerReminderLocalNotification();
-                    navigator.pop();
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          duration: Duration(
+                            seconds: 2,
+                          ),
+                          content: Text("始まりと終わりの番号を変更しました"),
+                        ),
+                      );
+                      Navigator.of(context).popUntil((route) => route.isFirst);
+                    }
                   },
                 )
               ]),
