@@ -224,8 +224,6 @@ class RegisterReminderLocalNotification {
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
-    debugPrint("tzNow:$tzNow, tz.local:${tz.local}");
-
     final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber;
 
     for (final reminderTime in setting.reminderTimes) {
@@ -254,15 +252,12 @@ class RegisterReminderLocalNotification {
           });
           continue;
         }
-        debugPrint("==== reminderDate:$reminderDateTime ===");
 
         // 跨いでも1ピルシート分だけなので、今日の日付起点で考えて今処理しているループがactivePillSheetの次かどうかを判別し、処理中の「ピルシート中のピル番号」を計算して使用する
         final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
         final pillNumberInPillSheet = isOverActivePillSheet
             ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
             : activePillSheet.todayPillNumber + dayOffset;
-        debugPrint(
-            "activePillSheet.todayPillNumber: ${activePillSheet.todayPillNumber}, offset: $dayOffset, activePillSheet.typeInfo.totalCount: ${activePillSheet.typeInfo.totalCount}, isOverActivePillSheet:$isOverActivePillSheet, pillNumberInPillSheet:$pillNumberInPillSheet");
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
@@ -364,7 +359,6 @@ class RegisterReminderLocalNotification {
             }
             return result;
           }();
-          debugPrint("title:$title");
 
           futures.add(
             Future(() async {
@@ -414,7 +408,6 @@ class RegisterReminderLocalNotification {
                 });
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
-                debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
                 errorLogger.recordError(e, st);
                 analytics.debug(name: "rrrn_e_premium", parameters: {
                   "dayOffset": dayOffset,
@@ -468,7 +461,6 @@ class RegisterReminderLocalNotification {
                 });
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
-                debugPrint("[bannzai] notificationID:$notificationID error:$e, stackTrace:$st");
                 errorLogger.recordError(e, st);
 
                 analytics.debug(name: "rrrn_e_non_premium", parameters: {
@@ -491,7 +483,6 @@ class RegisterReminderLocalNotification {
     analytics.debug(name: "rrrn_e_end_run", parameters: {
       "notificationCount": futures.length,
     });
-    debugPrint("end scheduleRemiderNotification: ${setting.reminderTimes}, futures.length:${futures.length}");
   }
 
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberInPillSheet:2}
@@ -540,7 +531,6 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
     final localNotification = schedule.localNotification;
     if (localNotification != null) {
       final remindDate = tz.TZDateTime.from(localNotification.remindDateTime, tz.local);
-      debugPrint("$remindDate");
       await plugin.zonedSchedule(
         localNotification.localNotificationID,
         "本日の予定です",
