@@ -1,13 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/native/legacy.dart';
-import 'package:pilll/native/pill.dart';
-import 'package:pilll/native/widget.dart';
-import 'package:pilll/utils/error_log.dart';
-import 'package:pilll/utils/local_notification.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:pilll/provider/database.dart';
 
 const methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 void definedChannel() {
