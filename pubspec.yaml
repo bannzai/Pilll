@@ -48,7 +48,7 @@ dependencies:
   flutter_hooks: ^0.20.5
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.1.0
-  in_app_review: ^2.0.8
+  in_app_review: ^2.0.9
   uuid: ^3.0.7
   async_value_group: ^1.0.0
 
@@ -84,7 +84,7 @@ dev_dependencies:
   freezed: ^2.4.7
   custom_lint: 0.6.2
   riverpod_lint: 2.3.10
-  riverpod_generator: 2.3.11
+  riverpod_generator: 2.4.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

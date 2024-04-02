@@ -10,6 +10,7 @@ import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
 import 'package:pilll/features/root/resolver/sync_data.dart';
 import 'package:pilll/features/root/resolver/user_setup.dart';
 import 'package:pilll/features/root/resolver/user_sign_in.dart';
+import 'package:pilll/features/root/resolver/user_stream.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -113,6 +114,7 @@ class App extends StatelessWidget {
                 userID: userID,
                 builder: (_) => Stack(
                   children: [
+                    UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
                     const SyncDataResolver(),
                     InitialSettingOrAppPage(
                       initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(

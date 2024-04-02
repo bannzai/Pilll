@@ -634,10 +634,10 @@ packages:
     dependency: "direct main"
     description:
       name: in_app_review
-      sha256: "41ec6f30427ab09eb6ae1c85c4a2a624a145fc5d726f023de4d97170ec9e5466"
+      sha256: "99869244d09adc76af16bf8fd731dd13cef58ecafd5917847589c49f378cbb30"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.8"
+    version: "2.0.9"
   in_app_review_platform_interface:
     dependency: transitive
     description:
@@ -914,10 +914,10 @@ packages:
     dependency: "direct dev"
     description:
       name: riverpod_generator
-      sha256: "359068f04879347ae4edbe66c81cc95f83fa1743806d1a0c86e55dd3c33ebb32"
+      sha256: d451608bf17a372025fc36058863737636625dfdb7e3cbf6142e0dfeb366ab22
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.11"
+    version: "2.4.0"
   riverpod_lint:
     dependency: "direct dev"
     description:
