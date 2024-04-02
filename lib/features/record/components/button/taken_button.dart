@@ -22,8 +22,6 @@ class TakenButton extends HookConsumerWidget {
   final PillSheet activePillSheet;
   final bool userIsPremiumOtTrial;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
-// TODO: [UseLocalNotification-Beta] 2024-04
-  final User user;
 
   const TakenButton({
     Key? key,
@@ -32,7 +30,6 @@ class TakenButton extends HookConsumerWidget {
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
-    required this.user,
   }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -61,9 +58,6 @@ class TakenButton extends HookConsumerWidget {
             );
             syncActivePillSheetValue(pillSheetGroup: updatedPillSheetGroup);
             await registerReminderLocalNotification();
-            if (!user.useLocalNotificationForReminder) {
-              await updateUseLocalNotification(user, true);
-            }
           } catch (exception, stack) {
             errorLogger.recordError(exception, stack);
             if (context.mounted) showErrorAlert(context, exception);
