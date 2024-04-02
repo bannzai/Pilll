@@ -74,7 +74,7 @@ class LocalNotificationService {
           defaultPresentList: true,
         ),
       ),
-      onDidReceiveBackgroundNotificationResponse: Platform.isAndroid ? handleNotificationAction : null,
+      onDidReceiveBackgroundNotificationResponse: handleNotificationAction,
     );
   }
 
