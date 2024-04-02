@@ -48,6 +48,5 @@ import 'package:pilll/utils/local_notification.dart';
   ErrorLogger,
   FirestoreIDGenerator,
   LocalNotificationService,
-  UpdateUseLocalNotification,
 ])
 abstract class KeepGeneratedMocks {}
