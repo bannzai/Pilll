@@ -4,34 +4,29 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
-class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
+class PillSheetModifiedHistoryChangedRestDuration extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final int? beforeTodayPillNumber;
-  final int? afterTodayPillNumber;
+  final ChangedRestDurationValue? value;
 
-  const PillSheetModifiedHistoryChangedPillNumberAction({
+  const PillSheetModifiedHistoryChangedRestDuration({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.beforeTodayPillNumber,
-    required this.afterTodayPillNumber,
+    required this.value,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    final beforeTodayPillNumber = this.beforeTodayPillNumber;
-    final afterTodayPillNumber = this.afterTodayPillNumber;
-    if (beforeTodayPillNumber == null || afterTodayPillNumber == null) {
+    final value = this.value;
+    if (value == null) {
       return Container();
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-        beforeTodayPillNumber: beforeTodayPillNumber,
-        afterTodayPillNumber: afterTodayPillNumber,
-      )),
+      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDuration(value)),
       detail: const Text(
-        "ピル番号変更",
+        "服用お休み期間変更",
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

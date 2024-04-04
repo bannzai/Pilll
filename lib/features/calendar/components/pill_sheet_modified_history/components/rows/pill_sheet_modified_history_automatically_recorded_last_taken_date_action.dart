@@ -26,7 +26,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
 
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphen: PillNumber(
+      pillNumbersOrHyphenOrDate: PillNumber(
           pillNumber: PillSheetModifiedHistoryPillNumberOrDate.autoTaken(
         beforeLastTakenPillNumber: beforeLastTakenPillNumber,
         afterLastTakenPillNumber: afterLastTakenPillNumber,

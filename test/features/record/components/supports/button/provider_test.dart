@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -23,7 +24,11 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
       final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
         beginDate: now(),
         createdDate: now(),
         endDate: null,
@@ -79,6 +84,7 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
         beginDate: now().subtract(const Duration(days: 1)),
         createdDate: now().subtract(const Duration(days: 1)),
         endDate: null,
@@ -136,6 +142,7 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
       final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
         beginDate: now().subtract(const Duration(days: 1)),
         createdDate: now().subtract(const Duration(days: 1)),
         endDate: null,

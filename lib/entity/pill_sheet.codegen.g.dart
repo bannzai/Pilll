@@ -26,6 +26,7 @@ Map<String, dynamic> _$$PillSheetTypeInfoImplToJson(
 
 _$RestDurationImpl _$$RestDurationImplFromJson(Map<String, dynamic> json) =>
     _$RestDurationImpl(
+      id: json['id'] as String?,
       beginDate: NonNullTimestampConverter.timestampToDateTime(
           json['beginDate'] as Timestamp),
       endDate:
@@ -36,6 +37,7 @@ _$RestDurationImpl _$$RestDurationImplFromJson(Map<String, dynamic> json) =>
 
 Map<String, dynamic> _$$RestDurationImplToJson(_$RestDurationImpl instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'beginDate':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate),
       'endDate': TimestampConverter.dateTimeToTimestamp(instance.endDate),

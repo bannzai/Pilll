@@ -26,17 +26,20 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: const Row(children: [
+        Icon(
+          Icons.settings,
+          size: 16,
+        ),
+        SizedBox(width: 4),
         Text(
           "設定",
           style: TextStyle(
             color: TextColor.main,
-            fontSize: 12,
+            fontSize: 14,
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w700,
           ),
         ),
-        SizedBox(width: 6),
-        Icon(Icons.settings),
       ]),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_setting");

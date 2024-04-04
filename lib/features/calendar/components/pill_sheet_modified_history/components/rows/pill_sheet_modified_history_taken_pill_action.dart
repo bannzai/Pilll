@@ -85,7 +85,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       },
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-        pillNumbersOrHyphen: PillNumber(
+        pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
           beforeLastTakenPillNumber: beforePillSheet.lastTakenPillNumber,
           afterLastTakenPillNumber: afterPillSheet.lastTakenPillNumber,

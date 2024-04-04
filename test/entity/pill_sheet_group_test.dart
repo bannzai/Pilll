@@ -85,6 +85,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-22"),
                 createdDate: DateTime.parse("2020-09-22"),
               )
@@ -118,6 +119,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-22"),
                 createdDate: DateTime.parse("2020-09-22"),
                 endDate: DateTime.parse("2020-09-25"),
@@ -152,11 +154,13 @@ void main() {
               createdAt: now(),
               restDurations: [
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-12"),
                   createdDate: DateTime.parse("2020-09-12"),
                   endDate: DateTime.parse("2020-09-15"),
                 ),
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-22"),
                   createdDate: DateTime.parse("2020-09-22"),
                 )
@@ -189,11 +193,13 @@ void main() {
               createdAt: now(),
               restDurations: [
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-12"),
                   createdDate: DateTime.parse("2020-09-12"),
                   endDate: DateTime.parse("2020-09-15"),
                 ),
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-22"),
                   createdDate: DateTime.parse("2020-09-22"),
                   endDate: DateTime.parse("2020-09-25"),
@@ -478,6 +484,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-23"),
                 createdDate: DateTime.parse("2020-09-23"),
               ),
@@ -510,6 +517,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-23"),
                 createdDate: DateTime.parse("2020-09-23"),
                 endDate: DateTime.parse("2020-09-25"),
@@ -543,6 +551,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-23"),
                 createdDate: DateTime.parse("2020-09-23"),
                 endDate: DateTime.parse("2020-09-25"),
@@ -578,11 +587,13 @@ void main() {
               createdAt: now(),
               restDurations: [
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-12"),
                   createdDate: DateTime.parse("2020-09-12"),
                   endDate: DateTime.parse("2020-09-15"),
                 ),
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-26"),
                   createdDate: DateTime.parse("2020-09-26"),
                 ),
@@ -615,11 +626,13 @@ void main() {
               createdAt: now(),
               restDurations: [
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-12"),
                   createdDate: DateTime.parse("2020-09-12"),
                   endDate: DateTime.parse("2020-09-15"),
                 ),
                 RestDuration(
+                  id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-26"),
                   createdDate: DateTime.parse("2020-09-26"),
                   endDate: DateTime.parse("2020-09-27"),
@@ -1133,6 +1146,7 @@ void main() {
             ),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-10"),
                 createdDate: DateTime.parse("2020-09-10"),
                 endDate: null,
@@ -1204,6 +1218,7 @@ void main() {
             ),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-10"),
                 createdDate: DateTime.parse("2020-09-10"),
                 endDate: DateTime.parse("2020-09-10").add(const Duration(days: restDurationDays)),

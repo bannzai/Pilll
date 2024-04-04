@@ -537,6 +537,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-23T19:00:04"),
           restDurations: [
             RestDuration(
+              id: "rest_duration_id",
               beginDate: DateTime.parse("2022-07-14T18:25:41"),
               createdDate: DateTime.parse("2022-07-14T18:25:41"),
               endDate: DateTime.parse("2022-07-18T18:10:01"),
@@ -610,14 +611,17 @@ void main() {
             activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00")).copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
         activePillSheet = activePillSheet.copyWith(restDurations: [
           RestDuration(
+              id: "rest_duration_id",
               beginDate: DateTime.parse("2022-08-04T08:19:04"),
               createdDate: DateTime.parse("2022-08-04T08:19:04"),
               endDate: DateTime.parse("2022-08-04T08:19:17")),
           RestDuration(
+              id: "rest_duration_id",
               beginDate: DateTime.parse("2022-08-04T08:19:32"),
               createdDate: DateTime.parse("2022-08-04T08:19:32"),
               endDate: DateTime.parse("2022-08-07T10:48:19")),
           RestDuration(
+              id: "rest_duration_id",
               beginDate: DateTime.parse("2022-08-07T10:48:22"),
               createdDate: DateTime.parse("2022-08-07T10:48:22"),
               endDate: DateTime.parse("2022-08-08T19:47:49"))

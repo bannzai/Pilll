@@ -228,6 +228,8 @@ RestDuration _$RestDurationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RestDuration {
+// from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -254,7 +256,8 @@ abstract class $RestDurationCopyWith<$Res> {
       _$RestDurationCopyWithImpl<$Res, RestDuration>;
   @useResult
   $Res call(
-      {@JsonKey(
+      {String? id,
+      @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime beginDate,
@@ -281,11 +284,16 @@ class _$RestDurationCopyWithImpl<$Res, $Val extends RestDuration>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? beginDate = null,
     Object? endDate = freezed,
     Object? createdDate = null,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       beginDate: null == beginDate
           ? _value.beginDate
           : beginDate // ignore: cast_nullable_to_non_nullable
@@ -311,7 +319,8 @@ abstract class _$$RestDurationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(
+      {String? id,
+      @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime beginDate,
@@ -336,11 +345,16 @@ class __$$RestDurationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? id = freezed,
     Object? beginDate = null,
     Object? endDate = freezed,
     Object? createdDate = null,
   }) {
     return _then(_$RestDurationImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       beginDate: null == beginDate
           ? _value.beginDate
           : beginDate // ignore: cast_nullable_to_non_nullable
@@ -360,9 +374,10 @@ class __$$RestDurationImplCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$RestDurationImpl implements _RestDuration {
+class _$RestDurationImpl extends _RestDuration {
   const _$RestDurationImpl(
-      {@JsonKey(
+      {required this.id,
+      @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.beginDate,
@@ -373,11 +388,15 @@ class _$RestDurationImpl implements _RestDuration {
       @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.createdDate});
+      required this.createdDate})
+      : super._();
 
   factory _$RestDurationImpl.fromJson(Map<String, dynamic> json) =>
       _$$RestDurationImplFromJson(json);
 
+// from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  @override
+  final String? id;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -396,7 +415,7 @@ class _$RestDurationImpl implements _RestDuration {
 
   @override
   String toString() {
-    return 'RestDuration(beginDate: $beginDate, endDate: $endDate, createdDate: $createdDate)';
+    return 'RestDuration(id: $id, beginDate: $beginDate, endDate: $endDate, createdDate: $createdDate)';
   }
 
   @override
@@ -404,6 +423,7 @@ class _$RestDurationImpl implements _RestDuration {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RestDurationImpl &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.beginDate, beginDate) ||
                 other.beginDate == beginDate) &&
             (identical(other.endDate, endDate) || other.endDate == endDate) &&
@@ -413,7 +433,8 @@ class _$RestDurationImpl implements _RestDuration {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, beginDate, endDate, createdDate);
+  int get hashCode =>
+      Object.hash(runtimeType, id, beginDate, endDate, createdDate);
 
   @JsonKey(ignore: true)
   @override
@@ -429,9 +450,10 @@ class _$RestDurationImpl implements _RestDuration {
   }
 }
 
-abstract class _RestDuration implements RestDuration {
+abstract class _RestDuration extends RestDuration {
   const factory _RestDuration(
-      {@JsonKey(
+      {required final String? id,
+      @JsonKey(
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime beginDate,
@@ -443,10 +465,13 @@ abstract class _RestDuration implements RestDuration {
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdDate}) = _$RestDurationImpl;
+  const _RestDuration._() : super._();
 
   factory _RestDuration.fromJson(Map<String, dynamic> json) =
       _$RestDurationImpl.fromJson;
 
+  @override // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  String? get id;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
