@@ -88,7 +88,7 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
 
     String f(DateTime date) => DateTimeFormatter.slashMonthAndDay(date);
 
-    return "開始日:${f(before.beginDate)}→${f(after.beginDate)}日\n終了日:${f(beforeEnd)}→${f(afterEnd)}";
+    return "${f(before.beginDate)}~${f(beforeEnd)}\n↓\n${f(after.beginDate)}~${f(afterEnd)}";
   }
 
   static String changedRestDurationBeginDate(ChangedRestDurationBeginDateValue value) {
@@ -97,6 +97,6 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
 
     String f(DateTime date) => DateTimeFormatter.slashMonthAndDay(date);
 
-    return "${f(before.beginDate)}→${f(after.beginDate)}";
+    return "${f(before.beginDate)}\n↓\n${f(after.beginDate)}";
   }
 }
