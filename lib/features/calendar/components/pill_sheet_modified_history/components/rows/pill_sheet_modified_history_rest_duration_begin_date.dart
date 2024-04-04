@@ -26,7 +26,7 @@ class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidg
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(value)),
       detail: const Text(
-        "服用お休開始日変更",
+        "服用お休み開始日変更",
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

@@ -97,6 +97,6 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
 
     String f(DateTime date) => DateTimeFormatter.slashMonthAndDay(date);
 
-    return "開始日:${f(before.beginDate)}→${f(after.beginDate)}";
+    return "${f(before.beginDate)}→${f(after.beginDate)}";
   }
 }
