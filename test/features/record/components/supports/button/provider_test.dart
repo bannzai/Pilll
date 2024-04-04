@@ -23,6 +23,8 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(mockToday);
 
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
       final notYetEndRestDuration = RestDuration(
         id: "rest_duration_id",
         beginDate: now(),
