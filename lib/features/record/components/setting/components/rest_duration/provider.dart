@@ -256,7 +256,7 @@ class ChangeRestDuration {
           PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
             pillSheetGroupID: pillSheetGroup.id,
             before: fromRestDurationPillSheet,
-            after: toRestDurationPillSheet,
+            after: updatedToRestDurationPillSheet,
             beforeRestDuration: fromRestDuration,
             afterRestDuration: toRestDuration,
             beforePillSheetGroup: pillSheetGroup,
@@ -269,7 +269,7 @@ class ChangeRestDuration {
           PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
             pillSheetGroupID: pillSheetGroup.id,
             before: fromRestDurationPillSheet,
-            after: toRestDurationPillSheet,
+            after: updatedToRestDurationPillSheet,
             beforeRestDuration: fromRestDuration,
             afterRestDuration: toRestDuration,
             beforePillSheetGroup: pillSheetGroup,

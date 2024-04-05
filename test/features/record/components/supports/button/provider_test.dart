@@ -234,4 +234,172 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
   });
+
+  group("#changeRestDurationBeginDate", () {
+    test("group has only one pill sheet", () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+      final beforeRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: null,
+      );
+      final afterRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now().subtract(const Duration(days: 1)),
+        createdDate: now(),
+        endDate: null,
+      );
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheet = PillSheet(
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: null,
+        beginingDate: now(),
+        createdAt: now(),
+        restDurations: [beforeRestDuration],
+      );
+      final updatedPillSheet = pillSheet.copyWith(
+        restDurations: [afterRestDuration],
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1"].toList(),
+        pillSheets: [pillSheet],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1"].toList(),
+        pillSheets: [updatedPillSheet],
+        createdAt: now(),
+      );
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
+        beforeRestDuration: beforeRestDuration,
+        afterRestDuration: afterRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final beginRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await beginRestDuration.call(
+        fromRestDuration: beforeRestDuration,
+        toRestDuration: afterRestDuration,
+        pillSheetGroup: pillSheetGroup,
+      );
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+  });
+
+  group("#changeRestDuration", () {
+    test("group has only one pill sheet", () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+      final beforeRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: now(),
+      );
+      final afterRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now().subtract(const Duration(days: 2)),
+        createdDate: now(),
+        endDate: now().subtract(const Duration(days: 1)),
+      );
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheet = PillSheet(
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: null,
+        beginingDate: now(),
+        createdAt: now(),
+        restDurations: [beforeRestDuration],
+      );
+      final updatedPillSheet = pillSheet.copyWith(
+        restDurations: [afterRestDuration],
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1"].toList(),
+        pillSheets: [pillSheet],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1"].toList(),
+        pillSheets: [updatedPillSheet],
+        createdAt: now(),
+      );
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
+        beforeRestDuration: beforeRestDuration,
+        afterRestDuration: afterRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final beginRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDuration,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await beginRestDuration.call(
+        fromRestDuration: beforeRestDuration,
+        toRestDuration: afterRestDuration,
+        pillSheetGroup: pillSheetGroup,
+      );
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+  });
 }
