@@ -40,7 +40,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
     }
 
     return ListTile(
-      leading: const Icon(Icons.back_hand),
+      leading: const Icon(Icons.dark_mode_outlined),
       title: const Text("服用お休み開始"),
       onTap: () {
         analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});
