@@ -19,7 +19,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
     return ListTile(
       leading: const Icon(Icons.change_circle_outlined),
       title: const Text("服用日数を変更"),
-      subtitle: Text("$begin番〜$end番"),
+      subtitle: Text("$begin番 ~ $end番"),
       onTap: () {
         analytics.logEvent(name: "t_r_p_display_number_setting");
         showDisplayNumberSettingSheet(context, pillSheetGroup: pillSheetGroup);
