@@ -52,7 +52,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
     if (end == null) {
       return ListTile(
-        leading: const Icon(Icons.date_range),
+        leading: const Icon(Icons.date_range_outlined),
         title: const Text("服用お休み開始日を編集"),
         subtitle: Text(begin),
         onTap: () async {
@@ -99,7 +99,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
       );
     } else {
       return ListTile(
-        leading: const Icon(Icons.date_range),
+        leading: const Icon(Icons.date_range_outlined),
         title: const Text("服用お休み期間を編集"),
         subtitle: Text("$begin - $end"),
         onTap: () async {
