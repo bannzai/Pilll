@@ -1,4 +1,5 @@
 import 'package:flutter/services.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
@@ -44,6 +45,7 @@ void definedChannel() {
           final user = (await database.userReference().get()).data();
           final setting = user?.setting;
           if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
+            UpdateUseLocalNotification(databaseConnection: database).call(user, true);
             await RegisterReminderLocalNotification.run(
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
