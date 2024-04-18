@@ -49,7 +49,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
             TextButton(
               style: const ButtonStyle(alignment: Alignment.centerLeft),
               onPressed: () {
-                showMenstruationDateRangePicker(
+                showEditMenstruationDateRangePicker(
                   context,
                   ref,
                   initialMenstruation: menstruation,

@@ -8,7 +8,7 @@ import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
-void showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation? initialMenstruation}) async {
+void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation? initialMenstruation}) async {
   void onSaved(Menstruation savedMenstruation) {
     if (initialMenstruation == null) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -24,8 +24,10 @@ void showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requi
           content: Text("生理期間を編集しました"),
         ),
       );
+
+      // 編集の場合はBottomSheet経由で開かれる
+      Navigator.of(context).pop();
     }
-    Navigator.of(context).pop();
   }
 
   final dateTimeRange = await showDateRangePicker(
@@ -68,4 +70,12 @@ void showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requi
       if (context.mounted) showErrorAlert(context, e);
     }
   }
+}
+
+void showEditMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation initialMenstruation}) async {
+  _showMenstruationDateRangePicker(context, ref, initialMenstruation: initialMenstruation);
+}
+
+void showCreateMenstruationDateRangePicker(BuildContext context, WidgetRef ref) async {
+  _showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
 }
