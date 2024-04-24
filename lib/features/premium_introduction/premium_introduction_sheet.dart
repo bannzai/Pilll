@@ -32,8 +32,8 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
       ref.watch(userProvider),
     ).when(
       data: (data) => PremiumIntroductionSheetBody(
-        offerings: data.t1,
-        user: data.t2,
+        offerings: data.$1,
+        user: data.$2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,

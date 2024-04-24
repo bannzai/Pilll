@@ -121,7 +121,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
       );
-      final pillSheet2 = PillSheet(
+      final pillShee$2 = PillSheet(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday.add(const Duration(days: 28)),
@@ -134,7 +134,7 @@ void main() {
         pillSheetIDs: ["sheet_id", "sheet_id2"],
         pillSheets: [
           pillSheet.copyWith(id: "sheet_id"),
-          pillSheet2.copyWith(id: "sheet_id2"),
+          pillShee$2.copyWith(id: "sheet_id2"),
         ],
         createdAt: now(),
       );

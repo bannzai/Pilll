@@ -357,7 +357,7 @@ void main() {
         );
 
         // actived pill sheet
-        final pillSheet2 = PillSheet(
+        final pillShee$2 = PillSheet(
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
@@ -369,7 +369,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
-          pillSheets: [pillSheet, pillSheet2],
+          pillSheets: [pillSheet, pillShee$2],
           createdAt: now(),
         );
         final updatedPillSheetGroup = PillSheetGroup(
@@ -377,7 +377,7 @@ void main() {
           pillSheetIDs: ["1", "2"],
           pillSheets: [
             pillSheet,
-            pillSheet2.copyWith(
+            pillShee$2.copyWith(
               lastTakenDate: yesterday,
             ),
           ],
@@ -388,8 +388,8 @@ void main() {
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: pillSheet2.copyWith(
+          before: pillShee$2,
+          after: pillShee$2.copyWith(
             lastTakenDate: yesterday,
           ),
           beforePillSheetGroup: pillSheetGroup,
@@ -442,7 +442,7 @@ void main() {
         );
 
         // actived pill sheet
-        final pillSheet2 = PillSheet(
+        final pillShee$2 = PillSheet(
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
@@ -454,7 +454,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
-          pillSheets: [pillSheet, pillSheet2],
+          pillSheets: [pillSheet, pillShee$2],
           createdAt: now(),
         );
         final updatedPillSheetGroup = PillSheetGroup(
@@ -464,8 +464,8 @@ void main() {
             pillSheet.copyWith(
               lastTakenDate: mockToday.subtract(const Duration(days: 4)),
             ),
-            pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+            pillShee$2.copyWith(
+              lastTakenDate: pillShee$2.beginingDate.subtract(const Duration(days: 1)),
             ),
           ],
           createdAt: now(),
@@ -475,7 +475,7 @@ void main() {
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
-          before: pillSheet2,
+          before: pillShee$2,
           after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
@@ -526,7 +526,7 @@ void main() {
         );
 
         // actived pill sheet
-        final pillSheet2 = PillSheet(
+        final pillShee$2 = PillSheet(
           id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
@@ -541,7 +541,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
-          pillSheets: [pillSheet, pillSheet2],
+          pillSheets: [pillSheet, pillShee$2],
           createdAt: now(),
         );
         final updatedPillSheetGroup = PillSheetGroup(
@@ -551,8 +551,8 @@ void main() {
             pillSheet.copyWith(
               lastTakenDate: mockToday.subtract(const Duration(days: 4)),
             ),
-            pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+            pillShee$2.copyWith(
+              lastTakenDate: pillShee$2.beginingDate.subtract(const Duration(days: 1)),
               restDurations: [],
             )
           ],
@@ -563,7 +563,7 @@ void main() {
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
-          before: pillSheet2,
+          before: pillShee$2,
           after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4)), restDurations: []),
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,

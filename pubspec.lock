@@ -53,10 +53,10 @@ packages:
     dependency: "direct main"
     description:
       name: async_value_group
-      sha256: "28d2e6f035cb70348d6c39dd1436046c169576eb0c294f32866bb89e3e7c8a3d"
+      sha256: "258c7f5808d4e7627418f0af96f905aaf453dc26753b77182e4010fa64b5b48c"
       url: "https://pub.dev"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.1"
   boolean_selector:
     dependency: transitive
     description:

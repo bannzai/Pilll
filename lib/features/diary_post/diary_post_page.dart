@@ -37,8 +37,8 @@ class DiaryPostPage extends HookConsumerWidget {
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
-        user: data.t1,
-        diarySetting: data.t2,
+        user: data.$1,
+        diarySetting: data.$2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,

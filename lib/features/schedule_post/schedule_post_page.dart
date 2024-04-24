@@ -35,8 +35,8 @@ class SchedulePostPage extends HookConsumerWidget {
     return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
       data: (data) => _SchedulePostPage(
         date: date,
-        user: data.t1,
-        schedule: data.t2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
+        user: data.$1,
+        schedule: data.$2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
       ),
       error: (error, _) => UniversalErrorPage(
         error: error,
