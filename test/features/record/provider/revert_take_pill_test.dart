@@ -187,6 +187,7 @@ void main() {
           createdAt: now(),
           restDurations: [
             RestDuration(
+              id: "rest_duration_id",
               beginDate: mockToday.subtract(const Duration(days: 2)),
               createdDate: mockToday.subtract(const Duration(days: 2)),
               endDate: mockToday.subtract(const Duration(days: 1)),
@@ -272,6 +273,7 @@ void main() {
           createdAt: now(),
           restDurations: [
             RestDuration(
+              id: "rest_duration_id",
               beginDate: mockToday.subtract(const Duration(days: 8)),
               createdDate: mockToday.subtract(const Duration(days: 8)),
               endDate: mockToday.subtract(const Duration(days: 7)),
@@ -531,7 +533,7 @@ void main() {
           lastTakenDate: mockToday,
           groupIndex: 1,
           restDurations: [
-            RestDuration(beginDate: yesterday, createdDate: yesterday, endDate: today()),
+            RestDuration(id: "rest_duration_id", beginDate: yesterday, createdDate: yesterday, endDate: today()),
           ],
           createdAt: now(),
         );

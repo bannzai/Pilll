@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -24,21 +25,8 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: const Row(children: [
-        Text(
-          "設定",
-          style: TextStyle(
-            color: TextColor.main,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-        SizedBox(width: 6),
-        Icon(Icons.settings),
-      ]),
-      onTap: () {
+    return ElevatedButton(
+      onPressed: () {
         analytics.logEvent(name: "did_tapped_record_page_setting");
         showPillSheetSettingSheet(
           context,
@@ -50,6 +38,29 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
           ),
         );
       },
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(TextColor.white),
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(8),
+            side: const BorderSide(
+              color: PilllColors.primary,
+              width: 1,
+            ),
+          ),
+        ),
+      ).merge(
+        ElevatedButton.styleFrom(elevation: 0),
+      ),
+      child: const Text(
+        "ピルシートの設定",
+        style: TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontSize: 12,
+          fontWeight: FontWeight.w700,
+          color: TextColor.main,
+        ),
+      ),
     );
   }
 }

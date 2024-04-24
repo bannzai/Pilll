@@ -19,8 +19,7 @@ class DateTimeFormatter {
   }
 
   static String monthAndWeekday(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, "ja_JP")
-        .format(dateTime);
+    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, "ja_JP").format(dateTime);
   }
 
   static String monthAndDay(DateTime dateTime) {
@@ -46,6 +45,10 @@ class DateTimeFormatter {
   // 2022/01
   static String slashYearAndMonth(DateTime dateTime) {
     return DateFormat("yyyy/MM", "ja_JP").format(dateTime);
+  }
+
+  static String slashMonthAndDay(DateTime dateTime) {
+    return DateFormat("MM/dd", "ja_JP").format(dateTime);
   }
 
   static String diaryIdentifier(DateTime dateTime) {

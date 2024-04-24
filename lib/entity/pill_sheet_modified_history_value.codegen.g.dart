@@ -47,6 +47,16 @@ _$PillSheetModifiedHistoryValueImpl
               ? null
               : EndedRestDurationValue.fromJson(
                   json['endedRestDurationValue'] as Map<String, dynamic>),
+          changedRestDurationBeginDateValue:
+              json['changedRestDurationBeginDateValue'] == null
+                  ? null
+                  : ChangedRestDurationBeginDateValue.fromJson(
+                      json['changedRestDurationBeginDateValue']
+                          as Map<String, dynamic>),
+          changedRestDurationValue: json['changedRestDurationValue'] == null
+              ? null
+              : ChangedRestDurationValue.fromJson(
+                  json['changedRestDurationValue'] as Map<String, dynamic>),
           changedBeginDisplayNumber: json['changedBeginDisplayNumber'] == null
               ? null
               : ChangedBeginDisplayNumberValue.fromJson(
@@ -70,6 +80,9 @@ Map<String, dynamic> _$$PillSheetModifiedHistoryValueImplToJson(
       'endedPillSheet': instance.endedPillSheet?.toJson(),
       'beganRestDurationValue': instance.beganRestDurationValue?.toJson(),
       'endedRestDurationValue': instance.endedRestDurationValue?.toJson(),
+      'changedRestDurationBeginDateValue':
+          instance.changedRestDurationBeginDateValue?.toJson(),
+      'changedRestDurationValue': instance.changedRestDurationValue?.toJson(),
       'changedBeginDisplayNumber': instance.changedBeginDisplayNumber?.toJson(),
       'changedEndDisplayNumber': instance.changedEndDisplayNumber?.toJson(),
     };
@@ -275,6 +288,39 @@ Map<String, dynamic> _$$EndedRestDurationValueImplToJson(
         _$EndedRestDurationValueImpl instance) =>
     <String, dynamic>{
       'restDuration': instance.restDuration.toJson(),
+    };
+
+_$ChangedRestDurationBeginDateValueImpl
+    _$$ChangedRestDurationBeginDateValueImplFromJson(
+            Map<String, dynamic> json) =>
+        _$ChangedRestDurationBeginDateValueImpl(
+          beforeRestDuration: RestDuration.fromJson(
+              json['beforeRestDuration'] as Map<String, dynamic>),
+          afterRestDuration: RestDuration.fromJson(
+              json['afterRestDuration'] as Map<String, dynamic>),
+        );
+
+Map<String, dynamic> _$$ChangedRestDurationBeginDateValueImplToJson(
+        _$ChangedRestDurationBeginDateValueImpl instance) =>
+    <String, dynamic>{
+      'beforeRestDuration': instance.beforeRestDuration.toJson(),
+      'afterRestDuration': instance.afterRestDuration.toJson(),
+    };
+
+_$ChangedRestDurationValueImpl _$$ChangedRestDurationValueImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ChangedRestDurationValueImpl(
+      beforeRestDuration: RestDuration.fromJson(
+          json['beforeRestDuration'] as Map<String, dynamic>),
+      afterRestDuration: RestDuration.fromJson(
+          json['afterRestDuration'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ChangedRestDurationValueImplToJson(
+        _$ChangedRestDurationValueImpl instance) =>
+    <String, dynamic>{
+      'beforeRestDuration': instance.beforeRestDuration.toJson(),
+      'afterRestDuration': instance.afterRestDuration.toJson(),
     };
 
 _$ChangedBeginDisplayNumberValueImpl

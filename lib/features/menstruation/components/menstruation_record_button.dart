@@ -55,7 +55,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
           }
           if (setting.durationMenstruation == 0) {
             // 生理期間を設定していないユーザーは、直接日付入力させる
-            return showMenstruationDateRangePicker(context, ref, initialMenstruation: latestMenstruation);
+            return showCreateMenstruationDateRangePicker(context, ref);
           }
 
           showModalBottomSheet(

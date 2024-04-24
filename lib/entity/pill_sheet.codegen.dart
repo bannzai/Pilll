@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
@@ -35,6 +36,8 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 class RestDuration with _$RestDuration {
   @JsonSerializable(explicitToJson: true)
   const factory RestDuration({
+    // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+    required String? id,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -51,8 +54,11 @@ class RestDuration with _$RestDuration {
     )
     required DateTime createdDate,
   }) = _RestDuration;
+  const RestDuration._();
 
   factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
+
+  DateTimeRange? get dateTimeRange => endDate == null ? null : DateTimeRange(start: beginDate, end: endDate!);
 }
 
 @freezed

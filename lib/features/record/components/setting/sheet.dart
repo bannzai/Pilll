@@ -8,6 +8,7 @@ import 'package:pilll/features/record/components/setting/components/appearance_m
 import 'package:pilll/features/record/components/setting/components/delete/pill_sheet_group_delete.dart';
 import 'package:pilll/features/record/components/setting/components/display_number_setting/display_number_setting.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/begin_manual_rest_duration.dart';
+import 'package:pilll/features/record/components/setting/components/rest_duration/change_manual_rest_duration.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/end_manual_rest_duration.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -75,6 +76,11 @@ class PillSheetSettingSheet extends HookConsumerWidget {
                 activePillSheet: activePillSheet,
                 pillSheetGroup: pillSheetGroup,
                 setting: setting,
+              ),
+            for (final restDuration in pillSheetGroup.restDurations)
+              ChangeManualRestDuration(
+                restDuration: restDuration,
+                pillSheetGroup: pillSheetGroup,
               ),
             PillSheetGroupDelete(
               pillSheetGroup: pillSheetGroup,
