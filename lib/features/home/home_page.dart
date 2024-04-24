@@ -54,7 +54,8 @@ class HomePage extends HookConsumerWidget {
       data: (data) {
         return HomePageBody(
           user: data.$1,
-          shouldShowMigrateInfo: data.$2,
+          pillSheetGroup: data.$2,
+          shouldShowMigrateInfo: data.$3,
           sharedPreferences: sharedPreferences,
         );
       },
