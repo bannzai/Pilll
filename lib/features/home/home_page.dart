@@ -71,7 +71,7 @@ class HomePage extends HookConsumerWidget {
 
 class HomePageBody extends HookConsumerWidget {
   final User user;
-  final PillSheetGroup pillSheetGroup;
+  final PillSheetGroup? pillSheetGroup;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
 
@@ -118,7 +118,7 @@ class HomePageBody extends HookConsumerWidget {
           disableShouldAskCancelReason();
           // ignore: use_build_context_synchronously
           showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
-        } else if (!isAlreadyAnsweredFormForManulRestDuration && pillSheetGroup.restDurations.isNotEmpty) {
+        } else if (!isAlreadyAnsweredFormForManulRestDuration && pillSheetGroup?.restDurations.isNotEmpty == true) {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
               title: "「服用お休み」機能についてのアンケート",
