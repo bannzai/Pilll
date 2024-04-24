@@ -92,33 +92,44 @@ class HomePageBody extends HookConsumerWidget {
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
 
-    Future.microtask(() async {
-      if (shouldShowMigrateInfo) {
-        showDialog(
+    useEffect(() {
+      void f() async {
+        if (shouldShowMigrateInfo) {
+          showDialog(
+              context: context,
+              barrierColor: Colors.white,
+              builder: (context) {
+                return const MigrateInfo();
+              });
+        } else if (shouldAskCancelReason) {
+          await Navigator.of(context).push(
+            WebViewPageRoute.route(
+              title: "解約後のアンケートご協力のお願い",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
+            ),
+          );
+          disableShouldAskCancelReason();
+          // ignore: use_build_context_synchronously
+          showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
+        } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
+          showModalBottomSheet(
             context: context,
-            barrierColor: Colors.white,
-            builder: (context) {
-              return const MigrateInfo();
-            });
-      } else if (shouldAskCancelReason) {
-        await Navigator.of(context).push(
-          WebViewPageRoute.route(
-            title: "解約後のアンケートご協力のお願い",
-            url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
-          ),
-        );
-        disableShouldAskCancelReason();
-        // ignore: use_build_context_synchronously
-        showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
-      } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
-        showModalBottomSheet(
-          context: context,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const PreStoreReviewModal(),
-        );
-        sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+            backgroundColor: Colors.transparent,
+            builder: (_) => const PreStoreReviewModal(),
+          );
+          sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+        }
       }
-    });
+
+      f();
+
+      return null;
+    }, [
+      shouldShowMigrateInfo,
+      shouldAskCancelReason,
+      isAlreadyAnsweredPreStoreReviewModal,
+      totalCountOfActionForTakenPill,
+    ]);
 
     return DefaultTabController(
       length: HomePageTabType.values.length,
