@@ -63,10 +63,10 @@ class SettingPage extends HookConsumerWidget {
         final userIsMigratedFrom132 =
             sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
-          user: data.t1,
-          setting: data.t2,
-          latestPillSheetGroup: data.t3,
-          isHealthDataAvailable: data.t4,
+          user: data.$1,
+          setting: data.$2,
+          latestPillSheetGroup: data.$3,
+          isHealthDataAvailable: data.$4,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },

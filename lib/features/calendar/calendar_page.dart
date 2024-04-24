@@ -53,12 +53,12 @@ class CalendarPage extends HookConsumerWidget {
       ref.watch(diaryForTodayProvider),
     ).when(
       data: (data) => _CalendarPageBody(
-        histories: data.t1,
-        user: data.t2,
-        calendarMenstruationBandModels: data.t3,
-        calendarScheduledMenstruationBandModels: data.t4,
-        calendarNextPillSheetBandModels: data.t5,
-        todayDiary: data.t6,
+        histories: data.$1,
+        user: data.$2,
+        calendarMenstruationBandModels: data.$3,
+        calendarScheduledMenstruationBandModels: data.$4,
+        calendarNextPillSheetBandModels: data.$5,
+        todayDiary: data.$6,
         displayedMonth: displayedMonth,
         page: page,
         pageController: pageController,

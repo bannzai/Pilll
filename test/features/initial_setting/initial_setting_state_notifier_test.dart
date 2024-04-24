@@ -361,7 +361,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
       );
-      final pillSheet2 = PillSheet(
+      final pillShee$2 = PillSheet(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
@@ -374,7 +374,7 @@ void main() {
         pillSheetIDs: ["sheet_id", "sheet_id2"],
         pillSheets: [
           pillSheet.copyWith(id: "sheet_id"),
-          pillSheet2.copyWith(id: "sheet_id2"),
+          pillShee$2.copyWith(id: "sheet_id2"),
         ],
         createdAt: now(),
       );

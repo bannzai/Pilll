@@ -53,8 +53,8 @@ class HomePage extends HookConsumerWidget {
     ).when(
       data: (data) {
         return HomePageBody(
-          user: data.t1,
-          shouldShowMigrateInfo: data.t2,
+          user: data.$1,
+          shouldShowMigrateInfo: data.$2,
           sharedPreferences: sharedPreferences,
         );
       },
