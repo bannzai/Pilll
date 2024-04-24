@@ -40,9 +40,9 @@ class RecordPage extends HookConsumerWidget {
       ref.watch(userProvider),
     ).when(
       data: (data) {
-        final latestPillSheetGroup = data.t1;
-        final user = data.t2;
-        final setting = data.t3;
+        final latestPillSheetGroup = data.$1;
+        final user = data.$2;
+        final setting = data.$3;
         return RecordPageBody(
           pillSheetGroup: latestPillSheetGroup,
           setting: setting,

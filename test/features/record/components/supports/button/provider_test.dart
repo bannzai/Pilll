@@ -183,25 +183,25 @@ void main() {
           createdAt: now(),
         )
       ];
-      final updatedPillSheet1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);
-      final updatedPillSheet2 = pillSheets[1].copyWith(beginingDate: updatedPillSheet1.estimatedEndTakenDate.add(const Duration(days: 1)));
-      final updatedPillSheet3 = pillSheets[2].copyWith(beginingDate: updatedPillSheet2.estimatedEndTakenDate.add(const Duration(days: 1)));
+      final updatedPillShee$1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);
+      final updatedPillShee$2 = pillSheets[1].copyWith(beginingDate: updatedPillShee$1.estimatedEndTakenDate.add(const Duration(days: 1)));
+      final updatedPillShee$3 = pillSheets[2].copyWith(beginingDate: updatedPillShee$2.estimatedEndTakenDate.add(const Duration(days: 1)));
       final updatedPillSheets = [
-        updatedPillSheet1,
-        updatedPillSheet2,
-        updatedPillSheet3,
+        updatedPillShee$1,
+        updatedPillShee$2,
+        updatedPillShee$3,
       ];
 
       expect(
-        isSameDay(pillSheets[0].beginingDate, updatedPillSheet1.beginingDate),
+        isSameDay(pillSheets[0].beginingDate, updatedPillShee$1.beginingDate),
         true,
       );
       expect(
-        isSameDay(pillSheets[1].beginingDate, updatedPillSheet2.beginingDate),
+        isSameDay(pillSheets[1].beginingDate, updatedPillShee$2.beginingDate),
         false,
       );
       expect(
-        isSameDay(pillSheets[2].beginingDate, updatedPillSheet3.beginingDate),
+        isSameDay(pillSheets[2].beginingDate, updatedPillShee$3.beginingDate),
         false,
       );
 

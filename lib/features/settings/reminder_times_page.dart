@@ -33,8 +33,8 @@ class ReminderTimesPage extends HookConsumerWidget {
       ref.watch(deviceTimezoneNameProvider),
     ).when(
       data: (data) {
-        final setting = data.t1;
-        final deviceTimezoneName = data.t2;
+        final setting = data.$1;
+        final deviceTimezoneName = data.$2;
         return ReminderTimesPageBody(
           setting: setting,
           deviceTimezoneName: deviceTimezoneName,

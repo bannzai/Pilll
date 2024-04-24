@@ -42,8 +42,8 @@ class MonthCalendar extends HookConsumerWidget {
       ref.watch(schedulesForMonthProvider(dateForMonth)),
     ).when(
       data: (data) {
-        final diaries = data.t1;
-        final schedules = data.t2;
+        final diaries = data.$1;
+        final schedules = data.$2;
         final weeks = _weeks;
 
         return Column(
