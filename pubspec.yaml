@@ -30,7 +30,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_svg: ^2.0.10+1
-  shared_preferences: ^2.2.2
+  shared_preferences: ^2.2.3
   intl: ^0.18.1
   firebase_core: ^2.21.0
   firebase_analytics: ^10.6.3
