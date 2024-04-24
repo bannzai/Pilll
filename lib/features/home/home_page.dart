@@ -3,11 +3,13 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/web_view.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -44,14 +46,16 @@ class HomePage extends HookConsumerWidget {
     }, [user.valueOrNull]);
 
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group2(
+    return AsyncValueGroup.group3(
       user,
+      ref.watch(latestPillSheetGroupProvider),
       ref.watch(shouldShowMigrationInformationProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.$1,
-          shouldShowMigrateInfo: data.$2,
+          pillSheetGroup: data.$2,
+          shouldShowMigrateInfo: data.$3,
           sharedPreferences: sharedPreferences,
         );
       },
@@ -67,12 +71,14 @@ class HomePage extends HookConsumerWidget {
 
 class HomePageBody extends HookConsumerWidget {
   final User user;
+  final PillSheetGroup? pillSheetGroup;
   final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
 
   const HomePageBody({
     Key? key,
     required this.user,
+    required this.pillSheetGroup,
     required this.shouldShowMigrateInfo,
     required this.sharedPreferences,
   }) : super(key: key);
@@ -88,37 +94,57 @@ class HomePageBody extends HookConsumerWidget {
     });
 
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
+    final isAlreadyAnsweredFormForManulRestDuration = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredFormForManulRestDuration) ?? false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
 
-    Future.microtask(() async {
-      if (shouldShowMigrateInfo) {
-        showDialog(
+    useEffect(() {
+      void f() async {
+        if (shouldShowMigrateInfo) {
+          showDialog(
+              context: context,
+              barrierColor: Colors.white,
+              builder: (context) {
+                return const MigrateInfo();
+              });
+        } else if (shouldAskCancelReason) {
+          await Navigator.of(context).push(
+            WebViewPageRoute.route(
+              title: "解約後のアンケートご協力のお願い",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
+            ),
+          );
+          disableShouldAskCancelReason();
+          // ignore: use_build_context_synchronously
+          showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
+        } else if (!isAlreadyAnsweredFormForManulRestDuration && pillSheetGroup?.restDurations.isNotEmpty == true) {
+          await Navigator.of(context).push(
+            WebViewPageRoute.route(
+              title: "「服用お休み」機能についてのアンケート",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLSczkwniUqI7hPeVVYFmM2pNAtMAvf_M38_1nWBRLSgHu_otmw/viewform",
+            ),
+          );
+          sharedPreferences.setBool(BoolKey.isAlreadyAnsweredFormForManulRestDuration, true);
+        } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
+          showModalBottomSheet(
             context: context,
-            barrierColor: Colors.white,
-            builder: (context) {
-              return const MigrateInfo();
-            });
-      } else if (shouldAskCancelReason) {
-        await Navigator.of(context).push(
-          WebViewPageRoute.route(
-            title: "解約後のアンケートご協力のお願い",
-            url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
-          ),
-        );
-        disableShouldAskCancelReason();
-        // ignore: use_build_context_synchronously
-        showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
-      } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
-        showModalBottomSheet(
-          context: context,
-          backgroundColor: Colors.transparent,
-          builder: (_) => const PreStoreReviewModal(),
-        );
-        sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+            backgroundColor: Colors.transparent,
+            builder: (_) => const PreStoreReviewModal(),
+          );
+          sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+        }
       }
-    });
+
+      f();
+
+      return null;
+    }, [
+      shouldShowMigrateInfo,
+      shouldAskCancelReason,
+      isAlreadyAnsweredPreStoreReviewModal,
+      totalCountOfActionForTakenPill,
+    ]);
 
     return DefaultTabController(
       length: HomePageTabType.values.length,
