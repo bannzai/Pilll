@@ -28,7 +28,6 @@ class TakenButton extends HookConsumerWidget {
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
-    required this.user,
   });
 
   @override
