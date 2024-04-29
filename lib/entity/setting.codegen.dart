@@ -64,6 +64,21 @@ class Setting with _$Setting {
   List<PillSheetType> get pillSheetEnumTypes {
     return backportPillSheetTypes(pillSheetTypes);
   }
+
+  ReminderTime? get earlyReminderTime {
+    if (reminderTimes.isEmpty) {
+      return null;
+    }
+    return reminderTimes.reduce((value, element) {
+      if (value.hour < element.hour) {
+        return value;
+      }
+      if (value.hour == element.hour && value.minute < element.minute) {
+        return value;
+      }
+      return element;
+    });
+  }
 }
 
 List<PillSheetType> backportPillSheetTypes(List<PillSheetType?> pillSheetTypes) {
