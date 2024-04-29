@@ -11,10 +11,10 @@ class EndedPillSheet extends StatelessWidget {
   final bool isPremium;
 
   const EndedPillSheet({
-    Key? key,
+    super.key,
     required this.isTrial,
     required this.isPremium,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

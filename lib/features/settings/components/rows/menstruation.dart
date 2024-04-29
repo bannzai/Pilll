@@ -10,7 +10,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 class MenstruationRow extends HookConsumerWidget {
   final Setting setting;
 
-  const MenstruationRow(this.setting, {Key? key}) : super(key: key);
+  const MenstruationRow(this.setting, {super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

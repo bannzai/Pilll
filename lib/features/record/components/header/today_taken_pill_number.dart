@@ -13,11 +13,11 @@ class TodayTakenPillNumber extends StatelessWidget {
   final Setting setting;
 
   const TodayTakenPillNumber({
-    Key? key,
+    super.key,
     required this.pillSheetGroup,
     required this.onPressed,
     required this.setting,
-  }) : super(key: key);
+  });
 
   PillSheetAppearanceMode get _appearanceMode => setting.pillSheetAppearanceMode;
 

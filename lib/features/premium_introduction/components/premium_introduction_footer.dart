@@ -16,7 +16,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionFotter extends StatelessWidget {
   final ValueNotifier<bool> isLoading;
-  const PremiumIntroductionFotter({Key? key, required this.isLoading}) : super(key: key);
+  const PremiumIntroductionFotter({super.key, required this.isLoading});
 
   @override
   Widget build(BuildContext context) {

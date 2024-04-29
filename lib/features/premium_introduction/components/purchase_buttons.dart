@@ -15,12 +15,12 @@ class PurchaseButtons extends HookConsumerWidget {
   final ValueNotifier<bool> isLoading;
 
   const PurchaseButtons({
-    Key? key,
+    super.key,
     required this.offeringType,
     required this.monthlyPackage,
     required this.annualPackage,
     required this.isLoading,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

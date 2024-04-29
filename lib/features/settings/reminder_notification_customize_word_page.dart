@@ -12,7 +12,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
-  const ReminderNotificationCustomizeWordPage({Key? key}) : super(key: key);
+  const ReminderNotificationCustomizeWordPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -278,12 +278,11 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
   final bool isInvisibleDescription;
 
   const _ReminderPushNotificationPreview({
-    Key? key,
     required this.word,
     required this.isInVisibleReminderDate,
     required this.isInvisiblePillNumber,
     required this.isInvisibleDescription,
-  }) : super(key: key);
+  });
 
   // avoid broken editor
   final thinkingFace = "🤔";

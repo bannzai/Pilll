@@ -12,11 +12,11 @@ class AnnualPurchaseButton extends StatelessWidget {
   final Function(Package) onTap;
 
   const AnnualPurchaseButton({
-    Key? key,
+    super.key,
     required this.annualPackage,
     required this.offeringType,
     required this.onTap,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final monthlyPrice = annualPackage.storeProduct.price / 12;
@@ -90,7 +90,7 @@ class AnnualPurchaseButton extends StatelessWidget {
 class _DiscountBadge extends StatelessWidget {
   final OfferingType offeringType;
 
-  const _DiscountBadge({Key? key, required this.offeringType}) : super(key: key);
+  const _DiscountBadge({required this.offeringType});
   @override
   Widget build(BuildContext context) {
     return Container(

@@ -9,10 +9,10 @@ class QuickRecordRow extends StatelessWidget {
   final DateTime? trialDeadlineDate;
 
   const QuickRecordRow({
-    Key? key,
+    super.key,
     required this.isTrial,
     required this.trialDeadlineDate,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return ListTile(

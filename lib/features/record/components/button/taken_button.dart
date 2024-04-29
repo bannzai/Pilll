@@ -26,14 +26,14 @@ class TakenButton extends HookConsumerWidget {
   final User user;
 
   const TakenButton({
-    Key? key,
+    super.key,
     required this.parentContext,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
     required this.user,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final takePill = ref.watch(takePillProvider);

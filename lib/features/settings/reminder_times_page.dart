@@ -21,7 +21,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ReminderTimesPage extends HookConsumerWidget {
-  const ReminderTimesPage({Key? key}) : super(key: key);
+  const ReminderTimesPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

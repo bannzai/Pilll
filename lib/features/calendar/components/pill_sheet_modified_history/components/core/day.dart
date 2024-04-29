@@ -6,8 +6,7 @@ import 'package:pilll/entity/weekday.dart';
 class Day extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
 
-  const Day({Key? key, required this.estimatedEventCausingDate})
-      : super(key: key);
+  const Day({super.key, required this.estimatedEventCausingDate});
 
   int get _day => estimatedEventCausingDate.day;
   Weekday get _weekday =>

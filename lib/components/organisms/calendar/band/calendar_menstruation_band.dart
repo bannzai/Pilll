@@ -6,11 +6,11 @@ import 'package:pilll/entity/menstruation.codegen.dart';
 
 class CalendarMenstruationBand extends StatelessWidget {
   const CalendarMenstruationBand({
-    Key? key,
+    super.key,
     required this.menstruation,
     required this.width,
     required this.onTap,
-  }) : super(key: key);
+  });
 
   final Menstruation menstruation;
   final double width;

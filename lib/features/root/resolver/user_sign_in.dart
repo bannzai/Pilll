@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 class UserSignIn extends HookConsumerWidget {
   final Widget Function(BuildContext, String) builder;
-  const UserSignIn({Key? key, required this.builder}) : super(key: key);
+  const UserSignIn({super.key, required this.builder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

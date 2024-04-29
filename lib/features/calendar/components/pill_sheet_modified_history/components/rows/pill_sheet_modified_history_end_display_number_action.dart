@@ -11,10 +11,10 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
   final ChangedEndDisplayNumberValue? value;
 
   const PillSheetModifiedHistoryChangedEndDisplayNumberAction({
-    Key? key,
+    super.key,
     required this.estimatedEventCausingDate,
     required this.value,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final value = this.value;

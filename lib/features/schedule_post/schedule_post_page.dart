@@ -29,7 +29,7 @@ import 'package:pilll/utils/datetime/day.dart';
 class SchedulePostPage extends HookConsumerWidget {
   final DateTime date;
 
-  const SchedulePostPage({Key? key, required this.date}) : super(key: key);
+  const SchedulePostPage({super.key, required this.date});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
@@ -54,11 +54,10 @@ class _SchedulePostPage extends HookConsumerWidget {
   final User user;
 
   const _SchedulePostPage({
-    Key? key,
     required this.date,
     required this.schedule,
     required this.user,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

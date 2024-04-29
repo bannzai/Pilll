@@ -12,7 +12,7 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/user.dart';
 
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
-  const PillSheetModifiedHistoriesPage({Key? key}) : super(key: key);
+  const PillSheetModifiedHistoriesPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

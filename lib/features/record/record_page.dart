@@ -22,7 +22,7 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/auth.dart';
 
 class RecordPage extends HookConsumerWidget {
-  const RecordPage({Key? key}) : super(key: key);
+  const RecordPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -67,12 +67,12 @@ class RecordPageBody extends HookConsumerWidget {
   final bool isLinkedLoginProvider;
 
   const RecordPageBody({
-    Key? key,
+    super.key,
     required this.pillSheetGroup,
     required this.setting,
     required this.user,
     required this.isLinkedLoginProvider,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -123,7 +123,7 @@ class RecordPageBody extends HookConsumerWidget {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Container(
+                        SizedBox(
                           width: PillSheetViewLayout.width,
                           child: Row(
                             children: [

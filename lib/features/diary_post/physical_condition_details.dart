@@ -11,12 +11,12 @@ import 'package:flutter/material.dart';
 
 class DiaryPostPhysicalConditionDetails extends StatelessWidget {
   const DiaryPostPhysicalConditionDetails({
-    Key? key,
+    super.key,
     required this.user,
     required this.diarySetting,
     required this.context,
     required this.physicalConditionDetails,
-  }) : super(key: key);
+  });
 
   final User user;
   final DiarySetting? diarySetting;
