@@ -16,10 +16,10 @@ class UserSetup extends HookConsumerWidget {
   final String userID;
   final Widget Function(BuildContext) builder;
   const UserSetup({
-    Key? key,
+    super.key,
     required this.userID,
     required this.builder,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

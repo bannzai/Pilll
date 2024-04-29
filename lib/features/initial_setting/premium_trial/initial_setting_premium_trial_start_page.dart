@@ -17,7 +17,7 @@ import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
-  const IntiialSettingPremiumTrialStartPage({Key? key}) : super(key: key);
+  const IntiialSettingPremiumTrialStartPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

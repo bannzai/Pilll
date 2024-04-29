@@ -14,10 +14,10 @@ class NotificationInRestDuration extends HookConsumerWidget {
   final Setting setting;
 
   const NotificationInRestDuration({
-    Key? key,
+    super.key,
     required this.pillSheet,
     required this.setting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

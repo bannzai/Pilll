@@ -23,14 +23,14 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
   final PillSheet? afterPillSheet;
 
   const PillSheetModifiedHistoryTakenPillAction({
-    Key? key,
+    super.key,
     required this.premiumOrTrial,
     required this.estimatedEventCausingDate,
     required this.history,
     required this.value,
     required this.beforePillSheet,
     required this.afterPillSheet,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

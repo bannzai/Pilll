@@ -11,11 +11,11 @@ class CalendarPageTitle extends StatelessWidget {
   final PageController pageController;
 
   const CalendarPageTitle({
-    Key? key,
+    super.key,
     required this.displayedMonth,
     required this.page,
     required this.pageController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

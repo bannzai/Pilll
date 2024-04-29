@@ -8,7 +8,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   final String salvagedOldStartTakenDate;
   final String salvagedOldLastTakenDate;
 
-  const InformationForBeforeMigrate132({Key? key, required this.salvagedOldStartTakenDate, required this.salvagedOldLastTakenDate}) : super(key: key);
+  const InformationForBeforeMigrate132({super.key, required this.salvagedOldStartTakenDate, required this.salvagedOldLastTakenDate});
 
   int _latestPillNumber() {
     final last = DateTime.parse(salvagedOldLastTakenDate);

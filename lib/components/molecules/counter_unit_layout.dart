@@ -8,11 +8,11 @@ class CounterUnitLayout extends StatelessWidget {
   final String unit;
 
   const CounterUnitLayout({
-    Key? key,
+    super.key,
     required this.title,
     required this.number,
     required this.unit,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return Column(

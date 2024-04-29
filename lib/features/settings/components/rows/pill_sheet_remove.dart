@@ -17,10 +17,10 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheet activePillSheet;
 
   const PillSheetRemoveRow({
-    Key? key,
+    super.key,
     required this.latestPillSheetGroup,
     required this.activePillSheet,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

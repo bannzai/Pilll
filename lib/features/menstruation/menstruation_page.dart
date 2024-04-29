@@ -39,7 +39,7 @@ abstract class MenstruationPageConst {
 }
 
 class MenstruationPage extends HookConsumerWidget {
-  const MenstruationPage({Key? key}) : super(key: key);
+  const MenstruationPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -94,7 +94,7 @@ class MenstruationPageBody extends HookConsumerWidget {
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   const MenstruationPageBody({
-    Key? key,
+    super.key,
     required this.latestPillSheetGroup,
     required this.user,
     required this.allMenstruation,
@@ -105,7 +105,7 @@ class MenstruationPageBody extends HookConsumerWidget {
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

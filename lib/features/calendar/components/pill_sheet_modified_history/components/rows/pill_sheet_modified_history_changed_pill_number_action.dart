@@ -11,11 +11,11 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final int? afterTodayPillNumber;
 
   const PillSheetModifiedHistoryChangedPillNumberAction({
-    Key? key,
+    super.key,
     required this.estimatedEventCausingDate,
     required this.beforeTodayPillNumber,
     required this.afterTodayPillNumber,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final beforeTodayPillNumber = this.beforeTodayPillNumber;

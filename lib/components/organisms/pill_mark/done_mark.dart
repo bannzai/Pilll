@@ -5,8 +5,8 @@ import 'package:flutter_svg/svg.dart';
 
 class PillMarkDoneMark extends StatelessWidget {
   const PillMarkDoneMark({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

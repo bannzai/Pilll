@@ -18,11 +18,11 @@ class PillMark extends StatefulWidget {
   final bool showsRippleAnimation;
 
   const PillMark({
-    Key? key,
+    super.key,
     required this.pillMarkType,
     required this.showsCheckmark,
     required this.showsRippleAnimation,
-  }) : super(key: key);
+  });
 
   @override
   PillMarkState createState() => PillMarkState();

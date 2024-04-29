@@ -8,11 +8,11 @@ class DateAndTimePicker extends StatelessWidget {
   final void Function(DateTime datetime) done;
 
   const DateAndTimePicker({
-    Key? key,
+    super.key,
     required this.initialDateTime,
     this.maximumDate,
     required this.done,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

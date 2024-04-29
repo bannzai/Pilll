@@ -9,11 +9,11 @@ import 'package:flutter_svg/svg.dart';
 
 class AddPillSheetGroupEmptyFrame extends StatelessWidget {
   const AddPillSheetGroupEmptyFrame({
-    Key? key,
+    super.key,
     required this.context,
     required this.pillSheetGroup,
     required this.setting,
-  }) : super(key: key);
+  });
 
   final BuildContext context;
   final PillSheetGroup? pillSheetGroup;

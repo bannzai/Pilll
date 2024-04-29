@@ -10,9 +10,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
   const PremiumTrialLimitAnnouncementBar({
-    Key? key,
+    super.key,
     required this.premiumTrialLimit,
-  }) : super(key: key);
+  });
 
   final String premiumTrialLimit;
 

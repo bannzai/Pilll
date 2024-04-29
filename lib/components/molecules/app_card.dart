@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class AppCard extends StatelessWidget {
   final Widget? child;
 
-  const AppCard({Key? key, this.child}) : super(key: key);
+  const AppCard({super.key, this.child});
   @override
   Widget build(BuildContext context) {
     return Container(

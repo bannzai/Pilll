@@ -49,10 +49,9 @@ class _Page extends HookConsumerWidget {
   final Setting setting;
 
   const _Page({
-    Key? key,
     required this.pillSheetGroup,
     required this.setting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

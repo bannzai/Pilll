@@ -10,9 +10,9 @@ abstract class WeekdayBadgeConst {
 class WeekdayBadge extends StatelessWidget {
   final Weekday weekday;
   const WeekdayBadge({
-    Key? key,
+    super.key,
     required this.weekday,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
