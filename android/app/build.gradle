@@ -31,6 +31,19 @@ if (secretPropertiesFile.exists()) {
   secretProperties.load(new FileInputStream(secretPropertiesFile))
 }
 
+// ref: https://github.com/flutter/flutter/issues/142976#issuecomment-1949602247
+// dart-define-from-filesに渡すjsonの内容をapp/build.gradleで使えるようにしている。使い方はdartDefines.appIdのような具合でアクセスできる
+def dartDefines = [:];
+if (project.hasProperty('dart-defines')) {
+    // Decode dart-defines, which are comma-separated and encoded in Base64, and store them in a variable.
+    dartDefines = dartDefines + project.property('dart-defines')
+        .split(',')
+        .collectEntries { entry ->
+            def pair = new String(entry.decodeBase64(), 'UTF-8').split('=')
+            [(pair.first()): pair.last()]
+        }
+}
+
 android {
     compileSdkVersion 33
 
@@ -53,14 +66,14 @@ android {
     
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId ANDROID_APPLICATION_ID
+        applicationId dartDefines.ANDROID_APPLICATION_ID
         minSdkVersion 26
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        resValue "string", "app_name", APP_NAME
+        resValue "string", "app_name", dartDefines.APP_NAME
 
-        manifestPlaceholders = [ADMOB_APP_ID: "${secretProperties['admobAppIdentifier']}", applicationName: "android.app.Application"]
+        manifestPlaceholders = [dartDefines.ADMOB_APP_ID: "${secretProperties['admobAppIdentifier']}", applicationName: "android.app.Application"]
     }
 
     signingConfigs {
@@ -112,7 +125,7 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 
 task copySources(type: Copy) {
-   from "src/$FLAVOR/res"
+   from "src/$dartDefines.FLAVOR/res"
    into 'src/main/res'
 }
 tasks.whenTaskAdded { task ->
@@ -120,7 +133,7 @@ tasks.whenTaskAdded { task ->
 }
 
 task selectGoogleServicesJson(type: Copy) {
-    from "src/$FLAVOR/google-services.json"
+    from "src/$dartDefines.FLAVOR/google-services.json"
     into './'
 }
 tasks.whenTaskAdded { task ->
