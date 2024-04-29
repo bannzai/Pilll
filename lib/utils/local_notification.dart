@@ -134,7 +134,7 @@ final registerReminderLocalNotificationProvider = Provider(
 // 以下のように行わずに、手続的に必要な箇所でcallを呼ぶ。なぜなら不意にローカル通知の解除や登録が走ってしまうのはアンコントローラブルだから
 // - 各アクションと並行して処理を行わない
 // - アクションの結果を受け取ってローカル通知の登録の更新をしない
-// - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす
+// - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす → クイックレコードの場合なども考慮に入れる必要がある。それらの処理でWidgetが起動しているかどうか定かでは無いのでやらない
 // NOTE:
 // 現状はテストケースが増えること以外は問題点では無いのでこの方式で行くが、他の方法としてiOSはNotification Service App Extensionを使用した方法がある(Silence Push Notifications)
 // Doc: https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_usernotifications_filtering#3737535
