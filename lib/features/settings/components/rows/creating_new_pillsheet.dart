@@ -15,12 +15,12 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
   final DateTime? trialDeadlineDate;
 
   const CreatingNewPillSheetRow({
-    Key? key,
+    super.key,
     required this.setting,
     required this.isTrial,
     required this.isPremium,
     required this.trialDeadlineDate,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

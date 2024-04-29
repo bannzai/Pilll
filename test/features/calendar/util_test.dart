@@ -40,7 +40,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillShee$2 = PillSheet(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
@@ -49,7 +49,7 @@ void main() {
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1", "2"],
-            pillSheets: [pillSheet, pillSheet2],
+            pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
           );
           var setting = const Setting(
@@ -95,7 +95,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillShee$2 = PillSheet(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
@@ -104,7 +104,7 @@ void main() {
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1", "2"],
-            pillSheets: [pillSheet, pillSheet2],
+            pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
           );
           var setting = const Setting(
@@ -150,7 +150,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillShee$2 = PillSheet(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
@@ -159,7 +159,7 @@ void main() {
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1", "2"],
-            pillSheets: [pillSheet, pillSheet2],
+            pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
           );
           var setting = const Setting(
@@ -585,7 +585,7 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillShee$2 = PillSheet(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
             beginingDate: beginingDate.add(const Duration(days: 28)),
@@ -594,7 +594,7 @@ void main() {
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1", "2"],
-            pillSheets: [pillSheet, pillSheet2],
+            pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
           );
 
@@ -836,6 +836,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-08"),
                 endDate: DateTime.parse("2020-09-10"),
                 createdDate: DateTime.parse("2020-09-08"),

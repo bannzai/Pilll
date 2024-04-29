@@ -11,11 +11,11 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final int? afterTodayPillNumber;
 
   const PillSheetModifiedHistoryChangedPillNumberAction({
-    Key? key,
+    super.key,
     required this.estimatedEventCausingDate,
     required this.beforeTodayPillNumber,
     required this.afterTodayPillNumber,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final beforeTodayPillNumber = this.beforeTodayPillNumber;
@@ -25,8 +25,8 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphen: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changed(
+      pillNumbersOrHyphenOrDate: PillNumber(
+          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
         beforeTodayPillNumber: beforeTodayPillNumber,
         afterTodayPillNumber: afterTodayPillNumber,
       )),

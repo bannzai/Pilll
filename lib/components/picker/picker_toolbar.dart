@@ -6,7 +6,7 @@ class PickerToolbar extends StatelessWidget {
   final VoidCallback done;
   final VoidCallback cancel;
 
-  const PickerToolbar({Key? key, required this.done, required this.cancel}) : super(key: key);
+  const PickerToolbar({super.key, required this.done, required this.cancel});
   @override
   Widget build(BuildContext context) {
     return SizedBox(

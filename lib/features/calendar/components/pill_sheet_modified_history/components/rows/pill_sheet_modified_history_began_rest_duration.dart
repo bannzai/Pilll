@@ -11,10 +11,10 @@ class PillSheetModifiedHistoryBeganRestDuration extends StatelessWidget {
   final BeganRestDurationValue? value;
 
   const PillSheetModifiedHistoryBeganRestDuration({
-    Key? key,
+    super.key,
     required this.value,
     required this.estimatedEventCausingDate,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class PillSheetModifiedHistoryBeganRestDuration extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphen: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.hyphen()),
+      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.hyphen()),
       detail: const Text(
         "服用お休み",
         style: TextStyle(

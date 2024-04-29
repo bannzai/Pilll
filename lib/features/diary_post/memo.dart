@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class DiaryPostMemo extends HookConsumerWidget {
   final TextEditingController textEditingController;
   final FocusNode focusNode;
-  const DiaryPostMemo({Key? key, required this.textEditingController, required this.focusNode}) : super(key: key);
+  const DiaryPostMemo({super.key, required this.textEditingController, required this.focusNode});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

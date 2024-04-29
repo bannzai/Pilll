@@ -46,7 +46,7 @@ import 'components/rows/about_churn.dart';
 enum SettingSection { account, premium, pill, notification, menstruation, other }
 
 class SettingPage extends HookConsumerWidget {
-  const SettingPage({Key? key}) : super(key: key);
+  const SettingPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -63,10 +63,10 @@ class SettingPage extends HookConsumerWidget {
         final userIsMigratedFrom132 =
             sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
-          user: data.t1,
-          setting: data.t2,
-          latestPillSheetGroup: data.t3,
-          isHealthDataAvailable: data.t4,
+          user: data.$1,
+          setting: data.$2,
+          latestPillSheetGroup: data.$3,
+          isHealthDataAvailable: data.$4,
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
@@ -88,13 +88,13 @@ class SettingPageBody extends StatelessWidget {
   final bool userIsUpdatedFrom132;
 
   const SettingPageBody({
-    Key? key,
+    super.key,
     required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
     required this.isHealthDataAvailable,
     required this.userIsUpdatedFrom132,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -314,7 +314,7 @@ class SettingPageBody extends StatelessWidget {
                             }),
                         if (Environment.isDevelopment) ...[
                           _separator(),
-                          DebugRow(),
+                          const DebugRow(),
                         ],
                       ],
                     );

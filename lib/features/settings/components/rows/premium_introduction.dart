@@ -9,10 +9,10 @@ class PremiumIntroductionRow extends StatelessWidget {
   final DateTime? trialDeadlineDate;
 
   const PremiumIntroductionRow({
-    Key? key,
+    super.key,
     required this.isPremium,
     required this.trialDeadlineDate,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     return ListTile(

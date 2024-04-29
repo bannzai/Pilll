@@ -4,9 +4,9 @@ class PillMarkLine extends StatelessWidget {
   final List<Widget> pillMarks;
 
   const PillMarkLine({
-    Key? key,
+    super.key,
     required this.pillMarks,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

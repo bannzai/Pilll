@@ -15,12 +15,12 @@ class RecordPageButton extends HookConsumerWidget {
   final User user;
 
   const RecordPageButton({
-    Key? key,
+    super.key,
     required this.pillSheetGroup,
     required this.currentPillSheet,
     required this.userIsPremiumOtTrial,
     required this.user,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

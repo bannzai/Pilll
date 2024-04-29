@@ -31,7 +31,7 @@ final _calendarDataSource =
 final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
 
 class CalendarPage extends HookConsumerWidget {
-  const CalendarPage({Key? key}) : super(key: key);
+  const CalendarPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -53,12 +53,12 @@ class CalendarPage extends HookConsumerWidget {
       ref.watch(diaryForTodayProvider),
     ).when(
       data: (data) => _CalendarPageBody(
-        histories: data.t1,
-        user: data.t2,
-        calendarMenstruationBandModels: data.t3,
-        calendarScheduledMenstruationBandModels: data.t4,
-        calendarNextPillSheetBandModels: data.t5,
-        todayDiary: data.t6,
+        histories: data.$1,
+        user: data.$2,
+        calendarMenstruationBandModels: data.$3,
+        calendarScheduledMenstruationBandModels: data.$4,
+        calendarNextPillSheetBandModels: data.$5,
+        todayDiary: data.$6,
         displayedMonth: displayedMonth,
         page: page,
         pageController: pageController,
@@ -85,7 +85,6 @@ class _CalendarPageBody extends StatelessWidget {
   final PageController pageController;
 
   const _CalendarPageBody({
-    Key? key,
     required this.histories,
     required this.user,
     required this.calendarMenstruationBandModels,
@@ -95,7 +94,7 @@ class _CalendarPageBody extends StatelessWidget {
     required this.displayedMonth,
     required this.page,
     required this.pageController,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

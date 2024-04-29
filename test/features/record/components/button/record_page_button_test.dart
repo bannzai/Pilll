@@ -65,6 +65,7 @@ void main() {
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
+              id: "rest_duration_id",
               beginDate: now().subtract(const Duration(seconds: 1)),
               createdDate: now(),
               endDate: null,
@@ -128,6 +129,7 @@ void main() {
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
+              id: "rest_duration_id",
               beginDate: now().subtract(const Duration(days: 1)),
               createdDate: now().subtract(const Duration(days: 1)),
               endDate: now(),
@@ -195,6 +197,7 @@ void main() {
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
+                id: "rest_duration_id",
                 beginDate: now().subtract(const Duration(days: 1)),
                 createdDate: now().subtract(const Duration(days: 1)),
                 endDate: now().subtract(const Duration(seconds: 1))),

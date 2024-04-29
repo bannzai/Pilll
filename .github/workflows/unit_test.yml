@@ -30,9 +30,10 @@ jobs:
         FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+        XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.7'
+        flutter-version: '3.19.6'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
@@ -52,7 +53,7 @@ jobs:
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.7'
+        flutter-version: '3.19.6'
     - run: flutter pub get
     - run: flutter build apk --debug --target lib/main.dev.dart --dart-define-from-file=environment/dev.json
   test:
@@ -65,7 +66,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.7'
+        flutter-version: '3.19.6'
     - run: make secret
     - run: flutter pub get
     - run: flutter test 
@@ -79,7 +80,7 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v2
       with:
-        flutter-version: '3.16.7'
+        flutter-version: '3.19.6'
     - run: make secret
     - run: flutter pub get
     - run: flutter pub run build_runner build --delete-conflicting-outputs

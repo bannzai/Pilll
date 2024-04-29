@@ -23,7 +23,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionSheet extends HookConsumerWidget {
-  const PremiumIntroductionSheet({Key? key}) : super(key: key);
+  const PremiumIntroductionSheet({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -32,8 +32,8 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
       ref.watch(userProvider),
     ).when(
       data: (data) => PremiumIntroductionSheetBody(
-        offerings: data.t1,
-        user: data.t2,
+        offerings: data.$1,
+        user: data.$2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -53,10 +53,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
   final User user;
 
   const PremiumIntroductionSheetBody({
-    Key? key,
+    super.key,
     required this.offerings,
     required this.user,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

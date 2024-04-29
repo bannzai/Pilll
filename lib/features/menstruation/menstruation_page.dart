@@ -39,7 +39,7 @@ abstract class MenstruationPageConst {
 }
 
 class MenstruationPage extends HookConsumerWidget {
-  const MenstruationPage({Key? key}) : super(key: key);
+  const MenstruationPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -59,16 +59,16 @@ class MenstruationPage extends HookConsumerWidget {
     ).when(
       data: (data) {
         return MenstruationPageBody(
-          latestPillSheetGroup: data.t1,
-          user: data.t2,
-          allMenstruation: data.t3,
-          latestMenstruation: data.t4,
-          setting: data.t5,
-          diaries: data.t6,
-          schedules: data.t7,
-          calendarMenstruationBandModels: data.t8,
-          calendarScheduledMenstruationBandModels: data.t9,
-          calendarNextPillSheetBandModels: data.t10,
+          latestPillSheetGroup: data.$1,
+          user: data.$2,
+          allMenstruation: data.$3,
+          latestMenstruation: data.$4,
+          setting: data.$5,
+          diaries: data.$6,
+          schedules: data.$7,
+          calendarMenstruationBandModels: data.$8,
+          calendarScheduledMenstruationBandModels: data.$9,
+          calendarNextPillSheetBandModels: data.$10,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -94,7 +94,7 @@ class MenstruationPageBody extends HookConsumerWidget {
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   const MenstruationPageBody({
-    Key? key,
+    super.key,
     required this.latestPillSheetGroup,
     required this.user,
     required this.allMenstruation,
@@ -105,7 +105,7 @@ class MenstruationPageBody extends HookConsumerWidget {
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

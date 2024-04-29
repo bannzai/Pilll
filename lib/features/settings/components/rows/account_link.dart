@@ -9,7 +9,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/settings/setting_account_list/setting_account_cooperation_list_page.dart';
 
 class AccountLinkRow extends HookConsumerWidget {
-  const AccountLinkRow({Key? key}) : super(key: key);
+  const AccountLinkRow({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

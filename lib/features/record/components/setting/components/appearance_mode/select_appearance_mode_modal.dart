@@ -14,7 +14,7 @@ import 'package:pilll/utils/local_notification.dart';
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final User user;
 
-  const SelectAppearanceModeModal({Key? key, required this.user}) : super(key: key);
+  const SelectAppearanceModeModal({super.key, required this.user});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

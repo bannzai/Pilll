@@ -12,7 +12,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 
 class ShowPaywallOnAppLaunch extends HookConsumerWidget {
   final Widget Function(BuildContext) builder;
-  const ShowPaywallOnAppLaunch({Key? key, required this.builder}) : super(key: key);
+  const ShowPaywallOnAppLaunch({super.key, required this.builder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -20,13 +20,13 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
   final void Function(int duration) durationMenstructionDidDecide;
 
   const SettingMenstruationDynamicDescription({
-    Key? key,
+    super.key,
     required this.pillSheetTypes,
     required this.fromMenstruation,
     required this.durationMenstruation,
     required this.fromMenstructionDidDecide,
     required this.durationMenstructionDidDecide,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

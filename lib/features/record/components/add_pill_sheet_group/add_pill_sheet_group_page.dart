@@ -18,7 +18,7 @@ import 'package:pilll/utils/local_notification.dart';
 class AddPillSheetGroupPage extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
-  const AddPillSheetGroupPage({Key? key, required this.pillSheetGroup, required this.setting}) : super(key: key);
+  const AddPillSheetGroupPage({super.key, required this.pillSheetGroup, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

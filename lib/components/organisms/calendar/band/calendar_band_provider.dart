@@ -29,9 +29,9 @@ final calendarScheduledMenstruationBandListProvider = Provider.autoDispose<Async
     ref.watch(allMenstruationProvider),
   ).whenData(
     (t) => scheduledMenstruationDateRanges(
-      t.t1,
-      t.t2,
-      t.t3,
+      t.$1,
+      t.$2,
+      t.$3,
     ).map((dateRange) => CalendarScheduledMenstruationBandModel(dateRange.begin, dateRange.end)).toList(),
   );
 });

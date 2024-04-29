@@ -24,7 +24,7 @@ import 'package:pilll/utils/router.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
-  const InitialSettingPillSheetGroupPage({Key? key}) : super(key: key);
+  const InitialSettingPillSheetGroupPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -164,10 +164,10 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 
 class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
   const InitialSettingPillSheetGroupPageBody({
-    Key? key,
+    super.key,
     required this.state,
     required this.store,
-  }) : super(key: key);
+  });
 
   final InitialSettingState state;
   final InitialSettingStateNotifier store;

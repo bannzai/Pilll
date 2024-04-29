@@ -27,7 +27,7 @@ class DiaryPostPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 
-  const DiaryPostPage(this.date, this.diary, {Key? key}) : super(key: key);
+  const DiaryPostPage(this.date, this.diary, {super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -37,8 +37,8 @@ class DiaryPostPage extends HookConsumerWidget {
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
-        user: data.t1,
-        diarySetting: data.t2,
+        user: data.$1,
+        diarySetting: data.$2,
       ),
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
@@ -67,12 +67,12 @@ class DiaryPostPageBody extends HookConsumerWidget {
   final DiarySetting? diarySetting;
 
   const DiaryPostPageBody({
-    Key? key,
+    super.key,
     required this.date,
     required this.diary,
     required this.user,
     required this.diarySetting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -19,10 +19,10 @@ class MenstruationRecordButton extends HookConsumerWidget {
   final Setting setting;
 
   const MenstruationRecordButton({
-    Key? key,
+    super.key,
     required this.latestMenstruation,
     required this.setting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -55,7 +55,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
           }
           if (setting.durationMenstruation == 0) {
             // 生理期間を設定していないユーザーは、直接日付入力させる
-            return showMenstruationDateRangePicker(context, ref, initialMenstruation: latestMenstruation);
+            return showCreateMenstruationDateRangePicker(context, ref);
           }
 
           showModalBottomSheet(

@@ -11,11 +11,11 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
   final int? afterLastTakenPillNumber;
 
   const PillSheetModifiedHistoryRevertTakenPillAction({
-    Key? key,
+    super.key,
     required this.estimatedEventCausingDate,
     required this.beforeLastTakenPillNumber,
     required this.afterLastTakenPillNumber,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final beforeLastTakenPillNumber = this.beforeLastTakenPillNumber;
@@ -25,7 +25,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphen: PillNumber(
+      pillNumbersOrHyphenOrDate: PillNumber(
           pillNumber: PillSheetModifiedHistoryPillNumberOrDate.revert(
         beforeLastTakenPillNumber: beforeLastTakenPillNumber,
         afterLastTakenPillNumber: afterLastTakenPillNumber,

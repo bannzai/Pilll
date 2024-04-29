@@ -12,9 +12,9 @@ class ToggleReminderNotification extends HookConsumerWidget {
   final Setting setting;
 
   const ToggleReminderNotification({
-    Key? key,
+    super.key,
     required this.setting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

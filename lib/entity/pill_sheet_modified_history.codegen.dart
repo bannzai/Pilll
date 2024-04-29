@@ -37,6 +37,10 @@ enum PillSheetModifiedActionType {
   beganRestDuration,
   @JsonValue("endedRestDuration")
   endedRestDuration,
+  @JsonValue("changedRestDurationBeginDate")
+  changedRestDurationBeginDate,
+  @JsonValue("changedRestDuration")
+  changedRestDuration,
   @JsonValue("changedBeginDisplayNumber")
   changedBeginDisplayNumber,
   @JsonValue("changedEndDisplayNumber")
@@ -368,6 +372,64 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       value: PillSheetModifiedHistoryValue(
         endedRestDurationValue: EndedRestDurationValue(
           restDuration: restDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
+    );
+  }
+
+  static PillSheetModifiedHistory createChangedRestDurationBeginDateAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required RestDuration beforeRestDuration,
+    required RestDuration afterRestDuration,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
+  }) {
+    assert(pillSheetGroupID != null);
+
+    return _create(
+      actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
+      value: PillSheetModifiedHistoryValue(
+        changedRestDurationBeginDateValue: ChangedRestDurationBeginDateValue(
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+      beforePillSheetGroup: beforePillSheetGroup,
+      afterPillSheetGroup: afterPillSheetGroup,
+    );
+  }
+
+  static PillSheetModifiedHistory createChangedRestDurationAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required RestDuration beforeRestDuration,
+    required RestDuration afterRestDuration,
+    required PillSheetGroup beforePillSheetGroup,
+    required PillSheetGroup afterPillSheetGroup,
+  }) {
+    assert(pillSheetGroupID != null);
+
+    return _create(
+      actionType: PillSheetModifiedActionType.changedRestDuration,
+      value: PillSheetModifiedHistoryValue(
+        changedRestDurationValue: ChangedRestDurationValue(
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
         ),
       ),
       pillSheetGroupID: pillSheetGroupID,

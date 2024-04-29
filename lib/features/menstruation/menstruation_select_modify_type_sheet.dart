@@ -39,7 +39,7 @@ const double _tileHeight = 48;
 class MenstruationSelectModifyTypeSheet extends StatelessWidget {
   final Function(MenstruationSelectModifyType) onTap;
 
-  const MenstruationSelectModifyTypeSheet({Key? key, required this.onTap}) : super(key: key);
+  const MenstruationSelectModifyTypeSheet({super.key, required this.onTap});
 
   @override
   Widget build(BuildContext context) {

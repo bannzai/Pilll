@@ -29,14 +29,14 @@ import 'package:pilll/utils/datetime/day.dart';
 class SchedulePostPage extends HookConsumerWidget {
   final DateTime date;
 
-  const SchedulePostPage({Key? key, required this.date}) : super(key: key);
+  const SchedulePostPage({super.key, required this.date});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
       data: (data) => _SchedulePostPage(
         date: date,
-        user: data.t1,
-        schedule: data.t2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
+        user: data.$1,
+        schedule: data.$2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
       ),
       error: (error, _) => UniversalErrorPage(
         error: error,
@@ -54,11 +54,10 @@ class _SchedulePostPage extends HookConsumerWidget {
   final User user;
 
   const _SchedulePostPage({
-    Key? key,
     required this.date,
     required this.schedule,
     required this.user,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

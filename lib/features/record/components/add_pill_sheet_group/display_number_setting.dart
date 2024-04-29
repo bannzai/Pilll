@@ -16,11 +16,11 @@ class DisplayNumberSetting extends HookConsumerWidget {
   final Function(PillSheetGroupDisplayNumberSetting) onChanged;
 
   const DisplayNumberSetting({
-    Key? key,
+    super.key,
     required this.pillSheetAppearanceMode,
     required this.pillSheetGroup,
     required this.onChanged,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

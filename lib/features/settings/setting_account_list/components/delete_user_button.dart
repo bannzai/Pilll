@@ -17,7 +17,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DeleteUserButton extends HookConsumerWidget {
-  const DeleteUserButton({Key? key}) : super(key: key);
+  const DeleteUserButton({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -120,7 +120,7 @@ class DeleteUserButton extends HookConsumerWidget {
 }
 
 class _CompletedDialog extends StatelessWidget {
-  const _CompletedDialog({Key? key}) : super(key: key);
+  const _CompletedDialog();
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

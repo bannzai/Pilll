@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ReleaseNote extends StatelessWidget {
-  const ReleaseNote({Key? key}) : super(key: key);
+  const ReleaseNote({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(

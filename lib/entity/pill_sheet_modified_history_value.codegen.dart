@@ -21,6 +21,8 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
     @Default(null) EndedPillSheetValue? endedPillSheet,
     @Default(null) BeganRestDurationValue? beganRestDurationValue,
     @Default(null) EndedRestDurationValue? endedRestDurationValue,
+    @Default(null) ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
+    @Default(null) ChangedRestDurationValue? changedRestDurationValue,
     @Default(null) ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
     @Default(null) ChangedEndDisplayNumberValue? changedEndDisplayNumber,
   }) = _PillSheetModifiedHistoryValue;
@@ -245,6 +247,32 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
   }) = _EndedRestDurationValue;
 
   factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) => _$EndedRestDurationValueFromJson(json);
+}
+
+// ChangedRestDurationBeginDateValue は v2 からの構造体
+@freezed
+class ChangedRestDurationBeginDateValue with _$ChangedRestDurationBeginDateValue {
+  const ChangedRestDurationBeginDateValue._();
+  @JsonSerializable(explicitToJson: true)
+  const factory ChangedRestDurationBeginDateValue({
+    required RestDuration beforeRestDuration,
+    required RestDuration afterRestDuration,
+  }) = _ChangedRestDurationBeginDateValue;
+
+  factory ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) => _$ChangedRestDurationBeginDateValueFromJson(json);
+}
+
+// ChangedRestDurationValue は v2 からの構造体
+@freezed
+class ChangedRestDurationValue with _$ChangedRestDurationValue {
+  const ChangedRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
+  const factory ChangedRestDurationValue({
+    required RestDuration beforeRestDuration,
+    required RestDuration afterRestDuration,
+  }) = _ChangedRestDurationValue;
+
+  factory ChangedRestDurationValue.fromJson(Map<String, dynamic> json) => _$ChangedRestDurationValueFromJson(json);
 }
 
 @freezed

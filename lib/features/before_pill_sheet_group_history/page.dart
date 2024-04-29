@@ -30,8 +30,8 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
     ).when(
       data: (data) {
         return _Page(
-          pillSheetGroup: data.t1,
-          setting: data.t2,
+          pillSheetGroup: data.$1,
+          setting: data.$2,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
@@ -49,10 +49,9 @@ class _Page extends HookConsumerWidget {
   final Setting setting;
 
   const _Page({
-    Key? key,
     required this.pillSheetGroup,
     required this.setting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

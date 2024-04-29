@@ -9,7 +9,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
-  const SettingMenstruationPage({Key? key}) : super(key: key);
+  const SettingMenstruationPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -573,6 +573,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-11"),
                 createdDate: DateTime.parse("2020-09-11"),
               ),
@@ -609,6 +610,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-11"),
                 createdDate: DateTime.parse("2020-09-11"),
               ),
@@ -647,6 +649,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-11"),
                 createdDate: DateTime.parse("2020-09-11"),
                 endDate: DateTime.parse("2020-09-11"),
@@ -685,6 +688,7 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-11"),
                 createdDate: DateTime.parse("2020-09-11"),
                 endDate: DateTime.parse("2020-09-12"),
@@ -726,11 +730,13 @@ void main() {
             createdAt: now(),
             restDurations: [
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2022-01-10"),
                 createdDate: DateTime.parse("2022-01-10"),
                 endDate: DateTime.parse("2022-01-10"),
               ),
               RestDuration(
+                id: "rest_duration_id",
                 beginDate: DateTime.parse("2022-01-10"),
                 createdDate: DateTime.parse("2022-01-10"),
                 endDate: DateTime.parse("2022-01-14"),
@@ -767,11 +773,13 @@ void main() {
         createdAt: now(),
         restDurations: [
           RestDuration(
+            id: "rest_duration_id",
             beginDate: DateTime.parse("2023-01-17"),
             createdDate: DateTime.parse("2023-01-17"),
             endDate: DateTime.parse("2023-01-24"),
           ),
           RestDuration(
+            id: "rest_duration_id",
             beginDate: DateTime.parse("2023-02-02"),
             createdDate: DateTime.parse("2023-02-02"),
             endDate: DateTime.parse("2023-02-08"),

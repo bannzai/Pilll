@@ -13,11 +13,11 @@ class TodayPllNumberRow extends HookConsumerWidget {
   final PillSheet activePillSheet;
 
   const TodayPllNumberRow({
-    Key? key,
+    super.key,
     required this.setting,
     required this.pillSheetGroup,
     required this.activePillSheet,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

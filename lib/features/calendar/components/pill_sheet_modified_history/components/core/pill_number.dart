@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class PillNumber extends StatelessWidget {
   const PillNumber({
-    Key? key,
+    super.key,
     required this.pillNumber,
-  }) : super(key: key);
+  });
 
   final String pillNumber;
 
@@ -54,7 +55,8 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     return "$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}番";
   }
 
-  static String changed({required int beforeTodayPillNumber, required int afterTodayPillNumber}) => "$beforeTodayPillNumber→$afterTodayPillNumber番";
+  static String changedPillNumber({required int beforeTodayPillNumber, required int afterTodayPillNumber}) =>
+      "$beforeTodayPillNumber→$afterTodayPillNumber番";
 
   static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
@@ -73,4 +75,28 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
   }
 
   static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? "${pillSheetIDs.length}枚" : hyphen();
+
+  static String changedRestDuration(ChangedRestDurationValue value) {
+    final before = value.beforeRestDuration;
+    final after = value.afterRestDuration;
+    final beforeEnd = before.endDate;
+    final afterEnd = after.endDate;
+
+    if (beforeEnd == null || afterEnd == null) {
+      return "";
+    }
+
+    String f(DateTime date) => DateTimeFormatter.slashMonthAndDay(date);
+
+    return "${f(before.beginDate)}~${f(beforeEnd)}\n↓\n${f(after.beginDate)}~${f(afterEnd)}";
+  }
+
+  static String changedRestDurationBeginDate(ChangedRestDurationBeginDateValue value) {
+    final before = value.beforeRestDuration;
+    final after = value.afterRestDuration;
+
+    String f(DateTime date) => DateTimeFormatter.slashMonthAndDay(date);
+
+    return "${f(before.beginDate)}\n↓\n${f(after.beginDate)}";
+  }
 }

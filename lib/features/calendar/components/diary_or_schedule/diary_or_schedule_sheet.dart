@@ -8,7 +8,7 @@ class DiaryOrScheduleSheet extends StatelessWidget {
   final VoidCallback showDiary;
   final VoidCallback showSchedule;
 
-  const DiaryOrScheduleSheet({Key? key, required this.showDiary, required this.showSchedule}) : super(key: key);
+  const DiaryOrScheduleSheet({super.key, required this.showDiary, required this.showSchedule});
 
   @override
   Widget build(BuildContext context) {

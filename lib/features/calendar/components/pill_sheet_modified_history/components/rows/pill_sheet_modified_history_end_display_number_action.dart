@@ -11,10 +11,10 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
   final ChangedEndDisplayNumberValue? value;
 
   const PillSheetModifiedHistoryChangedEndDisplayNumberAction({
-    Key? key,
+    super.key,
     required this.estimatedEventCausingDate,
     required this.value,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final value = this.value;
@@ -23,7 +23,7 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphen: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(value)),
+      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(value)),
       detail: const Text(
         "服用日数の終わりを変更",
         style: TextStyle(
