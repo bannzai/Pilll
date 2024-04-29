@@ -41,3 +41,7 @@ Flutter/*-Secret.xcconfig
 *secret*
 _StoreKitTestCertificate.cer
 build
+
+# dart-define-from-fileと同じ内容が出力される。環境(dev,stg,prod)を切り替えるたびに自動的に変わるので除外
+Flutter/Dart-Defines.xcconfig
+

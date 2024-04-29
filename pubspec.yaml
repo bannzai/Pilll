@@ -49,25 +49,25 @@ dependencies:
   firebase_crashlytics: ^3.0.12
   dotted_border: ^2.1.0
   in_app_review: ^2.0.9
-  uuid: ^3.0.7
+  uuid: ^4.4.0
   async_value_group: ^1.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_app_badger: ^1.2.0
-  purchases_flutter: ^5.7.0
+  purchases_flutter: ^6.28.0
   flutter_native_timezone:
     git:
       url: https://github.com/bannzai/flutter_native_timezone.git
       ref: master
-  flutter_local_notifications: ^16.3.3
+  flutter_local_notifications: ^17.1.0
   webview_flutter: ^4.7.0
   collection: ^1.18.0
   crypto:
   timezone:
   firebase_remote_config: ^4.3.3
-  google_mobile_ads: ^3.0.0
+  google_mobile_ads: ^5.0.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
@@ -75,14 +75,14 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.3
+  flutter_lints: ^3.0.2
 
   flutter_test:
     sdk: flutter
   build_runner: 2.4.9
   json_serializable:
   freezed: ^2.5.2
-  custom_lint: 0.6.2
+  custom_lint: ^0.6.4
   riverpod_lint: 2.3.10
   riverpod_generator: 2.4.0
 
