@@ -1,5 +1,5 @@
 #include "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
 #include "Generated.xcconfig"
-#include "Development-Secret.xcconfig"
+#include "Secret.xcconfig"
 
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "DEBUG"
