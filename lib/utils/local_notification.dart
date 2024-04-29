@@ -218,6 +218,15 @@ class RegisterReminderLocalNotification {
     if (activePillSheet.activeRestDuration != null) {
       return;
     }
+    try {
+      // NOTE: 本来であれば各ユースケース毎に通知を登録するが、99%のケースで同じ通知を登録するのでここで登録してしまう
+      // ただ、重要な服用通知のスケジューリング処理を邪魔しないため、awaitもしないしエラーハンドリングもしない
+      final newPillSheetNotification = NewPillSheetNotification();
+      unawaited(newPillSheetNotification.call(pillSheetGroup: pillSheetGroup, setting: setting));
+    } catch (e, st) {
+      // 通知の登録に失敗しても、服用記録には影響がないのでエラーログだけ残す
+      errorLogger.recordError(e, st);
+    }
 
     analytics.debug(name: "run_register_reminder_notification", parameters: {
       "todayPillNumber": activePillSheet.todayPillNumber,
