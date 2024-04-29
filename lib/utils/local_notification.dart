@@ -558,6 +558,8 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
   }
 }
 
+final newPillSheetNotificationProvider = Provider((ref) => NewPillSheetNotification());
+
 // 新しいピルシートの通知をスケジュールする
 // PillSheetGroup.pillSheets毎にスケジュールする方法が直感的だが、ローカル通知のスケジュールができる数に上限もあるので枠を節約する意味でも一つ先のピルシートの通知をスケジュールする
 // 2[0-9]日毎に1会通知をスケジュールするのでも十分
