@@ -30,14 +30,14 @@ class CalendarDayTile extends StatelessWidget {
         );
 
   const CalendarDayTile({
-    super.key,
+    Key? key,
     required this.date,
     required this.weekday,
     required this.showsDiaryMark,
     required this.showsScheduleMark,
     required this.showsMenstruationMark,
     required this.onTap,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

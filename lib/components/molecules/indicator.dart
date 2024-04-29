@@ -4,8 +4,8 @@ import 'package:pilll/utils/environment.dart';
 
 class Indicator extends StatelessWidget {
   const Indicator({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class Indicator extends StatelessWidget {
 }
 
 class ScaffoldIndicator extends StatelessWidget {
-  const ScaffoldIndicator({super.key});
+  const ScaffoldIndicator({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class ScaffoldIndicator extends StatelessWidget {
 }
 
 class DialogIndicator extends StatelessWidget {
-  const DialogIndicator({super.key});
+  const DialogIndicator({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

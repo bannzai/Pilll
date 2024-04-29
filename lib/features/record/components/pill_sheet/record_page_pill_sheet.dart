@@ -38,12 +38,12 @@ class RecordPagePillSheet extends HookConsumerWidget {
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
   const RecordPagePillSheet({
-    super.key,
+    Key? key,
     required this.pillSheetGroup,
     required this.pillSheet,
     required this.setting,
     required this.user,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -7,7 +7,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class ExplainPillNumber extends HookConsumerWidget {
   final String today;
 
-  const ExplainPillNumber({super.key, required this.today});
+  const ExplainPillNumber({Key? key, required this.today}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(initialSettingStateNotifierProvider);

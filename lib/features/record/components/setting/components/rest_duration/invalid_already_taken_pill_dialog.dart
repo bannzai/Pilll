@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InvalidAlreadyTakenPillDialog extends StatelessWidget {
-  const InvalidAlreadyTakenPillDialog({super.key});
+  const InvalidAlreadyTakenPillDialog({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

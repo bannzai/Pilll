@@ -3,9 +3,10 @@ import 'package:pilll/components/molecules/indicator.dart';
 
 class _InheritedWidget extends InheritedWidget {
   const _InheritedWidget({
-    required super.child,
+    Key? key,
+    required Widget child,
     required this.state,
-  });
+  }) : super(key: key, child: child);
 
   final HUDState state;
 
@@ -21,11 +22,11 @@ class HUD extends StatefulWidget {
   final Widget? child;
 
   const HUD({
-    super.key,
+    Key? key,
     required this.child,
     required this.shown,
     this.barrierEnabled = true,
-  });
+  }) : super(key: key);
 
   @override
   HUDState createState() => HUDState();

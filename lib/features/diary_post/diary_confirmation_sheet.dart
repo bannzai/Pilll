@@ -16,9 +16,9 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   final DateTime date;
 
   const DiaryConfirmationSheet({
-    super.key,
+    Key? key,
     required this.date,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -19,7 +19,7 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
-  const AnnouncementBar({super.key});
+  const AnnouncementBar({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

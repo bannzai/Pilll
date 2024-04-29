@@ -5,12 +5,12 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingPillSheetGroup extends StatelessWidget {
   const SettingPillSheetGroup({
-    super.key,
+    Key? key,
     required this.pillSheetTypes,
     required this.onAdd,
     required this.onChange,
     required this.onDelete,
-  });
+  }) : super(key: key);
 
   final List<PillSheetType> pillSheetTypes;
   final Function(PillSheetType) onAdd;

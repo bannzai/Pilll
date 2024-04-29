@@ -14,11 +14,11 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
   final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
 
   const SettingTodayPillNumberPillSheetList({
-    super.key,
+    Key? key,
     required this.pillSheetTypes,
     required this.selectedTodayPillNumberIntoPillSheet,
     required this.markSelected,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);

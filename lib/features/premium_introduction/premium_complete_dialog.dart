@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 class PremiumCompleteDialog extends StatelessWidget {
   final VoidCallback onClose;
 
-  const PremiumCompleteDialog({super.key, required this.onClose});
+  const PremiumCompleteDialog({Key? key, required this.onClose}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

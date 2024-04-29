@@ -14,11 +14,11 @@ class TimezoneSettingDialog extends HookConsumerWidget {
   final Function(String) onDone;
 
   const TimezoneSettingDialog({
-    super.key,
+    Key? key,
     required this.setting,
     required this.deviceTimezoneName,
     required this.onDone,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

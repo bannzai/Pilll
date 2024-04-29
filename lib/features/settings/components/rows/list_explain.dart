@@ -6,9 +6,9 @@ class ListExplainRow extends StatelessWidget {
   final String text;
 
   const ListExplainRow({
-    super.key,
+    Key? key,
     required this.text,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListTile(

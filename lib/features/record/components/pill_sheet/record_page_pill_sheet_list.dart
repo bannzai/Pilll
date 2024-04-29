@@ -18,12 +18,12 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   final User user;
 
   const RecordPagePillSheetList({
-    super.key,
+    Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.setting,
     required this.user,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

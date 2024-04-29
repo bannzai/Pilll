@@ -8,9 +8,9 @@ import 'package:pilll/utils/datetime/day.dart';
 
 class RestDurationAnnouncementBar extends StatelessWidget {
   const RestDurationAnnouncementBar({
-    super.key,
+    Key? key,
     required this.restDurationNotification,
-  });
+  }) : super(key: key);
 
   final String restDurationNotification;
 

@@ -13,11 +13,11 @@ class RecordPageRestDurationDialog extends StatelessWidget {
   final VoidCallback onDone;
 
   const RecordPageRestDurationDialog({
-    super.key,
+    Key? key,
     required this.title,
     required this.appearanceMode,
     required this.onDone,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -92,10 +92,10 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
 
   const RecordPageRestDurationDialogTitle({
-    super.key,
+    Key? key,
     required this.appearanceMode,
     required this.pillSheetGroup,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

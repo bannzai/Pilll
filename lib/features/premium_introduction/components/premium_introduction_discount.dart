@@ -13,10 +13,10 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
   final DateTime? discountEntitlementDeadlineDate;
 
   const PremiumIntroductionDiscountRow({
-    super.key,
+    Key? key,
     required this.discountEntitlementDeadlineDate,
     required this.monthlyPremiumPackage,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

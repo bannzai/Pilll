@@ -10,12 +10,12 @@ class DottedLine extends StatelessWidget {
   final double dashGapLength;
 
   const DottedLine({
-    super.key,
+    Key? key,
     this.lineLength = double.infinity,
     this.height = 1,
     this.dashLength = 3,
     this.dashGapLength = 3,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

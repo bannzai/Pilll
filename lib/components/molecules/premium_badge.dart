@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class PremiumBadge extends StatelessWidget {
-  const PremiumBadge({super.key});
+  const PremiumBadge({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

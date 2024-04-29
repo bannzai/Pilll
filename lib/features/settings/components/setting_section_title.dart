@@ -7,10 +7,10 @@ class SettingSectionTitle extends StatelessWidget {
   final List<Widget> children;
 
   const SettingSectionTitle({
-    super.key,
+    Key? key,
     required this.text,
     required this.children,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Column(

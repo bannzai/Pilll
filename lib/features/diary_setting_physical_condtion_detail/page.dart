@@ -12,7 +12,7 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 
 class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
-  const DiarySettingPhysicalConditionDetailPage({super.key});
+  const DiarySettingPhysicalConditionDetailPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

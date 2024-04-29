@@ -9,10 +9,10 @@ class PrimaryButton extends HookWidget {
   final Future<void> Function()? onPressed;
 
   const PrimaryButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -67,10 +67,10 @@ class UndoButton extends HookWidget {
   final Future<void> Function()? onPressed;
 
   const UndoButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -125,10 +125,10 @@ class RedTextButton extends HookWidget {
   final Future<void> Function() onPressed;
 
   const RedTextButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -176,10 +176,10 @@ class InconspicuousButton extends HookWidget {
   final Future<void> Function() onPressed;
 
   const InconspicuousButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -223,10 +223,10 @@ class SmallAppOutlinedButton extends HookWidget {
   final Future<void> Function()? onPressed;
 
   const SmallAppOutlinedButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -282,10 +282,10 @@ class AppOutlinedButton extends HookWidget {
   final Future<void> Function()? onPressed;
 
   const AppOutlinedButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -343,10 +343,10 @@ class AlertButton extends HookWidget {
   final Future<void> Function()? onPressed;
 
   const AlertButton({
-    super.key,
+    Key? key,
     required this.onPressed,
     required this.text,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

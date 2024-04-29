@@ -27,11 +27,11 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
   const HistoricalPillsheetGroupPagePillSheet({
-    super.key,
+    Key? key,
     required this.pillSheetGroup,
     required this.pillSheet,
     required this.setting,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

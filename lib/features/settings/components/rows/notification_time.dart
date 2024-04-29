@@ -8,9 +8,9 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 class NotificationTimeRow extends StatelessWidget {
   final Setting setting;
   const NotificationTimeRow({
-    super.key,
+    Key? key,
     required this.setting,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

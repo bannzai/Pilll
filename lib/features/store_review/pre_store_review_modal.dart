@@ -14,7 +14,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 enum PreStoreReviewModalSelection { good, bad }
 
 class PreStoreReviewModal extends HookConsumerWidget {
-  const PreStoreReviewModal({super.key});
+  const PreStoreReviewModal({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -130,8 +130,9 @@ class _ThanksDialog extends StatelessWidget {
   final PreStoreReviewModalSelection goodOrBad;
 
   const _ThanksDialog({
+    Key? key,
     required this.goodOrBad,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -202,7 +203,9 @@ class _ThanksDialog extends StatelessWidget {
 }
 
 class _CompleteDialog extends StatelessWidget {
-  const _CompleteDialog();
+  const _CompleteDialog({
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -11,10 +11,10 @@ class PillSheetModifiedHistoryBeganRestDuration extends StatelessWidget {
   final BeganRestDurationValue? value;
 
   const PillSheetModifiedHistoryBeganRestDuration({
-    super.key,
+    Key? key,
     required this.value,
     required this.estimatedEventCausingDate,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -8,9 +8,9 @@ import 'package:flutter/material.dart';
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
   final User user;
   const PillSheetModifiedHistoryMoreButton({
-    super.key,
+    Key? key,
     required this.user,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

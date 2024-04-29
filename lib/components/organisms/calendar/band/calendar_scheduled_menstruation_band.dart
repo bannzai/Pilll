@@ -5,11 +5,11 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
 class CalendarScheduledMenstruationBand extends StatelessWidget {
   const CalendarScheduledMenstruationBand({
-    super.key,
+    Key? key,
     required this.begin,
     required this.end,
     required this.width,
-  });
+  }) : super(key: key);
 
   final DateTime begin;
   final DateTime end;

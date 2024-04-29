@@ -18,10 +18,10 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheet activePillSheet;
 
   const SettingTodayPillNumberPage({
-    super.key,
+    Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

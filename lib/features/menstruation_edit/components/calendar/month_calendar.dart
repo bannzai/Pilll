@@ -19,11 +19,11 @@ class MonthCalendar extends HookConsumerWidget {
   final Function(DateTime) onTap;
 
   const MonthCalendar({
-    super.key,
+    Key? key,
     required this.dateForMonth,
     required this.editingDateRange,
     required this.onTap,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -7,7 +7,8 @@ abstract class CalendarBandModel {
 }
 
 class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
-  CalendarScheduledMenstruationBandModel(super.begin, super.end);
+  CalendarScheduledMenstruationBandModel(DateTime begin, DateTime end)
+      : super(begin, end);
 }
 
 class CalendarMenstruationBandModel extends CalendarBandModel {
@@ -17,5 +18,6 @@ class CalendarMenstruationBandModel extends CalendarBandModel {
 }
 
 class CalendarNextPillSheetBandModel extends CalendarBandModel {
-  CalendarNextPillSheetBandModel(super.begin, super.end);
+  CalendarNextPillSheetBandModel(DateTime begin, DateTime end)
+      : super(begin, end);
 }

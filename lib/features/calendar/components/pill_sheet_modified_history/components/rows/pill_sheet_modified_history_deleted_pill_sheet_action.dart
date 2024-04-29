@@ -10,10 +10,10 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
   final List<String>? pillSheetIDs;
 
   const PillSheetModifiedHistoryDeletedPillSheetAction({
-    super.key,
+    Key? key,
     required this.estimatedEventCausingDate,
     required this.pillSheetIDs,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

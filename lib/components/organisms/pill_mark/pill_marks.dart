@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:dotted_border/dotted_border.dart';
 
 class NormalPillMark extends StatelessWidget {
-  const NormalPillMark({super.key});
+  const NormalPillMark({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class NormalPillMark extends StatelessWidget {
 }
 
 class RestPillMark extends StatelessWidget {
-  const RestPillMark({super.key});
+  const RestPillMark({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +44,7 @@ class RestPillMark extends StatelessWidget {
 }
 
 class FakePillMark extends StatelessWidget {
-  const FakePillMark({super.key});
+  const FakePillMark({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +60,7 @@ class FakePillMark extends StatelessWidget {
 }
 
 class SelectedPillMark extends StatelessWidget {
-  const SelectedPillMark({super.key});
+  const SelectedPillMark({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +76,7 @@ class SelectedPillMark extends StatelessWidget {
 }
 
 class LightGrayPillMark extends StatelessWidget {
-  const LightGrayPillMark({super.key});
+  const LightGrayPillMark({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

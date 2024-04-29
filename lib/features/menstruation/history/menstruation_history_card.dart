@@ -15,7 +15,7 @@ import 'package:pilll/features/premium_introduction/premium_introduction_sheet.d
 class MenstruationHistoryCard extends StatelessWidget {
   final MenstruationHistoryCardState state;
 
-  const MenstruationHistoryCard({super.key, required this.state});
+  const MenstruationHistoryCard({Key? key, required this.state}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -50,9 +50,9 @@ class MenstruationHistoryCard extends StatelessWidget {
 
 class MenstruationHistoryCardMoreButton extends StatelessWidget {
   const MenstruationHistoryCardMoreButton({
-    super.key,
+    Key? key,
     required this.state,
-  });
+  }) : super(key: key);
 
   final MenstruationHistoryCardState state;
 
@@ -79,9 +79,9 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
 
 class MenstruationHistoryCardList extends StatelessWidget {
   const MenstruationHistoryCardList({
-    super.key,
+    Key? key,
     required this.state,
-  });
+  }) : super(key: key);
 
   final MenstruationHistoryCardState state;
 
@@ -125,9 +125,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
   final MenstruationHistoryCardState state;
 
   const MenstruationHisotryCardAvarageInformation({
-    super.key,
+    Key? key,
     required this.state,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -160,9 +160,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
 
 class MenstruationHistoryCardTitle extends StatelessWidget {
   const MenstruationHistoryCardTitle({
-    super.key,
+    Key? key,
     required this.state,
-  });
+  }) : super(key: key);
 
   final MenstruationHistoryCardState state;
 

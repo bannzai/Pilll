@@ -12,11 +12,11 @@ class TakenPillActionOList extends StatelessWidget {
   final PillSheet afterPillSheet;
 
   const TakenPillActionOList({
-    super.key,
+    Key? key,
     required this.value,
     required this.beforePillSheet,
     required this.afterPillSheet,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

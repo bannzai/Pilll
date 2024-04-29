@@ -20,12 +20,12 @@ class RecordPageInformationHeader extends StatelessWidget {
   final Setting setting;
   final User user;
   const RecordPageInformationHeader({
-    super.key,
+    Key? key,
     required this.today,
     required this.pillSheetGroup,
     required this.setting,
     required this.user,
-  });
+  }) : super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
   String _todayWeekday() => DateTimeFormatter.weekday(today);

@@ -22,10 +22,10 @@ class MonthCalendar extends HookConsumerWidget {
   final Widget Function(BuildContext, List<Diary>, List<Schedule>, DateRange) weekCalendarBuilder;
 
   const MonthCalendar({
-    super.key,
+    Key? key,
     required this.dateForMonth,
     required this.weekCalendarBuilder,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

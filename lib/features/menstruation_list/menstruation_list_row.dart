@@ -12,10 +12,10 @@ class MenstruationListRow extends HookConsumerWidget {
   final Menstruation? previousMenstruation;
 
   const MenstruationListRow({
-    super.key,
+    Key? key,
     required this.menstruation,
     required this.previousMenstruation,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -54,7 +54,7 @@ class MenstruationListRow extends HookConsumerWidget {
                     (index) {
                       return [_circle(), const SizedBox(width: 4)];
                     },
-                  ).expand((element) => element),
+                  ).expand((element) => element).toList(),
                   const Spacer(),
                   Text(
                     _duration,

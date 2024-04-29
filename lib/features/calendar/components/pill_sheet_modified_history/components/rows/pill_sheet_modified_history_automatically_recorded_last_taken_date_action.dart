@@ -11,11 +11,11 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
   final int? afterLastTakenPillNumber;
 
   const PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction({
-    super.key,
+    Key? key,
     required this.estimatedEventCausingDate,
     required this.beforeLastTakenPillNumber,
     required this.afterLastTakenPillNumber,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final beforeLastTakenPillNumber = this.beforeLastTakenPillNumber;

@@ -7,12 +7,12 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 
 class CalendarNextPillSheetBand extends StatelessWidget {
   const CalendarNextPillSheetBand({
-    super.key,
+    Key? key,
     required this.begin,
     required this.end,
     required this.isLineBreak,
     required this.width,
-  });
+  }) : super(key: key);
 
   final DateTime begin;
   final DateTime end;

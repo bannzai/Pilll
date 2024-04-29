@@ -9,9 +9,9 @@ class HealthCareRow extends StatelessWidget {
   final DateTime? trialDeadlineDate;
 
   const HealthCareRow({
-    super.key,
+    Key? key,
     required this.trialDeadlineDate,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

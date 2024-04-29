@@ -17,7 +17,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {
-  const SettingAccountCooperationListPage({super.key});
+  const SettingAccountCooperationListPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -205,12 +205,12 @@ class SettingAccountCooperationRow extends StatelessWidget {
   final Future<void> Function() onLongPress;
 
   const SettingAccountCooperationRow({
-    super.key,
+    Key? key,
     required this.accountType,
     required this.isLinked,
     required this.onTap,
     required this.onLongPress,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

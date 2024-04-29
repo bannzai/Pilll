@@ -7,11 +7,11 @@ class PillMarkWithNumberLayout extends StatelessWidget {
   final VoidCallback onTap;
 
   const PillMarkWithNumberLayout({
-    super.key,
+    Key? key,
     required this.pillMark,
     required this.pillNumber,
     required this.onTap,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

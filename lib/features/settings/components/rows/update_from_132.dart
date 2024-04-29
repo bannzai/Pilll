@@ -7,7 +7,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class UpdateFrom132Row extends StatelessWidget {
-  const UpdateFrom132Row({super.key});
+  const UpdateFrom132Row({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

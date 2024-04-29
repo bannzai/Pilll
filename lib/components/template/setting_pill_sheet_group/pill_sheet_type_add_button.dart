@@ -9,10 +9,10 @@ class PillSheetTypeAddButton extends StatelessWidget {
   final Function(PillSheetType) onAdd;
   final List<PillSheetType> pillSheetTypes;
   const PillSheetTypeAddButton({
-    super.key,
+    Key? key,
     required this.pillSheetTypes,
     required this.onAdd,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

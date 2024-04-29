@@ -9,7 +9,7 @@ import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
 class MigrateInfo extends HookConsumerWidget {
-  const MigrateInfo({super.key});
+  const MigrateInfo({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final sharedPreferences = ref.watch(boolSharedPreferencesProvider(BoolKey.migrateFrom132IsShown).notifier);

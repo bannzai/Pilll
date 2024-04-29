@@ -20,12 +20,12 @@ class EndManualRestDuration extends HookConsumerWidget {
   final Setting setting;
 
   const EndManualRestDuration({
-    super.key,
+    Key? key,
     required this.restDuration,
     required this.activePillSheet,
     required this.pillSheetGroup,
     required this.setting,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -80,9 +80,9 @@ class EndRestDurationModal extends HookConsumerWidget {
   final PillSheetGroup endedRestDurationPillSheetGroup;
 
   const EndRestDurationModal({
-    super.key,
+    Key? key,
     required this.endedRestDurationPillSheetGroup,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

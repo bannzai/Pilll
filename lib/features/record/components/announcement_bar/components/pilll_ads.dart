@@ -11,10 +11,10 @@ class PilllAdsAnnouncementBar extends HookConsumerWidget {
   final PilllAds pilllAds;
   final VoidCallback onClose;
   const PilllAdsAnnouncementBar({
-    super.key,
+    Key? key,
     required this.pilllAds,
     required this.onClose,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,11 +33,11 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
   final VoidCallback onClose;
 
   const PilllAdsImageAnnouncementBar({
-    super.key,
+    Key? key,
     required this.pilllAds,
     required this.imageURL,
     required this.onClose,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -100,10 +100,10 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
   final VoidCallback onClose;
 
   const PilllAdsTextAnnouncementBar({
-    super.key,
+    Key? key,
     required this.pilllAds,
     required this.onClose,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -7,9 +7,9 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
   final EndedPillSheetValue? value;
   const PillSheetModifiedHistoryEndedPillSheetAction({
-    super.key,
+    Key? key,
     required this.value,
-  });
+  }) : super(key: key);
 
   TextStyle get _textStyle => const TextStyle(
         color: TextColor.main,

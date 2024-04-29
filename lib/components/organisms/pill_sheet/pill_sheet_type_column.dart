@@ -14,10 +14,10 @@ class PillSheetTypeColumn extends StatelessWidget {
   final PillSheetType pillSheetType;
   final bool selected;
   const PillSheetTypeColumn({
-    super.key,
+    Key? key,
     required this.pillSheetType,
     required this.selected,
-  });
+  }) : super(key: key);
 
   static const boxConstraints = BoxConstraints(minWidth: 146, minHeight: 129);
 

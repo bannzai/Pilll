@@ -9,10 +9,10 @@ class SwitchingAppearanceMode extends StatelessWidget {
   final User user;
 
   const SwitchingAppearanceMode({
-    super.key,
+    Key? key,
     required this.setting,
     required this.user,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

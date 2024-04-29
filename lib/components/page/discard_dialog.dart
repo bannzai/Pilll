@@ -9,11 +9,11 @@ class DiscardDialog extends StatelessWidget {
   final List<Widget> actions;
 
   const DiscardDialog({
-    super.key,
+    Key? key,
     required this.title,
     required this.message,
     required this.actions,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(

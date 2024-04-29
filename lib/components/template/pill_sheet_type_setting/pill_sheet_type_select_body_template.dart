@@ -9,10 +9,10 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   final void Function(PillSheetType type) onSelect;
 
   const PillSheetTypeSelectBodyTemplate({
-    super.key,
+    Key? key,
     required this.onSelect,
     required this.selectedFirstPillSheetType,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -34,10 +34,10 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
   final bool premiumOrTrial;
 
   const PillSheetModifiedHistoryList({
-    super.key,
+    Key? key,
     required this.pillSheetModifiedHistories,
     required this.premiumOrTrial,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -234,7 +234,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
         } else {
           return withSpace;
         }
-      }),
+      }).toList(),
     ];
   }
 

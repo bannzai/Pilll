@@ -8,12 +8,12 @@ class RowLayout extends StatelessWidget {
   final Widget? takenPillActionOList;
 
   const RowLayout({
-    super.key,
+    Key? key,
     required this.day,
     required this.pillNumbersOrHyphenOrDate,
     required this.detail,
     this.takenPillActionOList,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -49,10 +49,10 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   final User user;
 
   const CalendarPillSheetModifiedHistoryCard({
-    super.key,
+    Key? key,
     required this.histories,
     required this.user,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

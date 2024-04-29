@@ -16,7 +16,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InitialSettingReminderTimesPage extends HookConsumerWidget {
-  const InitialSettingReminderTimesPage({super.key});
+  const InitialSettingReminderTimesPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

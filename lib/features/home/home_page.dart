@@ -28,7 +28,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 enum HomePageTabType { record, menstruation, calendar, setting }
 
 class HomePage extends HookConsumerWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -76,12 +76,12 @@ class HomePageBody extends HookConsumerWidget {
   final SharedPreferences sharedPreferences;
 
   const HomePageBody({
-    super.key,
+    Key? key,
     required this.user,
     required this.pillSheetGroup,
     required this.shouldShowMigrateInfo,
     required this.sharedPreferences,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

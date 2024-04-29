@@ -18,7 +18,7 @@ import 'package:pilll/utils/local_notification.dart';
 
 class DisplayNumberSettingSheet extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
-  const DisplayNumberSettingSheet({super.key, required this.pillSheetGroup});
+  const DisplayNumberSettingSheet({Key? key, required this.pillSheetGroup}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

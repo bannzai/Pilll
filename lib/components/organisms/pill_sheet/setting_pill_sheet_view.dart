@@ -20,13 +20,13 @@ class SettingPillSheetView extends StatelessWidget {
   PillSheetType get pillSheetType => pillSheetTypes[pageIndex];
 
   const SettingPillSheetView({
-    super.key,
+    Key? key,
     required this.pageIndex,
     required this.pillSheetTypes,
     required this.appearanceMode,
     required this.selectedPillNumberIntoPillSheet,
     required this.markSelected,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

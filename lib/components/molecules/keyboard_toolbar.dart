@@ -4,7 +4,7 @@ const double keyboardToolbarHeight = 44;
 
 class KeyboardToolbar extends StatelessWidget {
   final Widget doneButton;
-  const KeyboardToolbar({super.key, required this.doneButton});
+  const KeyboardToolbar({Key? key, required this.doneButton}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

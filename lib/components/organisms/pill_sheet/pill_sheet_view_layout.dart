@@ -30,10 +30,10 @@ class PillSheetViewLayout extends StatelessWidget {
   final List<Widget> pillMarkLines;
 
   const PillSheetViewLayout({
-    super.key,
+    Key? key,
     required this.weekdayLines,
     required this.pillMarkLines,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

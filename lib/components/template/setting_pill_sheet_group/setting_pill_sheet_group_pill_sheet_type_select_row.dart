@@ -8,12 +8,12 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
   const SettingPillSheetGroupPillSheetTypeSelectRow({
-    super.key,
+    Key? key,
     required this.index,
     required this.pillSheetType,
     required this.onSelect,
     required this.onDelete,
-  });
+  }) : super(key: key);
 
   final int index;
   final PillSheetType pillSheetType;

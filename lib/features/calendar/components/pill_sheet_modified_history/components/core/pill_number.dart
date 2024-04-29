@@ -6,9 +6,9 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class PillNumber extends StatelessWidget {
   const PillNumber({
-    super.key,
+    Key? key,
     required this.pillNumber,
-  });
+  }) : super(key: key);
 
   final String pillNumber;
 

@@ -13,12 +13,12 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
   final PrimaryButton? doneButton;
 
   const SettingMenstruationPageTemplate({
-    super.key,
+    Key? key,
     required this.title,
     required this.pillSheetList,
     required this.dynamicDescription,
     required this.doneButton,
-  });
+  }) : super(key: key);
 
   @override
   Scaffold build(BuildContext context) {

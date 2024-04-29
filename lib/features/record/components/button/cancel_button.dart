@@ -15,12 +15,12 @@ class CancelButton extends HookConsumerWidget {
   final RegisterReminderLocalNotification registerReminderLocalNotification;
 
   const CancelButton({
-    super.key,
+    Key? key,
     required this.pillSheetGroup,
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

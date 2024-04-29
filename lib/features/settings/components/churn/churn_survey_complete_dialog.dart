@@ -6,8 +6,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 
 class ChurnSurveyCompleteDialog extends StatelessWidget {
   const ChurnSurveyCompleteDialog({
-    super.key,
-  });
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -32,14 +32,14 @@ class CalendarWeekLine extends HookConsumerWidget {
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   const CalendarWeekLine({
-    super.key,
+    Key? key,
     required this.dateRange,
     required this.horizontalPadding,
     required this.day,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
-  });
+  }) : super(key: key);
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     var tileWidth = (MediaQuery.of(context).size.width - horizontalPadding * 2) / Weekday.values.length;

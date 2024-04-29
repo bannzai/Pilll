@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class PremiumUserThanksRow extends StatelessWidget {
-  const PremiumUserThanksRow({super.key});
+  const PremiumUserThanksRow({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

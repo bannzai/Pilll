@@ -7,9 +7,9 @@ import 'package:flutter_svg/svg.dart';
 
 class DiaryPostPhysicalCondition extends StatelessWidget {
   const DiaryPostPhysicalCondition({
-    super.key,
+    Key? key,
     required this.physicalCondition,
-  });
+  }) : super(key: key);
 
   final ValueNotifier<PhysicalConditionStatus?> physicalCondition;
 
