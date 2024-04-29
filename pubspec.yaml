@@ -69,6 +69,7 @@ dependencies:
   firebase_remote_config: ^4.3.3
   google_mobile_ads: ^5.0.0
 
+  flutter_gen: any
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is

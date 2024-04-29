@@ -25,10 +25,10 @@ class SignInSheet extends HookConsumerWidget {
   final Function(LinkAccountType)? onSignIn;
 
   const SignInSheet({
-    Key? key,
+    super.key,
     required this.stateContext,
     required this.onSignIn,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isLoading = useState(false);

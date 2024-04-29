@@ -7,10 +7,9 @@ import 'package:flutter/material.dart';
 
 class _InheritedWidget extends InheritedWidget {
   const _InheritedWidget({
-    Key? key,
-    required Widget child,
+    required super.child,
     required this.state,
-  }) : super(key: key, child: child);
+  });
 
   final UniversalErrorPageState state;
 
@@ -26,11 +25,11 @@ class UniversalErrorPage extends StatefulWidget {
   final VoidCallback? reload;
 
   const UniversalErrorPage({
-    Key? key,
+    super.key,
     required this.error,
     required this.child,
     required this.reload,
-  }) : super(key: key);
+  });
 
   @override
   UniversalErrorPageState createState() => UniversalErrorPageState();

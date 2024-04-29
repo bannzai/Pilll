@@ -11,11 +11,11 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
   final int? afterLastTakenPillNumber;
 
   const PillSheetModifiedHistoryRevertTakenPillAction({
-    Key? key,
+    super.key,
     required this.estimatedEventCausingDate,
     required this.beforeLastTakenPillNumber,
     required this.afterLastTakenPillNumber,
-  }) : super(key: key);
+  });
   @override
   Widget build(BuildContext context) {
     final beforeLastTakenPillNumber = this.beforeLastTakenPillNumber;

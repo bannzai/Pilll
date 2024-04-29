@@ -25,14 +25,13 @@ class MenstruationCalendarHeader extends StatelessWidget {
   final PageController pageController;
 
   const MenstruationCalendarHeader(
-      {Key? key,
+      {super.key,
       required this.calendarMenstruationBandModels,
       required this.calendarScheduledMenstruationBandModels,
       required this.calendarNextPillSheetBandModels,
       required this.diaries,
       required this.schedules,
-      required this.pageController})
-      : super(key: key);
+      required this.pageController});
 
   @override
   Widget build(BuildContext context) {

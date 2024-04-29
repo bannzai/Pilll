@@ -8,8 +8,8 @@ import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
 class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
   const RecommendSignupForPremiumAnnouncementBar({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -13,7 +13,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
 class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
-  const InitialSettingSelectTodayPillNumberPage({Key? key}) : super(key: key);
+  const InitialSettingSelectTodayPillNumberPage({super.key});
 
   String todayString() {
     return DateFormat.yMEd('ja').format(today());

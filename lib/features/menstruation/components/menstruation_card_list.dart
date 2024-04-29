@@ -21,14 +21,14 @@ class MenstruationCardList extends StatelessWidget {
   final List<Menstruation> allMenstruation;
 
   const MenstruationCardList({
-    Key? key,
+    super.key,
     required this.calendarScheduledMenstruationBandModels,
     required this.user,
     required this.setting,
     required this.latestPillSheetGroup,
     required this.latestMenstruation,
     required this.allMenstruation,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

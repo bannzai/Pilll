@@ -8,7 +8,7 @@ import 'package:pilll/features/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/provider/menstruation.dart';
 
 class MenstruationListPage extends HookConsumerWidget {
-  const MenstruationListPage({Key? key}) : super(key: key);
+  const MenstruationListPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

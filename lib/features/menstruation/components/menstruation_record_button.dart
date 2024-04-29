@@ -19,10 +19,10 @@ class MenstruationRecordButton extends HookConsumerWidget {
   final Setting setting;
 
   const MenstruationRecordButton({
-    Key? key,
+    super.key,
     required this.latestMenstruation,
     required this.setting,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

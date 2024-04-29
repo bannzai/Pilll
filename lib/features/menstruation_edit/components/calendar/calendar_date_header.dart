@@ -10,9 +10,9 @@ abstract class CalendarDateHeaderConst {
 class CalendarDateHeader extends StatelessWidget {
   final DateTime date;
   const CalendarDateHeader({
-    Key? key,
+    super.key,
     required this.date,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

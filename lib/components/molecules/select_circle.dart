@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 class SelectCircle extends StatelessWidget {
   final bool isSelected;
 
-  const SelectCircle({Key? key, required this.isSelected}) : super(key: key);
+  const SelectCircle({super.key, required this.isSelected});
 
   @override
   Widget build(BuildContext context) {

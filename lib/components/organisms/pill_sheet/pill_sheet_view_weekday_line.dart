@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 
 class PillSheetViewWeekdayLine extends StatelessWidget {
   const PillSheetViewWeekdayLine({
-    Key? key,
+    super.key,
     required this.firstWeekday,
-  }) : super(key: key);
+  });
 
   final Weekday? firstWeekday;
 

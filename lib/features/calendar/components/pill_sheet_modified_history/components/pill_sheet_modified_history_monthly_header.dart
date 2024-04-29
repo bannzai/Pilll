@@ -7,8 +7,7 @@ class PillSheetModifiedHistoryMonthlyHeader extends StatelessWidget {
   final DateTime dateTimeOfMonth;
 
   const PillSheetModifiedHistoryMonthlyHeader(
-      {Key? key, required this.dateTimeOfMonth})
-      : super(key: key);
+      {super.key, required this.dateTimeOfMonth});
 
   @override
   Widget build(BuildContext context) {

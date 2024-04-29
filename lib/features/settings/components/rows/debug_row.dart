@@ -7,6 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 class DebugRow extends StatelessWidget {
+  const DebugRow({super.key});
+
   @override
   Widget build(BuildContext context) {
     if (Environment.isProduction) {

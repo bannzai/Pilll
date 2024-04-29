@@ -22,10 +22,10 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   final Widget Function(BuildContext) initialSettingPageBuilder;
   final Widget Function(BuildContext) homePageBuilder;
   const InitialSettingOrAppPage({
-    Key? key,
+    super.key,
     required this.homePageBuilder,
     required this.initialSettingPageBuilder,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

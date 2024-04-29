@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class RestDurationButton extends StatelessWidget {
-  const RestDurationButton({Key? key}) : super(key: key);
+  const RestDurationButton({super.key});
 
   @override
   Widget build(BuildContext context) {
