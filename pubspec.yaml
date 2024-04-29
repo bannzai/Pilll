@@ -39,7 +39,7 @@ dependencies:
   cloud_firestore: ^4.12.2
   url_launcher: ^6.2.6
   package_info: ^2.0.0
-  json_annotation: ^4.0.0
+  json_annotation: ^4.9.0
   mockito: ^5.4.4
   freezed_annotation: ^2.2.0
   riverpod: ^2.4.4
