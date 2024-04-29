@@ -240,21 +240,7 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
           now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.useLocalNotificationForReminder: true,
     }, SetOptions(merge: true));
-  }
-}
-
-// TODO: [UseLocalNotification-Beta] 2023-11 不要になったら削除
-final updateUseLocalNotificationProvider = Provider((ref) => UpdateUseLocalNotification(databaseConnection: ref.watch(databaseProvider)));
-
-class UpdateUseLocalNotification {
-  final DatabaseConnection databaseConnection;
-  UpdateUseLocalNotification({required this.databaseConnection});
-
-  Future<void> call(User user, bool value) async {
-    final updated = user.copyWith(useLocalNotificationForReminder: value);
-    await databaseConnection.userReference().update(updated.toJson());
   }
 }
 

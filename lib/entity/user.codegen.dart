@@ -58,7 +58,6 @@ extension UserFirestoreFieldKeys on String {
   static const trialDeadlineDate = "trialDeadlineDate";
   static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
   static const shouldAskCancelReason = "shouldAskCancelReason";
-  static const useLocalNotificationForReminder = "useLocalNotificationForReminder";
 
   // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
   // アプリを開かないとトライアルが終了しなくなることについては許容する
@@ -79,9 +78,6 @@ class User with _$User {
     @Default([]) List<String> firebaseCurrentUserIDSets,
     @Default(false) bool isPremium,
     @Default(false) bool shouldAskCancelReason,
-// TODO: [UseLocalNotification-Beta] 2024-04-01 に削除する。
-// バックエンドの方で使っていないかの確認を忘れずに
-    @Default(true) bool useLocalNotificationForReminder,
     @Default(false) bool analyticsDebugIsEnabled,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,

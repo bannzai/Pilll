@@ -42,7 +42,6 @@ class RecordPageButton extends HookConsumerWidget {
         activePillSheet: currentPillSheet,
         userIsPremiumOtTrial: userIsPremiumOtTrial,
         registerReminderLocalNotification: registerReminderLocalNotification,
-        user: user,
       );
     }
   }
