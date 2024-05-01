@@ -25,6 +25,8 @@ import 'package:pilll/entity/remote_config_parameter.codegen.dart' as _i27;
 import 'package:pilll/entity/schedule.codegen.dart' as _i24;
 import 'package:pilll/entity/setting.codegen.dart' as _i6;
 import 'package:pilll/entity/user.codegen.dart' as _i4;
+import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart'
+    as _i37;
 import 'package:pilll/provider/batch.dart' as _i11;
 import 'package:pilll/provider/database.dart' as _i2;
 import 'package:pilll/provider/force_update.dart' as _i32;
@@ -1525,4 +1527,36 @@ class MockLocalNotificationService extends _i1.Mock
                 _i9.Future<List<_i14.PendingNotificationRequest>>.value(
                     <_i14.PendingNotificationRequest>[]),
           ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+}
+
+/// A class which mocks [RegisterReminderLocalNotificationRunner].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
+    implements _i37.RegisterReminderLocalNotificationRunner {
+  MockRegisterReminderLocalNotificationRunner() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i9.Future<void> call({
+    required _i7.PillSheetGroup? createdPillSheetGroup,
+    required _i31.PillSheet? activePillSheet,
+    required bool? premiumOrTrial,
+    required _i6.Setting? setting,
+  }) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [],
+          {
+            #createdPillSheetGroup: createdPillSheetGroup,
+            #activePillSheet: activePillSheet,
+            #premiumOrTrial: premiumOrTrial,
+            #setting: setting,
+          },
+        ),
+        returnValue: _i9.Future<void>.value(),
+        returnValueForMissingStub: _i9.Future<void>.value(),
+      ) as _i9.Future<void>);
 }
