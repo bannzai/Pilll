@@ -26,7 +26,7 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
     ref.watch(remoteConfigParameterProvider),
-    RegisterReminderLocalNotificationRunner(),
+    ref.watch(registerReminderLocalNotificationRunnerProvider),
     now(),
   ),
 );
@@ -169,6 +169,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(isLoading: false);
   }
 }
+
+final registerReminderLocalNotificationRunnerProvider = Provider((ref) => RegisterReminderLocalNotificationRunner());
 
 // MockができないのでWrapperを作る
 class RegisterReminderLocalNotificationRunner {
