@@ -49,8 +49,8 @@ _$PillSheetGroupDisplayNumberSettingImpl
     _$$PillSheetGroupDisplayNumberSettingImplFromJson(
             Map<String, dynamic> json) =>
         _$PillSheetGroupDisplayNumberSettingImpl(
-          beginPillNumber: json['beginPillNumber'] as int?,
-          endPillNumber: json['endPillNumber'] as int?,
+          beginPillNumber: (json['beginPillNumber'] as num?)?.toInt(),
+          endPillNumber: (json['endPillNumber'] as num?)?.toInt(),
         );
 
 Map<String, dynamic> _$$PillSheetGroupDisplayNumberSettingImplToJson(

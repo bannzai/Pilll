@@ -93,6 +93,7 @@ class HomePageBody extends HookConsumerWidget {
       _screenTracking(tabController.index);
     });
 
+    sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, false);
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
     final isAlreadyAnsweredFormForManulRestDuration = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredFormForManulRestDuration) ?? false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
@@ -100,7 +101,7 @@ class HomePageBody extends HookConsumerWidget {
     final shouldAskCancelReason = user.shouldAskCancelReason;
 
     useEffect(() {
-      void f() async {
+      WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
         if (shouldShowMigrateInfo) {
           showDialog(
               context: context,
@@ -134,17 +135,10 @@ class HomePageBody extends HookConsumerWidget {
           );
           sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
         }
-      }
-
-      f();
+      });
 
       return null;
-    }, [
-      shouldShowMigrateInfo,
-      shouldAskCancelReason,
-      isAlreadyAnsweredPreStoreReviewModal,
-      totalCountOfActionForTakenPill,
-    ]);
+    }, []);
 
     return DefaultTabController(
       length: HomePageTabType.values.length,

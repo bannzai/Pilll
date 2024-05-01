@@ -41,7 +41,7 @@ Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
 _$LocalNotificationImpl _$$LocalNotificationImplFromJson(
         Map<String, dynamic> json) =>
     _$LocalNotificationImpl(
-      localNotificationID: json['localNotificationID'] as int,
+      localNotificationID: (json['localNotificationID'] as num).toInt(),
       remindDateTime: NonNullTimestampConverter.timestampToDateTime(
           json['remindDateTime'] as Timestamp),
     );
