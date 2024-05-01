@@ -37,6 +37,7 @@ const androidNotificationCategoryCalendarSchedule = "androidNotificationCategory
 
 // Notification ID offset
 const fallbackNotificationIdentifier = 1;
+const newPillSheetNotificationIdentifier = 2;
 const scheduleNotificationIdentifierOffset = 100000;
 const reminderNotificationIdentifierOffset = 1000000000;
 
@@ -114,6 +115,12 @@ class LocalNotificationService {
     final pendingNotifications = await plugin.pendingNotificationRequests();
     return pendingNotifications.where((element) => element.id - reminderNotificationIdentifierOffset > 0).toList();
   }
+
+  // iOSではgetPendingNotificationRequestsWithCompletionHandlerを実行しているだけなのでおそらくエラーは発生しない
+  Future<List<PendingNotificationRequest>> pendingNewPillSheetNotifications() async {
+    final pendingNotifications = await plugin.pendingNotificationRequests();
+    return pendingNotifications.where((element) => element.id == newPillSheetNotificationIdentifier).toList();
+  }
 }
 
 // 必要な状態が全て揃ったら(AsyncData)の時のみ値を返す。そうじゃない場合はnullを返す
@@ -127,7 +134,7 @@ final registerReminderLocalNotificationProvider = Provider(
 // 以下のように行わずに、手続的に必要な箇所でcallを呼ぶ。なぜなら不意にローカル通知の解除や登録が走ってしまうのはアンコントローラブルだから
 // - 各アクションと並行して処理を行わない
 // - アクションの結果を受け取ってローカル通知の登録の更新をしない
-// - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす
+// - 変更を検知してcallを呼ぶ親Widgetを用意して、変更があれば毎回登録しなおす → クイックレコードの場合なども考慮に入れる必要がある。それらの処理でWidgetが起動しているかどうか定かでは無いのでやらない
 // NOTE:
 // 現状はテストケースが増えること以外は問題点では無いのでこの方式で行くが、他の方法としてiOSはNotification Service App Extensionを使用した方法がある(Silence Push Notifications)
 // Doc: https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_usernotifications_filtering#3737535
@@ -210,6 +217,15 @@ class RegisterReminderLocalNotification {
     }
     if (activePillSheet.activeRestDuration != null) {
       return;
+    }
+    try {
+      // NOTE: 本来であれば各ユースケース毎に通知を登録するが、99%のケースで同じ通知を登録するのでここで登録してしまう
+      // ただ、重要な服用通知のスケジューリング処理を邪魔しないため、awaitもしないしエラーハンドリングもしない
+      final newPillSheetNotification = NewPillSheetNotification();
+      unawaited(newPillSheetNotification.call(pillSheetGroup: pillSheetGroup, setting: setting));
+    } catch (e, st) {
+      // 通知の登録に失敗しても、服用記録には影響がないのでエラーログだけ残す
+      errorLogger.recordError(e, st);
     }
 
     analytics.debug(name: "run_register_reminder_notification", parameters: {
@@ -547,6 +563,84 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
         androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
+    }
+  }
+}
+
+final newPillSheetNotificationProvider = Provider((ref) => NewPillSheetNotification());
+
+// 新しいピルシートの通知をスケジュールする
+// PillSheetGroup.pillSheets毎にスケジュールする方法が直感的だが、ローカル通知のスケジュールができる数に上限もあるので枠を節約する意味でも一つ先のピルシートの通知をスケジュールする
+// 2[0-9]日毎に1会通知をスケジュールするのでも十分
+class NewPillSheetNotification {
+  Future<void> call({
+    required PillSheetGroup pillSheetGroup,
+    required Setting setting,
+  }) async {
+    final pendingNotifications = await localNotificationService.pendingNewPillSheetNotifications();
+    await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
+
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
+      return;
+    }
+    final reminderTime = setting.earlyReminderTime;
+    if (reminderTime == null) {
+      return;
+    }
+
+    for (final pillSheet in pillSheetGroup.pillSheets) {
+      if (pillSheet.groupIndex > activePillSheet.groupIndex) {
+        final beginDate = tz.TZDateTime.from(pillSheet.beginingDate, tz.local);
+        final reminderDateTime = beginDate
+            .date()
+            .add(
+              Duration(hours: reminderTime.hour),
+            )
+            .add(
+              Duration(minutes: reminderTime.minute),
+            );
+        try {
+          await localNotificationService.plugin.zonedSchedule(
+            newPillSheetNotificationIdentifier,
+            "今日から新しいシートがはじまります",
+            "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
+            reminderDateTime,
+            const NotificationDetails(
+              android: AndroidNotificationDetails(
+                androidReminderNotificationChannelID,
+                "服用通知",
+                channelShowBadge: true,
+                setAsGroupSummary: true,
+                groupKey: androidReminderNotificationGroupKey,
+                category: AndroidNotificationCategory.alarm,
+              ),
+              iOS: DarwinNotificationDetails(
+                sound: "becho.caf",
+                presentBadge: true,
+                presentSound: true,
+                // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                presentAlert: false,
+                presentBanner: true,
+                presentList: true,
+              ),
+            ),
+            androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+            uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+          );
+        } catch (e, st) {
+          // NOTE: エラーが発生しても他の通知のスケジュールを続ける
+          errorLogger.recordError(e, st);
+
+          analytics.debug(name: "npn_error", parameters: {
+            "beginDate": beginDate,
+            "reminderTimeHour": reminderTime.hour,
+            "reminderTimeMinute": reminderTime.minute,
+          });
+        }
+        break;
+      }
     }
   }
 }

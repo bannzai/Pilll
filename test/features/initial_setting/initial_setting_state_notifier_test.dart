@@ -28,6 +28,7 @@ import '../../helper/mock.mocks.dart';
 
 void main() {
   const MethodChannel timezoneChannel = MethodChannel('flutter_native_timezone');
+  late RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -43,6 +44,8 @@ void main() {
     await LocalNotificationService.setupTimeZone();
     final mockLocalNotificationService = MockLocalNotificationService();
     localNotificationService = mockLocalNotificationService;
+
+    registerReminderLocalNotificationRunner = MockRegisterReminderLocalNotificationRunner();
   });
 
   tearDown(() {
@@ -322,6 +325,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -410,6 +414,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -485,6 +490,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);

@@ -10,6 +10,7 @@ import 'package:pilll/entity/package.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info/package_info.dart';
@@ -223,6 +224,10 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
 
       UserFirestoreFieldKeys.isTrial: user.isTrial,
+
+      // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
+      // 処理的に大体のユーザーがカバーできれば良いので、現在のnewPillSheetNotificationが登録されている数から判別する
+      UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: (await localNotificationService.pendingNewPillSheetNotifications()).isNotEmpty,
     }, SetOptions(merge: true));
   }
 }
@@ -240,6 +245,8 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
           now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
+      // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
+      UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: true,
     }, SetOptions(merge: true));
   }
 }

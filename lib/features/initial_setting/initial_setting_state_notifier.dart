@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -25,6 +26,7 @@ final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<In
     ref.watch(batchSetPillSheetModifiedHistoryProvider),
     ref.watch(batchSetPillSheetGroupProvider),
     ref.watch(remoteConfigParameterProvider),
+    ref.watch(registerReminderLocalNotificationRunnerProvider),
     now(),
   ),
 );
@@ -36,6 +38,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final RemoteConfigParameter remoteConfigParameter;
+  final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
     this.endInitialSetting,
@@ -44,6 +47,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.batchSetPillSheetModifiedHistory,
     this.batchSetPillSheetGroup,
     this.remoteConfigParameter,
+    this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
           InitialSettingState(reminderTimes: [
@@ -146,8 +150,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
     final activePillSheet = createdPillSheetGroup?.activePillSheet;
     if (createdPillSheetGroup != null && activePillSheet != null) {
-      await RegisterReminderLocalNotification.run(
-        pillSheetGroup: createdPillSheetGroup,
+      await registerReminderLocalNotificationRunner(
+        createdPillSheetGroup: createdPillSheetGroup,
         activePillSheet: activePillSheet,
         premiumOrTrial: true,
         setting: setting,
@@ -163,5 +167,24 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
 
   void hideHUD() {
     state = state.copyWith(isLoading: false);
+  }
+}
+
+final registerReminderLocalNotificationRunnerProvider = Provider((ref) => RegisterReminderLocalNotificationRunner());
+
+// MockができないのでWrapperを作る
+class RegisterReminderLocalNotificationRunner {
+  Future<void> call({
+    required PillSheetGroup createdPillSheetGroup,
+    required PillSheet activePillSheet,
+    required bool premiumOrTrial,
+    required Setting setting,
+  }) async {
+    await RegisterReminderLocalNotification.run(
+      pillSheetGroup: createdPillSheetGroup,
+      activePillSheet: activePillSheet,
+      premiumOrTrial: true,
+      setting: setting,
+    );
   }
 }

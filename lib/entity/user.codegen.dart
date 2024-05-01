@@ -62,6 +62,9 @@ extension UserFirestoreFieldKeys on String {
   // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
   // アプリを開かないとトライアルが終了しなくなることについては許容する
   static const isTrial = "isTrial";
+
+  // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
+  static const useLocalNotificationForNewPillSheet = "useLocalNotificationForNewPillSheet";
 }
 
 @freezed
