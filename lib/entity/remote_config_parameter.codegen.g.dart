@@ -13,13 +13,14 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(
           RemoteConfigParameterDefaultValues.isPaywallFirst,
       skipInitialSetting: json['skipInitialSetting'] as bool? ??
           RemoteConfigParameterDefaultValues.skipInitialSetting,
-      trialDeadlineDateOffsetDay: json['trialDeadlineDateOffsetDay'] as int? ??
-          RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+      trialDeadlineDateOffsetDay:
+          (json['trialDeadlineDateOffsetDay'] as num?)?.toInt() ??
+              RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
       discountEntitlementOffsetDay:
-          json['discountEntitlementOffsetDay'] as int? ??
+          (json['discountEntitlementOffsetDay'] as num?)?.toInt() ??
               RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
       discountCountdownBoundaryHour:
-          json['discountCountdownBoundaryHour'] as int? ??
+          (json['discountCountdownBoundaryHour'] as num?)?.toInt() ??
               RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
     );
 

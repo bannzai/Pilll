@@ -11,8 +11,8 @@ _$PillSheetTypeInfoImpl _$$PillSheetTypeInfoImplFromJson(
     _$PillSheetTypeInfoImpl(
       pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String,
       name: json['name'] as String,
-      totalCount: json['totalCount'] as int,
-      dosingPeriod: json['dosingPeriod'] as int,
+      totalCount: (json['totalCount'] as num).toInt(),
+      dosingPeriod: (json['dosingPeriod'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$PillSheetTypeInfoImplToJson(
@@ -58,7 +58,7 @@ _$PillSheetImpl _$$PillSheetImplFromJson(Map<String, dynamic> json) =>
           json['createdAt'] as Timestamp?),
       deletedAt: TimestampConverter.timestampToDateTime(
           json['deletedAt'] as Timestamp?),
-      groupIndex: json['groupIndex'] as int? ?? 0,
+      groupIndex: (json['groupIndex'] as num?)?.toInt() ?? 0,
       restDurations: (json['restDurations'] as List<dynamic>?)
               ?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>))
               .toList() ??

@@ -114,8 +114,10 @@ _$AutomaticallyRecordedLastTakenDateValueImpl
               json['beforeLastTakenDate'] as Timestamp?),
           afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
               json['afterLastTakenDate'] as Timestamp),
-          beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
-          afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+          beforeLastTakenPillNumber:
+              (json['beforeLastTakenPillNumber'] as num).toInt(),
+          afterLastTakenPillNumber:
+              (json['afterLastTakenPillNumber'] as num).toInt(),
         );
 
 Map<String, dynamic> _$$AutomaticallyRecordedLastTakenDateValueImplToJson(
@@ -159,8 +161,10 @@ _$TakenPillValueImpl _$$TakenPillValueImplFromJson(Map<String, dynamic> json) =>
           json['beforeLastTakenDate'] as Timestamp?),
       afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
           json['afterLastTakenDate'] as Timestamp),
-      beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
-      afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+      beforeLastTakenPillNumber:
+          (json['beforeLastTakenPillNumber'] as num).toInt(),
+      afterLastTakenPillNumber:
+          (json['afterLastTakenPillNumber'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$TakenPillValueImplToJson(
@@ -205,8 +209,10 @@ _$RevertTakenPillValueImpl _$$RevertTakenPillValueImplFromJson(
           json['beforeLastTakenDate'] as Timestamp?),
       afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
           json['afterLastTakenDate'] as Timestamp),
-      beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
-      afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+      beforeLastTakenPillNumber:
+          (json['beforeLastTakenPillNumber'] as num).toInt(),
+      afterLastTakenPillNumber:
+          (json['afterLastTakenPillNumber'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$RevertTakenPillValueImplToJson(
@@ -227,10 +233,10 @@ _$ChangedPillNumberValueImpl _$$ChangedPillNumberValueImplFromJson(
           json['beforeBeginingDate'] as Timestamp),
       afterBeginingDate: NonNullTimestampConverter.timestampToDateTime(
           json['afterBeginingDate'] as Timestamp),
-      beforeTodayPillNumber: json['beforeTodayPillNumber'] as int,
-      afterTodayPillNumber: json['afterTodayPillNumber'] as int,
-      beforeGroupIndex: json['beforeGroupIndex'] as int? ?? 1,
-      afterGroupIndex: json['afterGroupIndex'] as int? ?? 1,
+      beforeTodayPillNumber: (json['beforeTodayPillNumber'] as num).toInt(),
+      afterTodayPillNumber: (json['afterTodayPillNumber'] as num).toInt(),
+      beforeGroupIndex: (json['beforeGroupIndex'] as num?)?.toInt() ?? 1,
+      afterGroupIndex: (json['afterGroupIndex'] as num?)?.toInt() ?? 1,
     );
 
 Map<String, dynamic> _$$ChangedPillNumberValueImplToJson(
