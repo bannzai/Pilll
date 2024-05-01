@@ -1514,4 +1514,15 @@ class MockLocalNotificationService extends _i1.Mock
                 _i9.Future<List<_i14.PendingNotificationRequest>>.value(
                     <_i14.PendingNotificationRequest>[]),
           ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+  @override
+  _i9.Future<List<_i14.PendingNotificationRequest>>
+      pendingNewPillSheetNotifications() => (super.noSuchMethod(
+            Invocation.method(
+              #pendingNewPillSheetNotifications,
+              [],
+            ),
+            returnValue:
+                _i9.Future<List<_i14.PendingNotificationRequest>>.value(
+                    <_i14.PendingNotificationRequest>[]),
+          ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
 }
