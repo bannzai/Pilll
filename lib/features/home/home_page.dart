@@ -139,12 +139,7 @@ class HomePageBody extends HookConsumerWidget {
       f();
 
       return null;
-    }, [
-      shouldShowMigrateInfo,
-      shouldAskCancelReason,
-      isAlreadyAnsweredPreStoreReviewModal,
-      totalCountOfActionForTakenPill,
-    ]);
+    }, []);
 
     return DefaultTabController(
       length: HomePageTabType.values.length,
