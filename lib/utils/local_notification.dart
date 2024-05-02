@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -591,6 +592,7 @@ class NewPillSheetNotification {
     }
 
     Future<void> register(TZDateTime reminderDateTime) async {
+      debugPrint('NewPillSheetNotification register time: $reminderDateTime');
       try {
         await localNotificationService.plugin.zonedSchedule(
           newPillSheetNotificationIdentifier,
