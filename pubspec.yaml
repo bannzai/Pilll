@@ -65,7 +65,7 @@ dependencies:
   webview_flutter: ^4.7.0
   collection: ^1.18.0
   crypto:
-  timezone:
+  timezone: 0.9.3
   firebase_remote_config: ^4.3.3
   google_mobile_ads: ^5.0.0
 
