@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'dart:math';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -23,6 +24,7 @@ import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:timezone/timezone.dart';
 
 // Reminder Notification
 const actionIdentifier = "RECORD_PILL";
@@ -589,10 +591,54 @@ class NewPillSheetNotification {
       return;
     }
 
+    Future<void> register(TZDateTime reminderDateTime) async {
+      debugPrint('NewPillSheetNotification register time: $reminderDateTime');
+      try {
+        await localNotificationService.plugin.zonedSchedule(
+          newPillSheetNotificationIdentifier,
+          "今日から新しいシートがはじまります",
+          "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
+          reminderDateTime,
+          const NotificationDetails(
+            android: AndroidNotificationDetails(
+              androidReminderNotificationChannelID,
+              "服用通知",
+              channelShowBadge: true,
+              setAsGroupSummary: true,
+              groupKey: androidReminderNotificationGroupKey,
+              category: AndroidNotificationCategory.alarm,
+            ),
+            iOS: DarwinNotificationDetails(
+              sound: "becho.caf",
+              presentBadge: true,
+              presentSound: true,
+              // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+              // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+              presentAlert: false,
+              presentBanner: true,
+              presentList: true,
+            ),
+          ),
+          androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+          uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+        );
+      } catch (e, st) {
+        // NOTE: エラーが発生しても他の通知のスケジュールを続ける
+        errorLogger.recordError(e, st);
+
+        analytics.debug(name: "npn_error", parameters: {
+          "registerDateTime": reminderDateTime,
+          "reminderTimeHour": reminderTime.hour,
+          "reminderTimeMinute": reminderTime.minute,
+        });
+      }
+    }
+
     for (final pillSheet in pillSheetGroup.pillSheets) {
+      // 次のピルシートが存在する場合
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
-        final beginDate = tz.TZDateTime.from(pillSheet.beginingDate, tz.local);
-        final reminderDateTime = beginDate
+        final nextBeginDate = tz.TZDateTime.from(pillSheet.beginingDate, tz.local);
+        final reminderDateTime = nextBeginDate
             .date()
             .add(
               Duration(hours: reminderTime.hour),
@@ -600,45 +646,22 @@ class NewPillSheetNotification {
             .add(
               Duration(minutes: reminderTime.minute),
             );
-        try {
-          await localNotificationService.plugin.zonedSchedule(
-            newPillSheetNotificationIdentifier,
-            "今日から新しいシートがはじまります",
-            "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
-            reminderDateTime,
-            const NotificationDetails(
-              android: AndroidNotificationDetails(
-                androidReminderNotificationChannelID,
-                "服用通知",
-                channelShowBadge: true,
-                setAsGroupSummary: true,
-                groupKey: androidReminderNotificationGroupKey,
-                category: AndroidNotificationCategory.alarm,
-              ),
-              iOS: DarwinNotificationDetails(
-                sound: "becho.caf",
-                presentBadge: true,
-                presentSound: true,
-                // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
-                // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
-                presentAlert: false,
-                presentBanner: true,
-                presentList: true,
-              ),
-            ),
-            androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
-            uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
-          );
-        } catch (e, st) {
-          // NOTE: エラーが発生しても他の通知のスケジュールを続ける
-          errorLogger.recordError(e, st);
+        await register(reminderDateTime);
+        break;
+      }
 
-          analytics.debug(name: "npn_error", parameters: {
-            "beginDate": beginDate,
-            "reminderTimeHour": reminderTime.hour,
-            "reminderTimeMinute": reminderTime.minute,
-          });
-        }
+      // ピルシートグループが終了する場合
+      if (pillSheet.groupIndex == pillSheetGroup.pillSheets.last.groupIndex) {
+        final nextBeginDate = tz.TZDateTime.from(pillSheet.estimatedEndTakenDate.addDays(1), tz.local);
+        final reminderDateTime = nextBeginDate
+            .date()
+            .add(
+              Duration(hours: reminderTime.hour),
+            )
+            .add(
+              Duration(minutes: reminderTime.minute),
+            );
+        await register(reminderDateTime);
         break;
       }
     }
