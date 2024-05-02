@@ -627,6 +627,7 @@ class NewPillSheetNotification {
         errorLogger.recordError(e, st);
 
         analytics.debug(name: "npn_error", parameters: {
+          "registerDateTime": reminderDateTime,
           "reminderTimeHour": reminderTime.hour,
           "reminderTimeMinute": reminderTime.minute,
         });
