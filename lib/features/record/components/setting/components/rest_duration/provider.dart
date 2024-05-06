@@ -8,6 +8,7 @@ import 'package:pilll/provider/batch.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 final beginRestDurationProvider = Provider.autoDispose(
@@ -34,10 +35,23 @@ class BeginRestDuration {
     required PillSheetGroup pillSheetGroup,
   }) async {
     final batch = batchFactory.batch();
+    final PillSheet targetPillSheet;
+    if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll) {
+      // 最後に飲んだピルシートのピルが全て服用済みの場合は、次のピルシートを対象としてrestDurationを設定する
+      // すでに服用済みの場合は、次のピルの番号から服用お休みを開始する必要があるから
+      targetPillSheet = pillSheetGroup.pillSheets[pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex + 1];
+    } else {
+      targetPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
+    }
 
+    final lastTakenDate = targetPillSheet.lastTakenDate;
     final RestDuration restDuration;
-    final lastTakenDate = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
+      // 上述のtargetPillSheetを決定するifにより以下の内容が考えられる
+      // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll)
+      // true: 0番以外のピルシート
+      // false: 0番のピルシート
+
       // 1番目から服用お休みする場合は、beginDateは今日になる
       restDuration = RestDuration(
         id: firestoreIDGenerator(),
@@ -45,12 +59,14 @@ class BeginRestDuration {
         createdDate: now(),
       );
     } else {
+      // 服用お休みは原則最後に服用した日付の次の日付からスタートする
       restDuration = RestDuration(
         id: firestoreIDGenerator(),
         beginDate: lastTakenDate.addDays(1),
         createdDate: now(),
       );
     }
+
     final updatedPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.copyWith(
       restDurations: [...pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.restDurations, restDuration],
     );
