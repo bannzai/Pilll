@@ -45,7 +45,7 @@ class TakePill {
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
-      if (pillSheet.isEnded) {
+      if (pillSheet.isTakenAll) {
         return pillSheet;
       }
 

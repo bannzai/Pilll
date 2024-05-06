@@ -142,7 +142,7 @@ class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
-  bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
+  bool get isTakenAll => typeInfo.totalCount == lastTakenPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
