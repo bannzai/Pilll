@@ -6,6 +6,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -68,6 +69,89 @@ void main() {
           batchFactory: batchFactory,
           batchSetPillSheetGroup: batchSetPillSheetGroup,
           batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+
+    test("最後に飲んだピルシートが終了している。その場合は次のピルシートに服用お休み期間が適応される", () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheet1 = PillSheet(
+        id: "pill_sheet_id_1",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: now().addDays(-1),
+        beginingDate: now().addDays(-28),
+        createdAt: now(),
+      );
+      expect(pillSheet1.isTakenAll, true);
+
+      final pillSheet2 = PillSheet(
+        id: "pill_sheet_id_2",
+        groupIndex: 1,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: null,
+        beginingDate: now(),
+        createdAt: now(),
+      );
+      final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: null,
+      );
+      final updatedPillSheet = pillSheet2.copyWith(restDurations: [notYetEndRestDuration]);
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: [
+          "pill_sheet_id_1",
+          "pill_sheet_id_2",
+        ],
+        pillSheets: [
+          pillSheet1,
+          pillSheet2,
+        ],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(
+        pillSheets: [pillSheet1, updatedPillSheet],
+      );
+
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet,
+        restDuration: notYetEndRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final beginRestDuration = BeginRestDuration(
+        batchFactory: batchFactory,
+        batchSetPillSheetGroup: batchSetPillSheetGroup,
+        batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+      );
       await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
 
       verify(batchFactory.batch()).called(1);
