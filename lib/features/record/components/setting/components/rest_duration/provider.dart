@@ -35,40 +35,18 @@ class BeginRestDuration {
     required PillSheetGroup pillSheetGroup,
   }) async {
     final batch = batchFactory.batch();
-    final PillSheet targetPillSheet;
-    if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll) {
-      // 最後に飲んだピルシートのピルが全て服用済みの場合は、次のピルシートを対象としてrestDurationを設定する
-      // すでに服用済みの場合は、次のピルの番号から服用お休みを開始する必要があるから
-      targetPillSheet = pillSheetGroup.pillSheets[pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex + 1];
-    } else {
-      targetPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
-    }
 
-    final lastTakenDate = targetPillSheet.lastTakenDate;
-    final RestDuration restDuration;
-    if (lastTakenDate == null) {
-      // 上述のtargetPillSheetを決定するifにより以下の内容が考えられる
-      // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll)
-      // true: 0番以外のピルシート
-      // false: 0番のピルシート
+    final restDuration = RestDuration(
+      id: firestoreIDGenerator(),
+      beginDate: pillSheetGroup.availableRestDurationBeginDate(),
+      createdDate: now(),
+    );
 
-      // 1番目から服用お休みする場合は、beginDateは今日になる
-      restDuration = RestDuration(
-        id: firestoreIDGenerator(),
-        beginDate: now(),
-        createdDate: now(),
-      );
-    } else {
-      // 服用お休みは原則最後に服用した日付の次の日付からスタートする
-      restDuration = RestDuration(
-        id: firestoreIDGenerator(),
-        beginDate: lastTakenDate.addDays(1),
-        createdDate: now(),
-      );
-    }
-
-    final updatedPillSheet = targetPillSheet.copyWith(
-      restDurations: [...targetPillSheet.restDurations, restDuration],
+    final updatedPillSheet = pillSheetGroup.targetBeginRestDurationPillSheet.copyWith(
+      restDurations: [
+        ...pillSheetGroup.targetBeginRestDurationPillSheet.restDurations,
+        restDuration,
+      ],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
@@ -77,7 +55,7 @@ class BeginRestDuration {
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
-        before: targetPillSheet,
+        before: pillSheetGroup.targetBeginRestDurationPillSheet,
         after: updatedPillSheet,
         restDuration: restDuration,
         beforePillSheetGroup: pillSheetGroup,
