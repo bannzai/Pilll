@@ -914,7 +914,8 @@ void main() {
       );
       final updatedPillSheet2 = pillSheet2.copyWith(
         beginingDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
-        lastTakenDate: null,
+        // 変更されない
+        // lastTakenDate: null,
         restDurations: [notChangeRestDuration],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
