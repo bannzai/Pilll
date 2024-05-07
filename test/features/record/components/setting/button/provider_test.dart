@@ -19,7 +19,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
   group("#beginRestDuration", () {
-    test("group has only one pill sheet", () async {
+    test("ピルシートが1枚の時。未服用の場合は当日から服用お休み開始", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -77,7 +77,65 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("最後に飲んだピルシートが終了している。その場合は次のピルシートに服用お休み期間が適応される", () async {
+    test("ピルシートが1枚の時。服用済みの場合は次の日から服用お休み開始", () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+      final notYetEndRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now().addDays(1),
+        createdDate: now(),
+        endDate: null,
+      );
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheet = PillSheet(
+        id: "pill_sheet_id_1",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: now(),
+        beginingDate: now(),
+        createdAt: now(),
+      );
+      final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
+
+      final pillSheetGroup = PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [pillSheet], createdAt: now());
+      final updatedPillSheetGroup =
+          PillSheetGroup(id: "group_id", pillSheetIDs: ["pill_sheet_id_1"].toList(), pillSheets: [updatedPillSheet], createdAt: now());
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: updatedPillSheet,
+        restDuration: notYetEndRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final beginRestDuration = BeginRestDuration(
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await beginRestDuration.call(pillSheetGroup: pillSheetGroup);
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+
+    test("ピルシートが複数枚。最後に飲んだピルシートがすべて服用済み。次のピルシートに服用お休み期間が適応される", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
