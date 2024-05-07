@@ -65,7 +65,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           final dateTime = await showDatePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
-            initialDate: today(),
+            initialDate: pillSheetGroup.lastRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
             helpText: "服用お休み開始日を選択",

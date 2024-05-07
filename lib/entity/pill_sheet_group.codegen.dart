@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -295,6 +296,10 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 extension PillSheetGroupRestDurationDomain on PillSheetGroup {
+  RestDuration? get lastRestDuration {
+    return pillSheets.sorted((a, b) => a.beginingDate.compareTo(b.beginingDate)).map((e) => e.restDurations).flattened.firstOrNull;
+  }
+
   PillSheet get lastTakenPillSheetOrFirstPillSheet {
     for (final pillSheet in pillSheets.reversed) {
       if (pillSheet.lastTakenDate != null) {
