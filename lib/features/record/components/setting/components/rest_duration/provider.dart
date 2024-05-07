@@ -228,17 +228,33 @@ class ChangeRestDuration {
       }
     }
 
-    final updatedPillSheets = <PillSheet>[];
+    // beginingDateをアップデート
+    final updatedBeginingDatePillSheets = <PillSheet>[];
     for (final pillSheet in updatedRestDurationPillSheets) {
       if (pillSheet.id == updatedRestDurationPillSheets.first.id) {
+        updatedBeginingDatePillSheets.add(pillSheet);
+        continue;
+      }
+
+      /// このループ内でアップデートされた前のピルシートを用いてbeginingDateを算出するので、
+      /// [updatedBeginingDatePillSheets] から取得する
+      final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
+      updatedBeginingDatePillSheets.add(pillSheet.copyWith(
+        beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+      ));
+    }
+
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in updatedBeginingDatePillSheets) {
+      if (pillSheet.groupIndex <= updatedToRestDurationPillSheet.groupIndex) {
         updatedPillSheets.add(pillSheet);
         continue;
       }
-      // このループ内でアップデートされた前のピルシートを用いてbeginingDateを算出するので、
-      // updatedPillSheetsから取得する
-      final beforePillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
+
+      // updatedToRestDurationPillSheetよりも後ろのピルシートは、lastTakenDateをクリアしてしまう
+      // ピル番号の表示するロジックで、beginingDate > lastTakenDateのような状態になると困る
       updatedPillSheets.add(pillSheet.copyWith(
-        beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+        lastTakenDate: null,
       ));
     }
 
