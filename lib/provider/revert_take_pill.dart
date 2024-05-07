@@ -36,7 +36,7 @@ class RevertTakePill {
     if (activePillSheet == null) {
       throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
-    if (activePillSheet.activeRestDuration != null) {
+    if (pillSheetGroup.lastActiveRestDuration != null) {
       throw const FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
     }
 

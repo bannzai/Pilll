@@ -217,7 +217,7 @@ class RegisterReminderLocalNotification {
     if (!setting.isOnReminder) {
       return;
     }
-    if (activePillSheet.activeRestDuration != null) {
+    if (pillSheetGroup.lastActiveRestDuration != null) {
       return;
     }
     try {

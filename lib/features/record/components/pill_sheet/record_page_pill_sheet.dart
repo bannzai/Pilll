@@ -173,11 +173,11 @@ class RecordPagePillSheet extends HookConsumerWidget {
     if (pillNumberInPillSheet <= pillSheet.lastTakenPillNumber) {
       return null;
     }
-    final activePillSheet = pillSheetGroup.activePillSheet;
-    if (activePillSheet == null) {
+    if (pillSheetGroup.lastActiveRestDuration != null) {
       return null;
     }
-    if (activePillSheet.activeRestDuration != null) {
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
       return null;
     }
     if (activePillSheet.groupIndex < pillSheet.groupIndex) {
@@ -252,7 +252,7 @@ bool shouldPillMarkAnimation({
   required PillSheet pillSheet,
   required PillSheetGroup pillSheetGroup,
 }) {
-  if (pillSheetGroup.activePillSheet?.activeRestDuration != null) {
+  if (pillSheetGroup.lastActiveRestDuration != null) {
     return false;
   }
   final activePillSheet = pillSheetGroup.activePillSheet;
