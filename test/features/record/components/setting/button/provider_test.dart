@@ -13,6 +13,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../helper/mock.mocks.dart';
 
+// NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付(lastTakenDate)+1以上の日付は選択できない
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
@@ -459,8 +460,6 @@ void main() {
     });
   });
 
-  // DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
-  // よって、lastTakenDateが変動することがない前提でテストを書く
   group("#changeRestDurationBeginDate", () {
     test("ピルシートが1枚の場合", () async {
       var mockTodayRepository = MockTodayService();
@@ -583,7 +582,7 @@ void main() {
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        lastTakenDate: null,
+        lastTakenDate: now(),
         beginingDate: now().addDays(-2),
         createdAt: now(),
         restDurations: [beforeRestDuration],
@@ -603,6 +602,7 @@ void main() {
       // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginingDateが動く
       final updatedPillSheet2 = pillSheet2.copyWith(
         beginingDate: pillSheet2.beginingDate.addDays(3),
+        lastTakenDate: null,
         restDurations: [],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
