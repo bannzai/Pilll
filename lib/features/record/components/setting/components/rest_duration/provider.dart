@@ -38,7 +38,7 @@ class BeginRestDuration {
 
     final restDuration = RestDuration(
       id: firestoreIDGenerator(),
-      beginDate: pillSheetGroup.availableRestDurationBeginDate(),
+      beginDate: pillSheetGroup.availableRestDurationBeginDate,
       createdDate: now(),
     );
 
