@@ -60,6 +60,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             "rest_duration_id": restDuration.id,
           });
 
+          // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
+          // よって、lastTakenDateが変動することがない前提になる
           final dateTime = await showDatePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
@@ -107,6 +109,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             "rest_duration_id": restDuration.id,
           });
 
+          // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
+          // よって、lastTakenDateが変動することがない前提になる
           final dateTimeRange = await showDateRangePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,

@@ -234,9 +234,11 @@ class ChangeRestDuration {
         updatedPillSheets.add(pillSheet);
         continue;
       }
-      final beforePillSheet = updatedRestDurationPillSheets[pillSheet.groupIndex - 1];
+      // このループ内でアップデートされた前のピルシートを用いてbeginingDateを算出するので、
+      // updatedPillSheetsから取得する
+      final beforePillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
       updatedPillSheets.add(pillSheet.copyWith(
-        beginingDate: beforePillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+        beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
       ));
     }
 
