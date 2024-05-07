@@ -543,7 +543,7 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginingDateも変更される", () async {
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされる", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -604,6 +604,121 @@ void main() {
         beginingDate: pillSheet2.beginingDate.addDays(3),
         lastTakenDate: null,
         restDurations: [],
+      );
+      final updatedPillSheet3 = pillSheet3.copyWith(
+        beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2", "pill_sheet_id_3"],
+        pillSheets: [pillSheet1, pillSheet2, pillSheet3],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(
+        pillSheets: [updatedPillSheet1, updatedPillSheet2, updatedPillSheet3],
+      );
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet1,
+        beforeRestDuration: beforeRestDuration,
+        afterRestDuration: afterRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final changeRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await changeRestDuration.call(
+        fromRestDuration: beforeRestDuration,
+        toRestDuration: afterRestDuration,
+        pillSheetGroup: pillSheetGroup,
+      );
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。変更後もrestDurationを1つ持っている。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされない", () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+      final beforeRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: null,
+      );
+      // テストケース的に日付の差分は考えなくて良いので begin == end のデータを用意して、テストケースの用意を簡略化している
+      final notChangeRestDuration = RestDuration(
+        id: "_rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: now(),
+      );
+      final afterRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now().addDays(-3),
+        createdDate: now(),
+        endDate: null,
+      );
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheet1 = PillSheet(
+        id: "pill_sheet_id_1",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: now().addDays(-4),
+        beginingDate: now().addDays(-30),
+        createdAt: now(),
+        restDurations: [],
+      );
+      final pillSheet2 = PillSheet(
+        id: "pill_sheet_id_2",
+        groupIndex: 1,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: now(),
+        beginingDate: now().addDays(-2),
+        createdAt: now(),
+        restDurations: [notChangeRestDuration, beforeRestDuration],
+      );
+      final pillSheet3 = PillSheet(
+        id: "pill_sheet_id_3",
+        groupIndex: 2,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: null,
+        beginingDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        createdAt: now(),
+        restDurations: [],
+      );
+      final updatedPillSheet1 = pillSheet1.copyWith(
+        restDurations: [afterRestDuration],
+      );
+      // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginingDateが動く
+      final updatedPillSheet2 = pillSheet2.copyWith(
+        beginingDate: pillSheet2.beginingDate.addDays(3),
+        // 変更されない
+        // lastTakenDate: null,
+        restDurations: [notChangeRestDuration],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
         beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
@@ -734,7 +849,120 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginingDateも変更される", () async {
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされる", () async {
+      var mockTodayRepository = MockTodayService();
+      final mockToday = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockToday);
+
+      final mockIDGenerator = MockFirestoreIDGenerator();
+      when(mockIDGenerator.call()).thenReturn("rest_duration_id");
+      firestoreIDGenerator = mockIDGenerator;
+      final beforeRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: now(),
+      );
+      // テストケース的に日付の差分は考えなくて良いので begin == end のデータを用意して、テストケースの用意を簡略化している
+      final notChangeRestDuration = RestDuration(
+        id: "_rest_duration_id",
+        beginDate: now(),
+        createdDate: now(),
+        endDate: now(),
+      );
+      final afterRestDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: now().addDays(-3),
+        createdDate: now(),
+        endDate: now().addDays(-2),
+      );
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+
+      final pillSheet1 = PillSheet(
+        id: "pill_sheet_id_1",
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: now().addDays(-4),
+        beginingDate: now().addDays(-30),
+        createdAt: now(),
+        restDurations: [],
+      );
+      final pillSheet2 = PillSheet(
+        id: "pill_sheet_id_2",
+        groupIndex: 1,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: now(),
+        beginingDate: now().addDays(-2),
+        createdAt: now(),
+        restDurations: [notChangeRestDuration, beforeRestDuration],
+      );
+      final pillSheet3 = PillSheet(
+        id: "pill_sheet_id_3",
+        groupIndex: 2,
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        lastTakenDate: null,
+        beginingDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        createdAt: now(),
+        restDurations: [],
+      );
+      final updatedPillSheet1 = pillSheet1.copyWith(
+        restDurations: [afterRestDuration],
+      );
+      final updatedPillSheet2 = pillSheet2.copyWith(
+        beginingDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
+        lastTakenDate: null,
+        restDurations: [notChangeRestDuration],
+      );
+      final updatedPillSheet3 = pillSheet3.copyWith(
+        beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["pill_sheet_id_1", "pill_sheet_id_2", "pill_sheet_id_3"],
+        pillSheets: [pillSheet1, pillSheet2, pillSheet3],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(
+        pillSheets: [updatedPillSheet1, updatedPillSheet2, updatedPillSheet3],
+      );
+      final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+      when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet2,
+        after: updatedPillSheet1,
+        beforeRestDuration: beforeRestDuration,
+        afterRestDuration: afterRestDuration,
+        beforePillSheetGroup: pillSheetGroup,
+        afterPillSheetGroup: updatedPillSheetGroup,
+      );
+      final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+      final changeRestDuration = ChangeRestDuration(
+          actionType: PillSheetModifiedActionType.changedRestDuration,
+          batchFactory: batchFactory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory);
+      await changeRestDuration.call(
+        fromRestDuration: beforeRestDuration,
+        toRestDuration: afterRestDuration,
+        pillSheetGroup: pillSheetGroup,
+      );
+
+      verify(batchFactory.batch()).called(1);
+
+      verify(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).called(1);
+      verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+    });
+
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。変更後もrestDurationを1つ持っている。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされない", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -773,7 +1001,7 @@ void main() {
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        lastTakenDate: null,
+        lastTakenDate: now(),
         beginingDate: now().addDays(-2),
         createdAt: now(),
         restDurations: [beforeRestDuration],
@@ -792,6 +1020,7 @@ void main() {
       );
       final updatedPillSheet2 = pillSheet2.copyWith(
         beginingDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
+        lastTakenDate: null,
         restDurations: [],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
