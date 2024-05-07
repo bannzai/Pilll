@@ -244,6 +244,7 @@ class ChangeRestDuration {
       ));
     }
 
+    // lastTakenDateをクリアする
     final updatedPillSheets = <PillSheet>[];
     for (final pillSheet in updatedBeginingDatePillSheets) {
       if (pillSheet.groupIndex <= updatedToRestDurationPillSheet.groupIndex) {
@@ -253,9 +254,14 @@ class ChangeRestDuration {
 
       // updatedToRestDurationPillSheetよりも後ろのピルシートは、lastTakenDateをクリアしてしまう
       // ピル番号の表示するロジックで、beginingDate > lastTakenDateのような状態になると困る
-      updatedPillSheets.add(pillSheet.copyWith(
-        lastTakenDate: null,
-      ));
+      // 対象のピルシートにrestDurationsが含まれていない場合にlastTakenDateをクリアする
+      if (pillSheet.restDurations.isEmpty) {
+        updatedPillSheets.add(pillSheet.copyWith(
+          lastTakenDate: null,
+        ));
+      } else {
+        updatedPillSheets.add(pillSheet);
+      }
     }
 
     final batch = batchFactory.batch();
