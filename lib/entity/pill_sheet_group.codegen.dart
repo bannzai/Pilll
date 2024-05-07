@@ -296,8 +296,8 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 extension PillSheetGroupRestDurationDomain on PillSheetGroup {
-  RestDuration? get lastRestDuration {
-    return pillSheets.sorted((a, b) => a.beginingDate.compareTo(b.beginingDate)).map((e) => e.restDurations).flattened.firstOrNull;
+  RestDuration? get lastActiveRestDuration {
+    return pillSheets.map((e) => e.activeRestDuration).whereNotNull().firstOrNull;
   }
 
   PillSheet get lastTakenPillSheetOrFirstPillSheet {
