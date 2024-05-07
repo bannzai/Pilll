@@ -318,16 +318,16 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   }
 
   /// 服用お休みを開始できる日付を返す。beginRestDurationやDatePickerの初期値に利用する
-  DateTime availableRestDurationBeginDate() {
+  DateTime get availableRestDurationBeginDate {
     final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
-      // 上述のtargetPillSheetを決定するifにより以下の内容が考えられる
+      // 上述のtargetBeginRestDurationPillSheetを決定するifにより以下の内容が考えられる
       // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll)
       // true: 0番以外のピルシート
       // false: 0番のピルシート
 
       // 1番目から服用お休みする場合は、beginDateは今日になる
-      return now();
+      return today();
     } else {
       // 服用お休みは原則最後に服用した日付の次の日付からスタートする
       return lastTakenDate.addDays(1);
