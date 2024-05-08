@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/release_note/release_note.dart';
@@ -21,8 +20,6 @@ class TakenButton extends HookConsumerWidget {
   final PillSheet activePillSheet;
   final bool userIsPremiumOtTrial;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
-// TODO: [UseLocalNotification-Beta] 2024-04
-  final User user;
 
   const TakenButton({
     super.key,
@@ -31,7 +28,6 @@ class TakenButton extends HookConsumerWidget {
     required this.activePillSheet,
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
-    required this.user,
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
