@@ -45,7 +45,6 @@ void definedChannel() {
           final user = (await database.userReference().get()).data();
           final setting = user?.setting;
           if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
-            UpdateUseLocalNotification(databaseConnection: database).call(user, true);
             await RegisterReminderLocalNotification.run(
               pillSheetGroup: pillSheetGroup,
               activePillSheet: activePillSheet,
