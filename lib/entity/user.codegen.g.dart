@@ -38,6 +38,8 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
               const [],
       isPremium: json['isPremium'] as bool? ?? false,
       shouldAskCancelReason: json['shouldAskCancelReason'] as bool? ?? false,
+      useLocalNotificationForReminder:
+          json['useLocalNotificationForReminder'] as bool? ?? true,
       analyticsDebugIsEnabled:
           json['analyticsDebugIsEnabled'] as bool? ?? false,
       beginTrialDate: TimestampConverter.timestampToDateTime(
@@ -59,6 +61,8 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
       'isPremium': instance.isPremium,
       'shouldAskCancelReason': instance.shouldAskCancelReason,
+      'useLocalNotificationForReminder':
+          instance.useLocalNotificationForReminder,
       'analyticsDebugIsEnabled': instance.analyticsDebugIsEnabled,
       'beginTrialDate':
           TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),

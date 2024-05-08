@@ -192,6 +192,8 @@ private var channel: FlutterMethodChannel?
                 }
             }
         }
+        configureNotificationActionableButtons()
+        UNUserNotificationCenter.current().swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         FlutterLocalNotificationsPlugin.setPluginRegistrantCallback { (registry) in
@@ -219,11 +221,118 @@ private func analytics(name: String, parameters: [String: Any]? = nil, function:
     channel?.invokeMethod("analytics", arguments: ["name": name, "parameters": parameters ?? [:]])
 }
 
+// MARK: - Avoid bug for flutter app badger
+// ref: https://github.com/g123k/flutter_app_badger/pull/52
+extension UNUserNotificationCenter {
+    func swizzle() {
+        guard let fromMethod = class_getInstanceMethod(type(of: self), #selector(UNUserNotificationCenter.setNotificationCategories(_:))) else {
+            fatalError()
+        }
+        guard let toMethod = class_getInstanceMethod(type(of: self), #selector(UNUserNotificationCenter.setNotificationCategories_methodSwizzle(_:))) else {
+            fatalError()
+        }
+
+        method_exchangeImplementations(fromMethod, toMethod)
+    }
+
+    @objc func setNotificationCategories_methodSwizzle(_ categories: Set<UNNotificationCategory>) {
+        if categories.isEmpty {
+            return
+        }
+        setNotificationCategories_methodSwizzle(categories)
+    }
+}
+
 // MARK: - Notification
 extension AppDelegate {
     func migrateFrom_1_3_2() {
         if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
             channel?.invokeMethod("salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
         }
+    }
+
+    func configureNotificationActionableButtons() {
+        let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
+                                                title: "飲んだ")
+        let category =
+            UNNotificationCategory(identifier: Category.pillReminder.rawValue,
+                                   actions: [recordAction],
+                                   intentIdentifiers: [],
+                                   hiddenPreviewsBodyPlaceholder: "",
+                                   options: .customDismissAction)
+        UNUserNotificationCenter.current().setNotificationCategories([category])
+    }
+
+    // NOTE: [LOCAL_NOTIFICATION] async/await版のメソッドは使わない。
+    // FlutterPluginAppLifeCycleDelegateから呼び出しているのがwithCompletionHandler付きのものなので合わせる
+    // https://chromium.googlesource.com/external/github.com/flutter/engine/+/refs/heads/flutter-2.5-candidate.8/shell/platform/darwin/ios/framework/Source/FlutterPluginAppLifeCycleDelegate.mm#283
+    
+    // NOTE: このメソッドをoverrideすることでplugin側の処理は呼ばれないことに注意する。
+    // 常に一緒な結果をcompletionHandlerで実行すれば良いのでoverrideしても問題はない
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        if #available(iOS 15.0, *) {
+            analytics(name: "will_present", parameters: ["notification_id" : notification.request.identifier, "content_title": notification.request.content.title, "content_body": notification.request.content.body, "content_interruptionLevel": notification.request.content.interruptionLevel.rawValue])
+        } else {
+            // Fallback on earlier versions
+        }
+        UNUserNotificationCenter.current().getPendingNotificationRequests(completionHandler: { requests in
+            analytics(name: "pending_notifications", parameters: ["length": requests.count])
+        })
+        if #available(iOS 14.0, *) {
+            completionHandler([.banner, .list, .sound, .badge])
+        } else {
+            completionHandler([.alert, .sound, .badge])
+        }
+    }
+
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        func end() {
+            var isCompleted: Bool = false
+            let completionHandlerWrapper = {
+                isCompleted = true
+                completionHandler()
+            }
+
+            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+
+            if !isCompleted {
+                completionHandlerWrapper()
+            }
+        }
+
+        switch extractCategory(userInfo: response.notification.request.content.userInfo) ?? Category(rawValue: response.notification.request.content.categoryIdentifier) {
+        case .pillReminder:
+            switch response.actionIdentifier {
+            case "RECORD_PILL":
+                // 先にバッジをクリアしてしまう。後述の理由でQuickRecordが多少遅延するため操作に違和感が出る。この部分は楽観的UIとして更新してしまう
+                UIApplication.shared.applicationIconBadgeNumber = 0
+
+                // application(_:didFinishLaunchingWithOptions:)が終了してからFlutterのmainの開始は非同期的でFlutterのmainの完了までラグがある
+                // 特にアプリのプロセスがKillされている状態では、先にuserNotificationCenter(_:didReceive:withCompletionHandler:)の処理が走り
+                // Flutter側でのMethodChannelが確立される前にQuickRecordの呼び出しをおこなってしまう。この場合次にChanelが確立するまでFlutter側の処理の実行は遅延される。これは次のアプリの起動時まで遅延されるとほぼ同義になる
+                // よって対処療法的ではあるが、5秒待つことでほぼ間違いなくmain(の中でもMethodChanelの確立までは)の処理はすべて終えているとしてここではdelayを設けている。
+                // ちなみに通常は1秒前後あれば十分であるが念のためくらいの間を持たせている
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
+                    channel?.invokeMethod("recordPill", arguments: nil, result: { result in
+                        end()
+                    })
+                }
+            default:
+                end()
+            }
+        case nil:
+            return
+        }
+    }
+
+    enum Category: String {
+        case pillReminder = "PILL_REMINDER"
+    }
+
+    func extractCategory(userInfo: [AnyHashable: Any]) -> Category? {
+        guard let apns = userInfo["aps"] as? [String: Any], let category = apns["category"] as? String else {
+            return nil
+        }
+        return Category(rawValue: category)
     }
 }

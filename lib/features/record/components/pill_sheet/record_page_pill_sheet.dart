@@ -5,6 +5,7 @@ import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/widget.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
@@ -51,6 +52,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     final takePill = ref.watch(takePillProvider);
     final revertTakePill = ref.watch(revertTakePillProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final updateUseLocalNotification = ref.watch(updateUseLocalNotificationProvider);
 
     return PillSheetViewLayout(
       weekdayLines: PillSheetViewWeekdayLine(
@@ -64,6 +66,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               context,
               takePill: takePill,
               revertTakePill: revertTakePill,
+              updateUseLocalNotification: updateUseLocalNotification,
               registerReminderLocalNotification: registerReminderLocalNotification,
               lineIndex: index,
               pageIndex: pillSheet.groupIndex,
@@ -79,6 +82,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required TakePill takePill,
     required RevertTakePill revertTakePill,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
+    required UpdateUseLocalNotification updateUseLocalNotification,
     required int lineIndex,
     required int pageIndex,
   }) {
@@ -141,6 +145,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
 
                 syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
                 await registerReminderLocalNotification();
+                await updateUseLocalNotification(user, true);
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
                 FlutterAppBadger.removeBadge();
@@ -154,6 +159,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                   pillNumberInPillSheet: pillNumberInPillSheet,
                   pillSheet: pillSheet,
                 );
+                await updateUseLocalNotification(user, true);
               }
             } catch (exception, stack) {
               errorLogger.recordError(exception, stack);

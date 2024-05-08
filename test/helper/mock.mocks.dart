@@ -485,6 +485,11 @@ class MockUser extends _i1.Mock implements _i4.User {
         returnValue: false,
       ) as bool);
   @override
+  bool get useLocalNotificationForReminder => (super.noSuchMethod(
+        Invocation.getter(#useLocalNotificationForReminder),
+        returnValue: false,
+      ) as bool);
+  @override
   bool get analyticsDebugIsEnabled => (super.noSuchMethod(
         Invocation.getter(#analyticsDebugIsEnabled),
         returnValue: false,
@@ -1555,6 +1560,41 @@ class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
             #premiumOrTrial: premiumOrTrial,
             #setting: setting,
           },
+        ),
+        returnValue: _i9.Future<void>.value(),
+        returnValueForMissingStub: _i9.Future<void>.value(),
+      ) as _i9.Future<void>);
+}
+
+/// A class which mocks [UpdateUseLocalNotification].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockUpdateUseLocalNotification extends _i1.Mock
+    implements _i26.UpdateUseLocalNotification {
+  MockUpdateUseLocalNotification() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_1(
+          this,
+          Invocation.getter(#databaseConnection),
+        ),
+      ) as _i2.DatabaseConnection);
+  @override
+  _i9.Future<void> call(
+    _i4.User? user,
+    bool? value,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [
+            user,
+            value,
+          ],
         ),
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),

@@ -8,6 +8,7 @@ import 'package:pilll/features/record/components/button/rest_duration_button.dar
 import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
@@ -213,6 +214,7 @@ void main() {
           ProviderScope(
             overrides: [
               takePillProvider.overrideWith((ref) => MockTakePill()),
+              updateUseLocalNotificationProvider.overrideWith((ref) => MockUpdateUseLocalNotification()),
             ],
             child: MaterialApp(
               home: Material(
