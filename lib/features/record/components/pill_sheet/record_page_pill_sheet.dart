@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/native/widget.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
@@ -138,6 +139,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                   targetRevertPillNumberIntoPillSheet: pillNumberInPillSheet,
                 );
 
+                syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
                 await registerReminderLocalNotification();
               } else {
                 // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
