@@ -60,12 +60,14 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             "rest_duration_id": restDuration.id,
           });
 
+          // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
+          // よって、lastTakenDateが変動することがない前提になる
           final dateTime = await showDatePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
-            initialDate: today(),
+            initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
-            lastDate: today(),
+            lastDate: pillSheetGroup.availableRestDurationBeginDate,
             helpText: "服用お休み開始日を選択",
             fieldLabelText: "服用お休み開始日",
             builder: (context, child) {
@@ -107,12 +109,14 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             "rest_duration_id": restDuration.id,
           });
 
+          // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
+          // よって、lastTakenDateが変動することがない前提になる
           final dateTimeRange = await showDateRangePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
             initialDateRange: restDuration.dateTimeRange,
-            firstDate: DateTime.parse("2020-01-01"),
-            lastDate: today(),
+            firstDate: pillSheetGroup.pillSheets.first.beginingDate,
+            lastDate: pillSheetGroup.availableRestDurationBeginDate,
             helpText: "服用お休み期間を選択",
             fieldStartHintText: "服用お休み開始日",
             fieldEndLabelText: "服用お休み終了日",

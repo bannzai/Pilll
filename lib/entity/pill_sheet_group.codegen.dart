@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -127,16 +128,6 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     return sequentialLastTakenPillNumber;
-  }
-
-  PillSheet get lastTakenPillSheetOrFirstPillSheet {
-    for (final pillSheet in pillSheets.reversed) {
-      if (pillSheet.lastTakenDate != null) {
-        return pillSheet;
-      }
-    }
-
-    return pillSheets[0];
   }
 
   int get estimatedEndPillNumber {
@@ -301,6 +292,51 @@ class PillSheetGroup with _$PillSheetGroup {
       [],
       (previousValue, element) => previousValue + element.restDurations,
     );
+  }
+}
+
+extension PillSheetGroupRestDurationDomain on PillSheetGroup {
+  RestDuration? get lastActiveRestDuration {
+    return pillSheets.map((e) => e.activeRestDuration).whereNotNull().firstOrNull;
+  }
+
+  PillSheet get lastTakenPillSheetOrFirstPillSheet {
+    for (final pillSheet in pillSheets.reversed) {
+      if (pillSheet.lastTakenDate != null) {
+        return pillSheet;
+      }
+    }
+
+    return pillSheets[0];
+  }
+
+  PillSheet get targetBeginRestDurationPillSheet {
+    final PillSheet targetPillSheet;
+    if (lastTakenPillSheetOrFirstPillSheet.isTakenAll) {
+      // 最後に飲んだピルシートのピルが全て服用済みの場合は、次のピルシートを対象としてrestDurationを設定する
+      // すでに服用済みの場合は、次のピルの番号から服用お休みを開始する必要があるから
+      targetPillSheet = pillSheets[lastTakenPillSheetOrFirstPillSheet.groupIndex + 1];
+    } else {
+      targetPillSheet = lastTakenPillSheetOrFirstPillSheet;
+    }
+    return targetPillSheet;
+  }
+
+  /// 服用お休みを開始できる日付を返す。beginRestDurationやDatePickerの初期値に利用する
+  DateTime get availableRestDurationBeginDate {
+    final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
+    if (lastTakenDate == null) {
+      // 上述のtargetBeginRestDurationPillSheetを決定するifにより以下の内容が考えられる
+      // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll)
+      // true: 0番以外のピルシート
+      // false: 0番のピルシート
+
+      // 1番目から服用お休みする場合は、beginDateは今日になる
+      return today();
+    } else {
+      // 服用お休みは原則最後に服用した日付の次の日付からスタートする
+      return lastTakenDate.addDays(1);
+    }
   }
 }
 

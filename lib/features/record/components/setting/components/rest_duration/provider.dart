@@ -8,6 +8,7 @@ import 'package:pilll/provider/batch.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 final beginRestDurationProvider = Provider.autoDispose(
@@ -35,24 +36,17 @@ class BeginRestDuration {
   }) async {
     final batch = batchFactory.batch();
 
-    final RestDuration restDuration;
-    final lastTakenDate = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenDate;
-    if (lastTakenDate == null) {
-      // 1番目から服用お休みする場合は、beginDateは今日になる
-      restDuration = RestDuration(
-        id: firestoreIDGenerator(),
-        beginDate: now(),
-        createdDate: now(),
-      );
-    } else {
-      restDuration = RestDuration(
-        id: firestoreIDGenerator(),
-        beginDate: lastTakenDate.addDays(1),
-        createdDate: now(),
-      );
-    }
-    final updatedPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.copyWith(
-      restDurations: [...pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.restDurations, restDuration],
+    final restDuration = RestDuration(
+      id: firestoreIDGenerator(),
+      beginDate: pillSheetGroup.availableRestDurationBeginDate,
+      createdDate: now(),
+    );
+
+    final updatedPillSheet = pillSheetGroup.targetBeginRestDurationPillSheet.copyWith(
+      restDurations: [
+        ...pillSheetGroup.targetBeginRestDurationPillSheet.restDurations,
+        restDuration,
+      ],
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
@@ -61,7 +55,7 @@ class BeginRestDuration {
       batch,
       PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
-        before: pillSheetGroup.lastTakenPillSheetOrFirstPillSheet,
+        before: pillSheetGroup.targetBeginRestDurationPillSheet,
         after: updatedPillSheet,
         restDuration: restDuration,
         beforePillSheetGroup: pillSheetGroup,
@@ -234,16 +228,40 @@ class ChangeRestDuration {
       }
     }
 
-    final updatedPillSheets = <PillSheet>[];
+    // beginingDateをアップデート
+    final updatedBeginingDatePillSheets = <PillSheet>[];
     for (final pillSheet in updatedRestDurationPillSheets) {
       if (pillSheet.id == updatedRestDurationPillSheets.first.id) {
+        updatedBeginingDatePillSheets.add(pillSheet);
+        continue;
+      }
+
+      /// このループ内でアップデートされた前のピルシートを用いてbeginingDateを算出するので、
+      /// [updatedBeginingDatePillSheets] から取得する
+      final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
+      updatedBeginingDatePillSheets.add(pillSheet.copyWith(
+        beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+      ));
+    }
+
+    // lastTakenDateをクリアする
+    final updatedPillSheets = <PillSheet>[];
+    for (final pillSheet in updatedBeginingDatePillSheets) {
+      if (pillSheet.groupIndex <= updatedToRestDurationPillSheet.groupIndex) {
         updatedPillSheets.add(pillSheet);
         continue;
       }
-      final beforePillSheet = updatedRestDurationPillSheets[pillSheet.groupIndex - 1];
-      updatedPillSheets.add(pillSheet.copyWith(
-        beginingDate: beforePillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
-      ));
+
+      // updatedToRestDurationPillSheetよりも後ろのピルシートは、lastTakenDateをクリアしてしまう
+      // ピル番号の表示するロジックで、beginingDate > lastTakenDateのような状態になると困る
+      // 対象のピルシートにrestDurationsが含まれていない場合にlastTakenDateをクリアする
+      if (pillSheet.restDurations.isEmpty) {
+        updatedPillSheets.add(pillSheet.copyWith(
+          lastTakenDate: null,
+        ));
+      } else {
+        updatedPillSheets.add(pillSheet);
+      }
     }
 
     final batch = batchFactory.batch();

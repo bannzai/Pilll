@@ -155,7 +155,7 @@ bool shouldPillMarkAnimation({
   required PillSheet pillSheet,
   required PillSheetGroup pillSheetGroup,
 }) {
-  if (pillSheetGroup.activePillSheet?.activeRestDuration != null) {
+  if (pillSheetGroup.lastActiveRestDuration != null) {
     return false;
   }
   final activePillSheet = pillSheetGroup.activePillSheet;

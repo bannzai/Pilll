@@ -63,7 +63,7 @@ class TodayTakenPillNumber extends StatelessWidget {
   Widget _content() {
     final pillSheetGroup = this.pillSheetGroup;
     final activePillSheet = this.pillSheetGroup?.activePillSheet;
-    if (pillSheetGroup == null || activePillSheet == null || pillSheetGroup.isDeactived || activePillSheet.activeRestDuration != null) {
+    if (pillSheetGroup == null || activePillSheet == null || pillSheetGroup.isDeactived || pillSheetGroup.lastActiveRestDuration != null) {
       return const Padding(
           padding: EdgeInsets.only(top: 8),
           child: Text("-",

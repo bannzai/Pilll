@@ -31,7 +31,7 @@ class PillSheetSettingSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final RestDuration? restDuration = activePillSheet.activeRestDuration;
+    final RestDuration? restDuration = pillSheetGroup.lastActiveRestDuration;
     final themeData = Theme.of(context);
 
     return Theme(
