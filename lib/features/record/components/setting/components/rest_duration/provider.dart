@@ -8,7 +8,6 @@ import 'package:pilll/provider/batch.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
-import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 final beginRestDurationProvider = Provider.autoDispose(
