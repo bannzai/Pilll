@@ -29,7 +29,6 @@ class TakenButton extends HookConsumerWidget {
     required this.userIsPremiumOtTrial,
     required this.registerReminderLocalNotification,
   });
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final takePill = ref.watch(takePillProvider);

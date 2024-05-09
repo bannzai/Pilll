@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'dart:math';
 
@@ -76,7 +77,7 @@ class LocalNotificationService {
           defaultPresentList: true,
         ),
       ),
-      onDidReceiveBackgroundNotificationResponse: handleNotificationAction,
+      onDidReceiveBackgroundNotificationResponse: Platform.isAndroid ? handleNotificationAction : null,
     );
   }
 

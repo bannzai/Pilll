@@ -59,6 +59,7 @@ Future<void> entrypoint() async {
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
+// iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
 @pragma('vm:entry-point')
 Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
   if (notificationResponse.actionId == actionIdentifier) {
