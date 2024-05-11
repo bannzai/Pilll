@@ -10,7 +10,7 @@ part 'auth.g.dart';
 
 @Riverpod(keepAlive: true, dependencies: [])
 Stream<User?> firebaseUserState(FirebaseUserStateRef ref) {
-  return FirebaseAuth.instance.userChanges();
+  return FirebaseAuth.instance.authStateChanges();
 }
 
 final firebaseSignInProvider = FutureProvider<User>((ref) async {
