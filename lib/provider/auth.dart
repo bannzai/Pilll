@@ -13,7 +13,7 @@ Stream<User?> firebaseUserState(FirebaseUserStateRef ref) {
   return FirebaseAuth.instance.authStateChanges();
 }
 
-final firebaseSignInProvider = FutureProvider<User>((ref) async {
+final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
   analytics.logEvent(name: "current_user_provider");
   final currentUser = FirebaseAuth.instance.currentUser;
 
