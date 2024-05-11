@@ -6,7 +6,7 @@ part of 'auth.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$firebaseUserStateHash() => r'c50e10f43818ea992e82df756275ee8f6fcf5b73';
+String _$firebaseUserStateHash() => r'62611fe72dcab5913595572c4497d327d682b3f9';
 
 /// See also [firebaseUserState].
 @ProviderFor(firebaseUserState)
