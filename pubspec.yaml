@@ -56,7 +56,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_app_badger: ^1.2.0
-  purchases_flutter: ^6.28.0
+  purchases_flutter: ^6.29.0
   flutter_native_timezone:
     git:
       url: https://github.com/bannzai/flutter_native_timezone.git
