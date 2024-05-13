@@ -161,6 +161,9 @@ private var channel: FlutterMethodChannel?
                 }
 
                 completionHandler(["result": "success"])
+
+            case "requestAppTrackingTransparency":
+              requestAppTrackingTransparency(completion: completionHandler)
             case _:
                 return
             }
