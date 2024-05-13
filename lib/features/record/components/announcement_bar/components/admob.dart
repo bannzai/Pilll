@@ -1,12 +1,21 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob_banner.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob_native_advanced.dart';
+import 'package:pilll/native/app_tracking_transparency.dart';
 
 class AdMob extends StatelessWidget {
   const AdMob({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // 何度呼んでも冪等なので、WidgetsBinding.instance.addPostFrameCallback で処理してしまう
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
+      if (Platform.isIOS) {
+        requestAppTrackingTransparency();
+      }
+    });
     // iPhone mini, iPhone SEサイズだとNativeAdvanceの広告の高さだと画面占領が目立つので高さで広告を分岐する
     // SE(2nd)もminiも将来的にサポート対象外(どちらも生産終了)しているので、この分岐は将来的には不要になる
     // miniは確認した限りでは90pxの高さでもさほど問題はなかったが、ついでなのでminiも含めて分岐してしまう。Androidの小さい端末もこのコードでカバーできるだろうと目論んでいる
