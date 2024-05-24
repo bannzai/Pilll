@@ -26,26 +26,26 @@ PODS:
   - Firebase/RemoteConfig (10.24.0):
     - Firebase/CoreOnly
     - FirebaseRemoteConfig (~> 10.24.0)
-  - firebase_analytics (10.6.3):
+  - firebase_analytics (10.10.6):
     - Firebase/Analytics (= 10.24.0)
     - firebase_core
     - Flutter
-  - firebase_auth (4.12.1):
+  - firebase_auth (4.19.6):
     - Firebase/Auth (= 10.24.0)
     - firebase_core
     - Flutter
-  - firebase_core (2.21.0):
+  - firebase_core (2.31.1):
     - Firebase/CoreOnly (= 10.24.0)
     - Flutter
-  - firebase_crashlytics (3.4.1):
+  - firebase_crashlytics (3.5.6):
     - Firebase/Crashlytics (= 10.24.0)
     - firebase_core
     - Flutter
-  - firebase_messaging (14.7.3):
+  - firebase_messaging (14.9.3):
     - Firebase/Messaging (= 10.24.0)
     - firebase_core
     - Flutter
-  - firebase_remote_config (4.3.3):
+  - firebase_remote_config (4.4.6):
     - Firebase/RemoteConfig (= 10.24.0)
     - firebase_core
     - Flutter
@@ -350,12 +350,12 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   cloud_firestore: 8c4b661101df2bb2f234e7b4b8844d0f25528add
   Firebase: 91fefd38712feb9186ea8996af6cbdef41473442
-  firebase_analytics: f7ccbba99876448e810c33f08646dc3d7c806a93
-  firebase_auth: 3fb7f278e76cf45252b5bd46381ff9b1bf7a0fbe
-  firebase_core: 1a6ee44259d9dced3fda610cf9cada02457139f7
-  firebase_crashlytics: a8efe8d33a71de9fa33fbe224c408577fb8a94c3
-  firebase_messaging: 34f1d5a3d6578b7681b6cbefbc89e168a5864b6e
-  firebase_remote_config: 686250c51e8e32134b6d6af8f6be71f360a078ef
+  firebase_analytics: ecc1ed4c20387378b48483e49c0797791b83f1e2
+  firebase_auth: 7d7c7aad6e109c1c3d6ff82c223bad9ca8c21b0a
+  firebase_core: 59d11b64fc65c92371351b48d6260215d1403493
+  firebase_crashlytics: e11a74476f29e7ddcd460e4d5b0ac761927ba2c1
+  firebase_messaging: b0fa572f6de8cae4a205810de1ce65ebbbd63090
+  firebase_remote_config: 477bb15dc9a476f8558c4c8741ecf124eee839a8
   FirebaseABTesting: e6e3c3e0e35813874f571d1b7bdae2aab319dd38
   FirebaseAnalytics: b5efc493eb0f40ec560b04a472e3e1a15d39ca13
   FirebaseAppCheckInterop: 5da5ce93e8797a215e3f677fb0654b74e736c8b8
