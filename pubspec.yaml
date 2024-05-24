@@ -32,10 +32,11 @@ dependencies:
   flutter_svg: ^2.0.10+1
   shared_preferences: ^2.2.3
   intl: ^0.18.1
-  firebase_core: ^2.21.0
-  firebase_analytics: ^10.6.3
-  firebase_auth: ^4.12.1
-  firebase_messaging: ^14.7.3
+  firebase_core: ^2.31.1
+  firebase_analytics: ^10.10.6
+  firebase_auth: ^4.19.6
+  firebase_messaging: ^14.9.3
+  firebase_remote_config: ^4.4.6
   cloud_firestore: ^4.12.2
   url_launcher: ^6.2.6
   package_info: ^2.0.0
@@ -46,7 +47,7 @@ dependencies:
   hooks_riverpod: ^2.4.10
   riverpod_annotation: 2.3.5
   flutter_hooks: ^0.20.5
-  firebase_crashlytics: ^3.0.12
+  firebase_crashlytics: ^3.5.6
   dotted_border: ^2.1.0
   in_app_review: ^2.0.9
   uuid: ^4.4.0
@@ -66,7 +67,6 @@ dependencies:
   collection: ^1.18.0
   crypto:
   timezone: 0.9.3
-  firebase_remote_config: ^4.3.3
   google_mobile_ads: ^5.0.0
 
 dev_dependencies:
