@@ -45,9 +45,9 @@ class SkipInitialSetting extends HookConsumerWidget {
     // }, []);
 
     // if (remoteConfigParameter.skipInitialSetting) {
-    return homePageBuilder(context);
+    // return homePageBuilder(context);
     // } else {
-    //   return initialSettingPageBuilder(context);
+    return initialSettingPageBuilder(context);
     // }
   }
 }
