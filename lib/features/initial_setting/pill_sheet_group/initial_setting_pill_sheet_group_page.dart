@@ -65,19 +65,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       return null;
     }, [isAppleLinked, isGoogleLinked]);
 
-    // Skip initial setting when user already set setting.
-    final navigator = Navigator.of(context);
-    useEffect(() {
-      void f() async {
-        if (user.asData?.value.setting != null) {
-          await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
-        }
-      }
-
-      f();
-      return null;
-    }, [user]);
-
     return HUD(
       shown: state.isLoading,
       child: Scaffold(

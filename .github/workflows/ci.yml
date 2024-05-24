@@ -1,9 +1,10 @@
-# This is a basic workflow to help you get started with Actions
+name: ci
 
-name: Test
+  
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 
-# Controls when the action will run. Triggers the workflow on push or pull request
-# events but only for the main branch
 on:
   push:
     branches: [ main, feature/* ]
