@@ -23,8 +23,8 @@ jobs:
       with:
         channel: stable
         flutter-version: '3.19.6'
+    - run: make secret
     - run: flutter pub get
-    - run: flutter pub run build_runner build
     - run: flutter analyze --no-pub --no-fatal-infos --fatal-warnings
   build-ios-debug:
     runs-on: macos-13
@@ -52,6 +52,9 @@ jobs:
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
     - name: Prepare firebase config
       run: make secret
       env:
