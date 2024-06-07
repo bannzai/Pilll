@@ -14,7 +14,7 @@ on:
     branches: [ main, feature/* ]
 
 jobs:
-    lint:
+  lint:
     runs-on: ubuntu-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
@@ -26,7 +26,6 @@ jobs:
     - run: flutter pub get
     - run: flutter pub run build_runner build
     - run: flutter analyze --no-pub --no-fatal-infos --fatal-warnings
-
   build-ios-debug:
     runs-on: macos-13
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
