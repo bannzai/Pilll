@@ -10,7 +10,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/utils/error_log.dart';
 
 import '../../helper/fake.dart';
-import '../../helper/mock.mocks.dart';
 
 class _FakeUser extends Fake implements User {
   final Setting? fakeSetting;
