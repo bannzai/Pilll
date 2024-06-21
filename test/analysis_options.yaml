@@ -24,7 +24,6 @@ analyzer:
     missing_required_param: error
     missing_return: error
     invalid_annotation_target: ignore
-    scoped_providers_should_specify_dependencies: ignore
   exclude:
     - "lib/**/*.g.dart"
     - "lib/**/*.freezed.dart"

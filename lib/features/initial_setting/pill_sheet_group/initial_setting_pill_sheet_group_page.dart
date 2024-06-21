@@ -1,8 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
-import 'package:pilll/provider/typed_shared_preferences.dart';
-import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -20,8 +18,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
-import 'package:pilll/utils/router.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   const InitialSettingPillSheetGroupPage({super.key});
@@ -30,10 +26,8 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
-    final user = ref.watch(userProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
     final userIsAnonymous = FirebaseAuth.instance.currentUser?.isAnonymous == true;
 
     // For linked user
