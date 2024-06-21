@@ -19,16 +19,11 @@ jobs:
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v1
+    - run: make secret
     - uses: subosito/flutter-action@v2
       with:
         channel: stable
         flutter-version: '3.19.6'
-    - run: make secret
-      env:
-        FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
-        FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
-        DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
-        XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
     - run: flutter pub get
     - run: flutter analyze --no-pub --no-fatal-infos --fatal-warnings
   build-ios-debug:
