@@ -15,7 +15,7 @@ on:
 
 jobs:
   lint:
-    runs-on: ubuntu-latest
+    runs-on: macos-13
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v1
