@@ -55,7 +55,7 @@ jobs:
     - uses: actions/setup-java@v3
       with:
         distribution: "zulu"
-        java-version: '12'
+        java-version: '13.0.5+1'
     - name: Prepare firebase config
       run: make secret
       env:
