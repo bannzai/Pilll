@@ -273,7 +273,7 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
   @override
   void debug({
     required String? name,
-    Map<String, dynamic>? parameters,
+    Map<String, Object?>? parameters,
   }) =>
       super.noSuchMethod(
         Invocation.method(
@@ -289,7 +289,7 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
   @override
   void logEvent({
     required String? name,
-    Map<String, dynamic>? parameters,
+    Map<String, Object?>? parameters,
   }) =>
       super.noSuchMethod(
         Invocation.method(
