@@ -1,12 +1,12 @@
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/environment.dart';
-import 'package:package_info/package_info.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';

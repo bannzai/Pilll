@@ -31,7 +31,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^2.0.10+1
   shared_preferences: ^2.2.3
-  intl: ^0.18.1
+  intl: ^0.18.0
   firebase_core: ^2.31.1
   firebase_analytics: ^10.10.6
   firebase_auth: ^4.19.6
@@ -39,7 +39,7 @@ dependencies:
   firebase_remote_config: ^4.4.6
   cloud_firestore: ^4.12.2
   url_launcher: ^6.2.6
-  package_info: ^2.0.0
+  package_info_plus: ^8.0.0
   json_annotation: ^4.9.0
   mockito: ^5.4.4
   freezed_annotation: ^2.2.0
@@ -62,7 +62,7 @@ dependencies:
     git:
       url: https://github.com/bannzai/flutter_native_timezone.git
       ref: master
-  flutter_local_notifications: ^17.1.1
+  flutter_local_notifications: ^17.1.2
   webview_flutter: ^4.7.0
   collection: ^1.18.0
   crypto:
