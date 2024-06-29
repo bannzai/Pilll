@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
