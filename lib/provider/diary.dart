@@ -5,7 +5,7 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final todayDiaryProvider = StreamProvider((ref) {
+final diaryForTodayProvider = StreamProvider((ref) {
   return ref
       .watch(databaseProvider)
       .diariesReference()
