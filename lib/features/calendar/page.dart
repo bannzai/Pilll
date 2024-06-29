@@ -26,8 +26,9 @@ import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 const _calendarDataSourceLength = 24;
-final _calendarDataSource =
-    List.generate(_calendarDataSourceLength, (index) => (index + 1) - 12).map((e) => DateTime(today().year, today().month + e, 1)).toList();
+final _calendarDataSource = List.generate(_calendarDataSourceLength, (index) => (index + 1) - (_calendarDataSourceLength ~/ 2))
+    .map((e) => DateTime(today().year, today().month + e, 1))
+    .toList();
 final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
 
 class CalendarPage extends HookConsumerWidget {
