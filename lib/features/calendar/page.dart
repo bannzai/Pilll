@@ -50,7 +50,7 @@ class CalendarPage extends HookConsumerWidget {
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
       ref.watch(calendarNextPillSheetBandListProvider),
-      ref.watch(diaryForTodayProvider),
+      ref.watch(todayDiaryProvider),
     ).when(
       data: (data) => _CalendarPageBody(
         histories: data.$1,
