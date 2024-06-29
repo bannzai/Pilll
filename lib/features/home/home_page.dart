@@ -13,7 +13,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/features/calendar/calendar_page.dart';
+import 'package:pilll/features/calendar/page.dart';
 import 'package:pilll/features/menstruation/menstruation_page.dart';
 import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
