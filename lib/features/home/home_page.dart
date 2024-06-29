@@ -94,7 +94,6 @@ class HomePageBody extends HookConsumerWidget {
     });
 
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
-    final isAlreadyAnsweredFormForManulRestDuration = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredFormForManulRestDuration) ?? false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
@@ -118,14 +117,6 @@ class HomePageBody extends HookConsumerWidget {
           disableShouldAskCancelReason();
           // ignore: use_build_context_synchronously
           showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
-        } else if (!isAlreadyAnsweredFormForManulRestDuration && pillSheetGroup?.restDurations.isNotEmpty == true) {
-          await Navigator.of(context).push(
-            WebViewPageRoute.route(
-              title: "「服用お休み」機能についてのアンケート",
-              url: "https://docs.google.com/forms/d/e/1FAIpQLSczkwniUqI7hPeVVYFmM2pNAtMAvf_M38_1nWBRLSgHu_otmw/viewform",
-            ),
-          );
-          sharedPreferences.setBool(BoolKey.isAlreadyAnsweredFormForManulRestDuration, true);
         } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
           showModalBottomSheet(
             context: context,
