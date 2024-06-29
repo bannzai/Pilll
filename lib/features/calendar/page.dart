@@ -16,7 +16,7 @@ import 'package:pilll/features/calendar/components/title/calendar_page_title.dar
 import 'package:pilll/features/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/features/diary_post/diary_post_page.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
