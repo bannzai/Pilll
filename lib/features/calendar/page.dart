@@ -25,9 +25,11 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-const _calendarDataSourceLength = 24;
-final _calendarDataSource =
-    List.generate(_calendarDataSourceLength, (index) => (index + 1) - 12).map((e) => DateTime(today().year, today().month + e, 1)).toList();
+// NOTE: 数字に特に意味はないが、ユーザーが過去のカレンダーも見たいということで十分な枠をとっている。Pilllの開始が2018年なので、それより後のデータが見れるくらいで良い
+const _calendarDataSourceLength = 120;
+final _calendarDataSource = List.generate(_calendarDataSourceLength, (index) => (index + 1) - (_calendarDataSourceLength ~/ 2))
+    .map((e) => DateTime(today().year, today().month + e, 1))
+    .toList();
 final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
 
 class CalendarPage extends HookConsumerWidget {
