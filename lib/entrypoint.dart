@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,7 +9,6 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
-import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/native/channel.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -25,7 +23,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/utils/remote_config.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:workmanager/workmanager.dart';
 
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
@@ -34,10 +31,6 @@ Future<void> entrypoint() async {
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
-
-    if (Platform.isAndroid) {
-      Workmanager().initialize(handleSyncActivePillSheetValue, isInDebugMode: kDebugMode);
-    }
 
     if (kDebugMode) {
       overrideDebugPrint();
@@ -87,6 +80,7 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
       final database = DatabaseConnection(firebaseUser.uid);
 
       final pillSheetGroup = await quickRecordTakePill(database);
+      syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
 
       final cancelReminderLocalNotification = CancelReminderLocalNotification();
       // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
@@ -104,15 +98,6 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
           setting: setting,
         );
       }
-
-      // vm:entry-pointからの起動はHostAppのMainActivity.ktが起動しておらず、MethodChannelが確立されていない。
-      // そのためバックグラウンドでsyncActivePillSheetValue を呼び出す
-      if (Platform.isAndroid) {
-        await Workmanager().registerOneOffTask(
-          'syncActivePillSheetValue',
-          'syncActivePillSheetValue',
-        );
-      }
     } catch (e, st) {
       errorLogger.recordError(e, st);
 
@@ -125,38 +110,4 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
       );
     }
   }
-}
-
-@pragma('vm:entry-point') // Mandatory if the App is obfuscated or using Flutter 3.1+
-void handleSyncActivePillSheetValue() {
-  Workmanager().executeTask((task, inputData) async {
-    if (task == 'syncActivePillSheetValue') {
-      await LocalNotificationService.setupTimeZone();
-
-      if (Firebase.apps.isEmpty) {
-        await Firebase.initializeApp();
-      }
-      final firebaseUser = FirebaseAuth.instance.currentUser;
-      if (firebaseUser == null) {
-        return true;
-      }
-
-      try {
-        analytics.logEvent(name: "handle_notification_action");
-
-        final database = DatabaseConnection(firebaseUser.uid);
-        final pillSheetGroup = await fetchLatestPillSheetGroup(database);
-        if (pillSheetGroup == null) {
-          return true;
-        }
-        syncActivePillSheetValue(pillSheetGroup: pillSheetGroup);
-      } catch (e, st) {
-        errorLogger.recordError(e, st);
-        return false;
-      }
-      return true;
-    }
-
-    return false;
-  });
 }
