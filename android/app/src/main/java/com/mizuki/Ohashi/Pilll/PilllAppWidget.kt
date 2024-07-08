@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
@@ -14,18 +15,24 @@ import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneId
 import org.threeten.bp.format.DateTimeFormatter
 import java.lang.Integer.max
+import es.antonborri.home_widget.HomeWidgetProvider
 
 /**
  * Implementation of App Widget functionality.
  */
-class PilllAppWidget : AppWidgetProvider() {
+class PilllAppWidget : HomeWidgetProvider() {
     override fun onReceive(context: Context?, intent: Intent?) {
         super.onReceive(context, intent)
     }
-    override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
-        // There may be multiple widgets active, so update all of them
+
+    override fun onUpdate(
+        context: Context,
+        appWidgetManager: AppWidgetManager,
+        appWidgetIds: IntArray,
+        widgetData: SharedPreferences,
+    ) {
         for (appWidgetId in appWidgetIds) {
-            updateAppWidget(context, appWidgetManager, appWidgetId)
+            updateAppWidget(context, appWidgetManager, appWidgetId, widgetData)
         }
     }
 
@@ -37,8 +44,7 @@ class PilllAppWidget : AppWidgetProvider() {
         // Enter relevant functionality for when the last widget is disabled
     }
 
-    private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int) {
-        val sharedPreferences = context.getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE)
+    private fun updateAppWidget(context: Context, appWidgetManager: AppWidgetManager, appWidgetId: Int, sharedPreferences: SharedPreferences) {
         if (!sharedPreferences.getBoolean(Const.userIsPremiumOrTrial, false)) {
             val views = RemoteViews(context.packageName, R.layout.pilll_app_invalid_widget).apply {
                 val pendingIntent: PendingIntent = PendingIntent.getActivity(
