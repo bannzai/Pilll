@@ -29,7 +29,7 @@ Future<void> syncSetting({
     "settingPillSheetAppearanceMode": setting?.pillSheetAppearanceMode.name,
   };
   try {
-    await methodChannel.invokeMethod("syncSetting", map);
+    await HomeWidget.saveWidgetData("setting", map);
   } catch (error) {
     debugPrint(error.toString());
   }
@@ -38,8 +38,12 @@ Future<void> syncSetting({
 Future<void> syncUserStatus({
   required User? user,
 }) async {
-  final map = {
-    "userIsPremiumOrTrial": user?.premiumOrTrial,
-  };
-  await methodChannel.invokeMethod("syncUserStatus", map);
+  try {
+    final map = {
+      "userIsPremiumOrTrial": user?.premiumOrTrial,
+    };
+    await HomeWidget.saveWidgetData("userStatus", map);
+  } catch (error) {
+    debugPrint(error.toString());
+  }
 }
