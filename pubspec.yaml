@@ -68,6 +68,7 @@ dependencies:
   crypto:
   timezone: 0.9.3
   google_mobile_ads: ^5.0.0
+  workmanager: ^0.5.2
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
