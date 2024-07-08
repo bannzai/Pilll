@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/native/channel.dart';
+import 'package:home_widget/home_widget.dart';
 
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
@@ -15,7 +16,7 @@ Future<void> syncActivePillSheetValue({
     "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
   };
   try {
-    await methodChannel.invokeMethod("syncActivePillSheetValue", map);
+    await HomeWidget.saveWidgetData("pillSheetGroup", map);
   } catch (error) {
     debugPrint(error.toString());
   }
