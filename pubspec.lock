@@ -593,10 +593,11 @@ packages:
   home_widget:
     dependency: "direct main"
     description:
-      name: home_widget
-      sha256: "29565bfee4b32eaf9e7e8b998d504618b779a74b2b1ac62dd4dac7468e66f1a3"
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: "fix/android-valid-type"
+      resolved-ref: "4b54b441da61c0fcdca1eceb7d36743bc41617f0"
+      url: "https://github.com/bannzai/home_widget.git"
+    source: git
     version: "0.5.0"
   hooks_riverpod:
     dependency: "direct main"
