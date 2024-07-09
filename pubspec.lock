@@ -595,7 +595,7 @@ packages:
     description:
       path: "."
       ref: main
-      resolved-ref: "0a6c1ea3612faa31ef93b631a40e610323c61516"
+      resolved-ref: "2bb2581557a6020160c2cd80bb114beca6b7f5d7"
       url: "https://github.com/bannzai/home_widget.git"
     source: git
     version: "0.5.0"
