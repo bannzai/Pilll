@@ -1,8 +1,11 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:home_widget/home_widget.dart';
+import 'package:pilll/native/channel.dart';
 
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
@@ -53,4 +56,10 @@ Future<void> updateWidget() async {
     iOSName: 'com.mizuki.Ohashi.Pilll.widget',
     qualifiedAndroidName: 'com.mizuki.Ohashi.Pilll.PilllAppWidget',
   );
+
+  // QuickRecordの際にWidgetがリロードされない。上述のHomeWidget.updateWidgetでも通常の服用記録からの更新はうまくいくため、
+  // 何か難しい問題を孕んでいると予想。.swiftのコードをmethodChannelから呼び出せばリロードされるのでとりあえずそっちも呼ぶ
+  if (Platform.isIOS) {
+    await methodChannel.invokeMethod("reloadWidget");
+  }
 }

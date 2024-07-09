@@ -104,6 +104,13 @@ private var channel: FlutterMethodChannel?
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "reloadWidget":
+              if #available(iOS 14.0, *) {
+                WidgetCenter.shared.reloadTimelines(ofKind: Const.widgetKind)
+              } else {
+                // Fallback on earlier versions
+              }
+              completionHandler(["result": "success"])
             case "requestAppTrackingTransparency":
               requestAppTrackingTransparency(completion: completionHandler)
             case _:
