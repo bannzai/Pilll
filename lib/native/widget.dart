@@ -49,6 +49,7 @@ Future<void> syncUserStatus({
 
 Future<void> updateWidget() async {
   await HomeWidget.updateWidget(
+    name: 'PilllAppWidget',
     androidName: 'PilllAppWidget',
     iOSName: 'com.mizuki.Ohashi.Pilll.widget',
   );
