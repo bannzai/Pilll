@@ -594,8 +594,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "fix/android-valid-type"
-      resolved-ref: "4b54b441da61c0fcdca1eceb7d36743bc41617f0"
+      ref: main
+      resolved-ref: "0a6c1ea3612faa31ef93b631a40e610323c61516"
       url: "https://github.com/bannzai/home_widget.git"
     source: git
     version: "0.5.0"
