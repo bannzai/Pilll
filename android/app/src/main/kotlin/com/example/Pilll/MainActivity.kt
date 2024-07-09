@@ -46,17 +46,6 @@ class MainActivity: FlutterActivity() {
         }
     }
 
-    private fun updateWidget() {
-        val javaClass =
-            Class.forName("com.mizuki.Ohashi.Pilll.PilllAppWidget")
-        val intent = Intent(context, javaClass)
-        intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
-        val ids: IntArray = AppWidgetManager.getInstance(context.applicationContext)
-            .getAppWidgetIds(ComponentName(context, javaClass))
-        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
-        context.sendBroadcast(intent)
-    }
-
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
