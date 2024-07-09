@@ -35,43 +35,15 @@ class MainActivity: FlutterActivity() {
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler {
                 call, result ->
             when (call.method) {
-                "syncUserStatus" -> {
-                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
-                    sharedPreferences.putBoolean(Const.userIsPremiumOrTrial, call.argument<Boolean>(Const.userIsPremiumOrTrial) ?: false).apply()
-                    updateWidget()
-                    result.success(mapOf("result" to "success"))
-                }
-                "syncSetting" -> {
-                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
-                    sharedPreferences.putString(Const.settingPillSheetAppearanceMode, call.argument<String>(Const.settingPillSheetAppearanceMode)).apply()
-                    updateWidget()
-                    result.success(mapOf("result" to "success"))
-                }
-                "syncActivePillSheetValue" -> {
-                    Log.d("[DEBUG]", "${call.argument<Long>(Const.pillSheetValueLastUpdateDateTime)}")
-                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
-                    sharedPreferences.putLong(Const.pillSheetValueLastUpdateDateTime, call.argument<Long>(Const.pillSheetValueLastUpdateDateTime) ?: 0).apply()
-                    sharedPreferences.putLong(Const.pillSheetLastTakenDate, call.argument<Long>(Const.pillSheetLastTakenDate) ?: 0).apply()
-                    sharedPreferences.putInt(Const.pillSheetGroupTodayPillNumber, call.argument<Int>(Const.pillSheetGroupTodayPillNumber) ?: 0).apply()
-                    sharedPreferences.putInt(Const.pillSheetTodayPillNumber, call.argument<Int>(Const.pillSheetTodayPillNumber) ?: 0).apply()
-                    sharedPreferences.putInt(Const.pillSheetEndDisplayPillNumber, call.argument<Int>(Const.pillSheetEndDisplayPillNumber) ?: 0).apply()
-                    updateWidget()
-                    result.success(mapOf("result" to "success"))
-                }
+//                "methodName" -> {
+//                    val sharedPreferences = getSharedPreferences(R.string.PREFERENCE_KEY.toString(), Context.MODE_PRIVATE).edit()
+//                    sharedPreferences.putBoolean(Const.userIsPremiumOrTrial, call.argument<Boolean>(Const.userIsPremiumOrTrial) ?: false).apply()
+//                    updateWidget()
+//                    result.success(mapOf("result" to "success"))
+//                }
                 else -> {}
             }
         }
-    }
-
-    private fun updateWidget() {
-        val javaClass =
-            Class.forName("com.mizuki.Ohashi.Pilll.PilllAppWidget")
-        val intent = Intent(context, javaClass)
-        intent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
-        val ids: IntArray = AppWidgetManager.getInstance(context.applicationContext)
-            .getAppWidgetIds(ComponentName(context, javaClass))
-        intent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
-        context.sendBroadcast(intent)
     }
 
     private fun createNotificationChannel() {
