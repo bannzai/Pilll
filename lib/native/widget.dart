@@ -51,5 +51,6 @@ Future<void> updateWidget() async {
     name: 'PilllAppWidget',
     androidName: 'PilllAppWidget',
     iOSName: 'com.mizuki.Ohashi.Pilll.widget',
+    qualifiedAndroidName: 'com.mizuki.Ohashi.Pilll.PilllAppWidget',
   );
 }
