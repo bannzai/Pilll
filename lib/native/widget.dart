@@ -8,15 +8,18 @@ import 'package:home_widget/home_widget.dart';
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
 }) async {
-  final map = {
-    "pillSheetLastTakenDate": pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
-    "pillSheetTodayPillNumber": pillSheetGroup?.activePillSheet?.todayPillNumber,
-    "pillSheetGroupTodayPillNumber": pillSheetGroup?.sequentialTodayPillNumber,
-    "pillSheetEndDisplayPillNumber": pillSheetGroup?.displayNumberSetting?.endPillNumber,
-    "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
-  };
   try {
-    await HomeWidget.saveWidgetData("pillSheetGroup", map);
+    final map = {
+      "pillSheetLastTakenDate": pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
+      "pillSheetTodayPillNumber": pillSheetGroup?.activePillSheet?.todayPillNumber,
+      "pillSheetGroupTodayPillNumber": pillSheetGroup?.sequentialTodayPillNumber,
+      "pillSheetEndDisplayPillNumber": pillSheetGroup?.displayNumberSetting?.endPillNumber,
+      "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
+    };
+    for (final element in map.entries) {
+      await HomeWidget.saveWidgetData(element.key, element.value);
+    }
+    await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
   }
@@ -25,11 +28,9 @@ Future<void> syncActivePillSheetValue({
 Future<void> syncSetting({
   required Setting? setting,
 }) async {
-  final map = {
-    "settingPillSheetAppearanceMode": setting?.pillSheetAppearanceMode.name,
-  };
   try {
-    await HomeWidget.saveWidgetData("setting", map);
+    await HomeWidget.saveWidgetData("settingPillSheetAppearanceMode", setting?.pillSheetAppearanceMode.name);
+    await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
   }
@@ -39,11 +40,16 @@ Future<void> syncUserStatus({
   required User? user,
 }) async {
   try {
-    final map = {
-      "userIsPremiumOrTrial": user?.premiumOrTrial,
-    };
-    await HomeWidget.saveWidgetData("userStatus", map);
+    await HomeWidget.saveWidgetData("userIsPremiumOrTrial", user?.premiumOrTrial);
+    await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
   }
+}
+
+Future<void> updateWidget() async {
+  await HomeWidget.updateWidget(
+    androidName: 'PilllAppWidget',
+    iOSName: 'com.mizuki.Ohashi.Pilll.widget',
+  );
 }
