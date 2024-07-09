@@ -61,15 +61,6 @@
         <!-- To use notification actions, specify <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" /> between the <application> tags so that the plugin can process the actions and trigger the appropriate callback(s) -->
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" />
         
-        <!-- https://pub.dev/packages/home_widget#add-widgetreceiver-to-androidmanifest -->
-        <receiver android:name="HomeWidgetExampleProvider" android:exported="true">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-            <meta-data android:name="android.appwidget.provider"
-                android:resource="@xml/home_widget_example" />
-        </receiver>
-
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
