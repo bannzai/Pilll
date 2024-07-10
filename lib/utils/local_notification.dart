@@ -100,7 +100,7 @@ class LocalNotificationService {
           channelShowBadge: true,
           setAsGroupSummary: true,
           groupKey: androidReminderNotificationGroupKey,
-          category: AndroidNotificationCategory.alarm,
+          category: AndroidNotificationCategory.reminder,
         ),
         iOS: DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
@@ -391,7 +391,7 @@ class RegisterReminderLocalNotification {
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
-                      category: AndroidNotificationCategory.alarm,
+                      category: AndroidNotificationCategory.reminder,
                       actions: [
                         AndroidNotificationAction(
                           actionIdentifier,
@@ -451,7 +451,7 @@ class RegisterReminderLocalNotification {
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
-                      category: AndroidNotificationCategory.alarm,
+                      category: AndroidNotificationCategory.reminder,
                     ),
                     iOS: DarwinNotificationDetails(
                       sound: "becho.caf",
@@ -557,7 +557,7 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
             androidCalendarScheduleNotificationChannelID,
             "カレンダーの予定",
             groupKey: null,
-            category: AndroidNotificationCategory.alarm,
+            category: AndroidNotificationCategory.reminder,
           ),
           iOS: DarwinNotificationDetails(
             sound: "becho.caf",
@@ -607,7 +607,7 @@ class NewPillSheetNotification {
               channelShowBadge: true,
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
-              category: AndroidNotificationCategory.alarm,
+              category: AndroidNotificationCategory.reminder,
             ),
             iOS: DarwinNotificationDetails(
               sound: "becho.caf",
