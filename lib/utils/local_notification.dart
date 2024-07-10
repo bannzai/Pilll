@@ -100,7 +100,7 @@ class LocalNotificationService {
           channelShowBadge: true,
           setAsGroupSummary: true,
           groupKey: androidReminderNotificationGroupKey,
-          category: AndroidNotificationCategory.alarm,
+          category: AndroidNotificationCategory.reminder,
         ),
         iOS: DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
@@ -391,7 +391,7 @@ class RegisterReminderLocalNotification {
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
-                      category: AndroidNotificationCategory.alarm,
+                      category: AndroidNotificationCategory.reminder,
                       actions: [
                         AndroidNotificationAction(
                           actionIdentifier,
@@ -412,7 +412,7 @@ class RegisterReminderLocalNotification {
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
-                  androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+                  androidScheduleMode: AndroidScheduleMode.alarmClock,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
@@ -451,7 +451,7 @@ class RegisterReminderLocalNotification {
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
-                      category: AndroidNotificationCategory.alarm,
+                      category: AndroidNotificationCategory.reminder,
                     ),
                     iOS: DarwinNotificationDetails(
                       sound: "becho.caf",
@@ -465,7 +465,7 @@ class RegisterReminderLocalNotification {
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
-                  androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+                  androidScheduleMode: AndroidScheduleMode.alarmClock,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
@@ -557,13 +557,13 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
             androidCalendarScheduleNotificationChannelID,
             "カレンダーの予定",
             groupKey: null,
-            category: AndroidNotificationCategory.alarm,
+            category: AndroidNotificationCategory.reminder,
           ),
           iOS: DarwinNotificationDetails(
             sound: "becho.caf",
           ),
         ),
-        androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+        androidScheduleMode: AndroidScheduleMode.alarmClock,
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }
@@ -607,7 +607,7 @@ class NewPillSheetNotification {
               channelShowBadge: true,
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
-              category: AndroidNotificationCategory.alarm,
+              category: AndroidNotificationCategory.reminder,
             ),
             iOS: DarwinNotificationDetails(
               sound: "becho.caf",
@@ -620,7 +620,7 @@ class NewPillSheetNotification {
               presentList: true,
             ),
           ),
-          androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+          androidScheduleMode: AndroidScheduleMode.alarmClock,
           uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
         );
       } catch (e, st) {
