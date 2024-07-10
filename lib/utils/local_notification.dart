@@ -412,7 +412,7 @@ class RegisterReminderLocalNotification {
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
-                  androidScheduleMode: AndroidScheduleMode.exact,
+                  androidScheduleMode: AndroidScheduleMode.alarmClock,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
@@ -465,7 +465,7 @@ class RegisterReminderLocalNotification {
                       badgeNumber: badgeNumber + dayOffset,
                     ),
                   ),
-                  androidScheduleMode: AndroidScheduleMode.exact,
+                  androidScheduleMode: AndroidScheduleMode.alarmClock,
                   uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
@@ -563,7 +563,7 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
             sound: "becho.caf",
           ),
         ),
-        androidScheduleMode: AndroidScheduleMode.exact,
+        androidScheduleMode: AndroidScheduleMode.alarmClock,
         uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }
@@ -620,7 +620,7 @@ class NewPillSheetNotification {
               presentList: true,
             ),
           ),
-          androidScheduleMode: AndroidScheduleMode.exact,
+          androidScheduleMode: AndroidScheduleMode.alarmClock,
           uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
         );
       } catch (e, st) {
