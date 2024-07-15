@@ -66,7 +66,7 @@ dependencies:
   webview_flutter: ^4.7.0
   collection: ^1.18.0
   crypto:
-  timezone: 0.9.3
+  timezone: 0.9.4
   google_mobile_ads: ^5.0.0
     # home_widget: ^0.5.0
   home_widget:
