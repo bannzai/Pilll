@@ -63,7 +63,7 @@ dependencies:
       url: https://github.com/bannzai/flutter_native_timezone.git
       ref: master
   flutter_local_notifications: ^17.1.2
-  webview_flutter: ^4.7.0
+  webview_flutter: ^4.8.0
   collection: ^1.18.0
   crypto:
   timezone: 0.9.3
