@@ -54,18 +54,14 @@ class CalendarDayTile extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.topCenter,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Spacer(),
                       if (showsDiaryMark) ...[
                         _diaryMarkWidget(),
-                      ],
-                      if (showsDiaryMark && showsScheduleMark) ...[
-                        const SizedBox(width: 4),
                       ],
                       if (showsScheduleMark) ...[
                         _scheduleMarkWidget(),
                       ],
-                      const Spacer(),
                     ],
                   ),
                 ),
@@ -167,19 +163,11 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   Widget _diaryMarkWidget() {
-    return const SizedBox(
-      width: 8,
-      height: 8,
-      child: Icon(Icons.edit_calendar, color: PilllColors.gray),
-    );
+    return const Icon(Icons.edit_calendar, color: PilllColors.gray, size: 12);
   }
 
   Widget _scheduleMarkWidget() {
-    return const SizedBox(
-      width: 8,
-      height: 8,
-      child: Icon(Icons.schedule, color: PilllColors.primary),
-    );
+    return const Icon(Icons.schedule, color: PilllColors.primary, size: 12);
   }
 
   bool get _isToday => isSameDay(date, today());
