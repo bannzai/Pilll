@@ -167,18 +167,18 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   Widget _diaryMarkWidget() {
-    return Container(
+    return const SizedBox(
       width: 8,
       height: 8,
-      decoration: BoxDecoration(color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
+      child: Icon(Icons.edit_calendar, color: PilllColors.gray),
     );
   }
 
   Widget _scheduleMarkWidget() {
-    return Container(
+    return const SizedBox(
       width: 8,
       height: 8,
-      decoration: BoxDecoration(color: PilllColors.primary, borderRadius: BorderRadius.circular(4)),
+      child: Icon(Icons.schedule, color: PilllColors.primary),
     );
   }
 
