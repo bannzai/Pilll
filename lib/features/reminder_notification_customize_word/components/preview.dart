@@ -53,7 +53,7 @@ class ReminderPushNotificationPreview extends StatelessWidget {
               color: TextColor.black,
             ),
           ),
-          if (!isInvisibleDescription)
+          if (!isInvisibleDescription || message.isEmpty)
             Text(
               message,
               style: const TextStyle(
