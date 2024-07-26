@@ -376,13 +376,21 @@ class RegisterReminderLocalNotification {
             return result;
           }();
 
+          final message = () {
+            if (futures.isEmpty) {
+              return setting.reminderNotificationCustomization.dailyTakenMessage;
+            } else {
+              return setting.reminderNotificationCustomization.missedTakenMessage;
+            }
+          }();
+
           futures.add(
             Future(() async {
               try {
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
-                  '',
+                  message,
                   reminderDateTime,
                   NotificationDetails(
                     android: const AndroidNotificationDetails(
