@@ -1,5 +1,5 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:pilll/features/reminder_notification_customize_word/components/daily_message_text_field.dart';
+import 'package:pilll/features/reminder_notification_customize_word/components/daily_taken_message_text_field.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/preview.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/word_text_field.dart';
 import 'package:pilll/utils/analytics.dart';
