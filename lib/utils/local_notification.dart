@@ -378,6 +378,9 @@ class RegisterReminderLocalNotification {
           }();
 
           final message = () {
+            if (setting.reminderNotificationCustomization.isInVisibleDescription) {
+              return "";
+            }
             // 最後に飲んだ日付が数日前の場合は常にmissedTakenMessage
             if (activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber > 1) {
               return setting.reminderNotificationCustomization.missedTakenMessage;
