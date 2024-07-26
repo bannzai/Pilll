@@ -1,22 +1,18 @@
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/features/error/error_alert.dart';
 
 class DailyTakenMessageTextField extends StatelessWidget {
   final ValueNotifier<String> dailyTakenMessage;
   final TextEditingController textFieldController;
   final FocusNode focusNode;
-  final VoidCallback submit;
 
   const DailyTakenMessageTextField({
     super.key,
     required this.dailyTakenMessage,
     required this.textFieldController,
     required this.focusNode,
-    required this.submit,
   });
 
   @override
@@ -56,9 +52,6 @@ class DailyTakenMessageTextField extends StatelessWidget {
       ),
       onChanged: (value) {
         dailyTakenMessage.value = value;
-      },
-      onSubmitted: (_) {
-        submit();
       },
       controller: textFieldController,
       maxLength: 100,

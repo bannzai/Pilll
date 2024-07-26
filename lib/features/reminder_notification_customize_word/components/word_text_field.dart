@@ -7,12 +7,14 @@ class WordTextField extends StatelessWidget {
   final ValueNotifier<String> word;
   final TextEditingController textFieldController;
   final FocusNode focusNode;
+  final VoidCallback submit;
 
   const WordTextField({
     super.key,
     required this.word,
     required this.textFieldController,
     required this.focusNode,
+    required this.submit,
   });
 
   @override
@@ -43,6 +45,9 @@ class WordTextField extends StatelessWidget {
       ),
       onChanged: (value) {
         word.value = value;
+      },
+      onSubmitted: (_) {
+        submit();
       },
       controller: textFieldController,
       maxLength: 8,
