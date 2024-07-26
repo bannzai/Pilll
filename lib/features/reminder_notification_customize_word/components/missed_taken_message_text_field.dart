@@ -32,7 +32,7 @@ class MissedTakenMessageTextField extends StatelessWidget {
           borderSide: BorderSide(color: PilllColors.secondary),
         ),
         label: const Text(
-          "通常",
+          "飲み忘れ",
           style: TextStyle(
             color: TextColor.darkGray,
             fontFamily: FontFamily.japanese,
@@ -42,13 +42,13 @@ class MissedTakenMessageTextField extends StatelessWidget {
         ),
         counter: Row(children: [
           const Text(
-            "飲み忘れていない場合の通知文言を変更できます",
+            "飲み忘れてる場合の通知文言を変更できます",
             style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
           if (missedTakenMessage.value.characters.isNotEmpty)
             Text(
-              "${missedTakenMessage.value.characters.length}/30",
+              "${missedTakenMessage.value.characters.length}/100",
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
           if (missedTakenMessage.value.characters.isEmpty)
@@ -75,7 +75,8 @@ class MissedTakenMessageTextField extends StatelessWidget {
         }
       },
       controller: textFieldController,
-      maxLength: 30,
+      maxLength: 100,
+      maxLines: null,
     );
   }
 

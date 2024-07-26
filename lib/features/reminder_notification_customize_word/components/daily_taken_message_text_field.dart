@@ -48,7 +48,7 @@ class DailyTakenMessageTextField extends StatelessWidget {
           const Spacer(),
           if (dailyTakenMessage.value.characters.isNotEmpty)
             Text(
-              "${dailyTakenMessage.value.characters.length}/30",
+              "${dailyTakenMessage.value.characters.length}/100",
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
           if (dailyTakenMessage.value.characters.isEmpty)
@@ -75,7 +75,8 @@ class DailyTakenMessageTextField extends StatelessWidget {
         }
       },
       controller: textFieldController,
-      maxLength: 30,
+      maxLength: 100,
+      maxLines: null,
     );
   }
 
