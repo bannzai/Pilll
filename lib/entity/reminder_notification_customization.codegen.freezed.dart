@@ -21,10 +21,16 @@ ReminderNotificationCustomization _$ReminderNotificationCustomizationFromJson(
 
 /// @nodoc
 mixin _$ReminderNotificationCustomization {
+  String get version => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
   bool get isInVisibleReminderDate => throw _privateConstructorUsedError;
-  bool get isInVisiblePillNumber => throw _privateConstructorUsedError;
-  bool get isInVisibleDescription => throw _privateConstructorUsedError;
+  bool get isInVisiblePillNumber =>
+      throw _privateConstructorUsedError; // Deprecated
+  @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+  bool get isInVisibleDescription =>
+      throw _privateConstructorUsedError; // BEGIN: From v2
+  String get dailyTakenMessage => throw _privateConstructorUsedError;
+  String get missedTakenMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -41,10 +47,14 @@ abstract class $ReminderNotificationCustomizationCopyWith<$Res> {
           ReminderNotificationCustomization>;
   @useResult
   $Res call(
-      {String word,
+      {String version,
+      String word,
       bool isInVisibleReminderDate,
       bool isInVisiblePillNumber,
-      bool isInVisibleDescription});
+      @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+      bool isInVisibleDescription,
+      String dailyTakenMessage,
+      String missedTakenMessage});
 }
 
 /// @nodoc
@@ -61,12 +71,19 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = null,
     Object? word = null,
     Object? isInVisibleReminderDate = null,
     Object? isInVisiblePillNumber = null,
     Object? isInVisibleDescription = null,
+    Object? dailyTakenMessage = null,
+    Object? missedTakenMessage = null,
   }) {
     return _then(_value.copyWith(
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
       word: null == word
           ? _value.word
           : word // ignore: cast_nullable_to_non_nullable
@@ -83,6 +100,14 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res,
           ? _value.isInVisibleDescription
           : isInVisibleDescription // ignore: cast_nullable_to_non_nullable
               as bool,
+      dailyTakenMessage: null == dailyTakenMessage
+          ? _value.dailyTakenMessage
+          : dailyTakenMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+      missedTakenMessage: null == missedTakenMessage
+          ? _value.missedTakenMessage
+          : missedTakenMessage // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -97,10 +122,14 @@ abstract class _$$ReminderNotificationCustomizationImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String word,
+      {String version,
+      String word,
       bool isInVisibleReminderDate,
       bool isInVisiblePillNumber,
-      bool isInVisibleDescription});
+      @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+      bool isInVisibleDescription,
+      String dailyTakenMessage,
+      String missedTakenMessage});
 }
 
 /// @nodoc
@@ -116,12 +145,19 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? version = null,
     Object? word = null,
     Object? isInVisibleReminderDate = null,
     Object? isInVisiblePillNumber = null,
     Object? isInVisibleDescription = null,
+    Object? dailyTakenMessage = null,
+    Object? missedTakenMessage = null,
   }) {
     return _then(_$ReminderNotificationCustomizationImpl(
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
       word: null == word
           ? _value.word
           : word // ignore: cast_nullable_to_non_nullable
@@ -138,6 +174,14 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
           ? _value.isInVisibleDescription
           : isInVisibleDescription // ignore: cast_nullable_to_non_nullable
               as bool,
+      dailyTakenMessage: null == dailyTakenMessage
+          ? _value.dailyTakenMessage
+          : dailyTakenMessage // ignore: cast_nullable_to_non_nullable
+              as String,
+      missedTakenMessage: null == missedTakenMessage
+          ? _value.missedTakenMessage
+          : missedTakenMessage // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -148,16 +192,24 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
 class _$ReminderNotificationCustomizationImpl
     extends _ReminderNotificationCustomization {
   const _$ReminderNotificationCustomizationImpl(
-      {this.word = pillEmoji,
+      {this.version = "v2",
+      this.word = pillEmoji,
       this.isInVisibleReminderDate = false,
       this.isInVisiblePillNumber = false,
-      this.isInVisibleDescription = false})
+      @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+      this.isInVisibleDescription = false,
+      this.dailyTakenMessage = "",
+      this.missedTakenMessage =
+          "飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji"})
       : super._();
 
   factory _$ReminderNotificationCustomizationImpl.fromJson(
           Map<String, dynamic> json) =>
       _$$ReminderNotificationCustomizationImplFromJson(json);
 
+  @override
+  @JsonKey()
+  final String version;
   @override
   @JsonKey()
   final String word;
@@ -167,13 +219,22 @@ class _$ReminderNotificationCustomizationImpl
   @override
   @JsonKey()
   final bool isInVisiblePillNumber;
+// Deprecated
   @override
   @JsonKey()
+  @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
   final bool isInVisibleDescription;
+// BEGIN: From v2
+  @override
+  @JsonKey()
+  final String dailyTakenMessage;
+  @override
+  @JsonKey()
+  final String missedTakenMessage;
 
   @override
   String toString() {
-    return 'ReminderNotificationCustomization(word: $word, isInVisibleReminderDate: $isInVisibleReminderDate, isInVisiblePillNumber: $isInVisiblePillNumber, isInVisibleDescription: $isInVisibleDescription)';
+    return 'ReminderNotificationCustomization(version: $version, word: $word, isInVisibleReminderDate: $isInVisibleReminderDate, isInVisiblePillNumber: $isInVisiblePillNumber, isInVisibleDescription: $isInVisibleDescription, dailyTakenMessage: $dailyTakenMessage, missedTakenMessage: $missedTakenMessage)';
   }
 
   @override
@@ -181,6 +242,7 @@ class _$ReminderNotificationCustomizationImpl
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ReminderNotificationCustomizationImpl &&
+            (identical(other.version, version) || other.version == version) &&
             (identical(other.word, word) || other.word == word) &&
             (identical(
                     other.isInVisibleReminderDate, isInVisibleReminderDate) ||
@@ -188,13 +250,24 @@ class _$ReminderNotificationCustomizationImpl
             (identical(other.isInVisiblePillNumber, isInVisiblePillNumber) ||
                 other.isInVisiblePillNumber == isInVisiblePillNumber) &&
             (identical(other.isInVisibleDescription, isInVisibleDescription) ||
-                other.isInVisibleDescription == isInVisibleDescription));
+                other.isInVisibleDescription == isInVisibleDescription) &&
+            (identical(other.dailyTakenMessage, dailyTakenMessage) ||
+                other.dailyTakenMessage == dailyTakenMessage) &&
+            (identical(other.missedTakenMessage, missedTakenMessage) ||
+                other.missedTakenMessage == missedTakenMessage));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, word, isInVisibleReminderDate,
-      isInVisiblePillNumber, isInVisibleDescription);
+  int get hashCode => Object.hash(
+      runtimeType,
+      version,
+      word,
+      isInVisibleReminderDate,
+      isInVisiblePillNumber,
+      isInVisibleDescription,
+      dailyTakenMessage,
+      missedTakenMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -215,10 +288,14 @@ class _$ReminderNotificationCustomizationImpl
 abstract class _ReminderNotificationCustomization
     extends ReminderNotificationCustomization {
   const factory _ReminderNotificationCustomization(
-          {final String word,
+          {final String version,
+          final String word,
           final bool isInVisibleReminderDate,
           final bool isInVisiblePillNumber,
-          final bool isInVisibleDescription}) =
+          @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+          final bool isInVisibleDescription,
+          final String dailyTakenMessage,
+          final String missedTakenMessage}) =
       _$ReminderNotificationCustomizationImpl;
   const _ReminderNotificationCustomization._() : super._();
 
@@ -227,13 +304,20 @@ abstract class _ReminderNotificationCustomization
       _$ReminderNotificationCustomizationImpl.fromJson;
 
   @override
+  String get version;
+  @override
   String get word;
   @override
   bool get isInVisibleReminderDate;
   @override
   bool get isInVisiblePillNumber;
-  @override
+  @override // Deprecated
+  @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
   bool get isInVisibleDescription;
+  @override // BEGIN: From v2
+  String get dailyTakenMessage;
+  @override
+  String get missedTakenMessage;
   @override
   @JsonKey(ignore: true)
   _$$ReminderNotificationCustomizationImplCopyWith<
