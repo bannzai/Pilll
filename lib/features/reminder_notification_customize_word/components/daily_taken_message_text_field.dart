@@ -43,11 +43,6 @@ class DailyTakenMessageTextField extends StatelessWidget {
               "${dailyTakenMessage.value.characters.length}/100",
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
-          if (dailyTakenMessage.value.characters.isEmpty)
-            const Text(
-              "0文字以上入力してください",
-              style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
-            ),
         ]),
       ),
       onChanged: (value) {
