@@ -19,8 +19,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final setSetting = ref.watch(setSettingProvider);
     final setting = ref.watch(settingProvider).requireValue;
 
-    final textFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
-    final wordState = useState(setting.reminderNotificationCustomization.word);
+    final word = useState(setting.reminderNotificationCustomization.word);
+    final dailyMessage = useState(setting.reminderNotificationCustomization.word);
+    final wordTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
+
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
     final isInVisibleDescription = useState(setting.reminderNotificationCustomization.isInVisibleDescription);
@@ -51,7 +53,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   _ReminderPushNotificationPreview(
-                    word: wordState.value,
+                    word: word.value,
+                    message: dailyMessage.value,
                     isInVisibleReminderDate: isInVisibleReminderDate.value,
                     isInvisiblePillNumber: isInVisiblePillNumber.value,
                     isInvisibleDescription: isInVisibleDescription.value,
@@ -68,13 +71,13 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
                         ),
                         const Spacer(),
-                        if (wordState.value.characters.isNotEmpty)
+                        if (word.value.characters.isNotEmpty)
                           Text(
-                            "${wordState.value.characters.length}/8",
+                            "${word.value.characters.length}/8",
                             style: const TextStyle(
                                 fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
                           ),
-                        if (wordState.value.characters.isEmpty)
+                        if (word.value.characters.isEmpty)
                           const Text(
                             "0文字以上入力してください",
                             style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
@@ -82,8 +85,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       ]),
                     ),
                     autofocus: true,
-                    onChanged: (word) {
-                      wordState.value = word;
+                    onChanged: (value) {
+                      word.value = value;
                     },
                     onSubmitted: (word) async {
                       analytics.logEvent(name: "submit_reminder_notification_customize");
@@ -94,13 +97,11 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           setSetting: setSetting,
                           registerReminderLocalNotification: registerReminderLocalNotification,
                         );
-                        // ignore: use_build_context_synchronously
-                        Navigator.of(context).pop();
                       } catch (error) {
                         if (context.mounted) showErrorAlert(context, error);
                       }
                     },
-                    controller: textFieldController,
+                    controller: wordTextFieldController,
                     maxLength: 8,
                   ),
                   const SizedBox(height: 20),
@@ -273,19 +274,18 @@ extension ReminderNotificationCustomizeWordPageRoutes on ReminderNotificationCus
 
 class _ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
+  final String message;
   final bool isInVisibleReminderDate;
   final bool isInvisiblePillNumber;
   final bool isInvisibleDescription;
 
   const _ReminderPushNotificationPreview({
     required this.word,
+    required this.message,
     required this.isInVisibleReminderDate,
     required this.isInvisiblePillNumber,
     required this.isInvisibleDescription,
   });
-
-  // avoid broken editor
-  final thinkingFace = "🤔";
 
   @override
   Widget build(BuildContext context) {
@@ -323,7 +323,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
           ),
           if (!isInvisibleDescription)
             Text(
-              "飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFace",
+              message,
               style: const TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
