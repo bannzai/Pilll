@@ -1,5 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/features/reminder_notification_customize_word/components/word_text_field.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -63,13 +64,12 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                     isInvisibleDescription: isInVisibleDescription.value,
                   ),
                   const SizedBox(height: 20),
-                  _WordTextField(
-                    word,
-                    setting,
-                    setSetting,
-                    registerReminderLocalNotification,
-                    context,
-                    wordTextFieldController,
+                  WordTextField(
+                    word: word,
+                    setting: setting,
+                    setSetting: setSetting,
+                    registerReminderLocalNotification: registerReminderLocalNotification,
+                    wordTextFieldController: wordTextFieldController,
                   ),
                   const SizedBox(height: 20),
                   Column(
@@ -223,84 +223,6 @@ extension ReminderNotificationCustomizeWordPageRoutes on ReminderNotificationCus
       settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
       builder: (_) => const ReminderNotificationCustomizeWordPage(),
     );
-  }
-}
-
-class _WordTextField extends StatelessWidget {
-  final ValueNotifier<String> word;
-  final Setting setting;
-  final SetSetting setSetting;
-  final RegisterReminderLocalNotification registerReminderLocalNotification;
-  final BuildContext context;
-  final TextEditingController wordTextFieldController;
-
-  const _WordTextField({
-    required this.word,
-    required this.setting,
-    required this.setSetting,
-    required this.registerReminderLocalNotification,
-    required this.context,
-    required this.wordTextFieldController,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return TextField(
-      decoration: InputDecoration(
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: PilllColors.secondary),
-        ),
-        counter: Row(children: [
-          const Text(
-            "通知の先頭部分の変更ができます",
-            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
-          ),
-          const Spacer(),
-          if (word.value.characters.isNotEmpty)
-            Text(
-              "${word.value.characters.length}/8",
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
-            ),
-          if (word.value.characters.isEmpty)
-            const Text(
-              "0文字以上入力してください",
-              style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
-            ),
-        ]),
-      ),
-      autofocus: true,
-      onChanged: (value) {
-        word.value = value;
-      },
-      onSubmitted: (word) async {
-        analytics.logEvent(name: "submit_reminder_notification_customize");
-        try {
-          await _reminderNotificationWordSubmit(
-            word: word,
-            setting: setting,
-            setSetting: setSetting,
-            registerReminderLocalNotification: registerReminderLocalNotification,
-          );
-        } catch (error) {
-          if (context.mounted) showErrorAlert(context, error);
-        }
-      },
-      controller: wordTextFieldController,
-      maxLength: 8,
-    );
-  }
-
-  Future<void> _reminderNotificationWordSubmit({
-    required String word,
-    required Setting setting,
-    required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
-  }) async {
-    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word);
-
-    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    registerReminderLocalNotification();
   }
 }
 
