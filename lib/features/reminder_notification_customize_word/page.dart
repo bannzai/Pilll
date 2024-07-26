@@ -22,10 +22,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final setting = ref.watch(settingProvider).requireValue;
 
     final word = useState(setting.reminderNotificationCustomization.word);
-    final dailyMessage = useState(setting.reminderNotificationCustomization.dailyTakenMessage);
+    final dailyTakenMessage = useState(setting.reminderNotificationCustomization.dailyTakenMessage);
     final missedTakenMessage = useState(setting.reminderNotificationCustomization.missedTakenMessage);
     final wordTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
-    final dailyMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.dailyTakenMessage);
+    final dailyTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.dailyTakenMessage);
     final missedTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.missedTakenMessage);
 
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
@@ -59,7 +59,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                 children: [
                   ReminderPushNotificationPreview(
                     word: word.value,
-                    message: dailyMessage.value,
+                    message: dailyTakenMessage.value,
                     isInVisibleReminderDate: isInVisibleReminderDate.value,
                     isInvisiblePillNumber: isInVisiblePillNumber.value,
                     isInvisibleDescription: isInVisibleDescription.value,
@@ -73,10 +73,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                     registerReminderLocalNotification: registerReminderLocalNotification,
                   ),
                   const SizedBox(height: 20),
-                  DailyMessageTextField(
+                  DailyTakenMessageTextField(
                     setting: setting,
-                    dailyMessage: dailyMessage,
-                    textFieldController: dailyMessageTextFieldController,
+                    dailyTakenMessage: dailyTakenMessage,
+                    textFieldController: dailyTakenMessageTextFieldController,
                     setSetting: setSetting,
                     registerReminderLocalNotification: registerReminderLocalNotification,
                   ),

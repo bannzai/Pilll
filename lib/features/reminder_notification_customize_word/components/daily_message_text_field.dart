@@ -8,17 +8,17 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
-class DailyMessageTextField extends StatelessWidget {
+class DailyTakenMessageTextField extends StatelessWidget {
   final Setting setting;
-  final ValueNotifier<String> dailyMessage;
+  final ValueNotifier<String> dailyTakenMessage;
   final TextEditingController textFieldController;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
 
-  const DailyMessageTextField({
+  const DailyTakenMessageTextField({
     super.key,
     required this.setting,
-    required this.dailyMessage,
+    required this.dailyTakenMessage,
     required this.textFieldController,
     required this.setSetting,
     required this.registerReminderLocalNotification,
@@ -37,12 +37,12 @@ class DailyMessageTextField extends StatelessWidget {
             style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
-          if (dailyMessage.value.characters.isNotEmpty)
+          if (dailyTakenMessage.value.characters.isNotEmpty)
             Text(
-              "${dailyMessage.value.characters.length}/30",
+              "${dailyTakenMessage.value.characters.length}/30",
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
-          if (dailyMessage.value.characters.isEmpty)
+          if (dailyTakenMessage.value.characters.isEmpty)
             const Text(
               "0文字以上入力してください",
               style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
@@ -50,13 +50,13 @@ class DailyMessageTextField extends StatelessWidget {
         ]),
       ),
       onChanged: (value) {
-        dailyMessage.value = value;
+        dailyTakenMessage.value = value;
       },
       onSubmitted: (dailyMessage) async {
         analytics.logEvent(name: "submit_rnc_daily_message");
         try {
           await _submit(
-            dailyMessage: dailyMessage,
+            dailyTakenMessage: dailyMessage,
             setting: setting,
             setSetting: setSetting,
             registerReminderLocalNotification: registerReminderLocalNotification,
@@ -71,13 +71,13 @@ class DailyMessageTextField extends StatelessWidget {
   }
 
   Future<void> _submit({
-    required String dailyMessage,
+    required String dailyTakenMessage,
     required Setting setting,
     required SetSetting setSetting,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
   }) async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: dailyMessage);
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(dailyTakenMessage: dailyTakenMessage);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
     registerReminderLocalNotification();
