@@ -24,9 +24,7 @@ mixin _$ReminderNotificationCustomization {
   String get version => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
   bool get isInVisibleReminderDate => throw _privateConstructorUsedError;
-  bool get isInVisiblePillNumber =>
-      throw _privateConstructorUsedError; // Deprecated
-  @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+  bool get isInVisiblePillNumber => throw _privateConstructorUsedError;
   bool get isInVisibleDescription =>
       throw _privateConstructorUsedError; // BEGIN: From v2
   String get dailyTakenMessage => throw _privateConstructorUsedError;
@@ -51,7 +49,6 @@ abstract class $ReminderNotificationCustomizationCopyWith<$Res> {
       String word,
       bool isInVisibleReminderDate,
       bool isInVisiblePillNumber,
-      @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
       bool isInVisibleDescription,
       String dailyTakenMessage,
       String missedTakenMessage});
@@ -126,7 +123,6 @@ abstract class _$$ReminderNotificationCustomizationImplCopyWith<$Res>
       String word,
       bool isInVisibleReminderDate,
       bool isInVisiblePillNumber,
-      @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
       bool isInVisibleDescription,
       String dailyTakenMessage,
       String missedTakenMessage});
@@ -196,7 +192,6 @@ class _$ReminderNotificationCustomizationImpl
       this.word = pillEmoji,
       this.isInVisibleReminderDate = false,
       this.isInVisiblePillNumber = false,
-      @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
       this.isInVisibleDescription = false,
       this.dailyTakenMessage = "",
       this.missedTakenMessage =
@@ -219,10 +214,8 @@ class _$ReminderNotificationCustomizationImpl
   @override
   @JsonKey()
   final bool isInVisiblePillNumber;
-// Deprecated
   @override
   @JsonKey()
-  @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
   final bool isInVisibleDescription;
 // BEGIN: From v2
   @override
@@ -292,7 +285,6 @@ abstract class _ReminderNotificationCustomization
           final String word,
           final bool isInVisibleReminderDate,
           final bool isInVisiblePillNumber,
-          @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
           final bool isInVisibleDescription,
           final String dailyTakenMessage,
           final String missedTakenMessage}) =
@@ -311,8 +303,7 @@ abstract class _ReminderNotificationCustomization
   bool get isInVisibleReminderDate;
   @override
   bool get isInVisiblePillNumber;
-  @override // Deprecated
-  @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage")
+  @override
   bool get isInVisibleDescription;
   @override // BEGIN: From v2
   String get dailyTakenMessage;

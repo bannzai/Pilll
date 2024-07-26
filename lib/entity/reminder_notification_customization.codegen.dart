@@ -12,8 +12,7 @@ class ReminderNotificationCustomization with _$ReminderNotificationCustomization
     @Default(pillEmoji) String word,
     @Default(false) bool isInVisibleReminderDate,
     @Default(false) bool isInVisiblePillNumber,
-    // Deprecated
-    @Deprecated("Replace to use dailyTakenMessage or missedTakenMessage") @Default(false) bool isInVisibleDescription,
+    @Default(false) bool isInVisibleDescription,
     // BEGIN: From v2
     @Default("") String dailyTakenMessage,
     @Default("飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji") String missedTakenMessage,
