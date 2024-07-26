@@ -57,12 +57,7 @@ class WordTextField extends StatelessWidget {
       onSubmitted: (word) async {
         analytics.logEvent(name: "submit_rnc_word");
         try {
-          await _submit(
-            word: word,
-            setting: setting,
-            setSetting: setSetting,
-            registerReminderLocalNotification: registerReminderLocalNotification,
-          );
+          await _submit();
         } catch (error) {
           if (context.mounted) showErrorAlert(context, error);
         }
@@ -72,14 +67,9 @@ class WordTextField extends StatelessWidget {
     );
   }
 
-  Future<void> _submit({
-    required String word,
-    required Setting setting,
-    required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
-  }) async {
+  Future<void> _submit() async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word);
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word.value);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
     registerReminderLocalNotification();

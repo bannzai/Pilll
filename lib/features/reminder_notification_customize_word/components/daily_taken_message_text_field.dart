@@ -66,12 +66,7 @@ class DailyTakenMessageTextField extends StatelessWidget {
       onSubmitted: (dailyMessage) async {
         analytics.logEvent(name: "submit_rnc_daily_message");
         try {
-          await _submit(
-            dailyTakenMessage: dailyMessage,
-            setting: setting,
-            setSetting: setSetting,
-            registerReminderLocalNotification: registerReminderLocalNotification,
-          );
+          await _submit();
         } catch (error) {
           if (context.mounted) showErrorAlert(context, error);
         }
@@ -82,14 +77,9 @@ class DailyTakenMessageTextField extends StatelessWidget {
     );
   }
 
-  Future<void> _submit({
-    required String dailyTakenMessage,
-    required Setting setting,
-    required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
-  }) async {
+  Future<void> _submit() async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(dailyTakenMessage: dailyTakenMessage);
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(dailyTakenMessage: dailyTakenMessage.value);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
     registerReminderLocalNotification();

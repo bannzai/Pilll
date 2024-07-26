@@ -66,12 +66,7 @@ class MissedTakenMessageTextField extends StatelessWidget {
       onSubmitted: (missedMessage) async {
         analytics.logEvent(name: "submit_rnc_missed_message");
         try {
-          await _submit(
-            missedTakenMessage: missedMessage,
-            setting: setting,
-            setSetting: setSetting,
-            registerReminderLocalNotification: registerReminderLocalNotification,
-          );
+          await _submit();
         } catch (error) {
           if (context.mounted) showErrorAlert(context, error);
         }
@@ -82,14 +77,9 @@ class MissedTakenMessageTextField extends StatelessWidget {
     );
   }
 
-  Future<void> _submit({
-    required String missedTakenMessage,
-    required Setting setting,
-    required SetSetting setSetting,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
-  }) async {
+  Future<void> _submit() async {
     var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(missedTakenMessage: missedTakenMessage);
+    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(missedTakenMessage: missedTakenMessage.value);
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
     registerReminderLocalNotification();
