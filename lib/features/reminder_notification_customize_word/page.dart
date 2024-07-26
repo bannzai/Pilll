@@ -1,5 +1,5 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:pilll/features/reminder_notification_customize_word/components/preview.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/word_text_field.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -56,7 +56,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  _ReminderPushNotificationPreview(
+                  ReminderPushNotificationPreview(
                     word: word.value,
                     message: dailyMessage.value,
                     isInVisibleReminderDate: isInVisibleReminderDate.value,
@@ -222,71 +222,6 @@ extension ReminderNotificationCustomizeWordPageRoutes on ReminderNotificationCus
     return MaterialPageRoute(
       settings: const RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
       builder: (_) => const ReminderNotificationCustomizeWordPage(),
-    );
-  }
-}
-
-class _ReminderPushNotificationPreview extends StatelessWidget {
-  final String word;
-  final String message;
-  final bool isInVisibleReminderDate;
-  final bool isInvisiblePillNumber;
-  final bool isInvisibleDescription;
-
-  const _ReminderPushNotificationPreview({
-    required this.word,
-    required this.message,
-    required this.isInVisibleReminderDate,
-    required this.isInvisiblePillNumber,
-    required this.isInvisibleDescription,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(8),
-      ),
-      padding: const EdgeInsets.all(8),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(children: [
-            SvgPicture.asset("images/pilll_icon.svg"),
-            const SizedBox(width: 8),
-            const Text(
-              "Pilll",
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
-                color: TextColor.lightGray2,
-              ),
-            ),
-          ]),
-          const SizedBox(height: 16),
-          Text(
-            "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番 ~ 8番"}",
-            style: const TextStyle(
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
-              fontFamily: FontFamily.japanese,
-              color: TextColor.black,
-            ),
-          ),
-          if (!isInvisibleDescription)
-            Text(
-              message,
-              style: const TextStyle(
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.black,
-              ),
-            ),
-        ],
-      ),
     );
   }
 }
