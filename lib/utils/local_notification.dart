@@ -378,6 +378,7 @@ class RegisterReminderLocalNotification {
           }();
 
           final message = () {
+            // TODO: lastTakenPillNumberを使って文言を決める
             // 本日分の服用記録がない場合
             if (dayOffset == 0 && !activePillSheet.todayPillIsAlreadyTaken) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
