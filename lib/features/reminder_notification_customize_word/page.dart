@@ -65,27 +65,55 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                     isInvisibleDescription: isInVisibleDescription.value,
                   ),
                   const SizedBox(height: 20),
-                  WordTextField(
-                    setting: setting,
-                    word: word,
-                    textFieldController: wordTextFieldController,
-                    setSetting: setSetting,
-                    registerReminderLocalNotification: registerReminderLocalNotification,
-                  ),
-                  const SizedBox(height: 20),
-                  DailyTakenMessageTextField(
-                    setting: setting,
-                    dailyTakenMessage: dailyTakenMessage,
-                    textFieldController: dailyTakenMessageTextFieldController,
-                    setSetting: setSetting,
-                    registerReminderLocalNotification: registerReminderLocalNotification,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "タイトル",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: TextColor.primary,
+                        ),
+                      ),
+                      WordTextField(
+                        setting: setting,
+                        word: word,
+                        textFieldController: wordTextFieldController,
+                        setSetting: setSetting,
+                        registerReminderLocalNotification: registerReminderLocalNotification,
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 20),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Text(
-                        "詳細設定",
+                        "メッセージ",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: TextColor.primary,
+                        ),
+                      ),
+                      DailyTakenMessageTextField(
+                        setting: setting,
+                        dailyTakenMessage: dailyTakenMessage,
+                        textFieldController: dailyTakenMessageTextFieldController,
+                        setSetting: setSetting,
+                        registerReminderLocalNotification: registerReminderLocalNotification,
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 20),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "オプション",
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w300,

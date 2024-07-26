@@ -31,6 +31,15 @@ class DailyTakenMessageTextField extends StatelessWidget {
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: PilllColors.secondary),
         ),
+        label: const Text(
+          "通常",
+          style: TextStyle(
+            color: TextColor.darkGray,
+            fontFamily: FontFamily.japanese,
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+          ),
+        ),
         counter: Row(children: [
           const Text(
             "飲み忘れていない場合の通知文言を変更できます",
