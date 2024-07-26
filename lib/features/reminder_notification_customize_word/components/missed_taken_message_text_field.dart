@@ -1,34 +1,24 @@
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/provider/setting.dart';
-import 'package:pilll/utils/local_notification.dart';
 
 class MissedTakenMessageTextField extends StatelessWidget {
-  final Setting setting;
   final ValueNotifier<String> missedTakenMessage;
   final TextEditingController textFieldController;
   final FocusNode focusNode;
-  final SetSetting setSetting;
-  final RegisterReminderLocalNotification registerReminderLocalNotification;
 
   const MissedTakenMessageTextField({
     super.key,
-    required this.setting,
     required this.missedTakenMessage,
     required this.textFieldController,
     required this.focusNode,
-    required this.setSetting,
-    required this.registerReminderLocalNotification,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      focusNode: focusNode,
       decoration: InputDecoration(
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: PilllColors.secondary),
@@ -63,27 +53,9 @@ class MissedTakenMessageTextField extends StatelessWidget {
       onChanged: (value) {
         missedTakenMessage.value = value;
       },
-      onSubmitted: (missedMessage) async {
-        analytics.logEvent(name: "submit_rnc_missed_message");
-        try {
-          await _submit();
-        } catch (error) {
-          if (context.mounted) showErrorAlert(context, error);
-        }
-      },
       controller: textFieldController,
       maxLength: 100,
       maxLines: null,
     );
-  }
-
-  Future<void> _submit() async {
-    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(missedTakenMessage: missedTakenMessage.value);
-
-    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    registerReminderLocalNotification();
-
-    focusNode.unfocus();
   }
 }

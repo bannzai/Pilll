@@ -38,6 +38,54 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
 
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
+    void wordSubmit() async {
+      try {
+        analytics.logEvent(name: "submit_rnc_word");
+
+        var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(word: word.value);
+
+        await setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+        await registerReminderLocalNotification();
+
+        wordFocusNode.unfocus();
+      } catch (error) {
+        if (context.mounted) showErrorAlert(context, error);
+      }
+    }
+
+    void dailyTakenMessageSubmit() async {
+      try {
+        analytics.logEvent(name: "submit_rnc_daily_message");
+
+        var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(dailyTakenMessage: dailyTakenMessage.value);
+
+        setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+        registerReminderLocalNotification();
+
+        dailyTakenMessageFocusNode.unfocus();
+      } catch (error) {
+        if (context.mounted) showErrorAlert(context, error);
+      }
+    }
+
+    void misssedTakenMessageSubmit() async {
+      try {
+        analytics.logEvent(name: "submit_rnc_missed_message");
+
+        var reminderNotificationCustomization = setting.reminderNotificationCustomization;
+        reminderNotificationCustomization = reminderNotificationCustomization.copyWith(missedTakenMessage: missedTakenMessage.value);
+
+        setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
+        registerReminderLocalNotification();
+
+        missedTakenMessageFocusNode.unfocus();
+      } catch (error) {
+        if (context.mounted) showErrorAlert(context, error);
+      }
+    }
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(

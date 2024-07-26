@@ -3,32 +3,26 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/provider/setting.dart';
-import 'package:pilll/utils/local_notification.dart';
 
 class DailyTakenMessageTextField extends StatelessWidget {
-  final Setting setting;
   final ValueNotifier<String> dailyTakenMessage;
   final TextEditingController textFieldController;
   final FocusNode focusNode;
-  final SetSetting setSetting;
-  final RegisterReminderLocalNotification registerReminderLocalNotification;
+  final VoidCallback submit;
 
   const DailyTakenMessageTextField({
     super.key,
-    required this.setting,
     required this.dailyTakenMessage,
     required this.textFieldController,
     required this.focusNode,
-    required this.setSetting,
-    required this.registerReminderLocalNotification,
+    required this.submit,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextField(
+      focusNode: focusNode,
       decoration: InputDecoration(
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: PilllColors.secondary),
@@ -63,27 +57,12 @@ class DailyTakenMessageTextField extends StatelessWidget {
       onChanged: (value) {
         dailyTakenMessage.value = value;
       },
-      onSubmitted: (dailyMessage) async {
-        analytics.logEvent(name: "submit_rnc_daily_message");
-        try {
-          await _submit();
-        } catch (error) {
-          if (context.mounted) showErrorAlert(context, error);
-        }
+      onSubmitted: (_) {
+        submit();
       },
       controller: textFieldController,
       maxLength: 100,
       maxLines: null,
     );
-  }
-
-  Future<void> _submit() async {
-    var reminderNotificationCustomization = setting.reminderNotificationCustomization;
-    reminderNotificationCustomization = reminderNotificationCustomization.copyWith(dailyTakenMessage: dailyTakenMessage.value);
-
-    setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
-    registerReminderLocalNotification();
-
-    focusNode.unfocus();
   }
 }
