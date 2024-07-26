@@ -58,12 +58,65 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  ReminderPushNotificationPreview(
-                    word: word.value,
-                    message: dailyTakenMessage.value,
-                    isInVisibleReminderDate: isInVisibleReminderDate.value,
-                    isInvisiblePillNumber: isInVisiblePillNumber.value,
-                    isInvisibleDescription: isInVisibleDescription.value,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        "プレビュー",
+                        style: TextStyle(
+                          fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w400,
+                          fontSize: 14,
+                          color: TextColor.primary,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "通常",
+                            style: TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 10,
+                              color: TextColor.darkGray,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          ReminderPushNotificationPreview(
+                            word: word.value,
+                            message: dailyTakenMessage.value,
+                            isInVisibleReminderDate: isInVisibleReminderDate.value,
+                            isInvisiblePillNumber: isInVisiblePillNumber.value,
+                            isInvisibleDescription: isInVisibleDescription.value,
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "飲み忘れ",
+                            style: TextStyle(
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 10,
+                              color: TextColor.darkGray,
+                            ),
+                          ),
+                          const SizedBox(height: 4),
+                          ReminderPushNotificationPreview(
+                            word: word.value,
+                            message: missedTakenMessage.value,
+                            isInVisibleReminderDate: isInVisibleReminderDate.value,
+                            isInvisiblePillNumber: isInVisiblePillNumber.value,
+                            isInvisibleDescription: isInVisibleDescription.value,
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                   const SizedBox(height: 20),
                   Column(
@@ -107,6 +160,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         setSetting: setSetting,
                         registerReminderLocalNotification: registerReminderLocalNotification,
                       ),
+                      const SizedBox(height: 10),
                       MissedTakenMessageTextField(
                         setting: setting,
                         missedTakenMessage: missedTakenMessage,
