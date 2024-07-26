@@ -69,7 +69,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                     setting: setting,
                     setSetting: setSetting,
                     registerReminderLocalNotification: registerReminderLocalNotification,
-                    wordTextFieldController: wordTextFieldController,
+                    textFieldController: wordTextFieldController,
                   ),
                   const SizedBox(height: 20),
                   Column(

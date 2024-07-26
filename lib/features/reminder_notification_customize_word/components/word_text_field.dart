@@ -9,19 +9,19 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class WordTextField extends StatelessWidget {
-  final ValueNotifier<String> word;
   final Setting setting;
+  final ValueNotifier<String> word;
+  final TextEditingController textFieldController;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
-  final TextEditingController wordTextFieldController;
 
   const WordTextField({
     super.key,
-    required this.word,
     required this.setting,
+    required this.word,
+    required this.textFieldController,
     required this.setSetting,
     required this.registerReminderLocalNotification,
-    required this.wordTextFieldController,
   });
 
   @override
@@ -54,7 +54,7 @@ class WordTextField extends StatelessWidget {
         word.value = value;
       },
       onSubmitted: (word) async {
-        analytics.logEvent(name: "submit_reminder_notification_customize");
+        analytics.logEvent(name: "submit_rnc_word");
         try {
           await _reminderNotificationWordSubmit(
             word: word,
@@ -66,7 +66,7 @@ class WordTextField extends StatelessWidget {
           if (context.mounted) showErrorAlert(context, error);
         }
       },
-      controller: wordTextFieldController,
+      controller: textFieldController,
       maxLength: 8,
     );
   }
