@@ -56,7 +56,7 @@ class WordTextField extends StatelessWidget {
       onSubmitted: (word) async {
         analytics.logEvent(name: "submit_rnc_word");
         try {
-          await _reminderNotificationWordSubmit(
+          await _submit(
             word: word,
             setting: setting,
             setSetting: setSetting,
@@ -71,7 +71,7 @@ class WordTextField extends StatelessWidget {
     );
   }
 
-  Future<void> _reminderNotificationWordSubmit({
+  Future<void> _submit({
     required String word,
     required Setting setting,
     required SetSetting setSetting,
