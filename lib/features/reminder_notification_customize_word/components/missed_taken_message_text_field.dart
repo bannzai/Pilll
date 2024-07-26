@@ -12,6 +12,7 @@ class MissedTakenMessageTextField extends StatelessWidget {
   final Setting setting;
   final ValueNotifier<String> missedTakenMessage;
   final TextEditingController textFieldController;
+  final FocusNode focusNode;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
 
@@ -20,6 +21,7 @@ class MissedTakenMessageTextField extends StatelessWidget {
     required this.setting,
     required this.missedTakenMessage,
     required this.textFieldController,
+    required this.focusNode,
     required this.setSetting,
     required this.registerReminderLocalNotification,
   });

@@ -12,6 +12,7 @@ class WordTextField extends StatelessWidget {
   final Setting setting;
   final ValueNotifier<String> word;
   final TextEditingController textFieldController;
+  final FocusNode focusNode;
   final SetSetting setSetting;
   final RegisterReminderLocalNotification registerReminderLocalNotification;
 
@@ -20,6 +21,7 @@ class WordTextField extends StatelessWidget {
     required this.setting,
     required this.word,
     required this.textFieldController,
+    required this.focusNode,
     required this.setSetting,
     required this.registerReminderLocalNotification,
   });

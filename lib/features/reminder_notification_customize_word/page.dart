@@ -28,6 +28,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final wordTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
     final dailyTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.dailyTakenMessage);
     final missedTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.missedTakenMessage);
+    final wordFocusNode = useFocusNode();
+    final dailyTakenMessageFocusNode = useFocusNode();
+    final missedTakenMessageFocusNode = useFocusNode();
 
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
@@ -135,6 +138,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         setting: setting,
                         word: word,
                         textFieldController: wordTextFieldController,
+                        focusNode: wordFocusNode,
                         setSetting: setSetting,
                         registerReminderLocalNotification: registerReminderLocalNotification,
                       ),
@@ -157,6 +161,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         setting: setting,
                         dailyTakenMessage: dailyTakenMessage,
                         textFieldController: dailyTakenMessageTextFieldController,
+                        focusNode: dailyTakenMessageFocusNode,
                         setSetting: setSetting,
                         registerReminderLocalNotification: registerReminderLocalNotification,
                       ),
@@ -165,6 +170,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         setting: setting,
                         missedTakenMessage: missedTakenMessage,
                         textFieldController: missedTakenMessageTextFieldController,
+                        focusNode: missedTakenMessageFocusNode,
                         setSetting: setSetting,
                         registerReminderLocalNotification: registerReminderLocalNotification,
                       ),
