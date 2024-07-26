@@ -83,5 +83,7 @@ class MissedTakenMessageTextField extends StatelessWidget {
 
     setSetting(setting.copyWith(reminderNotificationCustomization: reminderNotificationCustomization));
     registerReminderLocalNotification();
+
+    focusNode.unfocus();
   }
 }
