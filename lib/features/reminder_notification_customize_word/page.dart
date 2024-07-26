@@ -306,6 +306,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   text: '完了',
                   onPressed: () async {
                     analytics.logEvent(name: "rnc_word_done");
+                    wordSubmit();
                     wordFocusNode.unfocus();
                   },
                 ),
@@ -317,6 +318,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   text: '完了',
                   onPressed: () async {
                     analytics.logEvent(name: "rnc_daily_taken_message_done");
+                    dailyTakenMessageSubmit();
                     dailyTakenMessageFocusNode.unfocus();
                   },
                 ),
@@ -328,6 +330,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   text: '完了',
                   onPressed: () async {
                     analytics.logEvent(name: "rnc_missed_taken_message_done");
+                    misssedTakenMessageSubmit();
                     missedTakenMessageFocusNode.unfocus();
                   },
                 ),
