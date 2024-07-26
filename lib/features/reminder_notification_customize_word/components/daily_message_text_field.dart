@@ -39,7 +39,7 @@ class DailyMessageTextField extends StatelessWidget {
           const Spacer(),
           if (dailyMessage.value.characters.isNotEmpty)
             Text(
-              "${dailyMessage.value.characters.length}/8",
+              "${dailyMessage.value.characters.length}/30",
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
           if (dailyMessage.value.characters.isEmpty)
@@ -49,7 +49,6 @@ class DailyMessageTextField extends StatelessWidget {
             ),
         ]),
       ),
-      autofocus: true,
       onChanged: (value) {
         dailyMessage.value = value;
       },
@@ -67,7 +66,7 @@ class DailyMessageTextField extends StatelessWidget {
         }
       },
       controller: textFieldController,
-      maxLength: 8,
+      maxLength: 30,
     );
   }
 

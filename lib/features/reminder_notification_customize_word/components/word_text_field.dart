@@ -49,7 +49,6 @@ class WordTextField extends StatelessWidget {
             ),
         ]),
       ),
-      autofocus: true,
       onChanged: (value) {
         word.value = value;
       },
