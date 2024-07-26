@@ -20,8 +20,11 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final setting = ref.watch(settingProvider).requireValue;
 
     final word = useState(setting.reminderNotificationCustomization.word);
-    final dailyMessage = useState(setting.reminderNotificationCustomization.word);
+    final dailyMessage = useState(setting.reminderNotificationCustomization.dailyTakenMessage);
+    final missedTakenMessage = useState(setting.reminderNotificationCustomization.missedTakenMessage);
     final wordTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.word);
+    final dailyMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.dailyTakenMessage);
+    final missedTakenMessageTextFieldController = useTextEditingController(text: setting.reminderNotificationCustomization.missedTakenMessage);
 
     final isInVisibleReminderDate = useState(setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(setting.reminderNotificationCustomization.isInVisiblePillNumber);
