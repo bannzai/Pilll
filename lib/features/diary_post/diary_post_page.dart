@@ -149,6 +149,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 ],
               ),
             ),
+
             if (focusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
