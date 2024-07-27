@@ -376,13 +376,32 @@ class RegisterReminderLocalNotification {
             return result;
           }();
 
+          final message = () {
+            if (setting.reminderNotificationCustomization.isInVisibleDescription) {
+              return "";
+            }
+            // 最後に飲んだ日付が数日前の場合は常にmissedTakenMessage
+            if (activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber > 1) {
+              return setting.reminderNotificationCustomization.missedTakenMessage;
+            }
+            // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
+            if (dayOffset == 0 && !activePillSheet.todayPillIsAlreadyTaken) {
+              return setting.reminderNotificationCustomization.dailyTakenMessage;
+            }
+            // 本日分の服用記録がある場合で、次の日のループ(dayOffset==1)の時
+            if (dayOffset == 1) {
+              return setting.reminderNotificationCustomization.dailyTakenMessage;
+            }
+            return setting.reminderNotificationCustomization.missedTakenMessage;
+          }();
+
           futures.add(
             Future(() async {
               try {
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
-                  '',
+                  message,
                   reminderDateTime,
                   NotificationDetails(
                     android: const AndroidNotificationDetails(
