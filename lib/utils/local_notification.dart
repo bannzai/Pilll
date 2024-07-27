@@ -13,7 +13,6 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
-import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
