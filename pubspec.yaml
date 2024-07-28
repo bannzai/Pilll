@@ -15,7 +15,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-version: 202407.09.201439
+version: 202407.27.101157
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
@@ -39,11 +39,11 @@ dependencies:
   firebase_remote_config:
   firebase_crashlytics:
   cloud_firestore:
-  url_launcher: ^6.2.6
+  url_launcher: ^6.3.0
   package_info_plus: ^8.0.0
   json_annotation: ^4.9.0
   mockito: ^5.4.4
-  freezed_annotation: ^2.2.0
+  freezed_annotation: ^2.4.4
   riverpod: ^2.4.4
   hooks_riverpod: ^2.4.10
   riverpod_annotation: 2.3.5
@@ -63,10 +63,10 @@ dependencies:
       url: https://github.com/bannzai/flutter_native_timezone.git
       ref: master
   flutter_local_notifications: ^17.1.2
-  webview_flutter: ^4.7.0
+  webview_flutter: ^4.8.0
   collection: ^1.18.0
   crypto:
-  timezone: 0.9.3
+  timezone: 0.9.4
   google_mobile_ads: ^5.0.0
     # home_widget: ^0.5.0
   home_widget:
@@ -85,7 +85,7 @@ dev_dependencies:
 
   flutter_test:
     sdk: flutter
-  build_runner: 2.4.9
+  build_runner: 2.4.11
   json_serializable: 6.8.0
   freezed: ^2.5.2
   custom_lint: ^0.6.4
