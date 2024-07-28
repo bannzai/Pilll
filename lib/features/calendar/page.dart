@@ -171,7 +171,6 @@ class _CalendarPageBody extends StatelessWidget {
                                 date: date,
                                 showsDiaryMark: isExistsPostedDiary(diaries, date),
                                 showsScheduleMark: isExistsSchedule(schedules, date),
-                                showsMenstruationMark: false,
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
                                   transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);

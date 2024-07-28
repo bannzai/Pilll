@@ -12,7 +12,6 @@ class CalendarDayTile extends StatelessWidget {
   final Weekday weekday;
   final bool showsDiaryMark;
   final bool showsScheduleMark;
-  final bool showsMenstruationMark;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile.grayout({
@@ -25,7 +24,6 @@ class CalendarDayTile extends StatelessWidget {
           weekday: weekday,
           showsDiaryMark: false,
           showsScheduleMark: false,
-          showsMenstruationMark: false,
           date: date,
         );
 
@@ -35,7 +33,6 @@ class CalendarDayTile extends StatelessWidget {
     required this.weekday,
     required this.showsDiaryMark,
     required this.showsScheduleMark,
-    required this.showsMenstruationMark,
     required this.onTap,
   });
 
@@ -85,20 +82,6 @@ class CalendarDayTile extends StatelessWidget {
       height: 40,
       child: Stack(
         children: [
-          if (showsMenstruationMark)
-            Positioned.fill(
-              child: Align(
-                alignment: Alignment.center,
-                child: Container(
-                  width: 40,
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: PilllColors.menstruation,
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                ),
-              ),
-            ),
           if (_isToday)
             Positioned(
               child: Align(
