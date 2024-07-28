@@ -139,24 +139,15 @@ class CalendarDayTile extends StatelessWidget {
     if (_isToday) {
       return PilllColors.white;
     }
-    final weekdayColor = () {
-      switch (weekday) {
-        case Weekday.Sunday:
-          return weekday.weekdayColor();
-        case Weekday.Monday:
-          return TextColor.main;
-        case Weekday.Tuesday:
-          return TextColor.main;
-        case Weekday.Wednesday:
-          return TextColor.main;
-        case Weekday.Thursday:
-          return TextColor.main;
-        case Weekday.Friday:
-          return TextColor.main;
-        case Weekday.Saturday:
-          return weekday.weekdayColor();
-      }
-    }();
+    final weekdayColor = switch (weekday) {
+      Weekday.Sunday => weekday.weekdayColor(),
+      Weekday.Monday => TextColor.main,
+      Weekday.Tuesday => TextColor.main,
+      Weekday.Wednesday => TextColor.main,
+      Weekday.Thursday => TextColor.main,
+      Weekday.Friday => TextColor.main,
+      Weekday.Saturday => weekday.weekdayColor()
+    };
     final onTap = this.onTap;
     final alpha = (255 * (onTap != null ? 1 : 0.4)).floor();
     return weekdayColor.withAlpha(alpha);
