@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/diary.codegen.dart';
+import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/features/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
@@ -10,8 +12,8 @@ import 'package:pilll/utils/datetime/day.dart';
 class CalendarDayTile extends StatelessWidget {
   final DateTime date;
   final Weekday weekday;
-  final bool showsDiaryMark;
-  final bool showsScheduleMark;
+  final Diary? diary;
+  final Schedule? schedule;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile.grayout({
@@ -22,8 +24,8 @@ class CalendarDayTile extends StatelessWidget {
           key: key,
           onTap: null,
           weekday: weekday,
-          showsDiaryMark: false,
-          showsScheduleMark: false,
+          diary: null,
+          schedule: null,
           date: date,
         );
 
@@ -31,8 +33,8 @@ class CalendarDayTile extends StatelessWidget {
     super.key,
     required this.date,
     required this.weekday,
-    required this.showsDiaryMark,
-    required this.showsScheduleMark,
+    required this.diary,
+    required this.schedule,
     required this.onTap,
   });
 
@@ -53,10 +55,10 @@ class CalendarDayTile extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      if (showsDiaryMark) ...[
+                      if (diary != null) ...[
                         _diaryMarkWidget(),
                       ],
-                      if (showsScheduleMark) ...[
+                      if (schedule != null) ...[
                         _scheduleMarkWidget(),
                       ],
                     ],

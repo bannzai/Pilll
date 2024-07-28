@@ -1,4 +1,5 @@
 import 'package:async_value_group/async_value_group.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -169,8 +170,8 @@ class _CalendarPageBody extends StatelessWidget {
                               return CalendarDayTile(
                                 weekday: weekday,
                                 date: date,
-                                showsDiaryMark: isExistsPostedDiary(diaries, date),
-                                showsScheduleMark: isExistsSchedule(schedules, date),
+                                diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                                schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
                                   transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
