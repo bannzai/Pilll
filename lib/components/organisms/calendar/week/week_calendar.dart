@@ -58,7 +58,7 @@ class CalendarWeekLine extends HookConsumerWidget {
         ...calendarMenstruationBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
-                bottomOffset: 0,
+                bottomOffset: CalendarBandConst.height,
                 tileWidth: tileWidth,
                 bandBuilder: (_, width) => CalendarMenstruationBand(
                   menstruation: e.menstruation,
@@ -79,7 +79,7 @@ class CalendarWeekLine extends HookConsumerWidget {
         ...calendarScheduledMenstruationBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
-                bottomOffset: 0,
+                bottomOffset: CalendarBandConst.height,
                 tileWidth: tileWidth,
                 bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
                   begin: e.begin,
@@ -91,7 +91,7 @@ class CalendarWeekLine extends HookConsumerWidget {
         ...calendarNextPillSheetBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
-                bottomOffset: CalendarBandConst.height,
+                bottomOffset: 0,
                 tileWidth: tileWidth,
                 bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(
                   begin: e.begin,
