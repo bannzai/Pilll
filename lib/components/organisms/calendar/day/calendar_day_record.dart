@@ -42,21 +42,21 @@ class CalendarDayRecord extends StatelessWidget {
             );
         }
       }
-      if (diary.physicalConditions.isNotEmpty) {
-        widgets.add(
-          const Icon(
-            Icons.accessibility_new,
-            size: 10,
-            color: PilllColors.gray,
-          ),
-        );
-      }
       if (diary.hasSex) {
         widgets.add(
           const Icon(
             Icons.favorite,
             size: 10,
             color: PilllColors.pinkRed,
+          ),
+        );
+      }
+      if (diary.physicalConditions.isNotEmpty) {
+        widgets.add(
+          const Icon(
+            Icons.accessibility_new,
+            size: 10,
+            color: PilllColors.gray,
           ),
         );
       }
