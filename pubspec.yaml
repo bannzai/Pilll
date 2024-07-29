@@ -50,19 +50,19 @@ dependencies:
   flutter_hooks: ^0.20.5
   dotted_border: ^2.1.0
   in_app_review: ^2.0.9
-  uuid: ^4.4.0
+  uuid: ^4.4.2
   async_value_group: ^1.0.1
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   flutter_app_badger: ^1.2.0
-  purchases_flutter: ^6.29.0
+  purchases_flutter: ^6.30.2
   flutter_native_timezone:
     git:
       url: https://github.com/bannzai/flutter_native_timezone.git
       ref: master
-  flutter_local_notifications: ^17.1.2
+  flutter_local_notifications: ^17.2.1+2
   webview_flutter: ^4.8.0
   collection: ^1.18.0
   crypto:
