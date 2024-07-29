@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/organisms/calendar/day/calendar_day_record.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/features/calendar/components/const.dart';
@@ -50,17 +51,7 @@ class CalendarDayTile extends StatelessWidget {
           child: Column(
             children: <Widget>[
               _content(),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  if (diary != null) ...[
-                    _diaryMarkWidget(),
-                  ],
-                  if (schedule != null) ...[
-                    _scheduleMarkWidget(),
-                  ],
-                ],
-              ),
+              CalendarDayRecord(diary: diary, schedule: schedule),
             ],
           ),
         ),

@@ -28,6 +28,7 @@ class CalendarDayRecord extends StatelessWidget {
             widgets.add(
               SvgPicture.asset(
                 "images/laugh.svg",
+                height: 10,
                 colorFilter: const ColorFilter.mode(PilllColors.green, BlendMode.srcIn),
               ),
             );
@@ -35,6 +36,7 @@ class CalendarDayRecord extends StatelessWidget {
             widgets.add(
               SvgPicture.asset(
                 "images/angry.svg",
+                height: 10,
                 colorFilter: const ColorFilter.mode(PilllColors.danger, BlendMode.srcIn),
               ),
             );
@@ -44,6 +46,7 @@ class CalendarDayRecord extends StatelessWidget {
         widgets.add(
           const Icon(
             Icons.accessibility_new,
+            size: 10,
             color: PilllColors.gray,
           ),
         );
@@ -52,6 +55,7 @@ class CalendarDayRecord extends StatelessWidget {
         widgets.add(
           const Icon(
             Icons.favorite,
+            size: 10,
             color: PilllColors.pinkRed,
           ),
         );
@@ -60,6 +64,7 @@ class CalendarDayRecord extends StatelessWidget {
         widgets.add(
           const Icon(
             Icons.description,
+            size: 10,
             color: PilllColors.gray,
           ),
         );
@@ -68,13 +73,15 @@ class CalendarDayRecord extends StatelessWidget {
 
     if (schedule != null) {
       widgets.add(
-        const Icon(Icons.schedule, color: PilllColors.primary, size: 12),
+        const Icon(Icons.schedule, color: PilllColors.primary, size: 10),
       );
     }
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: widgets,
-    );
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      for (final element in widgets.indexed) ...[
+        element.$2,
+        if (element.$1 != widgets.indexed.last.$1) const SizedBox(width: 2),
+      ],
+    ]);
   }
 }
