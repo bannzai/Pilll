@@ -58,7 +58,12 @@ class MonthCalendar extends HookConsumerWidget {
             const Divider(height: 1),
             ...List.generate(CalendarConstants.maxLineCount, (offset) {
               if (weeks.length <= offset) {
-                return Container(height: CalendarConstants.tileHeight);
+                return const Column(
+                  children: [
+                    SizedBox(height: CalendarConstants.tileHeight),
+                    Divider(height: 1),
+                  ],
+                );
               }
 
               final weekCalendar = weekCalendarBuilder(context, diaries, schedules, weeks[offset]);

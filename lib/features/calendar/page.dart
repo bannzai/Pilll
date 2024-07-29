@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/calendar/components/const.dart';
+import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -103,7 +104,9 @@ class _CalendarPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const double shadowHeight = 2;
-    const height = CalendarConstants.tileHeight * CalendarConstants.maxLineCount + shadowHeight;
+    const height =
+        WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + shadowHeight;
+
     return Scaffold(
       floatingActionButton: Container(
         padding: const EdgeInsets.only(right: 10, bottom: 32),
