@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
+import 'package:pilll/features/calendar/components/const.dart';
 import 'package:pilll/features/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
@@ -46,30 +47,19 @@ class CalendarDayTile extends StatelessWidget {
         onPressed: () => onTap != null ? onTap(date) : null,
         child: SizedBox(
           height: CalendarConstants.tileHeight,
-          child: Stack(
+          child: Column(
             children: <Widget>[
-              Positioned.fill(
-                top: 8,
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      if (diary != null) ...[
-                        _diaryMarkWidget(),
-                      ],
-                      if (schedule != null) ...[
-                        _scheduleMarkWidget(),
-                      ],
-                    ],
-                  ),
-                ),
-              ),
-              Positioned(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: _content(),
-                ),
+              _content(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  if (diary != null) ...[
+                    _diaryMarkWidget(),
+                  ],
+                  if (schedule != null) ...[
+                    _scheduleMarkWidget(),
+                  ],
+                ],
               ),
             ],
           ),

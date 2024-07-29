@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/calendar/week/utility.dart';
+import 'package:pilll/features/calendar/components/const.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.codegen.dart';
@@ -11,11 +12,6 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/schedule.dart';
-
-abstract class CalendarConstants {
-  static const double tileHeight = 66;
-  static const int maxLineCount = 6;
-}
 
 class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
@@ -60,14 +56,13 @@ class MonthCalendar extends HookConsumerWidget {
               ),
             ),
             const Divider(height: 1),
-            ...List.generate(6, (offset) {
+            ...List.generate(CalendarConstants.maxLineCount, (offset) {
               if (weeks.length <= offset) {
                 return Container(height: CalendarConstants.tileHeight);
               }
 
               final weekCalendar = weekCalendarBuilder(context, diaries, schedules, weeks[offset]);
               return Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   weekCalendar,
                   const Divider(height: 1),
