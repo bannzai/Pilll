@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 
@@ -74,6 +76,24 @@ class CalendarDayRecord extends StatelessWidget {
     if (schedule != null) {
       widgets.add(
         const Icon(Icons.schedule, color: PilllColors.primary, size: 10),
+      );
+    }
+
+    if (widgets.length > 3) {
+      final remain = widgets.length - 2;
+      widgets = widgets.sublist(0, 2);
+      widgets.add(
+        Text(
+          "+$remain",
+          style: TextStyle(
+            fontFamily: FontFamily.number,
+            fontSize: 9,
+            fontWeight: FontWeight.w400,
+            color: TextColor.highEmphasis(
+              TextColor.black,
+            ),
+          ),
+        ),
       );
     }
 
