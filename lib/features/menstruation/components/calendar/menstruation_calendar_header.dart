@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
-import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/menstruation/data.dart';
 import 'package:pilll/features/menstruation/menstruation_page.dart';
@@ -64,9 +65,8 @@ class MenstruationCalendarHeader extends StatelessWidget {
                         return CalendarDayTile(
                             weekday: weekday,
                             date: date,
-                            showsDiaryMark: isExistsPostedDiary(diaries, date),
-                            showsScheduleMark: isExistsSchedule(schedules, date),
-                            showsMenstruationMark: false,
+                            diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                            schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
                             onTap: (date) {
                               analytics.logEvent(name: "did_select_day_tile_on_menstruation");
                               transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);

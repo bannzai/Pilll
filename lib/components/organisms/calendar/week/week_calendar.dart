@@ -9,7 +9,6 @@ import 'package:pilll/components/organisms/calendar/band/calendar_menstruation_b
 import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_scheduled_menstruation_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_function.dart';
-import 'package:pilll/components/organisms/calendar/week/utility.dart';
 import 'package:pilll/features/calendar/components/diary_or_schedule/diary_or_schedule_sheet.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
@@ -59,7 +58,7 @@ class CalendarWeekLine extends HookConsumerWidget {
         ...calendarMenstruationBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
-                bottomOffset: 0,
+                bottomOffset: CalendarBandConst.height,
                 tileWidth: tileWidth,
                 bandBuilder: (_, width) => CalendarMenstruationBand(
                   menstruation: e.menstruation,
@@ -80,7 +79,7 @@ class CalendarWeekLine extends HookConsumerWidget {
         ...calendarScheduledMenstruationBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
-                bottomOffset: 0,
+                bottomOffset: CalendarBandConst.height,
                 tileWidth: tileWidth,
                 bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
                   begin: e.begin,
@@ -92,7 +91,7 @@ class CalendarWeekLine extends HookConsumerWidget {
         ...calendarNextPillSheetBandModels.where(_contains).map(
               (e) => _buildBand(
                 calendarBandModel: e,
-                bottomOffset: CalendarBandConst.height,
+                bottomOffset: 0,
                 tileWidth: tileWidth,
                 bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(
                   begin: e.begin,
@@ -146,7 +145,7 @@ void transitionWhenCalendarDayTapped(
   }
 
   final diary = diaries.lastWhereOrNull((element) => isSameDay(element.date, date));
-  if (isExistsSchedule(schedules, date)) {
+  if (schedules.where((e) => isSameDay(e.date, date)).isNotEmpty) {
     if (diary == null) {
       showModalBottomSheet(
         context: context,

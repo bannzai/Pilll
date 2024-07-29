@@ -1,8 +1,11 @@
 import 'package:async_value_group/async_value_group.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/calendar/components/const.dart';
+import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -100,6 +103,10 @@ class _CalendarPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double shadowHeight = 2;
+    const height =
+        WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + shadowHeight;
+
     return Scaffold(
       floatingActionButton: Container(
         padding: const EdgeInsets.only(right: 10, bottom: 32),
@@ -129,26 +136,24 @@ class _CalendarPageBody extends StatelessWidget {
           children: <Widget>[
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: 444,
+              height: height,
               child: PageView(
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
                 children: List.generate(_calendarDataSourceLength, (index) {
                   return Container(
-                    margin: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
                       color: PilllColors.white,
                       boxShadow: [
                         BoxShadow(
                           color: PilllColors.shadow,
                           blurRadius: 6.0,
-                          offset: const Offset(0, 2),
+                          offset: const Offset(0, shadowHeight),
                         ),
                       ],
                     ),
-                    // minus value of `margin`. so, it is show shadow
-                    height: 444 - 10,
+                    height: height,
                     width: MediaQuery.of(context).size.width,
                     child: MonthCalendar(
                         dateForMonth: displayedMonth,
@@ -169,9 +174,8 @@ class _CalendarPageBody extends StatelessWidget {
                               return CalendarDayTile(
                                 weekday: weekday,
                                 date: date,
-                                showsDiaryMark: isExistsPostedDiary(diaries, date),
-                                showsScheduleMark: isExistsSchedule(schedules, date),
-                                showsMenstruationMark: false,
+                                diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                                schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
                                 onTap: (date) {
                                   analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
                                   transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
