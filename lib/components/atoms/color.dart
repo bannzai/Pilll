@@ -27,6 +27,9 @@ abstract class PilllColors {
   static const Color lightGray = Color(0xFFCDCFD1);
   static const Color gray = Color(0xFFBEC0C2);
   static const Color gold = Color(0xFFB29446);
+  static const Color green = Color(0xFF528470);
+  static const Color danger = Color(0xFFB00020);
+  static const Color pinkRed = Color(0xFFED7E7E);
 
   static const Color menstruation = Color(0xFFE3BFC2);
   static const Color duration = Color(0xFF6A7DA5);
