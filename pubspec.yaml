@@ -40,7 +40,7 @@ dependencies:
   firebase_crashlytics:
   cloud_firestore:
   url_launcher: ^6.3.0
-  package_info_plus: ^8.0.0
+  package_info_plus: ^8.0.1
   json_annotation: ^4.9.0
   mockito: ^5.4.4
   freezed_annotation: ^2.4.4
