@@ -18,7 +18,7 @@ void main() {
   });
 
   group("#sequentialTodayPillNumber", () {
-    group("has one pill sheet", () {
+    group("ピルシートが一つの場合", () {
       test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
