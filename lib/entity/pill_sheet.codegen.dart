@@ -204,6 +204,13 @@ class PillSheet with _$PillSheet {
   int pillNumberFor({required DateTime targetDate}) {
     return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
   }
+
+  // (int begin, int? last, int today) pillNumbersFor({required DateTime targetDate}) {
+  //   final begin = pillNumberFor(targetDate: beginingDate);
+  //   final last = lastTakenDate == null ? null : pillNumberFor(targetDate: lastTakenDate!);
+  //   final today = pillNumberFor(targetDate: targetDate);
+  //   return (begin, last, today);
+  // }
 }
 
 // upperDate までの休薬期間を集計する
