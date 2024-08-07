@@ -71,8 +71,8 @@ void main() {
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 28);
       });
-      group("pillsheet has rest durations", () {
-        test("rest duration is not end", () {
+      group("服用お休み期間を持つ場合", () {
+        test("服用お休みが終わっていない場合", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -106,7 +106,7 @@ void main() {
           expect(pillSheetGroup.sequentialTodayPillNumber, 22);
         });
 
-        test("rest duration is ended", () {
+        test("服用お休みが終わっている場合", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -140,8 +140,8 @@ void main() {
           );
           expect(pillSheetGroup.sequentialTodayPillNumber, 25);
         });
-        group("pill sheet has plural rest duration. ", () {
-          test("last rest duration is not ended", () {
+        group("複数の服用お休み期間を持つ場合", () {
+          test("最後の服用お休みが終わっていない場合", () {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
             when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
@@ -180,24 +180,27 @@ void main() {
             );
             expect(pillSheetGroup.sequentialTodayPillNumber, 19);
           });
-          test("last rest duration is ended", () {
+          test("最後の服用お休み期間が終わっている場合", () {
             final mockTodayRepository = MockTodayService();
             todayRepository = mockTodayRepository;
             when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
+            // 服用お休みを考慮しない場合は28日間
             final pillSheet = PillSheet(
               id: firestoreIDGenerator(),
               beginingDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               createdAt: now(),
               restDurations: [
+                // 3日分
                 RestDuration(
                   id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-12"),
                   createdDate: DateTime.parse("2020-09-12"),
                   endDate: DateTime.parse("2020-09-15"),
                 ),
+                // 3日分
                 RestDuration(
                   id: "rest_duration_id",
                   beginDate: DateTime.parse("2020-09-22"),
