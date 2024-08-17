@@ -175,13 +175,15 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    if (premiumOrTrial && pillSheetAppearanceMode == PillSheetAppearanceMode.date) {
-      return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
-    } else if (pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
-      return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
-    } else {
-      return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
-    }
+    return switch (pillSheetAppearanceMode) {
+      PillSheetAppearanceMode.number => _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.date => premiumOrTrial
+          ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
+          : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.sequential => _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
+    };
   }
 
   String _displayPillNumberInPillSheet({
