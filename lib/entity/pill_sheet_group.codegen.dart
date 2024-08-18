@@ -411,14 +411,14 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
 }
 
 class PillNumberRange {
+  final PillSheet pillSheet;
   final int begin;
   final int end;
-  final PillSheet pillSheet;
 
   PillNumberRange({
+    required this.pillSheet,
     required this.begin,
     required this.end,
-    required this.pillSheet,
   });
 }
 
