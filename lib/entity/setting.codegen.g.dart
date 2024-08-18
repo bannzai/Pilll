@@ -81,4 +81,5 @@ const _$PillSheetAppearanceModeEnumMap = {
   PillSheetAppearanceMode.number: 'number',
   PillSheetAppearanceMode.date: 'date',
   PillSheetAppearanceMode.sequential: 'sequential',
+  PillSheetAppearanceMode.sequentialWithCycle: 'sequentialWithCycle',
 };

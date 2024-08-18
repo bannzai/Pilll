@@ -6,9 +6,9 @@ class PillNumberRange with _$PillNumberRange {
   final int begin;
   final int end;
 
-  PillNumberRange({
+  const factory PillNumberRange({
     required this.groupIndex,
     required this.begin,
     required this.end,
-  });
+  }) = _PillNumberRange;
 }
