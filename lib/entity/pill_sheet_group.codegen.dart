@@ -397,6 +397,18 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   }
 }
 
+class PillNumberRange {
+  final int begin;
+  final int end;
+  final PillSheet pillSheet;
+
+  PillNumberRange({
+    required this.begin,
+    required this.end,
+    required this.pillSheet,
+  });
+}
+
 @freezed
 class PillSheetGroupDisplayNumberSetting with _$PillSheetGroupDisplayNumberSetting {
   @JsonSerializable(explicitToJson: true)
