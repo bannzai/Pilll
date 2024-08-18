@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+part 'number_range.codegen.freezed.dart';
 
 @freezed
 class PillNumberRange with _$PillNumberRange {
