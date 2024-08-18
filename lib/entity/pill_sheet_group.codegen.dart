@@ -1,6 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
-import 'package:pilll/entity/number_range.dart';
+import 'package:pilll/entity/number_range.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -303,18 +303,17 @@ class PillSheetGroup with _$PillSheetGroup {
       3枚目: なし
       4枚目: 8番から
   */
-  List<NumberRange> menstruationNumberRanges({required Setting setting}) {
+  List<PillNumberRange> menstruationNumberRanges({required Setting setting}) {
     // 0が設定できる。その場合は生理設定をあえて無視したいと考えて0を返す
     if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
       return [];
     }
 
-    final menstruationDateRanges = <NumberRange>[];
-    for (final pillSheet in pillNumberRanges(pillSheetAppearanceMode: setting.pillSheetAppearanceMode)) {
+    final menstruationDateRanges = <PillNumberRange>[];
+    for (final pillSheet in pillSheets) {
       if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
-        final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
-        final right = left.addDays(setting.durationMenstruation - 1);
-        menstruationDateRanges.add(DateRange(left, right));
+        final range = pillNumberRange(pillSheet: pillSheet, pillSheetAppearanceMode: setting.pillSheetAppearanceMode);
+        menstruationDateRanges.add(range);
       } else {
         final summarizedPillCount = pillSheets.fold<int>(
           0,
@@ -439,7 +438,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     }
   }
 
-  NumberRange pillNumberRange({
+  PillNumberRange pillNumberRange({
     required PillSheet pillSheet,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
   }) {
@@ -455,7 +454,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     };
   }
 
-  List<NumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+  List<PillNumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
     return switch (pillSheetAppearanceMode) {
       // TODO: Handle this case.
       PillSheetAppearanceMode.number => throw UnimplementedError(),
