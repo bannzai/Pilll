@@ -1,8 +1,10 @@
-class NumberRange {
+class PillNumberRange {
+  final int groupIndex;
   final int begin;
   final int end;
 
-  NumberRange({
+  PillNumberRange({
+    required this.groupIndex,
     required this.begin,
     required this.end,
   });
