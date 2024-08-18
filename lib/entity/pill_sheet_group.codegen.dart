@@ -303,6 +303,48 @@ class PillSheetGroup with _$PillSheetGroup {
       3枚目: なし
       4枚目: 8番から
   */
+  List<NumberRange> menstruationNumberRanges({required Setting setting}) {
+    // 0が設定できる。その場合は生理設定をあえて無視したいと考えて0を返す
+    if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
+      return [];
+    }
+
+    final menstruationDateRanges = <NumberRange>[];
+    for (final pillSheet in pillNumberRanges(pillSheetAppearanceMode: setting.pillSheetAppearanceMode)) {
+      if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
+        final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
+        final right = left.addDays(setting.durationMenstruation - 1);
+        menstruationDateRanges.add(DateRange(left, right));
+      } else {
+        final summarizedPillCount = pillSheets.fold<int>(
+          0,
+          (previousValue, element) => previousValue + element.typeInfo.totalCount,
+        );
+
+        // ピルシートグループの中に何度pillNumberForFromMenstruation が出てくるか算出
+        final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount ~/ setting.pillNumberForFromMenstruation;
+        // 28番ごとなら28,56,84番目開始の番号とマッチさせるために各始まりの番号を配列にする
+        List<int> fromMenstruations = [];
+        for (var i = 0; i < numberOfMenstruationSettingInPillSheetGroup; i++) {
+          fromMenstruations.add(setting.pillNumberForFromMenstruation + (setting.pillNumberForFromMenstruation * i));
+        }
+
+        final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheet.groupIndex);
+        final begin = offset + 1;
+        final end = begin + (pillSheet.typeInfo.totalCount - 1);
+        for (final fromMenstruation in fromMenstruations) {
+          if (begin <= fromMenstruation && fromMenstruation <= end) {
+            final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
+            final right = left.addDays(setting.durationMenstruation - 1);
+            menstruationDateRanges.add(DateRange(left, right));
+          }
+        }
+      }
+    }
+
+    return menstruationDateRanges;
+  }
+
   List<DateRange> menstruationDateRanges({required Setting setting}) {
     // 0が設定できる。その場合は生理設定をあえて無視したいと考えて0を返す
     if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
@@ -395,6 +437,22 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       // 服用お休みは原則最後に服用した日付の次の日付からスタートする
       return lastTakenDate.addDays(1);
     }
+  }
+
+  NumberRange pillNumberRange({
+    required PillSheet pillSheet,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  }) {
+    return switch (pillSheetAppearanceMode) {
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.number => throw UnimplementedError(),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.date => throw UnimplementedError(),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.sequential => throw UnimplementedError(),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
+    };
   }
 
   List<NumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
