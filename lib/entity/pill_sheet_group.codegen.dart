@@ -1,5 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/number_range.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -396,7 +397,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     }
   }
 
-  List<PillNumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+  List<NumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
     return switch (pillSheetAppearanceMode) {
       // TODO: Handle this case.
       PillSheetAppearanceMode.number => throw UnimplementedError(),
@@ -408,18 +409,6 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
     };
   }
-}
-
-class PillNumberRange {
-  final PillSheet pillSheet;
-  final int begin;
-  final int end;
-
-  PillNumberRange({
-    required this.pillSheet,
-    required this.begin,
-    required this.end,
-  });
 }
 
 @freezed
