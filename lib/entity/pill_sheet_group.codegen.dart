@@ -395,6 +395,19 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       return lastTakenDate.addDays(1);
     }
   }
+
+  List<PillNumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+    return switch (pillSheetAppearanceMode) {
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.number => throw UnimplementedError(),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.date => throw UnimplementedError(),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.sequential => throw UnimplementedError(),
+      // TODO: Handle this case.
+      PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
+    };
+  }
 }
 
 class PillNumberRange {
