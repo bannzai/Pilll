@@ -1,4 +1,7 @@
-class PillNumberRange {
+import 'package:freezed_annotation/freezed_annotation.dart';
+
+@freezed
+class PillNumberRange with _$PillNumberRange {
   final int groupIndex;
   final int begin;
   final int end;
