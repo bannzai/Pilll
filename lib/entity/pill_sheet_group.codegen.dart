@@ -182,8 +182,8 @@ class PillSheetGroup with _$PillSheetGroup {
           ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
           : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.sequential => _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
+      PillSheetAppearanceMode.sequentialWithCycle =>
+        _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
   }
 
