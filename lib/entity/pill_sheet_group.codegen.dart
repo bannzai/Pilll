@@ -6,6 +6,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -200,13 +201,66 @@ class PillSheetGroup with _$PillSheetGroup {
       pillSheetTypes: pillSheetTypes,
       toIndex: pageIndex,
     );
-    var number = offset + pillNumberInPillSheet;
 
+    var number = offset + pillNumberInPillSheet;
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
+      // NOTE: この点が_displayCycleSequentialPillSheetNumberとは違うので注意。Cycle `じゃない` 場合は、各服用お休み期間にbeginPillNumberOffsetが適応される
+      // if (pageIndex == 0) {
       final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
       if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
         number += (beginPillNumberOffset - 1);
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        number %= endPillNumberOffset;
+        if (number == 0) {
+          number = endPillNumberOffset;
+        }
+      }
+    }
+    return "$number";
+  }
+
+  String _displayCycleSequentialPillSheetNumber({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    // NOTE: 最後に服用お休みした日付と引数に対応する日付の差分を表示する
+    // 最後に服用お休みした日付が無い場合は、最初のピルシートの一番初めの日付を代わりに使い、targetDateとの日付の差分を元として計算する
+    final targetPillSheet = pillSheets[pageIndex];
+    final targetDate = targetPillSheet.displayPillTakeDate(pillNumberInPillSheet);
+    DateTime? latestRestDurationEndDate;
+    for (final pillSheet in pillSheets) {
+      if (targetPillSheet.groupIndex < pillSheet.groupIndex) {
+        break;
+      }
+
+      for (final restDuration in pillSheet.restDurations) {
+        final restDurationEndDate = restDuration.endDate;
+        if (restDurationEndDate != null) {
+          if (restDurationEndDate.isBefore(targetDate) || isSameDay(restDurationEndDate, targetDate)) {
+            latestRestDurationEndDate = restDurationEndDate;
+          }
+        }
+      }
+    }
+    int number;
+    if (latestRestDurationEndDate == null) {
+      number = daysBetween(pillSheets.first.beginingDate, targetDate);
+    } else {
+      number = daysBetween(latestRestDurationEndDate, targetDate);
+    }
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      // NOTE: この点が_displaySequentialPillSheetNumberとは違うので注意。Cycleの場合は最初のピルシートの始まりの番号にのみ作用される
+      if (pageIndex == 0) {
+        final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+        if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+          number += (beginPillNumberOffset - 1);
+        }
       }
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
