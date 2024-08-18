@@ -246,6 +246,7 @@ class PillSheetGroup with _$PillSheetGroup {
         }
       }
     }
+
     int number;
     if (latestRestDurationEndDate == null) {
       number = daysBetween(pillSheets.first.beginingDate, targetDate);
