@@ -828,6 +828,30 @@ void main() {
         });
       });
     });
+    group("#dates", () {
+      test("服用お休みが無いパターン", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(pillSheet.dates().length, 28);
+        expect(pillSheet.dates().first, DateTime.parse("2022-05-01"));
+        expect(pillSheet.dates().last, DateTime.parse("2022-05-28"));
+      });
+    });
     group("#summarizedRestDuration", () {
       test("restDurations isEmpty", () {
         final mockTodayRepository = MockTodayService();

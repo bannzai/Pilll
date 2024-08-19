@@ -1,6 +1,5 @@
 import 'package:collection/collection.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
-import 'package:pilll/entity/number_range.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -22,7 +21,6 @@ class PillSheetGroupFirestoreKeys {
 
 @freezed
 class PillSheetGroup with _$PillSheetGroup {
-  const PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroup({
     @JsonKey(includeIfNull: false) String? id,
@@ -40,6 +38,7 @@ class PillSheetGroup with _$PillSheetGroup {
     DateTime? deletedAt,
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
   }) = _PillSheetGroup;
+  const PillSheetGroup._();
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) => _$PillSheetGroupFromJson(json);
 

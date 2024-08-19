@@ -67,7 +67,7 @@ class PillSheet with _$PillSheet {
 
   PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  PillSheet._();
+  const PillSheet._();
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false) required String? id,
@@ -207,8 +207,7 @@ class PillSheet with _$PillSheet {
   }
 
   // ピルシートのピルの日付を取得する
-  late final List<DateTime> dates = _dates();
-  List<DateTime> _dates() {
+  List<DateTime> dates() {
     final List<DateTime> dates = [];
     var offset = 0;
     for (int index = 0; index < typeInfo.totalCount; index++) {
