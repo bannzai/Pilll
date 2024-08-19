@@ -166,8 +166,12 @@ class PillSheetGroup with _$PillSheetGroup {
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.sequential:
         return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
-      default:
+      case PillSheetAppearanceMode.number:
         return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+      case PillSheetAppearanceMode.date:
+        return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+      case PillSheetAppearanceMode.sequentialWithCycle:
+        return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     }
   }
 
