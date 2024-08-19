@@ -1,3 +1,4 @@
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -15,19 +16,16 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+    initializeDateFormatting('ja_JP');
   });
 
   group("#displayPillSheetDate", () {
     group("ピルシートが一つの場合", () {
-      test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
-
+      test("begin: 2020-09-01, end: 2020-09-28", () {
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-14"),
+          beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -43,7 +41,9 @@ void main() {
           pillSheets: [pillSheet],
           createdAt: now(),
         );
-        expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+        expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 1), '9/1');
+        expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 10), "9/10");
+        expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 28), "9/28");
       });
 
       group("服用お休み期間を持つ場合", () {
