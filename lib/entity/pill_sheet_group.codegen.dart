@@ -343,9 +343,12 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
-        for (int index in endPillNumberOffsetIndexes) {
-          for (final (pillMarkIndex, (sublistIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
-            pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+        final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
+        for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
+          if (beginPillNumberOffsetIndex < pillMarks.length) {
+            for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(beginPillNumberOffsetIndex).indexed.toList()) {
+              pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+            }
           }
         }
       }
@@ -390,9 +393,12 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
-        for (int index in endPillNumberOffsetIndexes) {
-          for (final (pillMarkIndex, (sublistIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
-            pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+        final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
+        for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
+          if (beginPillNumberOffsetIndex < pillMarks.length) {
+            for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(beginPillNumberOffsetIndex).indexed.toList()) {
+              pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+            }
           }
         }
       }
