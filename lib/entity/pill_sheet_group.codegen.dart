@@ -290,6 +290,58 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 }
 
+extension PillSheetGroupPillNumberDomain on PillSheetGroup {
+  List<PillNumberRange> pillNumbers({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.number:
+      // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
+      case PillSheetAppearanceMode.date:
+        return pillSheets.map((pillSheet) => PillNumberRange(pillSheet: pillSheet, begin: 1, end: pillSheet.typeInfo.totalCount)).toList();
+      case PillSheetAppearanceMode.sequential:
+        return pillNumbersForSequential();
+      case PillSheetAppearanceMode.sequentialWithCycle:
+        return pillNumbersForSequentialWithCycle();
+    }
+  }
+
+  List<PillNumberRange> pillNumbersForSequential() {
+    final List<PillNumberRange> pillNumberRanges = [];
+    for (final pillSheet in pillSheets) {
+      var begin = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheetTypes,
+        toIndex: pillSheet.groupIndex,
+      );
+      var end = begin + pillSheet.pillSheetType.totalCount - 1;
+
+      final displayNumberSetting = this.displayNumberSetting;
+      if (displayNumberSetting != null) {
+        final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+        if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+          begin += (beginPillNumberOffset - 1);
+        }
+
+        final endPillNumberOffset = displayNumberSetting.endPillNumber;
+        if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+          begin %= endPillNumberOffset;
+          if (begin == 0) {
+            begin = 1;
+          }
+          end %= endPillNumberOffset;
+          if (end == 0) {
+            end = endPillNumberOffset;
+          }
+        }
+      }
+
+      pillNumberRanges.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
+    }
+
+    return pillNumberRanges;
+  }
+
+  List<PillNumberRange> pillNumbersForSequentialWithCycle() {}
+}
+
 /*
     1. setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
     2. setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
