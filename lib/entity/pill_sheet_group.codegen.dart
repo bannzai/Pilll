@@ -210,8 +210,6 @@ class PillSheetGroup with _$PillSheetGroup {
     var number = offset + pillNumberInPillSheet;
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
-      // NOTE: この点が_displayCycleSequentialPillSheetNumberとは違うので注意。Cycle `じゃない` 場合は、各服用お休み期間にbeginPillNumberOffsetが適応される
-      // if (pageIndex == 0) {
       final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
       if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
         number += (beginPillNumberOffset - 1);
@@ -261,12 +259,9 @@ class PillSheetGroup with _$PillSheetGroup {
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
-      // NOTE: この点が_displaySequentialPillSheetNumberとは違うので注意。Cycleの場合は最初のピルシートの始まりの番号にのみ作用される
-      if (pageIndex == 0) {
-        final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-        if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-          number += (beginPillNumberOffset - 1);
-        }
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        number += (beginPillNumberOffset - 1);
       }
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
