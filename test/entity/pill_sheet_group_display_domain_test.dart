@@ -268,6 +268,7 @@ void main() {
     });
   });
 
+  // NOTE: 服用お休み期間に左右されない
   group("#displaySequentialPillSheetNumber", () {
     group("ピルシートが一つの場合", () {
       test("begin: 2020-09-01, end: 2020-09-28", () {
