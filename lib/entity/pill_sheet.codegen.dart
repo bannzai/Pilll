@@ -205,12 +205,23 @@ class PillSheet with _$PillSheet {
     return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
   }
 
-  // (int begin, int? last, int today) pillNumbersFor({required DateTime targetDate}) {
-  //   final begin = pillNumberFor(targetDate: beginingDate);
-  //   final last = lastTakenDate == null ? null : pillNumberFor(targetDate: lastTakenDate!);
-  //   final today = pillNumberFor(targetDate: targetDate);
-  //   return (begin, last, today);
-  // }
+  // ピルシートのピルの日付を取得する
+  List<DateTime> dates() {
+    final List<DateTime> dates = [];
+    for (int index = 0; index < typeInfo.totalCount; index++) {
+      var date = beginingDate.addDays(index).date();
+
+      for (final restDuration in restDurations) {
+        if (restDuration.beginDate.isBefore(date)) {
+          final diff = daysBetween(date, restDuration.endDate ?? today());
+          date.addDays(diff);
+        }
+      }
+
+      dates.add(date);
+    }
+    return dates;
+  }
 }
 
 // upperDate までの休薬期間を集計する
