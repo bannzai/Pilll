@@ -157,6 +157,15 @@ class PillSheetGroup with _$PillSheetGroup {
 
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
+  List<RestDuration> get restDurations {
+    return pillSheets.fold<List<RestDuration>>(
+      [],
+      (previousValue, element) => previousValue + element.restDurations,
+    );
+  }
+}
+
+extension PillSheetGroupDisplayDomain on PillSheetGroup {
   // 日付以外を返す
   String displayPillNumberOnlyNumber({
     required PillSheetAppearanceMode pillSheetAppearanceMode,
@@ -280,13 +289,6 @@ class PillSheetGroup with _$PillSheetGroup {
     required int pillNumberInPillSheet,
   }) {
     return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
-  }
-
-  List<RestDuration> get restDurations {
-    return pillSheets.fold<List<RestDuration>>(
-      [],
-      (previousValue, element) => previousValue + element.restDurations,
-    );
   }
 }
 
