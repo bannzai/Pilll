@@ -67,9 +67,9 @@ class PillSheet with _$PillSheet {
 
   PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  const PillSheet._();
+  PillSheet._();
   @JsonSerializable(explicitToJson: true)
-  const factory PillSheet({
+  factory PillSheet({
     @JsonKey(includeIfNull: false) required String? id,
     @JsonKey() required PillSheetTypeInfo typeInfo,
     @JsonKey(
@@ -183,7 +183,7 @@ class PillSheet with _$PillSheet {
   }
 
   // ピルシートのピルの日付を取得する
-  List<DateTime> dates() {
+  late final List<DateTime> dates = () {
     final List<DateTime> dates = [];
     var offset = 0;
     for (int index = 0; index < typeInfo.totalCount; index++) {
@@ -203,7 +203,7 @@ class PillSheet with _$PillSheet {
       dates.add(date);
     }
     return dates;
-  }
+  }();
 }
 
 // upperDate までの休薬期間を集計する

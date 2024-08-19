@@ -720,7 +720,7 @@ class __$$PillSheetImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetImpl extends _PillSheet {
-  const _$PillSheetImpl(
+  _$PillSheetImpl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
       @JsonKey(
@@ -840,7 +840,7 @@ class _$PillSheetImpl extends _PillSheet {
 }
 
 abstract class _PillSheet extends PillSheet {
-  const factory _PillSheet(
+  factory _PillSheet(
       {@JsonKey(includeIfNull: false) required final String? id,
       @JsonKey() required final PillSheetTypeInfo typeInfo,
       @JsonKey(
@@ -861,7 +861,7 @@ abstract class _PillSheet extends PillSheet {
       final DateTime? deletedAt,
       final int groupIndex,
       final List<RestDuration> restDurations}) = _$PillSheetImpl;
-  const _PillSheet._() : super._();
+  _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
       _$PillSheetImpl.fromJson;
