@@ -283,7 +283,15 @@ class PillSheetGroup with _$PillSheetGroup {
     return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
   }
 
-  /*
+  List<RestDuration> get restDurations {
+    return pillSheets.fold<List<RestDuration>>(
+      [],
+      (previousValue, element) => previousValue + element.restDurations,
+    );
+  }
+}
+
+/*
     1. setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
     2. setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
       pillSheet.begin < pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合の結果を用いる
@@ -303,17 +311,24 @@ class PillSheetGroup with _$PillSheetGroup {
       3枚目: なし
       4枚目: 8番から
   */
-  List<PillNumberRange> menstruationNumberRanges({required Setting setting}) {
+
+typedef PillSheetGroupMenstruationDomainNumberRange = ({int begin, int end, int pillSheetGroupIndex});
+
+extension PillSheetGroupMenstruationDomain on PillSheetGroup {
+  List<PillSheetGroupMenstruationDomainNumberRange> menstruationNumberRanges({required Setting setting}) {
     // 0が設定できる。その場合は生理設定をあえて無視したいと考えて0を返す
     if (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0) {
       return [];
     }
 
-    final menstruationDateRanges = <PillNumberRange>[];
+    final menstruationRanges = <PillSheetGroupMenstruationDomainNumberRange>[];
     for (final pillSheet in pillSheets) {
       if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
-        final range = pillNumberRange(pillSheet: pillSheet, pillSheetAppearanceMode: setting.pillSheetAppearanceMode);
-        menstruationDateRanges.add(range);
+        menstruationRanges.add((
+          begin: setting.pillNumberForFromMenstruation,
+          end: setting.pillNumberForFromMenstruation + setting.durationMenstruation - 1,
+          pillSheetGroupIndex: pillSheet.groupIndex,
+        ));
       } else {
         final summarizedPillCount = pillSheets.fold<int>(
           0,
@@ -333,15 +348,18 @@ class PillSheetGroup with _$PillSheetGroup {
         final end = begin + (pillSheet.typeInfo.totalCount - 1);
         for (final fromMenstruation in fromMenstruations) {
           if (begin <= fromMenstruation && fromMenstruation <= end) {
-            final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
-            final right = left.addDays(setting.durationMenstruation - 1);
-            menstruationDateRanges.add(DateRange(left, right));
+            final begin = fromMenstruation - offset;
+            menstruationRanges.add((
+              begin: begin,
+              end: begin + setting.durationMenstruation - 1,
+              pillSheetGroupIndex: pillSheet.groupIndex,
+            ));
           }
         }
       }
     }
 
-    return menstruationDateRanges;
+    return menstruationRanges;
   }
 
   List<DateRange> menstruationDateRanges({required Setting setting}) {
@@ -384,13 +402,6 @@ class PillSheetGroup with _$PillSheetGroup {
     }
 
     return menstruationDateRanges;
-  }
-
-  List<RestDuration> get restDurations {
-    return pillSheets.fold<List<RestDuration>>(
-      [],
-      (previousValue, element) => previousValue + element.restDurations,
-    );
   }
 }
 
