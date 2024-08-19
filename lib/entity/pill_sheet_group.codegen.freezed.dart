@@ -203,7 +203,7 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetGroupImpl extends _PillSheetGroup {
-  const _$PillSheetGroupImpl(
+  _$PillSheetGroupImpl(
       {@JsonKey(includeIfNull: false) this.id,
       required final List<String> pillSheetIDs,
       required final List<PillSheet> pillSheets,
@@ -305,7 +305,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
 }
 
 abstract class _PillSheetGroup extends PillSheetGroup {
-  const factory _PillSheetGroup(
+  factory _PillSheetGroup(
           {@JsonKey(includeIfNull: false) final String? id,
           required final List<String> pillSheetIDs,
           required final List<PillSheet> pillSheets,
@@ -319,7 +319,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
           final DateTime? deletedAt,
           final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) =
       _$PillSheetGroupImpl;
-  const _PillSheetGroup._() : super._();
+  _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
       _$PillSheetGroupImpl.fromJson;
