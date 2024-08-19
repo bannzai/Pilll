@@ -305,12 +305,16 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
-        return pillSheets.map((pillSheet) => PillNumberRange(pillSheet: pillSheet, begin: 1, end: pillSheet.typeInfo.totalCount)).toList();
+        return pillNumbers();
       case PillSheetAppearanceMode.sequential:
         return pillNumbersForSequential();
       case PillSheetAppearanceMode.sequentialWithCycle:
         return pillNumbersForSequentialWithCycle();
     }
+  }
+
+  List<PillNumberRange> pillNumbers() {
+    return pillSheets.map((pillSheet) => PillNumberRange(pillSheet: pillSheet, begin: 1, end: pillSheet.typeInfo.totalCount)).toList();
   }
 
   List<PillNumberRange> pillNumbersForSequential() {
