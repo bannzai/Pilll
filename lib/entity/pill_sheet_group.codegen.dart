@@ -207,6 +207,14 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     return "$pillNumberInPillSheet";
   }
 
+  @visibleForTesting
+  String displaySequentialPillSheetNumber({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+  }
+
   String _displaySequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
@@ -233,6 +241,14 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
       }
     }
     return "$number";
+  }
+
+  @visibleForTesting
+  String displayCycleSequentialPillSheetNumber({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
   String _displayCycleSequentialPillSheetNumber({
@@ -282,6 +298,14 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
       }
     }
     return "$number";
+  }
+
+  @visibleForTesting
+  String displayPillSheetDate({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
   String _displayPillSheetDate({
