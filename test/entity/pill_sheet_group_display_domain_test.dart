@@ -22,6 +22,10 @@ void main() {
   group("#displayPillSheetDate", () {
     group("ピルシートが一つの場合", () {
       test("begin: 2020-09-01, end: 2020-09-28", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
         const sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
@@ -50,7 +54,7 @@ void main() {
         test("服用お休みが終わっていない場合", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -78,13 +82,17 @@ void main() {
             pillSheets: [pillSheet],
             createdAt: now(),
           );
-          expect(pillSheetGroup.sequentialTodayPillNumber, 22);
+
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 1), '9/1');
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 10), "9/10");
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 22), "9/24");
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 28), "9/30");
         });
 
         test("服用お休みが終わっている場合", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -97,7 +105,7 @@ void main() {
                 id: "rest_duration_id",
                 beginDate: DateTime.parse("2020-09-22"),
                 createdDate: DateTime.parse("2020-09-22"),
-                endDate: DateTime.parse("2020-09-25"),
+                endDate: DateTime.parse("2020-09-23"),
               )
             ],
             typeInfo: PillSheetTypeInfo(
@@ -113,7 +121,11 @@ void main() {
             pillSheets: [pillSheet],
             createdAt: now(),
           );
-          expect(pillSheetGroup.sequentialTodayPillNumber, 25);
+
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 1), '9/1');
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 10), "9/10");
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 22), "9/23");
+          expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 28), "9/29");
         });
         group("複数の服用お休み期間を持つ場合", () {
           test("最後の服用お休みが終わっていない場合", () {
@@ -153,7 +165,11 @@ void main() {
               pillSheets: [pillSheet],
               createdAt: now(),
             );
-            expect(pillSheetGroup.sequentialTodayPillNumber, 19);
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 1), '9/1');
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 10), "9/10");
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 12), "9/15");
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 22), "10/1");
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 28), "10/7");
           });
           test("最後の服用お休み期間が終わっている場合", () {
             final mockTodayRepository = MockTodayService();
@@ -196,7 +212,11 @@ void main() {
               pillSheets: [pillSheet],
               createdAt: now(),
             );
-            expect(pillSheetGroup.sequentialTodayPillNumber, 22);
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 1), '9/1');
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 10), "9/10");
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 12), "9/15");
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 22), "9/28");
+            expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 28), "10/4");
           });
         });
       });
