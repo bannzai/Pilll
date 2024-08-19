@@ -292,9 +292,9 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
 
     int number;
     if (latestRestDurationEndDate == null) {
-      number = daysBetween(pillSheets.first.beginingDate, targetDate);
+      number = daysBetween(pillSheets.first.beginingDate, targetDate) + 1;
     } else {
-      number = daysBetween(latestRestDurationEndDate, targetDate);
+      number = daysBetween(latestRestDurationEndDate, targetDate) + 1;
     }
 
     final displayNumberSetting = this.displayNumberSetting;
