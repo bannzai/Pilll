@@ -234,28 +234,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    final offset = summarizedPillCountWithPillSheetTypesToIndex(
-      pillSheetTypes: pillSheetTypes,
-      toIndex: pageIndex,
-    );
-
-    var number = offset + pillNumberInPillSheet;
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        number += (beginPillNumberOffset - 1);
-      }
-
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        number %= endPillNumberOffset;
-        if (number == 0) {
-          number = endPillNumberOffset;
-        }
-      }
-    }
-    return "$number";
+    return pillNumbersForSequential().where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
   }
 
   @visibleForTesting
