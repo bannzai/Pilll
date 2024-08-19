@@ -299,6 +299,7 @@ void main() {
         expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
       });
 
+      // NOTE: 直接このテストケースの結果に関わってこない部分ではあるが、書いちゃったので残している
       group("服用お休み期間を持つ場合", () {
         test("服用お休みが終わっていない場合", () {
           final mockTodayRepository = MockTodayService();
