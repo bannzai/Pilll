@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$PillNumberRange {
-  int get groupIndex => throw _privateConstructorUsedError;
+  PillSheet get pillSheet => throw _privateConstructorUsedError;
   int get begin => throw _privateConstructorUsedError;
   int get end => throw _privateConstructorUsedError;
 
@@ -31,7 +31,9 @@ abstract class $PillNumberRangeCopyWith<$Res> {
           PillNumberRange value, $Res Function(PillNumberRange) then) =
       _$PillNumberRangeCopyWithImpl<$Res, PillNumberRange>;
   @useResult
-  $Res call({int groupIndex, int begin, int end});
+  $Res call({PillSheet pillSheet, int begin, int end});
+
+  $PillSheetCopyWith<$Res> get pillSheet;
 }
 
 /// @nodoc
@@ -47,15 +49,15 @@ class _$PillNumberRangeCopyWithImpl<$Res, $Val extends PillNumberRange>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? groupIndex = null,
+    Object? pillSheet = null,
     Object? begin = null,
     Object? end = null,
   }) {
     return _then(_value.copyWith(
-      groupIndex: null == groupIndex
-          ? _value.groupIndex
-          : groupIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheet: null == pillSheet
+          ? _value.pillSheet
+          : pillSheet // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
       begin: null == begin
           ? _value.begin
           : begin // ignore: cast_nullable_to_non_nullable
@@ -65,6 +67,14 @@ class _$PillNumberRangeCopyWithImpl<$Res, $Val extends PillNumberRange>
           : end // ignore: cast_nullable_to_non_nullable
               as int,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PillSheetCopyWith<$Res> get pillSheet {
+    return $PillSheetCopyWith<$Res>(_value.pillSheet, (value) {
+      return _then(_value.copyWith(pillSheet: value) as $Val);
+    });
   }
 }
 
@@ -76,7 +86,10 @@ abstract class _$$PillNumberRangeImplCopyWith<$Res>
       __$$PillNumberRangeImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int groupIndex, int begin, int end});
+  $Res call({PillSheet pillSheet, int begin, int end});
+
+  @override
+  $PillSheetCopyWith<$Res> get pillSheet;
 }
 
 /// @nodoc
@@ -90,15 +103,15 @@ class __$$PillNumberRangeImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? groupIndex = null,
+    Object? pillSheet = null,
     Object? begin = null,
     Object? end = null,
   }) {
     return _then(_$PillNumberRangeImpl(
-      groupIndex: null == groupIndex
-          ? _value.groupIndex
-          : groupIndex // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheet: null == pillSheet
+          ? _value.pillSheet
+          : pillSheet // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
       begin: null == begin
           ? _value.begin
           : begin // ignore: cast_nullable_to_non_nullable
@@ -115,10 +128,10 @@ class __$$PillNumberRangeImplCopyWithImpl<$Res>
 
 class _$PillNumberRangeImpl implements _PillNumberRange {
   const _$PillNumberRangeImpl(
-      {required this.groupIndex, required this.begin, required this.end});
+      {required this.pillSheet, required this.begin, required this.end});
 
   @override
-  final int groupIndex;
+  final PillSheet pillSheet;
   @override
   final int begin;
   @override
@@ -126,7 +139,7 @@ class _$PillNumberRangeImpl implements _PillNumberRange {
 
   @override
   String toString() {
-    return 'PillNumberRange(groupIndex: $groupIndex, begin: $begin, end: $end)';
+    return 'PillNumberRange(pillSheet: $pillSheet, begin: $begin, end: $end)';
   }
 
   @override
@@ -134,14 +147,14 @@ class _$PillNumberRangeImpl implements _PillNumberRange {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PillNumberRangeImpl &&
-            (identical(other.groupIndex, groupIndex) ||
-                other.groupIndex == groupIndex) &&
+            (identical(other.pillSheet, pillSheet) ||
+                other.pillSheet == pillSheet) &&
             (identical(other.begin, begin) || other.begin == begin) &&
             (identical(other.end, end) || other.end == end));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, groupIndex, begin, end);
+  int get hashCode => Object.hash(runtimeType, pillSheet, begin, end);
 
   @JsonKey(ignore: true)
   @override
@@ -153,12 +166,12 @@ class _$PillNumberRangeImpl implements _PillNumberRange {
 
 abstract class _PillNumberRange implements PillNumberRange {
   const factory _PillNumberRange(
-      {required final int groupIndex,
+      {required final PillSheet pillSheet,
       required final int begin,
       required final int end}) = _$PillNumberRangeImpl;
 
   @override
-  int get groupIndex;
+  PillSheet get pillSheet;
   @override
   int get begin;
   @override
