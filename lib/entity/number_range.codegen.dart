@@ -10,6 +10,8 @@ class PillNumberRange with _$PillNumberRange {
     required int end,
   }) = _PillNumberRange;
 
+  const PillNumberRange._();
+
   List<int> get numbers => List.generate(pillSheet.typeInfo.totalCount, (index) {
         if (begin <= end) {
           return index + begin;

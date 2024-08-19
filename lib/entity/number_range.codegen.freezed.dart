@@ -126,9 +126,10 @@ class __$$PillNumberRangeImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$PillNumberRangeImpl implements _PillNumberRange {
+class _$PillNumberRangeImpl extends _PillNumberRange {
   const _$PillNumberRangeImpl(
-      {required this.pillSheet, required this.begin, required this.end});
+      {required this.pillSheet, required this.begin, required this.end})
+      : super._();
 
   @override
   final PillSheet pillSheet;
@@ -164,11 +165,12 @@ class _$PillNumberRangeImpl implements _PillNumberRange {
           this, _$identity);
 }
 
-abstract class _PillNumberRange implements PillNumberRange {
+abstract class _PillNumberRange extends PillNumberRange {
   const factory _PillNumberRange(
       {required final PillSheet pillSheet,
       required final int begin,
       required final int end}) = _$PillNumberRangeImpl;
+  const _PillNumberRange._() : super._();
 
   @override
   PillSheet get pillSheet;
