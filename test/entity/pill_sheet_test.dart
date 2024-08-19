@@ -847,9 +847,38 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(pillSheet.dates().length, 28);
-        expect(pillSheet.dates().first, DateTime.parse("2022-05-01"));
-        expect(pillSheet.dates().last, DateTime.parse("2022-05-28"));
+        final actual = pillSheet.dates();
+        final expected = [
+          DateTime.parse("2022-05-01"),
+          DateTime.parse("2022-05-02"),
+          DateTime.parse("2022-05-03"),
+          DateTime.parse("2022-05-04"),
+          DateTime.parse("2022-05-05"),
+          DateTime.parse("2022-05-06"),
+          DateTime.parse("2022-05-07"),
+          DateTime.parse("2022-05-08"),
+          DateTime.parse("2022-05-09"),
+          DateTime.parse("2022-05-10"),
+          DateTime.parse("2022-05-11"),
+          DateTime.parse("2022-05-12"),
+          DateTime.parse("2022-05-13"),
+          DateTime.parse("2022-05-14"),
+          DateTime.parse("2022-05-15"),
+          DateTime.parse("2022-05-16"),
+          DateTime.parse("2022-05-17"),
+          DateTime.parse("2022-05-18"),
+          DateTime.parse("2022-05-19"),
+          DateTime.parse("2022-05-20"),
+          DateTime.parse("2022-05-21"),
+          DateTime.parse("2022-05-22"),
+          DateTime.parse("2022-05-23"),
+          DateTime.parse("2022-05-24"),
+          DateTime.parse("2022-05-25"),
+          DateTime.parse("2022-05-26"),
+          DateTime.parse("2022-05-27"),
+          DateTime.parse("2022-05-28"),
+        ];
+        expect(actual, expected);
       });
     });
     group("#summarizedRestDuration", () {
