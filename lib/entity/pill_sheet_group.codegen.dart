@@ -344,9 +344,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
         for (int index in endPillNumberOffsetIndexes) {
-          final newBeginIndex = index + 1;
-          if (newBeginIndex < pillMarks.length) {
-            pillMarks[newBeginIndex] = pillMarks[newBeginIndex].copyWith(number: 1);
+          for (final (pillMarkIndex, (sublistIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
+            pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
           }
         }
       }
@@ -374,9 +373,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       if (restDurationEndDate != null) {
         final index = pillMarks.indexed.firstWhereOrNull((e) => isSameDay(e.$2.date, restDurationEndDate))?.$1;
         if (index != null) {
-          final newBeginIndex = index + 1;
-          if (newBeginIndex < pillMarks.length) {
-            pillMarks[newBeginIndex] = pillMarks[newBeginIndex].copyWith(number: 1);
+          for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
+            pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
           }
         }
       }
@@ -393,9 +391,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
         final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
         for (int index in endPillNumberOffsetIndexes) {
-          final newBeginIndex = index + 1;
-          if (newBeginIndex < pillMarks.length) {
-            pillMarks[newBeginIndex] = pillMarks[newBeginIndex].copyWith(number: 1);
+          for (final (pillMarkIndex, (sublistIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
+            pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
           }
         }
       }
