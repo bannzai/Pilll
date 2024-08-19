@@ -349,6 +349,191 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       throw _privateConstructorUsedError;
 }
 
+/// @nodoc
+mixin _$PillSheetGroupPillNumberDomainPillMarkValue {
+  PillSheet get pillSheet => throw _privateConstructorUsedError;
+  DateTime get date => throw _privateConstructorUsedError;
+  int get number => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<
+          PillSheetGroupPillNumberDomainPillMarkValue>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
+  factory $PillSheetGroupPillNumberDomainPillMarkValueCopyWith(
+          PillSheetGroupPillNumberDomainPillMarkValue value,
+          $Res Function(PillSheetGroupPillNumberDomainPillMarkValue) then) =
+      _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res,
+          PillSheetGroupPillNumberDomainPillMarkValue>;
+  @useResult
+  $Res call({PillSheet pillSheet, DateTime date, int number});
+
+  $PillSheetCopyWith<$Res> get pillSheet;
+}
+
+/// @nodoc
+class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res,
+        $Val extends PillSheetGroupPillNumberDomainPillMarkValue>
+    implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
+  _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl(
+      this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pillSheet = null,
+    Object? date = null,
+    Object? number = null,
+  }) {
+    return _then(_value.copyWith(
+      pillSheet: null == pillSheet
+          ? _value.pillSheet
+          : pillSheet // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+    ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PillSheetCopyWith<$Res> get pillSheet {
+    return $PillSheetCopyWith<$Res>(_value.pillSheet, (value) {
+      return _then(_value.copyWith(pillSheet: value) as $Val);
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res>
+    implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
+  factory _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith(
+          _$PillSheetGroupPillNumberDomainPillMarkValueImpl value,
+          $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl)
+              then) =
+      __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({PillSheet pillSheet, DateTime date, int number});
+
+  @override
+  $PillSheetCopyWith<$Res> get pillSheet;
+}
+
+/// @nodoc
+class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>
+    extends _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res,
+        _$PillSheetGroupPillNumberDomainPillMarkValueImpl>
+    implements
+        _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res> {
+  __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl(
+      _$PillSheetGroupPillNumberDomainPillMarkValueImpl _value,
+      $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? pillSheet = null,
+    Object? date = null,
+    Object? number = null,
+  }) {
+    return _then(_$PillSheetGroupPillNumberDomainPillMarkValueImpl(
+      pillSheet: null == pillSheet
+          ? _value.pillSheet
+          : pillSheet // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
+      date: null == date
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      number: null == number
+          ? _value.number
+          : number // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$PillSheetGroupPillNumberDomainPillMarkValueImpl
+    implements _PillSheetGroupPillNumberDomainPillMarkValue {
+  const _$PillSheetGroupPillNumberDomainPillMarkValueImpl(
+      {required this.pillSheet, required this.date, required this.number});
+
+  @override
+  final PillSheet pillSheet;
+  @override
+  final DateTime date;
+  @override
+  final int number;
+
+  @override
+  String toString() {
+    return 'PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: $pillSheet, date: $date, number: $number)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PillSheetGroupPillNumberDomainPillMarkValueImpl &&
+            (identical(other.pillSheet, pillSheet) ||
+                other.pillSheet == pillSheet) &&
+            (identical(other.date, date) || other.date == date) &&
+            (identical(other.number, number) || other.number == number));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, pillSheet, date, number);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<
+          _$PillSheetGroupPillNumberDomainPillMarkValueImpl>
+      get copyWith =>
+          __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<
+                  _$PillSheetGroupPillNumberDomainPillMarkValueImpl>(
+              this, _$identity);
+}
+
+abstract class _PillSheetGroupPillNumberDomainPillMarkValue
+    implements PillSheetGroupPillNumberDomainPillMarkValue {
+  const factory _PillSheetGroupPillNumberDomainPillMarkValue(
+          {required final PillSheet pillSheet,
+          required final DateTime date,
+          required final int number}) =
+      _$PillSheetGroupPillNumberDomainPillMarkValueImpl;
+
+  @override
+  PillSheet get pillSheet;
+  @override
+  DateTime get date;
+  @override
+  int get number;
+  @override
+  @JsonKey(ignore: true)
+  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<
+          _$PillSheetGroupPillNumberDomainPillMarkValueImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
 PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(
     Map<String, dynamic> json) {
   return _PillSheetGroupDisplayNumberSetting.fromJson(json);

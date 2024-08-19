@@ -273,20 +273,29 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }
 }
 
+@freezed
+class PillSheetGroupPillNumberDomainPillMarkValue with _$PillSheetGroupPillNumberDomainPillMarkValue {
+  const factory PillSheetGroupPillNumberDomainPillMarkValue({
+    required PillSheet pillSheet,
+    required DateTime date,
+    required int number,
+  }) = _PillSheetGroupPillNumberDomainPillMarkValue;
+}
+
 extension PillSheetGroupPillNumberDomain on PillSheetGroup {
-  PillNumberRange pillNumberRange({
+  PillSheetGroupPillNumberDomainPillMarkValue pillMark({
     required PillSheet pillSheet,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
   }) {
-    return pillNumberRanges(pillSheetAppearanceMode: pillSheetAppearanceMode).firstWhere((e) => e.pillSheet.id == pillSheet.id);
+    return pillMarks(pillSheetAppearanceMode: pillSheetAppearanceMode).firstWhere((e) => e.pillSheet.id == pillSheet.id);
   }
 
-  List<PillNumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
     switch (pillSheetAppearanceMode) {
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
-        return pillNumbers();
+        return pillMarksPillNumber();
       case PillSheetAppearanceMode.sequential:
         return pillNumbersForSequential();
       case PillSheetAppearanceMode.sequentialWithCycle:
@@ -294,8 +303,15 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     }
   }
 
-  List<PillNumberRange> pillNumbers() {
-    return pillSheets.map((pillSheet) => PillNumberRange(pillSheet: pillSheet, begin: 1, end: pillSheet.typeInfo.totalCount)).toList();
+  List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber() {
+    return pillSheets
+        .map((pillSheet) => pillSheet
+            .dates()
+            .indexed
+            .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1))
+            .toList())
+        .flattened
+        .toList();
   }
 
   List<PillNumberRange> pillNumbersForSequential() {

@@ -173,6 +173,7 @@ class PillSheet with _$PillSheet {
 
   // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
   // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
+  // TODO: このメソッドは削除しても良いかも。dates()を使うと良い
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
     final originDate = beginingDate.addDays(pillNumberInPillSheet - 1).date();
     if (restDurations.isEmpty) {
