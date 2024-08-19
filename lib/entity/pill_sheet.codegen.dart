@@ -175,31 +175,7 @@ class PillSheet with _$PillSheet {
   // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
   // TODO: このメソッドは削除しても良いかも。dates()を使うと良い
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
-    final originDate = beginingDate.addDays(pillNumberInPillSheet - 1).date();
-    if (restDurations.isEmpty) {
-      return originDate;
-    }
-
-    var pillTakenDate = originDate;
-    for (final restDuration in restDurations) {
-      final restDurationBeginDate = restDuration.beginDate.date();
-      final restDurationEndDate = restDuration.endDate?.date();
-
-      if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
-        continue;
-      }
-      if (pillTakenDate.isBefore(restDurationBeginDate)) {
-        continue;
-      }
-
-      if (restDurationEndDate != null) {
-        pillTakenDate = pillTakenDate.addDays(daysBetween(restDurationBeginDate, restDurationEndDate));
-      } else {
-        pillTakenDate = pillTakenDate.addDays(daysBetween(restDurationBeginDate, today()));
-      }
-    }
-
-    return pillTakenDate;
+    return dates()[pillNumberInPillSheet - 1];
   }
 
   int pillNumberFor({required DateTime targetDate}) {
