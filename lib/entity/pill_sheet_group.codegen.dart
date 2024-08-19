@@ -293,8 +293,8 @@ class PillSheetGroup with _$PillSheetGroup {
 extension PillSheetGroupPillNumberDomain on PillSheetGroup {
   List<PillNumberRange> pillNumbers({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
     switch (pillSheetAppearanceMode) {
-      case PillSheetAppearanceMode.number:
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
+      case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
         return pillSheets.map((pillSheet) => PillNumberRange(pillSheet: pillSheet, begin: 1, end: pillSheet.typeInfo.totalCount)).toList();
       case PillSheetAppearanceMode.sequential:
