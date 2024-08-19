@@ -342,7 +342,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
+        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number % endPillNumberOffset == 0).map((e) => e.$1);
         final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
         for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
           if (beginPillNumberOffsetIndex < pillMarks.length) {
@@ -392,7 +392,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
       final endPillNumberOffset = displayNumberSetting.endPillNumber;
       if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
+        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number % endPillNumberOffset == 0).map((e) => e.$1);
         final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
         for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
           if (beginPillNumberOffsetIndex < pillMarks.length) {
