@@ -291,7 +291,14 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 extension PillSheetGroupPillNumberDomain on PillSheetGroup {
-  List<PillNumberRange> pillNumbers({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+  PillNumberRange pillNumberRange({
+    required PillSheet pillSheet,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  }) {
+    return pillNumberRanges(pillSheetAppearanceMode: pillSheetAppearanceMode).firstWhere((e) => e.pillSheet.id == pillSheet.id);
+  }
+
+  List<PillNumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
     switch (pillSheetAppearanceMode) {
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
       case PillSheetAppearanceMode.number:
@@ -542,35 +549,6 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
       // 服用お休みは原則最後に服用した日付の次の日付からスタートする
       return lastTakenDate.addDays(1);
     }
-  }
-
-  PillNumberRange pillNumberRange({
-    required PillSheet pillSheet,
-    required PillSheetAppearanceMode pillSheetAppearanceMode,
-  }) {
-    return switch (pillSheetAppearanceMode) {
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.number => throw UnimplementedError(),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.date => throw UnimplementedError(),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.sequential => throw UnimplementedError(),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
-    };
-  }
-
-  List<PillNumberRange> pillNumberRanges({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
-    return switch (pillSheetAppearanceMode) {
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.number => throw UnimplementedError(),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.date => throw UnimplementedError(),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.sequential => throw UnimplementedError(),
-      // TODO: Handle this case.
-      PillSheetAppearanceMode.sequentialWithCycle => throw UnimplementedError(),
-    };
   }
 }
 
