@@ -863,10 +863,10 @@ void main() {
             createdAt: now(),
           );
 
-          // expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          // expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
+          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
+          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
           expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "22");
-          // expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
         });
 
         test("服用お休みが終わっている場合", () {
