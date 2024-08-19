@@ -7,6 +7,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -350,65 +351,53 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     return pillMarks;
   }
 
-  List<List<PillNumberRange>> pillNumbersForSequentialWithCycle() {
-    final List<List<PillNumberRange>> pillNumberRanges = [];
+  List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequentialWithCycle() {
+    List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     for (final pillSheet in pillSheets) {
-      final List<PillNumberRange> list = [];
-      int begin;
-      int end;
-      (int begin, int end) withDisplayNumberSetting(int begin, int end) {
-        final displayNumberSetting = this.displayNumberSetting;
-        if (displayNumberSetting != null) {
-          // NOTE: beginの決め方がpillSheet.groupIndex != 0の時に前の最後の番号+1で決定されるので、beginPllNumberでは変更されない
-          if (pillSheet.groupIndex == 0) {
-            final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-            if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-              begin += (beginPillNumberOffset - 1);
-              end += (beginPillNumberOffset - 1);
-            }
-          }
-
-          final endPillNumberOffset = displayNumberSetting.endPillNumber;
-          if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-            begin %= endPillNumberOffset;
-            if (begin == 0) {
-              begin = 1;
-            }
-            end %= endPillNumberOffset;
-            if (end == 0) {
-              end = endPillNumberOffset;
-            }
-          }
-        }
-        return (begin, end);
-      }
-
-      if (pillSheet.groupIndex == 0) {
-        begin = 1;
-        end = pillSheet.pillSheetType.totalCount;
-      } else {
-        begin = pillNumberRanges.last.last.end + 1;
-        end = begin + pillSheet.pillSheetType.totalCount - 1;
-      }
-
-      if (pillSheet.restDurations.isNotEmpty) {
-        for (final restDuration in pillSheet.restDurations) {
-          final diff = daysBetween(restDuration.beginDate, restDuration.endDate ?? today());
-          (begin, end) = withDisplayNumberSetting(begin, end + diff);
-          list.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
-
-          begin = 1;
-          end = pillSheet.pillSheetType.totalCount;
-        }
-      } else {
-        (begin, end) = withDisplayNumberSetting(begin, end);
-        list.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
-      }
-
-      pillNumberRanges.add(list);
+      pillMarks.addAll(
+        pillSheet.dates().indexed.map(
+              (e) => PillSheetGroupPillNumberDomainPillMarkValue(
+                pillSheet: pillSheet,
+                date: e.$2,
+                number: e.$1 + 1,
+              ),
+            ),
+      );
     }
 
-    return pillNumberRanges;
+    for (final restDuration in restDurations) {
+      final restDurationEndDate = restDuration.endDate;
+      if (restDurationEndDate != null) {
+        final index = pillMarks.indexed.firstWhereOrNull((e) => isSameDay(e.$2.date, restDurationEndDate))?.$1;
+        if (index != null) {
+          final newBeginIndex = index + 1;
+          if (newBeginIndex < pillMarks.length) {
+            pillMarks[newBeginIndex] = pillMarks[newBeginIndex].copyWith(number: 1);
+          }
+        }
+      }
+    }
+
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumberOffset - 1)).toList();
+      }
+
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
+        for (int index in endPillNumberOffsetIndexes) {
+          final newBeginIndex = index + 1;
+          if (newBeginIndex < pillMarks.length) {
+            pillMarks[newBeginIndex] = pillMarks[newBeginIndex].copyWith(number: 1);
+          }
+        }
+      }
+    }
+
+    return pillMarks;
   }
 }
 
