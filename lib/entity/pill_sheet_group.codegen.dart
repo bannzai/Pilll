@@ -334,46 +334,62 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     return pillNumberRanges;
   }
 
-  List<PillNumberRange> pillNumbersForSequentialWithCycle() {
-    final List<PillNumberRange> pillNumberRanges = [];
+  List<List<PillNumberRange>> pillNumbersForSequentialWithCycle() {
+    final List<List<PillNumberRange>> pillNumberRanges = [];
     for (final pillSheet in pillSheets) {
+      final List<PillNumberRange> list = [];
       int begin;
       int end;
+      (int begin, int end) withDisplayNumberSetting(int begin, int end) {
+        final displayNumberSetting = this.displayNumberSetting;
+        if (displayNumberSetting != null) {
+          // NOTE: beginの決め方がpillSheet.groupIndex != 0の時に前の最後の番号+1で決定されるので、beginPllNumberでは変更されない
+          if (pillSheet.groupIndex == 0) {
+            final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+            if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+              begin += (beginPillNumberOffset - 1);
+              end += (beginPillNumberOffset - 1);
+            }
+          }
+
+          final endPillNumberOffset = displayNumberSetting.endPillNumber;
+          if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+            begin %= endPillNumberOffset;
+            if (begin == 0) {
+              begin = 1;
+            }
+            end %= endPillNumberOffset;
+            if (end == 0) {
+              end = endPillNumberOffset;
+            }
+          }
+        }
+        return (begin, end);
+      }
+
       if (pillSheet.groupIndex == 0) {
         begin = 1;
         end = pillSheet.pillSheetType.totalCount;
       } else {
-        begin = pillNumberRanges.last.end + 1;
+        begin = pillNumberRanges.last.last.end + 1;
         end = begin + pillSheet.pillSheetType.totalCount - 1;
       }
 
-      for (final restDuration in pillSheet.restDurations) {
-        final diff = daysBetween(restDuration.beginDate, restDuration.endDate ?? today());
-        end += diff;
+      if (pillSheet.restDurations.isNotEmpty) {
+        for (final restDuration in pillSheet.restDurations) {
+          final diff = daysBetween(restDuration.beginDate, restDuration.endDate ?? today());
+          (begin, end) = withDisplayNumberSetting(begin, end + diff);
+          list.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
+
+          begin = 1;
+          end = pillSheet.pillSheetType.totalCount;
+        }
+      } else {
+        (begin, end) = withDisplayNumberSetting(begin, end);
+        list.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
       }
 
-      final displayNumberSetting = this.displayNumberSetting;
-      if (displayNumberSetting != null) {
-        final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-        if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-          begin += (beginPillNumberOffset - 1);
-          end += (beginPillNumberOffset - 1);
-        }
-
-        final endPillNumberOffset = displayNumberSetting.endPillNumber;
-        if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-          begin %= endPillNumberOffset;
-          if (begin == 0) {
-            begin = 1;
-          }
-          end %= endPillNumberOffset;
-          if (end == 0) {
-            end = endPillNumberOffset;
-          }
-        }
-      }
-
-      pillNumberRanges.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
+      pillNumberRanges.add(list);
     }
 
     return pillNumberRanges;
