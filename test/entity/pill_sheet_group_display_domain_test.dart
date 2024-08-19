@@ -228,7 +228,7 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillShee$1 = PillSheet(
+        final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
@@ -257,7 +257,7 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillShee$1, pillShee$2],
+          pillSheets: [pillSheet, pillShee$2],
           createdAt: now(),
         );
         expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 1), '9/1');
