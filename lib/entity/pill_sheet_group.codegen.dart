@@ -314,40 +314,40 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         .toList();
   }
 
-  List<PillNumberRange> pillNumbersForSequential() {
-    final List<PillNumberRange> pillNumberRanges = [];
+  List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential() {
+    List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     for (final pillSheet in pillSheets) {
-      var begin = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheetTypes,
-        toIndex: pillSheet.groupIndex,
+      pillMarks.addAll(
+        pillSheet.dates().indexed.map(
+              (e) => PillSheetGroupPillNumberDomainPillMarkValue(
+                pillSheet: pillSheet,
+                date: e.$2,
+                number: e.$1 + 1,
+              ),
+            ),
       );
-      var end = begin + pillSheet.pillSheetType.totalCount - 1;
+    }
 
-      final displayNumberSetting = this.displayNumberSetting;
-      if (displayNumberSetting != null) {
-        final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-        if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-          begin += (beginPillNumberOffset - 1);
-          end += (beginPillNumberOffset - 1);
-        }
+    final displayNumberSetting = this.displayNumberSetting;
+    if (displayNumberSetting != null) {
+      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumberOffset - 1)).toList();
+      }
 
-        final endPillNumberOffset = displayNumberSetting.endPillNumber;
-        if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-          begin %= endPillNumberOffset;
-          if (begin == 0) {
-            begin = 1;
-          }
-          end %= endPillNumberOffset;
-          if (end == 0) {
-            end = endPillNumberOffset;
+      final endPillNumberOffset = displayNumberSetting.endPillNumber;
+      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number == endPillNumberOffset).map((e) => e.$1);
+        for (int index in endPillNumberOffsetIndexes) {
+          final newBeginIndex = index + 1;
+          if (newBeginIndex < pillMarks.length) {
+            pillMarks[newBeginIndex] = pillMarks[newBeginIndex].copyWith(number: 1);
           }
         }
       }
-
-      pillNumberRanges.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
     }
 
-    return pillNumberRanges;
+    return pillMarks;
   }
 
   List<List<PillNumberRange>> pillNumbersForSequentialWithCycle() {
