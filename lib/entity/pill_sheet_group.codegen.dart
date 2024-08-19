@@ -208,6 +208,21 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }
 
   @visibleForTesting
+  String displayPillSheetDate({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+  }
+
+  String _displayPillSheetDate({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
+  }
+
+  @visibleForTesting
   String displaySequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
@@ -298,21 +313,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
       }
     }
     return "$number";
-  }
-
-  @visibleForTesting
-  String displayPillSheetDate({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
-    return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
-  }
-
-  String _displayPillSheetDate({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
-    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
   }
 }
 
