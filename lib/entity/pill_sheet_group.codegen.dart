@@ -318,6 +318,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
         if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
           begin += (beginPillNumberOffset - 1);
+          end += (beginPillNumberOffset - 1);
         }
 
         final endPillNumberOffset = displayNumberSetting.endPillNumber;
@@ -339,7 +340,50 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     return pillNumberRanges;
   }
 
-  List<PillNumberRange> pillNumbersForSequentialWithCycle() {}
+  List<PillNumberRange> pillNumbersForSequentialWithCycle() {
+    final List<PillNumberRange> pillNumberRanges = [];
+    for (final pillSheet in pillSheets) {
+      int begin;
+      int end;
+      if (pillSheet.groupIndex == 0) {
+        begin = 1;
+        end = pillSheet.pillSheetType.totalCount;
+      } else {
+        begin = pillNumberRanges.last.end + 1;
+        end = begin + pillSheet.pillSheetType.totalCount - 1;
+      }
+
+      for (final restDuration in pillSheet.restDurations) {
+        final diff = daysBetween(restDuration.beginDate, restDuration.endDate ?? today());
+        end += diff;
+      }
+
+      final displayNumberSetting = this.displayNumberSetting;
+      if (displayNumberSetting != null) {
+        final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
+        if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
+          begin += (beginPillNumberOffset - 1);
+          end += (beginPillNumberOffset - 1);
+        }
+
+        final endPillNumberOffset = displayNumberSetting.endPillNumber;
+        if (endPillNumberOffset != null && endPillNumberOffset > 0) {
+          begin %= endPillNumberOffset;
+          if (begin == 0) {
+            begin = 1;
+          }
+          end %= endPillNumberOffset;
+          if (end == 0) {
+            end = endPillNumberOffset;
+          }
+        }
+      }
+
+      pillNumberRanges.add(PillNumberRange(pillSheet: pillSheet, begin: begin, end: end));
+    }
+
+    return pillNumberRanges;
+  }
 }
 
 /*
