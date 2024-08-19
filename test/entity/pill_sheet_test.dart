@@ -993,6 +993,71 @@ void main() {
         ];
         expect(actual, expected);
       });
+      test("服用お休みが複数有るパターン", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: firestoreIDGenerator(),
+              beginDate: DateTime.parse("2022-05-08"),
+              endDate: DateTime.parse("2022-05-09"),
+              createdDate: now(),
+            ),
+            RestDuration(
+              id: firestoreIDGenerator(),
+              beginDate: DateTime.parse("2022-05-12"),
+              endDate: DateTime.parse("2022-05-14"),
+              createdDate: now(),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final actual = pillSheet.dates();
+        final expected = [
+          DateTime.parse("2022-05-01"),
+          DateTime.parse("2022-05-02"),
+          DateTime.parse("2022-05-03"),
+          DateTime.parse("2022-05-04"),
+          DateTime.parse("2022-05-05"),
+          DateTime.parse("2022-05-06"),
+          DateTime.parse("2022-05-07"),
+          DateTime.parse("2022-05-09"),
+          DateTime.parse("2022-05-10"),
+          DateTime.parse("2022-05-11"),
+          DateTime.parse("2022-05-14"),
+          DateTime.parse("2022-05-15"),
+          DateTime.parse("2022-05-16"),
+          DateTime.parse("2022-05-17"),
+          DateTime.parse("2022-05-18"),
+          DateTime.parse("2022-05-19"),
+          DateTime.parse("2022-05-20"),
+          DateTime.parse("2022-05-21"),
+          DateTime.parse("2022-05-22"),
+          DateTime.parse("2022-05-23"),
+          DateTime.parse("2022-05-24"),
+          DateTime.parse("2022-05-25"),
+          DateTime.parse("2022-05-26"),
+          DateTime.parse("2022-05-27"),
+          DateTime.parse("2022-05-28"),
+          DateTime.parse("2022-05-29"),
+          DateTime.parse("2022-05-30"),
+          DateTime.parse("2022-05-31"),
+        ];
+        expect(actual, expected);
+      });
     });
     group("#summarizedRestDuration", () {
       test("restDurations isEmpty", () {
