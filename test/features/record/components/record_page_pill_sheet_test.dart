@@ -535,7 +535,7 @@ void main() {
 
       final PillSheet pillSheet = PillSheet(
         id: firestoreIDGenerator(),
-        typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
@@ -567,7 +567,7 @@ void main() {
 
           final PillSheet pillSheet = PillSheet(
             id: firestoreIDGenerator(),
-            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
@@ -604,7 +604,7 @@ void main() {
 
           final PillSheet pillSheet = PillSheet(
             id: firestoreIDGenerator(),
-            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
@@ -643,7 +643,7 @@ void main() {
 
           final PillSheet pillSheet = PillSheet(
             id: firestoreIDGenerator(),
-            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
@@ -682,7 +682,7 @@ void main() {
 
           final PillSheet pillSheet = PillSheet(
             id: firestoreIDGenerator(),
-            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-10"),
             createdAt: now(),
