@@ -209,8 +209,9 @@ class PillSheet with _$PillSheet {
   // ピルシートのピルの日付を取得する
   List<DateTime> dates() {
     final List<DateTime> dates = [];
+    var offset = 0;
     for (int index = 0; index < typeInfo.totalCount; index++) {
-      var date = beginingDate.addDays(index).date();
+      var date = beginingDate.addDays(index + offset).date();
 
       for (final restDuration in restDurations) {
         if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
@@ -218,6 +219,7 @@ class PillSheet with _$PillSheet {
           if (restDurationEndDateOrToday.isAfter(date)) {
             final diff = daysBetween(date, restDurationEndDateOrToday);
             date = date.addDays(diff);
+            offset += diff;
           }
         }
       }
