@@ -67,7 +67,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
   int get sequentialTodayPillNumber {
-    return pillNumbersForSequential().firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
+    return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
   }
 
   // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
@@ -76,7 +76,7 @@ class PillSheetGroup with _$PillSheetGroup {
     if (activePillSheetLastTakenDate == null) {
       return 0;
     }
-    return pillNumbersForSequential().firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
+    return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
   }
 
   int get estimatedEndPillNumber {
@@ -110,6 +110,10 @@ class PillSheetGroup with _$PillSheetGroup {
       (previousValue, element) => previousValue + element.restDurations,
     );
   }
+
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber = _pillMarksPillNumber();
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential = _pillNumbersForSequential();
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequentialWithCycle = _pillNumbersForSequentialWithCycle();
 }
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
@@ -181,7 +185,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForSequential().where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
+    return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
   }
 
   @visibleForTesting
@@ -196,11 +200,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForSequentialWithCycle()
-        .where((e) => e.pillSheet.groupIndex == pageIndex)
-        .toList()[pillNumberInPillSheet - 1]
-        .number
-        .toString();
+    return pillNumbersForSequentialWithCycle.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
   }
 }
 
@@ -226,15 +226,15 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
-        return pillMarksPillNumber();
+        return pillMarksPillNumber;
       case PillSheetAppearanceMode.sequential:
-        return pillNumbersForSequential();
+        return pillNumbersForSequential;
       case PillSheetAppearanceMode.sequentialWithCycle:
-        return pillNumbersForSequentialWithCycle();
+        return pillNumbersForSequentialWithCycle;
     }
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillMarksPillNumber() {
     return pillSheets
         .map((pillSheet) =>
             pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
@@ -242,7 +242,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         .toList();
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForSequential() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     var offset = 0;
     for (final pillSheet in pillSheets) {
@@ -283,7 +283,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     return pillMarks;
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequentialWithCycle() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForSequentialWithCycle() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     var offset = 0;
     for (final pillSheet in pillSheets) {
