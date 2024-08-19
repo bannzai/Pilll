@@ -9,4 +9,15 @@ class PillNumberRange with _$PillNumberRange {
     required int begin,
     required int end,
   }) = _PillNumberRange;
+
+  List<int> get numbers => List.generate(pillSheet.typeInfo.totalCount, (index) {
+        if (begin <= end) {
+          return index + begin;
+        }
+        if (index + begin < pillSheet.typeInfo.totalCount) {
+          return index + begin;
+        } else {
+          return index + begin - pillSheet.typeInfo.totalCount;
+        }
+      }).toList();
 }
