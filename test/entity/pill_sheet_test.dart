@@ -847,7 +847,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final actual = pillSheet.dates();
+        final actual = pillSheet.dates;
         final expected = [
           DateTime.parse("2022-05-01"),
           DateTime.parse("2022-05-02"),
@@ -901,7 +901,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final actual = pillSheet.dates();
+        final actual = pillSheet.dates;
         final expected = [
           DateTime.parse("2022-05-01"),
           DateTime.parse("2022-05-02"),
@@ -960,7 +960,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final actual = pillSheet.dates();
+        final actual = pillSheet.dates;
         final expected = [
           DateTime.parse("2022-05-01"),
           DateTime.parse("2022-05-02"),
@@ -1025,7 +1025,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final actual = pillSheet.dates();
+        final actual = pillSheet.dates;
         final expected = [
           DateTime.parse("2022-05-01"),
           DateTime.parse("2022-05-02"),

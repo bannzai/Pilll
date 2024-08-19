@@ -175,7 +175,7 @@ class PillSheet with _$PillSheet {
   // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
   // TODO: このメソッドは削除しても良いかも。dates()を使うと良い
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
-    return dates()[pillNumberInPillSheet - 1];
+    return dates[pillNumberInPillSheet - 1];
   }
 
   int pillNumberFor({required DateTime targetDate}) {

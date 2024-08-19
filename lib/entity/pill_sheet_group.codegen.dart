@@ -236,11 +236,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber() {
     return pillSheets
-        .map((pillSheet) => pillSheet
-            .dates()
-            .indexed
-            .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1))
-            .toList())
+        .map((pillSheet) =>
+            pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
         .flattened
         .toList();
   }
@@ -249,7 +246,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     var offset = 0;
     for (final pillSheet in pillSheets) {
-      final dates = pillSheet.dates();
+      final dates = pillSheet.dates;
       pillMarks.addAll(
         dates.indexed.map(
           (e) => PillSheetGroupPillNumberDomainPillMarkValue(
@@ -290,7 +287,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     var offset = 0;
     for (final pillSheet in pillSheets) {
-      final dates = pillSheet.dates();
+      final dates = pillSheet.dates;
       pillMarks.addAll(
         dates.indexed.map(
           (e) => PillSheetGroupPillNumberDomainPillMarkValue(
