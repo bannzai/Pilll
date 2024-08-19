@@ -66,70 +66,18 @@ class PillSheetGroup with _$PillSheetGroup {
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activePillSheet == null || _isDeleted;
 
+  // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
   int get sequentialTodayPillNumber {
-    if (pillSheets.isEmpty) {
-      return 0;
-    }
-    final activePillSheet = this.activePillSheet;
-    if (activePillSheet == null) {
-      return 0;
-    }
-
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
-
-    var sequentialTodayPillNumber = passedPillCountForPillSheetTypes + activePillSheet.todayPillNumber;
-
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        sequentialTodayPillNumber += (beginPillNumberOffset - 1);
-      }
-
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        sequentialTodayPillNumber %= endPillNumberOffset;
-        if (sequentialTodayPillNumber == 0) {
-          sequentialTodayPillNumber = endPillNumberOffset;
-        }
-      }
-    }
-
-    return sequentialTodayPillNumber;
+    return pillNumbersForSequential().firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
   }
 
+  // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
   int get sequentialLastTakenPillNumber {
-    if (pillSheets.isEmpty) {
+    final activePillSheetLastTakenDate = activePillSheet?.lastTakenDate;
+    if (activePillSheetLastTakenDate == null) {
       return 0;
     }
-    final activePillSheet = this.activePillSheet;
-    if (activePillSheet == null) {
-      return 0;
-    }
-
-    final passedPillCountForPillSheetTypes = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: activePillSheet.groupIndex);
-
-    var sequentialLastTakenPillNumber = passedPillCountForPillSheetTypes + activePillSheet.lastTakenPillNumber;
-
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        sequentialLastTakenPillNumber += (beginPillNumberOffset - 1);
-      }
-
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        sequentialLastTakenPillNumber %= endPillNumberOffset;
-        if (sequentialTodayPillNumber == 0) {
-          sequentialLastTakenPillNumber = endPillNumberOffset;
-        }
-      }
-    }
-
-    return sequentialLastTakenPillNumber;
+    return pillNumbersForSequential().firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
   }
 
   int get estimatedEndPillNumber {
