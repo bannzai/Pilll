@@ -269,49 +269,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    // NOTE: 最後に服用お休みした日付と引数に対応する日付の差分を表示する
-    // 最後に服用お休みした日付が無い場合は、最初のピルシートの一番初めの日付を代わりに使い、targetDateとの日付の差分を元として計算する
-    final targetPillSheet = pillSheets[pageIndex];
-    final targetDate = targetPillSheet.displayPillTakeDate(pillNumberInPillSheet);
-    DateTime? latestRestDurationEndDate;
-    for (final pillSheet in pillSheets) {
-      if (targetPillSheet.groupIndex < pillSheet.groupIndex) {
-        break;
-      }
-
-      for (final restDuration in pillSheet.restDurations) {
-        final restDurationEndDate = restDuration.endDate;
-        if (restDurationEndDate != null) {
-          if (restDurationEndDate.isBefore(targetDate) || isSameDay(restDurationEndDate, targetDate)) {
-            latestRestDurationEndDate = restDurationEndDate;
-          }
-        }
-      }
-    }
-
-    int number;
-    if (latestRestDurationEndDate == null) {
-      number = daysBetween(pillSheets.first.beginingDate, targetDate) + 1;
-    } else {
-      number = daysBetween(latestRestDurationEndDate, targetDate) + 1;
-    }
-
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        number += (beginPillNumberOffset - 1);
-      }
-
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        number %= endPillNumberOffset;
-        if (number == 0) {
-          number = endPillNumberOffset;
-        }
-      }
-    }
-    return "$number";
+    return pillNumbersForSequentialWithCycle()[pageIndex].numbers[pillNumberInPillSheet - 1].toString();
   }
 }
 
