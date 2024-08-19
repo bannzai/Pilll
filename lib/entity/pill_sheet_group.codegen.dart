@@ -321,16 +321,19 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
+    var offset = 0;
     for (final pillSheet in pillSheets) {
+      final dates = pillSheet.dates();
       pillMarks.addAll(
-        pillSheet.dates().indexed.map(
-              (e) => PillSheetGroupPillNumberDomainPillMarkValue(
-                pillSheet: pillSheet,
-                date: e.$2,
-                number: e.$1 + 1,
-              ),
-            ),
+        dates.indexed.map(
+          (e) => PillSheetGroupPillNumberDomainPillMarkValue(
+            pillSheet: pillSheet,
+            date: e.$2,
+            number: e.$1 + 1 + offset,
+          ),
+        ),
       );
+      offset += dates.length;
     }
 
     final displayNumberSetting = this.displayNumberSetting;
@@ -359,16 +362,19 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequentialWithCycle() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
+    var offset = 0;
     for (final pillSheet in pillSheets) {
+      final dates = pillSheet.dates();
       pillMarks.addAll(
-        pillSheet.dates().indexed.map(
-              (e) => PillSheetGroupPillNumberDomainPillMarkValue(
-                pillSheet: pillSheet,
-                date: e.$2,
-                number: e.$1 + 1,
-              ),
-            ),
+        dates.indexed.map(
+          (e) => PillSheetGroupPillNumberDomainPillMarkValue(
+            pillSheet: pillSheet,
+            date: e.$2,
+            number: e.$1 + 1 + offset,
+          ),
+        ),
       );
+      offset += dates.length;
     }
 
     for (final restDuration in restDurations) {
