@@ -213,9 +213,8 @@ class PillSheet with _$PillSheet {
       var date = beginingDate.addDays(index).date();
 
       for (final restDuration in restDurations) {
-        if (restDuration.beginDate.isBefore(date)) {
-          final diff = daysBetween(date, restDuration.endDate ?? today());
-          date.addDays(diff);
+        if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
+          date = restDuration.endDate ?? today();
         }
       }
 
