@@ -270,7 +270,11 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForSequentialWithCycle().where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].toString();
+    return pillNumbersForSequentialWithCycle()
+        .where((e) => e.pillSheet.groupIndex == pageIndex)
+        .toList()[pillNumberInPillSheet - 1]
+        .number
+        .toString();
   }
 }
 
