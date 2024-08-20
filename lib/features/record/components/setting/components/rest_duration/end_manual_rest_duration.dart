@@ -33,9 +33,7 @@ class EndManualRestDuration extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     void didEndRestDuration(PillSheetGroup endedRestDurationPillSheetGroup) {
-      // TODO: [CyclicSequential]
-      if (endedRestDurationPillSheetGroup.sequentialLastTakenPillNumber > 0 &&
-          pillSheetGroup.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+      if (endedRestDurationPillSheetGroup.sequentialLastTakenPillNumber > 0 && pillSheetGroup.pillSheetAppearanceMode.isSequential) {
         showEndRestDurationModal(
           context,
           endedRestDurationPillSheetGroup: endedRestDurationPillSheetGroup,
