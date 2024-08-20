@@ -51,6 +51,7 @@ void main() {
             pillSheetIDs: ["1", "2"],
             pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
           var setting = const Setting(
             pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_24_0],
@@ -106,6 +107,7 @@ void main() {
             pillSheetIDs: ["1", "2"],
             pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
           var setting = const Setting(
             pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_21_0],
@@ -161,6 +163,7 @@ void main() {
             pillSheetIDs: ["1", "2"],
             pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
           var setting = const Setting(
             pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_24_0],
@@ -234,7 +237,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -279,7 +287,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
@@ -329,7 +342,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -381,7 +399,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -451,7 +474,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -494,7 +522,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: 23,
@@ -544,7 +577,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: 0,
@@ -596,6 +634,7 @@ void main() {
             pillSheetIDs: ["1", "2"],
             pillSheets: [pillSheet, pillShee$2],
             createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
           // pillSheetGroup.pillSheets.length * 2個のDateRangeが返ってくる
@@ -655,7 +694,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 1),
             [
@@ -688,7 +732,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 2),
             [
@@ -725,7 +774,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 3),
             [
@@ -783,7 +837,12 @@ void main() {
             lastTakenDate: null,
             createdAt: now(),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 1),
             [
@@ -842,7 +901,12 @@ void main() {
                 createdDate: DateTime.parse("2020-09-08"),
               ),
             ]);
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         expect(
           nextPillSheetDateRanges(pillSheetGroup, 1),
           [

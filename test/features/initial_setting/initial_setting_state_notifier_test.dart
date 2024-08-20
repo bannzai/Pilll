@@ -293,7 +293,12 @@ void main() {
         createdAt: now(),
       );
 
-      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [pillSheet.copyWith(id: "sheet_id")],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
@@ -381,6 +386,7 @@ void main() {
           pillShee$2.copyWith(id: "sheet_id2"),
         ],
         createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
@@ -466,7 +472,12 @@ void main() {
         createdAt: now(),
       );
 
-      final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["sheet_id"], pillSheets: [pillSheet.copyWith(id: "sheet_id")], createdAt: now());
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [pillSheet.copyWith(id: "sheet_id")],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
       when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 

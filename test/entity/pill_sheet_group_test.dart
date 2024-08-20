@@ -428,6 +428,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         expect(pillSheetGroup.sequentialLastTakenPillNumber, 0);
       });
@@ -586,6 +587,7 @@ void main() {
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
             createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 0);
         });
@@ -915,6 +917,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillNumberForFromMenstruation: 0,
@@ -948,6 +951,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillNumberForFromMenstruation: 24,
@@ -981,6 +985,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillNumberForFromMenstruation: 29,
@@ -1014,6 +1019,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillNumberForFromMenstruation: 10,
@@ -1076,6 +1082,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillNumberForFromMenstruation: 0,
@@ -1135,6 +1142,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
         const setting = Setting(
@@ -1207,6 +1215,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
         const setting = Setting(
@@ -1279,6 +1288,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
         const setting = Setting(
@@ -1343,6 +1353,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
         const setting = Setting(
@@ -1403,6 +1414,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
         const setting = Setting(
@@ -1466,6 +1478,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3"],
           pillSheets: [pillSheet, pillShee$2, pillShee$3],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
 
         const setting = Setting(

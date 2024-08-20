@@ -34,7 +34,12 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [],
+          pillSheets: [],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         const setting = Setting(
           pillSheetTypes: [PillSheetType.pillsheet_21],
           pillNumberForFromMenstruation: 22,
@@ -77,7 +82,12 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [],
+          pillSheets: [],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         const setting = Setting(
           pillSheetTypes: [PillSheetType.pillsheet_21],
           pillNumberForFromMenstruation: 22,
@@ -127,6 +137,7 @@ void main() {
             ),
           ],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillSheetTypes: [PillSheetType.pillsheet_21],
@@ -169,6 +180,7 @@ void main() {
             ),
           ],
           createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         const setting = Setting(
           pillSheetTypes: [PillSheetType.pillsheet_21],

@@ -2,6 +2,7 @@ import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/button/rest_duration_button.dart';
@@ -60,7 +61,12 @@ void main() {
             createdAt: now(),
           )
         ];
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
+          pillSheets: pillSheets,
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.beginDate.isBefore(now()))
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
@@ -125,7 +131,12 @@ void main() {
             createdAt: now(),
           )
         ];
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
+          pillSheets: pillSheets,
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
@@ -191,7 +202,12 @@ void main() {
             createdAt: now(),
           )
         ];
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: pillSheets.map((e) => e.id!).toList(), pillSheets: pillSheets, createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
+          pillSheets: pillSheets,
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
 
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
