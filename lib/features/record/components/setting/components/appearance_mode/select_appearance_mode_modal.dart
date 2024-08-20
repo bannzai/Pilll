@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -22,6 +23,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
     final setSetting = ref.watch(setSettingProvider);
+    final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return Container(
@@ -48,6 +50,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.date,
@@ -58,6 +61,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.number,
@@ -68,6 +72,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.sequential,
@@ -78,6 +83,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   setSetting: setSetting,
+                  setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.cyclicSequential,
@@ -95,6 +101,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget _row(
     BuildContext context, {
     required SetSetting setSetting,
+    required SetPillSheetGroup setPillSheetGroup,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
     required User user,
@@ -111,12 +118,14 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
         if (user.isPremium || user.isTrial) {
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         }
       },
