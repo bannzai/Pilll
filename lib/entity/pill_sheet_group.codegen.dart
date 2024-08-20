@@ -68,7 +68,15 @@ class PillSheetGroup with _$PillSheetGroup {
 
   // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
   int get sequentialTodayPillNumber {
-    return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.number:
+      case PillSheetAppearanceMode.date:
+        return 0;
+      case PillSheetAppearanceMode.sequential:
+        return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
+      case PillSheetAppearanceMode.cyclicSequential:
+        return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
+    }
   }
 
   // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
@@ -77,7 +85,15 @@ class PillSheetGroup with _$PillSheetGroup {
     if (activePillSheetLastTakenDate == null) {
       return 0;
     }
-    return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.number:
+      case PillSheetAppearanceMode.date:
+        return 0;
+      case PillSheetAppearanceMode.sequential:
+        return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
+      case PillSheetAppearanceMode.cyclicSequential:
+        return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
+    }
   }
 
   int get estimatedEndSequentialPillNumber {
