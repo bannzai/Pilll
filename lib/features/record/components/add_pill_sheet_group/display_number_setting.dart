@@ -27,7 +27,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
       return Container();
     }
 
-    final estimatedEndPillNumber = pillSheetGroup.estimatedEndSequentialPillNumber;
+    final estimatedEndPillNumber = pillSheetGroup.sequentialEstimatedEndPillNumber;
     final beginDisplayPillNumber = useState(estimatedEndPillNumber + 1);
     final textFieldController = useTextEditingController(text: "${beginDisplayPillNumber.value}");
 

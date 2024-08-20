@@ -96,7 +96,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
   }
 
-  int get estimatedEndSequentialPillNumber {
+  int get sequentialEstimatedEndPillNumber {
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:

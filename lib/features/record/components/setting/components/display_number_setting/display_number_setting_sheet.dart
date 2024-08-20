@@ -26,7 +26,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber);
 
     final beginTextFieldController = useTextEditingController(text: "${begin.value ?? 1}");
-    final endTextFieldController = useTextEditingController(text: "${end.value ?? pillSheetGroup.estimatedEndSequentialPillNumber}");
+    final endTextFieldController = useTextEditingController(text: "${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}");
 
     final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
 
@@ -181,7 +181,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "前回のシートの最後：${beforePillSheetGroup.estimatedEndSequentialPillNumber}日目",
+                              "前回のシートの最後：${beforePillSheetGroup.sequentialEstimatedEndPillNumber}日目",
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
