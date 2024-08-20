@@ -551,12 +551,6 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
         returnValue: false,
       ) as bool);
   @override
-  _i6.PillSheetAppearanceMode get pillSheetAppearanceMode =>
-      (super.noSuchMethod(
-        Invocation.getter(#pillSheetAppearanceMode),
-        returnValue: _i6.PillSheetAppearanceMode.number,
-      ) as _i6.PillSheetAppearanceMode);
-  @override
   bool get isAutomaticallyCreatePillSheet => (super.noSuchMethod(
         Invocation.getter(#isAutomaticallyCreatePillSheet),
         returnValue: false,
@@ -570,6 +564,12 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
           Invocation.getter(#reminderNotificationCustomization),
         ),
       ) as _i5.ReminderNotificationCustomization);
+  @override
+  _i6.PillSheetAppearanceMode get pillSheetAppearanceMode =>
+      (super.noSuchMethod(
+        Invocation.getter(#pillSheetAppearanceMode),
+        returnValue: _i6.PillSheetAppearanceMode.number,
+      ) as _i6.PillSheetAppearanceMode);
   @override
   _i6.$SettingCopyWith<_i6.Setting> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),

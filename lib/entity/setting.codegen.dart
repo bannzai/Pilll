@@ -53,9 +53,12 @@ class Setting with _$Setting {
     @Default([]) List<ReminderTime> reminderTimes,
     required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
-    @Default(PillSheetAppearanceMode.number) PillSheetAppearanceMode pillSheetAppearanceMode,
     @Default(false) bool isAutomaticallyCreatePillSheet,
     @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
+    // Deprecated
+    @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
+    @Default(PillSheetAppearanceMode.number)
+    PillSheetAppearanceMode pillSheetAppearanceMode,
     required String? timezoneDatabaseName,
   }) = _Setting;
 

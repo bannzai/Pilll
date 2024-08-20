@@ -34,10 +34,6 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
       isOnReminder: json['isOnReminder'] as bool,
       isOnNotifyInNotTakenDuration:
           json['isOnNotifyInNotTakenDuration'] as bool? ?? true,
-      pillSheetAppearanceMode: $enumDecodeNullable(
-              _$PillSheetAppearanceModeEnumMap,
-              json['pillSheetAppearanceMode']) ??
-          PillSheetAppearanceMode.number,
       isAutomaticallyCreatePillSheet:
           json['isAutomaticallyCreatePillSheet'] as bool? ?? false,
       reminderNotificationCustomization:
@@ -46,6 +42,10 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) =>
               : ReminderNotificationCustomization.fromJson(
                   json['reminderNotificationCustomization']
                       as Map<String, dynamic>),
+      pillSheetAppearanceMode: $enumDecodeNullable(
+              _$PillSheetAppearanceModeEnumMap,
+              json['pillSheetAppearanceMode']) ??
+          PillSheetAppearanceMode.number,
       timezoneDatabaseName: json['timezoneDatabaseName'] as String?,
     );
 
@@ -59,11 +59,11 @@ Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) =>
       'reminderTimes': instance.reminderTimes.map((e) => e.toJson()).toList(),
       'isOnReminder': instance.isOnReminder,
       'isOnNotifyInNotTakenDuration': instance.isOnNotifyInNotTakenDuration,
-      'pillSheetAppearanceMode':
-          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode]!,
       'isAutomaticallyCreatePillSheet': instance.isAutomaticallyCreatePillSheet,
       'reminderNotificationCustomization':
           instance.reminderNotificationCustomization.toJson(),
+      'pillSheetAppearanceMode':
+          _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode]!,
       'timezoneDatabaseName': instance.timezoneDatabaseName,
     };
 
