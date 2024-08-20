@@ -27,14 +27,14 @@ class ReminderTime with _$ReminderTime {
 }
 
 enum PillSheetAppearanceMode {
- @JsonValue("number")
+  @JsonValue("number")
   number,
   @JsonValue("date")
   date,
   @JsonValue("sequential")
   sequential,
-  @JsonValue("sequentialWithCycle")
-  sequentialWithCycle,
+  @JsonValue("cyclicSequential")
+  cyclicSequential,
 }
 
 class SettingFirestoreFieldKeys {

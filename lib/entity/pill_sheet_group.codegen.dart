@@ -130,7 +130,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
         return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.date:
         return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
-      case PillSheetAppearanceMode.sequentialWithCycle:
+      case PillSheetAppearanceMode.cyclicSequential:
         return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     }
   }
@@ -147,7 +147,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
           ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
           : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.sequential => _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.sequentialWithCycle =>
+      PillSheetAppearanceMode.cyclicSequential =>
         _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
   }
@@ -229,7 +229,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         return pillMarksPillNumber;
       case PillSheetAppearanceMode.sequential:
         return pillNumbersForSequential;
-      case PillSheetAppearanceMode.sequentialWithCycle:
+      case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForSequentialWithCycle;
     }
   }
