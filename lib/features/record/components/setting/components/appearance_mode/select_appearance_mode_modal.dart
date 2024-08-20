@@ -15,17 +15,20 @@ import 'package:pilll/utils/local_notification.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final User user;
-  final PillSheetGroup pillSheetGroup;
 
-  const SelectAppearanceModeModal({super.key, required this.user, required this.pillSheetGroup});
+  const SelectAppearanceModeModal({super.key, required this.user});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
+    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
     final setSetting = ref.watch(setSettingProvider);
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
+    if (pillSheetGroup == null) {
+      return const SizedBox();
+    }
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
@@ -49,6 +52,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                 _row(
                   context,
                   setting: setting,
+                  pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
@@ -60,6 +64,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                 _row(
                   context,
                   setting: setting,
+                  pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
@@ -71,6 +76,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                 _row(
                   context,
                   setting: setting,
+                  pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
@@ -82,6 +88,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                 _row(
                   context,
                   setting: setting,
+                  pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
@@ -104,6 +111,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     required SetPillSheetGroup setPillSheetGroup,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
+    required PillSheetGroup pillSheetGroup,
     required User user,
     required PillSheetAppearanceMode mode,
     required String text,
@@ -164,7 +172,6 @@ void showSelectAppearanceModeModal(
     context: context,
     builder: (context) => SelectAppearanceModeModal(
       user: user,
-      pillSheetGroup: pillSheetGroup,
     ),
     backgroundColor: Colors.transparent,
   );
