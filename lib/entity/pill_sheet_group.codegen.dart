@@ -81,26 +81,15 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   int get estimatedEndSequentialPillNumber {
-    var estimatedEndPillNumber =
-        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
-
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        estimatedEndPillNumber += (beginPillNumberOffset - 1);
-      }
-
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        estimatedEndPillNumber %= endPillNumberOffset;
-        if (sequentialTodayPillNumber == 0) {
-          estimatedEndPillNumber = endPillNumberOffset;
-        }
-      }
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.number:
+      case PillSheetAppearanceMode.date:
+        return 0;
+      case PillSheetAppearanceMode.sequential:
+        return pillNumbersForSequential.last.number;
+      case PillSheetAppearanceMode.cyclicSequential:
+        return pillNumbersForCyclicSequential.last.number;
     }
-
-    return estimatedEndPillNumber;
   }
 
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
