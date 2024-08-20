@@ -37,6 +37,19 @@ enum PillSheetAppearanceMode {
   cyclicSequential,
 }
 
+extension PillSheetAppearanceModeExt on PillSheetAppearanceMode {
+  bool get isSequential {
+    switch (this) {
+      case PillSheetAppearanceMode.number:
+      case PillSheetAppearanceMode.date:
+        return false;
+      case PillSheetAppearanceMode.sequential:
+      case PillSheetAppearanceMode.cyclicSequential:
+        return true;
+    }
+  }
+}
+
 class SettingFirestoreFieldKeys {
   static const pillSheetAppearanceMode = "pillSheetAppearanceMode";
   static const timezoneDatabaseName = "timezoneDatabaseName";
