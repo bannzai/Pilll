@@ -10,16 +10,14 @@ import 'package:pilll/entity/setting.codegen.dart';
 class TodayTakenPillNumber extends StatelessWidget {
   final PillSheetGroup? pillSheetGroup;
   final VoidCallback onPressed;
-  final Setting setting;
 
   const TodayTakenPillNumber({
     super.key,
     required this.pillSheetGroup,
     required this.onPressed,
-    required this.setting,
   });
 
-  PillSheetAppearanceMode get _appearanceMode => setting.pillSheetAppearanceMode;
+  PillSheetAppearanceMode get _appearanceMode => pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number;
 
   @override
   Widget build(BuildContext context) {

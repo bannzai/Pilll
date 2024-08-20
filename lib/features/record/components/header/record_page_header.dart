@@ -6,7 +6,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/record/components/header/today_taken_pill_number.dart';
 import 'package:pilll/features/settings/today_pill_number/setting_today_pill_number_page.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -17,13 +16,11 @@ abstract class RecordPageInformationHeaderConst {
 class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
-  final Setting setting;
   final User user;
   const RecordPageInformationHeader({
     super.key,
     required this.today,
     required this.pillSheetGroup,
-    required this.setting,
     required this.user,
   });
 
@@ -34,7 +31,6 @@ class RecordPageInformationHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final pillSheetGroup = this.pillSheetGroup;
     final activePillSheet = pillSheetGroup?.activePillSheet;
-    final setting = this.setting;
 
     return Stack(
       children: [
@@ -58,7 +54,6 @@ class RecordPageInformationHeader extends StatelessWidget {
                   const SizedBox(width: 28),
                   TodayTakenPillNumber(
                       pillSheetGroup: pillSheetGroup,
-                      setting: setting,
                       onPressed: () {
                         analytics.logEvent(name: "tapped_record_information_header");
                         if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {

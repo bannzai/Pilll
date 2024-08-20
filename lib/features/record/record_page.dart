@@ -88,7 +88,6 @@ class RecordPageBody extends HookConsumerWidget {
         title: RecordPageInformationHeader(
           today: DateTime.now(),
           pillSheetGroup: pillSheetGroup,
-          setting: setting,
           user: user,
         ),
       ),

@@ -11,20 +11,19 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/formatter/text_input_formatter.dart';
 
 class DisplayNumberSetting extends HookConsumerWidget {
-  final PillSheetAppearanceMode pillSheetAppearanceMode;
   final PillSheetGroup pillSheetGroup;
   final Function(PillSheetGroupDisplayNumberSetting) onChanged;
 
   const DisplayNumberSetting({
     super.key,
-    required this.pillSheetAppearanceMode,
     required this.pillSheetGroup,
     required this.onChanged,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    if (pillSheetAppearanceMode != PillSheetAppearanceMode.sequential) {
+    // TODO: [CyclicSequential]
+    if (pillSheetGroup.pillSheetAppearanceMode != PillSheetAppearanceMode.sequential) {
       return Container();
     }
 

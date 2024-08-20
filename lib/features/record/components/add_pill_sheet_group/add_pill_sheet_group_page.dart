@@ -86,7 +86,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                       children: [
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
-                              pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
                               pillSheetGroup: pillSheetGroup,
                               onChanged: (value) {
                                 displayNumberSetting.value = value;

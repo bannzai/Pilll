@@ -59,14 +59,15 @@ class PillSheetSettingSheet extends HookConsumerWidget {
             SwitchingAppearanceMode(
               setting: setting,
               user: user,
+              pillSheetGroup: pillSheetGroup,
             ),
-            if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
+            if (pillSheetGroup.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
               DisplayNumberSetting(
                 pillSheetGroup: pillSheetGroup,
               ),
             if (restDuration == null)
               BeginManualRestDuration(
-                appearanceMode: setting.pillSheetAppearanceMode,
+                appearanceMode: pillSheetGroup.pillSheetAppearanceMode,
                 activePillSheet: activePillSheet,
                 pillSheetGroup: pillSheetGroup,
               )

@@ -138,7 +138,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
 
   String displayPillNumber({
     required bool premiumOrTrial,
-    required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {

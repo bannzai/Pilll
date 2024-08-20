@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,8 +14,9 @@ import 'package:pilll/utils/local_notification.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
   final User user;
+  final PillSheetGroup pillSheetGroup;
 
-  const SelectAppearanceModeModal({super.key, required this.user});
+  const SelectAppearanceModeModal({super.key, required this.user, required this.pillSheetGroup});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -136,12 +138,14 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 void showSelectAppearanceModeModal(
   BuildContext context, {
   required User user,
+  required PillSheetGroup pillSheetGroup,
 }) {
   analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
     builder: (context) => SelectAppearanceModeModal(
       user: user,
+      pillSheetGroup: pillSheetGroup,
     ),
     backgroundColor: Colors.transparent,
   );

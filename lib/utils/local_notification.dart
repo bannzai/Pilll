@@ -278,7 +278,7 @@ class RegisterReminderLocalNotification {
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
         var pillSheetDisplayNumber = pillSheetGroup.displayPillNumberOnlyNumber(
-          pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+          pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
           pageIndex: activePillSheet.groupIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
         );
@@ -297,7 +297,7 @@ class RegisterReminderLocalNotification {
                 displayNumberSetting: null,
               );
               pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumberOnlyNumber(
-                pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
                 pageIndex: 0,
                 pillNumberInPillSheet: pillNumberInPillSheet,
               );
@@ -310,7 +310,7 @@ class RegisterReminderLocalNotification {
               pillSheetGroupIndex = nextPillSheet.groupIndex;
               pillSheeType = nextPillSheet.pillSheetType;
               pillSheetDisplayNumber = pillSheetGroup.displayPillNumberOnlyNumber(
-                pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
+                pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
                 pageIndex: nextPillSheet.groupIndex,
                 pillNumberInPillSheet: pillNumberInPillSheet,
               );
