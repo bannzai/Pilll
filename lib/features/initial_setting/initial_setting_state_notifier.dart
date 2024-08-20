@@ -131,6 +131,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
           pillSheetIDs: pillSheetIDs,
           pillSheets: createdPillSheets,
           createdAt: now(),
+          // BEGIN: Release function for trial user
+          pillSheetAppearanceMode: PillSheetAppearanceMode.date,
+          // END: Release function for trial user
         ),
       );
 
