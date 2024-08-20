@@ -80,7 +80,7 @@ class PillSheetGroup with _$PillSheetGroup {
     return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
   }
 
-  int get estimatedEndPillNumber {
+  int get estimatedEndSequentialPillNumber {
     var estimatedEndPillNumber =
         summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheets.map((e) => e.pillSheetType).toList(), toIndex: pillSheets.length);
 

@@ -105,7 +105,7 @@ PillSheetGroup buildPillSheetGroup({
         }
         if (pillSheetGroup != null) {
           return PillSheetGroupDisplayNumberSetting(
-            beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
+            beginPillNumber: pillSheetGroup.estimatedEndSequentialPillNumber + 1,
           );
         }
       }
