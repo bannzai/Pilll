@@ -97,9 +97,9 @@ PillSheetGroup buildPillSheetGroup({
   final updatedPillSheetGroup = PillSheetGroup(
     pillSheetIDs: pillSheetIDs,
     pillSheets: createdPillSheets,
+    pillSheetAppearanceMode: pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
     displayNumberSetting: () {
-      // TODO: [CyclicSequential]
-      if (pillSheetGroup?.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+      if (pillSheetGroup?.pillSheetAppearanceMode.isSequential == true) {
         if (displayNumberSetting != null) {
           return displayNumberSetting;
         }

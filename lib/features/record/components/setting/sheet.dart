@@ -61,7 +61,7 @@ class PillSheetSettingSheet extends HookConsumerWidget {
               user: user,
               pillSheetGroup: pillSheetGroup,
             ),
-            if (pillSheetGroup.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential)
+            if (pillSheetGroup.pillSheetAppearanceMode.isSequential)
               DisplayNumberSetting(
                 pillSheetGroup: pillSheetGroup,
               ),

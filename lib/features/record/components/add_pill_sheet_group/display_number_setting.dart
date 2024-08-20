@@ -22,8 +22,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // TODO: [CyclicSequential]
-    if (pillSheetGroup.pillSheetAppearanceMode != PillSheetAppearanceMode.sequential) {
+    if (!pillSheetGroup.pillSheetAppearanceMode.isSequential) {
       return Container();
     }
 

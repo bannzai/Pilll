@@ -64,7 +64,7 @@ class SettingPillSheetView extends StatelessWidget {
         child: PillMarkWithNumberLayout(
           pillNumber: Text(
             () {
-              if (appearanceMode == PillSheetAppearanceMode.sequential) {
+              if (appearanceMode.isSequential) {
                 return "${offset + pillNumberInPillSheet}";
               } else {
                 return "$pillNumberInPillSheet";

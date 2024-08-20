@@ -25,7 +25,7 @@ class TodayTakenPillNumber extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          if (_appearanceMode == PillSheetAppearanceMode.sequential)
+          if (_appearanceMode.isSequential)
             const Text(
               "💊 今日は服用",
               style: TextStyle(
@@ -35,7 +35,7 @@ class TodayTakenPillNumber extends StatelessWidget {
                 color: TextColor.noshime,
               ),
             ),
-          if (_appearanceMode != PillSheetAppearanceMode.sequential)
+          if (!_appearanceMode.isSequential)
             const Text(
               "💊 今日飲むピル",
               style: TextStyle(
@@ -120,7 +120,7 @@ class TodayTakenPillNumber extends StatelessWidget {
                 color: TextColor.noshime,
               )),
         ],
-        if (_appearanceMode == PillSheetAppearanceMode.sequential) ...[
+        if (_appearanceMode.isSequential) ...[
           Text("${pillSheetGroup.sequentialTodayPillNumber}",
               style: const TextStyle(
                 fontFamily: FontFamily.number,
