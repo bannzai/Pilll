@@ -37,7 +37,7 @@ class PillSheetGroup with _$PillSheetGroup {
     )
     DateTime? deletedAt,
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-    @Default(PillSheetAppearanceMode.number) PillSheetAppearanceMode pillSheetAppearanceMode,
+    @Default(PillSheetAppearanceMode.number) required PillSheetAppearanceMode pillSheetAppearanceMode,
   }) = _PillSheetGroup;
   PillSheetGroup._();
 

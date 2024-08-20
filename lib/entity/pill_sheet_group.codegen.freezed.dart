@@ -230,7 +230,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
           toJson: TimestampConverter.dateTimeToTimestamp)
       this.deletedAt,
       this.displayNumberSetting,
-      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
+      required this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
       : _pillSheetIDs = pillSheetIDs,
         _pillSheets = pillSheets,
         super._();
@@ -340,7 +340,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
               toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? deletedAt,
           final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-          final PillSheetAppearanceMode pillSheetAppearanceMode}) =
+          required final PillSheetAppearanceMode pillSheetAppearanceMode}) =
       _$PillSheetGroupImpl;
   _PillSheetGroup._() : super._();
 
