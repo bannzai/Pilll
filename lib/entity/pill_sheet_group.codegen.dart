@@ -113,7 +113,7 @@ class PillSheetGroup with _$PillSheetGroup {
 
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber = _pillMarksPillNumber();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential = _pillNumbersForSequential();
-  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequentialWithCycle = _pillNumbersForSequentialWithCycle();
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
@@ -200,7 +200,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForSequentialWithCycle.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
+    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
   }
 }
 
@@ -230,7 +230,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       case PillSheetAppearanceMode.sequential:
         return pillNumbersForSequential;
       case PillSheetAppearanceMode.cyclicSequential:
-        return pillNumbersForSequentialWithCycle;
+        return pillNumbersForCyclicSequential;
     }
   }
 
@@ -283,7 +283,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     return pillMarks;
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForSequentialWithCycle() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForCyclicSequential() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     var offset = 0;
     for (final pillSheet in pillSheets) {
