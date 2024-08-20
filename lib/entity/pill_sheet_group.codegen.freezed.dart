@@ -34,6 +34,8 @@ mixin _$PillSheetGroup {
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting =>
       throw _privateConstructorUsedError;
+  PillSheetAppearanceMode get pillSheetAppearanceMode =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -59,7 +61,8 @@ abstract class $PillSheetGroupCopyWith<$Res> {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? deletedAt,
-      PillSheetGroupDisplayNumberSetting? displayNumberSetting});
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+      PillSheetAppearanceMode pillSheetAppearanceMode});
 
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
@@ -83,6 +86,7 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
     Object? createdAt = null,
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
+    Object? pillSheetAppearanceMode = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -109,6 +113,10 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup>
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
               as PillSheetGroupDisplayNumberSetting?,
+      pillSheetAppearanceMode: null == pillSheetAppearanceMode
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
     ) as $Val);
   }
 
@@ -146,7 +154,8 @@ abstract class _$$PillSheetGroupImplCopyWith<$Res>
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? deletedAt,
-      PillSheetGroupDisplayNumberSetting? displayNumberSetting});
+      PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+      PillSheetAppearanceMode pillSheetAppearanceMode});
 
   @override
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
@@ -169,6 +178,7 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res>
     Object? createdAt = null,
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
+    Object? pillSheetAppearanceMode = null,
   }) {
     return _then(_$PillSheetGroupImpl(
       id: freezed == id
@@ -195,6 +205,10 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res>
           ? _value.displayNumberSetting
           : displayNumberSetting // ignore: cast_nullable_to_non_nullable
               as PillSheetGroupDisplayNumberSetting?,
+      pillSheetAppearanceMode: null == pillSheetAppearanceMode
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
     ));
   }
 }
@@ -215,7 +229,8 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       this.deletedAt,
-      this.displayNumberSetting})
+      this.displayNumberSetting,
+      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
       : _pillSheetIDs = pillSheetIDs,
         _pillSheets = pillSheets,
         super._();
@@ -254,10 +269,13 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
   final DateTime? deletedAt;
   @override
   final PillSheetGroupDisplayNumberSetting? displayNumberSetting;
+  @override
+  @JsonKey()
+  final PillSheetAppearanceMode pillSheetAppearanceMode;
 
   @override
   String toString() {
-    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, displayNumberSetting: $displayNumberSetting)';
+    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, displayNumberSetting: $displayNumberSetting, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
   }
 
   @override
@@ -275,7 +293,10 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
             (identical(other.deletedAt, deletedAt) ||
                 other.deletedAt == deletedAt) &&
             (identical(other.displayNumberSetting, displayNumberSetting) ||
-                other.displayNumberSetting == displayNumberSetting));
+                other.displayNumberSetting == displayNumberSetting) &&
+            (identical(
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
+                other.pillSheetAppearanceMode == pillSheetAppearanceMode));
   }
 
   @JsonKey(ignore: true)
@@ -287,7 +308,8 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
       const DeepCollectionEquality().hash(_pillSheets),
       createdAt,
       deletedAt,
-      displayNumberSetting);
+      displayNumberSetting,
+      pillSheetAppearanceMode);
 
   @JsonKey(ignore: true)
   @override
@@ -317,7 +339,8 @@ abstract class _PillSheetGroup extends PillSheetGroup {
               fromJson: TimestampConverter.timestampToDateTime,
               toJson: TimestampConverter.dateTimeToTimestamp)
           final DateTime? deletedAt,
-          final PillSheetGroupDisplayNumberSetting? displayNumberSetting}) =
+          final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+          final PillSheetAppearanceMode pillSheetAppearanceMode}) =
       _$PillSheetGroupImpl;
   _PillSheetGroup._() : super._();
 
@@ -343,6 +366,8 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   DateTime? get deletedAt;
   @override
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
+  @override
+  PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
   @JsonKey(ignore: true)
   _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith =>

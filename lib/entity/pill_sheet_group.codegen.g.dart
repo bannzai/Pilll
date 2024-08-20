@@ -23,6 +23,10 @@ _$PillSheetGroupImpl _$$PillSheetGroupImplFromJson(Map<String, dynamic> json) =>
           ? null
           : PillSheetGroupDisplayNumberSetting.fromJson(
               json['displayNumberSetting'] as Map<String, dynamic>),
+      pillSheetAppearanceMode: $enumDecodeNullable(
+              _$PillSheetAppearanceModeEnumMap,
+              json['pillSheetAppearanceMode']) ??
+          PillSheetAppearanceMode.number,
     );
 
 Map<String, dynamic> _$$PillSheetGroupImplToJson(
@@ -42,8 +46,17 @@ Map<String, dynamic> _$$PillSheetGroupImplToJson(
       NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['displayNumberSetting'] = instance.displayNumberSetting?.toJson();
+  val['pillSheetAppearanceMode'] =
+      _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode]!;
   return val;
 }
+
+const _$PillSheetAppearanceModeEnumMap = {
+  PillSheetAppearanceMode.number: 'number',
+  PillSheetAppearanceMode.date: 'date',
+  PillSheetAppearanceMode.sequential: 'sequential',
+  PillSheetAppearanceMode.cyclicSequential: 'cyclicSequential',
+};
 
 _$PillSheetGroupDisplayNumberSettingImpl
     _$$PillSheetGroupDisplayNumberSettingImplFromJson(
