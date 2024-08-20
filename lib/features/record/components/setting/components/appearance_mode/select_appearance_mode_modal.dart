@@ -114,7 +114,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == setting.pillSheetAppearanceMode),
+            SelectCircle(isSelected: mode == pillSheetGroup.pillSheetAppearanceMode),
             const SizedBox(width: 34),
             Text(
               text,
