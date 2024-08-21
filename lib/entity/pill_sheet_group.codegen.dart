@@ -363,8 +363,6 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       4枚目: 8番から
   */
 
-typedef PillSheetGroupMenstruationDomainNumberRange = ({int begin, int end, int pillSheetGroupIndex});
-
 extension PillSheetGroupMenstruationDomain on PillSheetGroup {
   List<DateRange> menstruationDateRanges({required Setting setting}) {
     // 0が設定できる。その場合は生理設定をあえて無視したいと考えて0を返す
