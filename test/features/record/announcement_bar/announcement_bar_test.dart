@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
@@ -68,7 +69,12 @@ void main() {
             const Duration(days: 25),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
         });
@@ -126,7 +132,12 @@ void main() {
             const Duration(days: 10),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -180,7 +191,12 @@ void main() {
             const Duration(days: 30),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -227,7 +243,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -273,7 +294,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -325,7 +351,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -379,7 +410,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -440,7 +476,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -503,7 +544,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -566,7 +612,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -629,7 +680,12 @@ void main() {
               const Duration(days: 25),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -699,7 +755,12 @@ void main() {
               const Duration(days: 10),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -764,7 +825,12 @@ void main() {
               const Duration(days: 10),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -829,7 +895,12 @@ void main() {
               const Duration(days: 10),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -894,7 +965,12 @@ void main() {
               const Duration(days: 10),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -959,7 +1035,12 @@ void main() {
               const Duration(days: 10),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -1024,7 +1105,12 @@ void main() {
               const Duration(days: 10),
             ),
           );
-          final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
 
           SharedPreferences.setMockInitialValues({
             IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -1090,7 +1176,12 @@ void main() {
             const Duration(days: 10),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -1144,7 +1235,12 @@ void main() {
             const Duration(days: 25),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
@@ -1198,7 +1294,12 @@ void main() {
             const Duration(days: 30),
           ),
         );
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
 
         SharedPreferences.setMockInitialValues({
           IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,

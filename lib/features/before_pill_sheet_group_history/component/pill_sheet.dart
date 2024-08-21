@@ -201,7 +201,6 @@ class PillNumber extends StatelessWidget {
 
     final text = pillSheetGroup.displayPillNumber(
       premiumOrTrial: true,
-      pillSheetAppearanceMode: setting.pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
     );

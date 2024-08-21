@@ -67,9 +67,9 @@ class PillSheet with _$PillSheet {
 
   PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  const PillSheet._();
+  PillSheet._();
   @JsonSerializable(explicitToJson: true)
-  const factory PillSheet({
+  factory PillSheet({
     @JsonKey(includeIfNull: false) required String? id,
     @JsonKey() required PillSheetTypeInfo typeInfo,
     @JsonKey(
@@ -174,36 +174,35 @@ class PillSheet with _$PillSheet {
   // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
   // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
-    final originDate = beginingDate.addDays(pillNumberInPillSheet - 1).date();
-    if (restDurations.isEmpty) {
-      return originDate;
-    }
-
-    var pillTakenDate = originDate;
-    for (final restDuration in restDurations) {
-      final restDurationBeginDate = restDuration.beginDate.date();
-      final restDurationEndDate = restDuration.endDate?.date();
-
-      if (restDurationEndDate != null && isSameDay(restDurationBeginDate, restDurationEndDate)) {
-        continue;
-      }
-      if (pillTakenDate.isBefore(restDurationBeginDate)) {
-        continue;
-      }
-
-      if (restDurationEndDate != null) {
-        pillTakenDate = pillTakenDate.addDays(daysBetween(restDurationBeginDate, restDurationEndDate));
-      } else {
-        pillTakenDate = pillTakenDate.addDays(daysBetween(restDurationBeginDate, today()));
-      }
-    }
-
-    return pillTakenDate;
+    return dates[pillNumberInPillSheet - 1];
   }
 
   int pillNumberFor({required DateTime targetDate}) {
     return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
   }
+
+  // ピルシートのピルの日付を取得する
+  late final List<DateTime> dates = () {
+    final List<DateTime> dates = [];
+    var offset = 0;
+    for (int index = 0; index < typeInfo.totalCount; index++) {
+      var date = beginingDate.addDays(index + offset).date();
+
+      for (final restDuration in restDurations) {
+        if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
+          final restDurationEndDateOrToday = restDuration.endDate ?? today();
+          if (restDurationEndDateOrToday.isAfter(date)) {
+            final diff = daysBetween(date, restDurationEndDateOrToday);
+            date = date.addDays(diff);
+            offset += diff;
+          }
+        }
+      }
+
+      dates.add(date);
+    }
+    return dates;
+  }();
 }
 
 // upperDate までの休薬期間を集計する

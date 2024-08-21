@@ -33,6 +33,21 @@ enum PillSheetAppearanceMode {
   date,
   @JsonValue("sequential")
   sequential,
+  @JsonValue("cyclicSequential")
+  cyclicSequential,
+}
+
+extension PillSheetAppearanceModeExt on PillSheetAppearanceMode {
+  bool get isSequential {
+    switch (this) {
+      case PillSheetAppearanceMode.number:
+      case PillSheetAppearanceMode.date:
+        return false;
+      case PillSheetAppearanceMode.sequential:
+      case PillSheetAppearanceMode.cyclicSequential:
+        return true;
+    }
+  }
 }
 
 class SettingFirestoreFieldKeys {
@@ -51,9 +66,12 @@ class Setting with _$Setting {
     @Default([]) List<ReminderTime> reminderTimes,
     required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
-    @Default(PillSheetAppearanceMode.number) PillSheetAppearanceMode pillSheetAppearanceMode,
     @Default(false) bool isAutomaticallyCreatePillSheet,
     @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
+    // Deprecated
+    @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
+    @Default(PillSheetAppearanceMode.number)
+    PillSheetAppearanceMode pillSheetAppearanceMode,
     required String? timezoneDatabaseName,
   }) = _Setting;
 

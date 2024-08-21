@@ -119,6 +119,8 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
         return dateString;
       case PillSheetAppearanceMode.sequential:
         return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}番";
+      case PillSheetAppearanceMode.cyclicSequential:
+        return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}番";
     }
   }
 }

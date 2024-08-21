@@ -97,14 +97,15 @@ PillSheetGroup buildPillSheetGroup({
   final updatedPillSheetGroup = PillSheetGroup(
     pillSheetIDs: pillSheetIDs,
     pillSheets: createdPillSheets,
+    pillSheetAppearanceMode: pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
     displayNumberSetting: () {
-      if (setting.pillSheetAppearanceMode == PillSheetAppearanceMode.sequential) {
+      if (pillSheetGroup?.pillSheetAppearanceMode.isSequential == true) {
         if (displayNumberSetting != null) {
           return displayNumberSetting;
         }
         if (pillSheetGroup != null) {
           return PillSheetGroupDisplayNumberSetting(
-            beginPillNumber: pillSheetGroup.estimatedEndPillNumber + 1,
+            beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
           );
         }
       }
