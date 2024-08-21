@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/setting.dart';
@@ -48,7 +49,7 @@ class Migration20240819 extends HookConsumerWidget {
 
       f();
       return null;
-    }, []);
+    }, [latestPillSheetGroup, setting]);
 
     return const SizedBox();
   }
