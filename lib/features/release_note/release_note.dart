@@ -95,7 +95,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version20240301;
+  const String key = ReleaseNoteKey.version20240823;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
