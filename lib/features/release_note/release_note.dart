@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "服用通知機能が新しくなります",
+                          "表示モード服用日数(周期)が追加されました",
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-多くの方に手伝っていただきありがとうございます。このバージョンから服用通知機能が新しくなります。旧:「服用通知β」表記されていた機能になります。問題が発生した場合はお手数ですがアプリ内の「お問い合わせ」よりお知らせください
+表示モード「服用日数」をご利用していた方はぜひご確認ください。「服用お休み」を起点に番号表示されるようになりました。
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
