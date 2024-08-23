@@ -67,77 +67,83 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 
     final isLoading = useState(false);
 
-    return HUD(
-      shown: isLoading.value,
-      child: Scaffold(
-        body: Container(
-          padding: const EdgeInsets.only(top: 20),
-          width: MediaQuery.of(context).size.width,
-          color: PilllColors.white,
-          child: Stack(
-            children: [
-              Container(
-                decoration: const BoxDecoration(
-                  color: Colors.transparent,
-                  image: DecorationImage(
-                    image: AssetImage("images/premium_background.png"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
-                width: MediaQuery.of(context).size.width,
-              ),
-              SingleChildScrollView(
-                padding: const EdgeInsets.only(bottom: 100, top: 20),
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const PremiumIntroductionHeader(),
-                    if (user.isPremium) ...[
-                      const SizedBox(height: 32),
-                      const PremiumUserThanksRow(),
-                    ],
-                    if (!user.isPremium) ...[
-                      if (user.hasDiscountEntitlement)
-                        if (monthlyPremiumPackage != null)
-                          PremiumIntroductionDiscountRow(
-                            monthlyPremiumPackage: monthlyPremiumPackage,
-                            discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
-                          ),
-                      const SizedBox(height: 12),
-                      PurchaseButtons(
-                        offeringType: offeringType,
-                        monthlyPackage: monthlyPackage,
-                        annualPackage: annualPackage,
-                        isLoading: isLoading,
+    return DraggableScrollableSheet(
+      initialChildSize: 0.8,
+      builder: (context, scrollController) {
+        return HUD(
+          shown: isLoading.value,
+          child: Scaffold(
+            body: Container(
+              padding: const EdgeInsets.only(top: 20),
+              width: MediaQuery.of(context).size.width,
+              color: PilllColors.white,
+              child: Stack(
+                children: [
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.transparent,
+                      image: DecorationImage(
+                        image: AssetImage("images/premium_background.png"),
+                        fit: BoxFit.cover,
                       ),
-                    ],
-                    const SizedBox(height: 24),
-                    AlertButton(
-                        onPressed: () async {
-                          analytics.logEvent(name: "pressed_premium_functions_on_sheet");
-                          await launchUrl(Uri.parse(preimumLink));
-                        },
-                        text: "プレミアム機能を見る"),
-                    const SizedBox(height: 24),
-                    PremiumIntroductionFotter(
-                      isLoading: isLoading,
                     ),
-                  ],
-                ),
+                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    width: MediaQuery.of(context).size.width,
+                  ),
+                  SingleChildScrollView(
+                    controller: scrollController,
+                    padding: const EdgeInsets.only(bottom: 100, top: 20),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const PremiumIntroductionHeader(),
+                        if (user.isPremium) ...[
+                          const SizedBox(height: 32),
+                          const PremiumUserThanksRow(),
+                        ],
+                        if (!user.isPremium) ...[
+                          if (user.hasDiscountEntitlement)
+                            if (monthlyPremiumPackage != null)
+                              PremiumIntroductionDiscountRow(
+                                monthlyPremiumPackage: monthlyPremiumPackage,
+                                discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+                              ),
+                          const SizedBox(height: 12),
+                          PurchaseButtons(
+                            offeringType: offeringType,
+                            monthlyPackage: monthlyPackage,
+                            annualPackage: annualPackage,
+                            isLoading: isLoading,
+                          ),
+                        ],
+                        const SizedBox(height: 24),
+                        AlertButton(
+                            onPressed: () async {
+                              analytics.logEvent(name: "pressed_premium_functions_on_sheet");
+                              await launchUrl(Uri.parse(preimumLink));
+                            },
+                            text: "プレミアム機能を見る"),
+                        const SizedBox(height: 24),
+                        PremiumIntroductionFotter(
+                          isLoading: isLoading,
+                        ),
+                      ],
+                    ),
+                  ),
+                  Positioned(
+                    left: 7,
+                    top: 20,
+                    child: IconButton(
+                      icon: const Icon(Icons.close, color: Colors.black),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                  ),
+                ],
               ),
-              Positioned(
-                left: 7,
-                top: 20,
-                child: IconButton(
-                  icon: const Icon(Icons.close, color: Colors.black),
-                  onPressed: () => Navigator.of(context).pop(),
-                ),
-              ),
-            ],
+            ),
           ),
-        ),
-      ),
+        );
+      },
     );
   }
 }
