@@ -7,6 +7,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/initial_setting/migrate_info.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -19,6 +20,7 @@ import 'package:pilll/features/record/record_page.dart';
 import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -97,6 +99,18 @@ class HomePageBody extends HookConsumerWidget {
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
+    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
+        sharedPreferences.getInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds) ?? 0;
+    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
+        now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
+    final bool isOneMonthPassedTrialDeadline;
+    final trialDeadlineDate = user.trialDeadlineDate;
+    if (trialDeadlineDate != null) {
+      isOneMonthPassedTrialDeadline =
+          now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
+    } else {
+      isOneMonthPassedTrialDeadline = false;
+    }
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
@@ -124,6 +138,9 @@ class HomePageBody extends HookConsumerWidget {
             builder: (_) => const PreStoreReviewModal(),
           );
           sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+        } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
+          showPremiumIntroductionSheet(context);
+          sharedPreferences.setInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds, now().millisecondsSinceEpoch);
         }
       });
 
