@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "服用通知機能が新しくなります",
+                          "表示モード服用日数(周期)が追加されました",
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -62,7 +62,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-多くの方に手伝っていただきありがとうございます。このバージョンから服用通知機能が新しくなります。旧:「服用通知β」表記されていた機能になります。問題が発生した場合はお手数ですがアプリ内の「お問い合わせ」よりお知らせください
+表示モード「服用日数」をご利用していた方はぜひご確認ください。「服用お休み」を起点に番号表示されるようになりました。
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
@@ -95,7 +95,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version20240301;
+  const String key = ReleaseNoteKey.version20240823;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -112,5 +112,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse("https://pilll.wraptas.site/46787454483746bc8d6ac0fab40612bc"), mode: LaunchMode.inAppWebView);
+  launchUrl(Uri.parse("https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57"), mode: LaunchMode.inAppWebView);
 }
