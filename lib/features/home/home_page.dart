@@ -106,8 +106,7 @@ class HomePageBody extends HookConsumerWidget {
     final bool isOneMonthPassedTrialDeadline;
     final trialDeadlineDate = user.trialDeadlineDate;
     if (trialDeadlineDate != null) {
-      isOneMonthPassedTrialDeadline =
-          now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
+      isOneMonthPassedTrialDeadline = now().millisecondsSinceEpoch - trialDeadlineDate.millisecondsSinceEpoch > 1000 * 60 * 60 * 24 * 30;
     } else {
       isOneMonthPassedTrialDeadline = false;
     }
