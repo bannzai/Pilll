@@ -78,6 +78,10 @@ class CalendarPage extends HookConsumerWidget {
   }
 }
 
+const double _shadowHeight = 2;
+const _monthlyCalendarHeight =
+    WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + _shadowHeight;
+
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
@@ -103,10 +107,6 @@ class _CalendarPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double shadowHeight = 2;
-    const height =
-        WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + shadowHeight;
-
     return Scaffold(
       floatingActionButton: Container(
         padding: const EdgeInsets.only(right: 10, bottom: 32),
@@ -136,7 +136,7 @@ class _CalendarPageBody extends StatelessWidget {
           children: <Widget>[
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: height,
+              height: _monthlyCalendarHeight,
               child: PageView(
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
@@ -145,12 +145,11 @@ class _CalendarPageBody extends StatelessWidget {
                   _calendarDataSourceLength,
                   (index) {
                     return MonthCalendarPager(
-                        shadowHeight: shadowHeight,
-                        height: height,
-                        displayedMonth: displayedMonth,
-                        calendarMenstruationBandModels: calendarMenstruationBandModels,
-                        calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels);
+                      displayedMonth: displayedMonth,
+                      calendarMenstruationBandModels: calendarMenstruationBandModels,
+                      calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                    );
                   },
                 ),
               ),
@@ -174,16 +173,12 @@ class _CalendarPageBody extends StatelessWidget {
 class MonthCalendarPager extends StatelessWidget {
   const MonthCalendarPager({
     super.key,
-    required this.shadowHeight,
-    required this.height,
     required this.displayedMonth,
     required this.calendarMenstruationBandModels,
     required this.calendarScheduledMenstruationBandModels,
     required this.calendarNextPillSheetBandModels,
   });
 
-  final double shadowHeight;
-  final double height;
   final DateTime displayedMonth;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
   final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
@@ -198,11 +193,11 @@ class MonthCalendarPager extends StatelessWidget {
           BoxShadow(
             color: PilllColors.shadow,
             blurRadius: 6.0,
-            offset: const Offset(0, shadowHeight),
+            offset: const Offset(0, _shadowHeight),
           ),
         ],
       ),
-      height: height,
+      height: _monthlyCalendarHeight,
       width: MediaQuery.of(context).size.width,
       child: MonthCalendar(
           dateForMonth: displayedMonth,
