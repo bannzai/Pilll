@@ -141,51 +141,18 @@ class _CalendarPageBody extends StatelessWidget {
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
-                children: List.generate(_calendarDataSourceLength, (index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: PilllColors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: PilllColors.shadow,
-                          blurRadius: 6.0,
-                          offset: const Offset(0, shadowHeight),
-                        ),
-                      ],
-                    ),
-                    height: height,
-                    width: MediaQuery.of(context).size.width,
-                    child: MonthCalendar(
-                        dateForMonth: displayedMonth,
-                        weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
-                          return CalendarWeekLine(
-                            dateRange: weekDateRange,
-                            calendarMenstruationBandModels: calendarMenstruationBandModels,
-                            calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                            calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                            horizontalPadding: 0,
-                            day: (context, weekday, date) {
-                              if (date.isPreviousMonth(displayedMonth)) {
-                                return CalendarDayTile.grayout(
-                                  weekday: weekday,
-                                  date: date,
-                                );
-                              }
-                              return CalendarDayTile(
-                                weekday: weekday,
-                                date: date,
-                                diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                                schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                                onTap: (date) {
-                                  analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-                                  transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
-                                },
-                              );
-                            },
-                          );
-                        }),
-                  );
-                }),
+                children: List.generate(
+                  _calendarDataSourceLength,
+                  (index) {
+                    return MonthCalendarPager(
+                        shadowHeight: shadowHeight,
+                        height: height,
+                        displayedMonth: displayedMonth,
+                        calendarMenstruationBandModels: calendarMenstruationBandModels,
+                        calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                        calendarNextPillSheetBandModels: calendarNextPillSheetBandModels);
+                  },
+                ),
               ),
             ),
             const SizedBox(height: 30),
@@ -200,6 +167,72 @@ class _CalendarPageBody extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class MonthCalendarPager extends StatelessWidget {
+  const MonthCalendarPager({
+    super.key,
+    required this.shadowHeight,
+    required this.height,
+    required this.displayedMonth,
+    required this.calendarMenstruationBandModels,
+    required this.calendarScheduledMenstruationBandModels,
+    required this.calendarNextPillSheetBandModels,
+  });
+
+  final double shadowHeight;
+  final double height;
+  final DateTime displayedMonth;
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: PilllColors.white,
+        boxShadow: [
+          BoxShadow(
+            color: PilllColors.shadow,
+            blurRadius: 6.0,
+            offset: const Offset(0, shadowHeight),
+          ),
+        ],
+      ),
+      height: height,
+      width: MediaQuery.of(context).size.width,
+      child: MonthCalendar(
+          dateForMonth: displayedMonth,
+          weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+            return CalendarWeekLine(
+              dateRange: weekDateRange,
+              calendarMenstruationBandModels: calendarMenstruationBandModels,
+              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+              horizontalPadding: 0,
+              day: (context, weekday, date) {
+                if (date.isPreviousMonth(displayedMonth)) {
+                  return CalendarDayTile.grayout(
+                    weekday: weekday,
+                    date: date,
+                  );
+                }
+                return CalendarDayTile(
+                  weekday: weekday,
+                  date: date,
+                  diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                  schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                  onTap: (date) {
+                    analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+                    transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
+                  },
+                );
+              },
+            );
+          }),
     );
   }
 }
