@@ -17,6 +17,7 @@ import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/remote_config.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({super.key});
@@ -40,6 +41,7 @@ class AnnouncementBar extends HookConsumerWidget {
         ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
+    final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
     final isAdsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
@@ -54,6 +56,11 @@ class AnnouncementBar extends HookConsumerWidget {
 
     if (user == null) {
       return Container();
+    }
+
+    // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
+    if (!appIsReleased && !user.isPremium) {
+      return const AdMob();
     }
 
     if (!user.isPremium) {
