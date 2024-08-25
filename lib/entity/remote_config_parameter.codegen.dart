@@ -9,6 +9,7 @@ abstract class RemoteConfigKeys {
   static const trialDeadlineDateOffsetDay = "trialDeadlineDateOffsetDay";
   static const discountEntitlementOffsetDay = "discountEntitlementOffsetDay";
   static const discountCountdownBoundaryHour = "discountCountdownBoundaryHour";
+  static const releasedVersion = "releasedVersion";
 }
 
 abstract class RemoteConfigParameterDefaultValues {
@@ -17,6 +18,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const trialDeadlineDateOffsetDay = 45;
   static const discountEntitlementOffsetDay = 2;
   static const discountCountdownBoundaryHour = 48;
+  static const releasedVersion = "202408.23.135014";
 }
 
 @freezed
