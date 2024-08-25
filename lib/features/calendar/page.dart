@@ -151,7 +151,8 @@ class _CalendarPageBody extends StatelessWidget {
                 children: List.generate(
                   _calendarDataSourceLength,
                   (index) {
-                    final withIn1Month = _todayCalendarPageIndex + 1 >= index && index >= _todayCalendarPageIndex - 1;
+                    // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
+                    final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
                     return Stack(
                       children: [
                         MonthCalendarPager(
@@ -160,7 +161,7 @@ class _CalendarPageBody extends StatelessWidget {
                           calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
                           calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                         ),
-                        if (!user.premiumOrTrial && !withIn1Month) const PremiumIntroductionOverlay(),
+                        if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
                       ],
                     );
                   },
