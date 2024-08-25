@@ -267,7 +267,7 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                   const Text(lockEmoji, style: TextStyle(fontSize: 40)),
                   const SizedBox(height: 12),
                   const Text(
-                    "服用履歴はプレミアム機能です",
+                    "これ以上の閲覧はプレミアム機能になります",
                     style: TextStyle(
                       color: TextColor.main,
                       fontSize: 14,
