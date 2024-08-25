@@ -59,7 +59,7 @@ class AnnouncementBar extends HookConsumerWidget {
     }
 
     // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
-    if (!appIsReleased || !user.isPremium) {
+    if (!appIsReleased && !user.isPremium) {
       return const AdMob();
     }
 
