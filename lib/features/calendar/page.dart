@@ -1,10 +1,16 @@
+import 'dart:ui';
+
 import 'package:async_value_group/async_value_group.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/calendar/components/const.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/user.dart';
@@ -27,6 +33,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 
 // NOTE: 数字に特に意味はないが、ユーザーが過去のカレンダーも見たいということで十分な枠をとっている。Pilllの開始が2018年なので、それより後のデータが見れるくらいで良い
 const _calendarDataSourceLength = 120;
@@ -78,6 +85,10 @@ class CalendarPage extends HookConsumerWidget {
   }
 }
 
+const double _shadowHeight = 2;
+const _monthlyCalendarHeight =
+    WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + _shadowHeight;
+
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
@@ -103,10 +114,6 @@ class _CalendarPageBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const double shadowHeight = 2;
-    const height =
-        WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + shadowHeight;
-
     return Scaffold(
       floatingActionButton: Container(
         padding: const EdgeInsets.only(right: 10, bottom: 32),
@@ -136,56 +143,29 @@ class _CalendarPageBody extends StatelessWidget {
           children: <Widget>[
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: height,
+              height: _monthlyCalendarHeight,
               child: PageView(
                 controller: pageController,
                 scrollDirection: Axis.horizontal,
                 physics: const PageScrollPhysics(),
-                children: List.generate(_calendarDataSourceLength, (index) {
-                  return Container(
-                    decoration: BoxDecoration(
-                      color: PilllColors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          color: PilllColors.shadow,
-                          blurRadius: 6.0,
-                          offset: const Offset(0, shadowHeight),
+                children: List.generate(
+                  _calendarDataSourceLength,
+                  (index) {
+                    // NOTE: 生理タブ上部のカレンダーの90日のデータと合わせて3index分の表示をフリープランとする
+                    final withInFreePlanMonth = _todayCalendarPageIndex + 3 >= index && index >= _todayCalendarPageIndex - 3;
+                    return Stack(
+                      children: [
+                        MonthCalendarPager(
+                          displayedMonth: displayedMonth,
+                          calendarMenstruationBandModels: calendarMenstruationBandModels,
+                          calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                          calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
                         ),
+                        if (!user.premiumOrTrial && !withInFreePlanMonth) const PremiumIntroductionOverlay(),
                       ],
-                    ),
-                    height: height,
-                    width: MediaQuery.of(context).size.width,
-                    child: MonthCalendar(
-                        dateForMonth: displayedMonth,
-                        weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
-                          return CalendarWeekLine(
-                            dateRange: weekDateRange,
-                            calendarMenstruationBandModels: calendarMenstruationBandModels,
-                            calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                            calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
-                            horizontalPadding: 0,
-                            day: (context, weekday, date) {
-                              if (date.isPreviousMonth(displayedMonth)) {
-                                return CalendarDayTile.grayout(
-                                  weekday: weekday,
-                                  date: date,
-                                );
-                              }
-                              return CalendarDayTile(
-                                weekday: weekday,
-                                date: date,
-                                diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                                schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                                onTap: (date) {
-                                  analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-                                  transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
-                                },
-                              );
-                            },
-                          );
-                        }),
-                  );
-                }),
+                    );
+                  },
+                ),
               ),
             ),
             const SizedBox(height: 30),
@@ -197,6 +177,121 @@ class _CalendarPageBody extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 120),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MonthCalendarPager extends StatelessWidget {
+  const MonthCalendarPager({
+    super.key,
+    required this.displayedMonth,
+    required this.calendarMenstruationBandModels,
+    required this.calendarScheduledMenstruationBandModels,
+    required this.calendarNextPillSheetBandModels,
+  });
+
+  final DateTime displayedMonth;
+  final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: PilllColors.white,
+        boxShadow: [
+          BoxShadow(
+            color: PilllColors.shadow,
+            blurRadius: 6.0,
+            offset: const Offset(0, _shadowHeight),
+          ),
+        ],
+      ),
+      height: _monthlyCalendarHeight,
+      width: MediaQuery.of(context).size.width,
+      child: MonthCalendar(
+          dateForMonth: displayedMonth,
+          weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
+            return CalendarWeekLine(
+              dateRange: weekDateRange,
+              calendarMenstruationBandModels: calendarMenstruationBandModels,
+              calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+              calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+              horizontalPadding: 0,
+              day: (context, weekday, date) {
+                if (date.isPreviousMonth(displayedMonth)) {
+                  return CalendarDayTile.grayout(
+                    weekday: weekday,
+                    date: date,
+                  );
+                }
+                return CalendarDayTile(
+                  weekday: weekday,
+                  date: date,
+                  diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                  schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                  onTap: (date) {
+                    analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+                    transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
+                  },
+                );
+              },
+            );
+          }),
+    );
+  }
+}
+
+class PremiumIntroductionOverlay extends StatelessWidget {
+  const PremiumIntroductionOverlay({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned.fill(
+      child: ClipRect(
+        child: Stack(
+          children: [
+            BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+              child: Container(
+                color: Colors.black.withOpacity(0),
+              ),
+            ),
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(lockEmoji, style: TextStyle(fontSize: 40)),
+                  const SizedBox(height: 12),
+                  const Text(
+                    "これ以上の閲覧はプレミアム機能になります",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontSize: 14,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  SizedBox(
+                    width: 204,
+                    child: AppOutlinedButton(
+                      text: "くわしくみる",
+                      onPressed: () async {
+                        analytics.logEvent(
+                          name: "pressed_premium_overlay_monthly_calendar",
+                        );
+                        showPremiumIntroductionSheet(context);
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
