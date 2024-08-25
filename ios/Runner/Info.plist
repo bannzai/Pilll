@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSUserTrackingUsageDescription</key>
-	<string>あなたに合わせた広告を表示するために利用します</string>
 	<key>AppGroupKey</key>
 	<string>$(APP_GROUP_KEY)</string>
 	<key>CADisableMinimumFrameDurationOnPhone</key>
