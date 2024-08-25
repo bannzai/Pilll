@@ -1,7 +1,9 @@
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/widgets.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/version/version.dart';
 
 final remoteConfig = FirebaseRemoteConfig.instance;
 
@@ -18,6 +20,7 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.trialDeadlineDateOffsetDay: RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
         RemoteConfigKeys.discountEntitlementOffsetDay: RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
         RemoteConfigKeys.discountCountdownBoundaryHour: RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+        RemoteConfigKeys.releasedVersion: RemoteConfigParameterDefaultValues.releasedVersion,
       }),
       remoteConfig.fetchAndActivate()
     ).wait;
@@ -33,6 +36,13 @@ Future<void> setupRemoteConfig() async {
     debugPrint(error.toString());
     errorLogger.recordError(error, st);
   }
+}
+
+Future<bool> appIsReleased() async {
+  final releasedVersion = Version.parse(remoteConfig.getString(RemoteConfigKeys.releasedVersion));
+  final packageInfo = await PackageInfo.fromPlatform();
+  final appVersion = Version.parse(packageInfo.version);
+  return !appVersion.isGreaterThan(releasedVersion);
 }
 
 void debugPrintRemoteConfig() {
