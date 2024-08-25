@@ -1,10 +1,16 @@
+import 'dart:ui';
+
 import 'package:async_value_group/async_value_group.dart';
 import 'package:collection/collection.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/calendar/components/const.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/user.dart';
@@ -27,6 +33,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/utils/emoji/emoji.dart';
 
 // NOTE: 数字に特に意味はないが、ユーザーが過去のカレンダーも見たいということで十分な枠をとっている。Pilllの開始が2018年なので、それより後のデータが見れるくらいで良い
 const _calendarDataSourceLength = 120;
@@ -144,11 +151,17 @@ class _CalendarPageBody extends StatelessWidget {
                 children: List.generate(
                   _calendarDataSourceLength,
                   (index) {
-                    return MonthCalendarPager(
-                      displayedMonth: displayedMonth,
-                      calendarMenstruationBandModels: calendarMenstruationBandModels,
-                      calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
-                      calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                    final withIn1Month = _todayCalendarPageIndex + 1 >= index && index >= _todayCalendarPageIndex - 1;
+                    return Stack(
+                      children: [
+                        MonthCalendarPager(
+                          displayedMonth: displayedMonth,
+                          calendarMenstruationBandModels: calendarMenstruationBandModels,
+                          calendarScheduledMenstruationBandModels: calendarScheduledMenstruationBandModels,
+                          calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,
+                        ),
+                        if (!user.premiumOrTrial && !withIn1Month) const PremiumIntroductionOverlay(),
+                      ],
                     );
                   },
                 ),
@@ -228,6 +241,59 @@ class MonthCalendarPager extends StatelessWidget {
               },
             );
           }),
+    );
+  }
+}
+
+class PremiumIntroductionOverlay extends StatelessWidget {
+  const PremiumIntroductionOverlay({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Positioned.fill(
+      child: ClipRect(
+        child: Stack(
+          children: [
+            BackdropFilter(
+              filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+              child: Container(
+                color: Colors.black.withOpacity(0),
+              ),
+            ),
+            Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(lockEmoji, style: TextStyle(fontSize: 40)),
+                  const SizedBox(height: 12),
+                  const Text(
+                    "服用履歴はプレミアム機能です",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontSize: 14,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w400,
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  SizedBox(
+                    width: 204,
+                    child: AppOutlinedButton(
+                      text: "くわしくみる",
+                      onPressed: () async {
+                        analytics.logEvent(
+                          name: "pressed_premium_overlay_monthly_calendar",
+                        );
+                        showPremiumIntroductionSheet(context);
+                      },
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
