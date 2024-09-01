@@ -286,6 +286,7 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void logEvent({
     required String? name,
@@ -302,6 +303,7 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setCurrentScreen({
     required String? screenName,
@@ -318,6 +320,7 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void setUserProperties(
     String? name,
@@ -351,6 +354,7 @@ class MockBatchFactory extends _i1.Mock implements _i11.BatchFactory {
           Invocation.getter(#database),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i3.WriteBatch batch() => (super.noSuchMethod(
         Invocation.method(
@@ -384,6 +388,7 @@ class MockWriteBatch extends _i1.Mock implements _i3.WriteBatch {
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   void delete(_i3.DocumentReference<Object?>? document) => super.noSuchMethod(
         Invocation.method(
@@ -392,6 +397,7 @@ class MockWriteBatch extends _i1.Mock implements _i3.WriteBatch {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void set<T>(
     _i3.DocumentReference<T>? document,
@@ -409,6 +415,7 @@ class MockWriteBatch extends _i1.Mock implements _i3.WriteBatch {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void update(
     _i3.DocumentReference<Object?>? document,
@@ -439,56 +446,67 @@ class MockUser extends _i1.Mock implements _i4.User {
         Invocation.getter(#hasDiscountEntitlement),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isTrial => (super.noSuchMethod(
         Invocation.getter(#isTrial),
         returnValue: false,
       ) as bool);
+
   @override
   bool get trialIsAlreadyBegin => (super.noSuchMethod(
         Invocation.getter(#trialIsAlreadyBegin),
         returnValue: false,
       ) as bool);
+
   @override
   bool get premiumOrTrial => (super.noSuchMethod(
         Invocation.getter(#premiumOrTrial),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isNotYetStartTrial => (super.noSuchMethod(
         Invocation.getter(#isNotYetStartTrial),
         returnValue: false,
       ) as bool);
+
   @override
   List<String> get userDocumentIDSets => (super.noSuchMethod(
         Invocation.getter(#userDocumentIDSets),
         returnValue: <String>[],
       ) as List<String>);
+
   @override
   List<String> get anonymousUserIDSets => (super.noSuchMethod(
         Invocation.getter(#anonymousUserIDSets),
         returnValue: <String>[],
       ) as List<String>);
+
   @override
   List<String> get firebaseCurrentUserIDSets => (super.noSuchMethod(
         Invocation.getter(#firebaseCurrentUserIDSets),
         returnValue: <String>[],
       ) as List<String>);
+
   @override
   bool get isPremium => (super.noSuchMethod(
         Invocation.getter(#isPremium),
         returnValue: false,
       ) as bool);
+
   @override
   bool get shouldAskCancelReason => (super.noSuchMethod(
         Invocation.getter(#shouldAskCancelReason),
         returnValue: false,
       ) as bool);
+
   @override
   bool get analyticsDebugIsEnabled => (super.noSuchMethod(
         Invocation.getter(#analyticsDebugIsEnabled),
         returnValue: false,
       ) as bool);
+
   @override
   _i4.$UserCopyWith<_i4.User> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),
@@ -497,6 +515,7 @@ class MockUser extends _i1.Mock implements _i4.User {
           Invocation.getter(#copyWith),
         ),
       ) as _i4.$UserCopyWith<_i4.User>);
+
   @override
   Map<String, dynamic> toJson() => (super.noSuchMethod(
         Invocation.method(
@@ -520,41 +539,49 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
         Invocation.getter(#pillSheetEnumTypes),
         returnValue: <_i17.PillSheetType>[],
       ) as List<_i17.PillSheetType>);
+
   @override
   List<_i17.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
         Invocation.getter(#pillSheetTypes),
         returnValue: <_i17.PillSheetType?>[],
       ) as List<_i17.PillSheetType?>);
+
   @override
   int get pillNumberForFromMenstruation => (super.noSuchMethod(
         Invocation.getter(#pillNumberForFromMenstruation),
         returnValue: 0,
       ) as int);
+
   @override
   int get durationMenstruation => (super.noSuchMethod(
         Invocation.getter(#durationMenstruation),
         returnValue: 0,
       ) as int);
+
   @override
   List<_i6.ReminderTime> get reminderTimes => (super.noSuchMethod(
         Invocation.getter(#reminderTimes),
         returnValue: <_i6.ReminderTime>[],
       ) as List<_i6.ReminderTime>);
+
   @override
   bool get isOnReminder => (super.noSuchMethod(
         Invocation.getter(#isOnReminder),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isOnNotifyInNotTakenDuration => (super.noSuchMethod(
         Invocation.getter(#isOnNotifyInNotTakenDuration),
         returnValue: false,
       ) as bool);
+
   @override
   bool get isAutomaticallyCreatePillSheet => (super.noSuchMethod(
         Invocation.getter(#isAutomaticallyCreatePillSheet),
         returnValue: false,
       ) as bool);
+
   @override
   _i5.ReminderNotificationCustomization get reminderNotificationCustomization =>
       (super.noSuchMethod(
@@ -564,12 +591,14 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
           Invocation.getter(#reminderNotificationCustomization),
         ),
       ) as _i5.ReminderNotificationCustomization);
+
   @override
   _i6.PillSheetAppearanceMode get pillSheetAppearanceMode =>
       (super.noSuchMethod(
         Invocation.getter(#pillSheetAppearanceMode),
         returnValue: _i6.PillSheetAppearanceMode.number,
       ) as _i6.PillSheetAppearanceMode);
+
   @override
   _i6.$SettingCopyWith<_i6.Setting> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),
@@ -578,6 +607,7 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
           Invocation.getter(#copyWith),
         ),
       ) as _i6.$SettingCopyWith<_i6.Setting>);
+
   @override
   Map<String, dynamic> toJson() => (super.noSuchMethod(
         Invocation.method(
@@ -605,6 +635,7 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i7.PillSheetGroup call(
     _i3.WriteBatch? batch,
@@ -648,6 +679,7 @@ class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   void call(
     _i3.WriteBatch? batch,
@@ -681,6 +713,7 @@ class MockBatchSetSetting extends _i1.Mock implements _i19.BatchSetSetting {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   void call(
     _i3.WriteBatch? batch,
@@ -714,6 +747,7 @@ class MockSetSetting extends _i1.Mock implements _i19.SetSetting {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<void> call(_i6.Setting? setting) => (super.noSuchMethod(
         Invocation.method(
@@ -741,6 +775,7 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i13.SetPillSheetGroup {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<void> call(_i7.PillSheetGroup? pillSheetGroup) =>
       (super.noSuchMethod(
@@ -770,6 +805,7 @@ class MockDeleteMenstruation extends _i1.Mock
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<void> call(_i8.Menstruation? menstruation) => (super.noSuchMethod(
         Invocation.method(
@@ -797,6 +833,7 @@ class MockSetMenstruation extends _i1.Mock implements _i20.SetMenstruation {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<_i8.Menstruation> call(_i8.Menstruation? menstruation) =>
       (super.noSuchMethod(
@@ -830,6 +867,7 @@ class MockBeginMenstruation extends _i1.Mock implements _i20.BeginMenstruation {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<_i8.Menstruation> call(
     DateTime? begin,
@@ -873,6 +911,7 @@ class MockDatabaseConnection extends _i1.Mock
           Invocation.getter(#userID),
         ),
       ) as String);
+
   @override
   _i3.DocumentReference<_i4.User> userReference() => (super.noSuchMethod(
         Invocation.method(
@@ -887,6 +926,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i4.User>);
+
   @override
   _i3.DocumentReference<Object?> userRawReference() => (super.noSuchMethod(
         Invocation.method(
@@ -901,6 +941,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<Object?>);
+
   @override
   _i3.DocumentReference<_i22.DiarySetting> diarySettingReference() =>
       (super.noSuchMethod(
@@ -916,6 +957,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i22.DiarySetting>);
+
   @override
   _i3.CollectionReference<_i23.Diary> diariesReference() => (super.noSuchMethod(
         Invocation.method(
@@ -930,6 +972,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.CollectionReference<_i23.Diary>);
+
   @override
   _i3.DocumentReference<_i23.Diary> diaryReference(_i23.Diary? diary) =>
       (super.noSuchMethod(
@@ -945,6 +988,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i23.Diary>);
+
   @override
   _i3.DocumentReference<Object?> userPrivateRawReference() =>
       (super.noSuchMethod(
@@ -960,6 +1004,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<Object?>);
+
   @override
   _i3.CollectionReference<_i8.Menstruation> menstruationsReference() =>
       (super.noSuchMethod(
@@ -975,6 +1020,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.CollectionReference<_i8.Menstruation>);
+
   @override
   _i3.DocumentReference<_i8.Menstruation> menstruationReference(
           String? menstruationID) =>
@@ -991,6 +1037,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i8.Menstruation>);
+
   @override
   _i3.CollectionReference<_i18.PillSheetModifiedHistory>
       pillSheetModifiedHistoriesReference() => (super.noSuchMethod(
@@ -1007,6 +1054,7 @@ class MockDatabaseConnection extends _i1.Mock
               ),
             ),
           ) as _i3.CollectionReference<_i18.PillSheetModifiedHistory>);
+
   @override
   _i3.DocumentReference<_i18.PillSheetModifiedHistory>
       pillSheetModifiedHistoryReference(
@@ -1027,6 +1075,7 @@ class MockDatabaseConnection extends _i1.Mock
               ),
             ),
           ) as _i3.DocumentReference<_i18.PillSheetModifiedHistory>);
+
   @override
   _i3.CollectionReference<_i7.PillSheetGroup> pillSheetGroupsReference() =>
       (super.noSuchMethod(
@@ -1042,6 +1091,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.CollectionReference<_i7.PillSheetGroup>);
+
   @override
   _i3.DocumentReference<_i7.PillSheetGroup> pillSheetGroupReference(
           String? pillSheetGroupID) =>
@@ -1058,6 +1108,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i7.PillSheetGroup>);
+
   @override
   _i3.CollectionReference<_i24.Schedule> schedulesReference() =>
       (super.noSuchMethod(
@@ -1073,6 +1124,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.CollectionReference<_i24.Schedule>);
+
   @override
   _i3.DocumentReference<_i24.Schedule> scheduleReference(String? scheduleID) =>
       (super.noSuchMethod(
@@ -1088,6 +1140,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i24.Schedule>);
+
   @override
   _i3.DocumentReference<_i25.PilllAds?> pilllAds() => (super.noSuchMethod(
         Invocation.method(
@@ -1102,6 +1155,7 @@ class MockDatabaseConnection extends _i1.Mock
           ),
         ),
       ) as _i3.DocumentReference<_i25.PilllAds?>);
+
   @override
   _i9.Future<T> transaction<T>(_i3.TransactionHandler<T>? transactionHandler) =>
       (super.noSuchMethod(
@@ -1127,6 +1181,7 @@ class MockDatabaseConnection extends _i1.Mock
               ),
             ),
       ) as _i9.Future<T>);
+
   @override
   _i3.WriteBatch batch() => (super.noSuchMethod(
         Invocation.method(
@@ -1159,6 +1214,7 @@ class MockEndInitialSetting extends _i1.Mock implements _i26.EndInitialSetting {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<void> call(_i27.RemoteConfigParameter? remoteConfigParameter) =>
       (super.noSuchMethod(
@@ -1211,6 +1267,7 @@ class MockRevertTakePill extends _i1.Mock implements _i29.RevertTakePill {
           Invocation.getter(#batchFactory),
         ),
       ) as _i11.BatchFactory);
+
   @override
   _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
@@ -1220,6 +1277,7 @@ class MockRevertTakePill extends _i1.Mock implements _i29.RevertTakePill {
           Invocation.getter(#batchSetPillSheetModifiedHistory),
         ),
       ) as _i12.BatchSetPillSheetModifiedHistory);
+
   @override
   _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
         Invocation.getter(#batchSetPillSheetGroup),
@@ -1228,6 +1286,7 @@ class MockRevertTakePill extends _i1.Mock implements _i29.RevertTakePill {
           Invocation.getter(#batchSetPillSheetGroup),
         ),
       ) as _i13.BatchSetPillSheetGroup);
+
   @override
   _i9.Future<_i7.PillSheetGroup?> call({
     required _i7.PillSheetGroup? pillSheetGroup,
@@ -1265,6 +1324,7 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
           Invocation.getter(#batchFactory),
         ),
       ) as _i11.BatchFactory);
+
   @override
   _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
@@ -1274,6 +1334,7 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
           Invocation.getter(#batchSetPillSheetModifiedHistory),
         ),
       ) as _i12.BatchSetPillSheetModifiedHistory);
+
   @override
   _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
         Invocation.getter(#batchSetPillSheetGroup),
@@ -1282,6 +1343,7 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
           Invocation.getter(#batchSetPillSheetGroup),
         ),
       ) as _i13.BatchSetPillSheetGroup);
+
   @override
   _i9.Future<_i7.PillSheetGroup?> call({
     required DateTime? takenDate,
@@ -1358,6 +1420,7 @@ class MockFetchOrCreateUser extends _i1.Mock implements _i26.FetchOrCreateUser {
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   _i9.Future<_i4.User> call(String? uid) => (super.noSuchMethod(
         Invocation.method(
@@ -1391,6 +1454,7 @@ class MockSaveUserLaunchInfo extends _i1.Mock
           Invocation.getter(#databaseConnection),
         ),
       ) as _i2.DatabaseConnection);
+
   @override
   void call(_i4.User? user) => super.noSuchMethod(
         Invocation.method(
@@ -1424,6 +1488,7 @@ class MockErrorLogger extends _i1.Mock implements _i34.ErrorLogger {
         ),
         returnValueForMissingStub: null,
       );
+
   @override
   void log(String? message) => super.noSuchMethod(
         Invocation.method(
@@ -1476,6 +1541,7 @@ class MockLocalNotificationService extends _i1.Mock
           Invocation.getter(#plugin),
         ),
       ) as _i14.FlutterLocalNotificationsPlugin);
+
   @override
   _i9.Future<void> initialize() => (super.noSuchMethod(
         Invocation.method(
@@ -1485,6 +1551,7 @@ class MockLocalNotificationService extends _i1.Mock
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> cancelNotification({required int? localNotificationID}) =>
       (super.noSuchMethod(
@@ -1496,6 +1563,7 @@ class MockLocalNotificationService extends _i1.Mock
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<void> test() => (super.noSuchMethod(
         Invocation.method(
@@ -1505,6 +1573,7 @@ class MockLocalNotificationService extends _i1.Mock
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
+
   @override
   _i9.Future<List<_i14.PendingNotificationRequest>>
       pendingReminderNotifications() => (super.noSuchMethod(
@@ -1516,6 +1585,7 @@ class MockLocalNotificationService extends _i1.Mock
                 _i9.Future<List<_i14.PendingNotificationRequest>>.value(
                     <_i14.PendingNotificationRequest>[]),
           ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+
   @override
   _i9.Future<List<_i14.PendingNotificationRequest>>
       pendingNewPillSheetNotifications() => (super.noSuchMethod(
