@@ -184,7 +184,7 @@ PODS:
     - GoogleUtilities/Environment (~> 7.7)
     - nanopb (< 2.30911.0, >= 2.30908.0)
     - PromisesObjC (< 3.0, >= 1.2)
-  - GoogleUserMessagingPlatform (2.5.0)
+  - GoogleUserMessagingPlatform (2.6.0)
   - GoogleUtilities/AppDelegateSwizzler (7.13.3):
     - GoogleUtilities/Environment
     - GoogleUtilities/Logger
@@ -232,13 +232,13 @@ PODS:
   - PromisesObjC (2.4.0)
   - PromisesSwift (2.4.0):
     - PromisesObjC (= 2.4.0)
-  - purchases_flutter (8.1.0):
+  - purchases_flutter (8.1.1):
     - Flutter
-    - PurchasesHybridCommon (= 13.1.0)
-  - PurchasesHybridCommon (13.1.0):
-    - RevenueCat (= 5.3.0)
+    - PurchasesHybridCommon (= 13.2.0)
+  - PurchasesHybridCommon (13.2.0):
+    - RevenueCat (= 5.3.1)
   - RecaptchaInterop (100.0.0)
-  - RevenueCat (5.3.0)
+  - RevenueCat (5.3.1)
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -395,7 +395,7 @@ SPEC CHECKSUMS:
   google_mobile_ads: 9379c80fdfa9988fb0e105a407890ff8deb3cf86
   GoogleAppMeasurement: f65fc137531af9ad647f1c0a42f3b6a4d3a98049
   GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
-  GoogleUserMessagingPlatform: 6b4f48a370e77ce121d034c908cc6ee4fdafaf13
+  GoogleUserMessagingPlatform: 0c3a08353e53ce8c2feab7addd0b652cde522450
   GoogleUtilities: ea963c370a38a8069cc5f7ba4ca849a60b6d7d15
   GTMSessionFetcher: 5aea5ba6bd522a239e236100971f10cb71b96ab6
   home_widget: 0434835a4c9a75704264feff6be17ea40e0f0d57
@@ -406,10 +406,10 @@ SPEC CHECKSUMS:
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
-  purchases_flutter: 81d2654605bb5c9f7d777f8b51e4c949ffea83cd
-  PurchasesHybridCommon: 04828bd308b446146db7976c35b54d62f3659a9b
+  purchases_flutter: 71bf40d5f70c4653df8a53ef3819b6bfe08d86d3
+  PurchasesHybridCommon: 20acf98303a9593f5d56b449459dcf16ea581a99
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
-  RevenueCat: 4ad1d1c656f4d66bbfde7c83a4669fa1c1cb6527
+  RevenueCat: b2d2555cbb1f4116d341af4c5f82269c8e4e499a
   shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
   url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
   webview_flutter_wkwebview: 2a23822e9039b7b1bc52e5add778e5d89ad488d1
