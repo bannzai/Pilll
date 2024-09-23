@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/premium_introduction/ab_test/components/features.dart';
+import 'package:pilll/features/premium_introduction/ab_test/a/components/features.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
 
