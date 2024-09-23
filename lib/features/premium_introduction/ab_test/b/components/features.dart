@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
@@ -7,42 +10,30 @@ class PremiumIntroductionFeatures extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Stack(
+      clipBehavior: Clip.none,
+      alignment: AlignmentDirectional.topEnd,
       children: [
-        Text(
-          "プレミアム機能一覧",
-          style: TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontSize: 12,
-            fontWeight: FontWeight.w700,
-            color: TextColor.primaryDarkBlue,
-          ),
+        Image.asset(
+          Platform.isIOS ? "images/ios-quick-record.gif" : "images/android-quick-record.gif",
         ),
-        SizedBox(height: 8),
-        DefaultTextStyle(
-          style: TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontSize: 18,
-            fontWeight: FontWeight.w600,
-            color: TextColor.main,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        Positioned(
+          right: -27,
+          top: -27,
+          child: Stack(
+            alignment: AlignmentDirectional.center,
             children: [
-              Text("📩 プッシュ通知から服用記録"),
-              SizedBox(height: 4),
-              Text("🗂 服用履歴の記録・閲覧"),
-              SizedBox(height: 4),
-              Text("📆 ピルシート上に日付表示"),
-              SizedBox(height: 4),
-              Text("📦 新しいピルシートを自動補充"),
-              SizedBox(height: 4),
-              Text("👀 過去のデータ閲覧"),
-              SizedBox(height: 4),
-              Text("🏷 体調タグをカスタマイズ"),
-              SizedBox(height: 4),
-              Text("🚫 広告の非表示"),
+              SvgPicture.asset("images/yellow_spike.svg"),
+              const Text(
+                "人気の\n機能",
+                style: TextStyle(
+                  color: TextColor.primaryDarkBlue,
+                  fontSize: 10,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.bold,
+                ),
+                textAlign: TextAlign.center,
+              ),
             ],
           ),
         ),
