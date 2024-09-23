@@ -80,6 +80,17 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
               color: PilllColors.white,
               child: Stack(
                 children: [
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.transparent,
+                      image: DecorationImage(
+                        image: AssetImage("images/premium_background.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    width: MediaQuery.of(context).size.width,
+                  ),
                   SingleChildScrollView(
                     controller: scrollController,
                     padding: const EdgeInsets.only(bottom: 100, top: 20),
