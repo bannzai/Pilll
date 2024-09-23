@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/premium_introduction/ab_test/components/features.dart';
 import 'package:pilll/features/premium_introduction/ab_test/components/premium_introduction_discount.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -106,6 +107,13 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           ),
                         ],
                         const SizedBox(height: 24),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 40),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: PremiumIntroductionFeatures(),
+                          ),
+                        ),
                         Align(
                           alignment: Alignment.center,
                           child: AlertButton(
