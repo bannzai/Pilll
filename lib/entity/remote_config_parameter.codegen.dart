@@ -20,7 +20,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const discountEntitlementOffsetDay = 2;
   static const discountCountdownBoundaryHour = 48;
   static const releasedVersion = "202407.29.133308";
-  // default or a or b ...
+  // default or A or B ...
   static const premiumIntroductionPattern = "default";
 }
 
