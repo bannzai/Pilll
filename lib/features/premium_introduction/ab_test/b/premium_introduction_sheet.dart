@@ -108,7 +108,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         ],
                         const SizedBox(height: 24),
                         const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 40),
+                          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
                           child: Align(
                             alignment: Alignment.centerLeft,
                             child: PremiumIntroductionFeatures(),
