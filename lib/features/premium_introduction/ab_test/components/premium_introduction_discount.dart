@@ -69,11 +69,6 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          const Align(
-            alignment: Alignment.centerLeft,
-            child: PremiumIntroductionFeatures(),
-          ),
-          const SizedBox(height: 20),
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -110,6 +105,11 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           ),
           const SizedBox(height: 8),
           SvgPicture.asset("images/arrow_down.svg"),
+          const SizedBox(height: 20),
+          const Align(
+            alignment: Alignment.centerLeft,
+            child: PremiumIntroductionFeatures(),
+          ),
         ],
       ),
     );
