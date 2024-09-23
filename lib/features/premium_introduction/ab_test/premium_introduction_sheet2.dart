@@ -148,7 +148,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
   }
 }
 
-Future<void> showPremiumIntroductionSheet(BuildContext context) async {
+Future<void> showPremiumIntroductionSheet2(BuildContext context) async {
   analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet2");
 
   await showModalBottomSheet(
