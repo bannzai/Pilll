@@ -23,8 +23,8 @@ import 'package:pilll/utils/links.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumIntroductionSheetA extends HookConsumerWidget {
-  const PremiumIntroductionSheetA({super.key});
+class PremiumIntroductionSheetC extends HookConsumerWidget {
+  const PremiumIntroductionSheetC({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
