@@ -23,8 +23,8 @@ import 'package:pilll/utils/links.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumIntroductionSheet2 extends HookConsumerWidget {
-  const PremiumIntroductionSheet2({super.key});
+class PremiumIntroductionSheetA extends HookConsumerWidget {
+  const PremiumIntroductionSheetA({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -149,12 +149,12 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
   }
 }
 
-Future<void> showPremiumIntroductionSheet2(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet2");
+Future<void> showPremiumIntroductionSheetA(BuildContext context) async {
+  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheetA");
 
   await showModalBottomSheet(
     context: context,
-    builder: (_) => const PremiumIntroductionSheet2(),
+    builder: (_) => const PremiumIntroductionSheetA(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

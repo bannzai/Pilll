@@ -18,7 +18,7 @@ class PremiumIntroductionRow extends StatelessWidget {
     return ListTile(
       onTap: () {
         analytics.logEvent(name: "tapped_premium_introduction_row");
-        showPremiumIntroductionSheet2(context);
+        showPremiumIntroductionSheetA(context);
       },
       title: Row(
         children: [
