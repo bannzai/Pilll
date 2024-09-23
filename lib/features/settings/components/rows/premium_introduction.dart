@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 
 class PremiumIntroductionRow extends StatelessWidget {
   final bool isPremium;

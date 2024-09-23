@@ -22,6 +22,9 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(
       discountCountdownBoundaryHour:
           (json['discountCountdownBoundaryHour'] as num?)?.toInt() ??
               RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+      premiumIntroductionPattern:
+          json['premiumIntroductionPattern'] as String? ??
+              RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(
@@ -32,4 +35,5 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(
       'trialDeadlineDateOffsetDay': instance.trialDeadlineDateOffsetDay,
       'discountEntitlementOffsetDay': instance.discountEntitlementOffsetDay,
       'discountCountdownBoundaryHour': instance.discountCountdownBoundaryHour,
+      'premiumIntroductionPattern': instance.premiumIntroductionPattern,
     };

@@ -24,6 +24,7 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.discountEntitlementOffsetDay: RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
         RemoteConfigKeys.discountCountdownBoundaryHour: RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
         RemoteConfigKeys.releasedVersion: RemoteConfigParameterDefaultValues.releasedVersion,
+        RemoteConfigKeys.premiumIntroductionPattern: RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
       }),
       remoteConfig.fetchAndActivate()
     ).wait;

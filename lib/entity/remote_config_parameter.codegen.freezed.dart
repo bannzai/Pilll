@@ -26,6 +26,7 @@ mixin _$RemoteConfigParameter {
   int get trialDeadlineDateOffsetDay => throw _privateConstructorUsedError;
   int get discountEntitlementOffsetDay => throw _privateConstructorUsedError;
   int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
+  String get premiumIntroductionPattern => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,7 +45,8 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       bool skipInitialSetting,
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
-      int discountCountdownBoundaryHour});
+      int discountCountdownBoundaryHour,
+      String premiumIntroductionPattern});
 }
 
 /// @nodoc
@@ -66,6 +68,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
     Object? trialDeadlineDateOffsetDay = null,
     Object? discountEntitlementOffsetDay = null,
     Object? discountCountdownBoundaryHour = null,
+    Object? premiumIntroductionPattern = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -88,6 +91,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
           ? _value.discountCountdownBoundaryHour
           : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
               as int,
+      premiumIntroductionPattern: null == premiumIntroductionPattern
+          ? _value.premiumIntroductionPattern
+          : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 }
@@ -106,7 +113,8 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res>
       bool skipInitialSetting,
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
-      int discountCountdownBoundaryHour});
+      int discountCountdownBoundaryHour,
+      String premiumIntroductionPattern});
 }
 
 /// @nodoc
@@ -126,6 +134,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
     Object? trialDeadlineDateOffsetDay = null,
     Object? discountEntitlementOffsetDay = null,
     Object? discountCountdownBoundaryHour = null,
+    Object? premiumIntroductionPattern = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -148,6 +157,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
           ? _value.discountCountdownBoundaryHour
           : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
               as int,
+      premiumIntroductionPattern: null == premiumIntroductionPattern
+          ? _value.premiumIntroductionPattern
+          : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -164,7 +177,9 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.discountEntitlementOffsetDay =
           RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
       this.discountCountdownBoundaryHour =
-          RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour})
+          RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+      this.premiumIntroductionPattern =
+          RemoteConfigParameterDefaultValues.premiumIntroductionPattern})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) =>
@@ -185,10 +200,13 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @override
   @JsonKey()
   final int discountCountdownBoundaryHour;
+  @override
+  @JsonKey()
+  final String premiumIntroductionPattern;
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern)';
   }
 
   @override
@@ -211,7 +229,11 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(other.discountCountdownBoundaryHour,
                     discountCountdownBoundaryHour) ||
                 other.discountCountdownBoundaryHour ==
-                    discountCountdownBoundaryHour));
+                    discountCountdownBoundaryHour) &&
+            (identical(other.premiumIntroductionPattern,
+                    premiumIntroductionPattern) ||
+                other.premiumIntroductionPattern ==
+                    premiumIntroductionPattern));
   }
 
   @JsonKey(ignore: true)
@@ -222,7 +244,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       skipInitialSetting,
       trialDeadlineDateOffsetDay,
       discountEntitlementOffsetDay,
-      discountCountdownBoundaryHour);
+      discountCountdownBoundaryHour,
+      premiumIntroductionPattern);
 
   @JsonKey(ignore: true)
   @override
@@ -245,7 +268,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final bool skipInitialSetting,
       final int trialDeadlineDateOffsetDay,
       final int discountEntitlementOffsetDay,
-      final int discountCountdownBoundaryHour}) = _$RemoteConfigParameterImpl;
+      final int discountCountdownBoundaryHour,
+      final String premiumIntroductionPattern}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) =
@@ -261,6 +285,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   int get discountEntitlementOffsetDay;
   @override
   int get discountCountdownBoundaryHour;
+  @override
+  String get premiumIntroductionPattern;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl>

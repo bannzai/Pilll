@@ -3,10 +3,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/premium_introduction/ab_test/c/premium_introduction_sheet.dart';
-import 'package:pilll/features/premium_introduction/ab_test/b/premium_introduction_sheet.dart';
+import 'package:pilll/features/premium_introduction/ab_test/c/components/features.dart';
+import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -14,7 +13,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_header.dart';
-import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
@@ -22,12 +20,11 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/links.dart';
-import 'package:pilll/utils/remote_config.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumIntroductionSheet extends HookConsumerWidget {
-  const PremiumIntroductionSheet({super.key});
+class PremiumIntroductionSheetC extends HookConsumerWidget {
+  const PremiumIntroductionSheetC({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -83,17 +80,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
               color: PilllColors.white,
               child: Stack(
                 children: [
-                  Container(
-                    decoration: const BoxDecoration(
-                      color: Colors.transparent,
-                      image: DecorationImage(
-                        image: AssetImage("images/premium_background.png"),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
-                    width: MediaQuery.of(context).size.width,
-                  ),
                   SingleChildScrollView(
                     controller: scrollController,
                     padding: const EdgeInsets.only(bottom: 100, top: 20),
@@ -121,12 +107,23 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           ),
                         ],
                         const SizedBox(height: 24),
-                        AlertButton(
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 40),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: PremiumIntroductionFeatures(),
+                          ),
+                        ),
+                        Align(
+                          alignment: Alignment.center,
+                          child: AlertButton(
                             onPressed: () async {
-                              analytics.logEvent(name: "pressed_premium_functions_on_sheet");
+                              analytics.logEvent(name: "pressed_premium_functions_on_sheet2");
                               await launchUrl(Uri.parse(preimumLink));
                             },
-                            text: "プレミアム機能を見る"),
+                            text: "プレミアム機能の詳細を見る",
+                          ),
+                        ),
                         const SizedBox(height: 24),
                         PremiumIntroductionFotter(
                           isLoading: isLoading,
@@ -150,48 +147,4 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
       },
     );
   }
-}
-
-Future<void> showPremiumIntroductionSheet(BuildContext context) async {
-  final premiumIntroductionPattern = remoteConfig.getString(RemoteConfigKeys.premiumIntroductionPattern);
-  switch (premiumIntroductionPattern) {
-    case "B":
-      await _showPremiumIntroductionSheetB(context);
-      break;
-    case "C":
-      await _showPremiumIntroductionSheetC(context);
-      break;
-    default:
-      analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet");
-
-      await showModalBottomSheet(
-        context: context,
-        builder: (_) => const PremiumIntroductionSheet(),
-        backgroundColor: Colors.transparent,
-        isScrollControlled: true,
-      );
-      break;
-  }
-}
-
-Future<void> _showPremiumIntroductionSheetC(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheetC");
-
-  await showModalBottomSheet(
-    context: context,
-    builder: (_) => const PremiumIntroductionSheetC(),
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-  );
-}
-
-Future<void> _showPremiumIntroductionSheetB(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheetB");
-
-  await showModalBottomSheet(
-    context: context,
-    builder: (_) => const PremiumIntroductionSheetB(),
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-  );
 }
