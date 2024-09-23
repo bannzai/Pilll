@@ -14,11 +14,12 @@ class PremiumIntroductionFeatures extends StatelessWidget {
           "プレミアム機能一覧",
           style: TextStyle(
             fontFamily: FontFamily.japanese,
-            fontSize: 14,
+            fontSize: 12,
             fontWeight: FontWeight.w700,
             color: TextColor.primaryDarkBlue,
           ),
         ),
+        SizedBox(height: 8),
         DefaultTextStyle(
           style: TextStyle(
             fontFamily: FontFamily.japanese,
