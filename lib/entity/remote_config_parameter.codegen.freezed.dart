@@ -26,7 +26,7 @@ mixin _$RemoteConfigParameter {
   int get trialDeadlineDateOffsetDay => throw _privateConstructorUsedError;
   int get discountEntitlementOffsetDay => throw _privateConstructorUsedError;
   int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
-  int get premiumIntroductionPattern => throw _privateConstructorUsedError;
+  String get premiumIntroductionPattern => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,7 +46,7 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour,
-      int premiumIntroductionPattern});
+      String premiumIntroductionPattern});
 }
 
 /// @nodoc
@@ -94,7 +94,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res,
       premiumIntroductionPattern: null == premiumIntroductionPattern
           ? _value.premiumIntroductionPattern
           : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ) as $Val);
   }
 }
@@ -114,7 +114,7 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res>
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour,
-      int premiumIntroductionPattern});
+      String premiumIntroductionPattern});
 }
 
 /// @nodoc
@@ -160,7 +160,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res>
       premiumIntroductionPattern: null == premiumIntroductionPattern
           ? _value.premiumIntroductionPattern
           : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
     ));
   }
 }
@@ -202,7 +202,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   final int discountCountdownBoundaryHour;
   @override
   @JsonKey()
-  final int premiumIntroductionPattern;
+  final String premiumIntroductionPattern;
 
   @override
   String toString() {
@@ -269,7 +269,7 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int trialDeadlineDateOffsetDay,
       final int discountEntitlementOffsetDay,
       final int discountCountdownBoundaryHour,
-      final int premiumIntroductionPattern}) = _$RemoteConfigParameterImpl;
+      final String premiumIntroductionPattern}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) =
@@ -286,7 +286,7 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   @override
   int get discountCountdownBoundaryHour;
   @override
-  int get premiumIntroductionPattern;
+  String get premiumIntroductionPattern;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl>

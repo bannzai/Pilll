@@ -23,7 +23,7 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(
           (json['discountCountdownBoundaryHour'] as num?)?.toInt() ??
               RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
       premiumIntroductionPattern:
-          (json['premiumIntroductionPattern'] as num?)?.toInt() ??
+          json['premiumIntroductionPattern'] as String? ??
               RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
     );
 
