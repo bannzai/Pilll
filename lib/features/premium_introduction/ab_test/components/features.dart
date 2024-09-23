@@ -10,7 +10,7 @@ class PremiumIntroductionFeatures extends StatelessWidget {
     return const DefaultTextStyle(
       style: TextStyle(
         fontFamily: FontFamily.japanese,
-        fontSize: 12,
+        fontSize: 14,
         fontWeight: FontWeight.w600,
         color: TextColor.main,
       ),
