@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/premium_introduction/ab_test/components/premium_introduction_discount.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -11,7 +12,6 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_header.dart';
-import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
@@ -117,12 +117,16 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           ),
                         ],
                         const SizedBox(height: 24),
-                        AlertButton(
+                        Align(
+                          alignment: Alignment.center,
+                          child: AlertButton(
                             onPressed: () async {
-                              analytics.logEvent(name: "pressed_premium_functions_on_sheet");
+                              analytics.logEvent(name: "pressed_premium_functions_on_sheet2");
                               await launchUrl(Uri.parse(preimumLink));
                             },
-                            text: "プレミアム機能を見る"),
+                            text: "プレミアム機能の詳細を見る",
+                          ),
+                        ),
                         const SizedBox(height: 24),
                         PremiumIntroductionFotter(
                           isLoading: isLoading,
