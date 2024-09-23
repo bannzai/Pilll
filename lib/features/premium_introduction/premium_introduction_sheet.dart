@@ -5,7 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/premium_introduction/ab_test/a/premium_introduction_sheet.dart';
+import 'package:pilll/features/premium_introduction/ab_test/c/premium_introduction_sheet.dart';
 import 'package:pilll/features/premium_introduction/ab_test/b/premium_introduction_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
