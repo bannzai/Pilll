@@ -272,7 +272,7 @@ class ApplyShareRewardPremiumTrial {
     await databaseConnection.userReference().set(
           user.copyWith(
             beginTrialDate: now(),
-            trialDeadlineDate: now().addDays(7).endOfDay(),
+            trialDeadlineDate: now().addDays(14).endOfDay(),
             appliedShareRewardPremiumTrialCount: user.appliedShareRewardPremiumTrialCount + 1,
           ),
           SetOptions(merge: true),
