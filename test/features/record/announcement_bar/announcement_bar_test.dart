@@ -515,9 +515,9 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    const User(
+                    User(
                       isPremium: false,
-                      trialDeadlineDate: null,
+                      trialDeadlineDate: today().addDays(-90),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
                     ),
@@ -525,20 +525,10 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
-                    ),
-                  ),
-                ),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -586,9 +576,9 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    const User(
+                    User(
                       isPremium: false,
-                      trialDeadlineDate: null,
+                      trialDeadlineDate: today().addDays(-90),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
                     ),
@@ -596,20 +586,10 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
-                    ),
-                  ),
-                ),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -657,9 +637,9 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    const User(
+                    User(
                       isPremium: false,
-                      trialDeadlineDate: null,
+                      trialDeadlineDate: today().addDays(-90),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
                     ),
@@ -667,20 +647,10 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
-                    ),
-                  ),
-                ),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -696,9 +666,11 @@ void main() {
             findsOneWidget,
           );
         });
-        testWidgets('now is 2022-08-24T00:00:00', (WidgetTester tester) async {
+        testWidgets('defaultTargetPlatform is android', (WidgetTester tester) async {
+          debugDefaultTargetPlatformOverride = TargetPlatform.android;
+
           final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 24);
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
 
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
@@ -728,9 +700,9 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    const User(
+                    User(
                       isPremium: false,
-                      trialDeadlineDate: null,
+                      trialDeadlineDate: today().addDays(-90),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
                     ),
@@ -738,27 +710,17 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
-                    ),
-                  ),
-                ),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
               ),
             ),
           );
-          await tester.pump();
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
           debugDefaultTargetPlatformOverride = null;
 
