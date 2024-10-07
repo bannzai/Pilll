@@ -4,19 +4,19 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/picker/picker_toolbar.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/native/channel.dart';
 import 'package:pilll/native/present_share_to_sns_for_reward_premium_trial.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/utils/datetime/day.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
+  final User user;
+
   const ShareRewardPremiumTrialAnnoumcenetBar({
     super.key,
+    required this.user,
   });
 
   @override
@@ -32,7 +32,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
 
           _showPicker(context, (shareToSNSKind) {
             presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
-              await applyShareRewardPremiumTrial();
+              await applyShareRewardPremiumTrial(user);
             });
           });
         },
@@ -42,7 +42,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const SizedBox(width: 24),
             const Spacer(),
             const Text(
-              "SNSシェアしてプレミアム機能を30日間無料で再体験できます！\nタップしてシェアしましょう！",
+              "SNSシェアしてプレミアム機能を7日間無料で再体験できます！\nタップしてシェアしましょう！",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
