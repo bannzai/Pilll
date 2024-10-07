@@ -118,9 +118,9 @@ private var channel: FlutterMethodChannel?
           requestAppTrackingTransparency(completion: completionHandler)
         case "presentShareToSNSForPremiumTrialReward":
           if let arguments = call.arguments as? [String: Any],
-             let snsKindRawValue = arguments["kind"] as? String,
-             let snsKind = ShareToSNSKind(rawValue: snsKindRawValue) {
-            presentShareToSNSForPremiumTrialReward(kind: snsKind, completionHandler: completionHandler)
+             let shareToSNSKindRawValue = arguments["shareToSNSKind"] as? String,
+             let shareToSNSKind = ShareToSNSKind(rawValue: shareToSNSKindRawValue) {
+            presentShareToSNSForPremiumTrialReward(kind: shareToSNSKind, completionHandler: completionHandler)
           } else {
             completionHandler(["result": "failure", "message": "不明なエラーが発生しました"])
           }
