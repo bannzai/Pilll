@@ -9,7 +9,7 @@ enum ShareToSNSKind {
   facebook,
 }
 
-extension on ShareToSNSKind {
+extension ShareToSNSKindExt on ShareToSNSKind {
   String get rawValue {
     switch (this) {
       case ShareToSNSKind.X:
