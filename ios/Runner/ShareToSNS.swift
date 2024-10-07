@@ -26,13 +26,13 @@ func presentShareToSNSForPremiumTrialReward(kind: ShareToSNSKind, completionHand
   let controller = UIActivityViewController(
     activityItems: [
       """
-🌸 Pilllでピル管理がもっと便利に！🌸
+🌸 Pilllでピル管理がもっと便利に！ 🌸
 飲み忘れの不安をなくすためにリマインダーや生理管理機能が備わっているアプリです
 
 #Pilll #ピル管理 #ヘルスケア #便利アプリ
 
 iOS: https://onl.sc/piiY1A6
-Android: https://onl.sc/c9xnQUk;
+Android: https://onl.sc/c9xnQUk
 """
     ],
     applicationActivities: nil
