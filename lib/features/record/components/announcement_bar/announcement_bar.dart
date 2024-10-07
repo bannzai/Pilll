@@ -97,6 +97,11 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       } else {
         // !isPremium && !isTrial
+
+        if (!isAdsDisabled && pilllAds != null) {
+          return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        }
+
         if (defaultTargetPlatform == TargetPlatform.iOS) {
           final trialDeadlineDate = user.trialDeadlineDate;
           if (trialDeadlineDate != null) {
@@ -105,10 +110,6 @@ class AnnouncementBar extends HookConsumerWidget {
               return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
             }
           }
-        }
-
-        if (!isAdsDisabled && pilllAds != null) {
-          return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
         return const AdMob();
       }
