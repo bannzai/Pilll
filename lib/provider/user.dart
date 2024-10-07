@@ -263,3 +263,14 @@ class DisableShouldAskCancelReason {
     }, SetOptions(merge: true));
   }
 }
+
+class ApplyShareRewardPremiumTrial {
+  final DatabaseConnection databaseConnection;
+  ApplyShareRewardPremiumTrial(this.databaseConnection);
+
+  Future<void> call(RemoteConfigParameter remoteConfigParameter) {
+    throw UnimplementedError();
+  }
+}
+
+final applyShareRewardPremiumTrial = Provider((ref) => ApplyShareRewardPremiumTrial(ref.watch(databaseProvider)));
