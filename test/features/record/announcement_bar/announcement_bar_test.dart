@@ -421,315 +421,6 @@ void main() {
           );
         });
       });
-      group("#ShareRewardPremiumTrialAnnoumcenetBar", () {
-        testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    User(
-                      isPremium: false,
-                      trialDeadlineDate: today().addDays(-90),
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
-                    ),
-                  ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
-              ),
-            ),
-          );
-          await tester.pumpAndSettle(const Duration(milliseconds: 400));
-
-          debugDefaultTargetPlatformOverride = null;
-
-          expect(
-            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsOneWidget,
-          );
-        });
-        testWidgets('today is 2022-08-10', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10);
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    User(
-                      isPremium: false,
-                      trialDeadlineDate: today().addDays(-90),
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
-                    ),
-                  ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
-              ),
-            ),
-          );
-          await tester.pump();
-
-          debugDefaultTargetPlatformOverride = null;
-
-          expect(
-            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsOneWidget,
-          );
-        });
-        testWidgets('today is 2022-08-11', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 11);
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    User(
-                      isPremium: false,
-                      trialDeadlineDate: today().addDays(-90),
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
-                    ),
-                  ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
-              ),
-            ),
-          );
-          await tester.pump();
-
-          debugDefaultTargetPlatformOverride = null;
-
-          expect(
-            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsOneWidget,
-          );
-        });
-        testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    User(
-                      isPremium: false,
-                      trialDeadlineDate: today().addDays(-90),
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
-                    ),
-                  ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
-              ),
-            ),
-          );
-          await tester.pump();
-
-          debugDefaultTargetPlatformOverride = null;
-
-          expect(
-            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsOneWidget,
-          );
-        });
-        testWidgets('defaultTargetPlatform is android', (WidgetTester tester) async {
-          debugDefaultTargetPlatformOverride = TargetPlatform.android;
-
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    User(
-                      isPremium: false,
-                      trialDeadlineDate: today().addDays(-90),
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
-                    ),
-                  ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
-              ),
-            ),
-          );
-          await tester.pumpAndSettle(const Duration(milliseconds: 400));
-
-          debugDefaultTargetPlatformOverride = null;
-
-          expect(
-            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsNothing,
-          );
-        });
-      });
       group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
@@ -1081,6 +772,315 @@ void main() {
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            findsNothing,
+          );
+        });
+      });
+      group("#ShareRewardPremiumTrialAnnoumcenetBar", () {
+        testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-90),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('today is 2022-08-10', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-90),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('today is 2022-08-11', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 11);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-90),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('now is 2022-08-23T23:59:59', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-90),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('defaultTargetPlatform is android', (WidgetTester tester) async {
+          debugDefaultTargetPlatformOverride = TargetPlatform.android;
+
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-90),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
             findsNothing,
           );
         });
