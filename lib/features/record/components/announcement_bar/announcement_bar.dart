@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/share_reward_premium_trial.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -16,6 +19,8 @@ import 'package:pilll/features/record/components/announcement_bar/components/res
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/remote_config.dart';
 
@@ -94,6 +99,15 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       } else {
         // !isPremium && !isTrial
+        if (Platform.isIOS) {
+          final trialDeadlineDate = user.trialDeadlineDate;
+          if (trialDeadlineDate != null) {
+            if (isSameDay(today(), now().addDays(90))) {
+              return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
+            }
+          }
+        }
+
         if (!isAdsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
