@@ -979,7 +979,7 @@ void main() {
 
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsOneWidget,
+            findsNothing,
           );
         });
         testWidgets('defaultTargetPlatform is android', (WidgetTester tester) async {
