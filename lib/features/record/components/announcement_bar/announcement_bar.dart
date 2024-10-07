@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -99,7 +97,7 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       } else {
         // !isPremium && !isTrial
-        if (Platform.isIOS) {
+        if (defaultTargetPlatform == TargetPlatform.iOS) {
           final trialDeadlineDate = user.trialDeadlineDate;
           if (trialDeadlineDate != null) {
             final range = DateRange(trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
