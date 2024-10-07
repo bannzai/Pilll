@@ -273,4 +273,4 @@ class ApplyShareRewardPremiumTrial {
   }
 }
 
-final applyShareRewardPremiumTrial = Provider((ref) => ApplyShareRewardPremiumTrial(ref.watch(databaseProvider)));
+final applyShareRewardPremiumTrialProvider = Provider((ref) => ApplyShareRewardPremiumTrial(ref.watch(databaseProvider)));
