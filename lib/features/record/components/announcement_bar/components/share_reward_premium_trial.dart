@@ -1,21 +1,28 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/picker/picker_toolbar.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/native/channel.dart';
+import 'package:pilll/native/present_share_to_sns_for_reward_premium_trial.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:share_plus/share_plus.dart';
 
-class ShareRewardPremiumTrialAnnoumcenetBar extends StatelessWidget {
+class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
   const ShareRewardPremiumTrialAnnoumcenetBar({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final applyShareRewardPremiumTrial = ref.watch(applyShareRewardPremiumTrialProvider);
+
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       color: PilllColors.primary,
@@ -23,10 +30,11 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends StatelessWidget {
         onTap: () async {
           analytics.logEvent(name: "pressed_share_reward_announcement_bar");
 
-          await Share.share('''Pilll ピル服用に特化したピルリマインダーアプリ
-
-iOS: https://onl.sc/piiY1A6
-Android: https://onl.sc/c9xnQUk''');
+          _showPicker(context, (shareToSNSKind) {
+            presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
+              await applyShareRewardPremiumTrial();
+            });
+          });
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -34,7 +42,7 @@ Android: https://onl.sc/c9xnQUk''');
             const SizedBox(width: 24),
             const Spacer(),
             const Text(
-              "SNSシェアしてプレミアム機能を30日間無料で再体験できます！",
+              "SNSシェアしてプレミアム機能を30日間無料で再体験できます！\nタップしてシェアしましょう！",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
@@ -57,23 +65,45 @@ Android: https://onl.sc/c9xnQUk''');
     );
   }
 
-  static String? retrievePremiumTrialLimit(User user) {
-    if (user.isPremium) {
-      return null;
-    }
-    if (!user.isTrial) {
-      return null;
-    }
-    final trialDeadlineDate = user.trialDeadlineDate;
-    if (trialDeadlineDate == null) {
-      return null;
-    }
+  void _showPicker(BuildContext context, Function(ShareToSNSKind) completionHandler) {
+    int selected = ShareToSNSKind.values.first.index;
 
-    if (trialDeadlineDate.isBefore(now())) {
-      return null;
-    }
-
-    final diff = daysBetween(now(), trialDeadlineDate);
-    return "残り$diff日間すべての機能を使えます";
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text("どちらにシェアしますか？"),
+            PickerToolbar(
+              done: (() {
+                completionHandler(ShareToSNSKind.values[selected]);
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            SizedBox(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  onSelectedItemChanged: (index) {
+                    selected = index;
+                  },
+                  scrollController: FixedExtentScrollController(initialItem: selected),
+                  children: ShareToSNSKind.values.map((e) => Text(e.rawValue)).toList(),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
