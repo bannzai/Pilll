@@ -849,7 +849,153 @@ void main() {
             findsNothing,
           );
         });
-        testWidgets('today between trialDeadlineDate.addDays(90 ~ 93)', (WidgetTester tester) async {
+        testWidgets('today between trialDeadlineDate.addDays(91) and appliedShareRewardPremiumTrialCount is 0', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-91),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                      appliedShareRewardPremiumTrialCount: 0,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('today between trialDeadlineDate.addDays(100) and appliedShareRewardPremiumTrialCount is 0', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+            beginDate: mockToday.subtract(
+              const Duration(days: 25),
+            ),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    User(
+                      isPremium: false,
+                      trialDeadlineDate: today().addDays(-100),
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                      appliedShareRewardPremiumTrialCount: 0,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                pilllAdsProvider.overrideWith(
+                  (ref) => Stream.value(
+                    PilllAds(
+                      description: 'これは広告用のテキスト',
+                      destinationURL: 'https://github.com/bannzai',
+                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                      hexColor: '#111111',
+                      imageURL: null,
+                    ),
+                  ),
+                ),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
+            findsOneWidget,
+          );
+        });
+        testWidgets('today between trialDeadlineDate.addDays(90 ~ 93) and appliedShareRewardPremiumTrialCount is 1', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
 
@@ -886,6 +1032,7 @@ void main() {
                       trialDeadlineDate: today().addDays(-90),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
+                      appliedShareRewardPremiumTrialCount: 1,
                     ),
                   ),
                 ),
@@ -921,7 +1068,8 @@ void main() {
             findsOneWidget,
           );
         });
-        testWidgets('today is not between trialDeadlineDate.addDays(90 ~ 93)', (WidgetTester tester) async {
+        testWidgets('today is not between trialDeadlineDate.addDays(90 ~ 93)  and appliedShareRewardPremiumTrialCount is 1',
+            (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10);
 

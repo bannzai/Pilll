@@ -105,9 +105,15 @@ class AnnouncementBar extends HookConsumerWidget {
         if (defaultTargetPlatform == TargetPlatform.iOS) {
           final trialDeadlineDate = user.trialDeadlineDate;
           if (trialDeadlineDate != null) {
-            final range = DateRange(trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
-            if (range.inRange(today())) {
-              return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
+            if (user.appliedShareRewardPremiumTrialCount == 0) {
+              if (today().isAfter(trialDeadlineDate.addDays(90))) {
+                return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
+              }
+            } else {
+              final range = DateRange(trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
+              if (range.inRange(today())) {
+                return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
+              }
             }
           }
         }
