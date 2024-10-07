@@ -21,6 +21,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
+import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/remote_config.dart';
 
@@ -102,7 +103,8 @@ class AnnouncementBar extends HookConsumerWidget {
         if (Platform.isIOS) {
           final trialDeadlineDate = user.trialDeadlineDate;
           if (trialDeadlineDate != null) {
-            if (isSameDay(today(), now().addDays(90))) {
+            final range = DateRange(trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
+            if (range.inRange(today())) {
               return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
             }
           }
