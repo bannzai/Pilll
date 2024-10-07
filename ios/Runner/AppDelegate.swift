@@ -116,6 +116,14 @@ private var channel: FlutterMethodChannel?
           completionHandler(["result": "success"])
         case "requestAppTrackingTransparency":
           requestAppTrackingTransparency(completion: completionHandler)
+        case "shareToSNSForReward":
+          if let arguments = call.arguments as? [String: Any],
+             let snsKindRawValue = arguments["kind"] as? String,
+             let snsKind = ShareToSNSKind(rawValue: snsKindRawValue) {
+            presentShareToSNS(kind: snsKind, completionHandler: completionHandler)
+          } else {
+            completionHandler(["result": "failure", "message": "不明なエラーが発生しました"])
+          }
         case _:
           return
         }
