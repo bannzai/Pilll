@@ -1630,3 +1630,32 @@ class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
         returnValueForMissingStub: _i9.Future<void>.value(),
       ) as _i9.Future<void>);
 }
+
+/// A class which mocks [ApplyShareRewardPremiumTrial].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockApplyShareRewardPremiumTrial extends _i1.Mock
+    implements _i26.ApplyShareRewardPremiumTrial {
+  MockApplyShareRewardPremiumTrial() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
+        Invocation.getter(#databaseConnection),
+        returnValue: _FakeDatabaseConnection_1(
+          this,
+          Invocation.getter(#databaseConnection),
+        ),
+      ) as _i2.DatabaseConnection);
+
+  @override
+  _i9.Future<void> call(_i4.User? user) => (super.noSuchMethod(
+        Invocation.method(
+          #call,
+          [user],
+        ),
+        returnValue: _i9.Future<void>.value(),
+        returnValueForMissingStub: _i9.Future<void>.value(),
+      ) as _i9.Future<void>);
+}
