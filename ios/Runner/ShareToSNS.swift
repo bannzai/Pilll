@@ -26,7 +26,10 @@ func presentShareToSNSForPremiumTrialReward(kind: ShareToSNSKind, completionHand
   let controller = UIActivityViewController(
     activityItems: [
       """
-Pilll ピル服用に特化したピルリマインダーアプリ
+🌸 Pilllでピル管理がもっと便利に！🌸
+飲み忘れの不安をなくすためにリマインダーや生理管理機能が備わっているアプリです
+
+#Pilll #ピル管理 #ヘルスケア #便利アプリ
 
 iOS: https://onl.sc/piiY1A6
 Android: https://onl.sc/c9xnQUk;
