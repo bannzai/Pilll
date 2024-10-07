@@ -27,6 +27,7 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
+import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
@@ -453,9 +454,9 @@ void main() {
                 latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
-                    const User(
+                    User(
                       isPremium: false,
-                      trialDeadlineDate: null,
+                      trialDeadlineDate: today().addDays(-90),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
                     ),
@@ -463,18 +464,10 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  )),
-                ),
+                pilllAdsProvider.overrideWith((ref) => const Stream.empty()),
                 sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                applyShareRewardPremiumTrialProvider.overrideWith((ref) => MockApplyShareRewardPremiumTrial())
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
