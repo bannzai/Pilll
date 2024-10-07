@@ -21,7 +21,7 @@ enum ShareToSNSKind: String, RawRepresentable, CaseIterable {
 }
 
 
-func presentShareToSNS(kind: ShareToSNSKind, completionHandler: @escaping (Dictionary<String, Any>) -> Void) {
+func presentShareToSNSForPremiumTrialReward(kind: ShareToSNSKind, completionHandler: @escaping (Dictionary<String, Any>) -> Void) {
   let controller = UIActivityViewController(
     activityItems: [
       """
