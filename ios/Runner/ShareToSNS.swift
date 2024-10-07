@@ -2,6 +2,7 @@ import Foundation
 import UIKit
 import ActivityKit
 
+// 種類を増やすならFlutterのコードの定義も追加する必要がある
 enum ShareToSNSKind: String, RawRepresentable, CaseIterable {
   case X
   case facebook
