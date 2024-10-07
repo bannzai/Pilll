@@ -1,9 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/picker/picker_toolbar.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/native/present_share_to_sns_for_reward_premium_trial.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -32,7 +34,11 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
 
           _showPicker(context, (shareToSNSKind) {
             presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
-              await applyShareRewardPremiumTrial(user);
+              try {
+                await applyShareRewardPremiumTrial(user);
+              } catch (error) {
+                showErrorAlert(context, error);
+              }
             });
           });
         },
