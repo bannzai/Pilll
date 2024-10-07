@@ -268,8 +268,15 @@ class ApplyShareRewardPremiumTrial {
   final DatabaseConnection databaseConnection;
   ApplyShareRewardPremiumTrial(this.databaseConnection);
 
-  Future<void> call(RemoteConfigParameter remoteConfigParameter) {
-    throw UnimplementedError();
+  Future<void> call(User user) async {
+    await databaseConnection.userReference().set(
+          user.copyWith(
+            beginTrialDate: now(),
+            trialDeadlineDate: now().addDays(7).endOfDay(),
+            appliedShareRewardPremiumTrialCount: user.appliedShareRewardPremiumTrialCount + 1,
+          ),
+          SetOptions(merge: true),
+        );
   }
 }
 
