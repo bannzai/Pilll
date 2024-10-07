@@ -1106,6 +1106,7 @@ void main() {
                       trialDeadlineDate: today().addDays(-100),
                       beginTrialDate: null,
                       discountEntitlementDeadlineDate: null,
+                      appliedShareRewardPremiumTrialCount: 1,
                     ),
                   ),
                 ),
