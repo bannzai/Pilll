@@ -777,9 +777,9 @@ void main() {
         });
       });
       group("#ShareRewardPremiumTrialAnnoumcenetBar", () {
-        testWidgets('today is before 2022-08-10, pilll-ads start 2022-08-10', (WidgetTester tester) async {
+        testWidgets('today is 2022-08-10, pilll-ads start 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+          final mockToday = DateTime(2022, 08, 10);
 
           when(mockTodayRepository.now()).thenReturn(mockToday);
           todayRepository = mockTodayRepository;
