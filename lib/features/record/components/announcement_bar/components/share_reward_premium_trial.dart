@@ -42,7 +42,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const SizedBox(width: 24),
             const Spacer(),
             const Text(
-              "SNSシェアしてプレミアム機能を7日間無料で再体験できます！\nタップしてシェアしましょう！",
+              "プレミアム機能を7日間で再体験できます！\nタップしてシェアしましょう！",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
@@ -75,7 +75,18 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text("どちらにシェアしますか？"),
+            const Padding(
+              padding: EdgeInsets.only(top: 10),
+              child: Text(
+                "どちらにシェアしますか？",
+                style: TextStyle(
+                  color: TextColor.main,
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
             PickerToolbar(
               done: (() {
                 completionHandler(ShareToSNSKind.values[selected]);
