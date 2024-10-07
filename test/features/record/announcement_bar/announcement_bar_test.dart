@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -41,7 +42,11 @@ import '../../../helper/mock.mocks.dart';
 
 void main() {
   const totalCountOfActionForTakenPillForLongTimeUser = 14;
+
   setUp(() {
+    /// iOSでのみ動作するコードがある。現状は [ShareRewardPremiumTrialAnnoumcenetBar] が該当する
+    debugDefaultTargetPlatformOverride = TargetPlatform.iOS;
+
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
