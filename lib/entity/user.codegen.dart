@@ -102,13 +102,8 @@ class User with _$User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    DateTime? shareRewardPremiumTrialAppliedDateTime,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? shareRewardPremiumTrialDeadlineDate,
-    @Default(0) appliedShareRewardPremiumTrialCount,
+    @Default(0)
+    appliedShareRewardPremiumTrialCount,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

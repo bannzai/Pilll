@@ -186,13 +186,6 @@ mixin _$User {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get shareRewardPremiumTrialAppliedDateTime =>
-      throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get shareRewardPremiumTrialDeadlineDate =>
-      throw _privateConstructorUsedError;
   dynamic get appliedShareRewardPremiumTrialCount =>
       throw _privateConstructorUsedError;
 
@@ -232,11 +225,6 @@ abstract class $UserCopyWith<$Res> {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? shareRewardPremiumTrialAppliedDateTime,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? shareRewardPremiumTrialDeadlineDate,
       dynamic appliedShareRewardPremiumTrialCount});
 
   $SettingCopyWith<$Res>? get setting;
@@ -268,8 +256,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
-    Object? shareRewardPremiumTrialAppliedDateTime = freezed,
-    Object? shareRewardPremiumTrialDeadlineDate = freezed,
     Object? appliedShareRewardPremiumTrialCount = freezed,
   }) {
     return _then(_value.copyWith(
@@ -326,16 +312,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User>
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      shareRewardPremiumTrialAppliedDateTime: freezed ==
-              shareRewardPremiumTrialAppliedDateTime
-          ? _value.shareRewardPremiumTrialAppliedDateTime
-          : shareRewardPremiumTrialAppliedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      shareRewardPremiumTrialDeadlineDate: freezed ==
-              shareRewardPremiumTrialDeadlineDate
-          ? _value.shareRewardPremiumTrialDeadlineDate
-          : shareRewardPremiumTrialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       appliedShareRewardPremiumTrialCount: freezed ==
               appliedShareRewardPremiumTrialCount
           ? _value.appliedShareRewardPremiumTrialCount
@@ -390,11 +366,6 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? shareRewardPremiumTrialAppliedDateTime,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? shareRewardPremiumTrialDeadlineDate,
       dynamic appliedShareRewardPremiumTrialCount});
 
   @override
@@ -424,8 +395,6 @@ class __$$UserImplCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
-    Object? shareRewardPremiumTrialAppliedDateTime = freezed,
-    Object? shareRewardPremiumTrialDeadlineDate = freezed,
     Object? appliedShareRewardPremiumTrialCount = freezed,
   }) {
     return _then(_$UserImpl(
@@ -482,16 +451,6 @@ class __$$UserImplCopyWithImpl<$Res>
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      shareRewardPremiumTrialAppliedDateTime: freezed ==
-              shareRewardPremiumTrialAppliedDateTime
-          ? _value.shareRewardPremiumTrialAppliedDateTime
-          : shareRewardPremiumTrialAppliedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      shareRewardPremiumTrialDeadlineDate: freezed ==
-              shareRewardPremiumTrialDeadlineDate
-          ? _value.shareRewardPremiumTrialDeadlineDate
-          : shareRewardPremiumTrialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       appliedShareRewardPremiumTrialCount:
           freezed == appliedShareRewardPremiumTrialCount
               ? _value.appliedShareRewardPremiumTrialCount!
@@ -530,11 +489,6 @@ class _$UserImpl extends _User {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      this.shareRewardPremiumTrialAppliedDateTime,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      this.shareRewardPremiumTrialDeadlineDate,
       this.appliedShareRewardPremiumTrialCount = 0})
       : _userDocumentIDSets = userDocumentIDSets,
         _anonymousUserIDSets = anonymousUserIDSets,
@@ -611,19 +565,11 @@ class _$UserImpl extends _User {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? shareRewardPremiumTrialAppliedDateTime;
-  @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? shareRewardPremiumTrialDeadlineDate;
-  @override
-  @JsonKey()
   final dynamic appliedShareRewardPremiumTrialCount;
 
   @override
   String toString() {
-    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, shareRewardPremiumTrialAppliedDateTime: $shareRewardPremiumTrialAppliedDateTime, shareRewardPremiumTrialDeadlineDate: $shareRewardPremiumTrialDeadlineDate, appliedShareRewardPremiumTrialCount: $appliedShareRewardPremiumTrialCount)';
+    return 'User(id: $id, setting: $setting, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, shouldAskCancelReason: $shouldAskCancelReason, analyticsDebugIsEnabled: $analyticsDebugIsEnabled, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, appliedShareRewardPremiumTrialCount: $appliedShareRewardPremiumTrialCount)';
   }
 
   @override
@@ -658,14 +604,6 @@ class _$UserImpl extends _User {
                     discountEntitlementDeadlineDate) ||
                 other.discountEntitlementDeadlineDate ==
                     discountEntitlementDeadlineDate) &&
-            (identical(other.shareRewardPremiumTrialAppliedDateTime,
-                    shareRewardPremiumTrialAppliedDateTime) ||
-                other.shareRewardPremiumTrialAppliedDateTime ==
-                    shareRewardPremiumTrialAppliedDateTime) &&
-            (identical(other.shareRewardPremiumTrialDeadlineDate,
-                    shareRewardPremiumTrialDeadlineDate) ||
-                other.shareRewardPremiumTrialDeadlineDate ==
-                    shareRewardPremiumTrialDeadlineDate) &&
             const DeepCollectionEquality().equals(
                 other.appliedShareRewardPremiumTrialCount,
                 appliedShareRewardPremiumTrialCount));
@@ -688,8 +626,6 @@ class _$UserImpl extends _User {
       beginTrialDate,
       trialDeadlineDate,
       discountEntitlementDeadlineDate,
-      shareRewardPremiumTrialAppliedDateTime,
-      shareRewardPremiumTrialDeadlineDate,
       const DeepCollectionEquality().hash(appliedShareRewardPremiumTrialCount));
 
   @JsonKey(ignore: true)
@@ -733,11 +669,6 @@ abstract class _User extends User {
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? shareRewardPremiumTrialAppliedDateTime,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      final DateTime? shareRewardPremiumTrialDeadlineDate,
       final dynamic appliedShareRewardPremiumTrialCount}) = _$UserImpl;
   const _User._() : super._();
 
@@ -783,13 +714,6 @@ abstract class _User extends User {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get shareRewardPremiumTrialAppliedDateTime;
-  @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get shareRewardPremiumTrialDeadlineDate;
-  @override
   dynamic get appliedShareRewardPremiumTrialCount;
   @override
   @JsonKey(ignore: true)
