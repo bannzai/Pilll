@@ -480,7 +480,7 @@ void main() {
 
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
-            findsNothing,
+            findsOneWidget,
           );
         });
         testWidgets('today is 2022-08-10', (WidgetTester tester) async {
