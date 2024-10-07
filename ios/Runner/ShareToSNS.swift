@@ -5,7 +5,7 @@ import ActivityKit
 // 種類を増やすならFlutterのコードの定義も追加する必要がある
 enum ShareToSNSKind: String, RawRepresentable, CaseIterable {
   case X
-  case facebook
+  case Facebook
 
   static var `default` = ShareToSNSKind.X
 
@@ -16,7 +16,7 @@ enum ShareToSNSKind: String, RawRepresentable, CaseIterable {
   var activityType: UIActivity.ActivityType {
     switch self {
     case .X: .postToTwitter
-    case .facebook: .postToFacebook
+    case .Facebook: .postToFacebook
     }
   }
 }

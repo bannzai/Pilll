@@ -6,7 +6,7 @@ import 'package:pilll/native/channel.dart';
 
 enum ShareToSNSKind {
   X,
-  facebook,
+  Facebook,
 }
 
 extension ShareToSNSKindExt on ShareToSNSKind {
@@ -14,8 +14,8 @@ extension ShareToSNSKindExt on ShareToSNSKind {
     switch (this) {
       case ShareToSNSKind.X:
         return "X";
-      case ShareToSNSKind.facebook:
-        return "facebook";
+      case ShareToSNSKind.Facebook:
+        return "Facebook";
     }
   }
 }
