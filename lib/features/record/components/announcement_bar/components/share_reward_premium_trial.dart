@@ -37,6 +37,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
               try {
                 await applyShareRewardPremiumTrial(user);
               } catch (error) {
+                // ignore: use_build_context_synchronously
                 showErrorAlert(context, error);
               }
             });
