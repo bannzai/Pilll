@@ -117,6 +117,8 @@ void main() {
         );
         await tester.pump();
 
+        debugDefaultTargetPlatformOverride = null;
+
         expect(
           find.byWidgetPredicate((widget) => widget is DiscountPriceDeadline),
           findsOneWidget,
@@ -178,6 +180,8 @@ void main() {
         );
         await tester.pump();
 
+        debugDefaultTargetPlatformOverride = null;
+
         expect(
           find.byWidgetPredicate((widget) => widget is PremiumTrialLimitAnnouncementBar),
           findsOneWidget,
@@ -238,6 +242,8 @@ void main() {
         );
         await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
+        debugDefaultTargetPlatformOverride = null;
+
         expect(
           find.byWidgetPredicate((widget) => widget is EndedPillSheet),
           findsOneWidget,
@@ -292,6 +298,8 @@ void main() {
           );
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is AdMob),
             findsOneWidget,
@@ -343,6 +351,8 @@ void main() {
             ),
           );
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is AdMob),
@@ -401,6 +411,8 @@ void main() {
             ),
           );
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is AdMob),
@@ -471,6 +483,8 @@ void main() {
           );
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
             findsNothing,
@@ -539,6 +553,8 @@ void main() {
             ),
           );
           await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
@@ -609,6 +625,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
             findsOneWidget,
@@ -678,6 +696,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
             findsOneWidget,
@@ -746,6 +766,8 @@ void main() {
             ),
           );
           await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is ShareRewardPremiumTrialAnnoumcenetBar),
@@ -816,6 +838,8 @@ void main() {
           );
           await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
@@ -884,6 +908,8 @@ void main() {
             ),
           );
           await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
@@ -954,6 +980,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsOneWidget,
@@ -1023,6 +1051,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsOneWidget,
@@ -1091,6 +1121,8 @@ void main() {
             ),
           );
           await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
@@ -1168,6 +1200,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
@@ -1238,6 +1272,8 @@ void main() {
             ),
           );
           await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
@@ -1310,6 +1346,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
@@ -1380,6 +1418,8 @@ void main() {
             ),
           );
           await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
 
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
@@ -1452,6 +1492,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
@@ -1523,6 +1565,8 @@ void main() {
           );
           await tester.pump();
 
+          debugDefaultTargetPlatformOverride = null;
+
           expect(
             find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
             findsNothing,
@@ -1582,6 +1626,8 @@ void main() {
           ),
         );
         await tester.pump();
+
+        debugDefaultTargetPlatformOverride = null;
 
         expect(
           find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
@@ -1643,6 +1689,8 @@ void main() {
         );
         await tester.pump();
 
+        debugDefaultTargetPlatformOverride = null;
+
         expect(
           find.byWidgetPredicate((widget) => widget is RestDurationAnnouncementBar),
           findsOneWidget,
@@ -1702,6 +1750,8 @@ void main() {
           ),
         );
         await tester.pump();
+
+        debugDefaultTargetPlatformOverride = null;
 
         expect(
           find.byWidgetPredicate((widget) => widget is EndedPillSheet),
