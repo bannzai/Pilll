@@ -50,5 +50,6 @@ import 'package:pilll/utils/local_notification.dart';
   FirestoreIDGenerator,
   LocalNotificationService,
   RegisterReminderLocalNotificationRunner,
+  ApplyShareRewardPremiumTrial,
 ])
 abstract class KeepGeneratedMocks {}

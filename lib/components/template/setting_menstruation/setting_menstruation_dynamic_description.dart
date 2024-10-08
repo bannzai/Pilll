@@ -45,7 +45,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   color: TextColor.main,
                 )),
             GestureDetector(
-              onTap: () => _showFromModalSheet(context),
+              onTap: () => _showPicker(context),
               child: _from(),
             ),
             const Text(" 番ごとに",
@@ -138,7 +138,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
     );
   }
 
-  void _showFromModalSheet(BuildContext context) {
+  void _showPicker(BuildContext context) {
     final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
