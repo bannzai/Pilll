@@ -27,12 +27,13 @@ func presentShareToSNSForPremiumTrialReward(kind: ShareToSNSKind, completionHand
     activityItems: [
       """
 🌸 Pilllでピル管理がもっと便利に！ 🌸
-飲み忘れの不安をなくすためにリマインダーや生理管理機能が備わっているアプリです
+ピル服用に特化したリマインダーアプリです！生理や体調も合わせて管理！
 
 #Pilll #ピル管理 #ヘルスケア #便利アプリ
 
 iOS: https://onl.sc/piiY1A6
 Android: https://onl.sc/c9xnQUk
+Webサイト：https://pilllapp.studio.site/
 """
     ],
     applicationActivities: nil
