@@ -47,10 +47,7 @@ _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       discountEntitlementDeadlineDate: TimestampConverter.timestampToDateTime(
           json['discountEntitlementDeadlineDate'] as Timestamp?),
       appliedShareRewardPremiumTrialCount:
-          json['appliedShareRewardPremiumTrialCount'] == null
-              ? 0
-              : TimestampConverter.timestampToDateTime(
-                  json['appliedShareRewardPremiumTrialCount'] as Timestamp?),
+          json['appliedShareRewardPremiumTrialCount'] ?? 0,
     );
 
 Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
@@ -72,6 +69,5 @@ Map<String, dynamic> _$$UserImplToJson(_$UserImpl instance) =>
       'discountEntitlementDeadlineDate': TimestampConverter.dateTimeToTimestamp(
           instance.discountEntitlementDeadlineDate),
       'appliedShareRewardPremiumTrialCount':
-          TimestampConverter.dateTimeToTimestamp(
-              instance.appliedShareRewardPremiumTrialCount),
+          instance.appliedShareRewardPremiumTrialCount,
     };

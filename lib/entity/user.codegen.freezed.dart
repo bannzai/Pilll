@@ -183,9 +183,6 @@ mixin _$User {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate =>
       throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   dynamic get appliedShareRewardPremiumTrialCount =>
       throw _privateConstructorUsedError;
 
@@ -222,9 +219,6 @@ abstract class $UserCopyWith<$Res> {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? discountEntitlementDeadlineDate,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
       dynamic appliedShareRewardPremiumTrialCount});
 
   $SettingCopyWith<$Res>? get setting;
@@ -363,9 +357,6 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? discountEntitlementDeadlineDate,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
       dynamic appliedShareRewardPremiumTrialCount});
 
   @override
@@ -486,9 +477,6 @@ class _$UserImpl extends _User {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       this.discountEntitlementDeadlineDate,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
       this.appliedShareRewardPremiumTrialCount = 0})
       : _userDocumentIDSets = userDocumentIDSets,
         _anonymousUserIDSets = anonymousUserIDSets,
@@ -562,9 +550,7 @@ class _$UserImpl extends _User {
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? discountEntitlementDeadlineDate;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey()
   final dynamic appliedShareRewardPremiumTrialCount;
 
   @override
@@ -666,9 +652,6 @@ abstract class _User extends User {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       final DateTime? discountEntitlementDeadlineDate,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
       final dynamic appliedShareRewardPremiumTrialCount}) = _$UserImpl;
   const _User._() : super._();
 
@@ -711,9 +694,6 @@ abstract class _User extends User {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   dynamic get appliedShareRewardPremiumTrialCount;
   @override
   @JsonKey(ignore: true)
