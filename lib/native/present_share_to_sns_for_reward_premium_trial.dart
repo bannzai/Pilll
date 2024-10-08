@@ -6,6 +6,7 @@ import 'package:pilll/native/channel.dart';
 
 enum ShareToSNSKind {
   X,
+  // ignore: constant_identifier_names
   Facebook,
 }
 
