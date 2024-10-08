@@ -32,15 +32,15 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
         onTap: () async {
           analytics.logEvent(name: "pressed_share_reward_announcement_bar");
 
-          _showPicker(context, (shareToSNSKind) {
-            presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
-              try {
+          _showPicker(context, (shareToSNSKind) async {
+            try {
+              await presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
                 await applyShareRewardPremiumTrial(user);
-              } catch (error) {
-                // ignore: use_build_context_synchronously
-                showErrorAlert(context, error);
-              }
-            });
+              });
+            } catch (error) {
+              // ignore: use_build_context_synchronously
+              showErrorAlert(context, error);
+            }
           });
         },
         child: Row(
