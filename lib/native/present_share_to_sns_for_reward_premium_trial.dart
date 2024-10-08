@@ -30,6 +30,6 @@ Future<void> presentShareToSNSForPremiumTrialReward(
     completionHandler();
     return;
   } else {
-    throw AlertError(result["message"]);
+    throw AlertError(result["message"], title: result["title"]);
   }
 }
