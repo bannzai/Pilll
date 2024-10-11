@@ -14,7 +14,7 @@ struct Entry: TimelineEntry {
   // Setting property
   var settingPillSheetAppearanceMode: SettingPillSheetAppearanceMode = .number
   enum SettingPillSheetAppearanceMode: String {
-    case number, date, sequential
+    case number, date, sequential, cyclicSequential
   }
 
   // Timestamp
@@ -77,7 +77,7 @@ extension Entry {
         return nil
       }
       todayPillNumberBase = pillSheetTodayPillNumber
-    case .sequential:
+    case .sequential, .cyclicSequential:
       guard let recordedPillSheetGroupTodayPillNumber = pillSheetGroupTodayPillNumber else {
         return nil
       }
