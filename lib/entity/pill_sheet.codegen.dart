@@ -77,6 +77,7 @@ class PillSheet with _$PillSheet {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime beginingDate,
+    // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -116,6 +117,7 @@ class PillSheet with _$PillSheet {
 
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
+  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   int get todayPillNumber {
     return pillNumberFor(targetDate: today());
   }

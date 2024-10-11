@@ -13,7 +13,7 @@ enum Const {
     // Epoch milli second
     static let pillSheetValueLastUpdateDateTime = "pillSheetValueLastUpdateDateTime"
 
-    static let settingPillSheetAppearanceMode = "settingPillSheetAppearanceMode" // number or date or sequential
+    static let settingPillSheetAppearanceMode = "settingPillSheetAppearanceMode" // number or date or sequential or cyclicSequential
 }
 
 enum Plist {

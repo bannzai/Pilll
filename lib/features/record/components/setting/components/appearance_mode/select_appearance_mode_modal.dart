@@ -125,6 +125,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         );
 
         if (user.isPremium || user.isTrial) {
+          // NOTE: [Migrate:PillSheetAppearanceMode] settingも同期する
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
           await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
@@ -132,6 +133,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
+          // NOTE: [Migrate:PillSheetAppearanceMode] settingも同期する
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
           await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();

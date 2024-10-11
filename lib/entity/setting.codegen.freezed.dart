@@ -195,6 +195,8 @@ mixin _$Setting {
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
   ReminderNotificationCustomization get reminderNotificationCustomization =>
       throw _privateConstructorUsedError; // Deprecated
+// NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
+// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
   @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
@@ -459,6 +461,8 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   @JsonKey()
   final ReminderNotificationCustomization reminderNotificationCustomization;
 // Deprecated
+// NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
+// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
   @override
   @JsonKey()
   @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
@@ -592,6 +596,8 @@ abstract class _Setting extends Setting {
   @override
   ReminderNotificationCustomization get reminderNotificationCustomization;
   @override // Deprecated
+// NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
+// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
   @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
