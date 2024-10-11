@@ -88,7 +88,7 @@ class SyncDataResolver extends HookConsumerWidget {
       });
       f();
       return null;
-    }, []);
+    }, [latestPillSheetGroup.asData?.value, setting.asData?.value]);
 
     return const SizedBox();
   }
