@@ -48,7 +48,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const SizedBox(width: 24),
             const Spacer(),
             const Text(
-              "シェアするとプレミアム機能を14日間試せます！\nタップしてシェアしましょう！",
+              "プレミアム機能を14日間で再体験できます！\nタップしてシェアしましょう！",
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
