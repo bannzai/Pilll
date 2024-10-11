@@ -36,6 +36,7 @@ class PillSheetGroup with _$PillSheetGroup {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? deletedAt,
+    // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
     @Default(PillSheetAppearanceMode.number) PillSheetAppearanceMode pillSheetAppearanceMode,
   }) = _PillSheetGroup;
@@ -67,6 +68,7 @@ class PillSheetGroup with _$PillSheetGroup {
   bool get isDeactived => activePillSheet == null || _isDeleted;
 
   // NOTE: 0が返却される時は、過去のピルシートグループを参照しているときなど
+  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   int get sequentialTodayPillNumber {
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.number:

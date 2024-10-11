@@ -122,6 +122,7 @@ class User with _$User {
   }
 
   bool get trialIsAlreadyBegin => beginTrialDate != null;
+  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   bool get premiumOrTrial => isPremium || isTrial;
   bool get isNotYetStartTrial => trialDeadlineDate == null;
 }

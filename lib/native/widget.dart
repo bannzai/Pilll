@@ -7,6 +7,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:pilll/native/channel.dart';
 
+// NOTE: [SyncData:Widget]
 Future<void> syncActivePillSheetValue({
   required PillSheetGroup? pillSheetGroup,
 }) async {

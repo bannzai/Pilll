@@ -6,6 +6,7 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
 
+// NOTE: [SyncData:Widget]
 class SyncDataResolver extends HookConsumerWidget {
   const SyncDataResolver({super.key});
 
