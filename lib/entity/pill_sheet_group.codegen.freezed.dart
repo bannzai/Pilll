@@ -31,7 +31,8 @@ mixin _$PillSheetGroup {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get deletedAt => throw _privateConstructorUsedError;
+  DateTime? get deletedAt =>
+      throw _privateConstructorUsedError; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting =>
       throw _privateConstructorUsedError;
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
@@ -267,6 +268,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
+// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @override
   final PillSheetGroupDisplayNumberSetting? displayNumberSetting;
   @override
@@ -364,7 +366,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
-  @override
+  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
   @override
   PillSheetAppearanceMode get pillSheetAppearanceMode;

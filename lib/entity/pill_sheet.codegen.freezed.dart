@@ -506,7 +506,8 @@ mixin _$PillSheet {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate => throw _privateConstructorUsedError;
+  DateTime get beginingDate =>
+      throw _privateConstructorUsedError; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -758,6 +759,7 @@ class _$PillSheetImpl extends _PillSheet {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime beginingDate;
+// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -877,7 +879,7 @@ abstract class _PillSheet extends PillSheet {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginingDate;
-  @override
+  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
