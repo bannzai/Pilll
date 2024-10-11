@@ -69,6 +69,7 @@ class Setting with _$Setting {
     @Default(false) bool isAutomaticallyCreatePillSheet,
     @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
     // Deprecated
+    // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
     @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
     @Default(PillSheetAppearanceMode.number)
     PillSheetAppearanceMode pillSheetAppearanceMode,
