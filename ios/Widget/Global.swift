@@ -22,7 +22,7 @@ func displayTodayPillNumber(todayPillNumber: Int, appearanceMode: Entry.SettingP
         return "\(todayPillNumber)番"
     case .sequential:
         return "\(todayPillNumber)日目"
-    case _:
-        return ""
+    case .cyclicSequential:
+      return "\(todayPillNumber)番"
     }
 }
