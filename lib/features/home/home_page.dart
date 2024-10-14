@@ -138,8 +138,10 @@ class HomePageBody extends HookConsumerWidget {
           );
           sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
         } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
-          showPremiumIntroductionSheet(context);
-          sharedPreferences.setInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds, now().millisecondsSinceEpoch);
+          if (!user.premiumOrTrial) {
+            showPremiumIntroductionSheet(context);
+            sharedPreferences.setInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds, now().millisecondsSinceEpoch);
+          }
         }
       });
 
