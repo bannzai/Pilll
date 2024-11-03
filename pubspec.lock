@@ -663,6 +663,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.19.0"
+  intl_translation:
+    dependency: "direct main"
+    description:
+      name: intl_translation
+      sha256: b858d88b569f3c529e992ba7186aa495f3e862897df60edb932563c619943610
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.20.0"
   io:
     dependency: transitive
     description:
