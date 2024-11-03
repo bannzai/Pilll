@@ -1,9 +1,0 @@
-{
-  "@@locale": "ja",
-  "@@last_modified": "2024-11-03T12:12:39.174237",
-  "Premium": "Premium",
-  "@Premium": {
-    "type": "text",
-    "placeholders": {}
-  }
-}

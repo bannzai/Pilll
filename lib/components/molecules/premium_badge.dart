@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -25,6 +24,4 @@ class PremiumBadge extends StatelessWidget {
           )),
     );
   }
-
-  String get message => Intl.message("Premium");
 }

@@ -6,7 +6,7 @@ import WidgetKit
 import flutter_local_notifications
 
 private var channel: FlutterMethodChannel?
-@main
+@UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
 
   override func application(
