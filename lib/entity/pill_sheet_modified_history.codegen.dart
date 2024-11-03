@@ -11,44 +11,44 @@ part 'pill_sheet_modified_history.codegen.g.dart';
 part 'pill_sheet_modified_history.codegen.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
-  static const estimatedEventCausingDate = "estimatedEventCausingDate";
+  static const estimatedEventCausingDate = 'estimatedEventCausingDate';
   // TODO:  [PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01
   // afterPillSheetGroup.idを用いて(null以外がセットされているので)フィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
   // static const afterPillSheetGroupID = "afterPillSheetGroup.id";
-  static const archivedDateTime = "archivedDateTime";
+  static const archivedDateTime = 'archivedDateTime';
 }
 
 enum PillSheetModifiedActionType {
-  @JsonValue("createdPillSheet")
+  @JsonValue('createdPillSheet')
   createdPillSheet,
-  @JsonValue("automaticallyRecordedLastTakenDate")
+  @JsonValue('automaticallyRecordedLastTakenDate')
   automaticallyRecordedLastTakenDate,
-  @JsonValue("deletedPillSheet")
+  @JsonValue('deletedPillSheet')
   deletedPillSheet,
-  @JsonValue("takenPill")
+  @JsonValue('takenPill')
   takenPill,
-  @JsonValue("revertTakenPill")
+  @JsonValue('revertTakenPill')
   revertTakenPill,
-  @JsonValue("changedPillNumber")
+  @JsonValue('changedPillNumber')
   changedPillNumber,
-  @JsonValue("endedPillSheet")
+  @JsonValue('endedPillSheet')
   endedPillSheet,
-  @JsonValue("beganRestDuration")
+  @JsonValue('beganRestDuration')
   beganRestDuration,
-  @JsonValue("endedRestDuration")
+  @JsonValue('endedRestDuration')
   endedRestDuration,
-  @JsonValue("changedRestDurationBeginDate")
+  @JsonValue('changedRestDurationBeginDate')
   changedRestDurationBeginDate,
-  @JsonValue("changedRestDuration")
+  @JsonValue('changedRestDuration')
   changedRestDuration,
-  @JsonValue("changedBeginDisplayNumber")
+  @JsonValue('changedBeginDisplayNumber')
   changedBeginDisplayNumber,
-  @JsonValue("changedEndDisplayNumber")
+  @JsonValue('changedEndDisplayNumber')
   changedEndDisplayNumber
 }
 
 extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
-  String get name => toString().split(".").last;
+  String get name => toString().split('.').last;
 }
 
 // PillSheetModifiedHistory only create on backend
@@ -58,7 +58,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
     // Added since 2023-08-01
-    @Default("v1") version,
+    @Default('v1') version,
 
     // ============ BEGIN: Added since v1 ============
     @JsonKey(includeIfNull: false) required String? id,
@@ -120,12 +120,17 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
-  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
+  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
+      _$PillSheetModifiedHistoryFromJson(json);
 
-  PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
+  PillSheetModifiedActionType? get enumActionType =>
+      PillSheetModifiedActionType.values
+          .firstWhereOrNull((element) => element.name == actionType);
 
-  PillSheet? get beforeActivePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-  PillSheet? get afterActivePillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get beforeActivePillSheet =>
+      beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get afterActivePillSheet =>
+      afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
 }
 
 // Factories
@@ -149,7 +154,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }) {
     return PillSheetModifiedHistory(
       id: null,
-      version: "v2",
+      version: 'v2',
       actionType: actionType.name,
       value: value,
       pillSheetID: null,
@@ -179,7 +184,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
     if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException("unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
+      throw FormatException(
+          'unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action');
     }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
@@ -214,13 +220,14 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
     if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException("unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
+      throw FormatException(
+          'unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action');
     }
     final beforeID = before.id;
     final beforeLastTakenDate = before.lastTakenDate;
     if (beforeID == null || beforeLastTakenDate == null) {
       throw FormatException(
-          "unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
+          'unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action');
     }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
@@ -279,7 +286,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     final afterID = after.id;
     if (afterID == null || pillSheetGroupID == null) {
-      throw FormatException("unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action");
+      throw FormatException(
+          'unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action');
     }
 
     return _create(

@@ -30,7 +30,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "3/3",
+          '3/3',
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -41,7 +41,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
             children: <Widget>[
               const SizedBox(height: 24),
               const Text(
-                "ピルの飲み忘れ通知",
+                'ピルの飲み忘れ通知',
                 style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
@@ -61,7 +61,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           return _form(context, store, state, index);
                         })),
                   ),
-                  const Text("複数設定しておく事で飲み忘れを防げます",
+                  const Text('複数設定しておく事で飲み忘れを防げます',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
@@ -78,7 +78,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: "プライバシーポリシー",
+                          text: 'プライバシーポリシー',
                           style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -87,11 +87,14 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
+                              launchUrl(
+                                  Uri.parse(
+                                      'https://bannzai.github.io/Pilll/PrivacyPolicy'),
+                                  mode: LaunchMode.inAppWebView);
                             },
                         ),
                         const TextSpan(
-                          text: "と",
+                          text: 'と',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -100,7 +103,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                         ),
                         TextSpan(
-                          text: "利用規約",
+                          text: '利用規約',
                           style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -109,11 +112,14 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
+                              launchUrl(
+                                  Uri.parse(
+                                      'https://bannzai.github.io/Pilll/Terms'),
+                                  mode: LaunchMode.inAppWebView);
                             },
                         ),
                         const TextSpan(
-                          text: "を読んで\n利用をはじめてください",
+                          text: 'を読んで\n利用をはじめてください',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -128,10 +134,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   SizedBox(
                     width: 180,
                     child: PrimaryButton(
-                      text: "次へ",
+                      text: '次へ',
                       onPressed: () async {
-                        analytics.logEvent(name: "next_initial_setting_reminder_times");
-                        Navigator.of(context).push(IntiialSettingPremiumTrialStartPageRoute.route());
+                        analytics.logEvent(
+                            name: 'next_initial_setting_reminder_times');
+                        Navigator.of(context).push(
+                            IntiialSettingPremiumTrialStartPageRoute.route());
                       },
                     ),
                   ),
@@ -151,18 +159,22 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     InitialSettingState state,
     InitialSettingStateNotifier store,
   ) {
-    analytics.logEvent(name: "show_initial_setting_reminder_picker");
+    analytics.logEvent(name: 'show_initial_setting_reminder_picker');
     final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
-    DateTime initialDateTime = reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
+    DateTime initialDateTime =
+        reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return TimePicker(
           initialDateTime: initialDateTime,
           done: (dateTime) {
-            analytics.logEvent(name: "selected_times_initial_setting", parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
-            store.setReminderTime(index: index, hour: dateTime.hour, minute: dateTime.minute);
+            analytics.logEvent(
+                name: 'selected_times_initial_setting',
+                parameters: {'hour': dateTime.hour, 'minute': dateTime.minute});
+            store.setReminderTime(
+                index: index, hour: dateTime.hour, minute: dateTime.minute);
             Navigator.pop(context);
           },
         );
@@ -177,7 +189,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     int index,
   ) {
     final reminderTime = state.reminderTimeOrNull(index);
-    final formValue = reminderTime == null ? "--:--" : DateTimeFormatter.militaryTime(reminderTime);
+    final formValue = reminderTime == null
+        ? '--:--'
+        : DateTimeFormatter.militaryTime(reminderTime);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(
@@ -185,8 +199,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SvgPicture.asset("images/alerm.svg"),
-              Text("通知${index + 1}",
+              SvgPicture.asset('images/alerm.svg'),
+              Text('通知${index + 1}',
                   style: const TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w300,
@@ -225,10 +239,11 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingReminderTimesPageRoute on InitialSettingReminderTimesPage {
+extension InitialSettingReminderTimesPageRoute
+    on InitialSettingReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "InitialSettingReminderTimesPage"),
+      settings: const RouteSettings(name: 'InitialSettingReminderTimesPage'),
       builder: (_) => const InitialSettingReminderTimesPage(),
     );
   }

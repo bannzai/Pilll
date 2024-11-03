@@ -33,7 +33,9 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final diary = this.diary ?? Diary.fromDate(date);
 
-    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(diarySettingProvider)).when(
+    return AsyncValueGroup.group2(
+            ref.watch(userProvider), ref.watch(diarySettingProvider))
+        .when(
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
@@ -53,7 +55,7 @@ class DiaryPostPage extends HookConsumerWidget {
 extension DiaryPostPageRoute on DiaryPostPage {
   static Route<dynamic> route(DateTime date, Diary? diary) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "DiaryPostPage"),
+      settings: const RouteSettings(name: 'DiaryPostPage'),
       builder: (_) => DiaryPostPage(date, diary),
       fullscreenDialog: true,
     );
@@ -76,11 +78,13 @@ class DiaryPostPageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final memoTextEditingController = useTextEditingController(text: diary.memo);
+    final memoTextEditingController =
+        useTextEditingController(text: diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
-    final physicalCondition = useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
+    final physicalCondition =
+        useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
     final physicalConditionDetails = useState(diary.physicalConditions);
     final sex = useState(diary.hasSex);
 
@@ -105,9 +109,9 @@ class DiaryPostPageBody extends HookConsumerWidget {
         ),
         actions: [
           AlertButton(
-              text: "保存",
+              text: '保存',
               onPressed: () async {
-                analytics.logEvent(name: "diary_post_button_tapped");
+                analytics.logEvent(name: 'diary_post_button_tapped');
 
                 final navigator = Navigator.of(context);
                 await setDiary(diary.copyWith(
@@ -127,7 +131,8 @@ class DiaryPostPageBody extends HookConsumerWidget {
           children: [
             Expanded(
               child: ListView(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 controller: scrollController,
                 children: [
                   Text(DateTimeFormatter.yearAndMonthAndDay(date),
@@ -138,24 +143,29 @@ class DiaryPostPageBody extends HookConsumerWidget {
                         color: TextColor.main,
                       )),
                   const SizedBox(height: 20),
-                  DiaryPostPhysicalCondition(physicalCondition: physicalCondition),
+                  DiaryPostPhysicalCondition(
+                      physicalCondition: physicalCondition),
                   const SizedBox(height: 20),
                   DiaryPostPhysicalConditionDetails(
-                      user: user, diarySetting: diarySetting, context: context, physicalConditionDetails: physicalConditionDetails),
+                      user: user,
+                      diarySetting: diarySetting,
+                      context: context,
+                      physicalConditionDetails: physicalConditionDetails),
                   const SizedBox(height: 20),
                   DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),
-                  DiaryPostMemo(textEditingController: memoTextEditingController, focusNode: focusNode),
+                  DiaryPostMemo(
+                      textEditingController: memoTextEditingController,
+                      focusNode: focusNode),
                 ],
               ),
             ),
-
             if (focusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
                   text: '完了',
                   onPressed: () async {
-                    analytics.logEvent(name: "post_diary_done_button_pressed");
+                    analytics.logEvent(name: 'post_diary_done_button_pressed');
                     focusNode.unfocus();
                   },
                 ),

@@ -4,18 +4,18 @@ extension LinkAccountTypeExtension on LinkAccountType {
   String get loginContentName {
     switch (this) {
       case LinkAccountType.apple:
-        return "Apple";
+        return 'Apple';
       case LinkAccountType.google:
-        return "Google アカウント";
+        return 'Google アカウント';
     }
   }
 
   String get providerName {
     switch (this) {
       case LinkAccountType.apple:
-        return "Apple";
+        return 'Apple';
       case LinkAccountType.google:
-        return "Google";
+        return 'Google';
     }
   }
 }

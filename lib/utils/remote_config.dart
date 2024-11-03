@@ -18,13 +18,20 @@ Future<void> setupRemoteConfig() async {
         minimumFetchInterval: const Duration(hours: 1),
       )),
       remoteConfig.setDefaults({
-        RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,
-        RemoteConfigKeys.skipInitialSetting: RemoteConfigParameterDefaultValues.skipInitialSetting,
-        RemoteConfigKeys.trialDeadlineDateOffsetDay: RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
-        RemoteConfigKeys.discountEntitlementOffsetDay: RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
-        RemoteConfigKeys.discountCountdownBoundaryHour: RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
-        RemoteConfigKeys.releasedVersion: RemoteConfigParameterDefaultValues.releasedVersion,
-        RemoteConfigKeys.premiumIntroductionPattern: RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+        RemoteConfigKeys.isPaywallFirst:
+            RemoteConfigParameterDefaultValues.isPaywallFirst,
+        RemoteConfigKeys.skipInitialSetting:
+            RemoteConfigParameterDefaultValues.skipInitialSetting,
+        RemoteConfigKeys.trialDeadlineDateOffsetDay:
+            RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+        RemoteConfigKeys.discountEntitlementOffsetDay:
+            RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+        RemoteConfigKeys.discountCountdownBoundaryHour:
+            RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+        RemoteConfigKeys.releasedVersion:
+            RemoteConfigParameterDefaultValues.releasedVersion,
+        RemoteConfigKeys.premiumIntroductionPattern:
+            RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
       }),
       remoteConfig.fetchAndActivate()
     ).wait;
@@ -44,7 +51,8 @@ Future<void> setupRemoteConfig() async {
 
 @Riverpod()
 Future<bool> appIsReleased(AppIsReleasedRef ref) async {
-  final releasedVersion = Version.parse(remoteConfig.getString(RemoteConfigKeys.releasedVersion));
+  final releasedVersion =
+      Version.parse(remoteConfig.getString(RemoteConfigKeys.releasedVersion));
   final packageInfo = await PackageInfo.fromPlatform();
   final appVersion = Version.parse(packageInfo.version);
   return !appVersion.isGreaterThan(releasedVersion);
@@ -52,6 +60,6 @@ Future<bool> appIsReleased(AppIsReleasedRef ref) async {
 
 void debugPrintRemoteConfig() {
   for (final entry in remoteConfig.getAll().entries) {
-    debugPrint("RemoteConfig: ${entry.key} ${entry.value.asString()}");
+    debugPrint('RemoteConfig: ${entry.key} ${entry.value.asString()}');
   }
 }

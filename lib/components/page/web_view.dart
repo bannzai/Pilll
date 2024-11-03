@@ -30,7 +30,8 @@ class _WebViewPageState extends State<WebViewPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title, style: const TextStyle(color: Colors.black, fontSize: 14)),
+        title: Text(widget.title,
+            style: const TextStyle(color: Colors.black, fontSize: 14)),
         elevation: 2,
         leading: IconButton(
           icon: const Icon(
@@ -53,7 +54,7 @@ extension WebViewPageRoute on WebViewPage {
     required String url,
   }) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "WebViewPage"),
+      settings: const RouteSettings(name: 'WebViewPage'),
       builder: (_) => WebViewPage(title: title, url: url),
     );
   }

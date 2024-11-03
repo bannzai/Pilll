@@ -23,11 +23,13 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
     // TODO: Androidで審査落とされたので一時的にifを入れる。2023-10に外す。フォントサイズを調整するかも
     if (Platform.isAndroid) return Container();
 
-    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate =
+        this.discountEntitlementDeadlineDate;
     final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final tmpDiff = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+      final tmpDiff = ref.watch(durationToDiscountPriceDeadlineProvider(
+          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
       countdown = discountPriceDeadlineCountdownString(tmpDiff);
       diff = tmpDiff;
     } else {
@@ -47,7 +49,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            "今なら限定価格でずっと使える",
+            '今なら限定価格でずっと使える',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w700,
@@ -72,7 +74,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
-                "通常 月額プラン",
+                '通常 月額プラン',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
@@ -96,14 +98,14 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                   ),
                   Positioned(
                     left: 24,
-                    child: SvgPicture.asset("images/strikethrough.svg"),
+                    child: SvgPicture.asset('images/strikethrough.svg'),
                   ),
                 ],
               ),
             ],
           ),
           const SizedBox(height: 8),
-          SvgPicture.asset("images/arrow_down.svg"),
+          SvgPicture.asset('images/arrow_down.svg'),
         ],
       ),
     );

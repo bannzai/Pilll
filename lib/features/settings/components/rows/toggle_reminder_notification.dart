@@ -19,11 +19,13 @@ class ToggleReminderNotification extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification =
+        ref.watch(cancelReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: const Text("ピルの服用通知",
+      title: const Text('ピルの服用通知',
           style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
@@ -32,7 +34,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
-          name: "did_select_toggle_reminder",
+          name: 'did_select_toggle_reminder',
         );
         final messenger = ScaffoldMessenger.of(context);
         messenger.hideCurrentSnackBar();

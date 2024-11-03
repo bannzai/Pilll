@@ -13,11 +13,15 @@ Future<void> syncActivePillSheetValue({
 }) async {
   try {
     final map = {
-      "pillSheetLastTakenDate": pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
-      "pillSheetTodayPillNumber": pillSheetGroup?.activePillSheet?.todayPillNumber,
-      "pillSheetGroupTodayPillNumber": pillSheetGroup?.sequentialTodayPillNumber,
-      "pillSheetEndDisplayPillNumber": pillSheetGroup?.displayNumberSetting?.endPillNumber,
-      "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
+      'pillSheetLastTakenDate': pillSheetGroup
+          ?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
+      'pillSheetTodayPillNumber':
+          pillSheetGroup?.activePillSheet?.todayPillNumber,
+      'pillSheetGroupTodayPillNumber':
+          pillSheetGroup?.sequentialTodayPillNumber,
+      'pillSheetEndDisplayPillNumber':
+          pillSheetGroup?.displayNumberSetting?.endPillNumber,
+      'pillSheetValueLastUpdateDateTime': DateTime.now().millisecondsSinceEpoch,
     };
     for (final element in map.entries) {
       await HomeWidget.saveWidgetData(element.key, element.value);
@@ -32,7 +36,8 @@ Future<void> syncSetting({
   required Setting? setting,
 }) async {
   try {
-    await HomeWidget.saveWidgetData("settingPillSheetAppearanceMode", setting?.pillSheetAppearanceMode.name);
+    await HomeWidget.saveWidgetData('settingPillSheetAppearanceMode',
+        setting?.pillSheetAppearanceMode.name);
     await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
@@ -43,7 +48,8 @@ Future<void> syncUserStatus({
   required User? user,
 }) async {
   try {
-    await HomeWidget.saveWidgetData("userIsPremiumOrTrial", user?.premiumOrTrial);
+    await HomeWidget.saveWidgetData(
+        'userIsPremiumOrTrial', user?.premiumOrTrial);
     await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
@@ -61,6 +67,6 @@ Future<void> updateWidget() async {
   // QuickRecordの際にWidgetがリロードされない。上述のHomeWidget.updateWidgetでも通常の服用記録からの更新はうまくいくため、
   // 何か難しい問題を孕んでいると予想。.swiftのコードをmethodChannelから呼び出せばリロードされるのでとりあえずそっちも呼ぶ
   if (Platform.isIOS) {
-    await methodChannel.invokeMethod("reloadWidget");
+    await methodChannel.invokeMethod('reloadWidget');
   }
 }

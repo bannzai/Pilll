@@ -18,7 +18,8 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
+final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<
+    InitialSettingStateNotifier, InitialSettingState>(
   (ref) => InitialSettingStateNotifier(
     ref.watch(endInitialSettingProvider),
     ref.watch(batchFactoryProvider),
@@ -38,7 +39,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
   final RemoteConfigParameter remoteConfigParameter;
-  final RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
+  final RegisterReminderLocalNotificationRunner
+      registerReminderLocalNotificationRunner;
 
   InitialSettingStateNotifier(
     this.endInitialSetting,
@@ -65,7 +67,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
+    state = state
+        .copyWith(pillSheetTypes: [...state.pillSheetTypes, pillSheetType]);
   }
 
   void changePillSheetType(int index, PillSheetType pillSheetType) {
@@ -116,7 +119,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     final todayPillNumber = state.todayPillNumber;
     PillSheetGroup? createdPillSheetGroup;
     if (todayPillNumber != null) {
-      final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
+      final createdPillSheets =
+          state.pillSheetTypes.asMap().keys.map((pageIndex) {
         return InitialSettingState.buildPillSheet(
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
@@ -137,7 +141,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
         ),
       );
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
         pillSheetIDs: pillSheetIDs,
         pillSheetGroupID: createdPillSheetGroup.id,
         beforePillSheetGroup: null,
@@ -173,7 +178,8 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
   }
 }
 
-final registerReminderLocalNotificationRunnerProvider = Provider((ref) => RegisterReminderLocalNotificationRunner());
+final registerReminderLocalNotificationRunnerProvider =
+    Provider((ref) => RegisterReminderLocalNotificationRunner());
 
 // MockができないのでWrapperを作る
 class RegisterReminderLocalNotificationRunner {

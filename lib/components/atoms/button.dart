@@ -22,8 +22,9 @@ class PrimaryButton extends HookWidget {
       alignment: Alignment.center,
       children: [
         ElevatedButton(
-          style: ButtonStyle(backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-            if (statuses.contains(MaterialState.disabled)) {
+          style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.resolveWith((statuses) {
+            if (statuses.contains(WidgetState.disabled)) {
               return PilllColors.lightGray;
             }
             return PilllColors.primary;
@@ -45,7 +46,8 @@ class PrimaryButton extends HookWidget {
                   }
                 },
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
+            constraints: const BoxConstraints(
+                maxHeight: 44, minHeight: 44, minWidth: 180),
             child: Center(
                 child: Text(text,
                     style: const TextStyle(
@@ -80,8 +82,9 @@ class UndoButton extends HookWidget {
       alignment: Alignment.center,
       children: [
         ElevatedButton(
-          style: ButtonStyle(backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-            if (statuses.contains(MaterialState.disabled)) {
+          style: ButtonStyle(
+              backgroundColor: WidgetStateProperty.resolveWith((statuses) {
+            if (statuses.contains(WidgetState.disabled)) {
               return PilllColors.lightGray;
             }
             return PilllColors.gray;
@@ -103,7 +106,8 @@ class UndoButton extends HookWidget {
                   }
                 },
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
+            constraints: const BoxConstraints(
+                maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
             child: Center(
                 child: Text(text,
                     style: const TextStyle(
@@ -209,7 +213,11 @@ class InconspicuousButton extends HookWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Text(text, style: TextStyle(color: isProcessing.value ? TextColor.lightGray : TextColor.gray)),
+            Text(text,
+                style: TextStyle(
+                    color: isProcessing.value
+                        ? TextColor.lightGray
+                        : TextColor.gray)),
             if (isProcessing.value) _Loading(),
           ],
         ),
@@ -377,7 +385,9 @@ class AlertButton extends HookWidget {
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-                color: (isProcessing.value || onPressed == null) ? TextColor.gray : TextColor.primary),
+                color: (isProcessing.value || onPressed == null)
+                    ? TextColor.gray
+                    : TextColor.primary),
           ),
           if (isProcessing.value) _Loading(),
         ],

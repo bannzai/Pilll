@@ -14,9 +14,9 @@ extension ShareToSNSKindExt on ShareToSNSKind {
   String get rawValue {
     switch (this) {
       case ShareToSNSKind.X:
-        return "X";
+        return 'X';
       case ShareToSNSKind.Facebook:
-        return "Facebook";
+        return 'Facebook';
     }
   }
 }
@@ -25,11 +25,13 @@ Future<void> presentShareToSNSForPremiumTrialReward(
   ShareToSNSKind shareToSNSKind,
   VoidCallback completionHandler,
 ) async {
-  final result = await methodChannel.invokeMethod("presentShareToSNSForPremiumTrialReward", {"shareToSNSKind": shareToSNSKind.rawValue});
-  if (result["result"] == "success") {
+  final result = await methodChannel.invokeMethod(
+      'presentShareToSNSForPremiumTrialReward',
+      {'shareToSNSKind': shareToSNSKind.rawValue});
+  if (result['result'] == 'success') {
     completionHandler();
     return;
   } else {
-    throw AlertError(result["message"], title: result["title"]);
+    throw AlertError(result['message'], title: result['title']);
   }
 }

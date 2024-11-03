@@ -36,15 +36,19 @@ class AnnouncementBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
-    final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
+    final latestPillSheetGroup =
+        ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
-    final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
-    final hiddenCountdownDiscountDeadline =
-        ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final discountEntitlementDeadlineDate =
+        user?.discountEntitlementDeadlineDate;
+    final hiddenCountdownDiscountDeadline = ref.watch(
+        hiddenCountdownDiscountDeadlineProvider(
+            discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
-    final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
+    final appIsReleased =
+        ref.watch(appIsReleasedProvider).asData?.value == true;
     final isAdsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
@@ -54,7 +58,8 @@ class AnnouncementBar extends HookConsumerWidget {
       if (pilllAds == null) {
         return true;
       }
-      return now().isBefore(pilllAds.startDateTime) || now().isAfter(pilllAds.endDateTime);
+      return now().isBefore(pilllAds.startDateTime) ||
+          now().isAfter(pilllAds.endDateTime);
     }();
 
     if (user == null) {
@@ -72,9 +77,11 @@ class AnnouncementBar extends HookConsumerWidget {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
-                  discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
                   onTap: () {
-                    analytics.logEvent(name: "pressed_discount_announcement_bar");
+                    analytics.logEvent(
+                        name: 'pressed_discount_announcement_bar');
                     showPremiumIntroductionSheet(context);
                   });
             }
@@ -82,7 +89,8 @@ class AnnouncementBar extends HookConsumerWidget {
         }
       }
 
-      if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
+      if (latestPillSheetGroup != null &&
+          latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
           isPremium: user.isPremium,
@@ -91,15 +99,19 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       if (user.isTrial) {
-        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
+        final premiumTrialLimit =
+            PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
         if (premiumTrialLimit != null) {
-          return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
+          return PremiumTrialLimitAnnouncementBar(
+              premiumTrialLimit: premiumTrialLimit);
         }
       } else {
         // !isPremium && !isTrial
 
         if (!isAdsDisabled && pilllAds != null) {
-          return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+          return PilllAdsAnnouncementBar(
+              pilllAds: pilllAds,
+              onClose: () => showPremiumIntroductionSheet(context));
         }
 
         if (defaultTargetPlatform == TargetPlatform.iOS) {
@@ -110,7 +122,8 @@ class AnnouncementBar extends HookConsumerWidget {
                 return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
               }
             } else {
-              final range = DateRange(trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
+              final range = DateRange(
+                  trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
               if (range.inRange(today())) {
                 return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
               }
@@ -125,12 +138,16 @@ class AnnouncementBar extends HookConsumerWidget {
         return const RecommendSignupForPremiumAnnouncementBar();
       }
 
-      final restDurationNotification = RestDurationAnnouncementBar.retrieveRestDurationNotification(latestPillSheetGroup: latestPillSheetGroup);
+      final restDurationNotification =
+          RestDurationAnnouncementBar.retrieveRestDurationNotification(
+              latestPillSheetGroup: latestPillSheetGroup);
       if (restDurationNotification != null) {
-        return RestDurationAnnouncementBar(restDurationNotification: restDurationNotification);
+        return RestDurationAnnouncementBar(
+            restDurationNotification: restDurationNotification);
       }
 
-      if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
+      if (latestPillSheetGroup != null &&
+          latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet(
           isPremium: user.isPremium,

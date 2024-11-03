@@ -23,10 +23,11 @@ class PilllAds with _$PilllAds {
     required String? imageURL,
     required String destinationURL,
     required String hexColor,
-    @Default("FFFFFF") String closeButtonColor,
-    @Default("FFFFFF") String chevronRightColor,
+    @Default('FFFFFF') String closeButtonColor,
+    @Default('FFFFFF') String chevronRightColor,
   }) = _PilllAds;
   PilllAds._();
 
-  factory PilllAds.fromJson(Map<String, dynamic> json) => _$PilllAdsFromJson(json);
+  factory PilllAds.fromJson(Map<String, dynamic> json) =>
+      _$PilllAdsFromJson(json);
 }

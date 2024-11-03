@@ -31,55 +31,76 @@ class PremiumIntroductionFotter extends StatelessWidget {
             child: RichText(
               textAlign: TextAlign.start,
               text: TextSpan(
-                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.gray),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 10,
+                    fontFamily: FontFamily.japanese,
+                    color: TextColor.gray),
                 children: [
-                  const TextSpan(text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
-                  const TextSpan(text: "・"),
+                  const TextSpan(
+                      text: '・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n'),
+                  const TextSpan(text: '・'),
                   TextSpan(
-                    text: "プライバシーポリシー",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    text: 'プライバシーポリシー',
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
+                        launchUrl(
+                            Uri.parse(
+                                'https://bannzai.github.io/Pilll/PrivacyPolicy'),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                   const TextSpan(
-                    text: " / ",
+                    text: ' / ',
                   ),
                   TextSpan(
-                    text: "利用規約",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    text: '利用規約',
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
+                        launchUrl(
+                            Uri.parse('https://bannzai.github.io/Pilll/Terms'),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                   const TextSpan(
-                    text: " / ",
+                    text: ' / ',
                   ),
                   TextSpan(
-                    text: "特定商取引法に基づく表示",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    text: '特定商取引法に基づく表示',
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse("https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct"), mode: LaunchMode.inAppWebView);
+                        launchUrl(
+                            Uri.parse(
+                                'https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct'),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                   const TextSpan(
-                    text: "をご確認のうえ登録してください\n",
+                    text: 'をご確認のうえ登録してください\n',
                   ),
                   const TextSpan(
-                    text: "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
+                    text: '・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n',
                   ),
                   TextSpan(
-                    text: "・購入後、自動更新の解約は$storeNameアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+                    text:
+                        '・購入後、自動更新の解約は$storeNameアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。',
                   ),
                   TextSpan(
-                    text: "詳細はこちら",
-                    style: const TextStyle(decoration: TextDecoration.underline),
+                    text: '詳細はこちら',
+                    style:
+                        const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse("https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940"), mode: LaunchMode.inAppWebView);
+                        launchUrl(
+                            Uri.parse(
+                                'https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'),
+                            mode: LaunchMode.inAppWebView);
                       },
                   ),
                 ],
@@ -99,7 +120,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
                       duration: Duration(
                         seconds: 2,
                       ),
-                      content: Text("購入情報を復元しました"),
+                      content: Text('購入情報を復元しました'),
                     ),
                   );
                 }
@@ -132,26 +153,28 @@ class PremiumIntroductionFotter extends StatelessWidget {
     try {
       final purchaserInfo = await Purchases.restorePurchases();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
-      analytics.logEvent(name: "proceed_restore_purchase_info", parameters: {
-        "entitlements": entitlements?.identifier,
-        "isActivated": entitlements?.isActive,
+      analytics.logEvent(name: 'proceed_restore_purchase_info', parameters: {
+        'entitlements': entitlements?.identifier,
+        'isActivated': entitlements?.isActive,
       });
       if (entitlements != null && entitlements.isActive) {
-        analytics.logEvent(name: "done_restore_purchase_info", parameters: {
-          "entitlements": entitlements.identifier,
+        analytics.logEvent(name: 'done_restore_purchase_info', parameters: {
+          'entitlements': entitlements.identifier,
         });
         await callUpdatePurchaseInfo(purchaserInfo);
         return Future.value(true);
       }
-      analytics.logEvent(name: "undone_restore_purchase_info", parameters: {
-        "entitlements": entitlements?.identifier,
-        "isActivated": entitlements?.isActive,
+      analytics.logEvent(name: 'undone_restore_purchase_info', parameters: {
+        'entitlements': entitlements?.identifier,
+        'isActivated': entitlements?.isActive,
       });
-      throw AlertError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
+      throw AlertError('以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください');
     } on PlatformException catch (exception, stack) {
-      analytics.logEvent(
-          name: "catched_restore_exception",
-          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
+      analytics.logEvent(name: 'catched_restore_exception', parameters: {
+        'code': exception.code,
+        'details': exception.details.toString(),
+        'message': exception.message
+      });
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -159,8 +182,9 @@ class PremiumIntroductionFotter extends StatelessWidget {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: "catched_restore_anonymous_exception", parameters: {
-        "exception_type": exception.runtimeType.toString(),
+      analytics
+          .logEvent(name: 'catched_restore_anonymous_exception', parameters: {
+        'exception_type': exception.runtimeType.toString(),
       });
       errorLogger.recordError(exception, stack);
       rethrow;

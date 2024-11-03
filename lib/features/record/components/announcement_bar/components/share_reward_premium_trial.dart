@@ -22,18 +22,20 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final applyShareRewardPremiumTrial = ref.watch(applyShareRewardPremiumTrialProvider);
+    final applyShareRewardPremiumTrial =
+        ref.watch(applyShareRewardPremiumTrialProvider);
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
       color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
-          analytics.logEvent(name: "pressed_share_reward_announcement_bar");
+          analytics.logEvent(name: 'pressed_share_reward_announcement_bar');
 
           _showPicker(context, (shareToSNSKind) async {
             try {
-              await presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
+              await presentShareToSNSForPremiumTrialReward(shareToSNSKind,
+                  () async {
                 await applyShareRewardPremiumTrial(user);
               });
             } catch (error) {
@@ -48,7 +50,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const SizedBox(width: 24),
             const Spacer(),
             const Text(
-              "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！",
+              'プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
@@ -59,8 +61,9 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             ),
             const Spacer(),
             SvgPicture.asset(
-              "images/arrow_right.svg",
-              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              'images/arrow_right.svg',
+              colorFilter:
+                  const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               width: 16,
               height: 16,
             ),
@@ -71,7 +74,8 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
     );
   }
 
-  void _showPicker(BuildContext context, Function(ShareToSNSKind) completionHandler) {
+  void _showPicker(
+      BuildContext context, Function(ShareToSNSKind) completionHandler) {
     int selected = ShareToSNSKind.values.first.index;
 
     showModalBottomSheet(
@@ -84,7 +88,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const Padding(
               padding: EdgeInsets.only(top: 10),
               child: Text(
-                "どちらにシェアしますか？",
+                'どちらにシェアしますか？',
                 style: TextStyle(
                   color: TextColor.main,
                   fontFamily: FontFamily.japanese,
@@ -113,8 +117,11 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
                   onSelectedItemChanged: (index) {
                     selected = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: selected),
-                  children: ShareToSNSKind.values.map((e) => Text(e.rawValue)).toList(),
+                  scrollController:
+                      FixedExtentScrollController(initialItem: selected),
+                  children: ShareToSNSKind.values
+                      .map((e) => Text(e.rawValue))
+                      .toList(),
                 ),
               ),
             ),

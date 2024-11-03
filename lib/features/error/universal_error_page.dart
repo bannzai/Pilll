@@ -54,7 +54,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
       child: () {
         if (error != null) return _errorPage(error);
         if (child != null) return child;
-        throw AssertionError("unexpected child and error are both null");
+        throw AssertionError('unexpected child and error are both null');
       }(),
     );
   }
@@ -77,7 +77,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  "images/universal_error.png",
+                  'images/universal_error.png',
                   width: 200,
                   height: 190,
                 ),
@@ -95,7 +95,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                     Icons.refresh,
                     size: 20,
                   ),
-                  label: const Text("画面を再読み込み",
+                  label: const Text('画面を再読み込み',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
@@ -103,7 +103,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                         color: TextColor.black,
                       )),
                   onPressed: () {
-                    analytics.logEvent(name: "reload_button_pressed");
+                    analytics.logEvent(name: 'reload_button_pressed');
                     setState(() {
                       _error = null;
                       final reload = widget.reload;
@@ -118,7 +118,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                     Icons.mail,
                     size: 20,
                   ),
-                  label: const Text("解決しない場合はこちら",
+                  label: const Text('解決しない場合はこちら',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
@@ -126,7 +126,8 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                         color: TextColor.black,
                       )),
                   onPressed: () {
-                    analytics.logEvent(name: "problem_unresolved_button_pressed");
+                    analytics.logEvent(
+                        name: 'problem_unresolved_button_pressed');
                     inquiry();
                   },
                 )

@@ -1,3 +1,3 @@
-const lockEmoji = "🔒";
-const pillEmoji = "💊";
-const thinkingFaceEmoji = "🤔";
+const lockEmoji = '🔒';
+const pillEmoji = '💊';
+const thinkingFaceEmoji = '🤔';

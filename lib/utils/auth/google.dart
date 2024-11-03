@@ -24,7 +24,7 @@ Future<UserCredential?> signInWithGoogle() async {
   try {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
-      throw const FormatException("Anonymous User not found");
+      throw const FormatException('Anonymous User not found');
     }
     final provider = GoogleAuthProvider().addScope('email');
     return await FirebaseAuth.instance.signInWithProvider(provider);
@@ -48,13 +48,16 @@ final isGoogleLinkedProvider = Provider((ref) {
 });
 
 bool isLinkedGoogleFor(User user) {
-  return user.providerData.where((element) => element.providerId == GoogleAuthProvider.PROVIDER_ID).isNotEmpty;
+  return user.providerData
+      .where((element) => element.providerId == GoogleAuthProvider.PROVIDER_ID)
+      .isNotEmpty;
 }
 
 Future<void> googleReauthentification() async {
   try {
     final provider = GoogleAuthProvider().addScope('email');
-    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+    await FirebaseAuth.instance.currentUser
+        ?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
     // Appleのcodeとは違うので注意

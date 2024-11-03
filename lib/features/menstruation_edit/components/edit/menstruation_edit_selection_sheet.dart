@@ -22,7 +22,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           duration: Duration(seconds: 2),
-          content: Text("生理期間を削除しました"),
+          content: Text('生理期間を削除しました'),
         ),
       );
       Navigator.of(context).pop();
@@ -37,7 +37,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "${DateTimeFormatter.yearAndMonthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.yearAndMonthAndDay(menstruation.endDate)}",
+              '${DateTimeFormatter.yearAndMonthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.yearAndMonthAndDay(menstruation.endDate)}',
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
@@ -64,7 +64,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                   ),
                   SizedBox(width: 16),
                   Text(
-                    "生理期間を編集",
+                    '生理期間を編集',
                     style: TextStyle(
                       color: TextColor.main,
                       fontWeight: FontWeight.w400,
@@ -86,7 +86,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                   ),
                   SizedBox(width: 16),
                   Text(
-                    "削除",
+                    '削除',
                     style: TextStyle(
                       color: TextColor.danger,
                       fontWeight: FontWeight.w400,
@@ -100,25 +100,29 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                 showDialog(
                   context: context,
                   builder: (context) => DiscardDialog(
-                    title: "生理期間を削除しますか？",
-                    message: const Text(""),
+                    title: '生理期間を削除しますか？',
+                    message: const Text(''),
                     actions: [
                       AlertButton(
-                        text: "キャンセル",
+                        text: 'キャンセル',
                         onPressed: () async {
-                          analytics.logEvent(name: "cancelled_delete_menstruation");
+                          analytics.logEvent(
+                              name: 'cancelled_delete_menstruation');
 
                           Navigator.of(context).pop();
                         },
                       ),
                       AlertButton(
-                        text: "削除する",
+                        text: '削除する',
                         onPressed: () async {
-                          analytics.logEvent(name: "pressed_delete_menstruation");
+                          analytics.logEvent(
+                              name: 'pressed_delete_menstruation');
 
                           final navigator = Navigator.of(context);
                           try {
-                            await ref.read(deleteMenstruationProvider).call(menstruation);
+                            await ref
+                                .read(deleteMenstruationProvider)
+                                .call(menstruation);
                           } catch (e) {
                             if (context.mounted) showErrorAlert(context, e);
                           }
@@ -138,7 +142,8 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
   }
 }
 
-void showMenstruationEditSelectionSheet(BuildContext context, MenstruationEditSelectionSheet menstruationEditSelectionSheet) {
+void showMenstruationEditSelectionSheet(BuildContext context,
+    MenstruationEditSelectionSheet menstruationEditSelectionSheet) {
   showModalBottomSheet(
     context: context,
     builder: (BuildContext context) {

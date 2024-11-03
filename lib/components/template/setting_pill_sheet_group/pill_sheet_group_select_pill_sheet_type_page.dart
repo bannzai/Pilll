@@ -10,7 +10,8 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
   final PillSheetType? pillSheetType;
   final Function(PillSheetType) onSelect;
 
-  const PillSheetGroupSelectPillSheetTypePage({super.key, required this.pillSheetType, required this.onSelect});
+  const PillSheetGroupSelectPillSheetTypePage(
+      {super.key, required this.pillSheetType, required this.onSelect});
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
@@ -36,7 +37,7 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
                 children: [
                   SizedBox(width: 16),
                   Text(
-                    "ピルの種類を選択",
+                    'ピルの種類を選択',
                     style: TextStyle(
                       color: TextColor.main,
                       fontSize: 20,
@@ -50,8 +51,8 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
               PillSheetTypeSelectBodyTemplate(
                 onSelect: (e) {
                   analytics.logEvent(
-                    name: "initial_setting_selected_pill_sheet_type",
-                    parameters: {"pill_sheet_type": e.fullName},
+                    name: 'initial_setting_selected_pill_sheet_type',
+                    parameters: {'pill_sheet_type': e.fullName},
                   );
                   Navigator.of(context).pop();
                   onSelect(e);
@@ -71,7 +72,8 @@ void showSettingPillSheetGroupSelectPillSheetTypePage({
   required final PillSheetType? pillSheetType,
   required final Function(PillSheetType) onSelect,
 }) {
-  analytics.setCurrentScreen(screenName: "PillSheetGroupSelectPillSheetTypePage");
+  analytics.setCurrentScreen(
+      screenName: 'PillSheetGroupSelectPillSheetTypePage');
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,

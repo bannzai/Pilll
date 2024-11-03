@@ -8,7 +8,8 @@ class DiaryOrScheduleSheet extends StatelessWidget {
   final VoidCallback showDiary;
   final VoidCallback showSchedule;
 
-  const DiaryOrScheduleSheet({super.key, required this.showDiary, required this.showSchedule});
+  const DiaryOrScheduleSheet(
+      {super.key, required this.showDiary, required this.showSchedule});
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +22,24 @@ class DiaryOrScheduleSheet extends StatelessWidget {
           children: [
             const SizedBox(height: 24),
             _tile(
-              title: "日記を記録",
+              title: '日記を記録',
               onTap: () => showDiary(),
               leading: const Icon(Icons.note_alt),
             ),
-            _tile(title: "予定を記入", onTap: () => showSchedule(), leading: const Icon(Icons.event)),
+            _tile(
+                title: '予定を記入',
+                onTap: () => showSchedule(),
+                leading: const Icon(Icons.event)),
           ],
         ),
       ),
     );
   }
 
-  Widget _tile({required String title, required VoidCallback onTap, required Widget leading}) {
+  Widget _tile(
+      {required String title,
+      required VoidCallback onTap,
+      required Widget leading}) {
     return SizedBox(
       height: _tileHeight,
       child: ListTile(

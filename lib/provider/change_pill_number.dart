@@ -13,7 +13,8 @@ import 'package:pilll/utils/datetime/day.dart';
 final changePillNumberProvider = Provider.autoDispose(
   (ref) => ChangePillNumber(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory:
+        ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
 );
@@ -38,13 +39,16 @@ class ChangePillNumber {
   }) async {
     final batch = batchFactory.batch();
 
-    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
-          pillSheetTypes: pillSheetTypes,
-          toIndex: pillSheetPageIndex,
-        ) +
-        pillNumberInPillSheet;
-    final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
+    final pillSheetTypes =
+        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final nextSerializedPillNumber =
+        summarizedPillCountWithPillSheetTypesToIndex(
+              pillSheetTypes: pillSheetTypes,
+              toIndex: pillSheetPageIndex,
+            ) +
+            pillNumberInPillSheet;
+    final firstPilSheetBeginDate =
+        today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
@@ -54,7 +58,8 @@ class ChangePillNumber {
       if (index == 0) {
         beginDate = firstPilSheetBeginDate;
       } else {
-        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: index);
+        final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(
+            pillSheetTypes: pillSheetTypes, toIndex: index);
         beginDate = firstPilSheetBeginDate.addDays(passedTotalCount);
       }
 
@@ -62,7 +67,8 @@ class ChangePillNumber {
       if (pillSheetPageIndex == index) {
         lastTakenDate = beginDate.addDays(pillNumberInPillSheet - 2);
       } else if (pillSheetPageIndex > index) {
-        lastTakenDate = beginDate.addDays(pillSheet.pillSheetType.totalCount - 1);
+        lastTakenDate =
+            beginDate.addDays(pillSheet.pillSheetType.totalCount - 1);
       } else {
         // state.selectedPillMarkNumberIntoPillSheet < index
         lastTakenDate = null;
@@ -76,8 +82,10 @@ class ChangePillNumber {
       updatedPillSheets.add(updatedPillSheet);
     });
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-    final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+    final updatedPillSheetGroup =
+        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: activePillSheet,
       after: updatedPillSheets[pillSheetPageIndex],

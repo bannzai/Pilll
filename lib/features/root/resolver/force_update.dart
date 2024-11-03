@@ -54,7 +54,10 @@ class ForceUpdate extends HookConsumerWidget {
     // For force update
     if (shouldForceUpdate.value) {
       Future.microtask(() async {
-        await showOKDialog(context, title: "アプリをアップデートしてください", message: "お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください",
+        await showOKDialog(context,
+            title: 'アプリをアップデートしてください',
+            message:
+                'お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください',
             ok: () async {
           await launchUrl(
             Uri.parse(forceUpdateStoreURL),

@@ -32,21 +32,21 @@ extension WeekdayFunctions on Weekday {
   String weekdayString() {
     switch (this) {
       case Weekday.Sunday:
-        return "日";
+        return '日';
       case Weekday.Monday:
-        return "月";
+        return '月';
       case Weekday.Tuesday:
-        return "火";
+        return '火';
       case Weekday.Wednesday:
-        return "水";
+        return '水';
       case Weekday.Thursday:
-        return "木";
+        return '木';
       case Weekday.Friday:
-        return "金";
+        return '金';
       case Weekday.Saturday:
-        return "土";
+        return '土';
       default:
-        throw ArgumentError.notNull("");
+        throw ArgumentError.notNull('');
     }
   }
 
@@ -67,7 +67,7 @@ extension WeekdayFunctions on Weekday {
       case Weekday.Saturday:
         return PilllColors.saturday;
       default:
-        throw ArgumentError.notNull("");
+        throw ArgumentError.notNull('');
     }
   }
 }

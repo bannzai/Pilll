@@ -25,10 +25,12 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillNumberInPillSheetState = useState(_pillNumberInPillSheet(activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup));
+    final pillNumberInPillSheetState = useState(_pillNumberInPillSheet(
+        activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup));
     final pillSheetPageIndexState = useState(activePillSheet.groupIndex);
     final changePillNumber = ref.watch(changePillNumberProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
     final navigator = Navigator.of(context);
 
     return Scaffold(
@@ -39,7 +41,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "ピル番号の変更",
+          'ピル番号の変更',
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -52,7 +54,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                 children: [
                   const SizedBox(height: 20),
                   Text(
-                    "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
+                    '今日(${_today()})\n飲む・飲んだピルの番号をタップ',
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
@@ -64,16 +66,20 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 56),
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
-                        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                        pillSheetTypes: pillSheetGroup.pillSheets
+                            .map((e) => e.pillSheetType)
+                            .toList(),
                         selectedTodayPillNumberIntoPillSheet: (pageIndex) {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
                           }
                           return pillNumberInPillSheetState.value;
                         },
-                        markSelected: (pillSheetPageIndex, pillNumberInPillSheet) {
+                        markSelected:
+                            (pillSheetPageIndex, pillNumberInPillSheet) {
                           pillSheetPageIndexState.value = pillSheetPageIndex;
-                          pillNumberInPillSheetState.value = pillNumberInPillSheet;
+                          pillNumberInPillSheetState.value =
+                              pillNumberInPillSheet;
                         }),
                   ),
                   const SizedBox(height: 20),
@@ -92,12 +98,13 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                               pillSheetGroup: pillSheetGroup,
                               activePillSheet: activePillSheet,
                               pillSheetPageIndex: pillSheetPageIndexState.value,
-                              pillNumberInPillSheet: pillNumberInPillSheetState.value);
+                              pillNumberInPillSheet:
+                                  pillNumberInPillSheetState.value);
                           await registerReminderLocalNotification();
 
                           navigator.pop();
                         },
-                        text: "変更する",
+                        text: '変更する',
                       ),
                     ),
                     const SizedBox(height: 35),
@@ -112,15 +119,17 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   }
 
   String _today() {
-    return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
+    return '${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})';
   }
 
   int _pillNumberInPillSheet({
     required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) {
-    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
+    final pillSheetTypes =
+        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(
+        pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
     if (passedTotalCount >= activePillSheet.todayPillNumber) {
       return activePillSheet.todayPillNumber;
     }
@@ -134,7 +143,7 @@ extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
     required PillSheet activePillSheet,
   }) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "SettingTodayPillNumberPage"),
+      settings: const RouteSettings(name: 'SettingTodayPillNumberPage'),
       builder: (_) => SettingTodayPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activePillSheet: activePillSheet,

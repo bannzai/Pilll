@@ -11,7 +11,7 @@ class PillMarkDoneMark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SvgPicture.asset(
-      "images/checkmark.svg",
+      'images/checkmark.svg',
       colorFilter: const ColorFilter.mode(
         PilllColors.potti,
         BlendMode.srcIn,

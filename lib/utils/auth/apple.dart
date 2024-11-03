@@ -10,7 +10,7 @@ Future<UserCredential?> linkWithApple(User user) async {
     return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意
-    if (e.code == "canceled") {
+    if (e.code == 'canceled') {
       return Future.value(null);
     }
     rethrow;
@@ -21,13 +21,13 @@ Future<UserCredential?> signInWithApple() async {
   try {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
-      throw const FormatException("Anonymous User not found");
+      throw const FormatException('Anonymous User not found');
     }
     final provider = AppleAuthProvider().addScope('email');
     return await FirebaseAuth.instance.signInWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意
-    if (e.code == "canceled") {
+    if (e.code == 'canceled') {
       return Future.value(null);
     }
     rethrow;
@@ -44,16 +44,19 @@ final isAppleLinkedProvider = Provider((ref) {
 });
 
 bool isLinkedAppleFor(User user) {
-  return user.providerData.where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID).isNotEmpty;
+  return user.providerData
+      .where((element) => element.providerId == AppleAuthProvider.PROVIDER_ID)
+      .isNotEmpty;
 }
 
 Future<void> appleReauthentification() async {
   try {
     final provider = AppleAuthProvider().addScope('email');
-    await FirebaseAuth.instance.currentUser?.reauthenticateWithProvider(provider);
+    await FirebaseAuth.instance.currentUser
+        ?.reauthenticateWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // Googleのcodeとは違うので注意
-    if (e.code == "canceled") {
+    if (e.code == 'canceled') {
       return Future.value();
     }
     rethrow;

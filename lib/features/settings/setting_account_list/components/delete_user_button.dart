@@ -23,27 +23,28 @@ class DeleteUserButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification =
+        ref.watch(cancelReminderLocalNotificationProvider);
     return Container(
       padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
         onPressed: () async {
           showDiscardDialog(
             context,
-            title: "ユーザー情報が削除されます",
-            message: "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
+            title: 'ユーザー情報が削除されます',
+            message: '退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。',
             actions: [
               AlertButton(
-                text: "キャンセル",
+                text: 'キャンセル',
                 onPressed: () async {
-                  analytics.logEvent(name: "cancel_delete_user");
+                  analytics.logEvent(name: 'cancel_delete_user');
                   Navigator.of(context).pop();
                 },
               ),
               AlertButton(
-                text: "退会する",
+                text: '退会する',
                 onPressed: () async {
-                  analytics.logEvent(name: "pressed_delete_user_button");
+                  analytics.logEvent(name: 'pressed_delete_user_button');
                   await (
                     _delete(
                       context,
@@ -57,7 +58,7 @@ class DeleteUserButton extends HookConsumerWidget {
             ],
           );
         },
-        text: "退会する",
+        text: '退会する',
       ),
     );
   }
@@ -77,21 +78,21 @@ class DeleteUserButton extends HookConsumerWidget {
         builder: (context) => const _CompletedDialog(),
       );
     } on FirebaseAuthException catch (error, stackTrace) {
-      if (error.code == "requires-recent-login") {
+      if (error.code == 'requires-recent-login') {
         if (!context.mounted) return;
         showDiscardDialog(
           context,
-          title: "再ログインしてください",
-          message: "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります",
+          title: '再ログインしてください',
+          message: '退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります',
           actions: [
             AlertButton(
-              text: "キャンセル",
+              text: 'キャンセル',
               onPressed: () async {
                 Navigator.of(context).pop();
               },
             ),
             AlertButton(
-              text: "再ログイン",
+              text: '再ログイン',
               onPressed: () async {
                 final navigator = Navigator.of(context);
                 if (isAppleLinked) {
@@ -99,12 +100,14 @@ class DeleteUserButton extends HookConsumerWidget {
                 } else if (isGoogleLinked) {
                   await googleReauthentification();
                 } else {
-                  errorLogger.log("it is not cooperate account");
+                  errorLogger.log('it is not cooperate account');
                   exit(1);
                 }
                 navigator.pop();
                 // ignore: use_build_context_synchronously
-                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
+                await _delete(context,
+                    isAppleLinked: isAppleLinked,
+                    isGoogleLinked: isGoogleLinked);
               },
             ),
           ],
@@ -130,7 +133,7 @@ class _CompletedDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            "退会しました",
+            '退会しました',
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
@@ -141,7 +144,7 @@ class _CompletedDialog extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           const Text(
-            "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。",
+            'アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。',
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
@@ -157,7 +160,7 @@ class _CompletedDialog extends StatelessWidget {
               onPressed: () async {
                 exit(0);
               },
-              text: "OK",
+              text: 'OK',
             ),
           ),
         ],

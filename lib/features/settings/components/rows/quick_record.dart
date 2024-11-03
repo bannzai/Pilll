@@ -19,7 +19,7 @@ class QuickRecordRow extends StatelessWidget {
       minVerticalPadding: 9,
       title: const Row(
         children: [
-          Text("クイックレコード",
+          Text('クイックレコード',
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -29,10 +29,10 @@ class QuickRecordRow extends StatelessWidget {
           PremiumBadge(),
         ],
       ),
-      subtitle: const Text("通知画面で今日飲むピルが分かり、そのまま服用記録できます。"),
+      subtitle: const Text('通知画面で今日飲むピルが分かり、そのまま服用記録できます。'),
       onTap: () {
         analytics.logEvent(
-          name: "did_select_quick_record_row",
+          name: 'did_select_quick_record_row',
         );
         if (isTrial) {
           return;

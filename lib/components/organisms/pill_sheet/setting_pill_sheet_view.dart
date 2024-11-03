@@ -56,8 +56,11 @@ class SettingPillSheetView extends StatelessWidget {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
 
-      final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(index, lineIndex);
-      final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+      final pillNumberInPillSheet =
+          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
+              index, lineIndex);
+      final offset = summarizedPillCountWithPillSheetTypesToIndex(
+          pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
 
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
@@ -65,9 +68,9 @@ class SettingPillSheetView extends StatelessWidget {
           pillNumber: Text(
             () {
               if (appearanceMode.isSequential) {
-                return "${offset + pillNumberInPillSheet}";
+                return '${offset + pillNumberInPillSheet}';
               } else {
-                return "$pillNumberInPillSheet";
+                return '$pillNumberInPillSheet';
               }
             }(),
             style: const TextStyle(color: PilllColors.weekday),
@@ -81,9 +84,9 @@ class SettingPillSheetView extends StatelessWidget {
             ),
           ),
           onTap: () {
-            analytics.logEvent(name: "setting_pill_mark_tapped", parameters: {
-              "number": pillNumberInPillSheet,
-              "page": pageIndex,
+            analytics.logEvent(name: 'setting_pill_mark_tapped', parameters: {
+              'number': pillNumberInPillSheet,
+              'page': pageIndex,
             });
             markSelected(pageIndex, pillNumberInPillSheet);
           },
@@ -100,7 +103,8 @@ class SettingPillSheetView extends StatelessWidget {
     }
 
     if (pillSheetType.dosingPeriod < pillNumberInPillSheet) {
-      return (pillSheetType == PillSheetType.pillsheet_21 || pillSheetType == PillSheetType.pillsheet_24_rest_4)
+      return (pillSheetType == PillSheetType.pillsheet_21 ||
+              pillSheetType == PillSheetType.pillsheet_24_rest_4)
           ? PillMarkType.rest
           : PillMarkType.fake;
     }

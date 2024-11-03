@@ -19,7 +19,7 @@ class HealthCareRow extends StatelessWidget {
       minVerticalPadding: 9,
       title: const Row(
         children: [
-          Text("ヘルスケア連携",
+          Text('ヘルスケア連携',
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -27,15 +27,16 @@ class HealthCareRow extends StatelessWidget {
               )),
         ],
       ),
-      subtitle: const Text("Pilllで記録した生理記録を自動でヘルスケアに記録できます"),
+      subtitle: const Text('Pilllで記録した生理記録を自動でヘルスケアに記録できます'),
       onTap: () async {
         analytics.logEvent(
-          name: "did_select_health_care_row",
+          name: 'did_select_health_care_row',
         );
 
         try {
           if (await healthKitRequestAuthorizationIsUnnecessary()) {
-            launchUrl(Uri.parse("https://pilll.wraptas.site/9f689858e2a34cf6bc7c08ab85a192cf"));
+            launchUrl(Uri.parse(
+                'https://pilll.wraptas.site/9f689858e2a34cf6bc7c08ab85a192cf'));
           } else {
             if (await shouldRequestForAccessToHealthKitData()) {
               await requestWriteMenstrualFlowHealthKitDataPermission();

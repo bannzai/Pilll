@@ -8,7 +8,10 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   final String salvagedOldStartTakenDate;
   final String salvagedOldLastTakenDate;
 
-  const InformationForBeforeMigrate132({super.key, required this.salvagedOldStartTakenDate, required this.salvagedOldLastTakenDate});
+  const InformationForBeforeMigrate132(
+      {super.key,
+      required this.salvagedOldStartTakenDate,
+      required this.salvagedOldLastTakenDate});
 
   int _latestPillNumber() {
     final last = DateTime.parse(salvagedOldLastTakenDate);
@@ -42,7 +45,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  "大型アップデート前の情報",
+                  '大型アップデート前の情報',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
@@ -52,7 +55,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 const Text(
-                  "下記の情報はversion 2.0.0以前のアプリの情報になります",
+                  '下記の情報はversion 2.0.0以前のアプリの情報になります',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
@@ -62,7 +65,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  "最後に飲んだ日: $salvagedOldLastTakenDate",
+                  '最後に飲んだ日: $salvagedOldLastTakenDate',
                   style: const TextStyle(
                     fontFamily: FontFamily.roboto,
                     fontWeight: FontWeight.w300,
@@ -72,7 +75,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  "※大型アップデート前のアプリで最後にピルの服用記録をつけた日です",
+                  '※大型アップデート前のアプリで最後にピルの服用記録をつけた日です',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
@@ -82,7 +85,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  "最後に飲んだピル番号: ${_latestPillNumber()}",
+                  '最後に飲んだピル番号: ${_latestPillNumber()}',
                   style: const TextStyle(
                     fontFamily: FontFamily.roboto,
                     fontWeight: FontWeight.w300,
@@ -92,7 +95,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  "※大型アップデート前のアプリで最後に服用したピル番号になります",
+                  '※大型アップデート前のアプリで最後に服用したピル番号になります',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
@@ -102,7 +105,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 Text(
-                  "今日服用予定だったピル番号: ${_todayPillNumber()}",
+                  '今日服用予定だったピル番号: ${_todayPillNumber()}',
                   style: const TextStyle(
                     fontFamily: FontFamily.roboto,
                     fontWeight: FontWeight.w300,
@@ -112,7 +115,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 4),
                 const Text(
-                  "※大型アップデート前のアプリを使用していた場合の本日のピル番号になります",
+                  '※大型アップデート前のアプリを使用していた場合の本日のピル番号になります',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w400,
@@ -130,10 +133,14 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   }
 }
 
-extension InformationForBeforeMigrate132Route on InformationForBeforeMigrate132 {
-  static Route<dynamic> route({required String salvagedOldStartTakenDate, required String salvagedOldLastTakenDate}) {
+extension InformationForBeforeMigrate132Route
+    on InformationForBeforeMigrate132 {
+  static Route<dynamic> route(
+      {required String salvagedOldStartTakenDate,
+      required String salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "InformationForBeforeMigrate132Route"),
+      settings:
+          const RouteSettings(name: 'InformationForBeforeMigrate132Route'),
       builder: (_) => InformationForBeforeMigrate132(
         salvagedOldStartTakenDate: salvagedOldStartTakenDate,
         salvagedOldLastTakenDate: salvagedOldLastTakenDate,

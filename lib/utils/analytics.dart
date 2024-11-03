@@ -15,10 +15,12 @@ class Analytics {
     }
   }
 
-  void logEvent({required String name, Map<String, Object?>? parameters}) async {
-    assert(name.length <= 40, "firebase analytics log event name limit length up to 40");
+  void logEvent(
+      {required String name, Map<String, Object?>? parameters}) async {
+    assert(name.length <= 40,
+        'firebase analytics log event name limit length up to 40');
     if (kDebugMode) {
-      print("[INFO] logEvent name: $name, parameters: $parameters");
+      print('[INFO] logEvent name: $name, parameters: $parameters');
     }
 
     Map<String, Object>? params = parameters != null ? {} : null;
@@ -26,13 +28,13 @@ class Analytics {
       for (final key in parameters.keys) {
         final param = parameters[key];
         if (param == null) {
-          params?[key] = "null";
+          params?[key] = 'null';
         } else if (param is DateTime) {
           params?[key] = param.toIso8601String();
         } else if (param is TZDateTime) {
           params?[key] = param.toIso8601String();
         } else if (param is bool) {
-          params?[key] = param ? "true" : "false";
+          params?[key] = param ? 'true' : 'false';
         } else {
           params?[key] = param;
         }
@@ -41,27 +43,31 @@ class Analytics {
     try {
       await firebaseAnalytics.logEvent(name: name, parameters: params);
     } catch (e) {
-      debugPrint("analytics error: $e");
+      debugPrint('analytics error: $e');
     }
   }
 
-  void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {
-    unawaited(firebaseAnalytics.logEvent(name: "screen_$screenName"));
-    return firebaseAnalytics.setCurrentScreen(screenName: screenName, screenClassOverride: screenClassOverride);
+  void setCurrentScreen(
+      {required String screenName,
+      String screenClassOverride = 'Flutter'}) async {
+    unawaited(firebaseAnalytics.logEvent(name: 'screen_$screenName'));
+    return firebaseAnalytics.setCurrentScreen(
+        screenName: screenName, screenClassOverride: screenClassOverride);
   }
 
   /// Up to 25 user property names are supported.
   // The "firebase_" prefix is reserved and should not be used for
   /// user property names.
   void setUserProperties(String name, value) {
-    assert(name.toLowerCase() != "age");
-    assert(name.toLowerCase() != "gender");
-    assert(name.toLowerCase() != "interest");
-    assert(name.length < 25, "firebase setUserProperties name limit length up to 25");
-    assert(!name.startsWith("firebase_"));
+    assert(name.toLowerCase() != 'age');
+    assert(name.toLowerCase() != 'gender');
+    assert(name.toLowerCase() != 'interest');
+    assert(name.length < 25,
+        'firebase setUserProperties name limit length up to 25');
+    assert(!name.startsWith('firebase_'));
 
     if (kDebugMode) {
-      print("[INFO] setUserProperties name: $name, value: $value");
+      print('[INFO] setUserProperties name: $name, value: $value');
     }
     firebaseAnalytics.setUserProperty(name: name, value: value);
   }

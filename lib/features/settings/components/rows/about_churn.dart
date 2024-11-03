@@ -10,7 +10,7 @@ class AboutChurn extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      title: const Text("解約について",
+      title: const Text('解約について',
           style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
@@ -18,10 +18,13 @@ class AboutChurn extends HookConsumerWidget {
           )),
       onTap: () {
         analytics.logEvent(
-          name: "did_select_about_churn",
+          name: 'did_select_about_churn',
         );
 
-        launchUrl(Uri.parse("https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940"), mode: LaunchMode.inAppWebView);
+        launchUrl(
+            Uri.parse(
+                'https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'),
+            mode: LaunchMode.inAppWebView);
       },
     );
   }

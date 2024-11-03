@@ -18,7 +18,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
       color: PilllColors.primary,
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: "tapped_premium_signup_announcement_bar");
+          analytics.logEvent(name: 'tapped_premium_signup_announcement_bar');
           showSignInSheet(context, SignInSheetStateContext.recordPage, null);
         },
         child: Stack(
@@ -31,14 +31,15 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SvgPicture.asset(
-                        "images/alert_24.svg",
+                        'images/alert_24.svg',
                         width: 16,
                         height: 16,
-                        colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                        colorFilter: const ColorFilter.mode(
+                            Colors.white, BlendMode.srcIn),
                       ),
                       const SizedBox(width: 5),
                       const Text(
-                        "アカウント登録をしてください",
+                        'アカウント登録をしてください',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w700,
@@ -51,7 +52,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    "機種変更やスマホ紛失時に、プレミアム機能を引き継げません",
+                    '機種変更やスマホ紛失時に、プレミアム機能を引き継げません',
                     style: TextStyle(
                       color: TextColor.white,
                       fontFamily: FontFamily.japanese,
@@ -67,8 +68,9 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
               alignment: Alignment.centerRight,
               child: IconButton(
                 icon: SvgPicture.asset(
-                  "images/arrow_right.svg",
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  'images/arrow_right.svg',
+                  colorFilter:
+                      const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
                 onPressed: () {},
                 iconSize: 24,

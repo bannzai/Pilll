@@ -20,13 +20,14 @@ class EndedPillSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: "pill_ended_sheet_tap", parameters: {
-          "isTrial": isTrial,
-          "isPremium": isPremium,
+        analytics.logEvent(name: 'pill_ended_sheet_tap', parameters: {
+          'isTrial': isTrial,
+          'isPremium': isPremium,
         });
 
         if (isPremium || isTrial) {
-          Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+          Navigator.of(context)
+              .push(PillSheetModifiedHistoriesPageRoute.route());
         } else {
           showPremiumIntroductionSheet(context);
         }
@@ -37,7 +38,7 @@ class EndedPillSheet extends StatelessWidget {
         child: const Center(
           child: Column(
             children: [
-              Text("ピルシートが終了しました",
+              Text('ピルシートが終了しました',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
@@ -45,7 +46,7 @@ class EndedPillSheet extends StatelessWidget {
                     color: TextColor.white,
                   )),
               Text(
-                "最後に服用した日を確認",
+                '最後に服用した日を確認',
                 style: TextStyle(
                   color: TextColor.white,
                   fontSize: 12,

@@ -27,7 +27,8 @@ class CalendarWeekLine extends HookConsumerWidget {
   final double horizontalPadding;
   final Widget Function(BuildContext, Weekday, DateTime) day;
   final List<CalendarMenstruationBandModel> calendarMenstruationBandModels;
-  final List<CalendarScheduledMenstruationBandModel> calendarScheduledMenstruationBandModels;
+  final List<CalendarScheduledMenstruationBandModel>
+      calendarScheduledMenstruationBandModels;
   final List<CalendarNextPillSheetBandModel> calendarNextPillSheetBandModels;
 
   const CalendarWeekLine({
@@ -41,7 +42,9 @@ class CalendarWeekLine extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    var tileWidth = (MediaQuery.of(context).size.width - horizontalPadding * 2) / Weekday.values.length;
+    var tileWidth =
+        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+            Weekday.values.length;
     return Stack(
       children: [
         Row(
@@ -64,7 +67,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                   menstruation: e.menstruation,
                   width: width,
                   onTap: (menstruation) async {
-                    analytics.logEvent(name: "tap_calendar_menstruation_band");
+                    analytics.logEvent(name: 'tap_calendar_menstruation_band');
 
                     showMenstruationEditSelectionSheet(
                       context,
@@ -106,7 +109,8 @@ class CalendarWeekLine extends HookConsumerWidget {
   }
 
   bool _contains(CalendarBandModel calendarBandModel) {
-    final isInRange = dateRange.inRange(calendarBandModel.begin) || dateRange.inRange(calendarBandModel.end);
+    final isInRange = dateRange.inRange(calendarBandModel.begin) ||
+        dateRange.inRange(calendarBandModel.end);
     return isInRange;
   }
 
@@ -117,7 +121,8 @@ class CalendarWeekLine extends HookConsumerWidget {
     required Widget Function(bool isLineBreak, double width) bandBuilder,
   }) {
     bool isLineBreak = isNecessaryLineBreak(calendarBandModel.begin, dateRange);
-    int start = offsetForStartPositionAtLine(calendarBandModel.begin, dateRange);
+    int start =
+        offsetForStartPositionAtLine(calendarBandModel.begin, dateRange);
     final length = bandLength(dateRange, calendarBandModel, isLineBreak);
 
     return Positioned(
@@ -144,21 +149,25 @@ void transitionWhenCalendarDayTapped(
     return;
   }
 
-  final diary = diaries.lastWhereOrNull((element) => isSameDay(element.date, date));
+  final diary =
+      diaries.lastWhereOrNull((element) => isSameDay(element.date, date));
   if (schedules.where((e) => isSameDay(e.date, date)).isNotEmpty) {
     if (diary == null) {
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
-            showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
-            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+            showDiary: () => Navigator.of(context)
+                .push(DiaryPostPageRoute.route(date, null)),
+            showSchedule: () =>
+                Navigator.of(context).push(SchedulePostPageRoute.route(date))),
       );
     } else {
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
             showDiary: () => _showConfirmDiarySheet(context, diary),
-            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+            showSchedule: () =>
+                Navigator.of(context).push(SchedulePostPageRoute.route(date))),
       );
     }
     return;

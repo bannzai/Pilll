@@ -15,7 +15,8 @@ import 'package:pilll/provider/schedule.dart';
 
 class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
-  final Widget Function(BuildContext, List<Diary>, List<Schedule>, DateRange) weekCalendarBuilder;
+  final Widget Function(BuildContext, List<Diary>, List<Schedule>, DateRange)
+      weekCalendarBuilder;
 
   const MonthCalendar({
     super.key,
@@ -27,10 +28,14 @@ class MonthCalendar extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
       // Prefetch
-      ref.read(diariesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
-      ref.read(diariesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
-      ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
-      ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
+      ref.read(diariesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
+      ref.read(diariesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
+      ref.read(schedulesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month + 1, 1)));
+      ref.read(schedulesForMonthProvider(
+          DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
       return null;
     }, [dateForMonth]);
     return AsyncValueGroup.group2(
@@ -66,7 +71,8 @@ class MonthCalendar extends HookConsumerWidget {
                 );
               }
 
-              final weekCalendar = weekCalendarBuilder(context, diaries, schedules, weeks[offset]);
+              final weekCalendar = weekCalendarBuilder(
+                  context, diaries, schedules, weeks[offset]);
               return Column(
                 children: [
                   weekCalendar,
@@ -82,7 +88,10 @@ class MonthCalendar extends HookConsumerWidget {
     );
   }
 
-  WeekCalendarDateRangeCalculator get _calculator => WeekCalendarDateRangeCalculator(dateForMonth);
+  WeekCalendarDateRangeCalculator get _calculator =>
+      WeekCalendarDateRangeCalculator(dateForMonth);
   List<DateRange> get _weeks =>
-      List.generate(_calculator.weeklineCount(), (index) => index + 1).map((line) => _calculator.dateRangeOfLine(line)).toList();
+      List.generate(_calculator.weeklineCount(), (index) => index + 1)
+          .map((line) => _calculator.dateRangeOfLine(line))
+          .toList();
 }

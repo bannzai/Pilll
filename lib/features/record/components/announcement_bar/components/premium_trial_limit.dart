@@ -23,8 +23,9 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
       color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
-          analytics.logEvent(name: "pressed_trial_limited_announcement_bar");
-          await launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
+          analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
+          await launchUrl(Uri.parse(
+              'https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,8 +44,9 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
             ),
             const Spacer(),
             SvgPicture.asset(
-              "images/arrow_right.svg",
-              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              'images/arrow_right.svg',
+              colorFilter:
+                  const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               width: 16,
               height: 16,
             ),
@@ -72,6 +74,6 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     }
 
     final diff = daysBetween(now(), trialDeadlineDate);
-    return "残り$diff日間すべての機能を使えます";
+    return '残り$diff日間すべての機能を使えます';
   }
 }

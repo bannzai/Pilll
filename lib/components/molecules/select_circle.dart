@@ -13,14 +13,14 @@ class SelectCircle extends StatelessWidget {
         SizedBox(
             width: 20,
             height: 20,
-            child: SvgPicture.asset("images/circle.line.svg")),
+            child: SvgPicture.asset('images/circle.line.svg')),
         if (isSelected)
           Positioned(
               top: 5,
               left: 5,
               width: 10,
               height: 10,
-              child: SvgPicture.asset("images/circle.fill.svg")),
+              child: SvgPicture.asset('images/circle.fill.svg')),
       ],
     );
   }

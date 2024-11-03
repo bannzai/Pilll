@@ -29,17 +29,19 @@ class CalendarDayRecord extends StatelessWidget {
           case PhysicalConditionStatus.fine:
             widgets.add(
               SvgPicture.asset(
-                "images/laugh.svg",
+                'images/laugh.svg',
                 height: 10,
-                colorFilter: const ColorFilter.mode(PilllColors.green, BlendMode.srcIn),
+                colorFilter:
+                    const ColorFilter.mode(PilllColors.green, BlendMode.srcIn),
               ),
             );
           case PhysicalConditionStatus.bad:
             widgets.add(
               SvgPicture.asset(
-                "images/angry.svg",
+                'images/angry.svg',
                 height: 10,
-                colorFilter: const ColorFilter.mode(PilllColors.danger, BlendMode.srcIn),
+                colorFilter:
+                    const ColorFilter.mode(PilllColors.danger, BlendMode.srcIn),
               ),
             );
         }
@@ -84,7 +86,7 @@ class CalendarDayRecord extends StatelessWidget {
       widgets = widgets.sublist(0, 2);
       widgets.add(
         Text(
-          "+$remain",
+          '+$remain',
           style: TextStyle(
             fontFamily: FontFamily.number,
             fontSize: 9,

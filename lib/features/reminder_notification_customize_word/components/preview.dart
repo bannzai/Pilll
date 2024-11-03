@@ -31,10 +31,10 @@ class ReminderPushNotificationPreview extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(children: [
-            SvgPicture.asset("images/pilll_icon.svg"),
+            SvgPicture.asset('images/pilll_icon.svg'),
             const SizedBox(width: 8),
             const Text(
-              "Pilll",
+              'Pilll',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 13,

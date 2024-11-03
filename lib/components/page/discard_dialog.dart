@@ -17,7 +17,7 @@ class DiscardDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+      title: SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
@@ -25,7 +25,11 @@ class DiscardDialog extends StatelessWidget {
           if (title.isNotEmpty) ...[
             Text(
               title,
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.main),
+              style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                  color: TextColor.main),
               textAlign: TextAlign.center,
             ),
             const SizedBox(

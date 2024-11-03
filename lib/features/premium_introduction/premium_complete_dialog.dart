@@ -17,7 +17,7 @@ class PremiumCompleteDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            "Pilllプレミアム登録完了",
+            'Pilllプレミアム登録完了',
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
@@ -27,10 +27,10 @@ class PremiumCompleteDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          SvgPicture.asset("images/jewel.svg"),
+          SvgPicture.asset('images/jewel.svg'),
           const SizedBox(height: 24),
           const Text(
-            "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
+            'ご登録ありがとうございます。\nすべての機能が使えるようになりました！',
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
@@ -47,7 +47,7 @@ class PremiumCompleteDialog extends StatelessWidget {
                 Navigator.of(context).pop();
                 onClose();
               },
-              text: "OK",
+              text: 'OK',
             ),
           ),
         ],

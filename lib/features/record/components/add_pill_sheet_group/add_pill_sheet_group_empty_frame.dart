@@ -29,7 +29,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
           children: <Widget>[
             Center(
               child: SvgPicture.asset(
-                "images/empty_frame.svg",
+                'images/empty_frame.svg',
               ),
             ),
             const Center(
@@ -37,7 +37,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Icon(Icons.add, color: TextColor.noshime),
-                Text("ピルシートを追加",
+                Text('ピルシートを追加',
                     style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
@@ -50,7 +50,7 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
         ),
       ),
       onTap: () async {
-        analytics.logEvent(name: "adding_pill_sheet_tapped");
+        analytics.logEvent(name: 'adding_pill_sheet_tapped');
         Navigator.of(context).push(AddPillSheetGroupPageRoute.route(
           pillSheetGroup: pillSheetGroup,
           setting: setting,

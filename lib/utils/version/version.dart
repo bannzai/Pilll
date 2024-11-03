@@ -13,14 +13,16 @@ class Version {
   });
 
   factory Version.parse(String str) {
-    final splited = str.split(".");
+    final splited = str.split('.');
     if (Environment.isDevelopment) {
-      assert(splited.length <= 3 || (splited.last == "dev" && splited.length == 4), "unexpected version format $str");
+      assert(
+          splited.length <= 3 || (splited.last == 'dev' && splited.length == 4),
+          'unexpected version format $str');
     }
 
     final versions = List.filled(3, 0);
     for (int i = 0; i < splited.length; i++) {
-      if (splited[i] == "dev") {
+      if (splited[i] == 'dev') {
         break;
       }
       versions[i] = int.parse(splited[i]);
@@ -38,11 +40,15 @@ class Version {
   }
 
   bool isLessThan(Version other) =>
-      major < other.major || (major <= other.major && minor < other.minor) || (major <= other.major && minor <= other.minor && patch < other.patch);
+      major < other.major ||
+      (major <= other.major && minor < other.minor) ||
+      (major <= other.major && minor <= other.minor && patch < other.patch);
   bool isGreaterThan(Version other) =>
-      major > other.major || (major >= other.major && minor > other.minor) || (major >= other.major && minor >= other.minor && patch > other.patch);
+      major > other.major ||
+      (major >= other.major && minor > other.minor) ||
+      (major >= other.major && minor >= other.minor && patch > other.patch);
 
   String get version {
-    return "$major.$minor.$patch";
+    return '$major.$minor.$patch';
   }
 }

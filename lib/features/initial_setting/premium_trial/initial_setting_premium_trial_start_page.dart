@@ -22,8 +22,10 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
-    final didEndInitialSettingNotifier = ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
+    final didEndInitialSettingNotifier = ref.watch(
+        boolSharedPreferencesProvider(BoolKey.didEndInitialSetting).notifier);
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     return Scaffold(
@@ -51,7 +53,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                       const Column(
                         children: [
                           Text(
-                            "\\ 通知から服用記録ができます /",
+                            '\\ 通知から服用記録ができます /',
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -63,13 +65,16 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 24.5, right: 24.5, top: 24),
+                        padding: const EdgeInsets.only(
+                            left: 24.5, right: 24.5, top: 24),
                         child: Stack(
                           clipBehavior: Clip.none,
                           alignment: AlignmentDirectional.topEnd,
                           children: [
                             Image.asset(
-                              Platform.isIOS ? "images/ios-quick-record.gif" : "images/android-quick-record.gif",
+                              Platform.isIOS
+                                  ? 'images/ios-quick-record.gif'
+                                  : 'images/android-quick-record.gif',
                             ),
                             Positioned(
                               right: -27,
@@ -77,9 +82,9 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                               child: Stack(
                                 alignment: AlignmentDirectional.center,
                                 children: [
-                                  SvgPicture.asset("images/yellow_spike.svg"),
+                                  SvgPicture.asset('images/yellow_spike.svg'),
                                   const Text(
-                                    "人気の\n機能",
+                                    '人気の\n機能',
                                     style: TextStyle(
                                       color: TextColor.primaryDarkBlue,
                                       fontSize: 10,
@@ -132,16 +137,18 @@ ${remoteConfigParameter.trialDeadlineDateOffsetDay}日間すべての機能が�
                 horizontal: 39,
               ),
               child: AppOutlinedButton(
-                text: "アプリをはじめる",
+                text: 'アプリをはじめる',
                 onPressed: () async {
-                  analytics.logEvent(name: "pressed_start_app_preiun_trial");
+                  analytics.logEvent(name: 'pressed_start_app_preiun_trial');
                   try {
                     final navigator = Navigator.of(context);
                     await store.register();
                     await registerReminderLocalNotification();
-                    await AppRouter.endInitialSetting(navigator, didEndInitialSettingNotifier);
+                    await AppRouter.endInitialSetting(
+                        navigator, didEndInitialSettingNotifier);
                   } catch (error) {
-                    if (context.mounted) showErrorAlert(context, error.toString());
+                    if (context.mounted)
+                      showErrorAlert(context, error.toString());
                   }
                 },
               ),
@@ -154,10 +161,12 @@ ${remoteConfigParameter.trialDeadlineDateOffsetDay}日間すべての機能が�
   }
 }
 
-extension IntiialSettingPremiumTrialStartPageRoute on IntiialSettingPremiumTrialStartPage {
+extension IntiialSettingPremiumTrialStartPageRoute
+    on IntiialSettingPremiumTrialStartPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "IntiialSettingPremiumTrialStartPage"),
+      settings:
+          const RouteSettings(name: 'IntiialSettingPremiumTrialStartPage'),
       builder: (_) => const IntiialSettingPremiumTrialStartPage(),
     );
   }

@@ -6,7 +6,8 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
-class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidget {
+class PillSheetModifiedHistoryChangedRestDurationBeginDate
+    extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final ChangedRestDurationBeginDateValue? value;
 
@@ -24,9 +25,11 @@ class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidg
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(value)),
+      pillNumbersOrHyphenOrDate: PillNumber(
+          pillNumber: PillSheetModifiedHistoryPillNumberOrDate
+              .changedRestDurationBeginDate(value)),
       detail: const Text(
-        "服用お休み開始日変更",
+        '服用お休み開始日変更',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

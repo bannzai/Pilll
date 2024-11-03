@@ -11,7 +11,7 @@ class PremiumUserThanksRow extends StatelessWidget {
     return Column(
       children: [
         const Text(
-          "あなたは\vプレミアムメンバーです",
+          'あなたは\vプレミアムメンバーです',
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w700,
@@ -21,10 +21,10 @@ class PremiumUserThanksRow extends StatelessWidget {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 32),
-        SvgPicture.asset("images/jewel.svg"),
+        SvgPicture.asset('images/jewel.svg'),
         const SizedBox(height: 24),
         const Text(
-          "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
+          'ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。',
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w400,

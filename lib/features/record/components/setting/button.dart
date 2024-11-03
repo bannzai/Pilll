@@ -27,7 +27,7 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: () {
-        analytics.logEvent(name: "did_tapped_record_page_setting");
+        analytics.logEvent(name: 'did_tapped_record_page_setting');
         showPillSheetSettingSheet(
           context,
           PillSheetSettingSheet(
@@ -39,8 +39,8 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
         );
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(TextColor.white),
-        shape: MaterialStateProperty.all(
+        backgroundColor: WidgetStateProperty.all(TextColor.white),
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
             side: const BorderSide(
@@ -53,7 +53,7 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
         ElevatedButton.styleFrom(elevation: 0),
       ),
       child: const Text(
-        "ピルシートの設定",
+        'ピルシートの設定',
         style: TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 12,

@@ -25,7 +25,8 @@ class BeginManualRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification =
+        ref.watch(cancelReminderLocalNotificationProvider);
 
     void didBeginRestDuration() {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -33,7 +34,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
           duration: Duration(
             seconds: 2,
           ),
-          content: Text("服用お休みを開始しました"),
+          content: Text('服用お休みを開始しました'),
         ),
       );
       Navigator.of(context).popUntil((route) => route.isFirst);
@@ -41,9 +42,11 @@ class BeginManualRestDuration extends HookConsumerWidget {
 
     return ListTile(
       leading: const Icon(Icons.dark_mode_outlined),
-      title: const Text("服用お休み開始"),
+      title: const Text('服用お休み開始'),
       onTap: () {
-        analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});
+        analytics.logEvent(
+            name: 'begin_manual_rest_duration_pressed',
+            parameters: {'pill_sheet_id': activePillSheet.id});
 
         if (activePillSheet.todayPillIsAlreadyTaken) {
           showInvalidAlreadyTakenPillDialog(context);
@@ -53,7 +56,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
             appearanceMode: appearanceMode,
             pillSheetGroup: pillSheetGroup,
             onDone: () async {
-              analytics.logEvent(name: "done_rest_duration");
+              analytics.logEvent(name: 'done_rest_duration');
               // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
               FlutterAppBadger.removeBadge();
               await beginRestDuration(

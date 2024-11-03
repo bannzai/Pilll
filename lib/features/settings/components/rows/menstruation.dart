@@ -17,20 +17,24 @@ class MenstruationRow extends HookConsumerWidget {
     return ListTile(
       title: Row(
         children: [
-          const Text("生理について",
+          const Text('生理について',
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
               )),
           const SizedBox(width: 8),
-          if (_hasError) SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+          if (_hasError)
+            SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
         ],
       ),
-      subtitle: _hasError ? const Text("生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています") : null,
+      subtitle: _hasError
+          ? const Text(
+              '生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています')
+          : null,
       onTap: () {
         analytics.logEvent(
-          name: "did_select_changing_about_menstruation",
+          name: 'did_select_changing_about_menstruation',
         );
         Navigator.of(context).push(SettingMenstruationPageRoute.route());
       },
@@ -42,7 +46,9 @@ class MenstruationRow extends HookConsumerWidget {
       return false;
     }
 
-    final totalCount = setting.pillSheetEnumTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final totalCount = setting.pillSheetEnumTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
     return totalCount < setting.pillNumberForFromMenstruation;
   }
 }

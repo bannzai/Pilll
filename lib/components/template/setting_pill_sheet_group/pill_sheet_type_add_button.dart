@@ -41,7 +41,7 @@ class PillSheetTypeAddButton extends StatelessWidget {
             ),
             SizedBox(width: 4),
             Text(
-              "ピルシートを追加",
+              'ピルシートを追加',
               style: TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,

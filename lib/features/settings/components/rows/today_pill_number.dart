@@ -22,7 +22,7 @@ class TodayPllNumberRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      title: const Text("今日飲むピル番号の変更",
+      title: const Text('今日飲むピル番号の変更',
           style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
@@ -32,9 +32,10 @@ class TodayPllNumberRow extends HookConsumerWidget {
     );
   }
 
-  void _onTap(BuildContext context, Setting setting, PillSheet activePillSheet) {
+  void _onTap(
+      BuildContext context, Setting setting, PillSheet activePillSheet) {
     analytics.logEvent(
-      name: "did_select_changing_pill_number",
+      name: 'did_select_changing_pill_number',
     );
     Navigator.of(context).push(
       SettingTodayPillNumberPageRoute.route(

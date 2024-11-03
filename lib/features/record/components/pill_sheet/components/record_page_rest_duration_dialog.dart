@@ -22,7 +22,8 @@ class RecordPageRestDurationDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0))),
       contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       content: Column(
@@ -30,7 +31,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          const Text("服用をお休みするとピル番号は進みません",
+          const Text('服用をお休みするとピル番号は進みません',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w500,
@@ -39,7 +40,9 @@ class RecordPageRestDurationDialog extends StatelessWidget {
               )),
           const SizedBox(height: 24),
           Text(
-            appearanceMode == PillSheetAppearanceMode.date ? "例えば「1/12から3日間」服用お休みした場合" : "例えば「18番から3日間」服用お休みした場合",
+            appearanceMode == PillSheetAppearanceMode.date
+                ? '例えば「1/12から3日間」服用お休みした場合'
+                : '例えば「18番から3日間」服用お休みした場合',
             style: const TextStyle(
               color: TextColor.main,
               fontWeight: FontWeight.w700,
@@ -48,19 +51,20 @@ class RecordPageRestDurationDialog extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          SvgPicture.asset(
-              appearanceMode == PillSheetAppearanceMode.date ? "images/explain_rest_duration_date.svg" : "images/explain_rest_duration_number.svg"),
+          SvgPicture.asset(appearanceMode == PillSheetAppearanceMode.date
+              ? 'images/explain_rest_duration_date.svg'
+              : 'images/explain_rest_duration_number.svg'),
           const SizedBox(height: 24),
         ],
       ),
       actions: <Widget>[
         AppOutlinedButton(
           onPressed: () async => onDone(),
-          text: "服用をお休みする",
+          text: '服用をお休みする',
         ),
         Center(
           child: AlertButton(
-            text: "閉じる",
+            text: '閉じる',
             onPressed: () async {
               Navigator.of(context).pop();
             },
@@ -80,7 +84,8 @@ void showRecordPageRestDurationDialog(
   showDialog(
     context: context,
     builder: (context) => RecordPageRestDurationDialog(
-      title: RecordPageRestDurationDialogTitle(appearanceMode: appearanceMode, pillSheetGroup: pillSheetGroup),
+      title: RecordPageRestDurationDialogTitle(
+          appearanceMode: appearanceMode, pillSheetGroup: pillSheetGroup),
       appearanceMode: appearanceMode,
       onDone: onDone,
     ),
@@ -99,7 +104,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text("$_numberから服用をお休みしますか？",
+    return Text('$_numberから服用をお休みしますか？',
         style: const TextStyle(
           color: TextColor.main,
           fontSize: 16,
@@ -111,16 +116,18 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1}番";
+        return '${pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1}番';
       case PillSheetAppearanceMode.date:
         final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
-            .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
+            .displayPillTakeDate(pillSheetGroup
+                    .lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber +
+                1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:
-        return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}番";
+        return '${pillSheetGroup.sequentialLastTakenPillNumber + 1}番';
       case PillSheetAppearanceMode.cyclicSequential:
-        return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}番";
+        return '${pillSheetGroup.sequentialLastTakenPillNumber + 1}番';
     }
   }
 }

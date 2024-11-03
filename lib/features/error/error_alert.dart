@@ -10,13 +10,14 @@ class ErrorAlert extends StatelessWidget {
   final String errorMessage;
   final String? faqLinkURL;
 
-  const ErrorAlert({super.key, this.title, this.faqLinkURL, required this.errorMessage});
+  const ErrorAlert(
+      {super.key, this.title, this.faqLinkURL, required this.errorMessage});
   @override
   Widget build(BuildContext context) {
     final faq = faqLinkURL;
     return AlertDialog(
       title: Text(
-        title ?? "エラーが発生しました",
+        title ?? 'エラーが発生しました',
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
@@ -34,13 +35,13 @@ class ErrorAlert extends StatelessWidget {
       actions: <Widget>[
         if (faq != null)
           AlertButton(
-            text: "FAQを見る",
+            text: 'FAQを見る',
             onPressed: () async {
               launchUrl(Uri.parse(faq));
             },
           ),
         AlertButton(
-          text: "閉じる",
+          text: '閉じる',
           onPressed: () async {
             Navigator.of(context).pop();
           },
@@ -58,19 +59,19 @@ void showErrorAlert(BuildContext? context, Object error) {
   final String message;
   final String? faqLinkURL;
   if (error is FormatException) {
-    title = "不明なエラーが発生しました";
+    title = '不明なエラーが発生しました';
     message = error.message;
     faqLinkURL = null;
   } else if (error is AlertError) {
-    title = error.title ?? "エラーが発生しました";
+    title = error.title ?? 'エラーが発生しました';
     message = error.displayedMessage;
     faqLinkURL = error.faqLinkURL;
   } else if (error is String) {
-    title = "エラーが発生しました";
+    title = 'エラーが発生しました';
     message = error;
     faqLinkURL = null;
   } else {
-    title = "予想外のエラーが発生しました";
+    title = '予想外のエラーが発生しました';
     message = error.toString();
     faqLinkURL = null;
   }

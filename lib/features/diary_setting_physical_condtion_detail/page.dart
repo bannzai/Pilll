@@ -16,10 +16,14 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final createDiarySetting = ref.watch(createDiarySettingPhysicalConditionDetailProvider);
-    final addDiarySetting = ref.watch(addDiarySettingPhysicalConditionDetailProvider);
-    final deleteDiarySetting = ref.watch(deleteDiarySettingPhysicalConditionDetailProvider);
-    final state = ref.watch(diarySettingPhysicalConditionDetailAsyncStateProvider);
+    final createDiarySetting =
+        ref.watch(createDiarySettingPhysicalConditionDetailProvider);
+    final addDiarySetting =
+        ref.watch(addDiarySettingPhysicalConditionDetailProvider);
+    final deleteDiarySetting =
+        ref.watch(deleteDiarySettingPhysicalConditionDetailProvider);
+    final state =
+        ref.watch(diarySettingPhysicalConditionDetailAsyncStateProvider);
     final textFieldController = useTextEditingController();
     final scrollController = useScrollController();
 
@@ -46,7 +50,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
         }
         return Scaffold(
           appBar: AppBar(
-            title: const Text("体調詳細",
+            title: const Text('体調詳細',
                 style: TextStyle(
                   fontSize: 17,
                   fontFamily: FontFamily.japanese,
@@ -66,13 +70,17 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                     focusedBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: PilllColors.secondary),
                     ),
-                    hintText: "入力して追加",
+                    hintText: '入力して追加',
                   ),
                   onSubmitted: (physicalConditionDetail) async {
-                    analytics.logEvent(name: "submit_physical_condition_detail", parameters: {"element": physicalConditionDetail});
+                    analytics.logEvent(
+                        name: 'submit_physical_condition_detail',
+                        parameters: {'element': physicalConditionDetail});
                     try {
-                      await addDiarySetting(diarySetting: diarySetting, physicalConditionDetail: physicalConditionDetail);
-                      textFieldController.text = "";
+                      await addDiarySetting(
+                          diarySetting: diarySetting,
+                          physicalConditionDetail: physicalConditionDetail);
+                      textFieldController.text = '';
                     } catch (error) {
                       if (context.mounted) showErrorAlert(context, error);
                     }
@@ -85,11 +93,14 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                   children: [
                     ListTile(
                       title: Text(p),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 0),
+                      contentPadding: const EdgeInsets.symmetric(
+                          horizontal: 16, vertical: 0),
                       trailing: IconButton(
                         icon: const Icon(Icons.delete),
                         onPressed: () async {
-                          await deleteDiarySetting(diarySetting: diarySetting, physicalConditionDetail: p);
+                          await deleteDiarySetting(
+                              diarySetting: diarySetting,
+                              physicalConditionDetail: p);
                         },
                       ),
                     ),
@@ -100,7 +111,8 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
           ),
         );
       },
-      error: (error, _) => UniversalErrorPage(error: error, child: null, reload: null),
+      error: (error, _) =>
+          UniversalErrorPage(error: error, child: null, reload: null),
       loading: () => const ScaffoldIndicator(),
     );
   }

@@ -34,7 +34,11 @@ class MenstruationListRow extends HookConsumerWidget {
           Row(
             children: [
               Text(_dateRange,
-                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 12, color: TextColor.main)),
+                  style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      color: TextColor.main)),
             ],
           ),
           const SizedBox(height: 6),
@@ -88,15 +92,15 @@ class MenstruationListRow extends HookConsumerWidget {
   }
 
   String get _dateRange {
-    return "${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)}";
+    return '${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)}';
   }
 
   String get _duration {
     final menstruationDuration = _menstruationDuration;
     if (menstruationDuration == null) {
-      return "-";
+      return '-';
     }
-    return "$menstruationDuration日周期";
+    return '$menstruationDuration日周期';
   }
 
   double get _dotLineWidth {
@@ -108,5 +112,6 @@ class MenstruationListRow extends HookConsumerWidget {
     return widthForDay * menstruationDuration;
   }
 
-  int? get _menstruationDuration => menstruationsDiff(menstruation, previousMenstruation);
+  int? get _menstruationDuration =>
+      menstruationsDiff(menstruation, previousMenstruation);
 }

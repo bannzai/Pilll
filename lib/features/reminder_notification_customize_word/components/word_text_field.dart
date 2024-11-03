@@ -27,19 +27,31 @@ class WordTextField extends StatelessWidget {
         ),
         counter: Row(children: [
           const Text(
-            "通知の先頭部分の変更ができます",
-            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+            '通知の先頭部分の変更ができます',
+            style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+                color: TextColor.darkGray),
           ),
           const Spacer(),
           if (word.value.characters.isNotEmpty)
             Text(
-              "${word.value.characters.length}/8",
-              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+              '${word.value.characters.length}/8',
+              style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.darkGray),
             ),
           if (word.value.characters.isEmpty)
             const Text(
-              "0文字以上入力してください",
-              style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
+              '0文字以上入力してください',
+              style: TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                  color: TextColor.danger),
             ),
         ]),
       ),

@@ -8,19 +8,23 @@ import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 
-final migration20240819Provider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.migration20240819)));
-final migration20240819NotifierProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.migration20240819).notifier));
+final migration20240819Provider = Provider.autoDispose((ref) =>
+    ref.watch(boolSharedPreferencesProvider(BoolKey.migration20240819)));
+final migration20240819NotifierProvider = Provider.autoDispose((ref) => ref
+    .watch(boolSharedPreferencesProvider(BoolKey.migration20240819).notifier));
 
 class Migration20240819 extends HookConsumerWidget {
   const Migration20240819({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
+    final latestPillSheetGroup =
+        ref.watch(latestPillSheetGroupProvider).asData?.value;
     final setting = ref.watch(settingProvider).asData?.value;
     final database = ref.watch(databaseProvider);
     final migration20240819 = ref.watch(migration20240819Provider);
-    final migration20240819Notifier = ref.watch(migration20240819NotifierProvider);
+    final migration20240819Notifier =
+        ref.watch(migration20240819NotifierProvider);
 
     useEffect(() {
       Future<void> f() async {

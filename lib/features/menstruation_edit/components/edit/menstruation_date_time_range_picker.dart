@@ -8,20 +8,22 @@ import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
-void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation? initialMenstruation}) async {
+void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref,
+    {required Menstruation? initialMenstruation}) async {
   void onSaved(Menstruation savedMenstruation) {
     if (initialMenstruation == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: const Duration(seconds: 2),
-          content: Text("${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
+          content: Text(
+              '${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました'),
         ),
       );
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
           duration: Duration(seconds: 2),
-          content: Text("生理期間を編集しました"),
+          content: Text('生理期間を編集しました'),
         ),
       );
 
@@ -34,11 +36,11 @@ void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requ
     context: context,
     initialEntryMode: DatePickerEntryMode.calendarOnly,
     initialDateRange: initialMenstruation?.dateTimeRange,
-    firstDate: DateTime.parse("2020-01-01"),
+    firstDate: DateTime.parse('2020-01-01'),
     lastDate: today().addDays(30),
-    helpText: initialMenstruation == null ? "生理開始日を選択" : "生理期間の編集",
-    fieldStartHintText: "生理開始日",
-    fieldEndLabelText: "生理終了日",
+    helpText: initialMenstruation == null ? '生理開始日を選択' : '生理期間の編集',
+    fieldStartHintText: '生理開始日',
+    fieldEndLabelText: '生理終了日',
     builder: (context, child) {
       return DateRangePickerTheme(child: child!);
     },
@@ -72,10 +74,13 @@ void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requ
   }
 }
 
-void showEditMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation initialMenstruation}) async {
-  _showMenstruationDateRangePicker(context, ref, initialMenstruation: initialMenstruation);
+void showEditMenstruationDateRangePicker(BuildContext context, WidgetRef ref,
+    {required Menstruation initialMenstruation}) async {
+  _showMenstruationDateRangePicker(context, ref,
+      initialMenstruation: initialMenstruation);
 }
 
-void showCreateMenstruationDateRangePicker(BuildContext context, WidgetRef ref) async {
+void showCreateMenstruationDateRangePicker(
+    BuildContext context, WidgetRef ref) async {
   _showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
 }

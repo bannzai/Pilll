@@ -15,16 +15,18 @@ class NotificationTimeRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: const Text("通知時刻",
+      title: const Text('通知時刻',
           style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text(setting.reminderTimes.map((e) => DateTimeFormatter.militaryTime(e.dateTime())).join(", ")),
+      subtitle: Text(setting.reminderTimes
+          .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
+          .join(', ')),
       onTap: () {
         analytics.logEvent(
-          name: "did_select_changing_reminder_times",
+          name: 'did_select_changing_reminder_times',
         );
         Navigator.of(context).push(ReminderTimesPageRoute.route());
       },

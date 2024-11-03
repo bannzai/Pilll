@@ -15,7 +15,9 @@ class PremiumIntroductionFeatures extends StatelessWidget {
       alignment: AlignmentDirectional.topEnd,
       children: [
         Image.asset(
-          Platform.isIOS ? "images/ios-quick-record.gif" : "images/android-quick-record.gif",
+          Platform.isIOS
+              ? 'images/ios-quick-record.gif'
+              : 'images/android-quick-record.gif',
         ),
         Positioned(
           right: -27,
@@ -23,9 +25,9 @@ class PremiumIntroductionFeatures extends StatelessWidget {
           child: Stack(
             alignment: AlignmentDirectional.center,
             children: [
-              SvgPicture.asset("images/yellow_spike.svg"),
+              SvgPicture.asset('images/yellow_spike.svg'),
               const Text(
-                "人気の\n機能",
+                '人気の\n機能',
                 style: TextStyle(
                   color: TextColor.primaryDarkBlue,
                   fontSize: 10,

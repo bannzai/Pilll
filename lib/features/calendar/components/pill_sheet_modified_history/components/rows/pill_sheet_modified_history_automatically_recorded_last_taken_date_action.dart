@@ -5,7 +5,8 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 
-class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends StatelessWidget {
+class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
+    extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final int? beforeLastTakenPillNumber;
   final int? afterLastTakenPillNumber;
@@ -32,7 +33,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
         afterLastTakenPillNumber: afterLastTakenPillNumber,
       )),
       detail: const Text(
-        "-",
+        '-',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

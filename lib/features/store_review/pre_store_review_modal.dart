@@ -32,7 +32,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              "Pilllの感想をお聞かせください",
+              'Pilllの感想をお聞かせください',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
@@ -44,9 +44,13 @@ class PreStoreReviewModal extends HookConsumerWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _goodOrBad(target: PreStoreReviewModalSelection.good, selection: selection),
+                _goodOrBad(
+                    target: PreStoreReviewModalSelection.good,
+                    selection: selection),
                 const SizedBox(width: 16),
-                _goodOrBad(target: PreStoreReviewModalSelection.bad, selection: selection),
+                _goodOrBad(
+                    target: PreStoreReviewModalSelection.bad,
+                    selection: selection),
               ],
             ),
             if (selectionValue != null) ...[
@@ -55,11 +59,15 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 onPressed: () async {
                   switch (selectionValue) {
                     case PreStoreReviewModalSelection.good:
-                      analytics.logEvent(name: "submit_pre_store_review_modal_good");
-                      ref.read(sharedPreferencesProvider).setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
+                      analytics.logEvent(
+                          name: 'submit_pre_store_review_modal_good');
+                      ref
+                          .read(sharedPreferencesProvider)
+                          .setBool(BoolKey.isPreStoreReviewGoodAnswer, true);
                       break;
                     case PreStoreReviewModalSelection.bad:
-                      analytics.logEvent(name: "submit_pre_store_review_modal_bad");
+                      analytics.logEvent(
+                          name: 'submit_pre_store_review_modal_bad');
                       break;
                   }
 
@@ -69,7 +77,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                   );
                   navigator.pop();
                 },
-                text: "決定",
+                text: '決定',
               ),
             ],
           ],
@@ -78,16 +86,18 @@ class PreStoreReviewModal extends HookConsumerWidget {
     );
   }
 
-  Widget _goodOrBad({required PreStoreReviewModalSelection target, required ValueNotifier<PreStoreReviewModalSelection?> selection}) {
+  Widget _goodOrBad(
+      {required PreStoreReviewModalSelection target,
+      required ValueNotifier<PreStoreReviewModalSelection?> selection}) {
     final isSelected = target == selection.value;
     return GestureDetector(
       onTap: () {
         switch (target) {
           case PreStoreReviewModalSelection.good:
-            analytics.logEvent(name: "pre_store_review_modal_good");
+            analytics.logEvent(name: 'pre_store_review_modal_good');
             break;
           case PreStoreReviewModalSelection.bad:
-            analytics.logEvent(name: "pre_store_review_modal_bad");
+            analytics.logEvent(name: 'pre_store_review_modal_bad');
             break;
         }
 
@@ -98,7 +108,9 @@ class PreStoreReviewModal extends HookConsumerWidget {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: isSelected ? PilllColors.primary.withOpacity(0.08) : PilllColors.white,
+              color: isSelected
+                  ? PilllColors.primary.withOpacity(0.08)
+                  : PilllColors.white,
               border: Border.all(
                 width: isSelected ? 2 : 1,
                 color: isSelected ? PilllColors.primary : PilllColors.border,
@@ -108,15 +120,23 @@ class PreStoreReviewModal extends HookConsumerWidget {
             child: Row(
               children: [
                 SvgPicture.asset(
-                  target == PreStoreReviewModalSelection.good ? "images/laugh.svg" : "images/angry.svg",
+                  target == PreStoreReviewModalSelection.good
+                      ? 'images/laugh.svg'
+                      : 'images/angry.svg',
                   colorFilter: ColorFilter.mode(
                     isSelected ? PilllColors.primary : Colors.grey,
                     BlendMode.srcIn,
                   ),
                 ),
                 const SizedBox(height: 16),
-                Text(target == PreStoreReviewModalSelection.good ? "満足している" : "満足では無い",
-                    style: const TextStyle(color: PilllColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese)),
+                Text(
+                    target == PreStoreReviewModalSelection.good
+                        ? '満足している'
+                        : '満足では無い',
+                    style: const TextStyle(
+                        color: PilllColors.primary,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: FontFamily.japanese)),
               ],
             ),
           ),
@@ -146,7 +166,7 @@ class _ThanksDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text("ご協力ありがとうございます",
+          Text('ご協力ありがとうございます',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
@@ -156,7 +176,7 @@ class _ThanksDialog extends StatelessWidget {
           SizedBox(
             height: 15,
           ),
-          Text("よろしければサービス改善のためのアンケートにもご協力ください",
+          Text('よろしければサービス改善のためのアンケートにもご協力ください',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
@@ -167,31 +187,34 @@ class _ThanksDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: "協力する",
+          text: '協力する',
           onPressed: () async {
             final String uri;
             switch (goodOrBad) {
               case PreStoreReviewModalSelection.good:
-                uri = "https://docs.google.com/forms/d/e/1FAIpQLScljawYCa-f13D94TvJXOoBQ_6lLBtwSpML5c55Zr115ukgeQ/viewform";
+                uri =
+                    'https://docs.google.com/forms/d/e/1FAIpQLScljawYCa-f13D94TvJXOoBQ_6lLBtwSpML5c55Zr115ukgeQ/viewform';
                 break;
               case PreStoreReviewModalSelection.bad:
-                uri = "https://docs.google.com/forms/d/e/1FAIpQLScdNJ5VsiWCNLk7LvSUJpb8ps0DHFnsvXVH8KbPWp9XDtuVMw/viewform";
+                uri =
+                    'https://docs.google.com/forms/d/e/1FAIpQLScdNJ5VsiWCNLk7LvSUJpb8ps0DHFnsvXVH8KbPWp9XDtuVMw/viewform';
                 break;
             }
             await Navigator.of(context).push(
               WebViewPageRoute.route(
-                title: "サービス改善アンケート",
+                title: 'サービス改善アンケート',
                 url: uri,
               ),
             );
 
             // ignore: use_build_context_synchronously
-            await showDialog(context: context, builder: (_) => const _CompleteDialog());
+            await showDialog(
+                context: context, builder: (_) => const _CompleteDialog());
             navigator.pop();
           },
         ),
         AlertButton(
-          text: "しない",
+          text: 'しない',
           onPressed: () async {
             navigator.pop();
           },
@@ -207,9 +230,10 @@ class _CompleteDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20.0))),
       title: const Text(
-        "ご協力頂きありがとうございます",
+        'ご協力頂きありがとうございます',
         style: TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -222,7 +246,7 @@ class _CompleteDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            "いただいた意見は今後の改善へと活用させていただきます。",
+            'いただいた意見は今後の改善へと活用させていただきます。',
             style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
@@ -234,9 +258,10 @@ class _CompleteDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: "閉じる",
+          text: '閉じる',
           onPressed: () async {
-            analytics.logEvent(name: "close_pre_store_review_modal_complete_dialog");
+            analytics.logEvent(
+                name: 'close_pre_store_review_modal_complete_dialog');
             Navigator.of(context).pop();
           },
         ),

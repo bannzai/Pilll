@@ -31,7 +31,8 @@ class RestDurationAnnouncementBar extends StatelessWidget {
     );
   }
 
-  static String? retrieveRestDurationNotification({required PillSheetGroup? latestPillSheetGroup}) {
+  static String? retrieveRestDurationNotification(
+      {required PillSheetGroup? latestPillSheetGroup}) {
     final activePillSheet = latestPillSheetGroup?.activePillSheet;
     if (activePillSheet == null) {
       return null;
@@ -42,19 +43,23 @@ class RestDurationAnnouncementBar extends StatelessWidget {
     final restDuration = latestPillSheetGroup?.lastActiveRestDuration;
     if (restDuration != null) {
       final day = daysBetween(restDuration.beginDate.date(), today()) + 1;
-      return "🌙 服用お休み $day日目";
+      return '🌙 服用お休み $day日目';
     }
 
-    if (activePillSheet.typeInfo.dosingPeriod < activePillSheet.todayPillNumber) {
-      final day = activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod;
+    if (activePillSheet.typeInfo.dosingPeriod <
+        activePillSheet.todayPillNumber) {
+      final day = activePillSheet.todayPillNumber -
+          activePillSheet.typeInfo.dosingPeriod;
       return "${activePillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
     const threshold = 4;
     if (activePillSheet.pillSheetType.notTakenWord.isNotEmpty) {
-      if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 < activePillSheet.todayPillNumber) {
-        final diff = activePillSheet.typeInfo.dosingPeriod - activePillSheet.todayPillNumber;
-        return "あと${diff + 1}日で${activePillSheet.pillSheetType.notTakenWord}期間です";
+      if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 <
+          activePillSheet.todayPillNumber) {
+        final diff = activePillSheet.typeInfo.dosingPeriod -
+            activePillSheet.todayPillNumber;
+        return 'あと${diff + 1}日で${activePillSheet.pillSheetType.notTakenWord}期間です';
       }
     }
     return null;

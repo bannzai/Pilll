@@ -22,11 +22,12 @@ class SwitchingAppearanceMode extends StatelessWidget {
     return ListTile(
       leading: const Icon(Icons.display_settings),
       title: const Text(
-        "表示モード",
+        '表示モード',
       ),
       onTap: () {
-        analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
-        showSelectAppearanceModeModal(context, user: user, pillSheetGroup: pillSheetGroup);
+        analytics.logEvent(name: 'did_tapped_record_page_appearance_mode');
+        showSelectAppearanceModeModal(context,
+            user: user, pillSheetGroup: pillSheetGroup);
       },
     );
   }
