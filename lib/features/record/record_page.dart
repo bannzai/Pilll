@@ -15,6 +15,7 @@ import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/l10n/messages_all.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
@@ -78,6 +79,8 @@ class RecordPageBody extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final pillSheetGroup = this.pillSheetGroup;
     final activePillSheet = pillSheetGroup?.activePillSheet;
+
+    initializeMessages("ja").then((t) => print(t));
 
     return Scaffold(
       backgroundColor: PilllColors.background,

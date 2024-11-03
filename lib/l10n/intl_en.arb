@@ -1,0 +1,8 @@
+{
+    "@@locale": "en",
+    "Premium": "Premium",
+    "@Premium": {
+        "type": "text",
+        "placeholders": {}
+    }
+}
