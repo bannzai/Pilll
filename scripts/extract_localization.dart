@@ -13,7 +13,7 @@ Future<void> main() async {
       final singleLineContent = content.replaceAll(RegExp(r'\s+'), ' ');
 
       // Extract strings following Text(, return , or text:
-      final regex = RegExp(r'(Text\(|return |text:)\s*["\']([^"\']+)["\']');
+      final regex = RegExp(r"(Text\(|return |text:)\s*[']([^']+)[']");
       for (final match in regex.allMatches(singleLineContent)) {
         final extractedString = match.group(2);
         if (extractedString != null) {
@@ -31,4 +31,3 @@ Future<void> main() async {
 
   print('Extracted strings saved to lib/app_localizations.json');
 }
-
