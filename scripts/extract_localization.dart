@@ -26,8 +26,8 @@ Future<void> main() async {
 
   // Save the extracted strings in AppLocalizations format JSON
   final jsonContent = jsonEncode(extractedStrings);
-  final outputFile = File('lib/app_localizations.json');
+  final outputFile = File('lib/l10n/app_localizations.json');
   await outputFile.writeAsString(jsonContent);
 
-  print('Extracted strings saved to lib/app_localizations.json');
+  print('Extracted strings saved to lib/l10n/app_localizations.json');
 }
