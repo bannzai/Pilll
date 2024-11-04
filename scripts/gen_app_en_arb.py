@@ -14,8 +14,16 @@ def translate_key(text):
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are an assistant for translation tasks in a Flutter project"},
-            {"role": "user", "content": f"Translate the following text into .arb key: '{text}'"}
+            {"role": "system", "content": """
+                    Please assist with the translation work for the pill management app, Pilll, created with Flutter. 
+                    Generate appropriate .arb keys for the provided Japanese text
+
+                    This means the following rules apply. Remember that this will be used as a key in the Flutter project source code:
+                    - Start with lowercase English letters
+                    - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores
+                    - No spaces allowed
+             """},
+            {"role": "user", "content": f"Translate the following text to .arb file key: '{text}'"}
         ],
         functions=[
             {
@@ -51,7 +59,15 @@ def translate_english_value(text):
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are an assistant for translation tasks in a Flutter project"},
+            {"role": "system", "content": """
+                Please assist with the translation work for the pill management app, Pilll, 
+                created with Flutter. Provide an appropriate English translation for the given Japanese text. 
+                This translation will be used as a value in the .arb file, 
+                so please keep variable placeholders such as \{name\} intact
+
+                This means the following rules apply. Remember that this will be used as a value of .arb file in the Flutter project source code:
+                - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores
+            """},
             {"role": "user", "content": f"Translate the following text into English for .arb value: '{text}'"}
         ],
         functions=[
