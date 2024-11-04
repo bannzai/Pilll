@@ -66,7 +66,7 @@ def translate_english_value(text):
                 so please keep variable placeholders such as \{name\} intact
 
                 This means the following rules apply. Remember that this will be used as a value of .arb file in the Flutter project source code:
-                - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores
+                - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores. Allow space.
             """},
             {"role": "user", "content": f"Translate the following text into English for .arb value: '{text}'"}
         ],
@@ -80,7 +80,7 @@ def translate_english_value(text):
                     so please keep variable placeholders such as \{name\} intact
 
                     This means the following rules apply. Remember that this will be used as a value of .arb file in the Flutter project source code:
-                    - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores
+                    - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores. Allow space.
                 """,
                 "parameters": {
                     "type": "object",
