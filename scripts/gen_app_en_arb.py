@@ -134,6 +134,8 @@ def convert_json_to_arb(input_path):
 
         # Translate the key using OpenAI's API
         arb_key = translate_key(replaced_key)
+        # Map to number prefix to with `L_`.
+        arb_key = f"l_{arb_key}" if arb_key[0].isdigit() else arb_key
         english_value = translate_english_value(replaced_key)
         
         # Add to the .arb data
