@@ -32,9 +32,11 @@ def translate_key(text):
         ],
         function_call={"name": "translate"}
     )
-    return json.loads(response.choices[0].message.function_call.arguments)[
+    translated = json.loads(response.choices[0].message.function_call.arguments)[
         "translated"
     ]
+    print(f"Translated: {translated}")
+    return translated
 
 def translate_english_value(text):
     print(f"Translating: {text}")
@@ -64,10 +66,11 @@ def translate_english_value(text):
         ],
         function_call={"name": "translate"}
     )
-    return json.loads(response.choices[0].message.function_call.arguments)[
+    translated = json.loads(response.choices[0].message.function_call.arguments)[
         "translated"
     ]
-
+    print(f"Translated: {translated}")
+    return translated
 # Load JSON data from app_localizations.json
 def load_json(filepath):
     with open(filepath, "r", encoding="utf-8") as file:
