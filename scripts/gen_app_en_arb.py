@@ -19,7 +19,7 @@ def translate_key(text):
                     Generate appropriate .arb keys for the provided Japanese text
 
                     This means the following rules apply. Remember that this will be used as a key in the Flutter project source code:
-                    - Start with lowercase English letters
+                    - Start with English letters
                     - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores
                     - No spaces allowed
              """},
@@ -33,7 +33,7 @@ def translate_key(text):
                     Generate appropriate .arb keys for the provided Japanese text
 
                     This means the following rules apply. Remember that this will be used as a key in the Flutter project source code:
-                    - Start with lowercase English letters
+                    - Start with English letters
                     - Only use the underscore (_) symbol; replace any other symbols, such as periods (.), with underscores
                     - No spaces allowed
                 """,
