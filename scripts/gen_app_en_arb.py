@@ -9,18 +9,18 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 os.chdir('../')
 
 # Function to translate text using OpenAI's API with Function Calling
-def translate_text_with_openai(text):
+def translate_key(text):
     print(f"Translating: {text}")
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
-            {"role": "system", "content": "You are a translator that only returns translations in a requested language."},
-            {"role": "user", "content": f"Translate the following text into English: '{text}'"}
+            {"role": "system", "content": "You are an assistant for translation tasks in a Flutter project"},
+            {"role": "user", "content": f"Translate the following text into .arb key: '{text}'"}
         ],
         functions=[
             {
                 "name": "translate",
-                "description": "Translate text into English",
+                "description": "Please assist with the translation work for the pill management app, Pilll, created with Flutter. Generate appropriate .arb keys for the provided Japanese text",
                 "parameters": {
                     "type": "object",
                     "properties": {
@@ -36,6 +36,37 @@ def translate_text_with_openai(text):
         "translated"
     ]
 
+def translate_english_value(text):
+    print(f"Translating: {text}")
+    response = openai.chat.completions.create(
+        model="gpt-4o-mini",
+        messages=[
+            {"role": "system", "content": "You are an assistant for translation tasks in a Flutter project"},
+            {"role": "user", "content": f"Translate the following text into English for .arb value: '{text}'"}
+        ],
+        functions=[
+            {
+                "name": "translate",
+                "description": """
+                    Please assist with the translation work for the pill management app, Pilll, created with Flutter. 
+                    Provide an appropriate English translation for the given Japanese text. 
+                    This translation will be used as a value in the .arb file, 
+                    so please keep variable placeholders such as {name} intact
+                """,
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "translated": {"type": "string", "description": "The translated text."}
+                    },
+                    "required": ["translated"]
+                }
+            }
+        ],
+        function_call={"name": "translate"}
+    )
+    return json.loads(response.choices[0].message.function_call.arguments)[
+        "translated"
+    ]
 
 # Load JSON data from app_localizations.json
 def load_json(filepath):
@@ -56,35 +87,34 @@ def replace_variable_patterns(text) -> str:
     return text;
 
 # Main function to convert JSON to .arb
-def convert_json_to_arb(input_path, output_path):
+ja_arb = {}
+en_arb = {}
+def convert_json_to_arb(input_path):
     print("Converting JSON to .arb...")
     json_data = load_json(input_path)
-    arb_data = {}
-
     for key in json_data:
         # arb の value (en_value)については Dart $ → {} の変換で良い
         # key にはそれ以外の制約もあるので後から value から変換する
-
         # Replace variable patterns
         replaced_key = replace_variable_patterns(key)
 
         # Translate the key using OpenAI's API
-        translated_key = translate_text_with_openai(replaced_key)
-        
-        arb_key = re.sub(r'^([A-Z])', lambda x: x.group(1).lower(), translated_key)
-        arb_key = re.sub(r'^(\d)', r'_\1', arb_key)
-        arb_key = re.sub(r'\s+', '_', arb_key)
+        arb_key = translate_key(replaced_key)
+        english_value = translate_english_value(replaced_key)
         
         # Add to the .arb data
-        arb_data[arb_key] = translated_key
+        ja_arb[arb_key] = replaced_key
+        en_arb[arb_key] = english_value
 
-    # Save to .arb file
-    save_arb(output_path, arb_data)
 
 # Paths to input and output files
 input_json_path = "lib/l10n/app_localizations.json"
-output_arb_path = "lib/l10n/app_en.arb"
+en_arb_path = "lib/l10n/app_en.arb"
+ja_arb_path = "lib/l10n/app_ja.arb"
 
 # Execute the conversion
 if __name__ == "__main__":
-    convert_json_to_arb(input_json_path, output_arb_path)
+    convert_json_to_arb(input_json_path)
+    # Save to .arb file
+    save_arb(en_arb_path, en_arb)
+    save_arb(ja_arb_path, ja_arb)
