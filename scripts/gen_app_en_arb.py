@@ -73,6 +73,7 @@ def convert_json_to_arb(input_path, output_path):
         
         arb_key = re.sub(r'^([A-Z])', lambda x: x.group(1).lower(), translated_key)
         arb_key = re.sub(r'^(\d)', r'_\1', arb_key)
+        arb_key = re.sub(r'\s+', '_', arb_key)
         
         # Add to the .arb data
         arb_data[arb_key] = translated_key
