@@ -10,6 +10,7 @@ os.chdir('../')
 
 # Function to translate text using OpenAI's API with Function Calling
 def translate_text_with_openai(text):
+    print(f"Translating: {text}")
     response = openai.chat.completions.create(
         model="gpt-4o-mini",
         messages=[
@@ -48,12 +49,15 @@ def save_arb(filepath, data):
 
 # Replace variable patterns (e.g., $VAL or ${VAL}) with {VAL}
 def replace_variable_patterns(text):
+    original = text
     text = re.sub(r'\$(\w+)', r'{\1}', text)  # Replace $VAL with {VAL}
     text = re.sub(r'\${(\w+)}', r'{\1}', text)  # Replace ${VAL} with {VAL}
+    print(f"Replaced variable patterns: {original} → {text}")
     return text
 
 # Main function to convert JSON to .arb
 def convert_json_to_arb(input_path, output_path):
+    print("Converting JSON to .arb...")
     json_data = load_json(input_path)
     arb_data = {}
 
