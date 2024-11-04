@@ -125,7 +125,7 @@ def convert_json_to_arb(input_path):
     i = 0
     for key in json_data:
         i += 1
-        if i > 10:
+        if i > 30:
             return
         # arb の value (en_value)については Dart $ → {} の変換で良い
         # key にはそれ以外の制約もあるので後から value から変換する
