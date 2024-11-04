@@ -48,17 +48,12 @@ def save_arb(filepath, data):
         json.dump(data, file, ensure_ascii=False, indent=2)
 
 # Replace variable patterns (e.g., $VAL or ${VAL}) with {VAL}
-def replace_variable_patterns(text) -> tuple[str, str]:
-    # arb の value (en_value)については Dart $ → {} の変換で良い
-    # key にはそれ以外の制約もあるので後から value から変換する
-    arbValue = re.sub(r'\$(\w+)', r'{\1}', text)  # Replace $VAL with {VAL}
-    arbValue = re.sub(r'\${(\w+)}', r'{\1}', arbValue)  # Replace ${VAL} with {VAL}
-
-    arbKey = re.sub(r'^([A-Z])', lambda x: x.group(1).lower(), arbValue)
-    arbKey = re.sub(r'^(\d)', r'_\1', arbKey)
-
-    print(f"Replaced variable patterns: text:{text} key:{arbKey}, enValue: {arbValue}")
-    return (arbKey, arbValue)
+def replace_variable_patterns(text) -> str:
+    original = text
+    text = re.sub(r'\$(\w+)', r'{\1}', text)  # Replace $VAL with {VAL}
+    text = re.sub(r'\${(\w+)}', r'{\1}', text)  # Replace ${VAL} with {VAL}
+    print(f"Replaced variable patterns: {original} -> {text}")
+    return text;
 
 # Main function to convert JSON to .arb
 def convert_json_to_arb(input_path, output_path):
@@ -67,14 +62,20 @@ def convert_json_to_arb(input_path, output_path):
     arb_data = {}
 
     for key in json_data:
+        # arb の value (en_value)については Dart $ → {} の変換で良い
+        # key にはそれ以外の制約もあるので後から value から変換する
+
         # Replace variable patterns
-        (arb_key, arb_value) = replace_variable_patterns(key)
-        
+        replaced_key = replace_variable_patterns(key)
+
         # Translate the key using OpenAI's API
-        translated = translate_text_with_openai(arb_value)
+        translated_key = translate_text_with_openai(replaced_key)
+        
+        arb_key = re.sub(r'^([A-Z])', lambda x: x.group(1).lower(), translated_key)
+        arb_key = re.sub(r'^(\d)', r'_\1', arb_key)
         
         # Add to the .arb data
-        arb_data[arb_key] = translated
+        arb_data[arb_key] = translated_key
 
     # Save to .arb file
     save_arb(output_path, arb_data)
