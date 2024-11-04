@@ -6,6 +6,8 @@ import openai
 # OpenAI API key (replace with your actual key)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
+os.chdir('../')
+
 # Function to translate text using OpenAI's API with Function Calling
 def translate_text_with_openai(text):
     response = openai.chat.completions.create(
