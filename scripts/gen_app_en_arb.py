@@ -122,11 +122,11 @@ en_arb = {}
 def convert_json_to_arb(input_path):
     print("Converting JSON to .arb...")
     json_data = load_json(input_path)
-    i = 0
+    # i = 0
     for key in json_data:
-        i += 1
-        if i > 30:
-            return
+        # i += 1
+        # if i > 30:
+        #     return
         # arb の value (en_value)については Dart $ → {} の変換で良い
         # key にはそれ以外の制約もあるので後から value から変換する
         # Replace variable patterns
