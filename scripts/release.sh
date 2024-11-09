@@ -10,9 +10,9 @@ DATE=$(date '+%Y%m.%d.%H%M%S')
 git fetch origin
 git switch -c release/$DATE origin/main
 
-sed -E -i "" "s/MARKETING_VERSION = (.+);/MARKETING_VERSION = $DATE;/" *.xcodeproj/project.pbxproj
+sed -E -i "" "s/^version: (.+)/version: $DATE/" pubspec.yaml
 
-git add *.xcodeproj/project.pbxproj
+git add pubspec.yaml
 git commit -m ":up: to $DATE"
 
 gh pr create --title "Release $DATE"
