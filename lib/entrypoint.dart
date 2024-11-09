@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -50,6 +51,8 @@ Future<void> entrypoint() async {
     ).wait;
 
     await localNotificationService.initialize();
+
+    FirebaseFirestore.instance.settings = const Settings(persistenceEnabled: false);
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
