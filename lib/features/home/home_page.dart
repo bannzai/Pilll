@@ -66,7 +66,7 @@ class HomePage extends HookConsumerWidget {
         reload: () => ref.refresh(shouldShowMigrationInformationProvider),
         child: null,
       ),
-      loading: () => const Indicator(),
+      loading: () => const ScaffoldIndicator(),
     );
   }
 }
