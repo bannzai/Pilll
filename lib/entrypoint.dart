@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
@@ -51,10 +50,6 @@ Future<void> entrypoint() async {
     ).wait;
 
     await localNotificationService.initialize();
-
-    // NOTE: メモリキャッシュは嬉しいが、永続化されてアプリ起動時にFirestoreにデータを登録するようなユースケースを考えるとかえって邪魔になる
-    // 例えばリモートDBのデータが更新されて、その後アプリを起動して永続化のストアからデータを取得してそれをセットすると、永続化されたデータの方に置き換わってしまう
-    FirebaseFirestore.instance.settings = const Settings(persistenceEnabled: false);
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
