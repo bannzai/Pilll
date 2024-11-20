@@ -21,30 +21,28 @@ class RootPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return AppLocalizationResolver(
-      child: ForceUpdate(
-        builder: (_) => FirebaseAuthResolver(
-          builder: (_, user) => UserSetup(
-            userID: user.uid,
-            builder: (_) => Stack(
-              children: [
-                UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
-                const SyncDataResolver(),
-                const Migration20240819(),
-                InitialSettingOrAppPage(
-                  initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
-                    builder: (_) => SkipInitialSetting(
-                      initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
-                      homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
-                        builder: (_) => const HomePage(),
-                      ),
+      builder: (_) => FirebaseAuthResolver(
+        builder: (_, user) => UserSetup(
+          userID: user.uid,
+          builder: (_) => Stack(
+            children: [
+              UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
+              const SyncDataResolver(),
+              const Migration20240819(),
+              InitialSettingOrAppPage(
+                initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
+                  builder: (_) => SkipInitialSetting(
+                    initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                    homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
+                      builder: (_) => const HomePage(),
                     ),
                   ),
-                  homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
-                    builder: (_) => const HomePage(),
-                  ),
                 ),
-              ],
-            ),
+                homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
+                  builder: (_) => const HomePage(),
+                ),
+              ),
+            ],
           ),
         ),
       ),

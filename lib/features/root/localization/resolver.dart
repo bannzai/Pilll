@@ -8,13 +8,13 @@ import 'package:pilll/features/root/localization/l.dart';
 /// > 初回のみと書いたが、おそらくOSの言語が変更されると再度評価される可能性がある。ただ、その場合も [AppLocalizationResolver] で問題ないはず。
 /// なぜなら MaterialAppから再構築されてもう一回 [appLocalizations] がセットされるから
 class AppLocalizationResolver extends StatelessWidget {
-  const AppLocalizationResolver({super.key, required this.child});
-  final Widget child;
+  final Widget Function(BuildContext) builder;
+  const AppLocalizationResolver({super.key, required this.builder});
 
   @override
   Widget build(BuildContext context) {
     // buildのタイミングでセットしているが、AppLocalizations 自体は変更されてもbuildに影響を与えないため許容する
     L = AppLocalizations.of(context)!;
-    return child;
+    return builder(context);
   }
 }
