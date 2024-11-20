@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/features/root/resolver/app_localizations.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 part 'user.codegen.g.dart';
@@ -10,7 +11,7 @@ part 'user.codegen.freezed.dart';
 class UserNotFound implements Exception {
   @override
   String toString() {
-    return 'user not found';
+    return L.userNotFound;
   }
 }
 
@@ -38,11 +39,9 @@ extension UserPrivateFirestoreFieldKeys on String {
 class UserPrivate with _$UserPrivate {
   const UserPrivate._();
   const factory UserPrivate({String? fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({required String fcmToken}) =>
-      UserPrivate(fcmToken: fcmToken);
+  factory UserPrivate.create({required String fcmToken}) => UserPrivate(fcmToken: fcmToken);
 
-  factory UserPrivate.fromJson(Map<String, dynamic> json) =>
-      _$UserPrivateFromJson(json);
+  factory UserPrivate.fromJson(Map<String, dynamic> json) => _$UserPrivateFromJson(json);
 }
 
 extension UserFirestoreFieldKeys on String {
@@ -58,8 +57,7 @@ extension UserFirestoreFieldKeys on String {
   static const purchaseAppID = 'purchaseAppID';
   static const beginTrialDate = 'beginTrialDate';
   static const trialDeadlineDate = 'trialDeadlineDate';
-  static const discountEntitlementDeadlineDate =
-      'discountEntitlementDeadlineDate';
+  static const discountEntitlementDeadlineDate = 'discountEntitlementDeadlineDate';
   static const shouldAskCancelReason = 'shouldAskCancelReason';
 
   // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
@@ -67,8 +65,7 @@ extension UserFirestoreFieldKeys on String {
   static const isTrial = 'isTrial';
 
   // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
-  static const useLocalNotificationForNewPillSheet =
-      'useLocalNotificationForNewPillSheet';
+  static const useLocalNotificationForNewPillSheet = 'useLocalNotificationForNewPillSheet';
 }
 
 @freezed
@@ -108,8 +105,7 @@ class User with _$User {
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 
   bool get hasDiscountEntitlement {
-    final discountEntitlementDeadlineDate =
-        this.discountEntitlementDeadlineDate;
+    final discountEntitlementDeadlineDate = this.discountEntitlementDeadlineDate;
     if (discountEntitlementDeadlineDate == null) {
       return true;
     } else {
