@@ -2,6 +2,7 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 enum Weekday {
   Sunday,
@@ -32,19 +33,19 @@ extension WeekdayFunctions on Weekday {
   String weekdayString() {
     switch (this) {
       case Weekday.Sunday:
-        return '日';
+        return L.sunday;
       case Weekday.Monday:
-        return '月';
+        return L.monday;
       case Weekday.Tuesday:
-        return '火';
+        return L.tuesday;
       case Weekday.Wednesday:
-        return '水';
+        return L.wednesday;
       case Weekday.Thursday:
-        return '木';
+        return L.thursday;
       case Weekday.Friday:
-        return '金';
+        return L.friday;
       case Weekday.Saturday:
-        return '土';
+        return L.saturday;
       default:
         throw ArgumentError.notNull('');
     }

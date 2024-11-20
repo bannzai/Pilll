@@ -4,6 +4,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/features/root/localization/resolver.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
 part 'user.codegen.g.dart';
 part 'user.codegen.freezed.dart';

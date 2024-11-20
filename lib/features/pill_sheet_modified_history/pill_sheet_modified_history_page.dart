@@ -10,6 +10,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/p
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/user.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   const PillSheetModifiedHistoriesPage({super.key});
@@ -37,9 +38,9 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
-                title: const Text(
-                  '服用履歴',
-                  style: TextStyle(color: TextColor.main),
+                title: Text(
+                  L.of(context).medicationHistory,  // 服用履歴を翻訳キーに置き換え
+                  style: const TextStyle(color: TextColor.main),
                 ),
                 centerTitle: false,
                 backgroundColor: PilllColors.white,

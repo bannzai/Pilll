@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/features/root/localization/resolver.dart';
+import 'package:pilll/features/root/localization/l.dart';
 import 'package:pilll/features/root/resolver/firebase_auth_resolver.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
