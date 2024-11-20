@@ -5,7 +5,7 @@
   "pillSheetType28": "28 tablet type (all active ingredients)",
   "pillSheetType24": "24 tablet type (all active ingredients)",
   "pillSheetType21": "21-tablet type (all active pills)",
-  "twentyFourPillType": "24-tablet type",
+  "pillSheetType24WithRest4": "24-tablet type",
   "restPeriod": "Drug-free period",
   "placebo": "Placebo",
   "userNotFound": "User not found",

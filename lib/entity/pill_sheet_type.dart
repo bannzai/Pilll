@@ -47,19 +47,19 @@ extension PillSheetTypeFunctions on PillSheetType {
   String get fullName {
     switch (this) {
       case PillSheetType.pillsheet_21:
-        return L.twentyOnePillType;
+        return L.pillSheetType21With7Placebo;
       case PillSheetType.pillsheet_28_4:
-        return L.twentyEightPillTypeWithFourPlacebos;
+        return L.pillSheetType28With4Placebo;
       case PillSheetType.pillsheet_28_7:
-        return '28錠タイプ(7錠偽薬)';
+        return L.pillSheetType28With7Placebo;
       case PillSheetType.pillsheet_28_0:
-        return '28錠タイプ(すべて実薬)';
+        return L.pillSheetType28;
       case PillSheetType.pillsheet_24_0:
-        return '24錠タイプ(すべて実薬)';
+        return L.pillSheetType24;
       case PillSheetType.pillsheet_21_0:
-        return '21錠タイプ(すべて実薬)';
+        return L.pillSheetType21;
       case PillSheetType.pillsheet_24_rest_4:
-        return '24錠タイプ';
+        return L.pillSheetType24WithRest4;
     }
   }
 

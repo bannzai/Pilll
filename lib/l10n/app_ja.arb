@@ -5,7 +5,7 @@
   "pillSheetType28": "28錠タイプ(すべて実薬)",
   "pillSheetType24": "24錠タイプ(すべて実薬)",
   "pillSheetType21": "21錠タイプ(すべて実薬)",
-  "twentyFourPillType": "24錠タイプ",
+  "pillSheetType24WithRest4": "24錠タイプ",
   "restPeriod": "休薬",
   "placebo": "偽薬",
   "userNotFound": "ユーザーが見つかりません",
