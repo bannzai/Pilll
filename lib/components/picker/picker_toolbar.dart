@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:pilll/l10n/l10n.dart';
 
 class PickerToolbar extends StatelessWidget {
   final VoidCallback done;
@@ -22,8 +23,8 @@ class PickerToolbar extends StatelessWidget {
               horizontal: 16.0,
               vertical: 5.0,
             ),
-            child: const Text('キャンセル',
-                style: TextStyle(
+            child: Text(context.l10n.cancel,
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w300,
                   fontSize: 14,
