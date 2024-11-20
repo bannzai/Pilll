@@ -1,6 +1,7 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/features/root/resolver/app_localizations.dart';
 
 enum PillSheetType {
   // "21錠+休薬7日";
@@ -46,7 +47,7 @@ extension PillSheetTypeFunctions on PillSheetType {
   String get fullName {
     switch (this) {
       case PillSheetType.pillsheet_21:
-        return '21錠タイプ';
+        return L.twentyOnePillType;
       case PillSheetType.pillsheet_28_4:
         return '28錠タイプ(4錠偽薬)';
       case PillSheetType.pillsheet_28_7:
