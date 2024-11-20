@@ -149,11 +149,11 @@ extension PillSheetTypeFunctions on PillSheetType {
   String get notTakenWord {
     switch (this) {
       case PillSheetType.pillsheet_21:
-        return '休薬';
+        return L.restPeriod;
       case PillSheetType.pillsheet_28_4:
-        return '偽薬';
+        return L.placebo;
       case PillSheetType.pillsheet_28_7:
-        return '偽薬';
+        return L.placebo;
       case PillSheetType.pillsheet_28_0:
         return '';
       case PillSheetType.pillsheet_24_0:
@@ -161,7 +161,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_21_0:
         return '';
       case PillSheetType.pillsheet_24_rest_4:
-        return '休薬';
+        return L.restPeriod;
     }
   }
 
