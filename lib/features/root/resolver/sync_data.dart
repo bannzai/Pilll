@@ -15,7 +15,6 @@ class SyncDataResolver extends HookConsumerWidget {
     final user = ref.watch(userProvider);
     final setting = ref.watch(settingProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
-    final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
     useEffect(() {
@@ -56,8 +55,7 @@ class SyncDataResolver extends HookConsumerWidget {
           return;
         }
         try {
-          syncActivePillSheetValue(
-              pillSheetGroup: latestPillSheetGroup.asData?.value);
+          syncActivePillSheetValue(pillSheetGroup: latestPillSheetGroup.asData?.value);
         } catch (error) {
           debugPrint(error.toString());
         }
@@ -66,33 +64,6 @@ class SyncDataResolver extends HookConsumerWidget {
       f();
       return null;
     }, [latestPillSheetGroup.asData?.value]);
-
-    // NOTE: [Migrate:PillSheetAppearanceMode] setting -> latestPillSheetGroup の移行処理
-    useEffect(() {
-      final f = (() async {
-        final settingData = setting.asData?.value;
-        final latestPillSheetGroupData = latestPillSheetGroup.asData?.value;
-        if (settingData == null || latestPillSheetGroupData == null) {
-          return;
-        }
-
-        try {
-          // NOTE: [Migrate:PillSheetAppearanceMode] SelectAppearanceModeModalでもsettingと同期をとっている。なので、移行が完了した後も実行し続けてもずれることはない
-          setPillSheetGroup(
-            latestPillSheetGroupData.copyWith(
-              pillSheetAppearanceMode: settingData.pillSheetAppearanceMode,
-            ),
-          );
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-      f();
-      return null;
-    }, [
-      latestPillSheetGroup.asData?.value != null,
-      setting.asData?.value != null
-    ]);
 
     return const SizedBox();
   }

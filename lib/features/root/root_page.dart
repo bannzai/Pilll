@@ -7,6 +7,7 @@ import 'package:pilll/features/root/resolver/firebase_auth_resolver.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
 import 'package:pilll/features/root/resolver/migration20240819.dart';
+import 'package:pilll/features/root/resolver/pill_sheet_appearance_mode_migration.dart';
 import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
 import 'package:pilll/features/root/resolver/sync_data.dart';
@@ -33,10 +34,14 @@ class RootPage extends HookConsumerWidget {
                   initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
                     builder: (_) => SkipInitialSetting(
                       initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
-                      homePageBuilder: (_) => const HomePage(),
+                      homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
+                        builder: (_) => const HomePage(),
+                      ),
                     ),
                   ),
-                  homePageBuilder: (_) => const HomePage(),
+                  homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
+                    builder: (_) => const HomePage(),
+                  ),
                 ),
               ],
             ),
