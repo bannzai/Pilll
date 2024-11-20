@@ -6,7 +6,7 @@ extension LinkAccountTypeExtension on LinkAccountType {
       case LinkAccountType.apple:
         return 'Apple';
       case LinkAccountType.google:
-        return 'Google アカウント';
+        return 'Google';
     }
   }
 
