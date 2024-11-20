@@ -31,7 +31,7 @@ class PillSheetAppearanceModeMigrationResolver extends HookConsumerWidget {
 
         try {
           // NOTE: [Migrate:PillSheetAppearanceMode] SelectAppearanceModeModalでもsettingと同期をとっている。なので、移行が完了した後も実行し続けてもずれることはない
-          setPillSheetGroup(
+          await setPillSheetGroup(
             latestPillSheetGroupData.copyWith(
               pillSheetAppearanceMode: settingData.pillSheetAppearanceMode,
             ),
