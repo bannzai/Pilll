@@ -1,7 +1,7 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/features/root/resolver/app_localizations.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
 enum PillSheetType {
   // "21錠+休薬7日";

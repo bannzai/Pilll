@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
 /// [AppLocalizationResolver] は [L] に [AppLocalizations] をセットするためのWidget
 /// 毎回 AppLocalizations.of(context)! と 書いているため late で評価したものを使うのも変わらないだろうと思い作成
@@ -17,5 +18,3 @@ class AppLocalizationResolver extends StatelessWidget {
     return child;
   }
 }
-
-late AppLocalizations L;

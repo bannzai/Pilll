@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/features/root/resolver/app_localizations.dart';
+import 'package:pilll/features/root/localization/resolver.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 part 'user.codegen.g.dart';
