@@ -49,7 +49,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_21:
         return L.twentyOnePillType;
       case PillSheetType.pillsheet_28_4:
-        return '28錠タイプ(4錠偽薬)';
+        return L.twentyEightPillTypeWithFourPlacebos;
       case PillSheetType.pillsheet_28_7:
         return '28錠タイプ(7錠偽薬)';
       case PillSheetType.pillsheet_28_0:
