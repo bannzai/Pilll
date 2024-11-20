@@ -44,3 +44,5 @@ app.*.map.json
 
 lib/util/*secret.dart
 *secret.dart
+
+scripts/venv
