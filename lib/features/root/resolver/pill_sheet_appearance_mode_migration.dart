@@ -9,7 +9,7 @@ import 'package:pilll/provider/setting.dart';
 class PillSheetAppearanceModeMigrationResolver extends HookConsumerWidget {
   final Widget Function(BuildContext) builder;
 
-  const PillSheetAppearanceModeMigrationResolver({
+  const PillSheetAppearanceModeMigration({
     super.key,
     required this.builder,
   });
