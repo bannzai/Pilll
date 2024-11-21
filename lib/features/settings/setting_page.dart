@@ -247,7 +247,7 @@ class SettingPageBody extends StatelessWidget {
       Android: https://onl.sc/c9xnQUk''';
                               Clipboard.setData(const ClipboardData(text: text));
                               ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
+                                SnackBar(
                                   duration: Duration(seconds: 2),
                                   content: Text(L.linkCopiedToClipboard),
                                 ),
