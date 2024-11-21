@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class TimezoneSettingDialog extends HookConsumerWidget {
   final Setting setting;
@@ -30,7 +31,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
           const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
-        '端末のタイムゾーン($deviceTimezoneName)と同期しますか？',
+        L.syncWithDeviceTimeZone.replaceAll('{deviceTimezoneName}', deviceTimezoneName),  // 端末のタイムゾーン({deviceTimezoneName})と同期しますか？を翻訳
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -42,9 +43,9 @@ class TimezoneSettingDialog extends HookConsumerWidget {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Text(
-            '現在設定されているタイムゾーン',
-            style: TextStyle(
+          Text(
+            L.currentTimeZone,  // 現在設定されているタイムゾーンを翻訳
+            style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
               fontWeight: FontWeight.w600,
@@ -84,11 +85,11 @@ class TimezoneSettingDialog extends HookConsumerWidget {
             }
             navigator.pop();
           },
-          text: 'はい',
+          text: L.yes,  // はいを翻訳
         ),
         Center(
           child: AlertButton(
-            text: 'いいえ',
+            text: L.no,  // いいえを翻訳
             onPressed: () async {
               analytics.logEvent(
                 name: 'pressed_timezone_no',
