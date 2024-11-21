@@ -337,5 +337,7 @@
   "twentyOnePlusSevenPlacebo": "21錠＋7錠偽薬",
   "allActivePills": "すべて実薬",
   "twentyFourPlusFourDaysBreak": "24錠＋4錠休薬",
-  "choosePillType": "ピルの種類を選ぶ"
+  "choosePillType": "ピルの種類を選ぶ",
+  "NotificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+  "AutoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます"
 }
