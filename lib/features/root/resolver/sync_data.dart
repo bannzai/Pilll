@@ -55,8 +55,7 @@ class SyncDataResolver extends HookConsumerWidget {
           return;
         }
         try {
-          syncActivePillSheetValue(
-              pillSheetGroup: latestPillSheetGroup.asData?.value);
+          syncActivePillSheetValue(pillSheetGroup: latestPillSheetGroup.asData?.value);
         } catch (error) {
           debugPrint(error.toString());
         }

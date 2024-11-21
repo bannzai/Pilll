@@ -41,7 +41,6 @@ class MenstruationCardState with _$MenstruationCardState {
       MenstruationCardState(
         title: "生理開始日",
         scheduleDate: menstruation.beginDate,
-        countdownString:
-            "${daysBetween(menstruation.beginDate, today()) + 1}日目",
+        countdownString: "${daysBetween(menstruation.beginDate, today()) + 1}日目",
       );
 }

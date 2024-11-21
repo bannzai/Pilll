@@ -23,8 +23,7 @@ class DeleteUserButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final cancelReminderLocalNotification =
-        ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return Container(
       padding: const EdgeInsets.only(top: 54),
       child: AlertButton(
@@ -105,9 +104,7 @@ class DeleteUserButton extends HookConsumerWidget {
                 }
                 navigator.pop();
                 // ignore: use_build_context_synchronously
-                await _delete(context,
-                    isAppleLinked: isAppleLinked,
-                    isGoogleLinked: isGoogleLinked);
+                await _delete(context, isAppleLinked: isAppleLinked, isGoogleLinked: isGoogleLinked);
               },
             ),
           ],

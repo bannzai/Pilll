@@ -40,8 +40,7 @@ class ReleaseNote extends StatelessWidget {
                     Align(
                       alignment: Alignment.center,
                       child: Container(
-                        padding:
-                            const EdgeInsets.only(top: 40, left: 40, right: 40),
+                        padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
                           "表示モード服用日数(周期)が追加されました",
                           style: TextStyle(
@@ -113,7 +112,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(
-      Uri.parse("https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57"),
-      mode: LaunchMode.inAppWebView);
+  launchUrl(Uri.parse("https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57"), mode: LaunchMode.inAppWebView);
 }

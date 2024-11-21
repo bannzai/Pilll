@@ -43,14 +43,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
 
-enum SettingSection {
-  account,
-  premium,
-  pill,
-  notification,
-  menstruation,
-  other
-}
+enum SettingSection { account, premium, pill, notification, menstruation, other }
 
 class SettingPage extends HookConsumerWidget {
   const SettingPage({super.key});
@@ -67,9 +60,7 @@ class SettingPage extends HookConsumerWidget {
       ref.watch(isHealthDataAvailableProvider),
     ).when(
       data: (data) {
-        final userIsMigratedFrom132 = sharedPreferences
-                .containsKey(StringKey.salvagedOldStartTakenDate) &&
-            sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
+        final userIsMigratedFrom132 = sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
           user: data.$1,
           setting: data.$2,
@@ -126,8 +117,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: "アカウント",
                       children: [
-                        const ListExplainRow(
-                            text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
+                        const ListExplainRow(text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                         const AccountLinkRow(),
                         _separator(),
                       ],
@@ -145,13 +135,8 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () {
-                              analytics.logEvent(
-                                  name: "did_select_about_trial",
-                                  parameters: {});
-                              launchUrl(
-                                  Uri.parse(
-                                      "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"),
-                                  mode: LaunchMode.inAppWebView);
+                              analytics.logEvent(name: "did_select_about_trial", parameters: {});
+                              launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"), mode: LaunchMode.inAppWebView);
                             },
                           ),
                           _separator(),
@@ -171,9 +156,7 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: "ピルシート",
                       children: [
-                        if (activePillSheet != null &&
-                            pillSheetGroup != null &&
-                            !pillSheetGroup.isDeactived) ...[
+                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                           TodayPllNumberRow(
                             setting: setting,
                             pillSheetGroup: pillSheetGroup,
@@ -203,10 +186,8 @@ class SettingPageBody extends StatelessWidget {
                         _separator(),
                         NotificationTimeRow(setting: setting),
                         _separator(),
-                        if (activePillSheet != null &&
-                            activePillSheet.pillSheetHasRestOrFakeDuration) ...[
-                          NotificationInRestDuration(
-                              setting: setting, pillSheet: activePillSheet),
+                        if (activePillSheet != null && activePillSheet.pillSheetHasRestOrFakeDuration) ...[
+                          NotificationInRestDuration(setting: setting, pillSheet: activePillSheet),
                           _separator(),
                         ],
                         if (!user.isPremium) ...[
@@ -256,15 +237,13 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () async {
-                              analytics.logEvent(
-                                  name: "tap_share_to_friend", parameters: {});
+                              analytics.logEvent(name: "tap_share_to_friend", parameters: {});
                               const text = '''
       Pilll ピル服用に特化したピルリマインダーアプリ
       
       iOS: https://onl.sc/piiY1A6
       Android: https://onl.sc/c9xnQUk''';
-                              Clipboard.setData(
-                                  const ClipboardData(text: text));
+                              Clipboard.setData(const ClipboardData(text: text));
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(
                                   duration: Duration(seconds: 2),
@@ -281,12 +260,8 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () {
-                              analytics.logEvent(
-                                  name: "did_select_terms", parameters: {});
-                              launchUrl(
-                                  Uri.parse(
-                                      "https://bannzai.github.io/Pilll/Terms"),
-                                  mode: LaunchMode.inAppWebView);
+                              analytics.logEvent(name: "did_select_terms", parameters: {});
+                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
@@ -297,13 +272,8 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () {
-                              analytics.logEvent(
-                                  name: "did_select_privacy_policy",
-                                  parameters: {});
-                              launchUrl(
-                                  Uri.parse(
-                                      "https://bannzai.github.io/Pilll/PrivacyPolicy"),
-                                  mode: LaunchMode.inAppWebView);
+                              analytics.logEvent(name: "did_select_privacy_policy", parameters: {});
+                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
@@ -314,12 +284,8 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () {
-                              analytics.logEvent(
-                                  name: "did_select_faq", parameters: {});
-                              launchUrl(
-                                  Uri.parse(
-                                      "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"),
-                                  mode: LaunchMode.inAppWebView);
+                              analytics.logEvent(name: "did_select_faq", parameters: {});
+                              launchUrl(Uri.parse("https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69"), mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
@@ -330,11 +296,8 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () {
-                              analytics.logEvent(
-                                  name: "setting_did_select_release_note",
-                                  parameters: {});
-                              launchUrl(Uri.parse(
-                                  "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
+                              analytics.logEvent(name: "setting_did_select_release_note", parameters: {});
+                              launchUrl(Uri.parse("https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61"));
                             }),
                         _separator(),
                         ListTile(
@@ -345,8 +308,7 @@ class SettingPageBody extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             onTap: () {
-                              analytics.logEvent(
-                                  name: "did_select_inquiry", parameters: {});
+                              analytics.logEvent(name: "did_select_inquiry", parameters: {});
                               inquiry();
                             }),
                         if (Environment.isDevelopment) ...[

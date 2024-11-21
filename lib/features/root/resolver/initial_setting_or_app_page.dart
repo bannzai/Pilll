@@ -12,8 +12,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 
 // FIXME: test 時にboolSharedPreferencesProviderをそのまま使うとフリーズする。 => riverpod_generatorで書き換えたりしたのでもうしない可能性はある
-final didEndInitialSettingProvider = Provider.autoDispose((ref) =>
-    ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
+final didEndInitialSettingProvider = Provider.autoDispose((ref) => ref.watch(boolSharedPreferencesProvider(BoolKey.didEndInitialSetting)));
 
 enum InitialSettingOrAppPageScreenType { initialSetting, app }
 
@@ -35,14 +34,12 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
     final user = ref.watch(userProvider).valueOrNull;
     final error = useState<LaunchException?>(null);
-    final screenType = retrieveScreenType(
-        user: user, didEndInitialSetting: didEndInitialSetting.value);
+    final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
 
     useEffect(() {
       if (user != null) {
         if (user.setting == null) {
-          analytics.logEvent(
-              name: "uset_setting_is_null", parameters: {"uid": user.id});
+          analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": user.id});
         }
       }
 

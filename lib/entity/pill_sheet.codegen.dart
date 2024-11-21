@@ -29,8 +29,7 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
-  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetTypeInfoFromJson(json);
+  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) => _$PillSheetTypeInfoFromJson(json);
 }
 
 @freezed
@@ -57,19 +56,16 @@ class RestDuration with _$RestDuration {
   }) = _RestDuration;
   const RestDuration._();
 
-  factory RestDuration.fromJson(Map<String, dynamic> json) =>
-      _$RestDurationFromJson(json);
+  factory RestDuration.fromJson(Map<String, dynamic> json) => _$RestDurationFromJson(json);
 
-  DateTimeRange? get dateTimeRange =>
-      endDate == null ? null : DateTimeRange(start: beginDate, end: endDate!);
+  DateTimeRange? get dateTimeRange => endDate == null ? null : DateTimeRange(start: beginDate, end: endDate!);
 }
 
 @freezed
 class PillSheet with _$PillSheet {
   String? get documentID => id;
 
-  PillSheetType get sheetType =>
-      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   PillSheet._();
   @JsonSerializable(explicitToJson: true)
@@ -117,11 +113,9 @@ class PillSheet with _$PillSheet {
         createdAt: now(),
       );
 
-  factory PillSheet.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetFromJson(json);
+  factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
 
-  PillSheetType get pillSheetType =>
-      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   int get todayPillNumber {
@@ -151,12 +145,9 @@ class PillSheet with _$PillSheet {
   }
 
   bool get isTakenAll => typeInfo.totalCount == lastTakenPillNumber;
-  bool get isBegan =>
-      beginingDate.date().toUtc().millisecondsSinceEpoch <
-      now().toUtc().millisecondsSinceEpoch;
+  bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestOrFakeDuration =>
-      !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
   bool get isActive => isActiveFor(now());
 
   bool isActiveFor(DateTime date) {
@@ -165,8 +156,7 @@ class PillSheet with _$PillSheet {
 
   DateTime get estimatedEndTakenDate => beginingDate
       .addDays(pillSheetType.totalCount - 1)
-      .addDays(summarizedRestDuration(
-          restDurations: restDurations, upperDate: today()))
+      .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
       .date()
       .add(const Duration(days: 1))
       .subtract(const Duration(seconds: 1));
@@ -175,8 +165,7 @@ class PillSheet with _$PillSheet {
     if (restDurations.isEmpty) {
       return null;
     } else {
-      if (restDurations.last.endDate == null &&
-          restDurations.last.beginDate.isBefore(now())) {
+      if (restDurations.last.endDate == null && restDurations.last.beginDate.isBefore(now())) {
         return restDurations.last;
       } else {
         return null;
@@ -191,10 +180,7 @@ class PillSheet with _$PillSheet {
   }
 
   int pillNumberFor({required DateTime targetDate}) {
-    return daysBetween(beginingDate.date(), targetDate) -
-        summarizedRestDuration(
-            restDurations: restDurations, upperDate: targetDate) +
-        1;
+    return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
   }
 
   // ピルシートのピルの日付を取得する
@@ -205,8 +191,7 @@ class PillSheet with _$PillSheet {
       var date = beginingDate.addDays(index + offset).date();
 
       for (final restDuration in restDurations) {
-        if (restDuration.beginDate.isBefore(date) ||
-            isSameDay(restDuration.beginDate, date)) {
+        if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
           final restDurationEndDateOrToday = restDuration.endDate ?? today();
           if (restDurationEndDateOrToday.isAfter(date)) {
             final diff = daysBetween(date, restDurationEndDateOrToday);

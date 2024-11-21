@@ -24,8 +24,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: "pressed_trial_limited_announcement_bar");
-          await launchUrl(Uri.parse(
-              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
+          await launchUrl(Uri.parse("https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242"));
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -45,8 +44,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
             const Spacer(),
             SvgPicture.asset(
               "images/arrow_right.svg",
-              colorFilter:
-                  const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               width: 16,
               height: 16,
             ),

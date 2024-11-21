@@ -15,18 +15,12 @@ class PillSheetViewLayout extends StatelessWidget {
     int numberOfLineInPillSheet,
     bool isHideWeekdayLine,
   ) {
-    const verticalSpacing =
-        PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
-    final pillMarkListHeight =
-        PillSheetViewLayout.lineHeight * numberOfLineInPillSheet +
-            verticalSpacing;
-    return isHideWeekdayLine
-        ? pillMarkListHeight
-        : pillMarkListHeight + WeekdayBadgeConst.height;
+    const verticalSpacing = PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
+    final pillMarkListHeight = PillSheetViewLayout.lineHeight * numberOfLineInPillSheet + verticalSpacing;
+    return isHideWeekdayLine ? pillMarkListHeight : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  static PillSheetType mostLargePillSheetType(
-      List<PillSheetType> pillSheetTypes) {
+  static PillSheetType mostLargePillSheetType(List<PillSheetType> pillSheetTypes) {
     final copied = [...pillSheetTypes];
     copied.sort((a, b) => b.totalCount.compareTo(a.totalCount));
     return copied.first;
@@ -61,8 +55,7 @@ class PillSheetViewLayout extends StatelessWidget {
           ),
         ],
       ),
-      padding:
-          const EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
+      padding: const EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [

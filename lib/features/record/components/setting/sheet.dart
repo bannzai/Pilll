@@ -94,8 +94,7 @@ class PillSheetSettingSheet extends HookConsumerWidget {
   }
 }
 
-void showPillSheetSettingSheet(
-    BuildContext context, PillSheetSettingSheet sheet) {
+void showPillSheetSettingSheet(BuildContext context, PillSheetSettingSheet sheet) {
   showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,

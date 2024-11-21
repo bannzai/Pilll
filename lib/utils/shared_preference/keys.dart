@@ -1,11 +1,9 @@
 extension BoolKey on String {
   static const didEndInitialSetting = "isDidEndInitialSettingKey";
-  static const shownPaywallWhenAppFirstLaunch =
-      "shownPaywallWhenAppFirstLaunch";
+  static const shownPaywallWhenAppFirstLaunch = "shownPaywallWhenAppFirstLaunch";
   static const isAlreadyShowDemography = "isAlreadyShowDemography";
   static const isAlreadyDoneDemography = "isAlreadyDoneDemography";
-  static const isAlreadyAnsweredPreStoreReviewModal =
-      "isAlreadyAnsweredPreStoreReviewModal";
+  static const isAlreadyAnsweredPreStoreReviewModal = "isAlreadyAnsweredPreStoreReviewModal";
   static const isPreStoreReviewGoodAnswer = "isPreStoreReviewGoodAnswer";
   static const migrateFrom132IsShown = "migrate_from_132_is_shown_9";
   static const migration20240819 = "migration20240819";
@@ -45,6 +43,5 @@ extension ReleaseNoteKey on String {
 
 extension IntKey on String {
   static const String totalCountOfActionForTakenPill = "totalPillCount";
-  static const String monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
-      "monthlyPremiumIntroductionSheetPresentedDateMilliSeconds";
+  static const String monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = "monthlyPremiumIntroductionSheetPresentedDateMilliSeconds";
 }

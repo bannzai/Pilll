@@ -16,8 +16,7 @@ class CheckForceUpdate {
     final config = Config.fromJson(doc.data() as Map<String, dynamic>);
     final packageVersion = await Version.fromPackage();
 
-    final forceUpdate = packageVersion
-        .isLessThan(Version.parse(config.minimumSupportedAppVersion));
+    final forceUpdate = packageVersion.isLessThan(Version.parse(config.minimumSupportedAppVersion));
     if (forceUpdate) {
       analytics.logEvent(
         name: "screen_type_force_update",

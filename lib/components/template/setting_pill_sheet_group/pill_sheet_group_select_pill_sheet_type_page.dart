@@ -10,8 +10,7 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
   final PillSheetType? pillSheetType;
   final Function(PillSheetType) onSelect;
 
-  const PillSheetGroupSelectPillSheetTypePage(
-      {super.key, required this.pillSheetType, required this.onSelect});
+  const PillSheetGroupSelectPillSheetTypePage({super.key, required this.pillSheetType, required this.onSelect});
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
@@ -72,8 +71,7 @@ void showSettingPillSheetGroupSelectPillSheetTypePage({
   required final PillSheetType? pillSheetType,
   required final Function(PillSheetType) onSelect,
 }) {
-  analytics.setCurrentScreen(
-      screenName: "PillSheetGroupSelectPillSheetTypePage");
+  analytics.setCurrentScreen(screenName: "PillSheetGroupSelectPillSheetTypePage");
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,

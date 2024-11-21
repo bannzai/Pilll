@@ -29,12 +29,9 @@ extension OfferingTypeFunction on OfferingType {
 }
 
 final _purchaseServiceProvider = Provider((ref) => PurchaseService());
-final purchaseOfferingsProvider = FutureProvider(
-    (ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
-final currentOfferingTypeProvider =
-    Provider.family.autoDispose((ref, User user) {
-  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(
-      discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate));
+final purchaseOfferingsProvider = FutureProvider((ref) => ref.watch(_purchaseServiceProvider).fetchOfferings());
+final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user) {
+  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate));
   if (!user.hasDiscountEntitlement) {
     return OfferingType.premium;
   }
@@ -44,42 +41,29 @@ final currentOfferingTypeProvider =
     return OfferingType.limited;
   }
 });
-final currentOfferingPackagesProvider =
-    Provider.family.autoDispose<List<Package>, User>((ref, User user) {
+final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
   final currentOfferingType = ref.watch(currentOfferingTypeProvider(user));
-  final offering = ref
-      .watch(purchaseOfferingsProvider)
-      .valueOrNull
-      ?.all[currentOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.identifier];
   if (offering != null) {
     return offering.availablePackages;
   }
   return [];
 });
 final annualPackageProvider = Provider.family.autoDispose((ref, User user) {
-  final currentOfferingPackages =
-      ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages
-      .firstWhere((element) => element.packageType == PackageType.annual);
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
+  return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
 });
 final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
-  final currentOfferingPackages =
-      ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages
-      .firstWhere((element) => element.packageType == PackageType.monthly);
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
+  return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });
-final monthlyPremiumPackageProvider =
-    Provider.family.autoDispose((ref, User user) {
+final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, User user) {
   const premiumPackageOfferingType = OfferingType.premium;
-  final offering = ref
-      .watch(purchaseOfferingsProvider)
-      .valueOrNull
-      ?.all[premiumPackageOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages
-      .firstWhere((element) => element.packageType == PackageType.monthly);
+  return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });
 
 final purchaseProvider = Provider((ref) => Purchase());
@@ -91,8 +75,7 @@ class Purchase {
   Future<bool> call(Package package) async {
     try {
       final purchaserInfo = await Purchases.purchasePackage(package);
-      final premiumEntitlement =
-          purchaserInfo.entitlements.all[premiumEntitlements];
+      final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError("unexpected premium entitlements is not exists");
       }
@@ -102,11 +85,7 @@ class Purchase {
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
-      analytics.logEvent(name: "catched_purchase_exception", parameters: {
-        "code": exception.code,
-        "details": exception.details.toString(),
-        "message": exception.message
-      });
+      analytics.logEvent(name: "catched_purchase_exception", parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -143,9 +122,7 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
   analytics.logEvent(name: "start_update_purchase_info");
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError(
-        "unexpected uid is not found when purchase info is update",
-        StackTrace.current);
+    errorLogger.recordError("unexpected uid is not found when purchase info is update", StackTrace.current);
     return;
   }
 
@@ -171,17 +148,13 @@ Future<void> syncPurchaseInfo() async {
   analytics.logEvent(name: "start_sync_purchase_info");
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError(
-        "unexpected uid is not found when purchase info to sync",
-        StackTrace.current);
+    errorLogger.recordError("unexpected uid is not found when purchase info to sync", StackTrace.current);
     return;
   }
 
   final purchaserInfo = await Purchases.getCustomerInfo();
-  final premiumEntitlement =
-      purchaserInfo.entitlements.all[premiumEntitlements];
-  final isActivated =
-      premiumEntitlement == null ? false : premiumEntitlement.isActive;
+  final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
+  final isActivated = premiumEntitlement == null ? false : premiumEntitlement.isActive;
 
   try {
     final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
@@ -194,10 +167,8 @@ Future<void> syncPurchaseInfo() async {
 }
 
 Future<void> initializePurchase(String uid) async {
-  await Purchases.setLogLevel(
-      Environment.isDevelopment ? LogLevel.debug : LogLevel.info);
-  Purchases.configure(
-      PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid);
+  await Purchases.setLogLevel(Environment.isDevelopment ? LogLevel.debug : LogLevel.info);
+  Purchases.configure(PurchasesConfiguration(Secret.revenueCatPublicAPIKey)..appUserID = uid);
   Purchases.addCustomerInfoUpdateListener(callUpdatePurchaseInfo);
   await syncPurchaseInfo();
 }

@@ -19,8 +19,7 @@ class DateTimeFormatter {
   }
 
   static String monthAndWeekday(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, "ja_JP")
-        .format(dateTime);
+    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, "ja_JP").format(dateTime);
   }
 
   static String monthAndDay(DateTime dateTime) {

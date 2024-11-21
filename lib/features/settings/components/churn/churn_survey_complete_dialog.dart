@@ -12,8 +12,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
       title: const Text(
         "ご協力頂きありがとうございます",
         style: TextStyle(

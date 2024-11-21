@@ -31,8 +31,7 @@ class CalendarDayRecord extends StatelessWidget {
               SvgPicture.asset(
                 "images/laugh.svg",
                 height: 10,
-                colorFilter:
-                    const ColorFilter.mode(PilllColors.green, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(PilllColors.green, BlendMode.srcIn),
               ),
             );
           case PhysicalConditionStatus.bad:
@@ -40,8 +39,7 @@ class CalendarDayRecord extends StatelessWidget {
               SvgPicture.asset(
                 "images/angry.svg",
                 height: 10,
-                colorFilter:
-                    const ColorFilter.mode(PilllColors.danger, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(PilllColors.danger, BlendMode.srcIn),
               ),
             );
         }

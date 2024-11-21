@@ -3,9 +3,7 @@ import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
-final todayCalendarPageIndex =
-    menstruationWeekCalendarDataSource.lastIndexWhere((element) =>
-        element.where((element) => isSameDay(element, today())).isNotEmpty);
+final todayCalendarPageIndex = menstruationWeekCalendarDataSource.lastIndexWhere((element) => element.where((element) => isSameDay(element, today())).isNotEmpty);
 
 final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
   final base = today();
@@ -15,8 +13,7 @@ final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
   begin = begin.subtract(Duration(days: beginWeekdayOffset));
 
   var end = base.add(const Duration(days: 90));
-  final endWeekdayOffset =
-      Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
+  final endWeekdayOffset = Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
   end = end.addDays(endWeekdayOffset);
 
   var diffDay = daysBetween(begin, end);
@@ -25,8 +22,5 @@ final List<List<DateTime>> menstruationWeekCalendarDataSource = () {
   for (int i = 0; i < diffDay; i++) {
     days.add(begin.addDays(i));
   }
-  return List.generate(
-      ((diffDay) / Weekday.values.length).round(),
-      (i) => days.sublist(i * Weekday.values.length,
-          i * Weekday.values.length + Weekday.values.length));
+  return List.generate(((diffDay) / Weekday.values.length).round(), (i) => days.sublist(i * Weekday.values.length, i * Weekday.values.length + Weekday.values.length));
 }();

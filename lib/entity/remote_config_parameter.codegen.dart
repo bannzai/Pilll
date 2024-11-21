@@ -27,20 +27,13 @@ abstract class RemoteConfigParameterDefaultValues {
 @freezed
 class RemoteConfigParameter with _$RemoteConfigParameter {
   factory RemoteConfigParameter({
-    @Default(RemoteConfigParameterDefaultValues.isPaywallFirst)
-    bool isPaywallFirst,
-    @Default(RemoteConfigParameterDefaultValues.skipInitialSetting)
-    bool skipInitialSetting,
-    @Default(RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay)
-    int trialDeadlineDateOffsetDay,
-    @Default(RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay)
-    int discountEntitlementOffsetDay,
-    @Default(RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour)
-    int discountCountdownBoundaryHour,
-    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern)
-    String premiumIntroductionPattern,
+    @Default(RemoteConfigParameterDefaultValues.isPaywallFirst) bool isPaywallFirst,
+    @Default(RemoteConfigParameterDefaultValues.skipInitialSetting) bool skipInitialSetting,
+    @Default(RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay) int trialDeadlineDateOffsetDay,
+    @Default(RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay) int discountEntitlementOffsetDay,
+    @Default(RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour) int discountCountdownBoundaryHour,
+    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern) String premiumIntroductionPattern,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
-  factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) =>
-      _$RemoteConfigParameterFromJson(json);
+  factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);
 }

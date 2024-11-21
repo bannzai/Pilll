@@ -18,9 +18,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorKey: navigatorKey,
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: firebaseAnalytics)
-      ],
+      navigatorObservers: [FirebaseAnalyticsObserver(analytics: firebaseAnalytics)],
       theme: ThemeData(
         useMaterial3: false,
         appBarTheme: const AppBarTheme(
@@ -55,8 +53,7 @@ class App extends StatelessWidget {
           headerBackgroundColor: PilllColors.primary,
         ),
         switchTheme: SwitchThemeData(
-          thumbColor: WidgetStateProperty.resolveWith<Color?>(
-              (Set<WidgetState> states) {
+          thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -65,8 +62,7 @@ class App extends StatelessWidget {
             }
             return null;
           }),
-          trackColor: WidgetStateProperty.resolveWith<Color?>(
-              (Set<WidgetState> states) {
+          trackColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -77,8 +73,7 @@ class App extends StatelessWidget {
           }),
         ),
         radioTheme: RadioThemeData(
-          fillColor: WidgetStateProperty.resolveWith<Color?>(
-              (Set<WidgetState> states) {
+          fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }
@@ -90,8 +85,7 @@ class App extends StatelessWidget {
           }),
         ),
         checkboxTheme: CheckboxThemeData(
-          fillColor: WidgetStateProperty.resolveWith<Color?>(
-              (Set<WidgetState> states) {
+          fillColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
             if (states.contains(WidgetState.disabled)) {
               return null;
             }

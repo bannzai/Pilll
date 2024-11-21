@@ -45,10 +45,7 @@ class PillSheetAppearanceModeMigrationResolver extends HookConsumerWidget {
       });
       f();
       return null;
-    }, [
-      latestPillSheetGroup.asData?.value != null,
-      setting.asData?.value != null
-    ]);
+    }, [latestPillSheetGroup.asData?.value != null, setting.asData?.value != null]);
 
     if (resolved.value) {
       return builder(context);

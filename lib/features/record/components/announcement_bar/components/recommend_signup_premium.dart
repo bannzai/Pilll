@@ -34,8 +34,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                         "images/alert_24.svg",
                         width: 16,
                         height: 16,
-                        colorFilter: const ColorFilter.mode(
-                            Colors.white, BlendMode.srcIn),
+                        colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                       ),
                       const SizedBox(width: 5),
                       const Text(
@@ -69,8 +68,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
               child: IconButton(
                 icon: SvgPicture.asset(
                   "images/arrow_right.svg",
-                  colorFilter:
-                      const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
                 onPressed: () {},
                 iconSize: 24,

@@ -32,8 +32,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: const Duration(seconds: 2),
-          content: Text(
-              "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+          content: Text("${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
         ),
       );
     }
@@ -45,8 +44,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
           analytics.logEvent(name: "pressed_menstruation_record");
 
           final latestMenstruation = this.latestMenstruation;
-          if (latestMenstruation != null &&
-              latestMenstruation.dateRange.inRange(today())) {
+          if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
             // 生理期間中は、生理期間を編集する
             return showMenstruationEditSelectionSheet(
               context,
@@ -62,8 +60,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
 
           showModalBottomSheet(
             context: context,
-            builder: (_) =>
-                MenstruationSelectModifyTypeSheet(onTap: (type) async {
+            builder: (_) => MenstruationSelectModifyTypeSheet(onTap: (type) async {
               switch (type) {
                 case MenstruationSelectModifyType.today:
                   analytics.logEvent(name: "tapped_menstruation_record_today");
@@ -82,8 +79,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
                   }
                   return;
                 case MenstruationSelectModifyType.yesterday:
-                  analytics.logEvent(
-                      name: "tapped_menstruation_record_yesterday");
+                  analytics.logEvent(name: "tapped_menstruation_record_yesterday");
                   try {
                     final begin = yesterday();
                     final created = await beginMenstruation(

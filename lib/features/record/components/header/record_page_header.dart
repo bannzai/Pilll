@@ -55,11 +55,8 @@ class RecordPageInformationHeader extends StatelessWidget {
                   TodayTakenPillNumber(
                       pillSheetGroup: pillSheetGroup,
                       onPressed: () {
-                        analytics.logEvent(
-                            name: "tapped_record_information_header");
-                        if (activePillSheet != null &&
-                            pillSheetGroup != null &&
-                            !pillSheetGroup.isDeactived) {
+                        analytics.logEvent(name: "tapped_record_information_header");
+                        if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
                           Navigator.of(context).push(
                             SettingTodayPillNumberPageRoute.route(
                               pillSheetGroup: pillSheetGroup,

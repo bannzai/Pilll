@@ -8,10 +8,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   final String salvagedOldStartTakenDate;
   final String salvagedOldLastTakenDate;
 
-  const InformationForBeforeMigrate132(
-      {super.key,
-      required this.salvagedOldStartTakenDate,
-      required this.salvagedOldLastTakenDate});
+  const InformationForBeforeMigrate132({super.key, required this.salvagedOldStartTakenDate, required this.salvagedOldLastTakenDate});
 
   int _latestPillNumber() {
     final last = DateTime.parse(salvagedOldLastTakenDate);
@@ -133,14 +130,10 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   }
 }
 
-extension InformationForBeforeMigrate132Route
-    on InformationForBeforeMigrate132 {
-  static Route<dynamic> route(
-      {required String salvagedOldStartTakenDate,
-      required String salvagedOldLastTakenDate}) {
+extension InformationForBeforeMigrate132Route on InformationForBeforeMigrate132 {
+  static Route<dynamic> route({required String salvagedOldStartTakenDate, required String salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
-      settings:
-          const RouteSettings(name: "InformationForBeforeMigrate132Route"),
+      settings: const RouteSettings(name: "InformationForBeforeMigrate132Route"),
       builder: (_) => InformationForBeforeMigrate132(
         salvagedOldStartTakenDate: salvagedOldStartTakenDate,
         salvagedOldLastTakenDate: salvagedOldLastTakenDate,

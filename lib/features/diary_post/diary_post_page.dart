@@ -33,9 +33,7 @@ class DiaryPostPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final diary = this.diary ?? Diary.fromDate(date);
 
-    return AsyncValueGroup.group2(
-            ref.watch(userProvider), ref.watch(diarySettingProvider))
-        .when(
+    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(diarySettingProvider)).when(
       data: (data) => DiaryPostPageBody(
         date: date,
         diary: diary,
@@ -78,13 +76,11 @@ class DiaryPostPageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final memoTextEditingController =
-        useTextEditingController(text: diary.memo);
+    final memoTextEditingController = useTextEditingController(text: diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
-    final physicalCondition =
-        useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
+    final physicalCondition = useState<PhysicalConditionStatus?>(diary.physicalConditionStatus);
     final physicalConditionDetails = useState(diary.physicalConditions);
     final sex = useState(diary.hasSex);
 
@@ -131,8 +127,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
           children: [
             Expanded(
               child: ListView(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                 controller: scrollController,
                 children: [
                   Text(DateTimeFormatter.yearAndMonthAndDay(date),
@@ -143,20 +138,13 @@ class DiaryPostPageBody extends HookConsumerWidget {
                         color: TextColor.main,
                       )),
                   const SizedBox(height: 20),
-                  DiaryPostPhysicalCondition(
-                      physicalCondition: physicalCondition),
+                  DiaryPostPhysicalCondition(physicalCondition: physicalCondition),
                   const SizedBox(height: 20),
-                  DiaryPostPhysicalConditionDetails(
-                      user: user,
-                      diarySetting: diarySetting,
-                      context: context,
-                      physicalConditionDetails: physicalConditionDetails),
+                  DiaryPostPhysicalConditionDetails(user: user, diarySetting: diarySetting, context: context, physicalConditionDetails: physicalConditionDetails),
                   const SizedBox(height: 20),
                   DiaryPostSex(sex: sex),
                   const SizedBox(height: 20),
-                  DiaryPostMemo(
-                      textEditingController: memoTextEditingController,
-                      focusNode: focusNode),
+                  DiaryPostMemo(textEditingController: memoTextEditingController, focusNode: focusNode),
                 ],
               ),
             ),

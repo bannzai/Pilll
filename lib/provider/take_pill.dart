@@ -13,8 +13,7 @@ import 'package:riverpod/riverpod.dart';
 final takePillProvider = Provider.autoDispose(
   (ref) => TakePill(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheetModifiedHistory:
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
 );
@@ -52,8 +51,7 @@ class TakePill {
 
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet.copyWith(
-            lastTakenDate: pillSheet.estimatedEndTakenDate);
+        return pillSheet.copyWith(lastTakenDate: pillSheet.estimatedEndTakenDate);
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -65,10 +63,8 @@ class TakePill {
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }).toList();
 
-    final updatedPillSheetGroup =
-        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-    final updatedIndexses =
-        pillSheetGroup.pillSheets.asMap().keys.where((index) {
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where((index) {
       final updatedPillSheet = updatedPillSheetGroup.pillSheets[index];
       if (pillSheetGroup.pillSheets[index] == updatedPillSheet) {
         return false;
@@ -80,9 +76,7 @@ class TakePill {
     if (updatedIndexses.isEmpty) {
       // NOTE: prevent error for unit test
       if (Firebase.apps.isNotEmpty) {
-        errorLogger.recordError(
-            const FormatException("unexpected updatedIndexes is empty"),
-            StackTrace.current);
+        errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
       }
       return null;
     }
@@ -92,8 +86,7 @@ class TakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+    final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
       after: after,

@@ -17,8 +17,7 @@ final diaryForTodayProvider = StreamProvider((ref) {
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList().lastOrNull);
 });
-final diariesForMonthProvider =
-    StreamProvider.family((ref, DateTime dateForMonth) {
+final diariesForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
   final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return ref
       .watch(databaseProvider)
@@ -37,9 +36,7 @@ final diariesFor90Days = StreamProvider.family((ref, DateTime base) {
   return ref
       .watch(databaseProvider)
       .diariesReference()
-      .where(DiaryFirestoreKey.date,
-          isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
-          isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
+      .where(DiaryFirestoreKey.date, isLessThanOrEqualTo: DateTime(base.year, base.month, 90), isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
       .orderBy(DiaryFirestoreKey.date)
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())
@@ -53,29 +50,21 @@ List<Diary> _sortedDiaries(List<Diary> diaries) {
 }
 
 final diaryProvider = Provider.family((ref, DateTime date) {
-  return ref
-      .watch(diariesForMonthProvider(date))
-      .asData
-      ?.value
-      .firstWhereOrNull((element) => element.date == date);
+  return ref.watch(diariesForMonthProvider(date)).asData?.value.firstWhereOrNull((element) => element.date == date);
 });
 
-final setDiaryProvider =
-    Provider((ref) => SetDiary(ref.watch(databaseProvider)));
+final setDiaryProvider = Provider((ref) => SetDiary(ref.watch(databaseProvider)));
 
 class SetDiary {
   final DatabaseConnection databaseConnection;
   SetDiary(this.databaseConnection);
 
   Future<void> call(Diary diary) async {
-    await databaseConnection
-        .diaryReference(diary)
-        .set(diary, SetOptions(merge: true));
+    await databaseConnection.diaryReference(diary).set(diary, SetOptions(merge: true));
   }
 }
 
-final deleteDiaryProvider =
-    Provider((ref) => DeleteDiary(ref.watch(databaseProvider)));
+final deleteDiaryProvider = Provider((ref) => DeleteDiary(ref.watch(databaseProvider)));
 
 class DeleteDiary {
   final DatabaseConnection databaseConnection;

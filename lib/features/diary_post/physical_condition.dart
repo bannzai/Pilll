@@ -33,53 +33,31 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      topLeft: Radius.circular(8),
-                      bottomLeft: Radius.circular(8)),
-                  color: physicalCondition.value == PhysicalConditionStatus.bad
-                      ? PilllColors.thinSecondary
-                      : Colors.transparent,
+                  borderRadius: const BorderRadius.only(topLeft: Radius.circular(8), bottomLeft: Radius.circular(8)),
+                  color: physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        colorFilter: ColorFilter.mode(
-                            physicalCondition.value ==
-                                    PhysicalConditionStatus.bad
-                                ? PilllColors.primary
-                                : TextColor.darkGray,
-                            BlendMode.srcIn)),
+                        colorFilter: ColorFilter.mode(physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.primary : TextColor.darkGray, BlendMode.srcIn)),
                     onPressed: () {
-                      if (physicalCondition.value ==
-                          PhysicalConditionStatus.bad) {
+                      if (physicalCondition.value == PhysicalConditionStatus.bad) {
                         physicalCondition.value = null;
                       } else {
                         physicalCondition.value = PhysicalConditionStatus.bad;
                       }
                     }),
               ),
-              const SizedBox(
-                  height: 48,
-                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
+              const SizedBox(height: 48, child: VerticalDivider(width: 1, color: PilllColors.divider)),
               Container(
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.only(
-                      topRight: Radius.circular(8),
-                      bottomRight: Radius.circular(8)),
-                  color: physicalCondition.value == PhysicalConditionStatus.fine
-                      ? PilllColors.thinSecondary
-                      : Colors.transparent,
+                  borderRadius: const BorderRadius.only(topRight: Radius.circular(8), bottomRight: Radius.circular(8)),
+                  color: physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        colorFilter: ColorFilter.mode(
-                            physicalCondition.value ==
-                                    PhysicalConditionStatus.fine
-                                ? PilllColors.primary
-                                : TextColor.darkGray,
-                            BlendMode.srcIn)),
+                        colorFilter: ColorFilter.mode(physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.primary : TextColor.darkGray, BlendMode.srcIn)),
                     onPressed: () {
-                      if (physicalCondition.value ==
-                          PhysicalConditionStatus.fine) {
+                      if (physicalCondition.value == PhysicalConditionStatus.fine) {
                         physicalCondition.value = null;
                       } else {
                         physicalCondition.value = PhysicalConditionStatus.fine;

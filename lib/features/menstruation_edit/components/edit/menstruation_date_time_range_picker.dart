@@ -8,15 +8,13 @@ import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
-void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref,
-    {required Menstruation? initialMenstruation}) async {
+void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation? initialMenstruation}) async {
   void onSaved(Menstruation savedMenstruation) {
     if (initialMenstruation == null) {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: const Duration(seconds: 2),
-          content: Text(
-              "${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
+          content: Text("${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました"),
         ),
       );
     } else {
@@ -74,13 +72,10 @@ void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref,
   }
 }
 
-void showEditMenstruationDateRangePicker(BuildContext context, WidgetRef ref,
-    {required Menstruation initialMenstruation}) async {
-  _showMenstruationDateRangePicker(context, ref,
-      initialMenstruation: initialMenstruation);
+void showEditMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation initialMenstruation}) async {
+  _showMenstruationDateRangePicker(context, ref, initialMenstruation: initialMenstruation);
 }
 
-void showCreateMenstruationDateRangePicker(
-    BuildContext context, WidgetRef ref) async {
+void showCreateMenstruationDateRangePicker(BuildContext context, WidgetRef ref) async {
   _showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
 }

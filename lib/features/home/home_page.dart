@@ -35,8 +35,7 @@ class HomePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider);
-    final registerRemotePushNotificationToken =
-        ref.watch(registerRemotePushNotificationTokenProvider);
+    final registerRemotePushNotificationToken = ref.watch(registerRemotePushNotificationTokenProvider);
 
     useEffect(() {
       final userValue = user.valueOrNull;
@@ -90,35 +89,22 @@ class HomePageBody extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final tabIndex = useState(0);
     final ticker = useSingleTickerProvider();
-    final tabController = useTabController(
-        initialLength: HomePageTabType.values.length, vsync: ticker);
+    final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
     tabController.addListener(() {
       tabIndex.value = tabController.index;
       _screenTracking(tabController.index);
     });
 
-    final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences
-            .getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ??
-        false;
-    final totalCountOfActionForTakenPill =
-        sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
-    final disableShouldAskCancelReason =
-        ref.watch(disableShouldAskCancelReasonProvider);
+    final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
+    final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
+    final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
-        sharedPreferences.getInt(IntKey
-                .monthlyPremiumIntroductionSheetPresentedDateMilliSeconds) ??
-            0;
-    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
-        now().millisecondsSinceEpoch -
-                monthlyPremiumIntroductionSheetPresentedDateMilliSeconds >
-            1000 * 60 * 60 * 24 * 30;
+    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = sharedPreferences.getInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds) ?? 0;
+    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet = now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
     final bool isOneMonthPassedTrialDeadline;
     final trialDeadlineDate = user.trialDeadlineDate;
     if (trialDeadlineDate != null) {
-      isOneMonthPassedTrialDeadline = now().millisecondsSinceEpoch -
-              trialDeadlineDate.millisecondsSinceEpoch >
-          1000 * 60 * 60 * 24 * 30;
+      isOneMonthPassedTrialDeadline = now().millisecondsSinceEpoch - trialDeadlineDate.millisecondsSinceEpoch > 1000 * 60 * 60 * 24 * 30;
     } else {
       isOneMonthPassedTrialDeadline = false;
     }
@@ -136,32 +122,23 @@ class HomePageBody extends HookConsumerWidget {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
               title: "解約後のアンケートご協力のお願い",
-              url:
-                  "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
+              url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
             ),
           );
           disableShouldAskCancelReason();
           // ignore: use_build_context_synchronously
-          showDialog(
-              context: context,
-              builder: (_) => const ChurnSurveyCompleteDialog());
-        } else if (!isAlreadyAnsweredPreStoreReviewModal &&
-            totalCountOfActionForTakenPill > 10) {
+          showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
+        } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
           showModalBottomSheet(
             context: context,
             backgroundColor: Colors.transparent,
             builder: (_) => const PreStoreReviewModal(),
           );
-          sharedPreferences.setBool(
-              BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
-        } else if (isOneMonthPassedTrialDeadline &&
-            isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet &&
-            !user.premiumOrTrial) {
+          sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
+        } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
           if (!user.premiumOrTrial) {
             showPremiumIntroductionSheet(context);
-            sharedPreferences.setInt(
-                IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds,
-                now().millisecondsSinceEpoch);
+            sharedPreferences.setInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds, now().millisecondsSinceEpoch);
           }
         }
       });
@@ -176,8 +153,7 @@ class HomePageBody extends HookConsumerWidget {
         appBar: null,
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
-            border:
-                Border(top: BorderSide(width: 1, color: PilllColors.border)),
+            border: Border(top: BorderSide(width: 1, color: PilllColors.border)),
           ),
           child: Ink(
             color: PilllColors.bottomBar,
@@ -191,31 +167,19 @@ class HomePageBody extends HookConsumerWidget {
                 tabs: <Tab>[
                   Tab(
                     text: "ピル",
-                    icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.record.index
-                            ? "images/tab_icon_pill_enable.svg"
-                            : "images/tab_icon_pill_disable.svg"),
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
                   ),
                   Tab(
                     text: "生理",
-                    icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.menstruation.index
-                            ? "images/menstruation.svg"
-                            : "images/menstruation_disable.svg"),
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
                   ),
                   Tab(
                     text: "カレンダー",
-                    icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.calendar.index
-                            ? "images/tab_icon_calendar_enable.svg"
-                            : "images/tab_icon_calendar_disable.svg"),
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index ? "images/tab_icon_calendar_enable.svg" : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.setting.index
-                            ? "images/tab_icon_setting_enable.svg"
-                            : "images/tab_icon_setting_disable.svg"),
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index ? "images/tab_icon_setting_enable.svg" : "images/tab_icon_setting_disable.svg"),
                   ),
                 ],
               ),

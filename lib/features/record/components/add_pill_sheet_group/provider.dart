@@ -16,8 +16,7 @@ final addPillSheetGroupProvider = Provider.autoDispose(
   (ref) => AddPillSheetGroup(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory:
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetSetting: ref.watch(batchSetSettingProvider),
   ),
 );
@@ -54,8 +53,7 @@ class AddPillSheetGroup {
       updatedPillSheetGroup,
     );
 
-    final history = PillSheetModifiedHistoryServiceActionFactory
-        .createCreatedPillSheetAction(
+    final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
       beforePillSheetGroup: pillSheetGroup,
       createdNewPillSheetGroup: createdPillSheetGroup,
       pillSheetIDs: updatedPillSheetGroup.pillSheetIDs,
@@ -82,8 +80,7 @@ PillSheetGroup buildPillSheetGroup({
   final n = now();
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
-    final offset = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
+    final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
     return PillSheet(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,
@@ -100,8 +97,7 @@ PillSheetGroup buildPillSheetGroup({
   final updatedPillSheetGroup = PillSheetGroup(
     pillSheetIDs: pillSheetIDs,
     pillSheets: createdPillSheets,
-    pillSheetAppearanceMode: pillSheetGroup?.pillSheetAppearanceMode ??
-        PillSheetAppearanceMode.number,
+    pillSheetAppearanceMode: pillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number,
     displayNumberSetting: () {
       if (pillSheetGroup?.pillSheetAppearanceMode.isSequential == true) {
         if (displayNumberSetting != null) {
@@ -109,8 +105,7 @@ PillSheetGroup buildPillSheetGroup({
         }
         if (pillSheetGroup != null) {
           return PillSheetGroupDisplayNumberSetting(
-            beginPillNumber:
-                pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
+            beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
           );
         }
       }

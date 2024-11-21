@@ -67,8 +67,7 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
           },
           child: Container(
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-            constraints: BoxConstraints(
-                minWidth: MediaQuery.of(context).size.width - 80),
+            constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width - 80),
             decoration: BoxDecoration(
               color: PilllColors.white,
               borderRadius: BorderRadius.circular(4),

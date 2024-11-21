@@ -19,10 +19,8 @@ class ToggleReminderNotification extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification =
-        ref.watch(registerReminderLocalNotificationProvider);
-    final cancelReminderLocalNotification =
-        ref.watch(cancelReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return SwitchListTile(
       title: const Text("ピルの服用通知",

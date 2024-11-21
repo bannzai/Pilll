@@ -25,24 +25,19 @@ class RootPage extends HookConsumerWidget {
           userID: user.uid,
           builder: (_) => Stack(
             children: [
-              UserStreamResolver(
-                  stream: (user) =>
-                      analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
+              UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
               const SyncDataResolver(),
               const Migration20240819(),
               InitialSettingOrAppPage(
                 initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
                   builder: (_) => SkipInitialSetting(
-                    initialSettingPageBuilder: (context) =>
-                        InitialSettingPillSheetGroupPageRoute.screen(),
-                    homePageBuilder: (_) =>
-                        PillSheetAppearanceModeMigrationResolver(
+                    initialSettingPageBuilder: (context) => InitialSettingPillSheetGroupPageRoute.screen(),
+                    homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
                       builder: (_) => const HomePage(),
                     ),
                   ),
                 ),
-                homePageBuilder: (_) =>
-                    PillSheetAppearanceModeMigrationResolver(
+                homePageBuilder: (_) => PillSheetAppearanceModeMigrationResolver(
                   builder: (_) => const HomePage(),
                 ),
               ),

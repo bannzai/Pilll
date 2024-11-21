@@ -9,8 +9,7 @@ class Day extends StatelessWidget {
   const Day({super.key, required this.estimatedEventCausingDate});
 
   int get _day => estimatedEventCausingDate.day;
-  Weekday get _weekday =>
-      WeekdayFunctions.weekdayFromDate(estimatedEventCausingDate);
+  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(estimatedEventCausingDate);
 
   @override
   Widget build(BuildContext context) {

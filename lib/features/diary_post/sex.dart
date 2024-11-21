@@ -25,13 +25,8 @@ class DiaryPostSex extends StatelessWidget {
             padding: const EdgeInsets.all(4),
             width: 32,
             height: 32,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: sex.value
-                    ? PilllColors.thinSecondary
-                    : PilllColors.disabledSheet),
-            child: SvgPicture.asset(
-                sex.value ? "images/heart.svg" : "images/heart-stroke.svg"),
+            decoration: BoxDecoration(shape: BoxShape.circle, color: sex.value ? PilllColors.thinSecondary : PilllColors.disabledSheet),
+            child: SvgPicture.asset(sex.value ? "images/heart.svg" : "images/heart-stroke.svg"),
           ),
         ),
         const Spacer(),

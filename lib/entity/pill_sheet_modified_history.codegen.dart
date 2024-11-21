@@ -120,17 +120,12 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
-  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetModifiedHistoryFromJson(json);
+  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
-  PillSheetModifiedActionType? get enumActionType =>
-      PillSheetModifiedActionType.values
-          .firstWhereOrNull((element) => element.name == actionType);
+  PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
 
-  PillSheet? get beforeActivePillSheet =>
-      beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
-  PillSheet? get afterActivePillSheet =>
-      afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get beforeActivePillSheet => beforePillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
+  PillSheet? get afterActivePillSheet => afterPillSheetGroup?.activePillSheetWhen(estimatedEventCausingDate);
 }
 
 // Factories
@@ -184,8 +179,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
     if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException(
-          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
+      throw FormatException("unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
@@ -220,14 +214,12 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
     if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException(
-          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
+      throw FormatException("unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
     }
     final beforeID = before.id;
     final beforeLastTakenDate = before.lastTakenDate;
     if (beforeID == null || beforeLastTakenDate == null) {
-      throw FormatException(
-          "unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
+      throw FormatException("unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
@@ -286,8 +278,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     final afterID = after.id;
     if (afterID == null || pillSheetGroupID == null) {
-      throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action");
+      throw FormatException("unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action");
     }
 
     return _create(

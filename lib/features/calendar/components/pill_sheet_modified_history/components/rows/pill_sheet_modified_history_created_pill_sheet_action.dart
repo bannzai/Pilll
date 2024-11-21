@@ -19,9 +19,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(
-              pillSheetIDs)),
+      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(pillSheetIDs)),
       detail: const Text(
         "ピルシート追加",
         style: TextStyle(
