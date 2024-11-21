@@ -1,23 +1,21 @@
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
-
 enum LinkAccountType { apple, google }
 
 extension LinkAccountTypeExtension on LinkAccountType {
   String get loginContentName {
     switch (this) {
       case LinkAccountType.apple:
-        return L.appleLogin;
+        return 'Apple';
       case LinkAccountType.google:
-        return L.googleLogin;
+        return 'Google';
     }
   }
 
   String get providerName {
     switch (this) {
       case LinkAccountType.apple:
-        return L.appleProvider;
+        return 'Apple';
       case LinkAccountType.google:
-        return L.googleProvider;
+        return 'Google';
     }
   }
 }
