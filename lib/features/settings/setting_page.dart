@@ -42,6 +42,7 @@ import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
 enum SettingSection {
   account,
@@ -111,7 +112,7 @@ class SettingPageBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: const Text('設定', style: TextStyle(color: TextColor.main)),
+        title: Text(L.of(context).settings, style: const TextStyle(color: TextColor.main)),
         backgroundColor: PilllColors.white,
       ),
       body: Padding(
@@ -124,17 +125,16 @@ class SettingPageBody extends StatelessWidget {
                 switch (section) {
                   case SettingSection.account:
                     return SettingSectionTitle(
-                      text: 'アカウント',
+                      text: L.of(context).account,
                       children: [
-                        const ListExplainRow(
-                            text: '機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。'),
+                        ListExplainRow(text: L.of(context).accountLinkDescription),
                         const AccountLinkRow(),
                         _separator(),
                       ],
                     );
                   case SettingSection.premium:
                     return SettingSectionTitle(
-                      text: 'Pilllプレミアム',
+                      text: L.of(context).pillPremium,
                       children: [
                         if (user.isTrial) ...[
                           ListTile(
