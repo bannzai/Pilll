@@ -15,6 +15,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class DeleteUserButton extends HookConsumerWidget {
   const DeleteUserButton({super.key});
@@ -30,18 +31,18 @@ class DeleteUserButton extends HookConsumerWidget {
         onPressed: () async {
           showDiscardDialog(
             context,
-            title: 'ユーザー情報が削除されます',
-            message: '退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。',
+            title: L.withdrawalCompleted,  // ユーザー情報が削除されますを翻訳
+            message: L.withdraw,  // 退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。を翻訳
             actions: [
               AlertButton(
-                text: 'キャンセル',
+                text: L.cancel,  // キャンセルを翻訳
                 onPressed: () async {
                   analytics.logEvent(name: 'cancel_delete_user');
                   Navigator.of(context).pop();
                 },
               ),
               AlertButton(
-                text: '退会する',
+                text: L.withdraw,  // 退会するを翻訳
                 onPressed: () async {
                   analytics.logEvent(name: 'pressed_delete_user_button');
                   await (
@@ -57,7 +58,7 @@ class DeleteUserButton extends HookConsumerWidget {
             ],
           );
         },
-        text: '退会する',
+        text: L.withdraw,  // 退会するを翻訳
       ),
     );
   }
@@ -81,17 +82,17 @@ class DeleteUserButton extends HookConsumerWidget {
         if (!context.mounted) return;
         showDiscardDialog(
           context,
-          title: '再ログインしてください',
-          message: '退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります',
+          title: L.reLogin,  // 再ログインしてくださいを翻訳
+          message: L.reLogin,  // 退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まりますを翻訳
           actions: [
             AlertButton(
-              text: 'キャンセル',
+              text: L.cancel,  // キャンセルを翻訳
               onPressed: () async {
                 Navigator.of(context).pop();
               },
             ),
             AlertButton(
-              text: '再ログイン',
+              text: L.reLogin,  // 再ログインを翻訳
               onPressed: () async {
                 final navigator = Navigator.of(context);
                 if (isAppleLinked) {
@@ -129,9 +130,9 @@ class _CompletedDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            '退会しました',
-            style: TextStyle(
+          Text(
+            L.withdrawalCompleted,  // 退会しましたを翻訳
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
@@ -140,9 +141,9 @@ class _CompletedDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          const Text(
-            'アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。',
-            style: TextStyle(
+          Text(
+            L.appExitMessage,  // アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。を翻訳
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w400,
@@ -157,7 +158,7 @@ class _CompletedDialog extends StatelessWidget {
               onPressed: () async {
                 exit(0);
               },
-              text: 'OK',
+              text: L.oK,  // OKを翻訳
             ),
           ),
         ],

@@ -26,7 +26,15 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelRelib/features/settings/setting_account_list/setting_account_cooperation_list_page.dart
+lib/features/settings/setting_account_list/components/delete_user_button.dart
+lib/features/settings/today_pill_number/setting_today_pill_number_page.dart
+lib/features/home/home_page.dart
+lib/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart
+lib/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart
+
+
+minderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       title: Text(L.discardAllPillSheets,
           style: const TextStyle(
