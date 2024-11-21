@@ -18,7 +18,7 @@ class TodayPillNumber extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
       leading: const Icon(Icons.today),
-      title: const Text("今日飲むピル番号の変更"),
+      title: const Text('今日飲むピル番号の変更'),
       onTap: () async {
         await Navigator.of(context).push(
           SettingTodayPillNumberPageRoute.route(

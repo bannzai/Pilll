@@ -21,7 +21,7 @@ class TakenPillActionOList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (beforePillSheet.groupIndex != afterPillSheet.groupIndex) {
-      return SvgPicture.asset("images/dots.svg");
+      return SvgPicture.asset('images/dots.svg');
     }
     final count = max(value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
     return Row(
@@ -30,12 +30,12 @@ class TakenPillActionOList extends StatelessWidget {
         children: List.generate(min(count, 4), (index) {
           final inRestDuration = _inRestDuration(afterPillSheet, value.afterLastTakenPillNumber, index);
           if (index == 0) {
-            return inRestDuration ? SvgPicture.asset("images/dash_o.svg") : SvgPicture.asset("images/o.svg");
+            return inRestDuration ? SvgPicture.asset('images/dash_o.svg') : SvgPicture.asset('images/o.svg');
           } else if (index < 3) {
             return _halfOWidgetWithTransform(
-                inRestDuration ? SvgPicture.asset("images/dash_half_o.svg") : SvgPicture.asset("images/half_o.svg"), index);
+                inRestDuration ? SvgPicture.asset('images/dash_half_o.svg') : SvgPicture.asset('images/half_o.svg'), index);
           } else {
-            return _dotsWidgetWithTransform(SvgPicture.asset("images/dots.svg"));
+            return _dotsWidgetWithTransform(SvgPicture.asset('images/dots.svg'));
           }
         }).toList());
   }

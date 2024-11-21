@@ -28,7 +28,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
 
     final estimatedEndPillNumber = pillSheetGroup.sequentialEstimatedEndPillNumber;
     final beginDisplayPillNumber = useState(estimatedEndPillNumber + 1);
-    final textFieldController = useTextEditingController(text: "${beginDisplayPillNumber.value}");
+    final textFieldController = useTextEditingController(text: '${beginDisplayPillNumber.value}');
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,7 +38,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Text(
-              "服用",
+              '服用',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 14,
@@ -74,7 +74,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
                 ),
                 onChanged: (text) {
                   try {
-                    analytics.logEvent(name: "on_changed_display_number", parameters: {"text": text});
+                    analytics.logEvent(name: 'on_changed_display_number', parameters: {'text': text});
                     beginDisplayPillNumber.value = int.parse(text);
                     onChanged(PillSheetGroupDisplayNumberSetting(beginPillNumber: beginDisplayPillNumber.value));
                   } catch (_) {}
@@ -83,7 +83,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
             ),
             const SizedBox(width: 5),
             const Text(
-              "番からスタート",
+              '番からスタート',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 14,
@@ -99,7 +99,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "前回のシートの最後：$estimatedEndPillNumber番",
+              '前回のシートの最後：$estimatedEndPillNumber番',
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 12,

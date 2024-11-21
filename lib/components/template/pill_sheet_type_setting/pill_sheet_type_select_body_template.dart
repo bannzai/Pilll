@@ -63,9 +63,9 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   Widget _pillSheet(PillSheetType type) {
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: "pill_sheet_type_selected", parameters: {
-          "pill_sheet_type": type.toString(),
-          "pill_sheet_name": type.fullName,
+        analytics.logEvent(name: 'pill_sheet_type_selected', parameters: {
+          'pill_sheet_type': type.toString(),
+          'pill_sheet_name': type.fullName,
         });
         onSelect(type);
       },

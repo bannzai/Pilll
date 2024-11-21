@@ -15,7 +15,7 @@ class PremiumBadge extends StatelessWidget {
         color: PilllColors.gold,
         borderRadius: BorderRadius.circular(41),
       ),
-      child: const Text("Premium",
+      child: const Text('Premium',
           style: TextStyle(
             color: TextColor.white,
             fontFamily: FontFamily.number,

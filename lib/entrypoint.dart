@@ -78,7 +78,7 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
     }
 
     try {
-      analytics.logEvent(name: "handle_notification_action");
+      analytics.logEvent(name: 'handle_notification_action');
 
       final database = DatabaseConnection(firebaseUser.uid);
 
@@ -107,8 +107,8 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
       // errorLoggerに記録した後に実行する。これも失敗する可能性がある
       await localNotificationService.plugin.show(
         fallbackNotificationIdentifier,
-        "服用記録が失敗した可能性があります",
-        "アプリを開いてご確認ください",
+        '服用記録が失敗した可能性があります',
+        'アプリを開いてご確認ください',
         null,
       );
     }

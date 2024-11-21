@@ -114,7 +114,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   }) {
     final activePillSheet = pillSheetGroup.activePillSheet;
     if (activePillSheet == null) {
-      throw const FormatException("pill sheet not found");
+      throw const FormatException('pill sheet not found');
     }
     if (activePillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
@@ -160,7 +160,7 @@ bool shouldPillMarkAnimation({
   }
   final activePillSheet = pillSheetGroup.activePillSheet;
   if (activePillSheet == null) {
-    throw const FormatException("pill sheet not found");
+    throw const FormatException('pill sheet not found');
   }
   if (activePillSheet.groupIndex < pillSheet.groupIndex) {
     return false;

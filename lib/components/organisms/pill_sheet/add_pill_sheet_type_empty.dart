@@ -17,13 +17,13 @@ class AddPillSheetTypeEmpty extends HookConsumerWidget {
       child: Column(
         children: [
           const SizedBox(height: 80),
-          SvgPicture.asset("images/empty_pill_sheet_type.svg"),
+          SvgPicture.asset('images/empty_pill_sheet_type.svg'),
           const SizedBox(height: 24),
           SizedBox(
             width: 180,
             child: PrimaryButton(
                 onPressed: () async {
-                  analytics.logEvent(name: "empty_pill_sheet_type");
+                  analytics.logEvent(name: 'empty_pill_sheet_type');
                   showSettingPillSheetGroupSelectPillSheetTypePage(
                     context: context,
                     pillSheetType: null,
@@ -32,7 +32,7 @@ class AddPillSheetTypeEmpty extends HookConsumerWidget {
                     },
                   );
                 },
-                text: "ピルの種類を選ぶ"),
+                text: 'ピルの種類を選ぶ'),
           ),
         ],
       ),

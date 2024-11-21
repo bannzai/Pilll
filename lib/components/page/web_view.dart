@@ -53,7 +53,7 @@ extension WebViewPageRoute on WebViewPage {
     required String url,
   }) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "WebViewPage"),
+      settings: const RouteSettings(name: 'WebViewPage'),
       builder: (_) => WebViewPage(title: title, url: url),
     );
   }

@@ -87,7 +87,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                     decoration: const BoxDecoration(
                       color: Colors.transparent,
                       image: DecorationImage(
-                        image: AssetImage("images/premium_background.png"),
+                        image: AssetImage('images/premium_background.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -123,10 +123,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         AlertButton(
                             onPressed: () async {
-                              analytics.logEvent(name: "pressed_premium_functions_on_sheet");
+                              analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
                               await launchUrl(Uri.parse(preimumLink));
                             },
-                            text: "プレミアム機能を見る"),
+                            text: 'プレミアム機能を見る'),
                         const SizedBox(height: 24),
                         PremiumIntroductionFotter(
                           isLoading: isLoading,
@@ -155,14 +155,14 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 Future<void> showPremiumIntroductionSheet(BuildContext context) async {
   final premiumIntroductionPattern = remoteConfig.getString(RemoteConfigKeys.premiumIntroductionPattern);
   switch (premiumIntroductionPattern) {
-    case "B":
+    case 'B':
       await _showPremiumIntroductionSheetB(context);
       break;
-    case "C":
+    case 'C':
       await _showPremiumIntroductionSheetC(context);
       break;
     default:
-      analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet");
+      analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheet');
 
       await showModalBottomSheet(
         context: context,
@@ -175,7 +175,7 @@ Future<void> showPremiumIntroductionSheet(BuildContext context) async {
 }
 
 Future<void> _showPremiumIntroductionSheetC(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheetC");
+  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheetC');
 
   await showModalBottomSheet(
     context: context,
@@ -186,7 +186,7 @@ Future<void> _showPremiumIntroductionSheetC(BuildContext context) async {
 }
 
 Future<void> _showPremiumIntroductionSheetB(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheetB");
+  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheetB');
 
   await showModalBottomSheet(
     context: context,

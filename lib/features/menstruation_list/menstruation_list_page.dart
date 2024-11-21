@@ -27,7 +27,7 @@ class MenstruationListPage extends HookConsumerWidget {
         ),
         centerTitle: false,
         title:
-            const Text("生理履歴", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
+            const Text('生理履歴', style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         backgroundColor: PilllColors.white,
         elevation: 0,
       ),
@@ -55,7 +55,7 @@ class MenstruationListPage extends HookConsumerWidget {
 extension MenstruationListPageRoute on MenstruationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "MenstruationListPage"),
+      settings: const RouteSettings(name: 'MenstruationListPage'),
       builder: (_) => const MenstruationListPage(),
     );
   }

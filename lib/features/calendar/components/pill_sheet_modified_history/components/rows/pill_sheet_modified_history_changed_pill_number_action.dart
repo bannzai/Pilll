@@ -31,7 +31,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
         afterTodayPillNumber: afterTodayPillNumber,
       )),
       detail: const Text(
-        "ピル番号変更",
+        'ピル番号変更',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

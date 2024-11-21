@@ -10,14 +10,14 @@ part 'user.codegen.freezed.dart';
 class UserNotFound implements Exception {
   @override
   String toString() {
-    return "user not found";
+    return 'user not found';
   }
 }
 
 class UserAlreadyExists implements Exception {
   @override
   String toString() {
-    return "user already exists";
+    return 'user already exists';
   }
 }
 
@@ -27,11 +27,11 @@ extension UserPrivateFirestoreFieldKeys on String {
   static const isLinkedApple = 'isLinkedApple';
   static const googleEmail = 'googleEmail';
   static const isLinkedGoogle = 'isLinkedGoogle';
-  static const latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
-  static const originalPurchaseDate = "originalPurchaseDate";
-  static const activeSubscriptions = "activeSubscriptions";
-  static const entitlementIdentifier = "entitlementIdentifier";
-  static const premiumFunctionSurvey = "premiumFunctionSurvey";
+  static const latestPremiumPlanIdentifier = 'latestPremiumPlanIdentifier';
+  static const originalPurchaseDate = 'originalPurchaseDate';
+  static const activeSubscriptions = 'activeSubscriptions';
+  static const entitlementIdentifier = 'entitlementIdentifier';
+  static const premiumFunctionSurvey = 'premiumFunctionSurvey';
 }
 
 @freezed
@@ -44,27 +44,27 @@ class UserPrivate with _$UserPrivate {
 }
 
 extension UserFirestoreFieldKeys on String {
-  static const userDocumentIDSets = "userDocumentIDSets";
-  static const anonymousUserIDSets = "anonymousUserIDSets";
-  static const firebaseCurrentUserIDSets = "firebaseCurrentUserIDSets";
-  static const userIDWhenCreateUser = "userIDWhenCreateUser";
-  static const anonymousUserID = "anonymousUserID";
-  static const settings = "settings";
-  static const packageInfo = "packageInfo";
-  static const isAnonymous = "isAnonymous";
-  static const isPremium = "isPremium";
-  static const purchaseAppID = "purchaseAppID";
-  static const beginTrialDate = "beginTrialDate";
-  static const trialDeadlineDate = "trialDeadlineDate";
-  static const discountEntitlementDeadlineDate = "discountEntitlementDeadlineDate";
-  static const shouldAskCancelReason = "shouldAskCancelReason";
+  static const userDocumentIDSets = 'userDocumentIDSets';
+  static const anonymousUserIDSets = 'anonymousUserIDSets';
+  static const firebaseCurrentUserIDSets = 'firebaseCurrentUserIDSets';
+  static const userIDWhenCreateUser = 'userIDWhenCreateUser';
+  static const anonymousUserID = 'anonymousUserID';
+  static const settings = 'settings';
+  static const packageInfo = 'packageInfo';
+  static const isAnonymous = 'isAnonymous';
+  static const isPremium = 'isPremium';
+  static const purchaseAppID = 'purchaseAppID';
+  static const beginTrialDate = 'beginTrialDate';
+  static const trialDeadlineDate = 'trialDeadlineDate';
+  static const discountEntitlementDeadlineDate = 'discountEntitlementDeadlineDate';
+  static const shouldAskCancelReason = 'shouldAskCancelReason';
 
   // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
   // アプリを開かないとトライアルが終了しなくなることについては許容する
-  static const isTrial = "isTrial";
+  static const isTrial = 'isTrial';
 
   // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
-  static const useLocalNotificationForNewPillSheet = "useLocalNotificationForNewPillSheet";
+  static const useLocalNotificationForNewPillSheet = 'useLocalNotificationForNewPillSheet';
 }
 
 @freezed
@@ -73,7 +73,7 @@ class User with _$User {
   @JsonSerializable(explicitToJson: true)
   const factory User({
     String? id,
-    @JsonKey(name: "settings") Setting? setting,
+    @JsonKey(name: 'settings') Setting? setting,
     String? userIDWhenCreateUser,
     String? anonymousUserID,
     @Default([]) List<String> userDocumentIDSets,

@@ -38,7 +38,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "表示モード",
+              '表示モード',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
@@ -58,7 +58,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.date,
-                  text: "日付表示",
+                  text: '日付表示',
                   isPremiumFunction: true,
                 ),
                 _row(
@@ -70,7 +70,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.number,
-                  text: "ピル番号",
+                  text: 'ピル番号',
                   isPremiumFunction: false,
                 ),
                 _row(
@@ -82,7 +82,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.sequential,
-                  text: "服用日数",
+                  text: '服用日数',
                   isPremiumFunction: false,
                 ),
                 _row(
@@ -94,7 +94,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.cyclicSequential,
-                  text: "服用日数(周期)",
+                  text: '服用日数(周期)',
                   isPremiumFunction: false,
                 ),
               ],
@@ -120,8 +120,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     return GestureDetector(
       onTap: () async {
         analytics.logEvent(
-          name: "did_select_pill_sheet_appearance",
-          parameters: {"mode": mode.toString(), "isPremiumFunction": isPremiumFunction},
+          name: 'did_select_pill_sheet_appearance',
+          parameters: {'mode': mode.toString(), 'isPremiumFunction': isPremiumFunction},
         );
 
         if (user.isPremium || user.isTrial) {
@@ -169,7 +169,7 @@ void showSelectAppearanceModeModal(
   required User user,
   required PillSheetGroup pillSheetGroup,
 }) {
-  analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
+  analytics.setCurrentScreen(screenName: 'SelectAppearanceModeModal');
   showModalBottomSheet(
     context: context,
     builder: (context) => SelectAppearanceModeModal(

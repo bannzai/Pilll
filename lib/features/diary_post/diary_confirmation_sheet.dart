@@ -64,31 +64,31 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
             style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         const Spacer(),
         IconButton(
-          icon: SvgPicture.asset("images/edit.svg"),
+          icon: SvgPicture.asset('images/edit.svg'),
           onPressed: () {
             Navigator.of(context).push(DiaryPostPageRoute.route(diary.date, diary));
           },
         ),
         const SizedBox(width: 12),
         IconButton(
-          icon: SvgPicture.asset("images/trash.svg"),
+          icon: SvgPicture.asset('images/trash.svg'),
           onPressed: () {
             showDialog(
                 context: context,
                 builder: (context) {
                   return DiscardDialog(
-                    title: "日記を削除します",
-                    message: const Text("削除された日記は復元ができません",
+                    title: '日記を削除します',
+                    message: const Text('削除された日記は復元ができません',
                         style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
                     actions: [
                       AlertButton(
-                        text: "キャンセル",
+                        text: 'キャンセル',
                         onPressed: () async {
                           Navigator.of(context).pop();
                         },
                       ),
                       AlertButton(
-                        text: "削除する",
+                        text: '削除する',
                         onPressed: () async {
                           int counter = 0;
                           final navigator = Navigator.of(context);
@@ -111,9 +111,9 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset("images/laugh.svg", colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset('images/laugh.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/angry.svg", colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset('images/angry.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
       default:
         return Container();
     }
@@ -122,7 +122,7 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalCondition(Diary diary) {
     return Row(
       children: [
-        const Text("体調",
+        const Text('体調',
             style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w300,
@@ -166,7 +166,7 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       width: 32,
       height: 32,
       decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
-      child: SvgPicture.asset("images/heart.svg", colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn)),
+      child: SvgPicture.asset('images/heart.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn)),
     );
   }
 

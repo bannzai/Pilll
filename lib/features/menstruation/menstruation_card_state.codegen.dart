@@ -18,9 +18,9 @@ class MenstruationCardState with _$MenstruationCardState {
   }) {
     final diff = daysBetween(today(), nextSchedule);
     return MenstruationCardState(
-      title: "生理予定日",
+      title: '生理予定日',
       scheduleDate: nextSchedule,
-      countdownString: "あと$diff日",
+      countdownString: 'あと$diff日',
     );
   }
 
@@ -29,9 +29,9 @@ class MenstruationCardState with _$MenstruationCardState {
   }) {
     final diff = daysBetween(scheduledDate, today());
     return MenstruationCardState(
-      title: "生理予定日",
+      title: '生理予定日',
       scheduleDate: scheduledDate,
-      countdownString: "生理予定：${diff + 1}日目",
+      countdownString: '生理予定：${diff + 1}日目',
     );
   }
 
@@ -39,8 +39,8 @@ class MenstruationCardState with _$MenstruationCardState {
     required Menstruation menstruation,
   }) =>
       MenstruationCardState(
-        title: "生理開始日",
+        title: '生理開始日',
         scheduleDate: menstruation.beginDate,
-        countdownString: "${daysBetween(menstruation.beginDate, today()) + 1}日目",
+        countdownString: '${daysBetween(menstruation.beginDate, today()) + 1}日目',
       );
 }

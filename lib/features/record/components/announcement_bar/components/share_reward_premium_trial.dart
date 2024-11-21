@@ -29,7 +29,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
       color: PilllColors.primary,
       child: GestureDetector(
         onTap: () async {
-          analytics.logEvent(name: "pressed_share_reward_announcement_bar");
+          analytics.logEvent(name: 'pressed_share_reward_announcement_bar');
 
           _showPicker(context, (shareToSNSKind) async {
             try {
@@ -48,7 +48,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const SizedBox(width: 24),
             const Spacer(),
             const Text(
-              "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！",
+              'プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
@@ -59,7 +59,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             ),
             const Spacer(),
             SvgPicture.asset(
-              "images/arrow_right.svg",
+              'images/arrow_right.svg',
               colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               width: 16,
               height: 16,
@@ -84,7 +84,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const Padding(
               padding: EdgeInsets.only(top: 10),
               child: Text(
-                "どちらにシェアしますか？",
+                'どちらにシェアしますか？',
                 style: TextStyle(
                   color: TextColor.main,
                   fontFamily: FontFamily.japanese,

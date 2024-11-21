@@ -82,7 +82,7 @@ class CalendarDayTile extends StatelessWidget {
             child: Align(
                 alignment: Alignment.center,
                 child: Text(
-                  "${date.day}",
+                  '${date.day}',
                   textAlign: TextAlign.center,
                   style: TextStyle(color: _textColor()).merge(_font()),
                 )),

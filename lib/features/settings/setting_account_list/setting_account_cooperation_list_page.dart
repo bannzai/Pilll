@@ -44,7 +44,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 Container(
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: const Text(
-                    "アカウント登録",
+                    'アカウント登録',
                     style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
@@ -72,17 +72,17 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
 
                     showDiscardDialog(
                       context,
-                      title: "認証情報を更新します",
-                      message: "再度ログインをして認証情報を更新します",
+                      title: '認証情報を更新します',
+                      message: '再度ログインをして認証情報を更新します',
                       actions: [
                         AlertButton(
-                          text: "キャンセル",
+                          text: 'キャンセル',
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
                         ),
                         AlertButton(
-                          text: "再ログイン",
+                          text: '再ログイン',
                           onPressed: () async {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
@@ -94,7 +94,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               messenger.showSnackBar(
                                 const SnackBar(
                                   duration: Duration(seconds: 2),
-                                  content: Text("認証情報を更新しました"),
+                                  content: Text('認証情報を更新しました'),
                                 ),
                               );
                               navigator.pop();
@@ -126,17 +126,17 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     );
                     showDiscardDialog(
                       context,
-                      title: "認証情報を更新します",
-                      message: "再度ログインをして認証情報を更新します",
+                      title: '認証情報を更新します',
+                      message: '再度ログインをして認証情報を更新します',
                       actions: [
                         AlertButton(
-                          text: "キャンセル",
+                          text: 'キャンセル',
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
                         ),
                         AlertButton(
-                          text: "再ログイン",
+                          text: '再ログイン',
                           onPressed: () async {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
@@ -148,7 +148,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               messenger.showSnackBar(
                                 const SnackBar(
                                   duration: Duration(seconds: 2),
-                                  content: Text("認証情報を更新しました"),
+                                  content: Text('認証情報を更新しました'),
                                 ),
                               );
                               navigator.pop();
@@ -180,7 +180,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             duration: snackBarDuration,
-            content: Text("${accountType.providerName}で登録しました"),
+            content: Text('${accountType.providerName}で登録しました'),
           ),
         );
         await Future.delayed(snackBarDuration);
@@ -192,7 +192,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
 extension SettingAccountCooperationListPageRoute on SettingAccountCooperationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "SettingAccountCooperationListPage"),
+      settings: const RouteSettings(name: 'SettingAccountCooperationListPage'),
       builder: (_) => const SettingAccountCooperationListPage(),
     );
   }
@@ -240,9 +240,9 @@ class SettingAccountCooperationRow extends StatelessWidget {
       return Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SvgPicture.asset("images/checkmark_green.svg"),
+          SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          const Text("連携済み",
+          const Text('連携済み',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
@@ -259,7 +259,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
           onPressed: () async {
             onTap();
           },
-          text: "連携する",
+          text: '連携する',
         ),
       );
     }

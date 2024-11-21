@@ -66,10 +66,10 @@ class _Page extends HookConsumerWidget {
             onPressed: () => Navigator.of(context).pop(),
           ),
           backgroundColor: PilllColors.white,
-          title: const Text("前回のピルシートグループ"),
+          title: const Text('前回のピルシートグループ'),
           foregroundColor: TextColor.main,
         ),
-        body: const Center(child: Text("前回のピルシートグループがまだ存在しません")),
+        body: const Center(child: Text('前回のピルシートグループがまだ存在しません')),
       );
     }
 
@@ -95,7 +95,7 @@ class _Page extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: PilllColors.white,
-        title: const Text("前回のピルシートグループ"),
+        title: const Text('前回のピルシートグループ'),
         foregroundColor: TextColor.main,
       ),
       body: SingleChildScrollView(
@@ -104,7 +104,7 @@ class _Page extends HookConsumerWidget {
           children: [
             const SizedBox(height: 40),
             Text(
-              "$begin ~ $end",
+              '$begin ~ $end',
               textAlign: TextAlign.center,
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
             ),
@@ -161,7 +161,7 @@ class _Page extends HookConsumerWidget {
 extension BeforePillSheetGroupHistoryPageRoute on BeforePillSheetGroupHistoryPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "BeforePillSheetGroupHistoryPage"),
+      settings: const RouteSettings(name: 'BeforePillSheetGroupHistoryPage'),
       builder: (_) => const BeforePillSheetGroupHistoryPage(),
     );
   }

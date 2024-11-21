@@ -36,7 +36,7 @@ class SchedulePostPage extends HookConsumerWidget {
       data: (data) => _SchedulePostPage(
         date: date,
         user: data.$1,
-        schedule: data.$2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
+        schedule: data.$2.firstOrNull ?? Schedule(title: '', localNotification: null, date: date, createdDateTime: DateTime.now()),
       ),
       error: (error, _) => UniversalErrorPage(
         error: error,
@@ -109,7 +109,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                             title.value = text;
                           },
                           decoration: const InputDecoration(
-                            hintText: "通院する",
+                            hintText: '通院する',
                             border: OutlineInputBorder(),
                           ),
                           controller: textEditingController,
@@ -120,7 +120,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                         ),
                       ),
                       SwitchListTile(
-                        title: const Text("当日9:00に通知を受け取る",
+                        title: const Text('当日9:00に通知を受け取る',
                             style: TextStyle(
                               fontFamily: FontFamily.roboto,
                               fontWeight: FontWeight.w300,
@@ -129,7 +129,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                         activeColor: PilllColors.secondary,
                         onChanged: (bool value) {
                           analytics.logEvent(
-                            name: "schedule_post_remind_toggle",
+                            name: 'schedule_post_remind_toggle',
                           );
                           isOnRemind.value = value;
                         },
@@ -146,7 +146,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                   doneButton: AlertButton(
                     text: '完了',
                     onPressed: () async {
-                      analytics.logEvent(name: "schedule_post_toolbar_done");
+                      analytics.logEvent(name: 'schedule_post_toolbar_done');
                       focusNode.unfocus();
                     },
                   ),
@@ -155,11 +155,11 @@ class _SchedulePostPage extends HookConsumerWidget {
               const Spacer(),
               if (date.date().isAfter(today())) ...[
                 PrimaryButton(
-                  text: "保存",
+                  text: '保存',
                   onPressed: isInvalid()
                       ? null
                       : () async {
-                          analytics.logEvent(name: "schedule_post_pressed");
+                          analytics.logEvent(name: 'schedule_post_pressed');
                           final navigator = Navigator.of(context);
 
                           try {
@@ -199,22 +199,22 @@ class _SchedulePostPage extends HookConsumerWidget {
               ],
               if (scheduleID != null)
                 AppOutlinedButton(
-                  text: "削除",
+                  text: '削除',
                   onPressed: () async {
-                    analytics.logEvent(name: "schedule_delete_pressed");
+                    analytics.logEvent(name: 'schedule_delete_pressed');
                     showDiscardDialog(
                       context,
-                      title: "予定を削除します",
-                      message: "削除された予定は復元ができません",
+                      title: '予定を削除します',
+                      message: '削除された予定は復元ができません',
                       actions: [
                         AlertButton(
-                          text: "キャンセル",
+                          text: 'キャンセル',
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
                         ),
                         AlertButton(
-                          text: "削除する",
+                          text: '削除する',
                           onPressed: () async {
                             final navigator = Navigator.of(context);
                             try {
@@ -246,7 +246,7 @@ class _SchedulePostPage extends HookConsumerWidget {
 extension SchedulePostPageRoute on SchedulePostPage {
   static Route<dynamic> route(DateTime date) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "SchedulePostPage"),
+      settings: const RouteSettings(name: 'SchedulePostPage'),
       builder: (_) => SchedulePostPage(date: date),
       fullscreenDialog: true,
     );

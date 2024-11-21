@@ -34,7 +34,7 @@ class DateRange {
 
   @override
   String toString() {
-    return "begin: $_begin, end: $_end";
+    return 'begin: $_begin, end: $_end';
   }
 
   @override

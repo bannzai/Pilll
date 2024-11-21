@@ -4,7 +4,7 @@ part 'package.codegen.g.dart';
 part 'package.codegen.freezed.dart';
 
 class PackageFirestoreKey {
-  static const latestOS = "latestOS";
+  static const latestOS = 'latestOS';
 }
 
 @freezed

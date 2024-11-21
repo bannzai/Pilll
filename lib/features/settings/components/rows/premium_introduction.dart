@@ -17,14 +17,14 @@ class PremiumIntroductionRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        analytics.logEvent(name: "tapped_premium_introduction_row");
+        analytics.logEvent(name: 'tapped_premium_introduction_row');
         showPremiumIntroductionSheet(context);
       },
       title: Row(
         children: [
-          SvgPicture.asset("images/crown.svg", width: 24),
+          SvgPicture.asset('images/crown.svg', width: 24),
           const SizedBox(width: 8),
-          const Text("プレミアムプランを見る",
+          const Text('プレミアムプランを見る',
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,

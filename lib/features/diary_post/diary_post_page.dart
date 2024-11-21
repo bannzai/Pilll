@@ -53,7 +53,7 @@ class DiaryPostPage extends HookConsumerWidget {
 extension DiaryPostPageRoute on DiaryPostPage {
   static Route<dynamic> route(DateTime date, Diary? diary) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "DiaryPostPage"),
+      settings: const RouteSettings(name: 'DiaryPostPage'),
       builder: (_) => DiaryPostPage(date, diary),
       fullscreenDialog: true,
     );
@@ -105,9 +105,9 @@ class DiaryPostPageBody extends HookConsumerWidget {
         ),
         actions: [
           AlertButton(
-              text: "保存",
+              text: '保存',
               onPressed: () async {
-                analytics.logEvent(name: "diary_post_button_tapped");
+                analytics.logEvent(name: 'diary_post_button_tapped');
 
                 final navigator = Navigator.of(context);
                 await setDiary(diary.copyWith(
@@ -154,7 +154,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 doneButton: AlertButton(
                   text: '完了',
                   onPressed: () async {
-                    analytics.logEvent(name: "post_diary_done_button_pressed");
+                    analytics.logEvent(name: 'post_diary_done_button_pressed');
                     focusNode.unfocus();
                   },
                 ),

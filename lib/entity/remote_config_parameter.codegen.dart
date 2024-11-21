@@ -4,13 +4,13 @@ part 'remote_config_parameter.codegen.freezed.dart';
 part 'remote_config_parameter.codegen.g.dart';
 
 abstract class RemoteConfigKeys {
-  static const isPaywallFirst = "isPaywallFirst";
-  static const skipInitialSetting = "skipInitialSetting";
-  static const trialDeadlineDateOffsetDay = "trialDeadlineDateOffsetDay";
-  static const discountEntitlementOffsetDay = "discountEntitlementOffsetDay";
-  static const discountCountdownBoundaryHour = "discountCountdownBoundaryHour";
-  static const releasedVersion = "releasedVersion";
-  static const premiumIntroductionPattern = "premiumIntroductionPattern";
+  static const isPaywallFirst = 'isPaywallFirst';
+  static const skipInitialSetting = 'skipInitialSetting';
+  static const trialDeadlineDateOffsetDay = 'trialDeadlineDateOffsetDay';
+  static const discountEntitlementOffsetDay = 'discountEntitlementOffsetDay';
+  static const discountCountdownBoundaryHour = 'discountCountdownBoundaryHour';
+  static const releasedVersion = 'releasedVersion';
+  static const premiumIntroductionPattern = 'premiumIntroductionPattern';
 }
 
 abstract class RemoteConfigParameterDefaultValues {
@@ -19,9 +19,9 @@ abstract class RemoteConfigParameterDefaultValues {
   static const trialDeadlineDateOffsetDay = 45;
   static const discountEntitlementOffsetDay = 2;
   static const discountCountdownBoundaryHour = 48;
-  static const releasedVersion = "202407.29.133308";
+  static const releasedVersion = '202407.29.133308';
   // default(A) or B or C ...
-  static const premiumIntroductionPattern = "default";
+  static const premiumIntroductionPattern = 'default';
 }
 
 @freezed

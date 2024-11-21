@@ -48,7 +48,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: "pilll_ads_image_tapped");
+          analytics.logEvent(name: 'pilll_ads_image_tapped');
           launchUrl(Uri.parse(pilllAds.destinationURL));
         },
         child: Stack(
@@ -66,7 +66,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                     size: 24,
                   ),
                   onPressed: () {
-                    analytics.logEvent(name: "pilll_ads_image_is_closed");
+                    analytics.logEvent(name: 'pilll_ads_image_is_closed');
                     onClose();
                   },
                   iconSize: 24,
@@ -74,7 +74,7 @@ class PilllAdsImageAnnouncementBar extends StatelessWidget {
                 ),
                 const Spacer(),
                 SvgPicture.asset(
-                  "images/arrow_right.svg",
+                  'images/arrow_right.svg',
                   colorFilter: ColorFilter.mode(
                     HexColor.fromHex(pilllAds.chevronRightColor),
                     BlendMode.srcIn,
@@ -112,7 +112,7 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       child: GestureDetector(
         onTap: () {
-          analytics.logEvent(name: "pilll_ads_text_tapped");
+          analytics.logEvent(name: 'pilll_ads_text_tapped');
           launchUrl(Uri.parse(pilllAds.destinationURL));
         },
         child: Row(
@@ -126,7 +126,7 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
                 size: 24,
               ),
               onTap: () {
-                analytics.logEvent(name: "pilll_ads_text_is_closed");
+                analytics.logEvent(name: 'pilll_ads_text_is_closed');
                 onClose();
               },
             ),
@@ -134,7 +134,7 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
             Expanded(
               child: Column(
                 children: [
-                  for (final w in pilllAds.description.split("\\n"))
+                  for (final w in pilllAds.description.split('\\n'))
                     Text(
                       w,
                       style: const TextStyle(
@@ -151,7 +151,7 @@ class PilllAdsTextAnnouncementBar extends StatelessWidget {
             ),
             const SizedBox(width: 10),
             SvgPicture.asset(
-              "images/arrow_right.svg",
+              'images/arrow_right.svg',
               colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               height: 20,
               width: 20,

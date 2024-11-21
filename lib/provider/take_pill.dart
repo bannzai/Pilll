@@ -76,7 +76,7 @@ class TakePill {
     if (updatedIndexses.isEmpty) {
       // NOTE: prevent error for unit test
       if (Firebase.apps.isNotEmpty) {
-        errorLogger.recordError(const FormatException("unexpected updatedIndexes is empty"), StackTrace.current);
+        errorLogger.recordError(const FormatException('unexpected updatedIndexes is empty'), StackTrace.current);
       }
       return null;
     }

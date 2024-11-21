@@ -45,7 +45,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
     final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: "tapped_history_taken_action");
+        analytics.logEvent(name: 'tapped_history_taken_action');
 
         if (premiumOrTrial) {
           showModalBottomSheet(
@@ -54,7 +54,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
               return DateAndTimePicker(
                 initialDateTime: estimatedEventCausingDate,
                 done: (dateTime) async {
-                  analytics.logEvent(name: "selected_date_taken_history", parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
+                  analytics.logEvent(name: 'selected_date_taken_history', parameters: {'hour': dateTime.hour, 'minute': dateTime.minute});
 
                   try {
                     final messenger = ScaffoldMessenger.of(context);
@@ -70,7 +70,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                     messenger.showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
-                        content: Text("$dateに変更しました"),
+                        content: Text('$dateに変更しました'),
                       ),
                     );
                     navigator.pop();

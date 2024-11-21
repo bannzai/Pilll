@@ -26,7 +26,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     final changeRestDuration = ref.watch(changeRestDurationProvider);
 
     String format(DateTime dateTime) {
-      return "${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.weekday(dateTime)})";
+      return '${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.weekday(dateTime)})';
     }
 
     final begin = format(restDuration.beginDate);
@@ -38,7 +38,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           duration: Duration(
             seconds: 2,
           ),
-          content: Text("服用お休みを変更しました"),
+          content: Text('服用お休みを変更しました'),
         ),
       );
 
@@ -53,11 +53,11 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     if (end == null) {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
-        title: const Text("服用お休み開始日を編集"),
+        title: const Text('服用お休み開始日を編集'),
         subtitle: Text(begin),
         onTap: () async {
-          analytics.logEvent(name: "change_manual_rest_duration_day", parameters: {
-            "rest_duration_id": restDuration.id,
+          analytics.logEvent(name: 'change_manual_rest_duration_day', parameters: {
+            'rest_duration_id': restDuration.id,
           });
 
           // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
@@ -68,8 +68,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: "服用お休み開始日を選択",
-            fieldLabelText: "服用お休み開始日",
+            helpText: '服用お休み開始日を選択',
+            fieldLabelText: '服用お休み開始日',
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
             },
@@ -102,11 +102,11 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     } else {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
-        title: const Text("服用お休み期間を編集"),
-        subtitle: Text("$begin - $end"),
+        title: const Text('服用お休み期間を編集'),
+        subtitle: Text('$begin - $end'),
         onTap: () async {
-          analytics.logEvent(name: "change_manual_rest_duration_range", parameters: {
-            "rest_duration_id": restDuration.id,
+          analytics.logEvent(name: 'change_manual_rest_duration_range', parameters: {
+            'rest_duration_id': restDuration.id,
           });
 
           // NOTE: DatePickerの表示制御により、最後に服用記録をつけた日付+1以上の日付は選択できない
@@ -117,9 +117,9 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialDateRange: restDuration.dateTimeRange,
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: "服用お休み期間を選択",
-            fieldStartHintText: "服用お休み開始日",
-            fieldEndLabelText: "服用お休み終了日",
+            helpText: '服用お休み期間を選択',
+            fieldStartHintText: '服用お休み開始日',
+            fieldEndLabelText: '服用お休み終了日',
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
             },

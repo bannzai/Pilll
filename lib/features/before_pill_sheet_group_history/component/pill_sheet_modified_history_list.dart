@@ -25,7 +25,7 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
             );
           },
           loading: () => const Indicator(),
-          error: (e, _) => Text("服用履歴情報の取得に失敗しました。${e.toString()}"),
+          error: (e, _) => Text('服用履歴情報の取得に失敗しました。${e.toString()}'),
         );
   }
 }

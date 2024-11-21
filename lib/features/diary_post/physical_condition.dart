@@ -18,7 +18,7 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("体調", style: sectionTitle),
+        const Text('体調', style: sectionTitle),
         const Spacer(),
         Container(
           height: 48,
@@ -37,7 +37,7 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
                   color: physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
-                    icon: SvgPicture.asset("images/angry.svg",
+                    icon: SvgPicture.asset('images/angry.svg',
                         colorFilter: ColorFilter.mode(
                             physicalCondition.value == PhysicalConditionStatus.bad ? PilllColors.primary : TextColor.darkGray, BlendMode.srcIn)),
                     onPressed: () {
@@ -55,7 +55,7 @@ class DiaryPostPhysicalCondition extends StatelessWidget {
                   color: physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.thinSecondary : Colors.transparent,
                 ),
                 child: IconButton(
-                    icon: SvgPicture.asset("images/laugh.svg",
+                    icon: SvgPicture.asset('images/laugh.svg',
                         colorFilter: ColorFilter.mode(
                             physicalCondition.value == PhysicalConditionStatus.fine ? PilllColors.primary : TextColor.darkGray, BlendMode.srcIn)),
                     onPressed: () {

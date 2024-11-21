@@ -24,7 +24,7 @@ class DailyTakenMessageTextField extends StatelessWidget {
           borderSide: BorderSide(color: PilllColors.secondary),
         ),
         label: const Text(
-          "通常",
+          '通常',
           style: TextStyle(
             color: TextColor.darkGray,
             fontFamily: FontFamily.japanese,
@@ -34,13 +34,13 @@ class DailyTakenMessageTextField extends StatelessWidget {
         ),
         counter: Row(children: [
           const Text(
-            "飲み忘れていない場合の通知文言を変更できます",
+            '飲み忘れていない場合の通知文言を変更できます',
             style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
           if (dailyTakenMessage.value.characters.isNotEmpty)
             Text(
-              "${dailyTakenMessage.value.characters.length}/100",
+              '${dailyTakenMessage.value.characters.length}/100',
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
         ]),

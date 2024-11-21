@@ -25,7 +25,7 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(value)),
       detail: const Text(
-        "服用日数の終わりを変更",
+        '服用日数の終わりを変更',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

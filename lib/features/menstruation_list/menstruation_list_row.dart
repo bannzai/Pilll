@@ -88,15 +88,15 @@ class MenstruationListRow extends HookConsumerWidget {
   }
 
   String get _dateRange {
-    return "${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)}";
+    return '${DateTimeFormatter.monthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.monthAndDay(menstruation.endDate)}';
   }
 
   String get _duration {
     final menstruationDuration = _menstruationDuration;
     if (menstruationDuration == null) {
-      return "-";
+      return '-';
     }
-    return "$menstruationDuration日周期";
+    return '$menstruationDuration日周期';
   }
 
   double get _dotLineWidth {

@@ -24,7 +24,7 @@ Future<UserCredential?> signInWithGoogle() async {
   try {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
-      throw const FormatException("Anonymous User not found");
+      throw const FormatException('Anonymous User not found');
     }
     final provider = GoogleAuthProvider().addScope('email');
     return await FirebaseAuth.instance.signInWithProvider(provider);

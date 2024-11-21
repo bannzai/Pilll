@@ -28,7 +28,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
       contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
-        "端末のタイムゾーン($deviceTimezoneName)と同期しますか？",
+        '端末のタイムゾーン($deviceTimezoneName)と同期しますか？',
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -41,7 +41,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const Text(
-            "現在設定されているタイムゾーン",
+            '現在設定されているタイムゾーン',
             style: TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
@@ -51,7 +51,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
           ),
           const SizedBox(height: 12),
           Text(
-            setting.timezoneDatabaseName ?? "Asia/Tokyo",
+            setting.timezoneDatabaseName ?? 'Asia/Tokyo',
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
@@ -65,10 +65,10 @@ class TimezoneSettingDialog extends HookConsumerWidget {
         AppOutlinedButton(
           onPressed: () async {
             analytics.logEvent(
-              name: "pressed_timezone_yes",
+              name: 'pressed_timezone_yes',
               parameters: {
-                "user_timezone": setting.timezoneDatabaseName,
-                "device_timezone": deviceTimezoneName,
+                'user_timezone': setting.timezoneDatabaseName,
+                'device_timezone': deviceTimezoneName,
               },
             );
 
@@ -81,17 +81,17 @@ class TimezoneSettingDialog extends HookConsumerWidget {
             }
             navigator.pop();
           },
-          text: "はい",
+          text: 'はい',
         ),
         Center(
           child: AlertButton(
-            text: "いいえ",
+            text: 'いいえ',
             onPressed: () async {
               analytics.logEvent(
-                name: "pressed_timezone_no",
+                name: 'pressed_timezone_no',
                 parameters: {
-                  "user_timezone": setting.timezoneDatabaseName,
-                  "device_timezone": deviceTimezoneName,
+                  'user_timezone': setting.timezoneDatabaseName,
+                  'device_timezone': deviceTimezoneName,
                 },
               );
               Navigator.of(context).pop();

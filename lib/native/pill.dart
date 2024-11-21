@@ -41,7 +41,7 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   FlutterAppBadger.removeBadge();
 
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
-  analytics.logEvent(name: "quick_recorded");
+  analytics.logEvent(name: 'quick_recorded');
 
   return updatedPillSheetGroup;
 }

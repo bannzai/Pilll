@@ -9,7 +9,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/provider/database.dart';
 
-const methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
+const methodChannel = MethodChannel('method.channel.MizukiOhashi.Pilll');
 void definedChannel() {
   methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
@@ -26,7 +26,7 @@ void definedChannel() {
         }
 
         try {
-          analytics.logEvent(name: "handle_recordPill_method_channel");
+          analytics.logEvent(name: 'handle_recordPill_method_channel');
 
           final database = DatabaseConnection(firebaseUser.uid);
 
@@ -55,17 +55,17 @@ void definedChannel() {
           // errorLoggerに記録した後に実行する。これも失敗する可能性がある
           await localNotificationService.plugin.show(
             fallbackNotificationIdentifier,
-            "服用記録が失敗した可能性があります",
-            "アプリを開いてご確認ください",
+            '服用記録が失敗した可能性があります',
+            'アプリを開いてご確認ください',
             null,
           );
         }
         return;
-      case "salvagedOldStartTakenDate":
+      case 'salvagedOldStartTakenDate':
         return salvagedOldStartTakenDate(call.arguments);
-      case "analytics":
-        final name = call.arguments["name"] as String;
-        final parameters = Map<String, dynamic>.from(call.arguments["parameters"]);
+      case 'analytics':
+        final name = call.arguments['name'] as String;
+        final parameters = Map<String, dynamic>.from(call.arguments['parameters']);
         analytics.logEvent(name: name, parameters: parameters);
         break;
       default:

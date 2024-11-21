@@ -52,7 +52,7 @@ class SignInSheet extends HookConsumerWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 const SizedBox(height: 14),
-                SvgPicture.asset("images/draggable_bar.svg", height: 6),
+                SvgPicture.asset('images/draggable_bar.svg', height: 6),
                 const SizedBox(height: 24),
                 Text(_title,
                     textAlign: TextAlign.center,
@@ -99,7 +99,7 @@ class SignInSheet extends HookConsumerWidget {
         ),
       ),
       onPressed: () async {
-        analytics.logEvent(name: "signin_sheet_selected_apple");
+        analytics.logEvent(name: 'signin_sheet_selected_apple');
         isLoading.value = true;
         final navigator = Navigator.of(context);
         try {
@@ -126,7 +126,7 @@ class SignInSheet extends HookConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SvgPicture.asset("images/apple_icon.svg"),
+              SvgPicture.asset('images/apple_icon.svg'),
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
@@ -162,7 +162,7 @@ class SignInSheet extends HookConsumerWidget {
         ),
       ),
       onPressed: () async {
-        analytics.logEvent(name: "signin_sheet_selected_google");
+        analytics.logEvent(name: 'signin_sheet_selected_google');
         isLoading.value = true;
         final navigator = Navigator.of(context);
         try {
@@ -189,7 +189,7 @@ class SignInSheet extends HookConsumerWidget {
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SvgPicture.asset("images/google_icon.svg"),
+              SvgPicture.asset('images/google_icon.svg'),
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
@@ -225,78 +225,78 @@ class SignInSheet extends HookConsumerWidget {
   String get _title {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return "ログイン";
+        return 'ログイン';
       case SignInSheetStateContext.recordPage:
-        return "アカウント登録";
+        return 'アカウント登録';
       case SignInSheetStateContext.premium:
-        return "プレミアム登録の前に…";
+        return 'プレミアム登録の前に…';
       case SignInSheetStateContext.setting:
-        return "アカウント登録";
+        return 'アカウント登録';
     }
   }
 
   String get _message {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます";
+        return 'Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます';
       case SignInSheetStateContext.recordPage:
-        return "アカウント登録するとデータの引き継ぎが可能になります";
+        return 'アカウント登録するとデータの引き継ぎが可能になります';
       case SignInSheetStateContext.premium:
-        return "アカウント情報を保持するため、アカウント登録をお願いします";
+        return 'アカウント情報を保持するため、アカウント登録をお願いします';
       case SignInSheetStateContext.setting:
-        return "アカウント登録するとデータの引き継ぎが可能になります";
+        return 'アカウント登録するとデータの引き継ぎが可能になります';
     }
   }
 
   String get _appleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return "${LinkAccountType.apple.loginContentName}でサインイン";
+        return '${LinkAccountType.apple.loginContentName}でサインイン';
       case SignInSheetStateContext.recordPage:
-        return "${LinkAccountType.apple.loginContentName}で登録";
+        return '${LinkAccountType.apple.loginContentName}で登録';
       case SignInSheetStateContext.premium:
-        return "${LinkAccountType.apple.loginContentName}で登録";
+        return '${LinkAccountType.apple.loginContentName}で登録';
       case SignInSheetStateContext.setting:
-        return "${LinkAccountType.apple.loginContentName}で登録";
+        return '${LinkAccountType.apple.loginContentName}で登録';
     }
   }
 
   String get _googleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return "${LinkAccountType.google.loginContentName}でサインイン";
+        return '${LinkAccountType.google.loginContentName}でサインイン';
       case SignInSheetStateContext.recordPage:
-        return "${LinkAccountType.google.loginContentName}で登録";
+        return '${LinkAccountType.google.loginContentName}で登録';
       case SignInSheetStateContext.premium:
-        return "${LinkAccountType.google.loginContentName}で登録";
+        return '${LinkAccountType.google.loginContentName}で登録';
       case SignInSheetStateContext.setting:
-        return "${LinkAccountType.google.loginContentName}で登録";
+        return '${LinkAccountType.google.loginContentName}で登録';
     }
   }
 
   Future<SignInWithAppleState> _handleApple(LinkApple linkApple) {
     if (_isLoginMode) {
-      analytics.logEvent(name: "signin_sheet_sign_in_apple");
+      analytics.logEvent(name: 'signin_sheet_sign_in_apple');
       return signInWithApple().then((value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined);
     } else {
-      analytics.logEvent(name: "signin_sheet_link_with_apple");
+      analytics.logEvent(name: 'signin_sheet_link_with_apple');
       return callLinkWithApple(linkApple);
     }
   }
 
   Future<SignInWithGoogleState> _handleGoogle(LinkGoogle linkGoogle) {
     if (_isLoginMode) {
-      analytics.logEvent(name: "signin_sheet_sign_in_google");
+      analytics.logEvent(name: 'signin_sheet_sign_in_google');
       return signInWithGoogle().then((value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined);
     } else {
-      analytics.logEvent(name: "signin_sheet_link_with_google");
+      analytics.logEvent(name: 'signin_sheet_link_with_google');
       return callLinkWithGoogle(linkGoogle);
     }
   }
 }
 
 void showSignInSheet(BuildContext context, SignInSheetStateContext stateContext, Function(LinkAccountType)? onSignIn) {
-  analytics.setCurrentScreen(screenName: "SigninSheet");
+  analytics.setCurrentScreen(screenName: 'SigninSheet');
   showModalBottomSheet(
     context: context,
     builder: (context) => SignInSheet(

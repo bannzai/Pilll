@@ -6,7 +6,7 @@ part 'schedule.codegen.g.dart';
 part 'schedule.codegen.freezed.dart';
 
 class ScheduleFirestoreKey {
-  static const String date = "date";
+  static const String date = 'date';
 }
 
 @freezed

@@ -36,11 +36,11 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
       children: [
         Row(
           children: [
-            const Text("体調詳細", style: sectionTitle),
+            const Text('体調詳細', style: sectionTitle),
             const SizedBox(width: 12),
             IconButton(
               onPressed: () {
-                analytics.logEvent(name: "edit_physical_condition_detail");
+                analytics.logEvent(name: 'edit_physical_condition_detail');
                 if (user.isPremium || user.isTrial) {
                   showModalBottomSheet(
                       context: context,

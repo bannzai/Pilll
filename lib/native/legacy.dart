@@ -18,25 +18,25 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
     return Future.value();
   }
 
-  final salvagedOldStartTakenDateRawValue = typedDic["salvagedOldStartTakenDate"];
+  final salvagedOldStartTakenDateRawValue = typedDic['salvagedOldStartTakenDate'];
   if (salvagedOldStartTakenDateRawValue == null) {
     return Future.value();
   }
-  if (!salvagedOldStartTakenDateRawValue.contains("/")) {
+  if (!salvagedOldStartTakenDateRawValue.contains('/')) {
     return Future.value();
   }
-  final salvagedOldLastTakenDateRawValue = typedDic["salvagedOldLastTakenDate"];
+  final salvagedOldLastTakenDateRawValue = typedDic['salvagedOldLastTakenDate'];
   if (salvagedOldLastTakenDateRawValue == null) {
     return Future.value();
   }
-  if (!salvagedOldLastTakenDateRawValue.contains("/")) {
+  if (!salvagedOldLastTakenDateRawValue.contains('/')) {
     return Future.value();
   }
-  final formattedStartTakenDate = salvagedOldStartTakenDateRawValue.replaceAll("/", "-");
-  final formattedSalvagedOldLastTakenDate = salvagedOldLastTakenDateRawValue.replaceAll("/", "-");
+  final formattedStartTakenDate = salvagedOldStartTakenDateRawValue.replaceAll('/', '-');
+  final formattedSalvagedOldLastTakenDate = salvagedOldLastTakenDateRawValue.replaceAll('/', '-');
   return SharedPreferences.getInstance().then((storage) {
-    storage.setString("salvagedOldStartTakenDate", formattedStartTakenDate);
-    storage.setString("salvagedOldLastTakenDate", formattedSalvagedOldLastTakenDate);
+    storage.setString('salvagedOldStartTakenDate', formattedStartTakenDate);
+    storage.setString('salvagedOldLastTakenDate', formattedSalvagedOldLastTakenDate);
   });
 }
 

@@ -17,7 +17,7 @@ class DiaryPostMemo extends HookConsumerWidget {
       ),
       child: TextFormField(
         decoration: const InputDecoration(
-          hintText: "メモ",
+          hintText: 'メモ',
           border: OutlineInputBorder(),
         ),
         controller: textEditingController,

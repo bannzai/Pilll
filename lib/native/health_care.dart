@@ -10,35 +10,35 @@ Future<bool> isHealthDataAvailable() async {
     return false;
   }
 
-  final result = await methodChannel.invokeMethod("isHealthDataAvailable");
-  return result["isHealthDataAvailable"] == true;
+  final result = await methodChannel.invokeMethod('isHealthDataAvailable');
+  return result['isHealthDataAvailable'] == true;
 }
 
 Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
   if (!Platform.isIOS) {
-    throw const FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException('iOSアプリにのみ対応しています');
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
   }
 
-  final result = await methodChannel.invokeMethod("healthKitRequestAuthorizationIsUnnecessary");
-  return result["healthKitRequestAuthorizationIsUnnecessary"] == true;
+  final result = await methodChannel.invokeMethod('healthKitRequestAuthorizationIsUnnecessary');
+  return result['healthKitRequestAuthorizationIsUnnecessary'] == true;
 }
 
 Future<bool> healthKitAuthorizationStatusIsSharingAuthorized() async {
   if (!Platform.isIOS) {
-    throw const FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException('iOSアプリにのみ対応しています');
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
   }
 
-  final result = await methodChannel.invokeMethod("healthKitAuthorizationStatusIsSharingAuthorized");
-  return result["healthKitAuthorizationStatusIsSharingAuthorized"] == true;
+  final result = await methodChannel.invokeMethod('healthKitAuthorizationStatusIsSharingAuthorized');
+  return result['healthKitAuthorizationStatusIsSharingAuthorized'] == true;
 }
 
 Future<bool> shouldRequestForAccessToHealthKitData() async {
@@ -50,15 +50,15 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
   }
 
   dynamic response = await methodChannel.invokeMethod(
-    "shouldRequestForAccessToHealthKitData",
+    'shouldRequestForAccessToHealthKitData',
   );
 
-  if (response["result"] == "success") {
-    return response["shouldRequestForAccessToHealthKitData"] == true;
-  } else if (response["result"] == "failure") {
-    throw AlertError(response["reason"]);
+  if (response['result'] == 'success') {
+    return response['shouldRequestForAccessToHealthKitData'] == true;
+  } else if (response['result'] == 'failure') {
+    throw AlertError(response['reason']);
   } else {
-    throw Exception("unknown error");
+    throw Exception('unknown error');
   }
 }
 
@@ -71,15 +71,15 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
   }
 
   dynamic response = await methodChannel.invokeMethod(
-    "requestWriteMenstrualFlowHealthKitDataPermission",
+    'requestWriteMenstrualFlowHealthKitDataPermission',
   );
 
-  if (response["result"] == "success") {
-    return response["isSuccess"] == true;
-  } else if (response["result"] == "failure") {
-    throw AlertError(response["reason"]);
+  if (response['result'] == 'success') {
+    return response['isSuccess'] == true;
+  } else if (response['result'] == 'failure') {
+    throw AlertError(response['reason']);
   } else {
-    throw Exception("unknown error");
+    throw Exception('unknown error');
   }
 }
 
@@ -87,13 +87,13 @@ Future<String> addMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw const FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException('iOSアプリにのみ対応しています');
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
   }
 
 // Avoid codec error
@@ -106,16 +106,16 @@ Future<String> addMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod("addMenstruationFlowHealthKitData", {
-    "menstruation": json,
+  dynamic response = await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {
+    'menstruation': json,
   });
 
-  if (response["result"] == "success") {
-    return response["healthKitSampleDataUUID"] as String;
-  } else if (response["result"] == "failure") {
-    throw AlertError(response["reason"]);
+  if (response['result'] == 'success') {
+    return response['healthKitSampleDataUUID'] as String;
+  } else if (response['result'] == 'failure') {
+    throw AlertError(response['reason']);
   } else {
-    throw Exception("unknown error");
+    throw Exception('unknown error');
   }
 }
 
@@ -123,13 +123,13 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw const FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException('iOSアプリにのみ対応しています');
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
   }
 
 // Avoid codec error
@@ -142,16 +142,16 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod("updateOrAddMenstruationFlowHealthKitData", {
-    "menstruation": json,
+  dynamic response = await methodChannel.invokeMethod('updateOrAddMenstruationFlowHealthKitData', {
+    'menstruation': json,
   });
 
-  if (response["result"] == "success") {
-    return response["healthKitSampleDataUUID"] as String;
-  } else if (response["result"] == "failure") {
-    throw AlertError(response["reason"]);
+  if (response['result'] == 'success') {
+    return response['healthKitSampleDataUUID'] as String;
+  } else if (response['result'] == 'failure') {
+    throw AlertError(response['reason']);
   } else {
-    throw Exception("unknown error");
+    throw Exception('unknown error');
   }
 }
 
@@ -159,13 +159,13 @@ Future<void> deleteMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw const FormatException("iOSアプリにのみ対応しています");
+    throw const FormatException('iOSアプリにのみ対応しています');
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException("ヘルスケアに対応していない端末ではご利用できません");
+    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException("設定アプリよりヘルスケアを有効にしてください");
+    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
   }
 
 // Avoid codec error
@@ -178,15 +178,15 @@ Future<void> deleteMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod("deleteMenstrualFlowHealthKitData", {
-    "menstruation": json,
+  dynamic response = await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {
+    'menstruation': json,
   });
 
-  if (response["result"] == "success") {
+  if (response['result'] == 'success') {
     return;
-  } else if (response["result"] == "failure") {
-    throw AlertError(response["reason"]);
+  } else if (response['result'] == 'failure') {
+    throw AlertError(response['reason']);
   } else {
-    throw Exception("unknown error");
+    throw Exception('unknown error');
   }
 }

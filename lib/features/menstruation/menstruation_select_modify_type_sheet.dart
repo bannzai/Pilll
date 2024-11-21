@@ -10,11 +10,11 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
   String get title {
     switch (this) {
       case MenstruationSelectModifyType.today:
-        return "今日から生理";
+        return '今日から生理';
       case MenstruationSelectModifyType.yesterday:
-        return "昨日から生理";
+        return '昨日から生理';
       case MenstruationSelectModifyType.begin:
-        return "生理開始日を選択";
+        return '生理開始日を選択';
     }
   }
 
@@ -22,11 +22,11 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
     String name() {
       switch (this) {
         case MenstruationSelectModifyType.today:
-          return "images/menstruation_record_icon.svg";
+          return 'images/menstruation_record_icon.svg';
         case MenstruationSelectModifyType.yesterday:
-          return "images/menstruation_record_icon.svg";
+          return 'images/menstruation_record_icon.svg';
         case MenstruationSelectModifyType.begin:
-          return "images/menstruation_begin_record_icon.svg";
+          return 'images/menstruation_begin_record_icon.svg';
       }
     }
 
@@ -52,7 +52,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
           children: [
             const Padding(
               padding: EdgeInsets.only(top: 21, left: 16),
-              child: Text("生理を記録",
+              child: Text('生理を記録',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,

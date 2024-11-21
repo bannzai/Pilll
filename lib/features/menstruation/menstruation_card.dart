@@ -27,7 +27,7 @@ class MenstruationCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SvgPicture.asset(
-                      "images/menstruation.svg",
+                      'images/menstruation.svg',
                       width: 24,
                       colorFilter: const ColorFilter.mode(PilllColors.red, BlendMode.srcIn),
                     ),

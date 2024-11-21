@@ -67,7 +67,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
 
         dirtyIndex += 1;
         final Widget content;
-        if (history.version == "v2") {
+        if (history.version == 'v2') {
           content = switch (history.enumActionType) {
             PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
@@ -222,7 +222,7 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 children: [
                   SizedBox(
                     width: 56,
-                    child: SvgPicture.asset("images/vertical_dash_line.svg"),
+                    child: SvgPicture.asset('images/vertical_dash_line.svg'),
                   ),
                   const Spacer(),
                 ],

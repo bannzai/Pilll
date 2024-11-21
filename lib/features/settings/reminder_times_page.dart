@@ -55,7 +55,7 @@ class ReminderTimesPage extends HookConsumerWidget {
 extension ReminderTimesPageRoute on ReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "ReminderTimesPage"),
+      settings: const RouteSettings(name: 'ReminderTimesPage'),
       builder: (_) => const ReminderTimesPage(),
     );
   }
@@ -85,13 +85,13 @@ class ReminderTimesPageBody extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "通知時間",
+          '通知時間',
           style: TextStyle(color: TextColor.black),
         ),
         actions: [
           IconButton(
             onPressed: () {
-              analytics.logEvent(name: "pressed_tz_setting_action");
+              analytics.logEvent(name: 'pressed_tz_setting_action');
               showDialog(
                 context: context,
                 builder: (_) => TimezoneSettingDialog(
@@ -101,7 +101,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
-                        content: Text("$tzに変更しました"),
+                        content: Text('$tzに変更しました'),
                       ),
                     );
                   },
@@ -159,11 +159,11 @@ class ReminderTimesPageBody extends StatelessWidget {
   }) {
     Widget body = GestureDetector(
       onTap: () {
-        analytics.logEvent(name: "show_modify_reminder_time");
+        analytics.logEvent(name: 'show_modify_reminder_time');
         _showPicker(context, setting: setting, setSetting: setSetting, index: number - 1);
       },
       child: ListTile(
-        title: Text("通知$number"),
+        title: Text('通知$number'),
         subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
       ),
     );
@@ -176,7 +176,7 @@ class ReminderTimesPageBody extends StatelessWidget {
       onDismissed: setting.reminderTimes.length == 1
           ? null
           : (direction) {
-              analytics.logEvent(name: "delete_reminder_time");
+              analytics.logEvent(name: 'delete_reminder_time');
               _deleteReminderTimes(
                 index: number - 1,
                 setting: setting,
@@ -192,7 +192,7 @@ class ReminderTimesPageBody extends StatelessWidget {
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                "削除",
+                '削除',
                 style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
@@ -215,7 +215,7 @@ class ReminderTimesPageBody extends StatelessWidget {
     }
     return GestureDetector(
       onTap: () {
-        analytics.logEvent(name: "pressed_add_reminder_time");
+        analytics.logEvent(name: 'pressed_add_reminder_time');
         _showPicker(context, setSetting: setSetting, setting: setting, index: null);
       },
       child: SizedBox(
@@ -223,9 +223,9 @@ class ReminderTimesPageBody extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset("images/add.svg"),
+            SvgPicture.asset('images/add.svg'),
             const Text(
-              "通知時間の追加",
+              '通知時間の追加',
               style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
@@ -253,7 +253,7 @@ class ReminderTimesPageBody extends StatelessWidget {
           initialDateTime: isEditing ? setting.reminderTimes[index].dateTime() : const ReminderTime(hour: 20, minute: 0).dateTime(),
           done: (dateTime) {
             if (isEditing) {
-              analytics.logEvent(name: "edited_reminder_time");
+              analytics.logEvent(name: 'edited_reminder_time');
               unawaited(_editReminderTime(
                 index: index,
                 reminderTime: ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
@@ -261,7 +261,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                 setSetting: setSetting,
               ).catchError((error) => showErrorAlert(context, error)));
             } else {
-              analytics.logEvent(name: "added_reminder_time");
+              analytics.logEvent(name: 'added_reminder_time');
               unawaited(_addReminderTimes(
                 reminderTime: ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
                 setting: setting,
@@ -313,10 +313,10 @@ class ReminderTimesPageBody extends StatelessWidget {
     required SetSetting setSetting,
   }) async {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      throw Exception("登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
+      throw Exception('登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください');
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
-      throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
+      throw Exception('通知時刻は最低${ReminderTime.minimumCount}件必要です');
     }
     await setSetting(setting.copyWith(reminderTimes: reminderTimes));
     await registerReminderLocalNotification();

@@ -49,7 +49,7 @@ class OKDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: "OK",
+          text: 'OK',
           onPressed: () async {
             final ok = this.ok;
             if (ok != null) {

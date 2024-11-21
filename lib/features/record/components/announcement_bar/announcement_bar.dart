@@ -74,7 +74,7 @@ class AnnouncementBar extends HookConsumerWidget {
               return DiscountPriceDeadline(
                   discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                   onTap: () {
-                    analytics.logEvent(name: "pressed_discount_announcement_bar");
+                    analytics.logEvent(name: 'pressed_discount_announcement_bar');
                     showPremiumIntroductionSheet(context);
                   });
             }

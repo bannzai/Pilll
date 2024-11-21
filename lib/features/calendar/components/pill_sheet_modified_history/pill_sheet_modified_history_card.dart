@@ -65,7 +65,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             Row(
               children: [
                 const Text(
-                  "服用履歴",
+                  '服用履歴',
                   style: TextStyle(
                     fontWeight: FontWeight.w500,
                     fontFamily: FontFamily.japanese,
@@ -123,7 +123,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                     const Text(lockEmoji, style: TextStyle(fontSize: 40)),
                                     const SizedBox(height: 12),
                                     const Text(
-                                      "服用履歴はプレミアム機能です",
+                                      '服用履歴はプレミアム機能です',
                                       style: TextStyle(
                                         color: TextColor.main,
                                         fontSize: 14,
@@ -135,10 +135,10 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                     SizedBox(
                                       width: 204,
                                       child: AppOutlinedButton(
-                                        text: "くわしくみる",
+                                        text: 'くわしくみる',
                                         onPressed: () async {
                                           analytics.logEvent(
-                                            name: "pressed_show_detail_pill_sheet_history",
+                                            name: 'pressed_show_detail_pill_sheet_history',
                                           );
                                           showPremiumIntroductionSheet(context);
                                         },

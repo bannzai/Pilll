@@ -13,7 +13,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
       day: Container(width: 64),
       pillNumbersOrHyphen: Container(),
       detail: const Text(
-        "服用時間",
+        '服用時間',
         style: TextStyle(
           color: TextColor.main,
           fontFamily: FontFamily.japanese,
@@ -23,7 +23,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
         textAlign: TextAlign.left,
       ),
       takenPillActionOList: const Text(
-        "服用済み",
+        '服用済み',
         style: TextStyle(
           color: TextColor.main,
           fontFamily: FontFamily.japanese,

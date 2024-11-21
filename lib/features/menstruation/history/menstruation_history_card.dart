@@ -24,7 +24,7 @@ class MenstruationHistoryCard extends StatelessWidget {
         padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
         child: GestureDetector(
           onTap: () {
-            analytics.logEvent(name: "menstruation_history_card_tapped");
+            analytics.logEvent(name: 'menstruation_history_card_tapped');
             if (state.isPremium || state.isTrial) {
               return;
             }
@@ -63,9 +63,9 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
       children: [
         if (!state.moreButtonIsHidden)
           AlertButton(
-              text: "もっと見る",
+              text: 'もっと見る',
               onPressed: () async {
-                analytics.logEvent(name: "menstruation_more_button_pressed");
+                analytics.logEvent(name: 'menstruation_more_button_pressed');
                 if (state.isPremium || state.isTrial) {
                   Navigator.of(context).push(MenstruationListPageRoute.route());
                 } else {
@@ -135,9 +135,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
       children: [
         const Spacer(),
         CounterUnitLayout(
-          title: "平均周期",
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : "🔒",
-          unit: "日",
+          title: '平均周期',
+          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : '🔒',
+          unit: '日',
         ),
         const SizedBox(width: 30),
         const SizedBox(
@@ -148,9 +148,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
             )),
         const SizedBox(width: 30),
         CounterUnitLayout(
-          title: "平均日数",
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : "🔒",
-          unit: "日",
+          title: '平均日数',
+          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : '🔒',
+          unit: '日',
         ),
         const Spacer(),
       ],
@@ -171,7 +171,7 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
     return Row(
       children: [
         const Text(
-          "生理履歴",
+          '生理履歴',
           style: TextStyle(
             color: TextColor.main,
             fontFamily: FontFamily.japanese,

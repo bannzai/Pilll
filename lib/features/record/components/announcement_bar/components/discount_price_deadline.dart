@@ -32,9 +32,9 @@ class DiscountPriceDeadline extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                """
+                '''
 プレミアム登録で引き続きすべての機能が利用できます
-$countdown内の購入で58%OFF!""",
+$countdown内の購入で58%OFF!''',
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
@@ -48,7 +48,7 @@ $countdown内の購入で58%OFF!""",
               alignment: Alignment.centerRight,
               child: IconButton(
                 icon: SvgPicture.asset(
-                  "images/arrow_right.svg",
+                  'images/arrow_right.svg',
                   colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
                 onPressed: () {},

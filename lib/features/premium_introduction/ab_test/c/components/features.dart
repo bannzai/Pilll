@@ -11,7 +11,7 @@ class PremiumIntroductionFeatures extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          "プレミアム機能一覧",
+          'プレミアム機能一覧',
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontSize: 12,
@@ -30,19 +30,19 @@ class PremiumIntroductionFeatures extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("📩 プッシュ通知から服用記録"),
+              Text('📩 プッシュ通知から服用記録'),
               SizedBox(height: 4),
-              Text("🗂 服用履歴の記録・閲覧"),
+              Text('🗂 服用履歴の記録・閲覧'),
               SizedBox(height: 4),
-              Text("📆 ピルシート上に日付表示"),
+              Text('📆 ピルシート上に日付表示'),
               SizedBox(height: 4),
-              Text("📦 新しいピルシートを自動補充"),
+              Text('📦 新しいピルシートを自動補充'),
               SizedBox(height: 4),
-              Text("👀 過去のデータ閲覧"),
+              Text('👀 過去のデータ閲覧'),
               SizedBox(height: 4),
-              Text("🏷 体調タグをカスタマイズ"),
+              Text('🏷 体調タグをカスタマイズ'),
               SizedBox(height: 4),
-              Text("🚫 広告の非表示"),
+              Text('🚫 広告の非表示'),
             ],
           ),
         ),
