@@ -8,7 +8,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
-import 'package:pilll/features/root/localization/l.dart';
 
 class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
@@ -27,14 +26,14 @@ class NotificationInRestDuration extends HookConsumerWidget {
         ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text(L.of(context).notificationDuringRestPeriod,
+      title: Text('${pillSheet.pillSheetType.notTakenWord}期間の通知',
           style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
       subtitle: Text(
-          L.of(context).notificationDuringRestPeriodDescription,
+          '通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます',
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
