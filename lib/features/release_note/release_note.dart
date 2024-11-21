@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          "表示モード服用日数(周期)が追加されました",
+                          '表示モード服用日数(周期)が追加されました',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -78,11 +78,11 @@ class ReleaseNote extends StatelessWidget {
                   width: 230,
                   child: AlertButton(
                       onPressed: () async {
-                        analytics.logEvent(name: "pressed_show_release_note");
+                        analytics.logEvent(name: 'pressed_show_release_note');
                         Navigator.of(context).pop();
                         openReleaseNote();
                       },
-                      text: "詳細を見る"),
+                      text: '詳細を見る'),
                 ),
                 const SizedBox(height: 20),
               ],
@@ -112,5 +112,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse("https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57"), mode: LaunchMode.inAppWebView);
+  launchUrl(Uri.parse('https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57'), mode: LaunchMode.inAppWebView);
 }

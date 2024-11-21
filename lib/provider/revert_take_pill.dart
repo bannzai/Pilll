@@ -34,15 +34,15 @@ class RevertTakePill {
   }) async {
     final activePillSheet = pillSheetGroup.activePillSheet;
     if (activePillSheet == null) {
-      throw const FormatException("現在対象となっているピルシートが見つかりませんでした");
+      throw const FormatException('現在対象となっているピルシートが見つかりませんでした');
     }
     if (pillSheetGroup.lastActiveRestDuration != null) {
-      throw const FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
+      throw const FormatException('ピルの服用の取り消し操作は休薬期間中は実行できません');
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
     final revertDate = targetPillSheet.displayPillTakeDate(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
-    debugPrint("revertDate: $revertDate");
+    debugPrint('revertDate: $revertDate');
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;

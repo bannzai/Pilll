@@ -34,7 +34,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             const Text(
-              "月額プラン",
+              '月額プラン',
               style: TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
@@ -43,7 +43,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
               ),
             ),
             Text(
-              "${monthlyPackage.storeProduct.priceString}/月",
+              '${monthlyPackage.storeProduct.priceString}/月',
               style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,

@@ -46,9 +46,9 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pillSheetTypes: state.pillSheetTypes,
                       selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(pageIndex: index),
                       markSelected: (pageIndex, number) {
-                        analytics.logEvent(name: "selected_today_number_initial_setting", parameters: {
-                          "pill_number": number,
-                          "page": pageIndex,
+                        analytics.logEvent(name: 'selected_today_number_initial_setting', parameters: {
+                          'pill_number': number,
+                          'page': pageIndex,
                         });
                         store.setTodayPillNumber(
                           pageIndex: pageIndex,

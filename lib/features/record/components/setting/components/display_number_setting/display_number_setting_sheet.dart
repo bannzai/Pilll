@@ -25,8 +25,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     final begin = useState(pillSheetGroup.displayNumberSetting?.beginPillNumber);
     final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber);
 
-    final beginTextFieldController = useTextEditingController(text: "${begin.value ?? 1}");
-    final endTextFieldController = useTextEditingController(text: "${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}");
+    final beginTextFieldController = useTextEditingController(text: '${begin.value ?? 1}');
+    final endTextFieldController = useTextEditingController(text: '${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}');
 
     final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
 
@@ -57,7 +57,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
             children: [
               Row(children: [
                 const Text(
-                  "シートの服用日数を変更",
+                  'シートの服用日数を変更',
                   style: TextStyle(
                     color: TextColor.main,
                     fontSize: 20,
@@ -67,10 +67,10 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                 ),
                 const Spacer(),
                 RedTextButton(
-                  text: "変更",
+                  text: '変更',
                   onPressed: () async {
                     analytics.logEvent(
-                      name: "sheet_change_display_number_setting",
+                      name: 'sheet_change_display_number_setting',
                     );
                     await _submit(
                       batchFactory: batchFactory,
@@ -86,7 +86,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           duration: Duration(
                             seconds: 2,
                           ),
-                          content: Text("始まりと終わりの番号を変更しました"),
+                          content: Text('始まりと終わりの番号を変更しました'),
                         ),
                       );
                       Navigator.of(context).popUntil((route) => route.isFirst);
@@ -104,10 +104,10 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset("images/begin_display_number_setting.svg"),
+                          SvgPicture.asset('images/begin_display_number_setting.svg'),
                           const SizedBox(width: 4),
                           const Text(
-                            "服用日数の始まり",
+                            '服用日数の始まり',
                             style: TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 12,
@@ -121,7 +121,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       Row(
                         children: [
                           const Text(
-                            "服用",
+                            '服用',
                             style: TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 14,
@@ -164,7 +164,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           ),
                           const SizedBox(width: 5),
                           const Text(
-                            "番からスタート",
+                            '番からスタート',
                             style: TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 14,
@@ -181,7 +181,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "前回のシートの最後：${beforePillSheetGroup.sequentialEstimatedEndPillNumber}日目",
+                              '前回のシートの最後：${beforePillSheetGroup.sequentialEstimatedEndPillNumber}日目',
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
@@ -197,10 +197,10 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                   const SizedBox(height: 32),
                   Row(
                     children: [
-                      SvgPicture.asset("images/end_display_number_setting.svg"),
+                      SvgPicture.asset('images/end_display_number_setting.svg'),
                       const SizedBox(width: 4),
                       const Text(
-                        "服用日数の終わり",
+                        '服用日数の終わり',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 12,
@@ -248,7 +248,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       ),
                       const SizedBox(width: 5),
                       const Text(
-                        "番に変更",
+                        '番に変更',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 14,
@@ -330,7 +330,7 @@ void showDisplayNumberSettingSheet(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
 }) {
-  analytics.setCurrentScreen(screenName: "DisplayNumberSettingSheet");
+  analytics.setCurrentScreen(screenName: 'DisplayNumberSettingSheet');
   showModalBottomSheet(
     context: context,
     builder: (context) => DisplayNumberSettingSheet(

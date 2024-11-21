@@ -182,22 +182,22 @@ class ChangeRestDuration {
   }) async {
     final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, fromRestDuration));
     if (fromRestDurationPillSheetIndex == -1) {
-      throw AssertionError("fromRestDurationPillSheetIndex is not found");
+      throw AssertionError('fromRestDurationPillSheetIndex is not found');
     }
     final fromRestDurationPillSheet = pillSheetGroup.pillSheets[fromRestDurationPillSheetIndex];
     if (fromRestDurationPillSheet.restDurations.isEmpty) {
-      throw AssertionError("fromRestDurationPillSheet.restDurations is empty");
+      throw AssertionError('fromRestDurationPillSheet.restDurations is empty');
     }
     final fromRestDurationIndex = fromRestDurationPillSheet.restDurations.indexOf(fromRestDuration);
     if (fromRestDurationIndex == -1) {
-      throw AssertionError("fromRestDurationIndex is not found");
+      throw AssertionError('fromRestDurationIndex is not found');
     }
     final updatedFromRestDurationPillSheet =
         fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
 
     final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, toRestDuration));
     if (toRestDurationPillSheetIndex == -1) {
-      throw AssertionError("toRestDurationPillSheetIndex is not found");
+      throw AssertionError('toRestDurationPillSheetIndex is not found');
     }
     final PillSheet updatedToRestDurationPillSheet;
     final toRestDurationPillSheet = pillSheetGroup.pillSheets[toRestDurationPillSheetIndex];
@@ -294,7 +294,7 @@ class ChangeRestDuration {
           ),
         );
       default:
-        throw AssertionError("actionType is not supported: $actionType");
+        throw AssertionError('actionType is not supported: $actionType');
     }
 
     await batch.commit();

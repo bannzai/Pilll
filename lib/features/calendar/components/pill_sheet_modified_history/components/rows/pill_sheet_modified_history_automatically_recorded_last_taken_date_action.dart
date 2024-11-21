@@ -32,7 +32,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
         afterLastTakenPillNumber: afterLastTakenPillNumber,
       )),
       detail: const Text(
-        "-",
+        '-',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

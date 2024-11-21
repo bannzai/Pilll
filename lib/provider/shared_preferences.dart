@@ -8,7 +8,7 @@ part 'shared_preferences.g.dart';
 // overrideする前提なので.autoDisposeはつけない=(keeyAlive: trueにする)。またこれに依存したProviderもkeepAlive: trueにする必要がある
 @Riverpod(keepAlive: true, dependencies: [])
 SharedPreferences sharedPreferences(SharedPreferencesRef ref) {
-  throw UnimplementedError("sharedPreferencesProvider is not implemented");
+  throw UnimplementedError('sharedPreferencesProvider is not implemented');
 }
 
 final shouldShowMigrationInformationProvider = FutureProvider.autoDispose((ref) {

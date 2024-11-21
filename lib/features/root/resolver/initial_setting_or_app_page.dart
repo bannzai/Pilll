@@ -39,7 +39,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
     useEffect(() {
       if (user != null) {
         if (user.setting == null) {
-          analytics.logEvent(name: "uset_setting_is_null", parameters: {"uid": user.id});
+          analytics.logEvent(name: 'uset_setting_is_null', parameters: {'uid': user.id});
         }
       }
 
@@ -76,14 +76,14 @@ InitialSettingOrAppPageScreenType? retrieveScreenType({
   }
 
   if (didEndInitialSetting == null) {
-    analytics.logEvent(name: "did_end_i_s_is_null");
+    analytics.logEvent(name: 'did_end_i_s_is_null');
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
   if (!didEndInitialSetting) {
-    analytics.logEvent(name: "did_end_i_s_is_false");
+    analytics.logEvent(name: 'did_end_i_s_is_false');
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
-  analytics.logEvent(name: "screen_type_is_home");
+  analytics.logEvent(name: 'screen_type_is_home');
   return InitialSettingOrAppPageScreenType.app;
 }

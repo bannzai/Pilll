@@ -31,7 +31,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
         afterLastTakenPillNumber: afterLastTakenPillNumber,
       )),
       detail: const Text(
-        "服用取り消し",
+        '服用取り消し',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

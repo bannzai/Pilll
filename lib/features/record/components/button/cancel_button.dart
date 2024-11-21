@@ -26,11 +26,11 @@ class CancelButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final revertTakePill = ref.watch(revertTakePillProvider);
     return UndoButton(
-      text: "飲んでない",
+      text: '飲んでない',
       onPressed: () async {
-        analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
-          "last_taken_pill_number": activePillSheet.lastTakenPillNumber,
-          "today_pill_number": activePillSheet.todayPillNumber,
+        analytics.logEvent(name: 'cancel_taken_button_pressed', parameters: {
+          'last_taken_pill_number': activePillSheet.lastTakenPillNumber,
+          'today_pill_number': activePillSheet.todayPillNumber,
         });
 
         final updatedPillSheetGroup = await _cancelTaken(revertTakePill);

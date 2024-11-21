@@ -15,8 +15,8 @@ part 'pill_sheet_group.codegen.g.dart';
 part 'pill_sheet_group.codegen.freezed.dart';
 
 class PillSheetGroupFirestoreKeys {
-  static const createdAt = "createdAt";
-  static const deletedAt = "deletedAt";
+  static const createdAt = 'createdAt';
+  static const deletedAt = 'deletedAt';
 }
 
 @freezed
@@ -53,11 +53,11 @@ class PillSheetGroup with _$PillSheetGroup {
 
   PillSheetGroup replaced(PillSheet pillSheet) {
     if (pillSheet.id == null) {
-      throw const FormatException("ピルシートの置き換えによる更新できませんでした");
+      throw const FormatException('ピルシートの置き換えによる更新できませんでした');
     }
     final index = pillSheets.indexWhere((element) => element.id == pillSheet.id);
     if (index == -1) {
-      throw FormatException("ピルシートの置き換えによる更新できませんでした。id: ${pillSheet.id}");
+      throw FormatException('ピルシートの置き換えによる更新できませんでした。id: ${pillSheet.id}');
     }
     final copied = [...pillSheets];
     copied[index] = pillSheet;
@@ -162,7 +162,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   String _displayPillNumberInPillSheet({
     required int pillNumberInPillSheet,
   }) {
-    return "$pillNumberInPillSheet";
+    return '$pillNumberInPillSheet';
   }
 
   @visibleForTesting

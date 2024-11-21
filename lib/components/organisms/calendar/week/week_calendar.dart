@@ -64,7 +64,7 @@ class CalendarWeekLine extends HookConsumerWidget {
                   menstruation: e.menstruation,
                   width: width,
                   onTap: (menstruation) async {
-                    analytics.logEvent(name: "tap_calendar_menstruation_band");
+                    analytics.logEvent(name: 'tap_calendar_menstruation_band');
 
                     showMenstruationEditSelectionSheet(
                       context,

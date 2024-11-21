@@ -27,7 +27,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text("服用通知のカスタマイズ",
+          const Text('服用通知のカスタマイズ',
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -39,7 +39,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: const Text("服用通知の文言のカスタマイズができます",
+      subtitle: const Text('服用通知の文言のカスタマイズができます',
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
@@ -47,7 +47,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
           )),
       onTap: () {
         analytics.logEvent(
-          name: "did_notification_customize_word",
+          name: 'did_notification_customize_word',
         );
         if (isTrial || isPremium) {
           Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());

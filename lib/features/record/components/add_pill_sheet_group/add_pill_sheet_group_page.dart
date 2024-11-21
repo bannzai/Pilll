@@ -36,7 +36,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "ピルシート追加",
+          'ピルシート追加',
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -59,18 +59,18 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                       SettingPillSheetGroup(
                         pillSheetTypes: pillSheetTypes.value,
                         onAdd: (pillSheetType) {
-                          analytics.logEvent(name: "setting_add_pill_sheet_group", parameters: {"pill_sheet_type": pillSheetType.fullName});
+                          analytics.logEvent(name: 'setting_add_pill_sheet_group', parameters: {'pill_sheet_type': pillSheetType.fullName});
                           pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
                         },
                         onChange: (index, pillSheetType) {
                           analytics.logEvent(
-                              name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
+                              name: 'setting_change_pill_sheet_group', parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName});
                           final copied = [...pillSheetTypes.value];
                           copied[index] = pillSheetType;
                           pillSheetTypes.value = copied;
                         },
                         onDelete: (index) {
-                          analytics.logEvent(name: "setting_delete_pill_sheet_group", parameters: {"index": index});
+                          analytics.logEvent(name: 'setting_delete_pill_sheet_group', parameters: {'index': index});
                           pillSheetTypes.value = [...pillSheetTypes.value]..removeAt(index);
                         },
                       ),
@@ -94,11 +94,11 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                         SizedBox(
                           width: 180,
                           child: PrimaryButton(
-                            text: "追加",
+                            text: '追加',
                             onPressed: pillSheetTypes.value.isEmpty
                                 ? null
                                 : () async {
-                                    analytics.logEvent(name: "pressed_add_pill_sheet_group");
+                                    analytics.logEvent(name: 'pressed_add_pill_sheet_group');
                                     final navigator = Navigator.of(context);
                                     await addPillSheetGroup.call(
                                       setting: setting,
@@ -128,7 +128,7 @@ extension AddPillSheetGroupPageRoute on AddPillSheetGroupPage {
   static Route<dynamic> route({required PillSheetGroup? pillSheetGroup, required Setting setting}) {
     return MaterialPageRoute(
       fullscreenDialog: true,
-      settings: const RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
+      settings: const RouteSettings(name: 'RecordPageAddingPillSheetGroupPage'),
       builder: (_) => AddPillSheetGroupPage(pillSheetGroup: pillSheetGroup, setting: setting),
     );
   }

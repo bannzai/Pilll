@@ -17,26 +17,26 @@ class DebugRow extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: const Center(child: Text("COPY DEBUG INFO", style: TextStyle(color: TextColor.primary))),
+        child: const Center(child: Text('COPY DEBUG INFO', style: TextStyle(color: TextColor.primary))),
         onTap: () async {
-          Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
+          Clipboard.setData(ClipboardData(text: await debugInfo('\n')));
         },
         onDoubleTap: () {
           final signOut = Environment.signOutUser;
           if (signOut == null) {
             return;
           }
-          showDiscardDialog(context, title: "サインアウトします", message: '''
+          showDiscardDialog(context, title: 'サインアウトします', message: '''
 これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
 ''', actions: [
             AlertButton(
-              text: "キャンセル",
+              text: 'キャンセル',
               onPressed: () async {
                 Navigator.of(context).pop();
               },
             ),
             AlertButton(
-              text: "サインアウト",
+              text: 'サインアウト',
               onPressed: () async {
                 final navigator = Navigator.of(context);
                 await signOut();
@@ -52,19 +52,19 @@ class DebugRow extends StatelessWidget {
           }
           showDiscardDialog(
             context,
-            title: "ユーザーを削除します",
+            title: 'ユーザーを削除します',
             message: '''
 これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
 ''',
             actions: [
               AlertButton(
-                text: "キャンセル",
+                text: 'キャンセル',
                 onPressed: () async {
                   Navigator.of(context).pop();
                 },
               ),
               AlertButton(
-                text: "削除",
+                text: '削除',
                 onPressed: () async {
                   final navigator = Navigator.of(context);
                   await deleteUser();

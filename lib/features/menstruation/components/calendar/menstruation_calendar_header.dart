@@ -68,7 +68,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                             diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
                             schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
                             onTap: (date) {
-                              analytics.logEvent(name: "did_select_day_tile_on_menstruation");
+                              analytics.logEvent(name: 'did_select_day_tile_on_menstruation');
                               transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
                             });
                       },

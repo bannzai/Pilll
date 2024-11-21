@@ -21,21 +21,21 @@ DatabaseConnection database(DatabaseRef ref) {
   final stream = ref.watch(firebaseUserStateProvider);
   // 初回起動の時には.userChanges()のstreamは流れてこないので、currentUserのidを使う
   final uid = stream.asData?.value?.uid ?? firebase.FirebaseAuth.instance.currentUser?.uid;
-  debugPrint("[DEBUG] database uid is $uid");
+  debugPrint('[DEBUG] database uid is $uid');
   return DatabaseConnection(uid);
 }
 
 abstract class _CollectionPath {
-  static const String users = "users";
-  static String settings(String userID) => "$users/$userID/settings";
-  static String diaries(String userID) => "$users/$userID/diaries";
-  static String pillSheetGroups(String userID) => "$users/$userID/pill_sheet_groups";
-  static String userPrivates(String userID) => "$users/$userID/privates";
-  static String menstruations(String userID) => "$users/$userID/menstruations";
-  static String pillSheetModifiedHistories(String userID) => "$users/$userID/pill_sheet_modified_histories";
-  static String schedule({required String userID, required String scheduleID}) => "$users/$userID/schedules/$scheduleID";
-  static String schedules({required String userID}) => "$users/$userID/schedules";
-  static String pilllAds() => "globals/pilll_ads";
+  static const String users = 'users';
+  static String settings(String userID) => '$users/$userID/settings';
+  static String diaries(String userID) => '$users/$userID/diaries';
+  static String pillSheetGroups(String userID) => '$users/$userID/pill_sheet_groups';
+  static String userPrivates(String userID) => '$users/$userID/privates';
+  static String menstruations(String userID) => '$users/$userID/menstruations';
+  static String pillSheetModifiedHistories(String userID) => '$users/$userID/pill_sheet_modified_histories';
+  static String schedule({required String userID, required String scheduleID}) => '$users/$userID/schedules/$scheduleID';
+  static String schedules({required String userID}) => '$users/$userID/schedules';
+  static String pilllAds() => 'globals/pilll_ads';
 }
 
 class DatabaseConnection {
@@ -43,7 +43,7 @@ class DatabaseConnection {
   String get userID => _userID!;
   final String? _userID;
 
-  final FromFirestore<User> _userFromFirestore = (snapshot, options) => User.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
+  final FromFirestore<User> _userFromFirestore = (snapshot, options) => User.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
   final ToFirestore<User> _userToFirestore = (user, options) => user.toJson();
   DocumentReference<User> userReference() => FirebaseFirestore.instance.collection(_CollectionPath.users).doc(userID).withConverter(
         fromFirestore: _userFromFirestore,
@@ -54,7 +54,7 @@ class DatabaseConnection {
   final FromFirestore<DiarySetting> _diarySettingFromFirestore = (snapshot, options) => DiarySetting.fromJson(snapshot.data()!);
   final ToFirestore<DiarySetting> _diarySettingToFirestore = (diarySetting, options) => diarySetting.toJson();
   DocumentReference<DiarySetting> diarySettingReference() =>
-      FirebaseFirestore.instance.collection(_CollectionPath.settings(userID)).doc("diary").withConverter(
+      FirebaseFirestore.instance.collection(_CollectionPath.settings(userID)).doc('diary').withConverter(
             fromFirestore: _diarySettingFromFirestore,
             toFirestore: _diarySettingToFirestore,
           );
@@ -74,7 +74,7 @@ class DatabaseConnection {
   DocumentReference userPrivateRawReference() => FirebaseFirestore.instance.collection(_CollectionPath.userPrivates(userID)).doc(userID);
 
   final FromFirestore<Menstruation> _menstruationFromFirestore =
-      (snapshot, options) => Menstruation.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
+      (snapshot, options) => Menstruation.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
   final ToFirestore<Menstruation> _menstruationToFirestore = (menstruation, options) => menstruation.toJson();
   CollectionReference<Menstruation> menstruationsReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.menstruations(userID)).withConverter(
@@ -88,7 +88,7 @@ class DatabaseConnection {
           );
 
   final FromFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryFromFirestore =
-      (snapshot, options) => PillSheetModifiedHistory.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
+      (snapshot, options) => PillSheetModifiedHistory.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
   final ToFirestore<PillSheetModifiedHistory> _pillSheetModifiedHistoryToFirestore = (history, options) => history.toJson();
   CollectionReference<PillSheetModifiedHistory> pillSheetModifiedHistoriesReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetModifiedHistories(userID)).withConverter(
@@ -102,7 +102,7 @@ class DatabaseConnection {
           );
 
   final FromFirestore<PillSheetGroup> _pillSheetGroupFromFirestore =
-      (snapshot, options) => PillSheetGroup.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
+      (snapshot, options) => PillSheetGroup.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
   final ToFirestore<PillSheetGroup> _pillSheetGroupToFirestore = (pillSheetGroup, options) => pillSheetGroup.toJson();
   CollectionReference<PillSheetGroup> pillSheetGroupsReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.pillSheetGroups(userID)).withConverter(
@@ -117,7 +117,7 @@ class DatabaseConnection {
           );
 
   final FromFirestore<Schedule> _scheduleFromFirestore =
-      (snapshot, options) => Schedule.fromJson(snapshot.data()!..putIfAbsent("id", () => snapshot.id));
+      (snapshot, options) => Schedule.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
   final ToFirestore<Schedule> _scheduleToFirestore = (schedule, options) => schedule.toJson();
   CollectionReference<Schedule> schedulesReference() =>
       FirebaseFirestore.instance.collection(_CollectionPath.schedules(userID: userID)).withConverter(

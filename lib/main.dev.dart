@@ -9,14 +9,14 @@ Future<void> main() async {
   Environment.flavor = Flavor.DEVELOP;
   Environment.deleteUser = () async {
     if (!Environment.isDevelopment) {
-      throw AssertionError("This method should not call out of development");
+      throw AssertionError('This method should not call out of development');
     }
     (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
     await FirebaseAuth.instance.currentUser?.delete();
   };
   Environment.signOutUser = () async {
     if (!Environment.isDevelopment) {
-      throw AssertionError("This method should not call out of development");
+      throw AssertionError('This method should not call out of development');
     }
     (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
     await CancelReminderLocalNotification().call();

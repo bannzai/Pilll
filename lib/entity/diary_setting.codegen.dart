@@ -7,20 +7,20 @@ part 'diary_setting.codegen.g.dart';
 part 'diary_setting.codegen.freezed.dart';
 
 const List<String> defaultPhysicalConditions = [
-  "頭痛",
-  "腹痛",
-  "吐き気",
-  "貧血",
-  "下痢",
-  "便秘",
-  "ほてり",
-  "眠気",
-  "腰痛",
-  "動悸",
-  "不正出血",
-  "食欲不振",
-  "胸の張り",
-  "不眠",
+  '頭痛',
+  '腹痛',
+  '吐き気',
+  '貧血',
+  '下痢',
+  '便秘',
+  'ほてり',
+  '眠気',
+  '腰痛',
+  '動悸',
+  '不正出血',
+  '食欲不振',
+  '胸の張り',
+  '不眠',
 ];
 
 @freezed

@@ -52,6 +52,6 @@ Future<bool> appIsReleased(AppIsReleasedRef ref) async {
 
 void debugPrintRemoteConfig() {
   for (final entry in remoteConfig.getAll().entries) {
-    debugPrint("RemoteConfig: ${entry.key} ${entry.value.asString()}");
+    debugPrint('RemoteConfig: ${entry.key} ${entry.value.asString()}');
   }
 }

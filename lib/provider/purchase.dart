@@ -21,9 +21,9 @@ extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
       case OfferingType.limited:
-        return "Limited";
+        return 'Limited';
       case OfferingType.premium:
-        return "Premium2";
+        return 'Premium2';
     }
   }
 }
@@ -77,17 +77,17 @@ class Purchase {
       final purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
-        throw AssertionError("unexpected premium entitlements is not exists");
+        throw AssertionError('unexpected premium entitlements is not exists');
       }
       if (!premiumEntitlement.isActive) {
-        throw AlertError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
+        throw AlertError('課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください');
       }
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
-          name: "catched_purchase_exception",
-          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
+          name: 'catched_purchase_exception',
+          parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message});
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -95,8 +95,8 @@ class Purchase {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: "catched_purchase_anonymous", parameters: {
-        "exception_type": exception.runtimeType.toString(),
+      analytics.logEvent(name: 'catched_purchase_anonymous', parameters: {
+        'exception_type': exception.runtimeType.toString(),
       });
       errorLogger.recordError(exception, stack);
       rethrow;
@@ -108,7 +108,7 @@ class PurchaseService {
   Future<Offerings> fetchOfferings() async {
     try {
       Offerings offerings = await Purchases.getOfferings();
-      debugPrint("[bannzai] ${offerings.all}");
+      debugPrint('[bannzai] ${offerings.all}');
       return offerings;
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
@@ -118,20 +118,20 @@ class PurchaseService {
   }
 }
 
-const premiumEntitlements = "Premium";
+const premiumEntitlements = 'Premium';
 
 Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
-  analytics.logEvent(name: "start_update_purchase_info");
+  analytics.logEvent(name: 'start_update_purchase_info');
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError("unexpected uid is not found when purchase info is update", StackTrace.current);
+    errorLogger.recordError('unexpected uid is not found when purchase info is update', StackTrace.current);
     return;
   }
 
   final updatePurchaseInfo = UpdatePurchaseInfo(DatabaseConnection(uid));
   final premiumEntitlement = info.entitlements.all[premiumEntitlements];
   try {
-    analytics.logEvent(name: "call_update_purchase_info");
+    analytics.logEvent(name: 'call_update_purchase_info');
     await updatePurchaseInfo(
       isActivated: premiumEntitlement?.isActive,
       entitlementIdentifier: premiumEntitlement?.identifier,
@@ -140,17 +140,17 @@ Future<void> callUpdatePurchaseInfo(CustomerInfo info) async {
       activeSubscriptions: info.activeSubscriptions,
       originalPurchaseDate: info.originalPurchaseDate,
     );
-    analytics.logEvent(name: "end_update_purchase_info");
+    analytics.logEvent(name: 'end_update_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }
 }
 
 Future<void> syncPurchaseInfo() async {
-  analytics.logEvent(name: "start_sync_purchase_info");
+  analytics.logEvent(name: 'start_sync_purchase_info');
   final uid = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
-    errorLogger.recordError("unexpected uid is not found when purchase info to sync", StackTrace.current);
+    errorLogger.recordError('unexpected uid is not found when purchase info to sync', StackTrace.current);
     return;
   }
 
@@ -160,9 +160,9 @@ Future<void> syncPurchaseInfo() async {
 
   try {
     final syncPurchaseInfo = SyncPurchaseInfo(DatabaseConnection(uid));
-    analytics.logEvent(name: "call_service_sync_purchase_info");
+    analytics.logEvent(name: 'call_service_sync_purchase_info');
     await syncPurchaseInfo(isActivated: isActivated);
-    analytics.logEvent(name: "end_sync_purchase_info");
+    analytics.logEvent(name: 'end_sync_purchase_info');
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }

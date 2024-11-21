@@ -47,7 +47,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           const Text(
-            "今なら限定価格でずっと使える",
+            '今なら限定価格でずっと使える',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontWeight: FontWeight.w700,
@@ -72,7 +72,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               const Text(
-                "通常 月額プラン",
+                '通常 月額プラン',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontWeight: FontWeight.w400,
@@ -96,14 +96,14 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                   ),
                   Positioned(
                     left: 24,
-                    child: SvgPicture.asset("images/strikethrough.svg"),
+                    child: SvgPicture.asset('images/strikethrough.svg'),
                   ),
                 ],
               ),
             ],
           ),
           const SizedBox(height: 8),
-          SvgPicture.asset("images/arrow_down.svg"),
+          SvgPicture.asset('images/arrow_down.svg'),
         ],
       ),
     );

@@ -28,7 +28,7 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
         Row(
           children: [
             Text(
-              "${index + 1}枚目",
+              '${index + 1}枚目',
               style: const TextStyle(
                 color: TextColor.main,
                 fontSize: 13,
@@ -47,7 +47,7 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
                       onDelete(index);
                     },
                     icon: SvgPicture.asset(
-                      "images/minus_icon.svg",
+                      'images/minus_icon.svg',
                       width: 20,
                       height: 20,
                     )),

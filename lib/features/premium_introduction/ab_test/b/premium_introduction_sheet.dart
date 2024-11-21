@@ -84,7 +84,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                     decoration: const BoxDecoration(
                       color: Colors.transparent,
                       image: DecorationImage(
-                        image: AssetImage("images/premium_background.png"),
+                        image: AssetImage('images/premium_background.png'),
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -129,10 +129,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           alignment: Alignment.center,
                           child: AlertButton(
                             onPressed: () async {
-                              analytics.logEvent(name: "pressed_premium_functions_on_sheet2");
+                              analytics.logEvent(name: 'pressed_premium_functions_on_sheet2');
                               await launchUrl(Uri.parse(preimumLink));
                             },
-                            text: "プレミアム機能の詳細を見る",
+                            text: 'プレミアム機能の詳細を見る',
                           ),
                         ),
                         const SizedBox(height: 24),

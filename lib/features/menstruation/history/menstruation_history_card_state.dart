@@ -52,7 +52,7 @@ class MenstruationHistoryCardState {
 
   String get avalageMenstruationDuration {
     if (allMenstruations.length <= 1) {
-      return "-";
+      return '-';
     }
 
     int totalMenstruationDuration = 0;
@@ -73,7 +73,7 @@ class MenstruationHistoryCardState {
 
   String get avalageMenstruationPeriod {
     if (allMenstruations.length <= 1) {
-      return "-";
+      return '-';
     }
 
     int totalMenstruationPeriod = 0;

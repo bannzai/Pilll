@@ -15,7 +15,7 @@ class DiaryPostSex extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const Text("sex", style: sectionTitle),
+        const Text('sex', style: sectionTitle),
         const SizedBox(width: 80),
         GestureDetector(
           onTap: () {
@@ -26,7 +26,7 @@ class DiaryPostSex extends StatelessWidget {
             width: 32,
             height: 32,
             decoration: BoxDecoration(shape: BoxShape.circle, color: sex.value ? PilllColors.thinSecondary : PilllColors.disabledSheet),
-            child: SvgPicture.asset(sex.value ? "images/heart.svg" : "images/heart-stroke.svg"),
+            child: SvgPicture.asset(sex.value ? 'images/heart.svg' : 'images/heart-stroke.svg'),
           ),
         ),
         const Spacer(),

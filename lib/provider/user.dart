@@ -66,21 +66,21 @@ class FetchOrCreateUser {
   FetchOrCreateUser(this.databaseConnection);
 
   Future<User> call(String uid) async {
-    debugPrint("call fetchOrCreate for $uid");
+    debugPrint('call fetchOrCreate for $uid');
     final user = await _fetch(uid).catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => _fetch(uid));
       }
-      throw FormatException("Create user error: $error, stackTrace: ${StackTrace.current.toString()}");
+      throw FormatException('Create user error: $error, stackTrace: ${StackTrace.current.toString()}');
     });
     return user;
   }
 
   Future<User> _fetch(String uid) async {
-    debugPrint("#fetch $uid");
+    debugPrint('#fetch $uid');
     final document = await databaseConnection.userReference().get();
     if (!document.exists) {
-      debugPrint("user does not exists $uid");
+      debugPrint('user does not exists $uid');
       throw UserNotFound();
     }
 
@@ -88,7 +88,7 @@ class FetchOrCreateUser {
   }
 
   Future<void> _create(String uid) async {
-    debugPrint("#create $uid");
+    debugPrint('#create $uid');
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     return databaseConnection.userRawReference().set(
@@ -142,7 +142,7 @@ class RegisterRemotePushNotificationToken {
   RegisterRemotePushNotificationToken(this.databaseConnection);
 
   Future<void> call(String? token) {
-    debugPrint("token: $token");
+    debugPrint('token: $token');
     return databaseConnection.userPrivateRawReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
@@ -202,18 +202,18 @@ class SaveUserLaunchInfo {
 
     return databaseConnection.userRawReference().set({
       // Shortcut property for backend
-      "lastLoginAt": now,
+      'lastLoginAt': now,
       // Stats
-      "stats": {
-        "lastLoginAt": now,
-        "beginVersion": beginVersion,
-        "lastLoginVersion": lastLoginVersion,
+      'stats': {
+        'lastLoginAt': now,
+        'beginVersion': beginVersion,
+        'lastLoginVersion': lastLoginVersion,
       },
-      "timezone": {
-        "name": timeZoneName,
-        "databaseName": timeZoneDatabaseName,
-        "offsetInHours": timeZoneOffset.inHours,
-        "offsetIsNegative": timeZoneOffset.isNegative,
+      'timezone': {
+        'name': timeZoneName,
+        'databaseName': timeZoneDatabaseName,
+        'offsetInHours': timeZoneOffset.inHours,
+        'offsetIsNegative': timeZoneOffset.isNegative,
       },
       // Package
       UserFirestoreFieldKeys.packageInfo: package.toJson(),

@@ -70,38 +70,38 @@ class PillSheetTypeColumn extends StatelessWidget {
   String _title(PillSheetType pillSheetType) {
     switch (pillSheetType) {
       case PillSheetType.pillsheet_21:
-        return "21錠";
+        return '21錠';
       case PillSheetType.pillsheet_28_4:
-        return "28錠";
+        return '28錠';
       case PillSheetType.pillsheet_28_7:
-        return "28錠";
+        return '28錠';
       case PillSheetType.pillsheet_28_0:
-        return "28錠";
+        return '28錠';
       case PillSheetType.pillsheet_24_0:
-        return "24錠";
+        return '24錠';
       case PillSheetType.pillsheet_21_0:
-        return "21錠";
+        return '21錠';
       case PillSheetType.pillsheet_24_rest_4:
-        return "24錠";
+        return '24錠';
     }
   }
 
   String _subtitle(PillSheetType pillSheetType) {
     switch (pillSheetType) {
       case PillSheetType.pillsheet_21:
-        return "21錠＋7日休薬";
+        return '21錠＋7日休薬';
       case PillSheetType.pillsheet_28_4:
-        return "24錠＋4錠偽薬";
+        return '24錠＋4錠偽薬';
       case PillSheetType.pillsheet_28_7:
-        return "21錠＋7錠偽薬";
+        return '21錠＋7錠偽薬';
       case PillSheetType.pillsheet_28_0:
-        return "すべて実薬";
+        return 'すべて実薬';
       case PillSheetType.pillsheet_24_0:
-        return "すべて実薬";
+        return 'すべて実薬';
       case PillSheetType.pillsheet_21_0:
-        return "すべて実薬";
+        return 'すべて実薬';
       case PillSheetType.pillsheet_24_rest_4:
-        return "24錠＋4錠休薬";
+        return '24錠＋4錠休薬';
     }
   }
 }

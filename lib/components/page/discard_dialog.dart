@@ -17,7 +17,7 @@ class DiscardDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+      title: SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,

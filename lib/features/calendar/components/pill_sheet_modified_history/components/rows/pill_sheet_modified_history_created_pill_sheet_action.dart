@@ -21,7 +21,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(pillSheetIDs)),
       detail: const Text(
-        "ピルシート追加",
+        'ピルシート追加',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

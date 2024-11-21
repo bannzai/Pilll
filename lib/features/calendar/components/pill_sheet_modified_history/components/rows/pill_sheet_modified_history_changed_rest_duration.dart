@@ -26,7 +26,7 @@ class PillSheetModifiedHistoryChangedRestDuration extends StatelessWidget {
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDuration(value)),
       detail: const Text(
-        "服用お休み期間変更",
+        '服用お休み期間変更',
         style: TextStyle(
           color: TextColor.main,
           fontSize: 12,

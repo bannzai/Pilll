@@ -37,7 +37,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   onPressed: () => Navigator.of(context).pop(),
                 ),
                 title: const Text(
-                  "服用履歴",
+                  '服用履歴',
                   style: TextStyle(color: TextColor.main),
                 ),
                 centerTitle: false,
@@ -83,7 +83,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
 extension PillSheetModifiedHistoriesPageRoute on PillSheetModifiedHistoriesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "PillSheetModifiedHistoriesPage"),
+      settings: const RouteSettings(name: 'PillSheetModifiedHistoriesPage'),
       builder: (_) => const PillSheetModifiedHistoriesPage(),
     );
   }

@@ -28,7 +28,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          const Text("ピルシートグループの自動追加",
+          const Text('ピルシートグループの自動追加',
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -40,7 +40,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: const Text("今のピルシートグループが終了したら、新しいシートを自動で追加します",
+      subtitle: const Text('今のピルシートグループが終了したら、新しいシートを自動で追加します',
           style: TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
@@ -49,7 +49,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
-          name: "toggle_creating_new_pillsheet",
+          name: 'toggle_creating_new_pillsheet',
         );
         if (isPremium || isTrial) {
           final messenger = ScaffoldMessenger.of(context);

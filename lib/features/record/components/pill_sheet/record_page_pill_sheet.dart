@@ -122,10 +122,10 @@ class RecordPagePillSheet extends HookConsumerWidget {
           ),
           onTap: () async {
             try {
-              analytics.logEvent(name: "pill_mark_tapped", parameters: {
-                "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-                "today_pill_number": pillSheet.todayPillNumber,
-                "pillNumberInPillSheet": pillNumberInPillSheet,
+              analytics.logEvent(name: 'pill_mark_tapped', parameters: {
+                'last_taken_pill_number': pillSheet.lastTakenPillNumber,
+                'today_pill_number': pillSheet.todayPillNumber,
+                'pillNumberInPillSheet': pillNumberInPillSheet,
               });
 
               if (pillSheet.todayPillNumber < pillNumberInPillSheet) {
@@ -213,7 +213,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
   }) {
     final activePillSheet = pillSheetGroup.activePillSheet;
     if (activePillSheet == null) {
-      throw const FormatException("pill sheet not found");
+      throw const FormatException('pill sheet not found');
     }
     if (activePillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
@@ -259,7 +259,7 @@ bool shouldPillMarkAnimation({
   }
   final activePillSheet = pillSheetGroup.activePillSheet;
   if (activePillSheet == null) {
-    throw const FormatException("pill sheet not found");
+    throw const FormatException('pill sheet not found');
   }
   if (activePillSheet.groupIndex < pillSheet.groupIndex) {
     return false;

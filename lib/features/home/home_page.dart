@@ -123,8 +123,8 @@ class HomePageBody extends HookConsumerWidget {
         } else if (shouldAskCancelReason) {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
-              title: "解約後のアンケートご協力のお願い",
-              url: "https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform",
+              title: '解約後のアンケートご協力のお願い',
+              url: 'https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform',
             ),
           );
           disableShouldAskCancelReason();
@@ -168,26 +168,26 @@ class HomePageBody extends HookConsumerWidget {
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
                   Tab(
-                    text: "ピル",
+                    text: 'ピル',
                     icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
+                        tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg'),
                   ),
                   Tab(
-                    text: "生理",
+                    text: '生理',
                     icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
+                        tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg'),
                   ),
                   Tab(
-                    text: "カレンダー",
+                    text: 'カレンダー',
                     icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
-                        ? "images/tab_icon_calendar_enable.svg"
-                        : "images/tab_icon_calendar_disable.svg"),
+                        ? 'images/tab_icon_calendar_enable.svg'
+                        : 'images/tab_icon_calendar_disable.svg'),
                   ),
                   Tab(
-                    text: "設定",
+                    text: '設定',
                     icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
-                        ? "images/tab_icon_setting_enable.svg"
-                        : "images/tab_icon_setting_disable.svg"),
+                        ? 'images/tab_icon_setting_enable.svg'
+                        : 'images/tab_icon_setting_disable.svg'),
                   ),
                 ],
               ),
@@ -232,13 +232,13 @@ extension HomePageTabFunctions on HomePageTabType {
   String get screenName {
     switch (this) {
       case HomePageTabType.record:
-        return "RecordPage";
+        return 'RecordPage';
       case HomePageTabType.menstruation:
-        return "MenstruationPage";
+        return 'MenstruationPage';
       case HomePageTabType.calendar:
-        return "CalendarPage";
+        return 'CalendarPage';
       case HomePageTabType.setting:
-        return "SettingsPage";
+        return 'SettingsPage';
     }
   }
 }

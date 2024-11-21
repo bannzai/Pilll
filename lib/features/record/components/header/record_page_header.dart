@@ -55,7 +55,7 @@ class RecordPageInformationHeader extends StatelessWidget {
                   TodayTakenPillNumber(
                       pillSheetGroup: pillSheetGroup,
                       onPressed: () {
-                        analytics.logEvent(name: "tapped_record_information_header");
+                        analytics.logEvent(name: 'tapped_record_information_header');
                         if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) {
                           Navigator.of(context).push(
                             SettingTodayPillNumberPageRoute.route(
@@ -97,7 +97,7 @@ class RecordPageInformationHeader extends StatelessWidget {
   Center _todayWidget() {
     return Center(
       child: Text(
-        "${_formattedToday()} (${_todayWeekday()})",
+        '${_formattedToday()} (${_todayWeekday()})',
         style: const TextStyle(
           fontFamily: FontFamily.number,
           fontWeight: FontWeight.w600,

@@ -31,7 +31,7 @@ class PurchaseButtons extends HookConsumerWidget {
         MonthlyPurchaseButton(
           monthlyPackage: monthlyPackage,
           onTap: (monthlyPackage) async {
-            analytics.logEvent(name: "pressed_monthly_purchase_button");
+            analytics.logEvent(name: 'pressed_monthly_purchase_button');
             await _purchase(context, monthlyPackage, purchase);
           },
         ),
@@ -40,7 +40,7 @@ class PurchaseButtons extends HookConsumerWidget {
           annualPackage: annualPackage,
           offeringType: offeringType,
           onTap: (annualPackage) async {
-            analytics.logEvent(name: "pressed_annual_purchase_button");
+            analytics.logEvent(name: 'pressed_annual_purchase_button');
             await _purchase(context, annualPackage, purchase);
           },
         ),
@@ -68,7 +68,7 @@ class PurchaseButtons extends HookConsumerWidget {
             });
       }
     } catch (error) {
-      debugPrint("caused purchase error for $error");
+      debugPrint('caused purchase error for $error');
       if (context.mounted) showErrorAlert(context, error);
     } finally {
       isLoading.value = false;

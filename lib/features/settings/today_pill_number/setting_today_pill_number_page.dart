@@ -39,7 +39,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: const Text(
-          "ピル番号の変更",
+          'ピル番号の変更',
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -52,7 +52,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                 children: [
                   const SizedBox(height: 20),
                   Text(
-                    "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
+                    '今日(${_today()})\n飲む・飲んだピルの番号をタップ',
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
@@ -97,7 +97,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
                           navigator.pop();
                         },
-                        text: "変更する",
+                        text: '変更する',
                       ),
                     ),
                     const SizedBox(height: 35),
@@ -112,7 +112,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   }
 
   String _today() {
-    return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
+    return '${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})';
   }
 
   int _pillNumberInPillSheet({
@@ -134,7 +134,7 @@ extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
     required PillSheet activePillSheet,
   }) {
     return MaterialPageRoute(
-      settings: const RouteSettings(name: "SettingTodayPillNumberPage"),
+      settings: const RouteSettings(name: 'SettingTodayPillNumberPage'),
       builder: (_) => SettingTodayPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activePillSheet: activePillSheet,

@@ -71,7 +71,7 @@ class PillSheetViewLayout extends StatelessWidget {
                   }
                   return MapEntry(index, [
                     pillMarkLine,
-                    SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                    SvgPicture.asset('images/pill_sheet_dot_line.svg'),
                   ]);
                 })
                 .entries

@@ -21,11 +21,11 @@ class DiaryOrScheduleSheet extends StatelessWidget {
           children: [
             const SizedBox(height: 24),
             _tile(
-              title: "日記を記録",
+              title: '日記を記録',
               onTap: () => showDiary(),
               leading: const Icon(Icons.note_alt),
             ),
-            _tile(title: "予定を記入", onTap: () => showSchedule(), leading: const Icon(Icons.event)),
+            _tile(title: '予定を記入', onTap: () => showSchedule(), leading: const Icon(Icons.event)),
           ],
         ),
       ),

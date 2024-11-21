@@ -33,7 +33,7 @@ class EndManualRestDuration extends HookConsumerWidget {
           duration: Duration(
             seconds: 2,
           ),
-          content: Text("服用のお休み期間が終了しました"),
+          content: Text('服用のお休み期間が終了しました'),
         ),
       );
     }
@@ -41,10 +41,10 @@ class EndManualRestDuration extends HookConsumerWidget {
     return ListTile(
       leading: const Icon(Icons.play_arrow),
       title: const Text(
-        "服用再開",
+        '服用再開',
       ),
       onTap: () async {
-        analytics.logEvent(name: "end_manual_rest_duration_pressed");
+        analytics.logEvent(name: 'end_manual_rest_duration_pressed');
 
         try {
           final endedRestDurationPillSheetGroup = await endRestDuration(
@@ -55,7 +55,7 @@ class EndManualRestDuration extends HookConsumerWidget {
           await registerReminderLocalNotification();
           didEndRestDuration(endedRestDurationPillSheetGroup);
         } catch (e) {
-          debugPrint("endRestDuration error: $e");
+          debugPrint('endRestDuration error: $e');
         }
       },
     );

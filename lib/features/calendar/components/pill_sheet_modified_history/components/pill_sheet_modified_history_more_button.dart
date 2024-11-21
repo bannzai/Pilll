@@ -18,9 +18,9 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         AlertButton(
-            text: "もっと見る",
+            text: 'もっと見る',
             onPressed: () async {
-              analytics.logEvent(name: "pill_sheet_modified_history_more");
+              analytics.logEvent(name: 'pill_sheet_modified_history_more');
               if (user.isPremium || user.isTrial) {
                 Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
               } else {

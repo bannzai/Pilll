@@ -31,7 +31,7 @@ class CalendarNextPillSheetBand extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.only(left: 10),
-            child: Text(isLineBreak ? "" : "新しいシート開始 ▶︎",
+            child: Text(isLineBreak ? '' : '新しいシート開始 ▶︎',
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

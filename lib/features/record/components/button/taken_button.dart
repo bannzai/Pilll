@@ -36,12 +36,12 @@ class TakenButton extends HookConsumerWidget {
     return SizedBox(
       width: 180,
       child: PrimaryButton(
-        text: "飲んだ",
+        text: '飲んだ',
         onPressed: () async {
           try {
-            analytics.logEvent(name: "taken_button_pressed", parameters: {
-              "last_taken_pill_number": activePillSheet.lastTakenPillNumber,
-              "today_pill_number": activePillSheet.todayPillNumber,
+            analytics.logEvent(name: 'taken_button_pressed', parameters: {
+              'last_taken_pill_number': activePillSheet.lastTakenPillNumber,
+              'today_pill_number': activePillSheet.todayPillNumber,
             });
             // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
             FlutterAppBadger.removeBadge();

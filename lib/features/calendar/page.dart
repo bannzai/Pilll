@@ -119,7 +119,7 @@ class _CalendarPageBody extends StatelessWidget {
         padding: const EdgeInsets.only(right: 10, bottom: 32),
         child: FloatingActionButton(
           onPressed: () {
-            analytics.logEvent(name: "calendar_fab_pressed");
+            analytics.logEvent(name: 'calendar_fab_pressed');
             Navigator.of(context).push(DiaryPostPageRoute.route(today(), todayDiary));
           },
           backgroundColor: PilllColors.primary,
@@ -235,7 +235,7 @@ class MonthCalendarPager extends StatelessWidget {
                   diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
                   schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
                   onTap: (date) {
-                    analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+                    analytics.logEvent(name: 'did_select_day_tile_on_calendar_card');
                     transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
                   },
                 );
@@ -268,7 +268,7 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                   const Text(lockEmoji, style: TextStyle(fontSize: 40)),
                   const SizedBox(height: 12),
                   const Text(
-                    "これ以上の閲覧はプレミアム機能になります",
+                    'これ以上の閲覧はプレミアム機能になります',
                     style: TextStyle(
                       color: TextColor.main,
                       fontSize: 14,
@@ -280,10 +280,10 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                   SizedBox(
                     width: 204,
                     child: AppOutlinedButton(
-                      text: "くわしくみる",
+                      text: 'くわしくみる',
                       onPressed: () async {
                         analytics.logEvent(
-                          name: "pressed_premium_overlay_monthly_calendar",
+                          name: 'pressed_premium_overlay_monthly_calendar',
                         );
                         showPremiumIntroductionSheet(context);
                       },
