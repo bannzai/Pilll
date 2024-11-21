@@ -13,9 +13,7 @@ String _$firebaseUserStateHash() => r'c50e10f43818ea992e82df756275ee8f6fcf5b73';
 final firebaseUserStateProvider = StreamProvider<User?>.internal(
   firebaseUserState,
   name: r'firebaseUserStateProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$firebaseUserStateHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$firebaseUserStateHash,
   dependencies: const <ProviderOrFamily>[],
   allTransitiveDependencies: const <ProviderOrFamily>{},
 );

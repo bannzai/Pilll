@@ -20,13 +20,9 @@ PilllAds _$PilllAdsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PilllAds {
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get startDateTime => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDateTime => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
   String? get imageURL => throw _privateConstructorUsedError;
@@ -37,24 +33,17 @@ mixin _$PilllAds {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PilllAdsCopyWith<PilllAds> get copyWith =>
-      throw _privateConstructorUsedError;
+  $PilllAdsCopyWith<PilllAds> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PilllAdsCopyWith<$Res> {
-  factory $PilllAdsCopyWith(PilllAds value, $Res Function(PilllAds) then) =
-      _$PilllAdsCopyWithImpl<$Res, PilllAds>;
+  factory $PilllAdsCopyWith(PilllAds value, $Res Function(PilllAds) then) = _$PilllAdsCopyWithImpl<$Res, PilllAds>;
   @useResult
   $Res call(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime startDateTime,
-      @JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime endDateTime,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
       String description,
       String? imageURL,
       String destinationURL,
@@ -64,8 +53,7 @@ abstract class $PilllAdsCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
-    implements $PilllAdsCopyWith<$Res> {
+class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds> implements $PilllAdsCopyWith<$Res> {
   _$PilllAdsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -123,22 +111,14 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds>
 }
 
 /// @nodoc
-abstract class _$$PilllAdsImplCopyWith<$Res>
-    implements $PilllAdsCopyWith<$Res> {
-  factory _$$PilllAdsImplCopyWith(
-          _$PilllAdsImpl value, $Res Function(_$PilllAdsImpl) then) =
-      __$$PilllAdsImplCopyWithImpl<$Res>;
+abstract class _$$PilllAdsImplCopyWith<$Res> implements $PilllAdsCopyWith<$Res> {
+  factory _$$PilllAdsImplCopyWith(_$PilllAdsImpl value, $Res Function(_$PilllAdsImpl) then) = __$$PilllAdsImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime startDateTime,
-      @JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime endDateTime,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
       String description,
       String? imageURL,
       String destinationURL,
@@ -148,12 +128,8 @@ abstract class _$$PilllAdsImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$PilllAdsImplCopyWithImpl<$Res>
-    extends _$PilllAdsCopyWithImpl<$Res, _$PilllAdsImpl>
-    implements _$$PilllAdsImplCopyWith<$Res> {
-  __$$PilllAdsImplCopyWithImpl(
-      _$PilllAdsImpl _value, $Res Function(_$PilllAdsImpl) _then)
-      : super(_value, _then);
+class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$PilllAdsImpl> implements _$$PilllAdsImplCopyWith<$Res> {
+  __$$PilllAdsImplCopyWithImpl(_$PilllAdsImpl _value, $Res Function(_$PilllAdsImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -209,13 +185,9 @@ class __$$PilllAdsImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$PilllAdsImpl extends _PilllAds {
   _$PilllAdsImpl(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.startDateTime,
-      @JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.endDateTime,
       required this.description,
       required this.imageURL,
@@ -225,18 +197,13 @@ class _$PilllAdsImpl extends _PilllAds {
       this.chevronRightColor = "FFFFFF"})
       : super._();
 
-  factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PilllAdsImplFromJson(json);
+  factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) => _$$PilllAdsImplFromJson(json);
 
   @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime startDateTime;
   @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endDateTime;
   @override
   final String description;
@@ -263,42 +230,25 @@ class _$PilllAdsImpl extends _PilllAds {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PilllAdsImpl &&
-            (identical(other.startDateTime, startDateTime) ||
-                other.startDateTime == startDateTime) &&
-            (identical(other.endDateTime, endDateTime) ||
-                other.endDateTime == endDateTime) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.imageURL, imageURL) ||
-                other.imageURL == imageURL) &&
-            (identical(other.destinationURL, destinationURL) ||
-                other.destinationURL == destinationURL) &&
-            (identical(other.hexColor, hexColor) ||
-                other.hexColor == hexColor) &&
-            (identical(other.closeButtonColor, closeButtonColor) ||
-                other.closeButtonColor == closeButtonColor) &&
-            (identical(other.chevronRightColor, chevronRightColor) ||
-                other.chevronRightColor == chevronRightColor));
+            (identical(other.startDateTime, startDateTime) || other.startDateTime == startDateTime) &&
+            (identical(other.endDateTime, endDateTime) || other.endDateTime == endDateTime) &&
+            (identical(other.description, description) || other.description == description) &&
+            (identical(other.imageURL, imageURL) || other.imageURL == imageURL) &&
+            (identical(other.destinationURL, destinationURL) || other.destinationURL == destinationURL) &&
+            (identical(other.hexColor, hexColor) || other.hexColor == hexColor) &&
+            (identical(other.closeButtonColor, closeButtonColor) || other.closeButtonColor == closeButtonColor) &&
+            (identical(other.chevronRightColor, chevronRightColor) || other.chevronRightColor == chevronRightColor));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      startDateTime,
-      endDateTime,
-      description,
-      imageURL,
-      destinationURL,
-      hexColor,
-      closeButtonColor,
-      chevronRightColor);
+  int get hashCode =>
+      Object.hash(runtimeType, startDateTime, endDateTime, description, imageURL, destinationURL, hexColor, closeButtonColor, chevronRightColor);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith =>
-      __$$PilllAdsImplCopyWithImpl<_$PilllAdsImpl>(this, _$identity);
+  _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith => __$$PilllAdsImplCopyWithImpl<_$PilllAdsImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -310,13 +260,9 @@ class _$PilllAdsImpl extends _PilllAds {
 
 abstract class _PilllAds extends PilllAds {
   factory _PilllAds(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime startDateTime,
-      @JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime endDateTime,
       required final String description,
       required final String? imageURL,
@@ -326,18 +272,13 @@ abstract class _PilllAds extends PilllAds {
       final String chevronRightColor}) = _$PilllAdsImpl;
   _PilllAds._() : super._();
 
-  factory _PilllAds.fromJson(Map<String, dynamic> json) =
-      _$PilllAdsImpl.fromJson;
+  factory _PilllAds.fromJson(Map<String, dynamic> json) = _$PilllAdsImpl.fromJson;
 
   @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get startDateTime;
   @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDateTime;
   @override
   String get description;
@@ -353,6 +294,5 @@ abstract class _PilllAds extends PilllAds {
   String get chevronRightColor;
   @override
   @JsonKey(ignore: true)
-  _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith => throw _privateConstructorUsedError;
 }

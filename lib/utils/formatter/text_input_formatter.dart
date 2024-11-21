@@ -1,8 +1,7 @@
 import 'package:flutter/services.dart';
 
 abstract class AppTextFieldFormatter {
-  static final greaterThanZero =
-      TextInputFormatter.withFunction((oldValue, newValue) {
+  static final greaterThanZero = TextInputFormatter.withFunction((oldValue, newValue) {
     if (newValue.text.isEmpty) {
       return newValue;
     }
