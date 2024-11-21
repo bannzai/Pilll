@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class PremiumIntroductionRow extends StatelessWidget {
   final bool isPremium;
@@ -24,8 +25,8 @@ class PremiumIntroductionRow extends StatelessWidget {
         children: [
           SvgPicture.asset('images/crown.svg', width: 24),
           const SizedBox(width: 8),
-          const Text('プレミアムプランを見る',
-              style: TextStyle(
+          Text(L.viewPremiumPlan,  // プレミアムプランを見るを翻訳
+              style: const TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
