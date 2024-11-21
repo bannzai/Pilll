@@ -26,22 +26,18 @@ class NotificationInRestDuration extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text(
-        L.NotificationForNotTakenPeriod(pillSheet.pillSheetType.notTakenWord),
-        style: const TextStyle(
-          fontFamily: FontFamily.roboto,
-          fontWeight: FontWeight.w300,
-          fontSize: 16,
-        )
-      ),
-      subtitle: Text(
-        L.AutoRecordForNotTakenPeriodIfNotificationOff(pillSheet.pillSheetType.notTakenWord),
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w300,
-          fontSize: 14,
-        )
-      ),
+      title: Text(L.NotificationForNotTakenPeriod(pillSheet.pillSheetType.notTakenWord),
+          style: const TextStyle(
+            fontFamily: FontFamily.roboto,
+            fontWeight: FontWeight.w300,
+            fontSize: 16,
+          )),
+      subtitle: Text(L.AutoRecordForNotTakenPeriodIfNotificationOff(pillSheet.pillSheetType.notTakenWord),
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w300,
+            fontSize: 14,
+          )),
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(

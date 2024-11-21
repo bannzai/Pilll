@@ -3,7 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
@@ -37,7 +37,7 @@ class CalendarPage extends HookConsumerWidget {
                   onPressed: () => Navigator.of(context).pop(),
                 ),
                 title: Text(
-                  L.medicationHistory,  // 服用履歴を翻訳
+                  L.medicationHistory, // 服用履歴を翻訳
                   style: const TextStyle(color: TextColor.main),
                 ),
                 centerTitle: false,

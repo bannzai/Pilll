@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
 class PillSheetModifiedHistoryCard extends StatelessWidget {
@@ -33,7 +33,7 @@ class PillSheetModifiedHistoryCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            L.pillSheetModifiedHistory,  // ピルシート変更履歴を翻訳
+            L.pillSheetModifiedHistory, // ピルシート変更履歴を翻訳
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,

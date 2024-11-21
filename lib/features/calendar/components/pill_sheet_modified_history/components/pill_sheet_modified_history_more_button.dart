@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -16,7 +16,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
     return TextButton(
       onPressed: onPressed,
       child: Text(
-        L.more,  // もっと見るを翻訳
+        L.more, // もっと見るを翻訳
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,

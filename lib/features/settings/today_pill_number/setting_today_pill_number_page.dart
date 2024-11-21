@@ -12,7 +12,7 @@ import 'package:pilll/provider/change_pill_number.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/utils/local_notification.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
@@ -40,7 +40,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          L.changePillNumber,  // ピル番号の変更を翻訳
+          L.changePillNumber, // ピル番号の変更を翻訳
           style: const TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -53,7 +53,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                 children: [
                   const SizedBox(height: 20),
                   Text(
-                    L.selectOrChangePillNumber,  // 今日({today})\n飲む・飲んだピルの番号をタップを翻訳
+                    L.selectOrChangePillNumber, // 今日({today})\n飲む・飲んだピルの番号をタップを翻訳
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
@@ -98,7 +98,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
                           navigator.pop();
                         },
-                        text: L.change,  // 変更するを翻訳
+                        text: L.change, // 変更するを翻訳
                       ),
                     ),
                     const SizedBox(height: 35),

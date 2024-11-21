@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
   const PillSheetModifiedHisotiryListHeader({super.key});
@@ -14,7 +14,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
-            L.medicationHistory,  // 服用履歴を翻訳
+            L.medicationHistory, // 服用履歴を翻訳
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
@@ -23,7 +23,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
             ),
           ),
           Text(
-            L.pillSheet,  // ピルシートを翻訳
+            L.pillSheet, // ピルシートを翻訳
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,

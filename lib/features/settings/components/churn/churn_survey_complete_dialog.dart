@@ -3,7 +3,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class ChurnSurveyCompleteDialog extends StatelessWidget {
   const ChurnSurveyCompleteDialog({
@@ -15,7 +15,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
     return AlertDialog(
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
       title: Text(
-        L.thankYouForCooperation,  // ご協力頂きありがとうございますを翻訳
+        L.thankYouForCooperation, // ご協力頂きありがとうございますを翻訳
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -28,7 +28,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            L.feedbackUsage,  // いただいた意見は今後の改善へと活用させていただきます。を翻訳
+            L.feedbackUsage, // いただいた意見は今後の改善へと活用させていただきます。を翻訳
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
@@ -40,7 +40,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: L.close,  // 閉じるを翻訳
+          text: L.close, // 閉じるを翻訳
           onPressed: () async {
             analytics.logEvent(name: 'close_churn');
             Navigator.of(context).pop();

@@ -7,7 +7,7 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class CreatingNewPillSheetRow extends HookConsumerWidget {
   final Setting setting;
@@ -29,7 +29,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          Text(L.autoAddPillSheetGroup,  // ピルシートグループの自動追加を翻訳
+          Text(L.autoAddPillSheetGroup, // ピルシートグループの自動追加を翻訳
               style: const TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -41,7 +41,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: Text(L.autoAddNewSheetAfterCurrentEnds,  // 今のピルシートグループが終了したら、新しいシートを自動で追加しますを翻訳
+      subtitle: Text(L.autoAddNewSheetAfterCurrentEnds, // 今のピルシートグループが終了したら、新しいシートを自動で追加しますを翻訳
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,

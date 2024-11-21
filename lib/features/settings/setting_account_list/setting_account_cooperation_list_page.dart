@@ -37,8 +37,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: Text(L.accountSettings,
-                  style: const TextStyle(color: TextColor.main)),
+              title: Text(L.accountSettings, style: const TextStyle(color: TextColor.main)),
               backgroundColor: PilllColors.white,
             ),
             body: ListView(
