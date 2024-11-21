@@ -152,7 +152,6 @@ class _SchedulePostPage extends HookConsumerWidget {
                   ),
                 ),
               ],
-
               const Spacer(),
               if (date.date().isAfter(today())) ...[
                 PrimaryButton(

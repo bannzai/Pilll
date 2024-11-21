@@ -23,13 +23,13 @@ class Diary with _$Diary {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime date,
+    required DateTime date,
     // NOTE: OLD data does't have createdAt
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime? createdAt,
+    required DateTime? createdAt,
     PhysicalConditionStatus? physicalConditionStatus,
     required List<String> physicalConditions,
     required bool hasSex,

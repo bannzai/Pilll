@@ -22,8 +22,8 @@ class PrimaryButton extends HookWidget {
       alignment: Alignment.center,
       children: [
         ElevatedButton(
-          style: ButtonStyle(backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-            if (statuses.contains(MaterialState.disabled)) {
+          style: ButtonStyle(backgroundColor: WidgetStateProperty.resolveWith((statuses) {
+            if (statuses.contains(WidgetState.disabled)) {
               return PilllColors.lightGray;
             }
             return PilllColors.primary;
@@ -80,8 +80,8 @@ class UndoButton extends HookWidget {
       alignment: Alignment.center,
       children: [
         ElevatedButton(
-          style: ButtonStyle(backgroundColor: MaterialStateProperty.resolveWith((statuses) {
-            if (statuses.contains(MaterialState.disabled)) {
+          style: ButtonStyle(backgroundColor: WidgetStateProperty.resolveWith((statuses) {
+            if (statuses.contains(WidgetState.disabled)) {
               return PilllColors.lightGray;
             }
             return PilllColors.gray;

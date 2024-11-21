@@ -35,7 +35,7 @@ class FirebaseAuthResolver extends HookConsumerWidget {
 
 class _FirebaseAuthSignInResolver extends HookConsumerWidget {
   final Widget Function(BuildContext, User) builder;
-  const _FirebaseAuthSignInResolver({super.key, required this.builder});
+  const _FirebaseAuthSignInResolver({required this.builder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

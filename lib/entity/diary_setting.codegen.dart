@@ -28,13 +28,12 @@ class DiarySetting with _$DiarySetting {
   const DiarySetting._();
   @JsonSerializable(explicitToJson: true)
   const factory DiarySetting({
-    @Default(defaultPhysicalConditions)
-        List<String> physicalConditions,
+    @Default(defaultPhysicalConditions) List<String> physicalConditions,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+    required DateTime createdAt,
   }) = _DiarySetting;
 
   factory DiarySetting.fromJson(Map<String, dynamic> json) => _$DiarySettingFromJson(json);

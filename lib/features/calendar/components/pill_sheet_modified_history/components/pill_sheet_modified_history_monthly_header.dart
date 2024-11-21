@@ -6,8 +6,7 @@ import 'package:pilll/utils/formatter/date_time_formatter.dart';
 class PillSheetModifiedHistoryMonthlyHeader extends StatelessWidget {
   final DateTime dateTimeOfMonth;
 
-  const PillSheetModifiedHistoryMonthlyHeader(
-      {super.key, required this.dateTimeOfMonth});
+  const PillSheetModifiedHistoryMonthlyHeader({super.key, required this.dateTimeOfMonth});
 
   @override
   Widget build(BuildContext context) {
