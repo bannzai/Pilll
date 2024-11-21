@@ -149,7 +149,9 @@ class PremiumIntroductionFotter extends StatelessWidget {
       });
       throw AlertError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
     } on PlatformException catch (exception, stack) {
-      analytics.logEvent(name: "catched_restore_exception", parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
+      analytics.logEvent(
+          name: "catched_restore_exception",
+          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);

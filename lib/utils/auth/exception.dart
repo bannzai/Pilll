@@ -8,7 +8,8 @@ Exception? mapFromFirebaseAuthException(FirebaseAuthException e, LinkAccountType
         faqLinkURL: "https://pilll.wraptas.site/a8d3c745e58c40f0b8b771bb70f7a7d1");
   }
   if (e.code == "credential-already-in-use") {
-    throw AlertError("この${accountType.providerName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${e.message}", faqLinkURL: "https://pilll.wraptas.site/a8d3c745e58c40f0b8b771bb70f7a7d1");
+    throw AlertError("この${accountType.providerName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${e.message}",
+        faqLinkURL: "https://pilll.wraptas.site/a8d3c745e58c40f0b8b771bb70f7a7d1");
   }
   if (e.code == "email-already-in-use") {
     throw AlertError("すでに${accountType.providerName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${e.message}");

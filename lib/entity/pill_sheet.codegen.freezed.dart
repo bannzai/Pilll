@@ -32,7 +32,8 @@ mixin _$PillSheetTypeInfo {
 
 /// @nodoc
 abstract class $PillSheetTypeInfoCopyWith<$Res> {
-  factory $PillSheetTypeInfoCopyWith(PillSheetTypeInfo value, $Res Function(PillSheetTypeInfo) then) = _$PillSheetTypeInfoCopyWithImpl<$Res, PillSheetTypeInfo>;
+  factory $PillSheetTypeInfoCopyWith(PillSheetTypeInfo value, $Res Function(PillSheetTypeInfo) then) =
+      _$PillSheetTypeInfoCopyWithImpl<$Res, PillSheetTypeInfo>;
   @useResult
   $Res call({String pillSheetTypeReferencePath, String name, int totalCount, int dosingPeriod});
 }
@@ -77,14 +78,16 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res, $Val extends PillSheetTypeInfo> impl
 
 /// @nodoc
 abstract class _$$PillSheetTypeInfoImplCopyWith<$Res> implements $PillSheetTypeInfoCopyWith<$Res> {
-  factory _$$PillSheetTypeInfoImplCopyWith(_$PillSheetTypeInfoImpl value, $Res Function(_$PillSheetTypeInfoImpl) then) = __$$PillSheetTypeInfoImplCopyWithImpl<$Res>;
+  factory _$$PillSheetTypeInfoImplCopyWith(_$PillSheetTypeInfoImpl value, $Res Function(_$PillSheetTypeInfoImpl) then) =
+      __$$PillSheetTypeInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String pillSheetTypeReferencePath, String name, int totalCount, int dosingPeriod});
 }
 
 /// @nodoc
-class __$$PillSheetTypeInfoImplCopyWithImpl<$Res> extends _$PillSheetTypeInfoCopyWithImpl<$Res, _$PillSheetTypeInfoImpl> implements _$$PillSheetTypeInfoImplCopyWith<$Res> {
+class __$$PillSheetTypeInfoImplCopyWithImpl<$Res> extends _$PillSheetTypeInfoCopyWithImpl<$Res, _$PillSheetTypeInfoImpl>
+    implements _$$PillSheetTypeInfoImplCopyWith<$Res> {
   __$$PillSheetTypeInfoImplCopyWithImpl(_$PillSheetTypeInfoImpl _value, $Res Function(_$PillSheetTypeInfoImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -143,7 +146,8 @@ class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PillSheetTypeInfoImpl &&
-            (identical(other.pillSheetTypeReferencePath, pillSheetTypeReferencePath) || other.pillSheetTypeReferencePath == pillSheetTypeReferencePath) &&
+            (identical(other.pillSheetTypeReferencePath, pillSheetTypeReferencePath) ||
+                other.pillSheetTypeReferencePath == pillSheetTypeReferencePath) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.totalCount, totalCount) || other.totalCount == totalCount) &&
             (identical(other.dosingPeriod, dosingPeriod) || other.dosingPeriod == dosingPeriod));
@@ -156,7 +160,8 @@ class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PillSheetTypeInfoImplCopyWith<_$PillSheetTypeInfoImpl> get copyWith => __$$PillSheetTypeInfoImplCopyWithImpl<_$PillSheetTypeInfoImpl>(this, _$identity);
+  _$$PillSheetTypeInfoImplCopyWith<_$PillSheetTypeInfoImpl> get copyWith =>
+      __$$PillSheetTypeInfoImplCopyWithImpl<_$PillSheetTypeInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -167,8 +172,11 @@ class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
 }
 
 abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
-  const factory _PillSheetTypeInfo({required final String pillSheetTypeReferencePath, required final String name, required final int totalCount, required final int dosingPeriod}) =
-      _$PillSheetTypeInfoImpl;
+  const factory _PillSheetTypeInfo(
+      {required final String pillSheetTypeReferencePath,
+      required final String name,
+      required final int totalCount,
+      required final int dosingPeriod}) = _$PillSheetTypeInfoImpl;
 
   factory _PillSheetTypeInfo.fromJson(Map<String, dynamic> json) = _$PillSheetTypeInfoImpl.fromJson;
 
@@ -267,7 +275,8 @@ abstract class _$$RestDurationImplCopyWith<$Res> implements $RestDurationCopyWit
 }
 
 /// @nodoc
-class __$$RestDurationImplCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res, _$RestDurationImpl> implements _$$RestDurationImplCopyWith<$Res> {
+class __$$RestDurationImplCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res, _$RestDurationImpl>
+    implements _$$RestDurationImplCopyWith<$Res> {
   __$$RestDurationImplCopyWithImpl(_$RestDurationImpl _value, $Res Function(_$RestDurationImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -305,9 +314,11 @@ class __$$RestDurationImplCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<
 class _$RestDurationImpl extends _RestDuration {
   const _$RestDurationImpl(
       {required this.id,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.beginDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.endDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdDate})
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdDate})
       : super._();
 
   factory _$RestDurationImpl.fromJson(Map<String, dynamic> json) => _$$RestDurationImplFromJson(json);
@@ -361,9 +372,11 @@ class _$RestDurationImpl extends _RestDuration {
 abstract class _RestDuration extends RestDuration {
   const factory _RestDuration(
       {required final String? id,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime beginDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? endDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime createdDate}) = _$RestDurationImpl;
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdDate}) = _$RestDurationImpl;
   const _RestDuration._() : super._();
 
   factory _RestDuration.fromJson(Map<String, dynamic> json) = _$RestDurationImpl.fromJson;
@@ -572,7 +585,8 @@ class _$PillSheetImpl extends _PillSheet {
   _$PillSheetImpl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.beginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beginingDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
@@ -636,7 +650,8 @@ class _$PillSheetImpl extends _PillSheet {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, const DeepCollectionEquality().hash(_restDurations));
+  int get hashCode => Object.hash(
+      runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, const DeepCollectionEquality().hash(_restDurations));
 
   @JsonKey(ignore: true)
   @override
@@ -655,8 +670,10 @@ abstract class _PillSheet extends PillSheet {
   factory _PillSheet(
       {@JsonKey(includeIfNull: false) required final String? id,
       @JsonKey() required final PillSheetTypeInfo typeInfo,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime beginingDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? lastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beginingDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      required final DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final int groupIndex,

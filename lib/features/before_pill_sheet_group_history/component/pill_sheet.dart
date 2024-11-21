@@ -137,7 +137,9 @@ PillMarkType pillMarkFor({
   required PillSheet pillSheet,
 }) {
   if (pillNumberInPillSheet > pillSheet.typeInfo.dosingPeriod) {
-    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4) ? PillMarkType.rest : PillMarkType.fake;
+    return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
+        ? PillMarkType.rest
+        : PillMarkType.fake;
   }
   if (pillNumberInPillSheet <= pillSheet.lastTakenPillNumber) {
     return PillMarkType.done;
@@ -182,13 +184,20 @@ class PillNumber extends StatelessWidget {
   final int pageIndex;
   final int pillNumberInPillSheet;
 
-  const PillNumber({super.key, required this.pillSheetGroup, required this.pillSheet, required this.setting, required this.pageIndex, required this.pillNumberInPillSheet});
+  const PillNumber(
+      {super.key,
+      required this.pillSheetGroup,
+      required this.pillSheet,
+      required this.setting,
+      required this.pageIndex,
+      required this.pillNumberInPillSheet});
 
   @override
   Widget build(BuildContext context) {
     final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
 
-    final containedMenstruationDuration = menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
+    final containedMenstruationDuration =
+        menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
     final text = pillSheetGroup.displayPillNumber(
       premiumOrTrial: true,

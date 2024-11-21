@@ -72,7 +72,8 @@ abstract class _$$ReminderTimeImplCopyWith<$Res> implements $ReminderTimeCopyWit
 }
 
 /// @nodoc
-class __$$ReminderTimeImplCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res, _$ReminderTimeImpl> implements _$$ReminderTimeImplCopyWith<$Res> {
+class __$$ReminderTimeImplCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res, _$ReminderTimeImpl>
+    implements _$$ReminderTimeImplCopyWith<$Res> {
   __$$ReminderTimeImplCopyWithImpl(_$ReminderTimeImpl _value, $Res Function(_$ReminderTimeImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -124,7 +125,10 @@ class _$ReminderTimeImpl extends _ReminderTime with DiagnosticableTreeMixin {
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$ReminderTimeImpl && (identical(other.hour, hour) || other.hour == hour) && (identical(other.minute, minute) || other.minute == minute));
+        (other.runtimeType == runtimeType &&
+            other is _$ReminderTimeImpl &&
+            (identical(other.hour, hour) || other.hour == hour) &&
+            (identical(other.minute, minute) || other.minute == minute));
   }
 
   @JsonKey(ignore: true)
@@ -455,13 +459,17 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
         (other.runtimeType == runtimeType &&
             other is _$SettingImpl &&
             const DeepCollectionEquality().equals(other._pillSheetTypes, _pillSheetTypes) &&
-            (identical(other.pillNumberForFromMenstruation, pillNumberForFromMenstruation) || other.pillNumberForFromMenstruation == pillNumberForFromMenstruation) &&
+            (identical(other.pillNumberForFromMenstruation, pillNumberForFromMenstruation) ||
+                other.pillNumberForFromMenstruation == pillNumberForFromMenstruation) &&
             (identical(other.durationMenstruation, durationMenstruation) || other.durationMenstruation == durationMenstruation) &&
             const DeepCollectionEquality().equals(other._reminderTimes, _reminderTimes) &&
             (identical(other.isOnReminder, isOnReminder) || other.isOnReminder == isOnReminder) &&
-            (identical(other.isOnNotifyInNotTakenDuration, isOnNotifyInNotTakenDuration) || other.isOnNotifyInNotTakenDuration == isOnNotifyInNotTakenDuration) &&
-            (identical(other.isAutomaticallyCreatePillSheet, isAutomaticallyCreatePillSheet) || other.isAutomaticallyCreatePillSheet == isAutomaticallyCreatePillSheet) &&
-            (identical(other.reminderNotificationCustomization, reminderNotificationCustomization) || other.reminderNotificationCustomization == reminderNotificationCustomization) &&
+            (identical(other.isOnNotifyInNotTakenDuration, isOnNotifyInNotTakenDuration) ||
+                other.isOnNotifyInNotTakenDuration == isOnNotifyInNotTakenDuration) &&
+            (identical(other.isAutomaticallyCreatePillSheet, isAutomaticallyCreatePillSheet) ||
+                other.isAutomaticallyCreatePillSheet == isAutomaticallyCreatePillSheet) &&
+            (identical(other.reminderNotificationCustomization, reminderNotificationCustomization) ||
+                other.reminderNotificationCustomization == reminderNotificationCustomization) &&
             (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
             (identical(other.timezoneDatabaseName, timezoneDatabaseName) || other.timezoneDatabaseName == timezoneDatabaseName));
   }

@@ -24,7 +24,8 @@ mixin _$DiarySettingPhysicalConditionDetailState {
 
 /// @nodoc
 abstract class $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
-  factory $DiarySettingPhysicalConditionDetailStateCopyWith(DiarySettingPhysicalConditionDetailState value, $Res Function(DiarySettingPhysicalConditionDetailState) then) =
+  factory $DiarySettingPhysicalConditionDetailStateCopyWith(
+          DiarySettingPhysicalConditionDetailState value, $Res Function(DiarySettingPhysicalConditionDetailState) then) =
       _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, DiarySettingPhysicalConditionDetailState>;
   @useResult
   $Res call({DiarySetting? diarySetting});
@@ -33,7 +34,8 @@ abstract class $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, $Val extends DiarySettingPhysicalConditionDetailState> implements $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
+class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, $Val extends DiarySettingPhysicalConditionDetailState>
+    implements $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
   _$DiarySettingPhysicalConditionDetailStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -69,7 +71,8 @@ class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, $Val extends 
 
 /// @nodoc
 abstract class _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<$Res> implements $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
-  factory _$$DiarySettingPhysicalConditionDetailStateImplCopyWith(_$DiarySettingPhysicalConditionDetailStateImpl value, $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) then) =
+  factory _$$DiarySettingPhysicalConditionDetailStateImplCopyWith(
+          _$DiarySettingPhysicalConditionDetailStateImpl value, $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) then) =
       __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -80,9 +83,11 @@ abstract class _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<$Res> imp
 }
 
 /// @nodoc
-class __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl<$Res> extends _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, _$DiarySettingPhysicalConditionDetailStateImpl>
+class __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl<$Res>
+    extends _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, _$DiarySettingPhysicalConditionDetailStateImpl>
     implements _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<$Res> {
-  __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl(_$DiarySettingPhysicalConditionDetailStateImpl _value, $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) _then)
+  __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl(
+      _$DiarySettingPhysicalConditionDetailStateImpl _value, $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -115,7 +120,9 @@ class _$DiarySettingPhysicalConditionDetailStateImpl extends _DiarySettingPhysic
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$DiarySettingPhysicalConditionDetailStateImpl && (identical(other.diarySetting, diarySetting) || other.diarySetting == diarySetting));
+        (other.runtimeType == runtimeType &&
+            other is _$DiarySettingPhysicalConditionDetailStateImpl &&
+            (identical(other.diarySetting, diarySetting) || other.diarySetting == diarySetting));
   }
 
   @override
@@ -136,5 +143,6 @@ abstract class _DiarySettingPhysicalConditionDetailState extends DiarySettingPhy
   DiarySetting? get diarySetting;
   @override
   @JsonKey(ignore: true)
-  _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<_$DiarySettingPhysicalConditionDetailStateImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<_$DiarySettingPhysicalConditionDetailStateImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }

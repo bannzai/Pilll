@@ -12,7 +12,8 @@ _$PillSheetModifiedHistoryImpl _$$PillSheetModifiedHistoryImplFromJson(Map<Strin
       actionType: json['actionType'] as String,
       estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(json['estimatedEventCausingDate'] as Timestamp),
       createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
-      beforePillSheetGroup: json['beforePillSheetGroup'] == null ? null : PillSheetGroup.fromJson(json['beforePillSheetGroup'] as Map<String, dynamic>),
+      beforePillSheetGroup:
+          json['beforePillSheetGroup'] == null ? null : PillSheetGroup.fromJson(json['beforePillSheetGroup'] as Map<String, dynamic>),
       afterPillSheetGroup: json['afterPillSheetGroup'] == null ? null : PillSheetGroup.fromJson(json['afterPillSheetGroup'] as Map<String, dynamic>),
       ttlExpiresDateTime: TimestampConverter.timestampToDateTime(json['ttlExpiresDateTime'] as Timestamp?),
       archivedDateTime: TimestampConverter.timestampToDateTime(json['archivedDateTime'] as Timestamp?),

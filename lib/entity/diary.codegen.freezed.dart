@@ -210,7 +210,8 @@ class _$DiaryImpl extends _Diary {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, date, createdAt, physicalConditionStatus, const DeepCollectionEquality().hash(_physicalConditions), hasSex, memo);
+  int get hashCode =>
+      Object.hash(runtimeType, date, createdAt, physicalConditionStatus, const DeepCollectionEquality().hash(_physicalConditions), hasSex, memo);
 
   @JsonKey(ignore: true)
   @override
@@ -227,7 +228,8 @@ class _$DiaryImpl extends _Diary {
 
 abstract class _Diary extends Diary {
   const factory _Diary(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime date,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime date,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
       final PhysicalConditionStatus? physicalConditionStatus,
       required final List<String> physicalConditions,

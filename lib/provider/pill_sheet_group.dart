@@ -16,7 +16,10 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
 
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
 Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseConnection) async {
-  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get()).docs.lastOrNull?.data();
+  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
+      .docs
+      .lastOrNull
+      ?.data();
 }
 
 // 最新のピルシートグループの.activePillSheetを取得する。
@@ -28,7 +31,13 @@ AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
 @Riverpod(dependencies: [database])
 Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
-  return ref.watch(databaseProvider).pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).snapshots(includeMetadataChanges: true).map(((event) => _filter(event)));
+  return ref
+      .watch(databaseProvider)
+      .pillSheetGroupsReference()
+      .orderBy(PillSheetGroupFirestoreKeys.createdAt)
+      .limitToLast(1)
+      .snapshots(includeMetadataChanges: true)
+      .map(((event) => _filter(event)));
 }
 
 // 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている

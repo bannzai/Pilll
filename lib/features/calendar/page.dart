@@ -37,7 +37,9 @@ import 'package:pilll/utils/emoji/emoji.dart';
 
 // NOTE: 数字に特に意味はないが、ユーザーが過去のカレンダーも見たいということで十分な枠をとっている。Pilllの開始が2018年なので、それより後のデータが見れるくらいで良い
 const _calendarDataSourceLength = 120;
-final _calendarDataSource = List.generate(_calendarDataSourceLength, (index) => (index + 1) - (_calendarDataSourceLength ~/ 2)).map((e) => DateTime(today().year, today().month + e, 1)).toList();
+final _calendarDataSource = List.generate(_calendarDataSourceLength, (index) => (index + 1) - (_calendarDataSourceLength ~/ 2))
+    .map((e) => DateTime(today().year, today().month + e, 1))
+    .toList();
 final _todayCalendarPageIndex = _calendarDataSource.lastIndexWhere((element) => isSameMonth(element, today()));
 
 class CalendarPage extends HookConsumerWidget {
@@ -54,7 +56,8 @@ class CalendarPage extends HookConsumerWidget {
 
     final displayedMonth = _calendarDataSource[page.value];
     return AsyncValueGroup.group6(
-      ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
+      ref.watch(
+          pillSheetModifiedHistoriesWithLimitProvider(limit: CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold + 1)),
       ref.watch(userProvider),
       ref.watch(calendarMenstruationBandListProvider),
       ref.watch(calendarScheduledMenstruationBandListProvider),
@@ -83,7 +86,8 @@ class CalendarPage extends HookConsumerWidget {
 }
 
 const double _shadowHeight = 2;
-const _monthlyCalendarHeight = WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + _shadowHeight;
+const _monthlyCalendarHeight =
+    WeekdayBadgeConst.height + (CalendarConstants.tileHeight + CalendarConstants.dividerHeight) * CalendarConstants.maxLineCount + _shadowHeight;
 
 class _CalendarPageBody extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;

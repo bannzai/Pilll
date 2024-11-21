@@ -100,7 +100,8 @@ class _$UserPrivateImpl extends _UserPrivate {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$UserPrivateImpl && (identical(other.fcmToken, fcmToken) || other.fcmToken == fcmToken));
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UserPrivateImpl && (identical(other.fcmToken, fcmToken) || other.fcmToken == fcmToken));
   }
 
   @JsonKey(ignore: true)
@@ -180,7 +181,8 @@ abstract class $UserCopyWith<$Res> {
       bool analyticsDebugIsEnabled,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? discountEntitlementDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? discountEntitlementDeadlineDate,
       dynamic appliedShareRewardPremiumTrialCount});
 
   $SettingCopyWith<$Res>? get setting;
@@ -304,7 +306,8 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool analyticsDebugIsEnabled,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? discountEntitlementDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? discountEntitlementDeadlineDate,
       dynamic appliedShareRewardPremiumTrialCount});
 
   @override
@@ -386,7 +389,8 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      appliedShareRewardPremiumTrialCount: freezed == appliedShareRewardPremiumTrialCount ? _value.appliedShareRewardPremiumTrialCount! : appliedShareRewardPremiumTrialCount,
+      appliedShareRewardPremiumTrialCount:
+          freezed == appliedShareRewardPremiumTrialCount ? _value.appliedShareRewardPremiumTrialCount! : appliedShareRewardPremiumTrialCount,
     ));
   }
 }
@@ -497,7 +501,8 @@ class _$UserImpl extends _User {
             (identical(other.analyticsDebugIsEnabled, analyticsDebugIsEnabled) || other.analyticsDebugIsEnabled == analyticsDebugIsEnabled) &&
             (identical(other.beginTrialDate, beginTrialDate) || other.beginTrialDate == beginTrialDate) &&
             (identical(other.trialDeadlineDate, trialDeadlineDate) || other.trialDeadlineDate == trialDeadlineDate) &&
-            (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) || other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate) &&
+            (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) ||
+                other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate) &&
             const DeepCollectionEquality().equals(other.appliedShareRewardPremiumTrialCount, appliedShareRewardPremiumTrialCount));
   }
 
@@ -547,7 +552,8 @@ abstract class _User extends User {
       final bool analyticsDebugIsEnabled,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? discountEntitlementDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? discountEntitlementDeadlineDate,
       final dynamic appliedShareRewardPremiumTrialCount}) = _$UserImpl;
   const _User._() : super._();
 

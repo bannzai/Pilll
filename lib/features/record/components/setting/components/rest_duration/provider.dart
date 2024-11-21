@@ -192,7 +192,8 @@ class ChangeRestDuration {
     if (fromRestDurationIndex == -1) {
       throw AssertionError("fromRestDurationIndex is not found");
     }
-    final updatedFromRestDurationPillSheet = fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
+    final updatedFromRestDurationPillSheet =
+        fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
 
     final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, toRestDuration));
     if (toRestDurationPillSheetIndex == -1) {

@@ -9,9 +9,12 @@ part of 'remote_config_parameter.codegen.dart';
 _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dynamic> json) => _$RemoteConfigParameterImpl(
       isPaywallFirst: json['isPaywallFirst'] as bool? ?? RemoteConfigParameterDefaultValues.isPaywallFirst,
       skipInitialSetting: json['skipInitialSetting'] as bool? ?? RemoteConfigParameterDefaultValues.skipInitialSetting,
-      trialDeadlineDateOffsetDay: (json['trialDeadlineDateOffsetDay'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
-      discountEntitlementOffsetDay: (json['discountEntitlementOffsetDay'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
-      discountCountdownBoundaryHour: (json['discountCountdownBoundaryHour'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+      trialDeadlineDateOffsetDay:
+          (json['trialDeadlineDateOffsetDay'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+      discountEntitlementOffsetDay:
+          (json['discountEntitlementOffsetDay'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+      discountCountdownBoundaryHour:
+          (json['discountCountdownBoundaryHour'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
       premiumIntroductionPattern: json['premiumIntroductionPattern'] as String? ?? RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
     );
 

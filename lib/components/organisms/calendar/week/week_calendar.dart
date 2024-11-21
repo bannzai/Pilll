@@ -149,13 +149,16 @@ void transitionWhenCalendarDayTapped(
     if (diary == null) {
       showModalBottomSheet(
         context: context,
-        builder: (context) =>
-            DiaryOrScheduleSheet(showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)), showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+        builder: (context) => DiaryOrScheduleSheet(
+            showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
       );
     } else {
       showModalBottomSheet(
         context: context,
-        builder: (context) => DiaryOrScheduleSheet(showDiary: () => _showConfirmDiarySheet(context, diary), showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+        builder: (context) => DiaryOrScheduleSheet(
+            showDiary: () => _showConfirmDiarySheet(context, diary),
+            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
       );
     }
     return;

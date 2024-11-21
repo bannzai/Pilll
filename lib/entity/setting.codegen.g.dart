@@ -27,7 +27,8 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) => _$SettingImpl
       reminderNotificationCustomization: json['reminderNotificationCustomization'] == null
           ? const ReminderNotificationCustomization()
           : ReminderNotificationCustomization.fromJson(json['reminderNotificationCustomization'] as Map<String, dynamic>),
-      pillSheetAppearanceMode: $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
+      pillSheetAppearanceMode:
+          $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
       timezoneDatabaseName: json['timezoneDatabaseName'] as String?,
     );
 

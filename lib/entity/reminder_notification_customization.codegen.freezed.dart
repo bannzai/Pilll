@@ -38,11 +38,19 @@ abstract class $ReminderNotificationCustomizationCopyWith<$Res> {
   factory $ReminderNotificationCustomizationCopyWith(ReminderNotificationCustomization value, $Res Function(ReminderNotificationCustomization) then) =
       _$ReminderNotificationCustomizationCopyWithImpl<$Res, ReminderNotificationCustomization>;
   @useResult
-  $Res call({String version, String word, bool isInVisibleReminderDate, bool isInVisiblePillNumber, bool isInVisibleDescription, String dailyTakenMessage, String missedTakenMessage});
+  $Res call(
+      {String version,
+      String word,
+      bool isInVisibleReminderDate,
+      bool isInVisiblePillNumber,
+      bool isInVisibleDescription,
+      String dailyTakenMessage,
+      String missedTakenMessage});
 }
 
 /// @nodoc
-class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends ReminderNotificationCustomization> implements $ReminderNotificationCustomizationCopyWith<$Res> {
+class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends ReminderNotificationCustomization>
+    implements $ReminderNotificationCustomizationCopyWith<$Res> {
   _$ReminderNotificationCustomizationCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -96,17 +104,28 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends Reminde
 
 /// @nodoc
 abstract class _$$ReminderNotificationCustomizationImplCopyWith<$Res> implements $ReminderNotificationCustomizationCopyWith<$Res> {
-  factory _$$ReminderNotificationCustomizationImplCopyWith(_$ReminderNotificationCustomizationImpl value, $Res Function(_$ReminderNotificationCustomizationImpl) then) =
+  factory _$$ReminderNotificationCustomizationImplCopyWith(
+          _$ReminderNotificationCustomizationImpl value, $Res Function(_$ReminderNotificationCustomizationImpl) then) =
       __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String version, String word, bool isInVisibleReminderDate, bool isInVisiblePillNumber, bool isInVisibleDescription, String dailyTakenMessage, String missedTakenMessage});
+  $Res call(
+      {String version,
+      String word,
+      bool isInVisibleReminderDate,
+      bool isInVisiblePillNumber,
+      bool isInVisibleDescription,
+      String dailyTakenMessage,
+      String missedTakenMessage});
 }
 
 /// @nodoc
-class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res> extends _$ReminderNotificationCustomizationCopyWithImpl<$Res, _$ReminderNotificationCustomizationImpl>
+class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
+    extends _$ReminderNotificationCustomizationCopyWithImpl<$Res, _$ReminderNotificationCustomizationImpl>
     implements _$$ReminderNotificationCustomizationImplCopyWith<$Res> {
-  __$$ReminderNotificationCustomizationImplCopyWithImpl(_$ReminderNotificationCustomizationImpl _value, $Res Function(_$ReminderNotificationCustomizationImpl) _then) : super(_value, _then);
+  __$$ReminderNotificationCustomizationImplCopyWithImpl(
+      _$ReminderNotificationCustomizationImpl _value, $Res Function(_$ReminderNotificationCustomizationImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -212,7 +231,8 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, version, word, isInVisibleReminderDate, isInVisiblePillNumber, isInVisibleDescription, dailyTakenMessage, missedTakenMessage);
+  int get hashCode => Object.hash(
+      runtimeType, version, word, isInVisibleReminderDate, isInVisiblePillNumber, isInVisibleDescription, dailyTakenMessage, missedTakenMessage);
 
   @JsonKey(ignore: true)
   @override

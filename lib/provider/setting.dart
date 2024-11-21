@@ -4,7 +4,8 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingProvider = StreamProvider<Setting>((ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()?.setting).where((data) => data != null).cast());
+final settingProvider = StreamProvider<Setting>(
+    (ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()?.setting).where((data) => data != null).cast());
 
 final setSettingProvider = Provider((ref) => SetSetting(ref.watch(databaseProvider)));
 

@@ -83,5 +83,6 @@ class MonthCalendar extends HookConsumerWidget {
   }
 
   WeekCalendarDateRangeCalculator get _calculator => WeekCalendarDateRangeCalculator(dateForMonth);
-  List<DateRange> get _weeks => List.generate(_calculator.weeklineCount(), (index) => index + 1).map((line) => _calculator.dateRangeOfLine(line)).toList();
+  List<DateRange> get _weeks =>
+      List.generate(_calculator.weeklineCount(), (index) => index + 1).map((line) => _calculator.dateRangeOfLine(line)).toList();
 }

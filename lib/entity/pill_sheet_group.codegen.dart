@@ -150,10 +150,12 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }) {
     return switch (pillSheetAppearanceMode) {
       PillSheetAppearanceMode.number => _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.date =>
-        premiumOrTrial ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet) : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.date => premiumOrTrial
+          ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
+          : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.sequential => _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.cyclicSequential => _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.cyclicSequential =>
+        _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
   }
 
@@ -240,7 +242,11 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
   }
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillMarksPillNumber() {
-    return pillSheets.map((pillSheet) => pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList()).flattened.toList();
+    return pillSheets
+        .map((pillSheet) =>
+            pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
+        .flattened
+        .toList();
   }
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForSequential() {

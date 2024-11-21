@@ -36,7 +36,8 @@ final diariesFor90Days = StreamProvider.family((ref, DateTime base) {
   return ref
       .watch(databaseProvider)
       .diariesReference()
-      .where(DiaryFirestoreKey.date, isLessThanOrEqualTo: DateTime(base.year, base.month, 90), isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
+      .where(DiaryFirestoreKey.date,
+          isLessThanOrEqualTo: DateTime(base.year, base.month, 90), isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
       .orderBy(DiaryFirestoreKey.date)
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())

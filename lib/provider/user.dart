@@ -31,9 +31,9 @@ class UpdatePurchaseInfo {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await databaseConnection
-        .userRawReference()
-        .set({if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated, UserFirestoreFieldKeys.purchaseAppID: purchaseAppID}, SetOptions(merge: true));
+    await databaseConnection.userRawReference().set(
+        {if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated, UserFirestoreFieldKeys.purchaseAppID: purchaseAppID},
+        SetOptions(merge: true));
     final privates = {
       if (premiumPlanIdentifier != null) UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier: premiumPlanIdentifier,
       if (originalPurchaseDate != null) UserPrivateFirestoreFieldKeys.originalPurchaseDate: originalPurchaseDate,
@@ -243,7 +243,8 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
+          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
       // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
       UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: true,
     }, SetOptions(merge: true));

@@ -12,8 +12,11 @@ _$PillSheetGroupImpl _$$PillSheetGroupImplFromJson(Map<String, dynamic> json) =>
       pillSheets: (json['pillSheets'] as List<dynamic>).map((e) => PillSheet.fromJson(e as Map<String, dynamic>)).toList(),
       createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
       deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
-      displayNumberSetting: json['displayNumberSetting'] == null ? null : PillSheetGroupDisplayNumberSetting.fromJson(json['displayNumberSetting'] as Map<String, dynamic>),
-      pillSheetAppearanceMode: $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
+      displayNumberSetting: json['displayNumberSetting'] == null
+          ? null
+          : PillSheetGroupDisplayNumberSetting.fromJson(json['displayNumberSetting'] as Map<String, dynamic>),
+      pillSheetAppearanceMode:
+          $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
     );
 
 Map<String, dynamic> _$$PillSheetGroupImplToJson(_$PillSheetGroupImpl instance) {
@@ -42,7 +45,8 @@ const _$PillSheetAppearanceModeEnumMap = {
   PillSheetAppearanceMode.cyclicSequential: 'cyclicSequential',
 };
 
-_$PillSheetGroupDisplayNumberSettingImpl _$$PillSheetGroupDisplayNumberSettingImplFromJson(Map<String, dynamic> json) => _$PillSheetGroupDisplayNumberSettingImpl(
+_$PillSheetGroupDisplayNumberSettingImpl _$$PillSheetGroupDisplayNumberSettingImplFromJson(Map<String, dynamic> json) =>
+    _$PillSheetGroupDisplayNumberSettingImpl(
       beginPillNumber: (json['beginPillNumber'] as num?)?.toInt(),
       endPillNumber: (json['endPillNumber'] as num?)?.toInt(),
     );

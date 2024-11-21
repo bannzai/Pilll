@@ -85,7 +85,9 @@ class Purchase {
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
-      analytics.logEvent(name: "catched_purchase_exception", parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
+      analytics.logEvent(
+          name: "catched_purchase_exception",
+          parameters: {"code": exception.code, "details": exception.details.toString(), "message": exception.message});
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);

@@ -6,7 +6,8 @@ part of 'reminder_notification_customization.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ReminderNotificationCustomizationImpl _$$ReminderNotificationCustomizationImplFromJson(Map<String, dynamic> json) => _$ReminderNotificationCustomizationImpl(
+_$ReminderNotificationCustomizationImpl _$$ReminderNotificationCustomizationImplFromJson(Map<String, dynamic> json) =>
+    _$ReminderNotificationCustomizationImpl(
       version: json['version'] as String? ?? "v2",
       word: json['word'] as String? ?? pillEmoji,
       isInVisibleReminderDate: json['isInVisibleReminderDate'] as bool? ?? false,

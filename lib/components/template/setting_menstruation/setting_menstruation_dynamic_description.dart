@@ -72,7 +72,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               onTap: () => _showDurationModalSheet(context),
               child: _duration(),
             ),
-            const Text(" 日間生理が続く", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
+            const Text(" 日間生理が続く",
+                style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
           ],
         )
       ],

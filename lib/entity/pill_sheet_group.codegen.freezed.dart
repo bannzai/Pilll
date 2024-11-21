@@ -119,7 +119,8 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup> implements
 
 /// @nodoc
 abstract class _$$PillSheetGroupImplCopyWith<$Res> implements $PillSheetGroupCopyWith<$Res> {
-  factory _$$PillSheetGroupImplCopyWith(_$PillSheetGroupImpl value, $Res Function(_$PillSheetGroupImpl) then) = __$$PillSheetGroupImplCopyWithImpl<$Res>;
+  factory _$$PillSheetGroupImplCopyWith(_$PillSheetGroupImpl value, $Res Function(_$PillSheetGroupImpl) then) =
+      __$$PillSheetGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -136,7 +137,8 @@ abstract class _$$PillSheetGroupImplCopyWith<$Res> implements $PillSheetGroupCop
 }
 
 /// @nodoc
-class __$$PillSheetGroupImplCopyWithImpl<$Res> extends _$PillSheetGroupCopyWithImpl<$Res, _$PillSheetGroupImpl> implements _$$PillSheetGroupImplCopyWith<$Res> {
+class __$$PillSheetGroupImplCopyWithImpl<$Res> extends _$PillSheetGroupCopyWithImpl<$Res, _$PillSheetGroupImpl>
+    implements _$$PillSheetGroupImplCopyWith<$Res> {
   __$$PillSheetGroupImplCopyWithImpl(_$PillSheetGroupImpl _value, $Res Function(_$PillSheetGroupImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -191,7 +193,8 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
       {@JsonKey(includeIfNull: false) this.id,
       required final List<String> pillSheetIDs,
       required final List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
       this.displayNumberSetting,
       this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
@@ -254,8 +257,8 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, const DeepCollectionEquality().hash(_pillSheetIDs), const DeepCollectionEquality().hash(_pillSheets), createdAt, deletedAt, displayNumberSetting, pillSheetAppearanceMode);
+  int get hashCode => Object.hash(runtimeType, id, const DeepCollectionEquality().hash(_pillSheetIDs),
+      const DeepCollectionEquality().hash(_pillSheets), createdAt, deletedAt, displayNumberSetting, pillSheetAppearanceMode);
 
   @JsonKey(ignore: true)
   @override
@@ -275,7 +278,8 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       {@JsonKey(includeIfNull: false) final String? id,
       required final List<String> pillSheetIDs,
       required final List<PillSheet> pillSheets,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
       final PillSheetAppearanceMode pillSheetAppearanceMode}) = _$PillSheetGroupImpl;
@@ -312,12 +316,14 @@ mixin _$PillSheetGroupPillNumberDomainPillMarkValue {
   int get number => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<PillSheetGroupPillNumberDomainPillMarkValue> get copyWith => throw _privateConstructorUsedError;
+  $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<PillSheetGroupPillNumberDomainPillMarkValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
-  factory $PillSheetGroupPillNumberDomainPillMarkValueCopyWith(PillSheetGroupPillNumberDomainPillMarkValue value, $Res Function(PillSheetGroupPillNumberDomainPillMarkValue) then) =
+  factory $PillSheetGroupPillNumberDomainPillMarkValueCopyWith(
+          PillSheetGroupPillNumberDomainPillMarkValue value, $Res Function(PillSheetGroupPillNumberDomainPillMarkValue) then) =
       _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, PillSheetGroupPillNumberDomainPillMarkValue>;
   @useResult
   $Res call({PillSheet pillSheet, DateTime date, int number});
@@ -326,7 +332,8 @@ abstract class $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, $Val extends PillSheetGroupPillNumberDomainPillMarkValue> implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
+class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, $Val extends PillSheetGroupPillNumberDomainPillMarkValue>
+    implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
   _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -367,8 +374,10 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, $Val exten
 }
 
 /// @nodoc
-abstract class _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res> implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
-  factory _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith(_$PillSheetGroupPillNumberDomainPillMarkValueImpl value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) then) =
+abstract class _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res>
+    implements $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<$Res> {
+  factory _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith(
+          _$PillSheetGroupPillNumberDomainPillMarkValueImpl value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) then) =
       __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -379,9 +388,11 @@ abstract class _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res> 
 }
 
 /// @nodoc
-class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res> extends _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, _$PillSheetGroupPillNumberDomainPillMarkValueImpl>
+class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>
+    extends _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, _$PillSheetGroupPillNumberDomainPillMarkValueImpl>
     implements _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<$Res> {
-  __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl(_$PillSheetGroupPillNumberDomainPillMarkValueImpl _value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) _then)
+  __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl(
+      _$PillSheetGroupPillNumberDomainPillMarkValueImpl _value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -446,8 +457,10 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueImpl implements _PillSheetGro
 }
 
 abstract class _PillSheetGroupPillNumberDomainPillMarkValue implements PillSheetGroupPillNumberDomainPillMarkValue {
-  const factory _PillSheetGroupPillNumberDomainPillMarkValue({required final PillSheet pillSheet, required final DateTime date, required final int number}) =
-      _$PillSheetGroupPillNumberDomainPillMarkValueImpl;
+  const factory _PillSheetGroupPillNumberDomainPillMarkValue(
+      {required final PillSheet pillSheet,
+      required final DateTime date,
+      required final int number}) = _$PillSheetGroupPillNumberDomainPillMarkValueImpl;
 
   @override
   PillSheet get pillSheet;
@@ -457,7 +470,8 @@ abstract class _PillSheetGroupPillNumberDomainPillMarkValue implements PillSheet
   int get number;
   @override
   @JsonKey(ignore: true)
-  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<_$PillSheetGroupPillNumberDomainPillMarkValueImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<_$PillSheetGroupPillNumberDomainPillMarkValueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(Map<String, dynamic> json) {
@@ -476,14 +490,16 @@ mixin _$PillSheetGroupDisplayNumberSetting {
 
 /// @nodoc
 abstract class $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
-  factory $PillSheetGroupDisplayNumberSettingCopyWith(PillSheetGroupDisplayNumberSetting value, $Res Function(PillSheetGroupDisplayNumberSetting) then) =
+  factory $PillSheetGroupDisplayNumberSettingCopyWith(
+          PillSheetGroupDisplayNumberSetting value, $Res Function(PillSheetGroupDisplayNumberSetting) then) =
       _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, PillSheetGroupDisplayNumberSetting>;
   @useResult
   $Res call({int? beginPillNumber, int? endPillNumber});
 }
 
 /// @nodoc
-class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, $Val extends PillSheetGroupDisplayNumberSetting> implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
+class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, $Val extends PillSheetGroupDisplayNumberSetting>
+    implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
   _$PillSheetGroupDisplayNumberSettingCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -512,7 +528,8 @@ class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, $Val extends PillSh
 
 /// @nodoc
 abstract class _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res> implements $PillSheetGroupDisplayNumberSettingCopyWith<$Res> {
-  factory _$$PillSheetGroupDisplayNumberSettingImplCopyWith(_$PillSheetGroupDisplayNumberSettingImpl value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) then) =
+  factory _$$PillSheetGroupDisplayNumberSettingImplCopyWith(
+          _$PillSheetGroupDisplayNumberSettingImpl value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) then) =
       __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -520,9 +537,12 @@ abstract class _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res> implement
 }
 
 /// @nodoc
-class __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res> extends _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, _$PillSheetGroupDisplayNumberSettingImpl>
+class __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>
+    extends _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, _$PillSheetGroupDisplayNumberSettingImpl>
     implements _$$PillSheetGroupDisplayNumberSettingImplCopyWith<$Res> {
-  __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl(_$PillSheetGroupDisplayNumberSettingImpl _value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) _then) : super(_value, _then);
+  __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl(
+      _$PillSheetGroupDisplayNumberSettingImpl _value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -589,7 +609,8 @@ class _$PillSheetGroupDisplayNumberSettingImpl implements _PillSheetGroupDisplay
 }
 
 abstract class _PillSheetGroupDisplayNumberSetting implements PillSheetGroupDisplayNumberSetting {
-  const factory _PillSheetGroupDisplayNumberSetting({final int? beginPillNumber, final int? endPillNumber}) = _$PillSheetGroupDisplayNumberSettingImpl;
+  const factory _PillSheetGroupDisplayNumberSetting({final int? beginPillNumber, final int? endPillNumber}) =
+      _$PillSheetGroupDisplayNumberSettingImpl;
 
   factory _PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) = _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
 

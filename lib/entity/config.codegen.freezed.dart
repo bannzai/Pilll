@@ -103,7 +103,8 @@ class _$ConfigImpl extends _Config {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConfigImpl &&
-            (identical(other.minimumSupportedAppVersion, minimumSupportedAppVersion) || other.minimumSupportedAppVersion == minimumSupportedAppVersion));
+            (identical(other.minimumSupportedAppVersion, minimumSupportedAppVersion) ||
+                other.minimumSupportedAppVersion == minimumSupportedAppVersion));
   }
 
   @JsonKey(ignore: true)

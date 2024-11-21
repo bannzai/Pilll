@@ -75,7 +75,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetModifiedHistoryValue> implements $PillSheetModifiedHistoryValueCopyWith<$Res> {
+class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetModifiedHistoryValue>
+    implements $PillSheetModifiedHistoryValueCopyWith<$Res> {
   _$PillSheetModifiedHistoryValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -315,7 +316,8 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
 
 /// @nodoc
 abstract class _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> implements $PillSheetModifiedHistoryValueCopyWith<$Res> {
-  factory _$$PillSheetModifiedHistoryValueImplCopyWith(_$PillSheetModifiedHistoryValueImpl value, $Res Function(_$PillSheetModifiedHistoryValueImpl) then) =
+  factory _$$PillSheetModifiedHistoryValueImplCopyWith(
+          _$PillSheetModifiedHistoryValueImpl value, $Res Function(_$PillSheetModifiedHistoryValueImpl) then) =
       __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -363,9 +365,12 @@ abstract class _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> implements $Pi
 }
 
 /// @nodoc
-class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res> extends _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, _$PillSheetModifiedHistoryValueImpl>
+class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
+    extends _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, _$PillSheetModifiedHistoryValueImpl>
     implements _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> {
-  __$$PillSheetModifiedHistoryValueImplCopyWithImpl(_$PillSheetModifiedHistoryValueImpl _value, $Res Function(_$PillSheetModifiedHistoryValueImpl) _then) : super(_value, _then);
+  __$$PillSheetModifiedHistoryValueImplCopyWithImpl(
+      _$PillSheetModifiedHistoryValueImpl _value, $Res Function(_$PillSheetModifiedHistoryValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -514,7 +519,8 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
         (other.runtimeType == runtimeType &&
             other is _$PillSheetModifiedHistoryValueImpl &&
             (identical(other.createdPillSheet, createdPillSheet) || other.createdPillSheet == createdPillSheet) &&
-            (identical(other.automaticallyRecordedLastTakenDate, automaticallyRecordedLastTakenDate) || other.automaticallyRecordedLastTakenDate == automaticallyRecordedLastTakenDate) &&
+            (identical(other.automaticallyRecordedLastTakenDate, automaticallyRecordedLastTakenDate) ||
+                other.automaticallyRecordedLastTakenDate == automaticallyRecordedLastTakenDate) &&
             (identical(other.deletedPillSheet, deletedPillSheet) || other.deletedPillSheet == deletedPillSheet) &&
             (identical(other.takenPill, takenPill) || other.takenPill == takenPill) &&
             (identical(other.revertTakenPill, revertTakenPill) || other.revertTakenPill == revertTakenPill) &&
@@ -522,7 +528,8 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
             (identical(other.endedPillSheet, endedPillSheet) || other.endedPillSheet == endedPillSheet) &&
             (identical(other.beganRestDurationValue, beganRestDurationValue) || other.beganRestDurationValue == beganRestDurationValue) &&
             (identical(other.endedRestDurationValue, endedRestDurationValue) || other.endedRestDurationValue == endedRestDurationValue) &&
-            (identical(other.changedRestDurationBeginDateValue, changedRestDurationBeginDateValue) || other.changedRestDurationBeginDateValue == changedRestDurationBeginDateValue) &&
+            (identical(other.changedRestDurationBeginDateValue, changedRestDurationBeginDateValue) ||
+                other.changedRestDurationBeginDateValue == changedRestDurationBeginDateValue) &&
             (identical(other.changedRestDurationValue, changedRestDurationValue) || other.changedRestDurationValue == changedRestDurationValue) &&
             (identical(other.changedBeginDisplayNumber, changedBeginDisplayNumber) || other.changedBeginDisplayNumber == changedBeginDisplayNumber) &&
             (identical(other.changedEndDisplayNumber, changedEndDisplayNumber) || other.changedEndDisplayNumber == changedEndDisplayNumber));
@@ -530,8 +537,21 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, createdPillSheet, automaticallyRecordedLastTakenDate, deletedPillSheet, takenPill, revertTakenPill, changedPillNumber, endedPillSheet,
-      beganRestDurationValue, endedRestDurationValue, changedRestDurationBeginDateValue, changedRestDurationValue, changedBeginDisplayNumber, changedEndDisplayNumber);
+  int get hashCode => Object.hash(
+      runtimeType,
+      createdPillSheet,
+      automaticallyRecordedLastTakenDate,
+      deletedPillSheet,
+      takenPill,
+      revertTakenPill,
+      changedPillNumber,
+      endedPillSheet,
+      beganRestDurationValue,
+      endedRestDurationValue,
+      changedRestDurationBeginDateValue,
+      changedRestDurationValue,
+      changedBeginDisplayNumber,
+      changedEndDisplayNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -616,9 +636,13 @@ mixin _$CreatedPillSheetValue {
 
 /// @nodoc
 abstract class $CreatedPillSheetValueCopyWith<$Res> {
-  factory $CreatedPillSheetValueCopyWith(CreatedPillSheetValue value, $Res Function(CreatedPillSheetValue) then) = _$CreatedPillSheetValueCopyWithImpl<$Res, CreatedPillSheetValue>;
+  factory $CreatedPillSheetValueCopyWith(CreatedPillSheetValue value, $Res Function(CreatedPillSheetValue) then) =
+      _$CreatedPillSheetValueCopyWithImpl<$Res, CreatedPillSheetValue>;
   @useResult
-  $Res call({@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime pillSheetCreatedAt, List<String> pillSheetIDs});
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetCreatedAt,
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
@@ -651,15 +675,21 @@ class _$CreatedPillSheetValueCopyWithImpl<$Res, $Val extends CreatedPillSheetVal
 
 /// @nodoc
 abstract class _$$CreatedPillSheetValueImplCopyWith<$Res> implements $CreatedPillSheetValueCopyWith<$Res> {
-  factory _$$CreatedPillSheetValueImplCopyWith(_$CreatedPillSheetValueImpl value, $Res Function(_$CreatedPillSheetValueImpl) then) = __$$CreatedPillSheetValueImplCopyWithImpl<$Res>;
+  factory _$$CreatedPillSheetValueImplCopyWith(_$CreatedPillSheetValueImpl value, $Res Function(_$CreatedPillSheetValueImpl) then) =
+      __$$CreatedPillSheetValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime pillSheetCreatedAt, List<String> pillSheetIDs});
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetCreatedAt,
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
-class __$$CreatedPillSheetValueImplCopyWithImpl<$Res> extends _$CreatedPillSheetValueCopyWithImpl<$Res, _$CreatedPillSheetValueImpl> implements _$$CreatedPillSheetValueImplCopyWith<$Res> {
-  __$$CreatedPillSheetValueImplCopyWithImpl(_$CreatedPillSheetValueImpl _value, $Res Function(_$CreatedPillSheetValueImpl) _then) : super(_value, _then);
+class __$$CreatedPillSheetValueImplCopyWithImpl<$Res> extends _$CreatedPillSheetValueCopyWithImpl<$Res, _$CreatedPillSheetValueImpl>
+    implements _$$CreatedPillSheetValueImplCopyWith<$Res> {
+  __$$CreatedPillSheetValueImplCopyWithImpl(_$CreatedPillSheetValueImpl _value, $Res Function(_$CreatedPillSheetValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -685,7 +715,8 @@ class __$$CreatedPillSheetValueImplCopyWithImpl<$Res> extends _$CreatedPillSheet
 @JsonSerializable(explicitToJson: true)
 class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
   const _$CreatedPillSheetValueImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.pillSheetCreatedAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.pillSheetCreatedAt,
       final List<String> pillSheetIDs = const []})
       : _pillSheetIDs = pillSheetIDs,
         super._();
@@ -727,7 +758,8 @@ class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$CreatedPillSheetValueImplCopyWith<_$CreatedPillSheetValueImpl> get copyWith => __$$CreatedPillSheetValueImplCopyWithImpl<_$CreatedPillSheetValueImpl>(this, _$identity);
+  _$$CreatedPillSheetValueImplCopyWith<_$CreatedPillSheetValueImpl> get copyWith =>
+      __$$CreatedPillSheetValueImplCopyWithImpl<_$CreatedPillSheetValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -739,7 +771,8 @@ class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
 
 abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
   const factory _CreatedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime pillSheetCreatedAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime pillSheetCreatedAt,
       final List<String> pillSheetIDs}) = _$CreatedPillSheetValueImpl;
   const _CreatedPillSheetValue._() : super._();
 
@@ -778,18 +811,21 @@ mixin _$AutomaticallyRecordedLastTakenDateValue {
 
 /// @nodoc
 abstract class $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
-  factory $AutomaticallyRecordedLastTakenDateValueCopyWith(AutomaticallyRecordedLastTakenDateValue value, $Res Function(AutomaticallyRecordedLastTakenDateValue) then) =
+  factory $AutomaticallyRecordedLastTakenDateValueCopyWith(
+          AutomaticallyRecordedLastTakenDateValue value, $Res Function(AutomaticallyRecordedLastTakenDateValue) then) =
       _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, AutomaticallyRecordedLastTakenDateValue>;
   @useResult
   $Res call(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
 /// @nodoc
-class _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, $Val extends AutomaticallyRecordedLastTakenDateValue> implements $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
+class _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, $Val extends AutomaticallyRecordedLastTakenDateValue>
+    implements $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
   _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -828,21 +864,25 @@ class _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, $Val extends A
 
 /// @nodoc
 abstract class _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<$Res> implements $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
-  factory _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith(_$AutomaticallyRecordedLastTakenDateValueImpl value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) then) =
+  factory _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith(
+          _$AutomaticallyRecordedLastTakenDateValueImpl value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) then) =
       __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
 /// @nodoc
-class __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res> extends _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, _$AutomaticallyRecordedLastTakenDateValueImpl>
+class __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res>
+    extends _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, _$AutomaticallyRecordedLastTakenDateValueImpl>
     implements _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<$Res> {
-  __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl(_$AutomaticallyRecordedLastTakenDateValueImpl _value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) _then)
+  __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl(
+      _$AutomaticallyRecordedLastTakenDateValueImpl _value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -880,12 +920,14 @@ class __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res> extends 
 class _$AutomaticallyRecordedLastTakenDateValueImpl extends _AutomaticallyRecordedLastTakenDateValue {
   const _$AutomaticallyRecordedLastTakenDateValueImpl(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
 
-  factory _$AutomaticallyRecordedLastTakenDateValueImpl.fromJson(Map<String, dynamic> json) => _$$AutomaticallyRecordedLastTakenDateValueImplFromJson(json);
+  factory _$AutomaticallyRecordedLastTakenDateValueImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AutomaticallyRecordedLastTakenDateValueImplFromJson(json);
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
@@ -937,7 +979,8 @@ class _$AutomaticallyRecordedLastTakenDateValueImpl extends _AutomaticallyRecord
 abstract class _AutomaticallyRecordedLastTakenDateValue extends AutomaticallyRecordedLastTakenDateValue {
   const factory _AutomaticallyRecordedLastTakenDateValue(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
       required final int afterLastTakenPillNumber}) = _$AutomaticallyRecordedLastTakenDateValueImpl;
   const _AutomaticallyRecordedLastTakenDateValue._() : super._();
@@ -957,7 +1000,8 @@ abstract class _AutomaticallyRecordedLastTakenDateValue extends AutomaticallyRec
   int get afterLastTakenPillNumber;
   @override
   @JsonKey(ignore: true)
-  _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<_$AutomaticallyRecordedLastTakenDateValueImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<_$AutomaticallyRecordedLastTakenDateValueImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 DeletedPillSheetValue _$DeletedPillSheetValueFromJson(Map<String, dynamic> json) {
@@ -979,9 +1023,13 @@ mixin _$DeletedPillSheetValue {
 
 /// @nodoc
 abstract class $DeletedPillSheetValueCopyWith<$Res> {
-  factory $DeletedPillSheetValueCopyWith(DeletedPillSheetValue value, $Res Function(DeletedPillSheetValue) then) = _$DeletedPillSheetValueCopyWithImpl<$Res, DeletedPillSheetValue>;
+  factory $DeletedPillSheetValueCopyWith(DeletedPillSheetValue value, $Res Function(DeletedPillSheetValue) then) =
+      _$DeletedPillSheetValueCopyWithImpl<$Res, DeletedPillSheetValue>;
   @useResult
-  $Res call({@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime pillSheetDeletedAt, List<String> pillSheetIDs});
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetDeletedAt,
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
@@ -1014,15 +1062,21 @@ class _$DeletedPillSheetValueCopyWithImpl<$Res, $Val extends DeletedPillSheetVal
 
 /// @nodoc
 abstract class _$$DeletedPillSheetValueImplCopyWith<$Res> implements $DeletedPillSheetValueCopyWith<$Res> {
-  factory _$$DeletedPillSheetValueImplCopyWith(_$DeletedPillSheetValueImpl value, $Res Function(_$DeletedPillSheetValueImpl) then) = __$$DeletedPillSheetValueImplCopyWithImpl<$Res>;
+  factory _$$DeletedPillSheetValueImplCopyWith(_$DeletedPillSheetValueImpl value, $Res Function(_$DeletedPillSheetValueImpl) then) =
+      __$$DeletedPillSheetValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime pillSheetDeletedAt, List<String> pillSheetIDs});
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime pillSheetDeletedAt,
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
-class __$$DeletedPillSheetValueImplCopyWithImpl<$Res> extends _$DeletedPillSheetValueCopyWithImpl<$Res, _$DeletedPillSheetValueImpl> implements _$$DeletedPillSheetValueImplCopyWith<$Res> {
-  __$$DeletedPillSheetValueImplCopyWithImpl(_$DeletedPillSheetValueImpl _value, $Res Function(_$DeletedPillSheetValueImpl) _then) : super(_value, _then);
+class __$$DeletedPillSheetValueImplCopyWithImpl<$Res> extends _$DeletedPillSheetValueCopyWithImpl<$Res, _$DeletedPillSheetValueImpl>
+    implements _$$DeletedPillSheetValueImplCopyWith<$Res> {
+  __$$DeletedPillSheetValueImplCopyWithImpl(_$DeletedPillSheetValueImpl _value, $Res Function(_$DeletedPillSheetValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -1048,7 +1102,8 @@ class __$$DeletedPillSheetValueImplCopyWithImpl<$Res> extends _$DeletedPillSheet
 @JsonSerializable(explicitToJson: true)
 class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
   const _$DeletedPillSheetValueImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.pillSheetDeletedAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.pillSheetDeletedAt,
       final List<String> pillSheetIDs = const []})
       : _pillSheetIDs = pillSheetIDs,
         super._();
@@ -1090,7 +1145,8 @@ class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DeletedPillSheetValueImplCopyWith<_$DeletedPillSheetValueImpl> get copyWith => __$$DeletedPillSheetValueImplCopyWithImpl<_$DeletedPillSheetValueImpl>(this, _$identity);
+  _$$DeletedPillSheetValueImplCopyWith<_$DeletedPillSheetValueImpl> get copyWith =>
+      __$$DeletedPillSheetValueImplCopyWithImpl<_$DeletedPillSheetValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1102,7 +1158,8 @@ class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
 
 abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
   const factory _DeletedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime pillSheetDeletedAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime pillSheetDeletedAt,
       final List<String> pillSheetIDs}) = _$DeletedPillSheetValueImpl;
   const _DeletedPillSheetValue._() : super._();
 
@@ -1151,7 +1208,8 @@ abstract class $TakenPillValueCopyWith<$Res> {
       {bool? isQuickRecord,
       TakenPillEditedValue? edited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 
@@ -1220,14 +1278,16 @@ class _$TakenPillValueCopyWithImpl<$Res, $Val extends TakenPillValue> implements
 
 /// @nodoc
 abstract class _$$TakenPillValueImplCopyWith<$Res> implements $TakenPillValueCopyWith<$Res> {
-  factory _$$TakenPillValueImplCopyWith(_$TakenPillValueImpl value, $Res Function(_$TakenPillValueImpl) then) = __$$TakenPillValueImplCopyWithImpl<$Res>;
+  factory _$$TakenPillValueImplCopyWith(_$TakenPillValueImpl value, $Res Function(_$TakenPillValueImpl) then) =
+      __$$TakenPillValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {bool? isQuickRecord,
       TakenPillEditedValue? edited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 
@@ -1236,7 +1296,8 @@ abstract class _$$TakenPillValueImplCopyWith<$Res> implements $TakenPillValueCop
 }
 
 /// @nodoc
-class __$$TakenPillValueImplCopyWithImpl<$Res> extends _$TakenPillValueCopyWithImpl<$Res, _$TakenPillValueImpl> implements _$$TakenPillValueImplCopyWith<$Res> {
+class __$$TakenPillValueImplCopyWithImpl<$Res> extends _$TakenPillValueCopyWithImpl<$Res, _$TakenPillValueImpl>
+    implements _$$TakenPillValueImplCopyWith<$Res> {
   __$$TakenPillValueImplCopyWithImpl(_$TakenPillValueImpl _value, $Res Function(_$TakenPillValueImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1286,7 +1347,8 @@ class _$TakenPillValueImpl extends _TakenPillValue {
       {this.isQuickRecord,
       this.edited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
@@ -1333,7 +1395,8 @@ class _$TakenPillValueImpl extends _TakenPillValue {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, isQuickRecord, edited, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
+  int get hashCode =>
+      Object.hash(runtimeType, isQuickRecord, edited, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -1353,7 +1416,8 @@ abstract class _TakenPillValue extends TakenPillValue {
       {final bool? isQuickRecord,
       final TakenPillEditedValue? edited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
       required final int afterLastTakenPillNumber}) = _$TakenPillValueImpl;
   const _TakenPillValue._() : super._();
@@ -1404,11 +1468,14 @@ mixin _$TakenPillEditedValue {
 
 /// @nodoc
 abstract class $TakenPillEditedValueCopyWith<$Res> {
-  factory $TakenPillEditedValueCopyWith(TakenPillEditedValue value, $Res Function(TakenPillEditedValue) then) = _$TakenPillEditedValueCopyWithImpl<$Res, TakenPillEditedValue>;
+  factory $TakenPillEditedValueCopyWith(TakenPillEditedValue value, $Res Function(TakenPillEditedValue) then) =
+      _$TakenPillEditedValueCopyWithImpl<$Res, TakenPillEditedValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime historyRecordedDate,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime historyRecordedDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDate});
 }
 
@@ -1447,17 +1514,21 @@ class _$TakenPillEditedValueCopyWithImpl<$Res, $Val extends TakenPillEditedValue
 
 /// @nodoc
 abstract class _$$TakenPillEditedValueImplCopyWith<$Res> implements $TakenPillEditedValueCopyWith<$Res> {
-  factory _$$TakenPillEditedValueImplCopyWith(_$TakenPillEditedValueImpl value, $Res Function(_$TakenPillEditedValueImpl) then) = __$$TakenPillEditedValueImplCopyWithImpl<$Res>;
+  factory _$$TakenPillEditedValueImplCopyWith(_$TakenPillEditedValueImpl value, $Res Function(_$TakenPillEditedValueImpl) then) =
+      __$$TakenPillEditedValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime historyRecordedDate,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime historyRecordedDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDate});
 }
 
 /// @nodoc
-class __$$TakenPillEditedValueImplCopyWithImpl<$Res> extends _$TakenPillEditedValueCopyWithImpl<$Res, _$TakenPillEditedValueImpl> implements _$$TakenPillEditedValueImplCopyWith<$Res> {
+class __$$TakenPillEditedValueImplCopyWithImpl<$Res> extends _$TakenPillEditedValueCopyWithImpl<$Res, _$TakenPillEditedValueImpl>
+    implements _$$TakenPillEditedValueImplCopyWith<$Res> {
   __$$TakenPillEditedValueImplCopyWithImpl(_$TakenPillEditedValueImpl _value, $Res Function(_$TakenPillEditedValueImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1489,9 +1560,12 @@ class __$$TakenPillEditedValueImplCopyWithImpl<$Res> extends _$TakenPillEditedVa
 @JsonSerializable(explicitToJson: true)
 class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
   const _$TakenPillEditedValueImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdDate})
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.historyRecordedDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdDate})
       : super._();
 
   factory _$TakenPillEditedValueImpl.fromJson(Map<String, dynamic> json) => _$$TakenPillEditedValueImplFromJson(json);
@@ -1531,7 +1605,8 @@ class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$TakenPillEditedValueImplCopyWith<_$TakenPillEditedValueImpl> get copyWith => __$$TakenPillEditedValueImplCopyWithImpl<_$TakenPillEditedValueImpl>(this, _$identity);
+  _$$TakenPillEditedValueImplCopyWith<_$TakenPillEditedValueImpl> get copyWith =>
+      __$$TakenPillEditedValueImplCopyWithImpl<_$TakenPillEditedValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1543,9 +1618,12 @@ class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
 
 abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   const factory _TakenPillEditedValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime actualTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime historyRecordedDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime createdDate}) = _$TakenPillEditedValueImpl;
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime historyRecordedDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdDate}) = _$TakenPillEditedValueImpl;
   const _TakenPillEditedValue._() : super._();
 
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) = _$TakenPillEditedValueImpl.fromJson;
@@ -1587,11 +1665,13 @@ mixin _$RevertTakenPillValue {
 
 /// @nodoc
 abstract class $RevertTakenPillValueCopyWith<$Res> {
-  factory $RevertTakenPillValueCopyWith(RevertTakenPillValue value, $Res Function(RevertTakenPillValue) then) = _$RevertTakenPillValueCopyWithImpl<$Res, RevertTakenPillValue>;
+  factory $RevertTakenPillValueCopyWith(RevertTakenPillValue value, $Res Function(RevertTakenPillValue) then) =
+      _$RevertTakenPillValueCopyWithImpl<$Res, RevertTakenPillValue>;
   @useResult
   $Res call(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -1636,18 +1716,21 @@ class _$RevertTakenPillValueCopyWithImpl<$Res, $Val extends RevertTakenPillValue
 
 /// @nodoc
 abstract class _$$RevertTakenPillValueImplCopyWith<$Res> implements $RevertTakenPillValueCopyWith<$Res> {
-  factory _$$RevertTakenPillValueImplCopyWith(_$RevertTakenPillValueImpl value, $Res Function(_$RevertTakenPillValueImpl) then) = __$$RevertTakenPillValueImplCopyWithImpl<$Res>;
+  factory _$$RevertTakenPillValueImplCopyWith(_$RevertTakenPillValueImpl value, $Res Function(_$RevertTakenPillValueImpl) then) =
+      __$$RevertTakenPillValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
 /// @nodoc
-class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillValueCopyWithImpl<$Res, _$RevertTakenPillValueImpl> implements _$$RevertTakenPillValueImplCopyWith<$Res> {
+class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillValueCopyWithImpl<$Res, _$RevertTakenPillValueImpl>
+    implements _$$RevertTakenPillValueImplCopyWith<$Res> {
   __$$RevertTakenPillValueImplCopyWithImpl(_$RevertTakenPillValueImpl _value, $Res Function(_$RevertTakenPillValueImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1685,7 +1768,8 @@ class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillVa
 class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
   const _$RevertTakenPillValueImpl(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
@@ -1728,7 +1812,8 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RevertTakenPillValueImplCopyWith<_$RevertTakenPillValueImpl> get copyWith => __$$RevertTakenPillValueImplCopyWithImpl<_$RevertTakenPillValueImpl>(this, _$identity);
+  _$$RevertTakenPillValueImplCopyWith<_$RevertTakenPillValueImpl> get copyWith =>
+      __$$RevertTakenPillValueImplCopyWithImpl<_$RevertTakenPillValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1741,7 +1826,8 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
 abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   const factory _RevertTakenPillValue(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
       required final int afterLastTakenPillNumber}) = _$RevertTakenPillValueImpl;
   const _RevertTakenPillValue._() : super._();
@@ -1788,11 +1874,14 @@ mixin _$ChangedPillNumberValue {
 
 /// @nodoc
 abstract class $ChangedPillNumberValueCopyWith<$Res> {
-  factory $ChangedPillNumberValueCopyWith(ChangedPillNumberValue value, $Res Function(ChangedPillNumberValue) then) = _$ChangedPillNumberValueCopyWithImpl<$Res, ChangedPillNumberValue>;
+  factory $ChangedPillNumberValueCopyWith(ChangedPillNumberValue value, $Res Function(ChangedPillNumberValue) then) =
+      _$ChangedPillNumberValueCopyWithImpl<$Res, ChangedPillNumberValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterBeginingDate,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterBeginingDate,
       int beforeTodayPillNumber,
       int afterTodayPillNumber,
       int beforeGroupIndex,
@@ -1849,12 +1938,15 @@ class _$ChangedPillNumberValueCopyWithImpl<$Res, $Val extends ChangedPillNumberV
 
 /// @nodoc
 abstract class _$$ChangedPillNumberValueImplCopyWith<$Res> implements $ChangedPillNumberValueCopyWith<$Res> {
-  factory _$$ChangedPillNumberValueImplCopyWith(_$ChangedPillNumberValueImpl value, $Res Function(_$ChangedPillNumberValueImpl) then) = __$$ChangedPillNumberValueImplCopyWithImpl<$Res>;
+  factory _$$ChangedPillNumberValueImplCopyWith(_$ChangedPillNumberValueImpl value, $Res Function(_$ChangedPillNumberValueImpl) then) =
+      __$$ChangedPillNumberValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime afterBeginingDate,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterBeginingDate,
       int beforeTodayPillNumber,
       int afterTodayPillNumber,
       int beforeGroupIndex,
@@ -1862,8 +1954,10 @@ abstract class _$$ChangedPillNumberValueImplCopyWith<$Res> implements $ChangedPi
 }
 
 /// @nodoc
-class __$$ChangedPillNumberValueImplCopyWithImpl<$Res> extends _$ChangedPillNumberValueCopyWithImpl<$Res, _$ChangedPillNumberValueImpl> implements _$$ChangedPillNumberValueImplCopyWith<$Res> {
-  __$$ChangedPillNumberValueImplCopyWithImpl(_$ChangedPillNumberValueImpl _value, $Res Function(_$ChangedPillNumberValueImpl) _then) : super(_value, _then);
+class __$$ChangedPillNumberValueImplCopyWithImpl<$Res> extends _$ChangedPillNumberValueCopyWithImpl<$Res, _$ChangedPillNumberValueImpl>
+    implements _$$ChangedPillNumberValueImplCopyWith<$Res> {
+  __$$ChangedPillNumberValueImplCopyWithImpl(_$ChangedPillNumberValueImpl _value, $Res Function(_$ChangedPillNumberValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -1909,8 +2003,10 @@ class __$$ChangedPillNumberValueImplCopyWithImpl<$Res> extends _$ChangedPillNumb
 @JsonSerializable(explicitToJson: true)
 class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
   const _$ChangedPillNumberValueImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.afterBeginingDate,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterBeginingDate,
       required this.beforeTodayPillNumber,
       required this.afterTodayPillNumber,
       this.beforeGroupIndex = 1,
@@ -1958,12 +2054,14 @@ class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, beforeBeginingDate, afterBeginingDate, beforeTodayPillNumber, afterTodayPillNumber, beforeGroupIndex, afterGroupIndex);
+  int get hashCode =>
+      Object.hash(runtimeType, beforeBeginingDate, afterBeginingDate, beforeTodayPillNumber, afterTodayPillNumber, beforeGroupIndex, afterGroupIndex);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangedPillNumberValueImplCopyWith<_$ChangedPillNumberValueImpl> get copyWith => __$$ChangedPillNumberValueImplCopyWithImpl<_$ChangedPillNumberValueImpl>(this, _$identity);
+  _$$ChangedPillNumberValueImplCopyWith<_$ChangedPillNumberValueImpl> get copyWith =>
+      __$$ChangedPillNumberValueImplCopyWithImpl<_$ChangedPillNumberValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -1975,8 +2073,10 @@ class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
 
 abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
   const factory _ChangedPillNumberValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime beforeBeginingDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime afterBeginingDate,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterBeginingDate,
       required final int beforeTodayPillNumber,
       required final int afterTodayPillNumber,
       final int beforeGroupIndex,
@@ -2024,11 +2124,14 @@ mixin _$EndedPillSheetValue {
 
 /// @nodoc
 abstract class $EndedPillSheetValueCopyWith<$Res> {
-  factory $EndedPillSheetValueCopyWith(EndedPillSheetValue value, $Res Function(EndedPillSheetValue) then) = _$EndedPillSheetValueCopyWithImpl<$Res, EndedPillSheetValue>;
+  factory $EndedPillSheetValueCopyWith(EndedPillSheetValue value, $Res Function(EndedPillSheetValue) then) =
+      _$EndedPillSheetValueCopyWithImpl<$Res, EndedPillSheetValue>;
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime lastTakenDate});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -2061,16 +2164,20 @@ class _$EndedPillSheetValueCopyWithImpl<$Res, $Val extends EndedPillSheetValue> 
 
 /// @nodoc
 abstract class _$$EndedPillSheetValueImplCopyWith<$Res> implements $EndedPillSheetValueCopyWith<$Res> {
-  factory _$$EndedPillSheetValueImplCopyWith(_$EndedPillSheetValueImpl value, $Res Function(_$EndedPillSheetValueImpl) then) = __$$EndedPillSheetValueImplCopyWithImpl<$Res>;
+  factory _$$EndedPillSheetValueImplCopyWith(_$EndedPillSheetValueImpl value, $Res Function(_$EndedPillSheetValueImpl) then) =
+      __$$EndedPillSheetValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime lastTakenDate});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime lastTakenDate});
 }
 
 /// @nodoc
-class __$$EndedPillSheetValueImplCopyWithImpl<$Res> extends _$EndedPillSheetValueCopyWithImpl<$Res, _$EndedPillSheetValueImpl> implements _$$EndedPillSheetValueImplCopyWith<$Res> {
+class __$$EndedPillSheetValueImplCopyWithImpl<$Res> extends _$EndedPillSheetValueCopyWithImpl<$Res, _$EndedPillSheetValueImpl>
+    implements _$$EndedPillSheetValueImplCopyWith<$Res> {
   __$$EndedPillSheetValueImplCopyWithImpl(_$EndedPillSheetValueImpl _value, $Res Function(_$EndedPillSheetValueImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2097,8 +2204,10 @@ class __$$EndedPillSheetValueImplCopyWithImpl<$Res> extends _$EndedPillSheetValu
 @JsonSerializable(explicitToJson: true)
 class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
   const _$EndedPillSheetValueImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.lastTakenDate})
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.lastTakenDate})
       : super._();
 
   factory _$EndedPillSheetValueImpl.fromJson(Map<String, dynamic> json) => _$$EndedPillSheetValueImplFromJson(json);
@@ -2133,7 +2242,8 @@ class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$EndedPillSheetValueImplCopyWith<_$EndedPillSheetValueImpl> get copyWith => __$$EndedPillSheetValueImplCopyWithImpl<_$EndedPillSheetValueImpl>(this, _$identity);
+  _$$EndedPillSheetValueImplCopyWith<_$EndedPillSheetValueImpl> get copyWith =>
+      __$$EndedPillSheetValueImplCopyWithImpl<_$EndedPillSheetValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2145,8 +2255,10 @@ class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
 
 abstract class _EndedPillSheetValue extends EndedPillSheetValue {
   const factory _EndedPillSheetValue(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime endRecordDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime lastTakenDate}) = _$EndedPillSheetValueImpl;
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime lastTakenDate}) = _$EndedPillSheetValueImpl;
   const _EndedPillSheetValue._() : super._();
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) = _$EndedPillSheetValueImpl.fromJson;
@@ -2179,7 +2291,8 @@ mixin _$BeganRestDurationValue {
 
 /// @nodoc
 abstract class $BeganRestDurationValueCopyWith<$Res> {
-  factory $BeganRestDurationValueCopyWith(BeganRestDurationValue value, $Res Function(BeganRestDurationValue) then) = _$BeganRestDurationValueCopyWithImpl<$Res, BeganRestDurationValue>;
+  factory $BeganRestDurationValueCopyWith(BeganRestDurationValue value, $Res Function(BeganRestDurationValue) then) =
+      _$BeganRestDurationValueCopyWithImpl<$Res, BeganRestDurationValue>;
   @useResult
   $Res call({RestDuration restDuration});
 
@@ -2219,7 +2332,8 @@ class _$BeganRestDurationValueCopyWithImpl<$Res, $Val extends BeganRestDurationV
 
 /// @nodoc
 abstract class _$$BeganRestDurationValueImplCopyWith<$Res> implements $BeganRestDurationValueCopyWith<$Res> {
-  factory _$$BeganRestDurationValueImplCopyWith(_$BeganRestDurationValueImpl value, $Res Function(_$BeganRestDurationValueImpl) then) = __$$BeganRestDurationValueImplCopyWithImpl<$Res>;
+  factory _$$BeganRestDurationValueImplCopyWith(_$BeganRestDurationValueImpl value, $Res Function(_$BeganRestDurationValueImpl) then) =
+      __$$BeganRestDurationValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RestDuration restDuration});
@@ -2229,8 +2343,10 @@ abstract class _$$BeganRestDurationValueImplCopyWith<$Res> implements $BeganRest
 }
 
 /// @nodoc
-class __$$BeganRestDurationValueImplCopyWithImpl<$Res> extends _$BeganRestDurationValueCopyWithImpl<$Res, _$BeganRestDurationValueImpl> implements _$$BeganRestDurationValueImplCopyWith<$Res> {
-  __$$BeganRestDurationValueImplCopyWithImpl(_$BeganRestDurationValueImpl _value, $Res Function(_$BeganRestDurationValueImpl) _then) : super(_value, _then);
+class __$$BeganRestDurationValueImplCopyWithImpl<$Res> extends _$BeganRestDurationValueCopyWithImpl<$Res, _$BeganRestDurationValueImpl>
+    implements _$$BeganRestDurationValueImplCopyWith<$Res> {
+  __$$BeganRestDurationValueImplCopyWithImpl(_$BeganRestDurationValueImpl _value, $Res Function(_$BeganRestDurationValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -2266,7 +2382,10 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$BeganRestDurationValueImpl && (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$BeganRestDurationValueImpl &&
+            (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
   }
 
   @JsonKey(ignore: true)
@@ -2276,7 +2395,8 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$BeganRestDurationValueImplCopyWith<_$BeganRestDurationValueImpl> get copyWith => __$$BeganRestDurationValueImplCopyWithImpl<_$BeganRestDurationValueImpl>(this, _$identity);
+  _$$BeganRestDurationValueImplCopyWith<_$BeganRestDurationValueImpl> get copyWith =>
+      __$$BeganRestDurationValueImplCopyWithImpl<_$BeganRestDurationValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2317,7 +2437,8 @@ mixin _$EndedRestDurationValue {
 
 /// @nodoc
 abstract class $EndedRestDurationValueCopyWith<$Res> {
-  factory $EndedRestDurationValueCopyWith(EndedRestDurationValue value, $Res Function(EndedRestDurationValue) then) = _$EndedRestDurationValueCopyWithImpl<$Res, EndedRestDurationValue>;
+  factory $EndedRestDurationValueCopyWith(EndedRestDurationValue value, $Res Function(EndedRestDurationValue) then) =
+      _$EndedRestDurationValueCopyWithImpl<$Res, EndedRestDurationValue>;
   @useResult
   $Res call({RestDuration restDuration});
 
@@ -2357,7 +2478,8 @@ class _$EndedRestDurationValueCopyWithImpl<$Res, $Val extends EndedRestDurationV
 
 /// @nodoc
 abstract class _$$EndedRestDurationValueImplCopyWith<$Res> implements $EndedRestDurationValueCopyWith<$Res> {
-  factory _$$EndedRestDurationValueImplCopyWith(_$EndedRestDurationValueImpl value, $Res Function(_$EndedRestDurationValueImpl) then) = __$$EndedRestDurationValueImplCopyWithImpl<$Res>;
+  factory _$$EndedRestDurationValueImplCopyWith(_$EndedRestDurationValueImpl value, $Res Function(_$EndedRestDurationValueImpl) then) =
+      __$$EndedRestDurationValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RestDuration restDuration});
@@ -2367,8 +2489,10 @@ abstract class _$$EndedRestDurationValueImplCopyWith<$Res> implements $EndedRest
 }
 
 /// @nodoc
-class __$$EndedRestDurationValueImplCopyWithImpl<$Res> extends _$EndedRestDurationValueCopyWithImpl<$Res, _$EndedRestDurationValueImpl> implements _$$EndedRestDurationValueImplCopyWith<$Res> {
-  __$$EndedRestDurationValueImplCopyWithImpl(_$EndedRestDurationValueImpl _value, $Res Function(_$EndedRestDurationValueImpl) _then) : super(_value, _then);
+class __$$EndedRestDurationValueImplCopyWithImpl<$Res> extends _$EndedRestDurationValueCopyWithImpl<$Res, _$EndedRestDurationValueImpl>
+    implements _$$EndedRestDurationValueImplCopyWith<$Res> {
+  __$$EndedRestDurationValueImplCopyWithImpl(_$EndedRestDurationValueImpl _value, $Res Function(_$EndedRestDurationValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -2404,7 +2528,10 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) || (other.runtimeType == runtimeType && other is _$EndedRestDurationValueImpl && (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$EndedRestDurationValueImpl &&
+            (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
   }
 
   @JsonKey(ignore: true)
@@ -2414,7 +2541,8 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$EndedRestDurationValueImplCopyWith<_$EndedRestDurationValueImpl> get copyWith => __$$EndedRestDurationValueImplCopyWithImpl<_$EndedRestDurationValueImpl>(this, _$identity);
+  _$$EndedRestDurationValueImplCopyWith<_$EndedRestDurationValueImpl> get copyWith =>
+      __$$EndedRestDurationValueImplCopyWithImpl<_$EndedRestDurationValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2464,7 +2592,8 @@ abstract class $ChangedRestDurationBeginDateValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends ChangedRestDurationBeginDateValue> implements $ChangedRestDurationBeginDateValueCopyWith<$Res> {
+class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends ChangedRestDurationBeginDateValue>
+    implements $ChangedRestDurationBeginDateValueCopyWith<$Res> {
   _$ChangedRestDurationBeginDateValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2509,7 +2638,8 @@ class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends Changed
 
 /// @nodoc
 abstract class _$$ChangedRestDurationBeginDateValueImplCopyWith<$Res> implements $ChangedRestDurationBeginDateValueCopyWith<$Res> {
-  factory _$$ChangedRestDurationBeginDateValueImplCopyWith(_$ChangedRestDurationBeginDateValueImpl value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) then) =
+  factory _$$ChangedRestDurationBeginDateValueImplCopyWith(
+          _$ChangedRestDurationBeginDateValueImpl value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) then) =
       __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2522,9 +2652,12 @@ abstract class _$$ChangedRestDurationBeginDateValueImplCopyWith<$Res> implements
 }
 
 /// @nodoc
-class __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res> extends _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, _$ChangedRestDurationBeginDateValueImpl>
+class __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res>
+    extends _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, _$ChangedRestDurationBeginDateValueImpl>
     implements _$$ChangedRestDurationBeginDateValueImplCopyWith<$Res> {
-  __$$ChangedRestDurationBeginDateValueImplCopyWithImpl(_$ChangedRestDurationBeginDateValueImpl _value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) _then) : super(_value, _then);
+  __$$ChangedRestDurationBeginDateValueImplCopyWithImpl(
+      _$ChangedRestDurationBeginDateValueImpl _value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -2591,7 +2724,8 @@ class _$ChangedRestDurationBeginDateValueImpl extends _ChangedRestDurationBeginD
 }
 
 abstract class _ChangedRestDurationBeginDateValue extends ChangedRestDurationBeginDateValue {
-  const factory _ChangedRestDurationBeginDateValue({required final RestDuration beforeRestDuration, required final RestDuration afterRestDuration}) = _$ChangedRestDurationBeginDateValueImpl;
+  const factory _ChangedRestDurationBeginDateValue({required final RestDuration beforeRestDuration, required final RestDuration afterRestDuration}) =
+      _$ChangedRestDurationBeginDateValueImpl;
   const _ChangedRestDurationBeginDateValue._() : super._();
 
   factory _ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationBeginDateValueImpl.fromJson;
@@ -2621,7 +2755,8 @@ mixin _$ChangedRestDurationValue {
 
 /// @nodoc
 abstract class $ChangedRestDurationValueCopyWith<$Res> {
-  factory $ChangedRestDurationValueCopyWith(ChangedRestDurationValue value, $Res Function(ChangedRestDurationValue) then) = _$ChangedRestDurationValueCopyWithImpl<$Res, ChangedRestDurationValue>;
+  factory $ChangedRestDurationValueCopyWith(ChangedRestDurationValue value, $Res Function(ChangedRestDurationValue) then) =
+      _$ChangedRestDurationValueCopyWithImpl<$Res, ChangedRestDurationValue>;
   @useResult
   $Res call({RestDuration beforeRestDuration, RestDuration afterRestDuration});
 
@@ -2675,7 +2810,8 @@ class _$ChangedRestDurationValueCopyWithImpl<$Res, $Val extends ChangedRestDurat
 
 /// @nodoc
 abstract class _$$ChangedRestDurationValueImplCopyWith<$Res> implements $ChangedRestDurationValueCopyWith<$Res> {
-  factory _$$ChangedRestDurationValueImplCopyWith(_$ChangedRestDurationValueImpl value, $Res Function(_$ChangedRestDurationValueImpl) then) = __$$ChangedRestDurationValueImplCopyWithImpl<$Res>;
+  factory _$$ChangedRestDurationValueImplCopyWith(_$ChangedRestDurationValueImpl value, $Res Function(_$ChangedRestDurationValueImpl) then) =
+      __$$ChangedRestDurationValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RestDuration beforeRestDuration, RestDuration afterRestDuration});
@@ -2687,8 +2823,10 @@ abstract class _$$ChangedRestDurationValueImplCopyWith<$Res> implements $Changed
 }
 
 /// @nodoc
-class __$$ChangedRestDurationValueImplCopyWithImpl<$Res> extends _$ChangedRestDurationValueCopyWithImpl<$Res, _$ChangedRestDurationValueImpl> implements _$$ChangedRestDurationValueImplCopyWith<$Res> {
-  __$$ChangedRestDurationValueImplCopyWithImpl(_$ChangedRestDurationValueImpl _value, $Res Function(_$ChangedRestDurationValueImpl) _then) : super(_value, _then);
+class __$$ChangedRestDurationValueImplCopyWithImpl<$Res> extends _$ChangedRestDurationValueCopyWithImpl<$Res, _$ChangedRestDurationValueImpl>
+    implements _$$ChangedRestDurationValueImplCopyWith<$Res> {
+  __$$ChangedRestDurationValueImplCopyWithImpl(_$ChangedRestDurationValueImpl _value, $Res Function(_$ChangedRestDurationValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -2743,7 +2881,8 @@ class _$ChangedRestDurationValueImpl extends _ChangedRestDurationValue {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ChangedRestDurationValueImplCopyWith<_$ChangedRestDurationValueImpl> get copyWith => __$$ChangedRestDurationValueImplCopyWithImpl<_$ChangedRestDurationValueImpl>(this, _$identity);
+  _$$ChangedRestDurationValueImplCopyWith<_$ChangedRestDurationValueImpl> get copyWith =>
+      __$$ChangedRestDurationValueImplCopyWithImpl<_$ChangedRestDurationValueImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -2754,7 +2893,8 @@ class _$ChangedRestDurationValueImpl extends _ChangedRestDurationValue {
 }
 
 abstract class _ChangedRestDurationValue extends ChangedRestDurationValue {
-  const factory _ChangedRestDurationValue({required final RestDuration beforeRestDuration, required final RestDuration afterRestDuration}) = _$ChangedRestDurationValueImpl;
+  const factory _ChangedRestDurationValue({required final RestDuration beforeRestDuration, required final RestDuration afterRestDuration}) =
+      _$ChangedRestDurationValueImpl;
   const _ChangedRestDurationValue._() : super._();
 
   factory _ChangedRestDurationValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationValueImpl.fromJson;
@@ -2797,7 +2937,8 @@ abstract class $ChangedBeginDisplayNumberValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeginDisplayNumberValue> implements $ChangedBeginDisplayNumberValueCopyWith<$Res> {
+class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeginDisplayNumberValue>
+    implements $ChangedBeginDisplayNumberValueCopyWith<$Res> {
   _$ChangedBeginDisplayNumberValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -2846,7 +2987,8 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeg
 
 /// @nodoc
 abstract class _$$ChangedBeginDisplayNumberValueImplCopyWith<$Res> implements $ChangedBeginDisplayNumberValueCopyWith<$Res> {
-  factory _$$ChangedBeginDisplayNumberValueImplCopyWith(_$ChangedBeginDisplayNumberValueImpl value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) then) =
+  factory _$$ChangedBeginDisplayNumberValueImplCopyWith(
+          _$ChangedBeginDisplayNumberValueImpl value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) then) =
       __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -2859,9 +3001,12 @@ abstract class _$$ChangedBeginDisplayNumberValueImplCopyWith<$Res> implements $C
 }
 
 /// @nodoc
-class __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res> extends _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, _$ChangedBeginDisplayNumberValueImpl>
+class __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res>
+    extends _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, _$ChangedBeginDisplayNumberValueImpl>
     implements _$$ChangedBeginDisplayNumberValueImplCopyWith<$Res> {
-  __$$ChangedBeginDisplayNumberValueImplCopyWithImpl(_$ChangedBeginDisplayNumberValueImpl _value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) _then) : super(_value, _then);
+  __$$ChangedBeginDisplayNumberValueImplCopyWithImpl(
+      _$ChangedBeginDisplayNumberValueImpl _value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -2908,7 +3053,8 @@ class _$ChangedBeginDisplayNumberValueImpl extends _ChangedBeginDisplayNumberVal
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangedBeginDisplayNumberValueImpl &&
-            (identical(other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) || other.beforeDisplayNumberSetting == beforeDisplayNumberSetting) &&
+            (identical(other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) ||
+                other.beforeDisplayNumberSetting == beforeDisplayNumberSetting) &&
             (identical(other.afterDisplayNumberSetting, afterDisplayNumberSetting) || other.afterDisplayNumberSetting == afterDisplayNumberSetting));
   }
 
@@ -2978,7 +3124,8 @@ abstract class $ChangedEndDisplayNumberValueCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDisplayNumberValue> implements $ChangedEndDisplayNumberValueCopyWith<$Res> {
+class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDisplayNumberValue>
+    implements $ChangedEndDisplayNumberValueCopyWith<$Res> {
   _$ChangedEndDisplayNumberValueCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -3027,7 +3174,8 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDi
 
 /// @nodoc
 abstract class _$$ChangedEndDisplayNumberValueImplCopyWith<$Res> implements $ChangedEndDisplayNumberValueCopyWith<$Res> {
-  factory _$$ChangedEndDisplayNumberValueImplCopyWith(_$ChangedEndDisplayNumberValueImpl value, $Res Function(_$ChangedEndDisplayNumberValueImpl) then) =
+  factory _$$ChangedEndDisplayNumberValueImplCopyWith(
+          _$ChangedEndDisplayNumberValueImpl value, $Res Function(_$ChangedEndDisplayNumberValueImpl) then) =
       __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -3040,9 +3188,11 @@ abstract class _$$ChangedEndDisplayNumberValueImplCopyWith<$Res> implements $Cha
 }
 
 /// @nodoc
-class __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res> extends _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, _$ChangedEndDisplayNumberValueImpl>
+class __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res>
+    extends _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, _$ChangedEndDisplayNumberValueImpl>
     implements _$$ChangedEndDisplayNumberValueImplCopyWith<$Res> {
-  __$$ChangedEndDisplayNumberValueImplCopyWithImpl(_$ChangedEndDisplayNumberValueImpl _value, $Res Function(_$ChangedEndDisplayNumberValueImpl) _then) : super(_value, _then);
+  __$$ChangedEndDisplayNumberValueImplCopyWithImpl(_$ChangedEndDisplayNumberValueImpl _value, $Res Function(_$ChangedEndDisplayNumberValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -3089,7 +3239,8 @@ class _$ChangedEndDisplayNumberValueImpl extends _ChangedEndDisplayNumberValue {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ChangedEndDisplayNumberValueImpl &&
-            (identical(other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) || other.beforeDisplayNumberSetting == beforeDisplayNumberSetting) &&
+            (identical(other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) ||
+                other.beforeDisplayNumberSetting == beforeDisplayNumberSetting) &&
             (identical(other.afterDisplayNumberSetting, afterDisplayNumberSetting) || other.afterDisplayNumberSetting == afterDisplayNumberSetting));
   }
 

@@ -48,7 +48,8 @@ class RecordPageRestDurationDialog extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          SvgPicture.asset(appearanceMode == PillSheetAppearanceMode.date ? "images/explain_rest_duration_date.svg" : "images/explain_rest_duration_number.svg"),
+          SvgPicture.asset(
+              appearanceMode == PillSheetAppearanceMode.date ? "images/explain_rest_duration_date.svg" : "images/explain_rest_duration_number.svg"),
           const SizedBox(height: 24),
         ],
       ),
@@ -112,7 +113,8 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
       case PillSheetAppearanceMode.number:
         return "${pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
-        final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
+        final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
+            .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:

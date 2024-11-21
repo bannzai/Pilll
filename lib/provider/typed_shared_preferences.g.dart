@@ -69,7 +69,10 @@ class BoolSharedPreferencesFamily extends Family<SharedPreferencesState<bool?>> 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{sharedPreferencesProvider, ...?sharedPreferencesProvider.allTransitiveDependencies};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
+    sharedPreferencesProvider,
+    ...?sharedPreferencesProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
@@ -154,7 +157,8 @@ mixin BoolSharedPreferencesRef on NotifierProviderRef<SharedPreferencesState<boo
   String get key;
 }
 
-class _BoolSharedPreferencesProviderElement extends NotifierProviderElement<BoolSharedPreferences, SharedPreferencesState<bool?>> with BoolSharedPreferencesRef {
+class _BoolSharedPreferencesProviderElement extends NotifierProviderElement<BoolSharedPreferences, SharedPreferencesState<bool?>>
+    with BoolSharedPreferencesRef {
   _BoolSharedPreferencesProviderElement(super.provider);
 
   @override
@@ -203,7 +207,10 @@ class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{sharedPreferencesProvider, ...?sharedPreferencesProvider.allTransitiveDependencies};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
+    sharedPreferencesProvider,
+    ...?sharedPreferencesProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
@@ -288,7 +295,8 @@ mixin IntSharedPreferencesRef on NotifierProviderRef<SharedPreferencesState<int?
   String get key;
 }
 
-class _IntSharedPreferencesProviderElement extends NotifierProviderElement<IntSharedPreferences, SharedPreferencesState<int?>> with IntSharedPreferencesRef {
+class _IntSharedPreferencesProviderElement extends NotifierProviderElement<IntSharedPreferences, SharedPreferencesState<int?>>
+    with IntSharedPreferencesRef {
   _IntSharedPreferencesProviderElement(super.provider);
 
   @override
@@ -337,7 +345,10 @@ class StringSharedPreferencesFamily extends Family<SharedPreferencesState<String
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{sharedPreferencesProvider, ...?sharedPreferencesProvider.allTransitiveDependencies};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
+    sharedPreferencesProvider,
+    ...?sharedPreferencesProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
@@ -422,7 +433,8 @@ mixin StringSharedPreferencesRef on NotifierProviderRef<SharedPreferencesState<S
   String get key;
 }
 
-class _StringSharedPreferencesProviderElement extends NotifierProviderElement<StringSharedPreferences, SharedPreferencesState<String?>> with StringSharedPreferencesRef {
+class _StringSharedPreferencesProviderElement extends NotifierProviderElement<StringSharedPreferences, SharedPreferencesState<String?>>
+    with StringSharedPreferencesRef {
   _StringSharedPreferencesProviderElement(super.provider);
 
   @override

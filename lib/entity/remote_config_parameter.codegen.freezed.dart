@@ -34,9 +34,16 @@ mixin _$RemoteConfigParameter {
 
 /// @nodoc
 abstract class $RemoteConfigParameterCopyWith<$Res> {
-  factory $RemoteConfigParameterCopyWith(RemoteConfigParameter value, $Res Function(RemoteConfigParameter) then) = _$RemoteConfigParameterCopyWithImpl<$Res, RemoteConfigParameter>;
+  factory $RemoteConfigParameterCopyWith(RemoteConfigParameter value, $Res Function(RemoteConfigParameter) then) =
+      _$RemoteConfigParameterCopyWithImpl<$Res, RemoteConfigParameter>;
   @useResult
-  $Res call({bool isPaywallFirst, bool skipInitialSetting, int trialDeadlineDateOffsetDay, int discountEntitlementOffsetDay, int discountCountdownBoundaryHour, String premiumIntroductionPattern});
+  $Res call(
+      {bool isPaywallFirst,
+      bool skipInitialSetting,
+      int trialDeadlineDateOffsetDay,
+      int discountEntitlementOffsetDay,
+      int discountCountdownBoundaryHour,
+      String premiumIntroductionPattern});
 }
 
 /// @nodoc
@@ -89,15 +96,24 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
 
 /// @nodoc
 abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConfigParameterCopyWith<$Res> {
-  factory _$$RemoteConfigParameterImplCopyWith(_$RemoteConfigParameterImpl value, $Res Function(_$RemoteConfigParameterImpl) then) = __$$RemoteConfigParameterImplCopyWithImpl<$Res>;
+  factory _$$RemoteConfigParameterImplCopyWith(_$RemoteConfigParameterImpl value, $Res Function(_$RemoteConfigParameterImpl) then) =
+      __$$RemoteConfigParameterImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isPaywallFirst, bool skipInitialSetting, int trialDeadlineDateOffsetDay, int discountEntitlementOffsetDay, int discountCountdownBoundaryHour, String premiumIntroductionPattern});
+  $Res call(
+      {bool isPaywallFirst,
+      bool skipInitialSetting,
+      int trialDeadlineDateOffsetDay,
+      int discountEntitlementOffsetDay,
+      int discountCountdownBoundaryHour,
+      String premiumIntroductionPattern});
 }
 
 /// @nodoc
-class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigParameterCopyWithImpl<$Res, _$RemoteConfigParameterImpl> implements _$$RemoteConfigParameterImplCopyWith<$Res> {
-  __$$RemoteConfigParameterImplCopyWithImpl(_$RemoteConfigParameterImpl _value, $Res Function(_$RemoteConfigParameterImpl) _then) : super(_value, _then);
+class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigParameterCopyWithImpl<$Res, _$RemoteConfigParameterImpl>
+    implements _$$RemoteConfigParameterImplCopyWith<$Res> {
+  __$$RemoteConfigParameterImplCopyWithImpl(_$RemoteConfigParameterImpl _value, $Res Function(_$RemoteConfigParameterImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -183,20 +199,26 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             other is _$RemoteConfigParameterImpl &&
             (identical(other.isPaywallFirst, isPaywallFirst) || other.isPaywallFirst == isPaywallFirst) &&
             (identical(other.skipInitialSetting, skipInitialSetting) || other.skipInitialSetting == skipInitialSetting) &&
-            (identical(other.trialDeadlineDateOffsetDay, trialDeadlineDateOffsetDay) || other.trialDeadlineDateOffsetDay == trialDeadlineDateOffsetDay) &&
-            (identical(other.discountEntitlementOffsetDay, discountEntitlementOffsetDay) || other.discountEntitlementOffsetDay == discountEntitlementOffsetDay) &&
-            (identical(other.discountCountdownBoundaryHour, discountCountdownBoundaryHour) || other.discountCountdownBoundaryHour == discountCountdownBoundaryHour) &&
-            (identical(other.premiumIntroductionPattern, premiumIntroductionPattern) || other.premiumIntroductionPattern == premiumIntroductionPattern));
+            (identical(other.trialDeadlineDateOffsetDay, trialDeadlineDateOffsetDay) ||
+                other.trialDeadlineDateOffsetDay == trialDeadlineDateOffsetDay) &&
+            (identical(other.discountEntitlementOffsetDay, discountEntitlementOffsetDay) ||
+                other.discountEntitlementOffsetDay == discountEntitlementOffsetDay) &&
+            (identical(other.discountCountdownBoundaryHour, discountCountdownBoundaryHour) ||
+                other.discountCountdownBoundaryHour == discountCountdownBoundaryHour) &&
+            (identical(other.premiumIntroductionPattern, premiumIntroductionPattern) ||
+                other.premiumIntroductionPattern == premiumIntroductionPattern));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, isPaywallFirst, skipInitialSetting, trialDeadlineDateOffsetDay, discountEntitlementOffsetDay, discountCountdownBoundaryHour, premiumIntroductionPattern);
+  int get hashCode => Object.hash(runtimeType, isPaywallFirst, skipInitialSetting, trialDeadlineDateOffsetDay, discountEntitlementOffsetDay,
+      discountCountdownBoundaryHour, premiumIntroductionPattern);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => __$$RemoteConfigParameterImplCopyWithImpl<_$RemoteConfigParameterImpl>(this, _$identity);
+  _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith =>
+      __$$RemoteConfigParameterImplCopyWithImpl<_$RemoteConfigParameterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {

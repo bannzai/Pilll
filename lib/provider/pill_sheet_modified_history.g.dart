@@ -61,7 +61,10 @@ class PillSheetModifiedHistoriesWithLimitFamily extends Family<AsyncValue<List<P
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{databaseProvider, ...?databaseProvider.allTransitiveDependencies};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
@@ -142,7 +145,8 @@ mixin PillSheetModifiedHistoriesWithLimitRef on AutoDisposeStreamProviderRef<Lis
   int get limit;
 }
 
-class _PillSheetModifiedHistoriesWithLimitProviderElement extends AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>> with PillSheetModifiedHistoriesWithLimitRef {
+class _PillSheetModifiedHistoriesWithLimitProviderElement extends AutoDisposeStreamProviderElement<List<PillSheetModifiedHistory>>
+    with PillSheetModifiedHistoriesWithLimitRef {
   _PillSheetModifiedHistoriesWithLimitProviderElement(super.provider);
 
   @override
@@ -186,7 +190,10 @@ class PillSheetModifiedHistoriesWithRangeFamily extends Family<AsyncValue<List<P
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{databaseProvider, ...?databaseProvider.allTransitiveDependencies};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
+    databaseProvider,
+    ...?databaseProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
@@ -277,7 +284,8 @@ mixin PillSheetModifiedHistoriesWithRangeRef on StreamProviderRef<List<PillSheet
   DateTime get end;
 }
 
-class _PillSheetModifiedHistoriesWithRangeProviderElement extends StreamProviderElement<List<PillSheetModifiedHistory>> with PillSheetModifiedHistoriesWithRangeRef {
+class _PillSheetModifiedHistoriesWithRangeProviderElement extends StreamProviderElement<List<PillSheetModifiedHistory>>
+    with PillSheetModifiedHistoriesWithRangeRef {
   _PillSheetModifiedHistoriesWithRangeProviderElement(super.provider);
 
   @override

@@ -168,7 +168,8 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
                 store.addPillSheetType(pillSheetType);
               },
               onChange: (index, pillSheetType) {
-                analytics.logEvent(name: "initial_setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
+                analytics.logEvent(
+                    name: "initial_setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
                 store.changePillSheetType(index, pillSheetType);
               },
               onDelete: (index) {

@@ -32,7 +32,8 @@ abstract class $InitialSettingTodayPillNumberCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$InitialSettingTodayPillNumberCopyWithImpl<$Res, $Val extends InitialSettingTodayPillNumber> implements $InitialSettingTodayPillNumberCopyWith<$Res> {
+class _$InitialSettingTodayPillNumberCopyWithImpl<$Res, $Val extends InitialSettingTodayPillNumber>
+    implements $InitialSettingTodayPillNumberCopyWith<$Res> {
   _$InitialSettingTodayPillNumberCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -61,7 +62,8 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res, $Val extends InitialSett
 
 /// @nodoc
 abstract class _$$InitialSettingTodayPillNumberImplCopyWith<$Res> implements $InitialSettingTodayPillNumberCopyWith<$Res> {
-  factory _$$InitialSettingTodayPillNumberImplCopyWith(_$InitialSettingTodayPillNumberImpl value, $Res Function(_$InitialSettingTodayPillNumberImpl) then) =
+  factory _$$InitialSettingTodayPillNumberImplCopyWith(
+          _$InitialSettingTodayPillNumberImpl value, $Res Function(_$InitialSettingTodayPillNumberImpl) then) =
       __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -69,9 +71,12 @@ abstract class _$$InitialSettingTodayPillNumberImplCopyWith<$Res> implements $In
 }
 
 /// @nodoc
-class __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res> extends _$InitialSettingTodayPillNumberCopyWithImpl<$Res, _$InitialSettingTodayPillNumberImpl>
+class __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>
+    extends _$InitialSettingTodayPillNumberCopyWithImpl<$Res, _$InitialSettingTodayPillNumberImpl>
     implements _$$InitialSettingTodayPillNumberImplCopyWith<$Res> {
-  __$$InitialSettingTodayPillNumberImplCopyWithImpl(_$InitialSettingTodayPillNumberImpl _value, $Res Function(_$InitialSettingTodayPillNumberImpl) _then) : super(_value, _then);
+  __$$InitialSettingTodayPillNumberImplCopyWithImpl(
+      _$InitialSettingTodayPillNumberImpl _value, $Res Function(_$InitialSettingTodayPillNumberImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -156,7 +161,8 @@ mixin _$InitialSettingState {
 
 /// @nodoc
 abstract class $InitialSettingStateCopyWith<$Res> {
-  factory $InitialSettingStateCopyWith(InitialSettingState value, $Res Function(InitialSettingState) then) = _$InitialSettingStateCopyWithImpl<$Res, InitialSettingState>;
+  factory $InitialSettingStateCopyWith(InitialSettingState value, $Res Function(InitialSettingState) then) =
+      _$InitialSettingStateCopyWithImpl<$Res, InitialSettingState>;
   @useResult
   $Res call(
       {List<PillSheetType> pillSheetTypes,
@@ -237,7 +243,8 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
 
 /// @nodoc
 abstract class _$$InitialSettingStateImplCopyWith<$Res> implements $InitialSettingStateCopyWith<$Res> {
-  factory _$$InitialSettingStateImplCopyWith(_$InitialSettingStateImpl value, $Res Function(_$InitialSettingStateImpl) then) = __$$InitialSettingStateImplCopyWithImpl<$Res>;
+  factory _$$InitialSettingStateImplCopyWith(_$InitialSettingStateImpl value, $Res Function(_$InitialSettingStateImpl) then) =
+      __$$InitialSettingStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -254,7 +261,8 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res> implements $InitialSetti
 }
 
 /// @nodoc
-class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStateCopyWithImpl<$Res, _$InitialSettingStateImpl> implements _$$InitialSettingStateImplCopyWith<$Res> {
+class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStateCopyWithImpl<$Res, _$InitialSettingStateImpl>
+    implements _$$InitialSettingStateImplCopyWith<$Res> {
   __$$InitialSettingStateImplCopyWithImpl(_$InitialSettingStateImpl _value, $Res Function(_$InitialSettingStateImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -367,13 +375,14 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(_pillSheetTypes), todayPillNumber, const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType);
+  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_pillSheetTypes), todayPillNumber,
+      const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith => __$$InitialSettingStateImplCopyWithImpl<_$InitialSettingStateImpl>(this, _$identity);
+  _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith =>
+      __$$InitialSettingStateImplCopyWithImpl<_$InitialSettingStateImpl>(this, _$identity);
 }
 
 abstract class _InitialSettingState extends InitialSettingState {

@@ -40,7 +40,8 @@ class AnnouncementBar extends HookConsumerWidget {
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
-    final hiddenCountdownDiscountDeadline = ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final hiddenCountdownDiscountDeadline =
+        ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;

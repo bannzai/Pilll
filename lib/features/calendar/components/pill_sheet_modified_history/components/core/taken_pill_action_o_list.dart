@@ -32,7 +32,8 @@ class TakenPillActionOList extends StatelessWidget {
           if (index == 0) {
             return inRestDuration ? SvgPicture.asset("images/dash_o.svg") : SvgPicture.asset("images/o.svg");
           } else if (index < 3) {
-            return _halfOWidgetWithTransform(inRestDuration ? SvgPicture.asset("images/dash_half_o.svg") : SvgPicture.asset("images/half_o.svg"), index);
+            return _halfOWidgetWithTransform(
+                inRestDuration ? SvgPicture.asset("images/dash_half_o.svg") : SvgPicture.asset("images/half_o.svg"), index);
           } else {
             return _dotsWidgetWithTransform(SvgPicture.asset("images/dots.svg"));
           }

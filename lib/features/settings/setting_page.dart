@@ -60,7 +60,8 @@ class SettingPage extends HookConsumerWidget {
       ref.watch(isHealthDataAvailableProvider),
     ).when(
       data: (data) {
-        final userIsMigratedFrom132 = sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
+        final userIsMigratedFrom132 =
+            sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
           user: data.$1,
           setting: data.$2,

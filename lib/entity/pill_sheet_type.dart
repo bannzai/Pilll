@@ -138,7 +138,8 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(pillSheetTypeReferencePath: rawPath, name: fullName, totalCount: totalCount, dosingPeriod: dosingPeriod);
+  PillSheetTypeInfo get typeInfo =>
+      PillSheetTypeInfo(pillSheetTypeReferencePath: rawPath, name: fullName, totalCount: totalCount, dosingPeriod: dosingPeriod);
 
   bool get isNotExistsNotTakenDuration {
     return totalCount == dosingPeriod;

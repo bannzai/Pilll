@@ -55,7 +55,8 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     return "$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}番";
   }
 
-  static String changedPillNumber({required int beforeTodayPillNumber, required int afterTodayPillNumber}) => "$beforeTodayPillNumber→$afterTodayPillNumber番";
+  static String changedPillNumber({required int beforeTodayPillNumber, required int afterTodayPillNumber}) =>
+      "$beforeTodayPillNumber→$afterTodayPillNumber番";
 
   static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;

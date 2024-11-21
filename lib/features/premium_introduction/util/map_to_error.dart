@@ -84,27 +84,36 @@ Exception? mapToDisplayedException(PlatformException exception) {
     case PurchasesErrorCode.configurationError:
       return FormatException("購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.unsupportedError:
-      return FormatException("原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.emptySubscriberAttributesError:
       return AlertError("原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.productDiscountMissingIdentifierError:
-      return FormatException("原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.unknownNonNativeError:
-      return FormatException("原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.productDiscountMissingSubscriptionGroupIdentifierError:
-      return FormatException("原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.customerInfoError:
-      return FormatException("顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: $errorCode ${exception.message}:${exception.details}");
+      return FormatException(
+          "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: $errorCode ${exception.message}:${exception.details}");
     case PurchasesErrorCode.systemInfoError:
-      return FormatException("端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.beginRefundRequestError:
-      return FormatException("返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.productRequestTimeout:
       return FormatException("タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.apiEndpointBlocked:
-      return FormatException("原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.invalidPromotionalOfferError:
-      return FormatException("原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: $errorCode 詳細: ${exception.message}:${exception.details}");
     case PurchasesErrorCode.offlineConnectionError:
       return FormatException("通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
   }

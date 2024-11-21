@@ -15,7 +15,9 @@ import '../../../../entity/user.codegen.dart';
 
 void inquiry() {
   PackageInfo.fromPlatform().then((value) => debugInfo(", ")).then((info) {
-    launchUrl(Uri.parse(Uri.encodeFull("https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info")),
+    launchUrl(
+        Uri.parse(Uri.encodeFull(
+            "https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info")),
         mode: LaunchMode.inAppWebView);
   });
 }

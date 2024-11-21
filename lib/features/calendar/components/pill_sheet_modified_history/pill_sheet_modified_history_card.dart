@@ -92,7 +92,8 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       premiumOrTrial: user.premiumOrTrial,
                     ),
                   ),
-                  if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold) PillSheetModifiedHistoryMoreButton(user: user),
+                  if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
+                    PillSheetModifiedHistoryMoreButton(user: user),
                 ];
               } else {
                 return [

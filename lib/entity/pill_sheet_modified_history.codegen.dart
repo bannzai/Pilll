@@ -219,7 +219,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final beforeID = before.id;
     final beforeLastTakenDate = before.lastTakenDate;
     if (beforeID == null || beforeLastTakenDate == null) {
-      throw FormatException("unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
+      throw FormatException(
+          "unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,

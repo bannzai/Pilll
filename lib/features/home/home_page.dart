@@ -99,8 +99,10 @@ class HomePageBody extends HookConsumerWidget {
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
     final shouldAskCancelReason = user.shouldAskCancelReason;
-    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds = sharedPreferences.getInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds) ?? 0;
-    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet = now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
+    final monthlyPremiumIntroductionSheetPresentedDateMilliSeconds =
+        sharedPreferences.getInt(IntKey.monthlyPremiumIntroductionSheetPresentedDateMilliSeconds) ?? 0;
+    final isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet =
+        now().millisecondsSinceEpoch - monthlyPremiumIntroductionSheetPresentedDateMilliSeconds > 1000 * 60 * 60 * 24 * 30;
     final bool isOneMonthPassedTrialDeadline;
     final trialDeadlineDate = user.trialDeadlineDate;
     if (trialDeadlineDate != null) {
@@ -167,19 +169,25 @@ class HomePageBody extends HookConsumerWidget {
                 tabs: <Tab>[
                   Tab(
                     text: "ピル",
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
+                    icon: SvgPicture.asset(
+                        tabIndex.value == HomePageTabType.record.index ? "images/tab_icon_pill_enable.svg" : "images/tab_icon_pill_disable.svg"),
                   ),
                   Tab(
                     text: "生理",
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
+                    icon: SvgPicture.asset(
+                        tabIndex.value == HomePageTabType.menstruation.index ? "images/menstruation.svg" : "images/menstruation_disable.svg"),
                   ),
                   Tab(
                     text: "カレンダー",
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index ? "images/tab_icon_calendar_enable.svg" : "images/tab_icon_calendar_disable.svg"),
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
+                        ? "images/tab_icon_calendar_enable.svg"
+                        : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index ? "images/tab_icon_setting_enable.svg" : "images/tab_icon_setting_disable.svg"),
+                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
+                        ? "images/tab_icon_setting_enable.svg"
+                        : "images/tab_icon_setting_disable.svg"),
                   ),
                 ],
               ),

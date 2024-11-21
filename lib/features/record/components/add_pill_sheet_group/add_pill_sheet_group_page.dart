@@ -63,7 +63,8 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                           pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
                         },
                         onChange: (index, pillSheetType) {
-                          analytics.logEvent(name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
+                          analytics.logEvent(
+                              name: "setting_change_pill_sheet_group", parameters: {"index": index, "pill_sheet_type": pillSheetType.fullName});
                           final copied = [...pillSheetTypes.value];
                           copied[index] = pillSheetType;
                           pillSheetTypes.value = copied;

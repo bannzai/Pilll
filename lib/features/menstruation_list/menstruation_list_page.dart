@@ -26,7 +26,8 @@ class MenstruationListPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         centerTitle: false,
-        title: const Text("生理履歴", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
+        title:
+            const Text("生理履歴", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         backgroundColor: PilllColors.white,
         elevation: 0,
       ),

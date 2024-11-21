@@ -271,7 +271,9 @@ class RegisterReminderLocalNotification {
 
         // 跨いでも1ピルシート分だけなので、今日の日付起点で考えて今処理しているループがactivePillSheetの次かどうかを判別し、処理中の「ピルシート中のピル番号」を計算して使用する
         final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
-        final pillNumberInPillSheet = isOverActivePillSheet ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount : activePillSheet.todayPillNumber + dayOffset;
+        final pillNumberInPillSheet = isOverActivePillSheet
+            ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
+            : activePillSheet.todayPillNumber + dayOffset;
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;

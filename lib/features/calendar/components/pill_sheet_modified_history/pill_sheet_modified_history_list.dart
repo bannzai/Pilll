@@ -85,8 +85,8 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                       history.beforePillSheetGroup?.pillSheets.reversed,
                     )
                     ?.lastTakenPillNumber),
-            PillSheetModifiedActionType.deletedPillSheet =>
-              PillSheetModifiedHistoryDeletedPillSheetAction(estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
+            PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
                 premiumOrTrial: premiumOrTrial,
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
@@ -102,7 +102,9 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
             // NOTE: revertTakenPill は findFirstDifferencePillSheetの向きはtakenPill等とは逆になる。なぜならbeforeの方がafterよりも後ろのピルシートの服用記録になるから、beforeの場合は後ろから(reversed)探索する
             PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets.reversed.findFirstDifferencePillSheet(history.afterPillSheetGroup?.pillSheets.reversed)?.lastTakenPillNumber,
+                beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets.reversed
+                    .findFirstDifferencePillSheet(history.afterPillSheetGroup?.pillSheets.reversed)
+                    ?.lastTakenPillNumber,
                 afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets
                     .findFirstDifferencePillSheet(
                       history.beforePillSheetGroup?.pillSheets,

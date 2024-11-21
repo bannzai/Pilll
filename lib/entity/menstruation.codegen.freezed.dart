@@ -113,7 +113,8 @@ abstract class _$$MenstruationImplCopyWith<$Res> implements $MenstruationCopyWit
 }
 
 /// @nodoc
-class __$$MenstruationImplCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res, _$MenstruationImpl> implements _$$MenstruationImplCopyWith<$Res> {
+class __$$MenstruationImplCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res, _$MenstruationImpl>
+    implements _$$MenstruationImplCopyWith<$Res> {
   __$$MenstruationImplCopyWithImpl(_$MenstruationImpl _value, $Res Function(_$MenstruationImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -161,10 +162,12 @@ class __$$MenstruationImplCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<
 class _$MenstruationImpl extends _Menstruation {
   const _$MenstruationImpl(
       {@JsonKey(includeIfNull: false) this.id,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.beginDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.endDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdAt,
       this.healthKitSampleDataUUID})
       : super._();
 
@@ -226,10 +229,13 @@ class _$MenstruationImpl extends _Menstruation {
 abstract class _Menstruation extends Menstruation {
   const factory _Menstruation(
       {@JsonKey(includeIfNull: false) final String? id,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime beginDate,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beginDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime endDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required final DateTime createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdAt,
       final String? healthKitSampleDataUUID}) = _$MenstruationImpl;
   const _Menstruation._() : super._();
 

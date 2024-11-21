@@ -167,7 +167,11 @@ class _$PackageImpl implements _Package {
 }
 
 abstract class _Package implements Package {
-  const factory _Package({required final String latestOS, required final String appName, required final String appVersion, required final String buildNumber}) = _$PackageImpl;
+  const factory _Package(
+      {required final String latestOS,
+      required final String appName,
+      required final String appVersion,
+      required final String buildNumber}) = _$PackageImpl;
 
   factory _Package.fromJson(Map<String, dynamic> json) = _$PackageImpl.fromJson;
 

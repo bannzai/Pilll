@@ -183,7 +183,10 @@ class HiddenCountdownDiscountDeadlineFamily extends Family<bool> {
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{remoteConfigParameterProvider, ...?remoteConfigParameterProvider.allTransitiveDependencies};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
+    remoteConfigParameterProvider,
+    ...?remoteConfigParameterProvider.allTransitiveDependencies
+  };
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;

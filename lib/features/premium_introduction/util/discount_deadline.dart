@@ -23,7 +23,8 @@ bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref, {re
   }
   final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
   final timer = ref.watch(tickProvider);
-  return !(timer.isBefore(discountEntitlementDeadlineDate) && discountEntitlementDeadlineDate.difference(timer).inMinutes <= remoteConfigParameter.discountCountdownBoundaryHour * 60);
+  return !(timer.isBefore(discountEntitlementDeadlineDate) &&
+      discountEntitlementDeadlineDate.difference(timer).inMinutes <= remoteConfigParameter.discountCountdownBoundaryHour * 60);
 }
 
 @Riverpod()

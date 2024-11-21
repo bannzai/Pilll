@@ -60,7 +60,8 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date), style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
+        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
@@ -77,7 +78,8 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
                 builder: (context) {
                   return DiscardDialog(
                     title: "日記を削除します",
-                    message: const Text("削除された日記は復元ができません", style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
+                    message: const Text("削除された日記は復元ができません",
+                        style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
                     actions: [
                       AlertButton(
                         text: "キャンセル",
