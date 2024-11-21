@@ -1,33 +1,29 @@
-import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/components/atoms/button.dart';
-import 'package:pilll/features/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
-import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
-  final User user;
+  final VoidCallback onPressed;
+
   const PillSheetModifiedHistoryMoreButton({
     super.key,
-    required this.user,
+    required this.onPressed,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        AlertButton(
-            text: 'もっと見る',
-            onPressed: () async {
-              analytics.logEvent(name: 'pill_sheet_modified_history_more');
-              if (user.isPremium || user.isTrial) {
-                Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
-              } else {
-                showPremiumIntroductionSheet(context);
-              }
-            }),
-      ],
+    return TextButton(
+      onPressed: onPressed,
+      child: Text(
+        L.more,  // もっと見るを翻訳
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w600,
+          fontSize: 14,
+          color: TextColor.main,
+        ),
+      ),
     );
   }
 }
