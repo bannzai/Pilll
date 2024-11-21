@@ -26,18 +26,22 @@ class NotificationInRestDuration extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text('${pillSheet.pillSheetType.notTakenWord}${L.notification}', // 通知を翻訳
-          style: const TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
-      subtitle: Text('通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます',
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-          )),
+      title: Text(
+        L.NotificationForNotTakenPeriod(pillSheet.pillSheetType.notTakenWord),
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        )
+      ),
+      subtitle: Text(
+        L.AutoRecordForNotTakenPeriodIfNotificationOff(pillSheet.pillSheetType.notTakenWord),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        )
+      ),
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
@@ -51,13 +55,12 @@ class NotificationInRestDuration extends HookConsumerWidget {
           SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(
-              "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
+              "${pillSheet.pillSheetType.notTakenWord}${L.notification}を${value ? "ON" : "OFF"}にしました",
             ),
           ),
         );
       },
       value: setting.isOnNotifyInNotTakenDuration,
-      // NOTE: when configured subtitle, the space between elements becomes very narrow
       contentPadding: const EdgeInsets.fromLTRB(14, 8, 6, 8),
     );
   }
