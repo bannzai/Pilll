@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
@@ -26,7 +27,8 @@ class NotificationInRestDuration extends HookConsumerWidget {
         ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text('${pillSheet.pillSheetType.notTakenWord}期間の通知',
+      title: Text(
+          '${pillSheet.pillSheetType.notTakenWord}${L.notification}',  // 通知を翻訳
           style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
