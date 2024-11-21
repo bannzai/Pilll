@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/root/localization/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -29,19 +30,12 @@ class CalendarPillSheetModifiedHistoryCardState {
     required this.trialDeadlineDate,
   });
 
-  bool get moreButtonIsShown =>
-      _allPillSheetModifiedHistories.length >
-      CalendarPillSheetModifiedHistoryCardState
-          .pillSheetModifiedHistoriesThreshold;
+  bool get moreButtonIsShown => _allPillSheetModifiedHistories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold;
   List<PillSheetModifiedHistory> get pillSheetModifiedHistories {
-    if (_allPillSheetModifiedHistories.length >
-        CalendarPillSheetModifiedHistoryCardState
-            .pillSheetModifiedHistoriesThreshold) {
+    if (_allPillSheetModifiedHistories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold) {
       final copied = [..._allPillSheetModifiedHistories];
       copied.removeRange(
-        CalendarPillSheetModifiedHistoryCardState
-                .pillSheetModifiedHistoriesThreshold -
-            1,
+        CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold - 1,
         copied.length,
       );
       return copied;
@@ -65,16 +59,15 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Container(
-        padding:
-            const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
+        padding: const EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               children: [
-                const Text(
-                  '服用履歴',
-                  style: TextStyle(
+                Text(
+                  L.medicationHistory,
+                  style: const TextStyle(
                     fontWeight: FontWeight.w500,
                     fontFamily: FontFamily.japanese,
                     fontSize: 20,
@@ -100,9 +93,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       premiumOrTrial: user.premiumOrTrial,
                     ),
                   ),
-                  if (histories.length >
-                      CalendarPillSheetModifiedHistoryCardState
-                          .pillSheetModifiedHistoriesThreshold)
+                  if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
                     PillSheetModifiedHistoryMoreButton(user: user),
                 ];
               } else {
@@ -130,8 +121,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    const Text(lockEmoji,
-                                        style: TextStyle(fontSize: 40)),
+                                    const Text(lockEmoji, style: TextStyle(fontSize: 40)),
                                     const SizedBox(height: 12),
                                     const Text(
                                       '服用履歴はプレミアム機能です',
@@ -149,8 +139,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                         text: 'くわしくみる',
                                         onPressed: () async {
                                           analytics.logEvent(
-                                            name:
-                                                'pressed_show_detail_pill_sheet_history',
+                                            name: 'pressed_show_detail_pill_sheet_history',
                                           );
                                           showPremiumIntroductionSheet(context);
                                         },
