@@ -6,8 +6,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'discount_deadline.g.dart';
 
 @Riverpod()
-bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref,
-    {required DateTime? discountEntitlementDeadlineDate}) {
+bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
@@ -17,8 +16,7 @@ bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref,
 }
 
 @Riverpod(dependencies: [remoteConfigParameter])
-bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref,
-    {required DateTime? discountEntitlementDeadlineDate}) {
+bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
@@ -26,13 +24,11 @@ bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref,
   final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
   final timer = ref.watch(tickProvider);
   return !(timer.isBefore(discountEntitlementDeadlineDate) &&
-      discountEntitlementDeadlineDate.difference(timer).inMinutes <=
-          remoteConfigParameter.discountCountdownBoundaryHour * 60);
+      discountEntitlementDeadlineDate.difference(timer).inMinutes <= remoteConfigParameter.discountCountdownBoundaryHour * 60);
 }
 
 @Riverpod()
-Duration durationToDiscountPriceDeadline(DurationToDiscountPriceDeadlineRef ref,
-    {required DateTime discountEntitlementDeadlineDate}) {
+Duration durationToDiscountPriceDeadline(DurationToDiscountPriceDeadlineRef ref, {required DateTime discountEntitlementDeadlineDate}) {
   final timerDate = ref.watch(tickProvider);
   return discountEntitlementDeadlineDate.difference(timerDate);
 }

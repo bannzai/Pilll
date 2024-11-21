@@ -37,18 +37,15 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
         color: PilllColors.white,
       ),
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-      child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _title(context, deleteDiary, diary),
-            ...[
-              if (diary.hasPhysicalConditionStatus) _physicalCondition(diary),
-              _physicalConditionDetails(diary),
-              if (diary.hasSex) _sex(diary),
-              _memo(diary),
-            ].map((e) => _withContentSpacer(e)),
-          ]),
+      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+        _title(context, deleteDiary, diary),
+        ...[
+          if (diary.hasPhysicalConditionStatus) _physicalCondition(diary),
+          _physicalConditionDetails(diary),
+          if (diary.hasSex) _sex(diary),
+          _memo(diary),
+        ].map((e) => _withContentSpacer(e)),
+      ]),
     );
   }
 
@@ -64,17 +61,12 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       mainAxisSize: MainAxisSize.max,
       children: [
         Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
-            style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w500,
-                fontSize: 20,
-                color: TextColor.main)),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset('images/edit.svg'),
           onPressed: () {
-            Navigator.of(context)
-                .push(DiaryPostPageRoute.route(diary.date, diary));
+            Navigator.of(context).push(DiaryPostPageRoute.route(diary.date, diary));
           },
         ),
         const SizedBox(width: 12),
@@ -87,11 +79,7 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
                   return DiscardDialog(
                     title: '日記を削除します',
                     message: const Text('削除された日記は復元ができません',
-                        style: TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 14,
-                            color: TextColor.main)),
+                        style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
                     actions: [
                       AlertButton(
                         text: 'キャンセル',
@@ -123,13 +111,9 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset('images/laugh.svg',
-            colorFilter:
-                const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset('images/laugh.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset('images/angry.svg',
-            colorFilter:
-                const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset('images/angry.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
       default:
         return Container();
     }
@@ -181,11 +165,8 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       padding: const EdgeInsets.all(4),
       width: 32,
       height: 32,
-      decoration: BoxDecoration(
-          shape: BoxShape.circle, color: PilllColors.thinSecondary),
-      child: SvgPicture.asset('images/heart.svg',
-          colorFilter:
-              const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn)),
+      decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
+      child: SvgPicture.asset('images/heart.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn)),
     );
   }
 

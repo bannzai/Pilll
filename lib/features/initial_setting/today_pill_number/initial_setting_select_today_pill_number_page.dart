@@ -67,10 +67,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     InconspicuousButton(
                       onPressed: () async {
                         store.unsetTodayPillNumber();
-                        analytics.logEvent(
-                            name: 'unknown_number_initial_setting');
-                        Navigator.of(context)
-                            .push(InitialSettingReminderTimesPageRoute.route());
+                        analytics.logEvent(name: 'unknown_number_initial_setting');
+                        Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
                       },
                       text: 'まだ分からない',
                     ),
@@ -88,10 +86,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                       onPressed: state.todayPillNumber == null
                           ? null
                           : () async {
-                              analytics.logEvent(
-                                  name: 'done_today_number_initial_setting');
-                              Navigator.of(context).push(
-                                  InitialSettingReminderTimesPageRoute.route());
+                              analytics.logEvent(name: 'done_today_number_initial_setting');
+                              Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
                             },
                     ),
                   ),
@@ -106,12 +102,10 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingSelectTodayPillNumberPageRoute
-    on InitialSettingSelectTodayPillNumberPage {
+extension InitialSettingSelectTodayPillNumberPageRoute on InitialSettingSelectTodayPillNumberPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings:
-          const RouteSettings(name: 'InitialSettingSelectTodayPillNumberPage'),
+      settings: const RouteSettings(name: 'InitialSettingSelectTodayPillNumberPage'),
       builder: (_) => const InitialSettingSelectTodayPillNumberPage(),
     );
   }

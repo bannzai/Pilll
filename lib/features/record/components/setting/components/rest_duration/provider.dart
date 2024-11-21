@@ -14,8 +14,7 @@ final beginRestDurationProvider = Provider.autoDispose(
   (ref) => BeginRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory:
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
 );
 
@@ -42,8 +41,7 @@ class BeginRestDuration {
       createdDate: now(),
     );
 
-    final updatedPillSheet =
-        pillSheetGroup.targetBeginRestDurationPillSheet.copyWith(
+    final updatedPillSheet = pillSheetGroup.targetBeginRestDurationPillSheet.copyWith(
       restDurations: [
         ...pillSheetGroup.targetBeginRestDurationPillSheet.restDurations,
         restDuration,
@@ -54,8 +52,7 @@ class BeginRestDuration {
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
       batch,
-      PillSheetModifiedHistoryServiceActionFactory
-          .createBeganRestDurationAction(
+      PillSheetModifiedHistoryServiceActionFactory.createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
         before: pillSheetGroup.targetBeginRestDurationPillSheet,
         after: updatedPillSheet,
@@ -73,8 +70,7 @@ final endRestDurationProvider = Provider.autoDispose(
   (ref) => EndRestDuration(
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory:
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
 );
 
@@ -110,24 +106,20 @@ class EndRestDuration {
         updatedPillSheets.add(updatedPillSheet);
       } else if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         // activePillSheetよりも後のピルシートで、前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
-        final beforeUpdatedPillSheet =
-            updatedPillSheets[pillSheet.groupIndex - 1];
+        final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
         updatedPillSheets.add(pillSheet.copyWith(
-          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate
-              .add(const Duration(days: 1)),
+          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
         ));
       } else {
         updatedPillSheets.add(pillSheet);
       }
     }
 
-    final updatedPillSheetGroup =
-        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     batchSetPillSheetModifiedHistory(
       batch,
-      PillSheetModifiedHistoryServiceActionFactory
-          .createEndedRestDurationAction(
+      PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
         before: activePillSheet,
         after: updatedPillSheet,
@@ -147,8 +139,7 @@ final changeRestDurationBeginDateProvider = Provider.autoDispose(
     actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory:
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
 );
 final changeRestDurationProvider = Provider.autoDispose(
@@ -156,8 +147,7 @@ final changeRestDurationProvider = Provider.autoDispose(
     actionType: PillSheetModifiedActionType.changedRestDuration,
     batchFactory: ref.watch(batchFactoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
-    batchSetPillSheetModifiedHistory:
-        ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
   ),
 );
 
@@ -179,14 +169,10 @@ class ChangeRestDuration {
     // restDuration.idが2024-03-28の実装時に追加されたものでnullableの可能性がある。
     // idチェックをしているが後述の期間をチェックする処理でもほぼ問題ない
     // また、toRestDurationの場合はマッチするIDが無いのでどちらにしてもidではなく期間で絞る必要がある
-    if (pillSheet.restDurations
-        .map((e) => e.id)
-        .where((e) => e != null)
-        .contains(restDuration.id)) {
+    if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
       return true;
     }
-    return !restDuration.beginDate.isBefore(pillSheet.beginingDate) &&
-        !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
+    return !restDuration.beginDate.isBefore(pillSheet.beginingDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
   }
 
   Future<void> call({
@@ -194,48 +180,35 @@ class ChangeRestDuration {
     required RestDuration toRestDuration,
     required PillSheetGroup pillSheetGroup,
   }) async {
-    final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets
-        .indexWhere((e) => _hasRestDuration(e, fromRestDuration));
+    final fromRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, fromRestDuration));
     if (fromRestDurationPillSheetIndex == -1) {
       throw AssertionError('fromRestDurationPillSheetIndex is not found');
     }
-    final fromRestDurationPillSheet =
-        pillSheetGroup.pillSheets[fromRestDurationPillSheetIndex];
+    final fromRestDurationPillSheet = pillSheetGroup.pillSheets[fromRestDurationPillSheetIndex];
     if (fromRestDurationPillSheet.restDurations.isEmpty) {
       throw AssertionError('fromRestDurationPillSheet.restDurations is empty');
     }
-    final fromRestDurationIndex =
-        fromRestDurationPillSheet.restDurations.indexOf(fromRestDuration);
+    final fromRestDurationIndex = fromRestDurationPillSheet.restDurations.indexOf(fromRestDuration);
     if (fromRestDurationIndex == -1) {
       throw AssertionError('fromRestDurationIndex is not found');
     }
-    final updatedFromRestDurationPillSheet = fromRestDurationPillSheet.copyWith(
-        restDurations: [...fromRestDurationPillSheet.restDurations]
-          ..removeAt(fromRestDurationIndex));
+    final updatedFromRestDurationPillSheet =
+        fromRestDurationPillSheet.copyWith(restDurations: [...fromRestDurationPillSheet.restDurations]..removeAt(fromRestDurationIndex));
 
-    final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets
-        .indexWhere((e) => _hasRestDuration(e, toRestDuration));
+    final toRestDurationPillSheetIndex = pillSheetGroup.pillSheets.indexWhere((e) => _hasRestDuration(e, toRestDuration));
     if (toRestDurationPillSheetIndex == -1) {
       throw AssertionError('toRestDurationPillSheetIndex is not found');
     }
     final PillSheet updatedToRestDurationPillSheet;
-    final toRestDurationPillSheet =
-        pillSheetGroup.pillSheets[toRestDurationPillSheetIndex];
+    final toRestDurationPillSheet = pillSheetGroup.pillSheets[toRestDurationPillSheetIndex];
     if (updatedFromRestDurationPillSheet.id == toRestDurationPillSheet.id) {
       // 変更前後のお休み期間対象のピルシートが一緒の場合はupdatedFromRestDurationPillSheetからコピーする
-      updatedToRestDurationPillSheet =
-          updatedFromRestDurationPillSheet.copyWith(
-        restDurations: [
-          ...updatedFromRestDurationPillSheet.restDurations,
-          toRestDuration
-        ],
+      updatedToRestDurationPillSheet = updatedFromRestDurationPillSheet.copyWith(
+        restDurations: [...updatedFromRestDurationPillSheet.restDurations, toRestDuration],
       );
     } else {
       updatedToRestDurationPillSheet = toRestDurationPillSheet.copyWith(
-        restDurations: [
-          ...toRestDurationPillSheet.restDurations,
-          toRestDuration
-        ],
+        restDurations: [...toRestDurationPillSheet.restDurations, toRestDuration],
       );
     }
 
@@ -264,8 +237,7 @@ class ChangeRestDuration {
 
       /// このループ内でアップデートされた前のピルシートを用いてbeginingDateを算出するので、
       /// [updatedBeginingDatePillSheets] から取得する
-      final beforePillSheet =
-          updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
+      final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
       updatedBeginingDatePillSheets.add(pillSheet.copyWith(
         beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
       ));
@@ -292,15 +264,13 @@ class ChangeRestDuration {
     }
 
     final batch = batchFactory.batch();
-    final updatedPillSheetGroup =
-        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
     switch (actionType) {
       case PillSheetModifiedActionType.changedRestDurationBeginDate:
         batchSetPillSheetModifiedHistory(
           batch,
-          PillSheetModifiedHistoryServiceActionFactory
-              .createChangedRestDurationBeginDateAction(
+          PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationBeginDateAction(
             pillSheetGroupID: pillSheetGroup.id,
             before: fromRestDurationPillSheet,
             after: updatedToRestDurationPillSheet,
@@ -313,8 +283,7 @@ class ChangeRestDuration {
       case PillSheetModifiedActionType.changedRestDuration:
         batchSetPillSheetModifiedHistory(
           batch,
-          PillSheetModifiedHistoryServiceActionFactory
-              .createChangedRestDurationAction(
+          PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
             pillSheetGroupID: pillSheetGroup.id,
             before: fromRestDurationPillSheet,
             after: updatedToRestDurationPillSheet,

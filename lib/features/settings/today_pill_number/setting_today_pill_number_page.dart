@@ -25,12 +25,10 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final pillNumberInPillSheetState = useState(_pillNumberInPillSheet(
-        activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup));
+    final pillNumberInPillSheetState = useState(_pillNumberInPillSheet(activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup));
     final pillSheetPageIndexState = useState(activePillSheet.groupIndex);
     final changePillNumber = ref.watch(changePillNumberProvider);
-    final registerReminderLocalNotification =
-        ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final navigator = Navigator.of(context);
 
     return Scaffold(
@@ -66,20 +64,16 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 56),
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
-                        pillSheetTypes: pillSheetGroup.pillSheets
-                            .map((e) => e.pillSheetType)
-                            .toList(),
+                        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                         selectedTodayPillNumberIntoPillSheet: (pageIndex) {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;
                           }
                           return pillNumberInPillSheetState.value;
                         },
-                        markSelected:
-                            (pillSheetPageIndex, pillNumberInPillSheet) {
+                        markSelected: (pillSheetPageIndex, pillNumberInPillSheet) {
                           pillSheetPageIndexState.value = pillSheetPageIndex;
-                          pillNumberInPillSheetState.value =
-                              pillNumberInPillSheet;
+                          pillNumberInPillSheetState.value = pillNumberInPillSheet;
                         }),
                   ),
                   const SizedBox(height: 20),
@@ -98,8 +92,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                               pillSheetGroup: pillSheetGroup,
                               activePillSheet: activePillSheet,
                               pillSheetPageIndex: pillSheetPageIndexState.value,
-                              pillNumberInPillSheet:
-                                  pillNumberInPillSheetState.value);
+                              pillNumberInPillSheet: pillNumberInPillSheetState.value);
                           await registerReminderLocalNotification();
 
                           navigator.pop();
@@ -126,10 +119,8 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     required PillSheet activePillSheet,
     required PillSheetGroup pillSheetGroup,
   }) {
-    final pillSheetTypes =
-        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(
-        pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
+    final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
     if (passedTotalCount >= activePillSheet.todayPillNumber) {
       return activePillSheet.todayPillNumber;
     }

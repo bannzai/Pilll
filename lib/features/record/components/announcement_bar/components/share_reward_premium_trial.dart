@@ -22,8 +22,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final applyShareRewardPremiumTrial =
-        ref.watch(applyShareRewardPremiumTrialProvider);
+    final applyShareRewardPremiumTrial = ref.watch(applyShareRewardPremiumTrialProvider);
 
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
@@ -34,8 +33,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
 
           _showPicker(context, (shareToSNSKind) async {
             try {
-              await presentShareToSNSForPremiumTrialReward(shareToSNSKind,
-                  () async {
+              await presentShareToSNSForPremiumTrialReward(shareToSNSKind, () async {
                 await applyShareRewardPremiumTrial(user);
               });
             } catch (error) {
@@ -62,8 +60,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
             const Spacer(),
             SvgPicture.asset(
               'images/arrow_right.svg',
-              colorFilter:
-                  const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
               width: 16,
               height: 16,
             ),
@@ -74,8 +71,7 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
     );
   }
 
-  void _showPicker(
-      BuildContext context, Function(ShareToSNSKind) completionHandler) {
+  void _showPicker(BuildContext context, Function(ShareToSNSKind) completionHandler) {
     int selected = ShareToSNSKind.values.first.index;
 
     showModalBottomSheet(
@@ -117,11 +113,8 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
                   onSelectedItemChanged: (index) {
                     selected = index;
                   },
-                  scrollController:
-                      FixedExtentScrollController(initialItem: selected),
-                  children: ShareToSNSKind.values
-                      .map((e) => Text(e.rawValue))
-                      .toList(),
+                  scrollController: FixedExtentScrollController(initialItem: selected),
+                  children: ShareToSNSKind.values.map((e) => Text(e.rawValue)).toList(),
                 ),
               ),
             ),

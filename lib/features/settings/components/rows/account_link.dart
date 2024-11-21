@@ -7,7 +7,7 @@ import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/settings/setting_account_list/setting_account_cooperation_list_page.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class AccountLinkRow extends HookConsumerWidget {
   const AccountLinkRow({super.key});
@@ -26,8 +26,7 @@ class AccountLinkRow extends HookConsumerWidget {
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
         analytics.logEvent(name: 'did_select_setting_account_cooperation');
-        Navigator.of(context)
-            .push(SettingAccountCooperationListPageRoute.route());
+        Navigator.of(context).push(SettingAccountCooperationListPageRoute.route());
       },
     );
   }

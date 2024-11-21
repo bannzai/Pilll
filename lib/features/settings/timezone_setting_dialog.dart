@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class TimezoneSettingDialog extends HookConsumerWidget {
   final Setting setting;
@@ -25,13 +25,11 @@ class TimezoneSettingDialog extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
     return AlertDialog(
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding:
-          const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
+      contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
-        L.syncWithDeviceTimeZone.replaceAll('{deviceTimezoneName}', deviceTimezoneName),  // 端末のタイムゾーン({deviceTimezoneName})と同期しますか？を翻訳
+        L.syncWithDeviceTimeZone.replaceAll('{deviceTimezoneName}', deviceTimezoneName), // 端末のタイムゾーン({deviceTimezoneName})と同期しますか？を翻訳
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -44,7 +42,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           Text(
-            L.currentTimeZone,  // 現在設定されているタイムゾーンを翻訳
+            L.currentTimeZone, // 現在設定されているタイムゾーンを翻訳
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
@@ -77,19 +75,18 @@ class TimezoneSettingDialog extends HookConsumerWidget {
 
             final navigator = Navigator.of(context);
             try {
-              await setSetting(
-                  setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
+              await setSetting(setting.copyWith(timezoneDatabaseName: deviceTimezoneName));
               onDone(deviceTimezoneName);
             } catch (error) {
               if (context.mounted) showErrorAlert(context, error);
             }
             navigator.pop();
           },
-          text: L.yes,  // はいを翻訳
+          text: L.yes, // はいを翻訳
         ),
         Center(
           child: AlertButton(
-            text: L.no,  // いいえを翻訳
+            text: L.no, // いいえを翻訳
             onPressed: () async {
               analytics.logEvent(
                 name: 'pressed_timezone_no',

@@ -17,8 +17,7 @@ final schedulesForDateProvider = StreamProvider.family((ref, DateTime date) {
       .map((event) => event.docs.map((e) => e.data()).toList());
 });
 
-final schedulesForMonthProvider =
-    StreamProvider.family((ref, DateTime dateForMonth) {
+final schedulesForMonthProvider = StreamProvider.family((ref, DateTime dateForMonth) {
   final range = MonthDateTimeRange.monthRange(dateForMonth: dateForMonth);
   return ref
       .watch(databaseProvider)
@@ -37,8 +36,7 @@ final schedules90Days = StreamProvider.family((ref, DateTime base) {
       .watch(databaseProvider)
       .schedulesReference()
       .where(ScheduleFirestoreKey.date,
-          isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
-          isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
+          isLessThanOrEqualTo: DateTime(base.year, base.month, 90), isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
       .orderBy(ScheduleFirestoreKey.date)
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList());

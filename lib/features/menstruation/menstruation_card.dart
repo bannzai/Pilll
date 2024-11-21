@@ -29,8 +29,7 @@ class MenstruationCard extends StatelessWidget {
                     SvgPicture.asset(
                       'images/menstruation.svg',
                       width: 24,
-                      colorFilter: const ColorFilter.mode(
-                          PilllColors.red, BlendMode.srcIn),
+                      colorFilter: const ColorFilter.mode(PilllColors.red, BlendMode.srcIn),
                     ),
                     Text(
                       state.title,
@@ -46,18 +45,13 @@ class MenstruationCard extends StatelessWidget {
                 const SizedBox(width: 12),
                 Text(
                   DateTimeFormatter.monthAndWeekday(state.scheduleDate),
-                  style: const TextStyle(
-                      color: TextColor.gray,
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: FontFamily.japanese),
+                  style: const TextStyle(color: TextColor.gray, fontSize: 20, fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese),
                 ),
               ],
             ),
             const SizedBox(height: 8),
             Container(
-              padding:
-                  const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
+              padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
               decoration: BoxDecoration(
                 color: PilllColors.primary,
                 borderRadius: BorderRadius.circular(30),

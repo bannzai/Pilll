@@ -17,8 +17,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final difference = ref.watch(durationToDiscountPriceDeadlineProvider(
-        discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
     if (difference.inSeconds <= 0) {
       return Container();
     }
@@ -50,8 +49,7 @@ $countdown内の購入で58%OFF!''',
               child: IconButton(
                 icon: SvgPicture.asset(
                   'images/arrow_right.svg',
-                  colorFilter:
-                      const ColorFilter.mode(Colors.white, BlendMode.srcIn),
+                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                 ),
                 onPressed: () {},
                 iconSize: 24,

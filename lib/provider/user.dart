@@ -17,11 +17,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final userProvider = StreamProvider((ref) => ref
-    .watch(databaseProvider)
-    .userReference()
-    .snapshots()
-    .map((event) => event.data()!));
+final userProvider = StreamProvider((ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()!));
 
 class UpdatePurchaseInfo {
   final DatabaseConnection databaseConnection;
@@ -35,27 +31,17 @@ class UpdatePurchaseInfo {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await databaseConnection.userRawReference().set({
-      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
-      UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
-    }, SetOptions(merge: true));
+    await databaseConnection.userRawReference().set(
+        {if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated, UserFirestoreFieldKeys.purchaseAppID: purchaseAppID},
+        SetOptions(merge: true));
     final privates = {
-      if (premiumPlanIdentifier != null)
-        UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier:
-            premiumPlanIdentifier,
-      if (originalPurchaseDate != null)
-        UserPrivateFirestoreFieldKeys.originalPurchaseDate:
-            originalPurchaseDate,
-      if (activeSubscriptions.isNotEmpty)
-        UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
-      if (entitlementIdentifier != null)
-        UserPrivateFirestoreFieldKeys.entitlementIdentifier:
-            entitlementIdentifier,
+      if (premiumPlanIdentifier != null) UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier: premiumPlanIdentifier,
+      if (originalPurchaseDate != null) UserPrivateFirestoreFieldKeys.originalPurchaseDate: originalPurchaseDate,
+      if (activeSubscriptions.isNotEmpty) UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
+      if (entitlementIdentifier != null) UserPrivateFirestoreFieldKeys.entitlementIdentifier: entitlementIdentifier,
     };
     if (privates.isNotEmpty) {
-      await databaseConnection
-          .userPrivateRawReference()
-          .set({...privates}, SetOptions(merge: true));
+      await databaseConnection.userPrivateRawReference().set({...privates}, SetOptions(merge: true));
     }
   }
 }
@@ -73,8 +59,7 @@ class SyncPurchaseInfo {
   }
 }
 
-final fetchOrCreateUserProvider =
-    Provider((ref) => FetchOrCreateUser(ref.watch(databaseProvider)));
+final fetchOrCreateUserProvider = Provider((ref) => FetchOrCreateUser(ref.watch(databaseProvider)));
 
 class FetchOrCreateUser {
   final DatabaseConnection databaseConnection;
@@ -86,8 +71,7 @@ class FetchOrCreateUser {
       if (error is UserNotFound) {
         return _create(uid).then((_) => _fetch(uid));
       }
-      throw FormatException(
-          'Create user error: $error, stackTrace: ${StackTrace.current.toString()}');
+      throw FormatException('Create user error: $error, stackTrace: ${StackTrace.current.toString()}');
     });
     return user;
   }
@@ -106,12 +90,10 @@ class FetchOrCreateUser {
   Future<void> _create(String uid) async {
     debugPrint('#create $uid');
     final sharedPreferences = await SharedPreferences.getInstance();
-    final anonymousUserID =
-        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    final anonymousUserID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     return databaseConnection.userRawReference().set(
       {
-        if (anonymousUserID != null)
-          UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+        if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
         UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
       },
       SetOptions(merge: true),
@@ -119,8 +101,7 @@ class FetchOrCreateUser {
   }
 }
 
-final linkAppleProvider =
-    Provider((ref) => LinkApple(ref.watch(databaseProvider)));
+final linkAppleProvider = Provider((ref) => LinkApple(ref.watch(databaseProvider)));
 
 class LinkApple {
   final DatabaseConnection databaseConnection;
@@ -137,8 +118,7 @@ class LinkApple {
   }
 }
 
-final linkGoogleProvider =
-    Provider((ref) => LinkGoogle(ref.watch(databaseProvider)));
+final linkGoogleProvider = Provider((ref) => LinkGoogle(ref.watch(databaseProvider)));
 
 class LinkGoogle {
   final DatabaseConnection databaseConnection;
@@ -155,8 +135,7 @@ class LinkGoogle {
   }
 }
 
-final registerRemotePushNotificationTokenProvider = Provider(
-    (ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)));
+final registerRemotePushNotificationTokenProvider = Provider((ref) => RegisterRemotePushNotificationToken(ref.watch(databaseProvider)));
 
 class RegisterRemotePushNotificationToken {
   final DatabaseConnection databaseConnection;
@@ -171,8 +150,7 @@ class RegisterRemotePushNotificationToken {
   }
 }
 
-final saveUserLaunchInfoProvider =
-    Provider((ref) => SaveUserLaunchInfo(ref.watch(databaseProvider)));
+final saveUserLaunchInfoProvider = Provider((ref) => SaveUserLaunchInfo(ref.watch(databaseProvider)));
 
 class SaveUserLaunchInfo {
   final DatabaseConnection databaseConnection;
@@ -186,8 +164,7 @@ class SaveUserLaunchInfo {
     final sharedPreferences = await SharedPreferences.getInstance();
 
     // Stats
-    final lastLoginVersion =
-        await PackageInfo.fromPlatform().then((value) => value.version);
+    final lastLoginVersion = await PackageInfo.fromPlatform().then((value) => value.version);
     String? beginVersion = sharedPreferences.getString(StringKey.beginVersion);
     if (beginVersion == null) {
       final v = lastLoginVersion;
@@ -204,11 +181,7 @@ class SaveUserLaunchInfo {
     // Package
     final packageInfo = await PackageInfo.fromPlatform();
     final os = Platform.operatingSystem;
-    final package = Package(
-        latestOS: os,
-        appName: packageInfo.appName,
-        buildNumber: packageInfo.buildNumber,
-        appVersion: packageInfo.version);
+    final package = Package(latestOS: os, appName: packageInfo.appName, buildNumber: packageInfo.buildNumber, appVersion: packageInfo.version);
 
     // UserIDs
     final userID = user.id!;
@@ -216,20 +189,14 @@ class SaveUserLaunchInfo {
     if (!userDocumentIDSets.contains(userID)) {
       userDocumentIDSets.add(userID);
     }
-    final lastSignInAnonymousUID =
-        sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
+    final lastSignInAnonymousUID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
     List<String> anonymousUserIDSets = [...user.anonymousUserIDSets];
-    if (lastSignInAnonymousUID != null &&
-        !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
+    if (lastSignInAnonymousUID != null && !anonymousUserIDSets.contains(lastSignInAnonymousUID)) {
       anonymousUserIDSets.add(lastSignInAnonymousUID);
     }
-    final firebaseCurrentUserID =
-        firebase_auth.FirebaseAuth.instance.currentUser?.uid;
-    List<String> firebaseCurrentUserIDSets = [
-      ...user.firebaseCurrentUserIDSets
-    ];
-    if (firebaseCurrentUserID != null &&
-        !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+    final firebaseCurrentUserID = firebase_auth.FirebaseAuth.instance.currentUser?.uid;
+    List<String> firebaseCurrentUserIDSets = [...user.firebaseCurrentUserIDSets];
+    if (firebaseCurrentUserID != null && !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
       firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
     }
 
@@ -253,23 +220,19 @@ class SaveUserLaunchInfo {
 
       // UserIDs
       UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
-      UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
-          firebaseCurrentUserIDSets,
+      UserFirestoreFieldKeys.firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
 
       UserFirestoreFieldKeys.isTrial: user.isTrial,
 
       // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
       // 処理的に大体のユーザーがカバーできれば良いので、現在のnewPillSheetNotificationが登録されている数から判別する
-      UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet:
-          (await localNotificationService.pendingNewPillSheetNotifications())
-              .isNotEmpty,
+      UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: (await localNotificationService.pendingNewPillSheetNotifications()).isNotEmpty,
     }, SetOptions(merge: true));
   }
 }
 
-final endInitialSettingProvider =
-    Provider((ref) => EndInitialSetting(ref.watch(databaseProvider)));
+final endInitialSettingProvider = Provider((ref) => EndInitialSetting(ref.watch(databaseProvider)));
 
 class EndInitialSetting {
   final DatabaseConnection databaseConnection;
@@ -279,21 +242,16 @@ class EndInitialSetting {
     return databaseConnection.userRawReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now()
-          .addDays(remoteConfigParameter.trialDeadlineDateOffsetDay)
-          .endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now()
-          .addDays(remoteConfigParameter.trialDeadlineDateOffsetDay +
-              remoteConfigParameter.discountEntitlementOffsetDay)
-          .endOfDay(),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
+          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
       // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
       UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: true,
     }, SetOptions(merge: true));
   }
 }
 
-final disableShouldAskCancelReasonProvider = Provider(
-    (ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
+final disableShouldAskCancelReasonProvider = Provider((ref) => DisableShouldAskCancelReason(ref.watch(databaseProvider)));
 
 class DisableShouldAskCancelReason {
   final DatabaseConnection databaseConnection;
@@ -315,13 +273,11 @@ class ApplyShareRewardPremiumTrial {
           user.copyWith(
             beginTrialDate: now(),
             trialDeadlineDate: now().addDays(14).endOfDay(),
-            appliedShareRewardPremiumTrialCount:
-                user.appliedShareRewardPremiumTrialCount + 1,
+            appliedShareRewardPremiumTrialCount: user.appliedShareRewardPremiumTrialCount + 1,
           ),
           SetOptions(merge: true),
         );
   }
 }
 
-final applyShareRewardPremiumTrialProvider = Provider(
-    (ref) => ApplyShareRewardPremiumTrial(ref.watch(databaseProvider)));
+final applyShareRewardPremiumTrialProvider = Provider((ref) => ApplyShareRewardPremiumTrial(ref.watch(databaseProvider)));

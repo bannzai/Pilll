@@ -5,8 +5,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
-class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList
-    extends HookConsumerWidget {
+class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
   final PillSheet pillSheet;
 
   const BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList({
@@ -18,10 +17,7 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList
     final begin = pillSheet.beginingDate;
     final end = pillSheet.estimatedEndTakenDate;
 
-    return ref
-        .watch(
-            pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end))
-        .when(
+    return ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end)).when(
           data: (pillSheetModifiedHistories) {
             return PillSheetModifiedHistoryList(
               pillSheetModifiedHistories: pillSheetModifiedHistories,

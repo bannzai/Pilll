@@ -27,8 +27,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     late List<String> availablePhysicalConditionDetails;
     if (user.premiumOrTrial) {
-      availablePhysicalConditionDetails =
-          diarySetting?.physicalConditions ?? defaultPhysicalConditions;
+      availablePhysicalConditionDetails = diarySetting?.physicalConditions ?? defaultPhysicalConditions;
     } else {
       availablePhysicalConditionDetails = defaultPhysicalConditions;
     }
@@ -51,8 +50,7 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
                       builder: (_) {
                         return SizedBox(
                           height: MediaQuery.of(context).size.height - 200,
-                          child:
-                              const DiarySettingPhysicalConditionDetailPage(),
+                          child: const DiarySettingPhysicalConditionDetailPage(),
                         );
                       });
                 } else {
@@ -78,23 +76,16 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
-                      color: physicalConditionDetails.value.contains(e)
-                          ? TextColor.white
-                          : TextColor.darkGray,
+                      color: physicalConditionDetails.value.contains(e) ? TextColor.white : TextColor.darkGray,
                     ),
                     disabledColor: PilllColors.disabledSheet,
                     selectedColor: PilllColors.primary,
                     selected: physicalConditionDetails.value.contains(e),
                     onSelected: (selected) {
                       if (physicalConditionDetails.value.contains(e)) {
-                        physicalConditionDetails.value = [
-                          ...physicalConditionDetails.value
-                        ]..remove(e);
+                        physicalConditionDetails.value = [...physicalConditionDetails.value]..remove(e);
                       } else {
-                        physicalConditionDetails.value = [
-                          ...physicalConditionDetails.value,
-                          e
-                        ];
+                        physicalConditionDetails.value = [...physicalConditionDetails.value, e];
                       }
                     },
                   ))

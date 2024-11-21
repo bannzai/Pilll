@@ -35,8 +35,7 @@ abstract class PilllColors {
   static const Color duration = Color(0xFF6A7DA5);
   static final Color overlay = secondary.withAlpha(20);
 
-  static final Color modalBackground =
-      const Color(0xFF333333).withAlpha((255 * 0.7).round());
+  static final Color modalBackground = const Color(0xFF333333).withAlpha((255 * 0.7).round());
   static const Color white = Colors.white;
 
   static Color get disabledSheet => PilllColors.pillSheet;

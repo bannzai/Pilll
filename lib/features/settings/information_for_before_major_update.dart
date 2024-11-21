@@ -3,16 +3,13 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class InformationForBeforeMigrate132 extends StatelessWidget {
   final String salvagedOldStartTakenDate;
   final String salvagedOldLastTakenDate;
 
-  const InformationForBeforeMigrate132(
-      {super.key,
-      required this.salvagedOldStartTakenDate,
-      required this.salvagedOldLastTakenDate});
+  const InformationForBeforeMigrate132({super.key, required this.salvagedOldStartTakenDate, required this.salvagedOldLastTakenDate});
 
   int _latestPillNumber() {
     final last = DateTime.parse(salvagedOldLastTakenDate);
@@ -46,7 +43,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  L.infoBeforeMajorUpdate,  // 大型アップデート前の情報を翻訳
+                  L.infoBeforeMajorUpdate, // 大型アップデート前の情報を翻訳
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
@@ -56,7 +53,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 const SizedBox(height: 32),
                 Text(
-                  L.infoFromBeforeVersion200,  // 下記の情報はversion 2.0.0以前のアプリの情報になりますを翻訳
+                  L.infoFromBeforeVersion200, // 下記の情報はversion 2.0.0以前のアプリの情報になりますを翻訳
                   style: const TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
@@ -134,14 +131,10 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   }
 }
 
-extension InformationForBeforeMigrate132Route
-    on InformationForBeforeMigrate132 {
-  static Route<dynamic> route(
-      {required String salvagedOldStartTakenDate,
-      required String salvagedOldLastTakenDate}) {
+extension InformationForBeforeMigrate132Route on InformationForBeforeMigrate132 {
+  static Route<dynamic> route({required String salvagedOldStartTakenDate, required String salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
-      settings:
-          const RouteSettings(name: 'InformationForBeforeMigrate132Route'),
+      settings: const RouteSettings(name: 'InformationForBeforeMigrate132Route'),
       builder: (_) => InformationForBeforeMigrate132(
         salvagedOldStartTakenDate: salvagedOldStartTakenDate,
         salvagedOldLastTakenDate: salvagedOldLastTakenDate,

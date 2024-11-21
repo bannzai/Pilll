@@ -26,8 +26,7 @@ class EndedPillSheet extends StatelessWidget {
         });
 
         if (isPremium || isTrial) {
-          Navigator.of(context)
-              .push(PillSheetModifiedHistoriesPageRoute.route());
+          Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
         } else {
           showPremiumIntroductionSheet(context);
         }

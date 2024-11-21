@@ -26,8 +26,7 @@ class CalendarNextPillSheetBand extends StatelessWidget {
       child: Stack(
         children: [
           CustomPaint(
-            painter: DiagonalStripedLine(
-                color: PilllColors.duration, isNecessaryBorder: false),
+            painter: DiagonalStripedLine(color: PilllColors.duration, isNecessaryBorder: false),
             size: Size(width, CalendarBandConst.height),
           ),
           Container(

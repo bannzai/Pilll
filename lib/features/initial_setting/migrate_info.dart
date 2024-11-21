@@ -12,16 +12,14 @@ class MigrateInfo extends HookConsumerWidget {
   const MigrateInfo({super.key});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final sharedPreferences = ref.watch(
-        boolSharedPreferencesProvider(BoolKey.migrateFrom132IsShown).notifier);
+    final sharedPreferences = ref.watch(boolSharedPreferencesProvider(BoolKey.migrateFrom132IsShown).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            padding:
-                const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 24),
+            padding: const EdgeInsets.only(left: 15, right: 15, bottom: 15, top: 24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,8 +39,7 @@ class MigrateInfo extends HookConsumerWidget {
                   text: const TextSpan(
                     children: [
                       TextSpan(
-                        text:
-                            '今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。',
+                        text: '今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w300,
@@ -87,8 +84,7 @@ class MigrateInfo extends HookConsumerWidget {
                   text: const TextSpan(
                     children: [
                       TextSpan(
-                        text:
-                            '同じようにお困りの方はこちらの表示を参考にしてピルシートの番号を調整していただくようお願いします。ピル番号の調整はピルシートを作っていただいてから',
+                        text: '同じようにお困りの方はこちらの表示を参考にしてピルシートの番号を調整していただくようお願いします。ピル番号の調整はピルシートを作っていただいてから',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w300,

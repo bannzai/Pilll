@@ -34,8 +34,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final setPillSheetModifiedHistory =
-        ref.watch(setPillSheetModifiedHistoryProvider);
+    final setPillSheetModifiedHistory = ref.watch(setPillSheetModifiedHistoryProvider);
     final value = this.value;
     final beforePillSheet = this.beforePillSheet;
     final afterPillSheet = this.afterPillSheet;
@@ -55,12 +54,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
               return DateAndTimePicker(
                 initialDateTime: estimatedEventCausingDate,
                 done: (dateTime) async {
-                  analytics.logEvent(
-                      name: 'selected_date_taken_history',
-                      parameters: {
-                        'hour': dateTime.hour,
-                        'minute': dateTime.minute
-                      });
+                  analytics.logEvent(name: 'selected_date_taken_history', parameters: {'hour': dateTime.hour, 'minute': dateTime.minute});
 
                   try {
                     final messenger = ScaffoldMessenger.of(context);
@@ -72,9 +66,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                       value: history.value,
                       takenPillValue: value,
                     );
-                    final date =
-                        DateTimeFormatter.slashYearAndMonthAndDayAndTime(
-                            dateTime);
+                    final date = DateTimeFormatter.slashYearAndMonthAndDayAndTime(dateTime);
                     messenger.showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
@@ -83,9 +75,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                     );
                     navigator.pop();
                   } catch (error) {
-                    if (context.mounted)
-                      showErrorAlert(
-                          context, '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
+                    if (context.mounted) showErrorAlert(context, '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
                   }
                 },
               );

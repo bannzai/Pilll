@@ -277,9 +277,7 @@ class SignInSheet extends HookConsumerWidget {
   Future<SignInWithAppleState> _handleApple(LinkApple linkApple) {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_apple');
-      return signInWithApple().then((value) => value == null
-          ? SignInWithAppleState.cancel
-          : SignInWithAppleState.determined);
+      return signInWithApple().then((value) => value == null ? SignInWithAppleState.cancel : SignInWithAppleState.determined);
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_apple');
       return callLinkWithApple(linkApple);
@@ -289,9 +287,7 @@ class SignInSheet extends HookConsumerWidget {
   Future<SignInWithGoogleState> _handleGoogle(LinkGoogle linkGoogle) {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_google');
-      return signInWithGoogle().then((value) => value == null
-          ? SignInWithGoogleState.cancel
-          : SignInWithGoogleState.determined);
+      return signInWithGoogle().then((value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined);
     } else {
       analytics.logEvent(name: 'signin_sheet_link_with_google');
       return callLinkWithGoogle(linkGoogle);
@@ -299,8 +295,7 @@ class SignInSheet extends HookConsumerWidget {
   }
 }
 
-void showSignInSheet(BuildContext context, SignInSheetStateContext stateContext,
-    Function(LinkAccountType)? onSignIn) {
+void showSignInSheet(BuildContext context, SignInSheetStateContext stateContext, Function(LinkAccountType)? onSignIn) {
   analytics.setCurrentScreen(screenName: 'SigninSheet');
   showModalBottomSheet(
     context: context,

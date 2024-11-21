@@ -15,9 +15,7 @@ class PremiumIntroductionFeatures extends StatelessWidget {
       alignment: AlignmentDirectional.topEnd,
       children: [
         Image.asset(
-          Platform.isIOS
-              ? 'images/ios-quick-record.gif'
-              : 'images/android-quick-record.gif',
+          Platform.isIOS ? 'images/ios-quick-record.gif' : 'images/android-quick-record.gif',
         ),
         Positioned(
           right: -27,

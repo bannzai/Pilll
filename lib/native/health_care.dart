@@ -22,8 +22,7 @@ Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
     throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
   }
 
-  final result = await methodChannel
-      .invokeMethod('healthKitRequestAuthorizationIsUnnecessary');
+  final result = await methodChannel.invokeMethod('healthKitRequestAuthorizationIsUnnecessary');
   return result['healthKitRequestAuthorizationIsUnnecessary'] == true;
 }
 
@@ -38,8 +37,7 @@ Future<bool> healthKitAuthorizationStatusIsSharingAuthorized() async {
     throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
   }
 
-  final result = await methodChannel
-      .invokeMethod('healthKitAuthorizationStatusIsSharingAuthorized');
+  final result = await methodChannel.invokeMethod('healthKitAuthorizationStatusIsSharingAuthorized');
   return result['healthKitAuthorizationStatusIsSharingAuthorized'] == true;
 }
 
@@ -108,8 +106,7 @@ Future<String> addMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response =
-      await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {
+  dynamic response = await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {
     'menstruation': json,
   });
 
@@ -145,8 +142,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel
-      .invokeMethod('updateOrAddMenstruationFlowHealthKitData', {
+  dynamic response = await methodChannel.invokeMethod('updateOrAddMenstruationFlowHealthKitData', {
     'menstruation': json,
   });
 
@@ -182,8 +178,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response =
-      await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {
+  dynamic response = await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {
     'menstruation': json,
   });
 
