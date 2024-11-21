@@ -11,7 +11,8 @@ import 'package:riverpod/riverpod.dart';
 final revertTakePillProvider = Provider.autoDispose(
   (ref) => RevertTakePill(
     batchFactory: ref.watch(batchFactoryProvider),
-    batchSetPillSheetModifiedHistory: ref.watch(batchSetPillSheetModifiedHistoryProvider),
+    batchSetPillSheetModifiedHistory:
+        ref.watch(batchSetPillSheetModifiedHistoryProvider),
     batchSetPillSheetGroup: ref.watch(batchSetPillSheetGroupProvider),
   ),
 );
@@ -41,7 +42,10 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final revertDate = targetPillSheet.displayPillTakeDate(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
+    final revertDate = targetPillSheet
+        .displayPillTakeDate(targetRevertPillNumberIntoPillSheet)
+        .subtract(const Duration(days: 1))
+        .date();
     debugPrint("revertDate: $revertDate");
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
@@ -62,17 +66,27 @@ class RevertTakePill {
 
       if (revertDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.copyWith(lastTakenDate: pillSheet.beginingDate.subtract(const Duration(days: 1)).date(), restDurations: []);
+        return pillSheet.copyWith(
+            lastTakenDate:
+                pillSheet.beginingDate.subtract(const Duration(days: 1)).date(),
+            restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
-        final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(revertDate)).toList();
-        return pillSheet.copyWith(lastTakenDate: revertDate, restDurations: remainingResetDurations);
+        final remainingResetDurations = pillSheet.restDurations
+            .where((restDuration) =>
+                restDuration.beginDate.date().isBefore(revertDate))
+            .toList();
+        return pillSheet.copyWith(
+            lastTakenDate: revertDate, restDurations: remainingResetDurations);
       }
     }).toList();
 
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedPillSheetGroup =
+        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
-          (index) => pillSheetGroup.pillSheets[index] != updatedPillSheetGroup.pillSheets[index],
+          (index) =>
+              pillSheetGroup.pillSheets[index] !=
+              updatedPillSheetGroup.pillSheets[index],
         );
 
     if (updatedIndexses.isEmpty) {
@@ -84,7 +98,8 @@ class RevertTakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
-    final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
       after: after,

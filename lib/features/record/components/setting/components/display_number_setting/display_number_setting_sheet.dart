@@ -22,22 +22,31 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin = useState(pillSheetGroup.displayNumberSetting?.beginPillNumber);
+    final begin =
+        useState(pillSheetGroup.displayNumberSetting?.beginPillNumber);
     final end = useState(pillSheetGroup.displayNumberSetting?.endPillNumber);
 
-    final beginTextFieldController = useTextEditingController(text: "${begin.value ?? 1}");
-    final endTextFieldController = useTextEditingController(text: "${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}");
+    final beginTextFieldController =
+        useTextEditingController(text: "${begin.value ?? 1}");
+    final endTextFieldController = useTextEditingController(
+        text:
+            "${end.value ?? pillSheetGroup.sequentialEstimatedEndPillNumber}");
 
-    final beforePillSheetGroup = ref.watch(beforePillSheetGroupProvider).valueOrNull;
+    final beforePillSheetGroup =
+        ref.watch(beforePillSheetGroupProvider).valueOrNull;
 
     const estimatedKeyboardHeight = 216;
     const offset = 24;
-    final height = 1 - ((estimatedKeyboardHeight - offset) / MediaQuery.of(context).size.height);
+    final height = 1 -
+        ((estimatedKeyboardHeight - offset) /
+            MediaQuery.of(context).size.height);
 
     final batchFactory = ref.watch(batchFactoryProvider);
     final batchSetPillSheetGroup = ref.watch(batchSetPillSheetGroupProvider);
-    final batchSetPillSheetModifiedHistory = ref.watch(batchSetPillSheetModifiedHistoryProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final batchSetPillSheetModifiedHistory =
+        ref.watch(batchSetPillSheetModifiedHistoryProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
 
     return DraggableScrollableSheet(
       initialChildSize: height,
@@ -75,7 +84,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     await _submit(
                       batchFactory: batchFactory,
                       batchSetPillSheetGroup: batchSetPillSheetGroup,
-                      batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+                      batchSetPillSheetModifiedHistory:
+                          batchSetPillSheetModifiedHistory,
                       begin: begin,
                       end: end,
                     );
@@ -104,7 +114,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       Row(
                         children: [
-                          SvgPicture.asset("images/begin_display_number_setting.svg"),
+                          SvgPicture.asset(
+                              "images/begin_display_number_setting.svg"),
                           const SizedBox(width: 4),
                           const Text(
                             "服用日数の始まり",
@@ -294,7 +305,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     if (begin.value != pillSheetGroup.displayNumberSetting?.beginPillNumber) {
       batchSetPillSheetModifiedHistory(
         batch,
-        PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+        PillSheetModifiedHistoryServiceActionFactory
+            .createChangedBeginDisplayNumberAction(
           pillSheetGroupID: pillSheetGroup.id,
           beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
           afterDisplayNumberSetting: updatedDisplayNumberSetting,
@@ -307,7 +319,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
     if (end.value != pillSheetGroup.displayNumberSetting?.endPillNumber) {
       batchSetPillSheetModifiedHistory(
         batch,
-        PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
+        PillSheetModifiedHistoryServiceActionFactory
+            .createChangedEndDisplayNumberAction(
           pillSheetGroupID: pillSheetGroup.id,
           beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
           afterDisplayNumberSetting: updatedDisplayNumberSetting,

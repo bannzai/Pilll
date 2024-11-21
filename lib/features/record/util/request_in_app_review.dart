@@ -5,10 +5,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 void requestInAppReview() async {
   final sharedPreferences = await SharedPreferences.getInstance();
 
-  int count = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
+  int count =
+      sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
   sharedPreferences.setInt(IntKey.totalCountOfActionForTakenPill, count + 1);
 
-  final isGoodAnswer = sharedPreferences.getBool(BoolKey.isPreStoreReviewGoodAnswer) ?? false;
+  final isGoodAnswer =
+      sharedPreferences.getBool(BoolKey.isPreStoreReviewGoodAnswer) ?? false;
   if (!isGoodAnswer) {
     return;
   }

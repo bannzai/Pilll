@@ -21,7 +21,9 @@ class AnnualPurchaseButton extends StatelessWidget {
   Widget build(BuildContext context) {
     final monthlyPrice = annualPackage.storeProduct.price / 12;
     Locale locale = Localizations.localeOf(context);
-    final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
+    final monthlyPriceString =
+        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0)
+            .format(monthlyPrice);
 
     return GestureDetector(
       onTap: () {

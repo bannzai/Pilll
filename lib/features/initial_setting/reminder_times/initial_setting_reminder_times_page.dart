@@ -87,7 +87,10 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/PrivacyPolicy"), mode: LaunchMode.inAppWebView);
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://bannzai.github.io/Pilll/PrivacyPolicy"),
+                                  mode: LaunchMode.inAppWebView);
                             },
                         ),
                         const TextSpan(
@@ -109,7 +112,10 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse("https://bannzai.github.io/Pilll/Terms"), mode: LaunchMode.inAppWebView);
+                              launchUrl(
+                                  Uri.parse(
+                                      "https://bannzai.github.io/Pilll/Terms"),
+                                  mode: LaunchMode.inAppWebView);
                             },
                         ),
                         const TextSpan(
@@ -130,8 +136,10 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     child: PrimaryButton(
                       text: "次へ",
                       onPressed: () async {
-                        analytics.logEvent(name: "next_initial_setting_reminder_times");
-                        Navigator.of(context).push(IntiialSettingPremiumTrialStartPageRoute.route());
+                        analytics.logEvent(
+                            name: "next_initial_setting_reminder_times");
+                        Navigator.of(context).push(
+                            IntiialSettingPremiumTrialStartPageRoute.route());
                       },
                     ),
                   ),
@@ -154,15 +162,19 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     analytics.logEvent(name: "show_initial_setting_reminder_picker");
     final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
-    DateTime initialDateTime = reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
+    DateTime initialDateTime =
+        reminderDateTime ?? DateTime(n.year, n.month, n.day, n.hour, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return TimePicker(
           initialDateTime: initialDateTime,
           done: (dateTime) {
-            analytics.logEvent(name: "selected_times_initial_setting", parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
-            store.setReminderTime(index: index, hour: dateTime.hour, minute: dateTime.minute);
+            analytics.logEvent(
+                name: "selected_times_initial_setting",
+                parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
+            store.setReminderTime(
+                index: index, hour: dateTime.hour, minute: dateTime.minute);
             Navigator.pop(context);
           },
         );
@@ -177,7 +189,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     int index,
   ) {
     final reminderTime = state.reminderTimeOrNull(index);
-    final formValue = reminderTime == null ? "--:--" : DateTimeFormatter.militaryTime(reminderTime);
+    final formValue = reminderTime == null
+        ? "--:--"
+        : DateTimeFormatter.militaryTime(reminderTime);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(
@@ -225,7 +239,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
   }
 }
 
-extension InitialSettingReminderTimesPageRoute on InitialSettingReminderTimesPage {
+extension InitialSettingReminderTimesPageRoute
+    on InitialSettingReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "InitialSettingReminderTimesPage"),

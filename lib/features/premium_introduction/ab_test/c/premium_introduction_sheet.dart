@@ -64,7 +64,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final offeringType = ref.watch(currentOfferingTypeProvider(user));
     final monthlyPackage = ref.watch(monthlyPackageProvider(user));
     final annualPackage = ref.watch(annualPackageProvider(user));
-    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
+    final monthlyPremiumPackage =
+        ref.watch(monthlyPremiumPackageProvider(user));
 
     final isLoading = useState(false);
 
@@ -96,7 +97,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             if (monthlyPremiumPackage != null)
                               PremiumIntroductionDiscountRow(
                                 monthlyPremiumPackage: monthlyPremiumPackage,
-                                discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+                                discountEntitlementDeadlineDate:
+                                    user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
                           PurchaseButtons(
@@ -118,7 +120,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           alignment: Alignment.center,
                           child: AlertButton(
                             onPressed: () async {
-                              analytics.logEvent(name: "pressed_premium_functions_on_sheet2");
+                              analytics.logEvent(
+                                  name: "pressed_premium_functions_on_sheet2");
                               await launchUrl(Uri.parse(preimumLink));
                             },
                             text: "プレミアム機能の詳細を見る",

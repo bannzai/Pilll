@@ -21,10 +21,12 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
-    final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
+    final pillSheetGroup =
+        ref.watch(latestPillSheetGroupProvider).asData?.value;
     final setSetting = ref.watch(setSettingProvider);
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
 
     if (pillSheetGroup == null) {
       return const SizedBox();
@@ -55,7 +57,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.date,
                   text: "日付表示",
@@ -67,7 +70,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.number,
                   text: "ピル番号",
@@ -79,7 +83,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
@@ -91,7 +96,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   pillSheetGroup: pillSheetGroup,
                   setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
-                  registerReminderLocalNotification: registerReminderLocalNotification,
+                  registerReminderLocalNotification:
+                      registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.cyclicSequential,
                   text: "服用日数(周期)",
@@ -109,7 +115,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
     BuildContext context, {
     required SetSetting setSetting,
     required SetPillSheetGroup setPillSheetGroup,
-    required RegisterReminderLocalNotification registerReminderLocalNotification,
+    required RegisterReminderLocalNotification
+        registerReminderLocalNotification,
     required Setting setting,
     required PillSheetGroup pillSheetGroup,
     required User user,
@@ -121,13 +128,17 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
       onTap: () async {
         analytics.logEvent(
           name: "did_select_pill_sheet_appearance",
-          parameters: {"mode": mode.toString(), "isPremiumFunction": isPremiumFunction},
+          parameters: {
+            "mode": mode.toString(),
+            "isPremiumFunction": isPremiumFunction
+          },
         );
 
         if (user.isPremium || user.isTrial) {
           // NOTE: [Migrate:PillSheetAppearanceMode] settingも同期する
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
-          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(
+              pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
@@ -135,7 +146,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           // User selected non premium function mode
           // NOTE: [Migrate:PillSheetAppearanceMode] settingも同期する
           await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
-          await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
+          await setPillSheetGroup(
+              pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         }
       },
@@ -143,7 +155,8 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == pillSheetGroup.pillSheetAppearanceMode),
+            SelectCircle(
+                isSelected: mode == pillSheetGroup.pillSheetAppearanceMode),
             const SizedBox(width: 34),
             Text(
               text,

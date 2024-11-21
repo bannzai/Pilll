@@ -21,7 +21,9 @@ class NotificationTimeRow extends StatelessWidget {
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text(setting.reminderTimes.map((e) => DateTimeFormatter.militaryTime(e.dateTime())).join(", ")),
+      subtitle: Text(setting.reminderTimes
+          .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
+          .join(", ")),
       onTap: () {
         analytics.logEvent(
           name: "did_select_changing_reminder_times",

@@ -32,11 +32,18 @@ class SchedulePostPage extends HookConsumerWidget {
   const SchedulePostPage({super.key, required this.date});
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(ref.watch(userProvider), ref.watch(schedulesForDateProvider(date))).when(
+    return AsyncValueGroup.group2(
+            ref.watch(userProvider), ref.watch(schedulesForDateProvider(date)))
+        .when(
       data: (data) => _SchedulePostPage(
         date: date,
         user: data.$1,
-        schedule: data.$2.firstOrNull ?? Schedule(title: "", localNotification: null, date: date, createdDateTime: DateTime.now()),
+        schedule: data.$2.firstOrNull ??
+            Schedule(
+                title: "",
+                localNotification: null,
+                date: date,
+                createdDateTime: DateTime.now()),
       ),
       error: (error, _) => UniversalErrorPage(
         error: error,
@@ -152,7 +159,6 @@ class _SchedulePostPage extends HookConsumerWidget {
                   ),
                 ),
               ],
-
               const Spacer(),
               if (date.date().isAfter(today())) ...[
                 PrimaryButton(
@@ -164,9 +170,11 @@ class _SchedulePostPage extends HookConsumerWidget {
                           final navigator = Navigator.of(context);
 
                           try {
-                            final localNotificationID = schedule.localNotification?.localNotificationID;
+                            final localNotificationID =
+                                schedule.localNotification?.localNotificationID;
                             if (localNotificationID != null) {
-                              await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                              await localNotificationService.cancelNotification(
+                                  localNotificationID: localNotificationID);
                             }
 
                             final Schedule newSchedule;
@@ -174,11 +182,15 @@ class _SchedulePostPage extends HookConsumerWidget {
                               newSchedule = schedule.copyWith(
                                 title: title.value,
                                 localNotification: LocalNotification(
-                                  localNotificationID: Random().nextInt(scheduleNotificationIdentifierOffset),
-                                  remindDateTime: DateTime(date.year, date.month, date.day, 9),
+                                  localNotificationID: Random().nextInt(
+                                      scheduleNotificationIdentifierOffset),
+                                  remindDateTime: DateTime(
+                                      date.year, date.month, date.day, 9),
                                 ),
                               );
-                              await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
+                              await localNotificationService
+                                  .scheduleCalendarScheduleNotification(
+                                      schedule: newSchedule);
                             } else {
                               newSchedule = schedule.copyWith(
                                 title: title.value,
@@ -186,7 +198,11 @@ class _SchedulePostPage extends HookConsumerWidget {
                               );
                             }
 
-                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
+                            await ref
+                                .read(databaseProvider)
+                                .schedulesReference()
+                                .doc(newSchedule.id)
+                                .set(
                                   newSchedule,
                                   SetOptions(merge: true),
                                 );
@@ -219,15 +235,24 @@ class _SchedulePostPage extends HookConsumerWidget {
                           onPressed: () async {
                             final navigator = Navigator.of(context);
                             try {
-                              final localNotificationID = schedule.localNotification?.localNotificationID;
+                              final localNotificationID = schedule
+                                  .localNotification?.localNotificationID;
                               if (localNotificationID != null) {
-                                await localNotificationService.cancelNotification(localNotificationID: localNotificationID);
+                                await localNotificationService
+                                    .cancelNotification(
+                                        localNotificationID:
+                                            localNotificationID);
                               }
 
-                              await ref.read(databaseProvider).schedulesReference().doc(scheduleID).delete();
+                              await ref
+                                  .read(databaseProvider)
+                                  .schedulesReference()
+                                  .doc(scheduleID)
+                                  .delete();
                               navigator.popUntil((route) => route.isFirst);
                             } catch (error) {
-                              if (context.mounted) showErrorAlert(context, error);
+                              if (context.mounted)
+                                showErrorAlert(context, error);
                             }
                           },
                         ),

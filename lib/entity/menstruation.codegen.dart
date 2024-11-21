@@ -18,7 +18,8 @@ class MenstruationFirestoreKey {
 class Menstruation with _$Menstruation {
   String? get documentID => id;
 
-  factory Menstruation.fromJson(Map<String, dynamic> json) => _$MenstruationFromJson(json);
+  factory Menstruation.fromJson(Map<String, dynamic> json) =>
+      _$MenstruationFromJson(json);
   const Menstruation._();
 
   @JsonSerializable(explicitToJson: true)
@@ -48,7 +49,8 @@ class Menstruation with _$Menstruation {
   }) = _Menstruation;
 
   DateRange get dateRange => DateRange(beginDate, endDate);
-  DateTimeRange get dateTimeRange => DateTimeRange(start: beginDate, end: endDate);
+  DateTimeRange get dateTimeRange =>
+      DateTimeRange(start: beginDate, end: endDate);
   bool get isActive => dateRange.inRange(today());
 }
 

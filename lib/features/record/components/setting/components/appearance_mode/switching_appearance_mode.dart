@@ -26,7 +26,8 @@ class SwitchingAppearanceMode extends StatelessWidget {
       ),
       onTap: () {
         analytics.logEvent(name: "did_tapped_record_page_appearance_mode");
-        showSelectAppearanceModeModal(context, user: user, pillSheetGroup: pillSheetGroup);
+        showSelectAppearanceModeModal(context,
+            user: user, pillSheetGroup: pillSheetGroup);
       },
     );
   }

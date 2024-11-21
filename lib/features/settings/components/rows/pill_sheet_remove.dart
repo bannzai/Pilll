@@ -25,7 +25,8 @@ class PillSheetRemoveRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification =
+        ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       title: const Text("ピルシートをすべて破棄",
           style: TextStyle(
@@ -87,10 +88,13 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                   text: "破棄する",
                   onPressed: () async {
                     try {
-                      await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activePillSheet: activePillSheet);
+                      await deletePillSheetGroup(
+                          latestPillSheetGroup: latestPillSheetGroup,
+                          activePillSheet: activePillSheet);
                       await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
-                      ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
+                      ScaffoldMessenger.of(navigatorKey.currentContext!)
+                          .showSnackBar(
                         const SnackBar(
                           duration: Duration(seconds: 2),
                           content: Text("ピルシートを破棄しました"),

@@ -33,7 +33,9 @@ Future<void> entrypoint() async {
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();
 
-    HomeWidget.setAppGroupId(Environment.isDevelopment ? 'group.com.mizuki.Ohashi.Pilll.dev' : 'group.com.mizuki.Ohashi.Pilll');
+    HomeWidget.setAppGroupId(Environment.isDevelopment
+        ? 'group.com.mizuki.Ohashi.Pilll.dev'
+        : 'group.com.mizuki.Ohashi.Pilll');
 
     if (kDebugMode) {
       overrideDebugPrint();
@@ -64,7 +66,8 @@ Future<void> entrypoint() async {
 
 // iOSはmethodChannel経由の方が呼ばれる。iOSはネイティブの方のコードで上書きされる模様。現在はAndroidのために定義
 @pragma('vm:entry-point')
-Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
+Future<void> handleNotificationAction(
+    NotificationResponse notificationResponse) async {
   if (notificationResponse.actionId == actionIdentifier) {
     await LocalNotificationService.setupTimeZone();
 
@@ -88,12 +91,16 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
       final cancelReminderLocalNotification = CancelReminderLocalNotification();
       // エンティティの変更があった場合にdatabaseの読み込みで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
       // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
-      await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
+      await (Future.microtask(() => null), cancelReminderLocalNotification())
+          .wait;
 
       final activePillSheet = pillSheetGroup?.activePillSheet;
       final user = (await database.userReference().get()).data();
       final setting = user?.setting;
-      if (pillSheetGroup != null && activePillSheet != null && user != null && setting != null) {
+      if (pillSheetGroup != null &&
+          activePillSheet != null &&
+          user != null &&
+          setting != null) {
         await RegisterReminderLocalNotification.run(
           pillSheetGroup: pillSheetGroup,
           activePillSheet: activePillSheet,

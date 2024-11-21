@@ -15,11 +15,13 @@ class ReminderTime with _$ReminderTime {
     required int minute,
   }) = _ReminderTime;
 
-  factory ReminderTime.fromJson(Map<String, dynamic> json) => _$ReminderTimeFromJson(json);
+  factory ReminderTime.fromJson(Map<String, dynamic> json) =>
+      _$ReminderTimeFromJson(json);
 
   DateTime dateTime() {
     var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, hour, minute, t.second, t.millisecond, t.microsecond);
+    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
+        t.millisecond, t.microsecond);
   }
 
   static const int maximumCount = 3;
@@ -67,7 +69,8 @@ class Setting with _$Setting {
     required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
     @Default(false) bool isAutomaticallyCreatePillSheet,
-    @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
+    @Default(ReminderNotificationCustomization())
+    ReminderNotificationCustomization reminderNotificationCustomization,
     // Deprecated
     // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
@@ -77,7 +80,8 @@ class Setting with _$Setting {
     required String? timezoneDatabaseName,
   }) = _Setting;
 
-  factory Setting.fromJson(Map<String, dynamic> json) => _$SettingFromJson(json);
+  factory Setting.fromJson(Map<String, dynamic> json) =>
+      _$SettingFromJson(json);
 
   // NOTE: v3.9.6 で PillSheetType.pillsheet_24_rest_4 を含めた状態でのコード生成をしていなかった
   // 本来初期設定でpillsheet_24_rest_4を選択したユーザーの pillSheetTypes の値が null が入ってしまっている
@@ -101,6 +105,9 @@ class Setting with _$Setting {
   }
 }
 
-List<PillSheetType> backportPillSheetTypes(List<PillSheetType?> pillSheetTypes) {
-  return pillSheetTypes.map((e) => e ?? PillSheetType.pillsheet_24_rest_4).toList();
+List<PillSheetType> backportPillSheetTypes(
+    List<PillSheetType?> pillSheetTypes) {
+  return pillSheetTypes
+      .map((e) => e ?? PillSheetType.pillsheet_24_rest_4)
+      .toList();
 }

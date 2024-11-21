@@ -22,7 +22,8 @@ class NotificationInRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setSetting = ref.watch(setSettingProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
       title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
@@ -31,7 +32,8 @@ class NotificationInRestDuration extends HookConsumerWidget {
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text("通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+      subtitle: Text(
+          "通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,

@@ -23,13 +23,13 @@ class Diary with _$Diary {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime date,
+    required DateTime date,
     // NOTE: OLD data does't have createdAt
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime? createdAt,
+    required DateTime? createdAt,
     PhysicalConditionStatus? physicalConditionStatus,
     required List<String> physicalConditions,
     required bool hasSex,
@@ -37,8 +37,14 @@ class Diary with _$Diary {
   }) = _Diary;
   const Diary._();
 
-  factory Diary.fromDate(DateTime date) => Diary(date: date, memo: "", createdAt: now(), physicalConditions: [], hasSex: false);
+  factory Diary.fromDate(DateTime date) => Diary(
+      date: date,
+      memo: "",
+      createdAt: now(),
+      physicalConditions: [],
+      hasSex: false);
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
   bool get hasPhysicalConditionStatus => physicalConditionStatus != null;
-  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) => physicalConditionStatus == status;
+  bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
+      physicalConditionStatus == status;
 }

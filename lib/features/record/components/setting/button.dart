@@ -39,8 +39,8 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
         );
       },
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(TextColor.white),
-        shape: MaterialStateProperty.all(
+        backgroundColor: WidgetStateProperty.all(TextColor.white),
+        shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
             side: const BorderSide(

@@ -25,7 +25,8 @@ class AccountLinkRow extends HookConsumerWidget {
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
         analytics.logEvent(name: "did_select_setting_account_cooperation");
-        Navigator.of(context).push(SettingAccountCooperationListPageRoute.route());
+        Navigator.of(context)
+            .push(SettingAccountCooperationListPageRoute.route());
       },
     );
   }

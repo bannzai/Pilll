@@ -9,7 +9,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
-  static final List<String> durationList = ["-", ...List<String>.generate(7, (index) => (index + 1).toString())];
+  static final List<String> durationList = [
+    "-",
+    ...List<String>.generate(7, (index) => (index + 1).toString())
+  ];
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
@@ -73,7 +76,11 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               child: _duration(),
             ),
             const Text(" 日間生理が続く",
-                style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
+                style: TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.main)),
           ],
         )
       ],
@@ -139,7 +146,9 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
   }
 
   void _showPicker(BuildContext context) {
-    final maximumCount = pillSheetTypes.map((e) => e.totalCount).reduce((value, element) => value + element);
+    final maximumCount = pillSheetTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
     int keepSelectedFromMenstruation = min(fromMenstruation, maximumCount);
     showModalBottomSheet(
       context: context,
@@ -168,7 +177,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedFromMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedFromMenstruation),
+                  scrollController: FixedExtentScrollController(
+                      initialItem: keepSelectedFromMenstruation),
                   children: List.generate(maximumCount + 1, (index) {
                     if (index == 0) {
                       return "-";
@@ -213,8 +223,12 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                   onSelectedItemChanged: (index) {
                     keepSelectedDurationMenstruation = index;
                   },
-                  scrollController: FixedExtentScrollController(initialItem: keepSelectedDurationMenstruation),
-                  children: SettingMenstruationDynamicDescriptionConstants.durationList.map(_pickerItem).toList(),
+                  scrollController: FixedExtentScrollController(
+                      initialItem: keepSelectedDurationMenstruation),
+                  children: SettingMenstruationDynamicDescriptionConstants
+                      .durationList
+                      .map(_pickerItem)
+                      .toList(),
                 ),
               ),
             ),

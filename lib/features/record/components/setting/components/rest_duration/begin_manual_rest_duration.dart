@@ -25,7 +25,8 @@ class BeginManualRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final beginRestDuration = ref.watch(beginRestDurationProvider);
-    final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final cancelReminderLocalNotification =
+        ref.watch(cancelReminderLocalNotificationProvider);
 
     void didBeginRestDuration() {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -43,7 +44,9 @@ class BeginManualRestDuration extends HookConsumerWidget {
       leading: const Icon(Icons.dark_mode_outlined),
       title: const Text("服用お休み開始"),
       onTap: () {
-        analytics.logEvent(name: "begin_manual_rest_duration_pressed", parameters: {"pill_sheet_id": activePillSheet.id});
+        analytics.logEvent(
+            name: "begin_manual_rest_duration_pressed",
+            parameters: {"pill_sheet_id": activePillSheet.id});
 
         if (activePillSheet.todayPillIsAlreadyTaken) {
           showInvalidAlreadyTakenPillDialog(context);

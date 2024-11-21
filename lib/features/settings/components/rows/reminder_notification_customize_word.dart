@@ -50,7 +50,8 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
           name: "did_notification_customize_word",
         );
         if (isTrial || isPremium) {
-          Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
+          Navigator.of(context)
+              .push(ReminderNotificationCustomizeWordPageRoutes.route());
         } else {
           showPremiumIntroductionSheet(context);
         }

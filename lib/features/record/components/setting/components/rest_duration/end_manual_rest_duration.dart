@@ -24,7 +24,8 @@ class EndManualRestDuration extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final endRestDuration = ref.watch(endRestDurationProvider);
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
 
     void didEndRestDuration(PillSheetGroup endedRestDurationPillSheetGroup) {
       Navigator.of(context).popUntil((route) => route.isFirst);

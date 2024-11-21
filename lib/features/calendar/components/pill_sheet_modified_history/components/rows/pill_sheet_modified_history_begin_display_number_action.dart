@@ -6,7 +6,8 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
-class PillSheetModifiedHistoryChangedBeginDisplayNumberAction extends StatelessWidget {
+class PillSheetModifiedHistoryChangedBeginDisplayNumberAction
+    extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final ChangedBeginDisplayNumberValue? value;
 
@@ -23,7 +24,9 @@ class PillSheetModifiedHistoryChangedBeginDisplayNumberAction extends StatelessW
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedBeginDisplayNumberSetting(value)),
+      pillNumbersOrHyphenOrDate: PillNumber(
+          pillNumber: PillSheetModifiedHistoryPillNumberOrDate
+              .changedBeginDisplayNumberSetting(value)),
       detail: const Text(
         "服用日数の始まりを変更",
         style: TextStyle(

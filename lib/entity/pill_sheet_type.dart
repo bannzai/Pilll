@@ -138,8 +138,11 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  PillSheetTypeInfo get typeInfo =>
-      PillSheetTypeInfo(pillSheetTypeReferencePath: rawPath, name: fullName, totalCount: totalCount, dosingPeriod: dosingPeriod);
+  PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(
+      pillSheetTypeReferencePath: rawPath,
+      name: fullName,
+      totalCount: totalCount,
+      dosingPeriod: dosingPeriod);
 
   bool get isNotExistsNotTakenDuration {
     return totalCount == dosingPeriod;
@@ -164,15 +167,19 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  int get numberOfLineInPillSheet => (totalCount / Weekday.values.length).ceil();
+  int get numberOfLineInPillSheet =>
+      (totalCount / Weekday.values.length).ceil();
 }
 
-int summarizedPillCountWithPillSheetTypesToIndex({required List<PillSheetType> pillSheetTypes, required int toIndex}) {
+int summarizedPillCountWithPillSheetTypesToIndex(
+    {required List<PillSheetType> pillSheetTypes, required int toIndex}) {
   if (toIndex == 0) {
     return 0;
   }
 
   final passed = pillSheetTypes.sublist(0, toIndex);
-  final passedTotalCount = passed.map((e) => e.totalCount).reduce((value, element) => value + element);
+  final passedTotalCount = passed
+      .map((e) => e.totalCount)
+      .reduce((value, element) => value + element);
   return passedTotalCount;
 }

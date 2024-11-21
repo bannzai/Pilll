@@ -27,7 +27,10 @@ class CalendarPageTitle extends StatelessWidget {
           onPressed: () {
             final previousMonthIndex = page.value - 1;
 
-            analytics.logEvent(name: "pressed_previous_month", parameters: {"current_index": page.value, "previous_index": previousMonthIndex});
+            analytics.logEvent(name: "pressed_previous_month", parameters: {
+              "current_index": page.value,
+              "previous_index": previousMonthIndex
+            });
 
             pageController.jumpToPage(previousMonthIndex);
             page.value = previousMonthIndex;
@@ -47,7 +50,10 @@ class CalendarPageTitle extends StatelessWidget {
           onPressed: () {
             final nextMonthIndex = page.value + 1;
 
-            analytics.logEvent(name: "pressed_next_month", parameters: {"current_index": page.value, "next_index": nextMonthIndex});
+            analytics.logEvent(name: "pressed_next_month", parameters: {
+              "current_index": page.value,
+              "next_index": nextMonthIndex
+            });
 
             pageController.jumpToPage(nextMonthIndex);
             page.value = nextMonthIndex;
@@ -57,5 +63,6 @@ class CalendarPageTitle extends StatelessWidget {
     );
   }
 
-  String get _displayMonthString => DateTimeFormatter.yearAndMonth(displayedMonth);
+  String get _displayMonthString =>
+      DateTimeFormatter.yearAndMonth(displayedMonth);
 }

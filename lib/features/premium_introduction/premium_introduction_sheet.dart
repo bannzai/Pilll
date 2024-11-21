@@ -67,7 +67,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final offeringType = ref.watch(currentOfferingTypeProvider(user));
     final monthlyPackage = ref.watch(monthlyPackageProvider(user));
     final annualPackage = ref.watch(annualPackageProvider(user));
-    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
+    final monthlyPremiumPackage =
+        ref.watch(monthlyPremiumPackageProvider(user));
 
     final isLoading = useState(false);
 
@@ -91,7 +92,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         fit: BoxFit.cover,
                       ),
                     ),
-                    padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    padding:
+                        const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                     width: MediaQuery.of(context).size.width,
                   ),
                   SingleChildScrollView(
@@ -110,7 +112,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             if (monthlyPremiumPackage != null)
                               PremiumIntroductionDiscountRow(
                                 monthlyPremiumPackage: monthlyPremiumPackage,
-                                discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+                                discountEntitlementDeadlineDate:
+                                    user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
                           PurchaseButtons(
@@ -123,7 +126,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                         const SizedBox(height: 24),
                         AlertButton(
                             onPressed: () async {
-                              analytics.logEvent(name: "pressed_premium_functions_on_sheet");
+                              analytics.logEvent(
+                                  name: "pressed_premium_functions_on_sheet");
                               await launchUrl(Uri.parse(preimumLink));
                             },
                             text: "プレミアム機能を見る"),
@@ -153,7 +157,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 }
 
 Future<void> showPremiumIntroductionSheet(BuildContext context) async {
-  final premiumIntroductionPattern = remoteConfig.getString(RemoteConfigKeys.premiumIntroductionPattern);
+  final premiumIntroductionPattern =
+      remoteConfig.getString(RemoteConfigKeys.premiumIntroductionPattern);
   switch (premiumIntroductionPattern) {
     case "B":
       await _showPremiumIntroductionSheetB(context);

@@ -22,7 +22,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final changeRestDurationBeginDate = ref.watch(changeRestDurationBeginDateProvider);
+    final changeRestDurationBeginDate =
+        ref.watch(changeRestDurationBeginDateProvider);
     final changeRestDuration = ref.watch(changeRestDurationProvider);
 
     String format(DateTime dateTime) {
@@ -30,7 +31,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     }
 
     final begin = format(restDuration.beginDate);
-    final end = restDuration.endDate != null ? format(restDuration.endDate!) : null;
+    final end =
+        restDuration.endDate != null ? format(restDuration.endDate!) : null;
 
     void onChanged() {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -56,7 +58,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
         title: const Text("服用お休み開始日を編集"),
         subtitle: Text(begin),
         onTap: () async {
-          analytics.logEvent(name: "change_manual_rest_duration_day", parameters: {
+          analytics
+              .logEvent(name: "change_manual_rest_duration_day", parameters: {
             "rest_duration_id": restDuration.id,
           });
 
@@ -65,7 +68,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           final dateTime = await showDatePicker(
             context: context,
             initialEntryMode: DatePickerEntryMode.calendarOnly,
-            initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
+            initialDate:
+                pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
             helpText: "服用お休み開始日を選択",
@@ -105,7 +109,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
         title: const Text("服用お休み期間を編集"),
         subtitle: Text("$begin - $end"),
         onTap: () async {
-          analytics.logEvent(name: "change_manual_rest_duration_range", parameters: {
+          analytics
+              .logEvent(name: "change_manual_rest_duration_range", parameters: {
             "rest_duration_id": restDuration.id,
           });
 

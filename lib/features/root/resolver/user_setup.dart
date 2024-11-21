@@ -47,7 +47,8 @@ class UserSetup extends HookConsumerWidget {
           }
         } catch (e, st) {
           errorLogger.recordError(e, st);
-          error.value = LaunchException("起動時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
+          error.value = LaunchException(
+              "起動時にエラーが発生しました\n${ErrorMessages.connection}\n詳細:", e);
         }
         // **** END: Do not break the sequence. ****
       }

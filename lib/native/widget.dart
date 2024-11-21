@@ -13,10 +13,14 @@ Future<void> syncActivePillSheetValue({
 }) async {
   try {
     final map = {
-      "pillSheetLastTakenDate": pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
-      "pillSheetTodayPillNumber": pillSheetGroup?.activePillSheet?.todayPillNumber,
-      "pillSheetGroupTodayPillNumber": pillSheetGroup?.sequentialTodayPillNumber,
-      "pillSheetEndDisplayPillNumber": pillSheetGroup?.displayNumberSetting?.endPillNumber,
+      "pillSheetLastTakenDate": pillSheetGroup
+          ?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
+      "pillSheetTodayPillNumber":
+          pillSheetGroup?.activePillSheet?.todayPillNumber,
+      "pillSheetGroupTodayPillNumber":
+          pillSheetGroup?.sequentialTodayPillNumber,
+      "pillSheetEndDisplayPillNumber":
+          pillSheetGroup?.displayNumberSetting?.endPillNumber,
       "pillSheetValueLastUpdateDateTime": DateTime.now().millisecondsSinceEpoch,
     };
     for (final element in map.entries) {
@@ -32,7 +36,8 @@ Future<void> syncSetting({
   required Setting? setting,
 }) async {
   try {
-    await HomeWidget.saveWidgetData("settingPillSheetAppearanceMode", setting?.pillSheetAppearanceMode.name);
+    await HomeWidget.saveWidgetData("settingPillSheetAppearanceMode",
+        setting?.pillSheetAppearanceMode.name);
     await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
@@ -43,7 +48,8 @@ Future<void> syncUserStatus({
   required User? user,
 }) async {
   try {
-    await HomeWidget.saveWidgetData("userIsPremiumOrTrial", user?.premiumOrTrial);
+    await HomeWidget.saveWidgetData(
+        "userIsPremiumOrTrial", user?.premiumOrTrial);
     await updateWidget();
   } catch (error) {
     debugPrint(error.toString());

@@ -22,7 +22,8 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
             onPressed: () async {
               analytics.logEvent(name: "pill_sheet_modified_history_more");
               if (user.isPremium || user.isTrial) {
-                Navigator.of(context).push(PillSheetModifiedHistoriesPageRoute.route());
+                Navigator.of(context)
+                    .push(PillSheetModifiedHistoriesPageRoute.route());
               } else {
                 showPremiumIntroductionSheet(context);
               }

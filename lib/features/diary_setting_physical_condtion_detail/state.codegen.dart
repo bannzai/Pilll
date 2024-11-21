@@ -5,7 +5,9 @@ import 'package:pilll/entity/diary_setting.codegen.dart';
 
 part 'state.codegen.freezed.dart';
 
-final diarySettingPhysicalConditionDetailAsyncStateProvider = Provider.autoDispose<AsyncValue<DiarySettingPhysicalConditionDetailState>>((ref) {
+final diarySettingPhysicalConditionDetailAsyncStateProvider =
+    Provider.autoDispose<AsyncValue<DiarySettingPhysicalConditionDetailState>>(
+        (ref) {
   final diarySetting = ref.watch(diarySettingProvider);
 
   if (diarySetting is AsyncLoading) {
@@ -22,7 +24,8 @@ final diarySettingPhysicalConditionDetailAsyncStateProvider = Provider.autoDispo
 });
 
 @freezed
-class DiarySettingPhysicalConditionDetailState with _$DiarySettingPhysicalConditionDetailState {
+class DiarySettingPhysicalConditionDetailState
+    with _$DiarySettingPhysicalConditionDetailState {
   factory DiarySettingPhysicalConditionDetailState({
     required DiarySetting? diarySetting,
   }) = _DiarySettingPhysicalConditionDetailState;

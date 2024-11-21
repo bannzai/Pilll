@@ -24,7 +24,10 @@ class PillSheetModifiedHistoryChangedRestDuration extends StatelessWidget {
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDuration(value)),
+      pillNumbersOrHyphenOrDate: PillNumber(
+          pillNumber:
+              PillSheetModifiedHistoryPillNumberOrDate.changedRestDuration(
+                  value)),
       detail: const Text(
         "服用お休み期間変更",
         style: TextStyle(

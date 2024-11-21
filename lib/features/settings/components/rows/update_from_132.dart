@@ -21,8 +21,10 @@ class UpdateFrom132Row extends StatelessWidget {
       onTap: () {
         analytics.logEvent(name: "did_select_migrate_132", parameters: {});
         SharedPreferences.getInstance().then((storage) {
-          final salvagedOldStartTakenDate = storage.getString(StringKey.salvagedOldStartTakenDate);
-          final salvagedOldLastTakenDate = storage.getString(StringKey.salvagedOldLastTakenDate);
+          final salvagedOldStartTakenDate =
+              storage.getString(StringKey.salvagedOldStartTakenDate);
+          final salvagedOldLastTakenDate =
+              storage.getString(StringKey.salvagedOldLastTakenDate);
           Navigator.of(context).push(InformationForBeforeMigrate132Route.route(
             salvagedOldStartTakenDate: salvagedOldStartTakenDate!,
             salvagedOldLastTakenDate: salvagedOldLastTakenDate!,

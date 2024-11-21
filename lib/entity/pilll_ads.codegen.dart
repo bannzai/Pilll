@@ -28,5 +28,6 @@ class PilllAds with _$PilllAds {
   }) = _PilllAds;
   PilllAds._();
 
-  factory PilllAds.fromJson(Map<String, dynamic> json) => _$PilllAdsFromJson(json);
+  factory PilllAds.fromJson(Map<String, dynamic> json) =>
+      _$PilllAdsFromJson(json);
 }

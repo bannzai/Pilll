@@ -21,7 +21,8 @@ class MenstruationHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Padding(
-        padding: const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
+        padding:
+            const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
         child: GestureDetector(
           onTap: () {
             analytics.logEvent(name: "menstruation_history_card_tapped");
@@ -136,7 +137,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const Spacer(),
         CounterUnitLayout(
           title: "平均周期",
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : "🔒",
+          number: (state.isPremium || state.isTrial)
+              ? state.avalageMenstruationDuration
+              : "🔒",
           unit: "日",
         ),
         const SizedBox(width: 30),
@@ -149,7 +152,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const SizedBox(width: 30),
         CounterUnitLayout(
           title: "平均日数",
-          number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : "🔒",
+          number: (state.isPremium || state.isTrial)
+              ? state.avalageMenstruationPeriod
+              : "🔒",
           unit: "日",
         ),
         const Spacer(),

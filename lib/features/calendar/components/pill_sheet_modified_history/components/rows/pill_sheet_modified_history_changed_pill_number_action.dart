@@ -26,7 +26,8 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
+          pillNumber:
+              PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
         beforeTodayPillNumber: beforeTodayPillNumber,
         afterTodayPillNumber: afterTodayPillNumber,
       )),

@@ -24,7 +24,8 @@ class RecordPageButton extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final registerReminderLocalNotification =
+        ref.watch(registerReminderLocalNotificationProvider);
 
     if (pillSheetGroup.lastActiveRestDuration != null) {
       return const RestDurationButton();

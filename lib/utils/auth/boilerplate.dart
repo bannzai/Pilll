@@ -11,7 +11,7 @@ Future<SignInWithAppleState> callLinkWithApple(LinkApple linkApple) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
     throw AssertionError("Required Firebase user");
-}
+  }
   try {
     final credential = await linkWithApple(user);
     if (credential == null) {
@@ -22,8 +22,10 @@ Future<SignInWithAppleState> callLinkWithApple(LinkApple linkApple) async {
     return Future.value(SignInWithAppleState.determined);
   } on FirebaseAuthException catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
-    debugPrint("FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
-    final mappedException = mapFromFirebaseAuthException(error, LinkAccountType.apple);
+    debugPrint(
+        "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
+    final mappedException =
+        mapFromFirebaseAuthException(error, LinkAccountType.apple);
     if (mappedException != null) {
       throw mappedException;
     }
@@ -51,8 +53,10 @@ Future<SignInWithGoogleState> callLinkWithGoogle(LinkGoogle linkGoogle) async {
     return Future.value(SignInWithGoogleState.determined);
   } on FirebaseAuthException catch (error, stackTrace) {
     errorLogger.recordError(error, stackTrace);
-    debugPrint("FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
-    final mappedException = mapFromFirebaseAuthException(error, LinkAccountType.google);
+    debugPrint(
+        "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
+    final mappedException =
+        mapFromFirebaseAuthException(error, LinkAccountType.google);
     if (mappedException != null) {
       throw mappedException;
     }

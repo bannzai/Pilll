@@ -36,7 +36,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: const Text('アカウント設定', style: TextStyle(color: TextColor.main)),
+              title: const Text('アカウント設定',
+                  style: TextStyle(color: TextColor.main)),
               backgroundColor: PilllColors.white,
             ),
             body: ListView(
@@ -87,7 +88,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              analytics.logEvent(name: 'a_c_l_apple_long_press_result');
+                              analytics.logEvent(
+                                  name: 'a_c_l_apple_long_press_result');
 
                               await appleReauthentification();
 
@@ -141,7 +143,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
                               final navigator = Navigator.of(context);
-                              analytics.logEvent(name: 'a_c_l_google_long_press_result');
+                              analytics.logEvent(
+                                  name: 'a_c_l_google_long_press_result');
 
                               await googleReauthentification();
 
@@ -189,7 +192,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
   }
 }
 
-extension SettingAccountCooperationListPageRoute on SettingAccountCooperationListPage {
+extension SettingAccountCooperationListPageRoute
+    on SettingAccountCooperationListPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: "SettingAccountCooperationListPage"),

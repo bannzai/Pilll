@@ -15,7 +15,9 @@ class AdMobBanner extends StatefulWidget {
 class AdMobBannerState extends State<AdMobBanner> {
   BannerAd? _bannerAd;
 
-  final String _adUnitId = Platform.isAndroid ? Secret.androidAdmobBannerIdentifier : Secret.iOSAdmobBannerIdentifier;
+  final String _adUnitId = Platform.isAndroid
+      ? Secret.androidAdmobBannerIdentifier
+      : Secret.iOSAdmobBannerIdentifier;
 
   @override
   void initState() {
