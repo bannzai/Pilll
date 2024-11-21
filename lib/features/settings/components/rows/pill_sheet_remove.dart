@@ -11,6 +11,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/delete_pill_sheet.dart';
 import 'package:pilll/utils/local_notification.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
 class PillSheetRemoveRow extends HookConsumerWidget {
   final PillSheetGroup latestPillSheetGroup;
@@ -27,28 +28,26 @@ class PillSheetRemoveRow extends HookConsumerWidget {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
-      title: const Text('ピルシートをすべて破棄',
-          style: TextStyle(
+      title: Text(L.discardAllPillSheets,
+          style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_remove_pill_sheet',
-        );
+        analytics.logEvent(name: 'did_select_remove_pill_sheet');
         showDialog(
           context: context,
           builder: (_) {
             return DiscardDialog(
-              title: 'ピルシートをすべて破棄しますか？',
+              title: L.discardAllPillSheets,
               message: RichText(
                 textAlign: TextAlign.start,
-                text: const TextSpan(
+                text: TextSpan(
                   children: [
                     TextSpan(
-                      text: '現在表示されている',
-                      style: TextStyle(
+                      text: L.currentlyDisplayed,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
@@ -56,8 +55,8 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                       ),
                     ),
                     TextSpan(
-                      text: 'すべてのピルシート',
-                      style: TextStyle(
+                      text: L.allPillSheets,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
@@ -65,8 +64,8 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                       ),
                     ),
                     TextSpan(
-                      text: 'が破棄されます',
-                      style: TextStyle(
+                      text: L.willBeDiscarded,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
@@ -78,22 +77,22 @@ class PillSheetRemoveRow extends HookConsumerWidget {
               ),
               actions: [
                 AlertButton(
-                  text: 'キャンセル',
+                  text: L.cancel,
                   onPressed: () async {
                     Navigator.of(context).pop();
                   },
                 ),
                 AlertButton(
-                  text: '破棄する',
+                  text: L.discard,
                   onPressed: () async {
                     try {
                       await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activePillSheet: activePillSheet);
                       await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
                       ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
-                        const SnackBar(
-                          duration: Duration(seconds: 2),
-                          content: Text('ピルシートを破棄しました'),
+                        SnackBar(
+                          duration: const Duration(seconds: 2),
+                          content: Text(L.pillSheetDiscarded),
                         ),
                       );
                     } catch (error) {
