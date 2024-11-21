@@ -6,6 +6,7 @@ import 'package:pilll/features/settings/today_pill_number/setting_today_pill_num
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/root/localization/l.dart';  // Lクラスをインポート
 
 class TodayPllNumberRow extends HookConsumerWidget {
   final Setting setting;
@@ -22,8 +23,8 @@ class TodayPllNumberRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      title: const Text('今日飲むピル番号の変更',
-          style: TextStyle(
+      title: Text(L.changePillNumberForToday,  // 今日飲むピル番号の変更を翻訳
+          style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
@@ -33,14 +34,10 @@ class TodayPllNumberRow extends HookConsumerWidget {
   }
 
   void _onTap(BuildContext context, Setting setting, PillSheet activePillSheet) {
-    analytics.logEvent(
-      name: 'did_select_changing_pill_number',
-    );
-    Navigator.of(context).push(
-      SettingTodayPillNumberPageRoute.route(
-        pillSheetGroup: pillSheetGroup,
-        activePillSheet: activePillSheet,
-      ),
-    );
+    analytics.logEvent(name: 'did_select_changing_pill_number');
+    Navigator.of(context).push(SettingTodayPillNumberPageRoute.route(
+      pillSheetGroup: pillSheetGroup,
+      activePillSheet: activePillSheet,
+    ));
   }
 }
