@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class MonthlyPurchaseButton extends StatelessWidget {
@@ -33,9 +34,9 @@ class MonthlyPurchaseButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Text(
-              '月額プラン',
-              style: TextStyle(
+            Text(
+              L.monthlyPlan,
+              style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
                 fontSize: 16,
@@ -43,7 +44,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
               ),
             ),
             Text(
-              '${monthlyPackage.storeProduct.priceString}/月',
+              L.monthlyPrice(monthlyPackage.storeProduct.priceString),
               style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,

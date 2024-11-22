@@ -3,6 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -44,9 +45,9 @@ class AnnualPurchaseButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  '年額プラン',
-                  style: TextStyle(
+                Text(
+                  L.annualPlan,
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontSize: 16,
@@ -100,6 +101,7 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.secondary,
       ),
       child: Text(
+        // TODO: [Localizations]
         offeringType == OfferingType.limited ? '通常月額と比べて58％OFF' : '33％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
