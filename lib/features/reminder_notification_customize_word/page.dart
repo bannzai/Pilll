@@ -237,7 +237,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             const SizedBox(height: 4),
                             _switchRow(
-                              '日付を表示',
+                              L.showsDate,
                               !isInVisibleReminderDate.value,
                               (value) async {
                                 analytics.logEvent(name: 'change_reminder_notification_date');
@@ -256,7 +256,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             const Divider(),
                             _switchRow(
-                              '番号を表示',
+                              L.showsPillNumber,
                               !isInVisiblePillNumber.value,
                               (value) async {
                                 analytics.logEvent(name: 'change_reminder_notification_number');
@@ -275,7 +275,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             const Divider(),
                             _switchRow(
-                              '説明文の表示',
+                              L.showsDescription,
                               !isInVisibleDescription.value,
                               (value) async {
                                 analytics.logEvent(name: 'change_reminder_notification_desc');
@@ -304,7 +304,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             if (wordFocusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'rnc_word_done');
                     wordSubmit();
@@ -316,7 +316,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             if (dailyTakenMessageFocusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'rnc_daily_taken_message_done');
                     dailyTakenMessageSubmit();
@@ -328,7 +328,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             if (missedTakenMessageFocusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'rnc_missed_taken_message_done');
                     misssedTakenMessageSubmit();
