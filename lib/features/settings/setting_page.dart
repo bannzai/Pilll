@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -103,7 +104,7 @@ class SettingPageBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: const Text('設定', style: TextStyle(color: TextColor.main)),
+        title: Text(L.settings, style: const TextStyle(color: TextColor.main)),
         backgroundColor: PilllColors.white,
       ),
       body: Padding(

@@ -7,6 +7,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/initial_setting/migrate_info.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
@@ -184,7 +185,7 @@ class HomePageBody extends HookConsumerWidget {
                         : 'images/tab_icon_calendar_disable.svg'),
                   ),
                   Tab(
-                    text: '設定',
+                    text: L.settings,
                     icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
                         ? 'images/tab_icon_setting_enable.svg'
                         : 'images/tab_icon_setting_disable.svg'),
