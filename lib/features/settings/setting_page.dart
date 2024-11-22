@@ -117,7 +117,7 @@ class SettingPageBody extends StatelessWidget {
                 switch (section) {
                   case SettingSection.account:
                     return SettingSectionTitle(
-                      text: 'アカウント',
+                      text: L.account,
                       children: [
                         const ListExplainRow(text: '機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。'),
                         const AccountLinkRow(),
