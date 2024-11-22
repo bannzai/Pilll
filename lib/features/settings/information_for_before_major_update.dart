@@ -3,7 +3,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class InformationForBeforeMigrate132 extends StatelessWidget {
   final String salvagedOldStartTakenDate;
@@ -43,7 +42,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const Text(
-                  L.infoBeforeMajorUpdate, // 大型アップデート前の情報を翻訳
+                  '大型アップデート前の情報',
                   style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w500,
@@ -52,9 +51,9 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 32),
-                Text(
-                  L.infoFromBeforeVersion200, // 下記の情報はversion 2.0.0以前のアプリの情報になりますを翻訳
-                  style: const TextStyle(
+                const Text(
+                  '下記の情報はversion 2.0.0以前のアプリの情報になります',
+                  style: TextStyle(
                     fontFamily: FontFamily.japanese,
                     fontWeight: FontWeight.w600,
                     fontSize: 16,

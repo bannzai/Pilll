@@ -7,7 +7,6 @@ import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/settings/setting_account_list/setting_account_cooperation_list_page.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class AccountLinkRow extends HookConsumerWidget {
   const AccountLinkRow({super.key});
@@ -17,8 +16,8 @@ class AccountLinkRow extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     return ListTile(
-      title: Text(L.accountSettings,
-          style: const TextStyle(
+      title: const Text('アカウント設定',
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
@@ -38,8 +37,8 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          Text(L.linked,
-              style: const TextStyle(
+          const Text('連携済み',
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -53,8 +52,8 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset('images/alert_24.svg'),
           const SizedBox(width: 6),
-          Text(L.unregistered,
-              style: const TextStyle(
+          const Text('未登録',
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,

@@ -5,7 +5,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class DebugRow extends StatelessWidget {
   const DebugRow({super.key});
@@ -18,9 +17,7 @@ class DebugRow extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: Center(
-            child: Text(L.copyDebugInfo, // COPY DEBUG INFOを翻訳
-                style: const TextStyle(color: TextColor.primary))),
+        child: const Center(child: Text('COPY DEBUG INFO', style: TextStyle(color: TextColor.primary))),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo('\n')));
         },

@@ -6,7 +6,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/settings/menstruation/setting_menstruation_page.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class MenstruationRow extends HookConsumerWidget {
   final Setting setting;
@@ -18,8 +17,8 @@ class MenstruationRow extends HookConsumerWidget {
     return ListTile(
       title: Row(
         children: [
-          Text(L.aboutMenstruation, // 生理についてを翻訳
-              style: const TextStyle(
+          const Text('生理について',
+              style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
@@ -28,9 +27,7 @@ class MenstruationRow extends HookConsumerWidget {
           if (_hasError) SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
         ],
       ),
-      subtitle: _hasError
-          ? Text(L.checkPillNumberForMenstruationStart) // 生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されていますを翻訳
-          : null,
+      subtitle: _hasError ? const Text('生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています') : null,
       onTap: () {
         analytics.logEvent(
           name: 'did_select_changing_about_menstruation',

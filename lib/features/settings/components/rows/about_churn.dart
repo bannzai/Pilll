@@ -3,7 +3,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:pilll/features/root/localization/l.dart';
 
 class AboutChurn extends HookConsumerWidget {
   const AboutChurn({super.key});
@@ -11,8 +10,8 @@ class AboutChurn extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      title: Text(L.unsubscribeInfo,
-          style: const TextStyle(
+      title: const Text('解約について',
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

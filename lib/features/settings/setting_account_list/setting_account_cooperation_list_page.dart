@@ -15,7 +15,6 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
-import 'package:pilll/features/root/localization/l.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {
   const SettingAccountCooperationListPage({super.key});
@@ -37,16 +36,16 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
-              title: Text(L.accountSettings, style: const TextStyle(color: TextColor.main)),
+              title: const Text('アカウント設定', style: TextStyle(color: TextColor.main)),
               backgroundColor: PilllColors.white,
             ),
             body: ListView(
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
-                  child: Text(
-                    L.registerAccount,
-                    style: const TextStyle(
+                  child: const Text(
+                    'アカウント登録',
+                    style: TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
@@ -73,17 +72,17 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
 
                     showDiscardDialog(
                       context,
-                      title: L.authenticationInfoUpdated,
-                      message: L.reLogin,
+                      title: '認証情報を更新します',
+                      message: '再度ログインをして認証情報を更新します',
                       actions: [
                         AlertButton(
-                          text: L.cancel,
+                          text: 'キャンセル',
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
                         ),
                         AlertButton(
-                          text: L.reLogin,
+                          text: '再ログイン',
                           onPressed: () async {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
@@ -93,9 +92,9 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               await appleReauthentification();
 
                               messenger.showSnackBar(
-                                SnackBar(
-                                  duration: const Duration(seconds: 2),
-                                  content: Text(L.loggedInWithProvider),
+                                const SnackBar(
+                                  duration: Duration(seconds: 2),
+                                  content: Text('認証情報を更新しました'),
                                 ),
                               );
                               navigator.pop();
@@ -108,6 +107,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     );
                   },
                 ),
+                const Divider(indent: 16),
                 SettingAccountCooperationRow(
                   accountType: LinkAccountType.google,
                   isLinked: () => isGoogleLinked,
@@ -124,20 +124,19 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     analytics.logEvent(
                       name: 'a_c_l_google_long_press',
                     );
-
                     showDiscardDialog(
                       context,
-                      title: L.authenticationInfoUpdated,
-                      message: L.reLogin,
+                      title: '認証情報を更新します',
+                      message: '再度ログインをして認証情報を更新します',
                       actions: [
                         AlertButton(
-                          text: L.cancel,
+                          text: 'キャンセル',
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
                         ),
                         AlertButton(
-                          text: L.reLogin,
+                          text: '再ログイン',
                           onPressed: () async {
                             try {
                               final messenger = ScaffoldMessenger.of(context);
@@ -147,9 +146,9 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               await googleReauthentification();
 
                               messenger.showSnackBar(
-                                SnackBar(
-                                  duration: const Duration(seconds: 2),
-                                  content: Text(L.loggedInWithProvider),
+                                const SnackBar(
+                                  duration: Duration(seconds: 2),
+                                  content: Text('認証情報を更新しました'),
                                 ),
                               );
                               navigator.pop();
@@ -162,6 +161,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     );
                   },
                 ),
+                const Divider(indent: 16),
                 const DeleteUserButton(),
               ],
             ),
@@ -180,7 +180,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             duration: snackBarDuration,
-            content: Text(L.registeredWithProvider),
+            content: Text('${accountType.providerName}で登録しました'),
           ),
         );
         await Future.delayed(snackBarDuration);
@@ -242,8 +242,8 @@ class SettingAccountCooperationRow extends StatelessWidget {
         children: [
           SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          Text(L.linked,
-              style: const TextStyle(
+          const Text('連携済み',
+              style: TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -259,7 +259,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
           onPressed: () async {
             onTap();
           },
-          text: L.linkAccount,
+          text: '連携する',
         ),
       );
     }

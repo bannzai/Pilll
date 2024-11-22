@@ -1,5 +1,4 @@
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/root/localization/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
@@ -19,7 +18,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         AlertButton(
-            text: L.viewMore,
+            text: 'もっと見る',
             onPressed: () async {
               analytics.logEvent(name: 'pill_sheet_modified_history_more');
               if (user.isPremium || user.isTrial) {

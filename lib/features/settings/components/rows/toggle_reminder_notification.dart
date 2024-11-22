@@ -7,7 +7,6 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class ToggleReminderNotification extends HookConsumerWidget {
   final Setting setting;
@@ -24,8 +23,8 @@ class ToggleReminderNotification extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text(L.pillReminder, // ピルの服用通知を翻訳
-          style: const TextStyle(
+      title: const Text('ピルの服用通知',
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
