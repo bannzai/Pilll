@@ -37,7 +37,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
                   TextSpan(text: L.premiumTermsNotice1),
                   const TextSpan(text: '・'),
                   TextSpan(
-                    text: 'プライバシーポリシー',
+                    text: L.privacyPolicy,
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
@@ -48,7 +48,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
                     text: ' / ',
                   ),
                   TextSpan(
-                    text: '利用規約',
+                    text: L.termsOfService,
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {

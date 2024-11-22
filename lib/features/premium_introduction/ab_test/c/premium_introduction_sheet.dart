@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/ab_test/c/components/features.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -121,7 +122,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                               analytics.logEvent(name: 'pressed_premium_functions_on_sheet2');
                               await launchUrl(Uri.parse(preimumLink));
                             },
-                            text: 'プレミアム機能の詳細を見る',
+                            text: L.viewPremiumFeatures,
                           ),
                         ),
                         const SizedBox(height: 24),
