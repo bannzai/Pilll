@@ -1,25 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
-class PillSheetModifiedHistoryCreatedPillSheetAction extends StatelessWidget {
-  final DateTime date;
+class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
+  final DateTime estimatedEventCausingDate;
+  final List<String> pillSheetIDs;
 
-  const PillSheetModifiedHistoryCreatedPillSheetAction({
+  const PillSheetModifiedHistoryCreatePillSheetAction({
     super.key,
-    required this.date,
+    required this.estimatedEventCausingDate,
+    required this.pillSheetIDs,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Text(
-      L.createdPillSheet(date), // ピルシートを作成しましたを翻訳
-      style: const TextStyle(
-        fontFamily: FontFamily.japanese,
-        fontWeight: FontWeight.w600,
-        fontSize: 14,
-        color: TextColor.main,
+    return RowLayout(
+      day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
+      pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(pillSheetIDs)),
+      detail: Text(
+        L.addPillSheet,
+        style: const TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w400,
+        ),
+        textAlign: TextAlign.start,
       ),
     );
   }
