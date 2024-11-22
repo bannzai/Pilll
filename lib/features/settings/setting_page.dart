@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/features/root/localization/l.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -104,7 +103,7 @@ class SettingPageBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: Text(L.settings, style: const TextStyle(color: TextColor.main)),
+        title: const Text('設定', style: TextStyle(color: TextColor.main)),
         backgroundColor: PilllColors.white,
       ),
       body: Padding(
@@ -117,7 +116,7 @@ class SettingPageBody extends StatelessWidget {
                 switch (section) {
                   case SettingSection.account:
                     return SettingSectionTitle(
-                      text: L.account,
+                      text: 'アカウント',
                       children: [
                         const ListExplainRow(text: '機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。'),
                         const AccountLinkRow(),
@@ -232,8 +231,8 @@ class SettingPageBody extends StatelessWidget {
                           _separator(),
                         ],
                         ListTile(
-                            title: Text(L.shareWithFriends,
-                                style: const TextStyle(
+                            title: const Text('友達に教える',
+                                style: TextStyle(
                                   fontFamily: FontFamily.roboto,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
@@ -247,16 +246,16 @@ class SettingPageBody extends StatelessWidget {
       Android: https://onl.sc/c9xnQUk''';
                               Clipboard.setData(const ClipboardData(text: text));
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                  duration: const Duration(seconds: 2),
-                                  content: Text(L.linkCopiedToClipboard),
+                                const SnackBar(
+                                  duration: Duration(seconds: 2),
+                                  content: Text('クリップボードにリンクをコピーしました'),
                                 ),
                               );
                             }),
                         _separator(),
                         ListTile(
-                            title: Text(L.termsOfService,
-                                style: const TextStyle(
+                            title: const Text('利用規約',
+                                style: TextStyle(
                                   fontFamily: FontFamily.roboto,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
@@ -267,8 +266,8 @@ class SettingPageBody extends StatelessWidget {
                             }),
                         _separator(),
                         ListTile(
-                            title: Text(L.privacyPolicy,
-                                style: const TextStyle(
+                            title: const Text('プライバシーポリシー',
+                                style: TextStyle(
                                   fontFamily: FontFamily.roboto,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
@@ -279,8 +278,8 @@ class SettingPageBody extends StatelessWidget {
                             }),
                         _separator(),
                         ListTile(
-                            title: Text(L.faq,
-                                style: const TextStyle(
+                            title: const Text('FAQ',
+                                style: TextStyle(
                                   fontFamily: FontFamily.roboto,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
@@ -291,8 +290,8 @@ class SettingPageBody extends StatelessWidget {
                             }),
                         _separator(),
                         ListTile(
-                            title: Text(L.newFeaturesIntroduction,
-                                style: const TextStyle(
+                            title: const Text('新機能紹介',
+                                style: TextStyle(
                                   fontFamily: FontFamily.roboto,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,
@@ -303,8 +302,8 @@ class SettingPageBody extends StatelessWidget {
                             }),
                         _separator(),
                         ListTile(
-                            title: Text(L.contactUs,
-                                style: const TextStyle(
+                            title: const Text('お問い合わせ',
+                                style: TextStyle(
                                   fontFamily: FontFamily.roboto,
                                   fontWeight: FontWeight.w300,
                                   fontSize: 16,

@@ -4,7 +4,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/settings/reminder_times_page.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class NotificationTimeRow extends StatelessWidget {
   final Setting setting;
@@ -16,8 +15,8 @@ class NotificationTimeRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(L.notificationTime, // 通知時刻を翻訳
-          style: const TextStyle(
+      title: const Text('通知時刻',
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

@@ -5,7 +5,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/settings/information_for_before_major_update.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class UpdateFrom132Row extends StatelessWidget {
   const UpdateFrom132Row({super.key});
@@ -13,8 +12,8 @@ class UpdateFrom132Row extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(L.infoBeforeMajorUpdate, // 大型アップデート前の情報を翻訳
-          style: const TextStyle(
+      title: const Text('大型アップデート前の情報',
+          style: TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,

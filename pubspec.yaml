@@ -74,7 +74,6 @@ dependencies:
       url: https://github.com/bannzai/home_widget.git
       ref: main
   path_provider: ^2.1.4
-  intl_translation: ^0.20.0
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to

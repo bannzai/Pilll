@@ -1,7 +1,6 @@
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/features/root/localization/l.dart';
 
 enum PillSheetType {
   // "21錠+休薬7日";
@@ -47,19 +46,19 @@ extension PillSheetTypeFunctions on PillSheetType {
   String get fullName {
     switch (this) {
       case PillSheetType.pillsheet_21:
-        return L.pillSheetType21With7Placebo;
+        return '21錠タイプ';
       case PillSheetType.pillsheet_28_4:
-        return L.pillSheetType28With4Placebo;
+        return '28錠タイプ(4錠偽薬)';
       case PillSheetType.pillsheet_28_7:
-        return L.pillSheetType28With7Placebo;
+        return '28錠タイプ(7錠偽薬)';
       case PillSheetType.pillsheet_28_0:
-        return L.pillSheetType28;
+        return '28錠タイプ(すべて実薬)';
       case PillSheetType.pillsheet_24_0:
-        return L.pillSheetType24;
+        return '24錠タイプ(すべて実薬)';
       case PillSheetType.pillsheet_21_0:
-        return L.pillSheetType21;
+        return '21錠タイプ(すべて実薬)';
       case PillSheetType.pillsheet_24_rest_4:
-        return L.pillSheetType24WithRest4;
+        return '24錠タイプ';
     }
   }
 
@@ -149,11 +148,11 @@ extension PillSheetTypeFunctions on PillSheetType {
   String get notTakenWord {
     switch (this) {
       case PillSheetType.pillsheet_21:
-        return L.restPeriod;
+        return '休薬';
       case PillSheetType.pillsheet_28_4:
-        return L.placebo;
+        return '偽薬';
       case PillSheetType.pillsheet_28_7:
-        return L.placebo;
+        return '偽薬';
       case PillSheetType.pillsheet_28_0:
         return '';
       case PillSheetType.pillsheet_24_0:
@@ -161,7 +160,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_21_0:
         return '';
       case PillSheetType.pillsheet_24_rest_4:
-        return L.restPeriod;
+        return '休薬';
     }
   }
 

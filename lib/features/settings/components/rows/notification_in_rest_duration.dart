@@ -8,7 +8,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
@@ -26,13 +25,13 @@ class NotificationInRestDuration extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text(L.NotificationForNotTakenPeriod(pillSheet.pillSheetType.notTakenWord),
+      title: Text('${pillSheet.pillSheetType.notTakenWord}期間の通知',
           style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text(L.AutoRecordForNotTakenPeriodIfNotificationOff(pillSheet.pillSheetType.notTakenWord),
+      subtitle: Text('通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます',
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
@@ -51,12 +50,13 @@ class NotificationInRestDuration extends HookConsumerWidget {
           SnackBar(
             duration: const Duration(seconds: 2),
             content: Text(
-              "${pillSheet.pillSheetType.notTakenWord}${L.notification}を${value ? "ON" : "OFF"}にしました",
+              "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
             ),
           ),
         );
       },
       value: setting.isOnNotifyInNotTakenDuration,
+      // NOTE: when configured subtitle, the space between elements becomes very narrow
       contentPadding: const EdgeInsets.fromLTRB(14, 8, 6, 8),
     );
   }

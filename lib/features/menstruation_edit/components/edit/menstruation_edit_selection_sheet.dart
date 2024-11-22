@@ -1,89 +1,148 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
-import 'package:pilll/provider/database.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
-import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
-import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/provider/user.dart';
+import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/entity/menstruation.codegen.dart';
+import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
+import 'package:pilll/provider/menstruation.dart';
+import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class MenstruationEditSelectionSheet extends HookConsumerWidget {
-  const MenstruationEditSelectionSheet({super.key});
+  final Menstruation menstruation;
+
+  const MenstruationEditSelectionSheet({super.key, required this.menstruation});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final loadingNext = useState(false);
-    final limit = useState(20);
-    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
-    final histories = historiesAsync.asData?.value ?? [];
+    void onDeleted() {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          duration: Duration(seconds: 2),
+          content: Text('生理期間を削除しました'),
+        ),
+      );
+      Navigator.of(context).pop();
+    }
 
-    return ref.watch(userProvider).when(
-          error: (error, _) => UniversalErrorPage(
-            error: error,
-            child: null,
-            reload: () => ref.refresh(databaseProvider),
-          ),
-          loading: () => const ScaffoldIndicator(),
-          data: (user) {
-            return Scaffold(
-              backgroundColor: PilllColors.white,
-              appBar: AppBar(
-                leading: IconButton(
-                  icon: const Icon(Icons.arrow_back, color: Colors.black),
-                  onPressed: () => Navigator.of(context).pop(),
-                ),
-                title: Text(
-                  L.medicationHistory, // 服用履歴を翻訳
-                  style: const TextStyle(color: TextColor.main),
-                ),
-                centerTitle: false,
-                backgroundColor: PilllColors.white,
+    return Container(
+      color: Colors.white,
+      padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
+      child: SafeArea(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '${DateTimeFormatter.yearAndMonthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.yearAndMonthAndDay(menstruation.endDate)}',
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.main,
               ),
-              body: SafeArea(
-                child: NotificationListener<ScrollNotification>(
-                  onNotification: (notification) {
-                    if (!loadingNext.value && notification.metrics.pixels >= notification.metrics.maxScrollExtent && histories.isNotEmpty) {
-                      loadingNext.value = true;
-                      limit.value += 20;
-                    }
-                    return true;
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        const PillSheetModifiedHisotiryListHeader(),
-                        const SizedBox(height: 4),
-                        Expanded(
-                          child: SingleChildScrollView(
-                            padding: const EdgeInsets.only(bottom: 20),
-                            physics: const AlwaysScrollableScrollPhysics(),
-                            child: PillSheetModifiedHistoryList(
-                              pillSheetModifiedHistories: histories,
-                              premiumOrTrial: user.premiumOrTrial,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
+            ),
+            const SizedBox(height: 16),
+            TextButton(
+              style: const ButtonStyle(alignment: Alignment.centerLeft),
+              onPressed: () {
+                showEditMenstruationDateRangePicker(
+                  context,
+                  ref,
+                  initialMenstruation: menstruation,
+                );
+              },
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.edit,
+                    color: TextColor.main,
+                    size: 20,
                   ),
-                ),
+                  SizedBox(width: 16),
+                  Text(
+                    '生理期間を編集',
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
               ),
-            );
-          },
-        );
+            ),
+            TextButton(
+              style: const ButtonStyle(alignment: Alignment.centerLeft),
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.delete,
+                    color: TextColor.danger,
+                    size: 20,
+                  ),
+                  SizedBox(width: 16),
+                  Text(
+                    '削除',
+                    style: TextStyle(
+                      color: TextColor.danger,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ],
+              ),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (context) => DiscardDialog(
+                    title: '生理期間を削除しますか？',
+                    message: const Text(''),
+                    actions: [
+                      AlertButton(
+                        text: 'キャンセル',
+                        onPressed: () async {
+                          analytics.logEvent(name: 'cancelled_delete_menstruation');
+
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      AlertButton(
+                        text: '削除する',
+                        onPressed: () async {
+                          analytics.logEvent(name: 'pressed_delete_menstruation');
+
+                          final navigator = Navigator.of(context);
+                          try {
+                            await ref.read(deleteMenstruationProvider).call(menstruation);
+                          } catch (e) {
+                            if (context.mounted) showErrorAlert(context, e);
+                          }
+                          onDeleted();
+                          navigator.pop();
+                        },
+                      ),
+                    ],
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
-extension MenstruationEditSelectionSheetRoute on MenstruationEditSelectionSheet {
-  static Route<dynamic> route() {
-    return MaterialPageRoute(
-      settings: const RouteSettings(name: 'MenstruationEditSelectionSheet'),
-      builder: (_) => const MenstruationEditSelectionSheet(),
-    );
-  }
+void showMenstruationEditSelectionSheet(BuildContext context, MenstruationEditSelectionSheet menstruationEditSelectionSheet) {
+  showModalBottomSheet(
+    context: context,
+    builder: (BuildContext context) {
+      return menstruationEditSelectionSheet;
+    },
+  );
 }
