@@ -28,9 +28,9 @@ class PillSheetGroupDelete extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       leading: const Icon(Icons.delete_outline, color: PilllColors.red),
-      title: const Text(
-        'ピルシートをすべて破棄',
-        style: TextStyle(color: PilllColors.red),
+      title: Text(
+        L.discardAllPillSheets,
+        style: const TextStyle(color: PilllColors.red),
       ),
       onTap: () {
         analytics.logEvent(
@@ -40,21 +40,21 @@ class PillSheetGroupDelete extends HookConsumerWidget {
           context: context,
           builder: (_) {
             return DiscardDialog(
-              title: 'ピルシートをすべて破棄しますか？',
+              title: L.areYouSureDoing(L.discardAllPillSheets),
               message: RichText(
                 textAlign: TextAlign.start,
-                text: const TextSpan(
+                text: TextSpan(
                   children: [
                     TextSpan(
-                      text: '現在表示されている',
-                      style: TextStyle(
+                      text: L.currentlyDisplayed,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
                         color: TextColor.main,
                       ),
                     ),
-                    TextSpan(
+                    const TextSpan(
                       text: 'すべてのピルシート',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,
@@ -63,7 +63,7 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                         color: TextColor.main,
                       ),
                     ),
-                    TextSpan(
+                    const TextSpan(
                       text: 'が破棄されます',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,

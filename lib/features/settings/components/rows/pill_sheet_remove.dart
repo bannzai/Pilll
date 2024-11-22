@@ -28,8 +28,8 @@ class PillSheetRemoveRow extends HookConsumerWidget {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
-      title: const Text('ピルシートをすべて破棄',
-          style: TextStyle(
+      title: Text(L.discardAllPillSheets,
+          style: const TextStyle(
             fontFamily: FontFamily.roboto,
             fontWeight: FontWeight.w300,
             fontSize: 16,
@@ -42,21 +42,21 @@ class PillSheetRemoveRow extends HookConsumerWidget {
           context: context,
           builder: (_) {
             return DiscardDialog(
-              title: 'ピルシートをすべて破棄しますか？',
+              title: L.areYouSureDoing(L.discardAllPillSheets),
               message: RichText(
                 textAlign: TextAlign.start,
-                text: const TextSpan(
+                text: TextSpan(
                   children: [
                     TextSpan(
-                      text: '現在表示されている',
-                      style: TextStyle(
+                      text: L.currentlyDisplayed,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
                         color: TextColor.main,
                       ),
                     ),
-                    TextSpan(
+                    const TextSpan(
                       text: 'すべてのピルシート',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,
@@ -65,7 +65,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                         color: TextColor.main,
                       ),
                     ),
-                    TextSpan(
+                    const TextSpan(
                       text: 'が破棄されます',
                       style: TextStyle(
                         fontFamily: FontFamily.japanese,

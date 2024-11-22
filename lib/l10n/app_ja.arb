@@ -59,6 +59,7 @@
   "viewPremiumPlan": "プレミアムプランを見る",
   "changePillNumberForToday": "今日飲むピル番号の変更",
   "discardAllPillSheets": "ピルシートをすべて破棄",
+  "areYouSureDoing": "{do}しますか？",
   "currentlyDisplayed": "現在表示されている",
   "allPillSheets": "すべてのピルシート",
   "willBeDiscarded": "が破棄されます",
