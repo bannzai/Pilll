@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
@@ -17,19 +18,21 @@ class QuickRecordRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       minVerticalPadding: 9,
-      title: const Row(
+      title: Row(
         children: [
-          Text('クイックレコード',
-              style: TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              )),
-          SizedBox(width: 7),
-          PremiumBadge(),
+          Text(
+            L.quickRecord,
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
+          ),
+          const SizedBox(width: 7),
+          const PremiumBadge(),
         ],
       ),
-      subtitle: const Text('通知画面で今日飲むピルが分かり、そのまま服用記録できます。'),
+      subtitle: Text(L.quickRecordDescription),
       onTap: () {
         analytics.logEvent(
           name: 'did_select_quick_record_row',

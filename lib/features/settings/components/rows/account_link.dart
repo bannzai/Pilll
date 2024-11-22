@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -16,12 +17,14 @@ class AccountLinkRow extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     return ListTile(
-      title: const Text('アカウント設定',
-          style: TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: Text(
+        L.accountSettings,
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
+      ),
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
         analytics.logEvent(name: 'did_select_setting_account_cooperation');
@@ -37,8 +40,8 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          const Text('連携済み',
-              style: TextStyle(
+          Text(L.linked,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -52,13 +55,15 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset('images/alert_24.svg'),
           const SizedBox(width: 6),
-          const Text('未登録',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.darkGray,
-              )),
+          Text(
+            L.unregistered,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.darkGray,
+            ),
+          ),
         ],
       );
     }

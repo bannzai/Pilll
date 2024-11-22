@@ -243,13 +243,15 @@ class SettingAccountCooperationRow extends StatelessWidget {
         children: [
           SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          const Text('連携済み',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.darkGray,
-              )),
+          Text(
+            L.linked,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w300,
+              fontSize: 14,
+              color: TextColor.darkGray,
+            ),
+          ),
         ],
       );
     } else {

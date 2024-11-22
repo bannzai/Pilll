@@ -37,7 +37,7 @@ class DebugRow extends StatelessWidget {
               },
             ),
             AlertButton(
-              text: 'サインアウト',
+              text: L.signOut,
               onPressed: () async {
                 final navigator = Navigator.of(context);
                 await signOut();
