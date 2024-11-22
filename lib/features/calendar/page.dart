@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/calendar/components/const.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/provider/diary.dart';
@@ -267,9 +268,9 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                 children: [
                   const Text(lockEmoji, style: TextStyle(fontSize: 40)),
                   const SizedBox(height: 12),
-                  const Text(
-                    'これ以上の閲覧はプレミアム機能になります',
-                    style: TextStyle(
+                  Text(
+                    L.medicationHistoryPremiumFeatureRestriction,
+                    style: const TextStyle(
                       color: TextColor.main,
                       fontSize: 14,
                       fontFamily: FontFamily.japanese,

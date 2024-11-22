@@ -118,9 +118,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'プレビュー',
-                              style: TextStyle(
+                            Text(
+                              L.preview,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -131,9 +131,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  '通常',
-                                  style: TextStyle(
+                                Text(
+                                  L.normal,
+                                  style: const TextStyle(
                                     fontFamily: FontFamily.japanese,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 10,
@@ -154,9 +154,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  '飲み忘れ',
-                                  style: TextStyle(
+                                Text(
+                                  L.missed,
+                                  style: const TextStyle(
                                     fontFamily: FontFamily.japanese,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 10,
@@ -179,9 +179,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'タイトル',
-                              style: TextStyle(
+                            Text(
+                              L.title,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -200,9 +200,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'メッセージ',
-                              style: TextStyle(
+                            Text(
+                              L.message,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -226,9 +226,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'オプション',
-                              style: TextStyle(
+                            Text(
+                              L.option,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 14,
