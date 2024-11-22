@@ -227,19 +227,21 @@ class SettingPageBody extends StatelessWidget {
 
                   case SettingSection.other:
                     return SettingSectionTitle(
-                      text: 'その他',
+                      text: L.others,
                       children: [
                         if (userIsUpdatedFrom132) ...[
                           const UpdateFrom132Row(),
                           _separator(),
                         ],
                         ListTile(
-                            title: const Text('友達に教える',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.shareWithFriends,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () async {
                               analytics.logEvent(name: 'tap_share_to_friend', parameters: {});
                               const text = '''
@@ -249,68 +251,78 @@ class SettingPageBody extends StatelessWidget {
       Android: https://onl.sc/c9xnQUk''';
                               Clipboard.setData(const ClipboardData(text: text));
                               ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  duration: Duration(seconds: 2),
-                                  content: Text('クリップボードにリンクをコピーしました'),
+                                SnackBar(
+                                  duration: const Duration(seconds: 2),
+                                  content: Text(L.linkCopiedToClipboard),
                                 ),
                               );
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('利用規約',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.termsOfService,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_terms', parameters: {});
                               launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('プライバシーポリシー',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.privacyPolicy,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_privacy_policy', parameters: {});
                               launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('FAQ',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.faq,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_faq', parameters: {});
                               launchUrl(Uri.parse('https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69'), mode: LaunchMode.inAppWebView);
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('新機能紹介',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.newFeaturesIntroduction,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'setting_did_select_release_note', parameters: {});
                               launchUrl(Uri.parse('https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61'));
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('お問い合わせ',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.contactUs,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_inquiry', parameters: {});
                               inquiry();
