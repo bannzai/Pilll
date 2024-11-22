@@ -293,5 +293,7 @@
   "twentyOnePlusSevenPlacebo": "21 pills + 7 placebo pills",
   "allActivePills": "All active ingredients",
   "twentyFourPlusFourDaysBreak": "24 pills + 4 pill break",
-  "choosePillType": "Select the type of pill"
+  "choosePillType": "Select the type of pill",
+  "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます"
 }
