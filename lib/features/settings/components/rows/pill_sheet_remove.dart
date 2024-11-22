@@ -28,12 +28,14 @@ class PillSheetRemoveRow extends HookConsumerWidget {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
-      title: Text(L.discardAllPillSheets,
-          style: const TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: Text(
+        L.discardAllPillSheets,
+        style: const TextStyle(
+          fontFamily: FontFamily.roboto,
+          fontWeight: FontWeight.w300,
+          fontSize: 16,
+        ),
+      ),
       onTap: () {
         analytics.logEvent(
           name: 'did_select_remove_pill_sheet',
@@ -47,6 +49,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                 textAlign: TextAlign.start,
                 text: TextSpan(
                   children: [
+                    // TODO: [Localizations]
                     TextSpan(
                       text: L.currentlyDisplayed,
                       style: const TextStyle(
@@ -56,18 +59,18 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                         color: TextColor.main,
                       ),
                     ),
-                    const TextSpan(
-                      text: 'すべてのピルシート',
-                      style: TextStyle(
+                    TextSpan(
+                      text: L.allPillSheets,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
                         color: TextColor.main,
                       ),
                     ),
-                    const TextSpan(
-                      text: 'が破棄されます',
-                      style: TextStyle(
+                    TextSpan(
+                      text: L.willBeDiscarded,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
@@ -85,16 +88,16 @@ class PillSheetRemoveRow extends HookConsumerWidget {
                   },
                 ),
                 AlertButton(
-                  text: '破棄する',
+                  text: L.discard,
                   onPressed: () async {
                     try {
                       await deletePillSheetGroup(latestPillSheetGroup: latestPillSheetGroup, activePillSheet: activePillSheet);
                       await cancelReminderLocalNotification();
                       navigatorKey.currentState?.pop();
                       ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
-                        const SnackBar(
-                          duration: Duration(seconds: 2),
-                          content: Text('ピルシートを破棄しました'),
+                        SnackBar(
+                          duration: const Duration(seconds: 2),
+                          content: Text(L.pillSheetDiscarded),
                         ),
                       );
                     } catch (error) {

@@ -54,18 +54,19 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                         color: TextColor.main,
                       ),
                     ),
-                    const TextSpan(
-                      text: 'すべてのピルシート',
-                      style: TextStyle(
+                    // TODO: [Localizations]
+                    TextSpan(
+                      text: L.allPillSheets,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
                         color: TextColor.main,
                       ),
                     ),
-                    const TextSpan(
-                      text: 'が破棄されます',
-                      style: TextStyle(
+                    TextSpan(
+                      text: L.willBeDiscarded,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
@@ -83,7 +84,7 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                   },
                 ),
                 AlertButton(
-                  text: '破棄する',
+                  text: L.discard,
                   onPressed: () async {
                     try {
                       await deletePillSheetGroup(latestPillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet);
@@ -91,9 +92,9 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                       if (context.mounted) {
                         Navigator.of(context).popUntil((route) => route.isFirst);
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            duration: Duration(seconds: 2),
-                            content: Text('ピルシートを破棄しました'),
+                          SnackBar(
+                            duration: const Duration(seconds: 2),
+                            content: Text(L.pillSheetDiscarded),
                           ),
                         );
                       }
