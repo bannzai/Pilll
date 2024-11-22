@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
@@ -186,13 +187,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SvgPicture.asset('images/alerm.svg'),
-              Text('通知${index + 1}',
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ))
+              Text(
+                L.notificationNumber(index + 1),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                  color: TextColor.main,
+                ),
+              )
             ],
           ),
           const SizedBox(height: 8),

@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:async_value_group/async_value_group.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/database.dart';
@@ -101,7 +102,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
-                        content: Text('$tzに変更しました'),
+                        content: Text(L.timeZoneChangedTo(tz)),
                       ),
                     );
                   },
@@ -163,7 +164,7 @@ class ReminderTimesPageBody extends StatelessWidget {
         _showPicker(context, setting: setting, setSetting: setSetting, index: number - 1);
       },
       child: ListTile(
-        title: Text('通知$number'),
+        title: Text(L.notificationNumber(number)),
         subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
       ),
     );
