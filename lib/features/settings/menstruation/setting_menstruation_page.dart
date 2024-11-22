@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
@@ -17,7 +18,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
     final setSetting = ref.watch(setSettingProvider);
 
     return SettingMenstruationPageTemplate(
-      title: '生理について',
+      title: L.aboutMenstruation,
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetEnumTypes,
         appearanceMode: PillSheetAppearanceMode.sequential,

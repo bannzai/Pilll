@@ -1,6 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/daily_taken_message_text_field.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/missed_taken_message_text_field.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/preview.dart';
@@ -95,9 +96,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '服用通知のカスタマイズ',
-          style: TextStyle(
+        title: Text(
+          L.customizeMedicationNotifications,
+          style: const TextStyle(
             color: TextColor.black,
           ),
         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
@@ -27,24 +28,28 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text('服用通知のカスタマイズ',
-              style: TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              )),
+          Text(
+            L.customizeMedicationNotifications,
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
+          ),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             const PremiumBadge(),
           ]
         ],
       ),
-      subtitle: const Text('服用通知の文言のカスタマイズができます',
-          style: TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-          )),
+      subtitle: Text(
+        L.xCanBeCustomized(L.customizeNotificationText),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        ),
+      ),
       onTap: () {
         analytics.logEvent(
           name: 'did_notification_customize_word',

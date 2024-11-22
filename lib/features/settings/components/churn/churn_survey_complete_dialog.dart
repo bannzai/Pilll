@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -23,12 +24,12 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
         ),
         textAlign: TextAlign.center,
       ),
-      content: const Column(
+      content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'いただいた意見は今後の改善へと活用させていただきます。',
-            style: TextStyle(
+            L.feedbackUsage,
+            style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
               fontWeight: FontWeight.w300,

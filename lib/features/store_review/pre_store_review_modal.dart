@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/web_view.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -146,13 +147,15 @@ class _ThanksDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('ご協力ありがとうございます',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-                color: TextColor.main,
-              )),
+          Text(
+            L.thankYouForCooperation,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
+              color: TextColor.main,
+            ),
+          ),
           SizedBox(
             height: 15,
           ),
@@ -218,12 +221,12 @@ class _CompleteDialog extends StatelessWidget {
         ),
         textAlign: TextAlign.center,
       ),
-      content: const Column(
+      content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'いただいた意見は今後の改善へと活用させていただきます。',
-            style: TextStyle(
+            L.feedbackUsage,
+            style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
               fontWeight: FontWeight.w300,

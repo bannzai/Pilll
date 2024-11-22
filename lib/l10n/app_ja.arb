@@ -69,6 +69,7 @@
   "checkPillNumberForMenstruationStart": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています",
   "customizeMedicationNotifications": "服用通知のカスタマイズ",
   "customizeNotificationText": "服用通知の文言のカスタマイズができます",
+  "xCanBeCustomized": "{x}のカスタマイズができます",
   "thankYouForCooperation": "ご協力ありがとうございます",
   "feedbackUsage": "いただいた意見は今後の改善へと活用させていただきます。",
   "close": "閉じる",
