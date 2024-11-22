@@ -1,6 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -33,7 +34,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
               text: TextSpan(
                 style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.gray),
                 children: [
-                  const TextSpan(text: '・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n'),
+                  TextSpan(text: L.premiumTermsNotice1),
                   const TextSpan(text: '・'),
                   TextSpan(
                     text: 'プライバシーポリシー',
@@ -58,24 +59,24 @@ class PremiumIntroductionFotter extends StatelessWidget {
                     text: ' / ',
                   ),
                   TextSpan(
-                    text: '特定商取引法に基づく表示',
+                    text: L.premiumTermsNotice2,
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         launchUrl(Uri.parse('https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct'), mode: LaunchMode.inAppWebView);
                       },
                   ),
-                  const TextSpan(
-                    text: 'をご確認のうえ登録してください\n',
-                  ),
-                  const TextSpan(
-                    text: '・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n',
+                  TextSpan(
+                    text: L.premiumTermsNotice3,
                   ),
                   TextSpan(
-                    text: '・購入後、自動更新の解約は$storeNameアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。',
+                    text: L.autoRenewNotice,
                   ),
                   TextSpan(
-                    text: '詳細はこちら',
+                    text: L.cancelAutoRenewInfo(storeName),
+                  ),
+                  TextSpan(
+                    text: L.moreDetails,
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
@@ -95,11 +96,11 @@ class PremiumIntroductionFotter extends StatelessWidget {
                 final shouldShowSnackbar = await _restore();
                 if (shouldShowSnackbar) {
                   messenger.showSnackBar(
-                    const SnackBar(
-                      duration: Duration(
+                    SnackBar(
+                      duration: const Duration(
                         seconds: 2,
                       ),
-                      content: Text('購入情報を復元しました'),
+                      content: Text(L.restorePurchase),
                     ),
                   );
                 }
@@ -109,9 +110,9 @@ class PremiumIntroductionFotter extends StatelessWidget {
                 isLoading.value = false;
               }
             },
-            child: const Text(
-              '以前購入した方はこちら',
-              style: TextStyle(
+            child: Text(
+              L.previouslyPurchased,
+              style: const TextStyle(
                 decoration: TextDecoration.underline,
                 color: TextColor.main,
                 fontWeight: FontWeight.w400,
@@ -147,7 +148,7 @@ class PremiumIntroductionFotter extends StatelessWidget {
         'entitlements': entitlements?.identifier,
         'isActivated': entitlements?.isActive,
       });
-      throw AlertError('以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください');
+      throw AlertError(L.noPreviousPurchaseInfo);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
           name: 'catched_restore_exception',

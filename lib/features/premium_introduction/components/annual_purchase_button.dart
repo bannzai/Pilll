@@ -55,7 +55,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '${annualPackage.storeProduct.priceString}/年',
+                  L.annualPrice(annualPackage.storeProduct.priceString),
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
@@ -64,7 +64,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '（$monthlyPriceString/月）',
+                  L.monthlyPrice(monthlyPriceString),
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
