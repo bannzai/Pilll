@@ -130,12 +130,14 @@ class SettingPageBody extends StatelessWidget {
                       children: [
                         if (user.isTrial) ...[
                           ListTile(
-                            title: const Text('機能無制限の期間について',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.unlimitedFeatureDuration,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_about_trial', parameters: {});
                               launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'), mode: LaunchMode.inAppWebView);
@@ -156,7 +158,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.pill:
                     return SettingSectionTitle(
-                      text: 'ピルシート',
+                      text: L.pillSheet,
                       children: [
                         if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                           TodayPllNumberRow(
