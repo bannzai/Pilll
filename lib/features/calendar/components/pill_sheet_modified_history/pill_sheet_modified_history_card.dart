@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -64,9 +65,9 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Text(
-                  '服用履歴',
-                  style: TextStyle(
+                Text(
+                  L.medicationHistory,
+                  style: const TextStyle(
                     fontWeight: FontWeight.w500,
                     fontFamily: FontFamily.japanese,
                     fontSize: 20,
