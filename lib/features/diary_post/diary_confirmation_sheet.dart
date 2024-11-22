@@ -6,6 +6,7 @@ import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
@@ -77,18 +78,20 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
                 context: context,
                 builder: (context) {
                   return DiscardDialog(
-                    title: '日記を削除します',
-                    message: const Text('削除された日記は復元ができません',
-                        style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
+                    title: L.deleteDiary,
+                    message: const Text(
+                      L.deletedDiaryCannotBeRestored,
+                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                    ),
                     actions: [
                       AlertButton(
-                        text: 'キャンセル',
+                        text: L.cancel,
                         onPressed: () async {
                           Navigator.of(context).pop();
                         },
                       ),
                       AlertButton(
-                        text: '削除する',
+                        text: L.doDelete,
                         onPressed: () async {
                           int counter = 0;
                           final navigator = Navigator.of(context);

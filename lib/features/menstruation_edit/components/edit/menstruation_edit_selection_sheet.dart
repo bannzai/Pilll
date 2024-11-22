@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -20,9 +21,9 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     void onDeleted() {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          duration: Duration(seconds: 2),
-          content: Text('生理期間を削除しました'),
+        SnackBar(
+          duration: const Duration(seconds: 2),
+          content: Text(L.menstruationDeleted),
         ),
       );
       Navigator.of(context).pop();
@@ -64,7 +65,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                   ),
                   SizedBox(width: 16),
                   Text(
-                    '生理期間を編集',
+                    L.editMenstruation,
                     style: TextStyle(
                       color: TextColor.main,
                       fontWeight: FontWeight.w400,
@@ -77,17 +78,17 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
             ),
             TextButton(
               style: const ButtonStyle(alignment: Alignment.centerLeft),
-              child: const Row(
+              child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.delete,
                     color: TextColor.danger,
                     size: 20,
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Text(
-                    '削除',
-                    style: TextStyle(
+                    L.delete,
+                    style: const TextStyle(
                       color: TextColor.danger,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -100,11 +101,11 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                 showDialog(
                   context: context,
                   builder: (context) => DiscardDialog(
-                    title: '生理期間を削除しますか？',
+                    title: L.confirmDeletingMenstruation,
                     message: const Text(''),
                     actions: [
                       AlertButton(
-                        text: 'キャンセル',
+                        text: L.cancel,
                         onPressed: () async {
                           analytics.logEvent(name: 'cancelled_delete_menstruation');
 
@@ -112,7 +113,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                         },
                       ),
                       AlertButton(
-                        text: '削除する',
+                        text: L.doDelete,
                         onPressed: () async {
                           analytics.logEvent(name: 'pressed_delete_menstruation');
 

@@ -1,5 +1,6 @@
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/environment.dart';
@@ -52,19 +53,19 @@ class DebugRow extends StatelessWidget {
           }
           showDiscardDialog(
             context,
-            title: 'ユーザーを削除します',
+            title: L.deleteUser,
             message: '''
 これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
 ''',
             actions: [
               AlertButton(
-                text: 'キャンセル',
+                text: L.cancel,
                 onPressed: () async {
                   Navigator.of(context).pop();
                 },
               ),
               AlertButton(
-                text: '削除',
+                text: L.delete,
                 onPressed: () async {
                   final navigator = Navigator.of(context);
                   await deleteUser();

@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -47,7 +48,7 @@ void main() {
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.text("通知時間の追加"), findsOneWidget);
+      expect(find.text(L.addNotificationTime), findsOneWidget);
       expect(find.byWidgetPredicate((widget) => widget is Dismissible), findsNothing);
     });
     testWidgets('when setting has maximum count reminder times︎', (WidgetTester tester) async {
@@ -75,7 +76,7 @@ void main() {
 
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.text("通知時間の追加"), findsNothing);
+      expect(find.text(L.addNotificationTime), findsNothing);
       expect(find.byWidgetPredicate((widget) => widget is Dismissible), findsNWidgets(3));
     });
   });

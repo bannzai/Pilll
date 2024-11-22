@@ -186,15 +186,15 @@ class ReminderTimesPageBody extends StatelessWidget {
             },
       background: Container(
         color: Colors.red,
-        child: const SizedBox(
+        child: SizedBox(
           width: 40,
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                '削除',
-                style: TextStyle(
+                L.delete,
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
@@ -225,9 +225,9 @@ class ReminderTimesPageBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset('images/add.svg'),
-            const Text(
-              '通知時間の追加',
-              style: TextStyle(
+            Text(
+              L.addNotificationTime,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
