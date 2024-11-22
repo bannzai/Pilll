@@ -2,6 +2,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/boilerplate.dart';
@@ -225,52 +226,52 @@ class SignInSheet extends HookConsumerWidget {
   String get _title {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return 'ログイン';
+        return L.login;
       case SignInSheetStateContext.recordPage:
-        return 'アカウント登録';
+        return L.registerAccount;
       case SignInSheetStateContext.premium:
-        return 'プレミアム登録の前に…';
+        return L.beforePremiumRegistration;
       case SignInSheetStateContext.setting:
-        return 'アカウント登録';
+        return L.registerAccount;
     }
   }
 
   String get _message {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return 'Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます';
+        return L.createNewAccountIfNotLoggedIn;
       case SignInSheetStateContext.recordPage:
-        return 'アカウント登録するとデータの引き継ぎが可能になります';
+        return L.registerAccountForDataTransfer;
       case SignInSheetStateContext.premium:
-        return 'アカウント情報を保持するため、アカウント登録をお願いします';
+        return L.registerAccountToKeepData;
       case SignInSheetStateContext.setting:
-        return 'アカウント登録するとデータの引き継ぎが可能になります';
+        return L.registerAccountForDataTransfer;
     }
   }
 
   String get _appleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return '${LinkAccountType.apple.loginContentName}でサインイン';
+        return L.signInWith(LinkAccountType.apple.loginContentName);
       case SignInSheetStateContext.recordPage:
-        return '${LinkAccountType.apple.loginContentName}で登録';
+        return L.registerWith(LinkAccountType.apple.loginContentName)
       case SignInSheetStateContext.premium:
-        return '${LinkAccountType.apple.loginContentName}で登録';
+        return L.registerWith(LinkAccountType.apple.loginContentName)
       case SignInSheetStateContext.setting:
-        return '${LinkAccountType.apple.loginContentName}で登録';
+        return L.registerWith(LinkAccountType.apple.loginContentName)
     }
   }
 
   String get _googleButtonText {
     switch (stateContext) {
       case SignInSheetStateContext.initialSetting:
-        return '${LinkAccountType.google.loginContentName}でサインイン';
+        return L.signInWith(LinkAccountType.google.loginContentName);
       case SignInSheetStateContext.recordPage:
-        return '${LinkAccountType.google.loginContentName}で登録';
+        return L.registerWith(LinkAccountType.google.loginContentName);
       case SignInSheetStateContext.premium:
-        return '${LinkAccountType.google.loginContentName}で登録';
+        return L.registerWith(LinkAccountType.google.loginContentName);
       case SignInSheetStateContext.setting:
-        return '${LinkAccountType.google.loginContentName}で登録';
+        return L.registerWith(LinkAccountType.google.loginContentName);
     }
   }
 

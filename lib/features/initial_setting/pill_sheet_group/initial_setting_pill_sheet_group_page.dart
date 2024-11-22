@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -49,7 +50,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 duration: const Duration(seconds: 2),
-                content: Text('${accountType.providerName}でログインしました'),
+                content: Text(L.loggedInWithProvider(accountType.providerName)),
               ),
             );
           });

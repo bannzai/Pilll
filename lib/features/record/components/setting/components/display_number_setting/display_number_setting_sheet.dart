@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -106,9 +107,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         children: [
                           SvgPicture.asset('images/begin_display_number_setting.svg'),
                           const SizedBox(width: 4),
-                          const Text(
-                            '服用日数の始まり',
-                            style: TextStyle(
+                          Text(
+                            L.changeStartOfPillDays,
+                            style: const TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 12,
                               fontWeight: FontWeight.w700,

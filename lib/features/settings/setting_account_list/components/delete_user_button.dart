@@ -31,8 +31,8 @@ class DeleteUserButton extends HookConsumerWidget {
         onPressed: () async {
           showDiscardDialog(
             context,
-            title: 'ユーザー情報が削除されます',
-            message: '退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。',
+            title: L.userInformationWillBeDeleted,
+            message: L.withdrawalMessage,
             actions: [
               AlertButton(
                 text: L.cancel,
@@ -42,7 +42,7 @@ class DeleteUserButton extends HookConsumerWidget {
                 },
               ),
               AlertButton(
-                text: '退会する',
+                text: L.withdraw,
                 onPressed: () async {
                   analytics.logEvent(name: 'pressed_delete_user_button');
                   await (
@@ -58,7 +58,7 @@ class DeleteUserButton extends HookConsumerWidget {
             ],
           );
         },
-        text: '退会する',
+        text: L.withdraw,
       ),
     );
   }
@@ -82,8 +82,8 @@ class DeleteUserButton extends HookConsumerWidget {
         if (!context.mounted) return;
         showDiscardDialog(
           context,
-          title: '再ログインしてください',
-          message: '退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります',
+          title: L.doReLogin,
+          message: L.reLoginMessage,
           actions: [
             AlertButton(
               text: L.cancel,
@@ -92,7 +92,7 @@ class DeleteUserButton extends HookConsumerWidget {
               },
             ),
             AlertButton(
-              text: '再ログイン',
+              text: L.reLogin,
               onPressed: () async {
                 final navigator = Navigator.of(context);
                 if (isAppleLinked) {
@@ -141,9 +141,9 @@ class _CompletedDialog extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
-          const Text(
-            'アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。',
-            style: TextStyle(
+          Text(
+            L.appExitMessage,
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w400,
@@ -158,7 +158,7 @@ class _CompletedDialog extends StatelessWidget {
               onPressed: () async {
                 exit(0);
               },
-              text: 'OK',
+              text: L.oK,
             ),
           ),
         ],
