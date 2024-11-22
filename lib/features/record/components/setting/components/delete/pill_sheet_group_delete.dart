@@ -8,6 +8,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/delete_pill_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -76,7 +77,7 @@ class PillSheetGroupDelete extends HookConsumerWidget {
               ),
               actions: [
                 AlertButton(
-                  text: 'キャンセル',
+                  text: L.cancel,
                   onPressed: () async {
                     Navigator.of(context).pop();
                   },

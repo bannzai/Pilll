@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -76,7 +77,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                       message: '再度ログインをして認証情報を更新します',
                       actions: [
                         AlertButton(
-                          text: 'キャンセル',
+                          text: L.cancel,
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
@@ -130,7 +131,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                       message: '再度ログインをして認証情報を更新します',
                       actions: [
                         AlertButton(
-                          text: 'キャンセル',
+                          text: L.cancel,
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },

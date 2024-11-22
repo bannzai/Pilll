@@ -18,7 +18,7 @@ class DebugRow extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
       child: GestureDetector(
-        child: const Center(child: Text('COPY DEBUG INFO', style: TextStyle(color: TextColor.primary))),
+        child: Center(child: Text(L.copyDebugInfo, style: const TextStyle(color: TextColor.primary))),
         onTap: () async {
           Clipboard.setData(ClipboardData(text: await debugInfo('\n')));
         },
@@ -31,7 +31,7 @@ class DebugRow extends StatelessWidget {
 これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
 ''', actions: [
             AlertButton(
-              text: 'キャンセル',
+              text: L.cancel,
               onPressed: () async {
                 Navigator.of(context).pop();
               },

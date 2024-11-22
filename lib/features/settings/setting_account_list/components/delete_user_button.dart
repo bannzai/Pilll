@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -34,7 +35,7 @@ class DeleteUserButton extends HookConsumerWidget {
             message: '退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。',
             actions: [
               AlertButton(
-                text: 'キャンセル',
+                text: L.cancel,
                 onPressed: () async {
                   analytics.logEvent(name: 'cancel_delete_user');
                   Navigator.of(context).pop();
@@ -85,7 +86,7 @@ class DeleteUserButton extends HookConsumerWidget {
           message: '退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります',
           actions: [
             AlertButton(
-              text: 'キャンセル',
+              text: L.cancel,
               onPressed: () async {
                 Navigator.of(context).pop();
               },

@@ -8,6 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -208,7 +209,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                       message: '削除された予定は復元ができません',
                       actions: [
                         AlertButton(
-                          text: 'キャンセル',
+                          text: L.cancel,
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },

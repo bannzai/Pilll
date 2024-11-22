@@ -22,13 +22,15 @@ class PickerToolbar extends StatelessWidget {
               horizontal: 16.0,
               vertical: 5.0,
             ),
-            child: const Text('キャンセル',
-                style: TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.primary,
-                )),
+            child: Text(
+              L.cancel,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.primary,
+              ),
+            ),
           ),
           CupertinoButton(
             onPressed: () {

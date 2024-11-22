@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/app.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -78,7 +79,7 @@ class PillSheetRemoveRow extends HookConsumerWidget {
               ),
               actions: [
                 AlertButton(
-                  text: 'キャンセル',
+                  text: L.cancel,
                   onPressed: () async {
                     Navigator.of(context).pop();
                   },
