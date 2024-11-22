@@ -126,7 +126,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.premium:
                     return SettingSectionTitle(
-                      text: 'Pilllプレミアム',
+                      text: L.pillPremium,
                       children: [
                         if (user.isTrial) ...[
                           ListTile(
