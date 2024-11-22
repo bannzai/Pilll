@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:intl/intl.dart';
 
 class DateTimeFormatter {
@@ -65,5 +67,15 @@ class DateTimeFormatter {
   static String clock(int hour, minute, second) {
     final format = NumberFormat('00');
     return '${format.format(hour)}:${format.format(minute)}:${format.format(second)}';
+  }
+
+  // 月火水木金土日
+  static String shortWeekday(DateTime dateTime) {
+    return DateFormat.EEEE(Platform.localeName).format(dateTime);
+  }
+
+  // [月火水木金土日]
+  static List<String> shortWeekdays() {
+    return DateFormat.EEEE(Platform.localeName).dateSymbols.SHORTWEEKDAYS;
   }
 }
