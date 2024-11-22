@@ -124,7 +124,7 @@ class HomePageBody extends HookConsumerWidget {
         } else if (shouldAskCancelReason) {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
-              title: '解約後のアンケートご協力のお願い',
+              title: L.requestForCancelSurvey,
               url: 'https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform',
             ),
           );
@@ -174,12 +174,12 @@ class HomePageBody extends HookConsumerWidget {
                         tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg'),
                   ),
                   Tab(
-                    text: '生理',
+                    text: L.menstruation,
                     icon: SvgPicture.asset(
                         tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg'),
                   ),
                   Tab(
-                    text: 'カレンダー',
+                    text: L.calendar,
                     icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
                         ? 'images/tab_icon_calendar_enable.svg'
                         : 'images/tab_icon_calendar_disable.svg'),

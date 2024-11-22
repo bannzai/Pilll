@@ -339,5 +339,6 @@
   "twentyFourPlusFourDaysBreak": "24錠＋4錠休薬",
   "choosePillType": "ピルの種類を選ぶ",
   "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
-  "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます"
+  "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+  "requestForCancelSurvey": "解約後のアンケートご協力のお願い"
 }

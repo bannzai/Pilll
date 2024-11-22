@@ -212,7 +212,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.menstruation:
                     return SettingSectionTitle(
-                      text: '生理',
+                      text: L.menstruation,
                       children: [
                         MenstruationRow(setting),
                         _separator(),

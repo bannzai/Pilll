@@ -12,6 +12,7 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/entrypoint.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
@@ -371,7 +372,7 @@ class RegisterReminderLocalNotification {
             }
             // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
             if (result.isEmpty) {
-              return '通知です';
+              return L.notification;
             }
             return result;
           }();
