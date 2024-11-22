@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -78,9 +79,9 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                                 alignment: AlignmentDirectional.center,
                                 children: [
                                   SvgPicture.asset('images/yellow_spike.svg'),
-                                  const Text(
-                                    '人気の\n機能',
-                                    style: TextStyle(
+                                  Text(
+                                    L.popularFeatures,
+                                    style: const TextStyle(
                                       color: TextColor.primaryDarkBlue,
                                       fontSize: 10,
                                       fontFamily: FontFamily.japanese,

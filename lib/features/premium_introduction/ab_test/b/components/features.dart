@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PremiumIntroductionFeatures extends StatelessWidget {
   const PremiumIntroductionFeatures({super.key});
@@ -24,9 +25,9 @@ class PremiumIntroductionFeatures extends StatelessWidget {
             alignment: AlignmentDirectional.center,
             children: [
               SvgPicture.asset('images/yellow_spike.svg'),
-              const Text(
-                '人気の\n機能',
-                style: TextStyle(
+              Text(
+                L.popularFeatures,
+                style: const TextStyle(
                   color: TextColor.primaryDarkBlue,
                   fontSize: 10,
                   fontFamily: FontFamily.japanese,
