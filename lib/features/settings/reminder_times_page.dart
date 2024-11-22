@@ -19,6 +19,7 @@ import 'package:pilll/components/picker/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class ReminderTimesPage extends HookConsumerWidget {
   const ReminderTimesPage({super.key});
@@ -84,9 +85,9 @@ class ReminderTimesPageBody extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '通知時間',
-          style: TextStyle(color: TextColor.black),
+        title: Text(
+          L.notificationTime, // 通知時間を翻訳
+          style: const TextStyle(color: TextColor.black),
         ),
         actions: [
           IconButton(
@@ -101,7 +102,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
-                        content: Text('$tzに変更しました'),
+                        content: Text(L.timeZoneChangedTo.replaceAll('{tz}', tz)), // {tz}に変更しましたを翻訳
                       ),
                     );
                   },

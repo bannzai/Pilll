@@ -6,6 +6,7 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/reminder_notification_customize_word/page.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class ReminderNotificationCustomizeWord extends HookConsumerWidget {
   final Setting setting;
@@ -27,8 +28,8 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
       minVerticalPadding: 9,
       title: Row(
         children: [
-          const Text('服用通知のカスタマイズ',
-              style: TextStyle(
+          Text(L.customizeMedicationNotifications, // 服用通知のカスタマイズを翻訳
+              style: const TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
                 fontSize: 16,
@@ -39,8 +40,8 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
           ]
         ],
       ),
-      subtitle: const Text('服用通知の文言のカスタマイズができます',
-          style: TextStyle(
+      subtitle: Text(L.customizeNotificationText, // 服用通知の文言のカスタマイズができますを翻訳
+          style: const TextStyle(
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w300,
             fontSize: 14,

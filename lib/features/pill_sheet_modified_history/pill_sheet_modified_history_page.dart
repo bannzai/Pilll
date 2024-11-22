@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/features/root/localization/l.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
@@ -36,9 +37,9 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
-                title: const Text(
-                  '服用履歴',
-                  style: TextStyle(color: TextColor.main),
+                title: Text(
+                  L.medicationHistory,
+                  style: const TextStyle(color: TextColor.main),
                 ),
                 centerTitle: false,
                 backgroundColor: PilllColors.white,

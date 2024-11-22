@@ -5,7 +5,7 @@ String get storeName {
 }
 
 String get accountName {
-  return Platform.isIOS ? 'Apple ID' : 'Google アカウント';
+  return Platform.isIOS ? 'Apple ID' : 'Google';
 }
 
 String get forceUpdateStoreURL {

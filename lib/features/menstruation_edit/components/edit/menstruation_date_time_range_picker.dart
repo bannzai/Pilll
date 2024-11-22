@@ -1,81 +1,89 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/components/theme/date_range_picker.dart';
-import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
-import 'package:pilll/entity/menstruation.codegen.dart';
-import 'package:pilll/provider/menstruation.dart';
-import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
+import 'package:pilll/provider/database.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
+import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
+import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/provider/user.dart';
 
-void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation? initialMenstruation}) async {
-  void onSaved(Menstruation savedMenstruation) {
-    if (initialMenstruation == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          duration: const Duration(seconds: 2),
-          content: Text('${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました'),
-        ),
-      );
-    } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          duration: Duration(seconds: 2),
-          content: Text('生理期間を編集しました'),
-        ),
-      );
+class MenstruationDateTimeRangePicker extends HookConsumerWidget {
+  const MenstruationDateTimeRangePicker({super.key});
 
-      // 編集の場合はBottomSheet経由で開かれる
-      Navigator.of(context).pop();
-    }
-  }
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final loadingNext = useState(false);
+    final limit = useState(20);
+    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
+    final histories = historiesAsync.asData?.value ?? [];
 
-  final dateTimeRange = await showDateRangePicker(
-    context: context,
-    initialEntryMode: DatePickerEntryMode.calendarOnly,
-    initialDateRange: initialMenstruation?.dateTimeRange,
-    firstDate: DateTime.parse('2020-01-01'),
-    lastDate: today().addDays(30),
-    helpText: initialMenstruation == null ? '生理開始日を選択' : '生理期間の編集',
-    fieldStartHintText: '生理開始日',
-    fieldEndLabelText: '生理終了日',
-    builder: (context, child) {
-      return DateRangePickerTheme(child: child!);
-    },
-  );
-
-  if (dateTimeRange == null) {
-    return;
-  }
-
-  if (initialMenstruation == null) {
-    final menstruation = Menstruation(
-      beginDate: dateTimeRange.start,
-      endDate: dateTimeRange.end,
-      createdAt: now(),
-    );
-    try {
-      onSaved(await ref.read(setMenstruationProvider).call(menstruation));
-    } catch (e) {
-      if (context.mounted) showErrorAlert(context, e);
-    }
-  } else {
-    final menstruation = initialMenstruation.copyWith(
-      beginDate: dateTimeRange.start,
-      endDate: dateTimeRange.end,
-    );
-    try {
-      onSaved(await ref.read(setMenstruationProvider).call(menstruation));
-    } catch (e) {
-      if (context.mounted) showErrorAlert(context, e);
-    }
+    return ref.watch(userProvider).when(
+          error: (error, _) => UniversalErrorPage(
+            error: error,
+            child: null,
+            reload: () => ref.refresh(databaseProvider),
+          ),
+          loading: () => const ScaffoldIndicator(),
+          data: (user) {
+            return Scaffold(
+              backgroundColor: PilllColors.white,
+              appBar: AppBar(
+                leading: IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.black),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+                title: Text(
+                  L.medicationHistory, // 服用履歴を翻訳
+                  style: const TextStyle(color: TextColor.main),
+                ),
+                centerTitle: false,
+                backgroundColor: PilllColors.white,
+              ),
+              body: SafeArea(
+                child: NotificationListener<ScrollNotification>(
+                  onNotification: (notification) {
+                    if (!loadingNext.value && notification.metrics.pixels >= notification.metrics.maxScrollExtent && histories.isNotEmpty) {
+                      loadingNext.value = true;
+                      limit.value += 20;
+                    }
+                    return true;
+                  },
+                  child: Container(
+                    padding: const EdgeInsets.only(left: 24, right: 24, top: 24),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const PillSheetModifiedHisotiryListHeader(),
+                        const SizedBox(height: 4),
+                        Expanded(
+                          child: SingleChildScrollView(
+                            padding: const EdgeInsets.only(bottom: 20),
+                            physics: const AlwaysScrollableScrollPhysics(),
+                            child: PillSheetModifiedHistoryList(
+                              pillSheetModifiedHistories: histories,
+                              premiumOrTrial: user.premiumOrTrial,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            );
+          },
+        );
   }
 }
 
-void showEditMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {required Menstruation initialMenstruation}) async {
-  _showMenstruationDateRangePicker(context, ref, initialMenstruation: initialMenstruation);
-}
-
-void showCreateMenstruationDateRangePicker(BuildContext context, WidgetRef ref) async {
-  _showMenstruationDateRangePicker(context, ref, initialMenstruation: null);
+extension MenstruationDateTimeRangePickerRoute on MenstruationDateTimeRangePicker {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: const RouteSettings(name: 'MenstruationDateTimeRangePicker'),
+      builder: (_) => const MenstruationDateTimeRangePicker(),
+    );
+  }
 }

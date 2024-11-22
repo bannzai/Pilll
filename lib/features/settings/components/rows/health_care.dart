@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/native/health_care.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:pilll/features/root/localization/l.dart'; // Lクラスをインポート
 
 class HealthCareRow extends StatelessWidget {
   final DateTime? trialDeadlineDate;
@@ -19,7 +20,7 @@ class HealthCareRow extends StatelessWidget {
       minVerticalPadding: 9,
       title: const Row(
         children: [
-          Text('ヘルスケア連携',
+          Text(L.healthCareIntegration, // ヘルスケア連携を翻訳
               style: TextStyle(
                 fontFamily: FontFamily.roboto,
                 fontWeight: FontWeight.w300,
@@ -27,7 +28,7 @@ class HealthCareRow extends StatelessWidget {
               )),
         ],
       ),
-      subtitle: const Text('Pilllで記録した生理記録を自動でヘルスケアに記録できます'),
+      subtitle: Text(L.healthCareIntegrationDescription), // Pilllで記録した生理記録を自動でヘルスケアに記録できますを翻訳
       onTap: () async {
         analytics.logEvent(
           name: 'did_select_health_care_row',

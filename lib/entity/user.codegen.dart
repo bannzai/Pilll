@@ -3,6 +3,7 @@ import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:pilll/features/root/localization/l.dart';
 
 part 'user.codegen.g.dart';
 part 'user.codegen.freezed.dart';
@@ -10,14 +11,14 @@ part 'user.codegen.freezed.dart';
 class UserNotFound implements Exception {
   @override
   String toString() {
-    return 'user not found';
+    return L.userNotFound;
   }
 }
 
 class UserAlreadyExists implements Exception {
   @override
   String toString() {
-    return 'user already exists';
+    return L.userAlreadyExists;
   }
 }
 

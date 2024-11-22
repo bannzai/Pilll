@@ -19,7 +19,7 @@ class Day extends StatelessWidget {
         SizedBox(
           width: 28,
           child: Text(
-            '$_day',
+            L.day(date),
             style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.number,
