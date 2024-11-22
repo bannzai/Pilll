@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/features/error/alert_error.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ErrorAlert extends StatelessWidget {
@@ -34,13 +35,13 @@ class ErrorAlert extends StatelessWidget {
       actions: <Widget>[
         if (faq != null)
           AlertButton(
-            text: 'FAQを見る',
+            text: L.seeFAQ,
             onPressed: () async {
               launchUrl(Uri.parse(faq));
             },
           ),
         AlertButton(
-          text: '閉じる',
+          text: L.close,
           onPressed: () async {
             Navigator.of(context).pop();
           },

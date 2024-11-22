@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class RecordPageRestDurationDialog extends StatelessWidget {
@@ -56,11 +57,11 @@ class RecordPageRestDurationDialog extends StatelessWidget {
       actions: <Widget>[
         AppOutlinedButton(
           onPressed: () async => onDone(),
-          text: '服用をお休みする',
+          text: L.startPauseTaking,
         ),
         Center(
           child: AlertButton(
-            text: '閉じる',
+            text: L.close,
             onPressed: () async {
               Navigator.of(context).pop();
             },

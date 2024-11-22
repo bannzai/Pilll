@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -70,11 +71,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             analytics.logEvent(name: 'invalid_already_taken_pill_faq');
             launchUrl(Uri.parse('https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5'));
           },
-          text: '服用お休み機能の使い方を見る',
+          text: L.seeHowToUsePauseTakingFeature,
         ),
         Center(
           child: AlertButton(
-            text: '閉じる',
+            text: L.close,
             onPressed: () async {
               analytics.logEvent(name: 'invalid_already_taken_pill_close');
               Navigator.of(context).pop();

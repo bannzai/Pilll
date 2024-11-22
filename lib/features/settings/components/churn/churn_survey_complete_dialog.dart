@@ -14,9 +14,9 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      title: const Text(
-        'ご協力頂きありがとうございます',
-        style: TextStyle(
+      title: Text(
+        L.thankYouForCooperation,
+        style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
           fontWeight: FontWeight.w600,
@@ -40,7 +40,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: '閉じる',
+          text: L.close,
           onPressed: () async {
             analytics.logEvent(name: 'close_churn');
             Navigator.of(context).pop();
