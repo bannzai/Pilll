@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class RestDurationButton extends StatelessWidget {
   const RestDurationButton({super.key});
@@ -14,9 +15,9 @@ class RestDurationButton extends StatelessWidget {
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: PilllColors.disable),
         onPressed: null,
-        child: const Text(
-          '服用お休み中',
-          style: TextStyle(
+        child: Text(
+          L.pauseTaking,
+          style: const TextStyle(
             color: TextColor.lightGray,
             fontFamily: FontFamily.japanese,
             fontWeight: FontWeight.w700,

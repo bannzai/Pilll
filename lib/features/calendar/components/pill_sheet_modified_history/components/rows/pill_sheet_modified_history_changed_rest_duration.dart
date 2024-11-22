@@ -5,6 +5,7 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryChangedRestDuration extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
@@ -25,9 +26,9 @@ class PillSheetModifiedHistoryChangedRestDuration extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDuration(value)),
-      detail: const Text(
-        '服用お休み期間変更',
-        style: TextStyle(
+      detail: Text(
+        L.changePausePeriod,
+        style: const TextStyle(
           color: TextColor.main,
           fontSize: 12,
           fontFamily: FontFamily.japanese,

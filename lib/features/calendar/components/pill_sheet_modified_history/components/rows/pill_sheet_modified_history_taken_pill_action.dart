@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
@@ -70,7 +71,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                     messenger.showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
-                        content: Text('$dateに変更しました'),
+                        content: Text(L.changedToDate(date)),
                       ),
                     );
                     navigator.pop();

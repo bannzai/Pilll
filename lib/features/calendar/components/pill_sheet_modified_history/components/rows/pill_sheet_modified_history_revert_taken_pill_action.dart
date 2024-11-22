@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
@@ -30,9 +31,9 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
         beforeLastTakenPillNumber: beforeLastTakenPillNumber,
         afterLastTakenPillNumber: afterLastTakenPillNumber,
       )),
-      detail: const Text(
-        '服用取り消し',
-        style: TextStyle(
+      detail: Text(
+        L.cancelTaking,
+        style: const TextStyle(
           color: TextColor.main,
           fontSize: 12,
           fontFamily: FontFamily.japanese,

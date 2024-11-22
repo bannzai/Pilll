@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/invalid_already_taken_pill_dialog.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
@@ -29,11 +30,11 @@ class BeginManualRestDuration extends HookConsumerWidget {
 
     void didBeginRestDuration() {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          duration: Duration(
+        SnackBar(
+          duration: const Duration(
             seconds: 2,
           ),
-          content: Text('服用お休みを開始しました'),
+          content: Text(L.startPauseTaking),
         ),
       );
       Navigator.of(context).popUntil((route) => route.isFirst);
@@ -41,7 +42,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
 
     return ListTile(
       leading: const Icon(Icons.dark_mode_outlined),
-      title: const Text('服用お休み開始'),
+      title: Text(L.startPauseTaking),
       onTap: () {
         analytics.logEvent(name: 'begin_manual_rest_duration_pressed', parameters: {'pill_sheet_id': activePillSheet.id});
 
