@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -28,7 +29,7 @@ class TimezoneSettingDialog extends HookConsumerWidget {
       contentPadding: const EdgeInsets.only(left: 24, right: 24, top: 32, bottom: 20),
       actionsPadding: const EdgeInsets.only(left: 24, right: 24),
       title: Text(
-        '端末のタイムゾーン($deviceTimezoneName)と同期しますか？',
+        L.syncWithDeviceTimeZone(deviceTimezoneName),
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
@@ -40,9 +41,9 @@ class TimezoneSettingDialog extends HookConsumerWidget {
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
-          const Text(
-            '現在設定されているタイムゾーン',
-            style: TextStyle(
+          Text(
+            L.currentTimeZone,
+            style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
               fontWeight: FontWeight.w600,
@@ -81,11 +82,11 @@ class TimezoneSettingDialog extends HookConsumerWidget {
             }
             navigator.pop();
           },
-          text: 'はい',
+          text: L.yes,
         ),
         Center(
           child: AlertButton(
-            text: 'いいえ',
+            text: L.no,
             onPressed: () async {
               analytics.logEvent(
                 name: 'pressed_timezone_no',
