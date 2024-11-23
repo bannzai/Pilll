@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/add_pill_sheet_group_page.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -32,18 +33,20 @@ class AddPillSheetGroupEmptyFrame extends StatelessWidget {
                 'images/empty_frame.svg',
               ),
             ),
-            const Center(
+            Center(
                 child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Icon(Icons.add, color: TextColor.noshime),
-                Text('ピルシートを追加',
-                    style: TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.noshime,
-                    )),
+                const Icon(Icons.add, color: TextColor.noshime),
+                Text(
+                  L.addPillSheet,
+                  style: const TextStyle(
+                    fontFamily: FontFamily.japanese,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 14,
+                    color: TextColor.noshime,
+                  ),
+                ),
               ],
             )),
           ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -34,19 +35,21 @@ class EndedPillSheet extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 8, horizontal: 8),
         color: PilllColors.primary,
-        child: const Center(
+        child: Center(
           child: Column(
             children: [
-              Text('ピルシートが終了しました',
-                  style: TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                    color: TextColor.white,
-                  )),
               Text(
-                '最後に服用した日を確認',
-                style: TextStyle(
+                L.pillSheetEnded,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w600,
+                  fontSize: 14,
+                  color: TextColor.white,
+                ),
+              ),
+              Text(
+                L.checkLastTakenDate,
+                style: const TextStyle(
                   color: TextColor.white,
                   fontSize: 12,
                   fontWeight: FontWeight.w400,

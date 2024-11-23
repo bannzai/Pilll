@@ -71,7 +71,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                         analytics.logEvent(name: 'unknown_number_initial_setting');
                         Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
                       },
-                      text: 'まだ分からない',
+                      text: L.notYetKnown,
                     ),
                   ],
                 ),

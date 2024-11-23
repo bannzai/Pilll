@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -38,9 +39,9 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          'ピル番号の変更',
-          style: TextStyle(color: TextColor.black),
+        title: Text(
+          L.changePillNumber,
+          style: const TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
       ),
@@ -52,7 +53,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                 children: [
                   const SizedBox(height: 20),
                   Text(
-                    '今日(${_today()})\n飲む・飲んだピルの番号をタップ',
+                    L.selectTodayPillNumber(_today()),
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
@@ -97,7 +98,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 
                           navigator.pop();
                         },
-                        text: '変更する',
+                        text: L.change,
                       ),
                     ),
                     const SizedBox(height: 35),

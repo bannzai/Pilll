@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetTypeAddButton extends StatelessWidget {
   final Function(PillSheetType) onAdd;
@@ -41,8 +42,8 @@ class PillSheetTypeAddButton extends StatelessWidget {
             ),
             SizedBox(width: 4),
             Text(
-              'ピルシートを追加',
-              style: TextStyle(
+              L.addPillSheet,
+              style: const TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
                 fontSize: 12,

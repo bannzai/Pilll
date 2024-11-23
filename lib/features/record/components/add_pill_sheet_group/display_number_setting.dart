@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -37,9 +38,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
-              '服用',
-              style: TextStyle(
+            Text(
+              L.taking,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -82,9 +83,9 @@ class DisplayNumberSetting extends HookConsumerWidget {
               ),
             ),
             const SizedBox(width: 5),
-            const Text(
-              '番からスタート',
-              style: TextStyle(
+            Text(
+              L.startFromNumber,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
@@ -99,7 +100,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              '前回のシートの最後：$estimatedEndPillNumber番',
+              L.estimatedEndPillNumber(estimatedEndPillNumber),
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontSize: 12,

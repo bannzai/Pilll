@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
@@ -35,9 +36,9 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          'ピルシート追加',
-          style: TextStyle(color: TextColor.black),
+        title: Text(
+          L.addPillSheet,
+          style: const TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
       ),

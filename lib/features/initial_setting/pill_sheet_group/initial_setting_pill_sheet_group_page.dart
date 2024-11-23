@@ -80,9 +80,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 24),
-                      const Text(
-                        '処方されるシートについて\n教えてください',
-                        style: TextStyle(
+                      Text(
+                        L.tellAboutPrescribedSheet,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
@@ -117,7 +117,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         if (userIsAnonymous) ...[
                           const SizedBox(height: 20),
                           AlertButton(
-                            text: 'すでにアカウントをお持ちの方はこちら',
+                            text: L.existingAccountUsers,
                             onPressed: () async {
                               analytics.logEvent(name: 'pressed_initial_setting_signin');
                               showSignInSheet(

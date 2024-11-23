@@ -6,6 +6,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/setting/sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 
@@ -52,9 +53,9 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
       ).merge(
         ElevatedButton.styleFrom(elevation: 0),
       ),
-      child: const Text(
-        'ピルシートの設定',
-        style: TextStyle(
+      child: Text(
+        L.pillSheetSettings,
+        style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 12,
           fontWeight: FontWeight.w700,
