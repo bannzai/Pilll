@@ -41,9 +41,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           child: Column(
             children: <Widget>[
               const SizedBox(height: 24),
-              const Text(
-                'ピルの飲み忘れ通知',
-                style: TextStyle(
+              Text(
+                L.missedPillNotification,
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 17,
@@ -62,13 +62,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           return _form(context, store, state, index);
                         })),
                   ),
-                  const Text('複数設定しておく事で飲み忘れを防げます',
-                      style: TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.main,
-                      )),
+                  Text(
+                    L.setMultipleReminders,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.main,
+                    ),
+                  ),
                 ],
               ),
               const Spacer(),
@@ -78,8 +80,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                       children: [
+                        // TODO: [Localizations]
                         TextSpan(
-                          text: 'プライバシーポリシー',
+                          text: L.privacyPolicy,
                           style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -91,9 +94,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                               launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppWebView);
                             },
                         ),
-                        const TextSpan(
-                          text: 'と',
-                          style: TextStyle(
+                        TextSpan(
+                          text: L.and,
+                          style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
@@ -101,7 +104,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '利用規約',
+                          text: L.termsOfService,
                           style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -113,9 +116,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                               launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppWebView);
                             },
                         ),
-                        const TextSpan(
-                          text: 'を読んで\n利用をはじめてください',
-                          style: TextStyle(
+                        TextSpan(
+                          text: L.readAndStartUsing,
+                          style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,

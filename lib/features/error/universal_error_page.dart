@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -95,13 +96,15 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                     Icons.refresh,
                     size: 20,
                   ),
-                  label: const Text('画面を再読み込み',
-                      style: TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.black,
-                      )),
+                  label: Text(
+                    L.reloadScreen,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.black,
+                    ),
+                  ),
                   onPressed: () {
                     analytics.logEvent(name: 'reload_button_pressed');
                     setState(() {
