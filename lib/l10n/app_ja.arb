@@ -44,6 +44,7 @@
   "no": "いいえ",
   "unsubscribeInfo": "解約について",
   "pillReminder": "ピルの服用通知",
+  "takePillReminder": "服用通知",
   "copyDebugInfo": "COPY DEBUG INFO",
   "cancel": "キャンセル",
   "signOut": "サインアウト",

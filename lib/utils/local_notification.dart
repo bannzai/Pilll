@@ -94,16 +94,16 @@ class LocalNotificationService {
       'test title',
       'test body',
       tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),
-      const NotificationDetails(
+      NotificationDetails(
         android: AndroidNotificationDetails(
           androidReminderNotificationChannelID,
-          '服用通知',
+          L.takePillReminder,
           channelShowBadge: true,
           setAsGroupSummary: true,
           groupKey: androidReminderNotificationGroupKey,
           category: AndroidNotificationCategory.reminder,
         ),
-        iOS: DarwinNotificationDetails(
+        iOS: const DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
           sound: 'becho.caf',
           presentBadge: true,
@@ -405,14 +405,14 @@ class RegisterReminderLocalNotification {
                   message,
                   reminderDateTime,
                   NotificationDetails(
-                    android: const AndroidNotificationDetails(
+                    android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
-                      '服用通知',
+                      L.takePillReminder,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
                       category: AndroidNotificationCategory.reminder,
-                      actions: [
+                      actions: const [
                         AndroidNotificationAction(
                           actionIdentifier,
                           '飲んだ',
@@ -465,9 +465,9 @@ class RegisterReminderLocalNotification {
                   '',
                   reminderDateTime,
                   NotificationDetails(
-                    android: const AndroidNotificationDetails(
+                    android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
-                      '服用通知',
+                      L.takePillReminder,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
@@ -620,16 +620,16 @@ class NewPillSheetNotification {
           '今日から新しいシートがはじまります',
           '🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍',
           reminderDateTime,
-          const NotificationDetails(
+          NotificationDetails(
             android: AndroidNotificationDetails(
               androidReminderNotificationChannelID,
-              '服用通知',
+              L.takePillReminder,
               channelShowBadge: true,
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
               category: AndroidNotificationCategory.reminder,
             ),
-            iOS: DarwinNotificationDetails(
+            iOS: const DarwinNotificationDetails(
               sound: 'becho.caf',
               presentBadge: true,
               presentSound: true,

@@ -41,8 +41,8 @@ class EndManualRestDuration extends HookConsumerWidget {
 
     return ListTile(
       leading: const Icon(Icons.play_arrow),
-      title: const Text(
-        '服用再開',
+      title: Text(
+        L.resumeTaking,
       ),
       onTap: () async {
         analytics.logEvent(name: 'end_manual_rest_duration_pressed');
