@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -82,7 +83,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                   SizedBox(
                     width: 180,
                     child: PrimaryButton(
-                      text: '次へ',
+                      text: L.next,
                       onPressed: state.todayPillNumber == null
                           ? null
                           : () async {

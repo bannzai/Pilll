@@ -107,7 +107,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                           SizedBox(
                             width: 180,
                             child: PrimaryButton(
-                              text: '次へ',
+                              text: L.next,
                               onPressed: () async {
                                 analytics.logEvent(name: 'next_to_today_pill_number');
                                 Navigator.of(context).push(InitialSettingSelectTodayPillNumberPageRoute.route());

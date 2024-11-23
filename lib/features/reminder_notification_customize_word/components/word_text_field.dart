@@ -2,6 +2,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class WordTextField extends StatelessWidget {
   final ValueNotifier<String> word;
@@ -26,9 +27,9 @@ class WordTextField extends StatelessWidget {
           borderSide: BorderSide(color: PilllColors.secondary),
         ),
         counter: Row(children: [
-          const Text(
-            '通知の先頭部分の変更ができます',
-            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+          Text(
+            L.changeNotificationHeader,
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
           if (word.value.characters.isNotEmpty)
@@ -37,9 +38,9 @@ class WordTextField extends StatelessWidget {
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
           if (word.value.characters.isEmpty)
-            const Text(
-              '0文字以上入力してください',
-              style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
+            Text(
+              L.enterAtLeastOneCharacter,
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.danger),
             ),
         ]),
       ),

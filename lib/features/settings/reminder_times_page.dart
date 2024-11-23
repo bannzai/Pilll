@@ -85,9 +85,9 @@ class ReminderTimesPageBody extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '通知時間',
-          style: TextStyle(color: TextColor.black),
+        title: Text(
+          L.notificationTime,
+          style: const TextStyle(color: TextColor.black),
         ),
         actions: [
           IconButton(

@@ -132,7 +132,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   SizedBox(
                     width: 180,
                     child: PrimaryButton(
-                      text: '次へ',
+                      text: L.next,
                       onPressed: () async {
                         analytics.logEvent(name: 'next_initial_setting_reminder_times');
                         Navigator.of(context).push(IntiialSettingPremiumTrialStartPageRoute.route());

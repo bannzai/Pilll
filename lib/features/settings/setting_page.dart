@@ -184,7 +184,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.notification:
                     return SettingSectionTitle(
-                      text: '通知',
+                      text: L.notification,
                       children: [
                         ToggleReminderNotification(setting: setting),
                         _separator(),
