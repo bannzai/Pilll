@@ -166,6 +166,8 @@
   "changeEndOfPillDays": "服用日数の終わりを変更",
   "changePausePeriod": "服用お休み期間変更",
   "changedToDate": "{date}に変更しました",
+  "quickRecordTakePillFailed": "服用記録が失敗した可能性があります",
+  "quickRecordTakePillFailedMessage": "アプリを開いてご確認ください",
   "cancelTaking": "服用取り消し",
   "endPillSheet": "ピルシート終了",
   "discardPillSheet": "ピルシート破棄",

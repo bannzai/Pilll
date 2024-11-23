@@ -3,6 +3,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookConsumerWidget {
@@ -25,7 +26,7 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
             );
           },
           loading: () => const Indicator(),
-          error: (e, _) => Text('服用履歴情報の取得に失敗しました。${e.toString()}'),
+          error: (e, _) => Text(L.cannotUpdateToReplacePillSheet(e.toString()),
         );
   }
 }

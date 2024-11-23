@@ -200,9 +200,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       SvgPicture.asset('images/end_display_number_setting.svg'),
                       const SizedBox(width: 4),
-                      const Text(
-                        '服用日数の終わり',
-                        style: TextStyle(
+                      Text(
+                        L.changeEndOfPillDays,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -248,9 +248,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         ),
                       ),
                       const SizedBox(width: 5),
-                      const Text(
-                        '番に変更',
-                        style: TextStyle(
+                      Text(
+                        L.changedToNumber,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 14,
                           fontWeight: FontWeight.w400,

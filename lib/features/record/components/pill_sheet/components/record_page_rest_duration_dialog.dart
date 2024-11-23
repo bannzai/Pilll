@@ -31,13 +31,15 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          const Text('服用をお休みするとピル番号は進みません',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w500,
-                fontSize: 14,
-                color: TextColor.main,
-              )),
+          Text(
+            L.pauseTakingDoesNotAdvancePillNumber,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w500,
+              fontSize: 14,
+              color: TextColor.main,
+            ),
+          ),
           const SizedBox(height: 24),
           Text(
             appearanceMode == PillSheetAppearanceMode.date ? '例えば「1/12から3日間」服用お休みした場合' : '例えば「18番から3日間」服用お休みした場合',

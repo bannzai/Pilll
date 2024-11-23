@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -37,9 +38,9 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              '表示モード',
-              style: TextStyle(
+            Text(
+              L.displayMode,
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w500,
                 fontFamily: FontFamily.japanese,
@@ -58,7 +59,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.date,
-                  text: '日付表示',
+                  text: L.dateDisplay,
                   isPremiumFunction: true,
                 ),
                 _row(
@@ -70,7 +71,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.number,
-                  text: 'ピル番号',
+                  text: L.pillNumber,
                   isPremiumFunction: false,
                 ),
                 _row(
@@ -82,7 +83,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.sequential,
-                  text: '服用日数',
+                  text: L.pillDays,
                   isPremiumFunction: false,
                 ),
                 _row(
@@ -94,7 +95,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
                   mode: PillSheetAppearanceMode.cyclicSequential,
-                  text: '服用日数(周期)',
+                  text: L.pillDaysCycle,
                   isPremiumFunction: false,
                 ),
               ],
