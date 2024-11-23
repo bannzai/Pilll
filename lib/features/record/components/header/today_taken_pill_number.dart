@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -36,9 +37,9 @@ class TodayTakenPillNumber extends StatelessWidget {
               ),
             ),
           if (!_appearanceMode.isSequential)
-            const Text(
-              '💊 今日飲むピル',
-              style: TextStyle(
+            Text(
+              L.todayPillToTake,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -96,8 +97,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          const Text('番',
-              style: TextStyle(
+          Text(L.perNumber,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -112,8 +113,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          const Text('番',
-              style: TextStyle(
+          Text(L.perNumber,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -128,8 +129,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          const Text('番',
-              style: TextStyle(
+          Text(L.perNumber,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,

@@ -46,7 +46,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                   children: [
                     const SizedBox(height: 24),
                     Text(
-                      '今日(${todayString()})\n飲む・飲んだピルの番号をタップ',
+                      L.selectTodayPillNumber(todayString()),
                       style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w500,

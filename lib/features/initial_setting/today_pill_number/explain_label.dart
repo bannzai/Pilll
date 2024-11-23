@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class ExplainPillNumber extends HookConsumerWidget {
   final String today;
@@ -30,7 +31,7 @@ class ExplainPillNumber extends HookConsumerWidget {
             ];
           }
           return <Widget>[
-            Text('$todayに飲むピルは',
+            Text(L.pillForToday(today),
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
@@ -44,8 +45,8 @@ class ExplainPillNumber extends HookConsumerWidget {
                   fontSize: 34,
                   color: TextColor.main,
                 )),
-            const Text('番',
-                style: TextStyle(
+            Text(L.perNumber,
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
