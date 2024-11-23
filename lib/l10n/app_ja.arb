@@ -292,17 +292,6 @@
   "notYetKnown": "まだ分からない",
   "pillForToday": "{today}に飲むピルは",
   "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-  "noticeAndApology": "お知らせとお詫び",
-  "updateToReferOldData": "今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。",
-  "settingsToViewOldInfo": "設定 > 大型アップデート前の情報 ",
-  "viewFromSettings": "から表示されます。",
-  "userFeedbackAfterUpdate": "先日の大型アップデート後に一部のユーザーの方から「アップデート前のデータが分からなくなり、今飲んでいるピル番号が把握できなくなった」と。お問い合わせをいただきました。アプリの作り直しの過程で自動でピル番号を自動的に移行することが困難になり、このような事態になってしまいました。",
-  "adjustPillSheetNumbers": "同じようにお困りの方はこちらの表示を参考にしてピルシートの番号を調整していただくようお願いします。ピル番号の調整はピルシートを作っていただいてから",
-  "settingsChangePillNumber": "設定 > 今日飲むピル番号の変更",
-  "adjustTodayPillNumber": "へおすすみください。今日服用するピルの番号を調整できます。",
-  "forUsersWhoKnowCurrentPillNumber": "なお現在服用している番号がすでに把握できている方は引き続きそのままアプリを使っていただいて構いません。",
-  "apologyToUsers": "今回は以前からアプリを使っていただいているユーザーの方にご迷惑をおかけする形になり申し訳ありません。",
-  "thanksForSupport": "引き続きよろしくお願いいたします。",
   "preview": "プレビュー",
   "normal": "通常",
   "missed": "飲み忘れ",
@@ -358,5 +347,7 @@
   "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
   "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
   "requestForCancelSurvey": "解約後のアンケートご協力のお願い",
-  "pilllDescription": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  "pilllDescription": "Pilll ピル服用に特化したピルリマインダーアプリ",
+  "reachedMaximumCountOfReminderTimes": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+  "minimumCountOfReminderTimes": "通知時間は最低${ReminderTimeMinimumCount}件必要です"
 }

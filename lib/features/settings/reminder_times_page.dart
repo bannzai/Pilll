@@ -314,10 +314,10 @@ class ReminderTimesPageBody extends StatelessWidget {
     required SetSetting setSetting,
   }) async {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      throw Exception('登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください');
+      throw Exception(L.reachedMaximumCountOfReminderTimes(ReminderTime.maximumCount));
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
-      throw Exception('通知時刻は最低${ReminderTime.minimumCount}件必要です');
+      throw Exception(L.minimumCountOfReminderTimes(ReminderTime.minimumCount));
     }
     await setSetting(setting.copyWith(reminderTimes: reminderTimes));
     await registerReminderLocalNotification();
