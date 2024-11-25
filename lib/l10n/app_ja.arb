@@ -101,7 +101,7 @@
   "editMenstruationPeriod": "生理期間を編集",
   "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDaySavedMenstruationBeginDate}から生理開始で記録しました",
   "menstruationEdited": "生理期間を編集しました",
-  "conditionDetails": "体調詳細",
+  "physicalConditionDetail": "体調詳細",
   "medicationHistoryPremiumFeatureRestriction": "これ以上の閲覧はプレミアム機能になります",
   "viewMoreDetails": "くわしくみる",
   "viewMore": "もっと見る",
@@ -423,5 +423,13 @@
   "diaryRecord": "日記を記録",
   "scheduleRecord": "予定を記入",
   "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません",
-  "withPillSheetCount": "{number}枚"
+  "withPillSheetCount": "{number}枚",
+  "connectionError": "通信環境が不安定のようです。時間をおいて再度お試しください",
+  "unknownErrorAndRetryAfter": "エラーが発生しました。時間をおいて再度お試しください",
+  "errorOccurred": "エラーが発生しました",
+  "unknownError": "不明なエラーが発生しました",
+  "unexpectedErrorOccurred": "予期しないエラーが発生しました",
+  "pressAndHoldNotificationToRecordPillTaking": "通知を長押しすると服用記録ができます",
+  "trialDeadlineDateOffsetDay": "{number}日間すべての機能が使えます！",
+  "inputAndAdd": "入力して追加"
 }
