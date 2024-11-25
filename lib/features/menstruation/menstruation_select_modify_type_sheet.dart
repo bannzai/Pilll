@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 enum MenstruationSelectModifyType { today, yesterday, begin }
 
@@ -50,15 +51,17 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 21, left: 16),
-              child: Text('生理を記録',
-                  style: TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: TextColor.main,
-                  )),
+            Padding(
+              padding: const EdgeInsets.only(top: 21, left: 16),
+              child: Text(
+                L.recordMenstruation,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                  color: TextColor.main,
+                ),
+              ),
             ),
             const SizedBox(height: 24),
             SizedBox(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/theme/date_range_picker.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_date_time_range_picker.dart';
 import 'package:pilll/features/menstruation_edit/components/edit/menstruation_edit_selection_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -133,11 +134,11 @@ class MenstruationRecordButton extends HookConsumerWidget {
   String get _buttonString {
     final latestMenstruation = this.latestMenstruation;
     if (latestMenstruation == null) {
-      return '生理を記録';
+      return L.recordMenstruation;
     }
     if (latestMenstruation.dateRange.inRange(today())) {
-      return '生理期間を編集';
+      return L.editMenstruationPeriod;
     }
-    return '生理を記録';
+    return L.recordMenstruation;
   }
 }
