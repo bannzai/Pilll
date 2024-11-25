@@ -17,9 +17,9 @@ class DiaryPostMemo extends HookConsumerWidget {
         maxHeight: 200,
       ),
       child: TextFormField(
-        decoration: const InputDecoration(
+        decoration: InputDecoration(
           hintText: L.memo,
-          border: OutlineInputBorder(),
+          border: const OutlineInputBorder(),
         ),
         controller: textEditingController,
         maxLines: null,

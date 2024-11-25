@@ -238,7 +238,7 @@ ${L.pilllDescription}
 
 iOS: https://onl.sc/piiY1A6
 Android: https://onl.sc/c9xnQUk''';
-                              Clipboard.setData(const ClipboardData(text: text));
+                              Clipboard.setData(ClipboardData(text: text));
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   duration: const Duration(seconds: 2),

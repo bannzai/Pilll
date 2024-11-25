@@ -24,9 +24,9 @@ class DailyTakenMessageTextField extends StatelessWidget {
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: PilllColors.secondary),
         ),
-        label: const Text(
+        label: Text(
           L.normal,
-          style: TextStyle(
+          style: const TextStyle(
             color: TextColor.darkGray,
             fontFamily: FontFamily.japanese,
             fontSize: 12,

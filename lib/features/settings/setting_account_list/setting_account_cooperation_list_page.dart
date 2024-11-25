@@ -93,8 +93,8 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                               await appleReauthentification();
 
                               messenger.showSnackBar(
-                                const SnackBar(
-                                  duration: Duration(seconds: 2),
+                                SnackBar(
+                                  duration: const Duration(seconds: 2),
                                   content: Text(L.authenticationInfoUpdated),
                                 ),
                               );

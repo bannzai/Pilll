@@ -83,8 +83,8 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     await registerReminderLocalNotification();
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          duration: Duration(
+                        SnackBar(
+                          duration: const Duration(
                             seconds: 2,
                           ),
                           content: Text(L.changedStartAndEndNumbers),

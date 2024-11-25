@@ -1,5 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/root/launch_exception.dart';
 import 'package:pilll/provider/set_user_id.dart';
 import 'package:pilll/entity/user.codegen.dart';

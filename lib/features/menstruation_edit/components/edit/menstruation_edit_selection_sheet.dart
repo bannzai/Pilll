@@ -56,17 +56,17 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
                   initialMenstruation: menstruation,
                 );
               },
-              child: const Row(
+              child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.edit,
                     color: TextColor.main,
                     size: 20,
                   ),
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Text(
                     L.editMenstruation,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: TextColor.main,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
