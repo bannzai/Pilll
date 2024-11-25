@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 const double _tileHeight = 48;
 
@@ -21,11 +22,11 @@ class DiaryOrScheduleSheet extends StatelessWidget {
           children: [
             const SizedBox(height: 24),
             _tile(
-              title: '日記を記録',
+              title: L.diaryRecord,
               onTap: () => showDiary(),
               leading: const Icon(Icons.note_alt),
             ),
-            _tile(title: '予定を記入', onTap: () => showSchedule(), leading: const Icon(Icons.event)),
+            _tile(title: L.scheduleRecord, onTap: () => showSchedule(), leading: const Icon(Icons.event)),
           ],
         ),
       ),

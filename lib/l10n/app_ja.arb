@@ -419,5 +419,8 @@
   "withNumber": "{number}番",
   "currentPillSheetNotFound": "現在対象となっているピルシートが見つかりませんでした",
   "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません",
-  "googleAccount": "Google アカウント"
+  "googleAccount": "Google アカウント",
+  "diaryRecord": "日記を記録",
+  "scheduleRecord": "予定を記入",
+  "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません"
 }

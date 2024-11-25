@@ -281,7 +281,7 @@ class PremiumIntroductionOverlay extends StatelessWidget {
                   SizedBox(
                     width: 204,
                     child: AppOutlinedButton(
-                      text: 'くわしくみる',
+                      text: L.viewMoreDetails,
                       onPressed: () async {
                         analytics.logEvent(
                           name: 'pressed_premium_overlay_monthly_calendar',
