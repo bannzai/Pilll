@@ -58,7 +58,7 @@ class PillSheetGroup with _$PillSheetGroup {
     }
     final index = pillSheets.indexWhere((element) => element.id == pillSheet.id);
     if (index == -1) {
-      throw FormatException(L.cannotUpdateToReplacePillSheet(pillSheet.id));
+      throw FormatException(L.cannotUpdateToReplacePillSheet(pillSheet.id ?? ''));
     }
     final copied = [...pillSheets];
     copied[index] = pillSheet;

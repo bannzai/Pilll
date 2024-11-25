@@ -79,7 +79,7 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
                 builder: (context) {
                   return DiscardDialog(
                     title: L.deleteDiary,
-                    message: const Text(
+                    message: Text(
                       L.deletedDiaryCannotBeRestored,
                       style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
                     ),
@@ -125,10 +125,9 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalCondition(Diary diary) {
     return Row(
       children: [
-        Text(
-          L.physicalCondition,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
+        Text(L.physicalCondition,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w300,
               fontSize: 16,
               color: TextColor.black,
