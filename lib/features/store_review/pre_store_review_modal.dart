@@ -145,7 +145,7 @@ class _ThanksDialog extends StatelessWidget {
         Icons.thumb_up,
         color: PilllColors.primary,
       ),
-      content: const Column(
+      content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -158,11 +158,11 @@ class _ThanksDialog extends StatelessWidget {
               color: TextColor.main,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           Text(L.surveyForServiceImprovement,
-              style: TextStyle(
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
