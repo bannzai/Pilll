@@ -77,10 +77,10 @@ class Purchase {
       final purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
-        throw AssertionError('unexpected premium entitlements is not exists');
+        throw AssertionError(L.unexpectedPremiumEntitlementsIsNotExists);
       }
       if (!premiumEntitlement.isActive) {
-        throw AlertError('課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください');
+        throw AlertError(L.purchaseErrorPurchasePendingError);
       }
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);

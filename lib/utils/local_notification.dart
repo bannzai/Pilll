@@ -65,7 +65,7 @@ class LocalNotificationService {
             DarwinNotificationCategory(
               iOSQuickRecordPillCategoryIdentifier,
               actions: [
-                DarwinNotificationAction.plain(actionIdentifier, '飲んだ'),
+                DarwinNotificationAction.plain(actionIdentifier, L.taken),
               ],
             ),
           ],
@@ -364,7 +364,7 @@ class RegisterReminderLocalNotification {
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
               result += ' ';
               result += pillSheetDisplayNumber;
-              result += '番';
+              result += L.number;
             }
 
             if (Environment.isDevelopment) {
@@ -412,10 +412,10 @@ class RegisterReminderLocalNotification {
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
                       category: AndroidNotificationCategory.reminder,
-                      actions: const [
+                      actions: [
                         AndroidNotificationAction(
                           actionIdentifier,
-                          '飲んだ',
+                          L.taken,
                         )
                       ],
                     ),
@@ -455,7 +455,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          const title = '💊の時間です';
+          final title = L.takePillReminder;
           futures.add(
             Future(() async {
               try {
@@ -569,13 +569,13 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
       final remindDate = tz.TZDateTime.from(localNotification.remindDateTime, tz.local);
       await plugin.zonedSchedule(
         localNotification.localNotificationID,
-        '本日の予定です',
+        L.todaySchedule,
         schedule.title,
         remindDate,
         const NotificationDetails(
           android: AndroidNotificationDetails(
             androidCalendarScheduleNotificationChannelID,
-            'カレンダーの予定',
+            L.calendarSchedule,
             groupKey: null,
             category: AndroidNotificationCategory.reminder,
           ),
@@ -617,8 +617,8 @@ class NewPillSheetNotification {
       try {
         await localNotificationService.plugin.zonedSchedule(
           newPillSheetNotificationIdentifier,
-          '今日から新しいシートがはじまります',
-          '🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍',
+          L.newPillSheetNotificationTitle,
+          L.newPillSheetNotificationMessage,
           reminderDateTime,
           NotificationDetails(
             android: AndroidNotificationDetails(
