@@ -1,3 +1,5 @@
+import 'package:pilll/features/localizations/l.dart';
+
 enum LinkAccountType { apple, google }
 
 extension LinkAccountTypeExtension on LinkAccountType {
@@ -6,7 +8,7 @@ extension LinkAccountTypeExtension on LinkAccountType {
       case LinkAccountType.apple:
         return 'Apple';
       case LinkAccountType.google:
-        return 'Google';
+        return L.googleAccount;
     }
   }
 

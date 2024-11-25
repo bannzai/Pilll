@@ -1,11 +1,13 @@
 import 'dart:io';
 
+import 'package:pilll/features/localizations/l.dart';
+
 String get storeName {
   return Platform.isIOS ? 'App Store' : 'Google Play';
 }
 
 String get accountName {
-  return Platform.isIOS ? 'Apple ID' : 'Google アカウント';
+  return Platform.isIOS ? 'Apple ID' : L.googleAccount;
 }
 
 String get forceUpdateStoreURL {

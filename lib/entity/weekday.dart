@@ -28,6 +28,7 @@ extension WeekdayFunctions on Weekday {
     return Weekday.values.sublist(firstWeekday.index)..addAll(Weekday.values.sublist(0, firstWeekday.index));
   }
 
+  // TODO: [Localizations]
   String weekdayString() {
     switch (this) {
       case Weekday.Sunday:

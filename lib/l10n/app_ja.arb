@@ -418,5 +418,6 @@
   "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
   "withNumber": "{number}番",
   "currentPillSheetNotFound": "現在対象となっているピルシートが見つかりませんでした",
-  "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません",
+  "googleAccount": "Google アカウント"
 }
