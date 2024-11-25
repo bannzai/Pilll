@@ -400,5 +400,8 @@
   "visitHospital": "通院する",
   "receiveNotificationAt9AM": "当日9:00に通知を受け取る",
   "deletedScheduleCannotBeRestored": "削除された予定は復元ができません",
-  "deleteSchedule": "予定を削除します"
+  "deleteSchedule": "予定を削除します",
+  "onlySupportiOS": "iOSアプリにのみ対応しています",
+  "healthKitDoesNotSupport": "ヘルスケアに対応していない端末ではご利用できません",
+  "enableHealthKitFromSettings": "設定アプリよりヘルスケアを有効にしてください"
 }

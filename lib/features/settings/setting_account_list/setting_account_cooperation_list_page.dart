@@ -44,9 +44,9 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
-                  child: const Text(
-                    'アカウント登録',
-                    style: TextStyle(
+                  child: Text(
+                    L.registerAccount,
+                    style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
                       fontSize: 14,
