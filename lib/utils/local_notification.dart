@@ -572,14 +572,14 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
         L.todaySchedule,
         schedule.title,
         remindDate,
-        const NotificationDetails(
+        NotificationDetails(
           android: AndroidNotificationDetails(
             androidCalendarScheduleNotificationChannelID,
             L.calendarSchedule,
             groupKey: null,
             category: AndroidNotificationCategory.reminder,
           ),
-          iOS: DarwinNotificationDetails(
+          iOS: const DarwinNotificationDetails(
             sound: 'becho.caf',
           ),
         ),

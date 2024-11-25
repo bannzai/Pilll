@@ -61,8 +61,6 @@ void definedChannel() {
           );
         }
         return;
-      case 'salvagedOldStartTakenDate':
-        return salvagedOldStartTakenDate(call.arguments);
       case 'analytics':
         final name = call.arguments['name'] as String;
         final parameters = Map<String, dynamic>.from(call.arguments['parameters']);

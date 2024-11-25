@@ -254,11 +254,11 @@ class SignInSheet extends HookConsumerWidget {
       case SignInSheetStateContext.initialSetting:
         return L.signInWith(LinkAccountType.apple.loginContentName);
       case SignInSheetStateContext.recordPage:
-        return L.registerWith(LinkAccountType.apple.loginContentName)
+        return L.registerWith(LinkAccountType.apple.loginContentName);
       case SignInSheetStateContext.premium:
-        return L.registerWith(LinkAccountType.apple.loginContentName)
+        return L.registerWith(LinkAccountType.apple.loginContentName);
       case SignInSheetStateContext.setting:
-        return L.registerWith(LinkAccountType.apple.loginContentName)
+        return L.registerWith(LinkAccountType.apple.loginContentName);
     }
   }
 

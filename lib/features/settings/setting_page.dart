@@ -33,12 +33,10 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
