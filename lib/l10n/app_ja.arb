@@ -343,6 +343,7 @@
   "daysMenstruationLasts": " 日間生理が続く",
   "selectPillNumberForMenstruationStart": "生理がはじまるピル番号をタップ",
   "countOfSheet": "{number}枚目",
+  "newPillSheetStart": "新しいピルシート開始 ▶︎",
   "selectPillType": "ピルの種類を選択",
   "twentyOnePills": "21錠",
   "twentyEightPills": "28錠",

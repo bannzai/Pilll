@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
   const SettingPillSheetGroupPillSheetTypeSelectRow({
@@ -28,7 +29,7 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
         Row(
           children: [
             Text(
-              '${index + 1}枚目',
+              L.countOfSheet(index + 1),
               style: const TextStyle(
                 color: TextColor.main,
                 fontSize: 13,
