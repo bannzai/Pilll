@@ -121,13 +121,15 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                     Icons.mail,
                     size: 20,
                   ),
-                  label: const Text('解決しない場合はこちら',
-                      style: TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.black,
-                      )),
+                  label: Text(
+                    L.contactIfNotResolved,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.black,
+                    ),
+                  ),
                   onPressed: () {
                     analytics.logEvent(name: 'problem_unresolved_button_pressed');
                     inquiry();
