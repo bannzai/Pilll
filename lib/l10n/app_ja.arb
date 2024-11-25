@@ -394,5 +394,11 @@
   "purchaseErrorProductRequestTimeout": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
   "purchaseErrorInvalidPromotionalOfferError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
-  "purchaseErrorOfflineConnectionError": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}"
+  "purchaseErrorOfflineConnectionError": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+  "forceUpdateTitle": "アプリをアップデートしてください",
+  "forceUpdateMessage": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+  "visitHospital": "通院する",
+  "receiveNotificationAt9AM": "当日9:00に通知を受け取る",
+  "deletedScheduleCannotBeRestored": "削除された予定は復元ができません",
+  "deleteSchedule": "予定を削除します"
 }
