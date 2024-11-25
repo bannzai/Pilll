@@ -33,7 +33,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: const Duration(seconds: 2),
-          content: Text('${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました'),
+          content: Text(L.recordedMenstruationStartDate(DateTimeFormatter.monthAndDay(menstruation.beginDate))),
         ),
       );
     }

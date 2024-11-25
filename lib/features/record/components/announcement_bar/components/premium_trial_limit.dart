@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -72,6 +73,6 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     }
 
     final diff = daysBetween(now(), trialDeadlineDate);
-    return '残り$diff日間すべての機能を使えます';
+    return L.remainingDaysAllFeatures(diff);
   }
 }

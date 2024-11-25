@@ -15,7 +15,7 @@ void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requ
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           duration: const Duration(seconds: 2),
-          content: Text('${DateTimeFormatter.monthAndDay(savedMenstruation.beginDate)}から生理開始で記録しました'),
+          content: Text(L.recordedMenstruationStartDate(DateTimeFormatter.monthAndDay(savedMenstruation.beginDate))),
         ),
       );
     } else {
