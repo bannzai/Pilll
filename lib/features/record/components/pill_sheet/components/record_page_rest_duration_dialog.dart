@@ -42,7 +42,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
           ),
           const SizedBox(height: 24),
           Text(
-            appearanceMode == PillSheetAppearanceMode.date ? '例えば「1/12から3日間」服用お休みした場合' : '例えば「18番から3日間」服用お休みした場合',
+            appearanceMode == PillSheetAppearanceMode.date ? L.exampleRestDurationDate : L.exampleRestDurationNumber,
             style: const TextStyle(
               color: TextColor.main,
               fontWeight: FontWeight.w700,
@@ -102,7 +102,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('$_numberから服用をお休みしますか？',
+    return Text(L.pauseTakingFromNumber(_number),
         style: const TextStyle(
           color: TextColor.main,
           fontSize: 16,
@@ -114,16 +114,16 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return '${pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1}番';
+        return L.withNumber(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
       case PillSheetAppearanceMode.date:
         final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
             .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:
-        return '${pillSheetGroup.sequentialLastTakenPillNumber + 1}番';
+        return L.withNumber(pillSheetGroup.sequentialLastTakenPillNumber + 1);
       case PillSheetAppearanceMode.cyclicSequential:
-        return '${pillSheetGroup.sequentialLastTakenPillNumber + 1}番';
+        return L.withNumber(pillSheetGroup.sequentialLastTakenPillNumber + 1);
     }
   }
 }

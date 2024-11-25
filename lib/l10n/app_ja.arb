@@ -413,5 +413,8 @@
   "newPillSheetNotificationMessage": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
   "unexpectedPremiumEntitlementsIsNotExists": "プレミアム情報が見つかりませんでした",
   "purchaseErrorPurchasePendingError": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください",
-  "launchError": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:"
+  "launchError": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+  "exampleRestDurationDate": "例えば「1/12から3日間」服用お休みした場合",
+  "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
+  "withNumber": "{number}番"
 }
