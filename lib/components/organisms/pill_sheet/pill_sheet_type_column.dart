@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 abstract class PillSheetTypeColumnConstant {
   static const double width = 146;
@@ -70,38 +71,38 @@ class PillSheetTypeColumn extends StatelessWidget {
   String _title(PillSheetType pillSheetType) {
     switch (pillSheetType) {
       case PillSheetType.pillsheet_21:
-        return '21錠';
+        return L.twentyOnePills;
       case PillSheetType.pillsheet_28_4:
-        return '28錠';
+        return L.twentyEightPills;
       case PillSheetType.pillsheet_28_7:
-        return '28錠';
+        return L.twentyEightPills;
       case PillSheetType.pillsheet_28_0:
-        return '28錠';
+        return L.twentyEightPills;
       case PillSheetType.pillsheet_24_0:
-        return '24錠';
+        return L.twentyFourPills;
       case PillSheetType.pillsheet_21_0:
-        return '21錠';
+        return L.twentyOnePills;
       case PillSheetType.pillsheet_24_rest_4:
-        return '24錠';
+        return L.twentyFourPills;
     }
   }
 
   String _subtitle(PillSheetType pillSheetType) {
     switch (pillSheetType) {
       case PillSheetType.pillsheet_21:
-        return '21錠＋7日休薬';
+        return L.twentyOnePlusSevenDaysBreak;
       case PillSheetType.pillsheet_28_4:
-        return '24錠＋4錠偽薬';
+        return L.twentyFourPlusFourPlacebo;
       case PillSheetType.pillsheet_28_7:
-        return '21錠＋7錠偽薬';
+        return L.twentyOnePlusSevenPlacebo;
       case PillSheetType.pillsheet_28_0:
-        return 'すべて実薬';
+        return L.allActivePills;
       case PillSheetType.pillsheet_24_0:
-        return 'すべて実薬';
+        return L.allActivePills;
       case PillSheetType.pillsheet_21_0:
-        return 'すべて実薬';
+        return L.allActivePills;
       case PillSheetType.pillsheet_24_rest_4:
-        return '24錠＋4錠休薬';
+        return L.twentyFourPlusFourDaysBreak;
     }
   }
 }
