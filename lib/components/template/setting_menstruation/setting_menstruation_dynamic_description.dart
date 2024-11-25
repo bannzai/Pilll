@@ -73,6 +73,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 4),
+        // TODO: [Localizations]
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -80,9 +81,9 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               onTap: () => _showDurationModalSheet(context),
               child: _duration(),
             ),
-            const Text(
-              ' 日間生理が続く',
-              style: TextStyle(
+            Text(
+              " ${L.daysMenstruationLasts}",
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,

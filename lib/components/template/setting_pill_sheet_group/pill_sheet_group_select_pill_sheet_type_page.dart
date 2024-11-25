@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -31,13 +32,13 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
             controller: scrollController,
             children: [
               const SizedBox(height: 25),
-              const Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(width: 16),
+                  const SizedBox(width: 16),
                   Text(
-                    'ピルの種類を選択',
-                    style: TextStyle(
+                    L.selectPillType,
+                    style: const TextStyle(
                       color: TextColor.main,
                       fontSize: 20,
                       fontFamily: FontFamily.japanese,
