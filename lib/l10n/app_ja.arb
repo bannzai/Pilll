@@ -403,5 +403,8 @@
   "deleteSchedule": "予定を削除します",
   "onlySupportiOS": "iOSアプリにのみ対応しています",
   "healthKitDoesNotSupport": "ヘルスケアに対応していない端末ではご利用できません",
-  "enableHealthKitFromSettings": "設定アプリよりヘルスケアを有効にしてください"
+  "enableHealthKitFromSettings": "設定アプリよりヘルスケアを有効にしてください",
+  "accountAlreadyLinked": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+  "emailAlreadyInUse": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}"
 }
