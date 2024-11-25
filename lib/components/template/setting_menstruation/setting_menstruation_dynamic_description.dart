@@ -82,7 +82,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               child: _duration(),
             ),
             Text(
-              " ${L.daysMenstruationLasts}",
+              ' ${L.daysMenstruationLasts}',
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,

@@ -36,7 +36,7 @@ class MissedTakenMessageTextField extends StatelessWidget {
         counter: Row(children: [
           Text(
             L.changeMissedNotificationMessage,
-            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
           if (missedTakenMessage.value.characters.isNotEmpty)

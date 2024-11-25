@@ -36,7 +36,7 @@ class DailyTakenMessageTextField extends StatelessWidget {
         counter: Row(children: [
           Text(
             L.changeDailyNotificationMessage,
-            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
           if (dailyTakenMessage.value.characters.isNotEmpty)
