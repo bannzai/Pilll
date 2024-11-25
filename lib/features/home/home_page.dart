@@ -6,7 +6,6 @@ import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/features/initial_setting/migrate_info.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
@@ -49,22 +48,20 @@ class HomePage extends HookConsumerWidget {
     }, [user.valueOrNull]);
 
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group3(
+    return AsyncValueGroup.group2(
       user,
       ref.watch(latestPillSheetGroupProvider),
-      ref.watch(shouldShowMigrationInformationProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.$1,
           pillSheetGroup: data.$2,
-          shouldShowMigrateInfo: data.$3,
           sharedPreferences: sharedPreferences,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
-        reload: () => ref.refresh(shouldShowMigrationInformationProvider),
+        reload: () => ref.refresh(latestPillSheetGroupProvider),
         child: null,
       ),
       loading: () => const ScaffoldIndicator(),
@@ -75,14 +72,12 @@ class HomePage extends HookConsumerWidget {
 class HomePageBody extends HookConsumerWidget {
   final User user;
   final PillSheetGroup? pillSheetGroup;
-  final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
 
   const HomePageBody({
     super.key,
     required this.user,
     required this.pillSheetGroup,
-    required this.shouldShowMigrateInfo,
     required this.sharedPreferences,
   });
 
@@ -114,14 +109,7 @@ class HomePageBody extends HookConsumerWidget {
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
-        if (shouldShowMigrateInfo) {
-          showDialog(
-              context: context,
-              barrierColor: Colors.white,
-              builder: (context) {
-                return const MigrateInfo();
-              });
-        } else if (shouldAskCancelReason) {
+        if (shouldAskCancelReason) {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
               title: L.requestForCancelSurvey,
