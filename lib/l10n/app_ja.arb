@@ -224,6 +224,7 @@
   "reexperiencePremiumFeatures": "プレミアム機能を14日間再体験できます！\\nタップしてSNSにシェアしましょう！",
   "whereToShare": "どちらにシェアしますか？",
   "pauseTakingDay": "🌙 服用お休み {day}日目",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
   "daysUntilPausePeriod": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
   "remainingDaysAllFeatures": "残り{diff}日間すべての機能を使えます",
   "todayIsTaking": "💊 今日は服用",
