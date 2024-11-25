@@ -22,7 +22,6 @@ import 'package:pilll/features/settings/components/rows/premium_introduction.dar
 import 'package:pilll/features/settings/components/rows/quick_record.dart';
 import 'package:pilll/features/settings/components/rows/toggle_reminder_notification.dart';
 import 'package:pilll/features/settings/components/rows/today_pill_number.dart';
-import 'package:pilll/features/settings/components/rows/update_from_132.dart';
 import 'package:pilll/features/settings/components/setting_section_title.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -53,7 +52,6 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final sharedPreferences = ref.watch(sharedPreferencesProvider);
     return AsyncValueGroup.group4(
       ref.watch(userProvider),
       ref.watch(settingProvider),
@@ -61,14 +59,11 @@ class SettingPage extends HookConsumerWidget {
       ref.watch(isHealthDataAvailableProvider),
     ).when(
       data: (data) {
-        final userIsMigratedFrom132 =
-            sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
           user: data.$1,
           setting: data.$2,
           latestPillSheetGroup: data.$3,
           isHealthDataAvailable: data.$4,
-          userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -86,7 +81,6 @@ class SettingPageBody extends StatelessWidget {
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final bool isHealthDataAvailable;
-  final bool userIsUpdatedFrom132;
 
   const SettingPageBody({
     super.key,
@@ -94,7 +88,6 @@ class SettingPageBody extends StatelessWidget {
     required this.setting,
     required this.latestPillSheetGroup,
     required this.isHealthDataAvailable,
-    required this.userIsUpdatedFrom132,
   });
 
   @override
@@ -229,10 +222,6 @@ class SettingPageBody extends StatelessWidget {
                     return SettingSectionTitle(
                       text: L.others,
                       children: [
-                        if (userIsUpdatedFrom132) ...[
-                          const UpdateFrom132Row(),
-                          _separator(),
-                        ],
                         ListTile(
                             title: Text(
                               L.shareWithFriends,
