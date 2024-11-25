@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/provider/menstruation.dart';
 
@@ -26,8 +27,10 @@ class MenstruationListPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         centerTitle: false,
-        title:
-            const Text('生理履歴', style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
+        title: Text(
+          L.menstruationHistory,
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+        ),
         backgroundColor: PilllColors.white,
         elevation: 0,
       ),

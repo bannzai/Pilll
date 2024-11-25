@@ -6,6 +6,7 @@ import 'package:pilll/features/diary_post/memo.dart';
 import 'package:pilll/features/diary_post/physical_condition.dart';
 import 'package:pilll/features/diary_post/physical_condition_details.dart';
 import 'package:pilll/features/diary_post/sex.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/diary_setting.dart';
@@ -105,7 +106,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
         ),
         actions: [
           AlertButton(
-              text: '保存',
+              text: L.save,
               onPressed: () async {
                 analytics.logEvent(name: 'diary_post_button_tapped');
 
@@ -152,7 +153,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
             if (focusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'post_diary_done_button_pressed');
                     focusNode.unfocus();

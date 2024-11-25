@@ -22,6 +22,22 @@ const List<String> defaultPhysicalConditions = [
   '胸の張り',
   '不眠',
 ];
+// TODO: [Localizations] const にしないとfreezedでエラー
+// final List<String> defaultPhysicalConditions = [
+//   L.headache,
+//   L.abdominalPain,
+//   L.nausea,
+//   L.anemia,
+//   L.diarrhea,
+//   L.constipation,
+//   L.drowsiness,
+//   L.backPain,
+//   L.palpitation,
+//   L.irregularBleeding,
+//   L.lossOfAppetite,
+//   L.chestTightness,
+//   L.insomnia,
+// ];
 
 @freezed
 class DiarySetting with _$DiarySetting {

@@ -125,9 +125,10 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalCondition(Diary diary) {
     return Row(
       children: [
-        const Text('体調',
-            style: TextStyle(
-              fontFamily: FontFamily.japanese,
+        Text(
+          L.physicalCondition,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w300,
               fontSize: 16,
               color: TextColor.black,

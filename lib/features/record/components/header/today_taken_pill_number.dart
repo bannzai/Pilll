@@ -26,10 +26,11 @@ class TodayTakenPillNumber extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          // TODO: [Localizations]
           if (_appearanceMode.isSequential)
-            const Text(
-              '💊 今日は服用',
-              style: TextStyle(
+            Text(
+              L.todayIsTaking,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,

@@ -130,9 +130,9 @@ class _CompletedDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            '退会しました',
-            style: TextStyle(
+          Text(
+            L.withdrawalCompleted,
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,

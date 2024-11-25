@@ -11,11 +11,11 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
   String get title {
     switch (this) {
       case MenstruationSelectModifyType.today:
-        return '今日から生理';
+        return L.menstruationFromToday;
       case MenstruationSelectModifyType.yesterday:
-        return '昨日から生理';
+        return L.menstruationFromYesterday;
       case MenstruationSelectModifyType.begin:
-        return '生理開始日を選択';
+        return L.selectMenstruationStartDate;
     }
   }
 

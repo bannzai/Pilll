@@ -101,8 +101,8 @@ class MenstruationRecordButton extends HookConsumerWidget {
                     initialDate: today(),
                     firstDate: DateTime.parse('2020-01-01'),
                     lastDate: today().addDays(30),
-                    helpText: '生理開始日を選択',
-                    fieldLabelText: '生理開始日',
+                    helpText: L.selectMenstruationStartDate,
+                    fieldLabelText: L.menstruationStartDate,
                     builder: (context, child) {
                       return DateRangePickerTheme(child: child!);
                     },
