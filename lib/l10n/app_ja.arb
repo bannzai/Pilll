@@ -422,5 +422,6 @@
   "googleAccount": "Google アカウント",
   "diaryRecord": "日記を記録",
   "scheduleRecord": "予定を記入",
-  "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません"
+  "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません",
+  "withPillSheetCount": "{number}枚"
 }
