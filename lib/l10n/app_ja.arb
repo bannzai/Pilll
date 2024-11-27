@@ -1082,9 +1082,9 @@
   "@existingAccountUsers": {
     "description": "すでにアカウントをお持ちの方はこちら"
   },
-  "selectTodayPillNumber": "今日({todayString})\\n飲む・飲んだピルの番号をタップ",
+  "selectTodayPillNumber": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
   "@selectTodayPillNumber": {
-    "description": "今日({todayString})\\n飲む・飲んだピルの番号をタップ",
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
     "placeholders": {
       "todayString": {
         "type": "String"
