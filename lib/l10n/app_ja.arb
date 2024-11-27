@@ -1527,6 +1527,10 @@
   "@quickRecordTakePillFailed": {
     "description": "服用記録が失敗した可能性があります"
   },
+  "quickRecordTakePillFailedMessage": "アプリを開いてご確認ください",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
   "alreadyTaken": "服用済み",
   "@alreadyTaken": {
     "description": "服用済み"
