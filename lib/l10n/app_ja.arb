@@ -1574,5 +1574,41 @@
   "editPauseStartDate": "服用お休み開始日を編集",
   "@editPauseStartDate": {
     "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "友達と共有",
+  "@shareWithFriends": {
+    "description": "友達と共有"
+  },
+  "termsOfService": "利用規約",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "プライバシーポリシー",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "クリップボードにコピーしました",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "通知{number}",
+  "@notificationNumber": {
+    "description": "通知{number}"
+  },
+  "notificationTime": "通知時間",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz}に変更しました",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました"
+  },
+  "changeStartOfPillDays": "服用日数の始まり",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "changeEndOfPillDays": "服用日数の終わり",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わり"
   }
 }
