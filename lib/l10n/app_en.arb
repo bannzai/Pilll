@@ -1783,37 +1783,37 @@
             }
         }
     },
-    "visitHospital": "通院する",
+    "visitHospital": "Visit hospital",
     "@visitHospital": {
-        "description": "通院する"
+        "description": "Visit hospital"
     },
-    "receiveNotificationAt9AM": "当日9:00に通知を受け取る",
+    "receiveNotificationAt9AM": "Receive notification at 9:00 AM",
     "@receiveNotificationAt9AM": {
-        "description": "当日9:00に通知を受け取る"
+        "description": "Receive notification at 9:00 AM"
     },
-    "deletedScheduleCannotBeRestored": "削除された予定は復元ができません",
+    "deletedScheduleCannotBeRestored": "Deleted schedule cannot be restored",
     "@deletedScheduleCannotBeRestored": {
-        "description": "削除された予定は復元ができません"
+        "description": "Deleted schedule cannot be restored"
     },
-    "deleteSchedule": "予定を削除します",
+    "deleteSchedule": "Delete schedule",
     "@deleteSchedule": {
-        "description": "予定を削除します"
+        "description": "Delete schedule"
     },
-    "onlySupportiOS": "iOSアプリにのみ対応しています",
+    "onlySupportiOS": "Only supported on iOS app",
     "@onlySupportiOS": {
-        "description": "iOSアプリにのみ対応しています"
+        "description": "Only supported on iOS app"
     },
-    "healthKitDoesNotSupport": "ヘルスケアに対応していない端末ではご利用できません",
+    "healthKitDoesNotSupport": "Not available on devices that do not support HealthKit",
     "@healthKitDoesNotSupport": {
-        "description": "ヘルスケアに対応していない端末ではご利用できません"
+        "description": "Not available on devices that do not support HealthKit"
     },
-    "enableHealthKitFromSettings": "設定アプリよりヘルスケアを有効にしてください",
+    "enableHealthKitFromSettings": "Please enable HealthKit from the settings app",
     "@enableHealthKitFromSettings": {
-        "description": "設定アプリよりヘルスケアを有効にしてください"
+        "description": "Please enable HealthKit from the settings app"
     },
-    "accountAlreadyLinked": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "accountAlreadyLinked": "This ${accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: ${exceptionMessage}",
     "@accountAlreadyLinked": {
-        "description": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "description": "This ${accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: ${exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1823,9 +1823,9 @@
             }
         }
     },
-    "accountAlreadyLinkedWithOtherPilllAccount": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "accountAlreadyLinkedWithOtherPilllAccount": "This ${accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: ${exceptionMessage}",
     "@accountAlreadyLinkedWithOtherPilllAccount": {
-        "description": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "description": "This ${accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: ${exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1835,9 +1835,9 @@
             }
         }
     },
-    "emailAlreadyInUse": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "emailAlreadyInUse": "The email address you are using with the ${accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: ${exceptionMessage}",
     "@emailAlreadyInUse": {
-        "description": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "description": "The email address you are using with the ${accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: ${exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1847,225 +1847,225 @@
             }
         }
     },
-    "todaySchedule": "本日の予定です",
+    "todaySchedule": "Today's schedule",
     "@todaySchedule": {
-        "description": "本日の予定です"
+        "description": "Today's schedule"
     },
-    "calendarSchedule": "カレンダーの予定",
+    "calendarSchedule": "Calendar schedule",
     "@calendarSchedule": {
-        "description": "カレンダーの予定"
+        "description": "Calendar schedule"
     },
-    "newPillSheetNotificationTitle": "今日から新しいシートがはじまります",
+    "newPillSheetNotificationTitle": "A new sheet starts today",
     "@newPillSheetNotificationTitle": {
-        "description": "今日から新しいシートがはじまります"
+        "description": "A new sheet starts today"
     },
-    "newPillSheetNotificationMessage": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
+    "newPillSheetNotificationMessage": "🆕 A new sheet starts today\nDon't forget to take it 👍",
     "@newPillSheetNotificationMessage": {
-        "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+        "description": "🆕 A new sheet starts today\nDon't forget to take it 👍"
     },
-    "unexpectedPremiumEntitlementsIsNotExists": "プレミアム情報が見つかりませんでした",
+    "unexpectedPremiumEntitlementsIsNotExists": "Premium information not found",
     "@unexpectedPremiumEntitlementsIsNotExists": {
-        "description": "プレミアム情報が見つかりませんでした"
+        "description": "Premium information not found"
     },
-    "purchaseErrorPurchasePendingError": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください",
+    "purchaseErrorPurchasePendingError": "The activation of the purchase is not yet complete. Please check again after some time",
     "@purchaseErrorPurchasePendingError": {
-        "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+        "description": "The activation of the purchase is not yet complete. Please check again after some time"
     },
-    "launchError": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+    "launchError": "An error occurred at startup\n${ErrorMessagesConnection}\nDetails:",
     "@launchError": {
-        "description": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+        "description": "An error occurred at startup\n${ErrorMessagesConnection}\nDetails:",
         "placeholders": {
             "ErrorMessagesConnection": {
                 "type": "String"
             }
         }
     },
-    "exampleRestDurationDate": "例えば「1/12から3日間」服用お休みした場合",
+    "exampleRestDurationDate": "For example, if you take a break from 1/12 for 3 days",
     "@exampleRestDurationDate": {
-        "description": "例えば「1/12から3日間」服用お休みした場合"
+        "description": "For example, if you take a break from 1/12 for 3 days"
     },
-    "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
+    "exampleRestDurationNumber": "For example, if you take a break from number 18 for 3 days",
     "@exampleRestDurationNumber": {
-        "description": "例えば「18番から3日間」服用お休みした場合"
+        "description": "For example, if you take a break from number 18 for 3 days"
     },
-    "withNumber": "{number}番",
+    "withNumber": "{number} number",
     "@withNumber": {
-        "description": "{number}番",
+        "description": "{number} number",
         "placeholders": {
             "number": {
                 "type": "String"
             }
         }
     },
-    "currentPillSheetNotFound": "現在対象となっているピルシートが見つかりませんでした",
+    "currentPillSheetNotFound": "The current pill sheet could not be found",
     "@currentPillSheetNotFound": {
-        "description": "現在対象となっているピルシートが見つかりませんでした"
+        "description": "The current pill sheet could not be found"
     },
-    "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません",
+    "doNotRevertTakePillInPausePeriod": "The operation to cancel taking the pill cannot be performed during the pause period",
     "@doNotRevertTakePillInPausePeriod": {
-        "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+        "description": "The operation to cancel taking the pill cannot be performed during the pause period"
     },
-    "googleAccount": "Google アカウント",
+    "googleAccount": "Google account",
     "@googleAccount": {
-        "description": "Google アカウント"
+        "description": "Google account"
     },
-    "diaryRecord": "日記を記録",
+    "diaryRecord": "Record diary",
     "@diaryRecord": {
-        "description": "日記を記録"
+        "description": "Record diary"
     },
-    "scheduleRecord": "予定を記入",
+    "scheduleRecord": "Enter schedule",
     "@scheduleRecord": {
-        "description": "予定を記入"
+        "description": "Enter schedule"
     },
-    "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません",
+    "previousPillSheetGroupNotFound": "The previous pill sheet group does not yet exist",
     "@previousPillSheetGroupNotFound": {
-        "description": "前回のピルシートグループがまだ存在しません"
+        "description": "The previous pill sheet group does not yet exist"
     },
-    "withPillSheetCount": "{number}枚",
+    "withPillSheetCount": "{number} sheets",
     "@withPillSheetCount": {
-        "description": "{number}枚",
+        "description": "{number} sheets",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "connectionError": "通信環境が不安定のようです。時間をおいて再度お試しください",
+    "connectionError": "The communication environment seems unstable. Please try again after some time",
     "@connectionError": {
-        "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+        "description": "The communication environment seems unstable. Please try again after some time"
     },
-    "unknownErrorAndRetryAfter": "エラーが発生しました。時間をおいて再度お試しください",
+    "unknownErrorAndRetryAfter": "An error occurred. Please try again after some time",
     "@unknownErrorAndRetryAfter": {
-        "description": "エラーが発生しました。時間をおいて再度お試しください"
+        "description": "An error occurred. Please try again after some time"
     },
-    "errorOccurred": "エラーが発生しました",
+    "errorOccurred": "An error occurred",
     "@errorOccurred": {
-        "description": "エラーが発生しました"
+        "description": "An error occurred"
     },
-    "unknownError": "不明なエラーが発生しました",
+    "unknownError": "An unknown error occurred",
     "@unknownError": {
-        "description": "不明なエラーが発生しました"
+        "description": "An unknown error occurred"
     },
-    "unexpectedErrorOccurred": "予期しないエラーが発生しました",
+    "unexpectedErrorOccurred": "An unexpected error occurred",
     "@unexpectedErrorOccurred": {
-        "description": "予期しないエラーが発生しました"
+        "description": "An unexpected error occurred"
     },
-    "pressAndHoldNotificationToRecordPillTaking": "通知を長押しすると服用記録ができます",
+    "pressAndHoldNotificationToRecordPillTaking": "You can record taking by long-pressing the notification",
     "@pressAndHoldNotificationToRecordPillTaking": {
-        "description": "通知を長押しすると服用記録ができます"
+        "description": "You can record taking by long-pressing the notification"
     },
-    "trialDeadlineDateOffsetDay": "{number}日間すべての機能が使えます！",
+    "trialDeadlineDateOffsetDay": "You can use all features for {number} days!",
     "@trialDeadlineDateOffsetDay": {
-        "description": "{number}日間すべての機能が使えます！",
+        "description": "You can use all features for {number} days!",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "inputAndAdd": "入力して追加",
+    "inputAndAdd": "Input and add",
     "@inputAndAdd": {
-        "description": "入力して追加"
+        "description": "Input and add"
     },
-    "averagePeriod": "平均周期",
+    "averagePeriod": "Average cycle",
     "@averagePeriod": {
-        "description": "平均周期"
+        "description": "Average cycle"
     },
-    "averageDays": "平均日数",
+    "averageDays": "Average days",
     "@averageDays": {
-        "description": "平均日数"
+        "description": "Average days"
     },
-    "days": "日",
+    "days": "Days",
     "@days": {
-        "description": "日"
+        "description": "Days"
     },
-    "memo": "メモ",
+    "memo": "Memo",
     "@memo": {
-        "description": "メモ"
+        "description": "Memo"
     },
-    "failedToUpdate": "更新に失敗しました。通信環境をお確かめの上、再度変更してください",
+    "failedToUpdate": "Failed to update. Please check your communication environment and try again",
     "@failedToUpdate": {
-        "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+        "description": "Failed to update. Please check your communication environment and try again"
     },
-    "headache": "頭痛",
+    "headache": "Headache",
     "@headache": {
-        "description": "頭痛"
+        "description": "Headache"
     },
-    "abdominalPain": "腹痛",
+    "abdominalPain": "Abdominal pain",
     "@abdominalPain": {
-        "description": "腹痛"
+        "description": "Abdominal pain"
     },
-    "nausea": "吐き気",
+    "nausea": "Nausea",
     "@nausea": {
-        "description": "吐き気"
+        "description": "Nausea"
     },
-    "anemia": "貧血",
+    "anemia": "Anemia",
     "@anemia": {
-        "description": "貧血"
+        "description": "Anemia"
     },
-    "diarrhea": "下痢",
+    "diarrhea": "Diarrhea",
     "@diarrhea": {
-        "description": "下痢"
+        "description": "Diarrhea"
     },
-    "constipation": "便秘",
+    "constipation": "Constipation",
     "@constipation": {
-        "description": "便秘"
+        "description": "Constipation"
     },
-    "drowsiness": "眠気",
+    "drowsiness": "Drowsiness",
     "@drowsiness": {
-        "description": "眠気"
+        "description": "Drowsiness"
     },
-    "backPain": "腰痛",
+    "backPain": "Back pain",
     "@backPain": {
-        "description": "腰痛"
+        "description": "Back pain"
     },
-    "palpitation": "動悸",
+    "palpitation": "Palpitation",
     "@palpitation": {
-        "description": "動悸"
+        "description": "Palpitation"
     },
-    "irregularBleeding": "不正出血",
+    "irregularBleeding": "Irregular bleeding",
     "@irregularBleeding": {
-        "description": "不正出血"
+        "description": "Irregular bleeding"
     },
-    "lossOfAppetite": "食欲不振",
+    "lossOfAppetite": "Loss of appetite",
     "@lossOfAppetite": {
-        "description": "食欲不振"
+        "description": "Loss of appetite"
     },
-    "chestTightness": "胸の張り",
+    "chestTightness": "Chest tightness",
     "@chestTightness": {
-        "description": "胸の張り"
+        "description": "Chest tightness"
     },
-    "insomnia": "不眠",
+    "insomnia": "Insomnia",
     "@insomnia": {
-        "description": "不眠"
+        "description": "Insomnia"
     },
-    "pauseStartingOtherDaysInstructions": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
+    "pauseStartingOtherDaysInstructions": "Please take a break. If you want to take a break from a day other than today, please refer to the following.",
     "@pauseStartingOtherDaysInstructions": {
-        "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+        "description": "Please take a break. If you want to take a break from a day other than today, please refer to the following."
     },
-    "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
+    "seeHowToUsePauseTakingFeature": "See how to use the pause taking feature",
     "@seeHowToUsePauseTakingFeature": {
-        "description": "服用お休み機能の使い方を見る"
+        "description": "See how to use the pause taking feature"
     },
-    "startPauseTakingLabel": "服用お休み開始",
+    "startPauseTakingLabel": "Start pause taking",
     "@startPauseTakingLabel": {
-        "description": "服用お休み開始"
+        "description": "Start pause taking"
     },
-    "pauseTakingChanged": "服用お休みを変更しました",
+    "pauseTakingChanged": "Pause taking has been changed",
     "@pauseTakingChanged": {
-        "description": "服用お休みを変更しました"
+        "description": "Pause taking has been changed"
     },
-    "editPausePeriod": "服用お休み期間を編集",
+    "editPausePeriod": "Edit pause period",
     "@editPausePeriod": {
-        "description": "服用お休み期間を編集"
+        "description": "Edit pause period"
     },
-    "changePillDays": "服用日数を変更",
+    "changePillDays": "Change pill days",
     "@changePillDays": {
-        "description": "服用日数を変更"
+        "description": "Change pill days"
     },
-    "beginToEndNumbers": "{begin}番 ~ {end}番",
+    "beginToEndNumbers": "{begin} to {end} number",
     "@beginToEndNumbers": {
-        "description": "{begin}番 ~ {end}番",
+        "description": "{begin} to {end} number",
         "placeholders": {
             "begin": {
                 "type": "int"
@@ -2075,71 +2075,71 @@
             }
         }
     },
-    "resumeTaking": "服用再開",
+    "resumeTaking": "Resume taking",
     "@resumeTaking": {
-        "description": "服用再開"
+        "description": "Resume taking"
     },
-    "changePausePeriod": "服用お休み期間変更",
+    "changePausePeriod": "Change pause period",
     "@changePausePeriod": {
-        "description": "服用お休み期間変更"
+        "description": "Change pause period"
     },
-    "changedToDate": "{date}に変更しました",
+    "changedToDate": "Changed to {date}",
     "@changedToDate": {
-        "description": "{date}に変更しました",
+        "description": "Changed to {date}",
         "placeholders": {
             "date": {
                 "type": "String"
             }
         }
     },
-    "quickRecordTakePillFailed": "服用記録が失敗した可能性があります",
+    "quickRecordTakePillFailed": "The record of taking the pill may have failed",
     "@quickRecordTakePillFailed": {
-        "description": "服用記録が失敗した可能性があります"
+        "description": "The record of taking the pill may have failed"
     },
-    "quickRecordTakePillFailedMessage": "アプリを開いてご確認ください",
+    "quickRecordTakePillFailedMessage": "Please open the app and check",
     "@quickRecordTakePillFailedMessage": {
-        "description": "アプリを開いてご確認ください"
+        "description": "Please open the app and check"
     },
-    "alreadyTaken": "服用済み",
+    "alreadyTaken": "Already taken",
     "@alreadyTaken": {
-        "description": "服用済み"
+        "description": "Already taken"
     },
-    "startPauseTaking": "服用をお休みする",
+    "startPauseTaking": "Start pause taking",
     "@startPauseTaking": {
-        "description": "服用をお休みする"
+        "description": "Start pause taking"
     },
-    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} number",
     "@sequentialLastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+        "description": "{pillSheetGroupSequentialLastTakenPillNumber} number",
         "placeholders": {
             "pillSheetGroupSequentialLastTakenPillNumber": {
                 "type": "String"
             }
         }
     },
-    "startFromNumber": "番からスタート",
+    "startFromNumber": "Start from number",
     "@startFromNumber": {
-        "description": "番からスタート"
+        "description": "Start from number"
     },
-    "add": "追加",
+    "add": "Add",
     "@add": {
-        "description": "追加"
+        "description": "Add"
     },
-    "addPillSheet": "ピルシートを追加",
+    "addPillSheet": "Add pill sheet",
     "@addPillSheet": {
-        "description": "ピルシートを追加"
+        "description": "Add pill sheet"
     },
-    "duringPauseTaking": "服用お休み中",
+    "duringPauseTaking": "During pause taking",
     "@duringPauseTaking": {
-        "description": "服用お休み中"
+        "description": "During pause taking"
     },
-    "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\n「服用お休み」できません",
+    "cannotPauseAlreadyTakenToday": "If today's pill is already taken\nYou cannot \"pause taking\"",
     "@cannotPauseAlreadyTakenToday": {
-        "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+        "description": "If today's pill is already taken, you cannot \"pause taking\""
     },
-    "pauseTakingStarted": "服用お休みを開始しました",
+    "pauseTakingStarted": "Pause taking has started",
     "@pauseTakingStarted": {
-        "description": "服用お休みを開始しました"
+        "description": "Pause taking has started"
     },
     "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
     "@formattedDateAndWeekday": {
@@ -2153,84 +2153,84 @@
             }
         }
     },
-    "editPauseStartDate": "服用お休み開始日を編集",
+    "editPauseStartDate": "Edit pause start date",
     "@editPauseStartDate": {
-        "description": "服用お休み開始日を編集"
+        "description": "Edit pause start date"
     },
-    "shareWithFriends": "友達と共有",
+    "shareWithFriends": "Share with friends",
     "@shareWithFriends": {
-        "description": "友達と共有"
+        "description": "Share with friends"
     },
-    "termsOfService": "利用規約",
+    "termsOfService": "Terms of service",
     "@termsOfService": {
-        "description": "利用規約"
+        "description": "Terms of service"
     },
-    "privacyPolicy": "プライバシーポリシー",
+    "privacyPolicy": "Privacy policy",
     "@privacyPolicy": {
-        "description": "プライバシーポリシー"
+        "description": "Privacy policy"
     },
-    "linkCopiedToClipboard": "クリップボードにコピーしました",
+    "linkCopiedToClipboard": "Copied to clipboard",
     "@linkCopiedToClipboard": {
-        "description": "クリップボードにコピーしました"
+        "description": "Copied to clipboard"
     },
-    "notificationNumber": "通知{number}",
+    "notificationNumber": "Notification {number}",
     "@notificationNumber": {
-        "description": "通知{number}",
+        "description": "Notification {number}",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "notificationTime": "通知時間",
+    "notificationTime": "Notification time",
     "@notificationTime": {
-        "description": "通知時間"
+        "description": "Notification time"
     },
-    "timeZoneChangedTo": "{tz}に変更しました",
+    "timeZoneChangedTo": "Changed to {tz}",
     "@timeZoneChangedTo": {
-        "description": "{tz}に変更しました",
+        "description": "Changed to {tz}",
         "placeholders": {
             "tz": {
                 "type": "String"
             }
         }
     },
-    "changeStartOfPillDays": "服用日数の始まり",
+    "changeStartOfPillDays": "Change start of pill days",
     "@changeStartOfPillDays": {
-        "description": "服用日数の始まり"
+        "description": "Change start of pill days"
     },
-    "changeEndOfPillDays": "服用日数の終わり",
+    "changeEndOfPillDays": "Change end of pill days",
     "@changeEndOfPillDays": {
-        "description": "服用日数の終わり"
+        "description": "Change end of pill days"
     },
-    "cannotUpdateToReplacePillSheet": "ピルシートの置き換えによる更新できません id: {id}",
+    "cannotUpdateToReplacePillSheet": "Cannot update to replace pill sheet id: {id}",
     "@cannotUpdateToReplacePillSheet": {
-        "description": "ピルシートの置き換えによる更新できません id: {id}",
+        "description": "Cannot update to replace pill sheet id: {id}",
         "placeholders": {
             "id": {
                 "type": "String"
             }
         }
     },
-    "failedToGetPillSheetHistory": "服用履歴情報の取得に失敗しました。{error}",
+    "failedToGetPillSheetHistory": "Failed to get pill sheet history. {error}",
     "@failedToGetPillSheetHistory": {
-        "description": "服用履歴情報の取得に失敗しました。{error}",
+        "description": "Failed to get pill sheet history. {error}",
         "placeholders": {
             "error": {
                 "type": "String"
             }
         }
     },
-    "cancelTaking": "服用取り消し",
+    "cancelTaking": "Cancel taking",
     "@cancelTaking": {
-        "description": "服用取り消し"
+        "description": "Cancel taking"
     },
-    "deletedDiaryCannotBeRestored": "削除した日記は復元できません",
+    "deletedDiaryCannotBeRestored": "Deleted diary cannot be restored",
     "@deletedDiaryCannotBeRestored": {
-        "description": "削除した日記は復元できません"
+        "description": "Deleted diary cannot be restored"
     },
-    "editMenstruation": "生理期間を編集",
+    "editMenstruation": "Edit menstruation period",
     "@editMenstruation": {
-        "description": "生理期間を編集"
+        "description": "Edit menstruation period"
     }
 }
