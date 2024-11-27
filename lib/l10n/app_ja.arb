@@ -215,7 +215,12 @@
   },
   "areYouSureDoing": "{do}しますか？",
   "@areYouSureDoing": {
-    "description": "{do}しますか？"
+    "description": "{do}しますか？",
+    "placeholders": {
+      "do": {
+        "type": "String"
+      }
+    }
   },
   "currentlyDisplayed": "現在表示されている",
   "@currentlyDisplayed": {
@@ -255,7 +260,12 @@
   },
   "xCanBeCustomized": "{x}のカスタマイズができます",
   "@xCanBeCustomized": {
-    "description": "{x}のカスタマイズができます"
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
   },
   "thankYouForCooperation": "ご協力ありがとうございます",
   "@thankYouForCooperation": {
@@ -287,7 +297,12 @@
   },
   "registeredWithProvider": "{accountTypeProviderName}で登録しました",
   "@registeredWithProvider": {
-    "description": "{accountTypeProviderName}で登録しました"
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
   },
   "linkAccount": "連携する",
   "@linkAccount": {
@@ -315,7 +330,12 @@
   },
   "selectOrChangePillNumber": "今日({today})\\n飲む・飲んだピルの番号をタップ",
   "@selectOrChangePillNumber": {
-    "description": "今日飲む・飲んだピルの番号をタップ"
+    "description": "今日飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
   },
   "change": "変更",
   "@change": {
@@ -391,35 +411,87 @@
   },
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber}番",
   "@afterLastTakenPillNumber": {
-    "description": "{afterLastTakenPillNumber}番"
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}番",
   "@leftDashAfterLastTakenPillNumber": {
-    "description": "{left}-{afterLastTakenPillNumber}番"
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}番",
   "@beforeLastTakenPillNumber": {
-    "description": "{beforeLastTakenPillNumber}番"
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
   "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
-    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番"
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
   },
   "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}番",
   "@oneToAfterDisplayNumberBeginPillNumber": {
-    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番"
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
   "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
-    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番"
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}番",
   "@oneToAfterDisplayNumberEndPillNumber": {
-    "description": "1→{afterDisplayNumberSettingEndPillNumber}番"
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
   "@beforeEndToAfterDisplayNumberEndPillNumber": {
-    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番"
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "selectPauseStartDate": "服用お休み開始日選択",
   "@selectPauseStartDate": {
@@ -459,11 +531,21 @@
   },
   "pauseTakingFromNumber": "{number}から服用をお休みしますか？",
   "@pauseTakingFromNumber": {
-    "description": "{number}から服用をお休みしますか？"
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
   },
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
   "@lastTakenPlusOnePillNumber": {
-    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番"
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
   },
   "taking": "服用",
   "@taking": {
@@ -471,7 +553,12 @@
   },
   "estimatedEndPillNumber": "前回のシートの最後：{estimatedEndPillNumber}番",
   "@estimatedEndPillNumber": {
-    "description": "前回のシートの最後：{estimatedEndPillNumber}番"
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "String"
+      }
+    }
   },
   "addPillSheetButton": "ピルシートを追加",
   "@addPillSheetButton": {
