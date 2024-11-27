@@ -683,6 +683,15 @@
       }
     }
   },
+  "withDay": "{word}日目",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
   "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
   "@restDurationDays": {
     "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
