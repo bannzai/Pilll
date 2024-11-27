@@ -964,9 +964,9 @@
       }
     }
   },
-  "youArePremiumMember": "あなたは\\vプレミアムメンバーです",
+  "youArePremiumMember": "あなたは\nプレミアムメンバーです",
   "@youArePremiumMember": {
-    "description": "あなたは\\vプレミアムメンバーです"
+    "description": "あなたは\nプレミアムメンバーです"
   },
   "thankYouMessage": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
   "@thankYouMessage": {
@@ -1057,9 +1057,9 @@
       }
     }
   },
-  "takingRecordFromNotification": "\\\\ 通知から服用記録ができます /",
+  "takingRecordFromNotification": "\\ 通知から服用記録ができます /",
   "@takingRecordFromNotification": {
-    "description": "\\\\ 通知から服用記録ができます /"
+    "description": "\\ 通知から服用記録ができます /"
   },
   "startApp": "アプリをはじめる",
   "@startApp": {
