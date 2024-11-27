@@ -50,7 +50,10 @@ Future<void> entrypoint() async {
       setupRemoteConfig(),
     ).wait;
 
-    await localNotificationService.initialize();
+    // AppLocalizationsの初期化を待つ
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      await localNotificationService.initialize();
+    });
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
