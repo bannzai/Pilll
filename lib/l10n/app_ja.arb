@@ -951,7 +951,7 @@
   "@enterAtLeastOneCharacter": {
     "description": "0文字以上入力してください"
   },
-  "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
+  "changeDailyNotificationMessage": "飲み忘れていな��場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
     "description": "飲み忘れていない場合の通知文言を変更できます"
   },
@@ -1524,15 +1524,51 @@
     "description": "{date}に変更しました"
   },
   "quickRecordTakePillFailed": "服用記録が失敗した可能性があります",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
   "alreadyTaken": "服用済み",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
   "startPauseTaking": "服用をお休みする",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番"
+  },
   "startFromNumber": "番からスタート",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
   "add": "追加",
+  "@add": {
+    "description": "追加"
+  },
   "addPillSheet": "ピルシートを追加",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
   "duringPauseTaking": "服用お休み中",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
   "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\\n「服用お休み」できません",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
   "pauseTakingStarted": "服用お休みを開始しました",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
   "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-  "editPauseStartDate": "服用お休み開始日を編集"
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})"
+  },
+  "editPauseStartDate": "服用お休み開始日を編集",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  }
 }
