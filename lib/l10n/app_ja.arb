@@ -1187,7 +1187,7 @@
   "@enterAtLeastOneCharacter": {
     "description": "0文字以上入力してください"
   },
-  "changeDailyNotificationMessage": "飲み忘れていな��場合の通知文言を変更できます",
+  "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
   "@changeDailyNotificationMessage": {
     "description": "飲み忘れていない場合の通知文言を変更できます"
   },
