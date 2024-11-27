@@ -91,7 +91,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
                             },
                         ),
                         TextSpan(
@@ -113,7 +113,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
                             },
                         ),
                         TextSpan(

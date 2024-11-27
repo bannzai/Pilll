@@ -22,7 +22,7 @@ class AboutChurn extends HookConsumerWidget {
           name: 'did_select_about_churn',
         );
 
-        launchUrl(Uri.parse('https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'), mode: LaunchMode.inAppWebView);
+        launchUrl(Uri.parse('https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'), mode: LaunchMode.inAppBrowserView);
       },
     );
   }

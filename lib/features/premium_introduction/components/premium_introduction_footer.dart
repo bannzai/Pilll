@@ -41,7 +41,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppWebView);
+                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
                   const TextSpan(
@@ -52,7 +52,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppWebView);
+                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
                   const TextSpan(
@@ -63,7 +63,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct'), mode: LaunchMode.inAppWebView);
+                        launchUrl(Uri.parse('https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
                   TextSpan(
@@ -80,7 +80,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'), mode: LaunchMode.inAppWebView);
+                        launchUrl(Uri.parse('https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
                 ],
