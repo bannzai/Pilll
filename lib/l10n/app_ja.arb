@@ -1482,5 +1482,57 @@
   "insomnia": "不眠",
   "@insomnia": {
     "description": "不眠"
-  }
+  },
+  "pauseStartingOtherDaysInstructions": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "服用お休み開始",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "服用お休みを変更しました",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "服用お休み期間を編集",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "服用日数を変更",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin}番 ~ {end}番",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番"
+  },
+  "resumeTaking": "服用再開",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "服用お休み期間変更",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedToDate": "{date}に変更しました",
+  "@changedToDate": {
+    "description": "{date}に変更しました"
+  },
+  "quickRecordTakePillFailed": "服用記録が失敗した可能性があります",
+  "alreadyTaken": "服用済み",
+  "startPauseTaking": "服用をお休みする",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+  "startFromNumber": "番からスタート",
+  "add": "追加",
+  "addPillSheet": "ピルシートを追加",
+  "duringPauseTaking": "服用お休み中",
+  "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\\n「服用お休み」できません",
+  "pauseTakingStarted": "服用お休みを開始しました",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "editPauseStartDate": "服用お休み開始日を編集"
 }
