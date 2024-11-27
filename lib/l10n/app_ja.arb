@@ -1,4 +1,5 @@
 {
+  "@@locale": "ja",
   "pillSheetType21With7Placebo": "21錠タイプ",
   "@pillSheetType21With7Placebo": {
     "description": "21錠タイプ(7錠偽薬)"
