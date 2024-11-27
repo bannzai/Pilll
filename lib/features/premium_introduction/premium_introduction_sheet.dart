@@ -130,7 +130,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           text: L.viewPremiumFeatures,
                         ),
                         const SizedBox(height: 24),
-                        PremiumIntroductionFotter(
+                        PremiumIntroductionFooter(
                           isLoading: isLoading,
                         ),
                       ],

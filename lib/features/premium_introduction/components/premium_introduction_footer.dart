@@ -15,9 +15,9 @@ import 'package:pilll/utils/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumIntroductionFotter extends StatelessWidget {
+class PremiumIntroductionFooter extends StatelessWidget {
   final ValueNotifier<bool> isLoading;
-  const PremiumIntroductionFotter({super.key, required this.isLoading});
+  const PremiumIntroductionFooter({super.key, required this.isLoading});
 
   @override
   Widget build(BuildContext context) {
