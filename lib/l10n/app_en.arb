@@ -1533,7 +1533,6 @@
     "purchaseErrorIneligibleError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorIneligibleError": {
         "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1543,18 +1542,18 @@
             }
         }
     },
-    "purchaseErrorInsufficientPermissionsError": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "purchaseErrorInsufficientPermissionsError": "Your {accountName} cannot subscribe to the plan. Please check your payment information and try again",
     "@purchaseErrorInsufficientPermissionsError": {
-        "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+        "description": "Your {accountName} cannot subscribe to the plan. Please check your payment information and try again",
         "placeholders": {
             "accountName": {
                 "type": "String"
             }
         }
     },
-    "purchaseErrorPaymentPendingError": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "purchaseErrorPaymentPendingError": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
     "@purchaseErrorPaymentPendingError": {
-        "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+        "description": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
         "placeholders": {
             "accountName": {
                 "type": "String"
@@ -1564,9 +1563,9 @@
             }
         }
     },
-    "purchaseErrorInvalidSubscriberAttributesError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidSubscriberAttributesError": "Failed to purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidSubscriberAttributesError": {
-        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "Failed to purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1576,9 +1575,9 @@
             }
         }
     },
-    "purchaseErrorLogOutWithAnonymousUserError": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorLogOutWithAnonymousUserError": "Failed to retrieve user information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorLogOutWithAnonymousUserError": {
-        "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "Failed to retrieve user information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1588,9 +1587,9 @@
             }
         }
     },
-    "purchaseErrorConfigurationError": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorConfigurationError": "Failed to retrieve purchase information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorConfigurationError": {
-        "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "Failed to retrieve purchase information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1600,9 +1599,9 @@
             }
         }
     },
-    "purchaseErrorUnsupportedError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnsupportedError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnsupportedError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1615,9 +1614,9 @@
             }
         }
     },
-    "purchaseErrorEmptySubscriberAttributesError": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorEmptySubscriberAttributesError": "An unknown error occurred. Could not retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorEmptySubscriberAttributesError": {
-        "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Could not retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1627,9 +1626,9 @@
             }
         }
     },
-    "purchaseErrorProductDiscountMissingIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorProductDiscountMissingIdentifierError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorProductDiscountMissingIdentifierError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1642,9 +1641,9 @@
             }
         }
     },
-    "purchaseErrorUnknownNonNativeError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnknownNonNativeError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnknownNonNativeError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1657,9 +1656,9 @@
             }
         }
     },
-    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1672,9 +1671,9 @@
             }
         }
     },
-    "purchaseErrorCustomerInfoError": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorCustomerInfoError": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorCustomerInfoError": {
-        "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+        "description": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1687,9 +1686,9 @@
             }
         }
     },
-    "purchaseErrorSystemInfoError": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorSystemInfoError": "There is a problem with the device settings. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorSystemInfoError": {
-        "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "There is a problem with the device settings. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1702,9 +1701,9 @@
             }
         }
     },
-    "purchaseErrorBeginRefundRequestError": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorBeginRefundRequestError": "A refund process has been initiated. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorBeginRefundRequestError": {
-        "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "A refund process has been initiated. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1717,9 +1716,9 @@
             }
         }
     },
-    "purchaseErrorProductRequestTimeout": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorProductRequestTimeout": "Timed out. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorProductRequestTimeout": {
-        "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "Timed out. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1729,9 +1728,9 @@
             }
         }
     },
-    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorApiEndpointBlocked": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorApiEndpointBlocked": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1744,9 +1743,9 @@
             }
         }
     },
-    "purchaseErrorInvalidPromotionalOfferError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidPromotionalOfferError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidPromotionalOfferError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1759,9 +1758,9 @@
             }
         }
     },
-    "purchaseErrorOfflineConnectionError": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorOfflineConnectionError": "Poor connection. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorOfflineConnectionError": {
-        "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "Poor connection. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1771,13 +1770,13 @@
             }
         }
     },
-    "forceUpdateTitle": "アプリをアップデートしてください",
+    "forceUpdateTitle": "Please update the app",
     "@forceUpdateTitle": {
-        "description": "アプリをアップデートしてください"
+        "description": "Please update the app"
     },
-    "forceUpdateMessage": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "forceUpdateMessage": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
     "@forceUpdateMessage": {
-        "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+        "description": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
         "placeholders": {
             "storeName": {
                 "type": "String"
