@@ -556,7 +556,7 @@
     "description": "前回のシートの最後：{estimatedEndPillNumber}番",
     "placeholders": {
       "estimatedEndPillNumber": {
-        "type": "String"
+        "type": "int"
       }
     }
   },
@@ -1917,7 +1917,7 @@
     "description": "{number}枚",
     "placeholders": {
       "number": {
-        "type": "String"
+        "type": "int"
       }
     }
   },
@@ -1950,7 +1950,7 @@
     "description": "{number}日間すべての機能が使えます！",
     "placeholders": {
       "number": {
-        "type": "String"
+        "type": "int"
       }
     }
   },
@@ -2059,10 +2059,10 @@
     "description": "{begin}番 ~ {end}番",
     "placeholders": {
       "begin": {
-        "type": "String"
+        "type": "int"
       },
       "end": {
-        "type": "String"
+        "type": "int"
       }
     }
   },
@@ -2169,7 +2169,7 @@
     "description": "通知{number}",
     "placeholders": {
       "number": {
-        "type": "String"
+        "type": "int"
       }
     }
   },
