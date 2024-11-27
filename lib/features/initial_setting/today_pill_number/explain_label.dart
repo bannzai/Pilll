@@ -45,7 +45,7 @@ class ExplainPillNumber extends HookConsumerWidget {
                   fontSize: 34,
                   color: TextColor.main,
                 )),
-            Text(L.perNumber,
+            Text(L.number,
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
