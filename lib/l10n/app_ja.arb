@@ -122,7 +122,12 @@
   },
   "syncWithDeviceTimeZone": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
   "@syncWithDeviceTimeZone": {
-    "description": "端末のタイムゾーンと同期しますか？"
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
   },
   "currentTimeZone": "現在設定されているタイムゾーン",
   "@currentTimeZone": {
