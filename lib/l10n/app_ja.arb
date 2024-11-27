@@ -1,41 +1,113 @@
 {
   "pillSheetType21With7Placebo": "21錠タイプ",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
   "pillSheetType28With4Placebo": "28錠タイプ(4錠偽薬)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
   "pillSheetType28With7Placebo": "28錠タイプ(7錠偽薬)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
   "pillSheetType28": "28錠タイプ(すべて実薬)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
   "pillSheetType24": "24錠タイプ(すべて実薬)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
   "pillSheetType21": "21錠タイプ(すべて実薬)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
   "pillSheetType24WithRest4": "24錠タイプ",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
   "restPeriod": "休薬",
+  "@restPeriod": {
+    "description": "休薬"
+  },
   "placebo": "偽薬",
+  "@placebo": {
+    "description": "偽薬"
+  },
   "userNotFound": "ユーザーが見つかりません",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
   "userAlreadyExists": "すでにユーザーが存在してます",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
   "medicationHistory": "服用履歴",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
   "settings": "設定",
+  "@settings": {
+    "description": "設定"
+  },
   "account": "アカウント",
+  "@account": {
+    "description": "アカウント"
+  },
   "dataTransferRequiresAccount": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
   "pillPremium": "Pilllプレミアム",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
   "unlimitedFeatureDuration": "機能無制限の期間について",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
   "pillSheet": "ピルシート",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
   "notification": "通知です",
+  "@notification": {
+    "description": "通知です"
+  },
   "menstruation": "生理",
+  "@menstruation": {
+    "description": "生理"
+  },
   "others": "その他",
-  "shareWithFriends": "友達に教える",
-  "linkCopiedToClipboard": "クリップボードにリンクをコピーしました",
-  "termsOfService": "利用規約",
-  "privacyPolicy": "プライバシーポリシー",
+  "@others": {
+    "description": "その他"
+  },
   "faq": "FAQ",
+  "@faq": {
+    "description": "FAQ"
+  },
   "newFeaturesIntroduction": "新機能紹介",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
   "contactUs": "お問い合わせ",
-  "notificationTime": "通知時刻",
-  "timeZoneChangedTo": "{tz}に変更しました",
-  "notificationNumber": "通知{number}",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
   "delete": "削除",
+  "@delete": {
+    "description": "削除"
+  },
   "doDelete": "削除する",
+  "@doDelete": {
+    "description": "削除する"
+  },
   "deleteUser": "ユーザーを削除",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
   "deleteDiary": "日記を削除します",
-  "deletedDiaryCannotBeRestored": "削除された日記は復元ができません",
-  "editMenstruation": "生理期間を編集",
   "confirmDeletingMenstruation": "生理期間を削除しますか？",
   "addNotificationTime": "通知時間の追加",
   "syncWithDeviceTimeZone": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
