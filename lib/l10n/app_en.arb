@@ -1,0 +1,2236 @@
+{
+    "@@locale": "en",
+    "pillSheetType21With7Placebo": "21錠タイプ",
+    "@pillSheetType21With7Placebo": {
+        "description": "21錠タイプ(7錠偽薬)"
+    },
+    "pillSheetType28With4Placebo": "28錠タイプ(4錠偽薬)",
+    "@pillSheetType28With4Placebo": {
+        "description": "28錠タイプ(4錠偽薬)"
+    },
+    "pillSheetType28With7Placebo": "28錠タイプ(7錠偽薬)",
+    "@pillSheetType28With7Placebo": {
+        "description": "28錠タイプ(7錠偽薬)"
+    },
+    "pillSheetType28": "28錠タイプ(すべて実薬)",
+    "@pillSheetType28": {
+        "description": "28錠タイプ(すべて実薬)"
+    },
+    "pillSheetType24": "24錠タイプ(すべて実薬)",
+    "@pillSheetType24": {
+        "description": "24錠タイプ(すべて実薬)"
+    },
+    "pillSheetType21": "21錠タイプ(すべて実薬)",
+    "@pillSheetType21": {
+        "description": "21錠タイプ(すべて実薬)"
+    },
+    "pillSheetType24WithRest4": "24錠タイプ",
+    "@pillSheetType24WithRest4": {
+        "description": "24錠タイプ"
+    },
+    "restPeriod": "休薬",
+    "@restPeriod": {
+        "description": "休薬"
+    },
+    "placebo": "偽薬",
+    "@placebo": {
+        "description": "偽薬"
+    },
+    "userNotFound": "ユーザーが見つかりません",
+    "@userNotFound": {
+        "description": "ユーザーが見つかりません"
+    },
+    "userAlreadyExists": "すでにユーザーが存在してます",
+    "@userAlreadyExists": {
+        "description": "すでにユーザーが存在してます"
+    },
+    "medicationHistory": "服用履歴",
+    "@medicationHistory": {
+        "description": "服用履歴"
+    },
+    "settings": "設定",
+    "@settings": {
+        "description": "設定"
+    },
+    "account": "アカウント",
+    "@account": {
+        "description": "アカウント"
+    },
+    "dataTransferRequiresAccount": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。",
+    "@dataTransferRequiresAccount": {
+        "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+    },
+    "pillPremium": "Pilllプレミアム",
+    "@pillPremium": {
+        "description": "Pilllプレミアム"
+    },
+    "unlimitedFeatureDuration": "機能無制限の期間について",
+    "@unlimitedFeatureDuration": {
+        "description": "機能無制限の期間について"
+    },
+    "pillSheet": "ピルシート",
+    "@pillSheet": {
+        "description": "ピルシート"
+    },
+    "notification": "通知です",
+    "@notification": {
+        "description": "通知です"
+    },
+    "menstruation": "生理",
+    "@menstruation": {
+        "description": "生理"
+    },
+    "others": "その他",
+    "@others": {
+        "description": "その他"
+    },
+    "faq": "FAQ",
+    "@faq": {
+        "description": "FAQ"
+    },
+    "newFeaturesIntroduction": "新機能紹介",
+    "@newFeaturesIntroduction": {
+        "description": "新機能紹介"
+    },
+    "contactUs": "お問い合わせ",
+    "@contactUs": {
+        "description": "お問い合わせ"
+    },
+    "delete": "削除",
+    "@delete": {
+        "description": "削除"
+    },
+    "doDelete": "削除する",
+    "@doDelete": {
+        "description": "削除する"
+    },
+    "deleteUser": "ユーザーを削除",
+    "@deleteUser": {
+        "description": "ユーザーを削除"
+    },
+    "deleteDiary": "日記を削除します",
+    "@deleteDiary": {
+        "description": "日記を削除します"
+    },
+    "confirmDeletingMenstruation": "生理期間を削除しますか？",
+    "@confirmDeletingMenstruation": {
+        "description": "生理期間を削除しますか？"
+    },
+    "addNotificationTime": "通知時間の追加",
+    "@addNotificationTime": {
+        "description": "通知時間の追加"
+    },
+    "syncWithDeviceTimeZone": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "@syncWithDeviceTimeZone": {
+        "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+        "placeholders": {
+            "deviceTimezoneName": {
+                "type": "String"
+            }
+        }
+    },
+    "currentTimeZone": "現在設定されているタイムゾーン",
+    "@currentTimeZone": {
+        "description": "現在設定されているタイムゾーン"
+    },
+    "yes": "はい",
+    "@yes": {
+        "description": "はい"
+    },
+    "no": "いいえ",
+    "@no": {
+        "description": "いいえ"
+    },
+    "unsubscribeInfo": "解約について",
+    "@unsubscribeInfo": {
+        "description": "解約について"
+    },
+    "pillReminder": "ピルの服用通知",
+    "@pillReminder": {
+        "description": "ピルの服用通知"
+    },
+    "takePillReminder": "服用通知",
+    "@takePillReminder": {
+        "description": "服用通知"
+    },
+    "copyDebugInfo": "COPY DEBUG INFO",
+    "@copyDebugInfo": {
+        "description": "COPY DEBUG INFO"
+    },
+    "cancel": "キャンセル",
+    "@cancel": {
+        "description": "キャンセル"
+    },
+    "signOut": "サインアウト",
+    "@signOut": {
+        "description": "サインアウト"
+    },
+    "autoAddPillSheetGroup": "ピルシートグループの自動追加",
+    "@autoAddPillSheetGroup": {
+        "description": "ピルシートグループの自動追加"
+    },
+    "autoAddNewSheetAfterCurrentEnds": "今のピルシートグループが終了したら、新しいシートを自動で追加します",
+    "@autoAddNewSheetAfterCurrentEnds": {
+        "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+    },
+    "accountSettings": "アカウント設定",
+    "@accountSettings": {
+        "description": "アカウント設定"
+    },
+    "linked": "連携済み",
+    "@linked": {
+        "description": "連携済み"
+    },
+    "unregistered": "未登録",
+    "@unregistered": {
+        "description": "未登録"
+    },
+    "quickRecord": "クイックレコード",
+    "@quickRecord": {
+        "description": "クイックレコード"
+    },
+    "quickRecordDescription": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。",
+    "@quickRecordDescription": {
+        "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    },
+    "healthCareIntegration": "ヘルスケア連携",
+    "@healthCareIntegration": {
+        "description": "ヘルスケア連携"
+    },
+    "healthCareIntegrationDescription": "Pilllで記録した生理記録を自動でヘルスケアに記録できます",
+    "@healthCareIntegrationDescription": {
+        "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+    },
+    "viewPremiumPlan": "プレミアムプランを見る",
+    "@viewPremiumPlan": {
+        "description": "プレミアムプランを見る"
+    },
+    "changePillNumberForToday": "今日飲むピル番号の変更",
+    "@changePillNumberForToday": {
+        "description": "今日飲むピル番号の変更"
+    },
+    "discardAllPillSheets": "ピルシートをすべて破棄",
+    "@discardAllPillSheets": {
+        "description": "ピルシートをすべて破棄"
+    },
+    "areYouSureDoing": "{doing}しますか？",
+    "@areYouSureDoing": {
+        "description": "{doing}しますか？",
+        "placeholders": {
+            "doing": {
+                "type": "String"
+            }
+        }
+    },
+    "currentlyDisplayed": "現在表示されている",
+    "@currentlyDisplayed": {
+        "description": "現在表示されている"
+    },
+    "allPillSheets": "すべてのピルシート",
+    "@allPillSheets": {
+        "description": "すべてのピルシート"
+    },
+    "willBeDiscarded": "が破棄されます",
+    "@willBeDiscarded": {
+        "description": "が破棄されます"
+    },
+    "discard": "破棄する",
+    "@discard": {
+        "description": "破棄する"
+    },
+    "pillSheetDiscarded": "ピルシートを破棄しました",
+    "@pillSheetDiscarded": {
+        "description": "ピルシートを破棄しました"
+    },
+    "aboutMenstruation": "生理について",
+    "@aboutMenstruation": {
+        "description": "生理について"
+    },
+    "checkPillNumberForMenstruationStart": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています",
+    "@checkPillNumberForMenstruationStart": {
+        "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    },
+    "customizeMedicationNotifications": "服用通知のカスタマイズ",
+    "@customizeMedicationNotifications": {
+        "description": "服用通知のカスタマイズ"
+    },
+    "customizeNotificationText": "服用通知の文言のカスタマイズができます",
+    "@customizeNotificationText": {
+        "description": "服用通知の文言のカスタマイズができます"
+    },
+    "xCanBeCustomized": "{x}のカスタマイズができます",
+    "@xCanBeCustomized": {
+        "description": "{x}のカスタマイズができます",
+        "placeholders": {
+            "x": {
+                "type": "String"
+            }
+        }
+    },
+    "thankYouForCooperation": "ご協力ありがとうございます",
+    "@thankYouForCooperation": {
+        "description": "ご協力ありがとうございます"
+    },
+    "feedbackUsage": "いただいた意見は今後の改善へと活用させていただきます。",
+    "@feedbackUsage": {
+        "description": "いただいた意見は今後の改善へと活用させていただきます。"
+    },
+    "close": "閉じる",
+    "@close": {
+        "description": "閉じる"
+    },
+    "registerAccount": "アカウント登録",
+    "@registerAccount": {
+        "description": "アカウント登録"
+    },
+    "reLogin": "再ログイン",
+    "@reLogin": {
+        "description": "再ログイン"
+    },
+    "authenticationInfoUpdated": "認証情報を更新しました",
+    "@authenticationInfoUpdated": {
+        "description": "認証情報を更新しました"
+    },
+    "updateAuthenticationInformation": "認証情報を更新します",
+    "@updateAuthenticationInformation": {
+        "description": "認証情報を更新します"
+    },
+    "registeredWithProvider": "{accountTypeProviderName}で登録しました",
+    "@registeredWithProvider": {
+        "description": "{accountTypeProviderName}で登録しました",
+        "placeholders": {
+            "accountTypeProviderName": {
+                "type": "String"
+            }
+        }
+    },
+    "linkAccount": "連携する",
+    "@linkAccount": {
+        "description": "連携する"
+    },
+    "withdraw": "退会する",
+    "@withdraw": {
+        "description": "退会する"
+    },
+    "withdrawalCompleted": "退会しました",
+    "@withdrawalCompleted": {
+        "description": "退会しました"
+    },
+    "appExitMessage": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。",
+    "@appExitMessage": {
+        "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+    },
+    "oK": "OK",
+    "@oK": {
+        "description": "OK"
+    },
+    "changePillNumber": "ピル番号の変更",
+    "@changePillNumber": {
+        "description": "ピル番号の変更"
+    },
+    "selectOrChangePillNumber": "今日({today})\n飲む・飲んだピルの番号をタップ",
+    "@selectOrChangePillNumber": {
+        "description": "今日飲む・飲んだピルの番号をタップ",
+        "placeholders": {
+            "today": {
+                "type": "String"
+            }
+        }
+    },
+    "change": "変更",
+    "@change": {
+        "description": "変更"
+    },
+    "pill": "ピル",
+    "@pill": {
+        "description": "ピル"
+    },
+    "calendar": "カレンダー",
+    "@calendar": {
+        "description": "カレンダー"
+    },
+    "userInformationWillBeDeleted": "ユーザー情報が削除されます",
+    "@userInformationWillBeDeleted": {
+        "description": "ユーザー情報が削除されます"
+    },
+    "withdrawalMessage": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
+    "@withdrawalMessage": {
+        "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+    },
+    "recordPage": "RecordPage",
+    "@recordPage": {
+        "description": "RecordPage"
+    },
+    "doReLogin": "再ログインしてください",
+    "@doReLogin": {
+        "description": "再ログインしてください"
+    },
+    "reLoginMessage": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります",
+    "@reLoginMessage": {
+        "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+    },
+    "menstruationPage": "MenstruationPage",
+    "@menstruationPage": {
+        "description": "MenstruationPage"
+    },
+    "calendarPage": "CalendarPage",
+    "@calendarPage": {
+        "description": "CalendarPage"
+    },
+    "settingsPage": "SettingsPage",
+    "@settingsPage": {
+        "description": "SettingsPage"
+    },
+    "menstruationDeleted": "生理期間を削除しました",
+    "@menstruationDeleted": {
+        "description": "生理期間を削除しました"
+    },
+    "editMenstruationPeriod": "生理期間を編集",
+    "@editMenstruationPeriod": {
+        "description": "生理期間を編集"
+    },
+    "menstruationEdited": "生理期間を編集しました",
+    "@menstruationEdited": {
+        "description": "生理期間を編集しました"
+    },
+    "physicalConditionDetail": "体調詳細",
+    "@physicalConditionDetail": {
+        "description": "体調詳細"
+    },
+    "medicationHistoryPremiumFeatureRestriction": "これ以上の閲覧はプレミアム機能になります",
+    "@medicationHistoryPremiumFeatureRestriction": {
+        "description": "これ以上の閲覧はプレミアム機能になります"
+    },
+    "viewMoreDetails": "くわしくみる",
+    "@viewMoreDetails": {
+        "description": "くわしくみる"
+    },
+    "viewMore": "もっと見る",
+    "@viewMore": {
+        "description": "もっと見る"
+    },
+    "afterLastTakenPillNumber": "{afterLastTakenPillNumber}番",
+    "@afterLastTakenPillNumber": {
+        "description": "{afterLastTakenPillNumber}番",
+        "placeholders": {
+            "afterLastTakenPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}番",
+    "@leftDashAfterLastTakenPillNumber": {
+        "description": "{left}-{afterLastTakenPillNumber}番",
+        "placeholders": {
+            "left": {
+                "type": "String"
+            },
+            "afterLastTakenPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}番",
+    "@beforeLastTakenPillNumber": {
+        "description": "{beforeLastTakenPillNumber}番",
+        "placeholders": {
+            "beforeLastTakenPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+        "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+        "placeholders": {
+            "beforeLastTakenPillNumber": {
+                "type": "String"
+            },
+            "afterLastTakenPillNumberPlusOne": {
+                "type": "String"
+            }
+        }
+    },
+    "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "@oneToAfterDisplayNumberBeginPillNumber": {
+        "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+        "placeholders": {
+            "afterDisplayNumberSettingBeginPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+        "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+        "placeholders": {
+            "beforeBeginPillNumber": {
+                "type": "String"
+            },
+            "afterDisplayNumberSettingBeginPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "@oneToAfterDisplayNumberEndPillNumber": {
+        "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+        "placeholders": {
+            "afterDisplayNumberSettingEndPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "@beforeEndToAfterDisplayNumberEndPillNumber": {
+        "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+        "placeholders": {
+            "beforeEndPillNumber": {
+                "type": "String"
+            },
+            "afterDisplayNumberSettingEndPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "selectPauseStartDate": "服用お休み開始日選択",
+    "@selectPauseStartDate": {
+        "description": "服用お休み開始日選択"
+    },
+    "selectPausePeriod": "服用お休み期間を選択",
+    "@selectPausePeriod": {
+        "description": "服用お休み期間を選択"
+    },
+    "pauseStartDate": "服用お休み開始日",
+    "@pauseStartDate": {
+        "description": "服用お休み開始日"
+    },
+    "pauseEndDate": "服用お休み終了日",
+    "@pauseEndDate": {
+        "description": "服用お休み終了日"
+    },
+    "endPillSheet": "ピルシート終了",
+    "@endPillSheet": {
+        "description": "ピルシート終了"
+    },
+    "discardPillSheet": "ピルシート破棄",
+    "@discardPillSheet": {
+        "description": "ピルシート破棄"
+    },
+    "takingTime": "服用時間",
+    "@takingTime": {
+        "description": "服用時間"
+    },
+    "takingHistoryIsPremiumFeature": "服用履歴はプレミアム機能です",
+    "@takingHistoryIsPremiumFeature": {
+        "description": "服用履歴はプレミアム機能です"
+    },
+    "pauseTakingDoesNotAdvancePillNumber": "服用をお休みするとピル番号は進みません",
+    "@pauseTakingDoesNotAdvancePillNumber": {
+        "description": "服用をお休みするとピル番号は進みません"
+    },
+    "pauseTakingFromNumber": "{number}から服用をお休みしますか？",
+    "@pauseTakingFromNumber": {
+        "description": "{number}から服用をお休みしますか？",
+        "placeholders": {
+            "number": {
+                "type": "String"
+            }
+        }
+    },
+    "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "@lastTakenPlusOnePillNumber": {
+        "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+        "placeholders": {
+            "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+                "type": "String"
+            }
+        }
+    },
+    "taking": "服用",
+    "@taking": {
+        "description": "服用"
+    },
+    "estimatedEndPillNumber": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "@estimatedEndPillNumber": {
+        "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+        "placeholders": {
+            "estimatedEndPillNumber": {
+                "type": "int"
+            }
+        }
+    },
+    "addPillSheetButton": "ピルシートを追加",
+    "@addPillSheetButton": {
+        "description": "ピルシートを追加"
+    },
+    "taken": "飲んだ",
+    "@taken": {
+        "description": "飲んだ"
+    },
+    "notTaken": "飲んでない",
+    "@notTaken": {
+        "description": "飲んでない"
+    },
+    "pillSheetSettings": "ピルシートの設定",
+    "@pillSheetSettings": {
+        "description": "ピルシートの設定"
+    },
+    "unmarkTodayPillAsTakenToPause": "今日飲むピルを未服用にしてから",
+    "@unmarkTodayPillAsTakenToPause": {
+        "description": "今日飲むピルを未服用にしてから"
+    },
+    "pauseTaking": "服用お休み",
+    "@pauseTaking": {
+        "description": "服用お休み"
+    },
+    "changePauseStartDate": "服用お休み開始日変更",
+    "@changePauseStartDate": {
+        "description": "服用お休み開始日変更"
+    },
+    "pauseTakingPeriodEnded": "服用のお休み期間が終了しました",
+    "@pauseTakingPeriodEnded": {
+        "description": "服用のお休み期間が終了しました"
+    },
+    "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "@endValue": {
+        "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+        "placeholders": {
+            "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+                "type": "int"
+            }
+        }
+    },
+    "changePillDaysForSheet": "シートの服用日数を変更",
+    "@changePillDaysForSheet": {
+        "description": "シートの服用日数を変更"
+    },
+    "changedStartAndEndNumbers": "始まりと終わりの番号を変更しました",
+    "@changedStartAndEndNumbers": {
+        "description": "始まりと終わりの番号を変更しました"
+    },
+    "startOfPillDays": "服用日数の始まり",
+    "@startOfPillDays": {
+        "description": "服用日数の始まり"
+    },
+    "beforePillSheetGroupSequentialEstimatedEndDay": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "@beforePillSheetGroupSequentialEstimatedEndDay": {
+        "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+        "placeholders": {
+            "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+                "type": "int"
+            }
+        }
+    },
+    "endOfPillDays": "服用日数の終わり",
+    "@endOfPillDays": {
+        "description": "服用日数の終わり"
+    },
+    "changedToNumber": "番に変更",
+    "@changedToNumber": {
+        "description": "番に変更"
+    },
+    "displayMode": "表示モード",
+    "@displayMode": {
+        "description": "表示モード"
+    },
+    "dateDisplay": "日付表示",
+    "@dateDisplay": {
+        "description": "日付表示"
+    },
+    "pillNumber": "ピル番号 ",
+    "@pillNumber": {
+        "description": "ピル番号 "
+    },
+    "pillDays": "服用日数",
+    "@pillDays": {
+        "description": "服用日数"
+    },
+    "pillDaysCycle": "服用日数(周期)",
+    "@pillDaysCycle": {
+        "description": "服用日数(周期)"
+    },
+    "pillSheetEnded": "ピルシートが終了しました",
+    "@pillSheetEnded": {
+        "description": "ピルシートが終了しました"
+    },
+    "checkLastTakenDate": "最後に服用した日を確認",
+    "@checkLastTakenDate": {
+        "description": "最後に服用した日を確認"
+    },
+    "pleaseRegisterAccount": "アカウント登録をしてください",
+    "@pleaseRegisterAccount": {
+        "description": "アカウント登録をしてください"
+    },
+    "cannotTransferPremiumWithoutAccount": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません",
+    "@cannotTransferPremiumWithoutAccount": {
+        "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    },
+    "reexperiencePremiumFeatures": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！",
+    "@reexperiencePremiumFeatures": {
+        "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+    },
+    "whereToShare": "どちらにシェアしますか？",
+    "@whereToShare": {
+        "description": "どちらにシェアしますか？"
+    },
+    "pauseTakingDay": "🌙 服用お休み {day}日目",
+    "@pauseTakingDay": {
+        "description": "🌙 服用お休み {day}日目",
+        "placeholders": {
+            "day": {
+                "type": "int"
+            }
+        }
+    },
+    "withDay": "{word}日目",
+    "@withDay": {
+        "description": "{word}日目",
+        "placeholders": {
+            "word": {
+                "type": "String"
+            }
+        }
+    },
+    "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "@restDurationDays": {
+        "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+        "placeholders": {
+            "activePillSheetPillSheetTypeNotTakenWord": {
+                "type": "String"
+            },
+            "restDurationDays": {
+                "type": "int"
+            }
+        }
+    },
+    "daysUntilPausePeriod": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "@daysUntilPausePeriod": {
+        "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+        "placeholders": {
+            "diffPlusOne": {
+                "type": "int"
+            },
+            "activePillSheetPillSheetTypeNotTakenWord": {
+                "type": "String"
+            }
+        }
+    },
+    "remainingDaysAllFeatures": "残り{diff}日間すべての機能を使えます",
+    "@remainingDaysAllFeatures": {
+        "description": "残り{diff}日間すべての機能を使えます",
+        "placeholders": {
+            "diff": {
+                "type": "int"
+            }
+        }
+    },
+    "todayIsTaking": "💊 今日は服用",
+    "@todayIsTaking": {
+        "description": "💊 今日は服用"
+    },
+    "todayPillToTake": "💊 今日飲むピル",
+    "@todayPillToTake": {
+        "description": "💊 今日飲むピル"
+    },
+    "number": "番",
+    "@number": {
+        "description": "番"
+    },
+    "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "@recordedMenstruationStartDate": {
+        "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+        "placeholders": {
+            "DateTimeFormatterMonthAndDay": {
+                "type": "String"
+            }
+        }
+    },
+    "menstruationStartDate": "生理開始日",
+    "@menstruationStartDate": {
+        "description": "生理開始日"
+    },
+    "menstruationEndDate": "生理終了日",
+    "@menstruationEndDate": {
+        "description": "生理終了日"
+    },
+    "menstruationScheduleDate": "生理予定日",
+    "@menstruationScheduleDate": {
+        "description": "生理予定日"
+    },
+    "menstruationScheduleDateWithNumber": "生理予定：{diffPlusOne}日目",
+    "@menstruationScheduleDateWithNumber": {
+        "description": "生理予定：{diffPlusOne}日目",
+        "placeholders": {
+            "diffPlusOne": {
+                "type": "int"
+            }
+        }
+    },
+    "menstruationScheduleDateWithNumberAndPillNumber": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "@menstruationScheduleDateWithNumberAndPillNumber": {
+        "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+        "placeholders": {
+            "diffPlusOne": {
+                "type": "int"
+            },
+            "pillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "menstruationRemainingDay": "あと{diff}日",
+    "@menstruationRemainingDay": {
+        "description": "あと{diff}日",
+        "placeholders": {
+            "diff": {
+                "type": "int"
+            }
+        }
+    },
+    "menstruationProgressingDay": "{diffPlusOne}日目",
+    "@menstruationProgressingDay": {
+        "description": "{diffPlusOne}日目",
+        "placeholders": {
+            "diffPlusOne": {
+                "type": "int"
+            }
+        }
+    },
+    "recordMenstruation": "生理を記録",
+    "@recordMenstruation": {
+        "description": "生理を記録"
+    },
+    "menstruationHistory": "生理履歴",
+    "@menstruationHistory": {
+        "description": "生理履歴"
+    },
+    "menstruationFromToday": "今日から生理",
+    "@menstruationFromToday": {
+        "description": "今日から生理"
+    },
+    "menstruationFromYesterday": "昨日から生理",
+    "@menstruationFromYesterday": {
+        "description": "昨日から生理"
+    },
+    "selectMenstruationStartDate": "生理開始日を選択",
+    "@selectMenstruationStartDate": {
+        "description": "生理開始日を選択"
+    },
+    "menstruationCycle": "{menstruationDuration}日周期",
+    "@menstruationCycle": {
+        "description": "{menstruationDuration}日周期",
+        "placeholders": {
+            "menstruationDuration": {
+                "type": "int"
+            }
+        }
+    },
+    "login": "ログイン",
+    "@login": {
+        "description": "ログイン"
+    },
+    "beforePremiumRegistration": "プレミアム登録の前に…",
+    "@beforePremiumRegistration": {
+        "description": "プレミアム登録の前に…"
+    },
+    "createNewAccountIfNotLoggedIn": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます",
+    "@createNewAccountIfNotLoggedIn": {
+        "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+    },
+    "registerAccountForDataTransfer": "アカウント登録するとデータの引き継ぎが可能になります",
+    "@registerAccountForDataTransfer": {
+        "description": "アカウント登録するとデータの引き継ぎが可能になります"
+    },
+    "registerAccountToKeepData": "アカウント情報を保持するため、アカウント登録をお願いします",
+    "@registerAccountToKeepData": {
+        "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+    },
+    "signInWith": "{loginName}でサインイン",
+    "@signInWith": {
+        "description": "{loginName}でサインイン",
+        "placeholders": {
+            "loginName": {
+                "type": "String"
+            }
+        }
+    },
+    "registerWith": "{loginName}で登録",
+    "@registerWith": {
+        "description": "{loginName}で登録",
+        "placeholders": {
+            "loginName": {
+                "type": "String"
+            }
+        }
+    },
+    "premiumRegistrationComplete": "Pilllプレミアム登録完了",
+    "@premiumRegistrationComplete": {
+        "description": "Pilllプレミアム登録完了"
+    },
+    "thankYouForRegistration": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
+    "@thankYouForRegistration": {
+        "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+    },
+    "limitedTimeDiscount": "今なら限定価格でずっと使える",
+    "@limitedTimeDiscount": {
+        "description": "今なら限定価格でずっと使える"
+    },
+    "standardMonthlyPlan": "通常 月額プラン",
+    "@standardMonthlyPlan": {
+        "description": "通常 月額プラン"
+    },
+    "annualPlan": "年額プラン",
+    "@annualPlan": {
+        "description": "年額プラン"
+    },
+    "annualPrice": "{annualPackageStoreProductPriceString}/年",
+    "@annualPrice": {
+        "description": "{annualPackageStoreProductPriceString}/年",
+        "placeholders": {
+            "annualPackageStoreProductPriceString": {
+                "type": "String"
+            }
+        }
+    },
+    "monthlyPrice": "（{monthlyPriceString}/月）",
+    "@monthlyPrice": {
+        "description": "（{monthlyPriceString}/月）",
+        "placeholders": {
+            "monthlyPriceString": {
+                "type": "String"
+            }
+        }
+    },
+    "premiumTermsNotice1": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n",
+    "@premiumTermsNotice1": {
+        "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+    },
+    "premiumTermsBullet": "・",
+    "@premiumTermsBullet": {
+        "description": "・"
+    },
+    "slashSeparator": " / ",
+    "@slashSeparator": {
+        "description": " / "
+    },
+    "premiumTermsNotice2": "特定商取引法に基づく表示",
+    "@premiumTermsNotice2": {
+        "description": "特定商取引法に基づく表示"
+    },
+    "premiumTermsNotice3": "をご確認のうえ登録してください\n",
+    "@premiumTermsNotice3": {
+        "description": "をご確認のうえ登録してください\n"
+    },
+    "autoRenewNotice": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
+    "@autoRenewNotice": {
+        "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    },
+    "cancelAutoRenewInfo": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "@cancelAutoRenewInfo": {
+        "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+        "placeholders": {
+            "storeName": {
+                "type": "String"
+            }
+        }
+    },
+    "moreDetails": "詳細はこちら",
+    "@moreDetails": {
+        "description": "詳細はこちら"
+    },
+    "restorePurchase": "購入情報を復元しました",
+    "@restorePurchase": {
+        "description": "購入情報を復元しました"
+    },
+    "previouslyPurchased": "以前購入した方はこちら",
+    "@previouslyPurchased": {
+        "description": "以前購入した方はこちら"
+    },
+    "noPreviousPurchaseInfo": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください",
+    "@noPreviousPurchaseInfo": {
+        "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+    },
+    "monthlyPlan": "月額プラン",
+    "@monthlyPlan": {
+        "description": "月額プラン"
+    },
+    "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/月",
+    "@monthlyPlanPrice": {
+        "description": "{monthlyPackageStoreProductPriceString}/月",
+        "placeholders": {
+            "monthlyPackageStoreProductPriceString": {
+                "type": "String"
+            }
+        }
+    },
+    "youArePremiumMember": "あなたは\nプレミアムメンバーです",
+    "@youArePremiumMember": {
+        "description": "あなたは\nプレミアムメンバーです"
+    },
+    "thankYouMessage": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
+    "@thankYouMessage": {
+        "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+    },
+    "premiumFeaturesList": "プレミアム機能一覧",
+    "@premiumFeaturesList": {
+        "description": "プレミアム機能一覧"
+    },
+    "pushNotificationForTakingRecord": "📩 プッシュ通知から服用記録",
+    "@pushNotificationForTakingRecord": {
+        "description": "📩 プッシュ通知から服用記録"
+    },
+    "viewAndRecordTakingHistory": "🗂 服用履歴の記録・閲覧",
+    "@viewAndRecordTakingHistory": {
+        "description": "🗂 服用履歴の記録・閲覧"
+    },
+    "displayDateOnPillSheet": "📆 ピルシート上に日付表示",
+    "@displayDateOnPillSheet": {
+        "description": "📆 ピルシート上に日付表示"
+    },
+    "autoRefillNewPillSheet": "📦 新しいピルシートを自動補充",
+    "@autoRefillNewPillSheet": {
+        "description": "📦 新しいピルシートを自動補充"
+    },
+    "viewPastData": "👀 過去のデータ閲覧",
+    "@viewPastData": {
+        "description": "👀 過去のデータ閲覧"
+    },
+    "customizeHealthTags": "🏷 体調タグをカスタマイズ",
+    "@customizeHealthTags": {
+        "description": "🏷 体調タグをカスタマイズ"
+    },
+    "hideAds": "🚫 広告の非表示",
+    "@hideAds": {
+        "description": "🚫 広告の非表示"
+    },
+    "seeDetailsOfPremiumFeatures": "プレミアム機能の詳細を見る",
+    "@seeDetailsOfPremiumFeatures": {
+        "description": "プレミアム機能の詳細を見る"
+    },
+    "popularFeatures": "人気の\n機能",
+    "@popularFeatures": {
+        "description": "人気の\n機能"
+    },
+    "viewPremiumFeatures": "プレミアム機能を見る",
+    "@viewPremiumFeatures": {
+        "description": "プレミアム機能を見る"
+    },
+    "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
+    "@addedDisplayModePillDaysCycle": {
+        "description": "表示モード服用日数(周期)が追加されました"
+    },
+    "seeDetails": "詳細を見る",
+    "@seeDetails": {
+        "description": "詳細を見る"
+    },
+    "stepThreeOfThree": "3/3",
+    "@stepThreeOfThree": {
+        "description": "3/3"
+    },
+    "missedPillNotification": "ピルの飲み忘れ通知",
+    "@missedPillNotification": {
+        "description": "ピルの飲み忘れ通知"
+    },
+    "setMultipleReminders": "複数設定しておく事で飲み忘れを防げます",
+    "@setMultipleReminders": {
+        "description": "複数設定しておく事で飲み忘れを防げます"
+    },
+    "and": "と",
+    "@and": {
+        "description": "と"
+    },
+    "readAndStartUsing": "を読んで\n利用をはじめてください",
+    "@readAndStartUsing": {
+        "description": "を読んで\n利用をはじめてください"
+    },
+    "next": "次へ",
+    "@next": {
+        "description": "次へ"
+    },
+    "notificationIndex": "通知{number}",
+    "@notificationIndex": {
+        "description": "通知{number}",
+        "placeholders": {
+            "number": {
+                "type": "int"
+            }
+        }
+    },
+    "takingRecordFromNotification": "\\ 通知から服用記録ができます /",
+    "@takingRecordFromNotification": {
+        "description": "\\ 通知から服用記録ができます /"
+    },
+    "startApp": "アプリをはじめる",
+    "@startApp": {
+        "description": "アプリをはじめる"
+    },
+    "loggedInWithProvider": "{accountTypeProviderName}でログインしました",
+    "@loggedInWithProvider": {
+        "description": "{accountTypeProviderName}でログインしました",
+        "placeholders": {
+            "accountTypeProviderName": {
+                "type": "String"
+            }
+        }
+    },
+    "tellAboutPrescribedSheet": "処方されるシートについて\n教えてください",
+    "@tellAboutPrescribedSheet": {
+        "description": "処方されるシートについて\n教えてください"
+    },
+    "existingAccountUsers": "すでにアカウントをお持ちの方はこちら",
+    "@existingAccountUsers": {
+        "description": "すでにアカウントをお持ちの方はこちら"
+    },
+    "selectTodayPillNumber": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "@selectTodayPillNumber": {
+        "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+        "placeholders": {
+            "todayString": {
+                "type": "String"
+            }
+        }
+    },
+    "notYetKnown": "まだ分からない",
+    "@notYetKnown": {
+        "description": "まだ分からない"
+    },
+    "pillForToday": "{today}に飲むピルは",
+    "@pillForToday": {
+        "description": "{today}に飲むピルは",
+        "placeholders": {
+            "today": {
+                "type": "String"
+            }
+        }
+    },
+    "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+    "@todayPillNumber": {
+        "description": "{todayPillNumberPillNumberInPillSheet}",
+        "placeholders": {
+            "todayPillNumberPillNumberInPillSheet": {
+                "type": "String"
+            }
+        }
+    },
+    "preview": "プレビュー",
+    "@preview": {
+        "description": "プレビュー"
+    },
+    "normal": "通常",
+    "@normal": {
+        "description": "通常"
+    },
+    "missed": "飲み忘れ",
+    "@missed": {
+        "description": "飲み忘れ"
+    },
+    "showsDate": "日付を表示",
+    "@showsDate": {
+        "description": "日付を表示"
+    },
+    "showsPillNumber": "番号を表示",
+    "@showsPillNumber": {
+        "description": "番号を表示"
+    },
+    "showsDescription": "説明文を表示",
+    "@showsDescription": {
+        "description": "説明文を表示"
+    },
+    "title": "タイトル",
+    "@title": {
+        "description": "タイトル"
+    },
+    "message": "メッセージ",
+    "@message": {
+        "description": "メッセージ"
+    },
+    "option": "オプション",
+    "@option": {
+        "description": "オプション"
+    },
+    "completed": "完了",
+    "@completed": {
+        "description": "完了"
+    },
+    "pilll": "Pilll",
+    "@pilll": {
+        "description": "Pilll"
+    },
+    "changeMissedNotificationMessage": "飲み忘れてる場合の通知文言を変更できます",
+    "@changeMissedNotificationMessage": {
+        "description": "飲み忘れてる場合の通知文言を変更できます"
+    },
+    "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+    "@missedNotificationMessageLength": {
+        "description": "{missedTakenMessageValueCharactersLength}/100",
+        "placeholders": {
+            "missedTakenMessageValueCharactersLength": {
+                "type": "int"
+            }
+        }
+    },
+    "changeNotificationHeader": "通知の先頭部分の変更ができます",
+    "@changeNotificationHeader": {
+        "description": "通知の先頭部分の変更ができます"
+    },
+    "notificationHeaderLength": "{wordValueCharactersLength}/8",
+    "@notificationHeaderLength": {
+        "description": "{wordValueCharactersLength}/8",
+        "placeholders": {
+            "wordValueCharactersLength": {
+                "type": "int"
+            }
+        }
+    },
+    "enterAtLeastOneCharacter": "0文字以上入力してください",
+    "@enterAtLeastOneCharacter": {
+        "description": "0文字以上入力してください"
+    },
+    "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
+    "@changeDailyNotificationMessage": {
+        "description": "飲み忘れていない場合の通知文言を変更できます"
+    },
+    "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+    "@dailyNotificationMessageLength": {
+        "description": "{dailyTakenMessageValueCharactersLength}/100",
+        "placeholders": {
+            "dailyTakenMessageValueCharactersLength": {
+                "type": "int"
+            }
+        }
+    },
+    "receiveDailyNotificationAt9AM": "当日9:00に通知を受け取る",
+    "@receiveDailyNotificationAt9AM": {
+        "description": "当日9:00に通知を受け取る"
+    },
+    "save": "保存",
+    "@save": {
+        "description": "保存"
+    },
+    "physicalCondition": "体調",
+    "@physicalCondition": {
+        "description": "体調"
+    },
+    "deletedDiaryCannotBeRecovered": "削除された日記は復元ができません",
+    "@deletedDiaryCannotBeRecovered": {
+        "description": "削除された日記は復元ができません"
+    },
+    "sex": "sex",
+    "@sex": {
+        "description": "sex"
+    },
+    "previousPillSheetGroup": "前回のピルシートグループ",
+    "@previousPillSheetGroup": {
+        "description": "前回のピルシートグループ"
+    },
+    "noPreviousPillSheetGroup": "前回のピルシートグループがまだ存在しません",
+    "@noPreviousPillSheetGroup": {
+        "description": "前回のピルシートグループがまだ存在しません"
+    },
+    "failedToFetchPillHistory": "服用履歴情報の取得に失敗しました。{error}",
+    "@failedToFetchPillHistory": {
+        "description": "服用履歴情報の取得に失敗しました。{error}",
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "seeFAQ": "FAQを見る",
+    "@seeFAQ": {
+        "description": "FAQを見る"
+    },
+    "reloadScreen": "画面を再読み込み",
+    "@reloadScreen": {
+        "description": "画面を再読み込み"
+    },
+    "contactIfNotResolved": "解決しない場合はこちら",
+    "@contactIfNotResolved": {
+        "description": "解決しない場合はこちら"
+    },
+    "shareFeedback": "Pilllの感想をお聞かせください",
+    "@shareFeedback": {
+        "description": "Pilllの感想をお聞かせください"
+    },
+    "confirm": "決定",
+    "@confirm": {
+        "description": "決定"
+    },
+    "surveyForServiceImprovement": "よろしければサービス改善のためのアンケートにもご協力ください",
+    "@surveyForServiceImprovement": {
+        "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+    },
+    "participate": "協力する",
+    "@participate": {
+        "description": "協力する"
+    },
+    "notHelp": "しない",
+    "@notHelp": {
+        "description": "しない"
+    },
+    "serviceImprovementSurvey": "サービス改善アンケート",
+    "@serviceImprovementSurvey": {
+        "description": "サービス改善アンケート"
+    },
+    "satisfied": "満足している",
+    "@satisfied": {
+        "description": "満足している"
+    },
+    "notSatisfied": "満足では無い",
+    "@notSatisfied": {
+        "description": "満足では無い"
+    },
+    "perNumber": " 番ごとに",
+    "@perNumber": {
+        "description": " 番ごとに"
+    },
+    "howManyDaysDoesMenstruationLast": "何日間生理が続く？",
+    "@howManyDaysDoesMenstruationLast": {
+        "description": "何日間生理が続く？"
+    },
+    "daysMenstruationLasts": " 日間生理が続く",
+    "@daysMenstruationLasts": {
+        "description": " 日間生理が続く"
+    },
+    "selectPillNumberForMenstruationStart": "生理がはじまるピル番号をタップ",
+    "@selectPillNumberForMenstruationStart": {
+        "description": "生理がはじまるピル番号をタップ"
+    },
+    "countOfSheet": "{number}枚目",
+    "@countOfSheet": {
+        "description": "{number}枚目",
+        "placeholders": {
+            "number": {
+                "type": "int"
+            }
+        }
+    },
+    "newPillSheetStart": "新しいピルシート開始 ▶︎",
+    "@newPillSheetStart": {
+        "description": "新しいピルシート開始 ▶︎"
+    },
+    "selectPillType": "ピルの種類を選択",
+    "@selectPillType": {
+        "description": "ピルの種類を選択"
+    },
+    "twentyOnePills": "21錠",
+    "@twentyOnePills": {
+        "description": "21錠"
+    },
+    "twentyEightPills": "28錠",
+    "@twentyEightPills": {
+        "description": "28錠"
+    },
+    "twentyFourPills": "24錠",
+    "@twentyFourPills": {
+        "description": "24錠"
+    },
+    "twentyOnePlusSevenDaysBreak": "21錠＋7日休薬",
+    "@twentyOnePlusSevenDaysBreak": {
+        "description": "21錠＋7日休薬"
+    },
+    "twentyFourPlusFourPlacebo": "24錠＋4錠偽薬",
+    "@twentyFourPlusFourPlacebo": {
+        "description": "24錠＋4錠偽薬"
+    },
+    "twentyOnePlusSevenPlacebo": "21錠＋7錠偽薬",
+    "@twentyOnePlusSevenPlacebo": {
+        "description": "21錠＋7錠偽薬"
+    },
+    "allActivePills": "すべて実薬",
+    "@allActivePills": {
+        "description": "すべて実薬"
+    },
+    "twentyFourPlusFourDaysBreak": "24錠＋4錠休薬",
+    "@twentyFourPlusFourDaysBreak": {
+        "description": "24錠＋4錠休薬"
+    },
+    "choosePillType": "ピルの種類を選ぶ",
+    "@choosePillType": {
+        "description": "ピルの種類を選ぶ"
+    },
+    "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "@notificationForNotTakenPeriod": {
+        "description": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+        "placeholders": {
+            "pillSheetPillSheetTypeNotTakenWord": {
+                "type": "String"
+            }
+        }
+    },
+    "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "@autoRecordForNotTakenPeriodIfNotificationOff": {
+        "description": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+        "placeholders": {
+            "pillSheetPillSheetTypeNotTakenWord": {
+                "type": "String"
+            }
+        }
+    },
+    "requestForCancelSurvey": "解約後のアンケートご協力のお願い",
+    "@requestForCancelSurvey": {
+        "description": "解約後のアンケートご協力のお願い"
+    },
+    "pilllDescription": "Pilll ピル服用に特化したピルリマインダーアプリ",
+    "@pilllDescription": {
+        "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    },
+    "reachedMaximumCountOfReminderTimes": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+    "@reachedMaximumCountOfReminderTimes": {
+        "description": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+        "placeholders": {
+            "ReminderTimeMaximumCount": {
+                "type": "int"
+            }
+        }
+    },
+    "minimumCountOfReminderTimes": "通知時間は最低${ReminderTimeMinimumCount}件必要です",
+    "@minimumCountOfReminderTimes": {
+        "description": "通知時間は最低${ReminderTimeMinimumCount}件必要です",
+        "placeholders": {
+            "ReminderTimeMinimumCount": {
+                "type": "int"
+            }
+        }
+    },
+    "purchaseErrorUnknownError": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorUnknownError": {
+        "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorStoreProblemError": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "@purchaseErrorStoreProblemError": {
+        "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+        "placeholders": {
+            "storeName": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorPurchaseNotAllowedError": "このデバイスで購入が許可されていません",
+    "@purchaseErrorPurchaseNotAllowedError": {
+        "description": "このデバイスで購入が許可されていません"
+    },
+    "purchaseErrorPurchaseInvalidError": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください",
+    "@purchaseErrorPurchaseInvalidError": {
+        "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    },
+    "purchaseErrorProductNotAvailableForPurchaseError": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください",
+    "@purchaseErrorProductNotAvailableForPurchaseError": {
+        "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    },
+    "purchaseErrorProductAlreadyPurchasedError": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい",
+    "@purchaseErrorProductAlreadyPurchasedError": {
+        "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+    },
+    "purchaseErrorReceiptAlreadyInUseError": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "@purchaseErrorReceiptAlreadyInUseError": {
+        "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+        "placeholders": {
+            "accountName": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorInvalidReceiptError": "不正な購入情報です。購入情報を確かめてください",
+    "@purchaseErrorInvalidReceiptError": {
+        "description": "不正な購入情報です。購入情報を確かめてください"
+    },
+    "purchaseErrorMissingReceiptFileError": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "@purchaseErrorMissingReceiptFileError": {
+        "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+        "placeholders": {
+            "accountName": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorNetworkError": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。",
+    "@purchaseErrorNetworkError": {
+        "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    },
+    "purchaseErrorInvalidCredentialsError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorInvalidCredentialsError": {
+        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorUnexpectedBackendResponseError": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorUnexpectedBackendResponseError": {
+        "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorReceiptInUseByOtherSubscriberError": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+        "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+        "placeholders": {
+            "accountName": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorInvalidAppUserIdError": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorInvalidAppUserIdError": {
+        "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorOperationAlreadyInProgressError": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください",
+    "@purchaseErrorOperationAlreadyInProgressError": {
+        "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    },
+    "purchaseErrorUnknownBackendError": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorUnknownBackendError": {
+        "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorInvalidAppleSubscriptionKeyError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorIneligibleError": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorIneligibleError": {
+        "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorInsufficientPermissionsError": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "@purchaseErrorInsufficientPermissionsError": {
+        "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+        "placeholders": {
+            "accountName": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorPaymentPendingError": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "@purchaseErrorPaymentPendingError": {
+        "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+        "placeholders": {
+            "accountName": {
+                "type": "String"
+            },
+            "storeName": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorInvalidSubscriberAttributesError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorInvalidSubscriberAttributesError": {
+        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorLogOutWithAnonymousUserError": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorLogOutWithAnonymousUserError": {
+        "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorConfigurationError": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorConfigurationError": {
+        "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorUnsupportedError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorUnsupportedError": {
+        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorEmptySubscriberAttributesError": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorEmptySubscriberAttributesError": {
+        "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorProductDiscountMissingIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorProductDiscountMissingIdentifierError": {
+        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorUnknownNonNativeError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorUnknownNonNativeError": {
+        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorCustomerInfoError": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorCustomerInfoError": {
+        "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorSystemInfoError": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorSystemInfoError": {
+        "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorBeginRefundRequestError": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorBeginRefundRequestError": {
+        "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorProductRequestTimeout": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorProductRequestTimeout": {
+        "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorApiEndpointBlocked": {
+        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorInvalidPromotionalOfferError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorInvalidPromotionalOfferError": {
+        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "purchaseErrorOfflineConnectionError": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "@purchaseErrorOfflineConnectionError": {
+        "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "placeholders": {
+            "exceptionMessage": {
+                "type": "String"
+            },
+            "exceptionDetails": {
+                "type": "String"
+            }
+        }
+    },
+    "forceUpdateTitle": "アプリをアップデートしてください",
+    "@forceUpdateTitle": {
+        "description": "アプリをアップデートしてください"
+    },
+    "forceUpdateMessage": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "@forceUpdateMessage": {
+        "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+        "placeholders": {
+            "storeName": {
+                "type": "String"
+            }
+        }
+    },
+    "visitHospital": "通院する",
+    "@visitHospital": {
+        "description": "通院する"
+    },
+    "receiveNotificationAt9AM": "当日9:00に通知を受け取る",
+    "@receiveNotificationAt9AM": {
+        "description": "当日9:00に通知を受け取る"
+    },
+    "deletedScheduleCannotBeRestored": "削除された予定は復元ができません",
+    "@deletedScheduleCannotBeRestored": {
+        "description": "削除された予定は復元ができません"
+    },
+    "deleteSchedule": "予定を削除します",
+    "@deleteSchedule": {
+        "description": "予定を削除します"
+    },
+    "onlySupportiOS": "iOSアプリにのみ対応しています",
+    "@onlySupportiOS": {
+        "description": "iOSアプリにのみ対応しています"
+    },
+    "healthKitDoesNotSupport": "ヘルスケアに対応していない端末ではご利用できません",
+    "@healthKitDoesNotSupport": {
+        "description": "ヘルスケアに対応していない端末ではご利用できません"
+    },
+    "enableHealthKitFromSettings": "設定アプリよりヘルスケアを有効にしてください",
+    "@enableHealthKitFromSettings": {
+        "description": "設定アプリよりヘルスケアを有効にしてください"
+    },
+    "accountAlreadyLinked": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "@accountAlreadyLinked": {
+        "description": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "placeholders": {
+            "accountTypeProviderName": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            }
+        }
+    },
+    "accountAlreadyLinkedWithOtherPilllAccount": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "@accountAlreadyLinkedWithOtherPilllAccount": {
+        "description": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "placeholders": {
+            "accountTypeProviderName": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            }
+        }
+    },
+    "emailAlreadyInUse": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "@emailAlreadyInUse": {
+        "description": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "placeholders": {
+            "accountTypeProviderName": {
+                "type": "String"
+            },
+            "exceptionMessage": {
+                "type": "String"
+            }
+        }
+    },
+    "todaySchedule": "本日の予定です",
+    "@todaySchedule": {
+        "description": "本日の予定です"
+    },
+    "calendarSchedule": "カレンダーの予定",
+    "@calendarSchedule": {
+        "description": "カレンダーの予定"
+    },
+    "newPillSheetNotificationTitle": "今日から新しいシートがはじまります",
+    "@newPillSheetNotificationTitle": {
+        "description": "今日から新しいシートがはじまります"
+    },
+    "newPillSheetNotificationMessage": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
+    "@newPillSheetNotificationMessage": {
+        "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+    },
+    "unexpectedPremiumEntitlementsIsNotExists": "プレミアム情報が見つかりませんでした",
+    "@unexpectedPremiumEntitlementsIsNotExists": {
+        "description": "プレミアム情報が見つかりませんでした"
+    },
+    "purchaseErrorPurchasePendingError": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください",
+    "@purchaseErrorPurchasePendingError": {
+        "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+    },
+    "launchError": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+    "@launchError": {
+        "description": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+        "placeholders": {
+            "ErrorMessagesConnection": {
+                "type": "String"
+            }
+        }
+    },
+    "exampleRestDurationDate": "例えば「1/12から3日間」服用お休みした場合",
+    "@exampleRestDurationDate": {
+        "description": "例えば「1/12から3日間」服用お休みした場合"
+    },
+    "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
+    "@exampleRestDurationNumber": {
+        "description": "例えば「18番から3日間」服用お休みした場合"
+    },
+    "withNumber": "{number}番",
+    "@withNumber": {
+        "description": "{number}番",
+        "placeholders": {
+            "number": {
+                "type": "String"
+            }
+        }
+    },
+    "currentPillSheetNotFound": "現在対象となっているピルシートが見つかりませんでした",
+    "@currentPillSheetNotFound": {
+        "description": "現在対象となっているピルシートが見つかりませんでした"
+    },
+    "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません",
+    "@doNotRevertTakePillInPausePeriod": {
+        "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+    },
+    "googleAccount": "Google アカウント",
+    "@googleAccount": {
+        "description": "Google アカウント"
+    },
+    "diaryRecord": "日記を記録",
+    "@diaryRecord": {
+        "description": "日記を記録"
+    },
+    "scheduleRecord": "予定を記入",
+    "@scheduleRecord": {
+        "description": "予定を記入"
+    },
+    "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません",
+    "@previousPillSheetGroupNotFound": {
+        "description": "前回のピルシートグループがまだ存在しません"
+    },
+    "withPillSheetCount": "{number}枚",
+    "@withPillSheetCount": {
+        "description": "{number}枚",
+        "placeholders": {
+            "number": {
+                "type": "int"
+            }
+        }
+    },
+    "connectionError": "通信環境が不安定のようです。時間をおいて再度お試しください",
+    "@connectionError": {
+        "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+    },
+    "unknownErrorAndRetryAfter": "エラーが発生しました。時間をおいて再度お試しください",
+    "@unknownErrorAndRetryAfter": {
+        "description": "エラーが発生しました。時間をおいて再度お試しください"
+    },
+    "errorOccurred": "エラーが発生しました",
+    "@errorOccurred": {
+        "description": "エラーが発生しました"
+    },
+    "unknownError": "不明なエラーが発生しました",
+    "@unknownError": {
+        "description": "不明なエラーが発生しました"
+    },
+    "unexpectedErrorOccurred": "予期しないエラーが発生しました",
+    "@unexpectedErrorOccurred": {
+        "description": "予期しないエラーが発生しました"
+    },
+    "pressAndHoldNotificationToRecordPillTaking": "通知を長押しすると服用記録ができます",
+    "@pressAndHoldNotificationToRecordPillTaking": {
+        "description": "通知を長押しすると服用記録ができます"
+    },
+    "trialDeadlineDateOffsetDay": "{number}日間すべての機能が使えます！",
+    "@trialDeadlineDateOffsetDay": {
+        "description": "{number}日間すべての機能が使えます！",
+        "placeholders": {
+            "number": {
+                "type": "int"
+            }
+        }
+    },
+    "inputAndAdd": "入力して追加",
+    "@inputAndAdd": {
+        "description": "入力して追加"
+    },
+    "averagePeriod": "平均周期",
+    "@averagePeriod": {
+        "description": "平均周期"
+    },
+    "averageDays": "平均日数",
+    "@averageDays": {
+        "description": "平均日数"
+    },
+    "days": "日",
+    "@days": {
+        "description": "日"
+    },
+    "memo": "メモ",
+    "@memo": {
+        "description": "メモ"
+    },
+    "failedToUpdate": "更新に失敗しました。通信環境をお確かめの上、再度変更してください",
+    "@failedToUpdate": {
+        "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+    },
+    "headache": "頭痛",
+    "@headache": {
+        "description": "頭痛"
+    },
+    "abdominalPain": "腹痛",
+    "@abdominalPain": {
+        "description": "腹痛"
+    },
+    "nausea": "吐き気",
+    "@nausea": {
+        "description": "吐き気"
+    },
+    "anemia": "貧血",
+    "@anemia": {
+        "description": "貧血"
+    },
+    "diarrhea": "下痢",
+    "@diarrhea": {
+        "description": "下痢"
+    },
+    "constipation": "便秘",
+    "@constipation": {
+        "description": "便秘"
+    },
+    "drowsiness": "眠気",
+    "@drowsiness": {
+        "description": "眠気"
+    },
+    "backPain": "腰痛",
+    "@backPain": {
+        "description": "腰痛"
+    },
+    "palpitation": "動悸",
+    "@palpitation": {
+        "description": "動悸"
+    },
+    "irregularBleeding": "不正出血",
+    "@irregularBleeding": {
+        "description": "不正出血"
+    },
+    "lossOfAppetite": "食欲不振",
+    "@lossOfAppetite": {
+        "description": "食欲不振"
+    },
+    "chestTightness": "胸の張り",
+    "@chestTightness": {
+        "description": "胸の張り"
+    },
+    "insomnia": "不眠",
+    "@insomnia": {
+        "description": "不眠"
+    },
+    "pauseStartingOtherDaysInstructions": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
+    "@pauseStartingOtherDaysInstructions": {
+        "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+    },
+    "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
+    "@seeHowToUsePauseTakingFeature": {
+        "description": "服用お休み機能の使い方を見る"
+    },
+    "startPauseTakingLabel": "服用お休み開始",
+    "@startPauseTakingLabel": {
+        "description": "服用お休み開始"
+    },
+    "pauseTakingChanged": "服用お休みを変更しました",
+    "@pauseTakingChanged": {
+        "description": "服用お休みを変更しました"
+    },
+    "editPausePeriod": "服用お休み期間を編集",
+    "@editPausePeriod": {
+        "description": "服用お休み期間を編集"
+    },
+    "changePillDays": "服用日数を変更",
+    "@changePillDays": {
+        "description": "服用日数を変更"
+    },
+    "beginToEndNumbers": "{begin}番 ~ {end}番",
+    "@beginToEndNumbers": {
+        "description": "{begin}番 ~ {end}番",
+        "placeholders": {
+            "begin": {
+                "type": "int"
+            },
+            "end": {
+                "type": "int"
+            }
+        }
+    },
+    "resumeTaking": "服用再開",
+    "@resumeTaking": {
+        "description": "服用再開"
+    },
+    "changePausePeriod": "服用お休み期間変更",
+    "@changePausePeriod": {
+        "description": "服用お休み期間変更"
+    },
+    "changedToDate": "{date}に変更しました",
+    "@changedToDate": {
+        "description": "{date}に変更しました",
+        "placeholders": {
+            "date": {
+                "type": "String"
+            }
+        }
+    },
+    "quickRecordTakePillFailed": "服用記録が失敗した可能性があります",
+    "@quickRecordTakePillFailed": {
+        "description": "服用記録が失敗した可能性があります"
+    },
+    "quickRecordTakePillFailedMessage": "アプリを開いてご確認ください",
+    "@quickRecordTakePillFailedMessage": {
+        "description": "アプリを開いてご確認ください"
+    },
+    "alreadyTaken": "服用済み",
+    "@alreadyTaken": {
+        "description": "服用済み"
+    },
+    "startPauseTaking": "服用をお休みする",
+    "@startPauseTaking": {
+        "description": "服用をお休みする"
+    },
+    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "@sequentialLastTakenPlusOnePillNumber": {
+        "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+        "placeholders": {
+            "pillSheetGroupSequentialLastTakenPillNumber": {
+                "type": "String"
+            }
+        }
+    },
+    "startFromNumber": "番からスタート",
+    "@startFromNumber": {
+        "description": "番からスタート"
+    },
+    "add": "追加",
+    "@add": {
+        "description": "追加"
+    },
+    "addPillSheet": "ピルシートを追加",
+    "@addPillSheet": {
+        "description": "ピルシートを追加"
+    },
+    "duringPauseTaking": "服用お休み中",
+    "@duringPauseTaking": {
+        "description": "服用お休み中"
+    },
+    "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\n「服用お休み」できません",
+    "@cannotPauseAlreadyTakenToday": {
+        "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+    },
+    "pauseTakingStarted": "服用お休みを開始しました",
+    "@pauseTakingStarted": {
+        "description": "服用お休みを開始しました"
+    },
+    "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "@formattedDateAndWeekday": {
+        "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+        "placeholders": {
+            "DateTimeFormatterMonthAndDay": {
+                "type": "String"
+            },
+            "DateTimeFormatterWeekday": {
+                "type": "String"
+            }
+        }
+    },
+    "editPauseStartDate": "服用お休み開始日を編集",
+    "@editPauseStartDate": {
+        "description": "服用お休み開始日を編集"
+    },
+    "shareWithFriends": "友達と共有",
+    "@shareWithFriends": {
+        "description": "友達と共有"
+    },
+    "termsOfService": "利用規約",
+    "@termsOfService": {
+        "description": "利用規約"
+    },
+    "privacyPolicy": "プライバシーポリシー",
+    "@privacyPolicy": {
+        "description": "プライバシーポリシー"
+    },
+    "linkCopiedToClipboard": "クリップボードにコピーしました",
+    "@linkCopiedToClipboard": {
+        "description": "クリップボードにコピーしました"
+    },
+    "notificationNumber": "通知{number}",
+    "@notificationNumber": {
+        "description": "通知{number}",
+        "placeholders": {
+            "number": {
+                "type": "int"
+            }
+        }
+    },
+    "notificationTime": "通知時間",
+    "@notificationTime": {
+        "description": "通知時間"
+    },
+    "timeZoneChangedTo": "{tz}に変更しました",
+    "@timeZoneChangedTo": {
+        "description": "{tz}に変更しました",
+        "placeholders": {
+            "tz": {
+                "type": "String"
+            }
+        }
+    },
+    "changeStartOfPillDays": "服用日数の始まり",
+    "@changeStartOfPillDays": {
+        "description": "服用日数の始まり"
+    },
+    "changeEndOfPillDays": "服用日数の終わり",
+    "@changeEndOfPillDays": {
+        "description": "服用日数の終わり"
+    },
+    "cannotUpdateToReplacePillSheet": "ピルシートの置き換えによる更新できません id: {id}",
+    "@cannotUpdateToReplacePillSheet": {
+        "description": "ピルシートの置き換えによる更新できません id: {id}",
+        "placeholders": {
+            "id": {
+                "type": "String"
+            }
+        }
+    },
+    "failedToGetPillSheetHistory": "服用履歴情報の取得に失敗しました。{error}",
+    "@failedToGetPillSheetHistory": {
+        "description": "服用履歴情報の取得に失敗しました。{error}",
+        "placeholders": {
+            "error": {
+                "type": "String"
+            }
+        }
+    },
+    "cancelTaking": "服用取り消し",
+    "@cancelTaking": {
+        "description": "服用取り消し"
+    },
+    "deletedDiaryCannotBeRestored": "削除した日記は復元できません",
+    "@deletedDiaryCannotBeRestored": {
+        "description": "削除した日記は復元できません"
+    },
+    "editMenstruation": "生理期間を編集",
+    "@editMenstruation": {
+        "description": "生理期間を編集"
+    }
+}
