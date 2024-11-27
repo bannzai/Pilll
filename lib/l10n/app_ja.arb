@@ -1610,5 +1610,25 @@
   "changeEndOfPillDays": "服用日数の終わり",
   "@changeEndOfPillDays": {
     "description": "服用日数の終わり"
+  },
+  "cannotUpdateToReplacePillSheet": "ピルシートの置き換えによる更新できません id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}"
+  },
+  "failedToGetPillSheetHistory": "服用履歴情報の取得に失敗しました。{error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}"
+  },
+  "cancelTaking": "服用取り消し",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "削除した日記は復元できません",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "生理期間を編集",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
   }
 }
