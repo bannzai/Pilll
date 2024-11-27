@@ -328,7 +328,7 @@
   "@changePillNumber": {
     "description": "ピル番号の変更"
   },
-  "selectOrChangePillNumber": "今日({today})\\n飲む・飲んだピルの番号をタップ",
+  "selectOrChangePillNumber": "今日({today})\n飲む・飲んだピルの番号をタップ",
   "@selectOrChangePillNumber": {
     "description": "今日飲む・飲んだピルの番号をタップ",
     "placeholders": {
@@ -666,9 +666,9 @@
   "@cannotTransferPremiumWithoutAccount": {
     "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
   },
-  "reexperiencePremiumFeatures": "プレミアム機能を14日間再体験できます！\\nタップしてSNSにシェアしましょう！",
+  "reexperiencePremiumFeatures": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！",
   "@reexperiencePremiumFeatures": {
-    "description": "プレミアム機能を14日間再体験できます！\\nタップしてSNSにシェアしましょう！"
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
   },
   "whereToShare": "どちらにシェアしますか？",
   "@whereToShare": {
@@ -868,9 +868,9 @@
   "@premiumRegistrationComplete": {
     "description": "Pilllプレミアム登録完了"
   },
-  "thankYouForRegistration": "ご登録ありがとうございます。\\nすべての機能が使えるようになりました！",
+  "thankYouForRegistration": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
   "@thankYouForRegistration": {
-    "description": "ご登録ありがとうございます。\\nすべての機能が使えるようになりました！"
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   },
   "limitedTimeDiscount": "今なら限定価格でずっと使える",
   "@limitedTimeDiscount": {
@@ -902,9 +902,9 @@
       }
     }
   },
-  "premiumTermsNotice1": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\\n",
+  "premiumTermsNotice1": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n",
   "@premiumTermsNotice1": {
-    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\\n"
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
   },
   "premiumTermsBullet": "・",
   "@premiumTermsBullet": {
@@ -918,13 +918,13 @@
   "@premiumTermsNotice2": {
     "description": "特定商取引法に基づく表示"
   },
-  "premiumTermsNotice3": "をご確認のうえ登録してください\\n",
+  "premiumTermsNotice3": "をご確認のうえ登録してください\n",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\\n"
+    "description": "をご確認のうえ登録してください\n"
   },
-  "autoRenewNotice": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\\n",
+  "autoRenewNotice": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\\n"
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
   },
   "cancelAutoRenewInfo": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
   "@cancelAutoRenewInfo": {
@@ -968,9 +968,9 @@
   "@youArePremiumMember": {
     "description": "あなたは\\vプレミアムメンバーです"
   },
-  "thankYouMessage": "ご利用ありがとうございます。\\nお陰様でPilllの運営を継続できています。",
+  "thankYouMessage": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
   "@thankYouMessage": {
-    "description": "ご利用ありがとうございます。\\nお陰様でPilllの運営を継続できています。"
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
   },
   "premiumFeaturesList": "プレミアム機能一覧",
   "@premiumFeaturesList": {
@@ -1008,9 +1008,9 @@
   "@seeDetailsOfPremiumFeatures": {
     "description": "プレミアム機能の詳細を見る"
   },
-  "popularFeatures": "人気の\\n機能",
+  "popularFeatures": "人気の\n機能",
   "@popularFeatures": {
-    "description": "人気の\\n機能"
+    "description": "人気の\n機能"
   },
   "viewPremiumFeatures": "プレミアム機能を見る",
   "@viewPremiumFeatures": {
@@ -1040,9 +1040,9 @@
   "@and": {
     "description": "と"
   },
-  "readAndStartUsing": "を読んで\\n利用をはじめてください",
+  "readAndStartUsing": "を読んで\n利用をはじめてください",
   "@readAndStartUsing": {
-    "description": "を読んで\\n利用をはじめてください"
+    "description": "を読んで\n利用をはじめてください"
   },
   "next": "次へ",
   "@next": {
@@ -1074,9 +1074,9 @@
       }
     }
   },
-  "tellAboutPrescribedSheet": "処方されるシートについて\\n教えてください",
+  "tellAboutPrescribedSheet": "処方されるシートについて\n教えてください",
   "@tellAboutPrescribedSheet": {
-    "description": "処方されるシートについて\\n教えてください"
+    "description": "処方されるシートについて\n教えてください"
   },
   "existingAccountUsers": "すでにアカウントをお持ちの方はこちら",
   "@existingAccountUsers": {
@@ -2133,7 +2133,7 @@
   "@duringPauseTaking": {
     "description": "服用お休み中"
   },
-  "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\\n「服用お休み」できません",
+  "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\n「服用お休み」できません",
   "@cannotPauseAlreadyTakenToday": {
     "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
   },
