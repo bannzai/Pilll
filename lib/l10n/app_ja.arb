@@ -213,11 +213,11 @@
   "@discardAllPillSheets": {
     "description": "ピルシートをすべて破棄"
   },
-  "areYouSureDoing": "{do}しますか？",
+  "areYouSureDoing": "{doing}しますか？",
   "@areYouSureDoing": {
-    "description": "{do}しますか？",
+    "description": "{doing}しますか？",
     "placeholders": {
-      "do": {
+      "doing": {
         "type": "String"
       }
     }
