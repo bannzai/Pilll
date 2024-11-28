@@ -115,6 +115,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                             offeringType: offeringType,
                             monthlyPackage: monthlyPackage,
                             annualPackage: annualPackage,
+                            regularAnnualPackage: regularAnnualPackage,
                             isLoading: isLoading,
                           ),
                         ],

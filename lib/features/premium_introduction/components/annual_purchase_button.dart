@@ -9,14 +9,14 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class AnnualPurchaseButton extends StatelessWidget {
   final Package annualPackage;
-  final Package discountedAnnualPackage;
+  final Package regularAnnualPackage;
   final OfferingType offeringType;
   final Function(Package) onTap;
 
   const AnnualPurchaseButton({
     super.key,
     required this.annualPackage,
-    required this.discountedAnnualPackage,
+    required this.regularAnnualPackage,
     required this.offeringType,
     required this.onTap,
   });
@@ -94,19 +94,18 @@ class _DiscountBadge extends StatelessWidget {
   final OfferingType offeringType;
   final Package monthlyPackage;
   final Package annualPackage;
-  final Package discountedAnnualPackage;
+  final Package regularAnnualPackage;
 
   const _DiscountBadge({
     required this.offeringType,
     required this.monthlyPackage,
     required this.annualPackage,
-    required this.discountedAnnualPackage,
+    required this.regularAnnualPackage,
   });
 
   @override
   Widget build(BuildContext context) {
-    final offPercentForDiscountedAnnualPackage =
-        ((1 - (discountedAnnualPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
+    final offPercentForregularAnnualPackage = ((1 - (regularAnnualPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
     final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / monthlyPackage.storeProduct.price * 12)) * 100).toInt();
 
     return Container(
@@ -116,7 +115,7 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.secondary,
       ),
       child: Text(
-        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentForDiscountedAnnualPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
+        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentForregularAnnualPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,
