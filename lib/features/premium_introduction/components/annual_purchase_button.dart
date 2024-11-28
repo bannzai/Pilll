@@ -111,8 +111,9 @@ class _DiscountBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // NOTE: [DiscountPercent]
-    final offPercentForMonthlyPremiumPackage = ((1 - (monthlyPremiumPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
-    final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / monthlyPackage.storeProduct.price * 12)) * 100).toInt();
+    final offPercentForMonthlyPremiumPackage =
+        ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100).toInt();
+    final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / (monthlyPackage.storeProduct.price * 12))) * 100).toInt();
 
     return Container(
       padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),

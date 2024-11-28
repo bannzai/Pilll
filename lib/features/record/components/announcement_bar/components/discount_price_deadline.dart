@@ -30,7 +30,8 @@ class DiscountPriceDeadline extends HookConsumerWidget {
 
     final countdown = discountPriceDeadlineCountdownString(difference);
     // NOTE: [DiscountPercent]
-    final offPercentForMonthlyPremiumPackage = ((1 - (monthlyPremiumPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
+    final offPercentForMonthlyPremiumPackage =
+        ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100).toInt();
 
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
