@@ -1,6 +1,6 @@
-import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-AppLocalizations L = lookupAppLocalizations(Locale(Platform.localeName));
+// Unitテストで使用するので初期Localeをjaに設定
+AppLocalizations L = lookupAppLocalizations(const Locale('ja'));
