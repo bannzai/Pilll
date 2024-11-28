@@ -21,19 +21,23 @@ mixin _$MenstruationCardState {
   String get countdownString => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $MenstruationCardStateCopyWith<MenstruationCardState> get copyWith => throw _privateConstructorUsedError;
+  $MenstruationCardStateCopyWith<MenstruationCardState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $MenstruationCardStateCopyWith<$Res> {
-  factory $MenstruationCardStateCopyWith(MenstruationCardState value, $Res Function(MenstruationCardState) then) =
+  factory $MenstruationCardStateCopyWith(MenstruationCardState value,
+          $Res Function(MenstruationCardState) then) =
       _$MenstruationCardStateCopyWithImpl<$Res, MenstruationCardState>;
   @useResult
   $Res call({String title, DateTime scheduleDate, String countdownString});
 }
 
 /// @nodoc
-class _$MenstruationCardStateCopyWithImpl<$Res, $Val extends MenstruationCardState> implements $MenstruationCardStateCopyWith<$Res> {
+class _$MenstruationCardStateCopyWithImpl<$Res,
+        $Val extends MenstruationCardState>
+    implements $MenstruationCardStateCopyWith<$Res> {
   _$MenstruationCardStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -66,8 +70,11 @@ class _$MenstruationCardStateCopyWithImpl<$Res, $Val extends MenstruationCardSta
 }
 
 /// @nodoc
-abstract class _$$MenstruationCardStateImplCopyWith<$Res> implements $MenstruationCardStateCopyWith<$Res> {
-  factory _$$MenstruationCardStateImplCopyWith(_$MenstruationCardStateImpl value, $Res Function(_$MenstruationCardStateImpl) then) =
+abstract class _$$MenstruationCardStateImplCopyWith<$Res>
+    implements $MenstruationCardStateCopyWith<$Res> {
+  factory _$$MenstruationCardStateImplCopyWith(
+          _$MenstruationCardStateImpl value,
+          $Res Function(_$MenstruationCardStateImpl) then) =
       __$$MenstruationCardStateImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -75,9 +82,12 @@ abstract class _$$MenstruationCardStateImplCopyWith<$Res> implements $Menstruati
 }
 
 /// @nodoc
-class __$$MenstruationCardStateImplCopyWithImpl<$Res> extends _$MenstruationCardStateCopyWithImpl<$Res, _$MenstruationCardStateImpl>
+class __$$MenstruationCardStateImplCopyWithImpl<$Res>
+    extends _$MenstruationCardStateCopyWithImpl<$Res,
+        _$MenstruationCardStateImpl>
     implements _$$MenstruationCardStateImplCopyWith<$Res> {
-  __$$MenstruationCardStateImplCopyWithImpl(_$MenstruationCardStateImpl _value, $Res Function(_$MenstruationCardStateImpl) _then)
+  __$$MenstruationCardStateImplCopyWithImpl(_$MenstruationCardStateImpl _value,
+      $Res Function(_$MenstruationCardStateImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -107,7 +117,11 @@ class __$$MenstruationCardStateImplCopyWithImpl<$Res> extends _$MenstruationCard
 /// @nodoc
 
 class _$MenstruationCardStateImpl extends _MenstruationCardState {
-  const _$MenstruationCardStateImpl({required this.title, required this.scheduleDate, required this.countdownString}) : super._();
+  const _$MenstruationCardStateImpl(
+      {required this.title,
+      required this.scheduleDate,
+      required this.countdownString})
+      : super._();
 
   @override
   final String title;
@@ -127,23 +141,29 @@ class _$MenstruationCardStateImpl extends _MenstruationCardState {
         (other.runtimeType == runtimeType &&
             other is _$MenstruationCardStateImpl &&
             (identical(other.title, title) || other.title == title) &&
-            (identical(other.scheduleDate, scheduleDate) || other.scheduleDate == scheduleDate) &&
-            (identical(other.countdownString, countdownString) || other.countdownString == countdownString));
+            (identical(other.scheduleDate, scheduleDate) ||
+                other.scheduleDate == scheduleDate) &&
+            (identical(other.countdownString, countdownString) ||
+                other.countdownString == countdownString));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, title, scheduleDate, countdownString);
+  int get hashCode =>
+      Object.hash(runtimeType, title, scheduleDate, countdownString);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl> get copyWith =>
-      __$$MenstruationCardStateImplCopyWithImpl<_$MenstruationCardStateImpl>(this, _$identity);
+  _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl>
+      get copyWith => __$$MenstruationCardStateImplCopyWithImpl<
+          _$MenstruationCardStateImpl>(this, _$identity);
 }
 
 abstract class _MenstruationCardState extends MenstruationCardState {
-  const factory _MenstruationCardState({required final String title, required final DateTime scheduleDate, required final String countdownString}) =
-      _$MenstruationCardStateImpl;
+  const factory _MenstruationCardState(
+      {required final String title,
+      required final DateTime scheduleDate,
+      required final String countdownString}) = _$MenstruationCardStateImpl;
   const _MenstruationCardState._() : super._();
 
   @override
@@ -154,5 +174,6 @@ abstract class _MenstruationCardState extends MenstruationCardState {
   String get countdownString;
   @override
   @JsonKey(ignore: true)
-  _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
