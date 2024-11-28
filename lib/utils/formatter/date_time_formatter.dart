@@ -24,8 +24,9 @@ class DateTimeFormatter {
     return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, Platform.localeName).format(dateTime);
   }
 
+  // 9/1, 10/1, 11/10,
   static String monthAndDay(DateTime dateTime) {
-    return slashMonthAndDay(dateTime);
+    return DateFormat(DateFormat.NUM_MONTH_DAY, 'ja_JP').format(dateTime);
   }
 
   // 2022/01/08
