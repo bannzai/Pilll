@@ -161,7 +161,7 @@ class _IsOverDiscountDeadlineProviderElement
 }
 
 String _$hiddenCountdownDiscountDeadlineHash() =>
-    r'b60536a8c5f8ee430f25d88781c84c3b4c381b21';
+    r'4dd96f9caf51c30935fe8ca49fb52028e1c35326';
 
 /// See also [hiddenCountdownDiscountDeadline].
 @ProviderFor(hiddenCountdownDiscountDeadline)
@@ -191,18 +191,14 @@ class HiddenCountdownDiscountDeadlineFamily extends Family<bool> {
     );
   }
 
-  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[
-    remoteConfigParameterProvider
-  ];
+  static final Iterable<ProviderOrFamily> _dependencies =
+      const <ProviderOrFamily>[];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
   static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
-      <ProviderOrFamily>{
-    remoteConfigParameterProvider,
-    ...?remoteConfigParameterProvider.allTransitiveDependencies
-  };
+      const <ProviderOrFamily>{};
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
