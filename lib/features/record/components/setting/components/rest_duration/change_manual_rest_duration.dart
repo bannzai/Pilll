@@ -27,7 +27,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     final changeRestDuration = ref.watch(changeRestDurationProvider);
 
     String format(DateTime dateTime) {
-      return '${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.weekday(dateTime)})';
+      return '${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.shortWeekday(dateTime)})';
     }
 
     final begin = format(restDuration.beginDate);

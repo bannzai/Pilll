@@ -113,7 +113,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   }
 
   String _today() {
-    return '${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})';
+    return '${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.shortWeekday(DateTime.now())})';
   }
 
   int _pillNumberInPillSheet({

@@ -9,32 +9,28 @@ class DateTimeFormatter {
   }
 
   static String yearAndMonth(DateTime dateTime) {
-    return DateFormat(DateFormat.YEAR_ABBR_MONTH, 'ja_JP').format(dateTime);
+    return DateFormat(DateFormat.YEAR_ABBR_MONTH, Platform.localeName).format(dateTime);
   }
 
   static String yearAndMonthAndDay(DateTime dateTime) {
-    return DateFormat(DateFormat.YEAR_ABBR_MONTH_DAY, 'ja_JP').format(dateTime);
+    return DateFormat(DateFormat.YEAR_ABBR_MONTH_DAY, Platform.localeName).format(dateTime);
   }
 
   static String jaMonth(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH, 'ja_JP').format(dateTime);
+    return DateFormat(DateFormat.NUM_MONTH, Platform.localeName).format(dateTime);
   }
 
   static String monthAndWeekday(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, 'ja_JP').format(dateTime);
+    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, Platform.localeName).format(dateTime);
   }
 
   static String monthAndDay(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH_DAY, 'ja_JP').format(dateTime);
-  }
-
-  static String weekday(DateTime dateTime) {
-    return DateFormat(DateFormat.ABBR_WEEKDAY, 'ja_JP').format(dateTime);
+    return DateFormat(DateFormat.NUM_MONTH_DAY, Platform.localeName).format(dateTime);
   }
 
   // 2022/01/08
   static String slashYearAndMonthAndDay(DateTime dateTime) {
-    return DateFormat('yyyy/MM/dd', 'ja_JP').format(dateTime);
+    return DateFormat('yyyy/MM/dd', Platform.localeName).format(dateTime);
   }
 
   // 2022/01/08 12:20
@@ -46,15 +42,15 @@ class DateTimeFormatter {
 
   // 2022/01
   static String slashYearAndMonth(DateTime dateTime) {
-    return DateFormat('yyyy/MM', 'ja_JP').format(dateTime);
+    return DateFormat('yyyy/MM', Platform.localeName).format(dateTime);
   }
 
   static String slashMonthAndDay(DateTime dateTime) {
-    return DateFormat('MM/dd', 'ja_JP').format(dateTime);
+    return DateFormat('MM/dd', Platform.localeName).format(dateTime);
   }
 
   static String diaryIdentifier(DateTime dateTime) {
-    return DateFormat('yyyyMMdd', 'ja_JP').format(dateTime);
+    return DateFormat('yyyyMMdd', Platform.localeName).format(dateTime);
   }
 
   // 12:20
@@ -71,11 +67,11 @@ class DateTimeFormatter {
 
   // 月火水木金土日
   static String shortWeekday(DateTime dateTime) {
-    return DateFormat.EEEE(Platform.localeName).format(dateTime);
+    return DateFormat.E(Platform.localeName).format(dateTime);
   }
 
   // [月火水木金土日]
   static List<String> shortWeekdays() {
-    return DateFormat.EEEE(Platform.localeName).dateSymbols.SHORTWEEKDAYS;
+    return DateFormat.E(Platform.localeName).dateSymbols.SHORTWEEKDAYS;
   }
 }
