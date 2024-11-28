@@ -430,7 +430,7 @@
             }
         }
     },
-    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}번",
+    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}���",
     "@beforeLastTakenPillNumber": {
         "description": "{beforeLastTakenPillNumber}번",
         "placeholders": {
@@ -613,7 +613,7 @@
     "@startOfPillDays": {
         "description": "복용 일수의 시작"
     },
-    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}�����째",
+    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
     "@beforePillSheetGroupSequentialEstimatedEndDay": {
         "description": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
         "placeholders": {
@@ -834,7 +834,7 @@
     "@beforePremiumRegistration": {
         "description": "프리미엄 등록 전에…"
     },
-    "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다",
+    "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로�� 계정이 작성됩니다",
     "@createNewAccountIfNotLoggedIn": {
         "description": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다"
     },
@@ -1006,7 +1006,7 @@
     },
     "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
     "@seeDetailsOfPremiumFeatures": {
-        "description": "프리미엄 기능의 세세한 정보 보기"
+        "description": "프리미엄 기���의 세세한 정보 보기"
     },
     "popularFeatures": "인기 있는\n기능",
     "@popularFeatures": {
@@ -1133,7 +1133,7 @@
     "@showsPillNumber": {
         "description": "번호 표시"
     },
-    "showsDescription": "설명 표시",
+    "showsDescription": "설명 표��",
     "@showsDescription": {
         "description": "설명 표시"
     },
@@ -1350,53 +1350,53 @@
     "@choosePillType": {
         "description": "알약 종류 선택"
     },
-    "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
     "@notificationForNotTakenPeriod": {
-        "description": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+        "description": "${pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
         "placeholders": {
             "pillSheetPillSheetTypeNotTakenWord": {
                 "type": "String"
             }
         }
     },
-    "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼져 있는 경우, ${pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
     "@autoRecordForNotTakenPeriodIfNotificationOff": {
-        "description": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+        "description": "알림이 꺼져 있는 경우, ${pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
         "placeholders": {
             "pillSheetPillSheetTypeNotTakenWord": {
                 "type": "String"
             }
         }
     },
-    "requestForCancelSurvey": "解約後のアンケートご協力のお願い",
+    "requestForCancelSurvey": "해약 후 설문조사 협조 요청",
     "@requestForCancelSurvey": {
-        "description": "解約後のアンケートご協力のお願い"
+        "description": "해약 후 설문조사 협조 요청"
     },
-    "pilllDescription": "Pilll ピル服用に特化したピルリマインダーアプリ",
+    "pilllDescription": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱",
     "@pilllDescription": {
-        "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+        "description": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱"
     },
-    "reachedMaximumCountOfReminderTimes": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+    "reachedMaximumCountOfReminderTimes": "등록 가능한 상한에 도달했습니다. ${ReminderTimeMaximumCount}건 이내로 제한해 주세요",
     "@reachedMaximumCountOfReminderTimes": {
-        "description": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+        "description": "등록 가능한 상한에 도달했습니다. ${ReminderTimeMaximumCount}건 이내로 제한해 주세요",
         "placeholders": {
             "ReminderTimeMaximumCount": {
                 "type": "int"
             }
         }
     },
-    "minimumCountOfReminderTimes": "通知時間は最低${ReminderTimeMinimumCount}件必要です",
+    "minimumCountOfReminderTimes": "알림 시간은 최소 ${ReminderTimeMinimumCount}건 필요합니다",
     "@minimumCountOfReminderTimes": {
-        "description": "通知時間は最低${ReminderTimeMinimumCount}件必要です",
+        "description": "알림 시간은 최소 ${ReminderTimeMinimumCount}건 필요합니다",
         "placeholders": {
             "ReminderTimeMinimumCount": {
                 "type": "int"
             }
         }
     },
-    "purchaseErrorUnknownError": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnknownError": "원인 불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnknownError": {
-        "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1406,60 +1406,60 @@
             }
         }
     },
-    "purchaseErrorStoreProblemError": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "purchaseErrorStoreProblemError": "{storeName}에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
     "@purchaseErrorStoreProblemError": {
-        "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+        "description": "{storeName}에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
         "placeholders": {
             "storeName": {
                 "type": "String"
             }
         }
     },
-    "purchaseErrorPurchaseNotAllowedError": "このデバイスで購入が許可されていません",
+    "purchaseErrorPurchaseNotAllowedError": "이 기기에서 구매가 허용되지 않았습니다",
     "@purchaseErrorPurchaseNotAllowedError": {
-        "description": "このデバイスで購入が許可されていません"
+        "description": "이 기기에서 구매가 허용되지 않았습니다"
     },
-    "purchaseErrorPurchaseInvalidError": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください",
+    "purchaseErrorPurchaseInvalidError": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요",
     "@purchaseErrorPurchaseInvalidError": {
-        "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+        "description": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요"
     },
-    "purchaseErrorProductNotAvailableForPurchaseError": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください",
+    "purchaseErrorProductNotAvailableForPurchaseError": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요",
     "@purchaseErrorProductNotAvailableForPurchaseError": {
-        "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+        "description": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요"
     },
-    "purchaseErrorProductAlreadyPurchasedError": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい",
+    "purchaseErrorProductAlreadyPurchasedError": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요",
     "@purchaseErrorProductAlreadyPurchasedError": {
-        "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+        "description": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요"
     },
-    "purchaseErrorReceiptAlreadyInUseError": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "purchaseErrorReceiptAlreadyInUseError": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
     "@purchaseErrorReceiptAlreadyInUseError": {
-        "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+        "description": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
         "placeholders": {
             "accountName": {
                 "type": "String"
             }
         }
     },
-    "purchaseErrorInvalidReceiptError": "不正な購入情報です。購入情報を確かめてください",
+    "purchaseErrorInvalidReceiptError": "부정한 구매 정보입니다. 구매 정보를 확인해 주세요",
     "@purchaseErrorInvalidReceiptError": {
-        "description": "不正な購入情報です。購入情報を確かめてください"
+        "description": "부정한 구매 정보입니다. 구매 정보를 확인해 주세요"
     },
-    "purchaseErrorMissingReceiptFileError": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "purchaseErrorMissingReceiptFileError": "구매자의 정보가 존재하지 않습니다. {accountName}으로 기기에 로그인한 후 시도해 주세요",
     "@purchaseErrorMissingReceiptFileError": {
-        "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+        "description": "구매자의 정보가 존재하지 않습니다. {accountName}으로 기기에 로그인한 후 시도해 주세요",
         "placeholders": {
             "accountName": {
                 "type": "String"
             }
         }
     },
-    "purchaseErrorNetworkError": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。",
+    "purchaseErrorNetworkError": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 시도해 주세요.",
     "@purchaseErrorNetworkError": {
-        "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+        "description": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 시도해 주세요."
     },
-    "purchaseErrorInvalidCredentialsError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidCredentialsError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidCredentialsError": {
-        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1469,9 +1469,9 @@
             }
         }
     },
-    "purchaseErrorUnexpectedBackendResponseError": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnexpectedBackendResponseError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnexpectedBackendResponseError": {
-        "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1481,18 +1481,18 @@
             }
         }
     },
-    "purchaseErrorReceiptInUseByOtherSubscriberError": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "purchaseErrorReceiptInUseByOtherSubscriberError": "구매 정보는 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",
     "@purchaseErrorReceiptInUseByOtherSubscriberError": {
-        "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+        "description": "구매 정보는 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",
         "placeholders": {
             "accountName": {
                 "type": "String"
             }
         }
     },
-    "purchaseErrorInvalidAppUserIdError": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidAppUserIdError": "사용자를 확인할 수 없었습니다. 앱을 재시작한 후 다시 시도해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidAppUserIdError": {
-        "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "사용자를 확인할 수 없었습니다. 앱을 재시작한 후 다시 시도해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1502,13 +1502,13 @@
             }
         }
     },
-    "purchaseErrorOperationAlreadyInProgressError": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください",
+    "purchaseErrorOperationAlreadyInProgressError": "구매 처리가 별도로 진행 중입니다. 잠시 후 다시 확인해 주세요",
     "@purchaseErrorOperationAlreadyInProgressError": {
-        "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+        "description": "구매 처리가 별도로 진행 중입니다. 잠시 후 다시 확인해 주세요"
     },
-    "purchaseErrorUnknownBackendError": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnknownBackendError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnknownBackendError": {
-        "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1518,9 +1518,9 @@
             }
         }
     },
-    "purchaseErrorInvalidAppleSubscriptionKeyError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidAppleSubscriptionKeyError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidAppleSubscriptionKeyError": {
-        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1530,9 +1530,9 @@
             }
         }
     },
-    "purchaseErrorIneligibleError": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorIneligibleError": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorIneligibleError": {
-        "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1542,18 +1542,18 @@
             }
         }
     },
-    "purchaseErrorInsufficientPermissionsError": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "purchaseErrorInsufficientPermissionsError": "사용 중인 {accountName}에서는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
     "@purchaseErrorInsufficientPermissionsError": {
-        "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+        "description": "사용 중인 {accountName}에서는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
         "placeholders": {
             "accountName": {
                 "type": "String"
             }
         }
     },
-    "purchaseErrorPaymentPendingError": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "purchaseErrorPaymentPendingError": "결제가 중단되었습니다. 로그인 중인 {accountName}에서 {storeName}을 확인해 주세요",
     "@purchaseErrorPaymentPendingError": {
-        "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+        "description": "결제가 중단되었습니다. 로그인 중인 {accountName}에서 {storeName}을 확인해 주세요",
         "placeholders": {
             "accountName": {
                 "type": "String"
@@ -1563,9 +1563,9 @@
             }
         }
     },
-    "purchaseErrorInvalidSubscriberAttributesError": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidSubscriberAttributesError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidSubscriberAttributesError": {
-        "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1575,9 +1575,9 @@
             }
         }
     },
-    "purchaseErrorLogOutWithAnonymousUserError": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorLogOutWithAnonymousUserError": "사용자 정보를 가져오지 못했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorLogOutWithAnonymousUserError": {
-        "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "사용자 정보를 가져오지 못했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1587,9 +1587,9 @@
             }
         }
     },
-    "purchaseErrorConfigurationError": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorConfigurationError": "구매 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorConfigurationError": {
-        "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "구매 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1599,9 +1599,9 @@
             }
         }
     },
-    "purchaseErrorUnsupportedError": "原因不明のエラーで��。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnsupportedError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnsupportedError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1614,10 +1614,13 @@
             }
         }
     },
-    "purchaseErrorEmptySubscriberAttributesError": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorEmptySubscriberAttributesError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorEmptySubscriberAttributesError": {
-        "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
+            "errorCode": {
+                "type": "String"
+            },
             "exceptionMessage": {
                 "type": "String"
             },
@@ -1626,9 +1629,9 @@
             }
         }
     },
-    "purchaseErrorProductDiscountMissingIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorProductDiscountMissingIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorProductDiscountMissingIdentifierError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1641,9 +1644,9 @@
             }
         }
     },
-    "purchaseErrorUnknownNonNativeError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnknownNonNativeError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnknownNonNativeError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1656,9 +1659,9 @@
             }
         }
     },
-    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1671,9 +1674,9 @@
             }
         }
     },
-    "purchaseErrorCustomerInfoError": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorCustomerInfoError": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorCustomerInfoError": {
-        "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+        "description": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1686,9 +1689,9 @@
             }
         }
     },
-    "purchaseErrorSystemInfoError": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorSystemInfoError": "기기 설정에 문제가 있습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorSystemInfoError": {
-        "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "기기 설정에 문제가 있습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1701,9 +1704,9 @@
             }
         }
     },
-    "purchaseErrorBeginRefundRequestError": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorBeginRefundRequestError": "환불 처리가 시작되었습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorBeginRefundRequestError": {
-        "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "환불 처리가 시작되었습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1716,9 +1719,9 @@
             }
         }
     },
-    "purchaseErrorProductRequestTimeout": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorProductRequestTimeout": "타임아웃하였습니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorProductRequestTimeout": {
-        "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "타임아웃하였습니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1728,9 +1731,9 @@
             }
         }
     },
-    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新��にアップデ��トして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorApiEndpointBlocked": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorApiEndpointBlocked": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1743,9 +1746,9 @@
             }
         }
     },
-    "purchaseErrorInvalidPromotionalOfferError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorInvalidPromotionalOfferError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidPromotionalOfferError": {
-        "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1758,9 +1761,9 @@
             }
         }
     },
-    "purchaseErrorOfflineConnectionError": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorOfflineConnectionError": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorOfflineConnectionError": {
-        "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+        "description": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "exceptionMessage": {
                 "type": "String"
@@ -1770,50 +1773,50 @@
             }
         }
     },
-    "forceUpdateTitle": "アプリをアップデートしてください",
+    "forceUpdateTitle": "앱을 업데이트해 주세요",
     "@forceUpdateTitle": {
-        "description": "アプリをアップデートしてください"
+        "description": "앱을 업데이트해 주세요"
     },
-    "forceUpdateMessage": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요.",
     "@forceUpdateMessage": {
-        "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+        "description": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요.",
         "placeholders": {
             "storeName": {
                 "type": "String"
             }
         }
     },
-    "visitHospital": "通院する",
+    "visitHospital": "병원에 방문하기",
     "@visitHospital": {
-        "description": "通院する"
+        "description": "병원에 방문하기"
     },
-    "receiveNotificationAt9AM": "当日9:00に通知を受け取る",
+    "receiveNotificationAt9AM": "당일 9:00에 알림을 받습니다",
     "@receiveNotificationAt9AM": {
-        "description": "当日9:00に通知を受け取る"
+        "description": "당일 9:00에 알림을 받습니다"
     },
-    "deletedScheduleCannotBeRestored": "削除された予定は復元ができません",
+    "deletedScheduleCannotBeRestored": "삭제된 일정은 복원할 수 없습니다",
     "@deletedScheduleCannotBeRestored": {
-        "description": "削除された予定は復元ができません"
+        "description": "삭제된 일정은 복원할 수 없습니다"
     },
-    "deleteSchedule": "予定を削除します",
+    "deleteSchedule": "일정을 삭제합니다",
     "@deleteSchedule": {
-        "description": "予定を削除します"
+        "description": "일정을 삭제합니다"
     },
-    "onlySupportiOS": "iOSアプリにのみ対応しています",
+    "onlySupportiOS": "iOS 앱에만 지원됩니다",
     "@onlySupportiOS": {
-        "description": "iOSアプリにのみ対応しています"
+        "description": "iOS 앱에만 지원됩니다"
     },
-    "healthKitDoesNotSupport": "ヘルスケアに対応していない端末ではご利用できません",
+    "healthKitDoesNotSupport": "헬스케어에 대응하지 않는 기기에서는 사용할 수 없습니다",
     "@healthKitDoesNotSupport": {
-        "description": "ヘルスケアに対応していない端末ではご利用できません"
+        "description": "헬스케어에 대응하지 않는 기기에서는 사용할 수 없습니다"
     },
-    "enableHealthKitFromSettings": "設定アプリよりヘルスケアを有効にしてください",
+    "enableHealthKitFromSettings": "설정 앱에서 헬스케어를 활성화해 주세요",
     "@enableHealthKitFromSettings": {
-        "description": "設定アプリよりヘルスケアを有効にしてください"
+        "description": "설정 앱에서 헬스케어를 활성화해 주세요"
     },
-    "accountAlreadyLinked": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "accountAlreadyLinked": "이 ${accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
     "@accountAlreadyLinked": {
-        "description": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "description": "이 ${accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1823,9 +1826,9 @@
             }
         }
     },
-    "accountAlreadyLinkedWithOtherPilllAccount": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "accountAlreadyLinkedWithOtherPilllAccount": "이 ${accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
     "@accountAlreadyLinkedWithOtherPilllAccount": {
-        "description": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "description": "이 ${accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1835,9 +1838,9 @@
             }
         }
     },
-    "emailAlreadyInUse": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "emailAlreadyInUse": "이미 ${accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
     "@emailAlreadyInUse": {
-        "description": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+        "description": "이미 ${accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1847,225 +1850,225 @@
             }
         }
     },
-    "todaySchedule": "本日の予定です",
+    "todaySchedule": "오늘의 일정입니다",
     "@todaySchedule": {
-        "description": "本日の予定です"
+        "description": "오늘의 일정입니다"
     },
-    "calendarSchedule": "カレンダーの予定",
+    "calendarSchedule": "캘린더의 일정",
     "@calendarSchedule": {
-        "description": "カレンダーの予定"
+        "description": "캘린더의 일정"
     },
-    "newPillSheetNotificationTitle": "今日から新しいシートがはじまります",
+    "newPillSheetNotificationTitle": "오늘부터 새로운 시트가 시작됩니다",
     "@newPillSheetNotificationTitle": {
-        "description": "今日から新しいシートがはじまります"
+        "description": "오늘부터 새로운 시트가 시작됩니다"
     },
-    "newPillSheetNotificationMessage": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍",
+    "newPillSheetNotificationMessage": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍",
     "@newPillSheetNotificationMessage": {
-        "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+        "description": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍"
     },
-    "unexpectedPremiumEntitlementsIsNotExists": "プレミアム情報が見つかりませんでした",
+    "unexpectedPremiumEntitlementsIsNotExists": "프리미엄 정보가 발견되지 않았습니다",
     "@unexpectedPremiumEntitlementsIsNotExists": {
-        "description": "プレミアム情報が見つかりませんでした"
+        "description": "프리미엄 정보가 발견되지 않았습니다"
     },
-    "purchaseErrorPurchasePendingError": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください",
+    "purchaseErrorPurchasePendingError": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요",
     "@purchaseErrorPurchasePendingError": {
-        "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+        "description": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요"
     },
-    "launchError": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+    "launchError": "시작 시 오류가 발생했습니다\n${ErrorMessagesConnection}\n상세:",
     "@launchError": {
-        "description": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+        "description": "시작 시 오류가 발생했습니다\n${ErrorMessagesConnection}\n상세:",
         "placeholders": {
             "ErrorMessagesConnection": {
                 "type": "String"
             }
         }
     },
-    "exampleRestDurationDate": "例えば「1/12から3日間」服用お休みした場合",
+    "exampleRestDurationDate": "예를 들어 '1/12부터 3일간' 복용을 쉬는 경우",
     "@exampleRestDurationDate": {
-        "description": "例えば「1/12から3日間」服用お休みした場合"
+        "description": "예를 들어 '1/12부터 3일간' 복용을 쉬는 경우"
     },
-    "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
+    "exampleRestDurationNumber": "예를 들어 '18번부터 3일간' 복용을 쉬는 경우",
     "@exampleRestDurationNumber": {
-        "description": "例えば「18番から3日間」服用お休みした場合"
+        "description": "예를 들어 '18번부터 3일간' 복용을 쉬는 경우"
     },
-    "withNumber": "{number}番",
+    "withNumber": "{number}번",
     "@withNumber": {
-        "description": "{number}番",
+        "description": "{number}번",
         "placeholders": {
             "number": {
                 "type": "String"
             }
         }
     },
-    "currentPillSheetNotFound": "現在対象となっているピルシートが見つかりませんでした",
+    "currentPillSheetNotFound": "현재 대상이 되는 피임약 시트를 찾을 수 없습니다",
     "@currentPillSheetNotFound": {
-        "description": "現在対象となっているピルシートが見つかりませんでした"
+        "description": "현재 대상이 되는 피임약 시트를 찾을 수 없습니다"
     },
-    "doNotRevertTakePillInPausePeriod": "ピルの服用の取り消し操作は休薬期間中は実行できません",
+    "doNotRevertTakePillInPausePeriod": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다",
     "@doNotRevertTakePillInPausePeriod": {
-        "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+        "description": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다"
     },
-    "googleAccount": "Google アカウント",
+    "googleAccount": "Google 계정",
     "@googleAccount": {
-        "description": "Google アカウント"
+        "description": "Google 계정"
     },
-    "diaryRecord": "日記を記録",
+    "diaryRecord": "일기를 기록",
     "@diaryRecord": {
-        "description": "日記を記録"
+        "description": "일기를 기록"
     },
-    "scheduleRecord": "予定を記入",
+    "scheduleRecord": "일정을 기록",
     "@scheduleRecord": {
-        "description": "予定を記入"
+        "description": "일정을 기록"
     },
-    "previousPillSheetGroupNotFound": "前回のピルシートグループがまだ存在しません",
+    "previousPillSheetGroupNotFound": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",
     "@previousPillSheetGroupNotFound": {
-        "description": "前回のピルシートグループがまだ存在しません"
+        "description": "이전 피임약 시트 그룹이 아직 존재하지 않습니다"
     },
-    "withPillSheetCount": "{number}枚",
+    "withPillSheetCount": "{number}장",
     "@withPillSheetCount": {
-        "description": "{number}枚",
+        "description": "{number}장",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "connectionError": "通信環境が不安定のようです。時間をおいて再度お試しください",
+    "connectionError": "통신 환경이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요",
     "@connectionError": {
-        "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+        "description": "통신 환경이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요"
     },
-    "unknownErrorAndRetryAfter": "エラーが発生しました。時間をおいて再度お試しください",
+    "unknownErrorAndRetryAfter": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
     "@unknownErrorAndRetryAfter": {
-        "description": "エラーが発生しました。時間をおいて再度お試しください"
+        "description": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요"
     },
-    "errorOccurred": "エラーが発生しました",
+    "errorOccurred": "오류가 발생했습니다",
     "@errorOccurred": {
-        "description": "エラーが発生しました"
+        "description": "오류가 발생했습니다"
     },
-    "unknownError": "不明なエラーが発生しました",
+    "unknownError": "알 수 없는 오류가 발생했습니다",
     "@unknownError": {
-        "description": "不明なエラーが発生しました"
+        "description": "알 수 없는 오류가 발생했습니다"
     },
-    "unexpectedErrorOccurred": "予期しないエラーが発生しました",
+    "unexpectedErrorOccurred": "예기치 않은 오류가 발생했습니다",
     "@unexpectedErrorOccurred": {
-        "description": "予期しないエラーが発生しました"
+        "description": "예기치 않은 오류가 발생했습니다"
     },
-    "pressAndHoldNotificationToRecordPillTaking": "通知を長押しすると服用記録ができます",
+    "pressAndHoldNotificationToRecordPillTaking": "알림을 길게 누르면 복용 기록을 할 수 있습니다",
     "@pressAndHoldNotificationToRecordPillTaking": {
-        "description": "通知を長押しすると服用記録ができます"
+        "description": "알림을 길게 누르면 복용 기록을 할 수 있습니다"
     },
-    "trialDeadlineDateOffsetDay": "{number}日間すべての機能が使えます！",
+    "trialDeadlineDateOffsetDay": "{number}일간 모든 기능을 사용할 수 있습니다!",
     "@trialDeadlineDateOffsetDay": {
-        "description": "{number}日間すべての機能が使えます！",
+        "description": "{number}일간 모든 기능을 사용할 수 있습니다!",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "inputAndAdd": "入力して追加",
+    "inputAndAdd": "입력하고 추가",
     "@inputAndAdd": {
-        "description": "入力して追加"
+        "description": "입력하고 추가"
     },
-    "averagePeriod": "平均周期",
+    "averagePeriod": "평균 주기",
     "@averagePeriod": {
-        "description": "平均周期"
+        "description": "평균 주기"
     },
-    "averageDays": "平均日数",
+    "averageDays": "평균 일수",
     "@averageDays": {
-        "description": "平均日数"
+        "description": "평균 일수"
     },
-    "days": "日",
+    "days": "일",
     "@days": {
-        "description": "日"
+        "description": "일"
     },
-    "memo": "メモ",
+    "memo": "메모",
     "@memo": {
-        "description": "メモ"
+        "description": "메모"
     },
-    "failedToUpdate": "更新に失敗しました。通信環境をお確かめの上、再度変更してください",
+    "failedToUpdate": "업데이트에 실패했습니다. 통신 환경을 확인한 후 다시 변경해 주세요",
     "@failedToUpdate": {
-        "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+        "description": "업데이트에 실패했습니다. 통신 환경을 확인한 후 다시 변경해 주세요"
     },
-    "headache": "頭痛",
+    "headache": "두통",
     "@headache": {
-        "description": "頭痛"
+        "description": "두통"
     },
-    "abdominalPain": "腹痛",
+    "abdominalPain": "복통",
     "@abdominalPain": {
-        "description": "腹痛"
+        "description": "복통"
     },
-    "nausea": "吐き気",
+    "nausea": "메스꺼움",
     "@nausea": {
-        "description": "吐き気"
+        "description": "메스꺼움"
     },
-    "anemia": "貧血",
+    "anemia": "빈혈",
     "@anemia": {
-        "description": "貧血"
+        "description": "빈혈"
     },
-    "diarrhea": "下痢",
+    "diarrhea": "설사",
     "@diarrhea": {
-        "description": "下痢"
+        "description": "설사"
     },
-    "constipation": "便秘",
+    "constipation": "변비",
     "@constipation": {
-        "description": "便秘"
+        "description": "변비"
     },
-    "drowsiness": "眠気",
+    "drowsiness": "졸음",
     "@drowsiness": {
-        "description": "眠気"
+        "description": "졸음"
     },
-    "backPain": "腰痛",
+    "backPain": "요통",
     "@backPain": {
-        "description": "腰痛"
+        "description": "요통"
     },
-    "palpitation": "動悸",
+    "palpitation": "두근거림",
     "@palpitation": {
-        "description": "動悸"
+        "description": "두근거림"
     },
-    "irregularBleeding": "不正出血",
+    "irregularBleeding": "불규칙 출혈",
     "@irregularBleeding": {
-        "description": "不正出血"
+        "description": "불규칙 출혈"
     },
-    "lossOfAppetite": "食欲不振",
+    "lossOfAppetite": "식욕 부진",
     "@lossOfAppetite": {
-        "description": "食欲不振"
+        "description": "식욕 부진"
     },
-    "chestTightness": "胸の張り",
+    "chestTightness": "가슴 답답함",
     "@chestTightness": {
-        "description": "胸の張り"
+        "description": "가슴 답답함"
     },
-    "insomnia": "不眠",
+    "insomnia": "불면",
     "@insomnia": {
-        "description": "不眠"
+        "description": "불면"
     },
-    "pauseStartingOtherDaysInstructions": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
+    "pauseStartingOtherDaysInstructions": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요.",
     "@pauseStartingOtherDaysInstructions": {
-        "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてく��さい。"
+        "description": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요."
     },
-    "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
+    "seeHowToUsePauseTakingFeature": "복용 쉬기 기능 사용 방법 보기",
     "@seeHowToUsePauseTakingFeature": {
-        "description": "服用お休み機能の使い方を見る"
+        "description": "복용 쉬기 기능 사용 방법 보기"
     },
-    "startPauseTakingLabel": "服用お休み開始",
+    "startPauseTakingLabel": "복용 쉬기 시작",
     "@startPauseTakingLabel": {
-        "description": "服用お休み開始"
+        "description": "복용 쉬기 시작"
     },
-    "pauseTakingChanged": "服用お休みを変更しました",
+    "pauseTakingChanged": "복용 쉬기를 변경했습니다",
     "@pauseTakingChanged": {
-        "description": "服用お休みを変更しました"
+        "description": "복용 쉬기를 변경했습니다"
     },
-    "editPausePeriod": "服用お休み期間を編集",
+    "editPausePeriod": "복용 쉬기 기간 편집",
     "@editPausePeriod": {
-        "description": "服用お休み期間を編集"
+        "description": "복용 쉬기 기간 편집"
     },
-    "changePillDays": "服用日数を変更",
+    "changePillDays": "복용 일수 변경",
     "@changePillDays": {
-        "description": "服用日数を変更"
+        "description": "복용 일수 변경"
     },
-    "beginToEndNumbers": "{begin}番 ~ {end}番",
+    "beginToEndNumbers": "{begin}번 ~ {end}번",
     "@beginToEndNumbers": {
-        "description": "{begin}番 ~ {end}番",
+        "description": "{begin}번 ~ {end}번",
         "placeholders": {
             "begin": {
                 "type": "int"
@@ -2075,71 +2078,71 @@
             }
         }
     },
-    "resumeTaking": "服用再開",
+    "resumeTaking": "복용 재개",
     "@resumeTaking": {
-        "description": "服用再開"
+        "description": "복용 재개"
     },
-    "changePausePeriod": "服用お休み期間変更",
+    "changePausePeriod": "복용 쉬기 기간 변경",
     "@changePausePeriod": {
-        "description": "服用お休み期間変更"
+        "description": "복용 쉬기 기간 변경"
     },
-    "changedToDate": "{date}に変更しました",
+    "changedToDate": "{date}로 변경했습니다",
     "@changedToDate": {
-        "description": "{date}に変更しました",
+        "description": "{date}로 변경했습니다",
         "placeholders": {
             "date": {
                 "type": "String"
             }
         }
     },
-    "quickRecordTakePillFailed": "服用記録が失敗した可能性があります",
+    "quickRecordTakePillFailed": "복용 기록이 실패했을 가능성이 있습니다",
     "@quickRecordTakePillFailed": {
-        "description": "服用記録が失敗した可能性があります"
+        "description": "복용 기록이 실패했을 가능성이 있습니다"
     },
-    "quickRecordTakePillFailedMessage": "アプリを開いてご確認ください",
+    "quickRecordTakePillFailedMessage": "앱을 열어 확인해 주세요",
     "@quickRecordTakePillFailedMessage": {
-        "description": "アプリを開いてご確認ください"
+        "description": "앱을 열어 확인해 주세요"
     },
-    "alreadyTaken": "服用済み",
+    "alreadyTaken": "복용 완료",
     "@alreadyTaken": {
-        "description": "服用済み"
+        "description": "복용 완료"
     },
-    "startPauseTaking": "服用をお休みする",
+    "startPauseTaking": "복용을 쉬기 시작",
     "@startPauseTaking": {
-        "description": "服用をお休みする"
+        "description": "복용을 쉬기 시작"
     },
-    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번",
     "@sequentialLastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+        "description": "{pillSheetGroupSequentialLastTakenPillNumber}번",
         "placeholders": {
             "pillSheetGroupSequentialLastTakenPillNumber": {
                 "type": "String"
             }
         }
     },
-    "startFromNumber": "番からスタート",
+    "startFromNumber": "번부터 시작",
     "@startFromNumber": {
-        "description": "番からスタート"
+        "description": "번부터 시작"
     },
-    "add": "追加",
+    "add": "추가",
     "@add": {
-        "description": "追加"
+        "description": "추가"
     },
-    "addPillSheet": "ピルシートを追加",
+    "addPillSheet": "피임약 시트 추가",
     "@addPillSheet": {
-        "description": "ピルシートを追加"
+        "description": "피임약 시트 추가"
     },
-    "duringPauseTaking": "服用お休み中",
+    "duringPauseTaking": "복용 쉬는 중",
     "@duringPauseTaking": {
-        "description": "服用お休み中"
+        "description": "복용 쉬는 중"
     },
-    "cannotPauseAlreadyTakenToday": "今日飲むピルが服用済みの場合\n「服用お休み」できません",
+    "cannotPauseAlreadyTakenToday": "오늘 복용할 피임약이 이미 복용된 경우\n'복용 쉬기'를 할 수 없습니다",
     "@cannotPauseAlreadyTakenToday": {
-        "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+        "description": "오늘 복용할 피임약이 이미 복용된 경우 '복용 쉬기'를 할 수 없습니다"
     },
-    "pauseTakingStarted": "服用お休みを開始しました",
+    "pauseTakingStarted": "복용 쉬기를 시작했습니다",
     "@pauseTakingStarted": {
-        "description": "服用お休みを開始しました"
+        "description": "복용 쉬기를 시작했습니다"
     },
     "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
     "@formattedDateAndWeekday": {
@@ -2153,84 +2156,84 @@
             }
         }
     },
-    "editPauseStartDate": "服用お休み開始日を編集",
+    "editPauseStartDate": "복용 쉬기 시작일 편집",
     "@editPauseStartDate": {
-        "description": "服用お休み開始日を編集"
+        "description": "복용 쉬기 시작일 편집"
     },
-    "shareWithFriends": "友達と共有",
+    "shareWithFriends": "친구와 공유",
     "@shareWithFriends": {
-        "description": "友達と共有"
+        "description": "친구와 공유"
     },
-    "termsOfService": "利用規約",
+    "termsOfService": "이용 약관",
     "@termsOfService": {
-        "description": "利用規約"
+        "description": "이용 약관"
     },
-    "privacyPolicy": "プライバシーポリシー",
+    "privacyPolicy": "개인정보 보호정책",
     "@privacyPolicy": {
-        "description": "プライバシーポリシー"
+        "description": "개인정보 보호정책"
     },
-    "linkCopiedToClipboard": "クリップボードにコピーしました",
+    "linkCopiedToClipboard": "클립보드에 복사되었습니다",
     "@linkCopiedToClipboard": {
-        "description": "クリップボードにコピーしました"
+        "description": "클립보드에 복사되었습니다"
     },
-    "notificationNumber": "通知{number}",
+    "notificationNumber": "알림 {number}",
     "@notificationNumber": {
-        "description": "通知{number}",
+        "description": "알림 {number}",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "notificationTime": "通知時間",
+    "notificationTime": "알림 시간",
     "@notificationTime": {
-        "description": "通知時間"
+        "description": "알림 시간"
     },
-    "timeZoneChangedTo": "{tz}に変更しました",
+    "timeZoneChangedTo": "{tz}로 변경되었습니다",
     "@timeZoneChangedTo": {
-        "description": "{tz}に変更しました",
+        "description": "{tz}로 변경되었습니다",
         "placeholders": {
             "tz": {
                 "type": "String"
             }
         }
     },
-    "changeStartOfPillDays": "服用日数の始まり",
+    "changeStartOfPillDays": "복용 일수의 시작",
     "@changeStartOfPillDays": {
-        "description": "服用日数の始まり"
+        "description": "복용 일수의 시작"
     },
-    "changeEndOfPillDays": "服用日数の終わり",
+    "changeEndOfPillDays": "복용 일수의 끝",
     "@changeEndOfPillDays": {
-        "description": "服用日数の終わり"
+        "description": "복용 일수의 끝"
     },
-    "cannotUpdateToReplacePillSheet": "ピルシートの置き換えによる更新できません id: {id}",
+    "cannotUpdateToReplacePillSheet": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
     "@cannotUpdateToReplacePillSheet": {
-        "description": "ピルシートの置き換えによる更新できません id: {id}",
+        "description": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
         "placeholders": {
             "id": {
                 "type": "String"
             }
         }
     },
-    "failedToGetPillSheetHistory": "服用履歴情報の取得に失敗しました。{error}",
+    "failedToGetPillSheetHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
     "@failedToGetPillSheetHistory": {
-        "description": "服用履歴情報の取得に失敗しました。{error}",
+        "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
         "placeholders": {
             "error": {
                 "type": "String"
             }
         }
     },
-    "cancelTaking": "服用取り消し",
+    "cancelTaking": "복용 취소",
     "@cancelTaking": {
-        "description": "服用取り消し"
+        "description": "복용 취소"
     },
-    "deletedDiaryCannotBeRestored": "削除した日記は復元できません",
+    "deletedDiaryCannotBeRestored": "삭제된 일기는 복원할 수 없습니다",
     "@deletedDiaryCannotBeRestored": {
-        "description": "削除した日記は復元できません"
+        "description": "삭제된 일기는 복원할 수 없습니다"
     },
-    "editMenstruation": "生理期間を編集",
+    "editMenstruation": "생리 기간 편집",
     "@editMenstruation": {
-        "description": "生理期間を編集"
+        "description": "생리 기간 편집"
     }
 }
