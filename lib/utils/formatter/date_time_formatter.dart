@@ -71,7 +71,7 @@ class DateTimeFormatter {
     return DateFormat.E(Platform.localeName).format(dateTime);
   }
 
-  // [月火水木金土日]
+  // [日月火水木金土]
   static List<String> shortWeekdays() {
     return DateFormat.E(Platform.localeName).dateSymbols.SHORTWEEKDAYS;
   }
