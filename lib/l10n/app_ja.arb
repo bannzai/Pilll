@@ -2236,5 +2236,30 @@
   "changedPillNumber": "ピル番号変更",
   "@changedPillNumber": {
     "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "通常月額と比べて{offPercent}％OFF",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "プレミアム登録で引き続きすべての機能が利用できます",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown}内の購入で{offPercent}％OFF",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
   }
 }

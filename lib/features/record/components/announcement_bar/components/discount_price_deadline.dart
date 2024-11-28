@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
@@ -41,9 +42,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                '''
-プレミアム登録で引き続きすべての機能が利用できます
-$countdown内の購入で$offPercentForMonthlyPremiumPackage%OFF!''',
+                '${L.premiumIntroductionDiscountPriceDeadline}\n${L.countdownForDiscountPriceDeadline(countdown, offPercentForMonthlyPremiumPackage)}',
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

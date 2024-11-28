@@ -121,7 +121,9 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.secondary,
       ),
       child: Text(
-        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentForMonthlyPremiumPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
+        offeringType == OfferingType.limited
+            ? L.offPercentForMonthlyPremiumPackage(offPercentForMonthlyPremiumPackage)
+            : '$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,
