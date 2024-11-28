@@ -157,7 +157,7 @@ class HomePageBody extends HookConsumerWidget {
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
                   Tab(
-                    text: 'ピル',
+                    text: L.pill,
                     icon: SvgPicture.asset(
                         tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg'),
                   ),

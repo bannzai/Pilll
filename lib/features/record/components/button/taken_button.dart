@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/release_note/release_note.dart';
@@ -36,7 +37,7 @@ class TakenButton extends HookConsumerWidget {
     return SizedBox(
       width: 180,
       child: PrimaryButton(
-        text: '飲んだ',
+        text: L.taken,
         onPressed: () async {
           try {
             analytics.logEvent(name: 'taken_button_pressed', parameters: {

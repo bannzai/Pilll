@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -26,7 +27,7 @@ class CancelButton extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final revertTakePill = ref.watch(revertTakePillProvider);
     return UndoButton(
-      text: '飲んでない',
+      text: L.notTaken,
       onPressed: () async {
         analytics.logEvent(name: 'cancel_taken_button_pressed', parameters: {
           'last_taken_pill_number': activePillSheet.lastTakenPillNumber,
