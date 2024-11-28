@@ -613,7 +613,7 @@
     "@startOfPillDays": {
         "description": "복용 일수의 시작"
     },
-    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
+    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}�����째",
     "@beforePillSheetGroupSequentialEstimatedEndDay": {
         "description": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
         "placeholders": {
@@ -1074,30 +1074,30 @@
             }
         }
     },
-    "tellAboutPrescribedSheet": "処方されるシートについて\n教えてください",
+    "tellAboutPrescribedSheet": "처방된 시트에 대해\n알려주세요",
     "@tellAboutPrescribedSheet": {
-        "description": "処方されるシートについて\n教えてください"
+        "description": "처방된 시트에 대해\n알려주세요"
     },
-    "existingAccountUsers": "すでにアカウントをお持ちの方はこちら",
+    "existingAccountUsers": "이미 계정이 있는 분은 여기를 클릭하세요",
     "@existingAccountUsers": {
-        "description": "すでにアカウントをお持ちの方はこちら"
+        "description": "이미 계정이 있는 분은 여기를 클릭하세요"
     },
-    "selectTodayPillNumber": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "selectTodayPillNumber": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
     "@selectTodayPillNumber": {
-        "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+        "description": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
         "placeholders": {
             "todayString": {
                 "type": "String"
             }
         }
     },
-    "notYetKnown": "まだ分からない",
+    "notYetKnown": "아직 모름",
     "@notYetKnown": {
-        "description": "まだ分からない"
+        "description": "아직 모름"
     },
-    "pillForToday": "{today}に飲むピルは",
+    "pillForToday": "{today}에 먹는 알약은",
     "@pillForToday": {
-        "description": "{today}に飲むピルは",
+        "description": "{today}에 먹는 알약은",
         "placeholders": {
             "today": {
                 "type": "String"
@@ -1113,53 +1113,53 @@
             }
         }
     },
-    "preview": "プレビュー",
+    "preview": "미리보기",
     "@preview": {
-        "description": "プレビュー"
+        "description": "미리보기"
     },
-    "normal": "通常",
+    "normal": "일반",
     "@normal": {
-        "description": "通常"
+        "description": "일반"
     },
-    "missed": "飲み忘れ",
+    "missed": "복용 잊음",
     "@missed": {
-        "description": "飲み忘れ"
+        "description": "복용 잊음"
     },
-    "showsDate": "日付を表示",
+    "showsDate": "날짜 표시",
     "@showsDate": {
-        "description": "日付を表示"
+        "description": "날짜 표시"
     },
-    "showsPillNumber": "番号を表示",
+    "showsPillNumber": "번호 표시",
     "@showsPillNumber": {
-        "description": "番号を表示"
+        "description": "번호 표시"
     },
-    "showsDescription": "説明文を表示",
+    "showsDescription": "설명 표시",
     "@showsDescription": {
-        "description": "説明文を表示"
+        "description": "설명 표시"
     },
-    "title": "タイトル",
+    "title": "제목",
     "@title": {
-        "description": "タイトル"
+        "description": "제목"
     },
-    "message": "メッセージ",
+    "message": "메시지",
     "@message": {
-        "description": "メッセージ"
+        "description": "메시지"
     },
-    "option": "オプション",
+    "option": "옵션",
     "@option": {
-        "description": "オプション"
+        "description": "옵션"
     },
-    "completed": "完了",
+    "completed": "완료",
     "@completed": {
-        "description": "完了"
+        "description": "완료"
     },
     "pilll": "Pilll",
     "@pilll": {
         "description": "Pilll"
     },
-    "changeMissedNotificationMessage": "飲み忘れてる場合の通知文言を変更できます",
+    "changeMissedNotificationMessage": "복용 잊음 알림 메시지를 변경할 수 있습니다",
     "@changeMissedNotificationMessage": {
-        "description": "飲み忘れてる場合の通知文言を変更できます"
+        "description": "복용 잊음 알림 메시지를 변경할 수 있습니다"
     },
     "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
     "@missedNotificationMessageLength": {
@@ -1170,9 +1170,9 @@
             }
         }
     },
-    "changeNotificationHeader": "通知の先頭部分の変更ができます",
+    "changeNotificationHeader": "알림의 시작 부분을 변경할 수 있습니다",
     "@changeNotificationHeader": {
-        "description": "通知の先頭部分の変更ができます"
+        "description": "알림의 시작 부분을 변경할 수 있습니다"
     },
     "notificationHeaderLength": "{wordValueCharactersLength}/8",
     "@notificationHeaderLength": {
@@ -1183,13 +1183,13 @@
             }
         }
     },
-    "enterAtLeastOneCharacter": "0文字以上入力してください",
+    "enterAtLeastOneCharacter": "0자 이상 입력하세요",
     "@enterAtLeastOneCharacter": {
-        "description": "0文字以上入力してください"
+        "description": "0자 이상 입력하세요"
     },
-    "changeDailyNotificationMessage": "飲み忘れていない場合の通知文言を変更できます",
+    "changeDailyNotificationMessage": "복용 잊지 않음 알림 메시지를 변경할 수 있습니다",
     "@changeDailyNotificationMessage": {
-        "description": "飲み忘れていない場合の通知文言を変更できます"
+        "description": "복용 잊지 않음 알림 메시지를 변경할 수 있습니다"
     },
     "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
     "@dailyNotificationMessageLength": {
@@ -1200,155 +1200,155 @@
             }
         }
     },
-    "receiveDailyNotificationAt9AM": "当日9:00に通知を受け取る",
+    "receiveDailyNotificationAt9AM": "당일 9:00에 알림을 받습니다",
     "@receiveDailyNotificationAt9AM": {
-        "description": "当日9:00に通知を受け取る"
+        "description": "당일 9:00에 알림을 받습니다"
     },
-    "save": "保存",
+    "save": "저장",
     "@save": {
-        "description": "保存"
+        "description": "저장"
     },
-    "physicalCondition": "体調",
+    "physicalCondition": "신체 상태",
     "@physicalCondition": {
-        "description": "体調"
+        "description": "신체 상태"
     },
-    "deletedDiaryCannotBeRecovered": "削除された日記は復元ができません",
+    "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
     "@deletedDiaryCannotBeRecovered": {
-        "description": "削除された日記は復元ができません"
+        "description": "삭제된 일기는 복원할 수 없습니다"
     },
-    "sex": "sex",
+    "sex": "성별",
     "@sex": {
-        "description": "sex"
+        "description": "성별"
     },
-    "previousPillSheetGroup": "前回のピルシートグループ",
+    "previousPillSheetGroup": "이전 알약 시트 그룹",
     "@previousPillSheetGroup": {
-        "description": "前回のピルシートグループ"
+        "description": "이전 알약 시트 그룹"
     },
-    "noPreviousPillSheetGroup": "前回のピルシートグループがまだ存在しません",
+    "noPreviousPillSheetGroup": "이전 알약 시트 그룹이 아직 존재하지 않습니다",
     "@noPreviousPillSheetGroup": {
-        "description": "前回のピルシートグループがまだ存在しません"
+        "description": "이전 알약 시트 그룹이 아직 존재하지 않습니다"
     },
-    "failedToFetchPillHistory": "服用履歴情報の取得に失敗しました。{error}",
+    "failedToFetchPillHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
     "@failedToFetchPillHistory": {
-        "description": "服用履歴情報の取得に失敗しました。{error}",
+        "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
         "placeholders": {
             "error": {
                 "type": "String"
             }
         }
     },
-    "seeFAQ": "FAQを見る",
+    "seeFAQ": "FAQ 보기",
     "@seeFAQ": {
-        "description": "FAQを見る"
+        "description": "FAQ 보기"
     },
-    "reloadScreen": "画面を再読み込み",
+    "reloadScreen": "화면을 다시 로드",
     "@reloadScreen": {
-        "description": "画面を再読み込み"
+        "description": "화면을 다시 로드"
     },
-    "contactIfNotResolved": "解決しない場合はこちら",
+    "contactIfNotResolved": "해결되지 않는 경우 여기를 클릭하세요",
     "@contactIfNotResolved": {
-        "description": "解決しない場合はこちら"
+        "description": "해결되지 않는 경우 여기를 클릭하세요"
     },
-    "shareFeedback": "Pilllの感想をお聞かせください",
+    "shareFeedback": "Pilll의 감상을 들려주세요",
     "@shareFeedback": {
-        "description": "Pilllの感想をお聞かせください"
+        "description": "Pilll의 감상을 들려주세요"
     },
-    "confirm": "決定",
+    "confirm": "확인",
     "@confirm": {
-        "description": "決定"
+        "description": "확인"
     },
-    "surveyForServiceImprovement": "よろしければサービス改善のためのアンケートにもご協力ください",
+    "surveyForServiceImprovement": "서비스 개선을 위한 설문조사에 협조해 주세요",
     "@surveyForServiceImprovement": {
-        "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+        "description": "서비스 개선을 위한 설문조사에 협조해 주세요"
     },
-    "participate": "協力する",
+    "participate": "참여하기",
     "@participate": {
-        "description": "協力する"
+        "description": "참여하기"
     },
-    "notHelp": "しない",
+    "notHelp": "도움이 되지 않음",
     "@notHelp": {
-        "description": "しない"
+        "description": "도움이 되지 않음"
     },
-    "serviceImprovementSurvey": "サービス改善アンケート",
+    "serviceImprovementSurvey": "서비스 개선 설문조사",
     "@serviceImprovementSurvey": {
-        "description": "サービス改善アンケート"
+        "description": "서비스 개선 설문조사"
     },
-    "satisfied": "満足している",
+    "satisfied": "만족",
     "@satisfied": {
-        "description": "満足している"
+        "description": "만족"
     },
-    "notSatisfied": "満足では無い",
+    "notSatisfied": "만족하지 않음",
     "@notSatisfied": {
-        "description": "満足では無い"
+        "description": "만족하지 않음"
     },
-    "perNumber": " 番ごとに",
+    "perNumber": " 번호마다",
     "@perNumber": {
-        "description": " 番ごとに"
+        "description": " 번호마다"
     },
-    "howManyDaysDoesMenstruationLast": "何日間生理が続く？",
+    "howManyDaysDoesMenstruationLast": "생리가 며칠 동안 지속됩니까?",
     "@howManyDaysDoesMenstruationLast": {
-        "description": "何日間生理が続く？"
+        "description": "생리가 며칠 동안 지속됩니까?"
     },
-    "daysMenstruationLasts": " 日間生理が続く",
+    "daysMenstruationLasts": " 일 동안 생리가 지속됩니다",
     "@daysMenstruationLasts": {
-        "description": " 日間生理が続く"
+        "description": " 일 동안 생리가 지속됩니다"
     },
-    "selectPillNumberForMenstruationStart": "生理がはじまるピル番号をタップ",
+    "selectPillNumberForMenstruationStart": "생리가 시작되는 알약 번호를 탭하세요",
     "@selectPillNumberForMenstruationStart": {
-        "description": "生理がはじまるピル番号をタップ"
+        "description": "생리가 시작되는 알약 번호를 탭하세요"
     },
-    "countOfSheet": "{number}枚目",
+    "countOfSheet": "{number}번째",
     "@countOfSheet": {
-        "description": "{number}枚目",
+        "description": "{number}번째",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "newPillSheetStart": "新しいピルシート開始 ▶︎",
+    "newPillSheetStart": "새로운 알약 시트 시작 ▶︎",
     "@newPillSheetStart": {
-        "description": "新しいピルシート開始 ▶︎"
+        "description": "새로운 알약 시트 시작 ▶︎"
     },
-    "selectPillType": "ピルの種類を選択",
+    "selectPillType": "알약 종류 선택",
     "@selectPillType": {
-        "description": "ピルの種類を選択"
+        "description": "알약 종류 선택"
     },
-    "twentyOnePills": "21錠",
+    "twentyOnePills": "21정",
     "@twentyOnePills": {
-        "description": "21錠"
+        "description": "21정"
     },
-    "twentyEightPills": "28錠",
+    "twentyEightPills": "28정",
     "@twentyEightPills": {
-        "description": "28錠"
+        "description": "28정"
     },
-    "twentyFourPills": "24錠",
+    "twentyFourPills": "24정",
     "@twentyFourPills": {
-        "description": "24錠"
+        "description": "24정"
     },
-    "twentyOnePlusSevenDaysBreak": "21錠＋7日休薬",
+    "twentyOnePlusSevenDaysBreak": "21정＋7일 휴약",
     "@twentyOnePlusSevenDaysBreak": {
-        "description": "21錠＋7日休薬"
+        "description": "21정＋7일 휴약"
     },
-    "twentyFourPlusFourPlacebo": "24錠＋4錠偽薬",
+    "twentyFourPlusFourPlacebo": "24정＋4정 위약",
     "@twentyFourPlusFourPlacebo": {
-        "description": "24錠＋4錠偽薬"
+        "description": "24정＋4정 위약"
     },
-    "twentyOnePlusSevenPlacebo": "21錠＋7錠偽薬",
+    "twentyOnePlusSevenPlacebo": "21정＋7정 위약",
     "@twentyOnePlusSevenPlacebo": {
-        "description": "21錠＋7錠偽薬"
+        "description": "21정＋7정 위약"
     },
-    "allActivePills": "すべて実薬",
+    "allActivePills": "모두 실약",
     "@allActivePills": {
-        "description": "すべて実薬"
+        "description": "모두 실약"
     },
-    "twentyFourPlusFourDaysBreak": "24錠＋4錠休薬",
+    "twentyFourPlusFourDaysBreak": "24정＋4정 휴약",
     "@twentyFourPlusFourDaysBreak": {
-        "description": "24錠＋4錠休薬"
+        "description": "24정＋4정 휴약"
     },
-    "choosePillType": "ピルの種類を選ぶ",
+    "choosePillType": "알약 종류 선택",
     "@choosePillType": {
-        "description": "ピルの種類を選ぶ"
+        "description": "알약 종류 선택"
     },
     "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
     "@notificationForNotTakenPeriod": {
@@ -1599,7 +1599,7 @@
             }
         }
     },
-    "purchaseErrorUnsupportedError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnsupportedError": "原因不明のエラーで��。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnsupportedError": {
         "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
@@ -1728,7 +1728,7 @@
             }
         }
     },
-    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新��にアップデ��トして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorApiEndpointBlocked": {
         "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
@@ -2041,7 +2041,7 @@
     },
     "pauseStartingOtherDaysInstructions": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。",
     "@pauseStartingOtherDaysInstructions": {
-        "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+        "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてく��さい。"
     },
     "seeHowToUsePauseTakingFeature": "服用お休み機能の使い方を見る",
     "@seeHowToUsePauseTakingFeature": {
