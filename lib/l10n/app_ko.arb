@@ -613,7 +613,7 @@
     "@startOfPillDays": {
         "description": "복용 일수의 시작"
     },
-    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}���째",
+    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
     "@beforePillSheetGroupSequentialEstimatedEndDay": {
         "description": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
         "placeholders": {
@@ -1006,7 +1006,7 @@
     },
     "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
     "@seeDetailsOfPremiumFeatures": {
-        "description": "프리미엄 기��의 세세한 정보 보기"
+        "description": "프리미엄 기능의 세세한 정보 보기"
     },
     "popularFeatures": "인기 있는\n기능",
     "@popularFeatures": {
@@ -1599,7 +1599,7 @@
             }
         }
     },
-    "purchaseErrorUnsupportedError": "原因不明のエラーです。最新版にア��プデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorUnsupportedError": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorUnsupportedError": {
         "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
@@ -1728,7 +1728,7 @@
             }
         }
     },
-    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデー��して再度お��しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorApiEndpointBlocked": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorApiEndpointBlocked": {
         "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
