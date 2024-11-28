@@ -110,7 +110,8 @@ class _DiscountBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final offPercentFormonthlyPremiumPackage = ((1 - (monthlyPremiumPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
+    // NOTE: [DiscountPercent]
+    final offPercentForMonthlyPremiumPackage = ((1 - (monthlyPremiumPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
     final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / monthlyPackage.storeProduct.price * 12)) * 100).toInt();
 
     return Container(
@@ -120,7 +121,7 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.secondary,
       ),
       child: Text(
-        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentFormonthlyPremiumPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
+        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentForMonthlyPremiumPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,
