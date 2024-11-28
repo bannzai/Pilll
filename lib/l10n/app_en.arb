@@ -2236,5 +2236,26 @@
     "changedPillNumber": "Changed pill number",
     "@changedPillNumber": {
         "description": "Changed pill number"
+    },
+    "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF for regularly monthly price",
+    "@offPercentForMonthlyPremiumPackage": {
+        "description": "{offPercent}% OFF for regularly monthly price",
+        "placeholders": {
+            "offPercent": {
+                "type": "int"
+            }
+        }
+    },
+    "premiumIntroductionDiscountPriceDeadline": "{offPercent}% OFF for purchases within {countdown}",
+    "@premiumIntroductionDiscountPriceDeadline": {
+        "description": "20% OFF for purchases within 00:05:00",
+        "placeholders": {
+            "countdown": {
+                "type": "String"
+            },
+            "offPercent": {
+                "type": "int"
+            }
+        }
     }
 }
