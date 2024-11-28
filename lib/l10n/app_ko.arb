@@ -1,373 +1,373 @@
 {
     "@@locale": "ko",
-    "pillSheetType21With7Placebo": "21錠タイプ",
+    "pillSheetType21With7Placebo": "21정 타입",
     "@pillSheetType21With7Placebo": {
-        "description": "21錠タイプ(7錠偽薬)"
+        "description": "21정 타입(7정 위약)"
     },
-    "pillSheetType28With4Placebo": "28錠タイプ(4錠偽薬)",
+    "pillSheetType28With4Placebo": "28정 타입(4정 위약)",
     "@pillSheetType28With4Placebo": {
-        "description": "28錠タイプ(4錠偽薬)"
+        "description": "28정 타입(4정 위약)"
     },
-    "pillSheetType28With7Placebo": "28錠タイプ(7錠偽薬)",
+    "pillSheetType28With7Placebo": "28정 타입(7정 위약)",
     "@pillSheetType28With7Placebo": {
-        "description": "28錠タイプ(7錠偽薬)"
+        "description": "28정 타입(7정 위약)"
     },
-    "pillSheetType28": "28錠タイプ(すべて実薬)",
+    "pillSheetType28": "28정 타입(모두 실약)",
     "@pillSheetType28": {
-        "description": "28錠タイプ(すべて実薬)"
+        "description": "28정 타입(모두 실약)"
     },
-    "pillSheetType24": "24錠タイプ(すべて実薬)",
+    "pillSheetType24": "24정 타입(모두 실약)",
     "@pillSheetType24": {
-        "description": "24錠タイプ(すべて実薬)"
+        "description": "24정 타입(모두 실약)"
     },
-    "pillSheetType21": "21錠タイプ(すべて実薬)",
+    "pillSheetType21": "21정 타입(모두 실약)",
     "@pillSheetType21": {
-        "description": "21錠タイプ(すべて実薬)"
+        "description": "21정 타입(모두 실약)"
     },
-    "pillSheetType24WithRest4": "24錠タイプ",
+    "pillSheetType24WithRest4": "24정 타입",
     "@pillSheetType24WithRest4": {
-        "description": "24錠タイプ"
+        "description": "24정 타입"
     },
-    "restPeriod": "休薬",
+    "restPeriod": "휴약",
     "@restPeriod": {
-        "description": "休薬"
+        "description": "휴약"
     },
-    "placebo": "偽薬",
+    "placebo": "위약",
     "@placebo": {
-        "description": "偽薬"
+        "description": "위약"
     },
-    "userNotFound": "ユーザーが見つかりません",
+    "userNotFound": "사용자를 찾을 수 없습니다",
     "@userNotFound": {
-        "description": "ユーザーが見つかりません"
+        "description": "사용자를 찾을 수 없습니다"
     },
-    "userAlreadyExists": "すでにユーザーが存在してます",
+    "userAlreadyExists": "이미 사용자가 존재합니다",
     "@userAlreadyExists": {
-        "description": "すでにユーザーが存在してます"
+        "description": "이미 사용자가 존재합니다"
     },
-    "medicationHistory": "服用履歴",
+    "medicationHistory": "복용 이력",
     "@medicationHistory": {
-        "description": "服用履歴"
+        "description": "복용 이력"
     },
-    "settings": "設定",
+    "settings": "설정",
     "@settings": {
-        "description": "設定"
+        "description": "설정"
     },
-    "account": "アカウント",
+    "account": "계정",
     "@account": {
-        "description": "アカウント"
+        "description": "계정"
     },
-    "dataTransferRequiresAccount": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。",
+    "dataTransferRequiresAccount": "기기 변경이나 스마트폰 분실 시 데이터의 인계 및 복원에는 계정 등록이 필요합니다.",
     "@dataTransferRequiresAccount": {
-        "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+        "description": "기기 변경이나 스마트폰 분실 시 데이터의 인계 및 복원에는 계정 등록이 필요합니다."
     },
-    "pillPremium": "Pilllプレミアム",
+    "pillPremium": "Pilll 프리미엄",
     "@pillPremium": {
-        "description": "Pilllプレミアム"
+        "description": "Pilll 프리미엄"
     },
-    "unlimitedFeatureDuration": "機能無制限の期間について",
+    "unlimitedFeatureDuration": "기능 무제한 기간에 대해",
     "@unlimitedFeatureDuration": {
-        "description": "機能無制限の期間について"
+        "description": "기능 무제한 기간에 대해"
     },
-    "pillSheet": "ピルシート",
+    "pillSheet": "딜셔트",
     "@pillSheet": {
-        "description": "ピルシート"
+        "description": "딜셔트"
     },
-    "notification": "通知です",
+    "notification": "알림이 있습니다",
     "@notification": {
-        "description": "通知です"
+        "description": "알림이 있습니다"
     },
-    "menstruation": "生理",
+    "menstruation": "생리",
     "@menstruation": {
-        "description": "生理"
+        "description": "생리"
     },
-    "others": "その他",
+    "others": "기타",
     "@others": {
-        "description": "その他"
+        "description": "기타"
     },
     "faq": "FAQ",
     "@faq": {
         "description": "FAQ"
     },
-    "newFeaturesIntroduction": "新機能紹介",
+    "newFeaturesIntroduction": "새로운 기능 소개",
     "@newFeaturesIntroduction": {
-        "description": "新機能紹介"
+        "description": "새로운 기능 소개"
     },
-    "contactUs": "お問い合わせ",
+    "contactUs": "문의하기",
     "@contactUs": {
-        "description": "お問い合わせ"
+        "description": "문의하기"
     },
-    "delete": "削除",
+    "delete": "삭제",
     "@delete": {
-        "description": "削除"
+        "description": "삭제"
     },
-    "doDelete": "削除する",
+    "doDelete": "삭제하기",
     "@doDelete": {
-        "description": "削除する"
+        "description": "삭제하기"
     },
-    "deleteUser": "ユーザーを削除",
+    "deleteUser": "사용자 삭제",
     "@deleteUser": {
-        "description": "ユーザーを削除"
+        "description": "사용자 삭제"
     },
-    "deleteDiary": "日記を削除します",
+    "deleteDiary": "일기 삭제",
     "@deleteDiary": {
-        "description": "日記を削除します"
+        "description": "일기 삭제"
     },
-    "confirmDeletingMenstruation": "生理期間を削除しますか？",
+    "confirmDeletingMenstruation": "생리 기간을 삭제하시겠습니까?",
     "@confirmDeletingMenstruation": {
-        "description": "生理期間を削除しますか？"
+        "description": "생리 기간을 삭제하시겠습니까?"
     },
-    "addNotificationTime": "通知時間の追加",
+    "addNotificationTime": "알림 시간 추가",
     "@addNotificationTime": {
-        "description": "通知時間の追加"
+        "description": "알림 시간 추가"
     },
-    "syncWithDeviceTimeZone": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "syncWithDeviceTimeZone": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
     "@syncWithDeviceTimeZone": {
-        "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+        "description": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
         "placeholders": {
             "deviceTimezoneName": {
                 "type": "String"
             }
         }
     },
-    "currentTimeZone": "現在設定されているタイムゾーン",
+    "currentTimeZone": "현재 설정된 시간대",
     "@currentTimeZone": {
-        "description": "現在設定されているタイムゾーン"
+        "description": "현재 설정된 시간대"
     },
-    "yes": "はい",
+    "yes": "예",
     "@yes": {
-        "description": "はい"
+        "description": "예"
     },
-    "no": "いいえ",
+    "no": "아니오",
     "@no": {
-        "description": "いいえ"
+        "description": "아니오"
     },
-    "unsubscribeInfo": "解約について",
+    "unsubscribeInfo": "해지에 대해",
     "@unsubscribeInfo": {
-        "description": "解約について"
+        "description": "해지에 대해"
     },
-    "pillReminder": "ピルの服用通知",
+    "pillReminder": "딜의 복용 알림",
     "@pillReminder": {
-        "description": "ピルの服用通知"
+        "description": "딜의 복용 알림"
     },
-    "takePillReminder": "服用通知",
+    "takePillReminder": "알림",
     "@takePillReminder": {
-        "description": "服用通知"
+        "description": "알림"
     },
     "copyDebugInfo": "COPY DEBUG INFO",
     "@copyDebugInfo": {
         "description": "COPY DEBUG INFO"
     },
-    "cancel": "キャンセル",
+    "cancel": "취소",
     "@cancel": {
-        "description": "キャンセル"
+        "description": "취소"
     },
-    "signOut": "サインアウト",
+    "signOut": "로그아웃",
     "@signOut": {
-        "description": "サインアウト"
+        "description": "로그아웃"
     },
-    "autoAddPillSheetGroup": "ピルシートグループの自動追加",
+    "autoAddPillSheetGroup": "딜셔트 그룹 자동 추가",
     "@autoAddPillSheetGroup": {
-        "description": "ピルシートグループの自動追加"
+        "description": "딜셔트 그룹 자동 추가"
     },
-    "autoAddNewSheetAfterCurrentEnds": "今のピルシートグループが終了したら、新しいシートを自動で追加します",
+    "autoAddNewSheetAfterCurrentEnds": "현재 딜셔트 그룹이 끝나면 새로운 셔트를 자동으로 추가합니다",
     "@autoAddNewSheetAfterCurrentEnds": {
-        "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+        "description": "현재 딜셔트 그룹이 끝나면 새로운 셔트를 자동으로 추가합니다"
     },
-    "accountSettings": "アカウント設定",
+    "accountSettings": "계정 설정",
     "@accountSettings": {
-        "description": "アカウント設定"
+        "description": "계정 설정"
     },
-    "linked": "連携済み",
+    "linked": "연동 완료",
     "@linked": {
-        "description": "連携済み"
+        "description": "연동 완료"
     },
-    "unregistered": "未登録",
+    "unregistered": "미등록",
     "@unregistered": {
-        "description": "未登録"
+        "description": "미등록"
     },
-    "quickRecord": "クイックレコード",
+    "quickRecord": "퀵 레코드",
     "@quickRecord": {
-        "description": "クイックレコード"
+        "description": "퀵 레코드"
     },
-    "quickRecordDescription": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。",
+    "quickRecordDescription": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다.",
     "@quickRecordDescription": {
-        "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+        "description": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다."
     },
-    "healthCareIntegration": "ヘルスケア連携",
+    "healthCareIntegration": "건강 관리 연동",
     "@healthCareIntegration": {
-        "description": "ヘルスケア連携"
+        "description": "건강 관리 연동"
     },
-    "healthCareIntegrationDescription": "Pilllで記録した生理記録を自動でヘルスケアに記録できます",
+    "healthCareIntegrationDescription": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다",
     "@healthCareIntegrationDescription": {
-        "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+        "description": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다"
     },
-    "viewPremiumPlan": "プレミアムプランを見る",
+    "viewPremiumPlan": "프리미엄 플랜 보기",
     "@viewPremiumPlan": {
-        "description": "プレミアムプランを見る"
+        "description": "프리미엄 플랜 보기"
     },
-    "changePillNumberForToday": "今日飲むピル番号の変更",
+    "changePillNumberForToday": "오늘 복용할 딜 번호 변경",
     "@changePillNumberForToday": {
-        "description": "今日飲むピル番号の変更"
+        "description": "오늘 복용할 딜 번호 변경"
     },
-    "discardAllPillSheets": "ピルシートをすべて破棄",
+    "discardAllPillSheets": "딜셔트 모두 폐기",
     "@discardAllPillSheets": {
-        "description": "ピルシートをすべて破棄"
+        "description": "딜셔트 모두 폐기"
     },
-    "areYouSureDoing": "{doing}しますか？",
+    "areYouSureDoing": "{doing}하시겠습니까?",
     "@areYouSureDoing": {
-        "description": "{doing}しますか？",
+        "description": "{doing}하시겠습니까?",
         "placeholders": {
             "doing": {
                 "type": "String"
             }
         }
     },
-    "currentlyDisplayed": "現在表示されている",
+    "currentlyDisplayed": "현재 표시되고 있는",
     "@currentlyDisplayed": {
-        "description": "現在表示されている"
+        "description": "현재 표시되고 있는"
     },
-    "allPillSheets": "すべてのピルシート",
+    "allPillSheets": "모든 딜셔트",
     "@allPillSheets": {
-        "description": "すべてのピルシート"
+        "description": "모든 딜셔트"
     },
-    "willBeDiscarded": "が破棄されます",
+    "willBeDiscarded": "가 폐기됩니다",
     "@willBeDiscarded": {
-        "description": "が破棄されます"
+        "description": "가 폐기됩니다"
     },
-    "discard": "破棄する",
+    "discard": "폐기하기",
     "@discard": {
-        "description": "破棄する"
+        "description": "폐기하기"
     },
-    "pillSheetDiscarded": "ピルシートを破棄しました",
+    "pillSheetDiscarded": "딜셔트를 폐기했습니다",
     "@pillSheetDiscarded": {
-        "description": "ピルシートを破棄しました"
+        "description": "딜셔트를 폐기했습니다"
     },
-    "aboutMenstruation": "生理について",
+    "aboutMenstruation": "생리에 대해",
     "@aboutMenstruation": {
-        "description": "生理について"
+        "description": "생리에 대해"
     },
-    "checkPillNumberForMenstruationStart": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています",
+    "checkPillNumberForMenstruationStart": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다",
     "@checkPillNumberForMenstruationStart": {
-        "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+        "description": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다"
     },
-    "customizeMedicationNotifications": "服用通知のカスタマイズ",
+    "customizeMedicationNotifications": "복용 알림 커스터마이즈",
     "@customizeMedicationNotifications": {
-        "description": "服用通知のカスタマイズ"
+        "description": "복용 알림 커스터마이즈"
     },
-    "customizeNotificationText": "服用通知の文言のカスタマイズができます",
+    "customizeNotificationText": "복용 알림 문구 커스터마이즈가 가능합니다",
     "@customizeNotificationText": {
-        "description": "服用通知の文言のカスタマイズができます"
+        "description": "복용 알림 문구 커스터마이즈가 가능합니다"
     },
-    "xCanBeCustomized": "{x}のカスタマイズができます",
+    "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
     "@xCanBeCustomized": {
-        "description": "{x}のカスタマイズができます",
+        "description": "{x}의 커스터마이즈가 가능합니다",
         "placeholders": {
             "x": {
                 "type": "String"
             }
         }
     },
-    "thankYouForCooperation": "ご協力ありがとうございます",
+    "thankYouForCooperation": "협력에 감사합니다",
     "@thankYouForCooperation": {
-        "description": "ご協力ありがとうございます"
+        "description": "협력에 감사합니다"
     },
-    "feedbackUsage": "いただいた意見は今後の改善へと活用させていただきます。",
+    "feedbackUsage": "받은 의견은 향후 개선을 위해 활용하겠습니다.",
     "@feedbackUsage": {
-        "description": "いただいた意見は今後の改善へと活用させていただきます。"
+        "description": "받은 의견은 향후 개선을 위해 활용하겠습니다."
     },
-    "close": "閉じる",
+    "close": "닫기",
     "@close": {
-        "description": "閉じる"
+        "description": "닫기"
     },
-    "registerAccount": "アカウント登録",
+    "registerAccount": "계정 등록",
     "@registerAccount": {
-        "description": "アカウント登録"
+        "description": "계정 등록"
     },
-    "reLogin": "再ログイン",
+    "reLogin": "다시 로그인",
     "@reLogin": {
-        "description": "再ログイン"
+        "description": "다시 로그인"
     },
-    "authenticationInfoUpdated": "認証情報を更新しました",
+    "authenticationInfoUpdated": "인증 정보를 업데이트했습니다",
     "@authenticationInfoUpdated": {
-        "description": "認証情報を更新しました"
+        "description": "인증 정보를 업데이트했습니다"
     },
-    "updateAuthenticationInformation": "認証情報を更新します",
+    "updateAuthenticationInformation": "인증 정보 업데이트",
     "@updateAuthenticationInformation": {
-        "description": "認証情報を更新します"
+        "description": "인증 정보 업데이트"
     },
-    "registeredWithProvider": "{accountTypeProviderName}で登録しました",
+    "registeredWithProvider": "{accountTypeProviderName}으로 등록했습니다",
     "@registeredWithProvider": {
-        "description": "{accountTypeProviderName}で登録しました",
+        "description": "{accountTypeProviderName}으로 등록했습니다",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
             }
         }
     },
-    "linkAccount": "連携する",
+    "linkAccount": "연동하기",
     "@linkAccount": {
-        "description": "連携する"
+        "description": "연동하기"
     },
-    "withdraw": "退会する",
+    "withdraw": "탈퇴하기",
     "@withdraw": {
-        "description": "退会する"
+        "description": "탈퇴하기"
     },
-    "withdrawalCompleted": "退会しました",
+    "withdrawalCompleted": "탈퇴했습니다",
     "@withdrawalCompleted": {
-        "description": "退会しました"
+        "description": "탈퇴했습니다"
     },
-    "appExitMessage": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。",
+    "appExitMessage": "앱을 한 번 종료합니다. 새로 시작하려면 앱을 다시 시작한 후 초기 설정을 해주세요.",
     "@appExitMessage": {
-        "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+        "description": "앱을 한 번 종료합니다. 새로 시작하려면 앱을 다시 시작한 후 초기 설정을 해주세요."
     },
-    "oK": "OK",
+    "oK": "확인",
     "@oK": {
-        "description": "OK"
+        "description": "확인"
     },
-    "changePillNumber": "ピル番号の変更",
+    "changePillNumber": "딜 번호 변경",
     "@changePillNumber": {
-        "description": "ピル番号の変更"
+        "description": "딜 번호 변경"
     },
-    "selectOrChangePillNumber": "今日({today})\n飲む・飲んだピルの番号をタップ",
+    "selectOrChangePillNumber": "오늘({today})\n복용하는 딜의 번호를 탭",
     "@selectOrChangePillNumber": {
-        "description": "今日飲む・飲んだピルの番号をタップ",
+        "description": "오늘({today})\n복용하는 딜의 번호를 탭",
         "placeholders": {
             "today": {
                 "type": "String"
             }
         }
     },
-    "change": "変更",
+    "change": "변경",
     "@change": {
-        "description": "変更"
+        "description": "변경"
     },
-    "pill": "ピル",
+    "pill": "딜",
     "@pill": {
-        "description": "ピル"
+        "description": "딜"
     },
-    "calendar": "カレンダー",
+    "calendar": "캘린더",
     "@calendar": {
-        "description": "カレンダー"
+        "description": "캘린더"
     },
-    "userInformationWillBeDeleted": "ユーザー情報が削除されます",
+    "userInformationWillBeDeleted": "사용자 정보가 삭제됩니다",
     "@userInformationWillBeDeleted": {
-        "description": "ユーザー情報が削除されます"
+        "description": "사용자 정보가 삭제됩니다"
     },
-    "withdrawalMessage": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
+    "withdrawalMessage": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다.",
     "@withdrawalMessage": {
-        "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+        "description": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다."
     },
     "recordPage": "RecordPage",
     "@recordPage": {
         "description": "RecordPage"
     },
-    "doReLogin": "再ログインしてください",
+    "doReLogin": "다시 로그인해주세요",
     "@doReLogin": {
-        "description": "再ログインしてください"
+        "description": "다시 로그인해주세요"
     },
-    "reLoginMessage": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります",
+    "reLoginMessage": "탈퇴하기 전에 본인 확인을 위해 다시 로그인을 해주세요. 다시 로그인 후 자동으로 탈퇴 처리가 시작됩니다",
     "@reLoginMessage": {
-        "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+        "description": "탈퇴하기 전에 본인 확인을 위해 다시 로그인을 해주세요. 다시 로그인 후 자동으로 탈퇴 처리가 시작됩니다"
     },
     "menstruationPage": "MenstruationPage",
     "@menstruationPage": {
@@ -381,46 +381,46 @@
     "@settingsPage": {
         "description": "SettingsPage"
     },
-    "menstruationDeleted": "生理期間を削除しました",
+    "menstruationDeleted": "생리 기간을 삭제했습니다",
     "@menstruationDeleted": {
-        "description": "生理期間を削除しました"
+        "description": "생리 기간을 삭제했습니다"
     },
-    "editMenstruationPeriod": "生理期間を編集",
+    "editMenstruationPeriod": "생리 기간 편집",
     "@editMenstruationPeriod": {
-        "description": "生理期間を編集"
+        "description": "생리 기간 편집"
     },
-    "menstruationEdited": "生理期間を編集しました",
+    "menstruationEdited": "생리 기간을 편집했습니다",
     "@menstruationEdited": {
-        "description": "生理期間を編集しました"
+        "description": "생리 기간을 편집했습니다"
     },
-    "physicalConditionDetail": "体調詳細",
+    "physicalConditionDetail": "체온 세부 정보",
     "@physicalConditionDetail": {
-        "description": "体調詳細"
+        "description": "체온 세부 정보"
     },
-    "medicationHistoryPremiumFeatureRestriction": "これ以上の閲覧はプレミアム機能になります",
+    "medicationHistoryPremiumFeatureRestriction": "이 이상의 보기는 프리미엄 기능에 해당됩니다",
     "@medicationHistoryPremiumFeatureRestriction": {
-        "description": "これ以上の閲覧はプレミアム機能になります"
+        "description": "이 이상의 보기는 프리미엄 기능에 해당됩니다"
     },
-    "viewMoreDetails": "くわしくみる",
+    "viewMoreDetails": "세세하게 보기",
     "@viewMoreDetails": {
-        "description": "くわしくみる"
+        "description": "세세하게 보기"
     },
-    "viewMore": "もっと見る",
+    "viewMore": "더 많이 보기",
     "@viewMore": {
-        "description": "もっと見る"
+        "description": "더 많이 보기"
     },
-    "afterLastTakenPillNumber": "{afterLastTakenPillNumber}番",
+    "afterLastTakenPillNumber": "{afterLastTakenPillNumber}번",
     "@afterLastTakenPillNumber": {
-        "description": "{afterLastTakenPillNumber}番",
+        "description": "{afterLastTakenPillNumber}번",
         "placeholders": {
             "afterLastTakenPillNumber": {
                 "type": "String"
             }
         }
     },
-    "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}番",
+    "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}번",
     "@leftDashAfterLastTakenPillNumber": {
-        "description": "{left}-{afterLastTakenPillNumber}番",
+        "description": "{left}-{afterLastTakenPillNumber}번",
         "placeholders": {
             "left": {
                 "type": "String"
@@ -430,18 +430,18 @@
             }
         }
     },
-    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}番",
+    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}번",
     "@beforeLastTakenPillNumber": {
-        "description": "{beforeLastTakenPillNumber}番",
+        "description": "{beforeLastTakenPillNumber}번",
         "placeholders": {
             "beforeLastTakenPillNumber": {
                 "type": "String"
             }
         }
     },
-    "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
     "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
-        "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+        "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
         "placeholders": {
             "beforeLastTakenPillNumber": {
                 "type": "String"
@@ -451,18 +451,18 @@
             }
         }
     },
-    "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}번",
     "@oneToAfterDisplayNumberBeginPillNumber": {
-        "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+        "description": "1→{afterDisplayNumberSettingBeginPillNumber}번",
         "placeholders": {
             "afterDisplayNumberSettingBeginPillNumber": {
                 "type": "String"
             }
         }
     },
-    "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
     "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
-        "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+        "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
         "placeholders": {
             "beforeBeginPillNumber": {
                 "type": "String"
@@ -472,18 +472,18 @@
             }
         }
     },
-    "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}번",
     "@oneToAfterDisplayNumberEndPillNumber": {
-        "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+        "description": "1→{afterDisplayNumberSettingEndPillNumber}번",
         "placeholders": {
             "afterDisplayNumberSettingEndPillNumber": {
                 "type": "String"
             }
         }
     },
-    "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
     "@beforeEndToAfterDisplayNumberEndPillNumber": {
-        "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+        "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
         "placeholders": {
             "beforeEndPillNumber": {
                 "type": "String"
@@ -493,104 +493,104 @@
             }
         }
     },
-    "selectPauseStartDate": "服用お休み開始日選択",
+    "selectPauseStartDate": "복용 휴식 시작일 선택",
     "@selectPauseStartDate": {
-        "description": "服用お休み開始日選択"
+        "description": "복용 휴식 시작일 선택"
     },
-    "selectPausePeriod": "服用お休み期間を選択",
+    "selectPausePeriod": "복용 휴식 기간 선택",
     "@selectPausePeriod": {
-        "description": "服用お休み期間を選択"
+        "description": "복용 휴식 기간 선택"
     },
-    "pauseStartDate": "服用お休み開始日",
+    "pauseStartDate": "복용 휴식 시작일",
     "@pauseStartDate": {
-        "description": "服用お休み開始日"
+        "description": "복용 휴식 시작일"
     },
-    "pauseEndDate": "服用お休み終了日",
+    "pauseEndDate": "복용 휴식 종료일",
     "@pauseEndDate": {
-        "description": "服用お休み終了日"
+        "description": "복용 휴식 종료일"
     },
-    "endPillSheet": "ピルシート終了",
+    "endPillSheet": "딜셔트 종료",
     "@endPillSheet": {
-        "description": "ピルシート終了"
+        "description": "딜셔트 종료"
     },
-    "discardPillSheet": "ピルシート破棄",
+    "discardPillSheet": "딜셔트 폐기",
     "@discardPillSheet": {
-        "description": "ピルシート破棄"
+        "description": "딜셔트 폐기"
     },
-    "takingTime": "服用時間",
+    "takingTime": "복용 시간",
     "@takingTime": {
-        "description": "服用時間"
+        "description": "복용 시간"
     },
-    "takingHistoryIsPremiumFeature": "服用履歴はプレミアム機能です",
+    "takingHistoryIsPremiumFeature": "복용 이력은 프리미엄 기능입니다",
     "@takingHistoryIsPremiumFeature": {
-        "description": "服用履歴はプレミアム機能です"
+        "description": "복용 이력은 프리미엄 기능입니다"
     },
-    "pauseTakingDoesNotAdvancePillNumber": "服用をお休みするとピル番号は進みません",
+    "pauseTakingDoesNotAdvancePillNumber": "복용을 휴식하면 딜 번호가 진행되지 않습니다",
     "@pauseTakingDoesNotAdvancePillNumber": {
-        "description": "服用をお休みするとピル番号は進みません"
+        "description": "복용을 휴식하면 딜 번호가 진행되지 않습니다"
     },
-    "pauseTakingFromNumber": "{number}から服用をお休みしますか？",
+    "pauseTakingFromNumber": "{number}에서 복용을 휴식하시겠습니까?",
     "@pauseTakingFromNumber": {
-        "description": "{number}から服用をお休みしますか？",
+        "description": "{number}에서 복용을 휴식하시겠습니까?",
         "placeholders": {
             "number": {
                 "type": "String"
             }
         }
     },
-    "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",
     "@lastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+        "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",
         "placeholders": {
             "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
                 "type": "String"
             }
         }
     },
-    "taking": "服用",
+    "taking": "복용",
     "@taking": {
-        "description": "服用"
+        "description": "복용"
     },
-    "estimatedEndPillNumber": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "estimatedEndPillNumber": "이전 셔트의 마지막: {estimatedEndPillNumber}번",
     "@estimatedEndPillNumber": {
-        "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+        "description": "이전 셔트의 마지막: {estimatedEndPillNumber}번",
         "placeholders": {
             "estimatedEndPillNumber": {
                 "type": "int"
             }
         }
     },
-    "addPillSheetButton": "ピルシートを追加",
+    "addPillSheetButton": "딜셔트 추가",
     "@addPillSheetButton": {
-        "description": "ピルシートを追加"
+        "description": "딜셔트 추가"
     },
-    "taken": "飲んだ",
+    "taken": "복용했습니다",
     "@taken": {
-        "description": "飲んだ"
+        "description": "복용했습니다"
     },
-    "notTaken": "飲んでない",
+    "notTaken": "복용하지 않았습니다",
     "@notTaken": {
-        "description": "飲んでない"
+        "description": "복용하지 않았습니다"
     },
-    "pillSheetSettings": "ピルシートの設定",
+    "pillSheetSettings": "딜셔트 설정",
     "@pillSheetSettings": {
-        "description": "ピルシートの設定"
+        "description": "딜셔트 설정"
     },
-    "unmarkTodayPillAsTakenToPause": "今日飲むピルを未服用にしてから",
+    "unmarkTodayPillAsTakenToPause": "오늘 복용하는 딜을 미복용으로 하고",
     "@unmarkTodayPillAsTakenToPause": {
-        "description": "今日飲むピルを未服用にしてから"
+        "description": "오늘 복용하는 딜을 미복용으로 하고"
     },
-    "pauseTaking": "服用お休み",
+    "pauseTaking": "복용 휴식",
     "@pauseTaking": {
-        "description": "服用お休み"
+        "description": "복용 휴식"
     },
-    "changePauseStartDate": "服用お休み開始日変更",
+    "changePauseStartDate": "복용 휴식 시작일 변경",
     "@changePauseStartDate": {
-        "description": "服用お休み開始日変更"
+        "description": "복용 휴식 시작일 변경"
     },
-    "pauseTakingPeriodEnded": "服用のお休み期間が終了しました",
+    "pauseTakingPeriodEnded": "복용 휴식 기간이 종료되었습니다",
     "@pauseTakingPeriodEnded": {
-        "description": "服用のお休み期間が終了しました"
+        "description": "복용 휴식 기간이 종료되었습니다"
     },
     "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
     "@endValue": {
@@ -601,100 +601,100 @@
             }
         }
     },
-    "changePillDaysForSheet": "シートの服用日数を変更",
+    "changePillDaysForSheet": "셔트의 복용 일수 변경",
     "@changePillDaysForSheet": {
-        "description": "シートの服用日数を変更"
+        "description": "셔트의 복용 일수 변경"
     },
-    "changedStartAndEndNumbers": "始まりと終わりの番号を変更しました",
+    "changedStartAndEndNumbers": "시작과 끝의 번호가 변경되었습니다",
     "@changedStartAndEndNumbers": {
-        "description": "始まりと終わりの番号を変更しました"
+        "description": "시작과 끝의 번호가 변경되었습니다"
     },
-    "startOfPillDays": "服用日数の始まり",
+    "startOfPillDays": "복용 일수의 시작",
     "@startOfPillDays": {
-        "description": "服用日数の始まり"
+        "description": "복용 일수의 시작"
     },
-    "beforePillSheetGroupSequentialEstimatedEndDay": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
     "@beforePillSheetGroupSequentialEstimatedEndDay": {
-        "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+        "description": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
         "placeholders": {
             "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
                 "type": "int"
             }
         }
     },
-    "endOfPillDays": "服用日数の終わり",
+    "endOfPillDays": "복용 일수의 끝",
     "@endOfPillDays": {
-        "description": "服用日数の終わり"
+        "description": "복용 일수의 끝"
     },
-    "changedToNumber": "番に変更",
+    "changedToNumber": "번호로 변경",
     "@changedToNumber": {
-        "description": "番に変更"
+        "description": "번호로 변경"
     },
-    "displayMode": "表示モード",
+    "displayMode": "표시 모드",
     "@displayMode": {
-        "description": "表示モード"
+        "description": "표시 모드"
     },
-    "dateDisplay": "日付表示",
+    "dateDisplay": "날짜 표시",
     "@dateDisplay": {
-        "description": "日付表示"
+        "description": "날짜 표시"
     },
-    "pillNumber": "ピル番号 ",
+    "pillNumber": "딜 번호 ",
     "@pillNumber": {
-        "description": "ピル番号 "
+        "description": "딜 번호 "
     },
-    "pillDays": "服用日数",
+    "pillDays": "복용 일수",
     "@pillDays": {
-        "description": "服用日数"
+        "description": "복용 일수"
     },
-    "pillDaysCycle": "服用日数(周期)",
+    "pillDaysCycle": "복용 일수(주기)",
     "@pillDaysCycle": {
-        "description": "服用日数(周期)"
+        "description": "복용 일수(주기)"
     },
-    "pillSheetEnded": "ピルシートが終了しました",
+    "pillSheetEnded": "딜셔트가 종료되었습니다",
     "@pillSheetEnded": {
-        "description": "ピルシートが終了しました"
+        "description": "딜셔트가 종료되었습니다"
     },
-    "checkLastTakenDate": "最後に服用した日を確認",
+    "checkLastTakenDate": "마지막으로 복용한 날을 확인",
     "@checkLastTakenDate": {
-        "description": "最後に服用した日を確認"
+        "description": "마지막으로 복용한 날을 확인"
     },
-    "pleaseRegisterAccount": "アカウント登録をしてください",
+    "pleaseRegisterAccount": "계정 등록을 해주세요",
     "@pleaseRegisterAccount": {
-        "description": "アカウント登録をしてください"
+        "description": "계정 등록을 해주세요"
     },
-    "cannotTransferPremiumWithoutAccount": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません",
+    "cannotTransferPremiumWithoutAccount": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다",
     "@cannotTransferPremiumWithoutAccount": {
-        "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+        "description": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다"
     },
-    "reexperiencePremiumFeatures": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！",
+    "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!",
     "@reexperiencePremiumFeatures": {
-        "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+        "description": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!"
     },
-    "whereToShare": "どちらにシェアしますか？",
+    "whereToShare": "어디에 공유하시겠습니까?",
     "@whereToShare": {
-        "description": "どちらにシェアしますか？"
+        "description": "어디에 공유하시겠습니까?"
     },
-    "pauseTakingDay": "🌙 服用お休み {day}日目",
+    "pauseTakingDay": "🌙 복용 휴식 {day}일째",
     "@pauseTakingDay": {
-        "description": "🌙 服用お休み {day}日目",
+        "description": "🌙 복용 휴식 {day}일째",
         "placeholders": {
             "day": {
                 "type": "int"
             }
         }
     },
-    "withDay": "{word}日目",
+    "withDay": "{word}일째",
     "@withDay": {
-        "description": "{word}日目",
+        "description": "{word}일째",
         "placeholders": {
             "word": {
                 "type": "String"
             }
         }
     },
-    "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
     "@restDurationDays": {
-        "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+        "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
         "placeholders": {
             "activePillSheetPillSheetTypeNotTakenWord": {
                 "type": "String"
@@ -704,9 +704,9 @@
             }
         }
     },
-    "daysUntilPausePeriod": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "daysUntilPausePeriod": "남은 {diffPlusOne}일 동안 {activePillSheetPillSheetTypeNotTakenWord} 기간이 됩니다",
     "@daysUntilPausePeriod": {
-        "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+        "description": "남은 {diffPlusOne}일 동안 {activePillSheetPillSheetTypeNotTakenWord} 기간이 됩니다",
         "placeholders": {
             "diffPlusOne": {
                 "type": "int"
@@ -716,60 +716,60 @@
             }
         }
     },
-    "remainingDaysAllFeatures": "残り{diff}日間すべての機能を使えます",
+    "remainingDaysAllFeatures": "남은 {diff}일 동안 모든 기능을 사용할 수 있습니다",
     "@remainingDaysAllFeatures": {
-        "description": "残り{diff}日間すべての機能を使えます",
+        "description": "남은 {diff}일 동안 모든 기능을 사용할 수 있습니다",
         "placeholders": {
             "diff": {
                 "type": "int"
             }
         }
     },
-    "todayIsTaking": "💊 今日は服用",
+    "todayIsTaking": "💊 오늘은 복용",
     "@todayIsTaking": {
-        "description": "💊 今日は服用"
+        "description": "💊 오늘은 복용"
     },
-    "todayPillToTake": "💊 今日飲むピル",
+    "todayPillToTake": "💊 오늘 복용할 딜",
     "@todayPillToTake": {
-        "description": "💊 今日飲むピル"
+        "description": "💊 오늘 복용할 딜"
     },
-    "number": "番",
+    "number": "번",
     "@number": {
-        "description": "番"
+        "description": "번"
     },
-    "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}에서 생리 시작으로 기록했습니다",
     "@recordedMenstruationStartDate": {
-        "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+        "description": "{DateTimeFormatterMonthAndDay}에서 생리 시작으로 기록했습니다",
         "placeholders": {
             "DateTimeFormatterMonthAndDay": {
                 "type": "String"
             }
         }
     },
-    "menstruationStartDate": "生理開始日",
+    "menstruationStartDate": "생리 시작일",
     "@menstruationStartDate": {
-        "description": "生理開始日"
+        "description": "생리 시작일"
     },
-    "menstruationEndDate": "生理終了日",
+    "menstruationEndDate": "생리 종료일",
     "@menstruationEndDate": {
-        "description": "生理終了日"
+        "description": "생리 종료일"
     },
-    "menstruationScheduleDate": "生理予定日",
+    "menstruationScheduleDate": "생리 예정일",
     "@menstruationScheduleDate": {
-        "description": "生理予定日"
+        "description": "생리 예정일"
     },
-    "menstruationScheduleDateWithNumber": "生理予定：{diffPlusOne}日目",
+    "menstruationScheduleDateWithNumber": "생리 예정: {diffPlusOne}일째",
     "@menstruationScheduleDateWithNumber": {
-        "description": "生理予定：{diffPlusOne}日目",
+        "description": "생리 예정: {diffPlusOne}일째",
         "placeholders": {
             "diffPlusOne": {
                 "type": "int"
             }
         }
     },
-    "menstruationScheduleDateWithNumberAndPillNumber": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "menstruationScheduleDateWithNumberAndPillNumber": "생리 예정: {diffPlusOne}일째의 {pillNumber}",
     "@menstruationScheduleDateWithNumberAndPillNumber": {
-        "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+        "description": "생리 예정: {diffPlusOne}일째의 {pillNumber}",
         "placeholders": {
             "diffPlusOne": {
                 "type": "int"
@@ -779,132 +779,132 @@
             }
         }
     },
-    "menstruationRemainingDay": "あと{diff}日",
+    "menstruationRemainingDay": "남은 {diff}일",
     "@menstruationRemainingDay": {
-        "description": "あと{diff}日",
+        "description": "남은 {diff}일",
         "placeholders": {
             "diff": {
                 "type": "int"
             }
         }
     },
-    "menstruationProgressingDay": "{diffPlusOne}日目",
+    "menstruationProgressingDay": "{diffPlusOne}일째",
     "@menstruationProgressingDay": {
-        "description": "{diffPlusOne}日目",
+        "description": "{diffPlusOne}일째",
         "placeholders": {
             "diffPlusOne": {
                 "type": "int"
             }
         }
     },
-    "recordMenstruation": "生理を記録",
+    "recordMenstruation": "생리 기록",
     "@recordMenstruation": {
-        "description": "生理を記録"
+        "description": "생리 기록"
     },
-    "menstruationHistory": "生理履歴",
+    "menstruationHistory": "생리 이력",
     "@menstruationHistory": {
-        "description": "生理履歴"
+        "description": "생리 이력"
     },
-    "menstruationFromToday": "今日から生理",
+    "menstruationFromToday": "오늘부터 생리",
     "@menstruationFromToday": {
-        "description": "今日から生理"
+        "description": "오늘부터 생리"
     },
-    "menstruationFromYesterday": "昨日から生理",
+    "menstruationFromYesterday": "어제부터 생리",
     "@menstruationFromYesterday": {
-        "description": "昨日から生理"
+        "description": "어제부터 생리"
     },
-    "selectMenstruationStartDate": "生理開始日を選択",
+    "selectMenstruationStartDate": "생리 시작일 선택",
     "@selectMenstruationStartDate": {
-        "description": "生理開始日を選択"
+        "description": "생리 시작일 선택"
     },
-    "menstruationCycle": "{menstruationDuration}日周期",
+    "menstruationCycle": "{menstruationDuration}일 주기",
     "@menstruationCycle": {
-        "description": "{menstruationDuration}日周期",
+        "description": "{menstruationDuration}일 주기",
         "placeholders": {
             "menstruationDuration": {
                 "type": "int"
             }
         }
     },
-    "login": "ログイン",
+    "login": "로그인",
     "@login": {
-        "description": "ログイン"
+        "description": "로그인"
     },
-    "beforePremiumRegistration": "プレミアム登録の前に…",
+    "beforePremiumRegistration": "프리미엄 등록 전에…",
     "@beforePremiumRegistration": {
-        "description": "プレミアム登録の前に…"
+        "description": "프리미엄 등록 전에…"
     },
-    "createNewAccountIfNotLoggedIn": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます",
+    "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다",
     "@createNewAccountIfNotLoggedIn": {
-        "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+        "description": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다"
     },
-    "registerAccountForDataTransfer": "アカウント登録するとデータの引き継ぎが可能になります",
+    "registerAccountForDataTransfer": "계정 등록하면 데이터의 인계가 가능합니다",
     "@registerAccountForDataTransfer": {
-        "description": "アカウント登録するとデータの引き継ぎが可能になります"
+        "description": "계정 등록하면 데이터의 인계가 가능합니다"
     },
-    "registerAccountToKeepData": "アカウント情報を保持するため、アカウント登録をお願いします",
+    "registerAccountToKeepData": "데이터를 유지하기 위해 계정 등록을 부탁드립니다",
     "@registerAccountToKeepData": {
-        "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+        "description": "데이터를 유지하기 위해 계정 등록을 부탁드립니다"
     },
-    "signInWith": "{loginName}でサインイン",
+    "signInWith": "{loginName}으로 로그인",
     "@signInWith": {
-        "description": "{loginName}でサインイン",
+        "description": "{loginName}으로 로그인",
         "placeholders": {
             "loginName": {
                 "type": "String"
             }
         }
     },
-    "registerWith": "{loginName}で登録",
+    "registerWith": "{loginName}으로 등록",
     "@registerWith": {
-        "description": "{loginName}で登録",
+        "description": "{loginName}으로 등록",
         "placeholders": {
             "loginName": {
                 "type": "String"
             }
         }
     },
-    "premiumRegistrationComplete": "Pilllプレミアム登録完了",
+    "premiumRegistrationComplete": "Pilll 프리미엄 등록 완료",
     "@premiumRegistrationComplete": {
-        "description": "Pilllプレミアム登録完了"
+        "description": "Pilll 프리미엄 등록 완료"
     },
-    "thankYouForRegistration": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！",
+    "thankYouForRegistration": "등록 감사합니다.\n모든 기능을 사용할 수 있게 되었습니다!",
     "@thankYouForRegistration": {
-        "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+        "description": "등록 감사합니다.\n모든 기능을 사용할 수 있게 되었습니다!"
     },
-    "limitedTimeDiscount": "今なら限定価格でずっと使える",
+    "limitedTimeDiscount": "지금이면 제한 가격으로 계속 사용할 수 있습니다",
     "@limitedTimeDiscount": {
-        "description": "今なら限定価格でずっと使える"
+        "description": "지금이면 제한 가격으로 계속 사용할 수 있습니다"
     },
-    "standardMonthlyPlan": "通常 月額プラン",
+    "standardMonthlyPlan": "일반 월간 플랜",
     "@standardMonthlyPlan": {
-        "description": "通常 月額プラン"
+        "description": "일반 월간 플랜"
     },
-    "annualPlan": "年額プラン",
+    "annualPlan": "연간 플랜",
     "@annualPlan": {
-        "description": "年額プラン"
+        "description": "연간 플랜"
     },
-    "annualPrice": "{annualPackageStoreProductPriceString}/年",
+    "annualPrice": "{annualPackageStoreProductPriceString}/년",
     "@annualPrice": {
-        "description": "{annualPackageStoreProductPriceString}/年",
+        "description": "{annualPackageStoreProductPriceString}/년",
         "placeholders": {
             "annualPackageStoreProductPriceString": {
                 "type": "String"
             }
         }
     },
-    "monthlyPrice": "（{monthlyPriceString}/月）",
+    "monthlyPrice": "（{monthlyPriceString}/월）",
     "@monthlyPrice": {
-        "description": "（{monthlyPriceString}/月）",
+        "description": "（{monthlyPriceString}/월）",
         "placeholders": {
             "monthlyPriceString": {
                 "type": "String"
             }
         }
     },
-    "premiumTermsNotice1": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n",
+    "premiumTermsNotice1": "・프리미엄 계약 기간은 시작일부터 1개월 또는 1년마다 자동 갱신됩니다\n",
     "@premiumTermsNotice1": {
-        "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+        "description": "・프리미엄 계약 기간은 시작일부터 1개월 또는 1년마다 자동 갱신됩니다\n"
     },
     "premiumTermsBullet": "・",
     "@premiumTermsBullet": {
@@ -914,160 +914,160 @@
     "@slashSeparator": {
         "description": " / "
     },
-    "premiumTermsNotice2": "特定商取引法に基づく表示",
+    "premiumTermsNotice2": "특정 사업자 표시법에 따른 표시",
     "@premiumTermsNotice2": {
-        "description": "特定商取引法に基づく表示"
+        "description": "특정 사업자 표시법에 따른 표시"
     },
-    "premiumTermsNotice3": "をご確認のうえ登録してください\n",
+    "premiumTermsNotice3": "확인하신 후 등록해주세요\n",
     "@premiumTermsNotice3": {
-        "description": "をご確認のうえ登録してください\n"
+        "description": "확인하신 후 등록해주세요\n"
     },
-    "autoRenewNotice": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
+    "autoRenewNotice": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n",
     "@autoRenewNotice": {
-        "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+        "description": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n"
     },
-    "cancelAutoRenewInfo": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "cancelAutoRenewInfo": "・구매 후 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 가능합니다. (앱 내에서 자동 갱신 해지는 불가능합니다).",
     "@cancelAutoRenewInfo": {
-        "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+        "description": "・구매 후 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 가능합니다. (앱 내에서 자동 갱신 해지는 불가능합니다).",
         "placeholders": {
             "storeName": {
                 "type": "String"
             }
         }
     },
-    "moreDetails": "詳細はこちら",
+    "moreDetails": "세세하게 보기",
     "@moreDetails": {
-        "description": "詳細はこちら"
+        "description": "세세하게 보기"
     },
-    "restorePurchase": "購入情報を復元しました",
+    "restorePurchase": "구매 정보를 복원했습니다",
     "@restorePurchase": {
-        "description": "購入情報を復元しました"
+        "description": "구매 정보를 복원했습니다"
     },
-    "previouslyPurchased": "以前購入した方はこちら",
+    "previouslyPurchased": "이전에 구매한 분은 여기를 참고하세요",
     "@previouslyPurchased": {
-        "description": "以前購入した方はこちら"
+        "description": "이전에 구매한 분은 여기를 참고하세요"
     },
-    "noPreviousPurchaseInfo": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください",
+    "noPreviousPurchaseInfo": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요",
     "@noPreviousPurchaseInfo": {
-        "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+        "description": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요"
     },
-    "monthlyPlan": "月額プラン",
+    "monthlyPlan": "월간 플랜",
     "@monthlyPlan": {
-        "description": "月額プラン"
+        "description": "월간 플랜"
     },
-    "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/月",
+    "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/월",
     "@monthlyPlanPrice": {
-        "description": "{monthlyPackageStoreProductPriceString}/月",
+        "description": "{monthlyPackageStoreProductPriceString}/월",
         "placeholders": {
             "monthlyPackageStoreProductPriceString": {
                 "type": "String"
             }
         }
     },
-    "youArePremiumMember": "あなたは\nプレミアムメンバーです",
+    "youArePremiumMember": "당신은\n프리미엄 멤버입니다",
     "@youArePremiumMember": {
-        "description": "あなたは\nプレミアムメンバーです"
+        "description": "당신은\n프리미엄 멤버입니다"
     },
-    "thankYouMessage": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。",
+    "thankYouMessage": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다.",
     "@thankYouMessage": {
-        "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+        "description": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다."
     },
-    "premiumFeaturesList": "プレミアム機能一覧",
+    "premiumFeaturesList": "프리미엄 기능 목록",
     "@premiumFeaturesList": {
-        "description": "プレミアム機能一覧"
+        "description": "프리미엄 기능 목록"
     },
-    "pushNotificationForTakingRecord": "📩 プッシュ通知から服用記録",
+    "pushNotificationForTakingRecord": "📩 프루시 알림에서 복용 기록",
     "@pushNotificationForTakingRecord": {
-        "description": "📩 プッシュ通知から服用記録"
+        "description": "📩 프루시 알림에서 복용 기록"
     },
-    "viewAndRecordTakingHistory": "🗂 服用履歴の記録・閲覧",
+    "viewAndRecordTakingHistory": "🗂 복용 이력의 기록과 보기",
     "@viewAndRecordTakingHistory": {
-        "description": "🗂 服用履歴の記録・閲覧"
+        "description": "🗂 복용 이력의 기록과 보기"
     },
-    "displayDateOnPillSheet": "📆 ピルシート上に日付表示",
+    "displayDateOnPillSheet": "📆 딜셔트 위에 날짜 표시",
     "@displayDateOnPillSheet": {
-        "description": "📆 ピルシート上に日付表示"
+        "description": "📆 딜셔트 위에 날짜 표시"
     },
-    "autoRefillNewPillSheet": "📦 新しいピルシートを自動補充",
+    "autoRefillNewPillSheet": "📦 새로운 딜셔트를 자동으로 보충",
     "@autoRefillNewPillSheet": {
-        "description": "📦 新しいピルシートを自動補充"
+        "description": "📦 새로운 딜셔트를 자동으로 보충"
     },
-    "viewPastData": "👀 過去のデータ閲覧",
+    "viewPastData": "👀 과거의 데이터 보기",
     "@viewPastData": {
-        "description": "👀 過去のデータ閲覧"
+        "description": "👀 과거의 데이터 보기"
     },
-    "customizeHealthTags": "🏷 体調タグをカスタマイズ",
+    "customizeHealthTags": "🏷 체온 태그 커스터마이즈",
     "@customizeHealthTags": {
-        "description": "🏷 体調タグをカスタマイズ"
+        "description": "🏷 체온 태그 커스터마이즈"
     },
-    "hideAds": "🚫 広告の非表示",
+    "hideAds": "🚫 광고 표시 안함",
     "@hideAds": {
-        "description": "🚫 広告の非表示"
+        "description": "🚫 광고 표시 안함"
     },
-    "seeDetailsOfPremiumFeatures": "プレミアム機能の詳細を見る",
+    "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
     "@seeDetailsOfPremiumFeatures": {
-        "description": "プレミアム機能の詳細を見る"
+        "description": "프리미엄 기능의 세세한 정보 보기"
     },
-    "popularFeatures": "人気の\n機能",
+    "popularFeatures": "인기 있는\n기능",
     "@popularFeatures": {
-        "description": "人気の\n機能"
+        "description": "인기 있는\n기능"
     },
-    "viewPremiumFeatures": "プレミアム機能を見る",
+    "viewPremiumFeatures": "프리미엄 기능 보기",
     "@viewPremiumFeatures": {
-        "description": "プレミアム機能を見る"
+        "description": "프리미엄 기능 보기"
     },
-    "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
+    "addedDisplayModePillDaysCycle": "표시 모드 복용 일수(주기)가 추가되었습니다",
     "@addedDisplayModePillDaysCycle": {
-        "description": "表示モード服用日数(周期)が追加されました"
+        "description": "표시 모드 복용 일수(주기)가 추가되었습니다"
     },
-    "seeDetails": "詳細を見る",
+    "seeDetails": "세세한 정보 보기",
     "@seeDetails": {
-        "description": "詳細を見る"
+        "description": "세세한 정보 보기"
     },
     "stepThreeOfThree": "3/3",
     "@stepThreeOfThree": {
         "description": "3/3"
     },
-    "missedPillNotification": "ピルの飲み忘れ通知",
+    "missedPillNotification": "딜을 놓쳤을 때의 알림 문구를 변경할 수 있습니다",
     "@missedPillNotification": {
-        "description": "ピルの飲み忘れ通知"
+        "description": "딜을 놓쳤을 때의 알림 문구를 변경할 수 있습니다"
     },
-    "setMultipleReminders": "複数設定しておく事で飲み忘れを防げます",
+    "setMultipleReminders": "여러 개의 알림을 설정하면 놓치지 않을 수 있습니다",
     "@setMultipleReminders": {
-        "description": "複数設定しておく事で飲み忘れを防げます"
+        "description": "여러 개의 알림을 설정하면 놓치지 않을 수 있습니다"
     },
-    "and": "と",
+    "and": "과",
     "@and": {
-        "description": "と"
+        "description": "과"
     },
-    "readAndStartUsing": "を読んで\n利用をはじめてください",
+    "readAndStartUsing": "읽고\n이용을 시작하세요",
     "@readAndStartUsing": {
-        "description": "を読んで\n利用をはじめてください"
+        "description": "읽고\n이용을 시작하세요"
     },
-    "next": "次へ",
+    "next": "다음",
     "@next": {
-        "description": "次へ"
+        "description": "다음"
     },
-    "notificationIndex": "通知{number}",
+    "notificationIndex": "알림 {number}",
     "@notificationIndex": {
-        "description": "通知{number}",
+        "description": "알림 {number}",
         "placeholders": {
             "number": {
                 "type": "int"
             }
         }
     },
-    "takingRecordFromNotification": "\\ 通知から服用記録ができます /",
+    "takingRecordFromNotification": "\\ 알림에서 복용 기록을 할 수 있습니다 /",
     "@takingRecordFromNotification": {
-        "description": "\\ 通知から服用記録ができます /"
+        "description": "\\ 알림에서 복용 기록을 할 수 있습니다 /"
     },
-    "startApp": "アプリをはじめる",
+    "startApp": "앱 시작",
     "@startApp": {
-        "description": "アプリをはじめる"
+        "description": "앱 시작"
     },
-    "loggedInWithProvider": "{accountTypeProviderName}でログインしました",
+    "loggedInWithProvider": "{accountTypeProviderName}으로 로그인했습니다",
     "@loggedInWithProvider": {
-        "description": "{accountTypeProviderName}でログインしました",
+        "description": "{accountTypeProviderName}으로 로그인했습니다",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
