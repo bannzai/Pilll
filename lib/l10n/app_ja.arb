@@ -2232,5 +2232,9 @@
   "editMenstruation": "生理期間を編集",
   "@editMenstruation": {
     "description": "生理期間を編集"
+  },
+  "changedPillNumber": "ピル番号変更",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
   }
 }

@@ -2232,5 +2232,9 @@
     "editMenstruation": "Edit menstruation period",
     "@editMenstruation": {
         "description": "Edit menstruation period"
+    },
+    "changedPillNumber": "Changed pill number",
+    "@changedPillNumber": {
+        "description": "Changed pill number"
     }
 }
