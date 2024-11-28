@@ -1,4 +1,5 @@
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -43,7 +44,9 @@ void main() {
             deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
             setSettingProvider.overrideWith((ref) => MockSetSetting()),
           ],
-          child: const MaterialApp(home: ReminderTimesPage()),
+          child: const MaterialApp(
+            home: ReminderTimesPage(),
+          ),
         ),
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
