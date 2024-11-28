@@ -2236,5 +2236,26 @@
     "changedPillNumber": "피임약 번호 변경",
     "@changedPillNumber": {
         "description": "피임약 번호 변경"
+    },
+    "offPercentForMonthlyPremiumPackage": "{offPercent}% 정기 월간 가격 할인",
+    "@offPercentForMonthlyPremiumPackage": {
+        "description": "{offPercent}% OFF for regularly monthly price",
+        "placeholders": {
+            "offPercent": {
+                "type": "int"
+            }
+        }
+    },
+    "premiumIntroductionDiscountPriceDeadline": "{offPercent}% 할인된 가격으로 구매할 수 있는 기한 {countdown}",
+    "@premiumIntroductionDiscountPriceDeadline": {
+        "description": "{offPercent}% 할인된 가격으로 구매할 수 있는 기한 {countdown}",
+        "placeholders": {
+            "offPercent": {
+                "type": "int"
+            },
+            "countdown": {
+                "type": "String"
+            }
+        }
     }
 }
