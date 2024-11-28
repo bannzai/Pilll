@@ -3,6 +3,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/band/calendar_next_pill_sheet_band.dart';
 import 'package:pilll/features/calendar/components/month_calendar/month_calendar.dart';
 import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +66,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
+      expect(find.text(L.newPillSheetStart), findsOneWidget);
       expect(find.byType(CalendarNextPillSheetBand), findsOneWidget);
       expect(
           find.byWidgetPredicate((widget) =>
@@ -113,7 +114,7 @@ void main() {
       );
       await tester.pump();
 
-      expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
+      expect(find.text(L.newPillSheetStart), findsOneWidget);
       expect(find.byType(CalendarNextPillSheetBand), findsNWidgets(2));
       expect(
           find.byWidgetPredicate((widget) =>
@@ -146,7 +147,7 @@ void main() {
           ),
         ),
       );
-      expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
+      expect(find.text(L.newPillSheetStart), isNot(findsWidgets));
       expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
     testWidgets('when showing new sheet label to before month', (WidgetTester tester) async {
@@ -175,7 +176,7 @@ void main() {
           ),
         ),
       );
-      expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
+      expect(find.text(L.newPillSheetStart), isNot(findsWidgets));
       expect(find.byType(CalendarNextPillSheetBand), isNot(findsWidgets));
     });
   });
