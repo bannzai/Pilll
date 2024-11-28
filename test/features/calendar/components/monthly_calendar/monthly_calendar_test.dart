@@ -47,8 +47,6 @@ void main() {
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
-            supportedLocales: const [Locale('ja')],
-            locale: const Locale('ja'),
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
@@ -97,8 +95,6 @@ void main() {
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
-            supportedLocales: const [Locale('ja')],
-            locale: const Locale('ja'),
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
@@ -134,8 +130,6 @@ void main() {
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
-            supportedLocales: const [Locale('ja')],
-            locale: const Locale('ja'),
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
@@ -165,8 +159,6 @@ void main() {
             schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
           ],
           child: MaterialApp(
-            supportedLocales: const [Locale('ja')],
-            locale: const Locale('ja'),
             home: MonthCalendar(
               dateForMonth: DateTime(2020, 09, 14),
               weekCalendarBuilder: (context, diaries, schedules, weekDateRange) {
