@@ -38,7 +38,6 @@ class DiscountPriceDeadline extends HookConsumerWidget {
         onTap: onTap,
         child: Stack(
           children: [
-            // TODO: [Localizations]
             Align(
               alignment: Alignment.center,
               child: Text(
