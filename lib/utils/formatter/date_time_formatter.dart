@@ -25,7 +25,7 @@ class DateTimeFormatter {
   }
 
   static String monthAndDay(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH_DAY, Platform.localeName).format(dateTime);
+    return slashMonthAndDay(dateTime);
   }
 
   // 2022/01/08
