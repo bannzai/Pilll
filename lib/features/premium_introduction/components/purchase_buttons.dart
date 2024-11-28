@@ -12,7 +12,7 @@ class PurchaseButtons extends HookConsumerWidget {
   final OfferingType offeringType;
   final Package monthlyPackage;
   final Package annualPackage;
-  final Package regularAnnualPackage;
+  final Package monthlyPremiumPackage;
   final ValueNotifier<bool> isLoading;
 
   const PurchaseButtons({
@@ -20,7 +20,7 @@ class PurchaseButtons extends HookConsumerWidget {
     required this.offeringType,
     required this.monthlyPackage,
     required this.annualPackage,
-    required this.regularAnnualPackage,
+    required this.monthlyPremiumPackage,
     required this.isLoading,
   });
 
@@ -40,7 +40,8 @@ class PurchaseButtons extends HookConsumerWidget {
         const SizedBox(width: 16),
         AnnualPurchaseButton(
           annualPackage: annualPackage,
-          regularAnnualPackage: regularAnnualPackage,
+          monthlyPackage: monthlyPackage,
+          monthlyPremiumPackage: monthlyPremiumPackage,
           offeringType: offeringType,
           onTap: (annualPackage) async {
             analytics.logEvent(name: 'pressed_annual_purchase_button');

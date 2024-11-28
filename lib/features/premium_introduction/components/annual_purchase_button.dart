@@ -8,15 +8,17 @@ import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class AnnualPurchaseButton extends StatelessWidget {
+  final Package monthlyPackage;
   final Package annualPackage;
-  final Package regularAnnualPackage;
+  final Package monthlyPremiumPackage;
   final OfferingType offeringType;
   final Function(Package) onTap;
 
   const AnnualPurchaseButton({
     super.key,
+    required this.monthlyPackage,
     required this.annualPackage,
-    required this.regularAnnualPackage,
+    required this.monthlyPremiumPackage,
     required this.offeringType,
     required this.onTap,
   });
@@ -82,6 +84,9 @@ class AnnualPurchaseButton extends StatelessWidget {
             right: 8,
             child: _DiscountBadge(
               offeringType: offeringType,
+              monthlyPackage: monthlyPackage,
+              annualPackage: annualPackage,
+              monthlyPremiumPackage: monthlyPremiumPackage,
             ),
           ),
         ],
@@ -94,18 +99,18 @@ class _DiscountBadge extends StatelessWidget {
   final OfferingType offeringType;
   final Package monthlyPackage;
   final Package annualPackage;
-  final Package regularAnnualPackage;
+  final Package monthlyPremiumPackage;
 
   const _DiscountBadge({
     required this.offeringType,
     required this.monthlyPackage,
     required this.annualPackage,
-    required this.regularAnnualPackage,
+    required this.monthlyPremiumPackage,
   });
 
   @override
   Widget build(BuildContext context) {
-    final offPercentForRegularAnnualPackage = ((1 - (regularAnnualPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
+    final offPercentFormonthlyPremiumPackage = ((1 - (monthlyPremiumPackage.storeProduct.price / annualPackage.storeProduct.price)) * 100).toInt();
     final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / monthlyPackage.storeProduct.price * 12)) * 100).toInt();
 
     return Container(
@@ -115,7 +120,7 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.secondary,
       ),
       child: Text(
-        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentForRegularAnnualPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
+        offeringType == OfferingType.limited ? '通常月額と比べて$offPercentFormonthlyPremiumPackage％OFF' : '通常月額と比べて$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,

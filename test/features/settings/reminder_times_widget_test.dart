@@ -1,5 +1,4 @@
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';

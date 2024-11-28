@@ -100,12 +100,14 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                                 discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
-                          PurchaseButtons(
-                            offeringType: offeringType,
-                            monthlyPackage: monthlyPackage,
-                            annualPackage: annualPackage,
-                            isLoading: isLoading,
-                          ),
+                          if (monthlyPremiumPackage != null)
+                            PurchaseButtons(
+                              offeringType: offeringType,
+                              monthlyPackage: monthlyPackage,
+                              annualPackage: annualPackage,
+                              monthlyPremiumPackage: monthlyPremiumPackage,
+                              isLoading: isLoading,
+                            ),
                         ],
                         const SizedBox(height: 24),
                         const Padding(
