@@ -1614,13 +1614,10 @@
             }
         }
     },
-    "purchaseErrorEmptySubscriberAttributesError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "purchaseErrorEmptySubscriberAttributesError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorEmptySubscriberAttributesError": {
         "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
             "exceptionMessage": {
                 "type": "String"
             },
@@ -1777,9 +1774,9 @@
     "@forceUpdateTitle": {
         "description": "앱을 업데이트해 주세요"
     },
-    "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요.",
+    "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
     "@forceUpdateMessage": {
-        "description": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요.",
+        "description": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
         "placeholders": {
             "storeName": {
                 "type": "String"

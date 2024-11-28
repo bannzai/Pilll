@@ -926,7 +926,7 @@
     "@autoRenewNotice": {
         "description": "・The premium subscription period will automatically renew unless you cancel at least 24 hours before the end of the current period\n"
     },
-    "cancelAutoRenewInfo": "・You can cancel auto-renewal in the app's account settings. (Auto-renewal cannot be canceled in the app)",
+    "cancelAutoRenewInfo": "・You can cancel auto-renewal in the {storeName} app's account settings. (Auto-renewal cannot be canceled in the app)",
     "@cancelAutoRenewInfo": {
         "description": "・You can cancel auto-renewal in the app's account settings. (Auto-renewal cannot be canceled in the app)",
         "placeholders": {
@@ -1427,9 +1427,9 @@
     "@purchaseErrorProductNotAvailableForPurchaseError": {
         "description": "The plan is not currently available for purchase. Please try restarting the app"
     },
-    "purchaseErrorProductAlreadyPurchasedError": "You have already purchased this plan. If you want to restore your purchase information, please check the "previously purchased" section",
+    "purchaseErrorProductAlreadyPurchasedError": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section",
     "@purchaseErrorProductAlreadyPurchasedError": {
-        "description": "You have already purchased this plan. If you want to restore your purchase information, please check the "previously purchased" section"
+        "description": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section"
     },
     "purchaseErrorReceiptAlreadyInUseError": "Purchase already in use. The pill sheet information is being used by another user. Please check {accountName}",
     "@purchaseErrorReceiptAlreadyInUseError": {
@@ -1444,7 +1444,7 @@
     "@purchaseErrorInvalidReceiptError": {
         "description": "Invalid purchase information. Please check your purchase information"
     },
-    "purchaseErrorMissingReceiptFileError": "No purchase information found. Please try signing in on the device",
+    "purchaseErrorMissingReceiptFileError": "No purchase information found. Please try signing with {accountName} in on the device",
     "@purchaseErrorMissingReceiptFileError": {
         "description": "No purchase information found. Please try signing in on the device",
         "placeholders": {
@@ -1490,7 +1490,7 @@
             }
         }
     },
-    "purchaseErrorInvalidAppUserIdError": "Unable to verify user. Please try restarting the app",
+    "purchaseErrorInvalidAppUserIdError": "Unable to verify user. Please try restarting the app. Details: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidAppUserIdError": {
         "description": "Unable to verify user. Please try restarting the app",
         "placeholders": {
