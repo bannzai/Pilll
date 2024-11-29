@@ -638,9 +638,9 @@
   "@dateDisplay": {
     "description": "日付表示"
   },
-  "pillNumber": "ピル番号 ",
+  "pillNumber": "ピル番号",
   "@pillNumber": {
-    "description": "ピル番号 "
+    "description": "ピル番号"
   },
   "pillDays": "服用日数",
   "@pillDays": {

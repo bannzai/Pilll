@@ -40,7 +40,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              L.pillNumber,
+              '${L.pillNumber} ',
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
