@@ -74,7 +74,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     showDiscardDialog(
                       context,
                       title: L.updateAuthenticationInformation,
-                      message: L.reLogin,
+                      message: L.updateAuthenticationAfterReLogin,
                       actions: [
                         AlertButton(
                           text: L.cancel,

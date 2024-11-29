@@ -369,6 +369,10 @@
     "@reLoginMessage": {
         "description": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically"
     },
+    "updateAuthenticationAfterReLogin": "Re-login to update authentication information",
+    "@updateAuthenticationAfterReLogin": {
+        "description": "Re-login to update authentication information"
+    },
     "menstruationPage": "MenstruationPage",
     "@menstruationPage": {
         "description": "MenstruationPage"

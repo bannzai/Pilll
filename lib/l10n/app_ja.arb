@@ -369,6 +369,10 @@
   "@reLoginMessage": {
     "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
   },
+  "updateAuthenticationAfterReLogin": "再度ログインをして認証情報を更新します",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
   "menstruationPage": "MenstruationPage",
   "@menstruationPage": {
     "description": "MenstruationPage"
