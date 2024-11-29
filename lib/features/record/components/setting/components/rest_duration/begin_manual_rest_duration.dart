@@ -34,7 +34,7 @@ class BeginManualRestDuration extends HookConsumerWidget {
           duration: const Duration(
             seconds: 2,
           ),
-          content: Text(L.startPauseTaking),
+          content: Text(L.startedPauseTaking),
         ),
       );
       Navigator.of(context).popUntil((route) => route.isFirst);

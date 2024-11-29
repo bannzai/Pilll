@@ -108,7 +108,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           SvgPicture.asset('images/begin_display_number_setting.svg'),
                           const SizedBox(width: 4),
                           Text(
-                            L.changeStartOfPillDays,
+                            L.startOfPillDays,
                             style: const TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 12,

@@ -2112,6 +2112,10 @@
   "@startPauseTaking": {
     "description": "服用をお休みする"
   },
+  "startedPauseTaking": "服用お休みを開始しました",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
   "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}番",
   "@sequentialLastTakenPlusOnePillNumber": {
     "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
