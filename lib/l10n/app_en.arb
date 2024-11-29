@@ -1281,9 +1281,9 @@
     "@notSatisfied": {
         "description": "Not satisfied"
     },
-    "perNumber": " per number",
+    "perNumber": "per number",
     "@perNumber": {
-        "description": " per number"
+        "description": "per number"
     },
     "howManyDaysDoesMenstruationLast": "How many days does menstruation last?",
     "@howManyDaysDoesMenstruationLast": {

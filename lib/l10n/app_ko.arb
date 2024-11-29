@@ -1281,9 +1281,9 @@
     "@notSatisfied": {
         "description": "만족하지 않음"
     },
-    "perNumber": " 번호마다",
+    "perNumber": "번호마다",
     "@perNumber": {
-        "description": " 번호마다"
+        "description": "번호마다"
     },
     "howManyDaysDoesMenstruationLast": "생리가 며칠 동안 지속됩니까?",
     "@howManyDaysDoesMenstruationLast": {

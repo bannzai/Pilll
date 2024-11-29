@@ -53,7 +53,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               child: _from(),
             ),
             Text(
-              L.perNumber,
+              ' ${L.perNumber}',
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,

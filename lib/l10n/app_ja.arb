@@ -1281,9 +1281,9 @@
   "@notSatisfied": {
     "description": "満足では無い"
   },
-  "perNumber": " 番ごとに",
+  "perNumber": "番ごとに",
   "@perNumber": {
-    "description": " 番ごとに"
+    "description": "番ごとに"
   },
   "howManyDaysDoesMenstruationLast": "何日間生理が続く？",
   "@howManyDaysDoesMenstruationLast": {
