@@ -5,6 +5,7 @@ import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -26,7 +27,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     final changeRestDuration = ref.watch(changeRestDurationProvider);
 
     String format(DateTime dateTime) {
-      return '${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.weekday(dateTime)})';
+      return '${DateTimeFormatter.monthAndDay(dateTime)}(${DateTimeFormatter.shortWeekday(dateTime)})';
     }
 
     final begin = format(restDuration.beginDate);
@@ -34,11 +35,11 @@ class ChangeManualRestDuration extends HookConsumerWidget {
 
     void onChanged() {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          duration: Duration(
+        SnackBar(
+          duration: const Duration(
             seconds: 2,
           ),
-          content: Text('服用お休みを変更しました'),
+          content: Text(L.editPausePeriod),
         ),
       );
 
@@ -53,7 +54,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     if (end == null) {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
-        title: const Text('服用お休み開始日を編集'),
+        title: Text(L.pauseTakingChanged),
         subtitle: Text(begin),
         onTap: () async {
           analytics.logEvent(name: 'change_manual_rest_duration_day', parameters: {
@@ -68,8 +69,8 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialDate: pillSheetGroup.lastActiveRestDuration?.beginDate ?? today(),
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: '服用お休み開始日を選択',
-            fieldLabelText: '服用お休み開始日',
+            helpText: L.selectPauseStartDate,
+            fieldLabelText: L.pauseStartDate,
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
             },
@@ -102,7 +103,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     } else {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
-        title: const Text('服用お休み期間を編集'),
+        title: Text(L.changedPausePeriod),
         subtitle: Text('$begin - $end'),
         onTap: () async {
           analytics.logEvent(name: 'change_manual_rest_duration_range', parameters: {
@@ -117,9 +118,9 @@ class ChangeManualRestDuration extends HookConsumerWidget {
             initialDateRange: restDuration.dateTimeRange,
             firstDate: pillSheetGroup.pillSheets.first.beginingDate,
             lastDate: pillSheetGroup.availableRestDurationBeginDate,
-            helpText: '服用お休み期間を選択',
-            fieldStartHintText: '服用お休み開始日',
-            fieldEndLabelText: '服用お休み終了日',
+            helpText: L.selectPausePeriod,
+            fieldStartHintText: L.pauseStartDate,
+            fieldEndLabelText: L.pauseEndDate,
             builder: (context, child) {
               return DateRangePickerTheme(child: child!);
             },

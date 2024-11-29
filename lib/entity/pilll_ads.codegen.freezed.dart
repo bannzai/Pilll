@@ -193,8 +193,8 @@ class _$PilllAdsImpl extends _PilllAds {
       required this.imageURL,
       required this.destinationURL,
       required this.hexColor,
-      this.closeButtonColor = "FFFFFF",
-      this.chevronRightColor = "FFFFFF"})
+      this.closeButtonColor = 'FFFFFF',
+      this.chevronRightColor = 'FFFFFF'})
       : super._();
 
   factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) => _$$PilllAdsImplFromJson(json);

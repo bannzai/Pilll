@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/provider/root.dart';
@@ -54,8 +55,7 @@ class ForceUpdate extends HookConsumerWidget {
     // For force update
     if (shouldForceUpdate.value) {
       Future.microtask(() async {
-        await showOKDialog(context, title: 'アプリをアップデートしてください', message: 'お使いのアプリのバージョンのアップデートをお願いしております。$storeNameから最新バージョンにアップデートしてください',
-            ok: () async {
+        await showOKDialog(context, title: L.forceUpdateTitle, message: L.forceUpdateMessage(storeName), ok: () async {
           await launchUrl(
             Uri.parse(forceUpdateStoreURL),
             mode: LaunchMode.externalApplication,

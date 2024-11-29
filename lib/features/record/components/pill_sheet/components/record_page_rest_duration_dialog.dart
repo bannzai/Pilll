@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class RecordPageRestDurationDialog extends StatelessWidget {
@@ -30,16 +31,18 @@ class RecordPageRestDurationDialog extends StatelessWidget {
         children: <Widget>[
           title,
           const SizedBox(height: 24),
-          const Text('服用をお休みするとピル番号は進みません',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w500,
-                fontSize: 14,
-                color: TextColor.main,
-              )),
+          Text(
+            L.pauseTakingDoesNotAdvancePillNumber,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w500,
+              fontSize: 14,
+              color: TextColor.main,
+            ),
+          ),
           const SizedBox(height: 24),
           Text(
-            appearanceMode == PillSheetAppearanceMode.date ? '例えば「1/12から3日間」服用お休みした場合' : '例えば「18番から3日間」服用お休みした場合',
+            appearanceMode == PillSheetAppearanceMode.date ? L.exampleRestDurationDate : L.exampleRestDurationNumber,
             style: const TextStyle(
               color: TextColor.main,
               fontWeight: FontWeight.w700,
@@ -56,11 +59,11 @@ class RecordPageRestDurationDialog extends StatelessWidget {
       actions: <Widget>[
         AppOutlinedButton(
           onPressed: () async => onDone(),
-          text: '服用をお休みする',
+          text: L.startPauseTaking,
         ),
         Center(
           child: AlertButton(
-            text: '閉じる',
+            text: L.close,
             onPressed: () async {
               Navigator.of(context).pop();
             },
@@ -99,7 +102,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text('$_numberから服用をお休みしますか？',
+    return Text(L.pauseTakingFromNumber(_number),
         style: const TextStyle(
           color: TextColor.main,
           fontSize: 16,
@@ -111,16 +114,16 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return '${pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1}番';
+        return L.withNumber((pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1).toString());
       case PillSheetAppearanceMode.date:
         final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
             .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:
-        return '${pillSheetGroup.sequentialLastTakenPillNumber + 1}番';
+        return L.withNumber((pillSheetGroup.sequentialLastTakenPillNumber + 1).toString());
       case PillSheetAppearanceMode.cyclicSequential:
-        return '${pillSheetGroup.sequentialLastTakenPillNumber + 1}番';
+        return L.withNumber((pillSheetGroup.sequentialLastTakenPillNumber + 1).toString());
     }
   }
 }

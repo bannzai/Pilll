@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -45,7 +46,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                   children: [
                     const SizedBox(height: 24),
                     Text(
-                      '今日(${todayString()})\n飲む・飲んだピルの番号をタップ',
+                      L.selectTodayPillNumber(todayString()),
                       style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w500,
@@ -70,7 +71,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                         analytics.logEvent(name: 'unknown_number_initial_setting');
                         Navigator.of(context).push(InitialSettingReminderTimesPageRoute.route());
                       },
-                      text: 'まだ分からない',
+                      text: L.notYetKnown,
                     ),
                   ],
                 ),
@@ -82,7 +83,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                   SizedBox(
                     width: 180,
                     child: PrimaryButton(
-                      text: '次へ',
+                      text: L.next,
                       onPressed: state.todayPillNumber == null
                           ? null
                           : () async {

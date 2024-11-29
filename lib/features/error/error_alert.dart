@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/features/error/alert_error.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ErrorAlert extends StatelessWidget {
@@ -16,7 +17,7 @@ class ErrorAlert extends StatelessWidget {
     final faq = faqLinkURL;
     return AlertDialog(
       title: Text(
-        title ?? 'エラーが発生しました',
+        title ?? L.errorOccurred,
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
@@ -34,13 +35,13 @@ class ErrorAlert extends StatelessWidget {
       actions: <Widget>[
         if (faq != null)
           AlertButton(
-            text: 'FAQを見る',
+            text: L.seeFAQ,
             onPressed: () async {
               launchUrl(Uri.parse(faq));
             },
           ),
         AlertButton(
-          text: '閉じる',
+          text: L.close,
           onPressed: () async {
             Navigator.of(context).pop();
           },
@@ -58,19 +59,19 @@ void showErrorAlert(BuildContext? context, Object error) {
   final String message;
   final String? faqLinkURL;
   if (error is FormatException) {
-    title = '不明なエラーが発生しました';
+    title = L.unknownError;
     message = error.message;
     faqLinkURL = null;
   } else if (error is AlertError) {
-    title = error.title ?? 'エラーが発生しました';
+    title = error.title ?? L.errorOccurred;
     message = error.displayedMessage;
     faqLinkURL = error.faqLinkURL;
   } else if (error is String) {
-    title = 'エラーが発生しました';
+    title = L.errorOccurred;
     message = error;
     faqLinkURL = null;
   } else {
-    title = '予想外のエラーが発生しました';
+    title = L.unexpectedErrorOccurred;
     message = error.toString();
     faqLinkURL = null;
   }

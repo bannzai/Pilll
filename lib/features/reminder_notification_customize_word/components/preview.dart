@@ -2,6 +2,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
@@ -45,7 +46,7 @@ class ReminderPushNotificationPreview extends StatelessWidget {
           ]),
           const SizedBox(height: 16),
           Text(
-            "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番 ~ 8番"}",
+            "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " ${L.beginToEndNumbers(5, 8)}"}",
             style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w600,

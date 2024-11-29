@@ -179,7 +179,7 @@ mixin _$Setting {
   ReminderNotificationCustomization get reminderNotificationCustomization => throw _privateConstructorUsedError; // Deprecated
 // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
-  @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
+  @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する')
   PillSheetAppearanceMode get pillSheetAppearanceMode => throw _privateConstructorUsedError;
   String? get timezoneDatabaseName => throw _privateConstructorUsedError;
 
@@ -201,7 +201,7 @@ abstract class $SettingCopyWith<$Res> {
       bool isOnNotifyInNotTakenDuration,
       bool isAutomaticallyCreatePillSheet,
       ReminderNotificationCustomization reminderNotificationCustomization,
-      @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する") PillSheetAppearanceMode pillSheetAppearanceMode,
+      @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') PillSheetAppearanceMode pillSheetAppearanceMode,
       String? timezoneDatabaseName});
 
   $ReminderNotificationCustomizationCopyWith<$Res> get reminderNotificationCustomization;
@@ -297,7 +297,7 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
       bool isOnNotifyInNotTakenDuration,
       bool isAutomaticallyCreatePillSheet,
       ReminderNotificationCustomization reminderNotificationCustomization,
-      @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する") PillSheetAppearanceMode pillSheetAppearanceMode,
+      @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') PillSheetAppearanceMode pillSheetAppearanceMode,
       String? timezoneDatabaseName});
 
   @override
@@ -380,7 +380,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       this.isOnNotifyInNotTakenDuration = true,
       this.isAutomaticallyCreatePillSheet = false,
       this.reminderNotificationCustomization = const ReminderNotificationCustomization(),
-      @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する") this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
+      @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
       required this.timezoneDatabaseName})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
@@ -426,7 +426,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
   @override
   @JsonKey()
-  @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
+  @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する')
   final PillSheetAppearanceMode pillSheetAppearanceMode;
   @override
   final String? timezoneDatabaseName;
@@ -512,7 +512,7 @@ abstract class _Setting extends Setting {
       final bool isOnNotifyInNotTakenDuration,
       final bool isAutomaticallyCreatePillSheet,
       final ReminderNotificationCustomization reminderNotificationCustomization,
-      @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する") final PillSheetAppearanceMode pillSheetAppearanceMode,
+      @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') final PillSheetAppearanceMode pillSheetAppearanceMode,
       required final String? timezoneDatabaseName}) = _$SettingImpl;
   const _Setting._() : super._();
 
@@ -537,7 +537,7 @@ abstract class _Setting extends Setting {
   @override // Deprecated
 // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
-  @Deprecated("PillSheetGroupのpillSheetAppearanceModeを使用する")
+  @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する')
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
   String? get timezoneDatabaseName;

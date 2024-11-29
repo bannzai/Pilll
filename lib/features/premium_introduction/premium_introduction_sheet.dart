@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/ab_test/c/premium_introduction_sheet.dart';
 import 'package:pilll/features/premium_introduction/ab_test/b/premium_introduction_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -113,22 +114,25 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                                 discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
-                          PurchaseButtons(
-                            offeringType: offeringType,
-                            monthlyPackage: monthlyPackage,
-                            annualPackage: annualPackage,
-                            isLoading: isLoading,
-                          ),
+                          if (monthlyPremiumPackage != null)
+                            PurchaseButtons(
+                              offeringType: offeringType,
+                              monthlyPackage: monthlyPackage,
+                              annualPackage: annualPackage,
+                              monthlyPremiumPackage: monthlyPremiumPackage,
+                              isLoading: isLoading,
+                            ),
                         ],
                         const SizedBox(height: 24),
                         AlertButton(
-                            onPressed: () async {
-                              analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
-                              await launchUrl(Uri.parse(preimumLink));
-                            },
-                            text: 'プレミアム機能を見る'),
+                          onPressed: () async {
+                            analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
+                            await launchUrl(Uri.parse(preimumLink));
+                          },
+                          text: L.viewPremiumFeatures,
+                        ),
                         const SizedBox(height: 24),
-                        PremiumIntroductionFotter(
+                        PremiumIntroductionFooter(
                           isLoading: isLoading,
                         ),
                       ],

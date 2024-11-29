@@ -2,6 +2,7 @@
 
 import 'package:flutter/widgets.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 enum Weekday {
   Sunday,
@@ -28,25 +29,9 @@ extension WeekdayFunctions on Weekday {
     return Weekday.values.sublist(firstWeekday.index)..addAll(Weekday.values.sublist(0, firstWeekday.index));
   }
 
+  // TODO: [Localizations]
   String weekdayString() {
-    switch (this) {
-      case Weekday.Sunday:
-        return '日';
-      case Weekday.Monday:
-        return '月';
-      case Weekday.Tuesday:
-        return '火';
-      case Weekday.Wednesday:
-        return '水';
-      case Weekday.Thursday:
-        return '木';
-      case Weekday.Friday:
-        return '金';
-      case Weekday.Saturday:
-        return '土';
-      default:
-        throw ArgumentError.notNull('');
-    }
+    return DateTimeFormatter.shortWeekdays()[index];
   }
 
   Color weekdayColor() {

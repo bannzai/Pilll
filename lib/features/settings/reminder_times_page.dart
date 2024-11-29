@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:async_value_group/async_value_group.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/provider/database.dart';
@@ -84,9 +85,9 @@ class ReminderTimesPageBody extends StatelessWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '通知時間',
-          style: TextStyle(color: TextColor.black),
+        title: Text(
+          L.notificationTime,
+          style: const TextStyle(color: TextColor.black),
         ),
         actions: [
           IconButton(
@@ -101,7 +102,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
                         duration: const Duration(seconds: 2),
-                        content: Text('$tzに変更しました'),
+                        content: Text(L.timeZoneChangedTo(tz)),
                       ),
                     );
                   },
@@ -163,7 +164,7 @@ class ReminderTimesPageBody extends StatelessWidget {
         _showPicker(context, setting: setting, setSetting: setSetting, index: number - 1);
       },
       child: ListTile(
-        title: Text('通知$number'),
+        title: Text(L.notificationNumber(number)),
         subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
       ),
     );
@@ -185,15 +186,15 @@ class ReminderTimesPageBody extends StatelessWidget {
             },
       background: Container(
         color: Colors.red,
-        child: const SizedBox(
+        child: SizedBox(
           width: 40,
           child: Padding(
-            padding: EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(20.0),
             child: Align(
               alignment: Alignment.centerRight,
               child: Text(
-                '削除',
-                style: TextStyle(
+                L.delete,
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
@@ -224,9 +225,9 @@ class ReminderTimesPageBody extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset('images/add.svg'),
-            const Text(
-              '通知時間の追加',
-              style: TextStyle(
+            Text(
+              L.addNotificationTime,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -313,10 +314,10 @@ class ReminderTimesPageBody extends StatelessWidget {
     required SetSetting setSetting,
   }) async {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      throw Exception('登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください');
+      throw Exception(L.reachedMaximumCountOfReminderTimes(ReminderTime.maximumCount));
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
-      throw Exception('通知時刻は最低${ReminderTime.minimumCount}件必要です');
+      throw Exception(L.minimumCountOfReminderTimes(ReminderTime.minimumCount));
     }
     await setSetting(setting.copyWith(reminderTimes: reminderTimes));
     await registerReminderLocalNotification();

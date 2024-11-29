@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
 
@@ -46,10 +47,10 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            '今なら限定価格でずっと使える',
+          Text(
+            L.limitedTimeDiscount,
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.w700,
               fontFamily: FontFamily.japanese,
               fontSize: 20,
@@ -71,10 +72,10 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              const Text(
-                '通常 月額プラン',
+              Text(
+                L.standardMonthlyPlan,
                 textAlign: TextAlign.center,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
                   fontFamily: FontFamily.japanese,

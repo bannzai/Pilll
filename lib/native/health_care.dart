@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/features/error/alert_error.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/native/channel.dart';
 
 Future<bool> isHealthDataAvailable() async {
@@ -16,10 +17,10 @@ Future<bool> isHealthDataAvailable() async {
 
 Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
   if (!Platform.isIOS) {
-    throw const FormatException('iOSアプリにのみ対応しています');
+    throw FormatException(L.onlySupportiOS);
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
+    throw FormatException(L.healthKitDoesNotSupport);
   }
 
   final result = await methodChannel.invokeMethod('healthKitRequestAuthorizationIsUnnecessary');
@@ -28,13 +29,13 @@ Future<bool> healthKitRequestAuthorizationIsUnnecessary() async {
 
 Future<bool> healthKitAuthorizationStatusIsSharingAuthorized() async {
   if (!Platform.isIOS) {
-    throw const FormatException('iOSアプリにのみ対応しています');
+    throw FormatException(L.onlySupportiOS);
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
+    throw FormatException(L.healthKitDoesNotSupport);
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
+    throw FormatException(L.enableHealthKitFromSettings);
   }
 
   final result = await methodChannel.invokeMethod('healthKitAuthorizationStatusIsSharingAuthorized');
@@ -87,13 +88,13 @@ Future<String> addMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw const FormatException('iOSアプリにのみ対応しています');
+    throw FormatException(L.onlySupportiOS);
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
+    throw FormatException(L.healthKitDoesNotSupport);
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
+    throw FormatException(L.enableHealthKitFromSettings);
   }
 
 // Avoid codec error
@@ -123,13 +124,13 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw const FormatException('iOSアプリにのみ対応しています');
+    throw FormatException(L.onlySupportiOS);
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
+    throw FormatException(L.healthKitDoesNotSupport);
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
+    throw FormatException(L.enableHealthKitFromSettings);
   }
 
 // Avoid codec error
@@ -159,13 +160,13 @@ Future<void> deleteMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
   if (!Platform.isIOS) {
-    throw const FormatException('iOSアプリにのみ対応しています');
+    throw FormatException(L.onlySupportiOS);
   }
   if (!await isHealthDataAvailable()) {
-    throw const FormatException('ヘルスケアに対応していない端末ではご利用できません');
+    throw FormatException(L.healthKitDoesNotSupport);
   }
   if (!await healthKitRequestAuthorizationIsUnnecessary()) {
-    throw const FormatException('設定アプリよりヘルスケアを有効にしてください');
+    throw FormatException(L.enableHealthKitFromSettings);
   }
 
 // Avoid codec error

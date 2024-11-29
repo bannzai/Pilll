@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -63,7 +64,7 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
       children: [
         if (!state.moreButtonIsHidden)
           AlertButton(
-              text: 'もっと見る',
+              text: L.viewMore,
               onPressed: () async {
                 analytics.logEvent(name: 'menstruation_more_button_pressed');
                 if (state.isPremium || state.isTrial) {
@@ -135,9 +136,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
       children: [
         const Spacer(),
         CounterUnitLayout(
-          title: '平均周期',
+          title: L.averagePeriod,
           number: (state.isPremium || state.isTrial) ? state.avalageMenstruationDuration : '🔒',
-          unit: '日',
+          unit: L.days,
         ),
         const SizedBox(width: 30),
         const SizedBox(
@@ -148,9 +149,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
             )),
         const SizedBox(width: 30),
         CounterUnitLayout(
-          title: '平均日数',
+          title: L.averageDays,
           number: (state.isPremium || state.isTrial) ? state.avalageMenstruationPeriod : '🔒',
-          unit: '日',
+          unit: L.days,
         ),
         const Spacer(),
       ],
@@ -170,9 +171,9 @@ class MenstruationHistoryCardTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
-          '生理履歴',
-          style: TextStyle(
+        Text(
+          L.menstruationHistory,
+          style: const TextStyle(
             color: TextColor.main,
             fontFamily: FontFamily.japanese,
             fontSize: 20,

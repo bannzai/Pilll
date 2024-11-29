@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 class RestDurationAnnouncementBar extends StatelessWidget {
@@ -42,19 +43,19 @@ class RestDurationAnnouncementBar extends StatelessWidget {
     final restDuration = latestPillSheetGroup?.lastActiveRestDuration;
     if (restDuration != null) {
       final day = daysBetween(restDuration.beginDate.date(), today()) + 1;
-      return '🌙 服用お休み $day日目';
+      return L.pauseTakingDay(day);
     }
 
     if (activePillSheet.typeInfo.dosingPeriod < activePillSheet.todayPillNumber) {
       final day = activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod;
-      return "${activePillSheet.pillSheetType.notTakenWord}$day日目";
+      return L.restDurationDays(activePillSheet.pillSheetType.notTakenWord, day);
     }
 
     const threshold = 4;
     if (activePillSheet.pillSheetType.notTakenWord.isNotEmpty) {
       if (activePillSheet.typeInfo.dosingPeriod - threshold + 1 < activePillSheet.todayPillNumber) {
         final diff = activePillSheet.typeInfo.dosingPeriod - activePillSheet.todayPillNumber;
-        return 'あと${diff + 1}日で${activePillSheet.pillSheetType.notTakenWord}期間です';
+        return L.daysUntilPausePeriod(diff + 1, activePillSheet.pillSheetType.notTakenWord);
       }
     }
     return null;

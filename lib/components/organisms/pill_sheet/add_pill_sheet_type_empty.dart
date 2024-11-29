@@ -1,4 +1,5 @@
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -32,7 +33,7 @@ class AddPillSheetTypeEmpty extends HookConsumerWidget {
                     },
                   );
                 },
-                text: 'ピルの種類を選ぶ'),
+                text: L.selectPillType),
           ),
         ],
       ),

@@ -25,7 +25,7 @@ class RecordPageInformationHeader extends StatelessWidget {
   });
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(today);
-  String _todayWeekday() => DateTimeFormatter.weekday(today);
+  String _todayWeekday() => DateTimeFormatter.shortWeekday(today);
 
   @override
   Widget build(BuildContext context) {

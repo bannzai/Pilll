@@ -1,7 +1,10 @@
+import 'dart:math';
+
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/error_log.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 class FakeUser extends Mock implements User {
   FakeUser({
@@ -54,4 +57,14 @@ class FakeErrorLogger extends Fake implements ErrorLogger {
 
   @override
   void recordError(exception, StackTrace? stack) {}
+}
+
+class FakeRevenueCatPackage extends Fake implements Package {
+  @override
+  StoreProduct get storeProduct => FakeStoreProduct();
+}
+
+class FakeStoreProduct extends Fake implements StoreProduct {
+  @override
+  double get price => Random().nextDouble();
 }

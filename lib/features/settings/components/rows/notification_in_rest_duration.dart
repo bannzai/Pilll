@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -31,12 +32,14 @@ class NotificationInRestDuration extends HookConsumerWidget {
             fontWeight: FontWeight.w300,
             fontSize: 16,
           )),
-      subtitle: Text('通知オフの場合は、${pillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます',
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-          )),
+      subtitle: Text(
+        L.autoRecordForNotTakenPeriodIfNotificationOff(pillSheet.pillSheetType.notTakenWord),
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        ),
+      ),
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(

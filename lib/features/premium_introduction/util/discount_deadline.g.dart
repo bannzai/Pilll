@@ -149,7 +149,7 @@ class _IsOverDiscountDeadlineProviderElement extends AutoDisposeProviderElement<
   DateTime? get discountEntitlementDeadlineDate => (origin as IsOverDiscountDeadlineProvider).discountEntitlementDeadlineDate;
 }
 
-String _$hiddenCountdownDiscountDeadlineHash() => r'b60536a8c5f8ee430f25d88781c84c3b4c381b21';
+String _$hiddenCountdownDiscountDeadlineHash() => r'd4bf0339b7bdcfdc41069db72d215f6b4ca09287';
 
 /// See also [hiddenCountdownDiscountDeadline].
 @ProviderFor(hiddenCountdownDiscountDeadline)
@@ -178,15 +178,12 @@ class HiddenCountdownDiscountDeadlineFamily extends Family<bool> {
     );
   }
 
-  static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[remoteConfigParameterProvider];
+  static final Iterable<ProviderOrFamily> _dependencies = const <ProviderOrFamily>[];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
-    remoteConfigParameterProvider,
-    ...?remoteConfigParameterProvider.allTransitiveDependencies
-  };
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = const <ProviderOrFamily>{};
 
   @override
   Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;

@@ -25,7 +25,7 @@ mixin _$ReminderNotificationCustomization {
   bool get isInVisibleReminderDate => throw _privateConstructorUsedError;
   bool get isInVisiblePillNumber => throw _privateConstructorUsedError;
   bool get isInVisibleDescription => throw _privateConstructorUsedError; // BEGIN: From v2
-  String get dailyTakenMessage => throw _privateConstructorUsedError;
+  String get dailyTakenMessage => throw _privateConstructorUsedError; // TODO: [Localizations]
   String get missedTakenMessage => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -176,13 +176,13 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCustomization {
   const _$ReminderNotificationCustomizationImpl(
-      {this.version = "v2",
+      {this.version = 'v2',
       this.word = pillEmoji,
       this.isInVisibleReminderDate = false,
       this.isInVisiblePillNumber = false,
       this.isInVisibleDescription = false,
-      this.dailyTakenMessage = "",
-      this.missedTakenMessage = "飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji"})
+      this.dailyTakenMessage = '',
+      this.missedTakenMessage = '飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji'})
       : super._();
 
   factory _$ReminderNotificationCustomizationImpl.fromJson(Map<String, dynamic> json) => _$$ReminderNotificationCustomizationImplFromJson(json);
@@ -206,6 +206,7 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
   @override
   @JsonKey()
   final String dailyTakenMessage;
+// TODO: [Localizations]
   @override
   @JsonKey()
   final String missedTakenMessage;
@@ -273,7 +274,7 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
   bool get isInVisibleDescription;
   @override // BEGIN: From v2
   String get dailyTakenMessage;
-  @override
+  @override // TODO: [Localizations]
   String get missedTakenMessage;
   @override
   @JsonKey(ignore: true)

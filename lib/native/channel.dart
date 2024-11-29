@@ -1,6 +1,6 @@
 import 'package:flutter/services.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/native/legacy.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/utils/error_log.dart';
@@ -55,14 +55,12 @@ void definedChannel() {
           // errorLoggerに記録した後に実行する。これも失敗する可能性がある
           await localNotificationService.plugin.show(
             fallbackNotificationIdentifier,
-            '服用記録が失敗した可能性があります',
-            'アプリを開いてご確認ください',
+            L.quickRecordTakePillFailed,
+            L.quickRecordTakePillFailedMessage,
             null,
           );
         }
         return;
-      case 'salvagedOldStartTakenDate':
-        return salvagedOldStartTakenDate(call.arguments);
       case 'analytics':
         final name = call.arguments['name'] as String;
         final parameters = Map<String, dynamic>.from(call.arguments['parameters']);

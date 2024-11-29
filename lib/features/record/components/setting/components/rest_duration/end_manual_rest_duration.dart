@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -29,19 +30,19 @@ class EndManualRestDuration extends HookConsumerWidget {
     void didEndRestDuration(PillSheetGroup endedRestDurationPillSheetGroup) {
       Navigator.of(context).popUntil((route) => route.isFirst);
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          duration: Duration(
+        SnackBar(
+          duration: const Duration(
             seconds: 2,
           ),
-          content: Text('服用のお休み期間が終了しました'),
+          content: Text(L.pauseTakingPeriodEnded),
         ),
       );
     }
 
     return ListTile(
       leading: const Icon(Icons.play_arrow),
-      title: const Text(
-        '服用再開',
+      title: Text(
+        L.resumeTaking,
       ),
       onTap: () async {
         analytics.logEvent(name: 'end_manual_rest_duration_pressed');

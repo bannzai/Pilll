@@ -5,13 +5,10 @@ extension BoolKey on String {
   static const isAlreadyDoneDemography = 'isAlreadyDoneDemography';
   static const isAlreadyAnsweredPreStoreReviewModal = 'isAlreadyAnsweredPreStoreReviewModal';
   static const isPreStoreReviewGoodAnswer = 'isPreStoreReviewGoodAnswer';
-  static const migrateFrom132IsShown = 'migrate_from_132_is_shown_9';
   static const migration20240819 = 'migration20240819';
 }
 
 extension StringKey on String {
-  static const String salvagedOldStartTakenDate = 'salvagedOldStartTakenDate';
-  static const String salvagedOldLastTakenDate = 'salvagedOldLastTakenDate';
   static const String beginVersion = 'beginingVersion';
   static const String lastSignInAnonymousUID = 'lastSigninAnonymousUID';
 }

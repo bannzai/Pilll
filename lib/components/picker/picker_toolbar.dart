@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PickerToolbar extends StatelessWidget {
   final VoidCallback done;
@@ -22,13 +23,15 @@ class PickerToolbar extends StatelessWidget {
               horizontal: 16.0,
               vertical: 5.0,
             ),
-            child: const Text('キャンセル',
-                style: TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.primary,
-                )),
+            child: Text(
+              L.cancel,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.primary,
+              ),
+            ),
           ),
           CupertinoButton(
             onPressed: () {
@@ -38,13 +41,15 @@ class PickerToolbar extends StatelessWidget {
               horizontal: 16.0,
               vertical: 5.0,
             ),
-            child: const Text('完了',
-                style: TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 16,
-                  color: TextColor.primary,
-                )),
+            child: Text(
+              L.completed,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 16,
+                color: TextColor.primary,
+              ),
+            ),
           )
         ],
       ),

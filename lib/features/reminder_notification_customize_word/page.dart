@@ -1,6 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/daily_taken_message_text_field.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/missed_taken_message_text_field.dart';
 import 'package:pilll/features/reminder_notification_customize_word/components/preview.dart';
@@ -95,9 +96,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '服用通知のカスタマイズ',
-          style: TextStyle(
+        title: Text(
+          L.customizeMedicationNotifications,
+          style: const TextStyle(
             color: TextColor.black,
           ),
         ),
@@ -117,9 +118,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'プレビュー',
-                              style: TextStyle(
+                            Text(
+                              L.preview,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -130,9 +131,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  '通常',
-                                  style: TextStyle(
+                                Text(
+                                  L.normal,
+                                  style: const TextStyle(
                                     fontFamily: FontFamily.japanese,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 10,
@@ -153,9 +154,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                const Text(
-                                  '飲み忘れ',
-                                  style: TextStyle(
+                                Text(
+                                  L.missed,
+                                  style: const TextStyle(
                                     fontFamily: FontFamily.japanese,
                                     fontWeight: FontWeight.w400,
                                     fontSize: 10,
@@ -178,9 +179,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'タイトル',
-                              style: TextStyle(
+                            Text(
+                              L.title,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -199,9 +200,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'メッセージ',
-                              style: TextStyle(
+                            Text(
+                              L.message,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 14,
@@ -225,9 +226,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Text(
-                              'オプション',
-                              style: TextStyle(
+                            Text(
+                              L.option,
+                              style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontWeight: FontWeight.w300,
                                 fontSize: 14,
@@ -236,7 +237,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             const SizedBox(height: 4),
                             _switchRow(
-                              '日付を表示',
+                              L.showsDate,
                               !isInVisibleReminderDate.value,
                               (value) async {
                                 analytics.logEvent(name: 'change_reminder_notification_date');
@@ -255,7 +256,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             const Divider(),
                             _switchRow(
-                              '番号を表示',
+                              L.showsPillNumber,
                               !isInVisiblePillNumber.value,
                               (value) async {
                                 analytics.logEvent(name: 'change_reminder_notification_number');
@@ -274,7 +275,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                             ),
                             const Divider(),
                             _switchRow(
-                              '説明文の表示',
+                              L.showsDescription,
                               !isInVisibleDescription.value,
                               (value) async {
                                 analytics.logEvent(name: 'change_reminder_notification_desc');
@@ -303,7 +304,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             if (wordFocusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'rnc_word_done');
                     wordSubmit();
@@ -315,7 +316,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             if (dailyTakenMessageFocusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'rnc_daily_taken_message_done');
                     dailyTakenMessageSubmit();
@@ -327,7 +328,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             if (missedTakenMessageFocusNode.hasPrimaryFocus) ...[
               KeyboardToolbar(
                 doneButton: AlertButton(
-                  text: '完了',
+                  text: L.completed,
                   onPressed: () async {
                     analytics.logEvent(name: 'rnc_missed_taken_message_done');
                     misssedTakenMessageSubmit();

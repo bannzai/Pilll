@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/picker/picker_toolbar.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/native/present_share_to_sns_for_reward_premium_trial.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -47,9 +48,9 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
           children: [
             const SizedBox(width: 24),
             const Spacer(),
-            const Text(
-              'プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！',
-              style: TextStyle(
+            Text(
+              L.reexperiencePremiumFeatures,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -81,11 +82,11 @@ class ShareRewardPremiumTrialAnnoumcenetBar extends HookConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 10),
+            Padding(
+              padding: const EdgeInsets.only(top: 10),
               child: Text(
-                'どちらにシェアしますか？',
-                style: TextStyle(
+                L.whereToShare,
+                style: const TextStyle(
                   color: TextColor.main,
                   fontFamily: FontFamily.japanese,
                   fontSize: 14,

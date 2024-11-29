@@ -131,8 +131,6 @@ private var channel: FlutterMethodChannel?
 
     // Await established channel
     DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-      self.migrateFrom_1_3_2()
-
       if #available(iOS 14.0, *) {
         WidgetCenter.shared.getCurrentConfigurations { result in
           do {
@@ -208,12 +206,6 @@ extension UNUserNotificationCenter {
 
 // MARK: - Notification
 extension AppDelegate {
-  func migrateFrom_1_3_2() {
-    if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
-      channel?.invokeMethod("salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
-    }
-  }
-
   func configureNotificationActionableButtons() {
     let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
                                             title: "飲んだ")

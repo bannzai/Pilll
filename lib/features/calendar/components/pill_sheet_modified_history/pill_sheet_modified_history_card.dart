@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -64,9 +65,9 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
           children: [
             Row(
               children: [
-                const Text(
-                  '服用履歴',
-                  style: TextStyle(
+                Text(
+                  L.medicationHistory,
+                  style: const TextStyle(
                     fontWeight: FontWeight.w500,
                     fontFamily: FontFamily.japanese,
                     fontSize: 20,
@@ -122,9 +123,9 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                   children: [
                                     const Text(lockEmoji, style: TextStyle(fontSize: 40)),
                                     const SizedBox(height: 12),
-                                    const Text(
-                                      '服用履歴はプレミアム機能です',
-                                      style: TextStyle(
+                                    Text(
+                                      L.takingHistoryIsPremiumFeature,
+                                      style: const TextStyle(
                                         color: TextColor.main,
                                         fontSize: 14,
                                         fontFamily: FontFamily.japanese,
@@ -135,7 +136,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                     SizedBox(
                                       width: 204,
                                       child: AppOutlinedButton(
-                                        text: 'くわしくみる',
+                                        text: L.viewMoreDetails,
                                         onPressed: () async {
                                           analytics.logEvent(
                                             name: 'pressed_show_detail_pill_sheet_history',

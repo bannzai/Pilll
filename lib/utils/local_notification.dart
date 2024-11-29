@@ -12,6 +12,7 @@ import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/entrypoint.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
@@ -64,7 +65,7 @@ class LocalNotificationService {
             DarwinNotificationCategory(
               iOSQuickRecordPillCategoryIdentifier,
               actions: [
-                DarwinNotificationAction.plain(actionIdentifier, '飲んだ'),
+                DarwinNotificationAction.plain(actionIdentifier, L.taken),
               ],
             ),
           ],
@@ -93,16 +94,16 @@ class LocalNotificationService {
       'test title',
       'test body',
       tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),
-      const NotificationDetails(
+      NotificationDetails(
         android: AndroidNotificationDetails(
           androidReminderNotificationChannelID,
-          '服用通知',
+          L.takePillReminder,
           channelShowBadge: true,
           setAsGroupSummary: true,
           groupKey: androidReminderNotificationGroupKey,
           category: AndroidNotificationCategory.reminder,
         ),
-        iOS: DarwinNotificationDetails(
+        iOS: const DarwinNotificationDetails(
           categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
           sound: 'becho.caf',
           presentBadge: true,
@@ -363,7 +364,7 @@ class RegisterReminderLocalNotification {
             if (!setting.reminderNotificationCustomization.isInVisiblePillNumber) {
               result += ' ';
               result += pillSheetDisplayNumber;
-              result += '番';
+              result += L.number;
             }
 
             if (Environment.isDevelopment) {
@@ -371,7 +372,7 @@ class RegisterReminderLocalNotification {
             }
             // NOTE: 0文字以上じゃないと通知が表示されない。フロントでバリデーションをかけていてもここだけは残す
             if (result.isEmpty) {
-              return '通知です';
+              return L.notification;
             }
             return result;
           }();
@@ -404,9 +405,9 @@ class RegisterReminderLocalNotification {
                   message,
                   reminderDateTime,
                   NotificationDetails(
-                    android: const AndroidNotificationDetails(
+                    android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
-                      '服用通知',
+                      L.takePillReminder,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
@@ -414,7 +415,7 @@ class RegisterReminderLocalNotification {
                       actions: [
                         AndroidNotificationAction(
                           actionIdentifier,
-                          '飲んだ',
+                          L.taken,
                         )
                       ],
                     ),
@@ -454,7 +455,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          const title = '💊の時間です';
+          final title = L.takePillReminder;
           futures.add(
             Future(() async {
               try {
@@ -464,9 +465,9 @@ class RegisterReminderLocalNotification {
                   '',
                   reminderDateTime,
                   NotificationDetails(
-                    android: const AndroidNotificationDetails(
+                    android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
-                      '服用通知',
+                      L.takePillReminder,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
@@ -568,17 +569,17 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
       final remindDate = tz.TZDateTime.from(localNotification.remindDateTime, tz.local);
       await plugin.zonedSchedule(
         localNotification.localNotificationID,
-        '本日の予定です',
+        L.todaySchedule,
         schedule.title,
         remindDate,
-        const NotificationDetails(
+        NotificationDetails(
           android: AndroidNotificationDetails(
             androidCalendarScheduleNotificationChannelID,
-            'カレンダーの予定',
+            L.calendarSchedule,
             groupKey: null,
             category: AndroidNotificationCategory.reminder,
           ),
-          iOS: DarwinNotificationDetails(
+          iOS: const DarwinNotificationDetails(
             sound: 'becho.caf',
           ),
         ),
@@ -616,19 +617,19 @@ class NewPillSheetNotification {
       try {
         await localNotificationService.plugin.zonedSchedule(
           newPillSheetNotificationIdentifier,
-          '今日から新しいシートがはじまります',
-          '🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍',
+          L.newPillSheetNotificationTitle,
+          L.newPillSheetNotificationMessage,
           reminderDateTime,
-          const NotificationDetails(
+          NotificationDetails(
             android: AndroidNotificationDetails(
               androidReminderNotificationChannelID,
-              '服用通知',
+              L.takePillReminder,
               channelShowBadge: true,
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
               category: AndroidNotificationCategory.reminder,
             ),
-            iOS: DarwinNotificationDetails(
+            iOS: const DarwinNotificationDetails(
               sound: 'becho.caf',
               presentBadge: true,
               presentSound: true,

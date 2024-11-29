@@ -7,7 +7,7 @@ part of 'pill_sheet_modified_history.codegen.dart';
 // **************************************************************************
 
 _$PillSheetModifiedHistoryImpl _$$PillSheetModifiedHistoryImplFromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryImpl(
-      version: json['version'] ?? "v1",
+      version: json['version'] ?? 'v1',
       id: json['id'] as String?,
       actionType: json['actionType'] as String,
       estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(json['estimatedEventCausingDate'] as Timestamp),

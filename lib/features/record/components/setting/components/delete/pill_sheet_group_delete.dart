@@ -8,6 +8,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/delete_pill_sheet.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -27,9 +28,9 @@ class PillSheetGroupDelete extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       leading: const Icon(Icons.delete_outline, color: PilllColors.red),
-      title: const Text(
-        'ピルシートをすべて破棄',
-        style: TextStyle(color: PilllColors.red),
+      title: Text(
+        L.discardAllPillSheets,
+        style: const TextStyle(color: PilllColors.red),
       ),
       onTap: () {
         analytics.logEvent(
@@ -39,23 +40,24 @@ class PillSheetGroupDelete extends HookConsumerWidget {
           context: context,
           builder: (_) {
             return DiscardDialog(
-              title: 'ピルシートをすべて破棄しますか？',
+              title: L.areYouSureDoing(L.discardAllPillSheets),
               message: RichText(
                 textAlign: TextAlign.start,
-                text: const TextSpan(
+                text: TextSpan(
                   children: [
                     TextSpan(
-                      text: '現在表示されている',
-                      style: TextStyle(
+                      text: L.currentlyDisplayed,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
                         color: TextColor.main,
                       ),
                     ),
+                    // TODO: [Localizations]
                     TextSpan(
-                      text: 'すべてのピルシート',
-                      style: TextStyle(
+                      text: L.allPillSheets,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w600,
                         fontSize: 14,
@@ -63,8 +65,8 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                       ),
                     ),
                     TextSpan(
-                      text: 'が破棄されます',
-                      style: TextStyle(
+                      text: L.willBeDiscarded,
+                      style: const TextStyle(
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
@@ -76,13 +78,13 @@ class PillSheetGroupDelete extends HookConsumerWidget {
               ),
               actions: [
                 AlertButton(
-                  text: 'キャンセル',
+                  text: L.cancel,
                   onPressed: () async {
                     Navigator.of(context).pop();
                   },
                 ),
                 AlertButton(
-                  text: '破棄する',
+                  text: L.discard,
                   onPressed: () async {
                     try {
                       await deletePillSheetGroup(latestPillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet);
@@ -90,9 +92,9 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                       if (context.mounted) {
                         Navigator.of(context).popUntil((route) => route.isFirst);
                         ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            duration: Duration(seconds: 2),
-                            content: Text('ピルシートを破棄しました'),
+                          SnackBar(
+                            duration: const Duration(seconds: 2),
+                            content: Text(L.pillSheetDiscarded),
                           ),
                         );
                       }

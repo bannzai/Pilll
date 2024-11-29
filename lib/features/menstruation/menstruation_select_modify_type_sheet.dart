@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 enum MenstruationSelectModifyType { today, yesterday, begin }
 
@@ -10,11 +11,11 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
   String get title {
     switch (this) {
       case MenstruationSelectModifyType.today:
-        return '今日から生理';
+        return L.menstruationFromToday;
       case MenstruationSelectModifyType.yesterday:
-        return '昨日から生理';
+        return L.menstruationFromYesterday;
       case MenstruationSelectModifyType.begin:
-        return '生理開始日を選択';
+        return L.selectMenstruationStartDate;
     }
   }
 
@@ -50,15 +51,17 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Padding(
-              padding: EdgeInsets.only(top: 21, left: 16),
-              child: Text('生理を記録',
-                  style: TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w500,
-                    fontSize: 20,
-                    color: TextColor.main,
-                  )),
+            Padding(
+              padding: const EdgeInsets.only(top: 21, left: 16),
+              child: Text(
+                L.recordMenstruation,
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 20,
+                  color: TextColor.main,
+                ),
+              ),
             ),
             const SizedBox(height: 24),
             SizedBox(

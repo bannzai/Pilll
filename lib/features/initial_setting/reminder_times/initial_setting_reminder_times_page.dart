@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
@@ -40,9 +41,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           child: Column(
             children: <Widget>[
               const SizedBox(height: 24),
-              const Text(
-                'ピルの飲み忘れ通知',
-                style: TextStyle(
+              Text(
+                L.missedPillNotification,
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 17,
@@ -61,13 +62,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           return _form(context, store, state, index);
                         })),
                   ),
-                  const Text('複数設定しておく事で飲み忘れを防げます',
-                      style: TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.main,
-                      )),
+                  Text(
+                    L.setMultipleReminders,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.main,
+                    ),
+                  ),
                 ],
               ),
               const Spacer(),
@@ -77,8 +80,9 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                     textAlign: TextAlign.center,
                     text: TextSpan(
                       children: [
+                        // TODO: [Localizations]
                         TextSpan(
-                          text: 'プライバシーポリシー',
+                          text: L.privacyPolicy,
                           style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -87,12 +91,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
                             },
                         ),
-                        const TextSpan(
-                          text: 'と',
-                          style: TextStyle(
+                        TextSpan(
+                          text: L.and,
+                          style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
@@ -100,7 +104,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                         ),
                         TextSpan(
-                          text: '利用規約',
+                          text: L.termsOfService,
                           style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
@@ -109,12 +113,12 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
                             },
                         ),
-                        const TextSpan(
-                          text: 'を読んで\n利用をはじめてください',
-                          style: TextStyle(
+                        TextSpan(
+                          text: L.readAndStartUsing,
+                          style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w300,
                             fontSize: 10,
@@ -128,7 +132,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   SizedBox(
                     width: 180,
                     child: PrimaryButton(
-                      text: '次へ',
+                      text: L.next,
                       onPressed: () async {
                         analytics.logEvent(name: 'next_initial_setting_reminder_times');
                         Navigator.of(context).push(IntiialSettingPremiumTrialStartPageRoute.route());
@@ -186,13 +190,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SvgPicture.asset('images/alerm.svg'),
-              Text('通知${index + 1}',
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ))
+              Text(
+                L.notificationNumber(index + 1),
+                style: const TextStyle(
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w300,
+                  fontSize: 14,
+                  color: TextColor.main,
+                ),
+              )
             ],
           ),
           const SizedBox(height: 8),

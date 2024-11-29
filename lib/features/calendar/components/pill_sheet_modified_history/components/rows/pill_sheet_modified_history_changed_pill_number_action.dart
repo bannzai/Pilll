@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
@@ -30,9 +31,9 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
         beforeTodayPillNumber: beforeTodayPillNumber,
         afterTodayPillNumber: afterTodayPillNumber,
       )),
-      detail: const Text(
-        'ピル番号変更',
-        style: TextStyle(
+      detail: Text(
+        L.changedPillNumber,
+        style: const TextStyle(
           color: TextColor.main,
           fontSize: 12,
           fontFamily: FontFamily.japanese,

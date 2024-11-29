@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
   const PillSheetModifiedHisotiryListHeader({
@@ -12,9 +13,9 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
     return _HeaderLayout(
       day: Container(width: 64),
       pillNumbersOrHyphen: Container(),
-      detail: const Text(
-        '服用時間',
-        style: TextStyle(
+      detail: Text(
+        L.takingTime,
+        style: const TextStyle(
           color: TextColor.main,
           fontFamily: FontFamily.japanese,
           fontSize: 12,
@@ -22,9 +23,9 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
         ),
         textAlign: TextAlign.left,
       ),
-      takenPillActionOList: const Text(
-        '服用済み',
-        style: TextStyle(
+      takenPillActionOList: Text(
+        L.alreadyTaken,
+        style: const TextStyle(
           color: TextColor.main,
           fontFamily: FontFamily.japanese,
           fontSize: 12,

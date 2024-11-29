@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class DiaryPostMemo extends HookConsumerWidget {
   final TextEditingController textEditingController;
@@ -16,9 +17,9 @@ class DiaryPostMemo extends HookConsumerWidget {
         maxHeight: 200,
       ),
       child: TextFormField(
-        decoration: const InputDecoration(
-          hintText: 'メモ',
-          border: OutlineInputBorder(),
+        decoration: InputDecoration(
+          hintText: L.memo,
+          border: const OutlineInputBorder(),
         ),
         controller: textEditingController,
         maxLines: null,

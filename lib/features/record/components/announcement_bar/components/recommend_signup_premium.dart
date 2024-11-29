@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -37,9 +38,9 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                         colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
                       ),
                       const SizedBox(width: 5),
-                      const Text(
-                        'アカウント登録をしてください',
-                        style: TextStyle(
+                      Text(
+                        L.pleaseRegisterAccount,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w700,
                           fontSize: 12,
@@ -50,9 +51,9 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 8),
-                  const Text(
-                    '機種変更やスマホ紛失時に、プレミアム機能を引き継げません',
-                    style: TextStyle(
+                  Text(
+                    L.cannotTransferPremiumWithoutAccount,
+                    style: const TextStyle(
                       color: TextColor.white,
                       fontFamily: FontFamily.japanese,
                       fontSize: 10,

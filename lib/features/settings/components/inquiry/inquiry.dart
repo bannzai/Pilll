@@ -18,7 +18,7 @@ void inquiry() {
     launchUrl(
         Uri.parse(Uri.encodeFull(
             'https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info')),
-        mode: LaunchMode.inAppWebView);
+        mode: LaunchMode.inAppBrowserView);
   });
 }
 

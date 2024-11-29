@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -46,8 +47,8 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
         }
         return Scaffold(
           appBar: AppBar(
-            title: const Text('体調詳細',
-                style: TextStyle(
+            title: Text(L.physicalConditionDetail,
+                style: const TextStyle(
                   fontSize: 17,
                   fontFamily: FontFamily.japanese,
                   color: TextColor.main,
@@ -62,11 +63,11 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: TextField(
                   controller: textFieldController,
-                  decoration: const InputDecoration(
-                    focusedBorder: UnderlineInputBorder(
+                  decoration: InputDecoration(
+                    focusedBorder: const UnderlineInputBorder(
                       borderSide: BorderSide(color: PilllColors.secondary),
                     ),
-                    hintText: '入力して追加',
+                    hintText: L.inputAndAdd,
                   ),
                   onSubmitted: (physicalConditionDetail) async {
                     analytics.logEvent(name: 'submit_physical_condition_detail', parameters: {'element': physicalConditionDetail});

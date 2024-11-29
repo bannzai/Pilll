@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 
@@ -34,10 +35,10 @@ class RevertTakePill {
   }) async {
     final activePillSheet = pillSheetGroup.activePillSheet;
     if (activePillSheet == null) {
-      throw const FormatException('現在対象となっているピルシートが見つかりませんでした');
+      throw FormatException(L.currentPillSheetNotFound);
     }
     if (pillSheetGroup.lastActiveRestDuration != null) {
-      throw const FormatException('ピルの服用の取り消し操作は休薬期間中は実行できません');
+      throw FormatException(L.doNotRevertTakePillInPausePeriod);
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];

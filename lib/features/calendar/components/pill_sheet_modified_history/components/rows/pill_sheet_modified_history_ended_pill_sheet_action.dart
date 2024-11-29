@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/dotted_line.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
   final EndedPillSheetValue? value;
@@ -27,7 +28,10 @@ class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
           child: const DottedLine(),
         ),
         const SizedBox(width: 12),
-        Text('ピルシート終了', style: _textStyle),
+        Text(
+          L.endPillSheet,
+          style: _textStyle,
+        ),
         const SizedBox(width: 12),
         LimitedBox(
           maxWidth: MediaQuery.of(context).size.width / 4 - 1,

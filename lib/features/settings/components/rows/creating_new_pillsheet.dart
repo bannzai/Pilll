@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -28,24 +29,28 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          const Text('ピルシートグループの自動追加',
-              style: TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              )),
+          Text(
+            L.autoAddPillSheetGroup,
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
+          ),
           if (!isPremium) ...[
             const SizedBox(width: 8),
             const PremiumBadge(),
           ]
         ],
       ),
-      subtitle: const Text('今のピルシートグループが終了したら、新しいシートを自動で追加します',
-          style: TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-          )),
+      subtitle: Text(
+        L.autoAddNewSheetAfterCurrentEnds,
+        style: const TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w300,
+          fontSize: 14,
+        ),
+      ),
       activeColor: PilllColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(

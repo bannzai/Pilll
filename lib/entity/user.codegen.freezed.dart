@@ -141,7 +141,7 @@ User _$UserFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$User {
   String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: "settings")
+  @JsonKey(name: 'settings')
   Setting? get setting => throw _privateConstructorUsedError;
   String? get userIDWhenCreateUser => throw _privateConstructorUsedError;
   String? get anonymousUserID => throw _privateConstructorUsedError;
@@ -170,7 +170,7 @@ abstract class $UserCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: "settings") Setting? setting,
+      @JsonKey(name: 'settings') Setting? setting,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
       List<String> userDocumentIDSets,
@@ -295,7 +295,7 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
   @useResult
   $Res call(
       {String? id,
-      @JsonKey(name: "settings") Setting? setting,
+      @JsonKey(name: 'settings') Setting? setting,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
       List<String> userDocumentIDSets,
@@ -401,7 +401,7 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
 class _$UserImpl extends _User {
   const _$UserImpl(
       {this.id,
-      @JsonKey(name: "settings") this.setting,
+      @JsonKey(name: 'settings') this.setting,
       this.userIDWhenCreateUser,
       this.anonymousUserID,
       final List<String> userDocumentIDSets = const [],
@@ -424,7 +424,7 @@ class _$UserImpl extends _User {
   @override
   final String? id;
   @override
-  @JsonKey(name: "settings")
+  @JsonKey(name: 'settings')
   final Setting? setting;
   @override
   final String? userIDWhenCreateUser;
@@ -541,7 +541,7 @@ class _$UserImpl extends _User {
 abstract class _User extends User {
   const factory _User(
       {final String? id,
-      @JsonKey(name: "settings") final Setting? setting,
+      @JsonKey(name: 'settings') final Setting? setting,
       final String? userIDWhenCreateUser,
       final String? anonymousUserID,
       final List<String> userDocumentIDSets,
@@ -562,7 +562,7 @@ abstract class _User extends User {
   @override
   String? get id;
   @override
-  @JsonKey(name: "settings")
+  @JsonKey(name: 'settings')
   Setting? get setting;
   @override
   String? get userIDWhenCreateUser;

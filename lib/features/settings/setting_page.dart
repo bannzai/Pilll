@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -21,7 +22,6 @@ import 'package:pilll/features/settings/components/rows/premium_introduction.dar
 import 'package:pilll/features/settings/components/rows/quick_record.dart';
 import 'package:pilll/features/settings/components/rows/toggle_reminder_notification.dart';
 import 'package:pilll/features/settings/components/rows/today_pill_number.dart';
-import 'package:pilll/features/settings/components/rows/update_from_132.dart';
 import 'package:pilll/features/settings/components/setting_section_title.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -33,12 +33,10 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
-import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'components/rows/about_churn.dart';
@@ -52,7 +50,6 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    final sharedPreferences = ref.watch(sharedPreferencesProvider);
     return AsyncValueGroup.group4(
       ref.watch(userProvider),
       ref.watch(settingProvider),
@@ -60,14 +57,11 @@ class SettingPage extends HookConsumerWidget {
       ref.watch(isHealthDataAvailableProvider),
     ).when(
       data: (data) {
-        final userIsMigratedFrom132 =
-            sharedPreferences.containsKey(StringKey.salvagedOldStartTakenDate) && sharedPreferences.containsKey(StringKey.salvagedOldLastTakenDate);
         return SettingPageBody(
           user: data.$1,
           setting: data.$2,
           latestPillSheetGroup: data.$3,
           isHealthDataAvailable: data.$4,
-          userIsUpdatedFrom132: userIsMigratedFrom132,
         );
       },
       error: (error, _) => UniversalErrorPage(
@@ -85,7 +79,6 @@ class SettingPageBody extends StatelessWidget {
   final Setting setting;
   final PillSheetGroup? latestPillSheetGroup;
   final bool isHealthDataAvailable;
-  final bool userIsUpdatedFrom132;
 
   const SettingPageBody({
     super.key,
@@ -93,7 +86,6 @@ class SettingPageBody extends StatelessWidget {
     required this.setting,
     required this.latestPillSheetGroup,
     required this.isHealthDataAvailable,
-    required this.userIsUpdatedFrom132,
   });
 
   @override
@@ -103,7 +95,7 @@ class SettingPageBody extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: const Text('設定', style: TextStyle(color: TextColor.main)),
+        title: Text(L.settings, style: const TextStyle(color: TextColor.main)),
         backgroundColor: PilllColors.white,
       ),
       body: Padding(
@@ -116,28 +108,30 @@ class SettingPageBody extends StatelessWidget {
                 switch (section) {
                   case SettingSection.account:
                     return SettingSectionTitle(
-                      text: 'アカウント',
+                      text: L.account,
                       children: [
-                        const ListExplainRow(text: '機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。'),
+                        ListExplainRow(text: L.dataTransferRequiresAccount),
                         const AccountLinkRow(),
                         _separator(),
                       ],
                     );
                   case SettingSection.premium:
                     return SettingSectionTitle(
-                      text: 'Pilllプレミアム',
+                      text: L.pillPremium,
                       children: [
                         if (user.isTrial) ...[
                           ListTile(
-                            title: const Text('機能無制限の期間について',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.unlimitedFeatureDuration,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_about_trial', parameters: {});
-                              launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'), mode: LaunchMode.inAppBrowserView);
                             },
                           ),
                           _separator(),
@@ -155,7 +149,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.pill:
                     return SettingSectionTitle(
-                      text: 'ピルシート',
+                      text: L.pillSheet,
                       children: [
                         if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                           TodayPllNumberRow(
@@ -181,7 +175,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.notification:
                     return SettingSectionTitle(
-                      text: '通知',
+                      text: L.notification,
                       children: [
                         ToggleReminderNotification(setting: setting),
                         _separator(),
@@ -209,7 +203,7 @@ class SettingPageBody extends StatelessWidget {
                     );
                   case SettingSection.menstruation:
                     return SettingSectionTitle(
-                      text: '生理',
+                      text: L.menstruation,
                       children: [
                         MenstruationRow(setting),
                         _separator(),
@@ -224,90 +218,98 @@ class SettingPageBody extends StatelessWidget {
 
                   case SettingSection.other:
                     return SettingSectionTitle(
-                      text: 'その他',
+                      text: L.others,
                       children: [
-                        if (userIsUpdatedFrom132) ...[
-                          const UpdateFrom132Row(),
-                          _separator(),
-                        ],
                         ListTile(
-                            title: const Text('友達に教える',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.shareWithFriends,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () async {
                               analytics.logEvent(name: 'tap_share_to_friend', parameters: {});
-                              const text = '''
-      Pilll ピル服用に特化したピルリマインダーアプリ
-      
-      iOS: https://onl.sc/piiY1A6
-      Android: https://onl.sc/c9xnQUk''';
-                              Clipboard.setData(const ClipboardData(text: text));
+                              final text = '''
+${L.pilllDescription}
+
+iOS: https://onl.sc/piiY1A6
+Android: https://onl.sc/c9xnQUk''';
+                              Clipboard.setData(ClipboardData(text: text));
                               ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  duration: Duration(seconds: 2),
-                                  content: Text('クリップボードにリンクをコピーしました'),
+                                SnackBar(
+                                  duration: const Duration(seconds: 2),
+                                  content: Text(L.linkCopiedToClipboard),
                                 ),
                               );
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('利用規約',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.termsOfService,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_terms', parameters: {});
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('プライバシーポリシー',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.privacyPolicy,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_privacy_policy', parameters: {});
-                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('FAQ',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.faq,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_faq', parameters: {});
-                              launchUrl(Uri.parse('https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69'), mode: LaunchMode.inAppWebView);
+                              launchUrl(Uri.parse('https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69'), mode: LaunchMode.inAppBrowserView);
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('新機能紹介',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.newFeaturesIntroduction,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'setting_did_select_release_note', parameters: {});
                               launchUrl(Uri.parse('https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61'));
                             }),
                         _separator(),
                         ListTile(
-                            title: const Text('お問い合わせ',
-                                style: TextStyle(
-                                  fontFamily: FontFamily.roboto,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 16,
-                                )),
+                            title: Text(
+                              L.contactUs,
+                              style: const TextStyle(
+                                fontFamily: FontFamily.roboto,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 16,
+                              ),
+                            ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_inquiry', parameters: {});
                               inquiry();

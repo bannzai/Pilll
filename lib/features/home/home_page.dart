@@ -6,7 +6,7 @@ import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
-import 'package:pilll/features/initial_setting/migrate_info.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
@@ -48,22 +48,20 @@ class HomePage extends HookConsumerWidget {
     }, [user.valueOrNull]);
 
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group3(
+    return AsyncValueGroup.group2(
       user,
       ref.watch(latestPillSheetGroupProvider),
-      ref.watch(shouldShowMigrationInformationProvider),
     ).when(
       data: (data) {
         return HomePageBody(
           user: data.$1,
           pillSheetGroup: data.$2,
-          shouldShowMigrateInfo: data.$3,
           sharedPreferences: sharedPreferences,
         );
       },
       error: (error, stackTrace) => UniversalErrorPage(
         error: error,
-        reload: () => ref.refresh(shouldShowMigrationInformationProvider),
+        reload: () => ref.refresh(latestPillSheetGroupProvider),
         child: null,
       ),
       loading: () => const ScaffoldIndicator(),
@@ -74,14 +72,12 @@ class HomePage extends HookConsumerWidget {
 class HomePageBody extends HookConsumerWidget {
   final User user;
   final PillSheetGroup? pillSheetGroup;
-  final bool shouldShowMigrateInfo;
   final SharedPreferences sharedPreferences;
 
   const HomePageBody({
     super.key,
     required this.user,
     required this.pillSheetGroup,
-    required this.shouldShowMigrateInfo,
     required this.sharedPreferences,
   });
 
@@ -113,17 +109,10 @@ class HomePageBody extends HookConsumerWidget {
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
-        if (shouldShowMigrateInfo) {
-          showDialog(
-              context: context,
-              barrierColor: Colors.white,
-              builder: (context) {
-                return const MigrateInfo();
-              });
-        } else if (shouldAskCancelReason) {
+        if (shouldAskCancelReason) {
           await Navigator.of(context).push(
             WebViewPageRoute.route(
-              title: '解約後のアンケートご協力のお願い',
+              title: L.requestForCancelSurvey,
               url: 'https://docs.google.com/forms/d/e/1FAIpQLScmxg1amJik_8viuPI3MeDCzz7FuBDXeIHWzorbXRKR38yp7g/viewform',
             ),
           );
@@ -168,23 +157,23 @@ class HomePageBody extends HookConsumerWidget {
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
                   Tab(
-                    text: 'ピル',
+                    text: L.pill,
                     icon: SvgPicture.asset(
                         tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg'),
                   ),
                   Tab(
-                    text: '生理',
+                    text: L.menstruation,
                     icon: SvgPicture.asset(
                         tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg'),
                   ),
                   Tab(
-                    text: 'カレンダー',
+                    text: L.calendar,
                     icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
                         ? 'images/tab_icon_calendar_enable.svg'
                         : 'images/tab_icon_calendar_disable.svg'),
                   ),
                   Tab(
-                    text: '設定',
+                    text: L.settings,
                     icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
                         ? 'images/tab_icon_setting_enable.svg'
                         : 'images/tab_icon_setting_disable.svg'),

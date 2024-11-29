@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/error/error_alert.dart';
@@ -17,17 +18,19 @@ class HealthCareRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       minVerticalPadding: 9,
-      title: const Row(
+      title: Row(
         children: [
-          Text('ヘルスケア連携',
-              style: TextStyle(
-                fontFamily: FontFamily.roboto,
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-              )),
+          Text(
+            L.healthCareIntegration,
+            style: const TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
+          ),
         ],
       ),
-      subtitle: const Text('Pilllで記録した生理記録を自動でヘルスケアに記録できます'),
+      subtitle: Text(L.healthCareIntegrationDescription),
       onTap: () async {
         analytics.logEvent(
           name: 'did_select_health_care_row',

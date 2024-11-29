@@ -399,7 +399,7 @@ class __$$PillSheetModifiedHistoryImplCopyWithImpl<$Res> extends _$PillSheetModi
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetModifiedHistoryImpl extends _PillSheetModifiedHistory {
   const _$PillSheetModifiedHistoryImpl(
-      {this.version = "v1",
+      {this.version = 'v1',
       @JsonKey(includeIfNull: false) required this.id,
       required this.actionType,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)

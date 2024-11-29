@@ -1,3 +1,4 @@
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -41,9 +42,9 @@ class ReleaseNote extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
-                        child: const Text(
-                          '表示モード服用日数(周期)が追加されました',
-                          style: TextStyle(
+                        child: Text(
+                          L.addedDisplayModePillDaysCycle,
+                          style: const TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
@@ -77,12 +78,13 @@ class ReleaseNote extends StatelessWidget {
                 SizedBox(
                   width: 230,
                   child: AlertButton(
-                      onPressed: () async {
-                        analytics.logEvent(name: 'pressed_show_release_note');
-                        Navigator.of(context).pop();
-                        openReleaseNote();
-                      },
-                      text: '詳細を見る'),
+                    onPressed: () async {
+                      analytics.logEvent(name: 'pressed_show_release_note');
+                      Navigator.of(context).pop();
+                      openReleaseNote();
+                    },
+                    text: L.seeDetails,
+                  ),
                 ),
                 const SizedBox(height: 20),
               ],
@@ -112,5 +114,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse('https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57'), mode: LaunchMode.inAppWebView);
+  launchUrl(Uri.parse('https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57'), mode: LaunchMode.inAppBrowserView);
 }

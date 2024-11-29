@@ -1,5 +1,5 @@
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/tick.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
@@ -15,16 +15,11 @@ bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref, {required DateTime? d
   return timer.isAfter(discountEntitlementDeadlineDate);
 }
 
-@Riverpod(dependencies: [remoteConfigParameter])
+// NOTE: テスト用に用意しているprovider
+@Riverpod(dependencies: [])
 bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
-  if (discountEntitlementDeadlineDate == null) {
-    // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
-    return false;
-  }
-  final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
-  final timer = ref.watch(tickProvider);
-  return !(timer.isBefore(discountEntitlementDeadlineDate) &&
-      discountEntitlementDeadlineDate.difference(timer).inMinutes <= remoteConfigParameter.discountCountdownBoundaryHour * 60);
+  final user = ref.watch(userProvider);
+  return user.valueOrNull?.hasDiscountEntitlement != true;
 }
 
 @Riverpod()

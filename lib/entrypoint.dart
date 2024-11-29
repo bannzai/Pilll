@@ -7,6 +7,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/native/pill.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/database.dart';
@@ -49,7 +50,10 @@ Future<void> entrypoint() async {
       setupRemoteConfig(),
     ).wait;
 
-    await localNotificationService.initialize();
+    // AppLocalizationsの初期化を待つ
+    WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      await localNotificationService.initialize();
+    });
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
@@ -107,8 +111,8 @@ Future<void> handleNotificationAction(NotificationResponse notificationResponse)
       // errorLoggerに記録した後に実行する。これも失敗する可能性がある
       await localNotificationService.plugin.show(
         fallbackNotificationIdentifier,
-        '服用記録が失敗した可能性があります',
-        'アプリを開いてご確認ください',
+        L.quickRecordTakePillFailed,
+        L.quickRecordTakePillFailedMessage,
         null,
       );
     }

@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class SettingMenstruationPageTemplate extends StatelessWidget {
   final String title;
@@ -43,9 +44,9 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
               child: ListView(
                 children: <Widget>[
                   const SizedBox(height: 24),
-                  const Text(
-                    '生理がはじまるピル番号をタップ',
-                    style: TextStyle(
+                  Text(
+                    L.selectPillNumberForMenstruationStart,
+                    style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/secret/secret.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/premium_introduction/util/map_to_error.dart';
@@ -77,10 +78,10 @@ class Purchase {
       final purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
-        throw AssertionError('unexpected premium entitlements is not exists');
+        throw AssertionError(L.unexpectedPremiumEntitlementsIsNotExists);
       }
       if (!premiumEntitlement.isActive) {
-        throw AlertError('課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください');
+        throw AlertError(L.purchaseErrorPurchasePendingError);
       }
       await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);

@@ -1,5 +1,6 @@
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/diary_post/util.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/diary_setting_physical_condtion_detail/page.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
@@ -36,7 +37,10 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
       children: [
         Row(
           children: [
-            const Text('体調詳細', style: sectionTitle),
+            Text(
+              L.physicalConditionDetail,
+              style: sectionTitle,
+            ),
             const SizedBox(width: 12),
             IconButton(
               onPressed: () {

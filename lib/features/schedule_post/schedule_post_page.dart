@@ -8,6 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/keyboard_toolbar.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -108,9 +109,9 @@ class _SchedulePostPage extends HookConsumerWidget {
                           onChanged: (text) {
                             title.value = text;
                           },
-                          decoration: const InputDecoration(
-                            hintText: '通院する',
-                            border: OutlineInputBorder(),
+                          decoration: InputDecoration(
+                            hintText: L.visitHospital,
+                            border: const OutlineInputBorder(),
                           ),
                           controller: textEditingController,
                           maxLines: null,
@@ -120,12 +121,14 @@ class _SchedulePostPage extends HookConsumerWidget {
                         ),
                       ),
                       SwitchListTile(
-                        title: const Text('当日9:00に通知を受け取る',
-                            style: TextStyle(
-                              fontFamily: FontFamily.roboto,
-                              fontWeight: FontWeight.w300,
-                              fontSize: 16,
-                            )),
+                        title: Text(
+                          L.receiveNotificationAt9AM,
+                          style: const TextStyle(
+                            fontFamily: FontFamily.roboto,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                          ),
+                        ),
                         activeColor: PilllColors.secondary,
                         onChanged: (bool value) {
                           analytics.logEvent(
@@ -144,7 +147,7 @@ class _SchedulePostPage extends HookConsumerWidget {
               if (focusNode.hasPrimaryFocus) ...[
                 KeyboardToolbar(
                   doneButton: AlertButton(
-                    text: '完了',
+                    text: L.completed,
                     onPressed: () async {
                       analytics.logEvent(name: 'schedule_post_toolbar_done');
                       focusNode.unfocus();
@@ -155,7 +158,7 @@ class _SchedulePostPage extends HookConsumerWidget {
               const Spacer(),
               if (date.date().isAfter(today())) ...[
                 PrimaryButton(
-                  text: '保存',
+                  text: L.save,
                   onPressed: isInvalid()
                       ? null
                       : () async {
@@ -199,22 +202,22 @@ class _SchedulePostPage extends HookConsumerWidget {
               ],
               if (scheduleID != null)
                 AppOutlinedButton(
-                  text: '削除',
+                  text: L.delete,
                   onPressed: () async {
                     analytics.logEvent(name: 'schedule_delete_pressed');
                     showDiscardDialog(
                       context,
-                      title: '予定を削除します',
-                      message: '削除された予定は復元ができません',
+                      title: L.deleteSchedule,
+                      message: L.deletedScheduleCannotBeRestored,
                       actions: [
                         AlertButton(
-                          text: 'キャンセル',
+                          text: L.cancel,
                           onPressed: () async {
                             Navigator.of(context).pop();
                           },
                         ),
                         AlertButton(
-                          text: '削除する',
+                          text: L.delete,
                           onPressed: () async {
                             final navigator = Navigator.of(context);
                             try {

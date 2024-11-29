@@ -7,6 +7,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/components/picker/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
   static final List<String> durationList = ['-', ...List<String>.generate(7, (index) => (index + 1).toString())];
@@ -34,37 +35,45 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: <Widget>[
         const SizedBox(height: 20),
+        // TODO: [Localizations]
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('ピル番号 ',
-                style: TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.main,
-                )),
+            Text(
+              '${L.pillNumber} ',
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
+            ),
             GestureDetector(
               onTap: () => _showPicker(context),
               child: _from(),
             ),
-            const Text(' 番ごとに',
-                style: TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.main,
-                )),
+            Text(
+              ' ${L.perNumber}',
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
+            ),
           ],
         ),
-        const Text('何日間生理が続く？',
-            style: TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: TextColor.main,
-            )),
+        Text(
+          L.howManyDaysDoesMenstruationLast,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w600,
+            fontSize: 14,
+            color: TextColor.main,
+          ),
+        ),
         const SizedBox(height: 4),
+        // TODO: [Localizations]
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
@@ -72,8 +81,15 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
               onTap: () => _showDurationModalSheet(context),
               child: _duration(),
             ),
-            const Text(' 日間生理が続く',
-                style: TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main)),
+            Text(
+              ' ${L.daysMenstruationLasts}',
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+                color: TextColor.main,
+              ),
+            ),
           ],
         )
       ],

@@ -15,6 +15,7 @@ class ReminderNotificationCustomization with _$ReminderNotificationCustomization
     @Default(false) bool isInVisibleDescription,
     // BEGIN: From v2
     @Default('') String dailyTakenMessage,
+    // TODO: [Localizations]
     @Default('飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFaceEmoji') String missedTakenMessage,
     // END: From v2
   }) = _ReminderNotificationCustomization;

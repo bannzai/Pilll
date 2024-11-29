@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/organisms/pill_sheet/add_pill_sheet_type_empty.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -49,7 +50,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
             ScaffoldMessenger.of(context).showSnackBar(
               SnackBar(
                 duration: const Duration(seconds: 2),
-                content: Text('${accountType.providerName}でログインしました'),
+                content: Text(L.loggedInWithProvider(accountType.providerName)),
               ),
             );
           });
@@ -79,9 +80,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 24),
-                      const Text(
-                        '処方されるシートについて\n教えてください',
-                        style: TextStyle(
+                      Text(
+                        L.tellAboutPrescribedSheet,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
@@ -106,7 +107,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                           SizedBox(
                             width: 180,
                             child: PrimaryButton(
-                              text: '次へ',
+                              text: L.next,
                               onPressed: () async {
                                 analytics.logEvent(name: 'next_to_today_pill_number');
                                 Navigator.of(context).push(InitialSettingSelectTodayPillNumberPageRoute.route());
@@ -116,7 +117,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         if (userIsAnonymous) ...[
                           const SizedBox(height: 20),
                           AlertButton(
-                            text: 'すでにアカウントをお持ちの方はこちら',
+                            text: L.existingAccountUsers,
                             onPressed: () async {
                               analytics.logEvent(name: 'pressed_initial_setting_signin');
                               showSignInSheet(

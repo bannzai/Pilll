@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -25,10 +26,11 @@ class TodayTakenPillNumber extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
+          // TODO: [Localizations]
           if (_appearanceMode.isSequential)
-            const Text(
-              '💊 今日は服用',
-              style: TextStyle(
+            Text(
+              L.todayIsTaking,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -36,9 +38,9 @@ class TodayTakenPillNumber extends StatelessWidget {
               ),
             ),
           if (!_appearanceMode.isSequential)
-            const Text(
-              '💊 今日飲むピル',
-              style: TextStyle(
+            Text(
+              L.todayPillToTake,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -74,7 +76,7 @@ class TodayTakenPillNumber extends StatelessWidget {
     }
     if (activePillSheet.inNotTakenDuration) {
       return Text(
-        "${activePillSheet.pillSheetType.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}日目",
+        L.withDay('${activePillSheet.pillSheetType.notTakenWord}${activePillSheet.todayPillNumber - activePillSheet.typeInfo.dosingPeriod}'),
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w600,
@@ -96,8 +98,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          const Text('番',
-              style: TextStyle(
+          Text(L.number,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -112,8 +114,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          const Text('番',
-              style: TextStyle(
+          Text(L.number,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
@@ -128,8 +130,8 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          const Text('番',
-              style: TextStyle(
+          Text(L.number,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
                 fontSize: 14,

@@ -7,6 +7,7 @@ import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/share_reward_premium_trial.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -39,6 +40,7 @@ import 'package:pilll/utils/remote_config.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../../helper/fake.dart';
 import '../../../helper/mock.mocks.dart';
 
 void main() {
@@ -110,6 +112,8 @@ void main() {
                   .overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+              annualPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
+              monthlyPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),

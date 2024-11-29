@@ -3,17 +3,22 @@ import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class AnnualPurchaseButton extends StatelessWidget {
+  final Package monthlyPackage;
   final Package annualPackage;
+  final Package monthlyPremiumPackage;
   final OfferingType offeringType;
   final Function(Package) onTap;
 
   const AnnualPurchaseButton({
     super.key,
+    required this.monthlyPackage,
     required this.annualPackage,
+    required this.monthlyPremiumPackage,
     required this.offeringType,
     required this.onTap,
   });
@@ -44,9 +49,9 @@ class AnnualPurchaseButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                const Text(
-                  '年額プラン',
-                  style: TextStyle(
+                Text(
+                  L.annualPlan,
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontSize: 16,
@@ -54,7 +59,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '${annualPackage.storeProduct.priceString}/年',
+                  L.annualPrice(annualPackage.storeProduct.priceString),
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
@@ -63,7 +68,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '（$monthlyPriceString/月）',
+                  '(${L.monthlyPrice(monthlyPriceString)})',
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
@@ -79,6 +84,9 @@ class AnnualPurchaseButton extends StatelessWidget {
             right: 8,
             child: _DiscountBadge(
               offeringType: offeringType,
+              monthlyPackage: monthlyPackage,
+              annualPackage: annualPackage,
+              monthlyPremiumPackage: monthlyPremiumPackage,
             ),
           ),
         ],
@@ -89,10 +97,24 @@ class AnnualPurchaseButton extends StatelessWidget {
 
 class _DiscountBadge extends StatelessWidget {
   final OfferingType offeringType;
+  final Package monthlyPackage;
+  final Package annualPackage;
+  final Package monthlyPremiumPackage;
 
-  const _DiscountBadge({required this.offeringType});
+  const _DiscountBadge({
+    required this.offeringType,
+    required this.monthlyPackage,
+    required this.annualPackage,
+    required this.monthlyPremiumPackage,
+  });
+
   @override
   Widget build(BuildContext context) {
+    // NOTE: [DiscountPercent]
+    final offPercentForMonthlyPremiumPackage =
+        ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100).toInt();
+    final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / (monthlyPackage.storeProduct.price * 12))) * 100).toInt();
+
     return Container(
       padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
       decoration: BoxDecoration(
@@ -100,7 +122,9 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.secondary,
       ),
       child: Text(
-        offeringType == OfferingType.limited ? '通常月額と比べて58％OFF' : '33％OFF',
+        offeringType == OfferingType.limited
+            ? L.offPercentForMonthlyPremiumPackage(offPercentForMonthlyPremiumPackage)
+            : '$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,

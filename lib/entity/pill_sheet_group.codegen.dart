@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -53,11 +54,11 @@ class PillSheetGroup with _$PillSheetGroup {
 
   PillSheetGroup replaced(PillSheet pillSheet) {
     if (pillSheet.id == null) {
-      throw const FormatException('ピルシートの置き換えによる更新できませんでした');
+      throw FormatException(L.cannotUpdateToReplacePillSheet('null'));
     }
     final index = pillSheets.indexWhere((element) => element.id == pillSheet.id);
     if (index == -1) {
-      throw FormatException('ピルシートの置き換えによる更新できませんでした。id: ${pillSheet.id}');
+      throw FormatException(L.cannotUpdateToReplacePillSheet(pillSheet.id ?? ''));
     }
     final copied = [...pillSheets];
     copied[index] = pillSheet;

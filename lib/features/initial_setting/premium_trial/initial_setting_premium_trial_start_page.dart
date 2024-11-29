@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/typed_shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -48,18 +49,18 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                   child: Column(
                     children: [
                       const SizedBox(height: 1),
-                      const Column(
+                      Column(
                         children: [
                           Text(
-                            '\\ 通知から服用記録ができます /',
-                            style: TextStyle(
+                            L.takingRecordFromNotification,
+                            style: const TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: TextColor.black,
                               fontFamily: FontFamily.japanese,
                             ),
                           ),
-                          SizedBox(height: 16),
+                          const SizedBox(height: 16),
                         ],
                       ),
                       Padding(
@@ -78,9 +79,9 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                                 alignment: AlignmentDirectional.center,
                                 children: [
                                   SvgPicture.asset('images/yellow_spike.svg'),
-                                  const Text(
-                                    '人気の\n機能',
-                                    style: TextStyle(
+                                  Text(
+                                    L.popularFeatures,
+                                    style: const TextStyle(
                                       color: TextColor.primaryDarkBlue,
                                       fontSize: 10,
                                       fontFamily: FontFamily.japanese,
@@ -95,12 +96,9 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                         ),
                       ),
                       const SizedBox(height: 12),
-                      const Text(
-                        '''
-通知を長押しすると服用記録ができます
-ぜひお試しください
-''',
-                        style: TextStyle(
+                      Text(
+                        '${L.pressAndHoldNotificationToRecordPillTaking}\n${L.letsTryIt}',
+                        style: const TextStyle(
                           color: TextColor.main,
                           fontSize: 14,
                           fontFamily: FontFamily.japanese,
@@ -113,9 +111,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  '''
-${remoteConfigParameter.trialDeadlineDateOffsetDay}日間すべての機能が使えます！
-''',
+                  L.trialDeadlineDateOffsetDay(remoteConfigParameter.trialDeadlineDateOffsetDay),
                   style: const TextStyle(
                     color: TextColor.main,
                     fontWeight: FontWeight.w700,
@@ -132,7 +128,7 @@ ${remoteConfigParameter.trialDeadlineDateOffsetDay}日間すべての機能が�
                 horizontal: 39,
               ),
               child: AppOutlinedButton(
-                text: 'アプリをはじめる',
+                text: L.startApp,
                 onPressed: () async {
                   analytics.logEvent(name: 'pressed_start_app_preiun_trial');
                   try {

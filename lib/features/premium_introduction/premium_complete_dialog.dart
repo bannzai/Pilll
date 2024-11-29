@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class PremiumCompleteDialog extends StatelessWidget {
   final VoidCallback onClose;
@@ -16,9 +17,9 @@ class PremiumCompleteDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const Text(
-            'Pilllプレミアム登録完了',
-            style: TextStyle(
+          Text(
+            L.premiumRegistrationComplete,
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
@@ -29,9 +30,9 @@ class PremiumCompleteDialog extends StatelessWidget {
           const SizedBox(height: 24),
           SvgPicture.asset('images/jewel.svg'),
           const SizedBox(height: 24),
-          const Text(
-            'ご登録ありがとうございます。\nすべての機能が使えるようになりました！',
-            style: TextStyle(
+          Text(
+            L.thankYouForRegistration,
+            style: const TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w400,
@@ -47,7 +48,7 @@ class PremiumCompleteDialog extends StatelessWidget {
                 Navigator.of(context).pop();
                 onClose();
               },
-              text: 'OK',
+              text: L.oK,
             ),
           ),
         ],

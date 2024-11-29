@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class PillNumber extends StatelessWidget {
@@ -34,47 +35,47 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     final left = beforeLastTakenPillNumber + 1;
     // 1度飲みの時に本日分を服用した場合は1錠分の服用履歴を表示する
     if (left == afterLastTakenPillNumber) {
-      return '$afterLastTakenPillNumber番';
+      return L.withNumber('$afterLastTakenPillNumber');
     }
-    return '$left-$afterLastTakenPillNumber番';
+    return L.withNumber('$left-$afterLastTakenPillNumber');
   }
 
   static String autoTaken({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
     final left = beforeLastTakenPillNumber + 1;
     if (left == afterLastTakenPillNumber) {
-      return '$afterLastTakenPillNumber番';
+      return L.withNumber('$afterLastTakenPillNumber');
     }
-    return '$left-$afterLastTakenPillNumber番';
+    return L.withNumber('$left-$afterLastTakenPillNumber');
   }
 
   static String revert({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
     if (beforeLastTakenPillNumber == (afterLastTakenPillNumber + 1)) {
-      return '$beforeLastTakenPillNumber番';
+      return L.withNumber('$beforeLastTakenPillNumber');
     }
-    return '$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}番';
+    return L.withNumber('$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}');
   }
 
   static String changedPillNumber({required int beforeTodayPillNumber, required int afterTodayPillNumber}) =>
-      '$beforeTodayPillNumber→$afterTodayPillNumber番';
+      L.withNumber('$beforeTodayPillNumber→$afterTodayPillNumber');
 
   static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null || before.beginPillNumber == null) {
-      return '1→${value.afterDisplayNumberSetting.beginPillNumber}番';
+      return L.withNumber('1→${value.afterDisplayNumberSetting.beginPillNumber}');
     }
-    return '${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}番';
+    return L.withNumber('${before.beginPillNumber}→${value.afterDisplayNumberSetting.beginPillNumber}');
   }
 
   static String changedEndDisplayNumberSetting(ChangedEndDisplayNumberValue value) {
     final before = value.beforeDisplayNumberSetting;
     if (before == null || before.endPillNumber == null) {
-      return '1→${value.afterDisplayNumberSetting.endPillNumber}番';
+      return L.withNumber('1→${value.afterDisplayNumberSetting.endPillNumber}');
     }
-    return '${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}番';
+    return L.withNumber('${before.endPillNumber}→${value.afterDisplayNumberSetting.endPillNumber}');
   }
 
-  static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? '${pillSheetIDs.length}枚' : hyphen();
+  static String pillSheetCount(List<String> pillSheetIDs) => pillSheetIDs.isNotEmpty ? L.withPillSheetCount(pillSheetIDs.length) : hyphen();
 
   static String changedRestDuration(ChangedRestDurationValue value) {
     final before = value.beforeRestDuration;

@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -56,9 +57,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Row(children: [
-                const Text(
-                  'シートの服用日数を変更',
-                  style: TextStyle(
+                Text(
+                  L.changePillDaysForSheet,
+                  style: const TextStyle(
                     color: TextColor.main,
                     fontSize: 20,
                     fontWeight: FontWeight.w500,
@@ -67,7 +68,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                 ),
                 const Spacer(),
                 RedTextButton(
-                  text: '変更',
+                  text: L.change,
                   onPressed: () async {
                     analytics.logEvent(
                       name: 'sheet_change_display_number_setting',
@@ -82,11 +83,11 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     await registerReminderLocalNotification();
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          duration: Duration(
+                        SnackBar(
+                          duration: const Duration(
                             seconds: 2,
                           ),
-                          content: Text('始まりと終わりの番号を変更しました'),
+                          content: Text(L.changedStartAndEndNumbers),
                         ),
                       );
                       Navigator.of(context).popUntil((route) => route.isFirst);
@@ -106,9 +107,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         children: [
                           SvgPicture.asset('images/begin_display_number_setting.svg'),
                           const SizedBox(width: 4),
-                          const Text(
-                            '服用日数の始まり',
-                            style: TextStyle(
+                          Text(
+                            L.startOfPillDays,
+                            style: const TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 12,
                               fontWeight: FontWeight.w700,
@@ -120,9 +121,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                       const SizedBox(height: 16),
                       Row(
                         children: [
-                          const Text(
-                            '服用',
-                            style: TextStyle(
+                          Text(
+                            L.taking,
+                            style: const TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
@@ -163,9 +164,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                             ),
                           ),
                           const SizedBox(width: 5),
-                          const Text(
-                            '番からスタート',
-                            style: TextStyle(
+                          Text(
+                            L.startFromNumber,
+                            style: const TextStyle(
                               fontFamily: FontFamily.japanese,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
@@ -181,7 +182,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              '前回のシートの最後：${beforePillSheetGroup.sequentialEstimatedEndPillNumber}日目',
+                              L.estimatedEndPillNumber(beforePillSheetGroup.sequentialEstimatedEndPillNumber),
                               style: const TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
@@ -199,9 +200,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                     children: [
                       SvgPicture.asset('images/end_display_number_setting.svg'),
                       const SizedBox(width: 4),
-                      const Text(
-                        '服用日数の終わり',
-                        style: TextStyle(
+                      Text(
+                        L.changeEndOfPillDays,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 12,
                           fontWeight: FontWeight.w700,
@@ -247,9 +248,9 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                         ),
                       ),
                       const SizedBox(width: 5),
-                      const Text(
-                        '番に変更',
-                        style: TextStyle(
+                      Text(
+                        L.changedToNumber,
+                        style: const TextStyle(
                           fontFamily: FontFamily.japanese,
                           fontSize: 14,
                           fontWeight: FontWeight.w400,

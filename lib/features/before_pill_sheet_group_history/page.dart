@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/features/before_pill_sheet_group_history/component/pill_sheet_modified_history_list.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/setting.dart';
@@ -66,10 +67,10 @@ class _Page extends HookConsumerWidget {
             onPressed: () => Navigator.of(context).pop(),
           ),
           backgroundColor: PilllColors.white,
-          title: const Text('前回のピルシートグループ'),
+          title: Text(L.previousPillSheetGroup),
           foregroundColor: TextColor.main,
         ),
-        body: const Center(child: Text('前回のピルシートグループがまだ存在しません')),
+        body: Center(child: Text(L.previousPillSheetGroupNotFound)),
       );
     }
 
@@ -95,7 +96,7 @@ class _Page extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         backgroundColor: PilllColors.white,
-        title: const Text('前回のピルシートグループ'),
+        title: Text(L.previousPillSheetGroup),
         foregroundColor: TextColor.main,
       ),
       body: SingleChildScrollView(

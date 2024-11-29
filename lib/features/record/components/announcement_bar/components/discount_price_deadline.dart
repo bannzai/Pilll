@@ -4,7 +4,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/provider/user.dart';
 
 class DiscountPriceDeadline extends HookConsumerWidget {
   final DateTime discountEntitlementDeadlineDate;
@@ -17,11 +20,19 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final user = ref.watch(userProvider).valueOrNull;
     final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
-    if (difference.inSeconds <= 0) {
+    final annualPackage = user != null ? ref.watch(annualPackageProvider(user)) : null;
+    final monthlyPremiumPackage = user != null ? ref.watch(monthlyPremiumPackageProvider(user)) : null;
+    if (difference.inSeconds <= 0 || annualPackage == null || monthlyPremiumPackage == null) {
       return Container();
     }
+
     final countdown = discountPriceDeadlineCountdownString(difference);
+    // NOTE: [DiscountPercent]
+    final offPercentForMonthlyPremiumPackage =
+        ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100).toInt();
+
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
       color: PilllColors.primary,
@@ -32,9 +43,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                '''
-プレミアム登録で引き続きすべての機能が利用できます
-$countdown内の購入で58%OFF!''',
+                '${L.premiumIntroductionDiscountPriceDeadline}\n${L.countdownForDiscountPriceDeadline(countdown, offPercentForMonthlyPremiumPackage)}',
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

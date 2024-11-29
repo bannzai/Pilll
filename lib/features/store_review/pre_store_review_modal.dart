@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/web_view.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -31,9 +32,9 @@ class PreStoreReviewModal extends HookConsumerWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const Text(
-              'Pilllの感想をお聞かせください',
-              style: TextStyle(
+            Text(
+              L.shareFeedback,
+              style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.w700,
                 fontFamily: FontFamily.japanese,
@@ -69,7 +70,7 @@ class PreStoreReviewModal extends HookConsumerWidget {
                   );
                   navigator.pop();
                 },
-                text: '決定',
+                text: L.confirm,
               ),
             ],
           ],
@@ -115,8 +116,10 @@ class PreStoreReviewModal extends HookConsumerWidget {
                   ),
                 ),
                 const SizedBox(height: 16),
-                Text(target == PreStoreReviewModalSelection.good ? '満足している' : '満足では無い',
-                    style: const TextStyle(color: PilllColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese)),
+                Text(
+                  target == PreStoreReviewModalSelection.good ? L.satisfied : L.notSatisfied,
+                  style: const TextStyle(color: PilllColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese),
+                ),
               ],
             ),
           ),
@@ -142,22 +145,24 @@ class _ThanksDialog extends StatelessWidget {
         Icons.thumb_up,
         color: PilllColors.primary,
       ),
-      content: const Column(
+      content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text('ご協力ありがとうございます',
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-                color: TextColor.main,
-              )),
-          SizedBox(
+          Text(
+            L.thankYouForCooperation,
+            style: const TextStyle(
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 16,
+              color: TextColor.main,
+            ),
+          ),
+          const SizedBox(
             height: 15,
           ),
-          Text('よろしければサービス改善のためのアンケートにもご協力ください',
-              style: TextStyle(
+          Text(L.surveyForServiceImprovement,
+              style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w300,
                 fontSize: 14,
@@ -167,7 +172,7 @@ class _ThanksDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: '協力する',
+          text: L.participate,
           onPressed: () async {
             final String uri;
             switch (goodOrBad) {
@@ -180,7 +185,7 @@ class _ThanksDialog extends StatelessWidget {
             }
             await Navigator.of(context).push(
               WebViewPageRoute.route(
-                title: 'サービス改善アンケート',
+                title: L.serviceImprovementSurvey,
                 url: uri,
               ),
             );
@@ -191,7 +196,7 @@ class _ThanksDialog extends StatelessWidget {
           },
         ),
         AlertButton(
-          text: 'しない',
+          text: L.notHelp,
           onPressed: () async {
             navigator.pop();
           },
@@ -208,9 +213,9 @@ class _CompleteDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      title: const Text(
-        'ご協力頂きありがとうございます',
-        style: TextStyle(
+      title: Text(
+        L.thankYouForCooperation,
+        style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontSize: 17,
           fontWeight: FontWeight.w600,
@@ -218,12 +223,12 @@ class _CompleteDialog extends StatelessWidget {
         ),
         textAlign: TextAlign.center,
       ),
-      content: const Column(
+      content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'いただいた意見は今後の改善へと活用させていただきます。',
-            style: TextStyle(
+            L.feedbackUsage,
+            style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontSize: 14,
               fontWeight: FontWeight.w300,
@@ -234,7 +239,7 @@ class _CompleteDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AlertButton(
-          text: '閉じる',
+          text: L.close,
           onPressed: () async {
             analytics.logEvent(name: 'close_pre_store_review_modal_complete_dialog');
             Navigator.of(context).pop();

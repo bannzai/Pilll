@@ -4,6 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/diagonal_striped_line.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class CalendarNextPillSheetBand extends StatelessWidget {
   const CalendarNextPillSheetBand({
@@ -31,7 +32,7 @@ class CalendarNextPillSheetBand extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.only(left: 10),
-            child: Text(isLineBreak ? '' : '新しいシート開始 ▶︎',
+            child: Text(isLineBreak ? '' : L.newPillSheetStart,
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,

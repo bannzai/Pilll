@@ -2,6 +2,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/features/localizations/l.dart';
 
 class DailyTakenMessageTextField extends StatelessWidget {
   final ValueNotifier<String> dailyTakenMessage;
@@ -23,9 +24,9 @@ class DailyTakenMessageTextField extends StatelessWidget {
         focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(color: PilllColors.secondary),
         ),
-        label: const Text(
-          '通常',
-          style: TextStyle(
+        label: Text(
+          L.normal,
+          style: const TextStyle(
             color: TextColor.darkGray,
             fontFamily: FontFamily.japanese,
             fontSize: 12,
@@ -33,9 +34,9 @@ class DailyTakenMessageTextField extends StatelessWidget {
           ),
         ),
         counter: Row(children: [
-          const Text(
-            '飲み忘れていない場合の通知文言を変更できます',
-            style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+          Text(
+            L.changeDailyNotificationMessage,
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
           ),
           const Spacer(),
           if (dailyTakenMessage.value.characters.isNotEmpty)
