@@ -2087,6 +2087,10 @@
     "@changePausePeriod": {
         "description": "Change pause period"
     },
+    "changedPausePeriod": "Pause period has been changed",
+    "@changedPausePeriod": {
+        "description": "Pause period has been changed"
+    },
     "changedToDate": "Changed to {date}",
     "@changedToDate": {
         "description": "Changed to {date}",

@@ -2087,6 +2087,10 @@
     "@changePausePeriod": {
         "description": "복용 쉬기 기간 변경"
     },
+    "changedPausePeriod": "복용 쉬기 기간을 변경했습니다",
+    "@changedPausePeriod": {
+        "description": "복용 쉬기 기간을 변경했습니다"
+    },
     "changedToDate": "{date}로 변경했습니다",
     "@changedToDate": {
         "description": "{date}로 변경했습니다",

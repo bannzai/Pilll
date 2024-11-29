@@ -2087,6 +2087,10 @@
   "@changePausePeriod": {
     "description": "服用お休み期間変更"
   },
+  "changedPausePeriod": "服用お休み期間を変更しました",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
   "changedToDate": "{date}に変更しました",
   "@changedToDate": {
     "description": "{date}に変更しました",
