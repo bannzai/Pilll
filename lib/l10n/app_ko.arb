@@ -1745,7 +1745,7 @@
     },
     "purchaseErrorInvalidPromotionalOfferError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidPromotionalOfferError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최��� 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -2246,15 +2246,19 @@
             }
         }
     },
-    "premiumIntroductionDiscountPriceDeadline": "{offPercent}% 할인된 가격으로 구매할 수 있는 기한 {countdown}",
+    "premiumIntroductionDiscountPriceDeadline": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다",
     "@premiumIntroductionDiscountPriceDeadline": {
-        "description": "{offPercent}% 할인된 가격으로 구매할 수 있는 기한 {countdown}",
+        "description": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다"
+    },
+    "countdownForDiscountPriceDeadline": "{countdown} 내 구매 시 {offPercent}% 할인",
+    "@countdownForDiscountPriceDeadline": {
+        "description": "{countdown} 내 구매 시 {offPercent}% 할인",
         "placeholders": {
-            "offPercent": {
-                "type": "int"
-            },
             "countdown": {
                 "type": "String"
+            },
+            "offPercent": {
+                "type": "int"
             }
         }
     }

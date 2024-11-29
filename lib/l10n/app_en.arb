@@ -2246,9 +2246,13 @@
             }
         }
     },
-    "premiumIntroductionDiscountPriceDeadline": "{offPercent}% OFF for purchases within {countdown}",
+    "premiumIntroductionDiscountPriceDeadline": "You can continue to use all features with premium registration",
     "@premiumIntroductionDiscountPriceDeadline": {
-        "description": "20% OFF for purchases within 00:05:00",
+        "description": "You can continue to use all features with premium registration"
+    },
+    "countdownForDiscountPriceDeadline": "{countdown} left to purchase with {offPercent}% OFF",
+    "@countdownForDiscountPriceDeadline": {
+        "description": "{countdown} left to purchase with {offPercent}% OFF",
         "placeholders": {
             "countdown": {
                 "type": "String"
