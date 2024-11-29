@@ -2195,13 +2195,13 @@
       }
     }
   },
-  "changeStartOfPillDays": "服用日数の始まり",
+  "changeStartOfPillDays": "服用日数の始まりを変更",
   "@changeStartOfPillDays": {
-    "description": "服用日数の始まり"
+    "description": "服用日数の始まりを変更"
   },
-  "changeEndOfPillDays": "服用日数の終わり",
+  "changeEndOfPillDays": "服用日数の終わりを変更",
   "@changeEndOfPillDays": {
-    "description": "服用日数の終わり"
+    "description": "服用日数の終わりを変更"
   },
   "cannotUpdateToReplacePillSheet": "ピルシートの置き換えによる更新できません id: {id}",
   "@cannotUpdateToReplacePillSheet": {
