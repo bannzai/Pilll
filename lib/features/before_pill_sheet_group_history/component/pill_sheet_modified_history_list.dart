@@ -26,7 +26,7 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
             );
           },
           loading: () => const Indicator(),
-          error: (e, _) => Text(L.cannotUpdateToReplacePillSheet(e.toString())),
+          error: (e, _) => Text(L.failedToGetPillSheetHistory(e.toString())),
         );
   }
 }
