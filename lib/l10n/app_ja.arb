@@ -1289,9 +1289,9 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": " 日間生理が続く",
+  "daysMenstruationLasts": "日間生理が続く",
   "@daysMenstruationLasts": {
-    "description": " 日間生理が続く"
+    "description": "日間生理が続く"
   },
   "selectPillNumberForMenstruationStart": "生理がはじまるピル番号をタップ",
   "@selectPillNumberForMenstruationStart": {
