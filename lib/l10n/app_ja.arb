@@ -2173,9 +2173,9 @@
   "@editPauseStartDate": {
     "description": "服用お休み開始日を編集"
   },
-  "shareWithFriends": "友達と共有",
+  "shareWithFriends": "友達に教える",
   "@shareWithFriends": {
-    "description": "友達と共有"
+    "description": "友達に教える"
   },
   "termsOfService": "利用規約",
   "@termsOfService": {
