@@ -20,17 +20,11 @@ Diary _$DiaryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Diary {
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get date =>
-      throw _privateConstructorUsedError; // NOTE: OLD data does't have createdAt
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get date => throw _privateConstructorUsedError; // NOTE: OLD data does't have createdAt
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt => throw _privateConstructorUsedError;
-  PhysicalConditionStatus? get physicalConditionStatus =>
-      throw _privateConstructorUsedError;
+  PhysicalConditionStatus? get physicalConditionStatus => throw _privateConstructorUsedError;
   List<String> get physicalConditions => throw _privateConstructorUsedError;
   bool get hasSex => throw _privateConstructorUsedError;
   String get memo => throw _privateConstructorUsedError;
@@ -42,18 +36,11 @@ mixin _$Diary {
 
 /// @nodoc
 abstract class $DiaryCopyWith<$Res> {
-  factory $DiaryCopyWith(Diary value, $Res Function(Diary) then) =
-      _$DiaryCopyWithImpl<$Res, Diary>;
+  factory $DiaryCopyWith(Diary value, $Res Function(Diary) then) = _$DiaryCopyWithImpl<$Res, Diary>;
   @useResult
   $Res call(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime date,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? createdAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
@@ -61,8 +48,7 @@ abstract class $DiaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DiaryCopyWithImpl<$Res, $Val extends Diary>
-    implements $DiaryCopyWith<$Res> {
+class _$DiaryCopyWithImpl<$Res, $Val extends Diary> implements $DiaryCopyWith<$Res> {
   _$DiaryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -111,20 +97,12 @@ class _$DiaryCopyWithImpl<$Res, $Val extends Diary>
 
 /// @nodoc
 abstract class _$$DiaryImplCopyWith<$Res> implements $DiaryCopyWith<$Res> {
-  factory _$$DiaryImplCopyWith(
-          _$DiaryImpl value, $Res Function(_$DiaryImpl) then) =
-      __$$DiaryImplCopyWithImpl<$Res>;
+  factory _$$DiaryImplCopyWith(_$DiaryImpl value, $Res Function(_$DiaryImpl) then) = __$$DiaryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime date,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      DateTime? createdAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
@@ -132,12 +110,8 @@ abstract class _$$DiaryImplCopyWith<$Res> implements $DiaryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$DiaryImplCopyWithImpl<$Res>
-    extends _$DiaryCopyWithImpl<$Res, _$DiaryImpl>
-    implements _$$DiaryImplCopyWith<$Res> {
-  __$$DiaryImplCopyWithImpl(
-      _$DiaryImpl _value, $Res Function(_$DiaryImpl) _then)
-      : super(_value, _then);
+class __$$DiaryImplCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res, _$DiaryImpl> implements _$$DiaryImplCopyWith<$Res> {
+  __$$DiaryImplCopyWithImpl(_$DiaryImpl _value, $Res Function(_$DiaryImpl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -183,14 +157,8 @@ class __$$DiaryImplCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$DiaryImpl extends _Diary {
   const _$DiaryImpl(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.date,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      required this.createdAt,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
       this.physicalConditionStatus,
       required final List<String> physicalConditions,
       required this.hasSex,
@@ -198,27 +166,21 @@ class _$DiaryImpl extends _Diary {
       : _physicalConditions = physicalConditions,
         super._();
 
-  factory _$DiaryImpl.fromJson(Map<String, dynamic> json) =>
-      _$$DiaryImplFromJson(json);
+  factory _$DiaryImpl.fromJson(Map<String, dynamic> json) => _$$DiaryImplFromJson(json);
 
   @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime date;
 // NOTE: OLD data does't have createdAt
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? createdAt;
   @override
   final PhysicalConditionStatus? physicalConditionStatus;
   final List<String> _physicalConditions;
   @override
   List<String> get physicalConditions {
-    if (_physicalConditions is EqualUnmodifiableListView)
-      return _physicalConditions;
+    if (_physicalConditions is EqualUnmodifiableListView) return _physicalConditions;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_physicalConditions);
   }
@@ -239,33 +201,22 @@ class _$DiaryImpl extends _Diary {
         (other.runtimeType == runtimeType &&
             other is _$DiaryImpl &&
             (identical(other.date, date) || other.date == date) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(
-                    other.physicalConditionStatus, physicalConditionStatus) ||
-                other.physicalConditionStatus == physicalConditionStatus) &&
-            const DeepCollectionEquality()
-                .equals(other._physicalConditions, _physicalConditions) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
+            (identical(other.physicalConditionStatus, physicalConditionStatus) || other.physicalConditionStatus == physicalConditionStatus) &&
+            const DeepCollectionEquality().equals(other._physicalConditions, _physicalConditions) &&
             (identical(other.hasSex, hasSex) || other.hasSex == hasSex) &&
             (identical(other.memo, memo) || other.memo == memo));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      date,
-      createdAt,
-      physicalConditionStatus,
-      const DeepCollectionEquality().hash(_physicalConditions),
-      hasSex,
-      memo);
+  int get hashCode =>
+      Object.hash(runtimeType, date, createdAt, physicalConditionStatus, const DeepCollectionEquality().hash(_physicalConditions), hasSex, memo);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$DiaryImplCopyWith<_$DiaryImpl> get copyWith =>
-      __$$DiaryImplCopyWithImpl<_$DiaryImpl>(this, _$identity);
+  _$$DiaryImplCopyWith<_$DiaryImpl> get copyWith => __$$DiaryImplCopyWithImpl<_$DiaryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -277,14 +228,9 @@ class _$DiaryImpl extends _Diary {
 
 abstract class _Diary extends Diary {
   const factory _Diary(
-      {@JsonKey(
-          fromJson: NonNullTimestampConverter.timestampToDateTime,
-          toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime date,
-      @JsonKey(
-          fromJson: TimestampConverter.timestampToDateTime,
-          toJson: TimestampConverter.dateTimeToTimestamp)
-      required final DateTime? createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
       final PhysicalConditionStatus? physicalConditionStatus,
       required final List<String> physicalConditions,
       required final bool hasSex,
@@ -294,14 +240,10 @@ abstract class _Diary extends Diary {
   factory _Diary.fromJson(Map<String, dynamic> json) = _$DiaryImpl.fromJson;
 
   @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date;
   @override // NOTE: OLD data does't have createdAt
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt;
   @override
   PhysicalConditionStatus? get physicalConditionStatus;
@@ -313,6 +255,5 @@ abstract class _Diary extends Diary {
   String get memo;
   @override
   @JsonKey(ignore: true)
-  _$$DiaryImplCopyWith<_$DiaryImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$DiaryImplCopyWith<_$DiaryImpl> get copyWith => throw _privateConstructorUsedError;
 }
