@@ -1954,6 +1954,10 @@
     "@pressAndHoldNotificationToRecordPillTaking": {
         "description": "You can record taking by long-pressing the notification"
     },
+    "letsTryIt": "Please try it!",
+    "@letsTryIt": {
+        "description": "Please try it!"
+    },
     "trialDeadlineDateOffsetDay": "You can use all features for {number} days!",
     "@trialDeadlineDateOffsetDay": {
         "description": "You can use all features for {number} days!",

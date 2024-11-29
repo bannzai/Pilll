@@ -1954,6 +1954,10 @@
   "@pressAndHoldNotificationToRecordPillTaking": {
     "description": "通知を長押しすると服用記録ができます"
   },
+  "letsTryIt": "ぜひお試しください",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
   "trialDeadlineDateOffsetDay": "{number}日間すべての機能が使えます！",
   "@trialDeadlineDateOffsetDay": {
     "description": "{number}日間すべての機能が使えます！",

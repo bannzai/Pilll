@@ -1745,7 +1745,7 @@
     },
     "purchaseErrorInvalidPromotionalOfferError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
     "@purchaseErrorInvalidPromotionalOfferError": {
-        "description": "원인 불명의 오류입니다. 최��� 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
         "placeholders": {
             "errorCode": {
                 "type": "String"
@@ -1953,6 +1953,10 @@
     "pressAndHoldNotificationToRecordPillTaking": "알림을 길게 누르면 복용 기록을 할 수 있습니다",
     "@pressAndHoldNotificationToRecordPillTaking": {
         "description": "알림을 길게 누르면 복용 기록을 할 수 있습니다"
+    },
+    "letsTryIt": "Please try it!",
+    "@letsTryIt": {
+        "description": "Please try it!"
     },
     "trialDeadlineDateOffsetDay": "{number}일간 모든 기능을 사용할 수 있습니다!",
     "@trialDeadlineDateOffsetDay": {

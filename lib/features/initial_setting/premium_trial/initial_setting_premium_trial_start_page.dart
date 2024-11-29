@@ -97,7 +97,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        L.pressAndHoldNotificationToRecordPillTaking,
+                        '${L.pressAndHoldNotificationToRecordPillTaking}\n${L.letsTryIt}',
                         style: const TextStyle(
                           color: TextColor.main,
                           fontSize: 14,
