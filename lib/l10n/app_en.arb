@@ -893,9 +893,9 @@
             }
         }
     },
-    "monthlyPrice": "({monthlyPriceString}/month)",
+    "monthlyPrice": "{monthlyPriceString}/month",
     "@monthlyPrice": {
-        "description": "({monthlyPriceString}/month)",
+        "description": "{monthlyPriceString}/month",
         "placeholders": {
             "monthlyPriceString": {
                 "type": "String"

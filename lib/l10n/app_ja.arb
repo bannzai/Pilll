@@ -893,9 +893,9 @@
       }
     }
   },
-  "monthlyPrice": "（{monthlyPriceString}/月）",
+  "monthlyPrice": "{monthlyPriceString}/月",
   "@monthlyPrice": {
-    "description": "（{monthlyPriceString}/月）",
+    "description": "{monthlyPriceString}/月",
     "placeholders": {
       "monthlyPriceString": {
         "type": "String"

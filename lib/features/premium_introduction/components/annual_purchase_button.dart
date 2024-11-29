@@ -68,7 +68,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  L.monthlyPrice(monthlyPriceString),
+                  '(${L.monthlyPrice(monthlyPriceString)})',
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
