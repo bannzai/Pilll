@@ -1310,9 +1310,9 @@
   "@newPillSheetStart": {
     "description": "新しいピルシート開始 ▶︎"
   },
-  "selectPillType": "ピルの種類を選ぶ",
+  "selectPillType": "ピルの種類を選択",
   "@selectPillType": {
-    "description": "ピルの種類を選ぶ"
+    "description": "ピルの種類を選択"
   },
   "twentyOnePills": "21錠",
   "@twentyOnePills": {
