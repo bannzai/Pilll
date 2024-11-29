@@ -2112,6 +2112,10 @@
     "@startPauseTaking": {
         "description": "Start pause taking"
     },
+    "startedPauseTaking": "Started pause taking",
+    "@startedPauseTaking": {
+        "description": "Started pause taking"
+    },
     "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} number",
     "@sequentialLastTakenPlusOnePillNumber": {
         "description": "{pillSheetGroupSequentialLastTakenPillNumber} number",

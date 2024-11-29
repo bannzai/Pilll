@@ -2112,6 +2112,10 @@
     "@startPauseTaking": {
         "description": "복용을 쉬기 시작"
     },
+    "startedPauseTaking": "복용을 쉬기를 시작했습니다",
+    "@startedPauseTaking": {
+        "description": "복용을 쉬기를 시작했습니다"
+    },
     "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번",
     "@sequentialLastTakenPlusOnePillNumber": {
         "description": "{pillSheetGroupSequentialLastTakenPillNumber}번",
