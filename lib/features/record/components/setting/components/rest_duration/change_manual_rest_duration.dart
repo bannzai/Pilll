@@ -39,7 +39,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
           duration: const Duration(
             seconds: 2,
           ),
-          content: Text(L.changePausePeriod),
+          content: Text(L.editPausePeriod),
         ),
       );
 
