@@ -24,7 +24,9 @@ class PillSheetAppearanceModeMigrationResolver extends HookConsumerWidget {
     useEffect(() {
       final f = (() async {
         final settingData = setting.asData?.value;
-        final latestPillSheetGroupData = latestPillSheetGroup.asData?.value;
+        // latestPillSheetGroupはuserに対して0件の場合もあるので、isLoadingをチェックしている
+        final latestPillSheetGroupData =
+            !latestPillSheetGroup.isLoading && latestPillSheetGroup.asData?.value != null ? latestPillSheetGroup.asData?.value : null;
         if (settingData == null || latestPillSheetGroupData == null) {
           return;
         }
