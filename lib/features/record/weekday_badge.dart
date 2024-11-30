@@ -26,7 +26,7 @@ class WeekdayBadge extends StatelessWidget {
             style: const TextStyle(
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w600,
-              fontSize: 10,
+              fontSize: 9,
             ).merge(TextStyle(color: weekday.weekdayColor()))),
       ),
     );

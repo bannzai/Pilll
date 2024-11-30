@@ -38,8 +38,8 @@ class MenstruationRecordButton extends HookConsumerWidget {
       );
     }
 
-    return SizedBox(
-      width: 180,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
       child: PrimaryButton(
         onPressed: () async {
           analytics.logEvent(name: 'pressed_menstruation_record');
