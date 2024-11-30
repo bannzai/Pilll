@@ -25,19 +25,20 @@ class PillSheetAppearanceModeMigrationResolver extends HookConsumerWidget {
       final f = (() async {
         final settingData = setting.asData?.value;
         // latestPillSheetGroupはuserに対して0件の場合もあるので、isLoadingをチェックしている
-        final latestPillSheetGroupData =
-            !latestPillSheetGroup.isLoading && latestPillSheetGroup.asData?.value != null ? latestPillSheetGroup.asData?.value : null;
-        if (settingData == null || latestPillSheetGroupData == null) {
+        if (settingData == null || latestPillSheetGroup.isLoading) {
           return;
         }
+        final latestPillSheetGroupData = latestPillSheetGroup.asData?.value;
 
         try {
           // NOTE: [Migrate:PillSheetAppearanceMode] SelectAppearanceModeModalでもsettingと同期をとっている。なので、移行が完了した後も実行し続けてもずれることはない
-          await setPillSheetGroup(
-            latestPillSheetGroupData.copyWith(
-              pillSheetAppearanceMode: settingData.pillSheetAppearanceMode,
-            ),
-          );
+          if (latestPillSheetGroupData != null) {
+            await setPillSheetGroup(
+              latestPillSheetGroupData.copyWith(
+                pillSheetAppearanceMode: settingData.pillSheetAppearanceMode,
+              ),
+            );
+          }
           if (!resolved.value) {
             resolved.value = true;
           }
