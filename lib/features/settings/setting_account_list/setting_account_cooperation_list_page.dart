@@ -255,15 +255,11 @@ class SettingAccountCooperationRow extends StatelessWidget {
         ],
       );
     } else {
-      return SizedBox(
-        height: 40,
-        width: 88,
-        child: SmallAppOutlinedButton(
-          onPressed: () async {
-            onTap();
-          },
-          text: L.linkAccount,
-        ),
+      return SmallAppOutlinedButton(
+        onPressed: () async {
+          onTap();
+        },
+        text: L.linkAccount,
       );
     }
   }
