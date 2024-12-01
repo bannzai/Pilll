@@ -2277,5 +2277,14 @@
         "type": "int"
       }
     }
+  },
+  "pillReminderChanged": "服用通知を{value}にしました",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   }
 }
