@@ -2277,5 +2277,14 @@
                 "type": "int"
             }
         }
+    },
+    "pillReminderChanged": "피임약 알림을 {value}로 변경했습니다",
+    "@pillReminderChanged": {
+        "description": "피임약 알림을 {value}로 변경했습니다",
+        "placeholders": {
+            "value": {
+                "type": "String"
+            }
+        }
     }
 }

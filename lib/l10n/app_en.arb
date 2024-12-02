@@ -2277,5 +2277,14 @@
                 "type": "int"
             }
         }
+    },
+    "pillReminderChanged": "Pill reminder has been changed to {value}",
+    "@pillReminderChanged": {
+        "description": "Pill reminder has been changed to {value}",
+        "placeholders": {
+            "value": {
+                "type": "String"
+            }
+        }
     }
 }

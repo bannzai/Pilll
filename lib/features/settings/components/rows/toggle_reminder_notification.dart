@@ -50,7 +50,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
             SnackBar(
               duration: const Duration(seconds: 2),
               content: Text(
-                "服用通知を${value ? "ON" : "OFF"}にしました",
+                L.pillReminderChanged(value ? 'ON' : 'OFF'),
               ),
             ),
           );

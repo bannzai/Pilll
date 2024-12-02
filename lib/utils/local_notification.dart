@@ -455,7 +455,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          final title = L.takePillReminder;
+          final title = L.pillReminder;
           futures.add(
             Future(() async {
               try {
