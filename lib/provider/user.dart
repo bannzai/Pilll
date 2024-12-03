@@ -263,21 +263,3 @@ class DisableShouldAskCancelReason {
     }, SetOptions(merge: true));
   }
 }
-
-class ApplyShareRewardPremiumTrial {
-  final DatabaseConnection databaseConnection;
-  ApplyShareRewardPremiumTrial(this.databaseConnection);
-
-  Future<void> call(User user) async {
-    await databaseConnection.userReference().set(
-          user.copyWith(
-            beginTrialDate: now(),
-            trialDeadlineDate: now().addDays(14).endOfDay(),
-            appliedShareRewardPremiumTrialCount: user.appliedShareRewardPremiumTrialCount + 1,
-          ),
-          SetOptions(merge: true),
-        );
-  }
-}
-
-final applyShareRewardPremiumTrialProvider = Provider((ref) => ApplyShareRewardPremiumTrial(ref.watch(databaseProvider)));
