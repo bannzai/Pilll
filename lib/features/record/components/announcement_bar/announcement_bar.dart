@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
-import 'package:pilll/features/record/components/announcement_bar/components/share_reward_premium_trial.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -17,8 +16,6 @@ import 'package:pilll/features/record/components/announcement_bar/components/res
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
-import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/remote_config.dart';
 
@@ -102,21 +99,6 @@ class AnnouncementBar extends HookConsumerWidget {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
 
-        if (defaultTargetPlatform == TargetPlatform.iOS) {
-          final trialDeadlineDate = user.trialDeadlineDate;
-          if (trialDeadlineDate != null) {
-            if (user.appliedShareRewardPremiumTrialCount == 0) {
-              if (today().isAfter(trialDeadlineDate.addDays(90))) {
-                return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
-              }
-            } else {
-              final range = DateRange(trialDeadlineDate.addDays(90), trialDeadlineDate.addDays(93));
-              if (range.inRange(today())) {
-                return ShareRewardPremiumTrialAnnoumcenetBar(user: user);
-              }
-            }
-          }
-        }
         return const AdMob();
       }
     } else {
