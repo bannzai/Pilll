@@ -27,7 +27,6 @@ import 'package:pilll/entity/pilll_ads.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/auth.dart';
-import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
