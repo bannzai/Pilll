@@ -1,10 +1,12 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:home_widget/home_widget.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -28,6 +30,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
+    // 日本語のフォーマットに頼っている部分があるので、jaは絶対に初期化しておく
+    await (initializeDateFormatting('ja'), initializeDateFormatting(Platform.localeName)).wait;
+
     WidgetsFlutterBinding.ensureInitialized();
     await (MobileAds.instance.initialize(), Firebase.initializeApp()).wait;
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
