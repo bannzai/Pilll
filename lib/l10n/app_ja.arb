@@ -254,10 +254,6 @@
   "@customizeMedicationNotifications": {
     "description": "服用通知のカスタマイズ"
   },
-  "customizeNotificationText": "服用通知の文言のカスタマイズができます",
-  "@customizeNotificationText": {
-    "description": "服用通知の文言のカスタマイズができます"
-  },
   "xCanBeCustomized": "{x}のカスタマイズができます",
   "@xCanBeCustomized": {
     "description": "{x}のカスタマイズができます",
@@ -1354,18 +1350,18 @@
   "@choosePillType": {
     "description": "ピルの種類を選ぶ"
   },
-  "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
   "@notificationForNotTakenPeriod": {
-    "description": "${pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
     "placeholders": {
       "pillSheetPillSheetTypeNotTakenWord": {
         "type": "String"
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
-    "description": "通知オフの場合は、${pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
     "placeholders": {
       "pillSheetPillSheetTypeNotTakenWord": {
         "type": "String"
@@ -1380,18 +1376,18 @@
   "@pilllDescription": {
     "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
   },
-  "reachedMaximumCountOfReminderTimes": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+  "reachedMaximumCountOfReminderTimes": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
   "@reachedMaximumCountOfReminderTimes": {
-    "description": "登録できる上限に達しました。${ReminderTimeMaximumCount}件以内に収めてください",
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
     "placeholders": {
       "ReminderTimeMaximumCount": {
         "type": "int"
       }
     }
   },
-  "minimumCountOfReminderTimes": "通知時間は最低${ReminderTimeMinimumCount}件必要です",
+  "minimumCountOfReminderTimes": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
   "@minimumCountOfReminderTimes": {
-    "description": "通知時間は最低${ReminderTimeMinimumCount}件必要です",
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
     "placeholders": {
       "ReminderTimeMinimumCount": {
         "type": "int"
@@ -1815,9 +1811,9 @@
   "@enableHealthKitFromSettings": {
     "description": "設定アプリよりヘルスケアを有効にしてください"
   },
-  "accountAlreadyLinked": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+  "accountAlreadyLinked": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
   "@accountAlreadyLinked": {
-    "description": "この${accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
@@ -1827,9 +1823,9 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
-    "description": "この${accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
@@ -1839,9 +1835,9 @@
       }
     }
   },
-  "emailAlreadyInUse": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+  "emailAlreadyInUse": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
   "@emailAlreadyInUse": {
-    "description": "すでに${accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: ${exceptionMessage}",
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
@@ -1875,9 +1871,9 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },
-  "launchError": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+  "launchError": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
   "@launchError": {
-    "description": "起動時にエラーが発生しました\n${ErrorMessagesConnection}\n詳細:",
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
     "placeholders": {
       "ErrorMessagesConnection": {
         "type": "String"

@@ -254,10 +254,6 @@
     "@customizeMedicationNotifications": {
         "description": "복용 알림 커스터마이즈"
     },
-    "customizeNotificationText": "복용 알림 문구 커스터마이즈가 가능합니다",
-    "@customizeNotificationText": {
-        "description": "복용 알림 문구 커스터마이즈가 가능합니다"
-    },
     "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
     "@xCanBeCustomized": {
         "description": "{x}의 커스터마이즈가 가능합니다",
@@ -1354,18 +1350,18 @@
     "@choosePillType": {
         "description": "알약 종류 선택"
     },
-    "notificationForNotTakenPeriod": "${pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
+    "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
     "@notificationForNotTakenPeriod": {
-        "description": "${pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
+        "description": "{pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
         "placeholders": {
             "pillSheetPillSheetTypeNotTakenWord": {
                 "type": "String"
             }
         }
     },
-    "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼져 있는 경우, ${pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
+    "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼져 있는 경우, {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
     "@autoRecordForNotTakenPeriodIfNotificationOff": {
-        "description": "알림이 꺼져 있는 경우, ${pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
+        "description": "알림이 꺼져 있는 경우, {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
         "placeholders": {
             "pillSheetPillSheetTypeNotTakenWord": {
                 "type": "String"
@@ -1380,18 +1376,18 @@
     "@pilllDescription": {
         "description": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱"
     },
-    "reachedMaximumCountOfReminderTimes": "등록 가능한 상한에 도달했습니다. ${ReminderTimeMaximumCount}건 이내로 제한해 주세요",
+    "reachedMaximumCountOfReminderTimes": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
     "@reachedMaximumCountOfReminderTimes": {
-        "description": "등록 가능한 상한에 도달했습니다. ${ReminderTimeMaximumCount}건 이내로 제한해 주세요",
+        "description": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
         "placeholders": {
             "ReminderTimeMaximumCount": {
                 "type": "int"
             }
         }
     },
-    "minimumCountOfReminderTimes": "알림 시간은 최소 ${ReminderTimeMinimumCount}건 필요합니다",
+    "minimumCountOfReminderTimes": "알림 시간은 최소 {ReminderTimeMinimumCount}건 필요합니다",
     "@minimumCountOfReminderTimes": {
-        "description": "알림 시간은 최소 ${ReminderTimeMinimumCount}건 필요합니다",
+        "description": "알림 시간은 최소 {ReminderTimeMinimumCount}건 필요합니다",
         "placeholders": {
             "ReminderTimeMinimumCount": {
                 "type": "int"
@@ -1815,9 +1811,9 @@
     "@enableHealthKitFromSettings": {
         "description": "설정 앱에서 헬스케어를 활성화해 주세요"
     },
-    "accountAlreadyLinked": "이 ${accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
+    "accountAlreadyLinked": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
     "@accountAlreadyLinked": {
-        "description": "이 ${accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
+        "description": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1827,9 +1823,9 @@
             }
         }
     },
-    "accountAlreadyLinkedWithOtherPilllAccount": "이 ${accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
+    "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
     "@accountAlreadyLinkedWithOtherPilllAccount": {
-        "description": "이 ${accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
+        "description": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1839,9 +1835,9 @@
             }
         }
     },
-    "emailAlreadyInUse": "이미 ${accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
+    "emailAlreadyInUse": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
     "@emailAlreadyInUse": {
-        "description": "이미 ${accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: ${exceptionMessage}",
+        "description": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
         "placeholders": {
             "accountTypeProviderName": {
                 "type": "String"
@@ -1875,9 +1871,9 @@
     "@purchaseErrorPurchasePendingError": {
         "description": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요"
     },
-    "launchError": "시작 시 오류가 발생했습니다\n${ErrorMessagesConnection}\n상세:",
+    "launchError": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
     "@launchError": {
-        "description": "시작 시 오류가 발생했습니다\n${ErrorMessagesConnection}\n상세:",
+        "description": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
         "placeholders": {
             "ErrorMessagesConnection": {
                 "type": "String"
