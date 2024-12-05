@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -10,6 +12,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/features/settings/components/churn/churn_survey_complete_dialog.dart';
 import 'package:pilll/features/store_review/pre_store_review_modal.dart';
+import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/shared_preferences.dart';
@@ -91,6 +94,7 @@ class HomePageBody extends HookConsumerWidget {
       _screenTracking(tabController.index);
     });
 
+    final isJaLocale = ref.watch(isJaLocaleProvider);
     final isAlreadyAnsweredPreStoreReviewModal = sharedPreferences.getBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal) ?? false;
     final totalCountOfActionForTakenPill = sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
     final disableShouldAskCancelReason = ref.watch(disableShouldAskCancelReasonProvider);
@@ -119,7 +123,7 @@ class HomePageBody extends HookConsumerWidget {
           disableShouldAskCancelReason();
           // ignore: use_build_context_synchronously
           showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
-        } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10) {
+        } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10 && isJaLocale) {
           showModalBottomSheet(
             context: context,
             backgroundColor: Colors.transparent,
