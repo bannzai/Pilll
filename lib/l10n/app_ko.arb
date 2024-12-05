@@ -254,10 +254,6 @@
     "@customizeMedicationNotifications": {
         "description": "복용 알림 커스터마이즈"
     },
-    "customizeNotificationText": "복용 알림 문구 커스터마이즈가 가능합니다",
-    "@customizeNotificationText": {
-        "description": "복용 알림 문구 커스터마이즈가 가능합니다"
-    },
     "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
     "@xCanBeCustomized": {
         "description": "{x}의 커스터마이즈가 가능합니다",

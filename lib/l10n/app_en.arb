@@ -254,10 +254,6 @@
     "@customizeMedicationNotifications": {
         "description": "Customize medication notifications"
     },
-    "customizeNotificationText": "You can customize the text of the notification",
-    "@customizeNotificationText": {
-        "description": "You can customize the text of the notification"
-    },
     "xCanBeCustomized": "{x} can be customized",
     "@xCanBeCustomized": {
         "description": "{x} can be customized",
