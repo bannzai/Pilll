@@ -149,9 +149,13 @@
     "@pillReminder": {
         "description": "Pill reminder"
     },
-    "takePillReminder": "Take pill reminder",
-    "@takePillReminder": {
+    "takePillReminderChannelName": "Take pill reminder",
+    "@takePillReminderChannelName": {
         "description": "Take pill reminder"
+    },
+    "takePillReminder": "Take 💊",
+    "@takePillReminder": {
+        "description": "Take 💊"
     },
     "copyDebugInfo": "COPY DEBUG INFO",
     "@copyDebugInfo": {

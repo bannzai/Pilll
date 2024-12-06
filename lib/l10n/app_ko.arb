@@ -149,9 +149,13 @@
     "@pillReminder": {
         "description": "딜의 복용 알림"
     },
-    "takePillReminder": "알림",
-    "@takePillReminder": {
+    "takePillReminderChannelName": "알림",
+    "@takePillReminderChannelName": {
         "description": "알림"
+    },
+    "takePillReminder": "💊 복용 알림",
+    "@takePillReminder": {
+        "description": "💊 복용 알림"
     },
     "copyDebugInfo": "COPY DEBUG INFO",
     "@copyDebugInfo": {

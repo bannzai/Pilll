@@ -149,8 +149,8 @@
   "@pillReminder": {
     "description": "ピルの服用通知"
   },
-  "takePillReminder": "服用通知",
-  "@takePillReminder": {
+  "takePillReminderChannelName": "服用通知",
+  "@takePillReminderChannelName": {
     "description": "服用通知"
   },
   "copyDebugInfo": "COPY DEBUG INFO",
