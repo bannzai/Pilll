@@ -97,7 +97,7 @@ class LocalNotificationService {
       NotificationDetails(
         android: AndroidNotificationDetails(
           androidReminderNotificationChannelID,
-          L.takePillReminder,
+          L.takePillReminderChannelName,
           channelShowBadge: true,
           setAsGroupSummary: true,
           groupKey: androidReminderNotificationGroupKey,
@@ -407,7 +407,7 @@ class RegisterReminderLocalNotification {
                   NotificationDetails(
                     android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
-                      L.takePillReminder,
+                      L.takePillReminderChannelName,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
@@ -455,7 +455,7 @@ class RegisterReminderLocalNotification {
             }),
           );
         } else {
-          final title = L.pillReminder;
+          final title = L.takePillReminder;
           futures.add(
             Future(() async {
               try {
@@ -467,7 +467,7 @@ class RegisterReminderLocalNotification {
                   NotificationDetails(
                     android: AndroidNotificationDetails(
                       androidReminderNotificationChannelID,
-                      L.takePillReminder,
+                      L.takePillReminderChannelName,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
@@ -623,7 +623,7 @@ class NewPillSheetNotification {
           NotificationDetails(
             android: AndroidNotificationDetails(
               androidReminderNotificationChannelID,
-              L.takePillReminder,
+              L.takePillReminderChannelName,
               channelShowBadge: true,
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
