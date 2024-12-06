@@ -153,6 +153,10 @@
   "@takePillReminderChannelName": {
     "description": "服用通知"
   },
+  "takePillReminder": "💊の時間です",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
   "copyDebugInfo": "COPY DEBUG INFO",
   "@copyDebugInfo": {
     "description": "COPY DEBUG INFO"
