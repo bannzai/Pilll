@@ -19,7 +19,15 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final limit = useState(20);
     final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
-    final histories = historiesAsync.asData?.value ?? [];
+    final histories = useState(historiesAsync.asData?.value ?? []);
+
+    useEffect(() {
+      final fetchedHistories = historiesAsync.asData?.value ?? [];
+      if (fetchedHistories.isNotEmpty && fetchedHistories.length != histories.value.length) {
+        histories.value = fetchedHistories;
+      }
+      return null;
+    }, [historiesAsync.asData?.value]);
 
     return ref.watch(userProvider).when(
           error: (error, _) => UniversalErrorPage(
@@ -46,8 +54,8 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
               body: SafeArea(
                 child: NotificationListener<ScrollNotification>(
                   onNotification: (notification) {
-                    if (histories.isNotEmpty &&
-                        histories.length == limit.value &&
+                    if (histories.value.isNotEmpty &&
+                        histories.value.length == limit.value &&
                         notification.metrics.pixels >= notification.metrics.maxScrollExtent) {
                       print('[DEBUG] LoadNext: limit.value: ${limit.value}');
                       limit.value += 20;
@@ -66,7 +74,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                             padding: const EdgeInsets.only(bottom: 20),
                             physics: const AlwaysScrollableScrollPhysics(),
                             child: PillSheetModifiedHistoryList(
-                              pillSheetModifiedHistories: histories,
+                              pillSheetModifiedHistories: histories.value,
                               premiumOrTrial: user.premiumOrTrial,
                             ),
                           ),
