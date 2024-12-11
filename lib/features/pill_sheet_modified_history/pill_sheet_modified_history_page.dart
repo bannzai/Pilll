@@ -17,10 +17,17 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final loadingNext = useState(false);
     final limit = useState(20);
     final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithLimitProvider(limit: limit.value));
-    final histories = historiesAsync.asData?.value ?? [];
+    final histories = useState(historiesAsync.asData?.value ?? []);
+
+    useEffect(() {
+      final fetchedHistories = historiesAsync.asData?.value ?? [];
+      if (fetchedHistories.isNotEmpty && fetchedHistories.length != histories.value.length) {
+        histories.value = fetchedHistories;
+      }
+      return null;
+    }, [historiesAsync.asData?.value]);
 
     return ref.watch(userProvider).when(
           error: (error, _) => UniversalErrorPage(
@@ -47,8 +54,10 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
               body: SafeArea(
                 child: NotificationListener<ScrollNotification>(
                   onNotification: (notification) {
-                    if (!loadingNext.value && notification.metrics.pixels >= notification.metrics.maxScrollExtent && histories.isNotEmpty) {
-                      loadingNext.value = true;
+                    if (histories.value.isNotEmpty &&
+                        histories.value.length == limit.value &&
+                        notification.metrics.pixels >= notification.metrics.maxScrollExtent) {
+                      print('[DEBUG] LoadNext: limit.value: ${limit.value}');
                       limit.value += 20;
                     }
                     return true;
@@ -65,7 +74,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                             padding: const EdgeInsets.only(bottom: 20),
                             physics: const AlwaysScrollableScrollPhysics(),
                             child: PillSheetModifiedHistoryList(
-                              pillSheetModifiedHistories: histories,
+                              pillSheetModifiedHistories: histories.value,
                               premiumOrTrial: user.premiumOrTrial,
                             ),
                           ),
