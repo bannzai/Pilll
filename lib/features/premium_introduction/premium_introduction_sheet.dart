@@ -81,7 +81,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
             body: Container(
               padding: const EdgeInsets.only(top: 20),
               width: MediaQuery.of(context).size.width,
-              color: PilllColors.white,
+              color: AppColors.white,
               child: Stack(
                 children: [
                   Container(

@@ -80,10 +80,10 @@ class RecordPageBody extends HookConsumerWidget {
     final activePillSheet = pillSheetGroup?.activePillSheet;
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         titleSpacing: 0,
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
         toolbarHeight: RecordPageInformationHeaderConst.height,
         title: RecordPageInformationHeader(
           today: DateTime.now(),

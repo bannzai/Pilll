@@ -110,7 +110,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(4)),
         border: Border.all(
           width: 1,
-          color: PilllColors.border,
+          color: AppColors.border,
         ),
       ),
       child: Center(
@@ -139,7 +139,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
         borderRadius: const BorderRadius.all(Radius.circular(4)),
         border: Border.all(
           width: 1,
-          color: PilllColors.border,
+          color: AppColors.border,
         ),
       ),
       child: Center(

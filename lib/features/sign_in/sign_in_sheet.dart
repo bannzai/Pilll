@@ -92,7 +92,7 @@ class SignInSheet extends HookConsumerWidget {
   ) {
     return OutlinedButton(
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(PilllColors.appleBlack),
+        backgroundColor: WidgetStateProperty.all(AppColors.appleBlack),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(6),
@@ -157,7 +157,7 @@ class SignInSheet extends HookConsumerWidget {
         backgroundColor: WidgetStateProperty.all(Colors.white),
         shape: WidgetStateProperty.all(
           RoundedRectangleBorder(
-            side: const BorderSide(color: PilllColors.primary),
+            side: const BorderSide(color: AppColors.primary),
             borderRadius: BorderRadius.circular(6),
           ),
         ),

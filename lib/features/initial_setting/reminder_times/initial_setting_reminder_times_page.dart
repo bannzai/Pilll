@@ -24,7 +24,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -34,7 +34,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           '3/3',
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Center(
@@ -211,7 +211,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                 borderRadius: const BorderRadius.all(Radius.circular(4)),
                 border: Border.all(
                   width: 1,
-                  color: PilllColors.border,
+                  color: AppColors.border,
                 ),
               ),
               child: Center(

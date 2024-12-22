@@ -10,10 +10,10 @@ class ShadowContainer extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.only(bottom: 2),
       decoration: BoxDecoration(
-        color: PilllColors.white,
+        color: AppColors.white,
         boxShadow: [
           BoxShadow(
-            color: PilllColors.shadow,
+            color: AppColors.shadow,
             blurRadius: 6.0,
             offset: const Offset(0, 2),
           ),

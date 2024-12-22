@@ -22,7 +22,7 @@ class DailyTakenMessageTextField extends StatelessWidget {
       focusNode: focusNode,
       decoration: InputDecoration(
         focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: PilllColors.secondary),
+          borderSide: BorderSide(color: AppColors.secondary),
         ),
         label: Text(
           L.normal,

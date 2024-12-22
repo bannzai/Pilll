@@ -79,7 +79,7 @@ class ReminderTimesPageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -109,10 +109,10 @@ class ReminderTimesPageBody extends StatelessWidget {
                 ),
               );
             },
-            icon: const Icon(Icons.timer_sharp, color: PilllColors.primary),
+            icon: const Icon(Icons.timer_sharp, color: AppColors.primary),
           ),
         ],
-        backgroundColor: PilllColors.background,
+        backgroundColor: AppColors.background,
       ),
       body: SafeArea(
         child: ListView(
@@ -128,7 +128,7 @@ class ReminderTimesPageBody extends StatelessWidget {
                           padding: const EdgeInsets.only(left: 15, right: 15),
                           child: Container(
                             height: 1,
-                            color: PilllColors.border,
+                            color: AppColors.border,
                           ),
                         ),
                         _component(context, setting: setting, reminderTime: reminderTime, setSetting: setSetting, number: offset + 1)
@@ -141,7 +141,7 @@ class ReminderTimesPageBody extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15, right: 15),
               child: Container(
                 height: 1,
-                color: PilllColors.border,
+                color: AppColors.border,
               ),
             ),
             _add(context, setting: setting, setSetting: setSetting),

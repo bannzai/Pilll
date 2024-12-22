@@ -24,13 +24,13 @@ class App extends StatelessWidget {
         appBarTheme: const AppBarTheme(
           systemOverlayStyle: SystemUiOverlayStyle.dark,
           centerTitle: true,
-          color: PilllColors.white,
+          color: AppColors.white,
           elevation: 3,
         ),
         textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: PilllColors.secondary,
+          cursorColor: AppColors.secondary,
         ),
-        primaryColor: PilllColors.secondary,
+        primaryColor: AppColors.secondary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
             textTheme: CupertinoTextThemeData(
@@ -40,17 +40,17 @@ class App extends StatelessWidget {
           fontSize: 24,
         ))),
         buttonTheme: const ButtonThemeData(
-          buttonColor: PilllColors.primary,
-          disabledColor: PilllColors.disable,
+          buttonColor: AppColors.primary,
+          disabledColor: AppColors.disable,
           textTheme: ButtonTextTheme.primary,
           colorScheme: ColorScheme.light(
-            primary: PilllColors.secondary,
-            secondary: PilllColors.accent,
+            primary: AppColors.secondary,
+            secondary: AppColors.accent,
           ),
         ),
         datePickerTheme: const DatePickerThemeData(
           backgroundColor: Colors.white,
-          headerBackgroundColor: PilllColors.primary,
+          headerBackgroundColor: AppColors.primary,
         ),
         switchTheme: SwitchThemeData(
           thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
@@ -58,7 +58,7 @@ class App extends StatelessWidget {
               return null;
             }
             if (states.contains(WidgetState.selected)) {
-              return PilllColors.secondary;
+              return AppColors.secondary;
             }
             return null;
           }),
@@ -67,7 +67,7 @@ class App extends StatelessWidget {
               return null;
             }
             if (states.contains(WidgetState.selected)) {
-              return PilllColors.secondary;
+              return AppColors.secondary;
             }
             return null;
           }),
@@ -78,7 +78,7 @@ class App extends StatelessWidget {
               return null;
             }
             if (states.contains(WidgetState.selected)) {
-              return PilllColors.secondary;
+              return AppColors.secondary;
             }
 
             return null;
@@ -90,7 +90,7 @@ class App extends StatelessWidget {
               return null;
             }
             if (states.contains(WidgetState.selected)) {
-              return PilllColors.secondary;
+              return AppColors.secondary;
             }
             return null;
           }),

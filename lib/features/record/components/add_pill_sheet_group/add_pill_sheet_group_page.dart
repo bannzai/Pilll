@@ -30,7 +30,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
@@ -40,7 +40,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           L.addPillSheet,
           style: const TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Container(
@@ -81,7 +81,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 35),
                   child: Container(
-                    color: PilllColors.background,
+                    color: AppColors.background,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [

@@ -45,7 +45,7 @@ class PillSheetViewLayout extends StatelessWidget {
       ),
       width: PillSheetViewLayout.width,
       decoration: BoxDecoration(
-        color: PilllColors.pillSheet,
+        color: AppColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
         boxShadow: const [
           BoxShadow(

@@ -38,7 +38,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
           loading: () => const ScaffoldIndicator(),
           data: (user) {
             return Scaffold(
-              backgroundColor: PilllColors.white,
+              backgroundColor: AppColors.white,
               appBar: AppBar(
                 leading: IconButton(
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -49,7 +49,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   style: const TextStyle(color: TextColor.main),
                 ),
                 centerTitle: false,
-                backgroundColor: PilllColors.white,
+                backgroundColor: AppColors.white,
               ),
               body: SafeArea(
                 child: NotificationListener<ScrollNotification>(

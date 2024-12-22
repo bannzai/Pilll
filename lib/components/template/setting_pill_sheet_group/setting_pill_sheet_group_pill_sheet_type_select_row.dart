@@ -70,9 +70,9 @@ class SettingPillSheetGroupPillSheetTypeSelectRow extends StatelessWidget {
             padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
             constraints: BoxConstraints(minWidth: MediaQuery.of(context).size.width - 80),
             decoration: BoxDecoration(
-              color: PilllColors.white,
+              color: AppColors.white,
               borderRadius: BorderRadius.circular(4),
-              border: Border.all(width: 1, color: PilllColors.border),
+              border: Border.all(width: 1, color: AppColors.border),
             ),
             child: Text(
               pillSheetType.fullName,

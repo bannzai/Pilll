@@ -37,19 +37,19 @@ extension WeekdayFunctions on Weekday {
   Color weekdayColor() {
     switch (this) {
       case Weekday.Sunday:
-        return PilllColors.sunday;
+        return AppColors.sunday;
       case Weekday.Monday:
-        return PilllColors.weekday;
+        return AppColors.weekday;
       case Weekday.Tuesday:
-        return PilllColors.weekday;
+        return AppColors.weekday;
       case Weekday.Wednesday:
-        return PilllColors.weekday;
+        return AppColors.weekday;
       case Weekday.Thursday:
-        return PilllColors.weekday;
+        return AppColors.weekday;
       case Weekday.Friday:
-        return PilllColors.weekday;
+        return AppColors.weekday;
       case Weekday.Saturday:
-        return PilllColors.saturday;
+        return AppColors.saturday;
       default:
         throw ArgumentError.notNull('');
     }

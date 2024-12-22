@@ -21,7 +21,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      color: PilllColors.primary,
+      color: AppColors.primary,
       child: GestureDetector(
         onTap: () async {
           analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');

@@ -27,10 +27,10 @@ class PillSheetGroupDelete extends HookConsumerWidget {
     final deletePillSheetGroup = ref.watch(deletePillSheetGroupProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
-      leading: const Icon(Icons.delete_outline, color: PilllColors.red),
+      leading: const Icon(Icons.delete_outline, color: AppColors.red),
       title: Text(
         L.discardAllPillSheets,
-        style: const TextStyle(color: PilllColors.red),
+        style: const TextStyle(color: AppColors.red),
       ),
       onTap: () {
         analytics.logEvent(

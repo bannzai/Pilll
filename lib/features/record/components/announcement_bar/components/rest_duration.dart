@@ -19,7 +19,7 @@ class RestDurationAnnouncementBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-      color: PilllColors.primary,
+      color: AppColors.primary,
       child: Center(
         child: Text(restDurationNotification,
             style: const TextStyle(

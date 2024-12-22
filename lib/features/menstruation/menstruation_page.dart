@@ -119,12 +119,12 @@ class MenstruationPageBody extends HookConsumerWidget {
     });
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         title: SizedBox(
           child: Text(_displayMonth(page.value), style: const TextStyle(color: TextColor.black)),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
       ),
       body: SafeArea(

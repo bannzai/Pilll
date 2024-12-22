@@ -21,7 +21,7 @@ class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
         return Container(
           width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
-            color: PilllColors.background,
+            color: AppColors.background,
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),

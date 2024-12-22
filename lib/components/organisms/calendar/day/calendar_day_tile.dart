@@ -72,7 +72,7 @@ class CalendarDayTile extends StatelessWidget {
                   width: 32,
                   height: 32,
                   decoration: BoxDecoration(
-                    color: PilllColors.primary,
+                    color: AppColors.primary,
                     borderRadius: BorderRadius.circular(16),
                   ),
                 ),
@@ -102,7 +102,7 @@ class CalendarDayTile extends StatelessWidget {
 
   Color _textColor() {
     if (_isToday) {
-      return PilllColors.white;
+      return AppColors.white;
     }
     final weekdayColor = switch (weekday) {
       Weekday.Sunday => weekday.weekdayColor(),
@@ -119,11 +119,11 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   Widget _diaryMarkWidget() {
-    return const Icon(Icons.edit_calendar, color: PilllColors.gray, size: 12);
+    return const Icon(Icons.edit_calendar, color: AppColors.gray, size: 12);
   }
 
   Widget _scheduleMarkWidget() {
-    return const Icon(Icons.schedule, color: PilllColors.primary, size: 12);
+    return const Icon(Icons.schedule, color: AppColors.primary, size: 12);
   }
 
   bool get _isToday => isSameDay(date, today());

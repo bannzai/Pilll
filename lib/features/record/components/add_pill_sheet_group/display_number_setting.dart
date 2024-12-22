@@ -66,7 +66,7 @@ class DisplayNumberSetting extends HookConsumerWidget {
                   AppTextFieldFormatter.greaterThanZero,
                 ],
                 decoration: const InputDecoration(
-                  fillColor: PilllColors.mat,
+                  fillColor: AppColors.mat,
                   filled: true,
                   border: UnderlineInputBorder(
                     borderSide: BorderSide(width: 1),

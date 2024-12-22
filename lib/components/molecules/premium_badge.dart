@@ -12,7 +12,7 @@ class PremiumBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.fromLTRB(8, 1, 8, 1),
       decoration: BoxDecoration(
-        color: PilllColors.gold,
+        color: AppColors.gold,
         borderRadius: BorderRadius.circular(41),
       ),
       child: const Text('Premium',
