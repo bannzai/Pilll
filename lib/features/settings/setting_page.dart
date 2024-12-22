@@ -93,10 +93,10 @@ class SettingPageBody extends StatelessWidget {
     final pillSheetGroup = latestPillSheetGroup;
     final activePillSheet = pillSheetGroup?.activePillSheet;
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         title: Text(L.settings, style: const TextStyle(color: TextColor.main)),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: Padding(
         padding: const EdgeInsets.only(bottom: 20),
@@ -336,7 +336,7 @@ Android: https://onl.sc/c9xnQUk''';
       padding: const EdgeInsets.only(left: 15, right: 15),
       child: Container(
         height: 1,
-        color: PilllColors.border,
+        color: AppColors.border,
       ),
     );
   }

@@ -28,10 +28,10 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: Container(),
-        backgroundColor: PilllColors.background,
+        backgroundColor: AppColors.background,
         elevation: 0,
       ),
       body: SafeArea(
@@ -45,7 +45,7 @@ class IntiialSettingPremiumTrialStartPage extends HookConsumerWidget {
                     vertical: 16,
                     horizontal: 44.5,
                   ),
-                  color: PilllColors.mat,
+                  color: AppColors.mat,
                   child: Column(
                     children: [
                       const SizedBox(height: 1),

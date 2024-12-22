@@ -41,7 +41,7 @@ class MenstruationListRow extends HookConsumerWidget {
           Container(
             width: _dotLineWidth,
             decoration: BoxDecoration(
-              color: PilllColors.tinBackground,
+              color: AppColors.tinBackground,
               borderRadius: BorderRadius.circular(26),
             ),
             height: 20,
@@ -79,7 +79,7 @@ class MenstruationListRow extends HookConsumerWidget {
   Widget _circle() {
     return Container(
       decoration: BoxDecoration(
-        color: PilllColors.menstruation,
+        color: AppColors.menstruation,
         borderRadius: BorderRadius.circular(6),
       ),
       width: 12,

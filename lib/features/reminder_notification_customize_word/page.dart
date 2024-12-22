@@ -90,7 +90,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     }
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -102,7 +102,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             color: TextColor.black,
           ),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: AppColors.background,
       ),
       body: SafeArea(
         child: Column(

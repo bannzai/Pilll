@@ -25,7 +25,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
   Scaffold build(BuildContext context) {
     final doneButton = this.doneButton;
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -35,7 +35,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
           title,
           style: const TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Column(

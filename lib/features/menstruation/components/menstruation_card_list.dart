@@ -36,7 +36,7 @@ class MenstruationCardList extends StatelessWidget {
     final historyCard = historyCardState(latestMenstruation, allMenstruation, user);
     return Expanded(
       child: Container(
-        color: PilllColors.background,
+        color: AppColors.background,
         child: ListView(
           padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
           scrollDirection: Axis.vertical,

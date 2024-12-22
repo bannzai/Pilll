@@ -70,7 +70,7 @@ class SettingPillSheetView extends StatelessWidget {
                 return '$pillNumberInPillSheet';
               }
             }(),
-            style: const TextStyle(color: PilllColors.weekday),
+            style: const TextStyle(color: AppColors.weekday),
             textScaleFactor: 1,
           ),
           pillMark: PillMark(

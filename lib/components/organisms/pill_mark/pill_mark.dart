@@ -80,7 +80,7 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               size: const Size(PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
               painter: Ripple(
                 _controller,
-                color: PilllColors.secondary,
+                color: AppColors.secondary,
               ),
             ),
           ),

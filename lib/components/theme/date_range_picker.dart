@@ -13,11 +13,11 @@ class DateRangePickerTheme extends StatelessWidget {
     return Theme(
       data: themeData.copyWith(
         appBarTheme: appBarTheme.copyWith(
-          backgroundColor: PilllColors.primary,
+          backgroundColor: AppColors.primary,
         ),
         colorScheme: const ColorScheme.light(
           onPrimary: Colors.white,
-          primary: PilllColors.secondary,
+          primary: AppColors.secondary,
         ),
       ),
       child: child,

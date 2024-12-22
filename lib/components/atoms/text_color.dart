@@ -9,11 +9,11 @@ abstract class TextColor {
   static const Color lightGray = Color(0xFFB1B1B1);
   static const Color lightGray2 = Color(0xFF666666);
   static const Color noshime = Color(0xFF3D4662);
-  static const Color primary = PilllColors.secondary;
+  static const Color primary = AppColors.secondary;
   static const Color main = Color(0xD429304D);
   static const Color primaryDarkBlue = Color(0xFF4E6287);
   static const Color link = primary;
-  static const Color danger = PilllColors.red;
+  static const Color danger = AppColors.red;
   static const Color discount = Color(0xFFB00020);
 
   static Color highEmphasis(Color color) => color.withOpacity(0.87);

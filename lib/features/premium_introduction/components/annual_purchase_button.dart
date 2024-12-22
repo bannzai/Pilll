@@ -38,11 +38,11 @@ class AnnualPurchaseButton extends StatelessWidget {
           Container(
             padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
             decoration: BoxDecoration(
-              color: PilllColors.blueBackground,
+              color: AppColors.blueBackground,
               borderRadius: const BorderRadius.all(Radius.circular(4)),
               border: Border.all(
                 width: 2,
-                color: PilllColors.primary,
+                color: AppColors.primary,
               ),
             ),
             child: Column(
@@ -119,7 +119,7 @@ class _DiscountBadge extends StatelessWidget {
       padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(12),
-        color: PilllColors.secondary,
+        color: AppColors.secondary,
       ),
       child: Text(
         offeringType == OfferingType.limited

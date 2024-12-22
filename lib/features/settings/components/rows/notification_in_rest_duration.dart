@@ -40,7 +40,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
           fontSize: 14,
         ),
       ),
-      activeColor: PilllColors.secondary,
+      activeColor: AppColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
           name: 'toggle_notify_not_taken_duration',

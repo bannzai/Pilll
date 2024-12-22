@@ -33,7 +33,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     final navigator = Navigator.of(context);
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -43,7 +43,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
           L.changePillNumber,
           style: const TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Center(

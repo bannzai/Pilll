@@ -45,7 +45,7 @@ class RecordPagePillSheetSettingButton extends StatelessWidget {
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8),
             side: const BorderSide(
-              color: PilllColors.primary,
+              color: AppColors.primary,
               width: 1,
             ),
           ),

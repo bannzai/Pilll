@@ -20,7 +20,7 @@ class MenstruationListPage extends HookConsumerWidget {
     final menstruations = menstruationsAsyncValue.valueOrNull ?? [];
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -31,12 +31,12 @@ class MenstruationListPage extends HookConsumerWidget {
           L.menstruationHistory,
           style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
         elevation: 0,
       ),
       body: SafeArea(
         child: Container(
-          color: PilllColors.white,
+          color: AppColors.white,
           child: ListView(
             padding: const EdgeInsets.all(32),
             children: [

@@ -24,7 +24,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.only(bottom: 24),
       width: MediaQuery.of(context).size.width,
-      color: PilllColors.white,
+      color: AppColors.white,
       child: Column(
         children: [
           Padding(

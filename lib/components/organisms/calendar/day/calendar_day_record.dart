@@ -31,7 +31,7 @@ class CalendarDayRecord extends StatelessWidget {
               SvgPicture.asset(
                 'images/laugh.svg',
                 height: 10,
-                colorFilter: const ColorFilter.mode(PilllColors.green, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.green, BlendMode.srcIn),
               ),
             );
           case PhysicalConditionStatus.bad:
@@ -39,7 +39,7 @@ class CalendarDayRecord extends StatelessWidget {
               SvgPicture.asset(
                 'images/angry.svg',
                 height: 10,
-                colorFilter: const ColorFilter.mode(PilllColors.danger, BlendMode.srcIn),
+                colorFilter: const ColorFilter.mode(AppColors.danger, BlendMode.srcIn),
               ),
             );
         }
@@ -49,7 +49,7 @@ class CalendarDayRecord extends StatelessWidget {
           const Icon(
             Icons.favorite,
             size: 10,
-            color: PilllColors.pinkRed,
+            color: AppColors.pinkRed,
           ),
         );
       }
@@ -58,7 +58,7 @@ class CalendarDayRecord extends StatelessWidget {
           const Icon(
             Icons.accessibility_new,
             size: 10,
-            color: PilllColors.gray,
+            color: AppColors.gray,
           ),
         );
       }
@@ -67,7 +67,7 @@ class CalendarDayRecord extends StatelessWidget {
           const Icon(
             Icons.description,
             size: 10,
-            color: PilllColors.gray,
+            color: AppColors.gray,
           ),
         );
       }
@@ -75,7 +75,7 @@ class CalendarDayRecord extends StatelessWidget {
 
     if (schedule != null) {
       widgets.add(
-        const Icon(Icons.schedule, color: PilllColors.primary, size: 10),
+        const Icon(Icons.schedule, color: AppColors.primary, size: 10),
       );
     }
 

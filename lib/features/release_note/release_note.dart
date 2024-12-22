@@ -20,7 +20,7 @@ class ReleaseNote extends StatelessWidget {
         child: Center(
           child: Container(
             decoration: BoxDecoration(
-              color: PilllColors.white,
+              color: AppColors.white,
               borderRadius: BorderRadius.circular(4),
             ),
             constraints: const BoxConstraints(maxWidth: 320),

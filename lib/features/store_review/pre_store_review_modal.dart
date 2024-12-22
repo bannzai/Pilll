@@ -99,10 +99,10 @@ class PreStoreReviewModal extends HookConsumerWidget {
           Container(
             padding: const EdgeInsets.all(20),
             decoration: BoxDecoration(
-              color: isSelected ? PilllColors.primary.withOpacity(0.08) : PilllColors.white,
+              color: isSelected ? AppColors.primary.withOpacity(0.08) : AppColors.white,
               border: Border.all(
                 width: isSelected ? 2 : 1,
-                color: isSelected ? PilllColors.primary : PilllColors.border,
+                color: isSelected ? AppColors.primary : AppColors.border,
               ),
               borderRadius: BorderRadius.circular(10),
             ),
@@ -111,14 +111,14 @@ class PreStoreReviewModal extends HookConsumerWidget {
                 SvgPicture.asset(
                   target == PreStoreReviewModalSelection.good ? 'images/laugh.svg' : 'images/angry.svg',
                   colorFilter: ColorFilter.mode(
-                    isSelected ? PilllColors.primary : Colors.grey,
+                    isSelected ? AppColors.primary : Colors.grey,
                     BlendMode.srcIn,
                   ),
                 ),
                 const SizedBox(height: 16),
                 Text(
                   target == PreStoreReviewModalSelection.good ? L.satisfied : L.notSatisfied,
-                  style: const TextStyle(color: PilllColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese),
+                  style: const TextStyle(color: AppColors.primary, fontWeight: FontWeight.bold, fontFamily: FontFamily.japanese),
                 ),
               ],
             ),
@@ -143,7 +143,7 @@ class _ThanksDialog extends StatelessWidget {
     return AlertDialog(
       title: const Icon(
         Icons.thumb_up,
-        color: PilllColors.primary,
+        color: AppColors.primary,
       ),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
