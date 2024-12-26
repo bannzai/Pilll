@@ -328,15 +328,6 @@
     "@changePillNumber": {
         "description": "Change pill number"
     },
-    "selectOrChangePillNumber": "Tap today's ({today}) pill number",
-    "@selectOrChangePillNumber": {
-        "description": "Tap today's ({today}) pill number",
-        "placeholders": {
-            "today": {
-                "type": "String"
-            }
-        }
-    },
     "change": "Change",
     "@change": {
         "description": "Change"
