@@ -1036,9 +1036,9 @@
     "@missedPillNotification": {
         "description": "Missed pill reminder"
     },
-    "setMultipleReminders": "Setting multiple reminders can prevent missing pills",
+    "setMultipleReminders": "Multiple reminders to prevent missing pills",
     "@setMultipleReminders": {
-        "description": "Setting multiple reminders can prevent missing pills"
+        "description": "Multiple reminders to prevent missing pills"
     },
     "and": "and",
     "@and": {
