@@ -328,15 +328,6 @@
   "@changePillNumber": {
     "description": "ピル番号の変更"
   },
-  "selectOrChangePillNumber": "今日({today})\n飲む・飲んだピルの番号をタップ",
-  "@selectOrChangePillNumber": {
-    "description": "今日飲む・飲んだピルの番号をタップ",
-    "placeholders": {
-      "today": {
-        "type": "String"
-      }
-    }
-  },
   "change": "変更",
   "@change": {
     "description": "変更"

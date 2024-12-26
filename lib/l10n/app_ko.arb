@@ -328,15 +328,6 @@
     "@changePillNumber": {
         "description": "딜 번호 변경"
     },
-    "selectOrChangePillNumber": "오늘({today})\n복용하는 딜의 번호를 탭",
-    "@selectOrChangePillNumber": {
-        "description": "오늘({today})\n복용하는 딜의 번호를 탭",
-        "placeholders": {
-            "today": {
-                "type": "String"
-            }
-        }
-    },
     "change": "변경",
     "@change": {
         "description": "변경"

@@ -328,15 +328,6 @@
     "@changePillNumber": {
         "description": "Change pill number"
     },
-    "selectOrChangePillNumber": "Tap today's ({today}) pill number",
-    "@selectOrChangePillNumber": {
-        "description": "Tap today's ({today}) pill number",
-        "placeholders": {
-            "today": {
-                "type": "String"
-            }
-        }
-    },
     "change": "Change",
     "@change": {
         "description": "Change"
@@ -1036,9 +1027,9 @@
     "@missedPillNotification": {
         "description": "Missed pill reminder"
     },
-    "setMultipleReminders": "Setting multiple reminders can prevent missing pills",
+    "setMultipleReminders": "Multiple reminders to prevent missing pills",
     "@setMultipleReminders": {
-        "description": "Setting multiple reminders can prevent missing pills"
+        "description": "Multiple reminders to prevent missing pills"
     },
     "and": "and",
     "@and": {
@@ -1078,13 +1069,13 @@
             }
         }
     },
-    "tellAboutPrescribedSheet": "Please tell us about the prescribed sheet",
+    "tellAboutPrescribedSheet": "Please tell us about the pill you use",
     "@tellAboutPrescribedSheet": {
-        "description": "Please tell us about the prescribed sheet"
+        "description": "Please tell us about the pill you use"
     },
-    "existingAccountUsers": "Those who already have an account, please check here",
+    "existingAccountUsers": "Already have an account? Log in here",
     "@existingAccountUsers": {
-        "description": "Those who already have an account, please check here"
+        "description": "Already have an account? Log in here"
     },
     "selectTodayPillNumber": "Tap today's ({todayString}) pill number",
     "@selectTodayPillNumber": {
