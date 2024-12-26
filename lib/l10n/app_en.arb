@@ -1078,9 +1078,9 @@
             }
         }
     },
-    "tellAboutPrescribedSheet": "Please tell us about the prescribed sheet",
+    "tellAboutPrescribedSheet": "Please tell us about the pill you use",
     "@tellAboutPrescribedSheet": {
-        "description": "Please tell us about the prescribed sheet"
+        "description": "Please tell us about the pill you use"
     },
     "existingAccountUsers": "Already have an account? Log in here",
     "@existingAccountUsers": {
