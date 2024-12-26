@@ -1,5 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -10,6 +11,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/provider/change_pill_number.dart';
+import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/utils/local_notification.dart';
@@ -113,7 +115,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   }
 
   String _today() {
-    return '${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.shortWeekday(DateTime.now())})';
+    return DateFormat.yMEd('ja').format(today());
   }
 
   int _pillNumberInPillSheet({
