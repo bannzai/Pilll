@@ -17,7 +17,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
   const InitialSettingSelectTodayPillNumberPage({super.key});
 
   String todayString() {
-    return DateFormat.yMEd('ja').format(today());
+    return DateFormat.MEd().format(today());
   }
 
   @override

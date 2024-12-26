@@ -115,7 +115,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   }
 
   String _today() {
-    return DateFormat.yMEd('ja').format(today());
+    return DateFormat.MEd().format(today());
   }
 
   int _pillNumberInPillSheet({
