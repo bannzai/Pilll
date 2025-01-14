@@ -136,22 +136,28 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
-  // 日付以外を返す
-  String displayPillNumberOnlyNumber({
-    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  int pillNumberOnlyNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.sequential:
-        return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+        return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.number:
-        return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+        return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.date:
-        return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+        return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.cyclicSequential:
-        return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+        return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     }
+  }
+
+  // 日付以外を返す
+  String displayPillNumberOnlyNumber({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return pillNumberOnlyNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet).toString();
   }
 
   String displayPillNumber({
@@ -159,21 +165,21 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return switch (pillSheetAppearanceMode) {
-      PillSheetAppearanceMode.number => _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+    final pillNumber = switch (pillSheetAppearanceMode) {
+      PillSheetAppearanceMode.number => _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.date => premiumOrTrial
           ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
-          : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.sequential => _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.cyclicSequential =>
-        _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+          : _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.sequential => _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.cyclicSequential => _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
+    return pillNumber.toString();
   }
 
-  String _displayPillNumberInPillSheet({
+  int _pillNumberInPillSheet({
     required int pillNumberInPillSheet,
   }) {
-    return '$pillNumberInPillSheet';
+    return pillNumberInPillSheet;
   }
 
   @visibleForTesting
@@ -192,33 +198,33 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }
 
   @visibleForTesting
-  String displaySequentialPillSheetNumber({
+  int sequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+    return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
-  String _displaySequentialPillSheetNumber({
+  int _sequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
+    return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 
   @visibleForTesting
-  String displayCycleSequentialPillSheetNumber({
+  int cycleSequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+    return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
-  String _displayCycleSequentialPillSheetNumber({
+  int _cycleSequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
+    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 }
 
