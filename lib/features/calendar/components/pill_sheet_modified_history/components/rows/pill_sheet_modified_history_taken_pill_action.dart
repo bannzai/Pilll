@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
@@ -85,8 +84,14 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforePillSheetGroup.displayedLastTakenPillNumber,
-          afterLastTakenPillNumber: afterPillSheetGroup.displayedLastTakenPillNumber,
+          beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberOnlyNumber(
+            pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber,
+          ),
+          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberOnlyNumber(
+            pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber,
+          ),
         )),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(
@@ -97,15 +102,6 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       ),
     );
   }
-}
-
-extension _PillSheetGroupExtension on PillSheetGroup {
-  int get displayedLastTakenPillNumber => switch (pillSheetAppearanceMode) {
-        PillSheetAppearanceMode.number => lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber,
-        PillSheetAppearanceMode.date => lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber,
-        PillSheetAppearanceMode.sequential => sequentialLastTakenPillNumber,
-        PillSheetAppearanceMode.cyclicSequential => sequentialLastTakenPillNumber,
-      };
 }
 
 Future<void> updateTakenValue({
