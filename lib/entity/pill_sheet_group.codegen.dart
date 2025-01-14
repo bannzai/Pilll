@@ -111,6 +111,16 @@ class PillSheetGroup with _$PillSheetGroup {
     }
   }
 
+  PillSheet get lastTakenPillSheetOrFirstPillSheet {
+    for (final pillSheet in pillSheets.reversed) {
+      if (pillSheet.lastTakenDate != null) {
+        return pillSheet;
+      }
+    }
+
+    return pillSheets[0];
+  }
+
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
   List<RestDuration> get restDurations {
@@ -413,16 +423,6 @@ extension PillSheetGroupMenstruationDomain on PillSheetGroup {
 extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   RestDuration? get lastActiveRestDuration {
     return pillSheets.map((e) => e.activeRestDuration).whereNotNull().firstOrNull;
-  }
-
-  PillSheet get lastTakenPillSheetOrFirstPillSheet {
-    for (final pillSheet in pillSheets.reversed) {
-      if (pillSheet.lastTakenDate != null) {
-        return pillSheet;
-      }
-    }
-
-    return pillSheets[0];
   }
 
   PillSheet get targetBeginRestDurationPillSheet {
