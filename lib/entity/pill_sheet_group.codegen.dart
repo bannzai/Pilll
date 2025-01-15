@@ -121,6 +121,8 @@ class PillSheetGroup with _$PillSheetGroup {
     return pillSheets[0];
   }
 
+  // テストまで作ったが、プロダクションではまだ使ってない。とはいえ普通に使うメソッドなので visibleForTestingにしておく
+  @visibleForTesting
   int? get lastTakenPillNumberWithoutDate {
     for (final pillSheet in pillSheets.reversed) {
       final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
@@ -155,6 +157,8 @@ class PillSheetGroup with _$PillSheetGroup {
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
   int pillNumberWithoutDate({
+    // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
@@ -175,7 +179,11 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumberWithoutDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet).toString();
+    return pillNumberWithoutDate(
+      pillSheetAppearanceMode: pillSheetAppearanceMode,
+      pageIndex: pageIndex,
+      pillNumberInPillSheet: pillNumberInPillSheet,
+    ).toString();
   }
 
   String displayPillNumberOrDate({
