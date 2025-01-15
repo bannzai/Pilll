@@ -132,6 +132,12 @@ class PillSheet with _$PillSheet {
     if (lastTakenDate == null) {
       return 0;
     }
+
+    // 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
+    if (lastTakenDate.isBefore(beginingDate)) {
+      return 0;
+    }
+
     return pillNumberFor(targetDate: lastTakenDate);
   }
 
