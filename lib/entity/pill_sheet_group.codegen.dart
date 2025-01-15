@@ -118,8 +118,11 @@ class PillSheetGroup with _$PillSheetGroup {
         return pillSheet;
       }
     }
-
     return pillSheets[0];
+  }
+
+  int get lastTakenPillNumberOrOne {
+    return 
   }
 
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
@@ -131,7 +134,7 @@ class PillSheetGroup with _$PillSheetGroup {
     );
   }
 
-  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber = _pillMarksPillNumber();
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber = _pillNumbersInPillSheet();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential = _pillNumbersForSequential();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
@@ -261,7 +264,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     }
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillMarksPillNumber() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet() {
     return pillSheets
         .map((pillSheet) =>
             pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
