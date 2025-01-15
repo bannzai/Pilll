@@ -85,7 +85,8 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
           beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberWithoutDate(
-            pillSheetAppearanceMode: beforePillSheetGroup.pillSheetAppearanceMode,
+            // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
+            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
             pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
             pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber ?? 1,
           ),

@@ -163,12 +163,12 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pillNumberInPillSheet,
   }) {
     switch (pillSheetAppearanceMode) {
-      case PillSheetAppearanceMode.sequential:
-        return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.number:
         return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.date:
         return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+      case PillSheetAppearanceMode.sequential:
+        return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.cyclicSequential:
         return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     }
