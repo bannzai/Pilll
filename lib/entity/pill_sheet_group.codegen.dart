@@ -348,17 +348,18 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         debugPrint('slices.length: ${slices.length}');
         for (final (sliceIndex, elements) in slices.indexed) {
           for (final (pillMarkIndex, pillMark) in elements) {
+            debugPrint('endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
             if (endPillNumber < pillMark.number) {
               if (beginPillNumber != null) {
-                final beginPillNumberOffset = beginPillNumber - 1;
                 final int number;
                 if (pillMark.number % endPillNumber == 0) {
                   number = endPillNumber;
+                } else if (pillMark.number % endPillNumber == 1) {
+                  number = beginPillNumber;
                 } else {
-                  number = max(pillMark.number % endPillNumber, beginPillNumberOffset) + max(sliceIndex, 1);
+                  number = pillMark.number % endPillNumber + sliceIndex;
                 }
-                debugPrint(
-                    'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
+                debugPrint('number: $number');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number.toInt());
               } else {
                 final int number;
@@ -367,8 +368,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
                 } else {
                   number = max(pillMark.number % endPillNumber, 1);
                 }
-                debugPrint(
-                    'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
+                debugPrint('number: $number');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
               }
             }
