@@ -356,7 +356,12 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
                     'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number.toInt());
               } else {
-                final number = max(pillMark.number % endPillNumber, 1);
+                final int number;
+                if (pillMark.number % endPillNumber == 0) {
+                  number = endPillNumber;
+                } else {
+                  number = max(pillMark.number % endPillNumber, 1);
+                }
                 debugPrint(
                     'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
