@@ -351,7 +351,12 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             if (endPillNumber < pillMark.number) {
               if (beginPillNumber != null) {
                 final beginPillNumberOffset = beginPillNumber - 1;
-                final number = max(pillMark.number % endPillNumber, 1) + (beginPillNumberOffset * max(sliceIndex, 1));
+                final int number;
+                if (pillMark.number % endPillNumber == 0) {
+                  number = endPillNumber;
+                } else {
+                  number = max(pillMark.number % endPillNumber, beginPillNumberOffset) + max(sliceIndex, 1);
+                }
                 debugPrint(
                     'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number.toInt());
