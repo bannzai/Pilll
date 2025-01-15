@@ -344,25 +344,28 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       final endPillNumber = displayNumberSetting.endPillNumber;
       if (endPillNumber != null && endPillNumber > 0) {
         final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
-        debugPrint('pillCount: $pillCount');
+        debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
         for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
           debugPrint('--------------------');
-          if (pillMark.number <= endPillNumber) {
-            debugPrint('pillMark.number <= endPillNumber, pillMark.number: ${pillMark.number}, date: ${pillMark.date}');
-            continue;
-          }
+          final loopOffset = (pillMarkIndex ~/ pillCount);
+          debugPrint('loopOffset: $loopOffset');
 
           final base = pillMark.number % pillCount;
           debugPrint('base: $base');
           if (base == 0) {
             pillMarks[pillMarkIndex] = pillMark.copyWith(number: endPillNumber);
           } else {
-            final loopOffset = (pillMark.number ~/ pillCount);
-            final countOffset = loopOffset * pillCount;
-            final number = pillMark.number - countOffset + max((beginPillNumber ?? 0) - 1, 0).toInt();
-            debugPrint(
-                'pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
-            pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+            if (loopOffset == 1) {
+              final number = pillMark.number - pillCount;
+              debugPrint('loopOffset == 1: index: $pillMarkIndex, pillMark.number: ${pillMark.number},  number: $number, date: ${pillMark.date}');
+              pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+            } else {
+              final countOffset = loopOffset * pillCount;
+              final number = pillMark.number - countOffset;
+              debugPrint(
+                  'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
+              pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+            }
           }
         }
       }
@@ -412,25 +415,28 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       final endPillNumber = displayNumberSetting.endPillNumber;
       if (endPillNumber != null && endPillNumber > 0) {
         final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
-        debugPrint('pillCount: $pillCount');
+        debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
         for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
           debugPrint('--------------------');
-          if (pillMark.number <= endPillNumber) {
-            debugPrint('pillMark.number <= endPillNumber, pillMark.number: ${pillMark.number}, date: ${pillMark.date}');
-            continue;
-          }
+          final loopOffset = (pillMarkIndex ~/ pillCount);
+          debugPrint('loopOffset: $loopOffset');
 
           final base = pillMark.number % pillCount;
           debugPrint('base: $base');
           if (base == 0) {
             pillMarks[pillMarkIndex] = pillMark.copyWith(number: endPillNumber);
           } else {
-            final loopOffset = (pillMark.number ~/ pillCount);
-            final countOffset = loopOffset * pillCount;
-            final number = pillMark.number - countOffset + max((beginPillNumber ?? 0) - 1, 0).toInt();
-            debugPrint(
-                'pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
-            pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+            if (loopOffset == 1) {
+              final number = pillMark.number - pillCount;
+              debugPrint('loopOffset == 1: index: $pillMarkIndex, pillMark.number: ${pillMark.number},  number: $number, date: ${pillMark.date}');
+              pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+            } else {
+              final countOffset = loopOffset * pillCount;
+              final number = pillMark.number - countOffset;
+              debugPrint(
+                  'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
+              pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+            }
           }
         }
       }
