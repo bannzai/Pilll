@@ -46,3 +46,5 @@ lib/util/*secret.dart
 *secret.dart
 
 scripts/venv
+
+translation_scripts/
