@@ -44,7 +44,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           createdAt: now(),
         );
-        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 6);
+        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 5);
       });
       group("服用お休み期間を持つ場合", () {
         test("服用お休みが終わっていない場合", () {

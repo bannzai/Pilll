@@ -53,7 +53,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
             pillSheet.copyWith(
-              lastTakenDate: yesterday.subtract(const Duration(days: 1)),
+              lastTakenDate: null,
             ),
           ],
           createdAt: now(),
@@ -208,7 +208,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [
             pillSheet.copyWith(
-              lastTakenDate: beginDate.subtract(const Duration(days: 1)),
+              lastTakenDate: null,
               restDurations: [],
             ),
           ],
@@ -465,7 +465,7 @@ void main() {
               lastTakenDate: mockToday.subtract(const Duration(days: 4)),
             ),
             pillShee$2.copyWith(
-              lastTakenDate: pillShee$2.beginingDate.subtract(const Duration(days: 1)),
+              lastTakenDate: null,
             ),
           ],
           createdAt: now(),
