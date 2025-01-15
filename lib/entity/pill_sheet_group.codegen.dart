@@ -156,12 +156,18 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
-  int pillNumberWithoutDate({
+  int pillNumberWithoutDateOrZero({
     // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
+    // pillNumberInPillSheet: lastTakenOrZeroPillNumberが0の場合に0を返す
+    // PillSheetModifiedHistoryPillNumberOrDate.taken で beforeLastTakenPillNumber にプラス1しており、整合性を保つため
+    if (pillNumberInPillSheet == 0) {
+      return 0;
+    }
+
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.number:
         return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
@@ -174,12 +180,29 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     }
   }
 
+  int pillNumberWithoutDateOrZeroFromDate({
+    // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+    required DateTime date,
+  }) {
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.number:
+        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
+      case PillSheetAppearanceMode.date:
+        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
+      case PillSheetAppearanceMode.sequential:
+        return pillNumbersForSequential.firstWhere((e) => isSameDay(e.date, date)).number;
+      case PillSheetAppearanceMode.cyclicSequential:
+        return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, date)).number;
+    }
+  }
+
   // 日付以外を返す
   String displayPillNumberWithoutDate({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumberWithoutDate(
+    return pillNumberWithoutDateOrZero(
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,

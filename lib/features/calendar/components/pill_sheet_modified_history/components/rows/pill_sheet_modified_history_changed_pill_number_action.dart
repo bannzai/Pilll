@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
@@ -8,22 +10,29 @@ import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final int? beforeTodayPillNumber;
-  final int? afterTodayPillNumber;
+  final PillSheetModifiedHistory history;
 
   const PillSheetModifiedHistoryChangedPillNumberAction({
     super.key,
     required this.estimatedEventCausingDate,
-    required this.beforeTodayPillNumber,
-    required this.afterTodayPillNumber,
+    required this.history,
   });
   @override
   Widget build(BuildContext context) {
-    final beforeTodayPillNumber = this.beforeTodayPillNumber;
-    final afterTodayPillNumber = this.afterTodayPillNumber;
-    if (beforeTodayPillNumber == null || afterTodayPillNumber == null) {
-      return Container();
+    final beforePillSheetGroup = history.beforePillSheetGroup;
+    final afterPillSheetGroup = history.afterPillSheetGroup;
+    if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
+      return Text(L.failedToGetPillSheetHistory('changedPillNumber'));
     }
+    final beforeTodayPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+      date: estimatedEventCausingDate,
+    );
+    final afterTodayPillNumber = afterPillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
+      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+      date: estimatedEventCausingDate,
+    );
+
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(

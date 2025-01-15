@@ -36,10 +36,8 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
     final beforePillSheetGroup = history.beforePillSheetGroup;
     final afterPillSheetGroup = history.afterPillSheetGroup;
     if (value == null || afterPillSheetGroup == null || beforePillSheetGroup == null) {
-      return Container();
+      return Text(L.failedToGetPillSheetHistory('takenPill'));
     }
-
-    final beforeLastTakenPillNumber = beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber;
 
     final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
     return GestureDetector(
@@ -86,15 +84,13 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforeLastTakenPillNumber == null
-              ? null
-              : beforePillSheetGroup.pillNumberWithoutDate(
-                  // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
-                  pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-                  pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-                  pillNumberInPillSheet: beforeLastTakenPillNumber,
-                ),
-          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDate(
+          beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberWithoutDateOrZero(
+            // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
+            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+          ),
+          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
             pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
             pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
             pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
