@@ -485,6 +485,26 @@ void main() {
       );
       expect(model.lastTakenOrZeroPillNumber, 0);
     });
+    test("beginingDate > lastTakenDateの場合は0になる。服用日が開始日より前になる。「今日飲むピル番号」の調整機能で1つ目のピルを選択した時", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-14"),
+        lastTakenDate: DateTime.parse("2020-09-13"),
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.lastTakenOrZeroPillNumber, 0);
+    });
     test("6日目だが4番まで服用済み", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
