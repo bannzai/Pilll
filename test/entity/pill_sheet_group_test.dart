@@ -245,7 +245,7 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           createdAt: now(),
         );
-        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 29);
+        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
       });
       test("with begin display number setting", () {
         final mockTodayRepository = MockTodayService();
@@ -256,7 +256,7 @@ void main() {
         final pillSheet1 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
-          lastTakenDate: DateTime.parse("2020-03-28"),
+          lastTakenDate: DateTime.parse("2022-03-28"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
@@ -287,7 +287,7 @@ void main() {
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2),
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
-        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 30);
+        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
       });
       test("with end display number setting", () {
         final mockTodayRepository = MockTodayService();
@@ -298,7 +298,7 @@ void main() {
         final pillSheet1 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
-          lastTakenDate: DateTime.parse("2020-03-28"),
+          lastTakenDate: DateTime.parse("2022-03-28"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
@@ -329,7 +329,7 @@ void main() {
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 28),
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
-        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 1);
+        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
       });
       test("with begin and end display number setting", () {
         final mockTodayRepository = MockTodayService();
@@ -340,7 +340,7 @@ void main() {
         final pillSheet1 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-03-01"),
-          lastTakenDate: DateTime.parse("2020-03-28"),
+          lastTakenDate: DateTime.parse("2022-03-28"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: PillSheetTypeInfo(
@@ -371,7 +371,7 @@ void main() {
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
-        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 2);
+        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
       });
     });
   });
