@@ -367,7 +367,7 @@ void main() {
       );
       final updatedRight = right.copyWith(
         beginingDate: DateTime.parse("2022-05-01"),
-        lastTakenDate: DateTime.parse("2022-04-30"),
+        lastTakenDate: null,
       );
 
       final pillSheetGroup = PillSheetGroup(
