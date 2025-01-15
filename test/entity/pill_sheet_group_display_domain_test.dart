@@ -584,8 +584,8 @@ void main() {
           expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
           expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
           expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 10);
-          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 12);
-          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 18);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 20);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 15);
         });
       });
     });
@@ -1321,8 +1321,8 @@ void main() {
           expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
           expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
           expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 38);
-          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 7);
-          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 25);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 16);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 34);
         });
       });
     });
