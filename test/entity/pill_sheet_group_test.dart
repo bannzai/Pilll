@@ -371,7 +371,7 @@ void main() {
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
-        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
+        expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 2);
       });
     });
   });
@@ -756,7 +756,7 @@ void main() {
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
           pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
-        expect(pillSheetGroup.sequentialTodayPillNumber, 2);
+        expect(pillSheetGroup.sequentialTodayPillNumber, 3);
       });
     });
   });

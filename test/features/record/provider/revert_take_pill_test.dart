@@ -552,7 +552,7 @@ void main() {
               lastTakenDate: mockToday.subtract(const Duration(days: 4)),
             ),
             pillSheet2.copyWith(
-              lastTakenDate: pillSheet2.beginingDate.subtract(const Duration(days: 1)),
+              lastTakenDate: null,
               restDurations: [],
             )
           ],
