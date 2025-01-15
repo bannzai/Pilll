@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
@@ -186,8 +188,10 @@ class PillSheet with _$PillSheet {
     return dates[pillNumberInPillSheet - 1];
   }
 
+  // beginDate > targetDate(lastTakenDate) の場合がある。「本日の服用日」を編集して1番目を未服用にした場合
+  // pillNumberは0は不自然なので、1番を返す
   int pillNumberFor({required DateTime targetDate}) {
-    return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
+    return max(daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
   }
 
   // ピルシートのピルの日付を取得する

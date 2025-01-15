@@ -242,8 +242,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    debugPrint(
-        "pillNumbersForCyclicSequential: ${pillNumbersForCyclicSequential.length}, pillNumberInPillSheet: $pillNumberInPillSheet, pageIndex: $pageIndex");
     return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 }
