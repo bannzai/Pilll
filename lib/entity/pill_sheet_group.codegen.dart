@@ -235,6 +235,11 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
+    if (pageIndex == 0 && pillNumberInPillSheet == 1) {
+      final result = pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
+      debugPrint("result: $result");
+      return result;
+    }
     return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 

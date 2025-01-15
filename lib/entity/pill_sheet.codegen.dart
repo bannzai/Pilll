@@ -133,6 +133,11 @@ class PillSheet with _$PillSheet {
       return 0;
     }
 
+    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
+    if (lastTakenDate.isBefore(beginingDate)) {
+      return 0;
+    }
+
     return pillNumberFor(targetDate: lastTakenDate);
   }
 
@@ -141,6 +146,12 @@ class PillSheet with _$PillSheet {
     if (lastTakenDate == null) {
       return null;
     }
+
+    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
+    if (lastTakenDate.isBefore(beginingDate)) {
+      return null;
+    }
+
     return pillNumberFor(targetDate: lastTakenDate);
   }
 
@@ -189,6 +200,7 @@ class PillSheet with _$PillSheet {
     return dates[pillNumberInPillSheet - 1];
   }
 
+  // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] beginDate > targetDate(lastTakenDate) の場合がある。「本日の服用日」を編集して1番目を未服用にした場合
   // pillNumberは0は不自然なので、1番を返す
   int pillNumberFor({required DateTime targetDate}) {
     return max(daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);

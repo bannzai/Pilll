@@ -39,6 +39,8 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       return Container();
     }
 
+    final beforeLastTakenPillNumber = beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber;
+
     final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
     return GestureDetector(
       onTap: () {
@@ -84,12 +86,14 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberWithoutDate(
-            // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
-            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-            pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber ?? 1,
-          ),
+          beforeLastTakenPillNumber: beforeLastTakenPillNumber == null
+              ? null
+              : beforePillSheetGroup.pillNumberWithoutDate(
+                  // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
+                  pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+                  pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+                  pillNumberInPillSheet: beforeLastTakenPillNumber,
+                ),
           afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDate(
             pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
             pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
