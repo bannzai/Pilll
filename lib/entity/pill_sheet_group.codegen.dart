@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
@@ -349,12 +351,12 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             if (endPillNumber < pillMark.number) {
               if (beginPillNumber != null) {
                 final beginPillNumberOffset = beginPillNumber - 1;
-                final number = pillMark.number % endPillNumber + (beginPillNumberOffset * sliceIndex);
+                final number = max(pillMark.number % endPillNumber, 1) + (beginPillNumberOffset * max(sliceIndex, 1));
                 debugPrint(
                     'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
-                pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+                pillMarks[pillMarkIndex] = pillMark.copyWith(number: number.toInt());
               } else {
-                final number = pillMark.number % endPillNumber;
+                final number = max(pillMark.number % endPillNumber, 1);
                 debugPrint(
                     'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);

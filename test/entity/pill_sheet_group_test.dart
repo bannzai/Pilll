@@ -1243,7 +1243,7 @@ void main() {
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
             pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           );
-          expect(pillSheetGroup.sequentialLastTakenPillNumber, 2);
+          expect(pillSheetGroup.sequentialLastTakenPillNumber, 3);
         });
       });
     });
