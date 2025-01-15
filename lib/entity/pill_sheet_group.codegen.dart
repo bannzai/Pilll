@@ -346,6 +346,12 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
         debugPrint('pillCount: $pillCount');
         for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
+          debugPrint('--------------------');
+          if (pillMark.number <= endPillNumber) {
+            debugPrint('pillMark.number <= endPillNumber, pillMark.number: ${pillMark.number}, date: ${pillMark.date}');
+            continue;
+          }
+
           final base = pillMark.number % pillCount;
           debugPrint('base: $base');
           if (base == 0) {
@@ -354,7 +360,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             final loopOffset = (pillMark.number ~/ pillCount);
             final countOffset = loopOffset * pillCount;
             final number = pillMark.number - countOffset + max((beginPillNumber ?? 0) - 1, 0).toInt();
-            debugPrint('pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number');
+            debugPrint(
+                'pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
             pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
           }
         }
