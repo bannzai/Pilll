@@ -125,7 +125,7 @@ class PillSheet with _$PillSheet {
   // lastTakenPillNumber は最後に服了したピルの番号を返す
   // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
   // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
-  int get lastTakenPillNumber {
+  int get lastTakenOrZeroPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
@@ -144,7 +144,7 @@ class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
-  bool get isTakenAll => typeInfo.totalCount == lastTakenPillNumber;
+  bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;

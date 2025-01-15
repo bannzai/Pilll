@@ -483,7 +483,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.lastTakenPillNumber, 0);
+      expect(model.lastTakenOrZeroPillNumber, 0);
     });
     test("6日目だが4番まで服用済み", () {
       final mockTodayRepository = MockTodayService();
@@ -503,7 +503,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.lastTakenPillNumber, 4);
+      expect(model.lastTakenOrZeroPillNumber, 4);
     });
     test("境界値テスト。28番を服用", () {
       final mockTodayRepository = MockTodayService();
@@ -523,7 +523,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.lastTakenPillNumber, 28);
+      expect(model.lastTakenOrZeroPillNumber, 28);
     });
     test("服用お休み期間がある場合。服用お休みが終了してない場合", () {
       final mockTodayRepository = MockTodayService();
@@ -550,7 +550,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.lastTakenPillNumber, 22);
+      expect(model.lastTakenOrZeroPillNumber, 22);
     });
     test("服用お休み期間がある場合。服用お休みが終了している場合", () {
       final mockTodayRepository = MockTodayService();
@@ -578,7 +578,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.lastTakenPillNumber, 25);
+      expect(model.lastTakenOrZeroPillNumber, 25);
     });
     test("服用お休みが終了しているが、まだピルを服用していない場合", () {
       final mockTodayRepository = MockTodayService();
@@ -606,7 +606,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.lastTakenPillNumber, 0);
+      expect(model.lastTakenOrZeroPillNumber, 0);
     });
 
     group("服用お休みを同じピルシートで複数している場合", () {
@@ -641,7 +641,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(model.lastTakenPillNumber, 19);
+        expect(model.lastTakenOrZeroPillNumber, 19);
       });
       test("最後の服用お休みが終了している場合", () {
         final mockTodayRepository = MockTodayService();
@@ -675,7 +675,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(model.lastTakenPillNumber, 19);
+        expect(model.lastTakenOrZeroPillNumber, 19);
       });
     });
   });

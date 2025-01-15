@@ -79,12 +79,12 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                     .findFirstDifferencePillSheet(
                       history.afterPillSheetGroup?.pillSheets,
                     )
-                    ?.lastTakenPillNumber,
+                    ?.lastTakenOrZeroPillNumber,
                 afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets.reversed
                     .findFirstDifferencePillSheet(
                       history.beforePillSheetGroup?.pillSheets.reversed,
                     )
-                    ?.lastTakenPillNumber),
+                    ?.lastTakenOrZeroPillNumber),
             PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
@@ -98,12 +98,12 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets.reversed
                     .findFirstDifferencePillSheet(history.afterPillSheetGroup?.pillSheets.reversed)
-                    ?.lastTakenPillNumber,
+                    ?.lastTakenOrZeroPillNumber,
                 afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets
                     .findFirstDifferencePillSheet(
                       history.beforePillSheetGroup?.pillSheets,
                     )
-                    ?.lastTakenPillNumber,
+                    ?.lastTakenOrZeroPillNumber,
               ),
             PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,

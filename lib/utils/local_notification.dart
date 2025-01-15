@@ -235,13 +235,13 @@ class RegisterReminderLocalNotification {
     analytics.debug(name: 'run_register_reminder_notification', parameters: {
       'todayPillNumber': activePillSheet.todayPillNumber,
       'todayPillIsAlreadyTaken': activePillSheet.todayPillIsAlreadyTaken,
-      'lastTakenPillNumber': activePillSheet.lastTakenPillNumber,
+      'lastTakenPillNumber': activePillSheet.lastTakenOrZeroPillNumber,
       'reminderTimes': setting.reminderTimes.toString(),
     });
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
-    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber;
+    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber;
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
@@ -379,7 +379,7 @@ class RegisterReminderLocalNotification {
               return '';
             }
             // 最後に飲んだ日付が数日前の場合は常にmissedTakenMessage
-            if (activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber > 1) {
+            if (activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber > 1) {
               return setting.reminderNotificationCustomization.missedTakenMessage;
             }
             // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時

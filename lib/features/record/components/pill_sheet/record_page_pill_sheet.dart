@@ -123,7 +123,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
           onTap: () async {
             try {
               analytics.logEvent(name: 'pill_mark_tapped', parameters: {
-                'last_taken_pill_number': pillSheet.lastTakenPillNumber,
+                'last_taken_pill_number': pillSheet.lastTakenOrZeroPillNumber,
                 'today_pill_number': pillSheet.todayPillNumber,
                 'pillNumberInPillSheet': pillNumberInPillSheet,
               });
@@ -132,7 +132,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 return;
               }
 
-              if (pillSheet.lastTakenPillNumber >= pillNumberInPillSheet) {
+              if (pillSheet.lastTakenOrZeroPillNumber >= pillNumberInPillSheet) {
                 await revertTakePill(
                   pillSheetGroup: pillSheetGroup,
                   pageIndex: pageIndex,
@@ -172,7 +172,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
     required PillSheetGroup pillSheetGroup,
     required PillSheet pillSheet,
   }) async {
-    if (pillNumberInPillSheet <= pillSheet.lastTakenPillNumber) {
+    if (pillNumberInPillSheet <= pillSheet.lastTakenOrZeroPillNumber) {
       return null;
     }
     if (pillSheetGroup.lastActiveRestDuration != null) {
@@ -220,14 +220,14 @@ class RecordPagePillSheet extends HookConsumerWidget {
     }
     if (activePillSheet.id != pillSheet.id) {
       if (pillSheet.isBegan) {
-        if (pillNumberInPillSheet > pillSheet.lastTakenPillNumber) {
+        if (pillNumberInPillSheet > pillSheet.lastTakenOrZeroPillNumber) {
           return false;
         }
       }
       return true;
     }
 
-    return pillNumberInPillSheet <= activePillSheet.lastTakenPillNumber;
+    return pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber;
   }
 }
 
@@ -240,7 +240,7 @@ PillMarkType pillMarkFor({
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
-  if (pillNumberInPillSheet <= pillSheet.lastTakenPillNumber) {
+  if (pillNumberInPillSheet <= pillSheet.lastTakenOrZeroPillNumber) {
     return PillMarkType.done;
   }
   if (pillNumberInPillSheet < pillSheet.todayPillNumber) {
@@ -266,14 +266,14 @@ bool shouldPillMarkAnimation({
   }
   if (activePillSheet.id != pillSheet.id) {
     if (pillSheet.isBegan) {
-      if (pillNumberInPillSheet > pillSheet.lastTakenPillNumber) {
+      if (pillNumberInPillSheet > pillSheet.lastTakenOrZeroPillNumber) {
         return true;
       }
     }
     return false;
   }
 
-  return pillNumberInPillSheet > activePillSheet.lastTakenPillNumber && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
+  return pillNumberInPillSheet > activePillSheet.lastTakenOrZeroPillNumber && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
 }
 
 class PillNumber extends StatelessWidget {

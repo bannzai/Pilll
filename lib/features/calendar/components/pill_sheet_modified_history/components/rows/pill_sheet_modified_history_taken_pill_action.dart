@@ -86,11 +86,11 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
           beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberOnlyNumber(
             pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber,
+            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
           ),
           afterLastTakenPillNumber: afterPillSheetGroup.pillNumberOnlyNumber(
             pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber,
+            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
           ),
         )),
         detail: Time(time: time),
