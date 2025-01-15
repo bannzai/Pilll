@@ -365,7 +365,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       }
     }
 
-    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join("\n"));
+    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
+
     return pillMarks;
   }
 
@@ -400,24 +401,38 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumberOffset - 1)).toList();
+      final beginPillNumber = displayNumberSetting.beginPillNumber;
+      if (beginPillNumber != null && beginPillNumber > 0) {
+        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumber - 1)).toList();
       }
 
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number % endPillNumberOffset == 0).map((e) => e.$1);
-        final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
-        for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
-          if (beginPillNumberOffsetIndex < pillMarks.length) {
-            for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(beginPillNumberOffsetIndex).indexed.toList()) {
-              pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+      final endPillNumber = displayNumberSetting.endPillNumber;
+      if (endPillNumber != null && endPillNumber > 0) {
+        final copiedPillMarks = [...pillMarks];
+        final slices = copiedPillMarks.indexed.slices(endPillNumber);
+        debugPrint('slices.length: ${slices.length}');
+        for (final (sliceIndex, elements) in slices.indexed) {
+          for (final (pillMarkIndex, pillMark) in elements) {
+            if (endPillNumber < pillMark.number) {
+              if (beginPillNumber != null) {
+                final beginPillNumberOffset = beginPillNumber - 1;
+                final number = pillMark.number % endPillNumber + (beginPillNumberOffset * sliceIndex);
+                debugPrint(
+                    'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
+                pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+              } else {
+                final number = pillMark.number % endPillNumber;
+                debugPrint(
+                    'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
+                pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+              }
             }
           }
         }
       }
     }
+
+    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
 
     return pillMarks;
   }
