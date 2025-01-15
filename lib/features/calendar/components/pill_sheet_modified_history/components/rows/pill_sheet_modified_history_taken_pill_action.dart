@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
@@ -84,14 +83,8 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberWithoutDate(
-            pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber ?? 1,
-          ),
-          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDate(
-            pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
-          ),
+          beforeLastTakenPillNumber: beforePillSheetGroup.lastTakenPillNumberWithoutDate ?? 1,
+          afterLastTakenPillNumber: afterPillSheetGroup.lastTakenPillNumberWithoutDate ?? 1,
         )),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(

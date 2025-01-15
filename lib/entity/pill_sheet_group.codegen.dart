@@ -121,6 +121,24 @@ class PillSheetGroup with _$PillSheetGroup {
     return pillSheets[0];
   }
 
+  int? get lastTakenPillNumberWithoutDate {
+    for (final pillSheet in pillSheets.reversed) {
+      final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
+      if (lastTakenPillNumber != null) {
+        switch (pillSheetAppearanceMode) {
+          case PillSheetAppearanceMode.number:
+          case PillSheetAppearanceMode.date:
+            return _pillNumberInPillSheet(pillNumberInPillSheet: lastTakenPillNumber);
+          case PillSheetAppearanceMode.sequential:
+            return _sequentialPillSheetNumber(pageIndex: pillSheet.groupIndex, pillNumberInPillSheet: lastTakenPillNumber);
+          case PillSheetAppearanceMode.cyclicSequential:
+            return _cycleSequentialPillSheetNumber(pageIndex: pillSheet.groupIndex, pillNumberInPillSheet: lastTakenPillNumber);
+        }
+      }
+    }
+    return null;
+  }
+
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
   List<RestDuration> get restDurations {
@@ -130,7 +148,7 @@ class PillSheetGroup with _$PillSheetGroup {
     );
   }
 
-  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber = _pillNumbersInPillSheet();
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersInPillSheet = _pillNumbersInPillSheet();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential = _pillNumbersForSequential();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
@@ -252,7 +270,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
-        return pillMarksPillNumber;
+        return pillNumbersInPillSheet;
       case PillSheetAppearanceMode.sequential:
         return pillNumbersForSequential;
       case PillSheetAppearanceMode.cyclicSequential:
