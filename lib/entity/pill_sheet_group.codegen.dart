@@ -425,17 +425,27 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         debugPrint('slices.length: ${slices.length}');
         for (final (sliceIndex, elements) in slices.indexed) {
           for (final (pillMarkIndex, pillMark) in elements) {
+            debugPrint('endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
             if (endPillNumber < pillMark.number) {
               if (beginPillNumber != null) {
-                final beginPillNumberOffset = beginPillNumber - 1;
-                final number = pillMark.number % endPillNumber + (beginPillNumberOffset * sliceIndex);
-                debugPrint(
-                    'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
-                pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+                final int number;
+                if (pillMark.number % endPillNumber == 0) {
+                  number = endPillNumber;
+                } else if (pillMark.number % endPillNumber == 1) {
+                  number = beginPillNumber;
+                } else {
+                  number = pillMark.number % endPillNumber + sliceIndex;
+                }
+                debugPrint('number: $number');
+                pillMarks[pillMarkIndex] = pillMark.copyWith(number: number.toInt());
               } else {
-                final number = pillMark.number % endPillNumber;
-                debugPrint(
-                    'number: $number, endPillNumber: $endPillNumber, pillMark.number: ${pillMark.number}, sliceIndex: $sliceIndex, date: ${pillMark.date}');
+                final int number;
+                if (pillMark.number % endPillNumber == 0) {
+                  number = endPillNumber;
+                } else {
+                  number = max(pillMark.number % endPillNumber, 1);
+                }
+                debugPrint('number: $number');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
               }
             }
