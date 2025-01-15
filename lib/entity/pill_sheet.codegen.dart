@@ -130,7 +130,14 @@ class PillSheet with _$PillSheet {
     if (lastTakenDate == null) {
       return 0;
     }
+    return pillNumberFor(targetDate: lastTakenDate);
+  }
 
+  int? get lastTakenPillNumber {
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return null;
+    }
     return pillNumberFor(targetDate: lastTakenDate);
   }
 

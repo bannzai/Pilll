@@ -121,10 +121,6 @@ class PillSheetGroup with _$PillSheetGroup {
     return pillSheets[0];
   }
 
-  int get lastTakenPillNumberOrOne {
-    return 
-  }
-
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
   List<RestDuration> get restDurations {
@@ -140,7 +136,7 @@ class PillSheetGroup with _$PillSheetGroup {
 }
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
-  int pillNumberOnlyNumber({
+  int pillNumberWithoutDate({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
@@ -157,14 +153,14 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }
 
   // 日付以外を返す
-  String displayPillNumberOnlyNumber({
+  String displayPillNumberWithoutDate({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumberOnlyNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet).toString();
+    return pillNumberWithoutDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet).toString();
   }
 
-  String displayPillNumber({
+  String displayPillNumberOrDate({
     required bool premiumOrTrial,
     required int pageIndex,
     required int pillNumberInPillSheet,

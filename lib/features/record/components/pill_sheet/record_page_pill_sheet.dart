@@ -300,7 +300,7 @@ class PillNumber extends StatelessWidget {
     final containedMenstruationDuration =
         menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
-    final text = pillSheetGroup.displayPillNumber(
+    final text = pillSheetGroup.displayPillNumberOrDate(
       premiumOrTrial: user.premiumOrTrial,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
