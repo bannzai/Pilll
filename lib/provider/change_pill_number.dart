@@ -66,7 +66,7 @@ class ChangePillNumber {
       } else {
         // state.selectedPillMarkNumberIntoPillSheet < index
         lastTakenDate = null;
-
+      }
       if (lastTakenDate != null && lastTakenDate.isBefore(pillSheet.beginingDate)) {
         // if (pillSheetPageIndex == index)
         // lastTakenDate = beginDate.addDays(pillNumberInPillSheet - 2);
