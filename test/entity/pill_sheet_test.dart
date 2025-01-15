@@ -464,7 +464,7 @@ void main() {
       expect(model.isBegan, false);
     });
   });
-  group("#lastTakenPillNumber", () {
+  group("#lastTakenOrZeroPillNumber", () {
     test("未服用の場合は0になる", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
