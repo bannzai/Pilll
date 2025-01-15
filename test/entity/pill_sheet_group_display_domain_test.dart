@@ -812,8 +812,8 @@ void main() {
           expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
           expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
           expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 38);
-          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 7);
-          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 25);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 16);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 34);
         });
       });
     });

@@ -352,14 +352,16 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             if (endPillNumber < pillMark.number) {
               if (beginPillNumber != null) {
                 final int number;
-                if (pillMark.number % endPillNumber == 0) {
+                final loopOffset = pillMark.number ~/ endPillNumber;
+                final base = pillMark.number % endPillNumber + (loopOffset - 1);
+                if (base == 0) {
                   number = endPillNumber;
-                } else if (pillMark.number % endPillNumber == 1) {
+                } else if (base == 1) {
                   number = beginPillNumber;
                 } else {
-                  number = pillMark.number % endPillNumber + sliceIndex;
+                  number = base + beginPillNumber - 1;
                 }
-                debugPrint('number: $number');
+                debugPrint('number: $number, loopOffset: $loopOffset, base: $base');
                 pillMarks[pillMarkIndex] = pillMark.copyWith(number: number.toInt());
               } else {
                 final int number;
