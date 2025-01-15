@@ -245,7 +245,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillShee$2 = PillSheet(
+        final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
@@ -261,7 +261,7 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillSheet, pillShee$2],
+          pillSheets: [pillSheet, pillSheet2],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           createdAt: now(),
         );
@@ -609,7 +609,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillShee$2 = PillSheet(
+        final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
@@ -625,7 +625,7 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillSheet, pillShee$2],
+          pillSheets: [pillSheet, pillSheet2],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           createdAt: now(),
         );
@@ -657,7 +657,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -673,7 +673,7 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
@@ -739,7 +739,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -755,7 +755,7 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
@@ -787,7 +787,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -803,7 +803,7 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10, endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
@@ -1152,7 +1152,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillShee$2 = PillSheet(
+        final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
@@ -1168,7 +1168,7 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillSheet, pillShee$2],
+          pillSheets: [pillSheet, pillSheet2],
           createdAt: now(),
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
@@ -1200,7 +1200,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -1216,7 +1216,7 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
@@ -1248,7 +1248,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -1264,7 +1264,7 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
@@ -1296,7 +1296,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -1312,7 +1312,7 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10, endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
