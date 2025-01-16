@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
@@ -125,10 +127,29 @@ class PillSheet with _$PillSheet {
   // lastTakenPillNumber は最後に服了したピルの番号を返す
   // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
   // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
-  int get lastTakenPillNumber {
+  int get lastTakenOrZeroPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
+    }
+
+    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
+    if (lastTakenDate.isBefore(beginingDate)) {
+      return 0;
+    }
+
+    return pillNumberFor(targetDate: lastTakenDate);
+  }
+
+  int? get lastTakenPillNumber {
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return null;
+    }
+
+    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
+    if (lastTakenDate.isBefore(beginingDate)) {
+      return null;
     }
 
     return pillNumberFor(targetDate: lastTakenDate);
@@ -144,7 +165,7 @@ class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
-  bool get isTakenAll => typeInfo.totalCount == lastTakenPillNumber;
+  bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
@@ -179,8 +200,10 @@ class PillSheet with _$PillSheet {
     return dates[pillNumberInPillSheet - 1];
   }
 
+  // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] beginDate > targetDate(lastTakenDate) の場合がある。「本日の服用日」を編集して1番目を未服用にした場合
+  // pillNumberは0は不自然なので、1番を返す
   int pillNumberFor({required DateTime targetDate}) {
-    return daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1;
+    return max(daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
   }
 
   // ピルシートのピルの日付を取得する

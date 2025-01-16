@@ -1,4 +1,5 @@
 import 'package:collection/collection.dart';
+import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -111,6 +112,35 @@ class PillSheetGroup with _$PillSheetGroup {
     }
   }
 
+  PillSheet get lastTakenPillSheetOrFirstPillSheet {
+    for (final pillSheet in pillSheets.reversed) {
+      if (pillSheet.lastTakenDate != null) {
+        return pillSheet;
+      }
+    }
+    return pillSheets[0];
+  }
+
+  // テストまで作ったが、プロダクションではまだ使ってない。とはいえ普通に使うメソッドなので visibleForTestingにしておく
+  @visibleForTesting
+  int? get lastTakenPillNumberWithoutDate {
+    for (final pillSheet in pillSheets.reversed) {
+      final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
+      if (lastTakenPillNumber != null) {
+        switch (pillSheetAppearanceMode) {
+          case PillSheetAppearanceMode.number:
+          case PillSheetAppearanceMode.date:
+            return _pillNumberInPillSheet(pillNumberInPillSheet: lastTakenPillNumber);
+          case PillSheetAppearanceMode.sequential:
+            return _sequentialPillSheetNumber(pageIndex: pillSheet.groupIndex, pillNumberInPillSheet: lastTakenPillNumber);
+          case PillSheetAppearanceMode.cyclicSequential:
+            return _cycleSequentialPillSheetNumber(pageIndex: pillSheet.groupIndex, pillNumberInPillSheet: lastTakenPillNumber);
+        }
+      }
+    }
+    return null;
+  }
+
   List<PillSheetType> get pillSheetTypes => pillSheets.map((e) => e.pillSheetType).toList();
 
   List<RestDuration> get restDurations {
@@ -120,50 +150,85 @@ class PillSheetGroup with _$PillSheetGroup {
     );
   }
 
-  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarksPillNumber = _pillMarksPillNumber();
+  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersInPillSheet = _pillNumbersInPillSheet();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential = _pillNumbersForSequential();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
 
 extension PillSheetGroupDisplayDomain on PillSheetGroup {
-  // 日付以外を返す
-  String displayPillNumberOnlyNumber({
+  int pillNumberWithoutDateOrZero({
+    // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
+    // pillNumberInPillSheet: lastTakenOrZeroPillNumberが0の場合に0を返す
+    // PillSheetModifiedHistoryPillNumberOrDate.taken で beforeLastTakenPillNumber にプラス1しており、整合性を保つため
+    if (pillNumberInPillSheet == 0) {
+      return 0;
+    }
+
     switch (pillSheetAppearanceMode) {
-      case PillSheetAppearanceMode.sequential:
-        return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.number:
-        return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+        return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.date:
-        return _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+        return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
+      case PillSheetAppearanceMode.sequential:
+        return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.cyclicSequential:
-        return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+        return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     }
   }
 
-  String displayPillNumber({
+  int pillNumberWithoutDateOrZeroFromDate({
+    // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+    required DateTime date,
+  }) {
+    switch (pillSheetAppearanceMode) {
+      case PillSheetAppearanceMode.number:
+        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
+      case PillSheetAppearanceMode.date:
+        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
+      case PillSheetAppearanceMode.sequential:
+        return pillNumbersForSequential.firstWhere((e) => isSameDay(e.date, date)).number;
+      case PillSheetAppearanceMode.cyclicSequential:
+        return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, date)).number;
+    }
+  }
+
+  // 日付以外を返す
+  String displayPillNumberWithoutDate({
+    required int pageIndex,
+    required int pillNumberInPillSheet,
+  }) {
+    return pillNumberWithoutDateOrZero(
+      pillSheetAppearanceMode: pillSheetAppearanceMode,
+      pageIndex: pageIndex,
+      pillNumberInPillSheet: pillNumberInPillSheet,
+    ).toString();
+  }
+
+  String displayPillNumberOrDate({
     required bool premiumOrTrial,
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return switch (pillSheetAppearanceMode) {
-      PillSheetAppearanceMode.number => _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+    final pillNumber = switch (pillSheetAppearanceMode) {
+      PillSheetAppearanceMode.number => _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.date => premiumOrTrial
           ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
-          : _displayPillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.sequential => _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.cyclicSequential =>
-        _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+          : _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.sequential => _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.cyclicSequential => _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
+    return pillNumber.toString();
   }
 
-  String _displayPillNumberInPillSheet({
+  int _pillNumberInPillSheet({
     required int pillNumberInPillSheet,
   }) {
-    return '$pillNumberInPillSheet';
+    return pillNumberInPillSheet;
   }
 
   @visibleForTesting
@@ -182,33 +247,33 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }
 
   @visibleForTesting
-  String displaySequentialPillSheetNumber({
+  int sequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return _displaySequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+    return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
-  String _displaySequentialPillSheetNumber({
+  int _sequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
+    return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 
   @visibleForTesting
-  String displayCycleSequentialPillSheetNumber({
+  int cycleSequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return _displayCycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
+    return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
-  String _displayCycleSequentialPillSheetNumber({
+  int _cycleSequentialPillSheetNumber({
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number.toString();
+    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 }
 
@@ -234,7 +299,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
-        return pillMarksPillNumber;
+        return pillNumbersInPillSheet;
       case PillSheetAppearanceMode.sequential:
         return pillNumbersForSequential;
       case PillSheetAppearanceMode.cyclicSequential:
@@ -242,7 +307,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     }
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillMarksPillNumber() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet() {
     return pillSheets
         .map((pillSheet) =>
             pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
@@ -269,24 +334,30 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumberOffset - 1)).toList();
+      final beginPillNumber = displayNumberSetting.beginPillNumber;
+      if (beginPillNumber != null && beginPillNumber > 0) {
+        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumber - 1)).toList();
       }
 
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number % endPillNumberOffset == 0).map((e) => e.$1);
-        final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
-        for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
-          if (beginPillNumberOffsetIndex < pillMarks.length) {
-            for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(beginPillNumberOffsetIndex).indexed.toList()) {
-              pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
-            }
-          }
+      final endPillNumber = displayNumberSetting.endPillNumber;
+      if (endPillNumber != null && endPillNumber > 0) {
+        final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
+        debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
+        for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
+          debugPrint('--------------------');
+          final loopOffset = (pillMarkIndex ~/ pillCount);
+          debugPrint('loopOffset: $loopOffset');
+
+          final countOffset = loopOffset * pillCount;
+          final number = pillMark.number - countOffset;
+          debugPrint(
+              'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
+          pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
         }
       }
     }
+
+    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
 
     return pillMarks;
   }
@@ -322,24 +393,30 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
     final displayNumberSetting = this.displayNumberSetting;
     if (displayNumberSetting != null) {
-      final beginPillNumberOffset = displayNumberSetting.beginPillNumber;
-      if (beginPillNumberOffset != null && beginPillNumberOffset > 0) {
-        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumberOffset - 1)).toList();
+      final beginPillNumber = displayNumberSetting.beginPillNumber;
+      if (beginPillNumber != null && beginPillNumber > 0) {
+        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumber - 1)).toList();
       }
 
-      final endPillNumberOffset = displayNumberSetting.endPillNumber;
-      if (endPillNumberOffset != null && endPillNumberOffset > 0) {
-        final endPillNumberOffsetIndexes = pillMarks.indexed.where((e) => e.$2.number % endPillNumberOffset == 0).map((e) => e.$1);
-        final beginPillNumberOffsetIndexes = endPillNumberOffsetIndexes.map((e) => e + 1).toList();
-        for (int beginPillNumberOffsetIndex in beginPillNumberOffsetIndexes) {
-          if (beginPillNumberOffsetIndex < pillMarks.length) {
-            for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(beginPillNumberOffsetIndex).indexed.toList()) {
-              pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
-            }
-          }
+      final endPillNumber = displayNumberSetting.endPillNumber;
+      if (endPillNumber != null && endPillNumber > 0) {
+        final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
+        debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
+        for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
+          debugPrint('--------------------');
+          final loopOffset = (pillMarkIndex ~/ pillCount);
+          debugPrint('loopOffset: $loopOffset');
+
+          final countOffset = loopOffset * pillCount;
+          final number = pillMark.number - countOffset;
+          debugPrint(
+              'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
+          pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
         }
       }
     }
+
+    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
 
     return pillMarks;
   }
@@ -413,16 +490,6 @@ extension PillSheetGroupMenstruationDomain on PillSheetGroup {
 extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   RestDuration? get lastActiveRestDuration {
     return pillSheets.map((e) => e.activeRestDuration).whereNotNull().firstOrNull;
-  }
-
-  PillSheet get lastTakenPillSheetOrFirstPillSheet {
-    for (final pillSheet in pillSheets.reversed) {
-      if (pillSheet.lastTakenDate != null) {
-        return pillSheet;
-      }
-    }
-
-    return pillSheets[0];
   }
 
   PillSheet get targetBeginRestDurationPillSheet {

@@ -245,7 +245,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillShee$2 = PillSheet(
+        final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
@@ -261,7 +261,7 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillSheet, pillShee$2],
+          pillSheets: [pillSheet, pillSheet2],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           createdAt: now(),
         );
@@ -303,9 +303,9 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           createdAt: now(),
         );
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
       });
 
       // NOTE: 直接このテストケースの結果に関わってこない部分ではあるが、書いちゃったので残している
@@ -343,10 +343,10 @@ void main() {
             createdAt: now(),
           );
 
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "22");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 22);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
         });
 
         test("服用お休みが終わっている場合", () {
@@ -383,10 +383,10 @@ void main() {
             createdAt: now(),
           );
 
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "22");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 22);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
         });
         group("複数の服用お休み期間を持つ場合", () {
           test("最後の服用お休みが終わっていない場合", () {
@@ -427,11 +427,11 @@ void main() {
               pillSheetAppearanceMode: PillSheetAppearanceMode.number,
               createdAt: now(),
             );
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "12");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "22");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 12);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 22);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
           });
           test("最後の服用お休み期間が終わっている場合", () {
             final mockTodayRepository = MockTodayService();
@@ -475,11 +475,11 @@ void main() {
               pillSheetAppearanceMode: PillSheetAppearanceMode.number,
               createdAt: now(),
             );
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '1');
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "12");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "22");
-            expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 12);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 22);
+            expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
           });
         });
       });
@@ -513,10 +513,10 @@ void main() {
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
           );
 
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "31");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "37");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 31);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
         });
 
         test("終了番号が設定されている", () {
@@ -541,17 +541,17 @@ void main() {
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 11),
           );
 
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 11), "11");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "11");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "6");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 11), 11);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 11);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 6);
         });
         test("開始と終了どちらも設定されている", () {
           final mockTodayRepository = MockTodayService();
@@ -581,11 +581,11 @@ void main() {
               endPillNumber: 20,
             ),
           );
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '10');
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "11");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "17");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 20);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 15);
         });
       });
     });
@@ -609,7 +609,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillShee$2 = PillSheet(
+        final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
@@ -625,16 +625,16 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillSheet, pillShee$2],
+          pillSheets: [pillSheet, pillSheet2],
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           createdAt: now(),
         );
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '1');
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "29");
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "38");
-        expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "56");
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 29);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 38);
+        expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 56);
       });
 
       group("displayNumberSettingの設定がある場合", () {
@@ -657,7 +657,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -673,17 +673,17 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '10');
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "37");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "38");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "47");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "65");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 38);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 47);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 65);
         });
 
         test("終了番号が設定されている", () {
@@ -713,12 +713,12 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 11), "11");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "11");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "6");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 11), 11);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 11);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 6);
         });
         test("開始番号が設定されている", () {
           final mockTodayRepository = MockTodayService();
@@ -739,7 +739,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -755,18 +755,18 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "29");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "38");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "16");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 29);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 38);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 16);
         });
         test("開始と終了どちらも設定されている", () {
           final mockTodayRepository = MockTodayService();
@@ -787,7 +787,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -803,17 +803,17 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10, endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "10");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "37");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "38");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "7");
-          expect(pillSheetGroup.displaySequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "25");
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 38);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 16);
+          expect(pillSheetGroup.sequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 34);
         });
       });
     });
@@ -846,9 +846,9 @@ void main() {
           createdAt: now(),
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
       });
 
       group("服用お休み期間を持つ場合", () {
@@ -885,10 +885,10 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "22");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 22);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
         });
 
         test("服用お休みが終わっている場合", () {
@@ -925,10 +925,10 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "7");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 1);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 7);
         });
         group("複数の服用お休み期間を持つ場合", () {
           test("最後の服用お休みが終わっていない場合", () {
@@ -969,11 +969,11 @@ void main() {
               createdAt: now(),
               pillSheetAppearanceMode: PillSheetAppearanceMode.number,
             );
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "11");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "17");
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 1);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 11);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 17);
           });
           test("最後の服用お休み期間が終わっている場合", () {
             final mockTodayRepository = MockTodayService();
@@ -1017,12 +1017,12 @@ void main() {
               createdAt: now(),
               pillSheetAppearanceMode: PillSheetAppearanceMode.number,
             );
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '1');
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 18), "7");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "4");
-            expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "10");
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 1);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 18), 7);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 4);
+            expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 10);
           });
         });
       });
@@ -1056,10 +1056,10 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "10");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "31");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "37");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 31);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
         });
 
         test("終了番号が設定されている", () {
@@ -1089,12 +1089,12 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 11), "11");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "11");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "6");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 11), 11);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 1);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 11);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 6);
         });
         test("開始と終了どちらも設定されている", () {
           final mockTodayRepository = MockTodayService();
@@ -1124,11 +1124,11 @@ void main() {
             ),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '10');
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), "11");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "17");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 12), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 22), 20);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 15);
         });
       });
     });
@@ -1152,7 +1152,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillShee$2 = PillSheet(
+        final pillSheet2 = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
@@ -1168,16 +1168,16 @@ void main() {
         // created at and id are anything value
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
-          pillSheets: [pillSheet, pillShee$2],
+          pillSheets: [pillSheet, pillSheet2],
           createdAt: now(),
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '1');
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "29");
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "38");
-        expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "56");
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 29);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 38);
+        expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 56);
       });
 
       group("displayNumberSettingの設定がある場合", () {
@@ -1200,7 +1200,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -1216,17 +1216,17 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), '10');
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "37");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "38");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "47");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "65");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 38);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 47);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 65);
         });
 
         test("開始番号が設定されている", () {
@@ -1248,7 +1248,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -1264,18 +1264,18 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
 
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "1");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "10");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "28");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "29");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "38");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "16");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 28);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 29);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 38);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 16);
         });
         test("開始と終了どちらも設定されている", () {
           final mockTodayRepository = MockTodayService();
@@ -1296,7 +1296,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillShee$2 = PillSheet(
+          final pillSheet2 = PillSheet(
             id: firestoreIDGenerator(),
             beginingDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
@@ -1312,17 +1312,17 @@ void main() {
           // created at and id are anything value
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id", "sheet_id2"],
-            pillSheets: [pillSheet, pillShee$2],
+            pillSheets: [pillSheet, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10, endPillNumber: 40),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), "10");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), "19");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), "37");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), "38");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), "7");
-          expect(pillSheetGroup.displayCycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), "25");
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 10), 19);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 28), 37);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 1), 38);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 10), 16);
+          expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 1, pillNumberInPillSheet: 28), 34);
         });
       });
     });

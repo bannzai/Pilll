@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
@@ -7,7 +8,6 @@ import 'package:pilll/features/calendar/components/pill_sheet_modified_history/c
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/time.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/taken_pill_action_o_list.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
@@ -20,8 +20,6 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
   final DateTime estimatedEventCausingDate;
   final PillSheetModifiedHistory history;
   final TakenPillValue? value;
-  final PillSheet? beforePillSheet;
-  final PillSheet? afterPillSheet;
 
   const PillSheetModifiedHistoryTakenPillAction({
     super.key,
@@ -29,18 +27,16 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
     required this.estimatedEventCausingDate,
     required this.history,
     required this.value,
-    required this.beforePillSheet,
-    required this.afterPillSheet,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final setPillSheetModifiedHistory = ref.watch(setPillSheetModifiedHistoryProvider);
     final value = this.value;
-    final beforePillSheet = this.beforePillSheet;
-    final afterPillSheet = this.afterPillSheet;
-    if (value == null || afterPillSheet == null || beforePillSheet == null) {
-      return Container();
+    final beforePillSheetGroup = history.beforePillSheetGroup;
+    final afterPillSheetGroup = history.afterPillSheetGroup;
+    if (value == null || afterPillSheetGroup == null || beforePillSheetGroup == null) {
+      return Text(L.failedToGetPillSheetHistory('takenPill'));
     }
 
     final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
@@ -88,14 +84,23 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
             pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforePillSheet.lastTakenPillNumber,
-          afterLastTakenPillNumber: afterPillSheet.lastTakenPillNumber,
+          beforeLastTakenPillNumber: beforePillSheetGroup.pillNumberWithoutDateOrZero(
+            // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
+            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+            pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+          ),
+          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
+            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+          ),
         )),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(
           value: value,
-          beforePillSheet: beforePillSheet,
-          afterPillSheet: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
         ),
       ),
     );
