@@ -213,7 +213,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null) {
+    if (afterID == null || afterLastTakenDate == null) {
       throw FormatException('unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action');
     }
     final beforeID = before.id;
