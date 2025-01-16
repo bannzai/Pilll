@@ -213,6 +213,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
+    // since: 2025-01-16 afterLastTakenDate は null許容になった。以前までは服用日の変更やrevert時に1番目のピルシートを指定した場合はbeginingDateの一つ前の日付を入れいたがやめた
     if (afterID == null) {
       throw FormatException('unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action');
     }
