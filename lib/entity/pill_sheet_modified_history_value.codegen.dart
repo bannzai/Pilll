@@ -162,10 +162,10 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
     )
     DateTime? beforeLastTakenDate,
     @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    required DateTime afterLastTakenDate,
+    required DateTime? afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
   }) = _RevertTakenPillValue;
