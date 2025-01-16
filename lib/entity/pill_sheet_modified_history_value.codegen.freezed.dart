@@ -1653,8 +1653,8 @@ mixin _$RevertTakenPillValue {
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get afterLastTakenDate => throw _privateConstructorUsedError;
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
@@ -1670,7 +1670,8 @@ abstract class $RevertTakenPillValueCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -1688,7 +1689,7 @@ class _$RevertTakenPillValueCopyWithImpl<$Res, $Val extends RevertTakenPillValue
   @override
   $Res call({
     Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = freezed,
+    Object? afterLastTakenDate = null,
     Object? beforeLastTakenPillNumber = null,
     Object? afterLastTakenPillNumber = null,
   }) {
@@ -1697,10 +1698,10 @@ class _$RevertTakenPillValueCopyWithImpl<$Res, $Val extends RevertTakenPillValue
           ? _value.beforeLastTakenDate
           : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      afterLastTakenDate: freezed == afterLastTakenDate
+      afterLastTakenDate: null == afterLastTakenDate
           ? _value.afterLastTakenDate
           : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as DateTime,
       beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
           ? _value.beforeLastTakenPillNumber
           : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
@@ -1721,7 +1722,8 @@ abstract class _$$RevertTakenPillValueImplCopyWith<$Res> implements $RevertTaken
   @useResult
   $Res call(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
@@ -1735,7 +1737,7 @@ class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillVa
   @override
   $Res call({
     Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = freezed,
+    Object? afterLastTakenDate = null,
     Object? beforeLastTakenPillNumber = null,
     Object? afterLastTakenPillNumber = null,
   }) {
@@ -1744,10 +1746,10 @@ class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillVa
           ? _value.beforeLastTakenDate
           : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      afterLastTakenDate: freezed == afterLastTakenDate
+      afterLastTakenDate: null == afterLastTakenDate
           ? _value.afterLastTakenDate
           : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as DateTime,
       beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
           ? _value.beforeLastTakenPillNumber
           : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
@@ -1766,7 +1768,8 @@ class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillVa
 class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
   const _$RevertTakenPillValueImpl(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
@@ -1779,8 +1782,8 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beforeLastTakenDate;
   @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? afterLastTakenDate;
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime afterLastTakenDate;
   @override
   final int beforeLastTakenPillNumber;
   @override
@@ -1823,8 +1826,8 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
 abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   const factory _RevertTakenPillValue(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-      required final DateTime? afterLastTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime afterLastTakenDate,
       required final int beforeLastTakenPillNumber,
       required final int afterLastTakenPillNumber}) = _$RevertTakenPillValueImpl;
   const _RevertTakenPillValue._() : super._();
@@ -1836,8 +1839,8 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
   @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get afterLastTakenDate;
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get afterLastTakenDate;
   @override
   int get beforeLastTakenPillNumber;
   @override
