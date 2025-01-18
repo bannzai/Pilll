@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -87,6 +88,8 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                   text: L.discard,
                   onPressed: () async {
                     try {
+                      // NOTE: リモートのDBに書き込む時間がかかるので事前にバッジを0にする。楽観的UI更新
+                      FlutterAppBadger.removeBadge();
                       await deletePillSheetGroup(latestPillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet);
                       await cancelReminderLocalNotification();
                       if (context.mounted) {
