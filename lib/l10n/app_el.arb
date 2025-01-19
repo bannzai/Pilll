@@ -1,0 +1,2281 @@
+{
+  "@@locale": "el",
+  "pillSheetType21With7Placebo": "21 δισκίων τύπου",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 δισκίων τύπος (4 δισκία εικονικού φαρμάκου)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 δισκία τύπου (7 δισκία ψεύτικα)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 δισκίων τύπος (όλα τα πραγματικά φάρμακα)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 δισκίων τύπου (όλα τα ενεργά φάρμακα)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 δισκίων τύπου (όλα τα λειτουργικά φάρμακα)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 δισκία τύπου",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "Διακοπή φαρμακευτικής αγωγής",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "Ψευδοφάρμακο",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "Δεν βρέθηκε χρήστης",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "Υπάρχει ήδη χρήστης.",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "Ιστορικό λαμβάνων",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "Ρυθμίσεις",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "Λογαριασμός",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "Για τη μεταφορά ή την ανάκτηση δεδομένων σε περίπτωση αλλαγής συσκευής ή απώλειας του κινητού, απαιτείται η εγγραφή λογαριασμού.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll Premium",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "Περίοδος απεριόριστης λειτουργικότητας",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "φάρμακο",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "Ειδοποίηση",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "έμμηνος ρύση",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "Άλλα",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "Συχνές Ερωτήσεις",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Εισαγωγή νέων χαρακτηριστικών",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "Επικοινωνία",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "Διαγραφή",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "Διαγραφή",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "Αφαίρεση χρήστη",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "Θα διαγράψετε το ημερολόγιο.",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Θα διαγράψετε την περίοδο της εμμήνου ρύσεως;",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "Προσθήκη ώρας ειδοποίησης",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "Θα συγχρονίσετε με την ζώνη ώρας της συσκευής ({deviceTimezoneName}) ;",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "Η τρέχουσα ρυθμισμένη ζώνη ώρας",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "Ναι",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "Όχι",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "Ακύρωση",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "Ειδοποίηση λήψης χαπιού",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "Ειδοποίηση λήψης",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "Ώρα για χάπια 💊",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "ΑΝΤΙΓΡΑΦΗ ΠΛΗΡΟΦΟΡΙΩΝ ΑΠΟΚΩΔΙΚΟΠΟΙΗΣΗΣ",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Ακύρωση",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "Αποσύνδεση",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "Αυτόματη προσθήκη ομάδας δισκίων",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "Αφού τελειώσει η τρέχουσα ομάδα φύλλων, θα προστεθεί αυτόματα ένα νέο φύλλο.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "Ρυθμίσεις λογαριασμού",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "Συνδεδεμένος",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "Μη καταχωρημένος",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "Γρήγορη καταγραφή",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "Στην οθόνη ειδοποιήσεων μπορείτε να δείτε τα χάπια που πρέπει να πάρετε σήμερα και να καταγράψετε αμέσως τη λήψη τους.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Σύνδεση υγειονομικής περίθαλψης",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Μπορείτε να καταγράψετε αυτόματα τις καταγραφές εμμηνόρροιας που έχετε κάνει στο Pilll στο Health.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "Δείτε το προνομιακό πλάνο",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "Αλλαγή του αριθμού του χαπιού που πρέπει να ληφθεί σήμερα",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "Απόρριψη όλων των φύλλων χαπιών",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "Θα κάνετε {doing};",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "Τώρα εμφανίζεται",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "Όλα τα φύλλα δισκίων",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "θα καταστραφεί",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "Απόρριψη",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "Έχετε απορρίψει το φύλλο των χαπιών.",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "Για την περίοδο",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "Ελέγξτε τον αριθμό του χαπιού της πρώτης ημέρας της περιόδου. Έχει οριστεί ένας αριθμός χαπιού που δεν υπάρχει στον τρέχοντα τύπο φύλλου χαπιών που έχετε επιλέξει.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "Προσαρμογή ειδοποιήσεων λήψης",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "Μπορείτε να προσαρμόσετε το {x}.",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Σας ευχαριστούμε για τη συνεργασία",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "Η γνώμη σας θα χρησιμοποιηθεί για μελλοντικές βελτιώσεις.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "Κλείσιμο",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "Εγγραφή λογαριασμού",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "Επανασύνδεση",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "Η πληροφορία πιστοποίησης ενημερώθηκε.",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "Θα ενημερώσω τα διαπιστευτήρια.",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "Εγγράφηκα με {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "Συνεργασία",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "Ακύρωση συνδρομής",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "Αποχώρησα",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "Η εφαρμογή θα τερματιστεί προσωρινά. Για να ξεκινήσετε καινούρια, παρακαλώ επανεκκινήστε την εφαρμογή και κάντε τις αρχικές ρυθμίσεις.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "Εντάξει",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Αλλαγή αριθμού χαπιού",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "Αλλαγή",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "Χάπι",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "Ημερολόγιο",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "Οι πληροφορίες χρήστη θα διαγραφούν.",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "Εάν αποχωρήσετε, όλα τα δεδομένα θα διαγραφούν και δεν θα μπορείτε ποτέ ξανά να συνδεθείτε με τον ίδιο λογαριασμό.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "RecordPage",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Παρακαλώ συνδεθείτε ξανά",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "Παρακαλώ συνδεθείτε ξανά για την επαλήθευση της ταυτότητας πριν από την ακύρωση της συνδρομής. Μετά την επανασύνδεση, η διαδικασία ακύρωσης θα αρχίσει αυτόματα.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "Θα συνδεθείτε ξανά και θα ενημερώσετε τις πληροφορίες πιστοποίησης.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "ΣελίδαΕμμηνόρροιας",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "Ημερολόγιο",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "ΡυθμίσειςΣελίδα",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Διαγράφηκε η περίοδος.",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "Επεξεργασία περιόδου",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "Επεξεργάστηκα την περίοδο έμμηνου ρύσεως",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "Λεπτομέρειες κατάστασης",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Αυτή η προβολή πέρα από αυτό το σημείο θα είναι διαθέσιμη μόνο σε προνομιακούς χρήστες.",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "δείτε λεπτομέρειες",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "Δείτε περισσότερα",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}β",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} αριθμός",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} αριθμός",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} αριθμός",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} αριθμός",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} αριθμός",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Επιλογή ημερομηνίας έναρξης διακοπής λήψης",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "Επιλέξτε την περίοδο διακοπής λήψης",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "Ημερομηνία έναρξης διακοπής λήψης",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Ημερομηνία λήξης διακοπής λήψης",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "Τέλος της θηκών των χαπιών",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "Απόρριψη της κάρτας χαπιών",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "Ώρα λήψης",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "Η ιστορία λήψης είναι λειτουργία premium.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Εάν διακόψετε τη λήψη, ο αριθμός των χαπιών δεν προχωρά.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "Θα κάνετε παύση στη λήψη από τον {number}?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "λήψη",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "Τελευταίο του προηγούμενου φύλλου: {estimatedEndPillNumber}",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Προσθήκη φύλλου χαπιών",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "Πήρα",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "Δεν το έπιασα",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "Ρύθμιση πίνακα χαπιών",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "Από τότε που δεν πήρα το χάπι που πρέπει να πάρω σήμερα",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "Διακοπή λήψης",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "Αλλαγή ημερομηνίας έναρξης διαλείμματος λήψης",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "Η περίοδος παύσης της λήψης έχει λήξει.",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "Αλλαγή του αριθμού ημερών λήψης της στήλης",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "Αλλάξαμε τους αριθμούς της αρχής και του τέλους.",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "Αρχή ημερών λήψης",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Τελευταία ημέρα του προηγούμενου φύλλου: {beforePillSheetGroupSequentialEstimatedEndPillNumber}η μέρα",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "Τέλος των ημερών λήψης",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "Αλλαγή αριθμού",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "Λειτουργία παρουσίασης",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "Ημερομηνία Εμφάνισης",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "Αριθμός χαπιού",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "Ημέρες λήψης",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "Ημερομηνίες λήψης (κύκλος)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "Η πλάκα των χαπιών έχει τελειώσει",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "Επιβεβαίωση της τελευταίας ημερομηνίας λήψης",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "Παρακαλώ εγγραφείτε",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "Δεν μπορείτε να μεταφέρετε τις premium δυνατότητες όταν αλλάζετε συσκευή ή χάνετε το τηλέφωνό σας.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "Μπορείτε να ξαναζήσετε τις premium δυνατότητες για 14 ημέρες! Πατήστε για να μοιραστείτε στα κοινωνικά δίκτυα!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "Πού θέλετε να μοιραστείτε;",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 Διακοπή λήψης {day} ημέρα",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} ημερών",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}η μέρα",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "Σε {diffPlusOne} ημέρες είναι η περίοδος {activePillSheetPillSheetTypeNotTakenWord}",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιήσετε όλες τις δυνατότητες για άλλες {diff} ημέρες.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Σήμερα λήψη",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 Το χάπι που πρέπει να πάρω σήμερα",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "Αριθμός",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "Καταγράφηκε ότι η περίοδος ξεκίνησε από {DateTimeFormatterMonthAndDay}.",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Ημερομηνία έναρξης περιόδου",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "Ημερομηνία λήξης περιόδου",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "Ημερομηνία αναμενόμενης περιόδου",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "Προβλεπόμενη εμμηνόρροια: {diffPlusOne}η ημέρα",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Προβλεπόμενη περίοδος: {diffPlusOne}-η μέρα του {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "Σε {diff} ημέρες",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "ημέρα {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Καταγραφή περιόδου",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "Ιστορικό περιόδου",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "Η περίοδος ξεκινά από σήμερα",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "Χθες άρχισε η περίοδος",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "Επιλέξτε ημερομηνία έναρξης περιόδου",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} ημέρες κύκλος",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Σύνδεση",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "Πριν από την εγγραφή στο Premium...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Εάν δεν έχετε συνδεθεί ποτέ στο Pilll, θα δημιουργηθεί ένας νέος λογαριασμός.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "Με την εγγραφή λογαριασμού, θα μπορείτε να μεταφέρετε τα δεδομένα σας.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "Σας παρακαλούμε να εγγραφείτε για να διατηρήσετε τις πληροφορίες του λογαριασμού σας.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "Σύνδεση με {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "Εγγραφή με {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Η εγγραφή Pilll Premium ολοκληρώθηκε",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "Σας ευχαριστούμε για την εγγραφή σας.\nΌλες οι δυνατότητες είναι πλέον διαθέσιμες!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Αυτή τη στιγμή μπορείτε να το αποκτήσετε σε περιορισμένη τιμή για πάντα.",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "Συνήθης μηνιαίο σχέδιο",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "ετήσιο πρόγραμμα",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString} το χρόνο",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/μήνα",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "Η περίοδος της Premium συνδρομής ανανεώνεται αυτόματα κάθε μήνα ή χρόνο από την ημερομηνία έναρξης.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Εμφάνιση σύμφωνα με τον Νόμο περί Ειδικών Εμπορικών Συναλλαγών",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "Ελέγξτε το και εγγραφείτε παρακαλώ",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "Η σύμβαση ανανεώνεται αυτόματα εκτός εάν ακυρωθεί τουλάχιστον 24 ώρες πριν από την ημερομηνία λήξης της περιόδου premium.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "• Μετά την αγορά, η ακύρωση της αυτόματης ανανέωσης μπορεί να γίνει στις ρυθμίσεις του λογαριασμού της εφαρμογής {storeName}. (Η ακύρωση της αυτόματης ανανέωσης δεν μπορεί να γίνει μέσω της εφαρμογής).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "Δείτε περισσότερα εδώ",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "Αποκατέστησα τις πληροφορίες αγοράς",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "Αν έχετε αγοράσει προηγουμένως, κάντε κλικ εδώ",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "Δεν βρέθηκαν προηγούμενες πληροφορίες αγοράς. Παρακαλούμε ελέγξτε τον λογαριασμό σας και δοκιμάστε ξανά.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "Μηνιαίο σχέδιο",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/μήνα",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "Είστε μέλος premium",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "Σας ευχαριστούμε για τη χρήση της εφαρμογής. Χάρη σε εσάς, μπορούμε να συνεχίσουμε τη λειτουργία του Pilll.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "Λίστα προνομιακών λειτουργιών",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 Καταγραφή λήψης από ειδοποιήσεις push",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 Καταγραφή και προβολή ιστορικού λήψης",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 Εμφάνιση ημερομηνίας στο φύλλο των χαπιών",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 Αυτόματη ανανέωση νέων φύλλων χαπιών",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 Προβολή παλαιότερων δεδομένων",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 Προσαρμογή ετικετών υγείας",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 Απενεργοποίηση διαφημίσεων",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "Δείτε λεπτομέρειες για τις premium δυνατότητες",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "Δημοφιλή χαρακτηριστικά",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "Δείτε τις premium λειτουργίες",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "Η λειτουργία εμφάνισης για τις ημέρες λήψης (κύκλος) έχει προστεθεί.",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "Δείτε λεπτομέρειες",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Ειδοποίηση για την παράλειψη λήψης χαπιών",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "Μπορείτε να αποτρέψετε την παράλειψη δόσεων ορίζοντας πολλές ρυθμίσεις.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "και",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "Διαβάστε και αρχίστε να χρησιμοποιείτε",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "Επόμενο",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "Ειδοποίηση {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "Μπορείτε να καταγράψετε την λήψη μέσω ειδοποίησης",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "Ξεκινήστε την εφαρμογή",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "Συνδεθήκατε με το {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Πείτε μου για το φύλλο που σας έχει συνταγογραφηθεί.",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "Αν έχετε ήδη λογαριασμό, κάντε κλικ εδώ",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "Σήμερα({todayString})\nΠατήστε τον αριθμό του χαπιού που παίρνετε ή πήρατε.",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "Δεν ξέρω ακόμα",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "Τα δισκία που πρέπει να λάβετε σήμερα",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "Προεπισκόπηση",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "Συνήθως",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "Ξέχασα να πάρω το φάρμακο",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "Εμφάνιση ημερομηνίας",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "Εμφάνιση Αριθμού",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "Εμφάνιση περιγραφής",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "Τίτλος",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Μήνυμα",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "Επιλογές",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "Ολοκληρώθηκε",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Πίλλ",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το κείμενο ειδοποίησης σε περίπτωση που έχετε ξεχάσει να πάρετε το φάρμακο.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "Μπορείτε να αλλάξετε το αρχικό μέρος της ειδοποίησης.",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "Εισάγετε τουλάχιστον 0 χαρακτήρες",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "Μπορείτε να αλλάξετε τη διατύπωση της ειδοποίησης όταν δεν έχετε ξεχάσει να πάρετε το χάπι.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Λάβετε ειδοποίηση στις 9:00 την ημέρα",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "Αποθήκευση",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "Κατάσταση υγείας",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "Το διαγραμμένο ημερολόγιο δεν μπορεί να ανακτηθεί.",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "σεξ",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "Προηγούμενη ομάδα φύλλων χαπιών",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "Η προηγούμενη ομάδα φύλλου δισκίων δεν υπάρχει ακόμη.",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "Αποτυχία στην απόκτηση πληροφοριών ιστορικού λήψης. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "Δείτε τις Συχνές Ερωτήσεις",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "Επαναφόρτωση οθόνης",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "Εάν δεν επιλυθεί, δείτε εδώ",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Παρακαλώ μοιραστείτε την άποψή σας για το Pilll",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "Απόφαση",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "Εάν μπορείτε, παρακαλούμε συμμετάσχετε στην έρευνα για τη βελτίωση της υπηρεσίας.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "Συνεργάζομαι",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "δεν κάνω",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "Δημοσκοπική έρευνα για τη βελτίωση υπηρεσιών",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "Είμαι ικανοποιημένος",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "Δεν είμαι ικανοποιημένος",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "κατά αριθμό",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "Πόσες ημέρες κρατά η περίοδος;",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "Διαρκεί η εμμηνόρροια για ημέρες",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "Πατήστε τον αριθμό του χαπιού που αρχίζει την περίοδο.",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "Η {number} σελίδα",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "Νέα έναρξη φύλλου χαπιών ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "Επιλέξτε τον τύπο του χαπιού",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 δισκία",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 δισκία",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 ταμπλέτες",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 δισκία + 7 ημέρες διακοπής",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 δισκία + 4 δισκία εικονικού φαρμάκου",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 δισκία + 7 ψευδών δισκίων",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "όλα τα πραγματικά φάρμακα",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 τεμάχια + 4 τεμάχια διακοπή",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "Επιλέξτε τον τύπο του χαπιού",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ειδοποίηση περιόδου",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Εάν οι ειδοποιήσεις είναι απενεργοποιημένες, η ιστορία λήψης φαρμάκων για την περίοδο {pillSheetPillSheetTypeNotTakenWord} θα καταχωρηθεί αυτόματα.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Παρακαλούμε να συμπληρώσετε την έρευνα μετά την ακύρωση",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll - εφαρμογή υπενθύμισης χαπιών που είναι ειδικά σχεδιασμένη για τη λήψη χαπιών",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "Έχετε φτάσει το ανώτατο όριο εγγραφών. Παρακαλώ περιορίστε το σε {ReminderTimeMaximumCount} ή λιγότερες εγγραφές.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Ο χρόνος ειδοποίησης απαιτεί τουλάχιστον {ReminderTimeMinimumCount} στοιχεία.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "Παρουσιάστηκε σφάλμα άγνωστης αιτίας. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "Παρουσιάστηκε σφάλμα στο {storeName}. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "Αυτή η συσκευή δεν επιτρέπεται να πραγματοποιεί αγορές.",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Ελέγξτε αν η μέθοδος πληρωμής είναι έγκυρη και προσπαθήστε ξανά.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Το συγκεκριμένο πρόγραμμα δεν είναι διαθέσιμο προς πώληση αυτή τη στιγμή. Σας παρακαλούμε να επανεκκινήσετε την εφαρμογή και να δοκιμάσετε ξανά.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Έχετε ήδη αγοράσει ένα σχέδιο. Για να επαναφέρετε τις πληροφορίες αγοράς σε αυτήν τη συσκευή, παρακαλώ κάντε κλικ στο \"Αυτοί που έχουν αγοράσει προηγουμένως εδώ\" για να επαναφέρετε τις πληροφορίες αγοράς.",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Έχετε ήδη αγοράσει. Οι πληροφορίες αγοράς χρησιμοποιούνται από άλλο χρήστη. Ελέγξτε το {accountName}.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Μη έγκυρες πληροφορίες αγοράς. Παρακαλώ επιβεβαιώστε τις πληροφορίες αγοράς.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "Δεν υπάρχουν πληροφορίες για τον αγοραστή. Παρακαλώ συνδεθείτε στη συσκευή σας με {accountName} και δοκιμάστε.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Η κατάσταση δικτύου είναι ασταθής. Παρακαλούμε ελέγξτε την κατάσταση σύνδεσης και προσπαθήστε ξανά.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Αποτυχία αγοράς. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε με την υποστήριξη μέσω Ρυθμίσεων > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Δεν μπορείτε να αγοράσετε αυτή τη στιγμή. Προσπαθήστε ξανά σε λίγη ώρα. Εάν δεν επιλυθεί, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Οι πληροφορίες αγοράς χρησιμοποιούνται από άλλο χρήστη. Ελέγξτε το {accountName} με το οποίο έχετε συνδεθεί στη συσκευή.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Ο χρήστης δεν μπόρεσε να επιβεβαιώσει. Παρακαλώ επανεκκινήστε την εφαρμογή και προσπαθήστε ξανά. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Η διαδικασία αγοράς προχωρά ξεχωριστά. Παρακαλώ ελέγξτε ξανά μετά από λίγο.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "Δεν μπορείς να κάνεις αγορά αυτή τη στιγμή. Δοκίμασε ξανά σε λίγο. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινώνησε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Αγορά αποτυχημένη. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά. Αν το πρόβλημα δεν επιλύεται, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Απέτυχε η αγορά με τον χρήστη σας. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα παραμένει, επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Δεν μπορείτε να εγγραφείτε στο σχέδιο με το {accountName} σας. Παρακαλούμε ελέγξτε τις πληροφορίες πληρωμής σας και προσπαθήστε ξανά.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Η πληρωμή έχει διακοπεί. Παρακαλώ ελέγξτε το {storeName} με το {accountName} που έχετε συνδεθεί.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Η αγορά απέτυχε. Παρακαλώ προσπαθήστε ξανά μετά από κάποιο χρονικό διάστημα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Απέτυχε να αποκτήσει πληροφορίες χρήστη. Παρακαλώ δοκιμάστε ξανά μετά από λίγη ώρα. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Απέτυχε να αποκτήσει πληροφορίες αγοράς. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επαφή. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "Απροσδιόριστο σφάλμα. Παρακαλώ αναβαθμίστε στην τελευταία έκδοση και προσπαθήστε ξανά. Εάν δεν λυθεί το πρόβλημα, επικοινωνήστε με την υποστήριξη μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Α未知 σφάλμα. Δεν ήταν δυνατή η προετοιμασία πληροφοριών αγοράς εκ των προτέρων. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Σφάλμα άγνωστης αιτίας. Παρακαλώ ενημερώστε την εφαρμογή στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω ρυθμίσεων > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "Άγνωστο σφάλμα. Ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα δεν επιλυθεί, επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Αβέβαιο σφάλμα. Παρακαλώ ενημερώστε την εφαρμογή στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν δεν επιλυθεί, επικοινωνήστε μαζί μας μέσω Ρυθμίσεων > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Αποτυχία λήψης πληροφοριών πελάτη. Δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα δεν επιλυθεί, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: Κωδικός: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "Υπάρχει πρόβλημα με τις ρυθμίσεις της συσκευής. Ελέγξτε και προσπαθήστε ξανά. Αν το πρόβλημα δεν επιλυθεί, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "Η διαδικασία επιστροφής χρημάτων έχει ξεκινήσει. Ελέγξτε το και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Η χρονική περίοδος έχει λήξει. Ελέγξτε το περιβάλλον δικτύου σας και δοκιμάστε ξανά. Εάν το πρόβλημα δεν επιλυθεί, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "Αόριστο σφάλμα. Ενημερώστε στην πιο πρόσφατη έκδοση και προσπαθήστε ξανά. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Αδιευκρίνιστο σφάλμα. Αναβαθμίστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα παραμείνει, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Υπάρχει πρόβλημα σύνδεσης. Παρακαλούμε ελέγξτε το περιβάλλον σύνδεσης και προσπαθήστε ξανά. Αν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Ενημερώστε την εφαρμογή σας",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "Σας ζητούμε να ενημερώσετε την έκδοση της εφαρμογής σας. Παρακαλώ αναβαθμίστε την τελευταία έκδοση από το {storeName}.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "Επισκέπτομαι το γιατρό",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "Λάβετε ειδοποίηση στις 9:00 την ημέρα εκείνη",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "Οι διαγραμμένοι προγραμματισμοί δεν μπορούν να αποκατασταθούν.",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "Θα διαγράψω το προγραμματισμένο.",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "Υποστηρίζει μόνο την εφαρμογή iOS",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "Δεν είναι διαθέσιμο σε συσκευές που δεν υποστηρίζουν το HealthKit.",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "Παρακαλούμε ενεργοποιήστε την υγειονομική περίθαλψη από την εφαρμογή ρυθμίσεων.",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με τον λογαριασμό Pilll που χρησιμοποιείτε. Παρακαλώ προσπαθήστε να ανανεώσετε την οθόνη. Μπορείτε επίσης να δείτε τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με άλλον λογαριασμό Pilll, επομένως δεν μπορεί να εγγραφεί. Παρακαλούμε δείτε επίσης τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "Δεν μπορείτε να εγγραφείτε γιατί η διεύθυνση email που χρησιμοποιείτε ήδη με τον λογαριασμό {accountTypeProviderName} είναι συνδεδεμένη με άλλους λογαριασμούς Pilll. Παρακαλούμε δείτε τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "Σχεδιασμός για σήμερα",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "Η ημερομηνία στο ημερολόγιο",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "Από σήμερα ξεκινάει νέο φύλλο.",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 Ξεκινά μια νέα κάρτα από σήμερα\nΜην ξεχάσετε να πάρετε το χάπι σας👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Δεν βρέθηκαν πληροφορίες premium.",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της χρέωσης δεν έχει ολοκληρωθεί. Παρακαλώ ελέγξτε ξανά μετά από λίγη ώρα.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση\n{ErrorMessagesConnection}\nΛεπτομέρειες:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "Για παράδειγμα, αν σταματήσετε τη λήψη για \"3 ημέρες από 1/12\"",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "Για παράδειγμα, αν σταματήσετε να παίρνετε το φάρμακο για 3 ημέρες από το 18ο.",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} αριθμός",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "Δεν βρέθηκε η τρέχουσα κάρτα χαπιών.",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "Η διαδικασία ακύρωσης της λήψης χαπιών δεν μπορεί να εκτελεστεί κατά τη διάρκεια της περιόδου διακοπής.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Λογαριασμός Google",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "Καταγραφή ημερολογίου",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "Καταχώριση προγράμματος",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "Η προηγούμενη ομάδα φύλλων φαρμάκων δεν υπάρχει ακόμη.",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} φύλλα",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "Φαίνεται ότι το περιβάλλον σύνδεσης είναι ασταθές. Παρακαλώ δοκιμάστε ξανά μετά από λίγο.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "Παρουσιάστηκε σφάλμα. Παρακαλώ προσπαθήστε ξανά αργότερα.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "Ένα σφάλμα προέκυψε",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "Προέκυψε άγνωστο σφάλμα",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "Προέκυψε απροσδόκητο σφάλμα",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "Μπορείτε να καταγράψετε την πρόσληψη κάνοντας παρατεταμένο πάτημα στις ειδοποιήσεις.",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "Σας παρακαλούμε να το δοκιμάσετε",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "Μπορείτε να χρησιμοποιήσετε όλες τις δυνατότητες για {number} ημέρες!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Προσθήκη με εισαγωγή",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "Μέσος κύκλος",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "Μέσος αριθμός ημερών",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "ημέρα",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "Σημείωση",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "Η ενημέρωση απέτυχε. Παρακαλώ ελέγξτε την κατάσταση σύνδεσης και προσπαθήστε ξανά.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "Πονοκέφαλος",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "κοιλιακός πόνος",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "ναυτία",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "αναιμία",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "Διάρροια",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "Δυσκοιλιότητα",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "υπνηλία",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "Πόνος στην πλάτη",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "ταχυκαρδία",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "ακανόνιστη αιμορραγία",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "Απώλεια όρεξης",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "Φούσκωμα του στήθους",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "Αϋπνία",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "Παρακαλώ ξεκουραστείτε. Εάν θέλετε να διακόψετε τη λήψη για ημέρες εκτός από σήμερα, παρακαλώ ανατρέξτε παρακάτω.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "Δείτε πώς να χρησιμοποιήσετε τη δυνατότητα διακοπής λήψης",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "Έναρξη διαλείμματος λήψης",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "Έχετε αλλάξει την περίοδο ανάπαυσης της φαρμακευτικής αγωγής.",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "Επεξεργασία περιόδου διακοπής φαρμακευτικής αγωγής",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "Αλλαγή ημερών λήψης",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} έως {end}",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Επανέναρξη λήψης",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "Αλλαγή περιόδου διακοπής λήψης",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "Έχετε αλλάξει τη διάρκεια της περιόδου διακοπής λήψης",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "Αλλάξαμε σε {date}",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "Ίσως να απέτυχε η καταγραφή της λήψης.",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Ανοίξτε την εφαρμογή και ελέγξτε.",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "Έχει ληφθεί",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "Σταματήστε να παίρνετε το φάρμακο",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "Άρχισε η διακοπή της λήψης",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "Ξεκινήστε από τον αριθμό",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "Προσθήκη",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "Προσθήκη φύλλου χαπιών",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "Διακοπή φαρμακευτικής αγωγής",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "Αν έχετε ήδη πάρει το χάπι που πρέπει να πάρετε σήμερα, δεν μπορείτε να διακόψετε την πρόσληψη.",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "Έχετε αρχίσει μια παύση στην λήψη",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης διακοπής λήψης",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "Πες το σε έναν φίλο",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "Όροι χρήσης",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "Πολιτική απορρήτου",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "Αντιγράφτηκε στο πρόχειρο",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "Ειδοποίηση {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "Ειδοποίηση ώρα",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "Αλλάξαμε σε {tz}",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Αλλαγή της αρχής του αριθμού ημερών λήψης",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "Αλλαγή του τέλους ημερών λήψης",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "Δεν μπορεί να ενημερωθεί λόγω αντικατάστασης του φύλλου δισκίων id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Αποτυχία λήψης πληροφοριών ιστορικού χρήσης. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "Ακυρώστε τη λήψη",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "Δεν μπορείτε να αποκαταστήσετε το ημερολόγιο που διαγράφηκε",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "Επεξεργασία περιόδου",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "Αλλαγή αριθμού χαπιών",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "Μειωμένο κατά {offPercent} % σε σχέση με την κανονική μηνιαία τιμή.",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "Με την premium εγγραφή, μπορείτε να συνεχίσετε να έχετε πρόσβαση σε όλες τις δυνατότητες.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "Προβολή {countdown} για αγορά με έκπτωση {offPercent}%",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Έχω ρυθμίσει την ειδοποίηση λήψης φαρμάκου για {value}",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

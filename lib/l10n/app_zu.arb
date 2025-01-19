@@ -1,0 +1,2281 @@
+{
+  "@@locale": "zu",
+  "pillSheetType21With7Placebo": "uhlobo lwezibulali-ntshonalanga eziyi-21 (izibulali-ntshonalanga eziyi-7 ezihamba phambili)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "uhlobo lwezidakamizwa ezingu-28 (izidakamizwa ezi-4 ezingasebenzi)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "uhlobo lwezinkomba eziyi-28 (izinkomba eziyi-7 eziphoshayo)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "uhlobo lwezixhumi eziyi-28 (z ukuze zibe khona emithini)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "uhlobo lwezinkanyezi eziyi-24 (konke kuyimidlayo yangempela)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "uhlobo lwezidakamizwa lwe-21 (zonke zihlobo zemithi)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "uhlobo lwezidakamizwa ezingu-24",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "ukuphumula",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "Iphilisi engatholakali",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "Awekusebenzisi atholakalanga.",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "Usuwani osemhlabeni sebeyikhona",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "Umlando weMithi",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "Imposta",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "i-akhawunti",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "Uhlanga lokushintsha imishini noma uma umakhalekhukhwini ulahlekile, ukudluliswa kokugcina kanye nokubuyiselwa kudinga uk registering an account.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll Premium",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "Ngokuphathelene nesikhathi esingenamkhawulo sokusebenza",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "Iphilisi Sheet",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "ukwaziswa",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "ukuphuma",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "Esinye",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "Imibuzo Evamelekile",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Ukukhombisa Izenzo Ezintsha",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "Xhumana nathi",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "Susa",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "Susa",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "Susa umsebenzisi",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "Ngizokhubaza idayari",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Uyakwenza ukufaka isikhathi sokuphila?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "Ukwengeza isikhathi sokwaziswa",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "Ingabe uyavumelana nokuxhumanisa isikhumbuzo sesikhathi se-device ({deviceTimezoneName})?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "I-zeitzone esikhona njengamanje",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "Yebo",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "Cha",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "Mayelana nokukhanselwa",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "Isikhumbuzi sokuthatha amapilisi",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "ukwaziswa kokusetshenziswa",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "Isikhathi se-💊",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "THUMBAZWA UHLU LWEZIMPUMELELO",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Khansela",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "Phuma",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "Ukuzenzakalela kokwengeza amaqembu epilisi",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "Umaqembu wamanje we-pills uma sekuvalekile, sizokwenza ngokuzenzakalelayo ukuthi engeze umkhiqizo omusha.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "Uhlelo Lokumisa I-akhawunti",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "uxhumekile",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "Ayikho",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "Qhuba irekhodi",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "Inombolo yokwazisa ikuvumela ukuthi ubone ukuthi iyiphi iphilisi okufanele uyithathe namuhla, futhi ungayirekhoda ngqo.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Ukunxibelelana kwezeMpilo",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Ungazi lapho ungakwenza khona irekhoda elivela ku-Pilll ngokuzenzakalelayo elizobhaliswa kwi-Health Care.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "Bukela uhlelo lwePremium",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "Ukushintsha inombolo ye-pill ezothathwa namuhla",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "Phuza zonke izikhwama zeziphuzo",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "Uwenza {doing}?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "okukhombisa",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "Zonke izithombe zephilisi",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "izophukile",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "phuca",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "Ukwaphula iphilisi",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "Mayelana nezinsuku zokuphila",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "Sicela uqinisekise inombolo ye-pil ngosuku lokuqala kokuhlanza. Inombolo ye-pil eqokiwe yamanje ayikho kuhlobo lwe-pil sheet olukhethiwe.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "Ukulungiswa kokwaziswa kokusebenzisa",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "Ungakwenza u{x} ngendlela oyithandayo.",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Ngiyabonga ngokubambisana",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "Izimvo ozitholile zizosebenza ekuthuthukiseni esikhathini esizayo.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "valela",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "Bhalisela i-akhawunti",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "Phinda ungene",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "Ulwazi lokuqinisekisa lwenziwe kabusha.",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "Ngizobuyekeza imininingwane yokwaziswa",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "Ubhaliswe ku-{accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "xhumana",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "Phuma",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "Uphume ngemva kokubhalisela ukuphuma.",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "Uzoqedlula uhlelo lokusebenza. Uma uqala kabusha, sicela uqale uhlelo lokusebenza futhi ulandele izinyathelo zokuqala.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "Kulungile",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Ukushintsha inombolo yephilisi",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "shintshela",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "Iphilisi",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "ikhalenda",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "Imininingwane yomsebenzisi izosuswa",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "Uma uma uHlelo lokuhoxiswa, yonke idatha izosuswa, futhi ngeke ukwazi ukufaka ku-akhawunti efanayo futhi uphinde ungene ngemvume.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "Ibhodi Yokurekhoda",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Sicela ubuye ungene.",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "Ngaphambi kokuphuma, sicela ungene ngemvume ukuze uqinisekise ubuqiniso bakho. Ngemva kokungena, inqubo yokuphuma izoqala ngokuzenzakalelayo.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "Faka phinda ungene ukuze ubuyekezelele ulwazi lokuthola.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "Ikhasi Lesikhathi Somjikelezo",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "IkhalendaIpheji",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "SettingsPage",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Umsuku wezimilo ususisiwe",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "Hlela isikhathi sokuhlakulela",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "Ngihlelile isikhathi sokuphuma kwemizuzu.",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "Imininingwane yokuphila",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Ukubuka okukhulu kuzoba yisici se-premium.",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "buka kabanzi",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "Bheka eminye",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} inombolo",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} inombolo",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} number",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Isuku sokuphumula sokuqala sokukhetha",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "Khetha isikhathi sokuphumula ekuthatheni",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "Usuku lokuQala lokuphumula lokusebenzisa",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Usuku lokuphumula emithi ophelile",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "Ukuvalwa kwe-pill sheet",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "Ukuphonsa i-pillsheet",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "Isikhathi sokusebenzisa",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "Umlando wokuthatha imithi uyimfanelo ye-premium.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Uma umahlo ushiywe, inombolo yephilisi ayiqhubeki.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "Uyakudlula {number}?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} intshi",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "Thatha",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "Umdlalo wokugcina wesikhala: {estimatedEndPillNumber}",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Faka phezulu iphilisi",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "Uthandile",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "Awuphumelele",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "Ukucushwa kwepili",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "Ngemuva kokuthi ngingasitholanga isiphilisi esifanele namuhla",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "Phuza kwezokwelapha",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "Shintsha Usuku Lokuphumula Lokuphuza",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "Isikhathi sokuphumula sokuphatha sesiphelile",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "Shintsha usuku lokwabiwa kwezigubhu",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "Ngishintshile inombolo yokuqala neyokugcina.",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "Ukuqala kwezinsuku zokuphuza",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Usuku lokugcina lombhoshongo wokuqala: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ngosuku",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "Ukuphela kosuku lokuphakelwa",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "Shintsha inombolo",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "Imodi Yokubonisa",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "Usuku lokubonisa",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "Inombolo yephilisi",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "Izinsuku zokusebenzisa",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "Usuku lokuphatha (i-cycle)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "Ishidi lephilisi liphothuliwe.",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "Bheka usuku lokugcina olutholwe kuwo",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "Sicela ubhalise i-akhawunti",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "Awodwa, awukwazi ukudlulisela izici eziphezulu uma ushintshela kwenye imishini noma uma umakhalekhukhwini wakho uphumele ngaphandle.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "Ungakuzwa ukuthi ungaphinda uzozama izici eziphezulu kweyama-14! Thinta ukuze wabelane ku-SNS!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "Uphi lapho uzokwenza khona ukwabelana?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 Ithwasa ukuphumula {day} ngosuku",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} usuku",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} usuku",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "Kusasele ukuthi kuzoba nezinsuku ezingu-{diffPlusOne} ezithatha {activePillSheetPillSheetTypeNotTakenWord} isikhathi.",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "Ungakhipha zonke izici ezinsukwini ezisele {diff}",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Namuhla ukuthola",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 Imithi yokudlula namuhla",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "Inombolo",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "Qala ukuwodbha kusukela ku-{DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Usuku lokuqala kwezinyanga",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "Usuku lokuphela kwenhliziyo",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "Usuku lokuphahla",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "Usuku lwezinyanga ezilindelweyo: {diffPlusOne}",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Isikhathi sokuphila: {diffPlusOne} Usuku lokuthi {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "Usuku {diff} lusala",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "Usuku {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Qopha i-period",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "Imihla Yokuphuma",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "Umgqibelo loMphiwe",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "Ukuze uvikele ukuhamba phambili, uhlelo lokusebenza lwePilll lukhumbuza ngesikhathi sokuthatha imithi. Lokhu kuhlanganisa ukuhamba phambili uma kuqala isikhathi sokuya, ukuze ube nekhono lokulawula impilo yakho kangcono.",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "Khetha usuku lokuqala kokuphuma kwezinyembezi",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} usuku",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Ngena",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "Ngaphambi kokubhalisela i-Premium...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Uma uma ungen siku uvula i-akhawunti ku-Pilll, i-akhawunti entsha izokwakhiwa.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "Uma vez ubhalisile i-akhawunti, uzokwazi ukudlulisela idatha.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "Sicela ubhalise i-akhawunti ukuze ugcine ulwazi lwe-akhawunti.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "Ngenisa nge-{loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "Bhalisela nge-{loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Ukwamukela ku-Pilll Premium kubhaliswe ngempumelelo",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "Ngiyabonga ngokubhalisela. Wonke umsebenzi manje usukhona!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Manje ungaphansi kwentengiso ethile ongayisebenzisa njalo",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "Imvamisa uHlelo lweNyanga",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "uHlelo lonyaka",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/unyaka",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/inyanga",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• Isikhathi sokubhaliselwa kwePremium sizoqala kusukela ngosuku lokuqala lokubhaliswa, siba nokuvuselelwa okuzenzakalelayo kwezinyanga ezingu-1 noma eminyakeni emibili.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Ukubandakanywa kweMthetho wezokuThengiselana Okwakhelwe Ngaphakathi",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "Ngiyacela uqinisekise lokho ngaphambi kokubhalisela",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "Umaze kube khona, isikhathi sokwakha umphathizinhleli uzovuselelwa ngokuzenzakalelayo ngaphandle kokuthi uhoxise ngaphambi kwezinsuku eziyi-24 ngaphambi kosuku lokuphela kwesivumelwano se-premium.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "• Ngemuva kokuthenga, ukukhipha ukuvuselelwa ngokuzenzakalelayo kungenziwa kuzilungiselelo ze-akhawunti ye-{storeName} uhlelo lokusebenza. (Akukwazi ukukhipha ukuvuselelwa ngokuzenzakalelayo kusuka ohlelweni lokusebenza).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "Nansi emininingwane",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "Ulwazi lokuthenga lubuyisiwe",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "Abantu abathenge ngaphambili banguya lapha",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "Alukho ulwazi lokuthenga olwandulela. Sicela uqinisekise i-akhawunti yakho bese uzama futhi.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "uHlelo lwemali yenyanga",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/inyanga",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "Uyi \nMember yePremium",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "Siyabonga ngokusebenzisa i-Pilll. Ngokubonga kuwe, sikwazi ukuqhubeka nokusebenza kwe-Pilll.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "Uhlu lwezici zePhrimiyamu",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 Rekhodi yokusebenzisa evela kwi-push notification",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 Ukwabelana Nokubuka Umlando Wokusebenzisa",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 Khombisa usuku ku-Pill Sheet",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 Ukuphinda ube nephilisi entsha ngokuzenzakalelayo",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 Ukubuka idatha yangaphambili",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 Phakathi kwezithako zomzimba ezizenzekalayo",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 Khanyisa Izikhangiso",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "Bheka imininingwane yezenzakalo eziphakeme",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "izici ezidume kakhulukazi",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "Bheka imisebenzi ye-premium",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "Imodi yokubonisa izinsuku zokuphuza (cyclical) zengeziwe.",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "Bheka imininingwane",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Ukukhumbuza ukuphuza ama-pills",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "Ungakwenza ukusetha okuphindaphindiwe ukuze uvikeleke ekuphuthumeni kokuphuza.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "no",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "Funda bese uqala ukusebenzisa.",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "Okwedlulelayo",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "Ukuqapha {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "Unokwenza irekhodi lokusebenzisa kusuka kwi-Notification.",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "Qala uhlelo lwe-app",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "Ngiyangena ngemvume ku-{accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Maya mayelana nesitsha esikwenziwayo\nNgiyacela ungitshele",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "Uma kulabo abanayo i-akhawunti, nansi",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "Namuhla({todayString})\nTapha inombolo yephilisi oyithathile/oyithathile.",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "kusadale",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "Iphili okumele uyiphuze {today}",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "umbono",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "jwayelekile",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "ukulahleka kokuphuzisa",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "Beka idethi",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "Bonisa inombolo",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "Khombisa incazelo",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "Isihloko",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Umyalezo",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "Izinketho",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "qedile",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "Ungazitholi ezokwaziswa uma ungakawathathi amaphilisi.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "Ungakwazi ukushintsha ingxenye yokuqala ye-ndaba.",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "Sicela ufake okungenani imiyalezo engama-0.",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "Ungashiyanga, ungashintsha umyalezo wokwazisa",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Thola izaziso ngalesi sikhathi ngo-9:00",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "Gcina",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "impilo",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "Ibhukwana elisusiwe alinakubuyiselwa.",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "ubulili",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "Iqembu le-pills elidlule",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "Akungakaze ngaphambili ye-Pill Sheet Group.",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "Kwephula ukuThola ulwazi lwezikhumbuzo zokuthatha imishanguzo. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "Bheka i-FAQ",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "Phinde umfanekiso",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "Umazinga ngezothando uma ungakakutholi isixazululo",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Sicela wabelane ngombono wakho ngePilll",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "Ukhetho",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "Ngabe ungangisiza ngokwabelana ngemibono yakho ukuze sithuthukise insizakalo?",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "Sebenzisa",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "ungayenzi",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "Umbuzo Wokuthuthukisa Isevisi",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "ujabule",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "Awukho umuzwa wokwaneliseka",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "ngokwe",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "Kuhamba izinsuku ezingakanani ngokwenziwa kwezinsuku?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "Imihla yokuhlanganisa ibhande",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "Tap the pill number to start menstruation.",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "i-#{number}",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "Qala iphilisi elisha ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "Khetha uhlobo lwepili",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 tablets",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 tablets",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 tablets",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 tablet + 7 days off",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 amaphilisi + 4 amaphilisi okungelobungo",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 tablet plus 7 sugar pills",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "konke yiziphuzo eziqotho",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 tablets + 4 tablets break",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "Khetha uhlobo lwepili",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} Isaziso yesikhathi",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Umaze ungaphuthelwa, i-{pillSheetPillSheetTypeNotTakenWord} isizini sokuthatha imithi sizodalwa ngokuzenzakalela.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Sicela usize ngeKhanisi yokuhoxiswa",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "I-Pilll iyinsizakalo yokukhumbuza amaphilisi egxile ekuphuzeni amaphilisi.",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "Ufinyelelwe emaphethelweni okubhaliswa. Sicela ugcine ngaphakathi kwe-{ReminderTimeMaximumCount} izinto.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Imizuzu yokwazisa idinga okungenani {ReminderTimeMinimumCount} izinto.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "Kwenzekile iphutha ongakuboni. Sicela uzame futhi emva kwesikhashana. Uma lokhu kungaxazululwanga, sicela uxhumane nathi ngokuhamba ku- Izilungiselelo > Xhumana Nathi. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "Kukhona iphutha ku-{storeName}. Sicela ulinde isikhathi esithile bese uzama futhi.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "Le nxhasa le ngeke kuvunyelwa ukunqunywa",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "Intela okuhluleka ukukhokha. Sicela uqinisekise ukuthi indlela yokukhokha iyasebenza bese uzama futhi.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Le phakethe elihlosiwe okwamanje alithengiswanga. Ngiyacela, uqale kabusha uhlelo lokusebenza bese uzama.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Uthengele umsebenzi omuhle. Uma udinga ukuvuselela ulwazi lokuthenga kule divayisi, sicela uvakatshele \"Abantu abanongamela ngaphambili lapha\" ukuze uvuselele ulwazi lokuthenga.",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Sikhishwe kuphi? I-mokha ithenga ulwazi lokuthenga olunikezwa ngomsebenzisi ohlukile. Sicela uhlole {accountName}.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Ulwazi lokuthengwa okungekho emthethweni. Sicela uqinisekise ulwazi lokuthengwa.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "Akukho mininingwane yomthengi. Sicela ungene kwi-device usebenzisa {accountName} ukuqhubeka nokuhlola.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Inethiwekhi isimo asiqinile. Sicela uqinisekise isimo sokuxhumana ngaphambi kokuzama.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Uthenge lwephutha. Sicela uthumele isikhathi sokuphindela njalo. Uma kungasebenzi, sicela uxhumane nathi ngemiyalelo > Ukubuza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Okwamanje, awukwazi ukuthenga. Thatha isikhathi bese uzama futhi. Uma lokhu kungakaxazululi, sicela uxhumane nathi kusuka ku Zilungiselelo > Xhumana. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Umlando wokuthenga se usebenzisa omunye umsebenzisi. Sicela uqinisekise {accountName} obhaliswe ku-device.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Umsebenzisi akakwazanga ukuqinisekisa. Sicela uphinde uzame ngemva kokuthi uhlelo lokusebenza luqale kabusha. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "I-oda ukwenziwa kokuthenga kuqhubekile ngokwehlukile. Cela uhlole futhi ngemuva kwesikhathi.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "Okwamanje, awukwazi ukuyothenga. Zama futhi emva kwesikhashana. Uma lokhu kungalungiseki, sicela uthintane ne-Settings > Inquiry. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Uphumelele ukuthenga. Ngena emuva emva kwesikhashana uzame futhi. Uma kungaxazululeki, sicela uxhumane nathi ngemuva kokuhamba > Ukuphendula. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Iphakhe ukukhipha kwempahla ye-akhawunti yakho ye-umsebenzisi. Sicela uzame futhi kamuva. Uma ingaxazululeki, sicela uxhumane nathi ngokuqhubeka > Ukuthinta. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "U {accountName} awunayo amalungelo okungena kuhlelo. Sicela uqinisekise ulwazi lwakho lokukhokha bese uzama futhi.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Inqubo yokukhokha iyema. Sicela uhlole {storeName} usebenzisa {accountName} ocingweni.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Ukuthenga kuhlulekile. Sicela uzame futhi emva kwesikhathi. Uma kungaxazululeki, xhumana nathi ngokusebenzisa Izilungiselelo > Ukubuzwa. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Ukwazi ulwazi lomsebenzisi kwehlulekile. Sicela uzame futhi ngemuva kwesikhathi. Uma lokhu kungasizi, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Ukubuza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Kwenziwa impumelelo yokuthola ulwazi lokuthenga. Sicela uphinde uzame kamuva. Uma lokho kungasixazululi, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Ukuxhumana. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "Kukhona iphutha okungekho sizathu saso. Sicela uvuselele uhlelo lokusebenza lwezinsuku ezisematheni bese uzama futhi. Uma lokho kungasizi, sicela uxhumane nathi ku: Izilungiselelo > Xhumana Nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Iphutha elingaziwa. Ukwaziswa kokuthenga akukwaziwa ngaphambi kokuthenga. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Kukhona iphutha elingaziwa. Sicela ubuyekeze uhlelo lokusebenza lube kusemthethweni bese uzama futhi. Uma kungaxazululeki, ungangakhetha ngaphansi kwezilungiselelo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "Kukhona iphutha ongakuthola. Sicela ubuyekeze uhlelo lwakho lube yisikhathi esisha futhi uzame futhi. Uma kungenzeki, sicela uxhumane nathi ngokuqhubeka ku Izilungiselelo > Ukuxhumana. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}.",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Kukhona iphutha engaziwa imbangela. Niyacelwa ukuba uthumele kuhlelo olwakamuva bese uzama kabusha. Uma ungakakaze, sicela uxhumane nathi ku: Izilungiselelo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Ukuphonywa kwemininingwane yabathengi kwehlulekile. Sicela uzame futhi emva kwesikhashana. Uma inkinga ingAxazululeki, sicela uthintane nathi ngemuva kokuvakashela Izilungiselelo > Ukubuza. Imininingwane: Ikhodi: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "Kune inkinga ngokumisa kwedivayisi. Sicela uqinisekise bese uzama futhi. Uma ungakaxazululi, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Ukucela Usizo. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "Ukuphuma kokubuyiselwa kwemali kuqalile. Sicela uhlole futhi uqhubeke uzame. Uma ingaxazululeki, sicela uxhumane nathi kusukela ku Langa > Ukubuza. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Isikhathi sokuphuma sifeziwe. Khumbula ukuhlola izimo zokuxhumana futhi uzame futhi. Uma ungenakho ukulungiswa, sicela uthinte kusetshenziswa Izilungiselelo > Ukuxhumana. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "Umbukiso ongezwayo. Ngiyacela uvuselele uhlelo lwaku última bese uzama futhi. Uma inkinga iqhubeka, sicela uxhumane nathi ngalesi sikhathi: Izilungiselelo > Xhumana. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Kune iphutha engaziwa. Sicela ubuyekeze uhlelo lwaku最新 futhi uzame futhi. Uma kungaxazululeki, sicela uthinte uhlelo > Xhumana. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Kukhona okungalungile kokuxhumana. Sicela uqinisekise indawo yokuxhumana ngaphambi kokuzama futhi. Uma lokhu kungaxazululi, sicela uthintane nathi ngokusebenzisa Izilungiselelo > Ukuxhumana. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Sicela ubuyekeze uhlelo lokusebenza",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "Sicela uvuselele inguqulo ye-app yakho. Sicela uvuselele ku-{storeName} ukuze uthole inguqulo yakamuva.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "ukuhamba emithini",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "Thola izaziso ngo-9:00 ngosuku lwezolo",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "Iziphakamiso ezisuswe azikwazi ukubuyiselwa",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "Susa umcimanga",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "I-app ye-iOS kuphela",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "Akungasetshenziswe kumadivayisi angahambisani nezeMpilo.",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "Sicela uvumele i-Health Care kusuka kuhlelo lokusebenza lwezinto ezilungisiwe.",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "Le {accountTypeProviderName} akhawunti sehlangene ne-akhawunti ye-Pilll esivele usebenzisa. Sicela uzame ukuvuselela ikhasi. Bheka ne-FAQ. Imininingwane: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Lo {accountTypeProviderName} akhawunti seleyikhona isiqinisekiso sePilll enye akhawunti, ngakho awukwazi ukubhalisela. Sicela ubuke i-FAQ. Imininingwane: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "Awukwazi ukubhalisela i-akhawunti ye-Pilll ngoba i-imeyili oyisebenzisayo isaxhunywe kwenye i-akhawunti ye-Pilll ye-{accountTypeProviderName}. Sicela uhlole i-FAQ. Imininingwane: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "uhlu lwemisebenzi lwansuku zonke",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "Icalenda yomcimbi",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "Usuku lokuqala lokusebenzisa iphini elisha luqala namuhla",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 Iqala isonto elisha namuhla\nUngakhohlwa ukuthatha👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Ayikho imininingwane ye-premium ephumelele.",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "Ukuvulwa kokukhokha akuphelile. Sicela ubheka futhi ngemuva kwesikhashana.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "Kwakho iphutha ngesikhathi sokuthi uhlelo lungene.",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "Ngesibonelo, uma uzothatha ikhefu lokwamukela amafutha imithamo kusukela ngomhla ka-1/12 kuze kube yizinsuku ezintathu.",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "Isibonelo \"ukuphumula\" imithi imini emithathu kusukela kweyeshumi nesishiyagalombili",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "isixhumo sesi-{number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "akuphumelelanga ukufumana ikhithi ye-pills ekhona ngoku",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "Umsebenzi wokuqeda ukuthatha i-pill awukwazi ukwenziwa ngesikhathi sokuphumula.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "i-akhawunti ye-Google",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "Bhala idayari",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "Faka i-odolo",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "Ayikho i-gruppu ye-pill sheet yangaphambilini.",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} amakhadi",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "Kubukeka sengathi umoya wokuxhumana awuphathekile kahle. Ngiyacela uzame futhi emva kwesikhathi.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "Kwenziwe iphutha. Sicela uzame futhi ngemva kwesikhashana.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "Kwenze iphutha.",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "Kwenzeka iphutha engaziwa.",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "Kwakhiwe iphutha elingalindelekile",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "Umazisa irekhodi lokusebenzisa uma uvale isikhathi eside phakathi kwezaziso.",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "Sicela uzame",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "{number} izinsuku zonke izici zingasetshenziswa!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Faka-inputa ukuze wengeze",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "Umgubo ojwayelekile",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "Usuku oluphakathi",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "usuku",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "Ithokoziso",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "Ukwakhiwa kwephutha. Sicela uqinisekise indawo yokuxhumana, bese ushintsha futhi.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "ikhanda",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "Ihliziyo",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "ukudlikiza",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "ukukhathazeka ngokuntula igazi",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "ukuhlanza",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "ukuvuvukala",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "Ubugebengu",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "ubuhlungu bemva",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "ukushaya kweqolo",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "ukukhuhla okungajwayelekile",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "ukuthola ukudla",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "ukuhlukuma komdlandla",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "ukuhluleka",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "Sicela uphumule. Uma ufuna ukuhoxisa ukusetshenziswa kokunye ngaphandle kosuku lwanamuhla, sicela ubheke ngezansi.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "Bheka indlela yokusebenzisa umsebenzi wokuphumula kokuphuza",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "Qala yokuphuma emithini",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "Ushintsho lwezokuhlala lwenziwe",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "Hlela isikhathi sokuphumula sokuthwala",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "Guqula izinsuku zokuphuza",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} ibhande ~ {end} ibhande",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Qala ukuthatha",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "Ukushintsha ngesikhathi sokuphumula kokusebenzisa",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "Ushintshile isikhathi sokuphumula sokuphila.",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "Kwenziwe ushintsho ku-{date}",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "Kungenzeka ukuthi irekhodi lokuthathwa kwephedi aliphumelelanga.",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Vula uhlelo lokusebenza ukuze uqinisekise.",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "Sephume",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "Thola ukuphumula ekuthatheni",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "Uqale ukungaphumuli kokusetshenziswa.",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} nombor",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "Qala ku-",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "engeza",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "Faka isikhwama sepilisi",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "Uphumile imishanguzo",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "Uma pill oyithathile namuhla awukwazi \"ukuphumula\".",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "Uqale ukuphumula ekudleni",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Hlela usuku lokuqala lokuphumula emithini",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "Khumbuza abangane",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "Imigomo Nezimo",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "Umgaqo-nkqubo wombuso",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "Ikhophiwe kwi-clipboard.",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "isaziso {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "isaziso sikhathi",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "Ku {tz} kushintshwe",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Shintsha ukuqala kosuku lokuphuza",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "Shintsha ukuphela kosuku lokuphuza",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "Awukwazi ukuvuselela ngenxa yokushintshwa kwepili shethid id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Kwephula ukufinyelela emlandweni yokuthatha imithi. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "ukukhansela ukuthatha",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "Ibhuku elisusiwe alikwazi ukubuyiselwa",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "Hlela isikhathi sokuphuma",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "Shintsha inombolo yephilisi",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "{offPercent} % UKHISHO",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "Ungakwazi ukuqhubeka usebenzisa zonke izici nge-Premium Registration.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} ukuthenga ngaphakathi {offPercent} % OFF",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Ngiyithumele isikhumbuzo sokuthatha imithi ngo-{value}.",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

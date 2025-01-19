@@ -1,2281 +1,2281 @@
 {
-    "@@locale": "ko",
-    "pillSheetType21With7Placebo": "21정 타입",
-    "@pillSheetType21With7Placebo": {
-        "description": "21정 타입(7정 위약)"
-    },
-    "pillSheetType28With4Placebo": "28정 타입(4정 위약)",
-    "@pillSheetType28With4Placebo": {
-        "description": "28정 타입(4정 위약)"
-    },
-    "pillSheetType28With7Placebo": "28정 타입(7정 위약)",
-    "@pillSheetType28With7Placebo": {
-        "description": "28정 타입(7정 위약)"
-    },
-    "pillSheetType28": "28정 타입(모두 실약)",
-    "@pillSheetType28": {
-        "description": "28정 타입(모두 실약)"
-    },
-    "pillSheetType24": "24정 타입(모두 실약)",
-    "@pillSheetType24": {
-        "description": "24정 타입(모두 실약)"
-    },
-    "pillSheetType21": "21정 타입(모두 실약)",
-    "@pillSheetType21": {
-        "description": "21정 타입(모두 실약)"
-    },
-    "pillSheetType24WithRest4": "24정 타입",
-    "@pillSheetType24WithRest4": {
-        "description": "24정 타입"
-    },
-    "restPeriod": "휴약",
-    "@restPeriod": {
-        "description": "휴약"
-    },
-    "placebo": "위약",
-    "@placebo": {
-        "description": "위약"
-    },
-    "userNotFound": "사용자를 찾을 수 없습니다",
-    "@userNotFound": {
-        "description": "사용자를 찾을 수 없습니다"
-    },
-    "userAlreadyExists": "이미 사용자가 존재합니다",
-    "@userAlreadyExists": {
-        "description": "이미 사용자가 존재합니다"
-    },
-    "medicationHistory": "복용 이력",
-    "@medicationHistory": {
-        "description": "복용 이력"
-    },
-    "settings": "설정",
-    "@settings": {
-        "description": "설정"
-    },
-    "account": "계정",
-    "@account": {
-        "description": "계정"
-    },
-    "dataTransferRequiresAccount": "기기 변경이나 스마트폰 분실 시 데이터의 인계 및 복원에는 계정 등록이 필요합니다.",
-    "@dataTransferRequiresAccount": {
-        "description": "기기 변경이나 스마트폰 분실 시 데이터의 인계 및 복원에는 계정 등록이 필요합니다."
-    },
-    "pillPremium": "Pilll 프리미엄",
-    "@pillPremium": {
-        "description": "Pilll 프리미엄"
-    },
-    "unlimitedFeatureDuration": "기능 무제한 기간에 대해",
-    "@unlimitedFeatureDuration": {
-        "description": "기능 무제한 기간에 대해"
-    },
-    "pillSheet": "딜셔트",
-    "@pillSheet": {
-        "description": "딜셔트"
-    },
-    "notification": "알림이 있습니다",
-    "@notification": {
-        "description": "알림이 있습니다"
-    },
-    "menstruation": "생리",
-    "@menstruation": {
-        "description": "생리"
-    },
-    "others": "기타",
-    "@others": {
-        "description": "기타"
-    },
-    "faq": "FAQ",
-    "@faq": {
-        "description": "FAQ"
-    },
-    "newFeaturesIntroduction": "새로운 기능 소개",
-    "@newFeaturesIntroduction": {
-        "description": "새로운 기능 소개"
-    },
-    "contactUs": "문의하기",
-    "@contactUs": {
-        "description": "문의하기"
-    },
-    "delete": "삭제",
-    "@delete": {
-        "description": "삭제"
-    },
-    "doDelete": "삭제하기",
-    "@doDelete": {
-        "description": "삭제하기"
-    },
-    "deleteUser": "사용자 삭제",
-    "@deleteUser": {
-        "description": "사용자 삭제"
-    },
-    "deleteDiary": "일기 삭제",
-    "@deleteDiary": {
-        "description": "일기 삭제"
-    },
-    "confirmDeletingMenstruation": "생리 기간을 삭제하시겠습니까?",
-    "@confirmDeletingMenstruation": {
-        "description": "생리 기간을 삭제하시겠습니까?"
-    },
-    "addNotificationTime": "알림 시간 추가",
-    "@addNotificationTime": {
-        "description": "알림 시간 추가"
-    },
-    "syncWithDeviceTimeZone": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
-    "@syncWithDeviceTimeZone": {
-        "description": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
-        "placeholders": {
-            "deviceTimezoneName": {
-                "type": "String"
-            }
-        }
-    },
-    "currentTimeZone": "현재 설정된 시간대",
-    "@currentTimeZone": {
-        "description": "현재 설정된 시간대"
-    },
-    "yes": "예",
-    "@yes": {
-        "description": "예"
-    },
-    "no": "아니오",
-    "@no": {
-        "description": "아니오"
-    },
-    "unsubscribeInfo": "해지에 대해",
-    "@unsubscribeInfo": {
-        "description": "해지에 대해"
-    },
-    "pillReminder": "딜의 복용 알림",
-    "@pillReminder": {
-        "description": "딜의 복용 알림"
-    },
-    "takePillReminderChannelName": "알림",
-    "@takePillReminderChannelName": {
-        "description": "알림"
-    },
-    "takePillReminder": "💊 복용 알림",
-    "@takePillReminder": {
-        "description": "💊 복용 알림"
-    },
-    "copyDebugInfo": "COPY DEBUG INFO",
-    "@copyDebugInfo": {
-        "description": "COPY DEBUG INFO"
-    },
-    "cancel": "취소",
-    "@cancel": {
-        "description": "취소"
-    },
-    "signOut": "로그아웃",
-    "@signOut": {
-        "description": "로그아웃"
-    },
-    "autoAddPillSheetGroup": "딜셔트 그룹 자동 추가",
-    "@autoAddPillSheetGroup": {
-        "description": "딜셔트 그룹 자동 추가"
-    },
-    "autoAddNewSheetAfterCurrentEnds": "현재 딜셔트 그룹이 끝나면 새로운 셔트를 자동으로 추가합니다",
-    "@autoAddNewSheetAfterCurrentEnds": {
-        "description": "현재 딜셔트 그룹이 끝나면 새로운 셔트를 자동으로 추가합니다"
-    },
-    "accountSettings": "계정 설정",
-    "@accountSettings": {
-        "description": "계정 설정"
-    },
-    "linked": "연동 완료",
-    "@linked": {
-        "description": "연동 완료"
-    },
-    "unregistered": "미등록",
-    "@unregistered": {
-        "description": "미등록"
-    },
-    "quickRecord": "퀵 레코드",
-    "@quickRecord": {
-        "description": "퀵 레코드"
-    },
-    "quickRecordDescription": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다.",
-    "@quickRecordDescription": {
-        "description": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다."
-    },
-    "healthCareIntegration": "건강 관리 연동",
-    "@healthCareIntegration": {
-        "description": "건강 관리 연동"
-    },
-    "healthCareIntegrationDescription": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다",
-    "@healthCareIntegrationDescription": {
-        "description": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다"
-    },
-    "viewPremiumPlan": "프리미엄 플랜 보기",
-    "@viewPremiumPlan": {
-        "description": "프리미엄 플랜 보기"
-    },
-    "changePillNumberForToday": "오늘 복용할 딜 번호 변경",
-    "@changePillNumberForToday": {
-        "description": "오늘 복용할 딜 번호 변경"
-    },
-    "discardAllPillSheets": "딜셔트 모두 폐기",
-    "@discardAllPillSheets": {
-        "description": "딜셔트 모두 폐기"
-    },
-    "areYouSureDoing": "{doing}하시겠습니까?",
-    "@areYouSureDoing": {
-        "description": "{doing}하시겠습니까?",
-        "placeholders": {
-            "doing": {
-                "type": "String"
-            }
-        }
-    },
-    "currentlyDisplayed": "현재 표시되고 있는",
-    "@currentlyDisplayed": {
-        "description": "현재 표시되고 있는"
-    },
-    "allPillSheets": "모든 딜셔트",
-    "@allPillSheets": {
-        "description": "모든 딜셔트"
-    },
-    "willBeDiscarded": "가 폐기됩니다",
-    "@willBeDiscarded": {
-        "description": "가 폐기됩니다"
-    },
-    "discard": "폐기하기",
-    "@discard": {
-        "description": "폐기하기"
-    },
-    "pillSheetDiscarded": "딜셔트를 폐기했습니다",
-    "@pillSheetDiscarded": {
-        "description": "딜셔트를 폐기했습니다"
-    },
-    "aboutMenstruation": "생리에 대해",
-    "@aboutMenstruation": {
-        "description": "생리에 대해"
-    },
-    "checkPillNumberForMenstruationStart": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다",
-    "@checkPillNumberForMenstruationStart": {
-        "description": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다"
-    },
-    "customizeMedicationNotifications": "복용 알림 커스터마이즈",
-    "@customizeMedicationNotifications": {
-        "description": "복용 알림 커스터마이즈"
-    },
-    "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
-    "@xCanBeCustomized": {
-        "description": "{x}의 커스터마이즈가 가능합니다",
-        "placeholders": {
-            "x": {
-                "type": "String"
-            }
-        }
-    },
-    "thankYouForCooperation": "협력에 감사합니다",
-    "@thankYouForCooperation": {
-        "description": "협력에 감사합니다"
-    },
-    "feedbackUsage": "받은 의견은 향후 개선을 위해 활용하겠습니다.",
-    "@feedbackUsage": {
-        "description": "받은 의견은 향후 개선을 위해 활용하겠습니다."
-    },
-    "close": "닫기",
-    "@close": {
-        "description": "닫기"
-    },
-    "registerAccount": "계정 등록",
-    "@registerAccount": {
-        "description": "계정 등록"
-    },
-    "reLogin": "다시 로그인",
-    "@reLogin": {
-        "description": "다시 로그인"
-    },
-    "authenticationInfoUpdated": "인증 정보를 업데이트했습니다",
-    "@authenticationInfoUpdated": {
-        "description": "인증 정보를 업데이트했습니다"
-    },
-    "updateAuthenticationInformation": "인증 정보 업데이트",
-    "@updateAuthenticationInformation": {
-        "description": "인증 정보 업데이트"
-    },
-    "registeredWithProvider": "{accountTypeProviderName}으로 등록했습니다",
-    "@registeredWithProvider": {
-        "description": "{accountTypeProviderName}으로 등록했습니다",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            }
-        }
-    },
-    "linkAccount": "연동하기",
-    "@linkAccount": {
-        "description": "연동하기"
-    },
-    "withdraw": "탈퇴하기",
-    "@withdraw": {
-        "description": "탈퇴하기"
-    },
-    "withdrawalCompleted": "탈퇴했습니다",
-    "@withdrawalCompleted": {
-        "description": "탈퇴했습니다"
-    },
-    "appExitMessage": "앱을 한 번 종료합니다. 새로 시작하려면 앱을 다시 시작한 후 초기 설정을 해주세요.",
-    "@appExitMessage": {
-        "description": "앱을 한 번 종료합니다. 새로 시작하려면 앱을 다시 시작한 후 초기 설정을 해주세요."
-    },
-    "oK": "확인",
-    "@oK": {
-        "description": "확인"
-    },
-    "changePillNumber": "딜 번호 변경",
-    "@changePillNumber": {
-        "description": "딜 번호 변경"
-    },
-    "change": "변경",
-    "@change": {
-        "description": "변경"
-    },
-    "pill": "딜",
-    "@pill": {
-        "description": "딜"
-    },
-    "calendar": "캘린더",
-    "@calendar": {
-        "description": "캘린더"
-    },
-    "userInformationWillBeDeleted": "사용자 정보가 삭제됩니다",
-    "@userInformationWillBeDeleted": {
-        "description": "사용자 정보가 삭제됩니다"
-    },
-    "withdrawalMessage": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다.",
-    "@withdrawalMessage": {
-        "description": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다."
-    },
-    "recordPage": "RecordPage",
-    "@recordPage": {
-        "description": "RecordPage"
-    },
-    "doReLogin": "다시 로그인해주세요",
-    "@doReLogin": {
-        "description": "다시 로그인해주세요"
-    },
-    "reLoginMessage": "탈퇴하기 전에 본인 확인을 위해 다시 로그인을 해주세요. 다시 로그인 후 자동으로 탈퇴 처리가 시작됩니다",
-    "@reLoginMessage": {
-        "description": "탈퇴하기 전에 본인 확인을 위해 다시 로그인을 해주세요. 다시 로그인 후 자동으로 탈퇴 처리가 시작됩니다"
-    },
-    "updateAuthenticationAfterReLogin": "다시 로그인해 인증 정보를 업데이트합니다",
-    "@updateAuthenticationAfterReLogin": {
-        "description": "다시 로그인해 인증 정보를 업데이트합니다"
-    },
-    "menstruationPage": "MenstruationPage",
-    "@menstruationPage": {
-        "description": "MenstruationPage"
-    },
-    "calendarPage": "CalendarPage",
-    "@calendarPage": {
-        "description": "CalendarPage"
-    },
-    "settingsPage": "SettingsPage",
-    "@settingsPage": {
-        "description": "SettingsPage"
-    },
-    "menstruationDeleted": "생리 기간을 삭제했습니다",
-    "@menstruationDeleted": {
-        "description": "생리 기간을 삭제했습니다"
-    },
-    "editMenstruationPeriod": "생리 기간 편집",
-    "@editMenstruationPeriod": {
-        "description": "생리 기간 편집"
-    },
-    "menstruationEdited": "생리 기간을 편집했습니다",
-    "@menstruationEdited": {
-        "description": "생리 기간을 편집했습니다"
-    },
-    "physicalConditionDetail": "체온 세부 정보",
-    "@physicalConditionDetail": {
-        "description": "체온 세부 정보"
-    },
-    "medicationHistoryPremiumFeatureRestriction": "이 이상의 보기는 프리미엄 기능에 해당됩니다",
-    "@medicationHistoryPremiumFeatureRestriction": {
-        "description": "이 이상의 보기는 프리미엄 기능에 해당됩니다"
-    },
-    "viewMoreDetails": "세세하게 보기",
-    "@viewMoreDetails": {
-        "description": "세세하게 보기"
-    },
-    "viewMore": "더 많이 보기",
-    "@viewMore": {
-        "description": "더 많이 보기"
-    },
-    "afterLastTakenPillNumber": "{afterLastTakenPillNumber}번",
-    "@afterLastTakenPillNumber": {
-        "description": "{afterLastTakenPillNumber}번",
-        "placeholders": {
-            "afterLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}번",
-    "@leftDashAfterLastTakenPillNumber": {
-        "description": "{left}-{afterLastTakenPillNumber}번",
-        "placeholders": {
-            "left": {
-                "type": "String"
-            },
-            "afterLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}���",
-    "@beforeLastTakenPillNumber": {
-        "description": "{beforeLastTakenPillNumber}번",
-        "placeholders": {
-            "beforeLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
-    "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
-        "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
-        "placeholders": {
-            "beforeLastTakenPillNumber": {
-                "type": "String"
-            },
-            "afterLastTakenPillNumberPlusOne": {
-                "type": "String"
-            }
-        }
-    },
-    "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}번",
-    "@oneToAfterDisplayNumberBeginPillNumber": {
-        "description": "1→{afterDisplayNumberSettingBeginPillNumber}번",
-        "placeholders": {
-            "afterDisplayNumberSettingBeginPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
-    "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
-        "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
-        "placeholders": {
-            "beforeBeginPillNumber": {
-                "type": "String"
-            },
-            "afterDisplayNumberSettingBeginPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}번",
-    "@oneToAfterDisplayNumberEndPillNumber": {
-        "description": "1→{afterDisplayNumberSettingEndPillNumber}번",
-        "placeholders": {
-            "afterDisplayNumberSettingEndPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
-    "@beforeEndToAfterDisplayNumberEndPillNumber": {
-        "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
-        "placeholders": {
-            "beforeEndPillNumber": {
-                "type": "String"
-            },
-            "afterDisplayNumberSettingEndPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "selectPauseStartDate": "복용 휴식 시작일 선택",
-    "@selectPauseStartDate": {
-        "description": "복용 휴식 시작일 선택"
-    },
-    "selectPausePeriod": "복용 휴식 기간 선택",
-    "@selectPausePeriod": {
-        "description": "복용 휴식 기간 선택"
-    },
-    "pauseStartDate": "복용 휴식 시작일",
-    "@pauseStartDate": {
-        "description": "복용 휴식 시작일"
-    },
-    "pauseEndDate": "복용 휴식 종료일",
-    "@pauseEndDate": {
-        "description": "복용 휴식 종료일"
-    },
-    "endPillSheet": "딜셔트 종료",
-    "@endPillSheet": {
-        "description": "딜셔트 종료"
-    },
-    "discardPillSheet": "딜셔트 폐기",
-    "@discardPillSheet": {
-        "description": "딜셔트 폐기"
-    },
-    "takingTime": "복용 시간",
-    "@takingTime": {
-        "description": "복용 시간"
-    },
-    "takingHistoryIsPremiumFeature": "복용 이력은 프리미엄 기능입니다",
-    "@takingHistoryIsPremiumFeature": {
-        "description": "복용 이력은 프리미엄 기능입니다"
-    },
-    "pauseTakingDoesNotAdvancePillNumber": "복용을 휴식하면 딜 번호가 진행되지 않습니다",
-    "@pauseTakingDoesNotAdvancePillNumber": {
-        "description": "복용을 휴식하면 딜 번호가 진행되지 않습니다"
-    },
-    "pauseTakingFromNumber": "{number}에서 복용을 휴식하시겠습니까?",
-    "@pauseTakingFromNumber": {
-        "description": "{number}에서 복용을 휴식하시겠습니까?",
-        "placeholders": {
-            "number": {
-                "type": "String"
-            }
-        }
-    },
-    "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",
-    "@lastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",
-        "placeholders": {
-            "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
-                "type": "String"
-            }
-        }
-    },
-    "taking": "복용",
-    "@taking": {
-        "description": "복용"
-    },
-    "estimatedEndPillNumber": "이전 셔트의 마지막: {estimatedEndPillNumber}번",
-    "@estimatedEndPillNumber": {
-        "description": "이전 셔트의 마지막: {estimatedEndPillNumber}번",
-        "placeholders": {
-            "estimatedEndPillNumber": {
-                "type": "int"
-            }
-        }
-    },
-    "addPillSheetButton": "딜셔트 추가",
-    "@addPillSheetButton": {
-        "description": "딜셔트 추가"
-    },
-    "taken": "복용했습니다",
-    "@taken": {
-        "description": "복용했습니다"
-    },
-    "notTaken": "복용하지 않았습니다",
-    "@notTaken": {
-        "description": "복용하지 않았습니다"
-    },
-    "pillSheetSettings": "딜셔트 설정",
-    "@pillSheetSettings": {
-        "description": "딜셔트 설정"
-    },
-    "unmarkTodayPillAsTakenToPause": "오늘 복용하는 딜을 미복용으로 하고",
-    "@unmarkTodayPillAsTakenToPause": {
-        "description": "오늘 복용하는 딜을 미복용으로 하고"
-    },
-    "pauseTaking": "복용 휴식",
-    "@pauseTaking": {
-        "description": "복용 휴식"
-    },
-    "changePauseStartDate": "복용 휴식 시작일 변경",
-    "@changePauseStartDate": {
-        "description": "복용 휴식 시작일 변경"
-    },
-    "pauseTakingPeriodEnded": "복용 휴식 기간이 종료되었습니다",
-    "@pauseTakingPeriodEnded": {
-        "description": "복용 휴식 기간이 종료되었습니다"
-    },
-    "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-    "@endValue": {
-        "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-        "placeholders": {
-            "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
-                "type": "int"
-            }
-        }
-    },
-    "changePillDaysForSheet": "셔트의 복용 일수 변경",
-    "@changePillDaysForSheet": {
-        "description": "셔트의 복용 일수 변경"
-    },
-    "changedStartAndEndNumbers": "시작과 끝의 번호가 변경되었습니다",
-    "@changedStartAndEndNumbers": {
-        "description": "시작과 끝의 번호가 변경되었습니다"
-    },
-    "startOfPillDays": "복용 일수의 시작",
-    "@startOfPillDays": {
-        "description": "복용 일수의 시작"
-    },
-    "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
-    "@beforePillSheetGroupSequentialEstimatedEndDay": {
-        "description": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
-        "placeholders": {
-            "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
-                "type": "int"
-            }
-        }
-    },
-    "endOfPillDays": "복용 일수의 끝",
-    "@endOfPillDays": {
-        "description": "복용 일수의 끝"
-    },
-    "changedToNumber": "번호로 변경",
-    "@changedToNumber": {
-        "description": "번호로 변경"
-    },
-    "displayMode": "표시 모드",
-    "@displayMode": {
-        "description": "표시 모드"
-    },
-    "dateDisplay": "날짜 표시",
-    "@dateDisplay": {
-        "description": "날짜 표시"
-    },
-    "pillNumber": "딜 번호 ",
-    "@pillNumber": {
-        "description": "딜 번호 "
-    },
-    "pillDays": "복용 일수",
-    "@pillDays": {
-        "description": "복용 일수"
-    },
-    "pillDaysCycle": "복용 일수(주기)",
-    "@pillDaysCycle": {
-        "description": "복용 일수(주기)"
-    },
-    "pillSheetEnded": "딜셔트가 종료되었습니다",
-    "@pillSheetEnded": {
-        "description": "딜셔트가 종료되었습니다"
-    },
-    "checkLastTakenDate": "마지막으로 복용한 날을 확인",
-    "@checkLastTakenDate": {
-        "description": "마지막으로 복용한 날을 확인"
-    },
-    "pleaseRegisterAccount": "계정 등록을 해주세요",
-    "@pleaseRegisterAccount": {
-        "description": "계정 등록을 해주세요"
-    },
-    "cannotTransferPremiumWithoutAccount": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다",
-    "@cannotTransferPremiumWithoutAccount": {
-        "description": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다"
-    },
-    "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!",
-    "@reexperiencePremiumFeatures": {
-        "description": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!"
-    },
-    "whereToShare": "어디에 공유하시겠습니까?",
-    "@whereToShare": {
-        "description": "어디에 공유하시겠습니까?"
-    },
-    "pauseTakingDay": "🌙 복용 휴식 {day}일째",
-    "@pauseTakingDay": {
-        "description": "🌙 복용 휴식 {day}일째",
-        "placeholders": {
-            "day": {
-                "type": "int"
-            }
-        }
-    },
-    "withDay": "{word}일째",
-    "@withDay": {
-        "description": "{word}일째",
-        "placeholders": {
-            "word": {
-                "type": "String"
-            }
-        }
-    },
-    "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
-    "@restDurationDays": {
-        "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
-        "placeholders": {
-            "activePillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            },
-            "restDurationDays": {
-                "type": "int"
-            }
-        }
-    },
-    "daysUntilPausePeriod": "남은 {diffPlusOne}일 동안 {activePillSheetPillSheetTypeNotTakenWord} 기간이 됩니다",
-    "@daysUntilPausePeriod": {
-        "description": "남은 {diffPlusOne}일 동안 {activePillSheetPillSheetTypeNotTakenWord} 기간이 됩니다",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            },
-            "activePillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            }
-        }
-    },
-    "remainingDaysAllFeatures": "남은 {diff}일 동안 모든 기능을 사용할 수 있습니다",
-    "@remainingDaysAllFeatures": {
-        "description": "남은 {diff}일 동안 모든 기능을 사용할 수 있습니다",
-        "placeholders": {
-            "diff": {
-                "type": "int"
-            }
-        }
-    },
-    "todayIsTaking": "💊 오늘은 복용",
-    "@todayIsTaking": {
-        "description": "💊 오늘은 복용"
-    },
-    "todayPillToTake": "💊 오늘 복용할 딜",
-    "@todayPillToTake": {
-        "description": "💊 오늘 복용할 딜"
-    },
-    "number": "번",
-    "@number": {
-        "description": "번"
-    },
-    "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}에서 생리 시작으로 기록했습니다",
-    "@recordedMenstruationStartDate": {
-        "description": "{DateTimeFormatterMonthAndDay}에서 생리 시작으로 기록했습니다",
-        "placeholders": {
-            "DateTimeFormatterMonthAndDay": {
-                "type": "String"
-            }
-        }
-    },
-    "menstruationStartDate": "생리 시작일",
-    "@menstruationStartDate": {
-        "description": "생리 시작일"
-    },
-    "menstruationEndDate": "생리 종료일",
-    "@menstruationEndDate": {
-        "description": "생리 종료일"
-    },
-    "menstruationScheduleDate": "생리 예정일",
-    "@menstruationScheduleDate": {
-        "description": "생리 예정일"
-    },
-    "menstruationScheduleDateWithNumber": "생리 예정: {diffPlusOne}일째",
-    "@menstruationScheduleDateWithNumber": {
-        "description": "생리 예정: {diffPlusOne}일째",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            }
-        }
-    },
-    "menstruationScheduleDateWithNumberAndPillNumber": "생리 예정: {diffPlusOne}일째의 {pillNumber}",
-    "@menstruationScheduleDateWithNumberAndPillNumber": {
-        "description": "생리 예정: {diffPlusOne}일째의 {pillNumber}",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            },
-            "pillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "menstruationRemainingDay": "남은 {diff}일",
-    "@menstruationRemainingDay": {
-        "description": "남은 {diff}일",
-        "placeholders": {
-            "diff": {
-                "type": "int"
-            }
-        }
-    },
-    "menstruationProgressingDay": "{diffPlusOne}일째",
-    "@menstruationProgressingDay": {
-        "description": "{diffPlusOne}일째",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            }
-        }
-    },
-    "recordMenstruation": "생리 기록",
-    "@recordMenstruation": {
-        "description": "생리 기록"
-    },
-    "menstruationHistory": "생리 이력",
-    "@menstruationHistory": {
-        "description": "생리 이력"
-    },
-    "menstruationFromToday": "오늘부터 생리",
-    "@menstruationFromToday": {
-        "description": "오늘부터 생리"
-    },
-    "menstruationFromYesterday": "어제부터 생리",
-    "@menstruationFromYesterday": {
-        "description": "어제부터 생리"
-    },
-    "selectMenstruationStartDate": "생리 시작일 선택",
-    "@selectMenstruationStartDate": {
-        "description": "생리 시작일 선택"
-    },
-    "menstruationCycle": "{menstruationDuration}일 주기",
-    "@menstruationCycle": {
-        "description": "{menstruationDuration}일 주기",
-        "placeholders": {
-            "menstruationDuration": {
-                "type": "int"
-            }
-        }
-    },
-    "login": "로그인",
-    "@login": {
-        "description": "로그인"
-    },
-    "beforePremiumRegistration": "프리미엄 등록 전에…",
-    "@beforePremiumRegistration": {
-        "description": "프리미엄 등록 전에…"
-    },
-    "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로�� 계정이 작성됩니다",
-    "@createNewAccountIfNotLoggedIn": {
-        "description": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다"
-    },
-    "registerAccountForDataTransfer": "계정 등록하면 데이터의 인계가 가능합니다",
-    "@registerAccountForDataTransfer": {
-        "description": "계정 등록하면 데이터의 인계가 가능합니다"
-    },
-    "registerAccountToKeepData": "데이터를 유지하기 위해 계정 등록을 부탁드립니다",
-    "@registerAccountToKeepData": {
-        "description": "데이터를 유지하기 위해 계정 등록을 부탁드립니다"
-    },
-    "signInWith": "{loginName}으로 로그인",
-    "@signInWith": {
-        "description": "{loginName}으로 로그인",
-        "placeholders": {
-            "loginName": {
-                "type": "String"
-            }
-        }
-    },
-    "registerWith": "{loginName}으로 등록",
-    "@registerWith": {
-        "description": "{loginName}으로 등록",
-        "placeholders": {
-            "loginName": {
-                "type": "String"
-            }
-        }
-    },
-    "premiumRegistrationComplete": "Pilll 프리미엄 등록 완료",
-    "@premiumRegistrationComplete": {
-        "description": "Pilll 프리미엄 등록 완료"
-    },
-    "thankYouForRegistration": "등록 감사합니다.\n모든 기능을 사용할 수 있게 되었습니다!",
-    "@thankYouForRegistration": {
-        "description": "등록 감사합니다.\n모든 기능을 사용할 수 있게 되었습니다!"
-    },
-    "limitedTimeDiscount": "지금이면 제한 가격으로 계속 사용할 수 있습니다",
-    "@limitedTimeDiscount": {
-        "description": "지금이면 제한 가격으로 계속 사용할 수 있습니다"
-    },
-    "standardMonthlyPlan": "일반 월간 플랜",
-    "@standardMonthlyPlan": {
-        "description": "일반 월간 플랜"
-    },
-    "annualPlan": "연간 플랜",
-    "@annualPlan": {
-        "description": "연간 플랜"
-    },
-    "annualPrice": "{annualPackageStoreProductPriceString}/년",
-    "@annualPrice": {
-        "description": "{annualPackageStoreProductPriceString}/년",
-        "placeholders": {
-            "annualPackageStoreProductPriceString": {
-                "type": "String"
-            }
-        }
-    },
-    "monthlyPrice": "{monthlyPriceString}/월",
-    "@monthlyPrice": {
-        "description": "{monthlyPriceString}/월",
-        "placeholders": {
-            "monthlyPriceString": {
-                "type": "String"
-            }
-        }
-    },
-    "premiumTermsNotice1": "・프리미엄 계약 기간은 시작일부터 1개월 또는 1년마다 자동 갱신됩니다\n",
-    "@premiumTermsNotice1": {
-        "description": "・프리미엄 계약 기간은 시작일부터 1개월 또는 1년마다 자동 갱신됩니다\n"
-    },
-    "premiumTermsBullet": "・",
-    "@premiumTermsBullet": {
-        "description": "・"
-    },
-    "slashSeparator": " / ",
-    "@slashSeparator": {
-        "description": " / "
-    },
-    "premiumTermsNotice2": "특정 사업자 표시법에 따른 표시",
-    "@premiumTermsNotice2": {
-        "description": "특정 사업자 표시법에 따른 표시"
-    },
-    "premiumTermsNotice3": "확인하신 후 등록해주세요\n",
-    "@premiumTermsNotice3": {
-        "description": "확인하신 후 등록해주세요\n"
-    },
-    "autoRenewNotice": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n",
-    "@autoRenewNotice": {
-        "description": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n"
-    },
-    "cancelAutoRenewInfo": "・구매 후 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 가능합니다. (앱 내에서 자동 갱신 해지는 불가능합니다).",
-    "@cancelAutoRenewInfo": {
-        "description": "・구매 후 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 가능합니다. (앱 내에서 자동 갱신 해지는 불가능합니다).",
-        "placeholders": {
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "moreDetails": "세세하게 보기",
-    "@moreDetails": {
-        "description": "세세하게 보기"
-    },
-    "restorePurchase": "구매 정보를 복원했습니다",
-    "@restorePurchase": {
-        "description": "구매 정보를 복원했습니다"
-    },
-    "previouslyPurchased": "이전에 구매한 분은 여기를 참고하세요",
-    "@previouslyPurchased": {
-        "description": "이전에 구매한 분은 여기를 참고하세요"
-    },
-    "noPreviousPurchaseInfo": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요",
-    "@noPreviousPurchaseInfo": {
-        "description": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요"
-    },
-    "monthlyPlan": "월간 플랜",
-    "@monthlyPlan": {
-        "description": "월간 플랜"
-    },
-    "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/월",
-    "@monthlyPlanPrice": {
-        "description": "{monthlyPackageStoreProductPriceString}/월",
-        "placeholders": {
-            "monthlyPackageStoreProductPriceString": {
-                "type": "String"
-            }
-        }
-    },
-    "youArePremiumMember": "당신은\n프리미엄 멤버입니다",
-    "@youArePremiumMember": {
-        "description": "당신은\n프리미엄 멤버입니다"
-    },
-    "thankYouMessage": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다.",
-    "@thankYouMessage": {
-        "description": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다."
-    },
-    "premiumFeaturesList": "프리미엄 기능 목록",
-    "@premiumFeaturesList": {
-        "description": "프리미엄 기능 목록"
-    },
-    "pushNotificationForTakingRecord": "📩 프루시 알림에서 복용 기록",
-    "@pushNotificationForTakingRecord": {
-        "description": "📩 프루시 알림에서 복용 기록"
-    },
-    "viewAndRecordTakingHistory": "🗂 복용 이력의 기록과 보기",
-    "@viewAndRecordTakingHistory": {
-        "description": "🗂 복용 이력의 기록과 보기"
-    },
-    "displayDateOnPillSheet": "📆 딜셔트 위에 날짜 표시",
-    "@displayDateOnPillSheet": {
-        "description": "📆 딜셔트 위에 날짜 표시"
-    },
-    "autoRefillNewPillSheet": "📦 새로운 딜셔트를 자동으로 보충",
-    "@autoRefillNewPillSheet": {
-        "description": "📦 새로운 딜셔트를 자동으로 보충"
-    },
-    "viewPastData": "👀 과거의 데이터 보기",
-    "@viewPastData": {
-        "description": "👀 과거의 데이터 보기"
-    },
-    "customizeHealthTags": "🏷 체온 태그 커스터마이즈",
-    "@customizeHealthTags": {
-        "description": "🏷 체온 태그 커스터마이즈"
-    },
-    "hideAds": "🚫 광고 표시 안함",
-    "@hideAds": {
-        "description": "🚫 광고 표시 안함"
-    },
-    "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
-    "@seeDetailsOfPremiumFeatures": {
-        "description": "프리미엄 기���의 세세한 정보 보기"
-    },
-    "popularFeatures": "인기 있는\n기능",
-    "@popularFeatures": {
-        "description": "인기 있는\n기능"
-    },
-    "viewPremiumFeatures": "프리미엄 기능 보기",
-    "@viewPremiumFeatures": {
-        "description": "프리미엄 기능 보기"
-    },
-    "addedDisplayModePillDaysCycle": "표시 모드 복용 일수(주기)가 추가되었습니다",
-    "@addedDisplayModePillDaysCycle": {
-        "description": "표시 모드 복용 일수(주기)가 추가되었습니다"
-    },
-    "seeDetails": "세세한 정보 보기",
-    "@seeDetails": {
-        "description": "세세한 정보 보기"
-    },
-    "stepThreeOfThree": "3/3",
-    "@stepThreeOfThree": {
-        "description": "3/3"
-    },
-    "missedPillNotification": "딜을 놓쳤을 때의 알림 문구를 변경할 수 있습니다",
-    "@missedPillNotification": {
-        "description": "딜을 놓쳤을 때의 알림 문구를 변경할 수 있습니다"
-    },
-    "setMultipleReminders": "여러 개의 알림을 설정하면 놓치지 않을 수 있습니다",
-    "@setMultipleReminders": {
-        "description": "여러 개의 알림을 설정하면 놓치지 않을 수 있습니다"
-    },
-    "and": "과",
-    "@and": {
-        "description": "과"
-    },
-    "readAndStartUsing": "읽고\n이용을 시작하세요",
-    "@readAndStartUsing": {
-        "description": "읽고\n이용을 시작하세요"
-    },
-    "next": "다음",
-    "@next": {
-        "description": "다음"
-    },
-    "notificationIndex": "알림 {number}",
-    "@notificationIndex": {
-        "description": "알림 {number}",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "takingRecordFromNotification": "\\ 알림에서 복용 기록을 할 수 있습니다 /",
-    "@takingRecordFromNotification": {
-        "description": "\\ 알림에서 복용 기록을 할 수 있습니다 /"
-    },
-    "startApp": "앱 시작",
-    "@startApp": {
-        "description": "앱 시작"
-    },
-    "loggedInWithProvider": "{accountTypeProviderName}으로 로그인했습니다",
-    "@loggedInWithProvider": {
-        "description": "{accountTypeProviderName}으로 로그인했습니다",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            }
-        }
-    },
-    "tellAboutPrescribedSheet": "처방된 시트에 대해\n알려주세요",
-    "@tellAboutPrescribedSheet": {
-        "description": "처방된 시트에 대해\n알려주세요"
-    },
-    "existingAccountUsers": "이미 계정이 있는 분은 여기를 클릭하세요",
-    "@existingAccountUsers": {
-        "description": "이미 계정이 있는 분은 여기를 클릭하세요"
-    },
-    "selectTodayPillNumber": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
-    "@selectTodayPillNumber": {
-        "description": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
-        "placeholders": {
-            "todayString": {
-                "type": "String"
-            }
-        }
-    },
-    "notYetKnown": "아직 모름",
-    "@notYetKnown": {
-        "description": "아직 모름"
-    },
-    "pillForToday": "{today}에 먹는 알약은",
-    "@pillForToday": {
-        "description": "{today}에 먹는 알약은",
-        "placeholders": {
-            "today": {
-                "type": "String"
-            }
-        }
-    },
-    "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-    "@todayPillNumber": {
-        "description": "{todayPillNumberPillNumberInPillSheet}",
-        "placeholders": {
-            "todayPillNumberPillNumberInPillSheet": {
-                "type": "String"
-            }
-        }
-    },
-    "preview": "미리보기",
-    "@preview": {
-        "description": "미리보기"
-    },
-    "normal": "일반",
-    "@normal": {
-        "description": "일반"
-    },
-    "missed": "복용 잊음",
-    "@missed": {
-        "description": "복용 잊음"
-    },
-    "showsDate": "날짜 표시",
-    "@showsDate": {
-        "description": "날짜 표시"
-    },
-    "showsPillNumber": "번호 표시",
-    "@showsPillNumber": {
-        "description": "번호 표시"
-    },
-    "showsDescription": "설명 표��",
-    "@showsDescription": {
-        "description": "설명 표시"
-    },
-    "title": "제목",
-    "@title": {
-        "description": "제목"
-    },
-    "message": "메시지",
-    "@message": {
-        "description": "메시지"
-    },
-    "option": "옵션",
-    "@option": {
-        "description": "옵션"
-    },
-    "completed": "완료",
-    "@completed": {
-        "description": "완료"
-    },
-    "pilll": "Pilll",
-    "@pilll": {
-        "description": "Pilll"
-    },
-    "changeMissedNotificationMessage": "복용 잊음 알림 메시지를 변경할 수 있습니다",
-    "@changeMissedNotificationMessage": {
-        "description": "복용 잊음 알림 메시지를 변경할 수 있습니다"
-    },
-    "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-    "@missedNotificationMessageLength": {
-        "description": "{missedTakenMessageValueCharactersLength}/100",
-        "placeholders": {
-            "missedTakenMessageValueCharactersLength": {
-                "type": "int"
-            }
-        }
-    },
-    "changeNotificationHeader": "알림의 시작 부분을 변경할 수 있습니다",
-    "@changeNotificationHeader": {
-        "description": "알림의 시작 부분을 변경할 수 있습니다"
-    },
-    "notificationHeaderLength": "{wordValueCharactersLength}/8",
-    "@notificationHeaderLength": {
-        "description": "{wordValueCharactersLength}/8",
-        "placeholders": {
-            "wordValueCharactersLength": {
-                "type": "int"
-            }
-        }
-    },
-    "enterAtLeastOneCharacter": "0자 이상 입력하세요",
-    "@enterAtLeastOneCharacter": {
-        "description": "0자 이상 입력하세요"
-    },
-    "changeDailyNotificationMessage": "복용 잊�� 않음 알림 ��시지를 변경할 수 있습니다",
-    "@changeDailyNotificationMessage": {
-        "description": "복용 잊지 않음 알림 메시지를 변경할 수 있습니다"
-    },
-    "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-    "@dailyNotificationMessageLength": {
-        "description": "{dailyTakenMessageValueCharactersLength}/100",
-        "placeholders": {
-            "dailyTakenMessageValueCharactersLength": {
-                "type": "int"
-            }
-        }
-    },
-    "receiveDailyNotificationAt9AM": "당일 9:00에 알림을 받습니다",
-    "@receiveDailyNotificationAt9AM": {
-        "description": "당일 9:00에 알림을 받습니다"
-    },
-    "save": "저장",
-    "@save": {
-        "description": "저장"
-    },
-    "physicalCondition": "신체 상태",
-    "@physicalCondition": {
-        "description": "신체 상태"
-    },
-    "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
-    "@deletedDiaryCannotBeRecovered": {
-        "description": "삭제된 일기는 복원할 수 없습니다"
-    },
-    "sex": "성별",
-    "@sex": {
-        "description": "성별"
-    },
-    "previousPillSheetGroup": "이전 알약 시트 그룹",
-    "@previousPillSheetGroup": {
-        "description": "이전 알약 시트 그룹"
-    },
-    "noPreviousPillSheetGroup": "이전 알약 시트 그룹이 아직 존재하지 않습니다",
-    "@noPreviousPillSheetGroup": {
-        "description": "이전 알약 시트 그룹이 아직 존재하지 않습니다"
-    },
-    "failedToFetchPillHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
-    "@failedToFetchPillHistory": {
-        "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
-        "placeholders": {
-            "error": {
-                "type": "String"
-            }
-        }
-    },
-    "seeFAQ": "FAQ 보기",
-    "@seeFAQ": {
-        "description": "FAQ 보기"
-    },
-    "reloadScreen": "화면을 다시 로드",
-    "@reloadScreen": {
-        "description": "화면을 다시 로드"
-    },
-    "contactIfNotResolved": "해결되지 않는 경우 여기를 클릭하세요",
-    "@contactIfNotResolved": {
-        "description": "해결되지 않는 경우 여기를 클릭하세요"
-    },
-    "shareFeedback": "Pilll의 감상을 들려주세요",
-    "@shareFeedback": {
-        "description": "Pilll의 감상을 들려주세요"
-    },
-    "confirm": "확인",
-    "@confirm": {
-        "description": "확인"
-    },
-    "surveyForServiceImprovement": "서비스 개선을 위한 설문조사에 협조해 주세요",
-    "@surveyForServiceImprovement": {
-        "description": "서비스 개선을 위한 설문조사에 협조해 주세요"
-    },
-    "participate": "참여하기",
-    "@participate": {
-        "description": "참여하기"
-    },
-    "notHelp": "도움이 되지 않음",
-    "@notHelp": {
-        "description": "도움이 되지 않음"
-    },
-    "serviceImprovementSurvey": "서비스 개선 설문조사",
-    "@serviceImprovementSurvey": {
-        "description": "서비스 개선 설문조사"
-    },
-    "satisfied": "만족",
-    "@satisfied": {
-        "description": "만족"
-    },
-    "notSatisfied": "만족하지 않음",
-    "@notSatisfied": {
-        "description": "만족하지 않음"
-    },
-    "perNumber": "번호마다",
-    "@perNumber": {
-        "description": "번호마다"
-    },
-    "howManyDaysDoesMenstruationLast": "생리가 며칠 동안 지속됩니까?",
-    "@howManyDaysDoesMenstruationLast": {
-        "description": "생리가 며칠 동안 지속됩니까?"
-    },
-    "daysMenstruationLasts": " 일 동안 생리가 지속됩니다",
-    "@daysMenstruationLasts": {
-        "description": " 일 동안 생리가 지속됩니다"
-    },
-    "selectPillNumberForMenstruationStart": "생리가 시작되는 알약 번호를 탭하세요",
-    "@selectPillNumberForMenstruationStart": {
-        "description": "생리가 시작되는 알약 번호를 탭하세요"
-    },
-    "countOfSheet": "{number}번째",
-    "@countOfSheet": {
-        "description": "{number}번째",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "newPillSheetStart": "새로운 알약 시트 시작 ▶︎",
-    "@newPillSheetStart": {
-        "description": "새로운 알약 시트 시작 ▶︎"
-    },
-    "selectPillType": "알약 종류 선택",
-    "@selectPillType": {
-        "description": "알약 종류 선택"
-    },
-    "twentyOnePills": "21정",
-    "@twentyOnePills": {
-        "description": "21정"
-    },
-    "twentyEightPills": "28정",
-    "@twentyEightPills": {
-        "description": "28정"
-    },
-    "twentyFourPills": "24정",
-    "@twentyFourPills": {
-        "description": "24정"
-    },
-    "twentyOnePlusSevenDaysBreak": "21정＋7일 휴약",
-    "@twentyOnePlusSevenDaysBreak": {
-        "description": "21정＋7일 휴약"
-    },
-    "twentyFourPlusFourPlacebo": "24정＋4정 위약",
-    "@twentyFourPlusFourPlacebo": {
-        "description": "24정＋4정 위약"
-    },
-    "twentyOnePlusSevenPlacebo": "21정＋7정 위약",
-    "@twentyOnePlusSevenPlacebo": {
-        "description": "21정＋7정 위약"
-    },
-    "allActivePills": "모두 실약",
-    "@allActivePills": {
-        "description": "모두 실약"
-    },
-    "twentyFourPlusFourDaysBreak": "24정＋4정 휴약",
-    "@twentyFourPlusFourDaysBreak": {
-        "description": "24정＋4정 휴약"
-    },
-    "choosePillType": "알약 종류 선택",
-    "@choosePillType": {
-        "description": "알약 종류 선택"
-    },
-    "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
-    "@notificationForNotTakenPeriod": {
-        "description": "{pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
-        "placeholders": {
-            "pillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            }
-        }
-    },
-    "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼져 있는 경우, {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
-    "@autoRecordForNotTakenPeriodIfNotificationOff": {
-        "description": "알림이 꺼져 있는 경우, {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
-        "placeholders": {
-            "pillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            }
-        }
-    },
-    "requestForCancelSurvey": "해약 후 설문조사 협조 요청",
-    "@requestForCancelSurvey": {
-        "description": "해약 후 설문조사 협조 요청"
-    },
-    "pilllDescription": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱",
-    "@pilllDescription": {
-        "description": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱"
-    },
-    "reachedMaximumCountOfReminderTimes": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
-    "@reachedMaximumCountOfReminderTimes": {
-        "description": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
-        "placeholders": {
-            "ReminderTimeMaximumCount": {
-                "type": "int"
-            }
-        }
-    },
-    "minimumCountOfReminderTimes": "알림 시간은 최소 {ReminderTimeMinimumCount}건 필요합니다",
-    "@minimumCountOfReminderTimes": {
-        "description": "알림 시간은 최소 {ReminderTimeMinimumCount}건 필요합니다",
-        "placeholders": {
-            "ReminderTimeMinimumCount": {
-                "type": "int"
-            }
-        }
-    },
-    "purchaseErrorUnknownError": "원인 불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnknownError": {
-        "description": "원인 불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorStoreProblemError": "{storeName}에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
-    "@purchaseErrorStoreProblemError": {
-        "description": "{storeName}에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
-        "placeholders": {
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorPurchaseNotAllowedError": "이 기기에서 구매가 허용되지 않았습니다",
-    "@purchaseErrorPurchaseNotAllowedError": {
-        "description": "이 기기에서 구매가 허용되지 않았습니다"
-    },
-    "purchaseErrorPurchaseInvalidError": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요",
-    "@purchaseErrorPurchaseInvalidError": {
-        "description": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요"
-    },
-    "purchaseErrorProductNotAvailableForPurchaseError": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요",
-    "@purchaseErrorProductNotAvailableForPurchaseError": {
-        "description": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요"
-    },
-    "purchaseErrorProductAlreadyPurchasedError": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요",
-    "@purchaseErrorProductAlreadyPurchasedError": {
-        "description": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요"
-    },
-    "purchaseErrorReceiptAlreadyInUseError": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
-    "@purchaseErrorReceiptAlreadyInUseError": {
-        "description": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidReceiptError": "부정한 구매 정보입니다. 구매 정보를 확인해 주세요",
-    "@purchaseErrorInvalidReceiptError": {
-        "description": "부정한 구매 정보입니다. 구매 정보를 확인해 주세요"
-    },
-    "purchaseErrorMissingReceiptFileError": "구매자의 정보가 존재하지 않습니다. {accountName}으로 기기에 로그인한 후 시도해 주세요",
-    "@purchaseErrorMissingReceiptFileError": {
-        "description": "구매자의 정보가 존재하지 않습니다. {accountName}으로 기기에 로그인한 후 시도해 주세요",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorNetworkError": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 시도해 주세요.",
-    "@purchaseErrorNetworkError": {
-        "description": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 시도해 주세요."
-    },
-    "purchaseErrorInvalidCredentialsError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidCredentialsError": {
-        "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorUnexpectedBackendResponseError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnexpectedBackendResponseError": {
-        "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorReceiptInUseByOtherSubscriberError": "구매 정보는 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",
-    "@purchaseErrorReceiptInUseByOtherSubscriberError": {
-        "description": "구매 정보는 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidAppUserIdError": "사용자를 확인할 수 없었습니다. 앱을 재시작한 후 다시 시도해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidAppUserIdError": {
-        "description": "사용자를 확인할 수 없었습니다. 앱을 재시작한 후 다시 시도해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorOperationAlreadyInProgressError": "구매 처리가 별도로 진행 중입니다. 잠시 후 다시 확인해 주세요",
-    "@purchaseErrorOperationAlreadyInProgressError": {
-        "description": "구매 처리가 별도로 진행 중입니다. 잠시 후 다시 확인해 주세요"
-    },
-    "purchaseErrorUnknownBackendError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnknownBackendError": {
-        "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidAppleSubscriptionKeyError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidAppleSubscriptionKeyError": {
-        "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorIneligibleError": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorIneligibleError": {
-        "description": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInsufficientPermissionsError": "사용 중인 {accountName}에서는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
-    "@purchaseErrorInsufficientPermissionsError": {
-        "description": "사용 중인 {accountName}에서는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorPaymentPendingError": "결제가 중단되었습니다. 로그인 중인 {accountName}에서 {storeName}을 확인해 주세요",
-    "@purchaseErrorPaymentPendingError": {
-        "description": "결제가 중단되었습니다. 로그인 중인 {accountName}에서 {storeName}을 확인해 주세요",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            },
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidSubscriberAttributesError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidSubscriberAttributesError": {
-        "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorLogOutWithAnonymousUserError": "사용자 정보를 가져오지 못했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorLogOutWithAnonymousUserError": {
-        "description": "사용자 정보를 가져오지 못했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorConfigurationError": "구매 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorConfigurationError": {
-        "description": "구매 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorUnsupportedError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnsupportedError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorEmptySubscriberAttributesError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorEmptySubscriberAttributesError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해��되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorProductDiscountMissingIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorProductDiscountMissingIdentifierError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorUnknownNonNativeError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnknownNonNativeError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorCustomerInfoError": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorCustomerInfoError": {
-        "description": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorSystemInfoError": "기기 설정에 문제가 있습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorSystemInfoError": {
-        "description": "기기 설정에 문제가 있습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorBeginRefundRequestError": "환불 처리가 시작되었습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorBeginRefundRequestError": {
-        "description": "환불 처리가 시작되었습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorProductRequestTimeout": "타임아웃하였습니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorProductRequestTimeout": {
-        "description": "타임아웃하였습니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorApiEndpointBlocked": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorApiEndpointBlocked": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidPromotionalOfferError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidPromotionalOfferError": {
-        "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorOfflineConnectionError": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorOfflineConnectionError": {
-        "description": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "forceUpdateTitle": "앱을 업데이트해 주세요",
-    "@forceUpdateTitle": {
-        "description": "앱을 업데이트해 주세요"
-    },
-    "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
-    "@forceUpdateMessage": {
-        "description": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
-        "placeholders": {
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "visitHospital": "병원에 방문하기",
-    "@visitHospital": {
-        "description": "병원에 방문하기"
-    },
-    "receiveNotificationAt9AM": "당일 9:00에 알림을 받습니다",
-    "@receiveNotificationAt9AM": {
-        "description": "당일 9:00에 알림을 받습니다"
-    },
-    "deletedScheduleCannotBeRestored": "삭제된 일정은 복원할 수 없습니다",
-    "@deletedScheduleCannotBeRestored": {
-        "description": "삭제된 일정은 복원할 수 없습니다"
-    },
-    "deleteSchedule": "일정을 삭제합니다",
-    "@deleteSchedule": {
-        "description": "일정을 삭제합니다"
-    },
-    "onlySupportiOS": "iOS 앱에만 지원됩니다",
-    "@onlySupportiOS": {
-        "description": "iOS 앱에만 지원됩니다"
-    },
-    "healthKitDoesNotSupport": "헬스케어에 대응하지 않는 기기에서는 사용할 수 없습니다",
-    "@healthKitDoesNotSupport": {
-        "description": "헬스케어에 대응하지 않는 기기에서는 사용할 수 없습니다"
-    },
-    "enableHealthKitFromSettings": "설정 앱에서 헬스케어를 활성화해 주세요",
-    "@enableHealthKitFromSettings": {
-        "description": "설정 앱에서 헬스케어를 활성화해 주세요"
-    },
-    "accountAlreadyLinked": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
-    "@accountAlreadyLinked": {
-        "description": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            }
-        }
-    },
-    "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
-    "@accountAlreadyLinkedWithOtherPilllAccount": {
-        "description": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            }
-        }
-    },
-    "emailAlreadyInUse": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
-    "@emailAlreadyInUse": {
-        "description": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            }
-        }
-    },
-    "todaySchedule": "오늘의 일정입니다",
-    "@todaySchedule": {
-        "description": "오늘의 일정입니다"
-    },
-    "calendarSchedule": "캘린더의 일정",
-    "@calendarSchedule": {
-        "description": "캘린더의 일정"
-    },
-    "newPillSheetNotificationTitle": "오늘부터 새로운 시트가 시작됩니다",
-    "@newPillSheetNotificationTitle": {
-        "description": "오늘부터 새로운 시트가 시작됩니다"
-    },
-    "newPillSheetNotificationMessage": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍",
-    "@newPillSheetNotificationMessage": {
-        "description": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍"
-    },
-    "unexpectedPremiumEntitlementsIsNotExists": "프리미엄 정보가 발견되지 않았습니다",
-    "@unexpectedPremiumEntitlementsIsNotExists": {
-        "description": "프리미엄 정보가 발견되지 않았습니다"
-    },
-    "purchaseErrorPurchasePendingError": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요",
-    "@purchaseErrorPurchasePendingError": {
-        "description": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요"
-    },
-    "launchError": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
-    "@launchError": {
-        "description": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
-        "placeholders": {
-            "ErrorMessagesConnection": {
-                "type": "String"
-            }
-        }
-    },
-    "exampleRestDurationDate": "예를 들어 '1/12부터 3일간' 복용을 쉬는 경우",
-    "@exampleRestDurationDate": {
-        "description": "예를 들어 '1/12부터 3일간' 복용을 쉬는 경우"
-    },
-    "exampleRestDurationNumber": "예를 들어 '18번부터 3일간' 복용을 쉬는 경우",
-    "@exampleRestDurationNumber": {
-        "description": "예를 들어 '18번부터 3일간' 복용을 쉬는 경우"
-    },
-    "withNumber": "{number}번",
-    "@withNumber": {
-        "description": "{number}번",
-        "placeholders": {
-            "number": {
-                "type": "String"
-            }
-        }
-    },
-    "currentPillSheetNotFound": "현재 대상이 되는 피임약 시트를 찾을 수 없습니다",
-    "@currentPillSheetNotFound": {
-        "description": "현재 대상이 되는 피임약 시트를 찾을 수 없습니다"
-    },
-    "doNotRevertTakePillInPausePeriod": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다",
-    "@doNotRevertTakePillInPausePeriod": {
-        "description": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다"
-    },
-    "googleAccount": "Google 계정",
-    "@googleAccount": {
-        "description": "Google 계정"
-    },
-    "diaryRecord": "일기를 기록",
-    "@diaryRecord": {
-        "description": "일기를 기록"
-    },
-    "scheduleRecord": "일정을 기록",
-    "@scheduleRecord": {
-        "description": "일정을 기록"
-    },
-    "previousPillSheetGroupNotFound": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",
-    "@previousPillSheetGroupNotFound": {
-        "description": "이전 피임약 시트 그룹이 아직 존재하지 않습니다"
-    },
-    "withPillSheetCount": "{number}장",
-    "@withPillSheetCount": {
-        "description": "{number}장",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "connectionError": "통신 환경이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요",
-    "@connectionError": {
-        "description": "통신 환경이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요"
-    },
-    "unknownErrorAndRetryAfter": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
-    "@unknownErrorAndRetryAfter": {
-        "description": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요"
-    },
-    "errorOccurred": "오류가 발생했습니다",
-    "@errorOccurred": {
-        "description": "오류가 발생했습니다"
-    },
-    "unknownError": "알 수 없는 오류가 발생했습니다",
-    "@unknownError": {
-        "description": "알 수 없는 오류가 발생했습니다"
-    },
-    "unexpectedErrorOccurred": "예기치 않은 오류가 발생했습니다",
-    "@unexpectedErrorOccurred": {
-        "description": "예기치 않은 오류가 발생했습니다"
-    },
-    "pressAndHoldNotificationToRecordPillTaking": "알림을 길게 누르면 복용 기록을 할 수 있습니다",
-    "@pressAndHoldNotificationToRecordPillTaking": {
-        "description": "알림을 길게 누르면 복용 기록을 할 수 있습니다"
-    },
-    "letsTryIt": "시도해 보세요!",
-    "@letsTryIt": {
-        "description": "시도해 보세요!"
-    },
-    "trialDeadlineDateOffsetDay": "{number}일간 모든 기능을 사용할 수 있습니다!",
-    "@trialDeadlineDateOffsetDay": {
-        "description": "{number}일간 모든 기능을 사용할 수 있습니다!",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "inputAndAdd": "입력하고 추가",
-    "@inputAndAdd": {
-        "description": "입력하고 추가"
-    },
-    "averagePeriod": "평균 주기",
-    "@averagePeriod": {
-        "description": "평균 주기"
-    },
-    "averageDays": "평균 일수",
-    "@averageDays": {
-        "description": "평균 일수"
-    },
-    "days": "일",
-    "@days": {
-        "description": "일"
-    },
-    "memo": "메모",
-    "@memo": {
-        "description": "메모"
-    },
-    "failedToUpdate": "업데이트에 실패했습니다. 통신 환경을 확인한 후 다시 변경해 주세요",
-    "@failedToUpdate": {
-        "description": "업데이트에 실패했습니다. 통신 환경을 확인한 후 다시 변경해 주세요"
-    },
-    "headache": "두통",
-    "@headache": {
-        "description": "두통"
-    },
-    "abdominalPain": "복통",
-    "@abdominalPain": {
-        "description": "복통"
-    },
-    "nausea": "메스꺼움",
-    "@nausea": {
-        "description": "메스꺼움"
-    },
-    "anemia": "빈혈",
-    "@anemia": {
-        "description": "빈혈"
-    },
-    "diarrhea": "설사",
-    "@diarrhea": {
-        "description": "설사"
-    },
-    "constipation": "변비",
-    "@constipation": {
-        "description": "변비"
-    },
-    "drowsiness": "졸음",
-    "@drowsiness": {
-        "description": "졸음"
-    },
-    "backPain": "요통",
-    "@backPain": {
-        "description": "요통"
-    },
-    "palpitation": "두근거림",
-    "@palpitation": {
-        "description": "두근거림"
-    },
-    "irregularBleeding": "불규칙 출혈",
-    "@irregularBleeding": {
-        "description": "불규칙 출혈"
-    },
-    "lossOfAppetite": "식욕 부진",
-    "@lossOfAppetite": {
-        "description": "식욕 부진"
-    },
-    "chestTightness": "가슴 답답함",
-    "@chestTightness": {
-        "description": "가슴 답답함"
-    },
-    "insomnia": "불면",
-    "@insomnia": {
-        "description": "불면"
-    },
-    "pauseStartingOtherDaysInstructions": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요.",
-    "@pauseStartingOtherDaysInstructions": {
-        "description": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요."
-    },
-    "seeHowToUsePauseTakingFeature": "복용 쉬기 기능 사용 방법 보기",
-    "@seeHowToUsePauseTakingFeature": {
-        "description": "복용 쉬기 기능 사용 방법 보기"
-    },
-    "startPauseTakingLabel": "복용 쉬기 시작",
-    "@startPauseTakingLabel": {
-        "description": "복용 쉬기 시작"
-    },
-    "pauseTakingChanged": "복용 쉬기를 변경했습니다",
-    "@pauseTakingChanged": {
-        "description": "복용 쉬기를 변경했습니다"
-    },
-    "editPausePeriod": "복용 쉬기 기간 편집",
-    "@editPausePeriod": {
-        "description": "복용 쉬기 기간 편집"
-    },
-    "changePillDays": "복용 일수 변경",
-    "@changePillDays": {
-        "description": "복용 일수 변경"
-    },
-    "beginToEndNumbers": "{begin}번 ~ {end}번",
-    "@beginToEndNumbers": {
-        "description": "{begin}번 ~ {end}번",
-        "placeholders": {
-            "begin": {
-                "type": "int"
-            },
-            "end": {
-                "type": "int"
-            }
-        }
-    },
-    "resumeTaking": "복용 재개",
-    "@resumeTaking": {
-        "description": "복용 재개"
-    },
-    "changePausePeriod": "복용 쉬기 기간 변경",
-    "@changePausePeriod": {
-        "description": "복용 쉬기 기간 변경"
-    },
-    "changedPausePeriod": "복용 쉬기 기간을 변경했습니다",
-    "@changedPausePeriod": {
-        "description": "복용 쉬기 기간을 변경했습니다"
-    },
-    "changedToDate": "{date}로 변경했습니다",
-    "@changedToDate": {
-        "description": "{date}로 변경했습니다",
-        "placeholders": {
-            "date": {
-                "type": "String"
-            }
-        }
-    },
-    "quickRecordTakePillFailed": "복용 기록이 실패했을 가능성이 있습니다",
-    "@quickRecordTakePillFailed": {
-        "description": "복용 기록이 실패했을 가능성이 있습니다"
-    },
-    "quickRecordTakePillFailedMessage": "앱을 열어 확인해 주세요",
-    "@quickRecordTakePillFailedMessage": {
-        "description": "앱을 열어 확인해 주세요"
-    },
-    "alreadyTaken": "복용 완료",
-    "@alreadyTaken": {
-        "description": "복용 완료"
-    },
-    "startPauseTaking": "복용을 쉬기 시작",
-    "@startPauseTaking": {
-        "description": "복용을 쉬기 시작"
-    },
-    "startedPauseTaking": "복용을 쉬기를 시작했습니다",
-    "@startedPauseTaking": {
-        "description": "복용을 쉬기를 시작했습니다"
-    },
-    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번",
-    "@sequentialLastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupSequentialLastTakenPillNumber}번",
-        "placeholders": {
-            "pillSheetGroupSequentialLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "startFromNumber": "번부터 시작",
-    "@startFromNumber": {
-        "description": "번부터 시작"
-    },
-    "add": "추가",
-    "@add": {
-        "description": "추가"
-    },
-    "addPillSheet": "피임약 시트 추가",
-    "@addPillSheet": {
-        "description": "피임약 시트 추가"
-    },
-    "duringPauseTaking": "복용 쉬는 중",
-    "@duringPauseTaking": {
-        "description": "복용 쉬는 중"
-    },
-    "cannotPauseAlreadyTakenToday": "오늘 복용할 피임약이 이미 복용된 경우\n'복용 쉬기'를 할 수 없습니다",
-    "@cannotPauseAlreadyTakenToday": {
-        "description": "오늘 복용할 피임약이 이미 복용된 경우 '복용 쉬기'를 할 수 없습니다"
-    },
-    "pauseTakingStarted": "복용 쉬기를 시작했습니다",
-    "@pauseTakingStarted": {
-        "description": "복용 쉬기를 시작했습니다"
-    },
-    "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-    "@formattedDateAndWeekday": {
-        "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-        "placeholders": {
-            "DateTimeFormatterMonthAndDay": {
-                "type": "String"
-            },
-            "DateTimeFormatterWeekday": {
-                "type": "String"
-            }
-        }
-    },
-    "editPauseStartDate": "복용 쉬기 시작일 편집",
-    "@editPauseStartDate": {
-        "description": "복용 쉬기 시작일 편집"
-    },
-    "shareWithFriends": "친구와 공유",
-    "@shareWithFriends": {
-        "description": "친구와 공유"
-    },
-    "termsOfService": "이용 약관",
-    "@termsOfService": {
-        "description": "이용 약관"
-    },
-    "privacyPolicy": "개인정보 보호정책",
-    "@privacyPolicy": {
-        "description": "개인정보 보호정책"
-    },
-    "linkCopiedToClipboard": "클립보드에 복사되었습니다",
-    "@linkCopiedToClipboard": {
-        "description": "클립보드에 복사되었습니다"
-    },
-    "notificationNumber": "알림 {number}",
-    "@notificationNumber": {
-        "description": "알림 {number}",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "notificationTime": "알림 시간",
-    "@notificationTime": {
-        "description": "알림 시간"
-    },
-    "timeZoneChangedTo": "{tz}로 변경되었습니다",
-    "@timeZoneChangedTo": {
-        "description": "{tz}로 변경되었습니다",
-        "placeholders": {
-            "tz": {
-                "type": "String"
-            }
-        }
-    },
-    "changeStartOfPillDays": "복용 일수의 시작",
-    "@changeStartOfPillDays": {
-        "description": "복용 일수의 시작"
-    },
-    "changeEndOfPillDays": "복용 일수의 끝",
-    "@changeEndOfPillDays": {
-        "description": "복용 일수의 끝"
-    },
-    "cannotUpdateToReplacePillSheet": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
-    "@cannotUpdateToReplacePillSheet": {
-        "description": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
-        "placeholders": {
-            "id": {
-                "type": "String"
-            }
-        }
-    },
-    "failedToGetPillSheetHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
-    "@failedToGetPillSheetHistory": {
-        "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
-        "placeholders": {
-            "error": {
-                "type": "String"
-            }
-        }
-    },
-    "cancelTaking": "복용 취소",
-    "@cancelTaking": {
-        "description": "복용 취소"
-    },
-    "deletedDiaryCannotBeRestored": "삭제된 일기는 복원할 수 없습니다",
-    "@deletedDiaryCannotBeRestored": {
-        "description": "삭제된 일기는 복원할 수 없습니다"
-    },
-    "editMenstruation": "생리 기간 편집",
-    "@editMenstruation": {
-        "description": "생리 기간 편집"
-    },
-    "changedPillNumber": "피임약 번호 변경",
-    "@changedPillNumber": {
-        "description": "피임약 번호 변경"
-    },
-    "offPercentForMonthlyPremiumPackage": "{offPercent}% 정기 월간 가격 할인",
-    "@offPercentForMonthlyPremiumPackage": {
-        "description": "{offPercent}% OFF for regularly monthly price",
-        "placeholders": {
-            "offPercent": {
-                "type": "int"
-            }
-        }
-    },
-    "premiumIntroductionDiscountPriceDeadline": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다",
-    "@premiumIntroductionDiscountPriceDeadline": {
-        "description": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다"
-    },
-    "countdownForDiscountPriceDeadline": "{countdown} 내 구매 시 {offPercent}% 할인",
-    "@countdownForDiscountPriceDeadline": {
-        "description": "{countdown} 내 구매 시 {offPercent}% 할인",
-        "placeholders": {
-            "countdown": {
-                "type": "String"
-            },
-            "offPercent": {
-                "type": "int"
-            }
-        }
-    },
-    "pillReminderChanged": "피임약 알림을 {value}로 변경했습니다",
-    "@pillReminderChanged": {
-        "description": "피임약 알림을 {value}로 변경했습니다",
-        "placeholders": {
-            "value": {
-                "type": "String"
-            }
-        }
+  "@@locale": "ko",
+  "pillSheetType21With7Placebo": "21정 타입",
+  "@pillSheetType21With7Placebo": {
+    "description": "21정 타입(7정 위약)"
+  },
+  "pillSheetType28With4Placebo": "28정 타입(4정 위약)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28정 타입(4정 위약)"
+  },
+  "pillSheetType28With7Placebo": "28정 타입(7정 위약)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28정 타입(7정 위약)"
+  },
+  "pillSheetType28": "28정 타입(모두 실약)",
+  "@pillSheetType28": {
+    "description": "28정 타입(모두 실약)"
+  },
+  "pillSheetType24": "24정 타입(모두 실약)",
+  "@pillSheetType24": {
+    "description": "24정 타입(모두 실약)"
+  },
+  "pillSheetType21": "21정 타입(모두 실약)",
+  "@pillSheetType21": {
+    "description": "21정 타입(모두 실약)"
+  },
+  "pillSheetType24WithRest4": "24정 타입",
+  "@pillSheetType24WithRest4": {
+    "description": "24정 타입"
+  },
+  "restPeriod": "휴약",
+  "@restPeriod": {
+    "description": "휴약"
+  },
+  "placebo": "위약",
+  "@placebo": {
+    "description": "위약"
+  },
+  "userNotFound": "사용자를 찾을 수 없습니다",
+  "@userNotFound": {
+    "description": "사용자를 찾을 수 없습니다"
+  },
+  "userAlreadyExists": "이미 사용자가 존재합니다",
+  "@userAlreadyExists": {
+    "description": "이미 사용자가 존재합니다"
+  },
+  "medicationHistory": "복용 이력",
+  "@medicationHistory": {
+    "description": "복용 이력"
+  },
+  "settings": "설정",
+  "@settings": {
+    "description": "설정"
+  },
+  "account": "계정",
+  "@account": {
+    "description": "계정"
+  },
+  "dataTransferRequiresAccount": "기기 변경이나 스마트폰 분실 시 데이터의 인계 및 복원에는 계정 등록이 필요합니다.",
+  "@dataTransferRequiresAccount": {
+    "description": "기기 변경이나 스마트폰 분실 시 데이터의 인계 및 복원에는 계정 등록이 필요합니다."
+  },
+  "pillPremium": "Pilll 프리미엄",
+  "@pillPremium": {
+    "description": "Pilll 프리미엄"
+  },
+  "unlimitedFeatureDuration": "기능 무제한 기간에 대해",
+  "@unlimitedFeatureDuration": {
+    "description": "기능 무제한 기간에 대해"
+  },
+  "pillSheet": "딜셔트",
+  "@pillSheet": {
+    "description": "딜셔트"
+  },
+  "notification": "알림이 있습니다",
+  "@notification": {
+    "description": "알림이 있습니다"
+  },
+  "menstruation": "생리",
+  "@menstruation": {
+    "description": "생리"
+  },
+  "others": "기타",
+  "@others": {
+    "description": "기타"
+  },
+  "faq": "FAQ",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "새로운 기능 소개",
+  "@newFeaturesIntroduction": {
+    "description": "새로운 기능 소개"
+  },
+  "contactUs": "문의하기",
+  "@contactUs": {
+    "description": "문의하기"
+  },
+  "delete": "삭제",
+  "@delete": {
+    "description": "삭제"
+  },
+  "doDelete": "삭제하기",
+  "@doDelete": {
+    "description": "삭제하기"
+  },
+  "deleteUser": "사용자 삭제",
+  "@deleteUser": {
+    "description": "사용자 삭제"
+  },
+  "deleteDiary": "일기 삭제",
+  "@deleteDiary": {
+    "description": "일기 삭제"
+  },
+  "confirmDeletingMenstruation": "생리 기간을 삭제하시겠습니까?",
+  "@confirmDeletingMenstruation": {
+    "description": "생리 기간을 삭제하시겠습니까?"
+  },
+  "addNotificationTime": "알림 시간 추가",
+  "@addNotificationTime": {
+    "description": "알림 시간 추가"
+  },
+  "syncWithDeviceTimeZone": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
+  "@syncWithDeviceTimeZone": {
+    "description": "기기의 시간대({deviceTimezoneName})와 동기화하시겠습니까?",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
     }
+  },
+  "currentTimeZone": "현재 설정된 시간대",
+  "@currentTimeZone": {
+    "description": "현재 설정된 시간대"
+  },
+  "yes": "예",
+  "@yes": {
+    "description": "예"
+  },
+  "no": "아니오",
+  "@no": {
+    "description": "아니오"
+  },
+  "unsubscribeInfo": "해지에 대해",
+  "@unsubscribeInfo": {
+    "description": "해지에 대해"
+  },
+  "pillReminder": "딜의 복용 알림",
+  "@pillReminder": {
+    "description": "딜의 복용 알림"
+  },
+  "takePillReminderChannelName": "알림",
+  "@takePillReminderChannelName": {
+    "description": "알림"
+  },
+  "takePillReminder": "💊 복용 알림",
+  "@takePillReminder": {
+    "description": "💊 복용 알림"
+  },
+  "copyDebugInfo": "COPY DEBUG INFO",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "취소",
+  "@cancel": {
+    "description": "취소"
+  },
+  "signOut": "로그아웃",
+  "@signOut": {
+    "description": "로그아웃"
+  },
+  "autoAddPillSheetGroup": "딜셔트 그룹 자동 추가",
+  "@autoAddPillSheetGroup": {
+    "description": "딜셔트 그룹 자동 추가"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "현재 딜셔트 그룹이 끝나면 새로운 셔트를 자동으로 추가합니다",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "현재 딜셔트 그룹이 끝나면 새로운 셔트를 자동으로 추가합니다"
+  },
+  "accountSettings": "계정 설정",
+  "@accountSettings": {
+    "description": "계정 설정"
+  },
+  "linked": "연동 완료",
+  "@linked": {
+    "description": "연동 완료"
+  },
+  "unregistered": "미등록",
+  "@unregistered": {
+    "description": "미등록"
+  },
+  "quickRecord": "퀵 레코드",
+  "@quickRecord": {
+    "description": "퀵 레코드"
+  },
+  "quickRecordDescription": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다.",
+  "@quickRecordDescription": {
+    "description": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다."
+  },
+  "healthCareIntegration": "건강 관리 연동",
+  "@healthCareIntegration": {
+    "description": "건강 관리 연동"
+  },
+  "healthCareIntegrationDescription": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다"
+  },
+  "viewPremiumPlan": "프리미엄 플랜 보기",
+  "@viewPremiumPlan": {
+    "description": "프리미엄 플랜 보기"
+  },
+  "changePillNumberForToday": "오늘 복용할 딜 번호 변경",
+  "@changePillNumberForToday": {
+    "description": "오늘 복용할 딜 번호 변경"
+  },
+  "discardAllPillSheets": "딜셔트 모두 폐기",
+  "@discardAllPillSheets": {
+    "description": "딜셔트 모두 폐기"
+  },
+  "areYouSureDoing": "{doing}하시겠습니까?",
+  "@areYouSureDoing": {
+    "description": "{doing}하시겠습니까?",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "현재 표시되고 있는",
+  "@currentlyDisplayed": {
+    "description": "현재 표시되고 있는"
+  },
+  "allPillSheets": "모든 딜셔트",
+  "@allPillSheets": {
+    "description": "모든 딜셔트"
+  },
+  "willBeDiscarded": "가 폐기됩니다",
+  "@willBeDiscarded": {
+    "description": "가 폐기됩니다"
+  },
+  "discard": "폐기하기",
+  "@discard": {
+    "description": "폐기하기"
+  },
+  "pillSheetDiscarded": "딜셔트를 폐기했습니다",
+  "@pillSheetDiscarded": {
+    "description": "딜셔트를 폐기했습니다"
+  },
+  "aboutMenstruation": "생리에 대해",
+  "@aboutMenstruation": {
+    "description": "생리에 대해"
+  },
+  "checkPillNumberForMenstruationStart": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다"
+  },
+  "customizeMedicationNotifications": "복용 알림 커스터마이즈",
+  "@customizeMedicationNotifications": {
+    "description": "복용 알림 커스터마이즈"
+  },
+  "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
+  "@xCanBeCustomized": {
+    "description": "{x}의 커스터마이즈가 가능합니다",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "협력에 감사합니다",
+  "@thankYouForCooperation": {
+    "description": "협력에 감사합니다"
+  },
+  "feedbackUsage": "받은 의견은 향후 개선을 위해 활용하겠습니다.",
+  "@feedbackUsage": {
+    "description": "받은 의견은 향후 개선을 위해 활용하겠습니다."
+  },
+  "close": "닫기",
+  "@close": {
+    "description": "닫기"
+  },
+  "registerAccount": "계정 등록",
+  "@registerAccount": {
+    "description": "계정 등록"
+  },
+  "reLogin": "다시 로그인",
+  "@reLogin": {
+    "description": "다시 로그인"
+  },
+  "authenticationInfoUpdated": "인증 정보를 업데이트했습니다",
+  "@authenticationInfoUpdated": {
+    "description": "인증 정보를 업데이트했습니다"
+  },
+  "updateAuthenticationInformation": "인증 정보 업데이트",
+  "@updateAuthenticationInformation": {
+    "description": "인증 정보 업데이트"
+  },
+  "registeredWithProvider": "{accountTypeProviderName}으로 등록했습니다",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}으로 등록했습니다",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "연동하기",
+  "@linkAccount": {
+    "description": "연동하기"
+  },
+  "withdraw": "탈퇴하기",
+  "@withdraw": {
+    "description": "탈퇴하기"
+  },
+  "withdrawalCompleted": "탈퇴했습니다",
+  "@withdrawalCompleted": {
+    "description": "탈퇴했습니다"
+  },
+  "appExitMessage": "앱을 한 번 종료합니다. 새로 시작하려면 앱을 다시 시작한 후 초기 설정을 해주세요.",
+  "@appExitMessage": {
+    "description": "앱을 한 번 종료합니다. 새로 시작하려면 앱을 다시 시작한 후 초기 설정을 해주세요."
+  },
+  "oK": "확인",
+  "@oK": {
+    "description": "확인"
+  },
+  "changePillNumber": "딜 번호 변경",
+  "@changePillNumber": {
+    "description": "딜 번호 변경"
+  },
+  "change": "변경",
+  "@change": {
+    "description": "변경"
+  },
+  "pill": "딜",
+  "@pill": {
+    "description": "딜"
+  },
+  "calendar": "캘린더",
+  "@calendar": {
+    "description": "캘린더"
+  },
+  "userInformationWillBeDeleted": "사용자 정보가 삭제됩니다",
+  "@userInformationWillBeDeleted": {
+    "description": "사용자 정보가 삭제됩니다"
+  },
+  "withdrawalMessage": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다.",
+  "@withdrawalMessage": {
+    "description": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다."
+  },
+  "recordPage": "RecordPage",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "다시 로그인해주세요",
+  "@doReLogin": {
+    "description": "다시 로그인해주세요"
+  },
+  "reLoginMessage": "탈퇴하기 전에 본인 확인을 위해 다시 로그인을 해주세요. 다시 로그인 후 자동으로 탈퇴 처리가 시작됩니다",
+  "@reLoginMessage": {
+    "description": "탈퇴하기 전에 본인 확인을 위해 다시 로그인을 해주세요. 다시 로그인 후 자동으로 탈퇴 처리가 시작됩니다"
+  },
+  "updateAuthenticationAfterReLogin": "다시 로그인해 인증 정보를 업데이트합니다",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "다시 로그인해 인증 정보를 업데이트합니다"
+  },
+  "menstruationPage": "MenstruationPage",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "CalendarPage",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "SettingsPage",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "생리 기간을 삭제했습니다",
+  "@menstruationDeleted": {
+    "description": "생리 기간을 삭제했습니다"
+  },
+  "editMenstruationPeriod": "생리 기간 편집",
+  "@editMenstruationPeriod": {
+    "description": "생리 기간 편집"
+  },
+  "menstruationEdited": "생리 기간을 편집했습니다",
+  "@menstruationEdited": {
+    "description": "생리 기간을 편집했습니다"
+  },
+  "physicalConditionDetail": "체온 세부 정보",
+  "@physicalConditionDetail": {
+    "description": "체온 세부 정보"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "이 이상의 보기는 프리미엄 기능에 해당됩니다",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "이 이상의 보기는 프리미엄 기능에 해당됩니다"
+  },
+  "viewMoreDetails": "세세하게 보기",
+  "@viewMoreDetails": {
+    "description": "세세하게 보기"
+  },
+  "viewMore": "더 많이 보기",
+  "@viewMore": {
+    "description": "더 많이 보기"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}번",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}번",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}번",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}번",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}���",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}번",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}번",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}번",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}번",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}번",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}번",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}번",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}번",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "복용 휴식 시작일 선택",
+  "@selectPauseStartDate": {
+    "description": "복용 휴식 시작일 선택"
+  },
+  "selectPausePeriod": "복용 휴식 기간 선택",
+  "@selectPausePeriod": {
+    "description": "복용 휴식 기간 선택"
+  },
+  "pauseStartDate": "복용 휴식 시작일",
+  "@pauseStartDate": {
+    "description": "복용 휴식 시작일"
+  },
+  "pauseEndDate": "복용 휴식 종료일",
+  "@pauseEndDate": {
+    "description": "복용 휴식 종료일"
+  },
+  "endPillSheet": "딜셔트 종료",
+  "@endPillSheet": {
+    "description": "딜셔트 종료"
+  },
+  "discardPillSheet": "딜셔트 폐기",
+  "@discardPillSheet": {
+    "description": "딜셔트 폐기"
+  },
+  "takingTime": "복용 시간",
+  "@takingTime": {
+    "description": "복용 시간"
+  },
+  "takingHistoryIsPremiumFeature": "복용 이력은 프리미엄 기능입니다",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "복용 이력은 프리미엄 기능입니다"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "복용을 휴식하면 딜 번호가 진행되지 않습니다",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "복용을 휴식하면 딜 번호가 진행되지 않습니다"
+  },
+  "pauseTakingFromNumber": "{number}에서 복용을 휴식하시겠습니까?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}에서 복용을 휴식하시겠습니까?",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}번",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "복용",
+  "@taking": {
+    "description": "복용"
+  },
+  "estimatedEndPillNumber": "이전 셔트의 마지막: {estimatedEndPillNumber}번",
+  "@estimatedEndPillNumber": {
+    "description": "이전 셔트의 마지막: {estimatedEndPillNumber}번",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "딜셔트 추가",
+  "@addPillSheetButton": {
+    "description": "딜셔트 추가"
+  },
+  "taken": "복용했습니다",
+  "@taken": {
+    "description": "복용했습니다"
+  },
+  "notTaken": "복용하지 않았습니다",
+  "@notTaken": {
+    "description": "복용하지 않았습니다"
+  },
+  "pillSheetSettings": "딜셔트 설정",
+  "@pillSheetSettings": {
+    "description": "딜셔트 설정"
+  },
+  "unmarkTodayPillAsTakenToPause": "오늘 복용하는 딜을 미복용으로 하고",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "오늘 복용하는 딜을 미복용으로 하고"
+  },
+  "pauseTaking": "복용 휴식",
+  "@pauseTaking": {
+    "description": "복용 휴식"
+  },
+  "changePauseStartDate": "복용 휴식 시작일 변경",
+  "@changePauseStartDate": {
+    "description": "복용 휴식 시작일 변경"
+  },
+  "pauseTakingPeriodEnded": "복용 휴식 기간이 종료되었습니다",
+  "@pauseTakingPeriodEnded": {
+    "description": "복용 휴식 기간이 종료되었습니다"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "셔트의 복용 일수 변경",
+  "@changePillDaysForSheet": {
+    "description": "셔트의 복용 일수 변경"
+  },
+  "changedStartAndEndNumbers": "시작과 끝의 번호가 변경되었습니다",
+  "@changedStartAndEndNumbers": {
+    "description": "시작과 끝의 번호가 변경되었습니다"
+  },
+  "startOfPillDays": "복용 일수의 시작",
+  "@startOfPillDays": {
+    "description": "복용 일수의 시작"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "복용 일수의 끝",
+  "@endOfPillDays": {
+    "description": "복용 일수의 끝"
+  },
+  "changedToNumber": "번호로 변경",
+  "@changedToNumber": {
+    "description": "번호로 변경"
+  },
+  "displayMode": "표시 모드",
+  "@displayMode": {
+    "description": "표시 모드"
+  },
+  "dateDisplay": "날짜 표시",
+  "@dateDisplay": {
+    "description": "날짜 표시"
+  },
+  "pillNumber": "딜 번호 ",
+  "@pillNumber": {
+    "description": "딜 번호 "
+  },
+  "pillDays": "복용 일수",
+  "@pillDays": {
+    "description": "복용 일수"
+  },
+  "pillDaysCycle": "복용 일수(주기)",
+  "@pillDaysCycle": {
+    "description": "복용 일수(주기)"
+  },
+  "pillSheetEnded": "딜셔트가 종료되었습니다",
+  "@pillSheetEnded": {
+    "description": "딜셔트가 종료되었습니다"
+  },
+  "checkLastTakenDate": "마지막으로 복용한 날을 확인",
+  "@checkLastTakenDate": {
+    "description": "마지막으로 복용한 날을 확인"
+  },
+  "pleaseRegisterAccount": "계정 등록을 해주세요",
+  "@pleaseRegisterAccount": {
+    "description": "계정 등록을 해주세요"
+  },
+  "cannotTransferPremiumWithoutAccount": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다"
+  },
+  "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!",
+  "@reexperiencePremiumFeatures": {
+    "description": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!"
+  },
+  "whereToShare": "어디에 공유하시겠습니까?",
+  "@whereToShare": {
+    "description": "어디에 공유하시겠습니까?"
+  },
+  "pauseTakingDay": "🌙 복용 휴식 {day}일째",
+  "@pauseTakingDay": {
+    "description": "🌙 복용 휴식 {day}일째",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word}일째",
+  "@withDay": {
+    "description": "{word}일째",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}일째",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "남은 {diffPlusOne}일 동안 {activePillSheetPillSheetTypeNotTakenWord} 기간이 됩니다",
+  "@daysUntilPausePeriod": {
+    "description": "남은 {diffPlusOne}일 동안 {activePillSheetPillSheetTypeNotTakenWord} 기간이 됩니다",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "남은 {diff}일 동안 모든 기능을 사용할 수 있습니다",
+  "@remainingDaysAllFeatures": {
+    "description": "남은 {diff}일 동안 모든 기능을 사용할 수 있습니다",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 오늘은 복용",
+  "@todayIsTaking": {
+    "description": "💊 오늘은 복용"
+  },
+  "todayPillToTake": "💊 오늘 복용할 딜",
+  "@todayPillToTake": {
+    "description": "💊 오늘 복용할 딜"
+  },
+  "number": "번",
+  "@number": {
+    "description": "번"
+  },
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}에서 생리 시작으로 기록했습니다",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}에서 생리 시작으로 기록했습니다",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "생리 시작일",
+  "@menstruationStartDate": {
+    "description": "생리 시작일"
+  },
+  "menstruationEndDate": "생리 종료일",
+  "@menstruationEndDate": {
+    "description": "생리 종료일"
+  },
+  "menstruationScheduleDate": "생리 예정일",
+  "@menstruationScheduleDate": {
+    "description": "생리 예정일"
+  },
+  "menstruationScheduleDateWithNumber": "생리 예정: {diffPlusOne}일째",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "생리 예정: {diffPlusOne}일째",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "생리 예정: {diffPlusOne}일째의 {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "생리 예정: {diffPlusOne}일째의 {pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "남은 {diff}일",
+  "@menstruationRemainingDay": {
+    "description": "남은 {diff}일",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne}일째",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}일째",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "생리 기록",
+  "@recordMenstruation": {
+    "description": "생리 기록"
+  },
+  "menstruationHistory": "생리 이력",
+  "@menstruationHistory": {
+    "description": "생리 이력"
+  },
+  "menstruationFromToday": "오늘부터 생리",
+  "@menstruationFromToday": {
+    "description": "오늘부터 생리"
+  },
+  "menstruationFromYesterday": "어제부터 생리",
+  "@menstruationFromYesterday": {
+    "description": "어제부터 생리"
+  },
+  "selectMenstruationStartDate": "생리 시작일 선택",
+  "@selectMenstruationStartDate": {
+    "description": "생리 시작일 선택"
+  },
+  "menstruationCycle": "{menstruationDuration}일 주기",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}일 주기",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "로그인",
+  "@login": {
+    "description": "로그인"
+  },
+  "beforePremiumRegistration": "프리미엄 등록 전에…",
+  "@beforePremiumRegistration": {
+    "description": "프리미엄 등록 전에…"
+  },
+  "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로�� 계정이 작성됩니다",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다"
+  },
+  "registerAccountForDataTransfer": "계정 등록하면 데이터의 인계가 가능합니다",
+  "@registerAccountForDataTransfer": {
+    "description": "계정 등록하면 데이터의 인계가 가능합니다"
+  },
+  "registerAccountToKeepData": "데이터를 유지하기 위해 계정 등록을 부탁드립니다",
+  "@registerAccountToKeepData": {
+    "description": "데이터를 유지하기 위해 계정 등록을 부탁드립니다"
+  },
+  "signInWith": "{loginName}으로 로그인",
+  "@signInWith": {
+    "description": "{loginName}으로 로그인",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "{loginName}으로 등록",
+  "@registerWith": {
+    "description": "{loginName}으로 등록",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll 프리미엄 등록 완료",
+  "@premiumRegistrationComplete": {
+    "description": "Pilll 프리미엄 등록 완료"
+  },
+  "thankYouForRegistration": "등록 감사합니다.\n모든 기능을 사용할 수 있게 되었습니다!",
+  "@thankYouForRegistration": {
+    "description": "등록 감사합니다.\n모든 기능을 사용할 수 있게 되었습니다!"
+  },
+  "limitedTimeDiscount": "지금이면 제한 가격으로 계속 사용할 수 있습니다",
+  "@limitedTimeDiscount": {
+    "description": "지금이면 제한 가격으로 계속 사용할 수 있습니다"
+  },
+  "standardMonthlyPlan": "일반 월간 플랜",
+  "@standardMonthlyPlan": {
+    "description": "일반 월간 플랜"
+  },
+  "annualPlan": "연간 플랜",
+  "@annualPlan": {
+    "description": "연간 플랜"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/년",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/년",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/월",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/월",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "・프리미엄 계약 기간은 시작일부터 1개월 또는 1년마다 자동 갱신됩니다\n",
+  "@premiumTermsNotice1": {
+    "description": "・프리미엄 계약 기간은 시작일부터 1개월 또는 1년마다 자동 갱신됩니다\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": " / ",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "특정 사업자 표시법에 따른 표시",
+  "@premiumTermsNotice2": {
+    "description": "특정 사업자 표시법에 따른 표시"
+  },
+  "premiumTermsNotice3": "확인하신 후 등록해주세요\n",
+  "@premiumTermsNotice3": {
+    "description": "확인하신 후 등록해주세요\n"
+  },
+  "autoRenewNotice": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n",
+  "@autoRenewNotice": {
+    "description": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n"
+  },
+  "cancelAutoRenewInfo": "・구매 후 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 가능합니다. (앱 내에서 자동 갱신 해지는 불가능합니다).",
+  "@cancelAutoRenewInfo": {
+    "description": "・구매 후 자동 갱신 해지는 {storeName} 앱의 계정 설정에서 가능합니다. (앱 내에서 자동 갱신 해지는 불가능합니다).",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "세세하게 보기",
+  "@moreDetails": {
+    "description": "세세하게 보기"
+  },
+  "restorePurchase": "구매 정보를 복원했습니다",
+  "@restorePurchase": {
+    "description": "구매 정보를 복원했습니다"
+  },
+  "previouslyPurchased": "이전에 구매한 분은 여기를 참고하세요",
+  "@previouslyPurchased": {
+    "description": "이전에 구매한 분은 여기를 참고하세요"
+  },
+  "noPreviousPurchaseInfo": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요",
+  "@noPreviousPurchaseInfo": {
+    "description": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요"
+  },
+  "monthlyPlan": "월간 플랜",
+  "@monthlyPlan": {
+    "description": "월간 플랜"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/월",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/월",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "당신은\n프리미엄 멤버입니다",
+  "@youArePremiumMember": {
+    "description": "당신은\n프리미엄 멤버입니다"
+  },
+  "thankYouMessage": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다.",
+  "@thankYouMessage": {
+    "description": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다."
+  },
+  "premiumFeaturesList": "프리미엄 기능 목록",
+  "@premiumFeaturesList": {
+    "description": "프리미엄 기능 목록"
+  },
+  "pushNotificationForTakingRecord": "📩 프루시 알림에서 복용 기록",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 프루시 알림에서 복용 기록"
+  },
+  "viewAndRecordTakingHistory": "🗂 복용 이력의 기록과 보기",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 복용 이력의 기록과 보기"
+  },
+  "displayDateOnPillSheet": "📆 딜셔트 위에 날짜 표시",
+  "@displayDateOnPillSheet": {
+    "description": "📆 딜셔트 위에 날짜 표시"
+  },
+  "autoRefillNewPillSheet": "📦 새로운 딜셔트를 자동으로 보충",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 새로운 딜셔트를 자동으로 보충"
+  },
+  "viewPastData": "👀 과거의 데이터 보기",
+  "@viewPastData": {
+    "description": "👀 과거의 데이터 보기"
+  },
+  "customizeHealthTags": "🏷 체온 태그 커스터마이즈",
+  "@customizeHealthTags": {
+    "description": "🏷 체온 태그 커스터마이즈"
+  },
+  "hideAds": "🚫 광고 표시 안함",
+  "@hideAds": {
+    "description": "🚫 광고 표시 안함"
+  },
+  "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "프리미엄 기���의 세세한 정보 보기"
+  },
+  "popularFeatures": "인기 있는\n기능",
+  "@popularFeatures": {
+    "description": "인기 있는\n기능"
+  },
+  "viewPremiumFeatures": "프리미엄 기능 보기",
+  "@viewPremiumFeatures": {
+    "description": "프리미엄 기능 보기"
+  },
+  "addedDisplayModePillDaysCycle": "표시 모드 복용 일수(주기)가 추가되었습니다",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "표시 모드 복용 일수(주기)가 추가되었습니다"
+  },
+  "seeDetails": "세세한 정보 보기",
+  "@seeDetails": {
+    "description": "세세한 정보 보기"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "딜을 놓쳤을 때의 알림 문구를 변경할 수 있습니다",
+  "@missedPillNotification": {
+    "description": "딜을 놓쳤을 때의 알림 문구를 변경할 수 있습니다"
+  },
+  "setMultipleReminders": "여러 개의 알림을 설정하면 놓치지 않을 수 있습니다",
+  "@setMultipleReminders": {
+    "description": "여러 개의 알림을 설정하면 놓치지 않을 수 있습니다"
+  },
+  "and": "과",
+  "@and": {
+    "description": "과"
+  },
+  "readAndStartUsing": "읽고\n이용을 시작하세요",
+  "@readAndStartUsing": {
+    "description": "읽고\n이용을 시작하세요"
+  },
+  "next": "다음",
+  "@next": {
+    "description": "다음"
+  },
+  "notificationIndex": "알림 {number}",
+  "@notificationIndex": {
+    "description": "알림 {number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "\\ 알림에서 복용 기록을 할 수 있습니다 /",
+  "@takingRecordFromNotification": {
+    "description": "\\ 알림에서 복용 기록을 할 수 있습니다 /"
+  },
+  "startApp": "앱 시작",
+  "@startApp": {
+    "description": "앱 시작"
+  },
+  "loggedInWithProvider": "{accountTypeProviderName}으로 로그인했습니다",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}으로 로그인했습니다",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "처방된 시트에 대해\n알려주세요",
+  "@tellAboutPrescribedSheet": {
+    "description": "처방된 시트에 대해\n알려주세요"
+  },
+  "existingAccountUsers": "이미 계정이 있는 분은 여기를 클릭하세요",
+  "@existingAccountUsers": {
+    "description": "이미 계정이 있는 분은 여기를 클릭하세요"
+  },
+  "selectTodayPillNumber": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
+  "@selectTodayPillNumber": {
+    "description": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "아직 모름",
+  "@notYetKnown": {
+    "description": "아직 모름"
+  },
+  "pillForToday": "{today}에 먹는 알약은",
+  "@pillForToday": {
+    "description": "{today}에 먹는 알약은",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "미리보기",
+  "@preview": {
+    "description": "미리보기"
+  },
+  "normal": "일반",
+  "@normal": {
+    "description": "일반"
+  },
+  "missed": "복용 잊음",
+  "@missed": {
+    "description": "복용 잊음"
+  },
+  "showsDate": "날짜 표시",
+  "@showsDate": {
+    "description": "날짜 표시"
+  },
+  "showsPillNumber": "번호 표시",
+  "@showsPillNumber": {
+    "description": "번호 표시"
+  },
+  "showsDescription": "설명 표��",
+  "@showsDescription": {
+    "description": "설명 표시"
+  },
+  "title": "제목",
+  "@title": {
+    "description": "제목"
+  },
+  "message": "메시지",
+  "@message": {
+    "description": "메시지"
+  },
+  "option": "옵션",
+  "@option": {
+    "description": "옵션"
+  },
+  "completed": "완료",
+  "@completed": {
+    "description": "완료"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "복용 잊음 알림 메시지를 변경할 수 있습니다",
+  "@changeMissedNotificationMessage": {
+    "description": "복용 잊음 알림 메시지를 변경할 수 있습니다"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "알림의 시작 부분을 변경할 수 있습니다",
+  "@changeNotificationHeader": {
+    "description": "알림의 시작 부분을 변경할 수 있습니다"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "0자 이상 입력하세요",
+  "@enterAtLeastOneCharacter": {
+    "description": "0자 이상 입력하세요"
+  },
+  "changeDailyNotificationMessage": "복용 잊�� 않음 알림 ��시지를 변경할 수 있습니다",
+  "@changeDailyNotificationMessage": {
+    "description": "복용 잊지 않음 알림 메시지를 변경할 수 있습니다"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "당일 9:00에 알림을 받습니다",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "당일 9:00에 알림을 받습니다"
+  },
+  "save": "저장",
+  "@save": {
+    "description": "저장"
+  },
+  "physicalCondition": "신체 상태",
+  "@physicalCondition": {
+    "description": "신체 상태"
+  },
+  "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "삭제된 일기는 복원할 수 없습니다"
+  },
+  "sex": "성별",
+  "@sex": {
+    "description": "성별"
+  },
+  "previousPillSheetGroup": "이전 알약 시트 그룹",
+  "@previousPillSheetGroup": {
+    "description": "이전 알약 시트 그룹"
+  },
+  "noPreviousPillSheetGroup": "이전 알약 시트 그룹이 아직 존재하지 않습니다",
+  "@noPreviousPillSheetGroup": {
+    "description": "이전 알약 시트 그룹이 아직 존재하지 않습니다"
+  },
+  "failedToFetchPillHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "FAQ 보기",
+  "@seeFAQ": {
+    "description": "FAQ 보기"
+  },
+  "reloadScreen": "화면을 다시 로드",
+  "@reloadScreen": {
+    "description": "화면을 다시 로드"
+  },
+  "contactIfNotResolved": "해결되지 않는 경우 여기를 클릭하세요",
+  "@contactIfNotResolved": {
+    "description": "해결되지 않는 경우 여기를 클릭하세요"
+  },
+  "shareFeedback": "Pilll의 감상을 들려주세요",
+  "@shareFeedback": {
+    "description": "Pilll의 감상을 들려주세요"
+  },
+  "confirm": "확인",
+  "@confirm": {
+    "description": "확인"
+  },
+  "surveyForServiceImprovement": "서비스 개선을 위한 설문조사에 협조해 주세요",
+  "@surveyForServiceImprovement": {
+    "description": "서비스 개선을 위한 설문조사에 협조해 주세요"
+  },
+  "participate": "참여하기",
+  "@participate": {
+    "description": "참여하기"
+  },
+  "notHelp": "도움이 되지 않음",
+  "@notHelp": {
+    "description": "도움이 되지 않음"
+  },
+  "serviceImprovementSurvey": "서비스 개선 설문조사",
+  "@serviceImprovementSurvey": {
+    "description": "서비스 개선 설문조사"
+  },
+  "satisfied": "만족",
+  "@satisfied": {
+    "description": "만족"
+  },
+  "notSatisfied": "만족하지 않음",
+  "@notSatisfied": {
+    "description": "만족하지 않음"
+  },
+  "perNumber": "번호마다",
+  "@perNumber": {
+    "description": "번호마다"
+  },
+  "howManyDaysDoesMenstruationLast": "생리가 며칠 동안 지속됩니까?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "생리가 며칠 동안 지속됩니까?"
+  },
+  "daysMenstruationLasts": " 일 동안 생리가 지속됩니다",
+  "@daysMenstruationLasts": {
+    "description": " 일 동안 생리가 지속됩니다"
+  },
+  "selectPillNumberForMenstruationStart": "생리가 시작되는 알약 번호를 탭하세요",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "생리가 시작되는 알약 번호를 탭하세요"
+  },
+  "countOfSheet": "{number}번째",
+  "@countOfSheet": {
+    "description": "{number}번째",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "새로운 알약 시트 시작 ▶︎",
+  "@newPillSheetStart": {
+    "description": "새로운 알약 시트 시작 ▶︎"
+  },
+  "selectPillType": "알약 종류 선택",
+  "@selectPillType": {
+    "description": "알약 종류 선택"
+  },
+  "twentyOnePills": "21정",
+  "@twentyOnePills": {
+    "description": "21정"
+  },
+  "twentyEightPills": "28정",
+  "@twentyEightPills": {
+    "description": "28정"
+  },
+  "twentyFourPills": "24정",
+  "@twentyFourPills": {
+    "description": "24정"
+  },
+  "twentyOnePlusSevenDaysBreak": "21정＋7일 휴약",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21정＋7일 휴약"
+  },
+  "twentyFourPlusFourPlacebo": "24정＋4정 위약",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24정＋4정 위약"
+  },
+  "twentyOnePlusSevenPlacebo": "21정＋7정 위약",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21정＋7정 위약"
+  },
+  "allActivePills": "모두 실약",
+  "@allActivePills": {
+    "description": "모두 실약"
+  },
+  "twentyFourPlusFourDaysBreak": "24정＋4정 휴약",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24정＋4정 휴약"
+  },
+  "choosePillType": "알약 종류 선택",
+  "@choosePillType": {
+    "description": "알약 종류 선택"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord} 기간의 알림",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "알림이 꺼져 있는 경우, {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "알림이 꺼져 있는 경우, {pillSheetPillSheetTypeNotTakenWord} 기간의 복용 기록도 자동으로 작성됩니다",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "해약 후 설문조사 협조 요청",
+  "@requestForCancelSurvey": {
+    "description": "해약 후 설문조사 협조 요청"
+  },
+  "pilllDescription": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱",
+  "@pilllDescription": {
+    "description": "Pilll 피임약 복용에 특화된 피임약 리마인더 앱"
+  },
+  "reachedMaximumCountOfReminderTimes": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "알림 시간은 최소 {ReminderTimeMinimumCount}건 필요합니다",
+  "@minimumCountOfReminderTimes": {
+    "description": "알림 시간은 최소 {ReminderTimeMinimumCount}건 필요합니다",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "원인 불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "원인 불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName}에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName}에서 오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "이 기기에서 구매가 허용되지 않았습니다",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "이 기기에서 구매가 허용되지 않았습니다"
+  },
+  "purchaseErrorPurchaseInvalidError": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "부정한 구매 정보입니다. 구매 정보를 확인해 주세요",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "부정한 구매 정보입니다. 구매 정보를 확인해 주세요"
+  },
+  "purchaseErrorMissingReceiptFileError": "구매자의 정보가 존재하지 않습니다. {accountName}으로 기기에 로그인한 후 시도해 주세요",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "구매자의 정보가 존재하지 않습니다. {accountName}으로 기기에 로그인한 후 시도해 주세요",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 시도해 주세요.",
+  "@purchaseErrorNetworkError": {
+    "description": "네트워크 상태가 불안정합니다. 연결 상태를 확인한 후 시도해 주세요."
+  },
+  "purchaseErrorInvalidCredentialsError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "구매 정보는 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "구매 정보는 다른 사용자에 의해 사용되고 있습니다. 기기에 로그인한 {accountName}을 확인해 주세요",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "사용자를 확인할 수 없었습니다. 앱을 재시작한 후 다시 시도해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "사용자를 확인할 수 없었습니다. 앱을 재시작한 후 다시 시도해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "구매 처리가 별도로 진행 중입니다. 잠시 후 다시 확인해 주세요",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "구매 처리가 별도로 진행 중입니다. 잠시 후 다시 확인해 주세요"
+  },
+  "purchaseErrorUnknownBackendError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "사용 중인 {accountName}에서는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "사용 중인 {accountName}에서는 플랜에 가입할 수 없습니다. 결제 정보를 확인한 후 다시 시도해 주세요",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "결제가 중단되었습니다. 로그인 중인 {accountName}에서 {storeName}을 확인해 주세요",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "결제가 중단되었습니다. 로그인 중인 {accountName}에서 {storeName}을 확인해 주세요",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "사용자 정보를 가져오지 못했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "사용자 정보를 가져오지 못했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "구매 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "구매 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해��되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "기기 설정에 문제가 있습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "기기 설정에 문제가 있습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "환불 처리가 시작되었습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "환불 처리가 시작되었습니다. 확인 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "타임아웃하였습니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "타임아웃하였습니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "앱을 업데이트해 주세요",
+  "@forceUpdateTitle": {
+    "description": "앱을 업데이트해 주세요"
+  },
+  "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
+  "@forceUpdateMessage": {
+    "description": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "병원에 방문하기",
+  "@visitHospital": {
+    "description": "병원에 방문하기"
+  },
+  "receiveNotificationAt9AM": "당일 9:00에 알림을 받습니다",
+  "@receiveNotificationAt9AM": {
+    "description": "당일 9:00에 알림을 받습니다"
+  },
+  "deletedScheduleCannotBeRestored": "삭제된 일정은 복원할 수 없습니다",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "삭제된 일정은 복원할 수 없습니다"
+  },
+  "deleteSchedule": "일정을 삭제합니다",
+  "@deleteSchedule": {
+    "description": "일정을 삭제합니다"
+  },
+  "onlySupportiOS": "iOS 앱에만 지원됩니다",
+  "@onlySupportiOS": {
+    "description": "iOS 앱에만 지원됩니다"
+  },
+  "healthKitDoesNotSupport": "헬스케어에 대응하지 않는 기기에서는 사용할 수 없습니다",
+  "@healthKitDoesNotSupport": {
+    "description": "헬스케어에 대응하지 않는 기기에서는 사용할 수 없습니다"
+  },
+  "enableHealthKitFromSettings": "설정 앱에서 헬스케어를 활성화해 주세요",
+  "@enableHealthKitFromSettings": {
+    "description": "설정 앱에서 헬스케어를 활성화해 주세요"
+  },
+  "accountAlreadyLinked": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "이 {accountTypeProviderName} 계정은 이미 사용 중인 Pilll 계정에 연결되어 있습니다. 화면을 새로 고침해 보세요. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "이 {accountTypeProviderName} 계정은 이미 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 상세: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "오늘의 일정입니다",
+  "@todaySchedule": {
+    "description": "오늘의 일정입니다"
+  },
+  "calendarSchedule": "캘린더의 일정",
+  "@calendarSchedule": {
+    "description": "캘린더의 일정"
+  },
+  "newPillSheetNotificationTitle": "오늘부터 새로운 시트가 시작됩니다",
+  "@newPillSheetNotificationTitle": {
+    "description": "오늘부터 새로운 시트가 시작됩니다"
+  },
+  "newPillSheetNotificationMessage": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 오늘부터 새로운 시트가 시작됩니다\n잊지 말고 복용하세요👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "프리미엄 정보가 발견되지 않았습니다",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "프리미엄 정보가 발견되지 않았습니다"
+  },
+  "purchaseErrorPurchasePendingError": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요"
+  },
+  "launchError": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
+  "@launchError": {
+    "description": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "예를 들어 '1/12부터 3일간' 복용을 쉬는 경우",
+  "@exampleRestDurationDate": {
+    "description": "예를 들어 '1/12부터 3일간' 복용을 쉬는 경우"
+  },
+  "exampleRestDurationNumber": "예를 들어 '18번부터 3일간' 복용을 쉬는 경우",
+  "@exampleRestDurationNumber": {
+    "description": "예를 들어 '18번부터 3일간' 복용을 쉬는 경우"
+  },
+  "withNumber": "{number}번",
+  "@withNumber": {
+    "description": "{number}번",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "현재 대상이 되는 피임약 시트를 찾을 수 없습니다",
+  "@currentPillSheetNotFound": {
+    "description": "현재 대상이 되는 피임약 시트를 찾을 수 없습니다"
+  },
+  "doNotRevertTakePillInPausePeriod": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다"
+  },
+  "googleAccount": "Google 계정",
+  "@googleAccount": {
+    "description": "Google 계정"
+  },
+  "diaryRecord": "일기를 기록",
+  "@diaryRecord": {
+    "description": "일기를 기록"
+  },
+  "scheduleRecord": "일정을 기록",
+  "@scheduleRecord": {
+    "description": "일정을 기록"
+  },
+  "previousPillSheetGroupNotFound": "이전 피임약 시트 그룹이 아직 존재하지 않습니다",
+  "@previousPillSheetGroupNotFound": {
+    "description": "이전 피임약 시트 그룹이 아직 존재하지 않습니다"
+  },
+  "withPillSheetCount": "{number}장",
+  "@withPillSheetCount": {
+    "description": "{number}장",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "통신 환경이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요",
+  "@connectionError": {
+    "description": "통신 환경이 불안정한 것 같습니다. 잠시 후 다시 시도해 주세요"
+  },
+  "unknownErrorAndRetryAfter": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
+  "@unknownErrorAndRetryAfter": {
+    "description": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요"
+  },
+  "errorOccurred": "오류가 발생했습니다",
+  "@errorOccurred": {
+    "description": "오류가 발생했습니다"
+  },
+  "unknownError": "알 수 없는 오류가 발생했습니다",
+  "@unknownError": {
+    "description": "알 수 없는 오류가 발생했습니다"
+  },
+  "unexpectedErrorOccurred": "예기치 않은 오류가 발생했습니다",
+  "@unexpectedErrorOccurred": {
+    "description": "예기치 않은 오류가 발생했습니다"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "알림을 길게 누르면 복용 기록을 할 수 있습니다",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "알림을 길게 누르면 복용 기록을 할 수 있습니다"
+  },
+  "letsTryIt": "시도해 보세요!",
+  "@letsTryIt": {
+    "description": "시도해 보세요!"
+  },
+  "trialDeadlineDateOffsetDay": "{number}일간 모든 기능을 사용할 수 있습니다!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}일간 모든 기능을 사용할 수 있습니다!",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "입력하고 추가",
+  "@inputAndAdd": {
+    "description": "입력하고 추가"
+  },
+  "averagePeriod": "평균 주기",
+  "@averagePeriod": {
+    "description": "평균 주기"
+  },
+  "averageDays": "평균 일수",
+  "@averageDays": {
+    "description": "평균 일수"
+  },
+  "days": "일",
+  "@days": {
+    "description": "일"
+  },
+  "memo": "메모",
+  "@memo": {
+    "description": "메모"
+  },
+  "failedToUpdate": "업데이트에 실패했습니다. 통신 환경을 확인한 후 다시 변경해 주세요",
+  "@failedToUpdate": {
+    "description": "업데이트에 실패했습니다. 통신 환경을 확인한 후 다시 변경해 주세요"
+  },
+  "headache": "두통",
+  "@headache": {
+    "description": "두통"
+  },
+  "abdominalPain": "복통",
+  "@abdominalPain": {
+    "description": "복통"
+  },
+  "nausea": "메스꺼움",
+  "@nausea": {
+    "description": "메스꺼움"
+  },
+  "anemia": "빈혈",
+  "@anemia": {
+    "description": "빈혈"
+  },
+  "diarrhea": "설사",
+  "@diarrhea": {
+    "description": "설사"
+  },
+  "constipation": "변비",
+  "@constipation": {
+    "description": "변비"
+  },
+  "drowsiness": "졸음",
+  "@drowsiness": {
+    "description": "졸음"
+  },
+  "backPain": "요통",
+  "@backPain": {
+    "description": "요통"
+  },
+  "palpitation": "두근거림",
+  "@palpitation": {
+    "description": "두근거림"
+  },
+  "irregularBleeding": "불규칙 출혈",
+  "@irregularBleeding": {
+    "description": "불규칙 출혈"
+  },
+  "lossOfAppetite": "식욕 부진",
+  "@lossOfAppetite": {
+    "description": "식욕 부진"
+  },
+  "chestTightness": "가슴 답답함",
+  "@chestTightness": {
+    "description": "가슴 답답함"
+  },
+  "insomnia": "불면",
+  "@insomnia": {
+    "description": "불면"
+  },
+  "pauseStartingOtherDaysInstructions": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요."
+  },
+  "seeHowToUsePauseTakingFeature": "복용 쉬기 기능 사용 방법 보기",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "복용 쉬기 기능 사용 방법 보기"
+  },
+  "startPauseTakingLabel": "복용 쉬기 시작",
+  "@startPauseTakingLabel": {
+    "description": "복용 쉬기 시작"
+  },
+  "pauseTakingChanged": "복용 쉬기를 변경했습니다",
+  "@pauseTakingChanged": {
+    "description": "복용 쉬기를 변경했습니다"
+  },
+  "editPausePeriod": "복용 쉬기 기간 편집",
+  "@editPausePeriod": {
+    "description": "복용 쉬기 기간 편집"
+  },
+  "changePillDays": "복용 일수 변경",
+  "@changePillDays": {
+    "description": "복용 일수 변경"
+  },
+  "beginToEndNumbers": "{begin}번 ~ {end}번",
+  "@beginToEndNumbers": {
+    "description": "{begin}번 ~ {end}번",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "복용 재개",
+  "@resumeTaking": {
+    "description": "복용 재개"
+  },
+  "changePausePeriod": "복용 쉬기 기간 변경",
+  "@changePausePeriod": {
+    "description": "복용 쉬기 기간 변경"
+  },
+  "changedPausePeriod": "복용 쉬기 기간을 변경했습니다",
+  "@changedPausePeriod": {
+    "description": "복용 쉬기 기간을 변경했습니다"
+  },
+  "changedToDate": "{date}로 변경했습니다",
+  "@changedToDate": {
+    "description": "{date}로 변경했습니다",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "복용 기록이 실패했을 가능성이 있습니다",
+  "@quickRecordTakePillFailed": {
+    "description": "복용 기록이 실패했을 가능성이 있습니다"
+  },
+  "quickRecordTakePillFailedMessage": "앱을 열어 확인해 주세요",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "앱을 열어 확인해 주세요"
+  },
+  "alreadyTaken": "복용 완료",
+  "@alreadyTaken": {
+    "description": "복용 완료"
+  },
+  "startPauseTaking": "복용을 쉬기 시작",
+  "@startPauseTaking": {
+    "description": "복용을 쉬기 시작"
+  },
+  "startedPauseTaking": "복용을 쉬기를 시작했습니다",
+  "@startedPauseTaking": {
+    "description": "복용을 쉬기를 시작했습니다"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}번",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}번",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "번부터 시작",
+  "@startFromNumber": {
+    "description": "번부터 시작"
+  },
+  "add": "추가",
+  "@add": {
+    "description": "추가"
+  },
+  "addPillSheet": "피임약 시트 추가",
+  "@addPillSheet": {
+    "description": "피임약 시트 추가"
+  },
+  "duringPauseTaking": "복용 쉬는 중",
+  "@duringPauseTaking": {
+    "description": "복용 쉬는 중"
+  },
+  "cannotPauseAlreadyTakenToday": "오늘 복용할 피임약이 이미 복용된 경우\n'복용 쉬기'를 할 수 없습니다",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "오늘 복용할 피임약이 이미 복용된 경우 '복용 쉬기'를 할 수 없습니다"
+  },
+  "pauseTakingStarted": "복용 쉬기를 시작했습니다",
+  "@pauseTakingStarted": {
+    "description": "복용 쉬기를 시작했습니다"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "복용 쉬기 시작일 편집",
+  "@editPauseStartDate": {
+    "description": "복용 쉬기 시작일 편집"
+  },
+  "shareWithFriends": "친구와 공유",
+  "@shareWithFriends": {
+    "description": "친구와 공유"
+  },
+  "termsOfService": "이용 약관",
+  "@termsOfService": {
+    "description": "이용 약관"
+  },
+  "privacyPolicy": "개인정보 보호정책",
+  "@privacyPolicy": {
+    "description": "개인정보 보호정책"
+  },
+  "linkCopiedToClipboard": "클립보드에 복사되었습니다",
+  "@linkCopiedToClipboard": {
+    "description": "클립보드에 복사되었습니다"
+  },
+  "notificationNumber": "알림 {number}",
+  "@notificationNumber": {
+    "description": "알림 {number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "알림 시간",
+  "@notificationTime": {
+    "description": "알림 시간"
+  },
+  "timeZoneChangedTo": "{tz}로 변경되었습니다",
+  "@timeZoneChangedTo": {
+    "description": "{tz}로 변경되었습니다",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "복용 일수의 시작",
+  "@changeStartOfPillDays": {
+    "description": "복용 일수의 시작"
+  },
+  "changeEndOfPillDays": "복용 일수의 끝",
+  "@changeEndOfPillDays": {
+    "description": "복용 일수의 끝"
+  },
+  "cannotUpdateToReplacePillSheet": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "복용 취소",
+  "@cancelTaking": {
+    "description": "복용 취소"
+  },
+  "deletedDiaryCannotBeRestored": "삭제된 일기는 복원할 수 없습니다",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "삭제된 일기는 복원할 수 없습니다"
+  },
+  "editMenstruation": "생리 기간 편집",
+  "@editMenstruation": {
+    "description": "생리 기간 편집"
+  },
+  "changedPillNumber": "피임약 번호 변경",
+  "@changedPillNumber": {
+    "description": "피임약 번호 변경"
+  },
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% 정기 월간 가격 할인",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "{offPercent}% OFF for regularly monthly price",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} 내 구매 시 {offPercent}% 할인",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown} 내 구매 시 {offPercent}% 할인",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "피임약 알림을 {value}로 변경했습니다",
+  "@pillReminderChanged": {
+    "description": "피임약 알림을 {value}로 변경했습니다",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
 }

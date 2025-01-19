@@ -1,0 +1,2281 @@
+{
+  "@@locale": "th",
+  "pillSheetType21With7Placebo": "ประเภท 21 เม็ด (เม็ดปลอม 7 เม็ด)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 เม็ด (เม็ดปลอม 4 เม็ด)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 เม็ด (ยาเม็ดปลอม 7 เม็ด)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "ประเภท 28 เม็ด (ทั้งหมดเป็นยาจริง)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 แท็บเล็ต (ยาแท้ทั้งหมด)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "ประเภท 21 เม็ด (ยาทั้งหมดเป็นยาจริง)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "ประเภท 24 เม็ด",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "หยุดยา",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "ยาหลอก",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "ไม่พบผู้ใช้",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "ผู้ใช้มีอยู่แล้ว",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "ประวัติการใช้ยา",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "การตั้งค่า",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "บัญชี",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "ในการเปลี่ยนเครื่องหรือเมื่อสูญหายโทรศัพท์ ต้องลงทะเบียนบัญชีเพื่อโอนข้อมูลหรือกู้คืนข้อมูล",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll พรีเมียม",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "เกี่ยวกับระยะเวลาฟังก์ชันไม่จำกัด",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "แผ่นยา",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "การแจ้งเตือน",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "ประจำเดือน",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "อื่น ๆ",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "คำถามที่พบบ่อย",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "แนะนำฟีเจอร์ใหม่",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "สอบถาม",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "ลบ",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "ลบ",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "ลบผู้ใช้",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "ลบบันทึกประจำวัน",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "คุณต้องการลบช่วงเวลาในประจำเดือนหรือไม่?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "การเพิ่มเวลาการแจ้งเตือน",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "คุณต้องการซิงค์กับโซนเวลาของอุปกรณ์ ({deviceTimezoneName}) ไหม?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "เขตเวลาที่ตั้งค่าไว้ในปัจจุบัน",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "ใช่",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "ไม่ได้",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "เกี่ยวกับการยกเลิก",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "การแจ้งเตือนการใช้ยาคุม",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "การแจ้งเตือนการรับประทานยา",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "ถึงเวลารับยา 💊",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "คัดลอกข้อมูลการดีบัก",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "ยกเลิก",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "ออกจากระบบ",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "การเพิ่มกลุ่มแผ่นยาอัตโนมัติ",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "เมื่อกลุ่มแผ่นยาเดิมสิ้นสุดลง ระบบจะเพิ่มแผ่นใหม่โดยอัตโนมัติ",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "การตั้งค่าบัญชี",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "เชื่อมโยงเรียบร้อยแล้ว",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "ยังไม่ได้ลงทะเบียน",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "บันทึกด่วน",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "คุณสามารถดูว่าเม็ดยาที่ต้องรับประทานในวันนี้คืออะไรในหน้าการแจ้งเตือน และบันทึกการรับประทานได้ทันที.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "การเชื่อมต่อกับระบบดูแลสุขภาพ",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "คุณสามารถบันทึกบันทึกการมีประจำเดือนที่บันทึกไว้ใน Pilll ได้โดยอัตโนมัติใน Health Care",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "ดูแผนพรีเมียม",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "การเปลี่ยนหมายเลขของยาที่จะทานวันนี้",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "ทิ้งแผ่นยาคุมทั้งหมด",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing}ไหม?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "แสดงในปัจจุบัน",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "แผ่นเม็ดยาทั้งหมด",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "จะถูกทิ้งไป",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "ลบ",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "ได้ทำการทิ้งแผ่นยาคุมแล้ว",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "เกี่ยวกับประจำเดือน",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "กรุณาตรวจสอบหมายเลขยาคุมกำเนิดในวันเริ่มมีประจำเดือน หมายเลขยาคุมกำเนิดที่ตั้งค่าไว้ไม่ได้อยู่ในประเภทแผ่นยาคุมกำเนิดที่เลือกในปัจจุบัน",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "การปรับแต่งการแจ้งเตือนการใช้ยา",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "คุณสามารถปรับแต่ง {x} ได้",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "ขอบคุณสำหรับความช่วยเหลือ",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "ความคิดเห็นที่ได้รับจะถูกนำไปใช้ในการปรับปรุงในอนาคต",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "ปิด",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "ลงทะเบียนบัญชี",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "เข้าสู่ระบบอีกครั้ง",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "อัปเดตข้อมูลการรับรองเรียบร้อยแล้ว",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "อัปเดตข้อมูลการรับรอง",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "ลงทะเบียนด้วย {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "เชื่อมต่อ",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "ยกเลิกการสมัคร",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "ออกจากระบบเรียบร้อยแล้ว",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "โปรดปิดแอปพลิเคชันก่อน หากต้องการเริ่มใหม่ โปรดรีสตาร์ทแอปพลิเคชันและตั้งค่าตั้งต้นใหม่อีกครั้ง",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "ตกลง",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "เปลี่ยนหมายเลขยาคุม",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "เปลี่ยนแปลง",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "ยา",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "ปฏิทิน",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "ข้อมูลผู้ใช้จะถูกลบออก",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "การออกจากระบบจะลบข้อมูลทั้งหมด และไม่สามารถเข้าสู่ระบบด้วยบัญชีเดิมได้อีก",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "หน้าบันทึก",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "กรุณาเข้าสู่ระบบอีกครั้ง",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "โปรดเข้าสู่ระบบอีกครั้งเพื่อยืนยันตัวตนก่อนที่จะยกเลิกการเป็นสมาชิก หลังจากเข้าสู่ระบบอีกครั้ง จะเริ่มดำเนินการยกเลิกการเป็นสมาชิกโดยอัตโนมัติ",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "เข้าสู่ระบบอีกครั้งเพื่ออัปเดตข้อมูลการรับรอง",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "หน้าประจำเดือน",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "หน้าปฏิทิน",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "หน้า.settings",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "ลบระยะเวลาการมีประจำเดือนแล้ว",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "แก้ไขระยะเวลาประจำเดือน",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "ได้แก้ไขระยะเวลาการมีประจำเดือน",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "รายละเอียดร่างกาย",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "การดูเพิ่มเติมนี้จะเป็นฟังก์ชันพรีเมียม",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "ดูรายละเอียดเพิ่มเติม",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "ดูเพิ่มเติม",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} หมายเลข",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} หมายเลข",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} หมายเลข",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ครั้ง",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "เลือกวันเริ่มหยุดการใช้ยา",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "เลือกช่วงเวลาหยุดการใช้ยา",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "วันที่เริ่มหยุดการใช้ยา",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "วันสิ้นสุดการหยุดรับประทานยา",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "หมดแผงยาคุม",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "ทำลายแผ่นเม็ดยา",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "เวลาในการใช้ยา",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "ประวัติการทานยาเป็นฟังก์ชันพรีเมียม",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "ถ้าหยุดการกินยา หมายเลขยา จะไม่เปลี่ยนแปลง",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "คุณต้องการหยุดการใช้ตั้งแต่ {number} ไหม?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "การรับประทาน",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "หมายเลขที่คาดว่าจะสิ้นสุดแผ่นงานครั้งที่แล้ว: {estimatedEndPillNumber}",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "เพิ่มแผ่นยา",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "ดื่มแล้ว",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "ยังไม่ได้กิน",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "การตั้งค่ากล่องยา",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "หลังจากที่ยังไม่รับประทานยาคุมที่ต้องทานวันนี้",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "หยุดการทานยา",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "เปลี่ยนวันที่เริ่มหยุดการใช้ยา",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "ระยะเวลาการหยุดการใช้ยาสิ้นสุดแล้ว",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "เปลี่ยนจำนวนวันที่ต้องทานแผ่น",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "เปลี่ยนหมายเลขเริ่มต้นและหมายเลขสิ้นสุด",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "วันเริ่มต้นการใช้ยา",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "วันสุดท้ายของแผ่นก่อนหน้า: {beforePillSheetGroupSequentialEstimatedEndPillNumber} วัน",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "วันสุดท้ายของการรับประทานยา",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "เปลี่ยนหมายเลข",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "โหมดการแสดงผล",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "แสดงวันที่",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "หมายเลขยา",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "จำนวนวันที่ใช้ยา",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "จำนวนวันในการใช้ยา (รอบ)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "แผ่นยาคุมประจำเดือนสิ้นสุดแล้ว",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "ตรวจสอบวันที่ใช้ยาในครั้งสุดท้าย",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "กรุณาลงทะเบียนบัญชีของคุณ",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "ไม่สามารถถ่ายทอดฟังก์ชันพรีเมียมเมื่อเปลี่ยนเครื่องหรือสูญหายของโทรศัพท์",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "คุณสามารถลองใช้งานฟีเจอร์พรีเมียมได้อีก 14 วัน! \nแตะเพื่อแชร์บนโซเชียลมีเดีย!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "คุณจะแบ่งปันที่ไหน?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 หยุดการใช้ยาในวัน {day}",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} วัน",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} วัน",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "อีก{diffPlusOne}วันจะเป็นช่วง{activePillSheetPillSheetTypeNotTakenWord}",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "คุณจะสามารถใช้ฟังก์ชั่นทั้งหมดได้อีก {diff} วัน",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 วันนี้รับประทานยา",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 ยาคุมที่ต้องทานวันนี้",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "หมายเลข",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "เริ่มมีประจำเดือนตั้งแต่ {DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "วันที่เริ่มมีประจำเดือน",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "วันสิ้นสุดประจำเดือน",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "วันหมดประจำเดือน",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "วันที่คาดว่าจะมีประจำเดือน: {diffPlusOne} วัน",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "การคาดการณ์รอบเดือน: วันที่ {diffPlusOne} ของ {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "อีก{diff}วัน",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "วันที่ {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "บันทึกประจำเดือน",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "ประวัติการมีประจำเดือน",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "วันนี้เริ่มมีประจำเดือน",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "มีประจำเดือนตั้งแต่เมื่อวาน",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "เลือกวันที่เริ่มมีประจำเดือน",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration}วันต่อรอบ",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "เข้าสู่ระบบ",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "ก่อนการลงทะเบียนพรีเมียม...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "หากคุณยังไม่ได้เข้าสู่ระบบ Pilll บัญชีใหม่จะถูกสร้างขึ้น",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "เมื่อคุณลงทะเบียนบัญชี คุณจะสามารถถ่ายโอนข้อมูลได้",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "กรุณาลงทะเบียนบัญชีเพื่อเก็บข้อมูลบัญชีของคุณ",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "เข้าสู่ระบบด้วย {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "ลงทะเบียนด้วย {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "ลงทะเบียน Pilll พรีเมียมเสร็จสิ้นแล้ว",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "ขอบคุณสำหรับการลงทะเบียนของคุณ\nตอนนี้คุณสามารถใช้ฟังก์ชันทั้งหมดได้แล้ว!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "ตอนนี้สามารถใช้งานได้ในราคาพิเศษตลอดไป",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "แผนสมาชิกเดือนปกติ",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "แผนรายปี",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/ปี",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/เดือน",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• ระยะเวลาการสมัครสมาชิกพรีเมียมจะมีการต่ออายุโดยอัตโนมัติทุกเดือนหรือทุกปีนับตั้งแต่วันเริ่มต้น",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": " ",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "การแสดงผลตามพระราชบัญญัติว่าด้วยการพาณิชย์อิเล็กทรอนิกส์",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "กรุณาตรวจสอบก่อนลงทะเบียน",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "• สัญญาพรีเมียมจะถูกต่ออายุโดยอัตโนมัติ เว้นแต่จะมีการยกเลิกภายใน 24 ชั่วโมงก่อนวันสิ้นสุดของระยะเวลาสัญญา",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "หลังจากการซื้อ คุณสามารถยกเลิกการอัปเดตอัตโนมัติได้ในการตั้งค่าบัญชีแอป {storeName} (ไม่สามารถยกเลิกการอัปเดตอัตโนมัติจากภายในแอปได้)",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "รายละเอียดเพิ่มเติมที่นี่",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "กู้คืนข้อมูลการซื้อเรียบร้อยแล้ว",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "ผู้ที่เคยซื้อไปแล้วที่นี่",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "ไม่พบข้อมูลการซื้อก่อนหน้า กรุณาตรวจสอบบัญชีของคุณและลองอีกครั้ง",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "แผนรายเดือน",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/เดือน",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "คุณเป็นสมาชิกพรีเมียม",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "ขอขอบคุณที่ใช้บริการของเรา\nขอบคุณที่ทำให้เราสามารถดำเนินการ Pilll ต่อไปได้",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "รายการฟีเจอร์พรีเมียม",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 บันทึกการใช้ยา จากการแจ้งเตือนพุช",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 บันทึกและดูประวัติการใช้ยา",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 แสดงวันที่บนแผ่นยา",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 เติมยาใหม่อัตโนมัติ",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 ดูข้อมูลที่เคยผ่านมา",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 ปรับแต่งแท็กสภาวะร่างกาย",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 ปิดการแสดงโฆษณา",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "ดูรายละเอียดฟีเจอร์พรีเมียม",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "ฟีเจอร์ที่ได้รับความนิยม",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "ดูฟีเจอร์พรีเมียม",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "โหมดการแสดงผลได้เพิ่มจำนวนวันในการใช้ยา (รอบ) เข้าไปแล้ว",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "ดูรายละเอียด",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "การแจ้งเตือนการลืมรับประทานยาคุม",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "คุณสามารถป้องกันการลืมยาด้วยการตั้งค่าหลายรายการไว้ล่วงหน้า",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "และ",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "อ่านเพื่อเริ่มใช้งาน",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "ถัดไป",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "การแจ้งเตือน{number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "คุณสามารถบันทึกการใช้ยาได้จากการแจ้งเตือน",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "เริ่มใช้งานแอป",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "ล็อกอินด้วย {accountTypeProviderName} เรียบร้อยแล้ว",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "เกี่ยวกับแผ่นที่ได้รับการสั่งยา กรุณาแจ้งให้ทราบ",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "หากคุณมีบัญชีอยู่แล้วกรุณาคลิกที่นี่",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "วันนี้({todayString})\nแตะหมายเลขยาที่คุณได้กินหรือกำลังจะกิน",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "ยังไม่ทราบ",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "ยาเม็ดที่ต้องทานในวันนี้",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "ตัวอย่าง",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "ปกติ",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "ลืมทานยา",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "แสดงวันที่",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "แสดงหมายเลข",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "แสดงข้อความอธิบาย",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "ชื่อเรื่อง",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "ข้อความ",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "ตัวเลือก",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "เสร็จสิ้น",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "คุณสามารถเปลี่ยนข้อความการแจ้งเตือนเมื่อคุณลืมทานยา",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "คุณสามารถเปลี่ยนส่วนของการแจ้งเตือน",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "กรุณากรอกมากกว่า 0 ตัวอักษร",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "คุณสามารถเปลี่ยนข้อความการแจ้งเตือนเมื่อคุณไม่ได้ลืมรับประทานยาได้",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "รับการแจ้งเตือนในวันนั้นเวลา 9:00 น.",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "บันทึก",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "สภาพร่างกาย",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "บันทึกที่ถูกลบไม่สามารถกู้คืนได้",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "เพศ",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "กลุ่มแผ่นเม็ดก่อนหน้า",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "กลุ่มแผ่นยาคุมกำเนิดครั้งก่อนยังไม่มีอยู่",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "ไม่สามารถดึงข้อมูลประวัติการใช้ยาได้ {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "ดู FAQ",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "โหลดหน้าจอใหม่",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "หากไม่สามารถแก้ไขได้โปรดยกมือขอความช่วยเหลือที่นี่",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "กรุณาแบ่งปันความคิดเห็นเกี่ยวกับ Pilll",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "การตัดสินใจ",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "หากต้องการ กรุณาร่วมตอบแบบสอบถามเพื่อปรับปรุงบริการ",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "ร่วมมือ",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "ไม่ทำ",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "แบบสอบถามการปรับปรุงบริการ",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "พอใจ",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "ไม่พอใจ",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "ตามหมายเลข",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "ประจำเดือนจะทำต่อเนื่องกี่วัน?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "ระยะเวลาสูติกรรมยังคงดำเนินอยู่",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "แตะหมายเลขยาคุมกำเนิดที่เริ่มมีประจำเดือน",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number} ใบ",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "เริ่มแผ่นยาคุมใหม่ ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "เลือกประเภทของยา",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 เม็ด",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 เม็ด",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 เม็ด",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 เม็ด + 7 วันหยุดการใช้ยา",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 เม็ด + 4 เม็ดยาหลอก",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 เม็ด + 7 เม็ดยาหลอก",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "ทั้งหมดเป็นยาจริง",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 เม็ด + 4 เม็ด หยุดยา",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "เลือกประเภทของเม็ดยา",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "การแจ้งเตือนช่วงเวลาที่ไม่ได้รับยา",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "หากปิดการแจ้งเตือน จะมีการบันทึกการใช้ยาในช่วงเวลา {pillSheetPillSheetTypeNotTakenWord} โดยอัตโนมัติ",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "โปรดช่วยตอบแบบสอบถามหลังการยกเลิก",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll แอปเตือนความจำเกี่ยวกับการใช้ยาเม็ดที่มุ่งเน้นการใช้ยาเม็ด",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "คุณถึงขีดจำกัดสูงสุดที่สามารถลงทะเบียนได้ โปรดลดให้เหลือไม่เกิน {ReminderTimeMaximumCount} รายการ",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "เวลาที่จะได้รับการแจ้งเตือนต้องมีอย่างน้อย {ReminderTimeMinimumCount} รายการ",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ โปรดลองอีกครั้งในภายหลัง หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อเราผ่านเมนู ตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "มีข้อผิดพลาดเกิดขึ้นที่ {storeName} โปรดลองอีกครั้งในภายหลัง",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "อุปกรณ์นี้ไม่ได้รับอนุญาตให้ทำการซื้อ",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "การชำระเงินล้มเหลว กรุณาตรวจสอบว่าเป็นวิธีการชำระเงินที่ถูกต้องและลองอีกครั้ง",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "แผนที่เลือกไม่ได้ขายในขณะนี้ ขออภัยในความไม่สะดวก กรุณาปิดและเปิดแอปพลิเคชันอีกครั้งแล้วลองใหม่อีกครั้ง",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "คุณได้ซื้อแผนแล้ว หากต้องการกู้คืนข้อมูลการซื้อบนอุปกรณ์นี้ โปรดไปที่ \"สำหรับผู้ที่เคยซื้อก่อนหน้านี้ที่นี่\" เพื่อกู้คืนข้อมูลการซื้อ",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "ซื้อแล้ว ใช้ข้อมูลการซื้อของ {accountName} ถูกใช้งานโดยผู้ใช้คนอื่น",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "ข้อมูลการซื้อไม่ถูกต้อง โปรดยืนยันข้อมูลการซื้อของคุณ",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "ไม่พบข้อมูลผู้ซื้อ กรุณาลงชื่อเข้าสู่ระบบด้วย {accountName} ก่อนทดลองใช้งาน",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "สถานะเครือข่ายไม่เสถียร กรุณาตรวจสอบสถานะการเชื่อมต่อก่อนลองอีกครั้ง",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "ไม่สามารถทำการซื้อได้ กรุณารอและลองอีกครั้ง หากยังมีปัญหา กรุณาติดต่อผ่าน ตั้งค่า > สอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "ไม่สามารถทำการซื้อได้ในขณะนี้ กรุณาลองใหม่อีกครั้งในภายหลัง หากยังคงมีปัญหา กรุณาติดต่อเราที่ การตั้งค่า > การสอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ข้อมูลการซื้อถูกใช้โดยผู้ใช้อื่น โปรดตรวจสอบ{accountName} ที่เข้าสู่ระบบในอุปกรณ์",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "ไม่สามารถยืนยันข้อมูลของผู้ใช้ได้ กรุณาปิดแอปพลิเคชันแล้วลองอีกครั้ง รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "กำลังดำเนินการซื้อแยกต่างหาก กรุณาตรวจสอบอีกครั้งหลังจากผ่านไปสักครู่",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "ขอโทษครับ ไม่สามารถทำการซื้อได้ในขณะนี้ กรุณาลองอีกครั้งในภายหลัง หากปัญหายังไม่ถูกแก้ไข กรุณาติดต่อเราผ่านการตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "การซื้อไม่สำเร็จ กรุณาลองอีกครั้งหลังจากผ่านไปสักครู่ หากยังคงไม่สามารถแก้ไขได้ กรุณาติดต่อเราที่ ตั้งค่า > สอบถาม ข้อมูลเพิ่มเติม: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "การซื้อของผู้ใช้ของคุณล้มเหลว โปรดลองอีกครั้งในภายหลัง หากปัญหายังคงอยู่ โปรดติดต่อเราได้ที่ การตั้งค่า > สอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "บัญชี {accountName} ของคุณไม่สามารถลงทะเบียนเข้าร่วมแผนได้ กรุณาตรวจสอบข้อมูลการชำระเงินของคุณและลองอีกครั้ง",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "การชำระเงินถูกระงับอยู่ โปรดตรวจสอบกับ {accountName} ในขณะที่คุณได้เข้าสู่ระบบ {storeName}",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "การซื้อไม่สำเร็จ โปรดลองอีกครั้งหลังจากพักสักครู่ หากยังไม่สามารถแก้ไขได้ โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "ไม่สามารถดึงข้อมูลผู้ใช้ได้ กรุณาลองอีกครั้งในภายหลัง หากยังมีปัญหา กรุณาติดต่อที่ การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "ไม่สามารถดึงข้อมูลการซื้อได้ กรุณาลองอีกครั้งในภายหลัง หากยังคงมีปัญหา กรุณาติดต่อเราที่ การตั้งค่า > ติดต่อเรา รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดและลองอีกครั้ง หากยังคงไม่สามารถแก้ไขได้ โปรดติดต่อโดยเข้าไปที่ การตั้งค่า > สอบถาม ข้อความรหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "ข้อผิดพลาดที่ไม่ทราบสาเหตุ ไม่สามารถดึงข้อมูลการซื้อได้ล่วงหน้า รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ โปรดอัปเดตเป็นเวอร์ชันล่าสุดและลองอีกครั้ง หากยังไม่สามารถแก้ไขได้ โปรดติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดแล้วลองอีกครั้ง หากปัญหาไม่หายไป กรุณาติดต่อผ่าน การตั้งค่า > สอบถาม โค้ด: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ โปรดอัปเดตเป็นเวอร์ชันล่าสุดและลองอีกครั้ง หากไม่สามารถแก้ไขได้ โปรดติดต่อทีมงานผ่าน เมนูการตั้งค่า > การสอบถาม รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "ไม่สามารถดึงข้อมูลลูกค้าได้ กรุณาลองอีกครั้งหลังจากพักสักครู่ หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อเราสำหรับความช่วยเหลือที่ การตั้งค่า > ติดต่อ รายละเอียด: รหัส: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "มีปัญหาในการตั้งค่าอุปกรณ์ กรุณาตรวจสอบและลองอีกครั้ง หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อผ่าน การตั้งค่า > สอบถาม รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "การคืนเงินกำลังดำเนินการอยู่ โปรดตรวจสอบและลองอีกครั้ง หากยังไม่ได้รับการแก้ไข โปรดติดต่อเราได้ที่ การตั้งค่า > ติดต่อเรา รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "หมดเวลาลงแล้ว กรุณาตรวจสอบสภาพการเชื่อมต่อและลองอีกครั้ง หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อผ่าน การตั้งค่า > สอบถาม ข้อมูลเพิ่มเติม: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดและลองอีกครั้ง หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อที่ การตั้งค่า > สอบถาม โค้ด: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ข้อผิดพลาดที่ไม่ทราบสาเหตุ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดและลองอีกครั้ง หากยังไม่สามารถแก้ไขได้ กรุณาติดต่อที่ การตั้งค่า > การสอบถาม รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "ไม่สามารถเชื่อมต่อได้ โปรดตรวจสอบสภาพการเชื่อมต่อของคุณแล้วลองอีกครั้ง หากยังไม่ได้ผลโปรดติดต่อเราผ่านทาง ตั้งค่า > สอบถาม รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "กรุณาอัปเดตแอปพลิเคชัน",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "เราขอให้คุณทำการอัปเดตเวอร์ชันของแอปพลิเคชันของคุณ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดจาก {storeName}",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "ไปพบหมอ",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "รับการแจ้งเตือนในเวลา 9:00 น. ของวันนั้น",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "กำหนดการที่ถูกลบจะไม่สามารถกู้คืนได้",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "คุณจะลบกำหนดการ",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "แอปพลิเคชันนี้รองรับเฉพาะ iOS เท่านั้น",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "คุณไม่สามารถใช้งานได้กับอุปกรณ์ที่ไม่มีการสนับสนุนด้านสุขภาพ",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "โปรดเปิดใช้งานสุขภาพจากแอปการตั้งค่า",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "บัญชี {accountTypeProviderName} นี้ได้เชื่อมโยงกับบัญชี Pilll ของคุณแล้ว กรุณาลองรีเฟรชหน้าจอของคุณ และดูที่ FAQ สำหรับข้อมูลเพิ่มเติม รายละเอียด: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "บัญชี {accountTypeProviderName} นี้ไม่สามารถลงทะเบียนได้เนื่องจากได้เชื่อมโยงกับบัญชี Pilll อื่นแล้ว กรุณาดู FAQ รายละเอียด: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "ไม่สามารถลงทะเบียนได้เนื่องจากอีเมลที่ใช้แล้ว {accountTypeProviderName} เชื่อมโยงกับบัญชี Pilll อื่น โปรดดู FAQ สำหรับข้อมูลเพิ่มเติม รายละเอียด: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "กำหนดการสำหรับวันนี้",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "ตารางนัดหมายในปฏิทิน",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "วันนี้เริ่มแผ่นใหม่แล้ว",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 วันนี้เริ่มแผ่นใหม่แล้ว\nอย่าลืมทาน👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "ไม่พบข้อมูลพรีเมียม",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "การเปิดใช้งานการชำระเงินยังไม่เสร็จสมบูรณ์ กรุณาตรวจสอบอีกครั้งหลังจากผ่านไปสักครู่",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "มีข้อผิดพลาดเกิดขึ้นระหว่างการเริ่มต้นแอปพลิเคชัน\n{ErrorMessagesConnection}\nรายละเอียด:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "กรุณาหยุดใช้ยาเป็นเวลา 3 วัน ตั้งแต่วันที่ 1/12",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "เช่น หากหยุดกินยาเป็นเวลา 3 วันตั้งแต่วันที่ 18",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "หมายเลข {number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "ไม่พบแผงยาเม็ดที่กำลังใช้งานอยู่ในขณะนี้",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "ไม่สามารถยกเลิกการใช้ยาแผงในช่วงระยะเวลาหยุดยาได้",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "บัญชี Google",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "บันทึกไดอารี่",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "บันทึกกำหนดการ",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "กลุ่มแผ่นยาคุมกำเนิดครั้งก่อนยังไม่มีอยู่",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} แผ่น",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "ดูเหมือนสภาพการเชื่อมต่อจะไม่เสถียร กรุณาลองอีกครั้งในภายหลัง",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "เกิดข้อผิดพลาด กรุณาลองอีกครั้งหลังจากเวลาผ่านไป",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "เกิดข้อผิดพลาดขึ้น",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "เกิดข้อผิดพลาดที่ไม่ทราบ",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "เกิดข้อผิดพลาดที่ไม่คาดคิด",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "กดนานที่การแจ้งเตือนเพื่อบันทึกการใช้ยา",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "ลองใช้ดูนะคะ",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "คุณสามารถใช้ฟังก์ชันทั้งหมดได้เป็นเวลา {number} วัน!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "เพิ่มการป้อนข้อมูล",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "平均รอบ",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "วันเฉลี่ย",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "วัน",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "บันทึก",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "ไม่สามารถอัปเดตได้ กรุณาตรวจสอบสภาพการเชื่อมต่อของคุณและลองเปลี่ยนแปลงอีกครั้ง",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "ปวดหัว",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "ปวดท้อง",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "คลื่นไส้",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "โรคโลหิตจาง",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "อาการท้องเสีย",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "ท้องผูก",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "ง่วงนอน",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "ปวดหลัง",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "หัวใจเต้นแรง",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "เลือดออกผิดปกติ",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "อยากอาหารลดลง",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "ความตึงของหน้าอก",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "การนอนไม่หลับ",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "โปรดหยุดพัก หากคุณต้องการหยุดการใช้จากวันอื่นนอกเหนือจากวันนี้ โปรดดูข้อมูลด้านล่าง.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "ดูวิธีการใช้ฟังก์ชันการพักการใช้ยา",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "เริ่มหยุดการใช้ยา",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "เปลี่ยนเวลาหยุดการใช้ยาแล้ว",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "แก้ไขระยะเวลาที่หยุดรับประทานยา",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "เปลี่ยนแปลงจำนวนวันที่ใช้ยา",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} ถึง {end}",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "เริ่มการใช้ใหม่",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "เปลี่ยนระยะเวลาหยุดการใช้ยา",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "ได้เปลี่ยนระยะเวลาพักการใช้ยาสำหรับการรับประทาน",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "เปลี่ยนแปลงเมื่อ {date}",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "บันทึกการใช้ยาอาจล้มเหลว",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "กรุณาเปิดแอปพลิเคชันเพื่อทำการตรวจสอบ",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "ได้รับยาแล้ว",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "หยุดการใช้ยา",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "เริ่มการหยุดการใช้ยา",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "เริ่มจากหมายเลข",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "เพิ่มเติม",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "เพิ่มแผ่นยา",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "หยุดการใช้ยา",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "หากคุณได้ทานยาเม็ดที่ต้องทานในวันนี้ไปแล้ว\nคุณไม่สามารถ \"หยุดทานยา\" ได้",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "เริ่มหยุดการใช้ยาแล้ว",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "แก้ไขวันเริ่มหยุดการใช้ยา",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "บอกเพื่อน",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "ข้อตกลงในการใช้บริการ",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "นโยบายความเป็นส่วนตัว",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "คัดลอกไปยังคลิปบอร์ดแล้ว",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "การแจ้งเตือน{number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "เวลาแจ้งเตือน",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "เปลี่ยนเป็น {tz} แล้ว",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "เปลี่ยนเริ่มต้นจำนวนวันที่ใช้ยา",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "เปลี่ยนแปลงวันสุดท้ายของการรับประทานยา",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "ไม่สามารถอัปเดตได้เนื่องจากการเปลี่ยนแผ่นยา id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "ไม่สามารถดึงข้อมูลประวัติการใช้ยาได้: {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "ยกเลิกการรับประทาน",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "บันทึกประจำวันที่ถูกลบนั้นไม่สามารถกู้คืนได้",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "แก้ไขระยะเวลาประจำเดือน",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "เปลี่ยนหมายเลขยา",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "ลด {offPercent} % เมื่อเปรียบเทียบกับค่าบริการรายเดือนปกติ",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "คุณสามารถใช้ฟีเจอร์ทั้งหมดต่อไปได้โดยการลงทะเบียนพรีเมียม",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "ลด{offPercent}٪ เมื่อซื้อภายใน {countdown}",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "ได้รับการแจ้งเตือนยาแล้วในเวลา {value}",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}
