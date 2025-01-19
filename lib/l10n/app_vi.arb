@@ -1,0 +1,2281 @@
+{
+  "@@locale": "vi",
+  "pillSheetType21With7Placebo": "Loại 21 viên (7 viên giả dược)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "Loại 28 viên (4 viên giả dược)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "Loại 28 viên (7 viên giả dược)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "Loại 28 viên (tất cả đều là thuốc thật)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "Loại 24 viên (tất cả đều là thuốc thật)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "Loại 21 viên (tất cả đều là thuốc thật)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 viên loại",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "ngừng thuốc",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "thuốc giả",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "Không tìm thấy người dùng",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "Đã có người dùng tồn tại",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "Lịch sử dùng thuốc",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "Cài đặt",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "Tài khoản",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "Để chuyển dữ liệu hoặc khôi phục khi thay đổi thiết bị hoặc mất điện thoại, cần phải đăng ký tài khoản.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll Premium",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "Thời gian không giới hạn chức năng",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "Bảng thuốc",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "Thông báo",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "Kỳ nguyệt san",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "Khác",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "Câu hỏi thường gặp",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Giới thiệu tính năng mới",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "Liên hệ",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "Xóa",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "Xóa",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "Xóa người dùng",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "Xoá nhật ký",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Bạn có muốn xoá thời gian hành kinh không?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "Thêm thời gian thông báo",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "Bạn có đồng bộ với múi giờ của thiết bị ({deviceTimezoneName}) không?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "Múi giờ hiện đang được thiết lập",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "Có",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "Không",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "Về việc hủy bỏ",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "Thông báo uống thuốc",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "Thông báo dùng thuốc",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "Đã đến giờ uống thuốc 💊",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "SAO CHÉP THÔNG TIN GHI LỖI",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Hủy",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "Đăng xuất",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "Tự động thêm nhóm viên thuốc",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "Khi nhóm viên thuốc hiện tại kết thúc, một tấm mới sẽ được thêm vào tự động.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "Cài đặt tài khoản",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "Đã liên kết",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "Chưa đăng ký",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "Ghi chú nhanh",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "Bạn có thể biết được viên thuốc nào cần uống hôm nay trên màn hình thông báo và ghi lại việc uống thuốc ngay lập tức.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Hợp tác chăm sóc sức khỏe",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Bạn có thể tự động ghi lại ghi chép chu kỳ kinh nguyệt đã được ghi lại trong Pilll vào ứng dụng sức khỏe.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "Xem kế hoạch cao cấp",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "Thay đổi số lượng viên thuốc cần uống hôm nay",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "Bỏ tất cả các viên thuốc",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "Bạn có muốn {doing} không?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "Hiện đang hiển thị",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "Tất cả các vỉ thuốc",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "sẽ bị hủy bỏ",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "Bỏ",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "Đã vứt bỏ bộ thuốc",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "Kinh nguyệt",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "Vui lòng kiểm tra số viên thuốc của ngày bắt đầu kỳ kinh nguyệt. Số viên thuốc được thiết lập hiện tại không có trong loại bảng thuốc đã chọn.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "Tùy chỉnh thông báo uống thuốc",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "Bạn có thể tùy chỉnh {x}",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Cảm ơn bạn đã hợp tác",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "Ý kiến mà bạn đã cung cấp sẽ được sử dụng cho việc cải thiện trong tương lai.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "Đóng",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "Đăng ký tài khoản",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "Đăng nhập lại",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "Đã cập nhật thông tin xác thực",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "Cập nhật thông tin xác thực",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "Đã đăng ký với {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "Liên kết",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "Hủy đăng ký",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "Bạn đã hủy đăng ký.",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "Ứng dụng sẽ tạm thời kết thúc. Nếu bạn muốn bắt đầu mới, hãy khởi động lại ứng dụng và thực hiện cài đặt ban đầu.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "Được rồi",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Thay đổi số viên thuốc",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "Thay đổi",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "Viên thuốc",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "Lịch",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "Thông tin người dùng sẽ bị xóa.",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "Khi bạn hủy đăng ký, tất cả dữ liệu sẽ bị xóa và bạn sẽ không thể đăng nhập lại bằng cùng một tài khoản lần nào nữa.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "TrangGhiChep",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Vui lòng đăng nhập lại",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "Vui lòng đăng nhập lại để xác nhận danh tính trước khi hủy đăng ký. Sau khi đăng nhập lại, quá trình hủy đăng ký sẽ tự động bắt đầu.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "Đăng nhập lại để cập nhật thông tin xác thực.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "TrangThaiKinhNguyet",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "Trang Lịch",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "Trang Cài đặt",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Đã xóa khoảng thời gian kinh nguyệt",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "Chỉnh sửa thời gian kỳ kinh nguyệt",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "Đã chỉnh sửa thời gian kỳ kinh nguyệt.",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "Chi tiết tình trạng sức khỏe",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Việc xem thêm sẽ trở thành tính năng cao cấp.",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "Xem chi tiết",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "Xem thêm",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "số {afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} số",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "vi: {beforeLastTakenPillNumber} viên",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} số",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} số",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "Số viên thuốc {beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} số",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} số",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Chọn ngày bắt đầu nghỉ uống",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "Chọn khoảng thời gian nghỉ uống thuốc",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "Ngày bắt đầu nghỉ uống thuốc",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Ngày kết thúc nghỉ uống",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "Kết thúc bảng thuốc",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "Loại bỏ phiếu uống",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "Thời gian sử dụng",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "Lịch sử sử dụng là tính năng cao cấp.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Nếu bạn tạm ngừng uống thuốc, số thuốc sẽ không tiến triển.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "Bạn có muốn ngừng uống từ {number} không?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} số",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "Uống thuốc",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "Cuối của vỉ trước: viên số {estimatedEndPillNumber}",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Thêm bảng thuốc",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "Đã uống",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "Chưa uống",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "Cài đặt bảng thuốc",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "Từ khi chưa uống viên thuốc hôm nay",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "nghỉ uống",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "Thay đổi ngày bắt đầu nghỉ uống thuốc",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "Thời gian nghỉ uống đã kết thúc",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "Thay đổi số ngày dùng thuốc trong vỉ",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "Đã thay đổi số bắt đầu và số kết thúc",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "Ngày bắt đầu uống thuốc",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Ngày thứ {beforePillSheetGroupSequentialEstimatedEndPillNumber} của tờ giấy trước",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "Cuối ngày dùng thuốc",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "Thay đổi số",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "Chế độ hiển thị",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "Hiện thị ngày",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "Số viên thuốc",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "Số ngày uống thuốc",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "Ngày sử dụng thuốc (chu kỳ)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "Bảng pill đã kết thúc",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "Kiểm tra ngày dùng thuốc cuối cùng",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "Vui lòng đăng ký tài khoản",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "Không thể chuyển nhượng các tính năng cao cấp khi thay đổi thiết bị hoặc mất điện thoại.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "Bạn có thể trải nghiệm lại các tính năng cao cấp trong 14 ngày! Hãy chạm vào để chia sẻ trên mạng xã hội!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "Bạn muốn chia sẻ đến đâu?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 Nghỉ uống thuốc ngày {day}",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "Ngày {word}",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} ngày",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "Chỉ còn {diffPlusOne} ngày nữa là đến thời gian {activePillSheetPillSheetTypeNotTakenWord}.",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "Bạn có thể sử dụng tất cả các tính năng trong {diff} ngày còn lại.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Hôm nay uống thuốc",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 Thuốc uống hôm nay",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "số",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "Đã ghi nhận bắt đầu kỳ kinh từ {DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Ngày bắt đầu kỳ kinh nguyệt",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "Ngày kết thúc chu kỳ",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "Ngày dự kiến kinh nguyệt",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "Kỳ kinh dự kiến: ngày {diffPlusOne}",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Ngày dự kiến của kỳ kinh nguyệt: Ngày thứ {diffPlusOne} của {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "Còn {diff} ngày nữa",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "Ngày thứ {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Ghi lại kỳ kinh nguyệt",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "Lịch sử kinh nguyệt",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "Kỳ kinh nguyệt bắt đầu từ hôm nay",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "Kỳ kinh bắt đầu từ hôm qua",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "Chọn ngày bắt đầu kỳ kinh nguyệt",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "chu kỳ {menstruationDuration} ngày",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Đăng nhập",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "Trước khi đăng ký Premium...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Nếu bạn chưa từng đăng nhập vào Pilll, một tài khoản mới sẽ được tạo.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "Khi đăng ký tài khoản, bạn sẽ có thể chuyển tiếp dữ liệu.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "Vui lòng đăng ký tài khoản để giữ thông tin tài khoản.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "Đăng nhập với {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "Đã đăng ký bằng {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Đăng ký Pilll Premium hoàn tất",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "Cảm ơn bạn đã đăng ký. Tất cả các chức năng đã được kích hoạt!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Hiện tại bạn có thể sử dụng với giá ưu đãi vĩnh viễn",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "Gói hàng tháng thông thường",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "gói hàng năm",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/năm",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/tháng",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "Thời gian hợp đồng cao cấp sẽ tự động gia hạn sau 1 tháng hoặc 1 năm kể từ ngày bắt đầu.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": " / ",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Thông báo theo Luật Giao dịch Đặc biệt",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "Vui lòng kiểm tra và đăng ký",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "Hợp đồng sẽ tự động gia hạn trừ khi bạn hủy trước 24 giờ của ngày kết thúc thời gian hợp đồng cao cấp.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "- Sau khi mua, bạn có thể hủy đăng ký tự động trong cài đặt tài khoản của ứng dụng {storeName}. (Không thể hủy đăng ký tự động từ bên trong ứng dụng).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "Chi tiết ở đây",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "Thông tin mua hàng đã được khôi phục.",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "Những người đã mua trước đây hãy nhấn vào đây",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "Không tìm thấy thông tin mua hàng trước đây. Vui lòng kiểm tra lại tài khoản của bạn và thử lại.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "Gói hàng tháng",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/tháng",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "Bạn là\nthành viên cao cấp.",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "Cảm ơn bạn đã sử dụng ứng dụng. Nhờ có bạn, chúng tôi có thể tiếp tục vận hành Pilll.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "Danh sách chức năng cao cấp",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 Ghi chú uống thuốc từ thông báo đẩy",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 Lịch sử sử dụng thuốc: ghi lại và xem",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 Hiển thị ngày trên bảng thuốc",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 Tự động bổ sung vỉ thuốc mới",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 Xem dữ liệu trước đây",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 Tùy chỉnh thẻ tình trạng sức khỏe",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 Ẩn quảng cáo",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "Xem chi tiết tính năng cao cấp",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "Chức năng phổ biến",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "Xem các tính năng cao cấp",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "Chế độ hiển thị số ngày uống thuốc (chu kỳ) đã được thêm vào.",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "Xem chi tiết",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Thông báo quên uống thuốc",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "Bạn có thể ngăn chặn việc quên uống thuốc bằng cách thiết lập nhiều thông báo.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "và",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "Vui lòng đọc và bắt đầu sử dụng",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "Tiếp theo",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "Thông báo {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "Bạn có thể ghi lại việc uống thuốc thông qua thông báo.",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "Bắt đầu ứng dụng",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "Đã đăng nhập bằng {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Về tờ kê đơn được cấp",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "Nếu bạn đã có tài khoản, hãy nhấn vào đây",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "Hôm nay ({todayString})\nNhấn vào số viên thuốc đã dùng hoặc đang dùng",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "Chưa biết",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "Viên thuốc bạn sẽ uống vào {today}",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "Xem trước",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "Thông thường",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "Quên uống thuốc",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "Hiển thị ngày",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "Hiển thị số",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "Hiển thị mô tả",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "Tiêu đề",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Tin nhắn",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "Tùy chọn",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "Hoàn tất",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "Bạn có thể thay đổi nội dung thông báo khi bạn quên uống thuốc.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "Bạn có thể thay đổi phần đầu của thông báo",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "Vui lòng nhập từ 0 ký tự trở lên",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "Bạn có thể thay đổi nội dung thông báo khi không quên uống thuốc.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Nhận thông báo vào lúc 9:00 trong ngày",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "Lưu",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "Tình trạng sức khỏe",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "Nhật ký đã bị xóa không thể phục hồi.",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "giới tính",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "Nhóm viên thuốc lần trước",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "Nhóm vỉ thuốc lần trước vẫn chưa tồn tại.",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "Không thể lấy thông tin lịch sử sử dụng thuốc. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "Xem FAQ",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "Tải lại màn hình",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "Nếu vẫn không giải quyết được, vui lòng nhấn vào đây",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Hãy cho chúng tôi biết cảm nhận của bạn về Pilll",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "Quyết định",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "Nếu bạn đồng ý, xin vui lòng giúp chúng tôi bằng cách tham gia khảo sát để cải thiện dịch vụ.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "Hợp tác",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "không",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "Khảo sát cải thiện dịch vụ",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "Hài lòng",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "Không hài lòng",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "theo từng số",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "Kinh nguyệt kéo dài trong bao nhiêu ngày?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "Kinh nguyệt kéo dài trong nhiều ngày",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "Nhấn vào số viên thuốc bắt đầu kỳ kinh nguyệt",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "tấm {number}",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "Bắt đầu tờ thuốc mới ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "Chọn loại thuốc",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 viên",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 viên",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 viên",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 viên + 7 ngày ngừng thuốc",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 viên + 4 viên giả dược",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 viên + 7 viên giả",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "Tất cả là thuốc thật",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 viên + 4 viên nghỉ thuốc",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "Chọn loại viên uống",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "Thông báo khoảng thời gian {pillSheetPillSheetTypeNotTakenWord}",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Nếu thông báo bị tắt, ghi chép việc dùng thuốc trong khoảng thời gian {pillSheetPillSheetTypeNotTakenWord} cũng sẽ được tự động tạo.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Yêu cầu hợp tác khảo sát sau khi hủy",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll Ứng dụng nhắc nhở uống thuốc chuyên biệt cho việc uống thuốc tránh thai",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "Bạn đã đạt đến giới hạn có thể đăng ký. Vui lòng giữ trong vòng {ReminderTimeMaximumCount} mục.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Thời gian thông báo cần tối thiểu {ReminderTimeMinimumCount} mục.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "Đã xảy ra lỗi không xác định. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn không được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "Đã xảy ra lỗi tại {storeName}. Vui lòng đợi một lát và thử lại.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "Không được phép mua sắm trên thiết bị này.",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "Thanh toán không thành công. Vui lòng kiểm tra xem phương thức thanh toán có hợp lệ hay không và thử lại.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Gói mục tiêu hiện không được bán. Xin vui lòng khởi động lại ứng dụng và thử lại.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Bạn đã mua gói dịch vụ trước đó. Nếu bạn muốn khôi phục thông tin mua hàng trên thiết bị này, hãy khôi phục thông tin mua hàng từ \"Nhấn vào đây nếu bạn đã mua trước đó\".",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Đã được mua trước. Thông tin mua hàng đang được sử dụng bởi người dùng khác. Vui lòng kiểm tra {accountName}.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Thông tin giao dịch không hợp lệ. Vui lòng kiểm tra thông tin giao dịch.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "Không tồn tại thông tin người mua. Vui lòng đăng nhập vào thiết bị bằng {accountName} và thử lại.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Tình trạng mạng không ổn định. Vui lòng kiểm tra tình trạng kết nối và thử lại.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Giao dịch mua hàng đã thất bại. Vui lòng thử lại sau khi đợi một lát. Nếu vẫn không giải quyết được, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Hiện tại không thể mua được. Vui lòng thử lại sau một thời gian. Nếu vẫn không giải quyết được, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Thông tin mua hàng đang được sử dụng bởi một người dùng khác. Vui lòng kiểm tra {accountName} đang đăng nhập trên thiết bị.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Người dùng không thể xác nhận. Vui lòng khởi động lại ứng dụng và thử lại. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Quá trình mua đang được thực hiện riêng. Vui lòng kiểm tra lại sau một thời gian.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "Hiện tại không thể thực hiện mua hàng. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Mua hàng không thành công. Vui lòng chờ một lúc và thử lại. Nếu vấn đề không được giải quyết, hãy liên hệ với chúng tôi từ Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Mua hàng của người dùng của bạn đã thất bại. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Bạn không thể tham gia vào kế hoạch với {accountName} của mình. Vui lòng kiểm tra thông tin thanh toán của bạn và thử lại.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Thanh toán của bạn đã bị dừng lại. Vui lòng kiểm tra {storeName} bằng {accountName} đang đăng nhập.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Giao dịch mua hàng không thành công. Vui lòng đợi một thời gian rồi thử lại. Nếu vấn đề vẫn không được giải quyết, xin vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Không thể lấy thông tin người dùng. Vui lòng thử lại sau vài phút. Nếu vấn đề vẫn không được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Không thể lấy thông tin mua hàng. Vui lòng thử lại sau một thời gian. Nếu vẫn không giải quyết được, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "Đây là lỗi không xác định. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vẫn không giải quyết được, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã lỗi: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Lỗi không rõ nguyên nhân. Không thể lấy thông tin mua trước. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Đây là lỗi không xác định. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "Đây là lỗi không xác định. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vẫn không giải quyết được vấn đề, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Một lỗi không xác định. Vui lòng nâng cấp lên phiên bản mới nhất và thử lại. Nếu vấn đề vẫn chưa được giải quyết, hãy liên hệ qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Không thể lấy thông tin khách hàng. Vui lòng thử lại sau một khoảng thời gian. Nếu vấn đề không được giải quyết, vui lòng liên hệ qua Cài đặt > Hỏi đáp. Chi tiết: Mã: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "Có vấn đề với cài đặt của thiết bị. Vui lòng kiểm tra và thử lại. Nếu vấn đề không được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "Quá trình hoàn tiền đã được bắt đầu. Vui lòng kiểm tra và thử lại. Nếu vấn đề không được giải quyết, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Thời gian đã hết. Vui lòng kiểm tra kết nối của bạn và thử lại. Nếu vấn đề vẫn không được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "Đây là lỗi không xác định. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu sự cố vẫn không được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Lỗi không xác định. Hãy cập nhật lên phiên bản mới nhất và thử lại. Nếu vẫn không giải quyết được, vui lòng liên hệ qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Có sự cố mạng. Vui lòng kiểm tra lại môi trường mạng của bạn và thử lại. Nếu vấn đề vẫn không được giải quyết, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Hãy cập nhật ứng dụng",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "Chúng tôi đề nghị bạn cập nhật phiên bản ứng dụng của mình. Vui lòng cập nhật lên phiên bản mới nhất từ {storeName}.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "Đi khám bệnh",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "Nhận thông báo vào lúc 9:00 sáng trong ngày.",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "Các lịch trình đã bị xóa không thể phục hồi.",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "Xóa lịch trình",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "Chỉ hỗ trợ ứng dụng iOS",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "Bạn không thể sử dụng ứng dụng này trên các thiết bị không hỗ trợ HealthKit.",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "Vui lòng kích hoạt Health từ ứng dụng Cài đặt",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "Tài khoản {accountTypeProviderName} này đã được liên kết với tài khoản Pilll mà bạn đang sử dụng. Vui lòng thử làm mới màn hình. Cũng xem phần Câu hỏi thường gặp (FAQ). Chi tiết: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Tài khoản {accountTypeProviderName} này đã được liên kết với một tài khoản Pilll khác, vì vậy không thể đăng ký. Vui lòng xem FAQ. Chi tiết: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "Bạn không thể đăng ký vì địa chỉ email đang sử dụng với tài khoản {accountTypeProviderName} đã được liên kết với tài khoản Pilll khác. Vui lòng xem phần Câu hỏi thường gặp (FAQ) để biết thêm chi tiết. Chi tiết: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "Lịch trình hôm nay",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "Lịch trình trên lịch",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "Hôm nay, một bảng mới sẽ bắt đầu.",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 Hôm nay bắt đầu một liệu trình mới.\nĐừng quên uống thuốc nhé 👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Không tìm thấy thông tin cao cấp.",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "Việc kích hoạt thanh toán chưa hoàn tất. Vui lòng kiểm tra lại sau một thời gian.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "Lỗi đã xảy ra khi khởi động\n{ErrorMessagesConnection}\nChi tiết:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "ví dụ như \"nghỉ uống trong 3 ngày từ 1/12\"",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "Ví dụ nếu bạn ngừng uống thuốc từ \"số 18\" trong vòng 3 ngày",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "số {number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "Không tìm thấy tấm thuốc nào đang được sử dụng.",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "Việc hủy bỏ việc sử dụng thuốc tránh thai không thể thực hiện được trong thời gian nghỉ thuốc.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Tài khoản Google",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "Ghi lại nhật ký",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "Ghi chú kế hoạch",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "Nhóm vỉ thuốc trước đó vẫn chưa tồn tại.",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} viên",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "Có vẻ như kết nối mạng không ổn định. Vui lòng thử lại sau một khoảng thời gian.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "Đã xảy ra lỗi. Vui lòng thử lại sau.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "Đã xảy ra lỗi",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "Đã xảy ra lỗi không xác định.",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "Đã xảy ra lỗi không mong muốn",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "Bạn có thể ghi lại việc uống thuốc bằng cách nhấn giữ thông báo.",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "Hãy thử ngay!",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "Bạn có thể sử dụng tất cả các tính năng trong {number} ngày!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Nhập vào để thêm",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "Chu kỳ trung bình",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "Số ngày trung bình",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "Ngày",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "Ghi chú",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "Cập nhật không thành công. Vui lòng kiểm tra kết nối mạng của bạn và thực hiện thay đổi một lần nữa.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "Đau đầu",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "Đau bụng",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "Buồn nôn",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "thiếu máu",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "Tiêu chảy",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "Táo bón",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "buồn ngủ",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "Đau lưng",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "nhịp tim đập mạnh",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "Ra máu bất thường",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "Chán ăn",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "Sưng ngực",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "Mất ngủ",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "Hãy nghỉ ngơi. Nếu bạn muốn ngừng uống thuốc từ một ngày khác ngoài hôm nay, hãy tham khảo bên dưới.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "Xem cách sử dụng chức năng nghỉ uống thuốc",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "Bắt đầu nghỉ uống thuốc",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "Bạn đã thay đổi thời gian nghỉ uống thuốc",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "Chỉnh sửa thời gian nghỉ sử dụng thuốc",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "Thay đổi số ngày sử dụng thuốc",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "từ {begin} đến {end}",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Bắt đầu lại việc uống thuốc",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "Thay đổi thời gian nghỉ ngừng sử dụng thuốc",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "Đã thay đổi thời gian nghỉ khi dùng thuốc.",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "Đã thay đổi vào {date}",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "Có thể đã xảy ra lỗi khi ghi lại việc sử dụng thuốc.",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Hãy mở ứng dụng và kiểm tra.",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "Đã dùng",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "Nghỉ uống thuốc",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "Đã bắt đầu nghỉ uống thuốc",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "vi: Viên thuốc số {pillSheetGroupSequentialLastTakenPillNumber}",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "Bắt đầu từ số",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "Thêm",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "Thêm bảng thuốc",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "Ngưng sử dụng",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "Nếu thuốc uống hôm nay đã được dùng, bạn không thể \"nghỉ uống\".",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "Đã bắt đầu nghỉ uống thuốc",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Chỉnh sửa ngày bắt đầu nghỉ uống thuốc",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "Chia sẻ với bạn bè",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "Điều khoản sử dụng",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "Chính sách bảo mật",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "Đã sao chép vào clipboard",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "Thông báo {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "Thời gian thông báo",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "Đã thay đổi thành {tz}",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Thay đổi ngày bắt đầu uống thuốc",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "Thay đổi ngày kết thúc của việc dùng thuốc",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "Không thể cập nhật do thay đổi vỉ thuốc id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Lấy thông tin lịch sử uống thuốc không thành công. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "hủy bỏ uống thuốc",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "Nhật ký đã xóa không thể phục hồi.",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "Chỉnh sửa thời gian hành kinh",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "Thay đổi số thuốc",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "Giảm {offPercent} % so với mức giá hàng tháng thông thường",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "Bạn có thể tiếp tục sử dụng tất cả các tính năng với đăng ký Premium.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "Giảm giá {offPercent}% khi mua trong vòng {countdown}",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Tôi đã đặt thông báo uống thuốc vào {value}",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

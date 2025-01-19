@@ -1,0 +1,2281 @@
+{
+  "@@locale": "lv",
+  "pillSheetType21With7Placebo": "21 tablešu tips",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 tablešu tips (4 tabletes - placebo)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 tablešu tips (7 tablešu placebo)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 tablešu veids (visi ir aktīvās zāles)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 tablešu tips (visas ir reālās zāles)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 tablešu tips (visi aktīvās vielas)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 tablešu tips",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "Pārtraukta lietošana",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "Sankaras",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "Lietotājs nav atrasts",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "Jau pastāv lietotājs",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "Lietošanas vēsture",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "Iestatījumi",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "Konts",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "Lai nodrošinātu datu pārsniegšanu vai atjaunošanu, mainot ierīci vai zaudējot viedtālruni, ir nepieciešama konta reģistrācija.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll Premium",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "Par funkcijas neierobežota perioda",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "Tableteņu lapa",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "Paziņojums",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "menstruācija",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "Citas",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "BUJ",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Jaunā funkcija",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "Sazināties",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "Dzēst",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "dzēst",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "Lietotāju dzēšana",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "Es dzēšu dienasgrāmatu.",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Vai dzēst menstruāciju periodu?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "Paziņojuma laika pievienošana",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "Vai vēlaties sinhronizēt ar ierīces laika zonu ({deviceTimezoneName})?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "Pašreiz iestatītais laika josla",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "Jā",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "nē",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "Par informācijas par atteikšanu",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "Tablešu lietošanas paziņojums",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "Pillēšanas paziņojums",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "Ir pienācis laiks 💊",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "KOPĒT KĒM GABALU INFORMATĪVU",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Atcelt",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "Izrakstīties",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "Tabletes grupas automātiskā pievienošana",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "Kad pašreizējā tablešu iepakojuma grupa beidzas, automātiski tiks pievienota jauna iepakojuma grupa.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "Kontu iestatījumi",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "Savienots",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "Navērts",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "Ātrā ieraksts",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "Paziņojumu ekrānā jūs varat redzēt, kādas tabletes jālieto šodien, un tūlīt pat ierakstīt to lietošanas vēsturi.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Veselības aprūpes integrācija",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Varat automātiski reģistrēt menstruāciju ierakstus, kas veikti vietnē Pilll, veselības aprūpē.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "Apskatīt Premium plānu",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "Šodien lietojamā tablete numura maiņa",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "Izmestiet visus tablešu iepakojumus",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "Vai vēlaties {doing}?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "Pašlaik tiek attēlots",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "Visi tablešu lapas",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "tiks izmests",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "iznīcināt",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "Jūs izmantojāt tablešu iepakojumu.",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "Par menstruāciju",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "Lūdzu, pārbaudiet menstruāciju sākuma dienas tablešu numuru. Pašreizējā izvēlētā tablešu plāksnes tipā ir iestatīts neesošs tablešu numurs.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "Pillēšanas paziņojumu pielāgošana",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "Jūs varat pielāgot {x}",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Paldies par sadarbību",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "Saņemto viedokļu izmantošana turpmākai uzlabošanai.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "Aizvērt",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "Reģistrācija",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "Pieslēgties vēlreiz",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "Autentifikācijas informācija ir atjaunināta.",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "Atjaunināt autentifikācijas informāciju",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "Esat reģistrēts kā {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "savienot",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "Atcelt dalību",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "Esat nostrādājis",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "Lietotne tiks aizvērta. Ja vēlaties uzsākt jaunu, pēc lietotnes atkārtotas palaišanas lūdzu veiciet sākotnējo iestatīšanu.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "Labi",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Tabletes numura maiņa",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "Izmaiņas",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "Tabletes",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "Kalendārs",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "Lietotāja informācija tiks dzēsta",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "Ja, izdzēšot kontu, visi dati tiks dzēsti un vairs nebūs iespējams pieslēgties ar to pašu kontu.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "ReģistrācijasLapa",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Lūdzu, piesakieties vēlreiz.",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "Lūdzu, veiciet atkārtotu pieteikšanos, lai veiktu personas identifikāciju pirms izstāšanās. Pēc atkārtotas pieteikšanās automātiski tiks uzsākta izstāšanās procedūra.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "Atkal piesakieties un atjauniniet autentifikācijas informāciju.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "MenstruācijasLapa",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "KalendāraLapa",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "Iestatījumu_lapa",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Menstruācijas periods ir noņemts",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "Редiģēt menstruāciju periodu",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "Esmu rediģējusi menstruāciju periodu",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "Veselības stāvokļa detaļas",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Šī satura skatīšana ir pieejama tikai premium līmenī.",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "Skatīt sīkāk",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "Vairāk",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} numurs",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} numurs",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} numurs",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} numurs",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} numurs",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} skaits",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} numurs",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} numurs",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Atpūtas sākuma datuma izvēle",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "Izvēlieties pārtraukuma laiku",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "Sākuma datums pārtraukumam no lietošanas",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Zāļu lietošanas atpūtas beigu datums",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "Pillļu iepakojuma beigas",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "Kontracepcijas plāksnes izmešana",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "Ieteikuma laiks",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "Zāles lietošanas vēsture ir premium funkcija.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Ja, pārtraucot lietot, tabletes numurs nepārvietojas.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "Vai jūs pārtrauksiet lietot no {number}?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} numurs",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "lietojot",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "Iepriekšējā iepakojuma beigas: {estimatedEndPillNumber} numurs",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Pillu lapu pievienošana",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "Izņemts",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "Neizdzerts",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "Pillēšu iestatīšana",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "Pirms tam, kad šodien jālieto tablete",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "Pārtraukums lietošanā",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "Pārtraukuma sākuma datuma maiņa",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "Pārtraukuma periods beidzies.",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "Mainīt tabletes lietošanas dienu skaitu",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "Esam izmainījis sākuma un beigu numurus",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "Sākums zāļu lietošanas dienām",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Iepriekšējā lapas beigās: {beforePillSheetGroupSequentialEstimatedEndPillNumber} diena",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "Zāļu lietošanas dienu beigas",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "mainīt nr.",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "Rādīšanas režīms",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "Datuma attēlojums",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "Tablete numurs",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "izmantošanas dienas",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "Lietotāju dienas (cikls)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "Tabletes beigušās",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "Pēdējās lietošanas datuma pārbaude",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "Lūdzu, reģistrējiet kontu.",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "Jaunu ierīču maiņas vai viedtālruņa zaudēšanas gadījumā nevarēsiet pārnest premium funkcijas.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "Jūs varat atkārtoti izmēģināt premium funkcijas 14 dienas! Nospiediet un dalieties ar to sociālajos tīklos!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "Kurā vietā vēlaties dalīties?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 Zāļu lietošana atpūtas {day} dienā",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} diena",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} diena",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "Vēl {diffPlusOne} dienas līdz {activePillSheetPillSheetTypeNotTakenWord} periodam.",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "Jums pieejamas visas funkcijas vēl {diff} dienas.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Šodien jālieto",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 Šodien jālieto tablete",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "numurs",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "Sākums menstruāciju ierakstīts no {DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Menstruācijas sākuma datums",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "Menstruācijas beigu datums",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "Menstruācijas plānotā diena",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "Menstruālās plānošanas datums: {diffPlusOne} diena",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruālā cikla prognoze: {diffPlusOne} diena no {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "pēc {diff} dienām",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} diena",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Reģistrēt menstruācijas",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "Menstruālā vēsture",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "Šodien sākas menstruācijas",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "Sākās menstruācijas vakar",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "Izvēlieties menstruāciju sākuma datumu",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} dienu cikls",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Pieteikties",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "Pirms premium reģistrācijas...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Ja, ja vēl neesat pieslēdzies Pieņemšanā, tiks izveidota jauna konta.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "Reģistrējoties kontā, datu pārsūtīšana būs iespējama.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "Lūdzu, reģistrējiet savu kontu, lai saglabātu konta informāciju.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "Pieteikšanās ar {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "Reģistrēts kā {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll premium reģistrācija pabeigta",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "Paldies par reģistrāciju.\nVisas funkcijas tagad ir pieejamas!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Tagad pa ierobežotu cenu varat izmantot mūžīgi.",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "Parastāvīgais mēneša plāns",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "Gada plāns",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/gads",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/mēnesī",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "Premium līguma periods tiek automātiski atjaunots katru mēnesi vai gadu, sākot no sākuma datuma.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Informācija saskaņā ar Specifiskās tirdzniecības likumu",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "Lūdzu, pārbaudiet un reģistrējieties.",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "Līgums tiks automātiski atjaunināts, ja tas netiks anulēts vismaz 24 stundas pirms premium līguma beigām.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "Pēc iegādes automātiskā atjaunošana tiks anulēta {storeName} lietotnes konta iestatījumos. (Automātiskā atjaunošana nevar tikt anulēta no lietotnes).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "Sīkāka informācija šeit",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "Jūs esat atjaunojis pirkuma informāciju.",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "Iepriekš iegādātie šeit",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "Iepriekšējo pirkumu informācija netika atrasta. Lūdzu, pārbaudiet savu kontu un mēģiniet vēlreiz.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "Mēneša plāns",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/mēnesī",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "Jūs esat\nmaksas loceklis",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "Paldies, ka izmantojat mūsu pakalpojumu. Pateicoties jums, mēs varam turpināt Pilll darbību.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "Premium funkciju saraksts",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 Lietotņu paziņojumi par zāļu lietošanas ierakstu",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 Medikamentu lietošanas vēstures ierakstīšana un skatīšana",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 Datuma attēlojums uz tablešu lapas",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 Jauna tablešu plāksne automātiski papildināta",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 Iepriekšējo datu skatīšana",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 Pielāgot veselības tagus",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 Reklāmu slēgšana",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "Skatīt detalizētu informāciju par premium funkcijām",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "populāras\nfunkcijas",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "Skatīt prēmiju funkcijas",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "Parādīšanas režīmā ir pievienots lietošanas dienu skaits (cyklus)",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "Skatīt sīkāk",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Pillī paņemt aizmirsta paziņošana",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "Iestatot vairākus, var novērst zāļu lietošanas aizmirstību.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "un",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "Lūdzu, izlasiet un sāciet izmantot",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "Tālāk",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "Paziņojums {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "Jūs varat reģistrēt zāļu lietošanu, izmantojot paziņojumu.",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "Sākt lietotni",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "Es esmu pieteicies, izmantojot {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Par receptēm, lūdzu, pastāstiet man.",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "Ja jūs jau esat reģistrējušies, lūdzu, noklikšķiniet šeit",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "Šodien({todayString})\nPieskarieties pillēm, ko lietot vai jau lietots.",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "Vēl nezinu",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "Tabletes, kas jālieto {today}",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "Priekšskatījums",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "parast",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "Aizmirsu",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "Rādīt datumu",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "Rādīt numuru",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "Rādīt aprakstu",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "Nosaukums",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Ziņojums",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "Opcijas",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "pabeigts",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "Jūs varat mainīt paziņojuma tekstu, ja esat aizmirsis lietot zāles.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "Jūs varat mainīt paziņojumu sākuma daļu",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "Lūdzu, ievadiet vismaz 0 rakstzīmes.",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "Jūs varat mainīt paziņojuma tekstu, ja zāles netika aizmirstas.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Saņemt paziņojumu tajā pašā dienā pulksten 9:00",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "Saglabāt",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "Veselība",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "Izdzēstās dienasgrāmatas nevar atjaunot.",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "dzimums",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "Iepriekšējā tablešu pakas grupa",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "Iepriekšējā kontracepcijas tablešu grupā vēl nav",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "Neizdevās iegūt zāļu lietošanas vēsturi. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "Skatīt BUJ",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "Pārslēgt ekrānu",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "Ja, lūdzu sazinieties ar mums, ja problēmas netiek atrisinātas.",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Lūdzu, pastāstiet par savu pieredzi ar Pilll.",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "Lēmums",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "Ja, lūdzu, palīdziet ar aptauju, lai uzlabotu pakalpojumu.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "Sadarbot",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "nedarīt",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "Pakalpojumu uzlabošanas anketa",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "Esmu apmierināts",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "Navsākt",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "Pa katram numuram",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "Cik dienas turpinās menstruācijas?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "Menstruācija turpinās vairākas dienas.",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "Noklikšķiniet uz tabletes numura, kad sākas menstruācijas",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number} lapa",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "Jauna tablešu lapas uzsākšana ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "Izvēlieties tablešu veidu",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 tabletes",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 tabletes",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 tabletes",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 tabletes + 7 dienu pārtraukums",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 tabletes + 4 tabletes placebo",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 tabletes + 7 tabletes placebo",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "Viss ir reālas zāles",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 tabletes + 4 tabletes atpūtas",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "Izvēlieties tablešu veidu",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} periods of notification",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Ja, ja būs paziņojumi izslēgti, tad automātiski tiks pievienots zāļu lietošanas ieraksts par {pillSheetPillSheetTypeNotTakenWord} periodu.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Pateikiet atsakymą uz anketu pēc līguma izbeigšanas",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll - kontracepcijas tablešu lietošanai pielāgota atgādinājumu lietotne",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "Esat sasniegts reģistrējamo ierakstu limits. Lūdzu, ierobežojiet to līdz {ReminderTimeMaximumCount} ierakstiem.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Paziņojumu laikam ir nepieciešami vismaz {ReminderTimeMinimumCount} gadījumi.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "Radās neskaidra kļūda. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu, sazinieties ar mums, dodoties uz Iestatījumi > Sazināties. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "Kļūda notika {storeName}. Lūdzu, pagaidiet kādu laiku un mēģiniet vēlreiz.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "Šajā ierīcē pirkumi nav atļauti.",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "Maksājums neizdevās. Lūdzu, pārbaudiet, vai jūsu maksājuma veids ir derīgs, un mēģiniet vēlreiz.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Izvēlētais plāns pašlaik nav pieejams. Atvainojiet par sagādātajām neērtībām, lūdzu, atkārtoti palaižiet lietotni un mēģiniet vēlreiz.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Jūs jau esat iegādājies plānu. Ja vēlaties atjaunot iegādes informāciju šajā ierīcē, lūdzu, dodieties uz \"Agrāk iegādāties šeit\".",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Jau iegādāts. Pirkuma informācija tiek izmantota cita lietotāja kontā. Lūdzu, pārbaudiet {accountName}.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Nederīga pirkuma informācija. Lūdzu, pārbaudiet pirkuma informāciju.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "Pircēja informācija neeksistē. Lūdzu, pierakstieties ar {accountName} un mēģiniet vēlreiz.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Tīkla stāvoklis ir nestabils. Lūdzu, pārbaudiet savienojuma situāciju un mēģiniet vēlreiz.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Iegāde neizdevās. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma joprojām pastāv, sazinieties, apmeklējot Iestatījumi > Sazināties. Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Pašreiz nav iespējams veikt pirkumu. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, sazinieties ar mums, dodoties uz Iestatījumi > Jautājumi. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Pirkuma informācija tiek izmantota citam lietotājam. Lūdzu, pārbaudiet ierīcē pievienoto {accountName}.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Lietotājs nevarēja pārbaudīt. Lūdzu, atkārtoti palaižiet lietotni un mēģiniet vēlreiz. Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Iegādes process tiek apstrādāts atsevišķi. Lūdzu, pārliecinieties vēlreiz pēc dažām minūtēm.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "Pašlaik nav iespējams veikt pirkumu. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma nepazūd, sazinieties ar mums, dodoties uz Iestatījumi > Sazināties. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Iegāde neizdevās. Lūdzu, pagaidiet un izmēģiniet vēlreiz. Ja problēma joprojām pastāv, sazinieties ar mums caur Iestatījumi > Kontaktinformācija. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Pirkums no jūsu lietotāja neizdevās. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja tas nedarbojas, lūdzu, sazinieties, izmantojot Iestatījumi > Sazināties. Papildu informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Ar Jūsu {accountName} nav iespējams pievienoties plānam. Lūdzu, pārbaudiet maksājuma informāciju un mēģiniet vēlreiz.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Maksājums ir pārtraukts. Lūdzu, pārbaudiet {storeName} ar {accountName} kontu.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Pirkšana neizdevās. Lūdzu, pagaidiet kādu laiku un mēģiniet vēlreiz. Ja tas netiek atrisināts, lūdzu, sazinieties ar mums, izmantojot Iestatījumi > Saziņa. Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Neizdevās iegūt lietotāja informāciju. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja problēma joprojām pastāv, sazinieties ar mums, izvēloties Iestatījumi > Sazināties. Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Neizdevās iegūt iegādes informāciju. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja problēma netiks atrisināta, sazinieties ar mums caur Iestatījumi > Atsauksmes. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "Nezināma kļūda. Lūdzu, atjauniniet lietotni uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu, sazinieties ar mums, dodoties uz Iestatījumi > Aptauja. Kods: {errorCode} Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Nezināma kļūda. Neizdevās iepriekš iegūt pirkuma informāciju. Sīkāk: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Nepazīstama kļūda. Lūdzu, atjauniniet uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma saglabājas, lūdzu, sazinieties ar mums, izmantojot Iestatījumi > Saziņa. Kods: {errorCode} Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "Nezināma kļūda. Lūdzu, atjauniniet uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma joprojām pastāv, lūdzu, sazinieties ar mums, dodoties uz Iestatījumi > Saziņa. Kods: {errorCode} Sīkāk: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Nezināma kļūda. Lūdzu, atjauniniet uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma netiek atrisināta, sazinieties ar mums, izvēloties Iestatījumi > Sazināties. Kods: {errorCode} Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Neizdevās iegūt klienta informāciju. Lūdzu, pagaidiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu sazinieties ar mums caur Iestatījumi > Jautājumi. Detalizēti: kods: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "Ir ir aparato iestatījumiem ir problēma. Lūdzu, pārbaudiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, sazinieties, izmantojot Iestatījumi > Sazināties. Kods: {errorCode} Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "Atmaksas process ir uzsākts. Lūdzu, pārbaudiet un mēģiniet vēlreiz. Ja problēma netiek atrisināta, lūdzu, sazinieties ar mums, dodoties uz Iestatījumi > Jautājumi. Kods: {errorCode} Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Ir bija laiks beigties. Lūdzu, pārbaudiet savus saziņas apstākļus un mēģiniet vēlreiz. Ja problēma joprojām pastāv, lūdzu, sazinieties ar mums, izvēloties Iestatījumi > Jautājumi. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "Nezināmas kļūdas ziņojums. Lūdzu, atjauniniet uz jaunāko versiju un mēģiniet vēlreiz. Ja tas nepalīdz, sazinieties ar mums, dodoties uz Iestatījumi > Sazināties. Kods: {errorCode} Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Neizskaidrojams kļūdas. Lūdzu, atjauniniet uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma joprojām pastāv, lūdzu, sazinieties ar mums caur Iestatījumi > Sazināties. Kods: {errorCode} Informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Saziņas traucējumi. Lūdzu, pārbaudiet savas saskares vides un mēģiniet vēlreiz. Ja problēma netiks atrisināta, lūdzu, sazinieties ar mums, izmantojot Iestatījumi > Sazināties. Detalizēti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Lūdzu, atjauniniet lietotni.",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "Lūdzu, atjauniniet jūsu izmantotās lietotnes versiju. Atjauniniet uz jaunāko versiju no {storeName}.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "Apmeklēt ārstu",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "Saņemt paziņojumu plkst. 9:00 tajā dienā",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "Dzēsti plāni nav iespējams atjaunot.",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "Dzēst plānu",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "Atbalsts ir pieejams tikai iOS lietotnei.",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "Šo lietotni nevar izmantot ierīcēs, kuras nav savietojamas ar veselības aprūpi.",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "Lūdzu, aktivizējiet veselības aprūpi no iestatījumu lietotnes.",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "Šis {accountTypeProviderName} konts ir jau saistīts ar jūsu lietotā Pilll kontu. Lūdzu, mēģiniet atsvaidzināt ekrānu. Apskatiet arī Biežāk uzdotos jautājumus. Detalizēti: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Šis {accountTypeProviderName} konts jau ir saistīts ar citu Pilll kontu, tāpēc reģistrācija nav iespējama. Lūdzu, skatiet FAQ. Sīkāka informācija: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "Jūsu e-pasta adrese, kas jau tiek izmantota ar {accountTypeProviderName} kontu, ir saistīta ar citu Pilll kontu, tādēļ reģistrācija nav iespējama. Lūdzu, apskatiet FAQ. Detalizēti: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "Šodienas plāns",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "Kalendāra plāni",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "Šodien sākas jauns plāksne.",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 Jauna tablete sākas šodien\nNeaizmirsti to lietot👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Nav premium informāciju neizdevās atrast.",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "Maksājumu aktivizācija nav pabeigta. Lūdzu, pārbaudiet vēlreiz pēc brīža.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "Startup error occurred\n{ErrorMessagesConnection}\nDetails:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "piemēram, ja no 1/12 uz 3 dienām netiek lietotas tabletes",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "Piemēram, ja pārtraucat lietot 3 dienas no 18. numura",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} numurs",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "Pašreizējā mērķa tablešu lapa netika atrasta.",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "Pārtraukšanas darbība tablešu lietošanai nav iespējama atpūtas periodā.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Google konts",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "Dienasgrāmata",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "Ieplānot ieceres",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "Iepriekšējā kontracepcijas tablešu grupā vēl nav",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} lapas",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "Izskatās, ka sakaru vide ir nestabila. Lūdzu, pagaidiet un mēģiniet vēlreiz.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "Radās kļūda. Lūdzu, pagaidiet un mēģiniet vēlreiz.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "Notika radās kļūda",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "Radās nezināma kļūda.",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "Notika neparedzēta kļūda",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "Nospiežot uz paziņojuma ilgāk, var izveidot zāļu lietošanas ierakstu.",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "noteikti mēģiniet",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "Visas {number} dienas varat izmantot visas funkcijas!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Ievadiet un pievienojiet",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "Vidējais cikls",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "Vidējais dienu skaits",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "Diena",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "Piezīme",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "Atjaunināšana neizdevās. Lūdzu, pārbaudiet sakaru vidi un mēģiniet vēlreiz.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "galvassāpes",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "sāpes vēderā",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "Slikums",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "anēmija",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "caureja",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "aizcietējums",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "miega",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "jostas sāpes",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "sirdsd",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "neparastais asiņošana",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "ēstgriba",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "krūšu sasprindzinājums",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "Bezmiegs",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "Atpūtiniet sevi. Ja vēlaties pārtraukt lietošanu no kādas citas dienas nekā šodien, lūdzu, skatiet zemāk esošo informāciju.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "Skatīt, kā izmantot zāļu pārtraukuma funkciju",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "Apturēšanas sākums",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "Esam mainījusi zāļu pārtraukuma laiku.",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "Rediģēt pārtraukuma periodu",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "Mainīt lietošanas dienu skaitu",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} numurs ~ {end} numurs",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Atjaunot lietošanu",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "Zāļu lietošanas pārtraukuma laika maiņa",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "Esam izmainījis zāļu lietošanas pārtraukuma periodu",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date} ir tika mainīts",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "Iespējams, ka zāļu lietošanas ieraksta izveide neizdevās",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Lūdzu, atveriet lietotni un pārbaudiet.",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "paņemts",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "Pārtraukt lietot",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "Esat sākts pārtraukums lietošanā.",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}. table",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "Sākt no numura",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "Pievienot",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "Pillju plāksnes pievienošana",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "Pauze lietošanā",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "Ja šodien lietotā tablete ir lietota, šodien \"pārtraukumu\" nav iespējams veikt.",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "Sākta pārtraukuma tablešu lietošanā",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Rediģēt zāļu pārtraukuma sākuma datumu",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "Pastāstīt draugiem",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "Lietošanas noteikumi",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "Privātuma politika",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "Es esmu nokopējis uz starpliktuves.",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "Paziņojums {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "Paziņas laiks",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz} ir mainīts",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Mainīšana uzsākšanas datuma lietošanai",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "Mainīt lietošanas ilguma beigu datumu",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "Navino atjaunināšanu, aizstājot tablešu plāksni, nav iespējams id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Neizdevās iegūt zāļu lietošanas vēstures informāciju. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "zāļošanas atcelšana",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "Izdzēsto dienasgrāmatu nevar atjaunot.",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "Rediģēt menstruāciju periodu",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "Tabletes numura maiņa",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "Salīdzinājumā ar parasto mēneša maksu {offPercent}%% ATLAIDE",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "Premium reģistrācija ļauj turpināt izmantot visas funkcijas.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} iekšējā pirkumā {offPercent} % ATLAIDE",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Esat informatīvu par lietošanas paziņojumu uz {value}.",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

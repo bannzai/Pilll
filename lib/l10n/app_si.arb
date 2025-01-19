@@ -1,0 +1,2281 @@
+{
+  "@@locale": "si",
+  "pillSheetType21With7Placebo": "21 པෝෂණ",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 ද sparkedා වර්ගය (4 දක්වා ඇස්තම)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28ක් ඖෂධයක වර්ගය (7ක් ද්වීපාර්ශ්ව ඖෂධය)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 කුඩු ආකාරය (සියල්ලී ප්‍රවාහය)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 පරිමාණවල (සියලුම ප්‍රායෝගික ද්‍රව්‍ය)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21ක් පරාසය (සියලුම ප්‍රතිකාර සංඛ්යා ලඹ කරන)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24නය",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "ආපසු ගමන",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "නිසැකය",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "භාවිතා කරන්නෙකු ආසන්න කළ හැකි නැත",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "{VAL} පෙනී සිටී",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "තාක්ෂණික ඉතිහාසය",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "සකස් කරුණු",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "පරිශීලක ගිණුම",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "මෙම උපාංගය මාරු කිරීමේදී හෝ දුරකථනය අහිමි වීමේදී දත්ත මාරු කිරීම සහ නවකරණය සඳහා ගිණුම් ලියාපදිංචිය අවශ්‍ය වේ.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll ප්‍රිමියම්",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "සීමාවකින් තොර විශේෂිත කාලය",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "පිල් ශීට්",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "ඇඟවීමක්",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "මාසික රුධිරය",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "ආවේණික",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "මෙම තොරතුරු පරීක්ෂාව",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "නව විශේෂණ හැදැරීම",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "සම්බන්ධ කරුණු",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "ඉවත් කරන්න",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "ඉවත් කරන්න",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "පරිශීලකයා මකන්න",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "දිනපොත මකා දැමිය හැක",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "ඔබ මාසික කාලය ඉවත් කිරීමට අවශ්‍යද?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "සන්නිවේදන කාලය එකතු කිරීම",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "ඔබ අත්වැකි කාලය ({deviceTimezoneName}) සමඟ සමන්විත වීමට කැමතිද?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "මෙම විටමින් පවා ස්ථාපිත කළ වේලාව භාෂාව",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "ඔව්",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "නැහැ",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "අළෙවි අවසන් කිරීම පිළිබඳ",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "පිල් භාවිතා වීමේ දුරකතන දැනුම්දීම",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "පැමිණිලි නිවේදනය",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊 නිවාස වේලාව",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "DEBUG තොරතුරු පිටපත් කරන්න",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "එකාලේ පෙරළන්න",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "සිග්නල් අවසරය",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "පිල් ශීට් කාණ්ඩය ස්වයංක්‍රීයව එක් කිරීම",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "ඔබගේ වත්මන් පැලැන්ඩම් පීල් ශීට් කණ්ඩායම අවසන් වූ බවයි, නව ශීට් එකක් ස්වයංක‍්‍රියව එකතු කළ යුතුය.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "ආකාරය සකස් කිරීම",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "සම්බන්ධ කර ඇති",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "අත්සන් නොකළ",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "ක්වික් පැමණි",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "ඔබට සහයවන දිනපත අත්සන් සටහනේ ඇති පොළොව සොයා ගන්නා අතර සිටින්න.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "ආරෝග්‍ය සම්බන්ධතා",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Pilll වලින් ලියාපදිංචි කර ඇති ශ්‍රාවක වාර්තා ස්වයංක්‍රීයව සෞඛ්‍යවේදීට ලියාපදිංචි කළ හැක.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "පෙරමීයම් පසුබැසීම බලන්න",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "අද බොන්නා වූ ඖෂධය අංකය කිහිලිකළම",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "සියලුම පිල් පුවරුවලට විනාශ කරන්න",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing} කරනවද?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "පෙන්වා ඇති මේවර",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "සියලුම පීල් තැටීල",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "මකී කෙරේ.",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "න්දනය කරන්න",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "ගැබ් බෝරුව යටතේ දැමී ඇත",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "මෙම පැවැත්ම පිළිබඳ",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "කරුණාකර ඔබගේ මාසික ගැසට් ආරම්භයේ පටිගත අංකය සහතික කරන්න. දැන් ඔබ තෝරාගෙන ඇති ගැසට් පත්‍රය වර්ගය තුළ නොනැඟිල්ලක් වන ගැසට් අංකයක් සකසා ඇත.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "පිල් අනුභවය අනුවය කිරීම",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "{x} හි අභිරුචි කිරීම් කළ හැක",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "ඔබගේ සහයෝගයට ස්තුතියි",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "ඔබ විසින් ලබා දි ඇති අදහස් ඉදිරි කාලයේ සංශෝධන සඳහා භාවිතා කරනු ඇත.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "වසන්",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "ගිණුම පහසුකරණය",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "යාළුවාගේ පිවිසීම",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "මිනුම් තොරතුරු යාවත්කාලීන කර ඇත",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "ආරක්ෂිත ආදරය සඳහා වූ තොරතුරු යාවත්කාලීන කරන්නේය.",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "{accountTypeProviderName} වලින් ලියාපදිංචි කරන ලදී",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "සම්බන්ධ කරන්න",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "නිවසින් පිටවන්න",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "මාර්ගය ඉවත් කිරීම කලෙමි",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "ආප‍්පු එක හාල්වත්වයන් යන්නේ. අලුත් ආරම්භයක් කරනවා නම්, ආප‍්පු නැවත ආරම්භකර පසුව ආධාරක සැකසුම් කරන්න.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "ශුභ ආගමනය",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "පිල් අංකය සාමාන්‍ය කරනවා",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "වෙනස් කරන්න",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "පිල්",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "කාණ්ඩ",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "යුਜ਼ර් තොරතුරු පරාජය වේ",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "ඔබ මැදිහත් වීමේදී සියලුම දත්ත මකනු ලබයි, සහ ඒකම ගිණුමේ නැවත ප්‍රවේශයක් ලබා ගැනීමට නොහැක.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "ریکارڈ پیج",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "කුඩා පුරවන්න",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "කරනයකට පෙර ඔබේ හැඳුනුම්පත තහවුරු කිරීම සඳහා නැවත ඇලිවීම් කරන්න. නැවත ඇලිවීම් කිරීමෙන් පසු, ස්වයංක්‍රීයව පදිංචි කරන ලදි.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "පෙර පිවිසීමට නැවත පෙරනිමික කිරීම සහ බලපත්‍ර තොරතුරු යාවත්කාලීන කිරීම.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "මන්ත‍්‍රණ පඨකය",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "කැලෙන්ඩර්පිටුව",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "ක්‍රීඩාව",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "උද්ධරණ කාලය ඉවත් කරන ලදි.",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "මසික පුරුෂතාවය සකසන්න",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "ඉරීඩිංග මියුරුකාලය සංස්කරණය කරන ලදි",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "ශරීර විස්තර",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "මෙමගින් තව පාඨය බැලීම පремියම් ලක්ෂණයක් වේ",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "විශේෂයෙන් බලන්න",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "මිලින් වැඩිදුර",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} කුඩු",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ක්",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}මහ",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}අංක",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}编号",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}ක්",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} අංකය",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "අනුභාව භාවිතා කිරීමට නිවසේ නැවත භාවිතය නිවසේ සිටියේය",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "දීවාරිය සෙසු කාලය තෝරන්න",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "උපයෝගය තාවකාලික නවතා අරඹන දිනය",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "ඔ thuốc ಮ ර ుද යද  භාව කළ ම ඌණය",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "පිල් පත්‍රිකාව අවසන්",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "පිල් පත්‍රිකා විනාශ",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "ආහාරය ගන්නා වේලාව",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "ඔබගේ ඖෂධ භාවිතය ඉතිහාසය ප්‍රීමිම් ශ්‍රේණිගත කිරීමක් වේ",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "ඔබ ඖෂධය ගන්න නවතා දැමුවහොත් ඖෂධ අංකය ඉදිරියට නොවැදී වේ",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "{number} සිට බීම සයන් එකක් නැවත යන්නද?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} එක",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "අාරෝපණය",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "පෙර ඕනෑම පතෙහි අවසන්: {estimatedEndPillNumber} නාමය",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "පිල් ශීට් එකක් එක් කරන්න",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "ඉල්ලා ගත්තා",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "ඔබ අරගෙන නොමැත",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "පිල් ශීට් සකස් කිරීම",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "අද බොන්න යන පීල් එක නොබොන විට සිට",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "පිල් පරිහරණය නවතන්න",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "ඇප්පන කාලය ආරම්භ දිනය වෙනස් කිරීම",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "ඉඟුරු පමණක් භාවිතා කිරීමේ අ කල කාලය අවසන් විය",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "\tෂීට් වල ඖෂධ භාෂාවන් සංශෝධනය කරන්න",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "මාර්ගය සහ අවසන් අංකය වෙනස් කරන ලදී",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "ඖෂධ භාවිතා කරන දිනය",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර වතාවේ ශීට්ටුවේ අවසන්: {beforePillSheetGroupSequentialEstimatedEndPillNumber} දින",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "මානසික දින සමාප්තිය",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "නාමයෙන් වෙනස් කරන්න",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "ප්‍රදර්ශන මාදිලිය",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "දිනය ප්‍රදර්ශනය",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "පිල් අංකය",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "උපයෝගිතාවේ දින ගණන්",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "ශුද්ධ යුගල දිනයන් (සංඛ්‍යාතය)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "මහණිය සීට් එක නිමවන ලදී",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "අවසන් වරට ගෙන ඇති දිනය පරීක්ෂා කරන්න",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "ආකൗන්ට් ධාවනය කරන්න",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "ආකෘතියන් මාරු කිරීමේදී හෝ ජංගම දුරකථනය කොයිඳු බවේදී, ප්‍රයෝජනවත් ලක්ෂණ ඉදිරියට ගෙන යා හැකියාවක් නැත.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "14 ක් මාලා පිරිමියන් ප්‍රතිශක්තිකරණය කළ හැක! එය මාලාවට කටයුතු කරන්න!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "ඔබ කැමති කිහිපයකින් බෙදා ගන්නා ආකාරය කුමක්ද?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 පෞදාලේ අත්හිටවන්න {day}වන දිනය",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} දිනය",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} දිනය",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "{diffPlusOne} දින කාලයක් {activePillSheetPillSheetTypeNotTakenWord} කාලය",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "{diff} දින ඉතිරි කළ විට සියළුම ფუნქෂන් පාවිච්චි කළ හැක.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 අද ගනු පිළිබඳ",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 අද ඔබි යාදන විෂය",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "පන්ති",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay} වලින් පරිචය ශරීර ශක්තිකරණය ආරම්භ කර ඇත",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "ප්‍රතිකාර ආරම්භයේ දිනය",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "ශුක්‍රාත්මක දිනය",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "අවසාන ආරම්භ දිනය",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "මාසික හරිතය: {diffPlusOne} වන දින",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "උදාවූ කල්: {diffPlusOne}වන දිනයෙන් {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff} දිනයන් අවශ්‍යයි",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} දිනය",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "අවුරුදු වළඳා",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "සැකසුම් ඉතිහාසය",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "අද සිට මාසික ප්‍රවාහය",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "ඉවත් කරාවාට යාමේ සිට",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "මාසිකය ආරම්භ වූ දිනය තෝරන්න",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration}දින කාළපාඨය",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "ආදාන",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "ප්‍රිමියම් ලියාපදිංචියට පෙර...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Pilll පිළිබඳව යෙදුමට ඇතුල් වී නැති නම්, නව ගිණුමක් නිර්මාණය වේ.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "ඔබ ගිණුමක් ලියාපදිංචි කළහොත්, දත්ත මාරු කිරීමට හැකි වේ.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "ඔබේ ගිණුම් තොරතුරු ශානුක කිරීමට, කරුණාකර ගිණුම් ලියාපදිංචිය ප්‍රවශ්‍යයි",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "{loginName} සමඟ ලොග් සිගේන් කිරීම",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "{loginName} මඟින් ලියාපදිංචි",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll ප්‍රිමියම් ලියාපදිංචිය සම්පූර්ණයි",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "ඔබගේ ලියාපදිංචි සඳහා ස්තූතියි.\nසියළුම විශේෂාංග භාවිතා කිරීමට හැකියාව ලැබූවා!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "අපට දැන් සීමිත මිලකට සෑම වේලාවකම භාවිතා කළ හැක",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "සාමාන්‍ය මාසික සැලසුම",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "වසරක සැලසිම",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/වසර",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/මාසික",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• ප්‍රීමියම් ගිවිසුම් කාලය ආරම්භක දිනයෙන් කණ්ඩායම් 1 මාසය හෝ 1 වසරක් ක්‍රියාත්මක වේ.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "විශේෂිත වාණිජ ගනුදෙනු නීතිය යටතේ පෙන්වීම",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "කරුණාකර පරික්ෂා කරන්න සහ ලියාපදිංචි වන්න",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "\tපෙරමියම් ගිණුමේ කාලය නව සංචිතයකින් අවසන් කළේ නම් යාවත්කාලීන කාලය 24 පැය වඩා පෙර කල් ඉකුත් කළ යුතුය.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "ඉතිහාසය කැපී පැමිණීමෙන් පසුව, ස්වයංක්‍රීය යාවත්කාලයට අදාළ වීම නවතම {storeName} යෙදුමේ ගිණුම් සැකසුම් තුළ සිදු කළ හැක. (යෙදුම තුළින් ස්වයංක්‍රීය යාවත්කාලය නවතම කිරීමට හැකියාවක් නොමැත)",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "මෙහි විස්තර",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "මිලදී ගැනීම් තොරතුරු ප්රතිසංස්කෘතය කර ඇති අතර",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "මෙහෙයුම් කරන ලද්දේ යම් කාලයක් කිවහොත් ඔබට යම් දෙයක් පිළිබඳව යම් කලකිරීම් ඇති බැව් කීවේය.",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "පෙර මිලදී ගැනීම් තොරතුරු හමු නොවේ. කරුණාකර ඔබගේ ගිණුම පරීක්ෂාකර සහ නැවත උත්සාහ කරන්න.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "මාසික යෝජනා",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/මාසය",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "ඔබ ප්‍රිමියම් සාමාජිකයෙකි",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "ඔබගේ භාවිතය සඳහා ස්තූතියි.\nඔබගේ සහායාධාරය නිසා Pilll පද්ධතිය අඛණ්ඩව ක්‍රියාත්මක කර ගැනීමට හැකි වී ඇත.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "පෙරමිම් මෙවැනි ලක්ෂණ",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 පූෂ් නිවේදන වෙතින් වේලාව පිළිබඳ වාර්තාව",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 ඖෂධ පවතින්නේ කෙටි කාලයක්ක බවත් අධ්‍යයන මගින් පෙනී යන ආකාරයෙන් අයිතිකරාරී රටා සහ ශක්තිමත් වැඩිමාවක් අතින්වීම",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 දිනය පෙන්වීමට පෝෂණ පතේ",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 නව පීල් පත්‍රය ස්වයංක්‍රීයව සම්පූර්ණ කිරීම",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 අතීත දත්ත පරීක්ෂණය",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 සෞඛ්‍ය ටැග් අභිරුචිකරන්න",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 මෙනු නොපෙන්වීම",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "පැමිණිම් ප්‍රතිපත්ති පරීක්ෂා කරන විශේෂත්වයන්",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "ප්‍රසිද්ධ විශේෂණ",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "ප්‍රීමියම් විශේෂාංග බලන්න",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "ඇලෙවීම්(ප්‍රතිපත්ති) සංඛ්‍යාව එක් කරන ලදි.",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "සැණින් බලන්න",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "පින්නුම් අමතක කිරීමේ දැනුම්දීම",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "මල නිෂ්පාදන වකුගඩුවෙහි ව්‍යවස්ථා පාලනය කිරීම මගින් භාවිතා කිරීමට හේතු ලබන්න.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "ආ",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": " पढि गर्नुहोस् कृपया प्रयोग गर्न थाल्नुहोस्",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "ඊළඟට",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "නිවේදනය {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "\nපණිවිඩය හරහා ඖෂධ ගැනුම් වාර්තාවක් සකස් කළ හැකිය.\n",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "ඇප් පටන් ගන්න",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "{accountTypeProviderName} මාර්ගයෙන් පිවිසියෙමි",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "ශිට් පත්‍රිකා කළ හැකි සම්බන්ධයෙන් මට කියන්න",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "මීට පෙර ගිණුම් තිබෙන අය මෙහි ආසන්න වන්න",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "අද({todayString})\nහිතමින් සිටිමට හෝ ගත්තානම් පිල් පෙළ අංකය න් ටැප් කරන්න.",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "මෙය තවම නිවැරදි මෙන් ඉගෙනීමට ඇති බවකි",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "{today}ට ලබා ගන්නා පීල්",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "පෙරද්ද",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "සාමාන්‍ය",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "මහන්සිය",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "දිනය පෙන්වන්න",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "අංකය පෙන්නන්න",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "විස්තර ලියුම වකට",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "ශීර්ෂය",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "පණිවුඩය",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "විකල්ප",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "සම්පුර්ණ",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "පිල්ල",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "ඔබ බිඳ වැටී ඇති අවස්ථාවේදී නිවේදන පණිවිඩය වෙනස් කළ හැක.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "මෙම දිවාදුරේ ඇමතුමක් වෙනස් කළ හැක",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "0 අකුරු සහිතව ඇතුළත් කරන්න",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "ඔබ මිසුම් කිරීමට අමතක නොවූනහොත් නිවේදනයේ වාක්‍යය වෙනස් කළ හැකිය.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "අද 9:00 වන විට දැනුම්දීමක් ලැබිය යුතුයි",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "සුරකින්න",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "ආරෝග්‍ය",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "ඉවත් කළ දිනපුස්තකය නැවත ලබා ගැනීමක් නොහැක",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "සුලු",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "පෙරතැනේ පැන්තුරේ පිල් කට්ටලය",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "පෙරහැදිලි කුළුණු කණ්ඩායම තවමත් පවතී නමුත් නොවේ",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "ඖෂධ භාවිත ඉතිහාස තොරතුරු ලබා ගැනීම අසාර්ථක විය. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "FAQ බලන්න",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "මානිනු වළක්වන්න",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "මෙහි ක්‍රියා නොකලහොත් මෙහි පැමිණෙන්න",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Pilll ගැන ඔබේ අදහස් ගෙදර දෙන්න",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "නිර්ණය",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "ඔබට දක්නට නම්, සේවාවල වැඩිදියුණු කිරීම සඳහා ප්‍රශ්ණාවලියකට සහය වන්න.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "සහාය වන්න",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "නැහැ",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "සේවා सुधारන අනුමත අයදුම්පත්",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "සතුටු වේ",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "සෙෙල්ලම්ක් නැත",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "සිංහලෙන්",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "කාල් පොදුවේ කී දිනක් ක්‍රියා කරයිද?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "{VAL} දිනකින් උපත ලැබේ",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "සඩු කාලය ආරම්භ වන පොදීන් අංකය ක්ලික් කරන්න",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number}ක පට",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "නව පීල් කුසියේ ආරම්භය ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "පිල් අංශය තෝරන්න",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 පුද්ගල",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28ක්",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 බ්‍රීක",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 බල්ලා + 7 දින නිවාඩු",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 කුඩු + 4 කුඩු හිස් කුඩු",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 පill + 7 වංචනමය පill",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "සියලුම සැත්කම්",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 තැටි සහ 4 තැටි විවේක",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "පිල් වර්ගය තෝරන්න",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}කාලයෝග්‍යතාවය",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "පෙරනිමි තොරතුරු වසා දැමූ විට, {pillSheetPillSheetTypeNotTakenWord} කාලය සඳහා ප්‍රියෝජන සටහන් ස්වයංක්‍රීයව සකස් කරනු ඇත.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "අත්හිටුවීමෙන් පසුව විමසීමේදී සහය වන්න",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll යනු පියෙන් පිළිකුල් භාවිතය සඳහා විශේෂිත පියෙන් මතකයකාරක යෙදුම වේ",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "ඔබට ලියාපදිංචි කළ හැකි උපරිමය ෙලඟට පැමිණී ඇත. {ReminderTimeMaximumCount} කට අවසන් කරන්න.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "ඇපැයීමේ වේලාවන්වල හුදෙක් {ReminderTimeMinimumCount} වඩා යෝජනා කිරීමට අවශ්‍යයි.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "අනිශ්චිත දෝෂයක් ඇති වූවාකි. කාලයක් රඳවා නැවත උත්සහ කරන්න. විසඳා නොගත් විට සකසන ආකාරය > ප්‍රශ්ණ විමසීම් මගින් අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName} හි දෝෂයක් සිදු වී ඇත. කරුණාකර කෙනෙකුට අපගේ අයදුම්පත නැවත පරික්ෂා කරන විට තත්ත්වය සවිකිරීමට සුළු කාලයක් පිල් ගන්න.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "මෙම උපාංගය හරහා මිලදී ගැනීම් කල හැකි නොවේ.",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "ගෙවීම අදාල වශයෙන් අසාර්ථක විය. කරුණාකර වලංගු ගෙවීමේ ශේෂය නොවන්න යළි උත්සාහ කරන්න.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "ඉලක්කය වූ සැලසුම් දැනට අලෙවි කිරීමට නොමැත. කරුණාකර යෙදුම නැවත ආරම්භ කර නැවත පරීක්ෂා කරන්න.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "ඔබට දැනටමත් පෙරහනක් මිලදී ගෙන ඇත. මෙම උපාංගයේ මිලදී ගැනීම් තොරතුරු යාවත්කාලීන කිරීමට \"මුල්දී මිලදී ගත් අය මෙතනින්\" කරුණාවෙන් නැවත ලබා ගන්න.",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "ඉතාමත්ම මිලදී ගෙන ඇත. {accountName} තහවුරු කරන්න, මොකක්ද මිලදී ගැනීම් තොරතුරු වෙනත් පරිශීලකයකුට භාවිතා කරමින්.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "අනුමත නොකළ මිලදී ගැනීම් තොරතුරු වේ. මිලදී ගැනීමේ තොරතුරුවලට විමසන්න.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "මෙම කතුවැකියට අනුව මිලදී ගැනුම්කරුවාගේ තොරතුරු නොමැත। කරුණාකර {accountName} සමඟ උපාංගය ඉන්විදුලීන් කර පරික්ෂා කරන්න.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "ජාලයෙහි තත්ත්වය අසමාන්‍ය වේ. සම්බන්ධතාවය තහවුරු කළ පසු නැවත එක්වන්න.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "ඇඳුම් මිලදී ගැනීමට අසාර්ථක විය. කරුණාකර කාලයක් රැක ඉන්පසු නැවත උත්සාහ කරන්න. ඕනෑම විසඳුමක් නොලැබුවහොත් සැකසුම් > පරීක්ෂාවට යන්න. විශේෂයි: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "මෙම ගණුشراءය දැන් කළ නොහැක. කරුණාකර විනෝදාංකය ලබා දී නැවත চেষ্টা කරන්න. එය විසඳුම් නොනැතිනම් සැකසුම් > විමසීම් එකට පිවිසෙන්න.",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ඇණවුම් විස්තරය වෙනත් පරිශීලකයකට භාවිතා වේ. {accountName} උපකරණයේ පිවිසෙමින් පරීක්ෂා කරන්න.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "මෙම භාවිතා කරන්නා ආදරය කළේ නැත. කරුණාකර යෙදුම නැ մසළන්, නැවත උත්සාහ කරන්න. විශදතා: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "ගැනීමේ ක්‍රියාවලියක් වෙන්කරමින් ඊට අනුව ගමන් කරයි. කල්පනාවට සමාව දෙන්න.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "මෙම වර්තමානයේ මිලදී ගැනීමට නොහැක. කාලයක් යැයි නැවත උත්සාහ කරන්න. විසඳුමක් නොහොත්, සමීපයෙන් සම්බන්ධ වීමට පිටුවේ යන්න: සැකසීම් > අභියාචන. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "මවිස්සීම් මිලදී ගැනීමට අසාර්ථක විය. කාලයක් පසුව නැවත උත්සහ කරන්න. විසඳුමක් නොලැබුණොත්, පිහිටුම් > ප්‍රශ්න කිරීම් මඟින් අප වෙත සම්බන්ධ වන්න. විශේෂාංග: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "ඔබගේ පරිශීලකයාගේ මිලදී ගැනීම අසාර්ථක විය. කාලයක් ගැනීමෙන් පනස්ම සිදුකරන්න. විසඳුම් ලැබූ නැතිනම්, සැකසුම් > ප්‍රශ්නය කිරීම මගින් අප හෝයන් කරන්න. විශේෂාංග: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "ඔබගේ {accountName} ක්‍රමය සමඟ මෙය ප්‍රතිපත්ති එකතු කිරීමේ හැකියාවක් නොමැත. කරුණාකර ඔබේ ගෙවිම් තොරතුරු පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "ගෙවිම මැද වෙලා ඇත. {accountName} පැවැති {storeName} පරික්ෂා කරන්න.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "කුල්පන් සාර්ථකව කළ නොහැක. කාලයක් බලාගෙන නැවත උත්සාහ කරන්න. ප්‍රශ්නය විසඳා නොගැනුවහොත් සකසන්න > ප්‍රශ්න කිරීම් එකට අමතා සම්බංධ කරගන්න. විස්තරය: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "පරිශීලක තොරතුරු ලබා ගැනීම අසාර්ථකයි. නැවත ප්‍රයෝගය කිරීමට කාලයක් දීලා බලන්න. ප්‍රශ්නය විසඳුවේ නැතිනම්, පිහිටුම > ප්‍රශ්න කිරීමෙන් අපව අමතන්න. විශේෂාංග: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "මිලදී ගැනීම් තොරතුරු ගැඹුරු කළාට දෝෂයක් තිබේ. කාලයක් යන්න සහ නැවත උත්සහ කරන්න. විසඳුමක් නොමැතිනම්, සැකසුම් > අදාළ කරුණු විසින් අපෙන් සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "මෙය කිසිඳු හේතුකාරකයක් නොමැති දෝෂයකි. නවතම වාර්තාවට යාවත්කාලීන කර 다시 prøාත්න කරන්න. මෙය විසදා නොගත් ආකාරයක් නම්, සැකසුම් > විමසුම් යන්නෙහි සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "අවිස්කාරක දෝෂයක්. මිලදී ගැනීමේ තොරතුරු පෙර ලබා ගත නොහැකි විය. විශේෂණ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "නොදන්නා පිළිවෙතක ව්‍යසනයකි. නවීනතමට යාවත්කාලීන කර නැවත පෙරළන්න. විසඳුමක් නොවන විට, සකසීම් > විමසීම් හරහා අපට සම්බන්ධ වන්න. කොඩ්: {errorCode} විශේෂිත: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "මෙය නියමිත වශයෙන් නිගමනක් නොවී ඇති දෝෂයකි. නවතම සංස්කරණයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. එය විසඳා නොගත් විට, සකස් කිරීම් > විමසීම් මඟින් අපට සම්බන්ධ වන්න. කේතය: {errorCode} විශේෂාංගය: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "අනාගතයට හෝ සම්පූර්ණයෙන් නිවැරදි නැති දෝෂයකි. නවතම සංස්කරණයට යාවත්කාලීන කරන ලෙසින් කරුණාකර නැවත පරීක්ෂා කරන්න. නවීනත්වය සාර්ථක වූයේ නම්, කරුණාකර සැකසුම් > ප්‍රශ්න විමසීමෙන් අප අමතන්න. කේතය: {errorCode} විශේෂිත: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "ගනුදෙනුකරුගේ තොරතුරු ලබා ගැනීම අසාර්ථක විය. කරුණාකර කාලයක් යෙදී නැවත උත්සාහ කරන්න. අදාළ තොරතුරු විසඳා නොගන්නා විට කරුණාකර සකසීම් > ප්‍රශ්න කිරීම් මඟින් අප හා සම්බන්ධ වන්න. විශේෂාංග: කේතය: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "ඉන්ද්‍රණී ඉන්ද්‍රණී ඉන්ද්‍රණීෙදෙත් බොහෝම නිවැරදිව සලකා බලන්න. නැවත උත්සාහ කරන්න. යථාර්ථයක් නොවන්නේනම්, සැකසුම > සම්බන්ධතා යටතේ අප හා සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "ආපසු ගෙවීමේ ප්‍රකියාව ආරම්භ වී ඇත. කරුණාකර තහවුරු කර නැවත උත්සාහ කරන්න. අවස්ථාව සම්පූර්ණ නොවන විට, කරුණාකර සැකසුම් > ප්‍රශ්න කිරීම් හරහා අමතන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "කාලය නිමා වී ඇත. ෙසමීම පොහොසත් බව තහවුරු කරමින් නැවත උත්සහා කරන්න. විසඳන්නේ නැතිනම්, සකසන් > ඇසීම් මගින් සම්බන්ධ වන්න. විශේෂාංගය: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "මෙය හේතු නොදන්නා දෝෂයකි. අලුත්ම සංස්කරණයට යාවත්කාලීන කර නැවත පරීක්ෂා කරන්න. යාවත්කාලීන කිරීමෙන් පසු ප්‍රශ්නය විසද නොවේ නම්, සැකසුම් > තොරතුරු අමතා සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "අසථික් කාරණයක් වේ. අලුත්ම වාර්ෂිකයට යාවත්කාලීන කර دوبාර බලන්න. විසඳුමක් නොමැති නම් පිළිබඳව සම්බන්ධ කර ගැනීම සඳහා සැකසුම් > පරීක්ෂණය කරන්න: කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "සම්බන්ධතා දුර්වසීතතා වාර්තා කරයි. කරුණාකර සම්බන්ධතා පරිසරය පරීක්ෂා කර නැවත පරීක්ෂා කරන්න. නීති පවා විසඳා නොගෙන ඇත්නම්, සැකසුම් > මෙහෙයුම් සඳහා විමසන්න. වාර්තාව: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "ආප්පය යාවත්කාලීන කරන්න",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "මෙම යෙදුමේ අනුවාදය යාවත්කාලීන කිරීමට අප ආරාධනා කරමු. {storeName} වෙතින් නවතම අනුවාදය යාවත්කාලීන කරන්න.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "සේවාදායකයාට යන්න",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "අදාළ දිනයේ 9:00 ට නිවේදනයක් ලබා ගන්න",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "ඉවත් කරන ලද සැලසුම් යළි ලබා ගත නොහැක.",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "{VAL} ඉවත් කරනවා",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "මෙය iOS යෙදුම්ගේ සහයය පමණක් වේ",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "මෙම යන්ත්‍රය සෞඛ්‍ය සත්කාරයට අනුව නොවේ",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "කරුණාකර සැකසුම් යෙදුමෙන් සෞඛ්‍ය සේවාව සක්‍රීය කරන්න",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "ආයුබෝවන්, දිනයේ{accountTypeProviderName} ගිණුමක් ඔබේ Pilll ගිණුමට සම්බන්ධ වී ඇත. ඉදිරිපස යාවත්කාලීන කිරීමේ සටහන නිරීක්ෂණය කරන්න. FAQ පරීක්ෂා කරන්න. විස්තරය: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "මෙම {accountTypeProviderName} ගිණුම ইতিমැඩ බොහෝ Pilll ගිණුම් සම්බන්ධ කර ඇති බැවින් දැන් ලියාපදිංචි කළ නොහැක. ප්‍රශ්න උත්සවය නරඹන්න. විස්තර: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "මෙම විද්‍යුත් ලිපිනය {accountTypeProviderName} ගිණුම් සමඟ දැනටමත් සම්බන්ධ වී ඇති අතර, එබැයි අනිත් Pilll ගිණුම් සමඟ සම්බන්ධ කිරීම නිසා නව ගිණුමක් ලියාපදිංචි කළ නොහැක. කරුණාකර FAQ පරික්ෂා කරන්න. විශේෂාංග: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "අදක් සඳහා සැලසුම්ය",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "කැලෑන්තරයේ නියමිත කාලය",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "අද සිට නව පෙනුමක් ආරම්භ වේ",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 අද සිට නව පත‍්‍රය ආරම්භ කරන්නෙමු\nඅපි හිතනවා ඔබට අමතක නොවන පරිදි භාවිතයට එක් කිරීමට👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "ප්‍රිමේරම් තොරතුරු සොයා ගන්න බෑ",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "{VAL} සක්‍රිය කිරීම තවමත් සම්පූර්ණ වී නැත. කමක් නැත, කාලයක් බidingෙන්න පසුව නැවත පිරික්සුම් කරන්න.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "ආරම්භයේදී දෝෂයක් සිදුවී ඇත\n{ErrorMessagesConnection}\nවਿਸතර:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "ආදානය: 1/12 සිට 3 දිනක් පමණක් ඖෂධය අහරත් භාවිතා කළ හැකි වෙනවා.",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "උදාහරණයක් ලෙස, \"18 වන දිනයෙන් 3 දිනක්\" දිවයිනක් තුවක්කු කිරීමට.",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "දැනට කරුණාකරන පීල් පතුලක් සොයාගත නොහැක",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "{\n    \"pillCancellationDuringBreak\": \"පිල් භාවිතය අහෝසී කිරීමේ ක්‍රියාත්මක කිරීම අඩුකාලීනයි\",\n    \"description\": \"ටාප් පිරිසක් මගින් ඔබේ ඇඟවීමේ කාලය, භාවිතා සමාලෝචන, හෝ මාසිකතාවය භාවිතා කිරීමේ විද්‍යුත් යෙදුමකි.\"\n}",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Google ගිණුම",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "දිනපොත ලිවීම",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "ඉලක්කය ඇතුළුවීම",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "ආපසු ගිය පද්ධති ගනුවේ කාණ්ඩයක් තවමත් නොපවත් වෙනවා.",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number}පිටු",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "මෙම වාණිජක පරිසරය අස්ථායි පෙනේ. කාලයක් බදා ගෙන යළි උත්සාහ කරන්න.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "කුත්තාකාරයකි. කාලය ඉස්සරහින් නැවත උත්සාහ කරන්න.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "දෝෂයක් ඇති වූයේය",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "හැකි නාධිකරයක් ඇතිවිය.",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "අපේක්ෂිතයෙන් පිටවූ දෝෂයක් ඇතිවිය.",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "සංවේදනා සංඝටනය කිරීමෙන් පශ්චාත් පියවර ලේඛනයක් සාදිය හැක",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "කරුණාකර අත්හදා බලන්න",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "{number} දිනක ඉක්මනින් සියලුම පහසුකම් ලබා ගන්න!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "ආදාන කරමට එකතු කරන්න",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "මධ්‍යම චක්‍රය",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "සාමාන්‍ය දිනයන්",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "දಿನ",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "මතකය",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "අලුත් කිරීම අසාර්ථක විය. සන්නිවේදන පරිසරය පරික්ෂා කරන්න, නැවත වෙනස් කරන්න.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "ඇඹුල්න",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "ඇඳිරිම",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "අන්ධකාරය",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "අශ්මිතය",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "මියස්ස",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "පියවර",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "නිදා ලබන විට",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "පหลัง මැදි",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "හදවතේ කුනක",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "අනිවාර්යෙන්ම විද්‍යුත්",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "ඕෂධ පිළිගැනීමේ කාලයේදී කාබනිකය විෂ හා සම්පූර්ණයෙන් ශක්තිය හෝ චංචලකකම තොර කරයි.",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "මැදිරි වල පැටවුම්",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "අනිද්‍රා",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "කරුණාකර විරාමයක් ගන්න. අද සිට වෙනත් දිනයකට උපකාරය නවතා කිරීමට අවශ්‍ය නම්, පහත දක්වා ඇති උපදෙස් බලන්න.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "ඉඳගෙන භාවිතා කිරීමේ විධානය",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "ආරෝග්‍යය අඩු කිරීමට පසුව ඉක්මනින් අකුරක් ලබා දීම ප්‍රථම කිරීම",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "ඔබගේ ප්‍රතිකාර බඳින්නාවූ නිවාඩු කාලය වෙනස් කළා",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "ඉවත් කරන ලද ඖෂධය කාලය සංස්කරණය කරන්න",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "පිල් ගත होने वाले දිනයන් වෙනස් කරන්න",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} අංකය ~ {end} අංකය",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "නැවත වෆ් කරන ලදී",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "උපයෝගයක් නැති කාලය වෙනස් කරන්න",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "{VAL} කාලය වෙනස් කරන ලදී",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date}ට යාවත්කාලීන කරන ලදි",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "උපචාරය සටහන් කිරීම අසාර්ථක විය හැකිය.",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "ඇප් එක විවෘත කර සහතික කර ගන්න",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "සංග්‍රහය",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "පැමිණීම වාර්තා කළ නොහැක",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "ආහාරය පිළිබඳ නිවාඩුව ආරම්භ කර ඇත",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ක්",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "ආරම්භයෙන් අංකය",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "ආදාන",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "පිල් අරය එකතු කරන්න",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "වරම් ඉවත් කළේ",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "ඔක්කොටත් අරක්ෂාකාරීව ගන්න ලැබෙන පසු, \"අනුමත කිරීම නතර කරන්න\" නොහැක",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "ඔබගේ ගෙන යෑම ආරම්භ කර ඇත",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "උපයෝගිතාව වාර්තා කරන මියැදීම් වාරිකය පාලනය කරන්න",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "මිතුරන්ට කියන්න",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "ශාස්ਤਰ නියමයන්",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "පෞද්ගලිකත්ව නීති",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "මම ක්ලිප්බෝඩ්ට පිටපත් කළෙමි",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "ඇඟවීම{number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "අදාල කාලය",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz} ට මාරු කරයි",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "දවාලන දින ගණන් ආරම්භය වෙනස් කරන්න",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "ඉන්ධන දිනයන්ගේ අවසන් දිනය වෙනස් කරන්න",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "පිල් සිට් එක වෙනස් කිරීමෙන් අලුත් කිරීමට බැරි බවයි ID: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "ඉකුත් ආහාර ගැනීමේ තොරතුරු ලබා ගැනීමට අපොසොක් විය. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "පිල්ල භාවිතය ඉවත් කරන්න",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "ඉවත් කරන ලද දිනපොත ආපසු ලබාගත නොහැක",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "අවලංගු මාරු කළ කාලය",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "පිල් අංකය මියැදීම්",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "ස්ථානීක මාසික ගාස්තු වලට ඔබට {offPercent} % වට්ටමක්",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "ක්‍රියාකාරී පියවර  සහ සියලුම ලක්ෂණ භාවිතා කිරීමට පවත්වා ගන්න පහසුකමක් ඇත.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} මැද යොමු කිරීමෙන් {offPercent}% වට්ටම්",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "ඇයියා මට {value} ඉනියා සම්බන්ධයෙන් කදලැබීමයි.",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

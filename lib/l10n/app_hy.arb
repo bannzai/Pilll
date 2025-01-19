@@ -1,0 +1,2281 @@
+{
+  "@@locale": "hy",
+  "pillSheetType21With7Placebo": "21 դեղահատի տեսակ (7 դեղահատերի սուտ դեղեր)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 հատ (4 հատ կեղծ դեղակ)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 դեղապատիճ (7 ենթադրյալ դեղ)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 քրոնիկ (բոլորը դրական)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 մետաղում (Մեկը նույնպես իրական դեղեր)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 պղպեղի տեսակը (բոլորը իրական մթերժ)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 դեղահատի տիպ",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "Դեղորայքի ընդմիջում",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "Ճշմարիտ դեղ",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "Մշտական օգտագործող չի գտնվել",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "আগে থেকেই ব্যবহারকারী գոյություն ունի",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "Նախ السابقة ։",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "համակարգում",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "Հաշիվ",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "Տվյալների փոխանցման կամ վերականգնման համար, ինչպիսիք են սարքի փոխումը կամ հեռախոսը կորցնելը, անհրաժեշտ է գրանցվել հաշվում։",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Պիլլլ պրեմիում",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "Աշխատանքի անսահմանափակ ժամկետը",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "Դեղահատերի թերթիկ",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "Հայտարարություն է",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "Համրող",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "Այլ",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "ՀՏՀ",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Անցյալ հատկություն",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "Հարցնում եմ",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "Հեռացնել",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "ոչնչացնել",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "Հաղորդագրությունը մաքրելու",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "Ես կջնջեմ օրագիրը",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Զիվի ժամանակաշրջանը հեռացնո՞ւմ եք։",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "Հավելել ծանուցման ժամ",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "Գործիքի ժամային գոտի ({deviceTimezoneName}) համաժամեցնե՞նք։",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "Համոզված է, որ ներկայումս սահմանված ժամային գոտին",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "Այո",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "Ոչ",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "Մերժման մասին",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "Պիլլի օգտագործման ծանուցում",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "Պատվերի ծանուցում",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊-ի ժամանակն է",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "Ավելացնել Debug տեղեկություններ",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Չեղարկել",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "Դուրս գալ",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "Պիլ տեսակների խմբերի ավտոմատ ավելացում",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "Երբ ներկայիս պիլ տուփի խումբն ավարտվի, նոր տուփը ավտոմատ կերպով կավելացվի։",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": " cuentas configuraciones",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "Միացված է",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "Դեռ գրանցված չէ",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "արագ գրանցում",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "Դուք կարող եք տեսնել, թե որ դեղամիջոցն եք այսօր խմելու, և անմիջապես գրանցել դրա խմումը։",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Առողջապահության ինտեգրում",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Pilll-ի կողմից գրանցված ձեր ամսական տվյալները ավտոմատ կերպով կարող եք գրանցել առողջության խնամքի համակարգում",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "Դիտել պրեմիում պլանը",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "Այսօր ընդունելի պարկերի համար փոխել թիվը",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "Աջակցություն ալիքները լրացնել",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing} անե՞մք?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "այժմ ցուցադրվում է",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "Բոլոր փիլշիթեր",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "կործանվում է",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "Մերժել",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "Խմբաքաղաքը չեղարկվել է",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "Մինա ցանկի մասին",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "Խնդրեմ ստուգեք պիլերի համարի ամսաթիվը: Ներկայումս ընտրված պիլ շիթի տիպերի մեջ գոյություն չունեցող պիլերի համար է կարգավորվել։",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "Պիլովի ընդունման ծանուցումների հարմարեցում",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "{x} -ի հարմարեցումը կարելի է կատարել",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Շնորհակալություն ձեր համագործակցության համար",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "Ճիշտ կարծիքները կա՛մ նախատեսում ենք աշխատել ավելի լավը դարձնելու համար.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "փակել",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "Հաշվի գրանցում",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "Կրկին մուտք գործել",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "Auth-ի տեղեկությունները թարմացվել են",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "Տեղեկությունները թարմացվելու են",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "Գրանցվել է {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "Համակցել",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "Ելք անել",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "Դուք դուրս եք եկել",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "Դուք կդադարեցնեք հավելվածի աշխատանքը: Եթե ցանկանում եք սկսել նորից, ապա վերընթաց կարգավորումներ կատարելու համար, վերսկսեք հավելվածը:",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "OK",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Պիլերի համարի փոփոխություն",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "փոխել",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "Երանգ",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "Կալենդար",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "Օգտագործողի տեղեկությունները կջնջվեն",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "Երբ դու հեռանում ես, բոլոր տվյալները կջնջվեն, և դու այլևս չես կարողանա նույն հաշիվի միջոցով մուտք գործել։",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "գրանցման էջ",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Խնդրում ենք նիհարել կրկին",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "Խնդրում ենք կրկին մուտք գործել ինքնութիւն հաստատելու համար նախքան անդամակցությունից հրաժարումը: Կրկին մուտք գործելուց հետո ավտոմատ կերպով կսկսվի անդամակցությունից հրաժարվելու ընթացքը",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "Կրկին մուտք կնեք և թարմացրեք վավերացման տեղեկությունները",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "Ադրեյենայի էջ",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "Միջազգային էջ",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "Կարգավորումներ",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Արժեքավոր ժամանակահատվածը հեռացվեց",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "Պատվիրի շրջանի խմբագրում",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "Ես խմբագրեցի իմ նյութերի շրջանը",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "Առողջության մանրամասները",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Միայն Պրեմիում ֆունկցիայով այլևս չեք կարող դիտվել",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "լրիվ դիտել",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "աշատը պարզել",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}-րդ",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} համար",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} հեռու",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} թիվ",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Առաջարկվող դեղամիջոցի հանգստյան օրը ընտրություն",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "Ընտրել դեղերի հանգամանություն",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "Ոչ գործածման սկսման օր",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Ընդունման ընդմիջման ավարտի օր",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "Պիլ շիթը ավարտվեց",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "Պիլ շիթի թափոն",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "գործածման ժամ",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "Իրացումը պատմությունը պրեմիում գործառույթ է",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Եթե դուք դադարեցնեք պիլյառն ընդունելը, ապա պիլյարի համարը չի առաջընթացվի",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "{number}-ից դեղորայքն անջատե՞նք։",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "Օգտագործում",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "Մինչև նախորդ փաթեթի ավարտը՝ {estimatedEndPillNumber}-րդ",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Ավելացնել պիլոշեյթ",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "նServidorել",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "Չեմ խմել",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "Պիլերի թերթիկի կարգավորումներ",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "Այսօր վերցվող պիլը դեռ չի ընդունվել",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "Թմրամիջոցների ընդունման ձեռնարկություն",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "Դեղամիջոցների ընդունման բացակայության սկսման ամսաթվի փոփոխություն",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "Դեղամիջոցների կրճատման ժամանակը ավարտվել է",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{ավարտValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "Օլորտի օգտագործման տևողությունը փոխել",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "Սկզբի և վերջի համարները փոխվեց",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "Պարզել ընդունման օրերի սկիզբը",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Նախորդ պլանշետի ավարտը։ {beforePillSheetGroupSequentialEstimatedEndPillNumber}-րդ օր",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "Օրերիը ավարտ",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "Համակ մաս",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "Ցուցադրման ռեժիմ",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "Օրուան ցուցադրում",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "պիլլի համար համարը",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "օսկտեսման օրեր",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "օրյա ընդունման (ցիկլ)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "Պիլ սիթը ավարտվեց",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "Վերջին անգամ ընդունված օրվա հաստատում",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "Խնդրում ենք մուտքագրել ձեր հաշիվը",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "Այս հնարավորությունն անջատում է Պրեմիում գործառույթի փոխանցումը հեռախոսը փոխելու կամ խոշոր զանգվածը կորցնելու ժամանակ",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "Հանդիպեք պրեմիում հատկություններին 14 օրով նորից! \nԹոփեք և կիսվեք սոցիալական ցանցերում!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "Ո՞ւր եք կիսվում։",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 Ոռոգման հանգիստ {day} օր",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} օրը",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} օր",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "{diffPlusOne} օր մնում է {activePillSheetPillSheetTypeNotTakenWord} ժամանակաշրջանի համար",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "{diff} օր մնացած, բոլոր ֆունկցիաները կարող եք օգտագործել",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Այսօր ընդունեք",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 Այսօր ընդունելի պիլ",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "փուլ",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-ից սկսվել է փաստագրությունը",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Աչքերի սկսման օր",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "Ամենայն դեպս ավարտի ամսաթիվ",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "Մինչդեռ որոշման օրը",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "Արտաքին շրջանաձև՝ {diffPlusOne} օր",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Մ menstruացիայի պլան: {diffPlusOne} օր {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff}_դիտ",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} दिन",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Ամենաթողուցները գրել",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "Հետո միջոցառումների պատմություն",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "Այսօր սկսվում է ամսականը",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "Երեկից սկսվեց ամսական",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "Ընտրեք menstruացիայի սկիզբը",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} օր ցիկլ",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Մուտք",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "Նախքան պրեմիում գրանցումը...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Եթե դեռ չեք մուտք գործել Pilll, նոր հաշիվ կստեղծվի",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "Հաշիվը գրանցելու դեպքում հնարավոր կլինի փոխանցել տվյալները։",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "Խնդրում ենք ռեգիստրացնել ձեր հաշիվը, որպեսզի պահպանեք հաշվի տեղեկությունները",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "Մուտք գործել {loginName}-ի համար",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "{loginName} միջոցով գրանցվել",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll պրեմիումի գրանցումը հաջողությամբ ավարտվեց",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "Շնորհակալություն ձեր գրանցման համար։\nԱմեն ինչի համար, բոլորը գործառույթները մատչելի են դարձել!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Այս պահին սահմանափակ գներով անմիջապես օգտագործելու հնարավորություն ունեք",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "Սովորական ամսական ծրագիր",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "ամսական ծրագիր",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/տարին",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/ամս 国产",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• Պրեմիում անդամակցությունը ավտոմատ կերպով կթարմացվի մեկ ամիս կամ մեկ տարի ժամկետի ընթացքում, սկսած մեկնարկի օրվանից",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Հատուկ առևտրային գործարքների օրենքի հիման վրա ցուցադրում",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "Խնդրում ենք հաստատել և գրանցվել.",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "Անգամ 24 ժամ առաջ չչեղարկելով տարածաշրջանային պայմանագրի ավարտի օրը, պայմանագիրը կավարտվի ինքնանորոգման կարգով:",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "• Ծ ձևի, դուք կարող եք կանխել ավտոմատ վերափոխումը ձեր հաշվի կարգավորումներում {storeName} ծրագրում։ (Ապրանք չօգտագործելու վերացման համար ծրագիրը ներսից չգործի)։",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "Ավելի շատ մանրամասների համար",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "Քնելային տեղեկությունները վերականգնվել են",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "Նախորդում գնած անձինք կարող են այցելել այստեղ",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "Նախորդ գնելու հավելյալ տեղեկություններ չեն գտնվել: Խնդրում ենք կրկին փորձել, երբ կրկին ստուգեք ձեր հաշիվը:",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "ամսական ծրագիր",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ամիս",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "Դուք պրեմիում անդամ եք",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "Շնորհակալություն ձեր օգտագործման համար։ Ձեր շնորհիվ Pilll-ի կառավարման գործընթացը շարունակել ենք։",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "Պրեմիում ֆունկցիաների ցուցակ",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 Պուշ ծանուցումից օգտագործման ռեկորդ",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 Պիլոսի ընդունման պատմության գրանցում և դիտում",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 Թվարկումը ցուցակում",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 Նոր պիլիաթների ինքնաբերական համալրում",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 Թուրքիայի նախկին տվյալների դիտում",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 Պաշտպանության տեղակայումները հարմարեցնել",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 Կայք՝ գովազդների այլևս չհայտնելու համար",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "Նայեք պրեմիում առանձնահատկությունների մանրամասներին",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "Ամենահայտնի\nֆունկցիաներ",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "Դիտել պրեմիում հնարավորություններ",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "Ցույցի ռեժիմ լիազորության օրերի (ցիկլ) ավելացվեց",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "Դիտել մանրամասները",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Պիլների ընդունման մոռացության ծանուցում",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "Մի շարք պարամետրեր սահմանելով, դուք կարող եք կանխել դեղորայքի բաց թողումը։",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "և",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "կարդալու համար\nսկսեք օգտագործել",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "Հաջորդը",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "ծանուցում {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "Դիպառանցությունից դեղերի ընդունման գրանցումը կարող եք կատարել",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "Դուրս գալ արգելանքը",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "Մուտք եք գործել {accountTypeProviderName} միջոցով",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Կա նշանակված թերթիկի մասին\nԽնդրում եմ տեղեկացրեք",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "Եթե դուք արդեն ունեք հաշիվ, սեղմեք здесь",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "Այսօր({todayString})\nԶգուշացուցիչը միացնելու համար `Թե՛ այսօր, թե՛ արդեն խմած պարանոցի համար՝ ն擊եք թիվը",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "դեռ չգիտեմ",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "{today} պայուսակները",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "Նախադիտում",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "Բնութային",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "մոռացված խմել",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "Ամսաթիվը ցուցադրելու",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "Թիվը ցույց տալ",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "Ց 모습을 ցույց տալ",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "Հոդված",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Հաղորդագրություն",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "առաջարկություններ",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "ավարտված",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Պիլլ",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "Դուք կարող եք փոխել ծանուցումը, եթե մոռացել եք դեղը վերցնել",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "Դուք կարող եք փոփոխել ծանուցման գլխամասը",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "Մուտքագրեք 0 կամ ավելի նշաններ",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "Դուք կարող եք փոփոխել ծանուցման տեքստը, երբ դեղը չկորցնեք",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Ամսաթվին 9:00-ին ծանուցում ստանալ",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "Պահպանել",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "առողջություն",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "Ձեռնարկված օրագիրները վերականգնվելու չեն",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "սեքս",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "Նախորդ պիլլի տակույքը",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "Ընդհանուր դեղահատերի խմբակ նախորդ անգամ դեռ գոյություն չունի",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "Դեղերի ընդունման պատմության տեղեկատվությունը չհաջողվեց ստանալ: {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "FAQ-ները դիտել",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "Նորից բեռնեք էկրանն",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "Եթե խնդիրը դեռ չի լուծվում, կապնվեք այստեղ",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Խնդրում ենք կիսվել ձեր մտքներով Pilll-ի մասին",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "Նիստ",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "Խնդրում ենք մասնակցել սերվիսի բարելավման հարցմանը, եթե ցանկանում եք",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "համագործակցել",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "չի անել",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "Ծառայության բարելավման հարցում",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "Հաճախ zufrieden",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "Չ tilfredիա",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "յուրաքանչյուրի համար",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "Որքա՞ն օր շարունակվում է կանացի ցիկլը:",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "օրականPeriods է շարունակում",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "Սկսել menstruation պիլի համարի վրա սեղմեք",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number}-րդ",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "नई պիլ շիթ սկսելը ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "Ընտրեք պիլերի տեսակը",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 դեղորայք",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 դեղ",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 դեղ",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 պարկուճ + 7 օր դադար",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 դեղահատ + 4 դեղահատ կեղծ դեղ",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 դեղահատ + 7 դեղահատ-սուտ",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "բոլորը իրական դեղորայք",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 դեղակ + 4 դեղակ հանգիստ",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "Ընտրել պիլերի տեսակը",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ժամանակաշրջանի ծանուցում",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Եթե ծանուցումները անջատված են, {pillSheetPillSheetTypeNotTakenWord} ժամանակահատվածի ընդունման գրառումները նաև ինքնաբերաբար կգրվեն։",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Կարողությամբ հարցման համար խնդրում ենք աջակցել Ձեր անդամակցության ամրագրումից հետո",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll - հղիության վերաբերյալ դեղորայքի հիշեցնող ծրագիր",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "Դուք հասել եք գրանցման առավելագույն սահմանին: Խնդրում ենք պահպանել մինչև {ReminderTimeMaximumCount} առարկա",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Հուշումների ժամանակը նվազագույնում պետք է {ReminderTimeMinimumCount} առարկա լինի",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "Ոչ մի պատճառով սխալ է տեղի ունեցել։ Խնդրում ենք սպասել որոշ ժամանակ և կրկին փորձել։ Եթե հարցը չի լուծվում, խնդրում ենք կապվել մեզ հետ՝ տանելով Ապահովագրություն > Հարցումներ։ Տեղեկություններ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName} ջերմոցում սխալ է առաջանում: Խնդրում ենք սպասել մի փոքր ժամանակ և կրկին փորձել",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "این دستگاه خرید مجاز نیست",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "Վճարը հաջողությամբ չհայտնվեց: Մասին՝ մոլոր գործող վճարման մեթոդ ներքնդրում: ",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Ընտրովի պլանը ներկայումս վաճառքում չկա։ Խնդրում ենք կրկին սկսել ծրագիրը և փորձել։",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Լրիվ կեղծիք չէ, որ արդեն գնել եք պլանը: Եթե ցանկանում եք վերականգնել գնումների տեղեկությունները այս սարքում, խնդրում ենք վերականգնել տեղեկությունները «Նախկինում գնել եք, սեղմեք այստեղ» բաժնի միջոցով:",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Այն արդեն գնվել է։ {accountName} կայացած օգտվողի կողմից գնելու տվյալները օգտագործվում են։",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Սխալ գնելու տեղեկություն է։ Խնդրում ենք ստուգել գնելու տեղեկությունը։",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "Գնելուողի տեղեկությունը գոյություն չունի։ Խնդրում ենք փորձել ՝ մուտքագրելով {accountName} սարքում",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Ձեր ցանցի վիճակը անկայուն է։ Խնդրում ենք ստուգել միացման վիճակը և փորձել կրկին.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Գնումն անհաջողվեց: Ուղղուկ մի քիչ սպասեք և փորձեք կրկին: Եթե խնդիրը շարունակում է մնալ, խնդրում ենք դիմել ՝ Շրջանակ > Հարցում: Հիմնաբառեր: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Շատախոսություն չի իրականացվում: Կարող եք կրկին փորձել ժամանակն անցնելուց հետո: Եթե խնդիրը չլուծվի, խնդրում ենք կապնվել Բարձրացման > Հարցում բաժինով: Գործընթացի մանրամասներ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Գնումների տեղեկատվությունը օգտագործվում է այլ օգտվողի կողմից: Խնդրում ենք ստուգել {accountName}՝ որ սարքում եք մուտք գործել",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Ապահովել չի կարողացել օգտատերը։Խնդրում ենք կրկին փորձել, նախ վերաօգտագործել հավելվածը։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Քնելը շարունակելու գործընթացն այլ կերպ է շարունակվում։ Խնդրում եմ սպասեք որոշ ժամանակ և կրկին ստուգեք։",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "Այժմ գնումներ Madeira չեն։ Խնդրում ենք մի քիչ սպասել և նորից փորձել։ Եթե խնդիրը չի լուծվում, ապա դիմեք ըստ Սահմանումներ > Հարցում: Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Կառուցվածքում չհաջողվեց գնում կատարել: Ավելի ուշ փորձեք նորից: Եթե այսպես չէ, խնդրում ենք դիմել պարամետրերի > Հարցում բաժինով: Վիճակագրություն: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Դուք անմիջապես չեն կարողացել ձեռք բերել ձեր օգտվողի հաշիվը։ Խնդրում ենք սպասել որոշ ժամանակ և փորձել կրկին։ Եթե դեռևս խնդիրը պահպանվում է, խնդրում ենք կապնվել մեզնից՝ ընտրելով Գ 설정 > Հարցում: Կիրառել մանրամասներ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Դուք ձեր {accountName} հաշիվով չեք կարող միանալ ծրագրին: Մանրամասն տեղեկությունների համար ստուգեք վճարման տեղեկատվությունը և փորձեք կրկին",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Տեղյակ եք, որ վճարումը դադարեցվել է։ Խնդրում ենք ստուգել {storeName} ձեր {accountName} հաշվում։",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Գնումը ձախողվեց: Խնդրում ենք սպասել և փորձել կրկին: Եթե խնդիրը չի լուծվում, խնդրում ենք կապ հաստատել կարգավորում > Հարցման միջոցով: Փոփոխություն: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Մեղմություն, օգտագործողի տվյալները չհաջողվեց ստանալ։ Խնդրում ենք սպասել քիչ ժամանակ եւ փորձել կրկին։ Եթե խնդիրը չլուծվի, խնդրում ենք կապվել ՝ անցնելով կարգավորումներ > Հարցումներ։ Մանրամասները ՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Գնումների տեղեկատվությունը ձեռք բերելու գործընթացը ձախողվեց։ Խնդրում ենք մի փոքր ժամանակ սպասել և կրկին փորձել։ Եթե խնդիրն չլուծվի, ապա կապարդեք ինձ `Կարգավորումներ > Հարցումներ` հավելվածի միջոցով։ մանրամասն՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "ՉՀայտարարաված սխալ է։ Շնորհիվ վերջին տարբերակին թարմացման՝ խնդրում ենք կրկին փորձել։ Եթե խնդիրը չի լուծվում, խնդրում ենք կապնվել՝ պարունակություն > Հարցում։ Կոդ: {errorCode} Վիճակագրություն: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Հայտնաբերվել է անորոշ սխալ: Գնումների տեղեկատվությունը նախօրոք չի կարողացել ստանալ: Նիրժ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Ակնարկում է անհայտ պատճառներով սխալ: Խնդրում ենք թարմացնել վերջին տարբերակը և կրկին փորձել: Եթե խնդիրը չի լուծվել, խնդրում ենք կապվել ՝ պարամետրեր > Հետադարձ կապ: Կոդ: {errorCode} Մանրամասներ: {exceptionMessage}:{exceptionDetails} ",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "Անհայտ սխալ է։ Գնացեք վերջին տարբերակին և փորձեք կրկին։ Եթե խնդիրը չի լուծվի, խնդրում ենք կապ հաստատել `Կարգավորումներ > Հարցումներ` բաժնում։ Վիճակագրություն: {errorCode} Վճռական: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Այսպիսով, սակայն, անհայտ պատճառներով սխալ է: Գրանցեք վերջին տարբերակը և փորձեք կրկին: Եթե այդպես չի լուծվում, խնդրում ենք կապվել մեզ հետ նախատեսված կարգավորումների ամսաթիվ > Հարցում։ Կոդը: {errorCode} Նկարագրություն: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Հաճախորդի տեղեկությունների ստացումը ձախողվեց: Խնդրում ենք զրուցել, և կրկին փորձել: Եթե խնդիրը շարունակվում է, խնդրում ենք կապ հաստատել>`Ամպում > Հարցումներ` միջոցով: Մանրամասն տեղեկատվություն՝ կոդ: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "Հնարավոր խնդիրներ առկա են սարքավորումների կարգավորումներում։ Կարգավորումները ստուգեք և փորձեք կրկին։ Եթե խնդիրը չի լուծվում, խնդրում ենք դիմել՝ անցնելով կարգավորում > Հարցումներ։ Կոդ: {errorCode} Մանրամասներ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "Վերադարձի գործընթացը սկսվել է: Ստուգեք և փորձեք նորից: Եթե խնդիրն չլուծվի, կապվեք մեզ հետ՝ գնացեք Հասկանալի > Հարցումներ: Կոդ: {errorCode} Հանդիպում: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Ժամանցը վաղանցել է: Հաստատեք ձեր հաղորդակցման միջավայրը և փորձեք կրկին: Եթե խնդիրը չի լուծվում, խնդրում ենք դիմել `Կարգավորում > Հարցում` բաժնում: Դիտարկումներ՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "Ազդեցության պատճառով առաջացած սխալ է: Խնդրում ենք թարմացնել մինչև վերջը և կրկին փորձել: Եթե ​​այդպես չէ, խնդրում ենք կապ հաստատել настройки > Հարցումներ: Կոդը: {errorCode} Տեղեկություններ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Արմատը հայտնի չէ։ Խնդրում ենք թարմացնել մինչև վերջին տարբերակը և կրկին փորձել։ Եթե խնդիրը չի լուծվում, կպստացեք կարգավորումներ > Հարցման համար դիմել ընտրելով։ Կոդ: {errorCode} Ավելին՝: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Հաղորդակցման խնդիր է։ Խնդրում ենք ստուգել հաղորդակցման միջավայրը և փորձել կրկին։ Եթե խնդիրը չի լուծվում, խնդրում ենք կապ հաստատել ՝ Գեղիզարկ > Հարցում բաժնում։ Մանրամասներ՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Թարմացրեք ծրագիրը",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "Մենք խնդրում ենք թարմացնել ձեր օգտագործողի հավելվածի տարբերակը։ Խնդրում ենք թարմացնել վերջին տարբերակը {storeName}-ից",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "Հիվանդանոց հաճախել",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "Մի քանի ժամին 9:00-ին ծանուցում ստանալ",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "Ձեռնարկված պլանները վերականգնման ենթակա չեն",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "ձեռնարկել եմ ծրագրի ցուցակը",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "Համատեղելի է միայն iOS հավելվածի համար",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "Դուք չեք կարող օգտագործել այս ծրագիրը այն սարքերում, որոնք աջակցություն չեն ցուցաբերում առողջության պահպանման համակարգերին",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "Խնդրում ենք ակտիվացնել առողջապահությունը կարգավորման հավելվածից",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "Այս {accountTypeProviderName} հաշվին արդեն կապված է Ձեր օգտագործվող Pilll հաշվի հետ: Please փորձեք թարմացնել էկրանն: Խնդրում ենք տեսնել FAQ: մանրամասներ. {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Այս {accountTypeProviderName} հաշիվն արդեն կապված է մեկ այլ Pilll հաշվի հետ, ուստի դուք չեք կարող գրանցվել: Խնդրում ենք ստուգել FAQ-ը: Մանրամասն տեղեկություն: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "Որպեսզի գրանցվել, դուք չեք կարող այն հաշիվը օգտագործելով, որը կապվում է այլ Pilll հաշվի հետ, քանի որ {accountTypeProviderName} հաշիվը արդեն օգտագործում է Ձեր էլ․ հասցեն: Խնդրում ենք տեսնել FAQ: Ամփոփում՝ {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "Այսօրվա պլանը",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "Օրացույցի պլանավորված միջոցառումներ",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "Այսօր նոր տախտակ է սկսվում",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 Այսօր սկսվում է նոր թերթիկ։\nՉմոռանաք ընդունել 👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Պրեմիում տեղեկություն չի գտնվել",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "Հանդիպումը դեռ ամբողջացված չէ։ Խնդրում ենք մի փոքր սպասել, ապա կրկին ստուգել։",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "Կարևոր տեղեկություն\n{ErrorMessagesConnection}\nՀեշտ տեղեկություններ: Եթե կիրառումը բացված ժամանակ որևէ խնդիր առաջանա, խնդրում ենք կապվել աջակցության ծառայության հետ.",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "օրինակ, եթե դեղորայքը դադարեցվել է \"1/12-ից 3 օր\"",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "օրինակ \"18-րդից 3 օր\" դեղամիջոց ընդունելը դադարեցնելու դեպքում",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} համար",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "Հայտնի չէ առկա հակաբեղմնավորիչի թերթիկը",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "Պիլի ընդունման չեղարկման գործողությունը հանգստի ընթացքում իրականացնել հնարավոր չէ",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Գուգլի հաշիվ",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "Օրագիր գրանցել",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "Թվագրեք պլանները",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "Նախորդ բաղադրիչների խումբը դեռ չի ստեղծվել",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} կտոր",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "Թ komunikatsian ev environmentyun anutyan cnbot e. Sor astich avtšatshmvdyok t'echkat' gavtahn.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "Սխալ է տեղի ունեցել: Խնդրում ենք սպասել ժամանակ և փորձել նորից",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "Կ meyd  անվստահություն  տեղի ունեցավ",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "Հայերեն: Անհայտ սխալ է տեղի ունեցել",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "Անսպասելի սխալ է տեղի ունեցել",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "Ծանուցումը երկար պահելուց հետո կարող եք գրանցել միջոցը",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "Խնդրում ենք փորձել",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "{number} օրը բոլոր ֆունկցիաները մատչելի են!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Մուտքագրեք և ավելացրեք",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "Միջին ցիկլ",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "Միջին օրեր",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "օր",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "Հիշեցում",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "Թարմացումը ձախողվեց: Խնդրում ենք ստուգել կապի պայմանները և կրկնօրինակել փոփոխությունները",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "ցավ",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "Աղիքների ցավ",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "Մզում",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "արյունահատույց",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": " diarrhea ",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "հիմք",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "քնածություն",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": " ցավ",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "હ્રદયધડક",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "Անսովոր արյունահոսություն",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "Ստամոքսի ախորժակի բացակայություն",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "Արյան շնչափողի",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "Անքնություն",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "Անհրաժեշտ է հանգստանալ։ Եթե ցանկանում եք դադարեցնել ընդունումը, չի կարելի այսօր, խնդրում ենք դիտեք ստորև ներկայացվածը։",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "Դեղամիջոցի հանգստի գործառույթի օգտագործման մասին դիտել",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "Լիանելու հանգստի սկիզբ",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "Դեղամիջոցը դադարեցնելու ժամանակը փոխվել է",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "Դեղեր ընդունելու ընդմիջման ժամանակը խմբագրեք",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "Օրվա դոզաների թիվը փոփոխել",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} համար ~ {end} համար",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Վերականգնել ընդունումը",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "Դեղագործության ընդմիջման ժամանակահատվածի փոփոխություն",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "Քամմի ժամանակահատվածը փոխվել է",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date}-ին փոփոխվել է",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": " posib anhasar chpakan zhoghovrakan moshak",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Բացեք հավելվածը և ստուգեք",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "վերցված",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "Երեկույթը դադարեցնել",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "Դեղերի ընդունման ընդմիջումը սկսվեց",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ի համար",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "սկսիր հերթից",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "Ավելացնել",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "Պիլ շիթ ավելացնել",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "Վերականգնման ժամանակ",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "Այսօր ընդունված պիլլի դեպքում \"ընդունման նվազեցում\" հնարավոր չէ",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "Գործողությունների ստիֆը սկսվեց",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Արտադրանքի դադարեցման սկիզբը խմբագրել",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "Մենք ներկայացնում ենք ընկերներին",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "օգտագործման պայմաններ",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "Քաղաքականություն",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "Պաշտպանիչ ատրճանակում պատճենվել է",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "հրատապություն{number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "Ծանուցման ժամանակը",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz}-ը փոխվել է",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Օրացույցի սկիզբը փոխել",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "Ամսաթիվի ավարտը փոխել",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "Պիլլի տուփը փոխարինելու պատճառով փորձարկման մեկնարկը չի հնարավոր: id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Դեղամիջոցների մարտահարավերով տեղեկատվության հավաքագրման գործընթացը ձախողվեց։{error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "Պիլն օգտագործելու գումարը",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "Ճշգրտված օրագիրը վերականգնել չի լինի",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "Մասնագիտական շրջանը խմբագրել",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "Պիլ номерի փոփոխություն",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "ՄեծԻսկ մեկն է, որ դուք կարող եք {offPercent} %-ով զեղչ",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "Պրեմիում գրանցմամբ շարունակաբար կարող եք օգտվել բոլոր հնարավորություններից",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} ձեռքբերումները {offPercent}٪ ԱՐԺԵՒ",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Դեղերի ընդունման ծանուցումը դարձա {value}",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

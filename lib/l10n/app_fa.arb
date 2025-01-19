@@ -1,0 +1,2281 @@
+{
+  "@@locale": "fa",
+  "pillSheetType21With7Placebo": "نوع 21 قرص (7 قرص دارونما)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "نوع 28 قرص (4 قرص دارونما)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "نوع 28 قرص (7 قرص دارونما)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "نوع ۲۸ قرص (همه واقعی)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "نوع 24 قرص (همه دارو واقعی)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "نوع 21 قرص (همه دارو واقعی)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "نوع 24 قرص",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "قطع مصرف",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "دارونما",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "کاربر پیدا نشد",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "وجود کاربر بالفعل",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "تاریخچه مصرف",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "تنظیمات",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "حساب",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "در زمان تغییر دستگاه یا گم شدن گوشی، برای انتقال یا بازیابی داده‌ها، ثبت‌نام حساب کاربری ضروری است.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll پریمیوم",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "دوره بدون محدودیت از امکانات",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "برگه قرص",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "اطلاعیه",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "قاعدگی",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "سایر",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "سؤالات متداول",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "معرفی ویژگی های جدید",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "تماس بگیرید",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "حذف",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "حذف کردن",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "حذف کاربر",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "این روزنامه را حذف می کنم",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "آیا می‌خواهید دوره قاعدگی را حذف کنید؟",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "اضافه کردن زمان اعلان",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "آیا می‌خواهید با منطقه زمانی دستگاه ({deviceTimezoneName}) همگام‌سازی کنید؟",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "منطقه زمانی فعلی تنظیم شده",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "بله",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "خیر",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "در مورد لغو اشتراک",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "اعلام مصرف قرص",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "پیام یادآوری مصرف",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "⏰ زمان مصرف قرص است",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "اطلاعات دیباگ را کپی کنید",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "لغو",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "خروج",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "اضافه کردن گروه قرص به طور خودکار",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "پس از پایان گروه فعلی نوار قرص، یک نوار جدید به‌طور خودکار اضافه می‌شود.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "تنظیمات حساب کاربری",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "همگام‌سازی شده",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "未 ثبت نام",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "ثبت سریع",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "شما می‌توانید در صفحه اعلان‌ها قرص‌هایی که امروز باید مصرف کنید را ببینید و مستقیماً آنها را ثبت کنید.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "همکاری با بهداشت و درمان",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "شما می توانید سوابق قاعدگی ثبت شده در Pilll را به طور خودکار در سلامت ذخیره کنید.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "برنامه پریمیوم را ببینید",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "تغییر شماره قرص امروز",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "تمامی ورقه‌های قرص را دور بیندازید",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "آیا {doing} می کنید؟",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "در حال حاضر نمایش داده شده",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "همه ورق های قرص",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "از دست داده می‌شود",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "حذف کردن",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "پیل شیت را دور انداختم",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "در مورد قاعدگی",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "لطفاً شماره قرص تاریخ شروع قاعدگی را تأیید کنید. شماره قرسی که در حال حاضر برای نوع ورق قرص انتخاب شده تنظیم شده است، وجود ندارد.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "سفارشی کردن اعلان مصرف",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "شما می توانید {x} را سفارشی کنید",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "از همکاری شما سپاسگزارم",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "نظرات شما در راستای بهبود های آینده مورد استفاده قرار خواهد گرفت.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "بستن",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "ثبت نام حساب کاربری",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "ورود مجدد",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "اطلاعات اعتبار را به‌روزرسانی کردید",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "اطلاعات اعتبارسنجی را به‌روزرسانی می‌کنم",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "با {accountTypeProviderName} ثبت نام کرده‌ام",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "همگرا شدن",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "خروج از حساب کاربری",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "خروج از عضویت انجام شد",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "برنامه یک بار بسته می‌شود. اگر می‌خواهید از ابتدا شروع کنید، پس از راه‌اندازی مجدد برنامه تنظیمات اولیه را انجام دهید.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "خوب",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "تغییر شماره قرص",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "تغییر",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "قرص",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "تقویم",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "اطلاعات کاربری حذف خواهد شد",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "با انصراف از عضویت، تمام داده‌ها حذف می‌شود و دیگر نمی‌توانید با همان حساب کاربری وارد شوید.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "صفحهٔ ثبت",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "لطفاً دوباره وارد شوید",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "لطفاً قبل از لغو عضویت، دوباره وارد حساب خود شوید تا هویت شما تأیید شود. پس از ورود مجدد، فرآیند لغو عضویت به طور خودکار آغاز خواهد شد.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "برای ورود مجدد و به‌روزرسانی اطلاعات اعتبار وارد کنید.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "صفحه قاعدگی",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "صفحه تقویم",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "صفحه تنظیمات",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "پریود را حذف کردید",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "ویرایش دوره قاعدگی",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "مدت قاعدگی ویرایش شد",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "جزئیات وضعیت سلامتی",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "این مشاهده بیشتر به ویژگی پریمیوم تعلق دارد",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "مشاهده جزئیات",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "بیشتر ببینید",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} شماره",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} شماره",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "قرص شماره {beforeLastTakenPillNumber}",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} عدد",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "۱→{afterDisplayNumberSettingBeginPillNumber} عدد",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} عدد",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "۱→{afterDisplayNumberSettingEndPillNumber} شماره",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} شماره",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "انتخاب تاریخ شروع مصرف قطع",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "مدت استراحت از مصرف را انتخاب کنید",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "تاریخ شروع استراحت دارو",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "تاریخ پایان استراحت دارو",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "پایان نوار قرص",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "سطل قرص دور ریختن",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "زمان مصرف",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "تاریخچه مصرف یک ویژگی پریمیوم است",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "اگر مصرف دارو را متوقف کنید، شماره قرص تغییر نخواهد کرد",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "آیا از {number} مصرف دارو را متوقف می کنید؟",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} شماره",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "مصرف",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "آخرین قرص از ورق قبلی: {estimatedEndPillNumber}",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "اضافه کردن برگه قرص",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "خورده",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "نخورده",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "تنظیم برگه قرص",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "از زمانی که قرص هایی که باید امروز مصرف کنم را مصرف نکرده ام",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "استراحت مصرف",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "تغییر تاریخ آغاز استراحت مصرف",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "مدت زمان استراحت مصرف دارو به پایان رسید",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "تغییر روزهای مصرف ورق",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "شماره شروع و پایان تغییر یافت",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "شروع تعداد روزهای مصرف",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "آخرین روز از شیت قبلی: {beforePillSheetGroupSequentialEstimatedEndPillNumber} روز",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "پایان تعداد روزهای مصرف",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "تغییر شماره",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "حالت نمایش",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "نمایش تاریخ",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "شماره قرص",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "تعداد روزهای مصرف",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "تعداد روزهای مصرف (چرخه)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "بسته قرص به پایان رسید",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "تاریخ آخرین مصرف را بررسی کنید",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "لطفاً ثبت نام حساب کاربری کنید",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "در زمان تغییر دستگاه یا گم کردن گوشی، نمی‌توانید امکانات پریمیوم را انتقال دهید.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "شما می‌توانید ویژگی‌های پریمیوم را به مدت ۱۴ روز دوباره تجربه کنید!\nبر روی اینجا کلیک کنید و آن را در شبکه‌های اجتماعی به اشتراک بگذارید!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "کجا می‌خواهید به اشتراک بگذارید؟",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 روز {day} پرهیز از مصرف دارو",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "روز {word}",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} روز",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "{diffPlusOne} روز دیگر به دوره {activePillSheetPillSheetTypeNotTakenWord} باقی مانده است",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "شما می‌توانید از تمامی ویژگی‌ها به مدت {diff} روز باقی‌مانده استفاده کنید.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 امروز دارو را مصرف کنید",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 قرص هایی که امروز باید مصرف شوند",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "شماره",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "از {DateTimeFormatterMonthAndDay} قاعدگی آغاز شده و ثبت شد",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "تاریخ شروع قاعدگی",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "تاریخ پایان قاعدگی",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "تاریخ پیش بینی شده قاعدگی",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "زمان تخمینی قاعدگی: روز {diffPlusOne}",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "برنامه قاعدگی: {diffPlusOne} روز به {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff} روز دیگر",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "روز {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "ثبت قاعدگی",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "تاریخچه قاعدگی",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "از امروز قاعدگی شروع می‌شود",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "دیروز قاعدگی شروع شد",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "تاریخ شروع قاعدگی را انتخاب کنید",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "چرخش {menstruationDuration} روزه",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "ورود به سیستم",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "قبل از ثبت نام در پریمیوم ...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "اگر هنوز وارد Pilll نشده‌اید، یک حساب جدید ایجاد خواهد شد.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "با ثبت نام در حساب کاربری، انتقال داده‌ها ممکن می‌شود.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "لطفاً برای نگهداری اطلاعات حساب، ثبت نام حساب کاربری انجام دهید.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "با {loginName} وارد شوید",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "ثبت نام با {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "ثبت نام Pilll پریمیوم تکمیل شد",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "با تشکر از ثبت نام شما.\nهمه قابلیت‌ها به شما ارائه شد!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "هم‌اکنون می‌توانید با قیمت ویژه به‌طور نامحدود استفاده کنید",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "برنامه اشتراک معمولی",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "برنامه سالانه",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/سال",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/ماه",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "مدت قرارداد پریمیوم به صورت خودکار هر ۱ ماه یا ۱ سال از تاریخ شروع محاسبه می‌شود.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "نمایش مطابق با قانون تجارت الکترونیک",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "لطفا بعد از بررسی ثبت نام کنید.",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "قرارداد پریمیوم به طور خودکار تمدید می‌شود مگر اینکه ۲۴ ساعت یا بیشتر قبل از تاریخ پایان قرارداد لغو شود.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "پس از خرید، می توانید اشتراک خودکار را در تنظیمات حساب برنامه {storeName} لغو کنید. (لغو اشتراک خودکار از داخل برنامه امکان‌پذیر نیست).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "برای جزئیات بیشتر اینجا کلیک کنید",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "اطلاعات خرید بازیابی شد",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "اگر قبلاً خرید کرده‌اید، اینجا را کلیک کنید.",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "هیچ اطلاعات خرید قبلی پیدا نشد. لطفاً حساب کاربری خود را بررسی کرده و دوباره تلاش کنید.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "برنامه ماهانه",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ماه",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "شما\nعضو پریمیوم هستید",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "از استقامت شما سپاسگزاریم.\nبه لطف شما، ما قادر به ادامهٔ فعالیت Pilll هستیم.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "فهرست ویژگی‌های پریمیوم",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 ثبت دارو از طریق اعلان های فشار",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 ثبت و مشاهده سابقه مصرف",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 نمایش تاریخ در برگه قرص",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 پر کردن خودکار ورق قرص جدید",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 مشاهده داده‌های قبلی",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 سفارشی کردن برچسب های وضعیت",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 عدم نمایش تبلیغات",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "جزئیات ویژگی‌های پریمیوم را مشاهده کنید",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "ویژگی های محبوب",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "مشاهده عملکردهای پریمیوم",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "حالت نمایش روزهای مصرف (چرخه) اضافه شد",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "جزئیات را مشاهده کنید",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "۳/۳",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "اعلام مصرف قرص فراموش شده",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "با تنظیمات متعدد می‌توانید از فراموشی مصرف دارو جلوگیری کنید",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "با",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "لطفا آن را بخوانید و استفاده را شروع کنید",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "بعدی",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "اطلاعیه {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "شما می توانید از طریق اعلان ها یادداشت دارو را ثبت کنید",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "برنامه را شروع کنید",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "با {accountTypeProviderName} وارد شدم",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "درباره ورق تجویزی لطفاً بفرمایید",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "افرادی که قبلاً حساب کاربری دارند، اینجا کلیک کنند",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "امروز ({todayString})\nبر روی شماره قرص‌هایی که باید مصرف کنید یا مصرف کرده‌اید ضربه بزنید",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "هنوز مشخص نیست",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "قرص هایی که باید در {today} مصرف کنید",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "نمایش پیش‌نما",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "معمولی",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "فراموشی در مصرف",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "تاریخ را نمایش دهید",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "نمایش شماره",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "نمایش متن توضیحی",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "عنوان",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "پیام",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "گزینه",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "تمام",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "پیلل",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "شما می توانید متن اعلان در صورت فراموشی داروها را تغییر دهید",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "شما می توانید قسمت ابتدایی اعلان را تغییر دهید",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "لطفاً ورودی خود را با حداقل 0 کاراکتر وارد کنید",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "شما می توانید متن اعلان را در صورت عدم فراموشی مصرف دارو تغییر دهید.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "در ساعت 9:00 همان روز، یادآوری دریافت کنید",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "ذخیره",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "وضعیت جسمانی",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "زمینه‌های حذف‌شده قابل بازگرداندن نیستند",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "جنس",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "گروه ورق دارو قبلی",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "گروه ورق قرص قبلی هنوز وجود ندارد",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "دریافت اطلاعات تاریخچه مصرف با شکست مواجه شد. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "FAQ را ببینید",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "صفحه را دوباره بارگذاری کنید",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "اگر حل نشد اینجا کلیک کنید",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "لطفاً نظرات خود را درباره Pilll به ما بگویید",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "تایید",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "اگر لطف کنید، لطفاً در نظرسنجی برای بهبود خدمات نیز همکاری کنید",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "همکاری کردن",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "نمی‌کنم",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "نظرسنجی بهبود خدمات",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "راضی هستم",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "راضی نیستم",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "به ترتیبی که",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "چند روز پریود ادامه دارد؟",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "روزهای قاعدگی ادامه دارد",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "عدد قرصی را که دوره قاعدگی آغاز می‌شود لمس کنید",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "صفحه {number}",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "شروع بسته قرص جدید ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "نوع قرص را انتخاب کنید",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "۲۱ قرص",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "۲۸ قرص",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 عدد",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 قرص + 7 روز استراحت",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 قرص + 4 قرص دارونما",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 قرص + 7 قرص دارونما",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "همه داروهای واقعی",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "۲۴ قرص + ۴ قرص استراحت",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "نوع قرص را انتخاب کنید",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "اطلاعیه دوره استفاده از {pillSheetPillSheetTypeNotTakenWord}",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "در صورتی که اعلان خاموش باشد، سوابق مصرف از دوره {pillSheetPillSheetTypeNotTakenWord} نیز به طور خودکار ثبت می‌شود.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "از شما خواهش می‌کنیم که در نظرسنجی پس از لغو اشتراک همکاری کنید",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll برنامه یادآوری مصرف قرص است که به طور خاص برای مصرف قرص طراحی شده است",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "به حداکثر تعداد قابل ثبت رسیده‌اید. لطفاً تا {ReminderTimeMaximumCount} مورد محدود کنید.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "زمان های اطلاع رسانی حداقل به {ReminderTimeMinimumCount} مورد نیاز است",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "یک خطای ناشناخته رخ داده است. لطفاً مدتی صبر کرده و دوباره امتحان کنید. در صورتی که مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "در {storeName} خطایی رخ داده است. لطفاً مدتی صبر کنید و دوباره امتحان کنید.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "خرید در این دستگاه مجاز نیست",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "پرداخت ناموفق بود. لطفاً بررسی کنید که آیا روش پرداخت شما معتبر است و دوباره امتحان کنید.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "این طرح فعلاً برای فروش در دسترس نیست. لطفاً از شما درخواست می‌شود که برنامه را دوباره راه‌اندازی کرده و امتحان کنید.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "شما قبلاً این پلن را خریداری کرده‌اید. اگر می‌خواهید اطلاعات خرید را در این دستگاه بازیابی کنید، لطفاً از \"اگر قبلاً خرید کرده‌اید، اینجا کلیک کنید\" برای بازیابی اطلاعات خرید استفاده کنید.",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "قبلاً خریداری شده است. اطلاعات خرید توسط کاربر دیگری استفاده می شود. لطفاً {accountName} را بررسی کنید.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "اطلاعات خرید نامعتبر است. لطفاً اطلاعات خرید را بررسی کنید.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "هیچ اطلاعاتی از خریدار وجود ندارد. لطفاً با ورود به دستگاه با {accountName} امتحان کنید.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "وضعیت شبکه ناپایدار است. لطفاً وضعیت اتصال را بررسی کرده و دوباره امتحان کنید.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "خرید ناموفق بود. لطفاً کمی صبر کنید و دوباره تلاش کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما اقدام کنید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "این زمان قادر به خرید نیستید. لطفاً کمی صبر کنید و دوباره تلاش کنید. اگر حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "اطلاعات خرید توسط کاربر دیگری استفاده می‌شود. لطفاً {accountName} را که روی دستگاه وارد شده‌اید بررسی کنید.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "کاربر نمی‌تواند تأیید کند. لطفاً برنامه را دوباره راه‌اندازی کنید و دوباره تلاش کنید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "فرآیند خرید به صورت جداگانه در حال انجام است. لطفاً مدتی منتظر بمانید و دوباره بررسی کنید.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "در حال حاضر نمی توانید خرید کنید. لطفاً مدتی صبر کنید و دوباره تلاش کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "خرید با شکست مواجه شد. لطفاً پس از مدتی دوباره امتحان کنید. در صورت عدم حل مشکل، لطفاً از بخش تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "خرید شما به عنوان کاربر با شکست مواجه شد. لطفاً مدتی صبر کنید و دوباره تلاش کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "شما نمی‌توانید به برنامه با {accountName} خود بپيوندم. لطفا اطلاعات پرداخت خود را بررسی کنید و دوباره تلاش کنید.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "پرداخت در میانه راه متوقف شده است. لطفاً با {accountName} که وارد شده‌اید، {storeName} را بررسی کنید.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "خرید ناموفق بود. لطفاً کمی صبر کرده و دوباره امتحان کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "خطای دریافت اطلاعات کاربری. لطفاً کمی صبر کنید و دوباره امتحان کنید. در صورت عدم حل مشکل، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "خطا در دریافت اطلاعات خرید. لطفاً اندکی صبر کنید و مجدداً تلاش کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "خطای غیر قابل شناسایی است. لطفاً به آخرین نسخه آپدیت کنید و دوباره امتحان کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما اقدام کنید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "خطای ناشناخته است. نمی‌توان اطلاعات خرید را از قبل دریافت کرد. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "خطای ناشناخته است. لطفاً به نسخه جدیدتر بروزرسانی کنید و دوباره امتحان کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > پشتیبانی با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "خطای ناشناخته است. لطفاً به آخرین نسخه آپدیت کرده و دوباره امتحان کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "خطای ناشناخته است. لطفاً به آخرین نسخه بروزرسانی کنید و دوباره امتحان کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "دریافت اطلاعات مشتری با شکست مواجه شد. لطفاً مدتی صبر کرده و دوباره تلاش کنید. در صورتی که حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: کد: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "در تنظیمات دستگاه مشکلی وجود دارد. لطفاً بررسی کرده و دوباره امتحان کنید. در صورت عدم حل مشکل، لطفاً از طریق تنظیمات > تماس با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "فرآیند بازپرداخت آغاز شده است. لطفاً تأیید کرده و مجدداً امتحان کنید. در صورت عدم حل مشکل، لطفاً از طریق تنظیمات > تماس با ما با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "زمان‌بندی تمام شد. لطفاً محیط ارتباطی خود را بررسی کرده و دوباره تلاش کنید. اگر حل نشد، لطفاً از طریق تنظیمات > تماس با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "خطای ناشناخته. لطفاً به آخرین نسخه به روز رسانی کرده و دوباره امتحان کنید. اگر حل نشد، لطفاً از طریق تنظیمات > تماس با ما با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "خطای ناشناخته است. لطفا به آخرین نسخه بروزرسانی کنید و دوباره امتحان کنید. اگر حل نشد، لطفا از طریق تنظیمات >  تماس با ما با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "خطا در ارتباط. لطفاً وضعیت ارتباطات خود را بررسی کرده و دوباره تلاش کنید. در صورت عدم رفع مشکل، لطفاً از طریق تنظیمات > ارتباط با ما تماس بگیرید. جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "لطفاً برنامه را به‌روزرسانی کنید",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "ما از شما می‌خواهیم که نسخه‌ی برنامه‌تان را به‌روزرسانی کنید. لطفاً از {storeName} آخرین نسخه را به‌روزرسانی کنید.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "به درمانگاه رفتن",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "در روز مورد نظر در ساعت ۹:۰۰ صبح اعلان دریافت کنید",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "برنامه هایی که حذف شده اند قابل بازیابی نیستند",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "برنامه حذف می‌شود",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "این تنها برای برنامه iOS قابل استفاده است.",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "این برنامه در دستگاه‌هایی که از سلامت پشتیبانی نمی‌کنند قابل استفاده نیست.",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "لطفاً از برنامه تنظیمات سلامت را فعال کنید",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "این حساب {accountTypeProviderName} قبلاً به حساب Pilll شما متصل شده است. لطفاً سعی کنید صفحه را بروزرسانی کنید. همچنین می‌توانید FAQ را مشاهده کنید. جزئیات: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "این حساب {accountTypeProviderName} در حال حاضر به حساب دیگری از Pilll متصل شده است و بنابراین نمی توان آن را ثبت کرد. همچنین می توانید به FAQ مراجعه کنید. جزئیات: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "شما نمی‌توانید ثبت‌نام کنید زیرا آدرس ایمیل شما قبلاً با یک حساب کاربری دیگر Pilll مرتبط است. لطفاً به سوالات متداول (FAQ) مراجعه کنید. جزئیات: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "برنامه امروز",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "برنامه های تقویم",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "از امروز یک ورق جدید شروع می‌شود",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 از امروز یک بسته جدید آغاز می‌شود\nفراموش نکنید که دارو را مصرف کنید👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "اطلاعات پریمیوم پیدا نشد",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "فعالسازی پرداخت کامل نشده است. لطفاً پس از مدتی دوباره بررسی کنید.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "هنگام راه اندازی خطایی پیش آمد\n{ErrorMessagesConnection}\nجزئیات:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "به عنوان مثال، اگر \"از ۱/۱۲ به مدت ۳ روز\" دارو مصرف نکنید",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "به عنوان مثال، در صورتی که از ۱۸ روز به مدت ۳ روز مصرف را متوقف کنید",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "شماره {number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "متاسفیم، هیچ شیت قرص فعلی پیدا نشد.",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "عملیات لغو مصرف قرص در دوران معافیت از مصرف امکان‌پذیر نیست.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "حساب Google",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "ثبت یادداشت",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "برنامه ریزی را وارد کنید",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "گروه ورق پیل قبلی هنوز وجود ندارد",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} عدد",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "به نظر می‌رسد که محیط ارتباطی ناپایدار است. لطفاً کمی صبر کنید و دوباره امتحان کنید.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "یک خطا رخ داده است. لطفاً مدتی صبر کرده و دوباره تلاش کنید.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "یک خطا پیش آمد",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "یک خطای ناشناخته رخ داده است",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "یک خطای غیرمنتظره رخ داده است",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "با نگه داشتن اعلان، می‌توانید سابقه مصرف را ثبت کنید.",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "لطفاً امتحان کنید",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "شما می توانید به مدت {number} روز از تمامی ویژگی ها استفاده کنید!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "اضافه کردن با وارد کردن",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "میانگین چرخه",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "میانگین روزها",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "روز",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "یادداشت",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "به‌روزرسانی انجام نشد. لطفاً شرایط ارتباطی خود را بررسی کرده و مجدداً تغییرات را انجام دهید.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "سردرد",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "درد شکم",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "تهوع",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "آسیب به رابطه",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "اسهال",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "یبوست",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "خستگی",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "درد کمر",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "تپش قلب",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "خونریزی غیرطبیعی",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "بی اشتهایی",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "فشار سینه",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "بی خوابی",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "لطفاً استراحت کنید. اگر می‌خواهید از روزهای دیگری غیر از امروز مصرف را متوقف کنید، لطفاً به موارد زیر مراجعه کنید.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "مشاهده نحوه استفاده از ویژگی استراحت دارو",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "شروع استراحت مصرف",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "زمان استراحت مصرف تغییر کرد",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "ویرایش دوره استراحت مصرف",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "تغییر تعداد روزهای مصرف",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} الی {end}",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "از سرگیری مصرف",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "تغییر دوره استراحت",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "مدت زمان استراحت دارو را تغییر دادم",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date} را تغییر دادم",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "ممکن است ثبت مصرف ناموفق بوده باشد",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "لطفا برنامه را باز کرده و بررسی کنید",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "مصرف شده",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "{VAL} را متوقف کنید",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "راحت مصرف را آغاز کردید",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "قرص شماره {pillSheetGroupSequentialLastTakenPillNumber}",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "شروع از شماره",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "اضافه",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "اضافه کردن ورق قرص",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "در حال استراحت از قرص",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "اگر قرص که امروز باید مصرف شود مصرف شده باشد\n\"نمی‌توان \"استراحت مصرف\" کرد.",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "داروهای خود را متوقف کرده‌اید",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "ویرایش تاریخ شروع استراحت دارو",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "به دوستان بگویید",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "شرایط استفاده",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "سیاست حفظ حریم خصوصی",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "در کلیپ بورد کپی شد",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "اعلان {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "زمان اطلاع رسانی",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "به {tz} تغییر کرد",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "تغییر شروع روزهای مصرف",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "تغییر پایان روزهای مصرف",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "بروز رسانی از طریق جایگزینی ورق قرص امکان پذیر نیست شناسه: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "دریافت اطلاعات تاریخچه مصرف دارو ناموفق بود. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "انصراف از مصرف",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "نوشتاری که حذف شده است قابل بازیابی نیست.",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "ویرایش دوره قاعدگی",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "تغییر شماره قرص",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "کاهش {offPercent}٪ نسبت به قیمت ماهیانه معمولی",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "با ثبت نام پریمیوم، همچنان می‌توانید از تمام ویژگی‌ها استفاده کنید.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "خرید در {countdown} با {offPercent}% تخفیف",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "زمان یادآوری مصرف را به {value} تنظیم کردم",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

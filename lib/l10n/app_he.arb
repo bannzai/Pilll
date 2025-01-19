@@ -1,0 +1,2281 @@
+{
+  "@@locale": "he",
+  "pillSheetType21With7Placebo": "סוג 21 טבליות (7 טבליות פלסבו)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "סוג של 28 כדורים (4 כדורי כוזב)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "סוג 28 טבליות (7 טבליות פלצבו)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 כדורים סוג (כל הכדורים הם כדורים אמיתיים)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "סוג של 24 כדורים (כל הכדורים הם כדורי עבודה)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "סוג של 21 כדורים (כולם תרופות אמיתיות)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "סוג של 24 כדורים",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "הפסקת תרופה",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "סמים מזויפים",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "משתמש לא נמצא",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "כבר קיים משתמש",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "היסטוריית נטילה",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "הגדרות",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "חשבון",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "בעת שינוי מכשיר או אובדן טלפון, יש צורך בהרשמה לחשבון לשם העברת נתונים ושחזור.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll פרימיום",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "תקופת פונקציות ללא הגבלה",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "מנהל גלולות",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "התראה",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "ווסת",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "אחר",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "שאלות נפוצות",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "הצגת תכנים חדשים",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "יצירת קשר",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "מחק",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "מחק",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "מחק משתמש",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "אני מוחק את היומן",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "האם אתה בטוח שברצונך למחוק את תקופת הווסת?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "הוספת זמן הודעה",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "האם לסנכרן עם אזור הזמן של המכשיר ({deviceTimezoneName})?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "האזור הזמן שהוגדר כעת",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "כן",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "לא",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "לגבי ביטול",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "התראה על נטילת כדורים",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "התראת נטילה",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊 זה הזמן",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "העתק מידע דיבוג",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "ביטול",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "התנתקות",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "הוספה אוטומטית של קבוצות לוח תרופות",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "כשהקבוצת גלולות הנוכחית תסתיים, מערכת תוסיף אוטומטית דף חדש.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "הגדרות חשבון",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "מחובר",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "לא רשום",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "רישום מהיר",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "ניתן לראות את התרופה שצריך לקחת היום במסך ההודעה, ולתעד את לקיחת התרופה באותו רגע.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "שיתוף פעולה עם בריאות",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "ניתן לרשום אוטומטית את רישומי המחזור שנרשמו ב-Pilll בבריאות.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "לראות את תוכנית הפרימיום",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "שינוי מספר הכדורים שיש לקחת היום",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "לְהַשְׁמִיד כָּל הַמַּדָּע בַּשִּׁיטָה",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "האם אתה {doing}?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "כעת מוצג",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "כל טבלת תרופות",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "יושלכו",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "למחוק",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "ניגשתי לזרוק את כרטיסית כדורי הסם.",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "על מחזור חודשי",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "אנא בדוק את מספר הכדור ביום הראשון של המחזור שלך. מספר הכדור שנבחר לא קיים בסוג גיליון הכדורים שנבחר.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "התאמת התראות לנטילה",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "ניתן להתאים אישית את {x}",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "תודה על שיתוף הפעולה",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "המחשבות שלך יועמדו לשימוש כדי לשפר את האפליקציה בעתיד.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "לסגור",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "רישום חשבון",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "התחברות מחדש",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "עדכנו את המידע לזיהוי",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "מעודכן מידע אישור",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "נרשמת באמצעות {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "להתחבר",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "לבטל חברות",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "נרשם להסרה",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "היישום ייסגר לסירוגין. במקרה שברצונך להתחיל מחדש, אנא הפעל את היישום מחדש ובצע את ההגדרות הראשוניות.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "אוקי",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "שינוי מספר הגלולה",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "שינוי",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "כדורים",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "לוח שנה",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "מידע המשתמש יימחק",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "כאשר תבטל את המנוי, כל הנתונים יימחקו ולא תוכל להיכנס מחדש עם אותו חשבון.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "דף ההקלטה",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "יש להיכנס שוב למערכת",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "אנא התחבר מחדש לאישור הזהות שלך לפני שאתה מתנתק. לאחר התחברות מחדש, תהליך ההתנתקות יחל אוטומטית.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "אתה מתחבר מחדש כדי לעדכן את פרטי האימות שלך.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "דף מחזור",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "דף לוח השנה",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "עמוד ההגדרות",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "המועד של המחזור הוסרה",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "עריכת תקופת המחזור",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "שיניתי את משך התקופה",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "פרטי מצב בריאותי",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "הצפייה מעבר לכך תהיה פונקציה פרימיום",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "לראות במפורט",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "ראה עוד",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} כדור",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} מספר",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}מספר",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} מספרים",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "בחרת תאריך התחלה לחופשה לקחת תרופות",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "בחר תקופת הפסקה של נטילת התרופות",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "תאריך התחלת הפסקת נטילה",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "תאריך סיום הפסקת לקיחה",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "סיום דף הגלולות",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "השמדת גיליון התרופות",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "זמן נטילה",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "היסטוריית נטילה היא תכונה פרימיום.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "כאשר מפסיקים לקחת, מספר הגלולה לא זז",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "האם אתה מפסיק לקחת את התרופה מ-{number}?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} מספר",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "נטילה",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "הכדור האחרון בשדה הקודם: {estimatedEndPillNumber}",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "הוסף גיליון תרופות",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "נלקח",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "לא נלקח",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "הגדרת סלית המרשמים",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "אחרי שלא לקחתי את הכדורים שלי להיום",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "יום חופש מנטילת תרופות",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "שינוי תאריך התחלה של הפסקת השימוש",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "תקופת ההפסקה של נטילת התרופה הסתיימה",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "שנה את מספר ימי השימוש של הגלולה",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "שיניתי את המספרים של ההתחלה והסוף",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "תחילת ימי הנטילה",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "היום האחרון בשקית הקודמת: יום מספר {beforePillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "סוף ימי לקיחת התרופה",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "שנה מספר",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "מצב תצוגה",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "תצוגת תאריך",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "מספר כדור",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "מספר ימי נטילה",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "מספר ימי נטילה (מחזור)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "תהליך תרופת השולחן הסתיים",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "אמת את התאריך האחרון בו נטלתי את התרופה",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "אנא הירשם לחשבון",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "לא ניתן להעביר את הפונקציות הפרימיום בעת שינוי מכשיר או אובדן הטלפון",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "תוכלו לחוות מחדש את הפונקציות הפרימיום במשך 14 יום! לְהַקֶשׁ על מנת לשתף ברשתות החברתיות!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "איפה תרצה לשתף?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 הפסקת שימוש ביום {day}",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "יום {word}",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} ימים",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "עוד {diffPlusOne} ימים עד לתקופת {activePillSheetPillSheetTypeNotTakenWord}",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "אתה יכול להשתמש בכל הפונקציות במשך {diff} ימים נוספים.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 היום לקחת",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 הכדור ששותים היום",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "מספר",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "תעדתי את תחילת המחזור מ-{DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "תאריך תחילת הווסת",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "תאריך סיום המחזור",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "תאריך הצפוי של המחזור",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "תאריך הווסת הבא: {diffPlusOne} יום",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "מחזור צפוי: {diffPlusOne} יום של {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "עוד {diff} ימים",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "יום {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "רישום מחזור",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "היסטוריית מחזור",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "היום מתחילה המחזור",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "המחזור התחיל אתמול",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "בחר תאריך תחילת מחזור",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} יום מחזור",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "התחברות",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "לפני רישום פרימיום...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "אם עדיין לא התחברת ל-Pilll, תיווצר לך חשבון חדש.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "כאשר אתה נרשם לחשבון, תוכל להעביר את הנתונים שלך.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "אנא הרשמו לחשבון כדי לשמור מידע על החשבון.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "התחבר עם {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "הרשמה עם {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "מנוי Pilll פרימיום הושלם",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "תודה על ההרשמה שלך!\nכל הפונקציות זמינות כעת!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "עכשיו במחיר מיוחד שאפשר להשתמש בו לנצח",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "מנוי חודשי רגיל",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "מנוי שנתי",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/שנה",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/חודש",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "מנוי הפרימיום מתחדש באופן אוטומטי כל חודש או כל שנה, מתחילת המנוי.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "הצגה לפי החוק לעסקים מיוחדים",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "אנא בדוק את זאת ורשום את עצמך",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "החוזה יתחדש אוטומטית אלא אם כן תבטל אותו 24 שעות לפחות לפני תאריך הסיום של תקופת המנוי לפרימיום.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "לאחר רכישה, תוכל לבטל את חידוש המנוי בהגדרות החשבון של האפליקציה {storeName}. (לא ניתן לבטל את חידוש המנוי מתוך האפליקציה).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "לפרטים נוספים כאן",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "שחזורים פרטי רכישה",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "כאן עבור מי שכבר רכש בעבר",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "לא נמצאו מידע על רכישות קודמות. אנא בדוק את החשבון שלך וננסה שוב.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "מנוי חודשי",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/חודש",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "אתה חבר פרימיום",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "תודה על השימוש שלך.\nבעזרתך אנחנו יכולים להמשיך להפעיל את אפליקציית Pilll.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "רשימת תכונות פרימיום",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 רישום נטילת תרופות מהודעות דחיפה",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 תיעוד וצפייה בהיסטוריית נטילה",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 הצגת תאריך על דף הפיל",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 מילוי אוטומטי של דפי גלולות חדשים",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 צפייה בנתונים קודמים",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 התאם אישית תגיות מצב הגוף",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 הסתרת פרסומות",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "לראות את פרטי הפונקציות המיוחדות",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "פופולריות של תכונות",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "ראה תכונות פרימיום",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "מצב התצוגה של מספר ימי השימוש (מחזור) נוסף.",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "ראה פרטים",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "התראה על שכחת לקחת את הפיל",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "על ידי הגדרת מספר תזכורות תוכלו למנוע שכחה של נטילת כדורים",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "ו",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "קרא ובצע שימוש",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "הבא",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "הודעה {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "ניתן לתעד את השימוש דרך ההודעות",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "להתחיל את האפליקציה",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "נכנסתי באמצעות {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "לגבי הגלולה שהומלץ עליה, אנא ספר לי.",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "אם כבר יש לכם חשבון, לחצו כאן",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "היום ({todayString})\nלחץ על מספר הפיל שנלקח/ליטול",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "עדיין לא ידוע",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "הגלולה שיש לקחת היום {today}",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "תצוגה מקדימה",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "נָמוּךְ",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "שכחת ליטול",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "הצגת תאריך",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "הצג מספר",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "הצג טקסט הסבר",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "כותרת",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "הודעה",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "אפשרויות",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "הושלם",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "פילל",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "אתה יכול לשנות את נוסח ההודעה במקרה ששכחת ליטול את הכדורים.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "ניתן לשנות את החלק הקדמי של ההודעה",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "אנא הכנס טקסט של 0 תווים ומעלה",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "אתה יכול לשנות את נוסח ההתראה במקרה שלא שכחת ליטול את הכדורים.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "לקבל התראה היום בשעה 9:00",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "שמור",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "מצב בריאותי",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "יומנים שנמחקו אינם ניתנים לשחזור",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "מין",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "הקבוצת גיליון הכדורים הקודמת",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "קבוצת גיליון הכדורים הקודמת עדיין אינה קיימת.",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "אִישּׁוּר לִקָּחוֹת הֵבֵּיָר הֶחָמָר שֶׁלָּקַחַתי מִכְּשָׁלַת {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "לראות שאלות נפוצות",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "רענן את המסך",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "אם הבעיה לא נפתרה, לחץ כאן",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "אנא שתף את דעתך על Pilll",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "החלטה",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "אם תרצו, אנא עזרו לנו על ידי משתתפות בסקר לשיפור השירות.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "שתף פעולה",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "לא",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "סקר שיפור שירות",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "מרוצה",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "לא מסופק",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "לפי מספר",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "כמה ימים הנשיואה? ",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "המחזור נמשך ימים",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "לחץ על מספר הכדור כשמתחילה הווסת",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "דף {number}",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "התחלת גיליון כדורים חדש ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "בחר את סוג הכדור",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 כדורים",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 כדורים",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 טבליות",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 כוכבים + 7 ימי הפסקה",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 טבליות + 4 טבליות פלסבו",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 כדורים + 7 כדורי פלסבו",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "כל התרופות אמיתיות",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 כרטיסים + 4 כרטיסים חופשה ",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "בחר את סוג הכדור",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} התראת תקופה",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "אם ההודעה מעוכבת, תיעשה גם הקלטת המידע על תקופת השימוש {pillSheetPillSheetTypeNotTakenWord} באופן אוטומטי.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "בקשת שיתוף פעולה בסקר לאחר ביטול המנוי",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll אפליקציה להזReminder למינון באופן מיוחד",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "הגעת למגבלה העליונה שניתן לרשום. אנא שמור על {ReminderTimeMaximumCount} פריטים או פחות.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "שעת ההודעה דורשת מינימום {ReminderTimeMinimumCount} הודעות",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "אירעה שגיאה בלתי ידועה. אנא המתן וחזור על הניסיון מאוחר יותר. אם הבעיה נמשכת, פנה אלינו דרך הגדרות > פניות. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "שגיאה התרחשה ב-{storeName} . נא המתן מעט ונסה שוב",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "הקנייה במכשיר זה אינה מורשית",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "ההצלחה בתשלום נכשלה. אנא בדוק שוב אם שיטת התשלום שלך תקפה.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית הרלוונטית אינה זמינה למכירה כיום. אנו מתנצלים, אך אנא הפעל מחדש את האפליקציה והניסיון שוב.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "כבר רכשת את התוכנית. אם ברצונך לשחזר את מידע הרכישה במכשיר זה, אנא שחזר את מידע הרכישה דרך \"כאן עבור קונים קודמים\".",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "כבר נרכש. המידע על הרכישה נמצא בשימוש על ידי משתמש אחר. אנא בדוק את {accountName}.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "מידע רכישה לא תקין. אנא בדוק את מידע הרכישה.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "אין מידע על הרוכש. אנא התחבר במכשיר עם {accountName} וניסיון זה.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "מְדִינַת הַרְשָׁמָה הִיא בְּמַצָּב שֶׁל חֲסָרוּת סָבִירָה. אֲנָא בְּקָשָׁה לוודא אֶת מַצָּב הַחִבּוּר וְלִנְסוֹת שֵׁנִית.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "הקנייה נכשלה. אנא המתן והנסה שוב. אם הבעיה נמשכת, צור קשר דרך הגדרות > פניות. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "הקנייה לא אפשרית כרגע. אנא המתן וחזור לנסות מאוחר יותר. אם הבעיה לא נפתרה, פנה אלינו דרך הגדרות > פנייה. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "מידע רכישה בשימוש על ידי משתמש אחר. אנא בדוק את {accountName} מחובר למכשיר.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "לא ניתן היה לאמת את המשתמש. נא צאו מהאפליקציה ונסו שוב. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "תהליך הרכישה מתבצע בנפרד. אנאודא את המידע שוב לאחר מכן.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "כעת אין אפשרות לרכוש. אנא נסה שוב לאחר חצי שעה. אם הבעיה לא נפתרה, אנא פנה אלינו דרך הגדרות > פניות. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "הק purchases לא הצליחו. אנא המתן ומנסו שוב. אם הבעיה לא נפתרת, אנא פנה אלינו דרך הגדרות > פניות. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "נכשל בחpurchase של משתמש שלך. אנא המתן והנסה שוב. אם הבעיה נמשכת, אנא פנה באמצעות הגדרות > יצירת קשר. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "אינך יכול להצטרף לתוכנית עם {accountName} שלך. אנא בדוק את פרטי התשלום שלך ונסה שוב.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "התשלום נעצר באמצע. אנא בדוק את {storeName} בעזרת {accountName} המחובר.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "הקנייה נכשלה. אנא המתן והנסה שוב. אם הבעיה נמשכת, פנה אלינו דרך הגדרות > פניות. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "לא הצלחנו להשיג מידע על המשתמש. אנא נסה שוב אחרי זמן מה. אם הבעיה לא נפתרת, אנא צור קשר דרך הגדרות > פניות. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "נכשל בהשגת מידע רכישה. אנא המתן זמן מה ונסה שוב. אם הבעיה נמשכת, אנא פנה אלינו דרך הגדרות > פניות. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "שגיאה לא ידועה. אנא עדכן לגרסה האחרונה ונסה שוב. אם הבעיה לא נפתרת, אנא פנה אלינו דרך הגדרות > פנייה. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "שגיאה לא ידועה. לא הצלחנו להשיג את מידע הרכישה מראש. פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "שגיאה בלתי ידועה. נא עדכן לגרסה האחרונה ונסה שוב. אם הבעיה לא נפתרת, אנא פנה אלינו דרך הגדרות > פניות. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "שגיאה ללא סיבה ידועה. אנא עדכן לגרסה האחרונה ונסה שוב. אם הבעיה נמשכת, פנה אלינו דרך הגדרות > פנייה. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "שגיאה בלתי ידועה. אנא עדכן לגרסה האחרונה וניסה שוב. אם הבעיה לא נפתרת, אנא צור קשר דרך הגדרות > פניות. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "כישלון בקבלת מידע על הלקוח. אנא המתן והנסו שוב. אם הבעיה לא נפתרה, פנו אלינו דרך הגדרות > פנייה. פרטים: קוד: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "יש בעיה בהגדרות המכשיר. אנא בדוק ונסה שוב. אם זה לא מתמגן, פנה אלינו דרך הגדרות > פנייה. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "תהליך ההחזר מתחיל. אנא בדוק ונסו שוב. אם זה לא מתקן את הבעיה, אנא פנה אלינו דרך הגדרות > פניות. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "זמן ההתקשרות לא היה זמין. אנא בדוק את סביבת התקשורת שלך ונסה שוב. אם הבעיה נמשכת, אנא פנה אלינו דרך הגדרות > פניות. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "שגיאה לא ידועה. אנא עדכנו לגרסה האחרונה ונסו שוב. אם הבעיה נמשכת, אנא פנו אלינו דרך הגדרות > פניות. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "שגיאה ללא סיבה ברורה. אנא עדכן לגרסה החדשה ביותר ונסה שוב. אם הבעיה עדיין לא נפתרה, צור קשר דרך הגדרות > שאלות. קוד: {errorCode} פרטים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "בְּהַצְּגָה מַעֲבְרָה. נא לבדוק את סביבת התקשורת ולנסות שוב. אם הבעיה נמשכת, אנא פנה אלינו דרך הגדרות > פניה. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "אנא עדכן את האפליקציה",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "אנאעדכן את גרסת האפליקציה שלך. עדכן לגרסה האחרונה מ-{storeName}.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "פגישה אצל רופא",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "לקבל הודעה בשעה 9:00 של אותו יום",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "לא ניתן לשחזר את ההתוכניות שנמחקו",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "נמחק את התוכנית",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "אנו תומכים רק באפליקציית iOS",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "אינך יכול להשתמש במכשירים שאינם תומכים בבריאות",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "אנא הפעל את הבריאות מהאפליקציה של ההגדרות",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "החשבון {accountTypeProviderName} כבר מחובר לחשבון Pilll שלך. אנא נסה לעדכן את המסך. אנא עיין בשאלות הנפוצות. פרטים: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "חשבון {accountTypeProviderName} זה כבר מחובר לחשבון Pilll אחר, ולכן אינו יכול להירשם. אנא עיין בשאלות הנפוצות. פרטים: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "אינך יכול להירשם מכיוון שהדואר האלקטרוני שלך משויך כבר לחשבון Pilll אחר עם סוג החשבון {accountTypeProviderName}. אנא עיין בשאלות נפוצות (FAQ) לקבלת מידע נוסף. פרטים: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "התוכנית להיום",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "תוכנית בדלפק",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "היום מתחיל גיליון חדש",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 היום מתחיל דף חדש \nאל תשכחו לקחת👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "לא נמצאה מידע פרימיום",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "הפעלה של התשלומים אינה הושלמה. אנא המתן קצת זמן ואז בדוק שוב.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "שגיאה התרחשה בעת הפעלת האפליקציה\n{ErrorMessagesConnection}\nפרטים:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "למשל, אם לא נלקח תרופה מ-1/12 במשך 3 ימים",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "למשל \"ממספר 18 הפסקת לקחת במשך 3 ימים\"",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "מספר {number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "לא נמצא גיליון הפיל הנוכחי",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "לא ניתן לבטל את פעולת נטילת הכדורים במהלך תקופת הפסקת השימוש.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "חשבונך של גוגל",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "רישום יומן",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "מלא את התוכנית",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "עדיין אין קבוצת גיליון כדורים קודמת",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} כרטיסים",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "נראה כי הסביבה התקשורתית לא יציבה. אנא נסה שוב לאחר זמן מה.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "חלה שגיאה. אנא המתן והקש שוב.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "שגיאה התרחשה",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "שגיאה לא ידועה התרחשה",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "אירעה שגיאה בלתי צפויה",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "אם מחזיקים את ההתראה, ניתן לתעד את השימוש",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "אנא נסו זאת",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "כל הפונקציות זמינות במשך {number} ימים!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "הזן והוסף",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "מחזור ממוצע",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "מספר ימים ממוצע",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "יום",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "הערה",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "עדכון נכשל. אנא בדוק את תנאי התקשורת שלך ונסה לשנות שוב",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "כאבי ראש",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": " כאב בטן",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "בחילה",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "אנמיה",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "שלשול",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "עצירות",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "עייפות",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "כאב גב",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "דפיקות לב",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "דימומים לא תקינים",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "חוסר תיאבון",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "כאבים בחזה",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "חוסר שינה",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "אנא קחו הפסקה. אם ברצונכם להפסיק את השימוש ביום אחר היום, אנא השתמשו במידע למטה.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "לראות כיצד להשתמש בתכונת חופשת הנטילה",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "התחלת הפסקת לקיחה",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "שיניתי את ימי ההפסקה של הכדורים",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "ערוך תקופת הפסקת השימוש",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "שנה את מספר ימי השימוש",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "מקום {begin} ~ {end}",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "חידוש נטילה",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "שינוי תקופת הפסקת השימוש",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "שיניתי את תקופת ההפסקה של התרופת",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "שיניתי ל{date}",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "ייתכן שההקלטה של נטילת התרופה נכשלה",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "אנא פתח את האפליקציה ואמת את המידע.",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "נלקח",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "להפסיק ליטול",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "התחלתי הפסקת נטילה",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "המספר {pillSheetGroupSequentialLastTakenPillNumber}",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "התחל מהמספר",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "הוספה",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "הוסף לוחית גלולות",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "נמצאים בפסק זמן מהנטילה",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "אם נטלת כבר את הכדור שצריך לנטול היום,\nלא ניתן לעשות \"הפסקה בנטילה\"",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "הפסקנו את נטילת התרופה",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "עריכת תאריך התחלה של הפסקת נטילת תרופות",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "לְהוֹעִיל לְחֲבֵרִים",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "תנאי שימוש",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "מדיניות פרטיות",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "העתקתי ללוח הזמנים",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "הודעה {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "זמן הודעה",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "שודרג ל-{tz}",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "שנה את תחילת מספר הימים של לקיחת התרופה",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "שינוי סוף ימי נטילה",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "לא ניתן לעדכן בגלל החלפת גיליון כדורים id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "כישלון בהשגת מידע על היסטוריית נטילת התרופות. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "ביטול נטילה",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "היומנים שנמחקו לא ניתנים לשחזור",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "עריכת תקופת המחזור",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "שינוי מספר כדור",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "ב comparison to the regular monthly fee {offPercent}% הנחה",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "ההרשמה לפרימיום מאפשרת להמשיך להשתמש בכל הפונקציות.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "%{offPercent} הנחה לרכישות בתוך %{countdown}",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "הזכרתי ל{value}",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}

@@ -1,0 +1,2281 @@
+{
+  "@@locale": "ky",
+  "pillSheetType21With7Placebo": "21 таблетка түрү (7 таблетка жасалма)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 таблетка түрү (4 таблетка жасалма)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 таблетка тиби (7 таблетка жасалма)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 таблетка түрү (бардыгы чыныгы дары)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 таблетка түрү (бардыгы реалдуу дары)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 таблетка түрү (бардыгы чыныгы дары)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 таблетка тип",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "Дем алу",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "жалған дәрі",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "Користуучу таба албайбыз",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "Ушул убакта колдонуучу бар",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "Эмдөө менен байланыштуу маалымат",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "Настройка",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "Аккаунт",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "Учууну алмаштырган кезде же смартфонду жоготкон учурда, маалыматты өткөрүп берүү жана калыбына келтирүү үчүн аккаунтту каттоо керек.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "PilllPremium",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "Функция чектери жок мөөнөт жөнүндө",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "Пилл пара",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "Эскертүү",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "Менструация",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "Башка",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "Сурак-жооптор",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Жаңы функцияларды тааныштыруу",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "Байланышы",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "Жою",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "Жойуу",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "Колдонуудду жоготуу",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "Журналды өчүрөм",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Сиз менструация мезгилин көзөмөлдөөнү жок кылгыңыз келеби?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "Эскертүү убактысын кошуу",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "Сиз терминалдын убакыт мөөрүнө ({deviceTimezoneName}) синхрондоштурабызбы?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "Учуралган учурдагы убакыт поясы",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "Ооба",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "жок",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "Ток томоосу жөнүндө",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "Пилдерди колдонуу тууралуу билдирүү",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "Дарыны эскертип",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊 убактысы",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "DEBUG МААЛЫМДАРЫН НЫГЫЗ",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Болтуруш",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "Чыгуу",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "Пил листтеринин топтому автоматтык кошуу",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "Эми уланткан паста группасы акырына чыкса, жаңы паста автоматтык түрдө кошулат.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "Аккаунтту тууралоо",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "Бириккен",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "Катталган эмес",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "Тез запист",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "Бүгүн ичүүгө тийиш болгон таблеткаларды билүүгө жана ошол бойдон кабыл алуу тарыхын жазып алууга болот.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Саламаттыкка камтуу",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Pilll менен жазылган менструация жазууларыңызды автоматтык түрдө HealthCareге жазып коюуга болот.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "Премиум пландын көрүүсү",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "Бүгүн ичүүчү пил номерин өзгөртүү",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "Бардык таблеткаларды жок кылуу",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing} үчүнбү?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "Кыргыча көрсөтүлүп жатат",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "Бардык таблетка парактары",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "жок болот",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "Жойгулоо",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "Пилдик таблицаны жок кылдым",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "Менструация жөнүндө",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "Менструациянын башталуу күнү үчүн пил номерин текшериңиз. Азыркы учурда тандалган пил баракча түрүндө жок пил номерлери коюлган.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "Дарыны билдирүүлөрүн жөндөө",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "{x}ны жекелештирип алууга болот",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Сиздин көмөгүңүз үчүн рахмат",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "Сизден алган пикирлерди мындан ары жакшыртууга колдонобуз.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "Жабуу",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "Тиркеме каттоо",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "Кайра кириш",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "Аутентификация маалыматтары жаңыртылды",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "Маалыматтарды жаңыртат",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "{accountTypeProviderName} менен катталган",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "Байланыш",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "Чыгуу",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "Жазылымдан чыктым",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "Приложение токтосузуп кетет. Экирет баштош үчүн, тиркемени кайра иштетип, баштапкы жөндөөлөрдү жасаңыз.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "ОК",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Пилл номери өзгөртүү",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "Өзгөртүү",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "Дары",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "Календарь",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "Коллоргулар жоюлатат",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "Эгер сиз каттоодон чыксаңыз, бардык маалыматтар жок болот жана ошол эле аккаунтка кайра кирүү мүмкүнчүлүгү болбойт.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "ЖазылуБаракчасы",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Кайра кириңиз",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "Чечимдиктен мурун, жеке өзүңүздү ырастоо үчүн кайра киришиңиз керек. кайра киргенден кийин, автоматтык түрдө чечимдерди өчүрүү иши башталат.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "Кайра логин болуп, аныктама маалыматтарды жаңыртыңыз.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "МенструацияБет",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "Календарь",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "Буулмаларды ордундаштыруунун беттөө учуру",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Менструация учурун жок кылдын",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "Менструалдык мезгилди түзөтүү",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "Менструалдык мезгилин өзгөрттүм",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "Көңүл абалы жөнүндө маалымат",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Бул мүмкүнчүлүктөрдү көрүү Premium функциясы болот.",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "Төмөнкү маалыматты жакшылап караңыз",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "Көбүрөөк көрүү",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} номер",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} номер",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} номер",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} номер",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} номер",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} саны",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} номер",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} саны",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Дары өтпөй турган күндү тандоо",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "Дарыны уюштуруу учурун тандаңыз",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "Эс алууну убагынын башталгычы",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Дарыны колдонуу убагынын аяктаган күнү",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "Пиллистин аяктады",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "Пилл жетегин таштоо",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "Дарыны убактысы",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "Дарыя иштетүү тарыхы премиум функция болуп саналат.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Эгер препараттарды кабыл алууну токтотсоңуз, препарат номери илгерилебей калат.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "{number}дан баштап дарыларды ичпей турасызбы?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} номур",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "өткөрүү",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "Предыдущий листтин акыркысы: {estimatedEndPillNumber}-сан",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Пилл лоток кошуу",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "Иче",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "Эчпей жатам",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "Пилдик тилкелерин орнотуu",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "Бүгүн ичүү үчүн пландалган таблетканы ичпей калгандан кийин",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "Дарыны унутуп калуу",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "Дарыкты баш тартуу күнү өзгөртүү",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "Жайкы кайра басуу мөөнөтү аяктады",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "{VAL} күндү өзгөртүү",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "Башталыктын жана аягынагы номерлерди алмаштырдым",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "Эмделүүнүн башталыш күнү",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Soŋkuŋãn ĩşus şitinin aqırı: {beforePillSheetGroupSequentialEstimatedEndPillNumber}-kün",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "Дозалган күндөрдүн аягы",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "номерди өзгөртүү",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "Көрсөтүү режими",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "Күн датасы",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "Пилл номери",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "Эмчүүддүн күндөрү",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "Уруктун узактыгы (цикл)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "Пилдик парагы аякталды",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "Акыркы жолу ичкен күндү текшерүү",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "Акаунт каттоосуз",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "Мобилдик колдонмонун премиум функцияларын смартфонду өзгөртүүнүн же жоготуунун учурунда өткөрүп бере албайсыз.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "14 күн премиум функцияларын кайрадан таап аласыз! SNSке бөлүшүүгө басыңыз!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "Кайда бөлүшөсүз?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 Дарык унутуп алган {day}-күн",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} күн",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}-кун",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "{diffPlusOne} күндүн ичинде {activePillSheetPillSheetTypeNotTakenWord} мезгили.",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "{diff} күн калганда бардык функцияларды колдоно аласыз",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Бүгүн кабыл алуу",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 Бүгүн ичүүчү пил",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "номер",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}дан башталды",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Эмчилгээ башталган күн",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "Айкөргөч күнү",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "Менструациядын пландалган күнү",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "Менструация күтүлүүдө: {diffPlusOne}-кү",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Менструалдык планда: {diffPlusOne}-күнү {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff} күн калды",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} күн",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Менструацияны каттоо",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "Менструалдык тарых",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "Бүгүн менструация башталат",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "Кечеден баштап менструация",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "Менstruatsiyanyн башталыш күнүн тандаңыз",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} күндүк цикл",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Кирүү",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "Premium катталыка катталарыңыздан мурун…",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "Эгер сиз Pilllге кызыкпаган болсоңуз, жаңы аккаунт түзүлөт.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "Эсеп жазгандан кийин маалыматтарды өткөрүп берүү мүмкүн болот",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "Акаунт маалыматтарын сактоосу үчүн, рахимдүү түрдө аккаунтту каттоону өтүнөм.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "{loginName} менен кирүү",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "{loginName} менен катталу боюнча",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll премиум каттоосу аякталды",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "Рахмат каттоо. Бардык функцияларды колдонууга мүмкүнчүлүгүңүз артты!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Эми чектелген баа менен дайыма колдоно аласыз",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "Тартипте айына төлөнүүчү план",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "Жылдык план",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/жыл",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/ай",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "・Премиум келишим мезгили башталыш күнүнөн тартып 1 ай же 1 жылга автоматтык түрдө жаңартыла турган болду.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Спецификация боюнча биринчи соода келишими",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "Булду текшериңиз жана катташыңыз",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "Жеткирүү мөөнөтү аяктаганга 24 саат калганда токтотпостон жакшыртылган келишим автоматтык түрдө жаңыртылат.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "- Сатып алгандан кийин, автоматтык жаңыртууну өзүңүздүн {storeName} колдонмосунун эсептөө жөндөөлөрүндө токтото аласыз. (Колдонмо боюнча автоматтык жаңыртууну токтотуу мүмкүн эмес).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "Толук маалымат үчүн",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "Сатып алу маалыматы калыбына келтирилди",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "Бу уже сатып алган адамдар үчүн бул жакка келип көрүңүз",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "Мурдагы сатып алу маалыматтары табылган жок. Тиркемеңизди текшериңиз жана кайра аракет кылыңыз.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "Айлык план",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ай",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "Сиз премиум мүчөсүңүз",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "Сиздин колдонгонуңуз үчүн рахмат. Сиздин жардамыңыз менен Pilllдин ишин уланта алдык.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "Премиум функциялардын тизмеси",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 Чиктирүү жазуулары аркылуу кабыл алуу",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 Дары кабыл алуу тарыхын жазып алуу жана көрүү",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 Дата көрсөтүү пил шитинде",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 Жаңы пил листин автоматтык түрдө толтуруу",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 Өткөн маалыматтарды көрүү",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 Ден соолук тагын колдонмо",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 Жарнамалардын көрсөтүлбөөсү",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "Премиум функцияларынын детализдөөсүн көрүү",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "Популярдуу функциялары",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "Premium функциясын көрүү",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "Көрсөтүү режимине таблеткалардын жумуш күнү (цикл) кошулду.",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "Түшүнүк алууга",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Пилди ичүүнү унутуп калуу жөнүндө эскертүү",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "Бир нече параметрди орнотуп, унутуп калууну алдын алсаңыз болот.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "жана",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "Окуп алгыла",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "Кийинки",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "билеттер {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "\nЭскертүү аркылуу таблеткаларды колдонуу жөнүндө жазып алсаңыз болот /",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "Программаны баштоо",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "{accountTypeProviderName} менен кирди",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Белгилей турган лист уруксат жөнүндө маалымат бериңиз.",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "Эгерде сизде мурунтан экинчи аккаунт болсо, анда мында",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "Бүгүн({todayString})\nИчүүчү же ичкен пилдин номерин тийкун",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "билишке маалымат эмес",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "{today}da içilmeli bol",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{бүгүнкүПиллердинСаныПилЛистиндегиПиллердинСаны}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "Көрсөтүү",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "Жалпысынан",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "Унутаркы ічмей",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "Күндү көрсөтүү",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "Номерыны көрсөтүү",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "Тасмалды көрсөтүү",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "Тайтл",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Билдеттер",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "Опциялар",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "Туулар",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Пилл",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "{VAL} эси унутуп калганда билдирмени өзгөртө аласыз",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "Эскертүү башындагы бөлүгүн өзгөртө аласыз",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "0 таңба же андан көп киргизиңиз",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "{VAL} албаган эместик учурда билдирүүнү өзгөртө аласыз",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Күнү 9:00 да билдирүү алууга",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "сақтоо",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "илим",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "Жок кылынган күндөлүк кайра калыбына келтирилбейт",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "жаш",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "Ушунчу пил шитинин топтому",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "Өткөн пиил таблицасы группа дагы жок",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "Дарыны алуу тарыхы боюнча маалыматты алуу мүмкүн болбой калды. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "Часто берилген суроолорду көрүү",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "Экранды кайра жүктөө",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "Эгер маселени чечпей турган болсоңуз, бул жерди чыкылдатыңыз",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Pilll жөнүндө пикирлериңизди айтып бериңиз",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "Танд",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "Эгер мүмкүн болсо, кызматтарды жакшыртуу үчүн суроо-тестке катышууга жардам берип койсоңуз.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "Коомектешүү",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "жок",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "Кызматты жакшыртуу боюнча анкета",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "Канааттанам",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "Канат эмес",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "номерлүү",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "Эмчлер күнүнө канча күнү бою? ",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "күн сайын менструация уланат",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "Менструация башталган таблетканын номерин басыңыз",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number}-барак",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "Жаңы пил листи баштоо ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "Дарынын түрүн тандаңыз",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 таблетка",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 таблетка",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 таблетка",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 таблетка + 7 күн тыныгуу",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 таблетка + 4 таблетка плацебо",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 таблетка + 7 таблетка препарат",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "бардык чыныгы дары",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 таблетка + 4 таблетка тыныгуу",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "Пилдин түрүн тандаңыз",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} мезгилдин билдирүүсү",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Эгер билдирүүлөр өчүрүлгөн болсо, {pillSheetPillSheetTypeNotTakenWord} мөөнөтүндөгү дарыны колдонуу тарыхы автоматтык түрдө түзүлөт.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Токтомунан кийин суроолоруна жардам берүүнү өтүнөм",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll пил алып жүрүүгө арналган пил унуттуруп жибербөө үчүн эскерткүч колдонмосу",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "Тиркеме чегинде жете жетти. {ReminderTimeMaximumCount} билдирүү менен чектелип туруңуз.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Эскертүү убактысы минималдуу {ReminderTimeMinimumCount}件 керек.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "Кансизданып болгон ката келип чыкты. Убакытты күтүп кайра аракет кылып көрүңүз. Эгерде маселе чечилбесе, Настройкалар > Байланыш аркылуу бизге байланышсаңыз болот. Тууралуу: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName} дык каталар пайда болду. Бир аз убакыт өткөндөн кийин кайра аракет кылып дагы көрүңүз.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "Бул түзмөктә сатып алу үчүн уруксат берилген эмес",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "Төлөм болду, бирок сиздин төлөм жолуңуздун туура экенин текшериңиз жана кайрадан аракет кылыңыз",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Учурда көрсөтүлгөн план сатыкка чыкпаган. Сураныч, тиркемени кайрадан иштетип көрүңүз.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Сиз пландын сатып алынганын мурда эле сатып алгансыз. Эгерде бул түзмөктө сатып алуу маалыматын калыбына келтиришиңиз керек болсо, \"Мурда сатып алган адам бул жактан\" бийиктигин калыбына келтиришиңиздер.",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Уже сатып алынган. Мок сатып алуу маалыматы башка колдонуучу тарабынан колдонулууда. {accountName} текшериңиз.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Сатылуу маалыматы туура эмес. Сатылуу маалыматын текшериңиз.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "Сатылып алуучунун маалыматтары жок. {accountName} менен түзмөккө кирип көрүңүз.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Тармак абалы туруктуу эмес. Байланыш статусун текшерип, андан кийин кайра аракет кылыңыз.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Сатып алу ийгиликсиз болду. Убакыт берип кайрадан аракет жасап көрүңүз. Эгер маселе чечилбесе, Настройка > Байланыш аркылуу биз менен байланышууга болот. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": " учурда сатып алууга мүмкүнчүлүк жок. Убакыт өткөндөн кийин кайра аракет жасап көрүңүз. Массалык көйгөй менен кезиккен болсоңуз, жөндөө > Байланыш аркылуу байланышыңыз. Мазмуну: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Сатуу маалыматы башка колдонуучуда колдонула жатат. Устройстваңызга кирип жаткан {accountName} текшериңиз.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Пользовательды тастыктоого жок. Тиркеп апкеме кайра кирип көрүңүз. Тасвир: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Сатып алуу процессу башка жерде улантылып жатат. Жабуу убактысын күтүп, кайрадан текшериңиз.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "Учурда сатып алуу мүмкүн эмес. Кийинки жолу аракет кылуу үчүн убакыт өткөнүн күтүңүз. Эгер маселе чечилбесе, \"Настройка > Байланыш\" аркылуу байланышууга заказ бериңиз. Тиешелүү маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Сатып алууда ийгиликсиз болду. Убакытты өткөрүп, кайра аракет жасап көрүңүз. Эгер маселени чечи албасаңыз, баарыбызга настройка > Байланыш аркылуу байланышсаңыз болот. Тагыраак маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Сиздин колдонуучунун сатып алуусунан баш тартылар. Бир аз убакыттан кийин кайра аракет кылыңыз. Эгер маселеңиз чечилбесе, ушул жайгаштыруучу -> Чакырык аркылуу биз менен байланышсаңыз болот. Анын толук маалыматтары: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Сиздин {accountName} атыңыз менен пландан жазыла албайсыз. Төлөм маалыматтарыңызды текшерип, кайрадан аракет кылып көрүңүз.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Төлөм жарым-жартылай токтоп калды. Кириңиз {accountName} менен {storeName} текшериңиз.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Сатып алууда ийгиликсиз болду. Убакыттан кийин кайра аракет кылып көрүңүз. Эгер көйгөй чечилбесе, параметрлер > Байланыш аркылуу бизге кайрылыңыз. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Колдонуучу жөнүндө маалымат алууну ийгиликсиз жасады. Мына бир аз убакыттан кийин кайра аракет кылып көрүңүз. Эгер чечилбесе, Параметрлер > Байланыш аркылуу биз менен байланышсаңыз болот. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Сатып алуу маалыматтарын алуу ийгиликсиз болду. Убакыт коюп кайра сынып көрүңүз. Эгер чечилбесе, конфигурация > Байланыш аркылуу бизге кайрылыңыз. Түшүндүрмө: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "Туура эмес ката. Соңку версиясына жаңыртып, кайра аракет кылып көрүңүз. Эгер чечилбеседе, Багыт > Байланыш аркылуу биз менен байланышууга болот. Код: {errorCode} Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Алдын ала сатып алу маалыматын ала албай турган белгилүү эмес ката. Подробности: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Анык эмес каталар. Соңку версиясына жаңыртып, кайра аракет кылыңыз. Эгер чечилбесе, Түзөтүүлөр > Байланыштан бизге кайрылыңыз. Код: {errorCode} Майда маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "Белгисиз каталар. Жаңылантуу кылып, кайра аракет кылып көрүңүз. Эгер чечүүгө жетишпеген болсоңуз, Настройки > Байланыш аркылуу бизге кайрылыңыз. Код: {errorCode} Мәліметтер: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Белгисиз каталар пайда болду. Жаңыртууну жасап, кайрадан аракет кылыңыз. Эгер маселе чечилбесе, Настройка > Сураныч бизге кайрылыңыз. Код: {errorCode} Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Кардардын маалыматтарын алуу мүмкүн болбой калды. Кийинки жолу аракет кылуу үчүн убакытты өткөрүңүз. Эгер чечилбесе, Нускалар > Байланыш аркылуу биз менен байланышыңыз. Чоо-жайы: Код: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "Техникалык талаптарда көйгөй бар. Текшерип, кайра аракет кылып көрүңүз. Эгерде көйгөй чечилбесе, Түзөтүү > Бийликке кайрылыңыз. Код: {errorCode} Доо: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "кайтаруу жараяны башталды. Тастыктап, кайра аракет кылып көрүңүз. Эгер көйгөй чечилбесе, жөнөтүү үчүн Түзөтүү > Суроолор аркылуу биз менен байланышыңыз. Код: {errorCode} Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Тайм-аут болду. Байланыш шарттарын текшериңиз, андан кийин кайра аракет жасап көрүңүз. Эгер чечилбесе, параметрлер > Билдирүү бөлүгүнө кирип, байланышкыла. Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "Белгисиз ката. Жаңыртууларды жасап, кайра сынап көрүңүз. Эгер чечилбесе, Түзөтүүлөр > Байланыш аркылуу биз менен байланышсаңыз болот. Код: {errorCode} Толук маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Билимсиз ката. Жаңыртууну жуктуруп алып, кайрадан аракет кылып көрүңүз. Эгер чечилбесе, анда Настройки > Суроолор аркылуу бизге кайрылыңыз. Код: {errorCode} Тулуктоо: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Тармак үзгүрү. Тармак шарттарын текшерип, кайра аракет кылып көрүңүз. Эгер чечилбесе, \"Настройка\" > \"Суроолор\" аркылуу бизге кайрылыңыз. Толугураак маалымат: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Приложениени жаңыртыңыз",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "Сиздин колдонгон тиркеменин версиясын жаңылооңузду өтүнөбүз. {storeName} дан акыркы версиясына жаңылаңыз.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "Клиникага баруу",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "Ошол күнү, саат 9:00дө маалымдаманы алууга",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "Жоюлган пландардын калыбына келтирилбейт",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "Жоспорду жок кылышыбыз керек",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "iOS колдонмосуна гана ылайыктуу",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "Саламаттыкка байланыштуу кызматтарга ылайык келбеген уюлдук телефондордо колдонууга мүмкүн эмес",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "Параметрлердерге кирип, ден соолук күтүүсүн иштетип коюңуз.",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "Бул {accountTypeProviderName} аккаунту сиз колдонуп жаткан Pilll аккаунтуңузга байланган. Экранды жаңыртууну аракет кылып көрүңүз. ЖГ (FAQ) башкалардын суроолорун карап көрүңүз. Толук маалымат: {exceptionMessage}.",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Бул {accountTypeProviderName} аккаунту башка Pilll аккаунтка байлангандыктан каттала албайсыз. Жи Frequently Asked Questions (FAQ) карап алыңыз. Тейлөө маалымат: {exceptionMessage}.",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "{accountTypeProviderName} аккаунтуңуз менен колдонуп жаткан электрондук почта адресиңиз башка Pilll аккаунтуна байланыштуу болгондуктан, катталуу мүмкүн эмес. FAQ'ны карап чыгыңыз. Деталдары: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "Бүгүнкү пландар",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "Календарьдын пландары",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "Бүгүн жаңы баракча башталат",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 Ушул күндөн баштап жаңы жума башталат\nУнутпастан ичип алыңыз👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Премиум маалымат табылган жок",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "{VAL} активациясы аяктаган жок. Бир аз убакыттан кийин текшерип көрүңүз.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "Демейкиндик учурда каталар пайда болду\n{ErrorMessagesConnection}\nТуураланма:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "мисалы, эгер «1/12 ден 3 күнгө» дары ичүүнү токтоткон учурда",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "мысалы, \"18-санадан 3 күн\" медикаментти ичүүнү токтоткон учурда",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} номер",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "Учурда боорукер бирдиктер табылган жок",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "Пиллдерди кабыл алууну токтотуу аракеттери дем алыш убактысы учурунда ишке ашырылбайт",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Google аккаунт",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "Күндөлүк жазып алуу",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "Планды жазуу",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "Ушунчу пилл листи топтому жок",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} даана",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "Сиздин байланыш чөйрөңүз туташ эмес көрүнөт. Убакытты күтүп, кайра аракет кылыңыз.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "Ката кеткенде. Кейин кайра аракет кылып көрүңүз.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "Ката басыңыз",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "Билдирилбеген каталар пайда болду",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "Күтүлбөгөн ката пайда болду",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "Эгер сиз кабарлоонун үстүнөн узак убакыт басып турсаңыз, кабыл алуу тарыхын жазып алсаңыз болот",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "Әйтпесе, сынап көрүңүз",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "{number} күн ичинде бардык функцияларды колдонсо болот!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Кириштирип кошуңуз",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "Орточо мезгил",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "Орточо күндөр",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "күн",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "Эскертуу",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "Жаңыртуу мүмкүнчүлүгү болбой калды. Байланыш чөйрөсүн текшериңиз жана кайрадан өзгөртүүнү аракет кылыңыз.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "баш оору",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "іш оорусу",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "ките",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "Төмөнкү гемоглобин деңгээли же темирдин жетишсиздиги менен мүнөздөлүүчү оорулар.",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "Диарея",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "Запор",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "Уйку",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "腰 ооруу",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "сакат",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "түзүлбөгөн кан",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "ишиндик жок",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "Эмчүүддүн сүүний хаван",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "уйкулук",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "Урун улуу үчүн эс алыңыз. Текшерүү үчүн, ушул күндөн кийин баштап, башка күндөрдүн ичинде таблеткаларды кабыл алууну токтотууну кааласаңыз, төмөнкү маалыматтарды пайдалансаңыз болот.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "Оорууну убагандай функциясын кантип колдонууну көрүү",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "Дарыңызды кабыл алууну убактылуу токтотуу",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "Дозаны Oкутуусун өзгөрттүм",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "Дарыны токтотуу убактысын редакциялоо",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "Дозаларды өзгөртүү",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin}номер ~ {end}номер",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Дары кайра баштоо",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "Дарыны пайдалану үчүн убактылуу өзгөртүү",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "Ылдамдарды убактылуу токтотуу мөөнөтүн өзгөрттү",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date}ге өзгөрттүм",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "Эмдөө жазууларыңыз ийгиликсиз болушу мүмкүн",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Программаны ачып, текшериңиз",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "Уколдуулду",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "приемди токтотуу",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "Дары кабыл алууну убактылуу токтотуу башталды",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} саны",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "Баштап №",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "Кошумча",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "Пилдик стейти кошуу",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "Дары жата турганда",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "Эгер бүгүн ичүүчү пил усталып калса, \"Ичүү жигерделери\" болбойт.",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "Дары ичүүнү токтотту",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Дозаны токто башталган күндү түзөт",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "Досугумдалар",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "Колдонмо эрежелери",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "Жеке маалыматты коргоо саясаты",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "Клипбордго көчүрдү",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "билдирүү {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "Эскертүү убактысы",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz} өзгөртүлдү",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Дозанын санынын башталышын өзгөртүү",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "Дозаларды кабыл алуу мөөнөтүнүн аягын өзгөртүү",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "Пилдик планшетин алмаштыруу боюнча жаңыртууну жүргүзүү мүмкүн эмес id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Дарыны алуу тарыхындагы маалыматты алуу удаа алган жок. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "Дарыны токтотуу",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "Өчүрүлгөн күндөлүктү калыбына келтирүү мүмкүн эмес",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "Менструация маалыгын редакциялоо",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "Пилл номери өзгөртүү",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "{offPercent} пайыз арзандатуу обычный айлыкка салыштырганда",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "Премиум каттоо аркылуу бардык функцияларды уланта аласыз.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} ичиндеги сатып алуулар үчүн {offPercent} % ТИЕШТҮК",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Дарыяның эскертүүсүн {value} кылдым",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}
