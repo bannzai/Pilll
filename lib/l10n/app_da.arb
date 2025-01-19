@@ -2273,5 +2273,9 @@
         "type": "String"
       }
     }
+  },
+  "createNewAccountIfNotLoggedIn": "Hvis du aldrig har logget ind på Pilll før, vil der blive oprettet en ny konto.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
   }
 }
