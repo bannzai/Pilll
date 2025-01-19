@@ -1,6 +1,6 @@
 {
   "@@locale": "am",
-  "pillSheetType21With7Placebo": "21 ይዘት አይነት",
+  "pillSheetType21With7Placebo": "21 ይዘት አይነት (7 ይዘት የማይሆን)",
   "@pillSheetType21With7Placebo": {
     "description": "21錠タイプ(7錠偽薬)"
   },

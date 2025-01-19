@@ -942,7 +942,7 @@
   "@previouslyPurchased": {
     "description": "以前購入した方はこちら"
   },
-  "noPreviousPurchaseInfo": "پچھلی خریداری کی معلومات نہیں मिली۔ براہ کرم اپنے اکاؤنٹ کی تصدیق کریں اور دوبارہ کوشش کریں۔",
+  "noPreviousPurchaseInfo": "پچھلی خریداری کی معلومات نہیں मिلी۔ براہ کرم اپنے اکاؤنٹ کی تصدیق کریں اور دوبارہ کوشش کریں۔",
   "@noPreviousPurchaseInfo": {
     "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
   },
@@ -1904,7 +1904,7 @@
   "@googleAccount": {
     "description": "Google アカウント"
   },
-  "diaryRecord": "ڈائیरी کو ریکارڈ کریں",
+  "diaryRecord": "ڈائیری کو ریکارڈ کریں",
   "@diaryRecord": {
     "description": "日記を記録"
   },
