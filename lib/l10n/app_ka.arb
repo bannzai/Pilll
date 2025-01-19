@@ -1099,7 +1099,7 @@
       }
     }
   },
-  "todayPillNumber": "{დღესთაPillNumberPillNumberInPillSheet}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "{todayPillNumberPillNumberInPillSheet}",
     "placeholders": {

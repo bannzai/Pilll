@@ -1052,7 +1052,7 @@
       }
     }
   },
-  "takingRecordFromNotification": "{\n  \"\\u901a\\u77e5\\u304b\\u3089\\u8a3c\\u8a18\\u53ef\\u80fd\\u304c\\u3042\\u308a\\u307e\\u305b\\u3093\\n}",
+  "takingRecordFromNotification": "\\ ನೋಟಿಫಿಕೇಶನ್ ನಿಂದ ಪಿಲ್ ಪ್ರಮಾಣವನ್ನು ದಾಖಲಿಸಲಾಗಿದೆ /",
   "@takingRecordFromNotification": {
     "description": "\\ 通知から服用記録ができます /"
   },

@@ -587,7 +587,7 @@
   "@pauseTakingPeriodEnded": {
     "description": "服用のお休み期間が終了しました"
   },
-  "endValue": "{ավարտValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "@endValue": {
     "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
     "placeholders": {

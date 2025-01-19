@@ -516,7 +516,7 @@
   "@takingTime": {
     "description": "服用時間"
   },
-  "takingHistoryIsPremiumFeature": "{\"history_premium\":\"İstifadə tarixçəsi premium funksiyadır\"}",
+  "takingHistoryIsPremiumFeature": "İstifadə tarixçəsi premium funksiyadır",
   "@takingHistoryIsPremiumFeature": {
     "description": "服用履歴はプレミアム機能です"
   },

@@ -533,7 +533,7 @@
       }
     }
   },
-  "lastTakenPlusOnePillNumber": "{{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}} نمبر",
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "@lastTakenPlusOnePillNumber": {
     "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
     "placeholders": {

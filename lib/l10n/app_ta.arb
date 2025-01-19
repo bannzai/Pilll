@@ -587,7 +587,7 @@
   "@pauseTakingPeriodEnded": {
     "description": "服用のお休み期間が終了しました"
   },
-  "endValue": "{முடிவின் மதிப்பு அல்லது மாதவிடாய் க்வர்.குழு காற்சட்டை மேலாண்மையின் மதிப்பீட்டு முடிவு மாதவிடாய் எண்ணிக்கை}",
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "@endValue": {
     "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
     "placeholders": {

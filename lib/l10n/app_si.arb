@@ -1896,7 +1896,7 @@
   "@currentPillSheetNotFound": {
     "description": "現在対象となっているピルシートが見つかりませんでした"
   },
-  "doNotRevertTakePillInPausePeriod": "{\n    \"pillCancellationDuringBreak\": \"පිල් භාවිතය අහෝසී කිරීමේ ක්‍රියාත්මක කිරීම අඩුකාලීනයි\",\n    \"description\": \"ටාප් පිරිසක් මගින් ඔබේ ඇඟවීමේ කාලය, භාවිතා සමාලෝචන, හෝ මාසිකතාවය භාවිතා කිරීමේ විද්‍යුත් යෙදුමකි.\"\n}",
+  "doNotRevertTakePillInPausePeriod": "පිල් භාවිතය අහෝසී කිරීමේ ක්‍රියාත්මක කිරීම අඩුකාලීනයි",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
   },

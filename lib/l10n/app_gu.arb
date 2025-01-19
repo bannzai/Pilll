@@ -762,7 +762,7 @@
       }
     }
   },
-  "menstruationScheduleDateWithNumberAndPillNumber": "આધારભૂત માહિતી: આ તે સમયે દર્શાવી શકાય છે જયારે તમારાanayo મહાવેતનના તે સમયે પિલનું સંખ્યાયત્-યતપીંડી કરાય છે...",
+  "menstruationScheduleDateWithNumberAndPillNumber": "{diffPlusOne} દિવસ {pillNumber} પુષ્ટિ",
   "@menstruationScheduleDateWithNumberAndPillNumber": {
     "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
     "placeholders": {
@@ -774,7 +774,7 @@
       }
     }
   },
-  "menstruationRemainingDay": "આ{!!diff!!} દિવસમાં",
+  "menstruationRemainingDay": "{diff} દિવસ",
   "@menstruationRemainingDay": {
     "description": "あと{diff}日",
     "placeholders": {
@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "ગ્રહણ ન થનાર ભૂલ છે. કૃપા કરીને નવા સંસ્કરણમાં અપડેટ કરો અને પુનઃ પ્રયાસ કરો. જો સમાધાન ન થાય તો {\n} સમાયોજનો > પ્રશ્ન પૂછીને સંપર્ક કરો. કોડ: {errorCode} વિગત: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "ગ્રહણ ન થનાર ભૂલ છે. કૃપા કરીને નવા સંસ્કરણમાં અપડેટ કરો અને પુનઃ પ્રયાસ કરો. જો સમાધાન ન થાય તો સમાયોજનો > પ્રશ્ન પૂછીને સંપર્ક કરો. કોડ: {errorCode} વિગત: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
     "placeholders": {

@@ -425,7 +425,7 @@
       }
     }
   },
-  "beforeLastTakenPillNumber": "{قبلآخرعددالأقراص}",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}",
   "@beforeLastTakenPillNumber": {
     "description": "{beforeLastTakenPillNumber}番",
     "placeholders": {
@@ -913,7 +913,7 @@
   "@premiumTermsNotice2": {
     "description": "特定商取引法に基づく表示"
   },
-  "premiumTermsNotice3": "يرجى التحقق من {VAL} وإكمال التسجيل",
+  "premiumTermsNotice3": "يرجى التحقق من  وإكمال التسجيل",
   "@premiumTermsNotice3": {
     "description": "をご確認のうえ登録してください\n"
   },
