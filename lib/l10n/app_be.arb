@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "{VAL} дзён менструацыя працягваецца",
+  "daysMenstruationLasts": "дзён менструацыя працягваецца",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },

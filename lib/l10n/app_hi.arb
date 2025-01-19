@@ -596,7 +596,7 @@
       }
     }
   },
-  "changePillDaysForSheet": "{VAL} की खुराक की अवधि बदलें",
+  "changePillDaysForSheet": "की खुराक की अवधि बदलें",
   "@changePillDaysForSheet": {
     "description": "シートの服用日数を変更"
   },
@@ -1120,7 +1120,7 @@
   "@missed": {
     "description": "飲み忘れ"
   },
-  "showsDate": "{VAL} की तारीख दिखाएँ",
+  "showsDate": "की तारीख दिखाएँ",
   "@showsDate": {
     "description": "日付を表示"
   },
@@ -1305,7 +1305,7 @@
   "@newPillSheetStart": {
     "description": "新しいピルシート開始 ▶︎"
   },
-  "selectPillType": "{VAL} का चयन करें",
+  "selectPillType": "का चयन करें",
   "@selectPillType": {
     "description": "ピルの種類を選択"
   },

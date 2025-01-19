@@ -291,7 +291,7 @@
   "@authenticationInfoUpdated": {
     "description": "認証情報を更新しました"
   },
-  "updateAuthenticationInformation": "{VAL} प्रमाणपत्रको जानकारी अद्यावधिक गरिन्छ",
+  "updateAuthenticationInformation": "प्रमाणपत्रको जानकारी अद्यावधिक गरिन्छ",
   "@updateAuthenticationInformation": {
     "description": "認証情報を更新します"
   },
@@ -596,7 +596,7 @@
       }
     }
   },
-  "changePillDaysForSheet": "{VAL} का सेवन दिनांक बदलें",
+  "changePillDaysForSheet": "का सेवन दिनांक बदलें",
   "@changePillDaysForSheet": {
     "description": "シートの服用日数を変更"
   },
@@ -1195,7 +1195,7 @@
       }
     }
   },
-  "receiveDailyNotificationAt9AM": "{VAL} मा सूचना प्राप्त गर्नुहोस्",
+  "receiveDailyNotificationAt9AM": "मा सूचना प्राप्त गर्नुहोस्",
   "@receiveDailyNotificationAt9AM": {
     "description": "当日9:00に通知を受け取る"
   },
@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "{VAL} दिनसम्मको महिना",
+  "daysMenstruationLasts": "दिनसम्मको महिना",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },
@@ -1782,7 +1782,7 @@
   "@visitHospital": {
     "description": "通院する"
   },
-  "receiveNotificationAt9AM": "{VAL} मा सूचना प्राप्त गर्नुहोस्",
+  "receiveNotificationAt9AM": "मा सूचना प्राप्त गर्नुहोस्",
   "@receiveNotificationAt9AM": {
     "description": "当日9:00に通知を受け取る"
   },
@@ -1896,7 +1896,7 @@
   "@currentPillSheetNotFound": {
     "description": "現在対象となっているピルシートが見つかりませんでした"
   },
-  "doNotRevertTakePillInPausePeriod": "{VAL} को सेवन रद्द गर्ने प्रक्रिया मुक्ति अवधिमा कार्यान्वयन गरिदैन।",
+  "doNotRevertTakePillInPausePeriod": "को सेवन रद्द गर्ने प्रक्रिया मुक्ति अवधिमा कार्यान्वयन गरिदैन।",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
   },
@@ -2050,7 +2050,7 @@
   "@startPauseTakingLabel": {
     "description": "服用お休み開始"
   },
-  "pauseTakingChanged": "{VAL} को ब्रेक परिवर्तन गरियो।",
+  "pauseTakingChanged": "को ब्रेक परिवर्तन गरियो।",
   "@pauseTakingChanged": {
     "description": "服用お休みを変更しました"
   },
@@ -2124,7 +2124,7 @@
       }
     }
   },
-  "startFromNumber": "{VAL} देखि सुरू गर्नुहोस्",
+  "startFromNumber": "देखि सुरू गर्नुहोस्",
   "@startFromNumber": {
     "description": "番からスタート"
   },
@@ -2136,7 +2136,7 @@
   "@addPillSheet": {
     "description": "ピルシートを追加"
   },
-  "duringPauseTaking": "{VAL} रोकि रहेको",
+  "duringPauseTaking": "रोकि रहेको",
   "@duringPauseTaking": {
     "description": "服用お休み中"
   },

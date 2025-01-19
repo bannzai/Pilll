@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "Continua per {VAL} giorni",
+  "daysMenstruationLasts": "Continua per giorni",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },

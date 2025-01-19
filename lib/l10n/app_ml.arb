@@ -1027,7 +1027,7 @@
   "@missedPillNotification": {
     "description": "ピルの飲み忘れ通知"
   },
-  "setMultipleReminders": "${VAL} ന്റെ ഉപയോഗം മറക്കാൻ നിങ്ങൾക്ക് അനേകം ക്രമീകരണങ്ങൾ സജ്ജമാക്കാൻ കഴിയും.",
+  "setMultipleReminders": "$ന്റെ ഉപയോഗം മറക്കാൻ നിങ്ങൾക്ക് അനേകം ക്രമീകരണങ്ങൾ സജ്ജമാക്കാൻ കഴിയും.",
   "@setMultipleReminders": {
     "description": "複数設定しておく事で飲み忘れを防げます"
   },
@@ -1152,7 +1152,7 @@
   "@pilll": {
     "description": "Pilll"
   },
-  "changeMissedNotificationMessage": "{VAL} ൽ വീഡിയോ ഇനമുമായി ബന്ധമുള്ള പ്രവര്‍ത്തനങ്ങള്‍ പരിശോധിക്കുന്നു.",
+  "changeMissedNotificationMessage": "ൽ വീഡിയോ ഇനമുമായി ബന്ധമുള്ള പ്രവര്‍ത്തനങ്ങള്‍ പരിശോധിക്കുന്നു.",
   "@changeMissedNotificationMessage": {
     "description": "飲み忘れてる場合の通知文言を変更できます"
   },

@@ -959,7 +959,7 @@
       }
     }
   },
-  "youArePremiumMember": "{VAL} сте премиум члан.",
+  "youArePremiumMember": "сте премиум члан.",
   "@youArePremiumMember": {
     "description": "あなたは\nプレミアムメンバーです"
   },

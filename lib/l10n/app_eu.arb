@@ -596,7 +596,7 @@
       }
     }
   },
-  "changePillDaysForSheet": "{VAL} hartu egun kopurua aldatzea",
+  "changePillDaysForSheet": "hartu egun kopurua aldatzea",
   "@changePillDaysForSheet": {
     "description": "シートの服用日数を変更"
   },

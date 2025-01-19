@@ -959,7 +959,7 @@
       }
     }
   },
-  "youArePremiumMember": "{VAL} ପ୍ରେମିଅମ୍ ସଦସ୍ୟ ଅଟେ",
+  "youArePremiumMember": "ପ୍ରେମିଅମ୍ ସଦସ୍ୟ ଅଟେ",
   "@youArePremiumMember": {
     "description": "あなたは\nプレミアムメンバーです"
   },
@@ -1182,7 +1182,7 @@
   "@enterAtLeastOneCharacter": {
     "description": "0文字以上入力してください"
   },
-  "changeDailyNotificationMessage": "{VAL} ବିଳମ୍ବ କରାଯାଇନଥିଲେ ନୋଟିଫିକେସନ୍ ଶବ୍ଦ ମାନ୍ୟକୁ ବଦଳାଇପାରିବେ",
+  "changeDailyNotificationMessage": "ବିଳମ୍ବ କରାଯାଇନଥିଲେ ନୋଟିଫିକେସନ୍ ଶବ୍ଦ ମାନ୍ୟକୁ ବଦଳାଇପାରିବେ",
   "@changeDailyNotificationMessage": {
     "description": "飲み忘れていない場合の通知文言を変更できます"
   },
@@ -1305,7 +1305,7 @@
   "@newPillSheetStart": {
     "description": "新しいピルシート開始 ▶︎"
   },
-  "selectPillType": "{VAL} ପ୍ରକାର ଚୟନ କରନ୍ତୁ",
+  "selectPillType": "ପ୍ରକାର ଚୟନ କରନ୍ତୁ",
   "@selectPillType": {
     "description": "ピルの種類を選択"
   },
@@ -1862,7 +1862,7 @@
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "プレミアム情報が見つかりませんでした"
   },
-  "purchaseErrorPurchasePendingError": "{VAL} ଅମକରଣ ସକ୍ରିୟ ହୋଇନି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଯାଞ୍ଚ କରନ୍ତୁ।",
+  "purchaseErrorPurchasePendingError": "ଅମକରଣ ସକ୍ରିୟ ହୋଇନି। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଯାଞ୍ଚ କରନ୍ତୁ।",
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },

@@ -1195,7 +1195,7 @@
       }
     }
   },
-  "receiveDailyNotificationAt9AM": "{VAL} তে 9:00 এ নোটিফিকেশন গ্রহণ করুন",
+  "receiveDailyNotificationAt9AM": "তে 9:00 এ নোটিফিকেশন গ্রহণ করুন",
   "@receiveDailyNotificationAt9AM": {
     "description": "当日9:00に通知を受け取る"
   },
@@ -1782,7 +1782,7 @@
   "@visitHospital": {
     "description": "通院する"
   },
-  "receiveNotificationAt9AM": "{VAL} 9:00 時ে notificasyon গ্রহণ করুন",
+  "receiveNotificationAt9AM": "9:00 時ে notificasyon গ্রহণ করুন",
   "@receiveNotificationAt9AM": {
     "description": "当日9:00に通知を受け取る"
   },

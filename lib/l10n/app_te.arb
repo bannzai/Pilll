@@ -516,7 +516,7 @@
   "@takingTime": {
     "description": "服用時間"
   },
-  "takingHistoryIsPremiumFeature": "{VAL} చేర్బాటు లో {VAL} సదస్సు არის ప్రీమియం ఫీచర్.",
+  "takingHistoryIsPremiumFeature": "చేర్బాటు లో సదస్సు არის ప్రీమియం ఫీచర్.",
   "@takingHistoryIsPremiumFeature": {
     "description": "服用履歴はプレミアム機能です"
   },
@@ -1182,7 +1182,7 @@
   "@enterAtLeastOneCharacter": {
     "description": "0文字以上入力してください"
   },
-  "changeDailyNotificationMessage": "{VAL} ఆమోదించబడింది.",
+  "changeDailyNotificationMessage": "ఆమోదించబడింది.",
   "@changeDailyNotificationMessage": {
     "description": "飲み忘れていない場合の通知文言を変更できます"
   },

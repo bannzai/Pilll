@@ -1152,7 +1152,7 @@
   "@pilll": {
     "description": "Pilll"
   },
-  "changeMissedNotificationMessage": "{VAL} ұмытылған жағдайда хабарландыру мәтінін өзгертуге болады.",
+  "changeMissedNotificationMessage": "ұмытылған жағдайда хабарландыру мәтінін өзгертуге болады.",
   "@changeMissedNotificationMessage": {
     "description": "飲み忘れてる場合の通知文言を変更できます"
   },
@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "{VAL} күндік кезең жалғасады",
+  "daysMenstruationLasts": "күндік кезең жалғасады",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },

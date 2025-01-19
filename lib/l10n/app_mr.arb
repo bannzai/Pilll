@@ -1152,7 +1152,7 @@
   "@pilll": {
     "description": "Pilll"
   },
-  "changeMissedNotificationMessage": "{VAL} च्या आवृत्तीतून नोटिफिकेशन मजकूर बदलू शकता",
+  "changeMissedNotificationMessage": "च्या आवृत्तीतून नोटिफिकेशन मजकूर बदलू शकता",
   "@changeMissedNotificationMessage": {
     "description": "飲み忘れてる場合の通知文言を変更できます"
   },

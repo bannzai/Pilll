@@ -234,7 +234,7 @@
   "@allPillSheets": {
     "description": "すべてのピルシート"
   },
-  "willBeDiscarded": "{VAL} ແມ່ນຈະຖືກແບ່ງໄປ",
+  "willBeDiscarded": "ແມ່ນຈະຖືກແບ່ງໄປ",
   "@willBeDiscarded": {
     "description": "が破棄されます"
   },
@@ -637,7 +637,7 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "{VAL} ມື້",
+  "pillDays": "ມື້",
   "@pillDays": {
     "description": "服用日数"
   },
@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "{VAL} ການຊໍາລະບິດກໍາລັງດຳເນີນດໍາເນີນໃນອຸ່ມດຽວ. ຂໍໃຫ້ລໍຖໍຕໍ່ໄປໃນຄວາມລະດັບແລະກວດເບິ່ງອີກໃຈ.",
+  "purchaseErrorOperationAlreadyInProgressError": "ການຊໍາລະບິດກໍາລັງດຳເນີນດໍາເນີນໃນອຸ່ມດຽວ. ຂໍໃຫ້ລໍຖໍຕໍ່ໄປໃນຄວາມລະດັບແລະກວດເບິ່ງອີກໃຈ.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
   },
@@ -1790,7 +1790,7 @@
   "@deletedScheduleCannotBeRestored": {
     "description": "削除された予定は復元ができません"
   },
-  "deleteSchedule": "{VAL} ສິບໍ່ຮານທັດທີ່ຄໍ່ອັບບານຂອງເພີນຂອງເພານໃດກໃນງານແລະກໂຕອາກາດສໍ່ວິນີມາ",
+  "deleteSchedule": "ສິບໍ່ຮານທັດທີ່ຄໍ່ອັບບານຂອງເພີນຂອງເພານໃດກໃນງານແລະກໂຕອາກາດສໍ່ວິນີມາ",
   "@deleteSchedule": {
     "description": "予定を削除します"
   },
@@ -1896,7 +1896,7 @@
   "@currentPillSheetNotFound": {
     "description": "現在対象となっているピルシートが見つかりませんでした"
   },
-  "doNotRevertTakePillInPausePeriod": "{VAL} ບໍ່ສາມາດເຮັດໃນໄລ່ສະບັບສັງຄົວນາແລະບັນທຶກແລະບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາ້ບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາມາດເຮັດເດད໌་མອງຂອບ。\n ",
+  "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດເຮັດໃນໄລ່ສະບັບສັງຄົວນາແລະບັນທຶກແລະບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາ້ບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາມາດເຮັດເດད໌་མອງຂອບ。\n ",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
   },
@@ -2082,7 +2082,7 @@
   "@changePausePeriod": {
     "description": "服用お休み期間変更"
   },
-  "changedPausePeriod": "{VAL} ຖິ່ນໃດເຮັດອາດ ປ່ອນປ່ອນແປ໛ ປ່ ໄດ້",
+  "changedPausePeriod": "ຖິ່ນໃດເຮັດອາດ ປ່ອນປ່ອນແປ໛ ປ່ ໄດ້",
   "@changedPausePeriod": {
     "description": "服用お休み期間を変更しました"
   },
@@ -2160,7 +2160,7 @@
       }
     }
   },
-  "editPauseStartDate": "{VAL} ແກ້ໄຂວັນເລີ່ມໃຫ້ພັກດືມ",
+  "editPauseStartDate": "ແກ້ໄຂວັນເລີ່ມໃຫ້ພັກດືມ",
   "@editPauseStartDate": {
     "description": "服用お休み開始日を編集"
   },

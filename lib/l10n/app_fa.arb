@@ -2107,7 +2107,7 @@
   "@alreadyTaken": {
     "description": "服用済み"
   },
-  "startPauseTaking": "{VAL} را متوقف کنید",
+  "startPauseTaking": "را متوقف کنید",
   "@startPauseTaking": {
     "description": "服用をお休みする"
   },

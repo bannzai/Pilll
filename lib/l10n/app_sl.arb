@@ -1035,7 +1035,7 @@
   "@and": {
     "description": "と"
   },
-  "readAndStartUsing": "{VAL} preberite\nZačnite uporabljati",
+  "readAndStartUsing": "preberite\nZačnite uporabljati",
   "@readAndStartUsing": {
     "description": "を読んで\n利用をはじめてください"
   },
@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "Trajanje menstruacije je {VAL} dni.",
+  "daysMenstruationLasts": "Trajanje menstruacije je dni.",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },
