@@ -1077,7 +1077,7 @@
   "@existingAccountUsers": {
     "description": "すでにアカウントをお持ちの方はこちら"
   },
-  "selectTodayPillNumber": "ತಾಕಲಾದ/ತೆಗೆದ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
+  "selectTodayPillNumber": "ಇಂದು ({todayString})\nತಿನ್ನುವ ಅಥವಾ ತಿಂದ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಟ್ಯಾಪ್ ಮಾಡಿ",
   "@selectTodayPillNumber": {
     "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
     "placeholders": {
@@ -1182,7 +1182,7 @@
   "@enterAtLeastOneCharacter": {
     "description": "0文字以上入力してください"
   },
-  "changeDailyNotificationMessage": "{VAL} ಕ್ಕೆ ಉದಾಹರಣೆ ನೀಡುವ ಮೂಲಕ ನೀವು ಏನನ್ನು ಮರೆತಿಲ್ಲ ಎಂಬುದನ್ನು ಪರಿಶೀಲಿಸಬಹುದು.",
+  "changeDailyNotificationMessage": "ಕ್ಕೆ ಉದಾಹರಣೆ ನೀಡುವ ಮೂಲಕ ನೀವು ಏನನ್ನು ಮರೆತಿಲ್ಲ ಎಂಬುದನ್ನು ಪರಿಶೀಲಿಸಬಹುದು.",
   "@changeDailyNotificationMessage": {
     "description": "飲み忘れていない場合の通知文言を変更できます"
   },
@@ -2144,7 +2144,7 @@
   "@cannotPauseAlreadyTakenToday": {
     "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
   },
-  "pauseTakingStarted": "{VAL}ನೇ ವಿರಾಮವನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗಿದೆ",
+  "pauseTakingStarted": "ನೇ ವಿರಾಮವನ್ನು ಪ್ರಾರಂಭಿಸಲಾಗಿದೆ",
   "@pauseTakingStarted": {
     "description": "服用お休みを開始しました"
   },

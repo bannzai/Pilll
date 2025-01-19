@@ -40,7 +40,7 @@
   "@userNotFound": {
     "description": "ユーザーが見つかりません"
   },
-  "userAlreadyExists": "{VAL} පෙනී සිටී",
+  "userAlreadyExists": "පෙනී සිටී",
   "@userAlreadyExists": {
     "description": "すでにユーザーが存在してます"
   },
@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "{VAL} දිනකින් උපත ලැබේ",
+  "daysMenstruationLasts": "දිනකින් උපත ලැබේ",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },
@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "මෙම ගණුشراءය දැන් කළ නොහැක. කරුණාකර විනෝදාංකය ලබා දී නැවත চেষ্টা කරන්න. එය විසඳුම් නොනැතිනම් සැකසුම් > විමසීම් එකට පිවිසෙන්න.",
+  "purchaseErrorUnexpectedBackendResponseError": "දැනට මිලදී ගැනීම් කළ නොහැක. කාලයක් රැදී නැවත උත්සාහ කරන්න. විසඳුමක් නොමැති නම්, සැකසුම් > විමසීම් මඟින් අපව අමතන්න. විශේෂාංග: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
     "placeholders": {
@@ -1790,7 +1790,7 @@
   "@deletedScheduleCannotBeRestored": {
     "description": "削除された予定は復元ができません"
   },
-  "deleteSchedule": "{VAL} ඉවත් කරනවා",
+  "deleteSchedule": "ඉවත් කරනවා",
   "@deleteSchedule": {
     "description": "予定を削除します"
   },
@@ -1862,7 +1862,7 @@
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "プレミアム情報が見つかりませんでした"
   },
-  "purchaseErrorPurchasePendingError": "{VAL} සක්‍රිය කිරීම තවමත් සම්පූර්ණ වී නැත. කමක් නැත, කාලයක් බidingෙන්න පසුව නැවත පිරික්සුම් කරන්න.",
+  "purchaseErrorPurchasePendingError": "සක්‍රිය කිරීම තවමත් සම්පූර්ණ වී නැත. කමක් නැත, කාලයක් බidingෙන්න පසුව නැවත පිරික්සුම් කරන්න.",
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },
@@ -2082,7 +2082,7 @@
   "@changePausePeriod": {
     "description": "服用お休み期間変更"
   },
-  "changedPausePeriod": "{VAL} කාලය වෙනස් කරන ලදී",
+  "changedPausePeriod": "කාලය වෙනස් කරන ලදී",
   "@changedPausePeriod": {
     "description": "服用お休み期間を変更しました"
   },

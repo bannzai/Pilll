@@ -596,7 +596,7 @@
       }
     }
   },
-  "changePillDaysForSheet": "{VAL} күндү өзгөртүү",
+  "changePillDaysForSheet": "күндү өзгөртүү",
   "@changePillDaysForSheet": {
     "description": "シートの服用日数を変更"
   },
@@ -1152,7 +1152,7 @@
   "@pilll": {
     "description": "Pilll"
   },
-  "changeMissedNotificationMessage": "{VAL} эси унутуп калганда билдирмени өзгөртө аласыз",
+  "changeMissedNotificationMessage": "эси унутуп калганда билдирмени өзгөртө аласыз",
   "@changeMissedNotificationMessage": {
     "description": "飲み忘れてる場合の通知文言を変更できます"
   },
@@ -1182,7 +1182,7 @@
   "@enterAtLeastOneCharacter": {
     "description": "0文字以上入力してください"
   },
-  "changeDailyNotificationMessage": "{VAL} албаган эместик учурда билдирүүнү өзгөртө аласыз",
+  "changeDailyNotificationMessage": "албаган эместик учурда билдирүүнү өзгөртө аласыз",
   "@changeDailyNotificationMessage": {
     "description": "飲み忘れていない場合の通知文言を変更できます"
   },
@@ -1862,7 +1862,7 @@
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "プレミアム情報が見つかりませんでした"
   },
-  "purchaseErrorPurchasePendingError": "{VAL} активациясы аяктаган жок. Бир аз убакыттан кийин текшерип көрүңүз.",
+  "purchaseErrorPurchasePendingError": "активациясы аяктаган жок. Бир аз убакыттан кийин текшерип көрүңүз.",
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },

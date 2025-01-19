@@ -291,7 +291,7 @@
   "@authenticationInfoUpdated": {
     "description": "認証情報を更新しました"
   },
-  "updateAuthenticationInformation": "{VAL} ќе се обнови.",
+  "updateAuthenticationInformation": "ќе се обнови.",
   "@updateAuthenticationInformation": {
     "description": "認証情報を更新します"
   },
