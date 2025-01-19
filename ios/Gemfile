@@ -8,4 +8,5 @@ gem 'pry-byebug'
 gem 'pry-coolline'
 gem 'pry-doc'
 gem 'pry-stack_explorer'
+gem "dotenv"
 
