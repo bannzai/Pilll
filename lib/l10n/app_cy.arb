@@ -1879,7 +1879,7 @@
   "@exampleRestDurationDate": {
     "description": "例えば「1/12から3日間」服用お休みした場合"
   },
-  "exampleRestDurationNumber": "Er enghraifft, pan fyddwch chi'n cymryd seibiant am 3 diwrnod o {\nVAL} 18.",
+  "exampleRestDurationNumber": "Er enghraifft, pan fyddwch chi'n cymryd seibiant am 3 diwrnod o 18.",
   "@exampleRestDurationNumber": {
     "description": "例えば「18番から3日間」服用お休みした場合"
   },
