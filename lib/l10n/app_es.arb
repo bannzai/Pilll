@@ -621,7 +621,7 @@
   "@endOfPillDays": {
     "description": "服用日数の終わり"
   },
-  "changedToNumber": "cambiar a la {VAL}",
+  "changedToNumber": "cambiar a la ",
   "@changedToNumber": {
     "description": "番に変更"
   },

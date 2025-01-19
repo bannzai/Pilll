@@ -1035,7 +1035,7 @@
   "@and": {
     "description": "と"
   },
-  "readAndStartUsing": "{VAL}-г уншиж, ашиглалт эхлүүлнэ үү",
+  "readAndStartUsing": "-г уншиж, ашиглалт эхлүүлнэ үү",
   "@readAndStartUsing": {
     "description": "を読んで\n利用をはじめてください"
   },

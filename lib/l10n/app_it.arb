@@ -2124,7 +2124,7 @@
       }
     }
   },
-  "startFromNumber": "Inizia da {VAL}",
+  "startFromNumber": "Inizia da ",
   "@startFromNumber": {
     "description": "番からスタート"
   },

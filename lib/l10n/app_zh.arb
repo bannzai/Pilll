@@ -1786,7 +1786,7 @@
   "@receiveNotificationAt9AM": {
     "description": "当日9:00に通知を受け取る"
   },
-  "deletedScheduleCannotBeRestored": "{VAL}的日程无法恢复。",
+  "deletedScheduleCannotBeRestored": "的日程无法恢复。",
   "@deletedScheduleCannotBeRestored": {
     "description": "削除された予定は復元ができません"
   },
@@ -2124,7 +2124,7 @@
       }
     }
   },
-  "startFromNumber": "从{VAL}开始",
+  "startFromNumber": "从开始",
   "@startFromNumber": {
     "description": "番からスタート"
   },

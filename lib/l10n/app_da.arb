@@ -2120,7 +2120,7 @@
       }
     }
   },
-  "startFromNumber": "Start from {VAL}",
+  "startFromNumber": "Start from ",
   "@startFromNumber": {
     "description": "番からスタート"
   },

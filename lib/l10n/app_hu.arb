@@ -2124,7 +2124,7 @@
       }
     }
   },
-  "startFromNumber": "Kezd a {VAL}-tól",
+  "startFromNumber": "Kezd a -tól",
   "@startFromNumber": {
     "description": "番からスタート"
   },

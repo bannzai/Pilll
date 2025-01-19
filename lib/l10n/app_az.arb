@@ -2124,7 +2124,7 @@
       }
     }
   },
-  "startFromNumber": "{VAL}-dan başlayın",
+  "startFromNumber": "-dan başlayın",
   "@startFromNumber": {
     "description": "番からスタート"
   },

@@ -2082,7 +2082,7 @@
   "@changePausePeriod": {
     "description": "服用お休み期間変更"
   },
-  "changedPausePeriod": "{VAL}को लागि विश्राम अवधि परिवर्तन गरियो",
+  "changedPausePeriod": "को लागि विश्राम अवधि परिवर्तन गरियो",
   "@changedPausePeriod": {
     "description": "服用お休み期間を変更しました"
   },
@@ -2107,7 +2107,7 @@
   "@alreadyTaken": {
     "description": "服用済み"
   },
-  "startPauseTaking": "{VAL}लाई विश्राम गर्नुहोस्",
+  "startPauseTaking": "लाई विश्राम गर्नुहोस्",
   "@startPauseTaking": {
     "description": "服用をお休みする"
   },

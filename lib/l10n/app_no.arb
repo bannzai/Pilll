@@ -621,7 +621,7 @@
   "@endOfPillDays": {
     "description": "服用日数の終わり"
   },
-  "changedToNumber": "endret til {VAL}",
+  "changedToNumber": "endret til ",
   "@changedToNumber": {
     "description": "番に変更"
   },
@@ -2124,7 +2124,7 @@
       }
     }
   },
-  "startFromNumber": "Start from {VAL}",
+  "startFromNumber": "Start from ",
   "@startFromNumber": {
     "description": "番からスタート"
   },

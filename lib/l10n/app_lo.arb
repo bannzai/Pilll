@@ -563,7 +563,7 @@
   "@taken": {
     "description": "飲んだ"
   },
-  "notTaken": "{VAL}",
+  "notTaken": "",
   "@notTaken": {
     "description": "飲んでない"
   },
@@ -1120,7 +1120,7 @@
   "@missed": {
     "description": "飲み忘れ"
   },
-  "showsDate": "{VAL}",
+  "showsDate": "",
   "@showsDate": {
     "description": "日付を表示"
   },
