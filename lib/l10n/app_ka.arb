@@ -1,0 +1,2281 @@
+{
+  "@@locale": "ka",
+  "pillSheetType21With7Placebo": "21 ტაბლეტი ტიპი",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 მინის ტიპი (4 მინის ყალბი)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 აბი ტიპი (7 აბი ფალსიფიკაცია)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 ტაბლეტიანი ტიპი (ყველა აქტიური ნივთიერება)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 აბის ტიპი (ყველა აქტიური ნივთიერება)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 აბის ტიპი (ყველა აქტიური წამალი)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 აბი ტიპი",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "გათიშვა",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "ფიკტიური წამლის",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "მომხმარებელი არ მოიძებნა",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "მიუხედავად იმისა, რომ უკვე არსებობს მომხმარებელი",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "სმარტფონის გამოყენებითი ისტორია",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "კონფიგურაცია",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "ანგარიშზე",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "მოდელის შეცვლის ან მობილურის დაკარგვის დროს, მონაცემების გადაცემისა და აღდგენისათვის ანგარიშის რეგისტრაცია აუცილებელია.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll პრემიუმი",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "ფუნქციის შეუზღუდავი პერიოდი",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "პილების სიის",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "განცხადება",
+  "@notification": {
+    "description": "通知です"
+  },
+  "menstruation": "განსაკუთრებული პერიოდი",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "სხვა",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": " კითხვები და პასუხები",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "ახალი ფუნქციების გაცნობა",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "კონტაქტი",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "წაშლა",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "წაშლა",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "გამოყენების პირის წაშლა",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "შეფურღვას ავალა",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "გსურთ საქმემის ხანგრძლივობის წაშლა?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "შეტყობინების დროის დამატება",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "თქვენ გსურთ მოწყობილობის დროის სარტყელის ({deviceTimezoneName}) სინქრონიზაცია?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "ამჟამად განთავსებული დროის ზონა",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "დიახ",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "არა",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "შეწყვეტის შესახებ",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "პილების მიღების შეტყობინება",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "გადაყენების შეტყობინება",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊-ის დროა",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "DEBUG ინფორმაცია დააკოპირეთ",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "გაუქმება",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "გარეშე რეჟიმში",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "პილების ჯგუფების ავტომატური დამატება",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "ახლა მიმდინარე წამლის ჯგუფის დასრულების შემდეგ, ახალი ჯგუფი ავტომატურად დაემატება.",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "ანგარიშის პარამეტრები",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "ზედმეტად უკვე ინტეგრირებული",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "არასტუმრობით",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "კვიკ რეპორტი",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "შეტყობინების ეკრანზე შეგიძლიათ ნახოთ დღეს სასმელი ეროვნული მედიკამენტები და პირდაპირ მოწვევა დააფიქსირეთ.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "გამაჯიბური მილების ინტეგრაცია",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "თქვენ შეგიძლიათ ავტომატურად ჩაიწეროთ თქვენი არტერიული წნევის ჩანაწერები Pilll-ით ჯანდაცვის პროგრამაში.",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "პრემიუმ გეგმის ნახვა",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "დღეს სასმელი კაფსულების ნომრის შეცვლა",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "ყველა ისეთის შემატება",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing} გააკეთებთ?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "ამჟამად ნაჩვენები",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "ყველა პილების ჩასაწერი",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "გაიშლება",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "აგდება",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "წვეთოვანი ფურცელი შეიცვალა",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "მენსტრუაციის შესახებ",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "გთხოვთ შეამოწმოთ წვეთების ნომერი კრიტიკული პერიოდის დაწყების დღეს. მიმდინარე არჩევით წვეთების ტიპის მიხედვით არ არსებობს ამისათვის შესაფერისი წვეთების ნომერი.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "შეკვირვების შეტყობინების მორგება",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "შენ შეგიძლია მოირგო {x}",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "დიდი მადლობა თქვენი დახმარებისთვის",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "თქვენ მიერ მოცემული კომენტარები მომავალ გაუმჯობესებაში გამოიყენება.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "დახურვა",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "ცენტრალური რეგისტრაცია",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "მ новой სამართლებრივი რაიონიუმენმა",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "ავტორიზაციის მონაცემები განახლდა",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "ავტორიზაციის მონაცემები განახლდება",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "{accountTypeProviderName}-ით რეგისტრირდით",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "კავშირი",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "გამოსვლა",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "გახდით გაწვდილი",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "აპლიკაციას ერთხელ ვხურავთ. ახალი დაწყების შემთხვევაში, აპლიკაციის თავიდან გაშვების შემდეგ, გააკეთეთ დაწყებითი პარამეტრები.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "კარგი",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "გახდით აბების ნომრის შეცვლა",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "ცვლილება",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "წვეთადი",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "კალენდარი",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "მომხმარებლის ინფორმაცია წაიშლება",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "თუ თქვენ გაწვდით, ყველა მონაცემი წაიშლება და აღარ შეძლებთ იგივე ანგარიშით შესვლა.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "ჩაწერის გვერდი",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "გთხოვთ კვლავ შესვლით მოახდინოთ",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "გთხოვთ, ხელახალი შესვლა გააკეთოთ პიროვნული გადამოწმებისთვის გაწვდვამდე. ხელახალი შესვლის შემდეგ, გაუქმების პროცესი ავტომატურად დაიწყება.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "მجدარდი ხართ მომხმარებელთა შესვლაზე ინფორმაცია განახლება.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "მენსტრუაციის გვერდი",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "კალენდარი",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "ფუნქციები",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "თქვენი ვლენა პერიოდი წაშლილია",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "პериოდის რედაქტირება",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "პირის ციკლის პერიოდი რედაქტირდა",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "ჯანმრთელობის დეტალები",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "ამაზე მეტი ხილვა პრემიერ ფუნქცია იქნება",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "დეტალურად ნახვა",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "გაიცანით მეტი",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} номер",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ნომერი",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} ნომერი",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ნომერი",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} ნომერია",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}რიცხა",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} ნომერი",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} ნომერი",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "გარდაცვლილი დაწყების დღეების გადარჩევა",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "არჩევა იმუნიზაციის შესვენების პერიოდი",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "გამოყენების შესვენების დაწყების თარიღი",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "ქიმიკატების გამოყენების შეწყვეტის დასრულების ბერი",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "პილების დისკის დასრულება",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "წვეთების ფურცლის გამოტყუება",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "მიღების დრო",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "დროული ქრონოლოგია პრემიუმ ფუნქციაა.",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "თუ თქვენ მახსოვხართ წამლების მიღება, არასოდეს განვითარდება ინდექსი.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "{number}დან წამლების მიღებას შევეშვათ?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} ნომერი",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "გამოყენება",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "უკანასკნელი შარჟიდან: {estimatedEndPillNumber} ნომერი",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "გამოცხადების ჩანაწერის დამატება",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "გაყლაპული",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "არ დალია",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "პილების ფურცლის პარამეტრების დაყენება",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "დღეს სასმელი აბი დაუთმეთ未服用",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "გაცდენა",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "გამოდის, სასამართლოს დაწყების დღე შეიცვლება",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "ელემენტების მიღება დროის დროის დასრულდა",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "შეიცვალეთ ტაბლეტის გამოყენების დღეები",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "დაწყებისა და დასრულების ნომრები შეიცვალა",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "მიღების დღეების დასაწყისი",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "წინა ფილების ჯგუფის ბოლო: {beforePillSheetGroupSequentialEstimatedEndPillNumber} დღე",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "მკურნალობის დღეების დასასრული",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "ბრძანა შეცვლის",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "ჩვენება რეჟიმი",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "თარიღი",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "პილი ნომერი",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "მიღების დღეების რაოდენობა",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "მიღების დღეების რაოდენობა (ციკლი)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "პილების საფკი დასრულდა",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "ბოლო დროს მიღებული დღის გადახედვა",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "გთხოვთ რეგისტრირდეთ ანგარიშზე",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "ქსელური მოწყობილობის შეცვლა ან ტელეფონის დაკარგვის დროს, პრემიუმ ფუნქციების გადატანა შეუძლებელი იქნება.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "შენ შეგიძლიათ ერთი კვირით (14 დღის განმავლობაში) გააახლებთ პრემიუმ შესაძლებლობებს! არის დრო, რომ გააზიარო ეს სოციალურ ქსელებში!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "კარგი, სად გავაზიაროთ?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 წამლის მიღება შეწყვეტილი {day} დღე",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} დღე",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} დღეს",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "{diffPlusOne} დღე დარჩა {activePillSheetPillSheetTypeNotTakenWord} პერიოდისთვის",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "სანამ{diff}დღეა დარჩენილი, შეგიძლიათ გამოიყენოთ ყველა ფუნქცია.",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 დღეს მიიღო",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 დღეს რომელი სარქმელი უნდა მიიღოთ",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "ნომერი",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}-დან მენსტრუაციის დაწყება უმოძრაოდ ჩაიწერა.",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "მენსტრუალური ციკლის დაწყების დღე",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "რეცეპტების დასრულების თარიღი",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "დასათვალიერებელი პერიოდის თარიღი",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "ატიდალური პერიოდია: {diffPlusOne} დღე",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "პერიოდის დაგეგმვა: {diffPlusOne}-ე დღე {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff} დღე არის დარჩენილი",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} დღეს",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "მოცემულობის რეგისტრაცია",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "მარადისული ისტორია",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "დღიდან იწყება პასუხისმგებლობა",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "გუშინ დაიწყო აღდგენა",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "შეუსაბამი დაწყების დღე",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} დღიანი ციკლი",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "შესვლა",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "წვდბელი რეგისტრაციის წინ...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "თუ ჯერ არ იქ_PRODUCTS_NAME -ში შესულხართ, ახალ ანგარიშს შექმნით.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "როდესაც დაარეგისტრირებთ ანგარიშს, მონაცემების გადატანა შესაძლებელი იქნება.",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "გთხოვთ იყოთ რეგისტრირებული ანგარიშის ინფორმაციის შენახვისათვის.",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "შეიყვანეთ {loginName} და შესვლა",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "{loginName} რეგისტრაცია",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "პილი премიუმი რეგისტრაციის დასრულება",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "გმადლობთ რეგისტრირებისთვის.\nყველა ფუნქცია სასარგებლოა!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "ახლა შეგიძლიათ შეიძინოთ შემოიფარგლებიანი ფასით და გამოიყენოთ უწყვეტად",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "გადასახდელი თვეში",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "წლიური გეგმა",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/წელიწადში",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/თვე",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "პრემიუმ ხელშეკრულების ვადა იწყება დაწყების თარიღიდან და ავტომატურად renewing ხდება 1 თვეში ან 1 წელს.",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "•",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "ანდაზადერა გადახადების შესახებ სპეციფიური კანონმდებლობის შესაბამისად",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "დაადასტურეთ და რეგისტრირდით",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "პრემიუმ კონტრაქტის ვადის დასრულებამდე 24 საათზე მეტით ადრე არ გააუქმებთ, კონტრაქტის ვადა ავტომატურად განახლდება.",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "• შეძენის შემდეგ, ავტომატური განახლების გაუქმება შეიძლება განხორციელდეს {storeName} აპის ანგარიშის პარამეტრებში. (შიდა აპლიკაციიდან ავტომატური განახლების გაუქმება ვერ მოხერხდება).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "გთხოვთ დეტალებისთვის",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "თქვენ დააკავეთ შეძენის ინფორმაცია",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "გთხოვთ, აირჩიოთ აქ ცუდად შესყიდული ნივთები.",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "წინა შესყიდვის ინფორმაცია ვერ მოიძებნა. გთხოვთ გადაამოწმოთ ანგარიში და ისევ სცადოთ.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "მზრადრო გეგმა",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/მინიმ",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "თქვენი პრემიერი წევრია",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "მადლობთ მომსახურებისთვის. თქვენი დახმარებით Pilll-ის მართვა გრძელდება.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "პრემიუმ ფუნქციების სია",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 მიღებული შეტყობინების საშუალებით წამლის მიღების ჩანაწერი",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 დოზირების ისტორიის ჩანაწერი და მონიტორინგი",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 დღეების ჩვენება პილების ფურცელზე",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 ახალი პილების ფურცლის ავტომატური შევსება",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 წარსულის მონაცემების ნახვა",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 ჯანმრთელობის ტაგების საკუთარი მახასიათებლების მორგება",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 რეკლამის დამალვა",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "პრემიერ ფუნქციის დეტალების ნახვა",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "მსგავსი",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "პრემიუმ ფუნქციები",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "გასაყდური რეჟიმი მიღების დღეების (ციკლის) ვადა დაემატა",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "დეტალების ნახვა",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "პილების მიღების გახსენების შეტყობინება",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "თქვენ შეგიძლიათ თავიდან აიცილოთ წამლის მიღება რამდენიმე მახასიათებლის დაყენებით.",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "და",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "გთხოვთ წაიკითხოთ და დაიწყოთ გამოყენება",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "შემდეგი",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "გამოსვლა{number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "\nწ通知დან წამლის მიღების ჩანაწერი შეგიძლიათ \n",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "აპლიკაციის დაწყება",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "{accountTypeProviderName} და შევედით",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "გთხოვთ მომწვდოთ ნარკოტიკების მიღების ცხრილის შესახებ",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "ვისაც უკვე აქვს ანგარიში აქ არის",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "დღეს({todayString})\nშეეხეთ იმ აბების ნომერს, რომელსაც უნდა მიაყოლოთ ან უკვე მიაყოლეთ.",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "მიუხედავად იმისა, რომ ჯერჯერობით არ ვიცი",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "{today}ზე ჩასაყვანი აბები არის",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "პრევიუ",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "ჩვეულებრივი",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "გაყოლილი",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "თარიღის ჩვენება",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "ნომრის ჩვენება",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "აღწერილობის ტექსტის ჩვენება",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "დასახელება",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "მესიჯი",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "ოპციები",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "შესრულებული",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "პილლ",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "თქვენ შეგიძლიათ შეცვალოთ შეტყობინება, როდესაც წამალი არ მიიღეთ.",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "შესაძლებელია შეტყობინების დასაწყისის შეცვლა",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "გთხოვთ, შეიყვანოთ 0 სიმბოლოზე მეტი",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "თქვენ შეგიძლიათ შეცვალოთ уведомления, როდესაც თქვენ არ დაგავიწყდათ წამლების მიღება.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "შეთანხმებული დროის უფრო ადრე 9:00 საათზე წ notification ნებით",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "შენახვა",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "ჯანმრთელობა",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "ნაკლებული დღიური ვერ აღდგება",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "სქესი",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "გასული აბების ჯგუფი",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "წინა პილების ჯგუფი ჯერ不存在",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "მისაღები ინფორმაცია მიღების ისტორიის შესახებ ვერ მოიძებნა. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "FAQ-ს ნახვა",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "ეკრანის ხელახალი დატვირთვა",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "თუ პრობლემა არ გადაწყდა, გადადით აქ",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "გთხოვთ, გაგვიზიაროთ Pilll-ის თქვენი გამოცდილება",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "მოქმედება",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "თუ გსურთ, გთხოვთ ასევე ჩაერთოთ კითხვარში, რომელიც დაგვაძლიერებს სერვისების გაუმჯობესებაში.",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "შესანიშნავად",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "არ ვაკეთებთ",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "სერვისების გაუმჯობესების anketa",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "კმაყოფილი",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "არ არის კმაყოფილი",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "თვალგადასახლებულ",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "რამდენი დღე გრძელდება ციკლი?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "დღის განმავლობაში მიმდინარეობს ციკლი",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "დაწკაპეთ თავიდან დაწყების აბის ნომერზე",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "№ {number}",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "ახალი პილების ფურცლის დაწყება ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "პილების ტიპის არჩევა",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 ცალი",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 აბი",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 ტაბლეტი",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 თაბლეტი + 7 დღის შესვენება",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 აბი + 4 აბი ფიქტიური წამალი",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 წვეთი + 7 წვეთი პლაცებო",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "ყველაზე დამხმარე წამლები",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 აბი + 4 აბის პაუზა",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "წამლების სახეობის არჩევა",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} პერიოდში შეტყობინება",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "თუ შეტყობინებები გამორთულია, ავტომატურად დაიწერება {pillSheetPillSheetTypeNotTakenWord} პერიოდის გამოყენების ჩანაწერი.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "გთხოვთ, დაელაპარაკოთ გამონაკლისების შემდეგ გამოკითხვას",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll - პილების გამოყენების სპეციალიზებული ჯერ კიდევ მახსოვრობის აპლიკაცია",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "რეგისტრაციის მაქსიმალურ ლიმიტზე მიიღწვა. მოთხოვნით {ReminderTimeMaximumCount}–ის ფარგლებში უნდა დარჩეს",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "შეტყობინებების დრო მინიმუმ {ReminderTimeMinimumCount} თხოვნა საჭიროა.",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "დაუზუსტებელი შეცდომა მოხდა. გთხოვთ, ცოტა დრო დაიცადოთ და კვლავ სცადოთ. თუ პრობლემა ვერ მოგვარების შემთხვევაში, თქვენ შეგიძლიათ დაგვიკავშირდეთ ნაყარი > შეკითხვა. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "უარი {storeName}-ზე დაფიქტირებულია. გთხოვთ ცოტა ხნით დაელოდეთ და კვლავ სცადოთ.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "ამ მოწყობილობაზე შესყიდვა არ არის ნებადართული.",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "გადახდა ვერ შესრულდა. დაადასტურეთ, რომ თქვენი გადახდის გზა მოქმედებს და სცადეთ ისევ.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "ამჟღავნებული გეგმა ახლა არ არის ხელმისაწვდომი. გთხოვთ, ხელახლა გაუშვათ აპლიკაცია და სცადეთ ისევ.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "თქვენ უკვე შეიძინეთ გეგმები. თუ გსურთ შეინარჩუნოთ შეძენილი ინფორმაცია ამ მოწყობილობაზე, გთხოვთ აღდგინოთ შეძენილი ინფორმაცია „წინა შეძენილი მომხმარებლებისთვის აქ“.",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "წარმატებით შეძენილი. შეთავაზება იყიდება სხვა მომხმარებლის მიერ. გთხოვთ გადაამოწმოთ {accountName}",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "არასწორი შეძენის ინფორმაციაა. გთხოვთ გადაამოწმოთ შეძენის ინფორმაცია.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "გაყიდვის ინფორმაციით, მომხმარებლის ინფორმაცია არ არსებობს. {accountName}  მოწყობილობაში დარეგისტრირდით და თავიდან სცადეთ.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "ქსელის მდგომარეობა არასტაბილურია. ყველას მდგომარეობას გადახედეთ და შემდეგ სცადეთ.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "ყიდვის პროცესი წარუმატებელია. გთხოვთ, ცოტა ხნის შემდეგ სცადოთ კვლავ. თუ პრობლემა არ გადაიჭრება, შეგიძლიათ მოგვწერთ მენიუში პარამეტრები > უკუკავშირი. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "ამჟამად შესყიდვა ვერ ხორციელდება. გთხოვთ ცოტა ხნის შემდეგ სცადოთ ისევ. თუ პრობლემა არ მოგვარდება, გთხოვთ მოიქეცეთ პარამეტრებში > კონტაქტი და დააკონწვიოთ ჩვენთან. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "სხვადასხვა მომხმარებლის მიერ შეძენის ინფორმაცია უკვე გამოყენებულია. გთხოვთ შეამოწმოთ მოწყობილობაზე შესული {accountName}.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "მომხმარებელმა ვერ გაამოწმა. გთხოვთ, განაახლოთ აპლიკაცია და კიდევ სცადოთ. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "შეძენის პროცესია მიმდინარე გრძელვადიან პროგრესში. გთხოვთ, დრო გამოყოთ და კვლავ გადაამოწმოთ.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "ახლა შესაძენად ვერ ხართ. გთხოვთ დრო დაიკავოთ და თავიდან სცადოთ. თუ პრობლემა არ მოგვარდება, გთხოვთ დაუკავშირდეთ  პარამეტრები > კითხვის სექცია. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "ვყიდუება ვერ განხორციელდა. გთხოვთ ცოტა ხანს დაელოდოთ და კვლავ სცადოთ. თუ პრობლემა ვერ გადაიჭრება, გთხოვთ მიაწვდოთ დახმარება პარამეტრების მენიუში > კონტაქტი. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "თქვენი მომხმარებლის მიერ შესყიდვა ვერ მოხერხდა. გაითვალისწინეთ და სცადეთ ისევ მოგვიანებით. თუ პრობლემა არ მოგვარდება, გამოგვიგზავნეთ გამოძახება პარამეტრებში > კითხვები. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "თქვენს {accountName} -ზე ვერ გაწვდავთ გეგმაში. გთხოვთ გადაამოწმოთ პოტენციური ინფორმაცია და კიდევ ერთხელ სცადოთ.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "ანაბარი შეჩერდა. იხილეთ {storeName} თქვენი ანგარიში {accountName}-ში.",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "شراء წარმატებით ვერ განხორციელდა. რამდენიმე ხნის შემდეგ კიდევ ერთხელ სცადეთ. პრობლემა გაგრძელების შემთხვევაში, გადაამოწმეთ პარამეტრები > წვდომა ზედა რეკლამებში. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "მომხმარებლის ინფორმაციის მიღება ვერ მოხერხდა. გთხოვთ, რამდენიმე ხნის შემდეგ სცადოთ თავიდან. თუ ეს არ მოგვარებს,ご了承ください უნდა მოგვმართოთ პარამეტრები > კითხვაზე. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "ყიდვის ინფორმაცია ვერ იქნა მიღებული. გთხოვთ, გარკვეული დროის შემდეგ კიდევ ერთხელ სცადოთ. თუ ეს არ გამოიხატება, დაგვიკავშირდეთ პარამეტრები > კითხვები. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "ეს არის უცნობი შეცდომა. გთხოვთ, განაახლოთ აპლიკაცია ახალ ვერსიაზე და სცადეთ ისევ. თუ პრობლემა არ მოგვარდება, გთხოვთ, დაგვიკავშირდეთ შევიდა პარამეტრებში > კითხვის ნაწილში. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": " უცნობი შეცდომა. ვერ შევიძინე ინფორმაცია დაზოგვის შესახებ წინასწარ. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "ეს არის უცნობი შეცდომა. გთხოვთ, განაახლოთ უკანასკნელი ვერსია და სცადოთ კიდევ ერთხელ. თუ პრობლემა არ მოგვარდება, გთხოვთ, დაგვიკავშირდეთ პარამეტრები > сұрақები. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "ეს არის უცნობი შეცდომა. გთხოვთ, გადააწყოთ最新版 და კვლავ სცადოთ. თუ ვერ გადაჭერთ, გთხოვთ, დაუკავშირდეთ ჩვენზე პარამეტრები > კონტაქტი. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "არასახლებელი შეცდომაა. მიმართეთ უახლეს ვერსიას და სცადეთ უქმეებზე. თუ პრობლემა არ გადაწყდა, მიმართეთ პარამეტრები > კითხვა. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "ხარისხი ინფორმაციის მიღება ვერ მოხერხდა. გთხოვთ, ცოტა ხნით დაელოდოთ და კვლავ სცადოთ. თუ პრობლემა არ მოგვარდება, გთხოვთ, მოიძიოთ მხარდაჭერა პარამეტრების ქვეშ > მხარდაჭერა. დეტალები: კოდი: {errorCode} {exceptionMessage}:{exceptionDetails}.",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "მობილური მოწყობილობის კონფიგურაციაში პრობლემაა. გთხოვთ შეამოწმოთ და კვლავ სცადოთ. თუ პრობლემა კვლავაც არ მოგვარდება, მოგვმართეთ პარამეტრები > კითხვა. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "შედეგების დაბრუნების პროცესი დაიწყო. დაადასტურეთ და სცადეთ კიდევ ერთხელ. თუ პრობლემა არ მოგვარდება, გთხოვთ მოინახულოთ პარამეტრები > შეკითხვა. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "დროის გასვლა მოხდა. დარწმუნდით, რომ კომუნიკაციის გარემო სწორია და მოინიშნეთ ხელახალი მცდელობა. თუ პრობლემა არ გადაიჭრა, გთხოვთ, დაუკავშირდეთ მხარსაჭერ მენიუდან: პარამეტრები > შეკითხვები. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "ეს არის განუსაზღვრელი შეცდომა. წაიყვანეთ განახლებული ვერსია და სცადეთ ისევ. თუ პრობლემა არ მოგვარდება, გთხოვთ მიმართოთ ცხელ ხაზზე ტესტირების > საკონტაქტო საშუალებებიდან. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ხშირად გაუგებარი შეცდომაა. შეასრულეთ განახლება ყველაზე ახლოს ვერსიაზე და იმში კვლავ სცადეთ. თუ პრობელმას ვერ მოაგვარებთ, გთხოვთ დაგვიკავშირდეთ პარამეტრები > კითხვები მენიუდან. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "კავშირი გაწყვეტილია. გთხოვთ გადაამოწმოთ კავშირი და კვლავ სცადოთ. თუ პრობლემა რჩება, მოიძიეთ \"პარამეტრები >問い合わせ\" და მოგვწერეთ. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "გთხოვთ გაახლოთ აპლიკაცია",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "გთხოვთ, დააინსტალიროთ თქვენი აპლიკაციის ვერსიის განახლება. გთხოვთ, განაახლეთ უახლეს ვერსიაში {storeName}.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "კლინიკაში წასვლა",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "ღირსეულად უნდა მიიღო შეტყობინება იმ დღეს 9:00 საათზე.",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "გაფანტული გეგმები ვერ აღდგება",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "გეგმას წავშლი",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "იგი მუშაობს მხოლოდ iOS აპლიკაციებზე",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "ეს აპლიკაცია არ არის ხელმისაწვდომი მოწყობილობებისთვის, რომლებიც არ ერთიანდება Health-ის სისტემასთან",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "გთხოვთ აქტივირება ჯანმრთელობის მოვლა მობილური აპლიკაციის მეშვეობით.",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებულია თქვენს არსებულ Pilll ანგარიშთან. გთხოვთ, სცადოთ ეკრანის განახლება. ასევე, ეწვიეთ სექციას FAQ. დეტალები: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "ეს {accountTypeProviderName} ანგარიში უკვე დაკავშირებულია სხვა Pilll ანგარიშთან, ამიტომ რეგისტრაცია ვერ მოხდება. გთხოვთ, გაეცნოთ FAQ-ს. დეტალები: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "თქვენ ვერ გააკეთებთ რეგისტრაციას, რადგან ამჟამად {accountTypeProviderName} ანგარიშზე იყენებთ ელექტრონულ ფოსტას, რომელიც დაკავშირებულია სხვა Pilll ანგარიშთან. გთხოვთ გაეცნოთ FAQ-ს. დეტალები: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "დღის ჩანაწერი",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "კალენდარი",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "დღედან ახალი ფურცელი იწყება",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 დღეს ახალი ფურცელი იწყება\nარ დაგავიწყდეთ მიღება👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "პრემიუმ ინფორმაცია ვერ მოიძებნა",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "ჯანგების გატანის გადამოწმება არ მომხდარა. გთხოვთ, რამდენიმე წუთით დაელოდოთ და კვლავ შეამოწმოთ.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "ძალადობის დროს შეცდომა მოხდა",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "მაგალითად \"1/12-დან 3 დღის განმავლობაში\" წამლის მიღება შეწყვეტილი იყო",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "მაგალითად, „18-ე ნომრიდან 3 დღე“ წამლის მიღება შეწყვეტილი იყო",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} ნომერი",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "ამჟამად სამიზნე მუქთბლოკი ვერ მოიძებნა",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "სპეციალურად წამლების მოხმარების გაუქმების პროცესი ვერ განხორციელდება დასვენების პერიოდის განმავლობაში.",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "გუგლის ანგარიში",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "დღიურის ჩანაწერი",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "განმარტება ჩაწერეთ",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "წინა აბების ჯგუფი ჯერ არ არსებობს.",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} დან",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "შეიძლება, რომ დაკავშირება არასტაბილურადაა. გთხოვთ შეეცადოთ ისევ გარკვეული დროის შემდეგ.",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "არაჩვენებითი შეცდომა მოხდა. გთხოვთ, ცოტახანს დაველოდოთ და კვლავ სცადოთ.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "შეცდომა მოხდა",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "თვითური შეცდომა მოხდა",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "#{VAL}Unexpected error occurred",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "თუ შეტყობინებაზე დიდხანს დააჭერთ, შეგიძლიათ წამლის მიღების ისტორია დაამატოთ.",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "გთხოვთ დაასწროთ",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "თქვენ შეგიძლიათ გამოიყენოთ ყველა ფუნქცია {number} დღის განმავლობაში!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "შემატება შესატყვისის მიხედვით",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "საშუალო ციკლი",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "საშუალო დღეები",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "დღე",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "შენიშვნა",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "განახლება ვერ განხორციელდა. გთხოვთ დაადასტუროთ საკომუნიკაციო გარემო და მიმართეთ ცვლილებებს.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "მუცლის შესაწირი",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "ღრუბლიანი",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "მუცლის ტკივილი",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "ანისით",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "ხანგრძლივი შეკრულობა",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "გაჭირვება",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "ძილი",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "წანწალი",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "საკუთარი გულისცემა",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "არითმიულება",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "მადას არექცევა",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "ძარღვების გაფართოება",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "უც眠",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "გთხოვთ დაისვენოთ. თუ გსურთ სხვა დღეს მიღების შეწყვეტა, გაითვალისეთ ქვემოთ.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "გამოცდილება გამოსაწვდეთის ფუნქციის გამოყენება",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "დავალების მიღება შეჩერება",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "თქვენი პილების მიღების დროში ცვლილება განხორციელდა",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "დროული შესვენების პერიოდის რედაქტირება",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "მიღების დღის რიცხვის შეცვლა",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} ნომერი ~ {end} ნომერი",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "უკიდურესად დაუბრუნებელი",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "დოზირების შესვენების პერიოდის გადახედვა",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "თქვენ შეცვალეთ პრეპარატის შესვენების პერიოდი",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date} შეიცვალა",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "可能ია სამკურნალო ჩანაწერის ჩატარდა ვერ განახორციელდა",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "Խնդրում ենք բացել ծրագիրը և ստուգել",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "Შექცევა",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "დრugs-ს ასე ნაკლებად ვმართავთ",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "თქვენ დაიწყეთ წამლის მიღების შვებას.",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} ნომერი",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "ნომრიდან დაწყება",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "დამატება",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "პილების ფირფიტის დამატება",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "მედიკამენტების მიღება შეჩერებულია",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "თუ დღეს მიღებული პილი გაქვთ, \"გამოტოვება\" შეუძლებელია.",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "დახმარების მიღება დაიწყო",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "დოზირების შეწყვეტის დაწყების თარიღის რედაქტირება",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "მეგობრებზე მიცემა",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "გამოყენების პირობები",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "მდუმარების პოლიტიკა",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "დასაბეჭდი ნოტები კომპიუტერის საჯარო ბიულეტენის დაწერა.",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "შეტყობინება{number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "შეტყობინების დრო",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz} შეცვალა",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "წამლის მიღების დღეების დაწყების შეცვლა",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "მიღების დღის ბოლოს ცვლილება",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "პილების გაწვდილი საგანძურის მიერ განახლება შეუძლებელია id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "პილების მიღების ისტორიის ინფორმაციის მიღება ვერ მოხერხდა।{error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "კენჭი გადაყვანა",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "წაშლილი დღიური ვერ მოიძებნება",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "არაჩვეულებრივი პერიოდის რედაქტირება",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "გვერდზე აღნიშნეთ პილების ნომერი",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "ზოგადად თვეების საფასურთან შედარებით {offPercent} % გადახდა",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "პრემიალური რეგისტრაციის საშუალებით შეგიძლიათ კვლავ გამოიყენოთ ყველა ფუნქცია",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} შიდა ყიდვით {offPercent}%-ით ფასდაკლება",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "საყურადღებოდ გააფრთხილეთ {value}.",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  }
+}
