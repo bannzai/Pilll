@@ -240,6 +240,7 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  dotenv
   fastlane
   pry-byebug
   pry-coolline
