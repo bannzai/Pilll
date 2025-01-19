@@ -360,6 +360,7 @@
   "@reLoginMessage": {
     "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
   },
+  "updateAuthenticationAfterReLogin": "მجდარდი ხართ მომხმარებელთა შესვლაზე ინფორმაცია განახლება.",
   "updateAuthenticationAfterReLogin": "მجدარდი ხართ მომხმარებელთა შესვლაზე ინფორმაცია განახლება.",
   "@updateAuthenticationAfterReLogin": {
     "description": "再度ログインをして認証情報を更新します"
@@ -1866,7 +1867,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },
-  "launchError": "ძალადობის დროს შეცდომა მოხდა",
+  "launchError": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
   "@launchError": {
     "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
     "placeholders": {

@@ -492,7 +492,7 @@
   "@selectPauseStartDate": {
     "description": "服用お休み開始日選択"
   },
-  "selectPausePeriod": "{VAL} کا دورانیہ منتخب کریں",
+  "selectPausePeriod": "کا دورانیہ منتخب کریں",
   "@selectPausePeriod": {
     "description": "服用お休み期間を選択"
   },
@@ -596,7 +596,7 @@
       }
     }
   },
-  "changePillDaysForSheet": "{VAL} کی دوائی کی تاریخ کو تبدیل کریں",
+  "changePillDaysForSheet": "کی دوائی کی تاریخ کو تبدیل کریں",
   "@changePillDaysForSheet": {
     "description": "シートの服用日数を変更"
   },
@@ -637,7 +637,7 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "{VAL} دنوں کے لئے",
+  "pillDays": "دنوں کے لئے",
   "@pillDays": {
     "description": "服用日数"
   },
@@ -1090,7 +1090,7 @@
   "@notYetKnown": {
     "description": "まだ分からない"
   },
-  "pillForToday": "آج لیتے ہوئے گولی ہے",
+  "pillForToday": "{today} لیتے ہوئے گولی ہے",
   "@pillForToday": {
     "description": "{today}に飲むピルは",
     "placeholders": {
@@ -1099,7 +1099,7 @@
       }
     }
   },
-  "todayPillNumber": "{آج کی گولی کی تعداد}",
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "{todayPillNumberPillNumberInPillSheet}",
     "placeholders": {
@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "{VAL} دنوں کی ماہواری جاری ہے",
+  "daysMenstruationLasts": "دنوں کی ماہواری جاری ہے",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },
@@ -2206,7 +2206,7 @@
   "@changeStartOfPillDays": {
     "description": "服用日数の始まりを変更"
   },
-  "changeEndOfPillDays": "{VAL} کی میعاد کی تاریخ تبدیل کریں",
+  "changeEndOfPillDays": "کی میعاد کی تاریخ تبدیل کریں",
   "@changeEndOfPillDays": {
     "description": "服用日数の終わりを変更"
   },

@@ -36,7 +36,7 @@
   "@placebo": {
     "description": "偽薬"
   },
-  "userNotFound": "{VAL} নীলামে নগদ টাকা অবিলম্বে পাওয়া যাবে।",
+  "userNotFound": "নীলামে নগদ টাকা অবিলম্বে পাওয়া যাবে।",
   "@userNotFound": {
     "description": "ユーザーが見つかりません"
   },
@@ -496,7 +496,7 @@
   "@selectPausePeriod": {
     "description": "服用お休み期間を選択"
   },
-  "pauseStartDate": "{VAL} তিৱৰাৰ আৰম্ভণিৰ তাৰিখ",
+  "pauseStartDate": "তিৱৰাৰ আৰম্ভণিৰ তাৰিখ",
   "@pauseStartDate": {
     "description": "服用お休み開始日"
   },
@@ -516,7 +516,7 @@
   "@takingTime": {
     "description": "服用時間"
   },
-  "takingHistoryIsPremiumFeature": "{VAL} ইতিহাস একটি প্রিমিয়াম ফিচার।",
+  "takingHistoryIsPremiumFeature": "ইতিহাস একটি প্রিমিয়াম ফিচার।",
   "@takingHistoryIsPremiumFeature": {
     "description": "服用履歴はプレミアム機能です"
   },
@@ -792,7 +792,7 @@
       }
     }
   },
-  "recordMenstruation": "{VAL} জলদিহি",
+  "recordMenstruation": "জলদিহি",
   "@recordMenstruation": {
     "description": "生理を記録"
   },
@@ -913,7 +913,7 @@
   "@premiumTermsNotice2": {
     "description": "特定商取引法に基づく表示"
   },
-  "premiumTermsNotice3": "{VAL}লগতৰ পৰা প্ৰমাণিত কৰি ৰাষ্ট্ৰভাষাত পঞ্জীয়ন কৰক৷",
+  "premiumTermsNotice3": "লগতৰ পৰা প্ৰমাণিত কৰি ৰাষ্ট্ৰভাষাত পঞ্জীয়ন কৰক৷",
   "@premiumTermsNotice3": {
     "description": "をご確認のうえ登録してください\n"
   },
@@ -942,7 +942,7 @@
   "@previouslyPurchased": {
     "description": "以前購入した方はこちら"
   },
-  "noPreviousPurchaseInfo": "{VAL} পৰিকল্পনা কৰা ক্ৰীড়সন্মেলনৰ বিষয়ে অতীতৰ চাহিদাৰ তথ্য লাভ কৰা গৈছে। অনুগ্ৰহ কৰি আপোনাৰ একাউণ্ট চাওঁক আৰু পুনৰ চেষ্টা কৰক।",
+  "noPreviousPurchaseInfo": "পৰিকল্পনা কৰা ক্ৰীড়সন্মেলনৰ বিষয়ে অতীতৰ চাহিদাৰ তথ্য লাভ কৰা গৈছে। অনুগ্ৰহ কৰি আপোনাৰ একাউণ্ট চাওঁক আৰু পুনৰ চেষ্টা কৰক।",
   "@noPreviousPurchaseInfo": {
     "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
   },
@@ -1152,7 +1152,7 @@
   "@pilll": {
     "description": "Pilll"
   },
-  "changeMissedNotificationMessage": "{VAL}の場合の通知文言を変更できます",
+  "changeMissedNotificationMessage": "আপনি ভুলে গেলে বিজ্ঞপ্তির বার্তা পরিবর্তন করতে পারেন",
   "@changeMissedNotificationMessage": {
     "description": "飲み忘れてる場合の通知文言を変更できます"
   },
@@ -1244,7 +1244,7 @@
   "@contactIfNotResolved": {
     "description": "解決しない場合はこちら"
   },
-  "shareFeedback": "Pilll {VAL} ৰ বিৱৰণ দিয়ক",
+  "shareFeedback": "Pilll ৰ বিৱৰণ দিয়ক",
   "@shareFeedback": {
     "description": "Pilllの感想をお聞かせください"
   },
@@ -1284,7 +1284,7 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "何日間生理が続く？"
   },
-  "daysMenstruationLasts": "{VAL} দিন পালিত হয়",
+  "daysMenstruationLasts": "দিন পালিত হয়",
   "@daysMenstruationLasts": {
     "description": "日間生理が続く"
   },
@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "পণ্য তথ্য উদ্ধার করতে ব্যর্থ হয়েছে। কয়েক মিনিট পর আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয়, তাহলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "পণ্য তথ্য উদ্ধার করতে ব্যর্থ হয়েছে। ক৯েক মিনিট পর আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয়, তাহলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
     "placeholders": {
@@ -1782,7 +1782,7 @@
   "@visitHospital": {
     "description": "通院する"
   },
-  "receiveNotificationAt9AM": "{VAL} বেগে {VAL} সময়ে নোটিফিকেশন পাবেন",
+  "receiveNotificationAt9AM": "বেগে সময়ে নোটিফিকেশন পাবেন",
   "@receiveNotificationAt9AM": {
     "description": "当日9:00に通知を受け取る"
   },
@@ -1862,7 +1862,7 @@
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "プレミアム情報が見つかりませんでした"
   },
-  "purchaseErrorPurchasePendingError": "{VAL}",
+  "purchaseErrorPurchasePendingError": "আপনার ক্রয়ের সক্রিয়করণ সম্পূর্ণ হয়নি। কিছুক্ষণ অপেক্ষা করে আবার পরীক্ষা করুন।",
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },

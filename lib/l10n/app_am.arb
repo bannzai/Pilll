@@ -64,7 +64,7 @@
   "@pillPremium": {
     "description": "Pilllプレミアム"
   },
-  "unlimitedFeatureDuration": "{VAL} ስለ የተገኘ ምርት ዝግጅት ይችላሉ",
+  "unlimitedFeatureDuration": "ስለ የተገኘ ምርት ዝግጅት ይችላሉ",
   "@unlimitedFeatureDuration": {
     "description": "機能無制限の期間について"
   },
@@ -600,7 +600,7 @@
   "@changePillDaysForSheet": {
     "description": "シートの服用日数を変更"
   },
-  "changedStartAndEndNumbers": "{VAL} ወዲያውን ቁጥር ማስተካከል ተመልሳ ነው፤ እንዲሁም ቁጥሮች የወንድሞች መለወጥ ይቻላል።",
+  "changedStartAndEndNumbers": "ወዲያውን ቁጥር ማስተካከል ተመልሳ ነው፤ እንዲሁም ቁጥሮች የወንድሞች መለወጥ ይቻላል።",
   "@changedStartAndEndNumbers": {
     "description": "始まりと終わりの番号を変更しました"
   },
@@ -1305,7 +1305,7 @@
   "@newPillSheetStart": {
     "description": "新しいピルシート開始 ▶︎"
   },
-  "selectPillType": "{VAL} ዝርዝር ይምረጡ",
+  "selectPillType": "ዝርዝር ይምረጡ",
   "@selectPillType": {
     "description": "ピルの種類を選択"
   },
@@ -1341,7 +1341,7 @@
   "@twentyFourPlusFourDaysBreak": {
     "description": "24錠＋4錠休薬"
   },
-  "choosePillType": "{VAL} የፒል ዓይነት ይምረጡ",
+  "choosePillType": "የፒል ዓይነት ይምረጡ",
   "@choosePillType": {
     "description": "ピルの種類を選ぶ"
   },
@@ -1371,7 +1371,7 @@
   "@pilllDescription": {
     "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
   },
-  "reachedMaximumCountOfReminderTimes": "የመመዘገቢያ ማውጣት ወይም ገዳይ ላይ ወይም ወገን ላይ ወይም ወግባ ላይ የማይኑቀ ወይም ታሪክ ክፍል ወይም ታሪክ ማድረግ ችሎታ ይወጣበት፣ አሁንም ይህ ወይም የአልባ ወይም ወታተር ማዕከል ይህ ወይም ትወቅ የሆነ ወይም ወታተር ወታተር ይወምዽ ስፈው ሳይነዳ ወ— ይቀን ወይም ወይም ወይም ወ @rules (እንድ  የአልባ ወይም ወይም ለመጻ (ለአንድ) በጣም ወይም ወ ወይም በጣም ወይም ወይም ማረፊያ ፈፍሢ ሐበሻ ይቀንች ይሁኑ፣ ው—} , ውዝ-ወይም አግዚክ ወይም ወይም ት−ወገን ማድረግ ይወምዽ ይህ አቀዲ ይሁኑ የሚያذ ולהיחלץ መመ له ይሆኑ በጣም ወይም ይቀንች ነው",
+  "reachedMaximumCountOfReminderTimes": "በመሆን የሚታይ የመድሃኒት ቦታዎች አልተገኘም። {ReminderTimeMaximumCount} ቦታዎች በእርስዎ ማስታወሻ ይታወቃሉ",
   "@reachedMaximumCountOfReminderTimes": {
     "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
     "placeholders": {
@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "በምርጥ ጊዜ ገጽታ ወይም ከነ ማህደሦች መነሻ እንዳትቀመጡ ይጠይቃሉ። እባኮትን እቀይዘው ወይም ልክ ዝርዝር ይከናውን። ወ/ለ ዝርዝር ሊከናኝ ይኖርበት የተናገሩን መርምር ሳይክ ይንቀሳቀስ ወደፍ기를 ወላናገር ይችላል።",
+  "purchaseErrorProductDiscountMissingIdentifierError": "ያልታወቀ ስህተት ነው። እባኮትን ወደ አዳዲስ እትም ይሂዱ እና እንደገና ይሞክሩ። አልተፈቀደም ከሆነ በቅንጡ መደብ > ጥያቄ ይገናኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
     "placeholders": {
@@ -1896,7 +1896,7 @@
   "@currentPillSheetNotFound": {
     "description": "現在対象となっているピルシートが見つかりませんでした"
   },
-  "doNotRevertTakePillInPausePeriod": "{VAL} የፒል ከፍተኛ ዝርካ መግደያ በቅርብ ጊዜ እንደሚቀ Sudan ይወስዳል።",
+  "doNotRevertTakePillInPausePeriod": "የፒል ከፍተኛ ዝርካ መግደያ በቅርብ ጊዜ እንደሚቀ Sudan ይወስዳል።",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
   },
