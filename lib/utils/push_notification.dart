@@ -13,6 +13,7 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
   registerRemotePushNotificationToken(await FirebaseMessaging.instance.getToken());
 
   if (Platform.isAndroid) {
+    await AndroidFlutterLocalNotificationsPlugin().requestNotificationsPermission();
     await AndroidFlutterLocalNotificationsPlugin().requestExactAlarmsPermission();
   }
 }
