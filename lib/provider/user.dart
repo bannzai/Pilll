@@ -224,10 +224,6 @@ class SaveUserLaunchInfo {
       UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
 
       UserFirestoreFieldKeys.isTrial: user.isTrial,
-
-      // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
-      // 処理的に大体のユーザーがカバーできれば良いので、現在のnewPillSheetNotificationが登録されている数から判別する
-      UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: (await localNotificationService.pendingNewPillSheetNotifications()).isNotEmpty,
     }, SetOptions(merge: true));
   }
 }
@@ -245,8 +241,6 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
       UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
           now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
-      // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
-      UserFirestoreFieldKeys.useLocalNotificationForNewPillSheet: true,
     }, SetOptions(merge: true));
   }
 }
