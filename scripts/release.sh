@@ -11,7 +11,7 @@ sed -E -i "" "s/^version: (.+)/version: $DATE/" pubspec.yaml
 git add pubspec.yaml
 git commit -m ":up: to $DATE"
 
-git push origin
+git push origin $(git rev-parse --abbrev-ref HEAD)
 gh pr create --fill --base main --head $(git rev-parse --abbrev-ref HEAD)
 
 # NOTE: --merge option will be create merge commit
