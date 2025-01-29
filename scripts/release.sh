@@ -2,10 +2,6 @@
 set -eu
 set -o pipefail
 
-set +e
-git b -d main
-set -e
-
 DATE=$(date '+%Y%m.%d.%H%M%S')
 git fetch origin
 git switch -c release/$DATE origin/main
@@ -29,6 +25,3 @@ git tag release-android-v$DATE
 git push origin --tags
 
 gh release create $DATE --generate-notes
-
-git b -d main
-
