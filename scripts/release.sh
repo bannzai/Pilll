@@ -14,6 +14,8 @@ git commit -m ":up: to $DATE"
 git push origin $(git rev-parse --abbrev-ref HEAD)
 gh pr create --fill --base main --head $(git rev-parse --abbrev-ref HEAD)
 
+git fetch origin
+
 # NOTE: --merge option will be create merge commit
 gh pr merge --merge --delete-branch
 
