@@ -37,6 +37,7 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
       .orderBy(PillSheetGroupFirestoreKeys.createdAt)
       .limitToLast(1)
       .snapshots(includeMetadataChanges: true)
+      .skipWhile((snapshot) => snapshot.metadata.hasPendingWrites)
       .map(((event) => _filter(event)));
 }
 
