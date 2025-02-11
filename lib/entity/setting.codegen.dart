@@ -1,4 +1,4 @@
-import 'package:pilll/entity/pill_sheet_appearance_mode.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
