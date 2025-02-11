@@ -227,7 +227,7 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
     Object? isOnNotifyInNotTakenDuration = null,
     Object? isAutomaticallyCreatePillSheet = null,
     Object? reminderNotificationCustomization = null,
-    Object? pillSheetAppearanceMode = null,
+    Object? pillSheetAppearanceMode = freezed,
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_value.copyWith(
@@ -263,7 +263,7 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
-      pillSheetAppearanceMode: null == pillSheetAppearanceMode
+      pillSheetAppearanceMode: freezed == pillSheetAppearanceMode
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
@@ -319,7 +319,7 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
     Object? isOnNotifyInNotTakenDuration = null,
     Object? isAutomaticallyCreatePillSheet = null,
     Object? reminderNotificationCustomization = null,
-    Object? pillSheetAppearanceMode = null,
+    Object? pillSheetAppearanceMode = freezed,
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_$SettingImpl(
@@ -355,7 +355,7 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
-      pillSheetAppearanceMode: null == pillSheetAppearanceMode
+      pillSheetAppearanceMode: freezed == pillSheetAppearanceMode
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
@@ -470,7 +470,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
                 other.isAutomaticallyCreatePillSheet == isAutomaticallyCreatePillSheet) &&
             (identical(other.reminderNotificationCustomization, reminderNotificationCustomization) ||
                 other.reminderNotificationCustomization == reminderNotificationCustomization) &&
-            (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
+            const DeepCollectionEquality().equals(other.pillSheetAppearanceMode, pillSheetAppearanceMode) &&
             (identical(other.timezoneDatabaseName, timezoneDatabaseName) || other.timezoneDatabaseName == timezoneDatabaseName));
   }
 
@@ -486,7 +486,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       isOnNotifyInNotTakenDuration,
       isAutomaticallyCreatePillSheet,
       reminderNotificationCustomization,
-      pillSheetAppearanceMode,
+      const DeepCollectionEquality().hash(pillSheetAppearanceMode),
       timezoneDatabaseName);
 
   @JsonKey(ignore: true)
