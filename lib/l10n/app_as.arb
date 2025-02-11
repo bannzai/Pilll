@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "পিল গ্রহণের বিজ্ঞপ্তি",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

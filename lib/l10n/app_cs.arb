@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Upozornění na užití",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

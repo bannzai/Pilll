@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "ការប្រាប់អំពីការទទួលមេដឹកនាំ",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

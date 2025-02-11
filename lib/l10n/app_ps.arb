@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "د درملنې خبرتيا",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

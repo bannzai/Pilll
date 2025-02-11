@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Arifa ya kutotumia",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

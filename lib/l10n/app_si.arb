@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "පැමිණීමේ දැනුම",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

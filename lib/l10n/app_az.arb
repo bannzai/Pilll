@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "İdman bildirişi",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

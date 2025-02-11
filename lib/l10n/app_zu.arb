@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "ukukhumbuza ukuthatha",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

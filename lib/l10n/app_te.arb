@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "దవాఖానా పరిహారాలు",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

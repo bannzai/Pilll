@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Дарыны эскертүү",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

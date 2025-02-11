@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Ειδοποίηση λήψης φαρμάκων",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

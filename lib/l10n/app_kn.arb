@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "ಪಿಲ್ಲ್ ತೆಗೆದುಕೊಳ್ಳುವ ಮಾಹಿತಿಯು",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

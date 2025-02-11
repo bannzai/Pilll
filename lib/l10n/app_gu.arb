@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "પેટ્રોલીાઉસ",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

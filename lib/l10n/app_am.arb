@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "የተያዙ መረጃ",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Vaistų vartojimo pranešimas",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

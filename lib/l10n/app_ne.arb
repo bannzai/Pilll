@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "पिल प्रयोग नोटिस",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Уведомление за прием",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

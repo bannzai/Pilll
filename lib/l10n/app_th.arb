@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "การแจ้งเตือนการใช้ยา",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

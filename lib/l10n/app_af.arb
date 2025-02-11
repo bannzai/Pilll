@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Pillinligting",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }
