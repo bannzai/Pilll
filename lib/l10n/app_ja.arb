@@ -72,9 +72,9 @@
   "@pillSheet": {
     "description": "ピルシート"
   },
-  "notification": "通知です",
+  "notification": "通知",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "生理",
   "@menstruation": {
