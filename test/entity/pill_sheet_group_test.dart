@@ -41,7 +41,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
-          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           createdAt: now(),
         );
         expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 5);
@@ -76,7 +76,7 @@ void main() {
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
-            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
             createdAt: now(),
           );
           expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 22);
@@ -112,7 +112,7 @@ void main() {
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
-            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
             createdAt: now(),
           );
           expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 25);
@@ -153,7 +153,7 @@ void main() {
             final pillSheetGroup = PillSheetGroup(
               pillSheetIDs: ["sheet_id"],
               pillSheets: [pillSheet],
-              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
               createdAt: now(),
             );
             expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 19);
@@ -197,7 +197,7 @@ void main() {
             final pillSheetGroup = PillSheetGroup(
               pillSheetIDs: ["sheet_id"],
               pillSheets: [pillSheet],
-              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
               createdAt: now(),
             );
             expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 22);
@@ -242,7 +242,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
           pillSheets: [pillSheet1, pillSheet2],
-          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           createdAt: now(),
         );
         expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
@@ -285,7 +285,7 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
           createdAt: now(),
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
         expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 29);
       });
@@ -327,7 +327,7 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
           createdAt: now(),
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 28),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
         expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 28);
       });
@@ -369,7 +369,7 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
           createdAt: now(),
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
         );
         expect(pillSheetGroup.lastTakenPillNumberWithoutDate, 2);
       });
@@ -399,7 +399,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
-          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           createdAt: now(),
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 6);
