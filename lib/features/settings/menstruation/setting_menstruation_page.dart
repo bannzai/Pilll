@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 
 class SettingMenstruationPage extends HookConsumerWidget {
@@ -21,7 +21,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
       title: L.aboutMenstruation,
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetEnumTypes,
-        appearanceMode: PillSheetAppearanceMode.sequential,
+        appearanceMode: PillSheetAppearanceMode.cyclicSequential,
         selectedPillNumber: (pageIndex) {
           final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
           if (passedTotalCount >= setting.pillNumberForFromMenstruation) {

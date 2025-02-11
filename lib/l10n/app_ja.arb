@@ -641,13 +641,9 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "服用日数",
-  "@pillDays": {
-    "description": "服用日数"
-  },
-  "pillDaysCycle": "服用日数(周期)",
+  "pillDaysCycle": "服用日数",
   "@pillDaysCycle": {
-    "description": "服用日数(周期)"
+    "description": "服用日数"
   },
   "pillSheetEnded": "ピルシートが終了しました",
   "@pillSheetEnded": {
@@ -1014,10 +1010,6 @@
   "viewPremiumFeatures": "プレミアム機能を見る",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能を見る"
-  },
-  "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
   },
   "seeDetails": "詳細を見る",
   "@seeDetails": {

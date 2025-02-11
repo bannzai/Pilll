@@ -2,7 +2,6 @@ import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';
 import 'package:pilll/features/record/components/button/rest_duration_button.dart';
