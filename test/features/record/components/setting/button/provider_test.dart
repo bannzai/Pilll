@@ -5,7 +5,6 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/record/components/setting/components/rest_duration/provider.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
