@@ -131,8 +131,6 @@ class PillSheetGroup with _$PillSheetGroup {
           case PillSheetAppearanceMode.number:
           case PillSheetAppearanceMode.date:
             return _pillNumberInPillSheet(pillNumberInPillSheet: lastTakenPillNumber);
-          case PillSheetAppearanceMode.sequential:
-            return _sequentialPillSheetNumber(pageIndex: pillSheet.groupIndex, pillNumberInPillSheet: lastTakenPillNumber);
           case PillSheetAppearanceMode.cyclicSequential:
             return _cycleSequentialPillSheetNumber(pageIndex: pillSheet.groupIndex, pillNumberInPillSheet: lastTakenPillNumber);
         }
@@ -151,7 +149,6 @@ class PillSheetGroup with _$PillSheetGroup {
   }
 
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersInPillSheet = _pillNumbersInPillSheet();
-  late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForSequential = _pillNumbersForSequential();
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
 
@@ -173,8 +170,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
         return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.date:
         return _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet);
-      case PillSheetAppearanceMode.sequential:
-        return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
       case PillSheetAppearanceMode.cyclicSequential:
         return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
     }
@@ -190,8 +185,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
         return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
       case PillSheetAppearanceMode.date:
         return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
-      case PillSheetAppearanceMode.sequential:
-        return pillNumbersForSequential.firstWhere((e) => isSameDay(e.date, date)).number;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, date)).number;
     }
@@ -219,7 +212,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
       PillSheetAppearanceMode.date => premiumOrTrial
           ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
           : _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.sequential => _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.cyclicSequential => _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
     return pillNumber.toString();
@@ -244,21 +236,6 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pillNumberInPillSheet,
   }) {
     return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
-  }
-
-  @visibleForTesting
-  int sequentialPillSheetNumber({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
-    return _sequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
-  }
-
-  int _sequentialPillSheetNumber({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
-    return pillNumbersForSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 
   @visibleForTesting
@@ -552,7 +529,6 @@ extension PillSheetAppearanceModeExt on PillSheetAppearanceMode {
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
         return false;
-      case PillSheetAppearanceMode.sequential:
       case PillSheetAppearanceMode.cyclicSequential:
         return true;
     }
