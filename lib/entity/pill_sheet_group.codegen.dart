@@ -521,7 +521,7 @@ enum PillSheetAppearanceMode {
   date,
   // 古い値。cyclicSequentialに変更した。一時的に両立されていた
   @JsonValue('sequential')
-  // sequential,
+  sequential,
   @JsonValue('cyclicSequential')
   cyclicSequential,
 }
