@@ -8,7 +8,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/formatter/text_input_formatter.dart';
 
 class DisplayNumberSetting extends HookConsumerWidget {

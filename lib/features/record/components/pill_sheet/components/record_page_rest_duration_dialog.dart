@@ -4,7 +4,6 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
