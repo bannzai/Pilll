@@ -21,7 +21,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
       title: L.aboutMenstruation,
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetEnumTypes,
-        appearanceMode: PillSheetAppearanceMode.sequential,
+        appearanceMode: PillSheetAppearanceMode.cyclicSequential,
         selectedPillNumber: (pageIndex) {
           final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
           if (passedTotalCount >= setting.pillNumberForFromMenstruation) {
