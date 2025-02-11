@@ -258,6 +258,10 @@
   "@customizeMedicationNotifications": {
     "description": "服用通知のカスタマイズ"
   },
+  "medicationNotification": "服用通知",
+  "@medicationNotification": {
+    "description": "服用通知"
+  },
   "xCanBeCustomized": "{x}のカスタマイズができます",
   "@xCanBeCustomized": {
     "description": "{x}のカスタマイズができます",
