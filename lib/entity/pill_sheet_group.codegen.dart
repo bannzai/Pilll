@@ -76,8 +76,6 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
         return 0;
-      case PillSheetAppearanceMode.sequential:
-        return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
     }
@@ -93,8 +91,6 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
         return 0;
-      case PillSheetAppearanceMode.sequential:
-        return pillNumbersForSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
     }
@@ -105,8 +101,6 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
         return 0;
-      case PillSheetAppearanceMode.sequential:
-        return pillNumbersForSequential.last.number;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.last.number;
     }
@@ -277,8 +271,6 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       case PillSheetAppearanceMode.number:
       case PillSheetAppearanceMode.date:
         return pillNumbersInPillSheet;
-      case PillSheetAppearanceMode.sequential:
-        return pillNumbersForSequential;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential;
     }
