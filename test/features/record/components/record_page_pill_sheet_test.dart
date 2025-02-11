@@ -388,7 +388,7 @@ void main() {
       });
     });
     group("pillSheetAppearanceMode is sequential", () {
-      const pillSheetAppearanceMode = PillSheetAppearanceMode.cyclicSequential;
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
       testWidgets("it is isPremium or isTrial", (WidgetTester tester) async {
         SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
