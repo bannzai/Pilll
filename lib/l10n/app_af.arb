@@ -1866,7 +1866,7 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
   },
-  "launchError": "`'n` 'Ongesteldheid: 'n fout het voorgekom tydens opstart.",
+  "launchError": "`'n` '{ErrorMessagesConnection}: 'n fout het voorgekom tydens opstart.",
   "@launchError": {
     "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
     "placeholders": {
