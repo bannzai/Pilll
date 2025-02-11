@@ -74,7 +74,7 @@
   },
   "notification": "Értesítés",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "Menstruáció",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Bevételi értesítés",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

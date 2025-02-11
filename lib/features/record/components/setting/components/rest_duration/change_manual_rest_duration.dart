@@ -103,7 +103,7 @@ class ChangeManualRestDuration extends HookConsumerWidget {
     } else {
       return ListTile(
         leading: const Icon(Icons.date_range_outlined),
-        title: Text(L.changedPausePeriod),
+        title: Text(L.changePausePeriod),
         subtitle: Text('$begin - $end'),
         onTap: () async {
           analytics.logEvent(name: 'change_manual_rest_duration_range', parameters: {

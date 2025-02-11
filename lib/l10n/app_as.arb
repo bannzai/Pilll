@@ -74,7 +74,7 @@
   },
   "notification": "নোটিফিকেশন",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "মাহিনা",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "পিল গ্রহণের বিজ্ঞপ্তি",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

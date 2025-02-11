@@ -74,7 +74,7 @@
   },
   "notification": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਹੈ",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "ਮਹਿਲਾ ਧਰਮ",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "ਦਵਾਈ ਚੇਤਾਵਨੀ",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

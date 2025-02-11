@@ -74,7 +74,7 @@
   },
   "notification": "ඇඟවීමක්",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "මාසික රුධිරය",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "පැමිණීමේ දැනුම",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

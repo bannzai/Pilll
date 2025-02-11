@@ -74,7 +74,7 @@
   },
   "notification": "សេចក្តីប្រកាស",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "កូដ",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "ការប្រាប់អំពីការទទួលមេដឹកនាំ",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

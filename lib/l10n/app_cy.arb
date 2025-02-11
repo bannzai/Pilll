@@ -74,7 +74,7 @@
   },
   "notification": "Hysbysiad ydy e",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "period",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Hysbysiad cymryd",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

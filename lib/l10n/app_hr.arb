@@ -74,7 +74,7 @@
   },
   "notification": "obavijest",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "Menstruacija",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Obavijest o uzimanju",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

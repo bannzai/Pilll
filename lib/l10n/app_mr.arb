@@ -74,7 +74,7 @@
   },
   "notification": "सूचना आहे",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "पीरियड",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "धरण सूचना",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

@@ -74,7 +74,7 @@
   },
   "notification": "அறிக்கை",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "மாதவிடாய்",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "போசன அறிவிப்புகள்",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

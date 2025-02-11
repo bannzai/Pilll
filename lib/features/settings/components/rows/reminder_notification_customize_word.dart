@@ -43,7 +43,7 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
         ],
       ),
       subtitle: Text(
-        L.xCanBeCustomized(L.takePillReminder),
+        L.xCanBeCustomized(L.medicationNotification),
         style: const TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w300,

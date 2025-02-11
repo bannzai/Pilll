@@ -74,7 +74,7 @@
   },
   "notification": "Powiadomienie",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "miesiączka",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Powiadomienie o przyjmowaniu",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

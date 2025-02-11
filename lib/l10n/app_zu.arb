@@ -74,7 +74,7 @@
   },
   "notification": "ukwaziswa",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "ukuphuma",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "ukukhumbuza ukuthatha",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

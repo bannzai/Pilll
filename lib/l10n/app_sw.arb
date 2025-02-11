@@ -74,7 +74,7 @@
   },
   "notification": "Taarifa",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "siku ya mwezi",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "Arifa ya kutotumia",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }

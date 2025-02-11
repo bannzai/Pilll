@@ -74,7 +74,7 @@
   },
   "notification": "განცხადება",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "განსაკუთრებული პერიოდი",
   "@menstruation": {
@@ -2277,5 +2277,9 @@
         "type": "String"
       }
     }
+  },
+  "medicationNotification": "მიღების შეტყობინება",
+  "@medicationNotification": {
+    "description": "服用通知"
   }
 }
