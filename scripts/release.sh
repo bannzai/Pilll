@@ -16,6 +16,9 @@ gh pr create --fill --base main --head $(git rev-parse --abbrev-ref HEAD)
 
 git fetch origin
 
+# wait for create pull-request
+sleep 5
+
 # NOTE: --merge option will be create merge commit
 gh pr merge --merge --delete-branch
 
