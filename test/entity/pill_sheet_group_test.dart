@@ -426,7 +426,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           createdAt: now(),
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 28);
@@ -461,7 +461,7 @@ void main() {
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
             createdAt: now(),
           );
           expect(pillSheetGroup.sequentialTodayPillNumber, 22);
@@ -497,7 +497,7 @@ void main() {
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
             createdAt: now(),
           );
           expect(pillSheetGroup.sequentialTodayPillNumber, 25);
@@ -538,7 +538,7 @@ void main() {
             final pillSheetGroup = PillSheetGroup(
               pillSheetIDs: ["sheet_id"],
               pillSheets: [pillSheet],
-              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
               createdAt: now(),
             );
             expect(pillSheetGroup.sequentialTodayPillNumber, 19);
@@ -582,7 +582,7 @@ void main() {
             final pillSheetGroup = PillSheetGroup(
               pillSheetIDs: ["sheet_id"],
               pillSheets: [pillSheet],
-              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
               createdAt: now(),
             );
             expect(pillSheetGroup.sequentialTodayPillNumber, 22);
@@ -627,7 +627,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id", "sheet_id2"],
           pillSheets: [pillSheet1, pillSheet2],
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           createdAt: now(),
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 29);
@@ -670,7 +670,7 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
           createdAt: now(),
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 30);
       });
@@ -712,7 +712,7 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
           createdAt: now(),
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 28),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 1);
       });
@@ -754,7 +754,7 @@ void main() {
           pillSheets: [pillSheet1, pillSheet2],
           createdAt: now(),
           displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         );
         expect(pillSheetGroup.sequentialTodayPillNumber, 3);
       });
@@ -813,7 +813,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         );
         expect(pillSheetGroup.sequentialLastTakenPillNumber, 4);
       });
@@ -840,7 +840,7 @@ void main() {
           pillSheetIDs: ["sheet_id"],
           pillSheets: [pillSheet],
           createdAt: now(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+          pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         );
         expect(pillSheetGroup.sequentialLastTakenPillNumber, 28);
       });
@@ -875,7 +875,7 @@ void main() {
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
             createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 22);
         });
@@ -910,7 +910,7 @@ void main() {
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
             createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 25);
         });
@@ -987,7 +987,7 @@ void main() {
               pillSheetIDs: ["sheet_id"],
               pillSheets: [pillSheet],
               createdAt: now(),
-              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
             );
             expect(pillSheetGroup.sequentialLastTakenPillNumber, 19);
           });
@@ -1028,7 +1028,7 @@ void main() {
               pillSheetIDs: ["sheet_id"],
               pillSheets: [pillSheet],
               createdAt: now(),
-              pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+              pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
             );
             expect(pillSheetGroup.sequentialLastTakenPillNumber, 19);
           });
@@ -1072,7 +1072,7 @@ void main() {
             pillSheetIDs: ["sheet_id", "sheet_id2"],
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 29);
         });
@@ -1114,7 +1114,7 @@ void main() {
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 30);
         });
@@ -1156,7 +1156,7 @@ void main() {
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 28),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 1);
         });
@@ -1199,7 +1199,7 @@ void main() {
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(endPillNumber: 28),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 1);
         });
@@ -1241,7 +1241,7 @@ void main() {
             pillSheets: [pillSheet1, pillSheet2],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 2, endPillNumber: 28),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
           expect(pillSheetGroup.sequentialLastTakenPillNumber, 3);
         });
