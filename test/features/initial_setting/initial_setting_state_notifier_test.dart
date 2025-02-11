@@ -401,7 +401,7 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
-        pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,
