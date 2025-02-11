@@ -1011,10 +1011,6 @@
   "@viewPremiumFeatures": {
     "description": "プレミアム機能を見る"
   },
-  "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
-  },
   "seeDetails": "詳細を見る",
   "@seeDetails": {
     "description": "詳細を見る"
