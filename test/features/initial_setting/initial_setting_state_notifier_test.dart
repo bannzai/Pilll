@@ -1,7 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill_sheet_appearance_mode.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/batch.dart';
