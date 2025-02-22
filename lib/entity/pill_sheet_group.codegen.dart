@@ -337,6 +337,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       }
     }
 
+    debugPrint('_pillNumbersForSequential:pillMarks');
     debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
 
     return pillMarks;
