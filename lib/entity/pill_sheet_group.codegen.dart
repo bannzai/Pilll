@@ -289,8 +289,9 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet() {
     return pillSheets
-        .map((pillSheet) =>
-            pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
+        .map((pillSheet) => pillSheet.dates.indexed
+            .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1 + 1))
+            .toList())
         .flattened
         .toList();
   }
@@ -322,22 +323,23 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       final endPillNumber = displayNumberSetting.endPillNumber;
       if (endPillNumber != null && endPillNumber > 0) {
         final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
-        debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
+        // debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
         for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
-          debugPrint('--------------------');
+          // debugPrint('--------------------');
           final loopOffset = (pillMarkIndex ~/ pillCount);
-          debugPrint('loopOffset: $loopOffset');
+          // debugPrint('loopOffset: $loopOffset');
 
           final countOffset = loopOffset * pillCount;
           final number = pillMark.number - countOffset;
-          debugPrint(
-              'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
+          // debugPrint(
+          //     'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
           pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
         }
       }
     }
 
-    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
+    // debugPrint('_pillNumbersForSequential:pillMarks');
+    // debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
 
     return pillMarks;
   }

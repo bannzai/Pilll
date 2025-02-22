@@ -134,7 +134,7 @@ class PillSheet with _$PillSheet {
     }
 
     // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
-    if (lastTakenDate.isBefore(beginingDate)) {
+    if (lastTakenDate.date().isBefore(beginingDate.date())) {
       return 0;
     }
 
@@ -168,7 +168,7 @@ class PillSheet with _$PillSheet {
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration => pillSheetType.hasRestOrFakeDuration;
   bool get isActive => isActiveFor(now());
 
   bool isActiveFor(DateTime date) {

@@ -33,6 +33,7 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
   static String taken({required int? beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
     // nullの場合は服用記録を取り消したり、服用日を移動した際にありえる
+    // また、1つ前のピルシートの最後の番号の時もnullになる
     final left = (beforeLastTakenPillNumber ?? 0) + 1;
     // 1度飲みの時に本日分を服用した場合は1錠分の服用履歴を表示する
     if (left == afterLastTakenPillNumber) {
@@ -50,7 +51,11 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     return L.withNumber('$left-$afterLastTakenPillNumber');
   }
 
-  static String revert({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
+  static String revert({required int beforeLastTakenPillNumber, required int? afterLastTakenPillNumber}) {
+    if (afterLastTakenPillNumber == null) {
+      return L.withNumber('$beforeLastTakenPillNumber');
+    }
+    // 1度飲みのrevertは1錠分の服用履歴を表示する
     if (beforeLastTakenPillNumber == (afterLastTakenPillNumber + 1)) {
       return L.withNumber('$beforeLastTakenPillNumber');
     }
