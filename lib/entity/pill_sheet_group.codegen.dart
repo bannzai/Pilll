@@ -289,8 +289,9 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet() {
     return pillSheets
-        .map((pillSheet) =>
-            pillSheet.dates.indexed.map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1)).toList())
+        .map((pillSheet) => pillSheet.dates.indexed
+            .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1 + 1))
+            .toList())
         .flattened
         .toList();
   }
