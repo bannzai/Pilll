@@ -380,6 +380,11 @@ class RegisterReminderLocalNotification {
             if (dayOffset == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
+            // 休薬期間の通知をONにしているユーザーで、跨いだときはdailyTakenMessageを設定。
+            // アプリを開いたときでなければRegisterReminderLocalNotificationで通知を登録しないため、この処理がないと複数飲み忘れの通知文言になる
+            if (activePillSheet.pillSheetHasRestOrFakeDuration && isOverActivePillSheet && pillNumberInPillSheet == 1) {
+              return setting.reminderNotificationCustomization.dailyTakenMessage;
+            }
             return setting.reminderNotificationCustomization.missedTakenMessage;
           }();
 

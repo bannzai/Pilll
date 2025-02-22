@@ -168,7 +168,7 @@ class PillSheet with _$PillSheet {
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestOrFakeDuration => !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration => pillSheetType.hasRestOrFakeDuration;
   bool get isActive => isActiveFor(now());
 
   bool isActiveFor(DateTime date) {
