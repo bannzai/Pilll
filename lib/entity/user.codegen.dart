@@ -35,15 +35,6 @@ extension UserPrivateFirestoreFieldKeys on String {
   static const premiumFunctionSurvey = 'premiumFunctionSurvey';
 }
 
-@freezed
-class UserPrivate with _$UserPrivate {
-  const UserPrivate._();
-  const factory UserPrivate({String? fcmToken, String? apnsToken}) = _UserPrivate;
-  factory UserPrivate.create({required String fcmToken, required String apnsToken}) => UserPrivate(fcmToken: fcmToken, apnsToken: apnsToken);
-
-  factory UserPrivate.fromJson(Map<String, dynamic> json) => _$UserPrivateFromJson(json);
-}
-
 extension UserFirestoreFieldKeys on String {
   static const userDocumentIDSets = 'userDocumentIDSets';
   static const anonymousUserIDSets = 'anonymousUserIDSets';
