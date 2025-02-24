@@ -296,54 +296,6 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
         .toList();
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForSequential() {
-    List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
-    var offset = 0;
-    for (final pillSheet in pillSheets) {
-      final dates = pillSheet.dates;
-      pillMarks.addAll(
-        dates.indexed.map(
-          (e) => PillSheetGroupPillNumberDomainPillMarkValue(
-            pillSheet: pillSheet,
-            date: e.$2,
-            number: e.$1 + 1 + offset,
-          ),
-        ),
-      );
-      offset += dates.length;
-    }
-
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumber = displayNumberSetting.beginPillNumber;
-      if (beginPillNumber != null && beginPillNumber > 0) {
-        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumber - 1)).toList();
-      }
-
-      final endPillNumber = displayNumberSetting.endPillNumber;
-      if (endPillNumber != null && endPillNumber > 0) {
-        final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
-        // debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
-        for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
-          // debugPrint('--------------------');
-          final loopOffset = (pillMarkIndex ~/ pillCount);
-          // debugPrint('loopOffset: $loopOffset');
-
-          final countOffset = loopOffset * pillCount;
-          final number = pillMark.number - countOffset;
-          // debugPrint(
-          //     'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
-          pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
-        }
-      }
-    }
-
-    // debugPrint('_pillNumbersForSequential:pillMarks');
-    // debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
-
-    return pillMarks;
-  }
-
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForCyclicSequential() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     var offset = 0;
