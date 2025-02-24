@@ -298,59 +298,95 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
 
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForCyclicSequential() {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
-    var offset = 0;
+    final beginPillNumber = displayNumberSetting?.beginPillNumber ?? 1;
+    final endPillNumber =
+        displayNumberSetting?.endPillNumber ?? pillSheets.fold<int>(0, (previousValue, element) => previousValue + element.typeInfo.totalCount);
     for (final pillSheet in pillSheets) {
-      final dates = pillSheet.dates;
-      pillMarks.addAll(
-        dates.indexed.map(
-          (e) => PillSheetGroupPillNumberDomainPillMarkValue(
-            pillSheet: pillSheet,
-            date: e.$2,
-            number: e.$1 + 1 + offset,
-          ),
-        ),
-      );
-      offset += dates.length;
-    }
-
-    for (final restDuration in restDurations) {
-      final restDurationEndDate = restDuration.endDate;
-      if (restDurationEndDate != null) {
-        final index = pillMarks.indexed.firstWhereOrNull((e) => isSameDay(e.$2.date, restDurationEndDate))?.$1;
-        if (index != null) {
-          for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
-            pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+      for (final date in pillSheet.dates) {
+        if (pillMarks.isEmpty) {
+          pillMarks.add(
+            PillSheetGroupPillNumberDomainPillMarkValue(
+              pillSheet: pillSheet,
+              date: date,
+              number: beginPillNumber,
+            ),
+          );
+        } else {
+          final diffDays = daysBetween(pillMarks.last.date, date);
+          var number = pillMarks.last.number + diffDays;
+          for (final restDuration in restDurations) {
+            final endDate = restDuration.endDate;
+            if (endDate != null && isSameDay(endDate, date)) {
+              number = beginPillNumber;
+            }
           }
+          if (number > endPillNumber) {
+            number = beginPillNumber;
+          }
+          pillMarks.add(
+            PillSheetGroupPillNumberDomainPillMarkValue(
+              pillSheet: pillSheet,
+              date: date,
+              number: number,
+            ),
+          );
         }
       }
     }
 
-    final displayNumberSetting = this.displayNumberSetting;
-    if (displayNumberSetting != null) {
-      final beginPillNumber = displayNumberSetting.beginPillNumber;
-      if (beginPillNumber != null && beginPillNumber > 0) {
-        pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumber - 1)).toList();
-      }
+    // var offset = 0;
+    // for (final pillSheet in pillSheets) {
+    //   final dates = pillSheet.dates;
+    //   pillMarks.addAll(
+    //     dates.indexed.map(
+    //       (e) => PillSheetGroupPillNumberDomainPillMarkValue(
+    //         pillSheet: pillSheet,
+    //         date: e.$2,
+    //         number: e.$1 + 1 + offset,
+    //       ),
+    //     ),
+    //   );
+    //   offset += dates.length;
+    // }
 
-      final endPillNumber = displayNumberSetting.endPillNumber;
-      if (endPillNumber != null && endPillNumber > 0) {
-        final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
-        debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
-        for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
-          debugPrint('--------------------');
-          final loopOffset = (pillMarkIndex ~/ pillCount);
-          debugPrint('loopOffset: $loopOffset');
+    // for (final restDuration in restDurations) {
+    //   final restDurationEndDate = restDuration.endDate;
+    //   if (restDurationEndDate != null) {
+    //     final index = pillMarks.indexed.firstWhereOrNull((e) => isSameDay(e.$2.date, restDurationEndDate))?.$1;
+    //     if (index != null) {
+    //       for (final (sublistIndex, (pillMarkIndex, pillMark)) in pillMarks.indexed.toList().sublist(index).indexed.toList()) {
+    //         pillMarks[pillMarkIndex] = pillMark.copyWith(number: sublistIndex + 1);
+    //       }
+    //     }
+    //   }
+    // }
 
-          final countOffset = loopOffset * pillCount;
-          final number = pillMark.number - countOffset;
-          debugPrint(
-              'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
-          pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
-        }
-      }
-    }
+    // final displayNumberSetting = this.displayNumberSetting;
+    // if (displayNumberSetting != null) {
+    //   final beginPillNumber = displayNumberSetting.beginPillNumber;
+    //   if (beginPillNumber != null && beginPillNumber > 0) {
+    //     pillMarks = pillMarks.map((e) => e.copyWith(number: e.number + beginPillNumber - 1)).toList();
+    //   }
 
-    debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
+    //   final endPillNumber = displayNumberSetting.endPillNumber;
+    //   if (endPillNumber != null && endPillNumber > 0) {
+    //     final pillCount = endPillNumber - (beginPillNumber ?? 1) + 1;
+    //     debugPrint('endPillNumber: $endPillNumber, beginPillNumber: $beginPillNumber, pillCount: $pillCount');
+    //     for (final (pillMarkIndex, pillMark) in pillMarks.indexed) {
+    //       debugPrint('--------------------');
+    //       final loopOffset = (pillMarkIndex ~/ pillCount);
+    //       debugPrint('loopOffset: $loopOffset');
+
+    //       final countOffset = loopOffset * pillCount;
+    //       final number = pillMark.number - countOffset;
+    //       debugPrint(
+    //           'index: $pillMarkIndex, pillMark.number: ${pillMark.number}, loopOffset: $loopOffset, countOffset: $countOffset, number: $number, date: ${pillMark.date}');
+    //       pillMarks[pillMarkIndex] = pillMark.copyWith(number: number);
+    //     }
+    //   }
+    // }
+
+    // debugPrint(pillMarks.map((e) => '${e.date} ${e.number}').join('\n'));
 
     return pillMarks;
   }
