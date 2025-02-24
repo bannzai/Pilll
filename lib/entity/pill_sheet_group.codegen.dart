@@ -302,6 +302,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     final endPillNumber = displayNumberSetting?.endPillNumber;
     for (final pillSheet in pillSheets) {
       for (final date in pillSheet.dates) {
+        // 1つ目はbeginNumber or 1が設定される。2つ目以降は前のピル番号+1を基本的に設定していく
         if (pillMarks.isEmpty) {
           pillMarks.add(
             PillSheetGroupPillNumberDomainPillMarkValue(
@@ -325,6 +326,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             }
           }
           if (endPillNumber != null && number > endPillNumber) {
+            // 終了番号が設定されていて、それを超えたらbeginPillNumberに戻る
+            // 終了番号が設定されてない場合にピルシートの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
             number = beginPillNumber;
           }
           pillMarks.add(
