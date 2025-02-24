@@ -23,6 +23,7 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static const fcmToken = 'fcmToken';
+  static const apnsToken = 'apnsToken';
   static const appleEmail = 'appleEmail';
   static const isLinkedApple = 'isLinkedApple';
   static const googleEmail = 'googleEmail';
@@ -32,15 +33,6 @@ extension UserPrivateFirestoreFieldKeys on String {
   static const activeSubscriptions = 'activeSubscriptions';
   static const entitlementIdentifier = 'entitlementIdentifier';
   static const premiumFunctionSurvey = 'premiumFunctionSurvey';
-}
-
-@freezed
-class UserPrivate with _$UserPrivate {
-  const UserPrivate._();
-  const factory UserPrivate({String? fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({required String fcmToken}) => UserPrivate(fcmToken: fcmToken);
-
-  factory UserPrivate.fromJson(Map<String, dynamic> json) => _$UserPrivateFromJson(json);
 }
 
 extension UserFirestoreFieldKeys on String {

@@ -6,14 +6,6 @@ part of 'user.codegen.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$UserPrivateImpl _$$UserPrivateImplFromJson(Map<String, dynamic> json) => _$UserPrivateImpl(
-      fcmToken: json['fcmToken'] as String?,
-    );
-
-Map<String, dynamic> _$$UserPrivateImplToJson(_$UserPrivateImpl instance) => <String, dynamic>{
-      'fcmToken': instance.fcmToken,
-    };
-
 _$UserImpl _$$UserImplFromJson(Map<String, dynamic> json) => _$UserImpl(
       id: json['id'] as String?,
       setting: json['settings'] == null ? null : Setting.fromJson(json['settings'] as Map<String, dynamic>),

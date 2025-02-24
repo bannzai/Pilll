@@ -1,5 +1,7 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:intl/intl.dart';
 import './l.dart';
 
 /// [AppLocalizationResolver] は [L] に [AppLocalizations] をセットするためのWidget
@@ -14,7 +16,16 @@ class AppLocalizationResolver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // buildのタイミングでセットしているが、AppLocalizations 自体は変更されてもbuildに影響を与えないため許容する
-    L = AppLocalizations.of(context)!;
+    if (kDebugMode) {
+      L = lookupAppLocalizations(const Locale('ja'));
+      // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する
+      Intl.defaultLocale = 'ja';
+    } else {
+      L = AppLocalizations.of(context)!;
+      // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する
+      Intl.defaultLocale = Localizations.localeOf(context).languageCode;
+    }
+
     return builder(context);
   }
 }

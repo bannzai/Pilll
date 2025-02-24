@@ -337,7 +337,7 @@ void main() {
             pillSheetIDs: ["sheet_id"],
             pillSheets: [pillSheet],
             createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
 
           expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 1);
@@ -508,7 +508,7 @@ void main() {
             pillSheets: [pillSheet],
             createdAt: now(),
             displayNumberSetting: const PillSheetGroupDisplayNumberSetting(beginPillNumber: 10),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+            pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
           );
 
           expect(pillSheetGroup.cycleSequentialPillSheetNumber(pageIndex: 0, pillNumberInPillSheet: 1), 10);
