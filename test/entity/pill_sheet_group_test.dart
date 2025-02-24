@@ -760,5 +760,69 @@ void main() {
         28,
       ]);
     });
+    test("服薬お休み期間がある場合", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+
+      const sheetType = PillSheetType.pillsheet_28_0;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2020-09-16"),
+            createdDate: DateTime.parse("2020-09-16"),
+            endDate: DateTime.parse("2020-09-18"),
+          ),
+        ],
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [pillSheet],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+      );
+      expect(pillSheetGroup.pillNumbersForCyclicSequential.map((e) => e.number), [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        // NOTE: 16番目から2日間休薬する。そのあと1番始まりになる
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+      ]);
+    });
   });
 }
