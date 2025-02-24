@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -700,6 +701,64 @@ void main() {
           DateRange(DateTime.parse("2020-11-05"), DateTime.parse("2020-11-07")),
         ]);
       });
+    });
+  });
+
+  group("#pillNumbersForCyclicSequential", () {
+    test("服薬お休み期間がない場合", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
+
+      const sheetType = PillSheetType.pillsheet_28_0;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-14"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [pillSheet],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
+      );
+      expect(pillSheetGroup.pillNumbersForCyclicSequential.map((e) => e.number), [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+      ]);
     });
   });
 }
