@@ -140,10 +140,14 @@ class RegisterRemotePushNotificationToken {
   final DatabaseConnection databaseConnection;
   RegisterRemotePushNotificationToken(this.databaseConnection);
 
-  Future<void> call(String? token) {
-    debugPrint('token: $token');
+  Future<void> call({required String? fcmToken, required String? apnsToken}) {
+    debugPrint('fcmToken: $fcmToken');
+    debugPrint('apnsToken: $apnsToken');
     return databaseConnection.userPrivateRawReference().set(
-      {UserPrivateFirestoreFieldKeys.fcmToken: token},
+      {
+        UserPrivateFirestoreFieldKeys.fcmToken: fcmToken,
+        UserPrivateFirestoreFieldKeys.apnsToken: apnsToken,
+      },
       SetOptions(merge: true),
     );
   }

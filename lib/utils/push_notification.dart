@@ -10,7 +10,10 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
     await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: true, sound: true);
   }
   await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
-  registerRemotePushNotificationToken(await FirebaseMessaging.instance.getToken());
+  final apnsToken = await FirebaseMessaging.instance.getAPNSToken();
+  final fcmToken = await FirebaseMessaging.instance.getToken();
+
+  registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: apnsToken);
 
   if (Platform.isAndroid) {
     await AndroidFlutterLocalNotificationsPlugin().requestNotificationsPermission();

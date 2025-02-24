@@ -18,11 +18,13 @@ class AppLocalizationResolver extends StatelessWidget {
     // buildのタイミングでセットしているが、AppLocalizations 自体は変更されてもbuildに影響を与えないため許容する
     if (kDebugMode) {
       L = lookupAppLocalizations(const Locale('ja'));
+      // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する
+      Intl.defaultLocale = 'ja';
     } else {
       L = AppLocalizations.of(context)!;
+      // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する
+      Intl.defaultLocale = Localizations.localeOf(context).languageCode;
     }
-    // defaultLocaleもこのタイミング更新し続ける。DateFormat等に影響する
-    Intl.defaultLocale = Localizations.localeOf(context).languageCode;
 
     return builder(context);
   }
