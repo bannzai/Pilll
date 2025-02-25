@@ -13,7 +13,7 @@ class NormalPillMark extends StatelessWidget {
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
       decoration: const BoxDecoration(
-        color: PilllColors.potti,
+        color: AppColors.potti,
         shape: BoxShape.circle,
       ),
     );
@@ -29,13 +29,13 @@ class RestPillMark extends StatelessWidget {
       borderType: BorderType.RRect,
       radius: const Radius.circular(10),
       padding: EdgeInsets.zero,
-      color: PilllColors.gray,
+      color: AppColors.gray,
       strokeWidth: 1,
       child: Container(
         width: PillMarkConst.edge,
         height: PillMarkConst.edge,
         decoration: const BoxDecoration(
-          color: PilllColors.blank,
+          color: AppColors.blank,
           shape: BoxShape.circle,
         ),
       ),
@@ -52,7 +52,7 @@ class FakePillMark extends StatelessWidget {
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
       decoration: const BoxDecoration(
-        color: PilllColors.blank,
+        color: AppColors.blank,
         shape: BoxShape.circle,
       ),
     );
@@ -68,7 +68,7 @@ class SelectedPillMark extends StatelessWidget {
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
       decoration: const BoxDecoration(
-        color: PilllColors.enable,
+        color: AppColors.enable,
         shape: BoxShape.circle,
       ),
     );
@@ -84,7 +84,7 @@ class LightGrayPillMark extends StatelessWidget {
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
       decoration: const BoxDecoration(
-        color: PilllColors.lightGray,
+        color: AppColors.lightGray,
         shape: BoxShape.circle,
       ),
     );

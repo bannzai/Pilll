@@ -68,7 +68,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
       message = error.toString();
     }
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       body: Center(
         child: SizedBox(
           width: 300,

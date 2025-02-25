@@ -48,7 +48,7 @@ class RecordPageInformationHeader extends StatelessWidget {
                     height: 64,
                     child: VerticalDivider(
                       width: 10,
-                      color: PilllColors.divider,
+                      color: AppColors.divider,
                     ),
                   ),
                   const SizedBox(width: 28),

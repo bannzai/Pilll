@@ -58,13 +58,19 @@ class ChangePillNumber {
         beginDate = firstPilSheetBeginDate.addDays(passedTotalCount);
       }
 
-      final DateTime? lastTakenDate;
+      DateTime? lastTakenDate;
       if (pillSheetPageIndex == index) {
         lastTakenDate = beginDate.addDays(pillNumberInPillSheet - 2);
       } else if (pillSheetPageIndex > index) {
         lastTakenDate = beginDate.addDays(pillSheet.pillSheetType.totalCount - 1);
       } else {
         // state.selectedPillMarkNumberIntoPillSheet < index
+        lastTakenDate = null;
+      }
+      if (lastTakenDate != null && lastTakenDate.isBefore(beginDate)) {
+        // if (pillSheetPageIndex == index)
+        // lastTakenDate = beginDate.addDays(pillNumberInPillSheet - 2);
+        // ここで1つ目のピル番号の時はlastTakenDateがbeginDateより前になるのでnullにする
         lastTakenDate = null;
       }
 

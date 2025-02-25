@@ -96,7 +96,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
     }, []);
 
     return Scaffold(
-      backgroundColor: PilllColors.white,
+      backgroundColor: AppColors.white,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
@@ -121,7 +121,7 @@ class DiaryPostPageBody extends HookConsumerWidget {
                 navigator.pop();
               }),
         ],
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Column(

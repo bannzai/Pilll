@@ -27,10 +27,10 @@ class PillSheetTypeColumn extends StatelessWidget {
     return Container(
       constraints: PillSheetTypeColumn.boxConstraints,
       decoration: BoxDecoration(
-        color: selected ? PilllColors.primary.withOpacity(0.08) : PilllColors.white,
+        color: selected ? AppColors.primary.withOpacity(0.08) : AppColors.white,
         border: Border.all(
           width: selected ? 2 : 1,
-          color: selected ? PilllColors.primary : PilllColors.border,
+          color: selected ? AppColors.primary : AppColors.border,
         ),
         borderRadius: BorderRadius.circular(10),
       ),

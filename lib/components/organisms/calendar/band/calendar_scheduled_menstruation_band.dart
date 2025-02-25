@@ -21,7 +21,7 @@ class CalendarScheduledMenstruationBand extends StatelessWidget {
       height: CalendarBandConst.height,
       child: CustomPaint(
         painter: DiagonalStripedLine(
-          color: PilllColors.menstruation.withOpacity(0.6),
+          color: AppColors.menstruation.withOpacity(0.6),
           isNecessaryBorder: true,
         ),
         size: Size(width, CalendarBandConst.height),

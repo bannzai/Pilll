@@ -593,11 +593,11 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
       ) as _i5.ReminderNotificationCustomization);
 
   @override
-  _i6.PillSheetAppearanceMode get pillSheetAppearanceMode =>
+  _i7.PillSheetAppearanceMode get pillSheetAppearanceMode =>
       (super.noSuchMethod(
         Invocation.getter(#pillSheetAppearanceMode),
-        returnValue: _i6.PillSheetAppearanceMode.number,
-      ) as _i6.PillSheetAppearanceMode);
+        returnValue: _i7.PillSheetAppearanceMode.number,
+      ) as _i7.PillSheetAppearanceMode);
 
   @override
   _i6.$SettingCopyWith<_i6.Setting> get copyWith => (super.noSuchMethod(

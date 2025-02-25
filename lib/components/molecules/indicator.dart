@@ -12,14 +12,14 @@ class Indicator extends StatelessWidget {
     if (Environment.disableWidgetAnimation) {
       return Center(
         child: Container(
-          color: PilllColors.secondary,
+          color: AppColors.secondary,
           width: 40,
           height: 40,
         ),
       );
     }
     return const Center(
-      child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(PilllColors.secondary)),
+      child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation(AppColors.secondary)),
     );
   }
 }
@@ -30,7 +30,7 @@ class ScaffoldIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       body: Indicator(),
     );
   }
@@ -46,7 +46,7 @@ class DialogIndicator extends StatelessWidget {
       child: Center(
         child: Container(
           decoration: BoxDecoration(
-            color: PilllColors.modalBackground,
+            color: AppColors.modalBackground,
             borderRadius: BorderRadius.circular(10),
           ),
           width: 200,

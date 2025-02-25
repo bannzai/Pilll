@@ -17,7 +17,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
   const InitialSettingSelectTodayPillNumberPage({super.key});
 
   String todayString() {
-    return DateFormat.yMEd('ja').format(today());
+    return DateFormat.MEd().format(today());
   }
 
   @override
@@ -25,7 +25,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
     final store = ref.watch(initialSettingStateNotifierProvider.notifier);
     final state = ref.watch(initialSettingStateNotifierProvider);
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
@@ -35,7 +35,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           '2/3',
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Center(

@@ -186,9 +186,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       value: PillSheetModifiedHistoryValue(
         takenPill: TakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenPillNumber,
+          afterLastTakenPillNumber: after.lastTakenOrZeroPillNumber,
           beforeLastTakenDate: before.lastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenPillNumber,
+          beforeLastTakenPillNumber: before.lastTakenOrZeroPillNumber,
           isQuickRecord: isQuickRecord,
         ),
       ),
@@ -213,7 +213,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
+    // since: 2025-01-16 afterLastTakenDate は null許容になった。以前までは服用日の変更やrevert時に1番目のピルシートを指定した場合はbeginingDateの一つ前の日付を入れいたがやめた
+    if (afterID == null) {
       throw FormatException('unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action');
     }
     final beforeID = before.id;
@@ -227,9 +228,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       value: PillSheetModifiedHistoryValue(
         revertTakenPill: RevertTakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenPillNumber,
+          afterLastTakenPillNumber: after.lastTakenOrZeroPillNumber,
           beforeLastTakenDate: beforeLastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenPillNumber,
+          beforeLastTakenPillNumber: before.lastTakenOrZeroPillNumber,
         ),
       ),
       after: after,

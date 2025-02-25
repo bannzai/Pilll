@@ -50,7 +50,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
               topLeft: Radius.circular(20.0),
               topRight: Radius.circular(20.0),
             ),
-            color: PilllColors.white,
+            color: AppColors.white,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
           child: Column(
@@ -149,7 +149,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                                 AppTextFieldFormatter.greaterThanZero,
                               ],
                               decoration: const InputDecoration(
-                                fillColor: PilllColors.mat,
+                                fillColor: AppColors.mat,
                                 filled: true,
                                 border: UnderlineInputBorder(
                                   borderSide: BorderSide(width: 1),
@@ -233,7 +233,7 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
                             AppTextFieldFormatter.greaterThanZero,
                           ],
                           decoration: const InputDecoration(
-                            fillColor: PilllColors.mat,
+                            fillColor: AppColors.mat,
                             filled: true,
                             border: UnderlineInputBorder(
                               borderSide: BorderSide(width: 1),

@@ -222,26 +222,16 @@ class RegisterReminderLocalNotification {
     if (pillSheetGroup.lastActiveRestDuration != null) {
       return;
     }
-    try {
-      // NOTE: 本来であれば各ユースケース毎に通知を登録するが、99%のケースで同じ通知を登録するのでここで登録してしまう
-      // ただ、重要な服用通知のスケジューリング処理を邪魔しないため、awaitもしないしエラーハンドリングもしない
-      final newPillSheetNotification = NewPillSheetNotification();
-      unawaited(newPillSheetNotification.call(pillSheetGroup: pillSheetGroup, setting: setting));
-    } catch (e, st) {
-      // 通知の登録に失敗しても、服用記録には影響がないのでエラーログだけ残す
-      errorLogger.recordError(e, st);
-    }
-
     analytics.debug(name: 'run_register_reminder_notification', parameters: {
       'todayPillNumber': activePillSheet.todayPillNumber,
       'todayPillIsAlreadyTaken': activePillSheet.todayPillIsAlreadyTaken,
-      'lastTakenPillNumber': activePillSheet.lastTakenPillNumber,
+      'lastTakenPillNumber': activePillSheet.lastTakenOrZeroPillNumber,
       'reminderTimes': setting.reminderTimes.toString(),
     });
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
 
-    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber;
+    final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber;
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
@@ -278,8 +268,7 @@ class RegisterReminderLocalNotification {
 
         var pillSheetGroupIndex = activePillSheet.groupIndex;
         var pillSheeType = activePillSheet.pillSheetType;
-        var pillSheetDisplayNumber = pillSheetGroup.displayPillNumberOnlyNumber(
-          pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
+        var pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
           pageIndex: activePillSheet.groupIndex,
           pillNumberInPillSheet: pillNumberInPillSheet,
         );
@@ -297,8 +286,7 @@ class RegisterReminderLocalNotification {
                 pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 displayNumberSetting: null,
               );
-              pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumberOnlyNumber(
-                pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
+              pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumberWithoutDate(
                 pageIndex: 0,
                 pillNumberInPillSheet: pillNumberInPillSheet,
               );
@@ -310,8 +298,7 @@ class RegisterReminderLocalNotification {
               final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
               pillSheetGroupIndex = nextPillSheet.groupIndex;
               pillSheeType = nextPillSheet.pillSheetType;
-              pillSheetDisplayNumber = pillSheetGroup.displayPillNumberOnlyNumber(
-                pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
+              pillSheetDisplayNumber = pillSheetGroup.displayPillNumberWithoutDate(
                 pageIndex: nextPillSheet.groupIndex,
                 pillNumberInPillSheet: pillNumberInPillSheet,
               );
@@ -382,7 +369,7 @@ class RegisterReminderLocalNotification {
               return '';
             }
             // 最後に飲んだ日付が数日前の場合は常にmissedTakenMessage
-            if (activePillSheet.todayPillNumber - activePillSheet.lastTakenPillNumber > 1) {
+            if (activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber > 1) {
               return setting.reminderNotificationCustomization.missedTakenMessage;
             }
             // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
@@ -391,6 +378,11 @@ class RegisterReminderLocalNotification {
             }
             // 本日分の服用記録がある場合で、次の日のループ(dayOffset==1)の時
             if (dayOffset == 1) {
+              return setting.reminderNotificationCustomization.dailyTakenMessage;
+            }
+            // 休薬期間の通知をONにしているユーザーで、跨いだときはdailyTakenMessageを設定。
+            // アプリを開いたときでなければRegisterReminderLocalNotificationで通知を登録しないため、この処理がないと複数飲み忘れの通知文言になる
+            if (activePillSheet.pillSheetHasRestOrFakeDuration && isOverActivePillSheet && pillNumberInPillSheet == 1) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
             return setting.reminderNotificationCustomization.missedTakenMessage;
@@ -519,6 +511,15 @@ class RegisterReminderLocalNotification {
     analytics.debug(name: 'rrrn_e_end_run', parameters: {
       'notificationCount': futures.length,
     });
+
+    try {
+      // NOTE: 本来であれば各ユースケース毎に通知を登録するが、99%のケースで同じ通知を登録するのでここで登録してしまう
+      final newPillSheetNotification = NewPillSheetNotification();
+      await newPillSheetNotification.call(pillSheetGroup: pillSheetGroup, setting: setting);
+    } catch (e, st) {
+      // 通知の登録に失敗しても、服用記録には影響がないのでエラーログだけ残す
+      errorLogger.recordError(e, st);
+    }
   }
 
   // reminder time id is 10{groupIndex:2}{hour:2}{minute:2}{pillNumberInPillSheet:2}

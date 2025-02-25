@@ -4,7 +4,6 @@ import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
@@ -114,14 +113,13 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return L.withNumber((pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1).toString());
+        return L.withNumber((pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1).toString());
       case PillSheetAppearanceMode.date:
         final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
-            .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenPillNumber + 1);
+            .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:
-        return L.withNumber((pillSheetGroup.sequentialLastTakenPillNumber + 1).toString());
       case PillSheetAppearanceMode.cyclicSequential:
         return L.withNumber((pillSheetGroup.sequentialLastTakenPillNumber + 1).toString());
     }

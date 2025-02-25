@@ -1,0 +1,2285 @@
+{
+  "@@locale": "as",
+  "pillSheetType21With7Placebo": "21 ট্যাবলেট প্রকার (7 ট্যাবলেট মিথ্যা ঔষধ)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 ট্যাবলেট টাইপ (4 ট্যাবলেট প্লেসবো)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28ຊອດປະເພດ(7ຊອດປະເພດເລື່ອນ)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 tablet type (all active ingredients)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 ট্যাবলেটের ধরন (সমস্ত আসল ওষুধ)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 ট্যাবলেট ধরনের (সবগুলি কার্যকর ঔষধ)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24টি ট্যাবলেটের ধরন",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "ঊষ্ণগন্ধ",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "প্লাসবো",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "নীলামে নগদ টাকা অবিলম্বে পাওয়া যাবে।",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "既にユーザーが存在しています",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "পিল খাওয়ার ইতিহাস",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "সেটিংস",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "অ্যাকাউন্ট",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "ডেটা স্থানান্তর বা স্মার্টফোন হারানোর মতো সময়ে, তথ্য স্থানান্তর এবং পুনরুদ্ধারের জন্য অ্যাকাউন্ট নিবন্ধন প্রয়োজন।",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll ପ୍ରେମିୟମ୍",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "অসীম ফিচার সময়কালについて",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "পিল শীট",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "নোটিফিকেশন",
+  "@notification": {
+    "description": "通知"
+  },
+  "menstruation": "মাহিনা",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "স্যাড",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "সাধারন জিজ্ঞাসা",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "নতুন বৈশিষ্ট্য পরিচিতি",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "প্ৰশ্ন কৰাৰ বাবে",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "মুছা",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "অপসারণ করুন",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "ব্যবহারকারী মুছুন",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "দিবন্ধনটি মুছে ফেলবো",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "আপনি কি মাসিক সময়কাল মুছে ফেলবেন?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "বিশদ সময় যোগ করা",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "আপনি কি ডিভাইসের সময় অঞ্চল ({deviceTimezoneName}) এর সঙ্গে সিঙ্ক করতে চান?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "সাম্প্রতিকভাবে সেট করা সময় অঞ্চল",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "হ্যাঁ",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "না",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "সাবস্ক্রিপশন বন্ধ করার বিষয়ে",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "পিল গ্রহণের বিজ্ঞপ্তি",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "পিল গ্রহণের বিজ্ঞপ্তি",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊ৰ সময় হৈছে",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "DEBUG_INFO_nik_copy_kara_nakushi",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "বাতিল",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "সাইন আউট",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "পিল শিট গ্রুপের স্বয়ংক্রিয় পরিবেশন",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "যখন বর্তমান পিল শীট গ্রুপটি শেষ হয়, তখন একটি নতুন শীট স্বয়ংক্রিয়ভাবে যোগ করা হবে।",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "অ্যাকাউন্ট সেটিংস",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "সংযুক্ত",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "অননুমোদিত",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "কুইক রেকর্ড",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "টোকা পর্দায় আজ কোন পিল গ্রহণ করতে হবে তা জানা যাবে এবং আপনি সোজা পিল গ্রহণের রেকর্ড রাখতে পারবেন।",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "Āyurvēdī sānñā",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "Pilll এ রেকর্ড করা মেনস্ট্রাল রেকর্ডগুলি অটোমেটিকালি হেলথকেয়ারে রেকর্ড করা যাবে।",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "প্ৰিমিয়াম পৰিকল্পনা চাওক",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "আজ গ্রহণ করার পিলের সংখ্যা পরিবর্তন",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "সম্পূর্ণ পিল শীট ধ্বংস করুন",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "আপনি কি {doing} করবেন?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "বর্তমানে প্রদর্শিত",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "সকল পিল শীট",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "বাতিল করা হবে",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "বাতিল করুন",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "পিল শীটটি বাতিল করা হয়েছে",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "মাসিক সম্পর্কে",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "生理開始日の পিল সংখ্যা চেক কৰক। বৰ্তমান নির্বাচন কৰা পিল শীট ধৰণত উপস্থিত নথকা পিল সংখ্যাৰ বিন্যাস কৰা হৈছে।",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "পিল নেওয়ার নোটিফিকেশন কাস্টমাইজ করা",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "আপনি {x} কাস্টমাইজ করতে পারেন",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "আপনার সহযোগিতার জন্য ধন্যবাদ",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "মেলে আসা বিষয়গুলি ভবিষ্যতের উন্নতির জন্য কাজে লাগানো হবে।",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "বন্ধ করুন",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "অ্যাকাউন্ট নিবন্ধন",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "পুনঃলগইন",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "সাক্ষ্য তথ্য আপডেট করা হয়েছে",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "আপনি প্রমাণীকরণের তথ্য আপডেট করছেন",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "{accountTypeProviderName} ৰে পঞ্জীয়ন কৰা হৈছে",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "জড়া",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "বন্ধন ছিন্ন করা",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "বৈঠক বাতিল করা হয়েছে",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "আপনি অ্যাপটি একবার বন্ধ করছেন। নতুন করে শুরু করতে চাইলে অ্যাপটি পুনরায় চালু করার পরে প্রাথমিক সেটআপ করুন।",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "ঠিক আছে",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "পিল নম্বরের পরিবর্তন",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "বদল",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "পিল",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "ক্যালেন্ডার",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "আপনার ব্যবহারকারীর তথ্য মুছে ফেলা হবে",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "যদি আপনি সদস্যপদ বাতিল করেন তাহলে সমস্ত তথ্য মুছে ফেলা হবে এবং একই অ্যাকাউন্টে পুনরায় লগইন করা সম্ভব হবে না।",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "ৰেকৰ্ডপাতা",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "দয়া করে আবার লগইন করুন",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "গ্ৰহণযোগ্যৰ পৰা বাহিৰ হোৱাৰ পূৰ্বে দয়া কৰি শনাক্তকৰণৰ বাবে পুনৰ লগইন কৰক। পুনৰ লগইন কৰাৰ পিছত, স্বয়ংক্ৰিয়ভাৱে বাহিৰ হোৱাৰ প্ৰক্ৰিয়া আৰম্ভ হব।",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "পুনরায় লগ ইন করুন এবং প্রমাণীকরণ তথ্য আপডেট করুন",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "মেন্সট্রুয়েশন পৃষ্ঠা",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "KalendaraPuni",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "সেটিংস পৃষ্ঠা",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "মাসিককালটি মুছে ফেলা হয়েছে",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "মেনস্ট্রুয়াল সময়কাল সম্পাদনা করুন",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "আপনার প্রজম্ন সময়সূচী সম্পাদনা করা হয়েছে",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "শারীরিক অবস্থার বিস্তারিত",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "এতদূর দেখার পর আরও দেখার জন্য প্রিমিয়াম ফিচার লাগবে।",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "বিস্তারিত দেখুন",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "অধিক দেখুন",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}番",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} সংখ্যার",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} num",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} নম্বর",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} নম্বর",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} সংখ্যার",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "পূর্ববর্তী ডোজের বিরতি শুরু করার তারিখ নির্বাচন করুন",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "খাবারের বিরতি সময় নির্বাচন করুন",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "তিৱৰাৰ আৰম্ভণিৰ তাৰিখ",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "Pilll訂閱結束日",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "পিল শীট শেষ",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "পিল শিট বাতিল",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "ຈິດເວລາການໃຊ້ງານ",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "ইতিহাস একটি প্রিমিয়াম ফিচার।",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "যদি আপনি গ্রহণ বন্ধ করেন তবে পিল নম্বর বাড়বে না",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "আপনি কি {number} থেকে ঔষধ নেওয়া বন্ধ করবেন?",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne} বারে",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "পিল নেওয়া",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "পূর্ববর্তী শীটের শেষ: {estimatedEndPillNumber} নম্বর",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "পিল শিট যোগ করুন",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "গেলা",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "খাইনি",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "পিল শীটের কনফিগারেশন",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "আজ আমি যা ট্যাবলেট খাওয়ার কথা ছিল তা খাইনি",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "সেবন বিরতি",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "পিল বন্ধের শুরু দিনের পরিবর্তন",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "ড্রাগ নিয়ে বিরতির সময় শেষ হয়ে গেছে",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "ৱাৰিষা গ্রহণৰ দিনৰ সংখ্যা সলনি কৰক",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "সংখ্যা শুরু এবং শেষ পরিবর্তন করা হয়েছে",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "পিল গ্রহণের দিনগুলির শুরু",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "পূর্ববর্তী পিল শীটের শেষ: {beforePillSheetGroupSequentialEstimatedEndPillNumber} তম দিন",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "প্ৰয়োগৰ দিনৰ শেষ",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "পদবীতে পরিবর্তন",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "প্ৰদৰ্শন মোড",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "তাৰিখৰ প্ৰদৰ্শন",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "পিল নম্বর",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "পিল গ্রহণের দিন",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "পিল গ্রহণের দিন সংখ্যা (চক্র)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "পিল শীট শেষ হয়েছে",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "শেষবার কখন টিকা নেওয়া হয়েছিল তা নিশ্চিত করুন",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "অনুগ্রহ করে আপনার অ্যাকাউন্ট নিবন্ধন করুন",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "আপনি ডিভাইস পরিবর্তন বা স্মার্টফোন হারানোর সময় প্রিমিয়াম ফিচার স্থানান্তর করতে পারবেন না।",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "আপনি ১৪ দিনের জন্য প্রিমিয়াম বৈশিষ্ট্য পুনরায় অভিজ্ঞতা নিতে পারেন! SNS এ শেয়ার করতে ট্যাপ করুন!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "আপনি কোন দিকে শেয়ার করবেন?",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 নষ্টের বিরতি {day} দিন",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} দিন",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} দিন",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "{diffPlusOne} {activePillSheetPillSheetTypeNotTakenWord} 𑑖𑑉𑑒𑑓𑑅𑑌𑑝𑑛𑑟𑑓𑑌𑑟𑑒𑑎𑑉𑑖𑑒𑑜𑑓𑑅𑑌𑑝𑑗𑑉𑑑𑑓𑑅𑑖𑑐𑑡𑑕𑑖𑑙𑑉𑑚𑑏𑑊𑑒𑑉𑑖𑑟𑑌𑑖𑑢𑑘𑑅𑑚𑑞𑑟𑑍𑑟𑑆𑑕𑑉𑑖𑑐𑑗𑑌𑑟𑑒𑑍𑑖𑑚𑑝𑑡𑑏𑑝𑑌𑑑𑑖𑑞𑑉𑑘𑑀𑑚𑑍𑑀𑑞𑑘𑑌𑑌𑑉𑑝𑑟𑑌𑑁𑑚𑑓𑑚𑑎𑑖𑑎𑑌𑑅𑑏𑑖𑑡𑑗𑑎𑑔𑑕𑑕𑑝𑑑𑑗𑑍𑑊𑑅𑑉𑑚𑑉𑑚𑑍𑑓𑑌𑑘𑑊𑑡𑑅𑑕𑑛𑑧𑑑𑑏𑑅𑑙𑑒𑑕𑑝𑑌𑑉𑑚𑑚𑑌𑑖𑑡𑑌𑑏𑑌𑑈𑑒𑑇𑑖𑑣𑑛𑑍𑑩𑑔𑑕𑑦𑑨𑑆𑑝𑑌𑑃𑑖𑑚𑑋𑑟𑑎𑑌𑑝𑑗𑑌𑑚𑑗𑑎𑑒𑑌𑑷𑑙𑑖𑑚𑑢𑑖𑑇𑑟𑑗𑑝𑑎𑑔",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "{diff} দিন অবশিষ্ট; সমস্ত বৈশিষ্ট্য ব্যবহার করতে পারবেন।",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 আজ গ্রহণ করুন",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 আজকের পিল",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "নম্বর",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "{DateTimeFormatterMonthAndDay}ৰ পৰা মাহ তাঁৰাৰ আৰম্ভণি ৰেকৰ্ড কৰা হ'ল",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "পিরিয়ড শুরু হওয়ার তারিখ",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "মেনস্ট্রুয়েশনের শেষ দিন",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "মাসিকের তারিখ নির্ধারণ",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "মাসিক প্রত্যাশিত: {diffPlusOne} তম দিন",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "মাসিকের সময়সূচী: {diffPlusOne} তম দিনের {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "あと{diff} দিন",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} দিন",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "জলদিহি",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "মাহवारी ইতিহাস",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "আজ থেকে মাসিক",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "অগতকালের পৰা মাসিক",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "বাঁকা দিন নির্বাচন করুন",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} দিন চক্র",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "লগইন",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "পৃথক নিবন্ধনের আগে...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "যদি আপুনি Pilll ত এতিয়াও লগ ইন কৰা নাই, তেনে নতুন এবাৰ একাউণ্ট সৃষ্টি কৰা হ'ব।",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "যদি আপুনি একাউণ্টত পঞ্জীয়ন কৰে তেন্তে ডেটা স্থানান্তৰ কৰিব পাৰিব।",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "কৃপয়া আপনার অ্যাকাউন্টের তথ্য সংরক্ষণের জন্য অ্যাকাউন্ট রেজিস্ট্রেশন করুন।",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "সাইন ইন {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "{loginName}ৰ পৰা পঞ্জীয়ন কৰক",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll প্ৰিমিয়াম নামভৰ্তি সম্পূৰ্ণ",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "আপনার নিবন্ধনের জন্য ধন্যবাদ। সমস্ত ফিচারগুলো এখন ব্যবহারযোগ্য!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "এখন সীমিত সময়ের জন্য বিশেষ মূল্যে চিরকাল ব্যবহার করতে পারেন",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "সাধারণ মাসিক পরিকল্পনা",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "বার্ষিক পরিকল্পনা",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/baris",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/মাস",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• প্রিমিয়াম চুক্তির সময়কাল শুরু তারিখ থেকে 1 মাস বা 1 বছরের জন্য স্বয়ংক্রিয় নবীকরণ হবে",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "এটি নির্দিষ্ট ট্রেড লঅ অ্যাক্ট অনুসারে প্রদর্শন",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "লগতৰ পৰা প্ৰমাণিত কৰি ৰাষ্ট্ৰভাষাত পঞ্জীয়ন কৰক৷",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "প্রিমিয়াম চুক্তির মেয়াদ শেষের 24 ঘণ্টা আগে বাতিল না করলে চুক্তির মেয়াদ স্বয়ংক্রিয়ভাবে নবায়ন হবে",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "• ক্ৰয়ৰ পিছত আপুনি {storeName} এপ্লিকেশনৰ একাউন্ট ছেটিংছত অটো নবীকৰণ বাতিল কৰিব পাৰিব (এপ্লিকেশনৰ ভিতৰত অটো নবীকৰণ বাতিল কৰিব নোৱাৰে)।",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "বিশদ এখানে",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "আপনার ক্রয় তথ্য পুনরুদ্ধার করা হয়েছে",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "অতীতের ক্রেতারা এখানে যান",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "পৰিকল্পনা কৰা ক্ৰীড়সন্মেলনৰ বিষয়ে অতীতৰ চাহিদাৰ তথ্য লাভ কৰা গৈছে। অনুগ্ৰহ কৰি আপোনাৰ একাউণ্ট চাওঁক আৰু পুনৰ চেষ্টা কৰক।",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "মাসিক পরিকল্পনা",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/মাস",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "আপনি প্রিমিয়াম সদস্য।",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "আপনাকে ধন্যবাদ। আপনার সহায়তায় আমরা পিল্লের পরিচালনা চালিয়ে যেতে পারছি।",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "প্ৰিমিয়াম বৈশিষ্ট্যসমূহৰ তালিকা",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 ঊঠন সুত্ৰে স্বাস্থ্য রেকৰ্ড",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 পিল গ্ৰহণ ৰেকৰ্ড আৰু পৰীক্ষা",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 এটি পিল শিটে তারিখ প্রদর্শন",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 নতুন পিল শীট স্বয়ংক্রিয় পূরণ",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 পেস্ট ডেটা দেখুন",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 অৱস্থাৰ ৰূপৰেখা কাস্টমাইজ কৰা",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 বিজ্ঞাপন লুকান",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "প্ৰিমিয়াম বৈশিষ্ট্যৰ বিৱৰণ চাওক",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "জনপ্রিয় ফিচার",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "প্ৰিমিয়াম ফিচাৰসমূহ চাওক",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "প্রদর্শন মোডে ব্যবহারের দিন সংখ্যা (চক্র) যোগ করা হয়েছে",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "বিস্তারি দেখুন",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "মহিলা স্বাস্থ্য",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "পিল ভুলে যাওয়ার সতর্কতা",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "আপনি একাধিক সেটিংস সেট করে পিল খাওয়ার কথা ভুলে যাওয়া প্রতিরোধ করতে পারেন",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": " আৰু",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "পঢ়ি শুরু কৰক",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "আগে",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "সুচনা{number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "আপনি বিজ্ঞপ্তি থেকে পিলের ব্যবহার রেকর্ড করতে পারেন /",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "এপ্লিকেশন শুরু করুন",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "আপনি {accountTypeProviderName} এ লগ ইন করেছেন",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "পেরোলামিত শিট সংক্রান্ত আরও জানাবেন",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "আগে থেকেই অ্যাকাউন্ট থাকা ব্যক্তিরা এখানে ক্লিক করুন",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "আজ ({todayString})\nদেবার বা খাওয়া পিলের নম্বর ট্যাপ করুন",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "অন্য কথায়, আমি জানি না",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "{today} তে খোৱাৰ পিল হৈছে",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "ৰিভিউ",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "স্বাভাবিক",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "ভুলে যাওয়া",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "তাৰিখ প্ৰদৰ্শন কৰক",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "সংখ্যা প্রদর্শন",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "বিবৰণী দেখাও",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "শিরোনাম",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "Sandesh",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "অপশন",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "সম্পন্ন",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "পিল্ল",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "আপনি ভুলে গেলে বিজ্ঞপ্তির বার্তা পরিবর্তন করতে পারেন",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "আপনি বিজ্ঞপ্তির শিরোনাম পরিবর্তন করতে পারেন",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "0文字以上入力してください",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "আপনি যখন ঔষধ খাননি তখনের বিজ্ঞপ্তির টেক্সট পরিবর্তন করতে পারেন।",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "9:00 নম্বৰতে সজাগ কৰক",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "সংরক্ষণ",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "অবস্থা",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "মুছে ফেলা ডায়েরি পুনরুদ্ধার করা যাবে না",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "লিঙ্গ",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "পূর্ববর্তী পিল শীট গ্রুপ",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "এর আগের পিল শিট গ্রুপ এখনও নেই",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "পিল ব্যবহারের ইতিহাসের তথ্য পাওয়ার ক্ষেত্রে ব্যর্থ হয়েছে।{error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "FAQ চোৱা",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "পৃষ্ঠাটি আবার লোড করুন",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "যদি এটি সমাধান না হয় তবে এখানে ক্লিক করুন",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "Pilll ৰ বিৱৰণ দিয়ক",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "নির্ধারণ",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "আপনারা যদি খুশি হন তবে দয়া করে পরিষেবার উন্নতির জন্য একটি সমীক্ষায় অংশগ্রহণ করুন।",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "সহযোগিতা",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "না",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "সেবা উন্নয়ন প্রশ্নাবলী",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "সন্তোষজনক",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "অসন্তুষ্ট",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "প্ৰতি নম্বৰৰ বাবে",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "আপনার মাসিক কত দিন ধরে চলবে?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "দিন পালিত হয়",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "期間 শুরু হওয়া পিল নম্বর টেপ করুন",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number}ৰ পৃষ্ঠা",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "নতুন পিল শীট শুরু করুন ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "পিলের প্রকার নির্বাচন করুন",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 ট্যাবলেট",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 ট্যাবলেট",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 ট্যাবলেট",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 ট্যাবলেট + 7 দিন বিরতি",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 ট্যাবলেট + 4 ট্যাবলেট প্লেসবো",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 গুলি + 7 গুলি ভুয়া ঔষধ",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "সমস্ত আসল ওষুধ",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 ଟ ଗୁଡିକ + 4 ଟ ସ୍ଥଗିତ ଗୁଡିକ",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "পিলের প্রকার নির্বাচন করুন",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} পৰিসৰজনিত অৱহিতকৰণ",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "যদি বিজ্ঞপ্তি বন্ধ থাকে, তহলে {pillSheetPillSheetTypeNotTakenWord} সময়ের ব্যবহারের ইতিহাস স্বয়ংক্রিয়ভাবে সংরক্ষণ করা হবে।",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "በእቅፍ ዝውውር ውስጥ አዲሱን ተመዘገበን እንዋጣ!ስለ እቅፉት ነው ሇአዳሮት ዘብት እገዚ በላዪ አይቅርብ ይዘዥ።ይብኩ ዋጋ ጀርበወፊ! በዚህ ወቅት እንጠብቅ ይላልኝ።",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll একটি পিল গ্রহণের জন্য বিশেষভাবে নির্মিত পিল রিমাইন্ডার অ্যাপ",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "আপনি নিবন্ধন করার উপরের সীমা পৌঁছে গেছেন। অনুগ্রহ করে {ReminderTimeMaximumCount} এর মধ্যে সীমাবদ্ধ থাকুন।",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "অনুমোদিত সময়ের জন্য কমপক্ষে {ReminderTimeMinimumCount} টি বিজ্ঞপ্তি প্রয়োজন।",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "একটি অজানা ত্রুটি ঘটেছে। দয়া করে কিছু সময় পরে আবার চেষ্টা করুন। যদি এটি সমাধান না হয়, তাহলে সেটিংস > যোগাযোগে যান এবং আমাদের যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName} এ একটি ত্রুটি ঘটেছে। দয়া করে কিছু সময় পরে আবার চেষ্টা করুন।",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইসে ক্রয় অনুমোদিত নয়",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "ଟଙ୍କର ଭୁ଼ଳିଲେ ପଇସା ଦେଖା ନାହିଁ। ଦୟାକରି ଏକ କାର୍ୟକ୍ଷମ ପଇସା ପ୍ରଣାଳୀର ଯାଞ୍ଚ କରନ୍ତୁ ଓ ପୁନରୁତ୍ସାହ କରନ୍ତୁ।",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "বৰ্তমান উপলব্ধ পৰিকল্পনা নাই। অনুগ্রহ কৰি एप্‌টি পুনৰ প্ৰাৰম্ভ কৰি চেষ্টা কৰক।",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "আপনি ইতিমধ্যে পরিকল্পনা কিনে ফেলেছেন। এই ডিভাইসে কেনার তথ্য পুনরুদ্ধার করতে চাইলে \"পূর্বে কেনা ব্যক্তিরা এখানে ক্লিক করুন\" থেকে কেনার তথ্য পুনরুদ্ধার করুন।",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "আপনি ইতিমধ্যে এটি কিনেছেন। এই তথ্যটি অন্য ব্যবহারকারী দ্বারা ব্যবহার করা হচ্ছে। {accountName}-এর জন্য যাচাই করুন।",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "অবৈধ ক্রয়ের তথ্য। ক্রয় তথ্য নিশ্চিত করুন।",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "কেনার্তাৰ তথ্য নাই। অনুগ্রহ কৰি {accountName} ব্যৱহাৰ কৰি ডিভাইচত লগ ইন কৰক আৰু পুনৰ চেষ্টা কৰক।",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "নেটওয়ার্ক পরিস্থিতি অস্থির। সংযোগের অবস্থা পরীক্ষা করে দেখুন এবং তারপর আবার চেষ্টা করুন।",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "বৰ্তমান ডাঙৰ হব নিবেদন। এক সময়ৰে পিছত পুনৰ চেষ্টা কৰক। সমাধান নহ'লে তাক প্ৰক্ষেপণ কৰক > যোগাযোগৰ বাবে অনুগ্ৰহ কৰি যোগাযোগ করক। বিশদ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "অধিক সময়ের জন্য কেনাকাটা করা সম্ভব নয়। দয়া করে কিছুক্ষণ পর পুনরায় চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তবে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "購買 তথ্য অন্য একেলগত ব্যৱহৃত হৈছে। দয়া কৰি নিশ্চিত কৰক যে আপুনি যি ডিভাইছত লগ ইন কৰিছে {accountName}।",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "আপনি ব্যবহারকারীর তথ্য নিশ্চিত করতে পারেননি। দয়া করে অ্যাপটি পুনরায় চালু করুন এবং আবার চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "ক্ৰয় প্ৰক্ৰিয়া বেলেগে আগবাঢ়িত হৈছে। অনুগ্ৰহ কৰি অলপ সময়ৰ পাছত পুনৰ চাই চাওক।",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "আপনি এখন কেনাকাটা করতে পারছেন না। পরে আবার চেষ্টা করুন। সমস্যা সমাধান না হলে, সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Kupun thik na thakile. Ekok din bitoron korite paren. Jodi samasyar samadhan na hoy, tahole seting > Probidan gorhito koren ontorjato korite paren. Bistari: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "আপনার ব্যবহারকারীর পক্ষে কেনাকাটা ব্যর্থ হয়েছে। কিছু সময় পরে আবার চেষ্টা করুন। যদি এটি সমাধান না হয়, তাহলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিশদ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "আপনার {accountName} এ পরিকল্পনায় যোগদান সম্ভব নয়। দয়া করে আপনার অর্থপ্রদানের তথ্য পরীক্ষা করুন এবং আবার চেষ্টা করুন",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "আপনার অর্থপ্রদান অর্ধবিচ্ছিন্ন। {accountName} এর মাধ্যমে লগ ইন করে {storeName} যাচাই করুন।",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "আপনার ক্রয়ে ব্যর্থ হয়েছে। দয়া করে কিছুক্ষণ অপেক্ষা করে আবার চেষ্টা করুন। পরিস্থিতি সমাধান না হলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "ব্যবহারকারীর তথ্য সংগ্রহ করতে ব্যর্থ হয়েছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যাটি সমাধান না হয়, তাহলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "পণ্য তথ্য উদ্ধার করতে ব্যর্থ হয়েছে। ক৯েক মিনিট পর আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয়, তাহলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "এই হচ্ছে একটি অজানা ত্রুটি। সর্বশেষ সংস্করণে আপডেট করুন এবং আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তাহলে সেটিংস > প্ৰশ্ন করণ এ যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "এটি একটি অজ্ঞাত কারণে ত্রুটি। ক্রয় তথ্য আগে থেকেই পাওয়া যায়নি। বিশদ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "অজানা ত্রুটি। সর্বশেষ সংস্করণে আপডেট করুন এবং পুনরায় চেষ্টা করুন। যদি সমস্যাটি সমাধান না হয়, তবে সেটিংসে যান > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "অজ্ঞাত কারণে একটি ত্রুটি ঘটেছে। সর্বশেষ সংস্করণে আপডেট করে আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তবে সেটিংস > সহায়তা থেকে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "এই একটি অজানা ত্রুটি। অনুগ্রহ করে সর্বশেষ সংস্করণটিতে আপডেট করুন এবং পুনরায় চেষ্টা করুন। যদি এটি সমাধান না হয় তবে অনুগ্রহ করে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "গ্ৰাহক তথ্য লাভ কৰিবলৈ ব্যৰ্থ হৈছে। কৃপা কৰি কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে \"ছেটিংছ > যোগাযোগ\"ৰ পৰা আমাদের সংযোগ কৰক। বিশদ: কোড: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "আপনার ডিভাইসে একটি সেটিং সমস্যা আছে। অনুগ্রহপূর্বক এটি পরীক্ষা করুন এবং আবার চেষ্টা করুন। যদি সমস্যাটি সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ পরবর্তী যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "প্ৰত্যােৱন প্ৰক্ৰিয়া আৰম্ভ কৰা হৈছে। দয়া কৰি পৰীক্ষা কৰক আৰু পুনৰ চেষ্টা কৰক। যদি সমস্যাটো সমাধান নহয়, তেন্তে চাইলৰ পৰা যোগাযোগ কৰক > সন্থাপন। কোড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "সময়সীমা শেষ হয়েছে। দয়া করে আপনার সংযোগের অবস্থা পরীক্ষা করুন এবং আবার চেষ্টা করুন। যদি এই সমস্যার সমাধান না হয় তবে দয়া করে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "এটি একটি অজানা ত্রুটি। সর্বশেষ সংস্করণটি আপডেট করুন এবং আবার চেষ্টা করুন। যদি এটি সমাধান না হয় তবে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিশদ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "অজ্ঞাত কারণে ত্রুটি ঘটেছে। সর্বশেষ সংস্করণে আপডেট করুন এবং আবার চেষ্টা করুন। যদি এটি সমাধান না হয় তবে সেটিংস > যোগাযোগ এর মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "যোগাযোগের সমস্যা। দয়া করে আপনার যোগাযোগের পরিবেশটি পরীক্ষা করুন এবং আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তবে সেটিংস > যোগাযোগ থেকে আমাদের যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "অ্যাপটি আপডেট করুন",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "আমাদের অনুরোধ আপনার অ্যাপের সংস্করণ আপডেট করতে। দয়া করে {storeName} থেকে সর্বশেষ সংস্করণে আপডেট করুন।",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "ডাক্তারতের যাওয়া",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "বেগে সময়ে নোটিফিকেশন পাবেন",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "不再能恢复已删除的计划",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "予定を削除します",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "iOS এপ্লিকেশনটিকে মাত্ৰ সমর্থন কৰে",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "এই অ্যান্ড্রয়েড স্মার্টফোনে স্বাস্থ্যসেবা উপলব্ধ নয়।",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "দয়া করে সেটিংস অ্যাপ থেকে স্বাস্থ্যকেয়ার সক্রিয় করুন",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "এই {accountTypeProviderName} অ্যাকাউন্ট ইতিমধ্যে আপনার ব্যবহৃত Pilll অ্যাকাউন্টের সাথে সংযুক্ত আছে। স্ক্রীন রিফ্রেশ করার চেষ্টা করুন। FAQ-ও দেখুন। বিস্তারিত: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} অ্যাকাউন্টটিকে ইতিমধ্যেই অন্য Pilll অ্যাকাউন্টের সাথে যুক্ত করা হয়েছে, তাই এটি নিবন্ধন করা যাবে না। দয়া করে FAQ দেখুন। বিস্তারিত: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "আপনার {accountTypeProviderName} অ্যাকাউন্টের জন্য ব্যবহৃত ই-মেইল ঠিকানা অন্য Pilll অ্যাকাউন্টের সাথে যুক্ত করা হয়েছে, তাই আপনি নিবন্ধন করতে পারছেন না। FAQs দেখুন। বিস্তারিত: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "আজকের পরিকল্পনা",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "ক্যালেন্ডারের পরিকল্পনা",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "আজ থেকে নতুন শিট শুরু হচ্ছে",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 আজি নতুন শীট আৰম্ভ হ'ব।\nবোল নামৰে ঔষধ খাবলৈ নাপাহৰিব 👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "প্ৰিমিয়াম তথ্য পোৱা নগল",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "আপনার ক্রয়ের সক্রিয়করণ সম্পূর্ণ হয়নি। কিছুক্ষণ অপেক্ষা করে আবার পরীক্ষা করুন।",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "অ্যাপ্লিকেশন শুরু করার সময় একটি ত্রুটি ঘটেছে\n{ErrorMessagesConnection}\nবিস্তারিত:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "উদাহরণস্বরূপ, \"1/12 থেকে 3 দিন\" ঔষধ গ্রহণ বন্ধ করলে",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "যেমন \"১৮ নম্বর থেকে ৩ দিন\" ওষুধ ব্যবহার বন্ধ করার পর",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} নম্বর",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "ଆପଣରେ ବର୍ତ୍ତମାନ ସମ୍ମିଳିତ ପିଲ୍ ଶୀଟ୍ ମିଳୁନି।",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "পিল গ্রহণের বাতিল করার কার্যকলাপটি বিশ্রামকালীন সময়ে চালিত করা যাবে না।",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "গুগল অ্যাকাউন্ট",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "ডায়েরি রেকর্ড করুন",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "আবশ্যকতাসমূহ লিখুন",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "পূর্ববর্তী পিল শিট গ্রুপ এখনও বিদ্যমান নেই।",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} বর্ণ",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "আপনার যোগাযোগের পরিবেশ অস্থির মনে হচ্ছে। কিছুক্ষণ অপেক্ষা করে আবার চেষ্টা করুন।",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "একটি ত্রুটি ঘটেছে। দয়া করে কিছু সময় পর আবার চেষ্টা করুন",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "একটি ত্রুটি ঘটেছে",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "অজানা ত্রুটি ঘটেছে",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "অপ্রত্যাশিত ত্রুটি সংঘটিত হয়েছে",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "আপনি বিজ্ঞপ্তিতে একটানা চাপ দিলে ঔষধ গ্রহণের রেকর্ড করতে পারবেন",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "অবশ্যই আপনার চেষ্টা করুন",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "আপনি {number} দিন ধরে সমস্ত ফিচার ব্যবহার করতে পারবেন!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "যোগ করুন",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "সাধারণ চক্র",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "মাঝারি দিন",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "দিন",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "স্মরণিকা",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "আপডেট ব্যর্থ হয়েছে। দয়া করে আপনার যোগাযোগের পরিবেশটি নিশ্চিত করুন এবং পুনরায় পরিবর্তন করার চেষ্টা করুন",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "মাথাব্যথা",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "পেটের ব্যথা",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "মাউন্ট",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "অ্যানিমিয়া",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "ব্যাথাযুক্ত পেট",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "বিনাৱ।",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "নিদ্রা",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "পিঠের ব্যথা",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "হৃদপিণ্ডের ধড়ফড়",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "অস্বাভাবিক রক্তস্রাব",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "অ্যাপেটাইট গুলিয়ে পড়া",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "বুকে ভার",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "অসুবিধা",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "আপনার বিশ্রাম নিন। আজ ছাড়া অন্য দিনের জন্য যদি ফেলার ছুটি নিতে চান তবে নীচের দিকে দেখুন।",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "服用休止 বৈশিষ্ট্য ব্যৱহাৰ কৰাৰ নিয়ম চাওক",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "প্ৰদ্ধতিত ছুটি আৰম্ভ",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "আপনার ঔষধের বিরতি পরিবর্তন করা হয়েছে",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "মেডিসিনের ছুটি পর্ব সম্পাদনা করুন",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "বিভিন্ন দিনগুলিতে ওষুধ গ্রহণের সংখ্যা পরিবর্তন করুন",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} সংখ্যাৰ পৰা ~ {end} সংখ্যাৰ পৰা",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "পুনরায় শুরু করুন",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "পিল বন্ধের সময় পরিবর্তন",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "মেডিসিনের বিরতি সময় পরিবর্তন করা হয়েছে",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date} কাে পরিবর্তিত করা হয়",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "服用記録𑄌𑄖𑄛𑄈𑄉𑄖𑄗𑄧𑄌𑄧𑄐𑄚𑄐𑄎𑄚𑄈𑄚𑄑𑄈𑄲𑄇𑄈𑄚𑄏𑄘𑄃𑄉𑄎𑄉𑄈𑄚𑄊𑄅𑄐𑄚𑄥𑄄𑄐𑄖𑄕𑄌𑄉𑄍𑄊𑄉",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "অ্যাপটি খুলে দেখুন",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "গ্ৰহণ কৰা",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "পিল নেওয়া বন্ধ করুন",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "মেডিসিন নেওয়া বিরতি শুরু হয়েছে",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} বুলি",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "প্রথম থেকে শুরু করুন",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "অতিরিক্ত",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "পিল শিট যোগ করুন",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "পিল গ্রহণ বন্ধ আছে",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "যদি আজ আপনি যে পিলটি খাবেন তা আগে থেকেই গ্রহণ করে ফেলেন, তাহলে \"গ্রহণের বিরতি\" নেওয়া সম্ভব নয়।",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "আপনি প্রেসক্রিপশনের ব্যবহারে বিরতি নিতে শুরু করেছেন",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "আপনার ঔষধ বন্ধ করার তারিখ সম্পাদনা করুন",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "বন্ধুদের জানানো",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "ব্যবহার শর্তাবলী",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "গোপনীয়তা নীতি",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "ক্লিপবোর্ডে কপি হয়েছে",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "সুচনা{number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "নোটিফিকেশন সময়",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz}লৈ পৰিবৰ্তন কৰা হৈছে",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "服取源县的開始/起点調整",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "পিল গ্রহণের দিনের শেষ পরিবর্তন করুন",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "పైల్ షీట్ మార్పు ద్వారా నవీకరించ不可 id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "পিল নেওয়ার ইতিহাসের তথ্য পাওয়ার ক্ষেত্রে ব্য失败 হয়েছে।{error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "পিল ব্যবহারের বাতিল",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "মুছে ফেলা ডায়রিটি পুনরুদ্ধার করা যাবে না",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "মাস্তিষ্কের সময়কাল সম্পাদনা করুন",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "পিল নম্বর পরিবর্তন",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "通常月額と比べて{offPercent}％OFF",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "প্ৰিমিয়াম ৰেজিষ্ট্ৰেশ্বনৰ জৰিয়তে সকলো ফিচাৰ আগলৈও ব্যৱহাৰ কৰিব পৰা যাব।",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} ৰ ভিতৰত ক্ৰয় কৰিলে {offPercent} % ৰ অৱনতি",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "আপনি {value} এ ঔষধ নেওয়ার বিজ্ঞপ্তি সেট করেছেন",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "medicationNotification": "পিল গ্রহণের বিজ্ঞপ্তি",
+  "@medicationNotification": {
+    "description": "服用通知"
+  }
+}

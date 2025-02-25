@@ -79,12 +79,12 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                     .findFirstDifferencePillSheet(
                       history.afterPillSheetGroup?.pillSheets,
                     )
-                    ?.lastTakenPillNumber,
+                    ?.lastTakenOrZeroPillNumber,
                 afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets.reversed
                     .findFirstDifferencePillSheet(
                       history.beforePillSheetGroup?.pillSheets.reversed,
                     )
-                    ?.lastTakenPillNumber),
+                    ?.lastTakenOrZeroPillNumber),
             PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
@@ -92,29 +92,15 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 history: history,
                 value: history.value.takenPill,
-                beforePillSheet: history.beforePillSheetGroup?.pillSheets.findFirstDifferencePillSheet(
-                  history.afterPillSheetGroup?.pillSheets,
-                ),
-                afterPillSheet: history.afterPillSheetGroup?.pillSheets.reversed.findFirstDifferencePillSheet(
-                  history.beforePillSheetGroup?.pillSheets.reversed,
-                ),
               ),
             // NOTE: revertTakenPill は findFirstDifferencePillSheetの向きはtakenPill等とは逆になる。なぜならbeforeの方がafterよりも後ろのピルシートの服用記録になるから、beforeの場合は後ろから(reversed)探索する
             PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets.reversed
-                    .findFirstDifferencePillSheet(history.afterPillSheetGroup?.pillSheets.reversed)
-                    ?.lastTakenPillNumber,
-                afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets
-                    .findFirstDifferencePillSheet(
-                      history.beforePillSheetGroup?.pillSheets,
-                    )
-                    ?.lastTakenPillNumber,
+                history: history,
               ),
             PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeTodayPillNumber: history.beforeActivePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
-                afterTodayPillNumber: history.afterActivePillSheet?.pillNumberFor(targetDate: history.estimatedEventCausingDate),
+                history: history,
               ),
             PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
                 value: history.value.endedPillSheet,
@@ -166,18 +152,14 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 history: history,
                 value: history.value.takenPill,
-                beforePillSheet: history.before,
-                afterPillSheet: history.after,
               ),
             PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.value.revertTakenPill?.beforeLastTakenPillNumber,
-                afterLastTakenPillNumber: history.value.revertTakenPill?.afterLastTakenPillNumber,
+                history: history,
               ),
             PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeTodayPillNumber: history.value.changedPillNumber?.beforeTodayPillNumber,
-                afterTodayPillNumber: history.value.changedPillNumber?.afterTodayPillNumber,
+                history: history,
               ),
             PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
                 value: history.value.endedPillSheet,

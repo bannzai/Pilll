@@ -23,6 +23,7 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static const fcmToken = 'fcmToken';
+  static const apnsToken = 'apnsToken';
   static const appleEmail = 'appleEmail';
   static const isLinkedApple = 'isLinkedApple';
   static const googleEmail = 'googleEmail';
@@ -32,15 +33,6 @@ extension UserPrivateFirestoreFieldKeys on String {
   static const activeSubscriptions = 'activeSubscriptions';
   static const entitlementIdentifier = 'entitlementIdentifier';
   static const premiumFunctionSurvey = 'premiumFunctionSurvey';
-}
-
-@freezed
-class UserPrivate with _$UserPrivate {
-  const UserPrivate._();
-  const factory UserPrivate({String? fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({required String fcmToken}) => UserPrivate(fcmToken: fcmToken);
-
-  factory UserPrivate.fromJson(Map<String, dynamic> json) => _$UserPrivateFromJson(json);
 }
 
 extension UserFirestoreFieldKeys on String {
@@ -62,9 +54,6 @@ extension UserFirestoreFieldKeys on String {
   // バックエンドと状態を同期するためにisTrialをDBにも保存する。trialDeadlineDateから計算する仕様の統一さよりも、ロジックの単純さを優先する。
   // アプリを開かないとトライアルが終了しなくなることについては許容する
   static const isTrial = 'isTrial';
-
-  // TODO: [NewPillSheetNotification] from:2024-04-30. 2024-07-01 でこの処理を削除する。ある程度機関を置いたら削除するくらいで良い。重要な処理でも無い
-  static const useLocalNotificationForNewPillSheet = 'useLocalNotificationForNewPillSheet';
 }
 
 @freezed

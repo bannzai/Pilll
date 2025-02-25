@@ -35,7 +35,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
 
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
-      color: PilllColors.primary,
+      color: AppColors.primary,
       child: GestureDetector(
         onTap: onTap,
         child: Stack(

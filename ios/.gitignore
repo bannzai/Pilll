@@ -43,3 +43,7 @@ Flutter/Secret.xcconfig
 _StoreKitTestCertificate.cer
 build
 
+fastlane
+!fastlane/.gitkeep
+
+vendor

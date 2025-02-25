@@ -24,9 +24,9 @@ class PrimaryButton extends HookWidget {
         ElevatedButton(
           style: ButtonStyle(backgroundColor: WidgetStateProperty.resolveWith((statuses) {
             if (statuses.contains(WidgetState.disabled)) {
-              return PilllColors.lightGray;
+              return AppColors.lightGray;
             }
-            return PilllColors.primary;
+            return AppColors.primary;
           })),
           onPressed: isProcessing.value || onPressed == null
               ? null
@@ -52,7 +52,7 @@ class PrimaryButton extends HookWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
-                      color: PilllColors.white,
+                      color: AppColors.white,
                     ))),
           ),
         ),
@@ -82,9 +82,9 @@ class UndoButton extends HookWidget {
         ElevatedButton(
           style: ButtonStyle(backgroundColor: WidgetStateProperty.resolveWith((statuses) {
             if (statuses.contains(WidgetState.disabled)) {
-              return PilllColors.lightGray;
+              return AppColors.lightGray;
             }
-            return PilllColors.gray;
+            return AppColors.gray;
           })),
           onPressed: isProcessing.value || onPressed == null
               ? null
@@ -110,7 +110,7 @@ class UndoButton extends HookWidget {
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w700,
                       fontSize: 16,
-                      color: PilllColors.white,
+                      color: AppColors.white,
                     ))),
           ),
         ),
@@ -234,11 +234,11 @@ class SmallAppOutlinedButton extends HookWidget {
 
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
-        foregroundColor: PilllColors.primary,
+        foregroundColor: AppColors.primary,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6),
         ),
-        side: const BorderSide(color: PilllColors.primary),
+        side: const BorderSide(color: AppColors.primary),
       ),
       onPressed: onPressed == null
           ? null
@@ -296,11 +296,11 @@ class AppOutlinedButton extends HookWidget {
       children: [
         OutlinedButton(
           style: OutlinedButton.styleFrom(
-            foregroundColor: PilllColors.primary,
+            foregroundColor: AppColors.primary,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(6),
             ),
-            side: const BorderSide(color: PilllColors.primary),
+            side: const BorderSide(color: AppColors.primary),
           ),
           onPressed: onPressed == null
               ? null

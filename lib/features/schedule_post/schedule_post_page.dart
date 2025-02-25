@@ -71,7 +71,7 @@ class _SchedulePostPage extends HookConsumerWidget {
     bool isInvalid() => !(date.date().isAfter(today())) || title.value.isEmpty;
 
     return Scaffold(
-      backgroundColor: PilllColors.white,
+      backgroundColor: AppColors.white,
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
@@ -86,7 +86,7 @@ class _SchedulePostPage extends HookConsumerWidget {
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       body: SafeArea(
         child: Padding(
@@ -129,7 +129,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                             fontSize: 16,
                           ),
                         ),
-                        activeColor: PilllColors.secondary,
+                        activeColor: AppColors.secondary,
                         onChanged: (bool value) {
                           analytics.logEvent(
                             name: 'schedule_post_remind_toggle',

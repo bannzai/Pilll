@@ -37,6 +37,9 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
       .orderBy(PillSheetGroupFirestoreKeys.createdAt)
       .limitToLast(1)
       .snapshots(includeMetadataChanges: true)
+      // 複数端末を使用しているユーザーもいるため、とりあえず実験的に hasPendingWrites の間はスキップする。明らかに動作が遅い等のフィードバックをもらったらまたオプションをつけたりするかを検討する
+      // またサーバー側でPillSheetGroupの変更も行うことがあるので(自動服用等)、hasPendingWrites の間はスキップするは有用の可能性がある。問い合わせがいくつかきているのでこれで解決する可能性がある
+      .skipWhile((snapshot) => snapshot.metadata.hasPendingWrites || snapshot.metadata.isFromCache)
       .map(((event) => _filter(event)));
 }
 

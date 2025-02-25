@@ -119,14 +119,14 @@ Map<String, dynamic> _$$TakenPillEditedValueImplToJson(_$TakenPillEditedValueImp
 
 _$RevertTakenPillValueImpl _$$RevertTakenPillValueImplFromJson(Map<String, dynamic> json) => _$RevertTakenPillValueImpl(
       beforeLastTakenDate: TimestampConverter.timestampToDateTime(json['beforeLastTakenDate'] as Timestamp?),
-      afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(json['afterLastTakenDate'] as Timestamp),
+      afterLastTakenDate: TimestampConverter.timestampToDateTime(json['afterLastTakenDate'] as Timestamp?),
       beforeLastTakenPillNumber: (json['beforeLastTakenPillNumber'] as num).toInt(),
       afterLastTakenPillNumber: (json['afterLastTakenPillNumber'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$RevertTakenPillValueImplToJson(_$RevertTakenPillValueImpl instance) => <String, dynamic>{
       'beforeLastTakenDate': TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
-      'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.afterLastTakenDate),
+      'afterLastTakenDate': TimestampConverter.dateTimeToTimestamp(instance.afterLastTakenDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };

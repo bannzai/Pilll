@@ -52,7 +52,7 @@ class DottedLine extends StatelessWidget {
   Widget _buildDash() {
     return Container(
       decoration: const BoxDecoration(
-        color: PilllColors.primary,
+        color: AppColors.primary,
       ),
       width: dashLength,
       height: height,

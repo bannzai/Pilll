@@ -35,7 +35,7 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
           topLeft: Radius.circular(10),
           topRight: Radius.circular(10),
         ),
-        color: PilllColors.white,
+        color: AppColors.white,
       ),
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
       child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -114,9 +114,9 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset('images/laugh.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset('images/laugh.svg', colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn));
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset('images/angry.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn));
+        return SvgPicture.asset('images/angry.svg', colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn));
       default:
         return Container();
     }
@@ -153,7 +153,7 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
                       fontSize: 14,
                       color: TextColor.white,
                     ),
-                    selectedColor: PilllColors.primary,
+                    selectedColor: AppColors.primary,
                     selected: true,
                     onSelected: (selected) {},
                   ))
@@ -168,8 +168,8 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
       padding: const EdgeInsets.all(4),
       width: 32,
       height: 32,
-      decoration: BoxDecoration(shape: BoxShape.circle, color: PilllColors.thinSecondary),
-      child: SvgPicture.asset('images/heart.svg', colorFilter: const ColorFilter.mode(PilllColors.primary, BlendMode.srcIn)),
+      decoration: BoxDecoration(shape: BoxShape.circle, color: AppColors.thinSecondary),
+      child: SvgPicture.asset('images/heart.svg', colorFilter: const ColorFilter.mode(AppColors.primary, BlendMode.srcIn)),
     );
   }
 

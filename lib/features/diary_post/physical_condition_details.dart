@@ -82,8 +82,8 @@ class DiaryPostPhysicalConditionDetails extends StatelessWidget {
                       fontSize: 14,
                       color: physicalConditionDetails.value.contains(e) ? TextColor.white : TextColor.darkGray,
                     ),
-                    disabledColor: PilllColors.disabledSheet,
-                    selectedColor: PilllColors.primary,
+                    disabledColor: AppColors.disabledSheet,
+                    selectedColor: AppColors.primary,
                     selected: physicalConditionDetails.value.contains(e),
                     onSelected: (selected) {
                       if (physicalConditionDetails.value.contains(e)) {

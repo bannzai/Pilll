@@ -1,2290 +1,2285 @@
 {
-    "@@locale": "en",
-    "pillSheetType21With7Placebo": "21-pill type",
-    "@pillSheetType21With7Placebo": {
-        "description": "21-pill type (7 placebo pills)"
-    },
-    "pillSheetType28With4Placebo": "28-pill type (4 placebo pills)",
-    "@pillSheetType28With4Placebo": {
-        "description": "28-pill type (4 placebo pills)"
-    },
-    "pillSheetType28With7Placebo": "28-pill type (7 placebo pills)",
-    "@pillSheetType28With7Placebo": {
-        "description": "28-pill type (7 placebo pills)"
-    },
-    "pillSheetType28": "28-pill type (all active pills)",
-    "@pillSheetType28": {
-        "description": "28-pill type (all active pills)"
-    },
-    "pillSheetType24": "24-pill type (all active pills)",
-    "@pillSheetType24": {
-        "description": "24-pill type (all active pills)"
-    },
-    "pillSheetType21": "21-pill type (all active pills)",
-    "@pillSheetType21": {
-        "description": "21-pill type (all active pills)"
-    },
-    "pillSheetType24WithRest4": "24-pill type",
-    "@pillSheetType24WithRest4": {
-        "description": "24-pill type"
-    },
-    "restPeriod": "Rest period",
-    "@restPeriod": {
-        "description": "Rest period"
-    },
-    "placebo": "Placebo",
-    "@placebo": {
-        "description": "Placebo"
-    },
-    "userNotFound": "User not found",
-    "@userNotFound": {
-        "description": "User not found"
-    },
-    "userAlreadyExists": "User already exists",
-    "@userAlreadyExists": {
-        "description": "User already exists"
-    },
-    "medicationHistory": "Medication history",
-    "@medicationHistory": {
-        "description": "Medication history"
-    },
-    "settings": "Settings",
-    "@settings": {
-        "description": "Settings"
-    },
-    "account": "Account",
-    "@account": {
-        "description": "Account"
-    },
-    "dataTransferRequiresAccount": "Account registration is required for data transfer and recovery in case of device change or loss.",
-    "@dataTransferRequiresAccount": {
-        "description": "Account registration is required for data transfer and recovery in case of device change or loss."
-    },
-    "pillPremium": "Pill Premium",
-    "@pillPremium": {
-        "description": "Pill Premium"
-    },
-    "unlimitedFeatureDuration": "About the unlimited feature duration",
-    "@unlimitedFeatureDuration": {
-        "description": "About the unlimited feature duration"
-    },
-    "pillSheet": "Pill sheet",
-    "@pillSheet": {
-        "description": "Pill sheet"
-    },
-    "notification": "Notification",
-    "@notification": {
-        "description": "Notification"
-    },
-    "menstruation": "Menstruation",
-    "@menstruation": {
-        "description": "Menstruation"
-    },
-    "others": "Others",
-    "@others": {
-        "description": "Others"
-    },
-    "faq": "FAQ",
-    "@faq": {
-        "description": "FAQ"
-    },
-    "newFeaturesIntroduction": "Introduction of new features",
-    "@newFeaturesIntroduction": {
-        "description": "Introduction of new features"
-    },
-    "contactUs": "Contact us",
-    "@contactUs": {
-        "description": "Contact us"
-    },
-    "delete": "Delete",
-    "@delete": {
-        "description": "Delete"
-    },
-    "doDelete": "Delete",
-    "@doDelete": {
-        "description": "Delete"
-    },
-    "deleteUser": "Delete user",
-    "@deleteUser": {
-        "description": "Delete user"
-    },
-    "deleteDiary": "Delete diary",
-    "@deleteDiary": {
-        "description": "Delete diary"
-    },
-    "confirmDeletingMenstruation": "Do you want to delete the menstruation period?",
-    "@confirmDeletingMenstruation": {
-        "description": "Do you want to delete the menstruation period?"
-    },
-    "addNotificationTime": "Add notification time",
-    "@addNotificationTime": {
-        "description": "Add notification time"
-    },
-    "syncWithDeviceTimeZone": "Sync with the device's timezone ({deviceTimezoneName})?",
-    "@syncWithDeviceTimeZone": {
-        "description": "Sync with the device's timezone ({deviceTimezoneName})?",
-        "placeholders": {
-            "deviceTimezoneName": {
-                "type": "String"
-            }
-        }
-    },
-    "currentTimeZone": "Currently set timezone",
-    "@currentTimeZone": {
-        "description": "Currently set timezone"
-    },
-    "yes": "Yes",
-    "@yes": {
-        "description": "Yes"
-    },
-    "no": "No",
-    "@no": {
-        "description": "No"
-    },
-    "unsubscribeInfo": "About cancellation",
-    "@unsubscribeInfo": {
-        "description": "About cancellation"
-    },
-    "pillReminder": "Pill reminder",
-    "@pillReminder": {
-        "description": "Pill reminder"
-    },
-    "takePillReminderChannelName": "Take pill reminder",
-    "@takePillReminderChannelName": {
-        "description": "Take pill reminder"
-    },
-    "takePillReminder": "Take 💊",
-    "@takePillReminder": {
-        "description": "Take 💊"
-    },
-    "copyDebugInfo": "COPY DEBUG INFO",
-    "@copyDebugInfo": {
-        "description": "COPY DEBUG INFO"
-    },
-    "cancel": "Cancel",
-    "@cancel": {
-        "description": "Cancel"
-    },
-    "signOut": "Sign out",
-    "@signOut": {
-        "description": "Sign out"
-    },
-    "autoAddPillSheetGroup": "Automatic addition of pill sheet group",
-    "@autoAddPillSheetGroup": {
-        "description": "Automatic addition of pill sheet group"
-    },
-    "autoAddNewSheetAfterCurrentEnds": "A new sheet will be automatically added when the current group ends",
-    "@autoAddNewSheetAfterCurrentEnds": {
-        "description": "A new sheet will be automatically added when the current group ends"
-    },
-    "accountSettings": "Account settings",
-    "@accountSettings": {
-        "description": "Account settings"
-    },
-    "linked": "Linked",
-    "@linked": {
-        "description": "Linked"
-    },
-    "unregistered": "Unregistered",
-    "@unregistered": {
-        "description": "Unregistered"
-    },
-    "quickRecord": "Quick record",
-    "@quickRecord": {
-        "description": "Quick record"
-    },
-    "quickRecordDescription": "You can record your pill intake on the notification screen",
-    "@quickRecordDescription": {
-        "description": "You can record your pill intake on the notification screen"
-    },
-    "healthCareIntegration": "Healthcare integration",
-    "@healthCareIntegration": {
-        "description": "Healthcare integration"
-    },
-    "healthCareIntegrationDescription": "Pilll will automatically record your menstrual cycle",
-    "@healthCareIntegrationDescription": {
-        "description": "Pilll will automatically record your menstrual cycle"
-    },
-    "viewPremiumPlan": "View premium plan",
-    "@viewPremiumPlan": {
-        "description": "View premium plan"
-    },
-    "changePillNumberForToday": "Change the pill number for today",
-    "@changePillNumberForToday": {
-        "description": "Change the pill number for today"
-    },
-    "discardAllPillSheets": "Discard all pill sheets",
-    "@discardAllPillSheets": {
-        "description": "Discard all pill sheets"
-    },
-    "areYouSureDoing": "{doing}?",
-    "@areYouSureDoing": {
-        "description": "{doing}?",
-        "placeholders": {
-            "doing": {
-                "type": "String"
-            }
-        }
-    },
-    "currentlyDisplayed": "Currently displayed",
-    "@currentlyDisplayed": {
-        "description": "Currently displayed"
-    },
-    "allPillSheets": "All pill sheets",
-    "@allPillSheets": {
-        "description": "All pill sheets"
-    },
-    "willBeDiscarded": "will be discarded",
-    "@willBeDiscarded": {
-        "description": "will be discarded"
-    },
-    "discard": "Discard",
-    "@discard": {
-        "description": "Discard"
-    },
-    "pillSheetDiscarded": "Pill sheet discarded",
-    "@pillSheetDiscarded": {
-        "description": "Pill sheet discarded"
-    },
-    "aboutMenstruation": "About menstruation",
-    "@aboutMenstruation": {
-        "description": "About menstruation"
-    },
-    "checkPillNumberForMenstruationStart": "Please check the pill number for the start of menstruation. The pill number you selected does not exist in the pill sheet type you are currently using",
-    "@checkPillNumberForMenstruationStart": {
-        "description": "Please check the pill number for the start of menstruation. The pill number you selected does not exist in the pill sheet type you are currently using"
-    },
-    "customizeMedicationNotifications": "Customize medication notifications",
-    "@customizeMedicationNotifications": {
-        "description": "Customize medication notifications"
-    },
-    "xCanBeCustomized": "{x} can be customized",
-    "@xCanBeCustomized": {
-        "description": "{x} can be customized",
-        "placeholders": {
-            "x": {
-                "type": "String"
-            }
-        }
-    },
-    "thankYouForCooperation": "Thank you for your cooperation",
-    "@thankYouForCooperation": {
-        "description": "Thank you for your cooperation"
-    },
-    "feedbackUsage": "We will use your feedback to improve our service",
-    "@feedbackUsage": {
-        "description": "We will use your feedback to improve our service"
-    },
-    "close": "Close",
-    "@close": {
-        "description": "Close"
-    },
-    "registerAccount": "Register account",
-    "@registerAccount": {
-        "description": "Register account"
-    },
-    "reLogin": "Re-login",
-    "@reLogin": {
-        "description": "Re-login"
-    },
-    "authenticationInfoUpdated": "Authentication information updated",
-    "@authenticationInfoUpdated": {
-        "description": "Authentication information updated"
-    },
-    "updateAuthenticationInformation": "Update authentication information",
-    "@updateAuthenticationInformation": {
-        "description": "Update authentication information"
-    },
-    "registeredWithProvider": "Registered with {accountTypeProviderName}",
-    "@registeredWithProvider": {
-        "description": "Registered with {accountTypeProviderName}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            }
-        }
-    },
-    "linkAccount": "Link account",
-    "@linkAccount": {
-        "description": "Link account"
-    },
-    "withdraw": "Withdraw",
-    "@withdraw": {
-        "description": "Withdraw"
-    },
-    "withdrawalCompleted": "Withdrawal completed",
-    "@withdrawalCompleted": {
-        "description": "Withdrawal completed"
-    },
-    "appExitMessage": "The app will close. Please restart the app and set up the initial settings.",
-    "@appExitMessage": {
-        "description": "The app will close. Please restart the app and set up the initial settings."
-    },
-    "oK": "OK",
-    "@oK": {
-        "description": "OK"
-    },
-    "changePillNumber": "Change pill number",
-    "@changePillNumber": {
-        "description": "Change pill number"
-    },
-    "selectOrChangePillNumber": "Tap today's ({today}) pill number",
-    "@selectOrChangePillNumber": {
-        "description": "Tap today's ({today}) pill number",
-        "placeholders": {
-            "today": {
-                "type": "String"
-            }
-        }
-    },
-    "change": "Change",
-    "@change": {
-        "description": "Change"
-    },
-    "pill": "Pill",
-    "@pill": {
-        "description": "Pill"
-    },
-    "calendar": "Calendar",
-    "@calendar": {
-        "description": "Calendar"
-    },
-    "userInformationWillBeDeleted": "User information will be deleted",
-    "@userInformationWillBeDeleted": {
-        "description": "User information will be deleted"
-    },
-    "withdrawalMessage": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again",
-    "@withdrawalMessage": {
-        "description": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again"
-    },
-    "recordPage": "RecordPage",
-    "@recordPage": {
-        "description": "RecordPage"
-    },
-    "doReLogin": "Please re-login",
-    "@doReLogin": {
-        "description": "Please re-login"
-    },
-    "reLoginMessage": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically",
-    "@reLoginMessage": {
-        "description": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically"
-    },
-    "updateAuthenticationAfterReLogin": "Re-login to update authentication information",
-    "@updateAuthenticationAfterReLogin": {
-        "description": "Re-login to update authentication information"
-    },
-    "menstruationPage": "MenstruationPage",
-    "@menstruationPage": {
-        "description": "MenstruationPage"
-    },
-    "calendarPage": "CalendarPage",
-    "@calendarPage": {
-        "description": "CalendarPage"
-    },
-    "settingsPage": "SettingsPage",
-    "@settingsPage": {
-        "description": "SettingsPage"
-    },
-    "menstruationDeleted": "Menstruation period deleted",
-    "@menstruationDeleted": {
-        "description": "Menstruation period deleted"
-    },
-    "editMenstruationPeriod": "Edit menstruation period",
-    "@editMenstruationPeriod": {
-        "description": "Edit menstruation period"
-    },
-    "menstruationEdited": "Menstruation period edited",
-    "@menstruationEdited": {
-        "description": "Menstruation period edited"
-    },
-    "physicalConditionDetail": "Physical condition details",
-    "@physicalConditionDetail": {
-        "description": "Physical condition details"
-    },
-    "medicationHistoryPremiumFeatureRestriction": "You need to be a premium member to view this",
-    "@medicationHistoryPremiumFeatureRestriction": {
-        "description": "You need to be a premium member to view this"
-    },
-    "viewMoreDetails": "View more details",
-    "@viewMoreDetails": {
-        "description": "View more details"
-    },
-    "viewMore": "View more",
-    "@viewMore": {
-        "description": "View more"
-    },
-    "afterLastTakenPillNumber": "{afterLastTakenPillNumber}th",
-    "@afterLastTakenPillNumber": {
-        "description": "{afterLastTakenPillNumber}th",
-        "placeholders": {
-            "afterLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}th",
-    "@leftDashAfterLastTakenPillNumber": {
-        "description": "{left}-{afterLastTakenPillNumber}th",
-        "placeholders": {
-            "left": {
-                "type": "String"
-            },
-            "afterLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}th",
-    "@beforeLastTakenPillNumber": {
-        "description": "{beforeLastTakenPillNumber}th",
-        "placeholders": {
-            "beforeLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}th",
-    "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
-        "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}th",
-        "placeholders": {
-            "beforeLastTakenPillNumber": {
-                "type": "String"
-            },
-            "afterLastTakenPillNumberPlusOne": {
-                "type": "String"
-            }
-        }
-    },
-    "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}th",
-    "@oneToAfterDisplayNumberBeginPillNumber": {
-        "description": "1→{afterDisplayNumberSettingBeginPillNumber}th",
-        "placeholders": {
-            "afterDisplayNumberSettingBeginPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}th",
-    "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
-        "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}th",
-        "placeholders": {
-            "beforeBeginPillNumber": {
-                "type": "String"
-            },
-            "afterDisplayNumberSettingBeginPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}th",
-    "@oneToAfterDisplayNumberEndPillNumber": {
-        "description": "1→{afterDisplayNumberSettingEndPillNumber}th",
-        "placeholders": {
-            "afterDisplayNumberSettingEndPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}th",
-    "@beforeEndToAfterDisplayNumberEndPillNumber": {
-        "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}th",
-        "placeholders": {
-            "beforeEndPillNumber": {
-                "type": "String"
-            },
-            "afterDisplayNumberSettingEndPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "selectPauseStartDate": "Select start date for taking a break",
-    "@selectPauseStartDate": {
-        "description": "Select start date for taking a break"
-    },
-    "selectPausePeriod": "Select duration for taking a break",
-    "@selectPausePeriod": {
-        "description": "Select duration for taking a break"
-    },
-    "pauseStartDate": "Start date for taking a break",
-    "@pauseStartDate": {
-        "description": "Start date for taking a break"
-    },
-    "pauseEndDate": "End date for taking a break",
-    "@pauseEndDate": {
-        "description": "End date for taking a break"
-    },
-    "endPillSheet": "End of pill sheet",
-    "@endPillSheet": {
-        "description": "End of pill sheet"
-    },
-    "discardPillSheet": "Discard pill sheet",
-    "@discardPillSheet": {
-        "description": "Discard pill sheet"
-    },
-    "takingTime": "Taking time",
-    "@takingTime": {
-        "description": "Taking time"
-    },
-    "takingHistoryIsPremiumFeature": "Taking history is a premium feature",
-    "@takingHistoryIsPremiumFeature": {
-        "description": "Taking history is a premium feature"
-    },
-    "pauseTakingDoesNotAdvancePillNumber": "Taking a break will not advance the pill number",
-    "@pauseTakingDoesNotAdvancePillNumber": {
-        "description": "Taking a break will not advance the pill number"
-    },
-    "pauseTakingFromNumber": "Do you want to take a break from {number} pills?",
-    "@pauseTakingFromNumber": {
-        "description": "Do you want to take a break from {number} pills?",
-        "placeholders": {
-            "number": {
-                "type": "String"
-            }
-        }
-    },
-    "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}th",
-    "@lastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}th",
-        "placeholders": {
-            "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
-                "type": "String"
-            }
-        }
-    },
-    "taking": "Taking",
-    "@taking": {
-        "description": "Taking"
-    },
-    "estimatedEndPillNumber": "Last pill on previous sheet: {estimatedEndPillNumber}th",
-    "@estimatedEndPillNumber": {
-        "description": "Last pill on previous sheet: {estimatedEndPillNumber}th",
-        "placeholders": {
-            "estimatedEndPillNumber": {
-                "type": "int"
-            }
-        }
-    },
-    "addPillSheetButton": "Add pill sheet",
-    "@addPillSheetButton": {
-        "description": "Add pill sheet"
-    },
-    "taken": "Taken",
-    "@taken": {
-        "description": "Taken"
-    },
-    "notTaken": "Not taken",
-    "@notTaken": {
-        "description": "Not taken"
-    },
-    "pillSheetSettings": "Pill sheet settings",
-    "@pillSheetSettings": {
-        "description": "Pill sheet settings"
-    },
-    "unmarkTodayPillAsTakenToPause": "Mark today's pill as not taken to take a break",
-    "@unmarkTodayPillAsTakenToPause": {
-        "description": "Mark today's pill as not taken to take a break"
-    },
-    "pauseTaking": "Taking a break",
-    "@pauseTaking": {
-        "description": "Taking a break"
-    },
-    "changePauseStartDate": "Change start date for taking a break",
-    "@changePauseStartDate": {
-        "description": "Change start date for taking a break"
-    },
-    "pauseTakingPeriodEnded": "Break ended",
-    "@pauseTakingPeriodEnded": {
-        "description": "Break ended"
-    },
-    "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-    "@endValue": {
-        "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
-        "placeholders": {
-            "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
-                "type": "int"
-            }
-        }
-    },
-    "changePillDaysForSheet": "Change number of days for pill intake",
-    "@changePillDaysForSheet": {
-        "description": "Change number of days for pill intake"
-    },
-    "changedStartAndEndNumbers": "Changed start and end numbers",
-    "@changedStartAndEndNumbers": {
-        "description": "Changed start and end numbers"
-    },
-    "startOfPillDays": "Start of pill intake days",
-    "@startOfPillDays": {
-        "description": "Start of pill intake days"
-    },
-    "beforePillSheetGroupSequentialEstimatedEndDay": "Last pill on previous sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}th day",
-    "@beforePillSheetGroupSequentialEstimatedEndDay": {
-        "description": "Last pill on previous sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}th day",
-        "placeholders": {
-            "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
-                "type": "int"
-            }
-        }
-    },
-    "endOfPillDays": "End of pill intake days",
-    "@endOfPillDays": {
-        "description": "End of pill intake days"
-    },
-    "changedToNumber": "Changed to number",
-    "@changedToNumber": {
-        "description": "Changed to number"
-    },
-    "displayMode": "Display mode",
-    "@displayMode": {
-        "description": "Display mode"
-    },
-    "dateDisplay": "Date display",
-    "@dateDisplay": {
-        "description": "Date display"
-    },
-    "pillNumber": "Pill number",
-    "@pillNumber": {
-        "description": "Pill number"
-    },
-    "pillDays": "Number of pill intake days",
-    "@pillDays": {
-        "description": "Number of pill intake days"
-    },
-    "pillDaysCycle": "Number of pill intake days (cycle)",
-    "@pillDaysCycle": {
-        "description": "Number of pill intake days (cycle)"
-    },
-    "pillSheetEnded": "Pill sheet ended",
-    "@pillSheetEnded": {
-        "description": "Pill sheet ended"
-    },
-    "checkLastTakenDate": "Check last taken date",
-    "@checkLastTakenDate": {
-        "description": "Check last taken date"
-    },
-    "pleaseRegisterAccount": "Please register an account",
-    "@pleaseRegisterAccount": {
-        "description": "Please register an account"
-    },
-    "cannotTransferPremiumWithoutAccount": "You cannot carry over the premium feature when changing devices or losing your phone",
-    "@cannotTransferPremiumWithoutAccount": {
-        "description": "You cannot carry over the premium feature when changing devices or losing your phone"
-    },
-    "reexperiencePremiumFeatures": "You can experience the premium features again for 14 days!\nTap to share on SNS!",
-    "@reexperiencePremiumFeatures": {
-        "description": "You can experience the premium features again for 14 days!\nTap to share on SNS!"
-    },
-    "whereToShare": "Where do you want to share?",
-    "@whereToShare": {
-        "description": "Where do you want to share?"
-    },
-    "pauseTakingDay": "🌙 Taking a break on {day}th day",
-    "@pauseTakingDay": {
-        "description": "🌙 Taking a break on {day}th day",
-        "placeholders": {
-            "day": {
-                "type": "int"
-            }
-        }
-    },
-    "withDay": "{word}th day",
-    "@withDay": {
-        "description": "{word}th day",
-        "placeholders": {
-            "word": {
-                "type": "String"
-            }
-        }
-    },
-    "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}th day",
-    "@restDurationDays": {
-        "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}th day",
-        "placeholders": {
-            "activePillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            },
-            "restDurationDays": {
-                "type": "int"
-            }
-        }
-    },
-    "daysUntilPausePeriod": "There are {diffPlusOne} days until {activePillSheetPillSheetTypeNotTakenWord} period",
-    "@daysUntilPausePeriod": {
-        "description": "There are {diffPlusOne} days until {activePillSheetPillSheetTypeNotTakenWord} period",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            },
-            "activePillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            }
-        }
-    },
-    "remainingDaysAllFeatures": "You have {diff} days left to use all features",
-    "@remainingDaysAllFeatures": {
-        "description": "You have {diff} days left to use all features",
-        "placeholders": {
-            "diff": {
-                "type": "int"
-            }
-        }
-    },
-    "todayIsTaking": "💊 Today is taking",
-    "@todayIsTaking": {
-        "description": "💊 Today is taking"
-    },
-    "todayPillToTake": "💊 Today's pill",
-    "@todayPillToTake": {
-        "description": "💊 Today's pill"
-    },
-    "number": "th",
-    "@number": {
-        "description": "th"
-    },
-    "recordedMenstruationStartDate": "Recorded from {DateTimeFormatterMonthAndDay}",
-    "@recordedMenstruationStartDate": {
-        "description": "Recorded from {DateTimeFormatterMonthAndDay}",
-        "placeholders": {
-            "DateTimeFormatterMonthAndDay": {
-                "type": "String"
-            }
-        }
-    },
-    "menstruationStartDate": "Start of menstruation",
-    "@menstruationStartDate": {
-        "description": "Start of menstruation"
-    },
-    "menstruationEndDate": "End of menstruation",
-    "@menstruationEndDate": {
-        "description": "End of menstruation"
-    },
-    "menstruationScheduleDate": "Menstruation schedule date",
-    "@menstruationScheduleDate": {
-        "description": "Menstruation schedule date"
-    },
-    "menstruationScheduleDateWithNumber": "Menstruation schedule: {diffPlusOne}th day",
-    "@menstruationScheduleDateWithNumber": {
-        "description": "Menstruation schedule: {diffPlusOne}th day",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            }
-        }
-    },
-    "menstruationScheduleDateWithNumberAndPillNumber": "Menstruation schedule: {diffPlusOne}th day's {pillNumber}",
-    "@menstruationScheduleDateWithNumberAndPillNumber": {
-        "description": "Menstruation schedule: {diffPlusOne}th day's {pillNumber}",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            },
-            "pillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "menstruationRemainingDay": "There are {diff} days left",
-    "@menstruationRemainingDay": {
-        "description": "There are {diff} days left",
-        "placeholders": {
-            "diff": {
-                "type": "int"
-            }
-        }
-    },
-    "menstruationProgressingDay": "{diffPlusOne}th day",
-    "@menstruationProgressingDay": {
-        "description": "{diffPlusOne}th day",
-        "placeholders": {
-            "diffPlusOne": {
-                "type": "int"
-            }
-        }
-    },
-    "recordMenstruation": "Record menstruation",
-    "@recordMenstruation": {
-        "description": "Record menstruation"
-    },
-    "menstruationHistory": "Menstruation history",
-    "@menstruationHistory": {
-        "description": "Menstruation history"
-    },
-    "menstruationFromToday": "Menstruation from today",
-    "@menstruationFromToday": {
-        "description": "Menstruation from today"
-    },
-    "menstruationFromYesterday": "Menstruation from yesterday",
-    "@menstruationFromYesterday": {
-        "description": "Menstruation from yesterday"
-    },
-    "selectMenstruationStartDate": "Select start date for menstruation",
-    "@selectMenstruationStartDate": {
-        "description": "Select start date for menstruation"
-    },
-    "menstruationCycle": "{menstruationDuration} day cycle",
-    "@menstruationCycle": {
-        "description": "{menstruationDuration} day cycle",
-        "placeholders": {
-            "menstruationDuration": {
-                "type": "int"
-            }
-        }
-    },
-    "login": "Login",
-    "@login": {
-        "description": "Login"
-    },
-    "beforePremiumRegistration": "Before premium registration...",
-    "@beforePremiumRegistration": {
-        "description": "Before premium registration..."
-    },
-    "createNewAccountIfNotLoggedIn": "If you haven't logged in to Pilll yet, a new account will be created for you",
-    "@createNewAccountIfNotLoggedIn": {
-        "description": "If you haven't logged in to Pilll yet, a new account will be created for you"
-    },
-    "registerAccountForDataTransfer": "Registering an account will allow you to transfer and recover data",
-    "@registerAccountForDataTransfer": {
-        "description": "Registering an account will allow you to transfer and recover data"
-    },
-    "registerAccountToKeepData": "In order to keep your account information, please register an account",
-    "@registerAccountToKeepData": {
-        "description": "In order to keep your account information, please register an account"
-    },
-    "signInWith": "Sign in with {loginName}",
-    "@signInWith": {
-        "description": "Sign in with {loginName}",
-        "placeholders": {
-            "loginName": {
-                "type": "String"
-            }
-        }
-    },
-    "registerWith": "Register with {loginName}",
-    "@registerWith": {
-        "description": "Register with {loginName}",
-        "placeholders": {
-            "loginName": {
-                "type": "String"
-            }
-        }
-    },
-    "premiumRegistrationComplete": "Pill Premium registration complete",
-    "@premiumRegistrationComplete": {
-        "description": "Pill Premium registration complete"
-    },
-    "thankYouForRegistration": "Thank you for registering.\nYou now have access to all features!",
-    "@thankYouForRegistration": {
-        "description": "Thank you for registering.\nYou now have access to all features!"
-    },
-    "limitedTimeDiscount": "Limited-time discount available",
-    "@limitedTimeDiscount": {
-        "description": "Limited-time discount available"
-    },
-    "standardMonthlyPlan": "Standard monthly plan",
-    "@standardMonthlyPlan": {
-        "description": "Standard monthly plan"
-    },
-    "annualPlan": "Annual plan",
-    "@annualPlan": {
-        "description": "Annual plan"
-    },
-    "annualPrice": "{annualPackageStoreProductPriceString}/year",
-    "@annualPrice": {
-        "description": "{annualPackageStoreProductPriceString}/year",
-        "placeholders": {
-            "annualPackageStoreProductPriceString": {
-                "type": "String"
-            }
-        }
-    },
-    "monthlyPrice": "{monthlyPriceString}/month",
-    "@monthlyPrice": {
-        "description": "{monthlyPriceString}/month",
-        "placeholders": {
-            "monthlyPriceString": {
-                "type": "String"
-            }
-        }
-    },
-    "premiumTermsNotice1": "・The premium subscription period automatically renews every month or every year\n",
-    "@premiumTermsNotice1": {
-        "description": "・The premium subscription period automatically renews every month or every year\n"
-    },
-    "premiumTermsBullet": "・",
-    "@premiumTermsBullet": {
-        "description": "・"
-    },
-    "slashSeparator": " / ",
-    "@slashSeparator": {
-        "description": " / "
-    },
-    "premiumTermsNotice2": "Displayed under the Specific Commercial Transactions Law",
-    "@premiumTermsNotice2": {
-        "description": "Displayed under the Specific Commercial Transactions Law"
-    },
-    "premiumTermsNotice3": "Please confirm before registering\n",
-    "@premiumTermsNotice3": {
-        "description": "Please confirm before registering\n"
-    },
-    "autoRenewNotice": "・The premium subscription period will automatically renew unless you cancel at least 24 hours before the end of the current period\n",
-    "@autoRenewNotice": {
-        "description": "・The premium subscription period will automatically renew unless you cancel at least 24 hours before the end of the current period\n"
-    },
-    "cancelAutoRenewInfo": "・You can cancel auto-renewal in the {storeName} app's account settings. (Auto-renewal cannot be canceled in the app)",
-    "@cancelAutoRenewInfo": {
-        "description": "・You can cancel auto-renewal in the app's account settings. (Auto-renewal cannot be canceled in the app)",
-        "placeholders": {
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "moreDetails": "More details",
-    "@moreDetails": {
-        "description": "More details"
-    },
-    "restorePurchase": "Purchase information restored",
-    "@restorePurchase": {
-        "description": "Purchase information restored"
-    },
-    "previouslyPurchased": "Previous purchasers, please check here",
-    "@previouslyPurchased": {
-        "description": "Previous purchasers, please check here"
-    },
-    "noPreviousPurchaseInfo": "No previous purchase information found. Please check your account again",
-    "@noPreviousPurchaseInfo": {
-        "description": "No previous purchase information found. Please check your account again"
-    },
-    "monthlyPlan": "Monthly plan",
-    "@monthlyPlan": {
-        "description": "Monthly plan"
-    },
-    "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/month",
-    "@monthlyPlanPrice": {
-        "description": "{monthlyPackageStoreProductPriceString}/month",
-        "placeholders": {
-            "monthlyPackageStoreProductPriceString": {
-                "type": "String"
-            }
-        }
-    },
-    "youArePremiumMember": "You are a\npremium member",
-    "@youArePremiumMember": {
-        "description": "You are a\npremium member"
-    },
-    "thankYouMessage": "Thank you for using our service.\nWe're grateful for your patronage.",
-    "@thankYouMessage": {
-        "description": "Thank you for using our service.\nWe're grateful for your patronage."
-    },
-    "premiumFeaturesList": "List of premium features",
-    "@premiumFeaturesList": {
-        "description": "List of premium features"
-    },
-    "pushNotificationForTakingRecord": "Taking record from push notification",
-    "@pushNotificationForTakingRecord": {
-        "description": "Taking record from push notification"
-    },
-    "viewAndRecordTakingHistory": "🗂 Record and view taking history",
-    "@viewAndRecordTakingHistory": {
-        "description": "🗂 Record and view taking history"
-    },
-    "displayDateOnPillSheet": "📆 Display date on pill sheet",
-    "@displayDateOnPillSheet": {
-        "description": "📆 Display date on pill sheet"
-    },
-    "autoRefillNewPillSheet": "📦 Automatically refill new pill sheet",
-    "@autoRefillNewPillSheet": {
-        "description": "📦 Automatically refill new pill sheet"
-    },
-    "viewPastData": "👀 View past data",
-    "@viewPastData": {
-        "description": "👀 View past data"
-    },
-    "customizeHealthTags": "🏷 Customize health tags",
-    "@customizeHealthTags": {
-        "description": "🏷 Customize health tags"
-    },
-    "hideAds": "🚫 Hide ads",
-    "@hideAds": {
-        "description": "🚫 Hide ads"
-    },
-    "seeDetailsOfPremiumFeatures": "View details of premium features",
-    "@seeDetailsOfPremiumFeatures": {
-        "description": "View details of premium features"
-    },
-    "popularFeatures": "Popular\nfeatures",
-    "@popularFeatures": {
-        "description": "Popular\nfeatures"
-    },
-    "viewPremiumFeatures": "View premium features",
-    "@viewPremiumFeatures": {
-        "description": "View premium features"
-    },
-    "addedDisplayModePillDaysCycle": "Display mode pill intake days (cycle) added",
-    "@addedDisplayModePillDaysCycle": {
-        "description": "Display mode pill intake days (cycle) added"
-    },
-    "seeDetails": "See details",
-    "@seeDetails": {
-        "description": "See details"
-    },
-    "stepThreeOfThree": "3/3",
-    "@stepThreeOfThree": {
-        "description": "3/3"
-    },
-    "missedPillNotification": "Missed pill reminder",
-    "@missedPillNotification": {
-        "description": "Missed pill reminder"
-    },
-    "setMultipleReminders": "Setting multiple reminders can prevent missing pills",
-    "@setMultipleReminders": {
-        "description": "Setting multiple reminders can prevent missing pills"
-    },
-    "and": "and",
-    "@and": {
-        "description": "and"
-    },
-    "readAndStartUsing": "Read and start using",
-    "@readAndStartUsing": {
-        "description": "Read and start using"
-    },
-    "next": "Next",
-    "@next": {
-        "description": "Next"
-    },
-    "notificationIndex": "Notification {number}",
-    "@notificationIndex": {
-        "description": "Notification {number}",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "takingRecordFromNotification": "\\ Taking record from notification /",
-    "@takingRecordFromNotification": {
-        "description": "\\ Taking record from notification /"
-    },
-    "startApp": "Start the app",
-    "@startApp": {
-        "description": "Start the app"
-    },
-    "loggedInWithProvider": "Logged in with {accountTypeProviderName}",
-    "@loggedInWithProvider": {
-        "description": "Logged in with {accountTypeProviderName}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            }
-        }
-    },
-    "tellAboutPrescribedSheet": "Please tell us about the prescribed sheet",
-    "@tellAboutPrescribedSheet": {
-        "description": "Please tell us about the prescribed sheet"
-    },
-    "existingAccountUsers": "Those who already have an account, please check here",
-    "@existingAccountUsers": {
-        "description": "Those who already have an account, please check here"
-    },
-    "selectTodayPillNumber": "Tap today's ({todayString}) pill number",
-    "@selectTodayPillNumber": {
-        "description": "Tap today's ({todayString}) pill number",
-        "placeholders": {
-            "todayString": {
-                "type": "String"
-            }
-        }
-    },
-    "notYetKnown": "Not yet known",
-    "@notYetKnown": {
-        "description": "Not yet known"
-    },
-    "pillForToday": "The pill for {today} is",
-    "@pillForToday": {
-        "description": "The pill for {today} is",
-        "placeholders": {
-            "today": {
-                "type": "String"
-            }
-        }
-    },
-    "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
-    "@todayPillNumber": {
-        "description": "{todayPillNumberPillNumberInPillSheet}",
-        "placeholders": {
-            "todayPillNumberPillNumberInPillSheet": {
-                "type": "String"
-            }
-        }
-    },
-    "preview": "Preview",
-    "@preview": {
-        "description": "Preview"
-    },
-    "normal": "Normal",
-    "@normal": {
-        "description": "Normal"
-    },
-    "missed": "Missed",
-    "@missed": {
-        "description": "Missed"
-    },
-    "showsDate": "Show date",
-    "@showsDate": {
-        "description": "Show date"
-    },
-    "showsPillNumber": "Show pill number",
-    "@showsPillNumber": {
-        "description": "Show pill number"
-    },
-    "showsDescription": "Show description",
-    "@showsDescription": {
-        "description": "Show description"
-    },
-    "title": "Title",
-    "@title": {
-        "description": "Title"
-    },
-    "message": "Message",
-    "@message": {
-        "description": "Message"
-    },
-    "option": "Option",
-    "@option": {
-        "description": "Option"
-    },
-    "completed": "Completed",
-    "@completed": {
-        "description": "Completed"
-    },
-    "pilll": "Pilll",
-    "@pilll": {
-        "description": "Pilll"
-    },
-    "changeMissedNotificationMessage": "You can change the text of the missed notification",
-    "@changeMissedNotificationMessage": {
-        "description": "You can change the text of the missed notification"
-    },
-    "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
-    "@missedNotificationMessageLength": {
-        "description": "{missedTakenMessageValueCharactersLength}/100",
-        "placeholders": {
-            "missedTakenMessageValueCharactersLength": {
-                "type": "int"
-            }
-        }
-    },
-    "changeNotificationHeader": "You can change the header of the notification",
-    "@changeNotificationHeader": {
-        "description": "You can change the header of the notification"
-    },
-    "notificationHeaderLength": "{wordValueCharactersLength}/8",
-    "@notificationHeaderLength": {
-        "description": "{wordValueCharactersLength}/8",
-        "placeholders": {
-            "wordValueCharactersLength": {
-                "type": "int"
-            }
-        }
-    },
-    "enterAtLeastOneCharacter": "Please enter at least one character",
-    "@enterAtLeastOneCharacter": {
-        "description": "Please enter at least one character"
-    },
-    "changeDailyNotificationMessage": "You can change the text of the notification for when you haven't taken your pill",
-    "@changeDailyNotificationMessage": {
-        "description": "You can change the text of the notification for when you haven't taken your pill"
-    },
-    "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
-    "@dailyNotificationMessageLength": {
-        "description": "{dailyTakenMessageValueCharactersLength}/100",
-        "placeholders": {
-            "dailyTakenMessageValueCharactersLength": {
-                "type": "int"
-            }
-        }
-    },
-    "receiveDailyNotificationAt9AM": "Receive notification at 9:00 AM",
-    "@receiveDailyNotificationAt9AM": {
-        "description": "Receive notification at 9:00 AM"
-    },
-    "save": "Save",
-    "@save": {
-        "description": "Save"
-    },
-    "physicalCondition": "Physical condition",
-    "@physicalCondition": {
-        "description": "Physical condition"
-    },
-    "deletedDiaryCannotBeRecovered": "Deleted diary cannot be recovered",
-    "@deletedDiaryCannotBeRecovered": {
-        "description": "Deleted diary cannot be recovered"
-    },
-    "sex": "Sex",
-    "@sex": {
-        "description": "Sex"
-    },
-    "previousPillSheetGroup": "Previous pill sheet group",
-    "@previousPillSheetGroup": {
-        "description": "Previous pill sheet group"
-    },
-    "noPreviousPillSheetGroup": "Previous pill sheet group does not exist",
-    "@noPreviousPillSheetGroup": {
-        "description": "Previous pill sheet group does not exist"
-    },
-    "failedToFetchPillHistory": "Failed to get pill history. {error}",
-    "@failedToFetchPillHistory": {
-        "description": "Failed to get pill history. {error}",
-        "placeholders": {
-            "error": {
-                "type": "String"
-            }
-        }
-    },
-    "seeFAQ": "View FAQ",
-    "@seeFAQ": {
-        "description": "View FAQ"
-    },
-    "reloadScreen": "Reload screen",
-    "@reloadScreen": {
-        "description": "Reload screen"
-    },
-    "contactIfNotResolved": "If you cannot resolve the issue, please contact us",
-    "@contactIfNotResolved": {
-        "description": "If you cannot resolve the issue, please contact us"
-    },
-    "shareFeedback": "We'd love to hear your thoughts about Pilll",
-    "@shareFeedback": {
-        "description": "We'd love to hear your thoughts about Pilll"
-    },
-    "confirm": "Confirm",
-    "@confirm": {
-        "description": "Confirm"
-    },
-    "surveyForServiceImprovement": "We'd love your input on how we can improve our service",
-    "@surveyForServiceImprovement": {
-        "description": "We'd love your input on how we can improve our service"
-    },
-    "participate": "Participate",
-    "@participate": {
-        "description": "Participate"
-    },
-    "notHelp": "Not helpful",
-    "@notHelp": {
-        "description": "Not helpful"
-    },
-    "serviceImprovementSurvey": "Service improvement survey",
-    "@serviceImprovementSurvey": {
-        "description": "Service improvement survey"
-    },
-    "satisfied": "Satisfied",
-    "@satisfied": {
-        "description": "Satisfied"
-    },
-    "notSatisfied": "Not satisfied",
-    "@notSatisfied": {
-        "description": "Not satisfied"
-    },
-    "perNumber": "per number",
-    "@perNumber": {
-        "description": "per number"
-    },
-    "howManyDaysDoesMenstruationLast": "How many days does menstruation last?",
-    "@howManyDaysDoesMenstruationLast": {
-        "description": "How many days does menstruation last?"
-    },
-    "daysMenstruationLasts": " days menstruation lasts",
-    "@daysMenstruationLasts": {
-        "description": " days menstruation lasts"
-    },
-    "selectPillNumberForMenstruationStart": "Tap the pill number for the start of menstruation",
-    "@selectPillNumberForMenstruationStart": {
-        "description": "Tap the pill number for the start of menstruation"
-    },
-    "countOfSheet": "{number}th sheet",
-    "@countOfSheet": {
-        "description": "{number}th sheet",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "newPillSheetStart": "New pill sheet start ▶︎",
-    "@newPillSheetStart": {
-        "description": "New pill sheet start ▶︎"
-    },
-    "selectPillType": "Select pill type",
-    "@selectPillType": {
-        "description": "Select pill type"
-    },
-    "twentyOnePills": "21 pills",
-    "@twentyOnePills": {
-        "description": "21 pills"
-    },
-    "twentyEightPills": "28 pills",
-    "@twentyEightPills": {
-        "description": "28 pills"
-    },
-    "twentyFourPills": "24 pills",
-    "@twentyFourPills": {
-        "description": "24 pills"
-    },
-    "twentyOnePlusSevenDaysBreak": "21 pills + 7 days break",
-    "@twentyOnePlusSevenDaysBreak": {
-        "description": "21 pills + 7 days break"
-    },
-    "twentyFourPlusFourPlacebo": "24 pills + 4 placebo pills",
-    "@twentyFourPlusFourPlacebo": {
-        "description": "24 pills + 4 placebo pills"
-    },
-    "twentyOnePlusSevenPlacebo": "21 pills + 7 placebo pills",
-    "@twentyOnePlusSevenPlacebo": {
-        "description": "21 pills + 7 placebo pills"
-    },
-    "allActivePills": "All active pills",
-    "@allActivePills": {
-        "description": "All active pills"
-    },
-    "twentyFourPlusFourDaysBreak": "24 pills + 4 days break",
-    "@twentyFourPlusFourDaysBreak": {
-        "description": "24 pills + 4 days break"
-    },
-    "choosePillType": "Choose pill type",
-    "@choosePillType": {
-        "description": "Choose pill type"
-    },
-    "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} period notification",
-    "@notificationForNotTakenPeriod": {
-        "description": "{pillSheetPillSheetTypeNotTakenWord} period notification",
-        "placeholders": {
-            "pillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            }
-        }
-    },
-    "autoRecordForNotTakenPeriodIfNotificationOff": "If notifications are off, taking record will also be automatically recorded for the {pillSheetPillSheetTypeNotTakenWord} period",
-    "@autoRecordForNotTakenPeriodIfNotificationOff": {
-        "description": "If notifications are off, taking record will also be automatically recorded for the {pillSheetPillSheetTypeNotTakenWord} period",
-        "placeholders": {
-            "pillSheetPillSheetTypeNotTakenWord": {
-                "type": "String"
-            }
-        }
-    },
-    "requestForCancelSurvey": "Request for cancellation survey",
-    "@requestForCancelSurvey": {
-        "description": "Request for cancellation survey"
-    },
-    "pilllDescription": "Pilll pill reminder app",
-    "@pilllDescription": {
-        "description": "Pilll pill reminder app"
-    },
-    "reachedMaximumCountOfReminderTimes": "You have reached the maximum number of reminder times. Please limit to {ReminderTimeMaximumCount} items",
-    "@reachedMaximumCountOfReminderTimes": {
-        "description": "You have reached the maximum number of reminder times. Please limit to {ReminderTimeMaximumCount} items",
-        "placeholders": {
-            "ReminderTimeMaximumCount": {
-                "type": "int"
-            }
-        }
-    },
-    "minimumCountOfReminderTimes": "Notification time is at least {ReminderTimeMinimumCount} items",
-    "@minimumCountOfReminderTimes": {
-        "description": "Notification time is at least {ReminderTimeMinimumCount} items",
-        "placeholders": {
-            "ReminderTimeMinimumCount": {
-                "type": "int"
-            }
-        }
-    },
-    "purchaseErrorUnknownError": "An unknown error occurred. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnknownError": {
-        "description": "An unknown error occurred. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorStoreProblemError": "{storeName} is having issues. Please try again later",
-    "@purchaseErrorStoreProblemError": {
-        "description": "{storeName} is having issues. Please try again later",
-        "placeholders": {
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorPurchaseNotAllowedError": "Purchase not allowed for this device",
-    "@purchaseErrorPurchaseNotAllowedError": {
-        "description": "Purchase not allowed for this device"
-    },
-    "purchaseErrorPurchaseInvalidError": "Failed to make payment. Please check if your payment method is valid",
-    "@purchaseErrorPurchaseInvalidError": {
-        "description": "Failed to make payment. Please check if your payment method is valid"
-    },
-    "purchaseErrorProductNotAvailableForPurchaseError": "The plan is not currently available for purchase. Please try restarting the app",
-    "@purchaseErrorProductNotAvailableForPurchaseError": {
-        "description": "The plan is not currently available for purchase. Please try restarting the app"
-    },
-    "purchaseErrorProductAlreadyPurchasedError": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section",
-    "@purchaseErrorProductAlreadyPurchasedError": {
-        "description": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section"
-    },
-    "purchaseErrorReceiptAlreadyInUseError": "Purchase already in use. The pill sheet information is being used by another user. Please check {accountName}",
-    "@purchaseErrorReceiptAlreadyInUseError": {
-        "description": "Purchase already in use. The pill sheet information is being used by another user. Please check {accountName}",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidReceiptError": "Invalid purchase information. Please check your purchase information",
-    "@purchaseErrorInvalidReceiptError": {
-        "description": "Invalid purchase information. Please check your purchase information"
-    },
-    "purchaseErrorMissingReceiptFileError": "No purchase information found. Please try signing with {accountName} in on the device",
-    "@purchaseErrorMissingReceiptFileError": {
-        "description": "No purchase information found. Please try signing in on the device",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorNetworkError": "Network status is unstable. Please check your connection and try again",
-    "@purchaseErrorNetworkError": {
-        "description": "Network status is unstable. Please check your connection and try again"
-    },
-    "purchaseErrorInvalidCredentialsError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidCredentialsError": {
-        "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorUnexpectedBackendResponseError": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnexpectedBackendResponseError": {
-        "description": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorReceiptInUseByOtherSubscriberError": "The pill sheet information is being used by another user. Please check {accountName}",
-    "@purchaseErrorReceiptInUseByOtherSubscriberError": {
-        "description": "The pill sheet information is being used by another user. Please check {accountName}",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidAppUserIdError": "Unable to verify user. Please try restarting the app. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidAppUserIdError": {
-        "description": "Unable to verify user. Please try restarting the app",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorOperationAlreadyInProgressError": "Another purchase process is in progress. Please try again later",
-    "@purchaseErrorOperationAlreadyInProgressError": {
-        "description": "Another purchase process is in progress. Please try again later"
-    },
-    "purchaseErrorUnknownBackendError": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnknownBackendError": {
-        "description": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidAppleSubscriptionKeyError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidAppleSubscriptionKeyError": {
-        "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorIneligibleError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorIneligibleError": {
-        "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInsufficientPermissionsError": "Your {accountName} cannot subscribe to the plan. Please check your payment information and try again",
-    "@purchaseErrorInsufficientPermissionsError": {
-        "description": "Your {accountName} cannot subscribe to the plan. Please check your payment information and try again",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorPaymentPendingError": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
-    "@purchaseErrorPaymentPendingError": {
-        "description": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
-        "placeholders": {
-            "accountName": {
-                "type": "String"
-            },
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidSubscriberAttributesError": "Failed to purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidSubscriberAttributesError": {
-        "description": "Failed to purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorLogOutWithAnonymousUserError": "Failed to retrieve user information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorLogOutWithAnonymousUserError": {
-        "description": "Failed to retrieve user information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorConfigurationError": "Failed to retrieve purchase information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorConfigurationError": {
-        "description": "Failed to retrieve purchase information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorUnsupportedError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnsupportedError": {
-        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorEmptySubscriberAttributesError": "An unknown error occurred. Could not retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorEmptySubscriberAttributesError": {
-        "description": "An unknown error occurred. Could not retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorProductDiscountMissingIdentifierError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorProductDiscountMissingIdentifierError": {
-        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorUnknownNonNativeError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorUnknownNonNativeError": {
-        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorCustomerInfoError": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorCustomerInfoError": {
-        "description": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorSystemInfoError": "There is a problem with the device settings. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorSystemInfoError": {
-        "description": "There is a problem with the device settings. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorBeginRefundRequestError": "A refund process has been initiated. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorBeginRefundRequestError": {
-        "description": "A refund process has been initiated. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorProductRequestTimeout": "Timed out. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorProductRequestTimeout": {
-        "description": "Timed out. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorApiEndpointBlocked": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorApiEndpointBlocked": {
-        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorInvalidPromotionalOfferError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorInvalidPromotionalOfferError": {
-        "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "errorCode": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "purchaseErrorOfflineConnectionError": "Poor connection. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-    "@purchaseErrorOfflineConnectionError": {
-        "description": "Poor connection. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
-        "placeholders": {
-            "exceptionMessage": {
-                "type": "String"
-            },
-            "exceptionDetails": {
-                "type": "String"
-            }
-        }
-    },
-    "forceUpdateTitle": "Please update the app",
-    "@forceUpdateTitle": {
-        "description": "Please update the app"
-    },
-    "forceUpdateMessage": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
-    "@forceUpdateMessage": {
-        "description": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
-        "placeholders": {
-            "storeName": {
-                "type": "String"
-            }
-        }
-    },
-    "visitHospital": "Visit hospital",
-    "@visitHospital": {
-        "description": "Visit hospital"
-    },
-    "receiveNotificationAt9AM": "Receive notification at 9:00 AM",
-    "@receiveNotificationAt9AM": {
-        "description": "Receive notification at 9:00 AM"
-    },
-    "deletedScheduleCannotBeRestored": "Deleted schedule cannot be restored",
-    "@deletedScheduleCannotBeRestored": {
-        "description": "Deleted schedule cannot be restored"
-    },
-    "deleteSchedule": "Delete schedule",
-    "@deleteSchedule": {
-        "description": "Delete schedule"
-    },
-    "onlySupportiOS": "Only supported on iOS app",
-    "@onlySupportiOS": {
-        "description": "Only supported on iOS app"
-    },
-    "healthKitDoesNotSupport": "Not available on devices that do not support HealthKit",
-    "@healthKitDoesNotSupport": {
-        "description": "Not available on devices that do not support HealthKit"
-    },
-    "enableHealthKitFromSettings": "Please enable HealthKit from the settings app",
-    "@enableHealthKitFromSettings": {
-        "description": "Please enable HealthKit from the settings app"
-    },
-    "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: {exceptionMessage}",
-    "@accountAlreadyLinked": {
-        "description": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: {exceptionMessage}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            }
-        }
-    },
-    "accountAlreadyLinkedWithOtherPilllAccount": "This {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
-    "@accountAlreadyLinkedWithOtherPilllAccount": {
-        "description": "This {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            }
-        }
-    },
-    "emailAlreadyInUse": "The email address you are using with the {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
-    "@emailAlreadyInUse": {
-        "description": "The email address you are using with the {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
-        "placeholders": {
-            "accountTypeProviderName": {
-                "type": "String"
-            },
-            "exceptionMessage": {
-                "type": "String"
-            }
-        }
-    },
-    "todaySchedule": "Today's schedule",
-    "@todaySchedule": {
-        "description": "Today's schedule"
-    },
-    "calendarSchedule": "Calendar schedule",
-    "@calendarSchedule": {
-        "description": "Calendar schedule"
-    },
-    "newPillSheetNotificationTitle": "A new sheet starts today",
-    "@newPillSheetNotificationTitle": {
-        "description": "A new sheet starts today"
-    },
-    "newPillSheetNotificationMessage": "🆕 A new sheet starts today\nDon't forget to take it 👍",
-    "@newPillSheetNotificationMessage": {
-        "description": "🆕 A new sheet starts today\nDon't forget to take it 👍"
-    },
-    "unexpectedPremiumEntitlementsIsNotExists": "Premium information not found",
-    "@unexpectedPremiumEntitlementsIsNotExists": {
-        "description": "Premium information not found"
-    },
-    "purchaseErrorPurchasePendingError": "The activation of the purchase is not yet complete. Please check again after some time",
-    "@purchaseErrorPurchasePendingError": {
-        "description": "The activation of the purchase is not yet complete. Please check again after some time"
-    },
-    "launchError": "An error occurred at startup\n{ErrorMessagesConnection}\nDetails:",
-    "@launchError": {
-        "description": "An error occurred at startup\n{ErrorMessagesConnection}\nDetails:",
-        "placeholders": {
-            "ErrorMessagesConnection": {
-                "type": "String"
-            }
-        }
-    },
-    "exampleRestDurationDate": "For example, if you take a break from 1/12 for 3 days",
-    "@exampleRestDurationDate": {
-        "description": "For example, if you take a break from 1/12 for 3 days"
-    },
-    "exampleRestDurationNumber": "For example, if you take a break from number 18 for 3 days",
-    "@exampleRestDurationNumber": {
-        "description": "For example, if you take a break from number 18 for 3 days"
-    },
-    "withNumber": "{number} number",
-    "@withNumber": {
-        "description": "{number} number",
-        "placeholders": {
-            "number": {
-                "type": "String"
-            }
-        }
-    },
-    "currentPillSheetNotFound": "The current pill sheet could not be found",
-    "@currentPillSheetNotFound": {
-        "description": "The current pill sheet could not be found"
-    },
-    "doNotRevertTakePillInPausePeriod": "The operation to cancel taking the pill cannot be performed during the pause period",
-    "@doNotRevertTakePillInPausePeriod": {
-        "description": "The operation to cancel taking the pill cannot be performed during the pause period"
-    },
-    "googleAccount": "Google account",
-    "@googleAccount": {
-        "description": "Google account"
-    },
-    "diaryRecord": "Record diary",
-    "@diaryRecord": {
-        "description": "Record diary"
-    },
-    "scheduleRecord": "Enter schedule",
-    "@scheduleRecord": {
-        "description": "Enter schedule"
-    },
-    "previousPillSheetGroupNotFound": "The previous pill sheet group does not yet exist",
-    "@previousPillSheetGroupNotFound": {
-        "description": "The previous pill sheet group does not yet exist"
-    },
-    "withPillSheetCount": "{number} sheets",
-    "@withPillSheetCount": {
-        "description": "{number} sheets",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "connectionError": "The communication environment seems unstable. Please try again after some time",
-    "@connectionError": {
-        "description": "The communication environment seems unstable. Please try again after some time"
-    },
-    "unknownErrorAndRetryAfter": "An error occurred. Please try again after some time",
-    "@unknownErrorAndRetryAfter": {
-        "description": "An error occurred. Please try again after some time"
-    },
-    "errorOccurred": "An error occurred",
-    "@errorOccurred": {
-        "description": "An error occurred"
-    },
-    "unknownError": "An unknown error occurred",
-    "@unknownError": {
-        "description": "An unknown error occurred"
-    },
-    "unexpectedErrorOccurred": "An unexpected error occurred",
-    "@unexpectedErrorOccurred": {
-        "description": "An unexpected error occurred"
-    },
-    "pressAndHoldNotificationToRecordPillTaking": "You can record taking by long-pressing the notification",
-    "@pressAndHoldNotificationToRecordPillTaking": {
-        "description": "You can record taking by long-pressing the notification"
-    },
-    "letsTryIt": "Please try it!",
-    "@letsTryIt": {
-        "description": "Please try it!"
-    },
-    "trialDeadlineDateOffsetDay": "You can use all features for {number} days!",
-    "@trialDeadlineDateOffsetDay": {
-        "description": "You can use all features for {number} days!",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "inputAndAdd": "Input and add",
-    "@inputAndAdd": {
-        "description": "Input and add"
-    },
-    "averagePeriod": "Average cycle",
-    "@averagePeriod": {
-        "description": "Average cycle"
-    },
-    "averageDays": "Average days",
-    "@averageDays": {
-        "description": "Average days"
-    },
-    "days": "Days",
-    "@days": {
-        "description": "Days"
-    },
-    "memo": "Memo",
-    "@memo": {
-        "description": "Memo"
-    },
-    "failedToUpdate": "Failed to update. Please check your communication environment and try again",
-    "@failedToUpdate": {
-        "description": "Failed to update. Please check your communication environment and try again"
-    },
-    "headache": "Headache",
-    "@headache": {
-        "description": "Headache"
-    },
-    "abdominalPain": "Abdominal pain",
-    "@abdominalPain": {
-        "description": "Abdominal pain"
-    },
-    "nausea": "Nausea",
-    "@nausea": {
-        "description": "Nausea"
-    },
-    "anemia": "Anemia",
-    "@anemia": {
-        "description": "Anemia"
-    },
-    "diarrhea": "Diarrhea",
-    "@diarrhea": {
-        "description": "Diarrhea"
-    },
-    "constipation": "Constipation",
-    "@constipation": {
-        "description": "Constipation"
-    },
-    "drowsiness": "Drowsiness",
-    "@drowsiness": {
-        "description": "Drowsiness"
-    },
-    "backPain": "Back pain",
-    "@backPain": {
-        "description": "Back pain"
-    },
-    "palpitation": "Palpitation",
-    "@palpitation": {
-        "description": "Palpitation"
-    },
-    "irregularBleeding": "Irregular bleeding",
-    "@irregularBleeding": {
-        "description": "Irregular bleeding"
-    },
-    "lossOfAppetite": "Loss of appetite",
-    "@lossOfAppetite": {
-        "description": "Loss of appetite"
-    },
-    "chestTightness": "Chest tightness",
-    "@chestTightness": {
-        "description": "Chest tightness"
-    },
-    "insomnia": "Insomnia",
-    "@insomnia": {
-        "description": "Insomnia"
-    },
-    "pauseStartingOtherDaysInstructions": "Please take a break. If you want to take a break from a day other than today, please refer to the following.",
-    "@pauseStartingOtherDaysInstructions": {
-        "description": "Please take a break. If you want to take a break from a day other than today, please refer to the following."
-    },
-    "seeHowToUsePauseTakingFeature": "See how to use the pause taking feature",
-    "@seeHowToUsePauseTakingFeature": {
-        "description": "See how to use the pause taking feature"
-    },
-    "startPauseTakingLabel": "Start pause taking",
-    "@startPauseTakingLabel": {
-        "description": "Start pause taking"
-    },
-    "pauseTakingChanged": "Pause taking has been changed",
-    "@pauseTakingChanged": {
-        "description": "Pause taking has been changed"
-    },
-    "editPausePeriod": "Edit pause period",
-    "@editPausePeriod": {
-        "description": "Edit pause period"
-    },
-    "changePillDays": "Change pill days",
-    "@changePillDays": {
-        "description": "Change pill days"
-    },
-    "beginToEndNumbers": "{begin} to {end} number",
-    "@beginToEndNumbers": {
-        "description": "{begin} to {end} number",
-        "placeholders": {
-            "begin": {
-                "type": "int"
-            },
-            "end": {
-                "type": "int"
-            }
-        }
-    },
-    "resumeTaking": "Resume taking",
-    "@resumeTaking": {
-        "description": "Resume taking"
-    },
-    "changePausePeriod": "Change pause period",
-    "@changePausePeriod": {
-        "description": "Change pause period"
-    },
-    "changedPausePeriod": "Pause period has been changed",
-    "@changedPausePeriod": {
-        "description": "Pause period has been changed"
-    },
-    "changedToDate": "Changed to {date}",
-    "@changedToDate": {
-        "description": "Changed to {date}",
-        "placeholders": {
-            "date": {
-                "type": "String"
-            }
-        }
-    },
-    "quickRecordTakePillFailed": "The record of taking the pill may have failed",
-    "@quickRecordTakePillFailed": {
-        "description": "The record of taking the pill may have failed"
-    },
-    "quickRecordTakePillFailedMessage": "Please open the app and check",
-    "@quickRecordTakePillFailedMessage": {
-        "description": "Please open the app and check"
-    },
-    "alreadyTaken": "Already taken",
-    "@alreadyTaken": {
-        "description": "Already taken"
-    },
-    "startPauseTaking": "Start pause taking",
-    "@startPauseTaking": {
-        "description": "Start pause taking"
-    },
-    "startedPauseTaking": "Started pause taking",
-    "@startedPauseTaking": {
-        "description": "Started pause taking"
-    },
-    "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} number",
-    "@sequentialLastTakenPlusOnePillNumber": {
-        "description": "{pillSheetGroupSequentialLastTakenPillNumber} number",
-        "placeholders": {
-            "pillSheetGroupSequentialLastTakenPillNumber": {
-                "type": "String"
-            }
-        }
-    },
-    "startFromNumber": "Start from number",
-    "@startFromNumber": {
-        "description": "Start from number"
-    },
-    "add": "Add",
-    "@add": {
-        "description": "Add"
-    },
-    "addPillSheet": "Add pill sheet",
-    "@addPillSheet": {
-        "description": "Add pill sheet"
-    },
-    "duringPauseTaking": "During pause taking",
-    "@duringPauseTaking": {
-        "description": "During pause taking"
-    },
-    "cannotPauseAlreadyTakenToday": "If today's pill is already taken\nYou cannot \"pause taking\"",
-    "@cannotPauseAlreadyTakenToday": {
-        "description": "If today's pill is already taken, you cannot \"pause taking\""
-    },
-    "pauseTakingStarted": "Pause taking has started",
-    "@pauseTakingStarted": {
-        "description": "Pause taking has started"
-    },
-    "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-    "@formattedDateAndWeekday": {
-        "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
-        "placeholders": {
-            "DateTimeFormatterMonthAndDay": {
-                "type": "String"
-            },
-            "DateTimeFormatterWeekday": {
-                "type": "String"
-            }
-        }
-    },
-    "editPauseStartDate": "Edit pause start date",
-    "@editPauseStartDate": {
-        "description": "Edit pause start date"
-    },
-    "shareWithFriends": "Share with friends",
-    "@shareWithFriends": {
-        "description": "Share with friends"
-    },
-    "termsOfService": "Terms of service",
-    "@termsOfService": {
-        "description": "Terms of service"
-    },
-    "privacyPolicy": "Privacy policy",
-    "@privacyPolicy": {
-        "description": "Privacy policy"
-    },
-    "linkCopiedToClipboard": "Copied to clipboard",
-    "@linkCopiedToClipboard": {
-        "description": "Copied to clipboard"
-    },
-    "notificationNumber": "Notification {number}",
-    "@notificationNumber": {
-        "description": "Notification {number}",
-        "placeholders": {
-            "number": {
-                "type": "int"
-            }
-        }
-    },
-    "notificationTime": "Notification time",
-    "@notificationTime": {
-        "description": "Notification time"
-    },
-    "timeZoneChangedTo": "Changed to {tz}",
-    "@timeZoneChangedTo": {
-        "description": "Changed to {tz}",
-        "placeholders": {
-            "tz": {
-                "type": "String"
-            }
-        }
-    },
-    "changeStartOfPillDays": "Change start of pill days",
-    "@changeStartOfPillDays": {
-        "description": "Change start of pill days"
-    },
-    "changeEndOfPillDays": "Change end of pill days",
-    "@changeEndOfPillDays": {
-        "description": "Change end of pill days"
-    },
-    "cannotUpdateToReplacePillSheet": "Cannot update to replace pill sheet id: {id}",
-    "@cannotUpdateToReplacePillSheet": {
-        "description": "Cannot update to replace pill sheet id: {id}",
-        "placeholders": {
-            "id": {
-                "type": "String"
-            }
-        }
-    },
-    "failedToGetPillSheetHistory": "Failed to get pill sheet history. {error}",
-    "@failedToGetPillSheetHistory": {
-        "description": "Failed to get pill sheet history. {error}",
-        "placeholders": {
-            "error": {
-                "type": "String"
-            }
-        }
-    },
-    "cancelTaking": "Cancel taking",
-    "@cancelTaking": {
-        "description": "Cancel taking"
-    },
-    "deletedDiaryCannotBeRestored": "Deleted diary cannot be restored",
-    "@deletedDiaryCannotBeRestored": {
-        "description": "Deleted diary cannot be restored"
-    },
-    "editMenstruation": "Edit menstruation period",
-    "@editMenstruation": {
-        "description": "Edit menstruation period"
-    },
-    "changedPillNumber": "Changed pill number",
-    "@changedPillNumber": {
-        "description": "Changed pill number"
-    },
-    "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF for regularly monthly price",
-    "@offPercentForMonthlyPremiumPackage": {
-        "description": "{offPercent}% OFF for regularly monthly price",
-        "placeholders": {
-            "offPercent": {
-                "type": "int"
-            }
-        }
-    },
-    "premiumIntroductionDiscountPriceDeadline": "You can continue to use all features with premium registration",
-    "@premiumIntroductionDiscountPriceDeadline": {
-        "description": "You can continue to use all features with premium registration"
-    },
-    "countdownForDiscountPriceDeadline": "{countdown} left to purchase with {offPercent}% OFF",
-    "@countdownForDiscountPriceDeadline": {
-        "description": "{countdown} left to purchase with {offPercent}% OFF",
-        "placeholders": {
-            "countdown": {
-                "type": "String"
-            },
-            "offPercent": {
-                "type": "int"
-            }
-        }
-    },
-    "pillReminderChanged": "Pill reminder has been changed to {value}",
-    "@pillReminderChanged": {
-        "description": "Pill reminder has been changed to {value}",
-        "placeholders": {
-            "value": {
-                "type": "String"
-            }
-        }
+  "@@locale": "en",
+  "pillSheetType21With7Placebo": "21-pill type",
+  "@pillSheetType21With7Placebo": {
+    "description": "21-pill type (7 placebo pills)"
+  },
+  "pillSheetType28With4Placebo": "28-pill type (4 placebo pills)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28-pill type (4 placebo pills)"
+  },
+  "pillSheetType28With7Placebo": "28-pill type (7 placebo pills)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28-pill type (7 placebo pills)"
+  },
+  "pillSheetType28": "28-pill type (all active pills)",
+  "@pillSheetType28": {
+    "description": "28-pill type (all active pills)"
+  },
+  "pillSheetType24": "24-pill type (all active pills)",
+  "@pillSheetType24": {
+    "description": "24-pill type (all active pills)"
+  },
+  "pillSheetType21": "21-pill type (all active pills)",
+  "@pillSheetType21": {
+    "description": "21-pill type (all active pills)"
+  },
+  "pillSheetType24WithRest4": "24-pill type",
+  "@pillSheetType24WithRest4": {
+    "description": "24-pill type"
+  },
+  "restPeriod": "Rest period",
+  "@restPeriod": {
+    "description": "Rest period"
+  },
+  "placebo": "Placebo",
+  "@placebo": {
+    "description": "Placebo"
+  },
+  "userNotFound": "User not found",
+  "@userNotFound": {
+    "description": "User not found"
+  },
+  "userAlreadyExists": "User already exists",
+  "@userAlreadyExists": {
+    "description": "User already exists"
+  },
+  "medicationHistory": "Medication history",
+  "@medicationHistory": {
+    "description": "Medication history"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings"
+  },
+  "account": "Account",
+  "@account": {
+    "description": "Account"
+  },
+  "dataTransferRequiresAccount": "Account registration is required for data transfer and recovery in case of device change or loss.",
+  "@dataTransferRequiresAccount": {
+    "description": "Account registration is required for data transfer and recovery in case of device change or loss."
+  },
+  "pillPremium": "Pill Premium",
+  "@pillPremium": {
+    "description": "Pill Premium"
+  },
+  "unlimitedFeatureDuration": "About the unlimited feature duration",
+  "@unlimitedFeatureDuration": {
+    "description": "About the unlimited feature duration"
+  },
+  "pillSheet": "Pill sheet",
+  "@pillSheet": {
+    "description": "Pill sheet"
+  },
+  "notification": "Notification",
+  "@notification": {
+    "description": "Notification"
+  },
+  "menstruation": "Menstruation",
+  "@menstruation": {
+    "description": "Menstruation"
+  },
+  "others": "Others",
+  "@others": {
+    "description": "Others"
+  },
+  "faq": "FAQ",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "Introduction of new features",
+  "@newFeaturesIntroduction": {
+    "description": "Introduction of new features"
+  },
+  "contactUs": "Contact us",
+  "@contactUs": {
+    "description": "Contact us"
+  },
+  "delete": "Delete",
+  "@delete": {
+    "description": "Delete"
+  },
+  "doDelete": "Delete",
+  "@doDelete": {
+    "description": "Delete"
+  },
+  "deleteUser": "Delete user",
+  "@deleteUser": {
+    "description": "Delete user"
+  },
+  "deleteDiary": "Delete diary",
+  "@deleteDiary": {
+    "description": "Delete diary"
+  },
+  "confirmDeletingMenstruation": "Do you want to delete the menstruation period?",
+  "@confirmDeletingMenstruation": {
+    "description": "Do you want to delete the menstruation period?"
+  },
+  "addNotificationTime": "Add notification time",
+  "@addNotificationTime": {
+    "description": "Add notification time"
+  },
+  "syncWithDeviceTimeZone": "Sync with the device's timezone ({deviceTimezoneName})?",
+  "@syncWithDeviceTimeZone": {
+    "description": "Sync with the device's timezone ({deviceTimezoneName})?",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
     }
+  },
+  "currentTimeZone": "Currently set timezone",
+  "@currentTimeZone": {
+    "description": "Currently set timezone"
+  },
+  "yes": "Yes",
+  "@yes": {
+    "description": "Yes"
+  },
+  "no": "No",
+  "@no": {
+    "description": "No"
+  },
+  "unsubscribeInfo": "About cancellation",
+  "@unsubscribeInfo": {
+    "description": "About cancellation"
+  },
+  "pillReminder": "Pill reminder",
+  "@pillReminder": {
+    "description": "Pill reminder"
+  },
+  "takePillReminderChannelName": "Take pill reminder",
+  "@takePillReminderChannelName": {
+    "description": "Take pill reminder"
+  },
+  "takePillReminder": "Take 💊",
+  "@takePillReminder": {
+    "description": "Take 💊"
+  },
+  "copyDebugInfo": "COPY DEBUG INFO",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel"
+  },
+  "signOut": "Sign out",
+  "@signOut": {
+    "description": "Sign out"
+  },
+  "autoAddPillSheetGroup": "Automatic addition of pill sheet group",
+  "@autoAddPillSheetGroup": {
+    "description": "Automatic addition of pill sheet group"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "A new sheet will be automatically added when the current group ends",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "A new sheet will be automatically added when the current group ends"
+  },
+  "accountSettings": "Account settings",
+  "@accountSettings": {
+    "description": "Account settings"
+  },
+  "linked": "Linked",
+  "@linked": {
+    "description": "Linked"
+  },
+  "unregistered": "Unregistered",
+  "@unregistered": {
+    "description": "Unregistered"
+  },
+  "quickRecord": "Quick record",
+  "@quickRecord": {
+    "description": "Quick record"
+  },
+  "quickRecordDescription": "You can record your pill intake on the notification screen",
+  "@quickRecordDescription": {
+    "description": "You can record your pill intake on the notification screen"
+  },
+  "healthCareIntegration": "Healthcare integration",
+  "@healthCareIntegration": {
+    "description": "Healthcare integration"
+  },
+  "healthCareIntegrationDescription": "Pilll will automatically record your menstrual cycle",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilll will automatically record your menstrual cycle"
+  },
+  "viewPremiumPlan": "View premium plan",
+  "@viewPremiumPlan": {
+    "description": "View premium plan"
+  },
+  "changePillNumberForToday": "Change the pill number for today",
+  "@changePillNumberForToday": {
+    "description": "Change the pill number for today"
+  },
+  "discardAllPillSheets": "Discard all pill sheets",
+  "@discardAllPillSheets": {
+    "description": "Discard all pill sheets"
+  },
+  "areYouSureDoing": "{doing}?",
+  "@areYouSureDoing": {
+    "description": "{doing}?",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "Currently displayed",
+  "@currentlyDisplayed": {
+    "description": "Currently displayed"
+  },
+  "allPillSheets": "All pill sheets",
+  "@allPillSheets": {
+    "description": "All pill sheets"
+  },
+  "willBeDiscarded": "will be discarded",
+  "@willBeDiscarded": {
+    "description": "will be discarded"
+  },
+  "discard": "Discard",
+  "@discard": {
+    "description": "Discard"
+  },
+  "pillSheetDiscarded": "Pill sheet discarded",
+  "@pillSheetDiscarded": {
+    "description": "Pill sheet discarded"
+  },
+  "aboutMenstruation": "About menstruation",
+  "@aboutMenstruation": {
+    "description": "About menstruation"
+  },
+  "checkPillNumberForMenstruationStart": "Please check the pill number for the start of menstruation. The pill number you selected does not exist in the pill sheet type you are currently using",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "Please check the pill number for the start of menstruation. The pill number you selected does not exist in the pill sheet type you are currently using"
+  },
+  "customizeMedicationNotifications": "Customize medication notifications",
+  "@customizeMedicationNotifications": {
+    "description": "Customize medication notifications"
+  },
+  "xCanBeCustomized": "{x} can be customized",
+  "@xCanBeCustomized": {
+    "description": "{x} can be customized",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "Thank you for your cooperation",
+  "@thankYouForCooperation": {
+    "description": "Thank you for your cooperation"
+  },
+  "feedbackUsage": "We will use your feedback to improve our service",
+  "@feedbackUsage": {
+    "description": "We will use your feedback to improve our service"
+  },
+  "close": "Close",
+  "@close": {
+    "description": "Close"
+  },
+  "registerAccount": "Register account",
+  "@registerAccount": {
+    "description": "Register account"
+  },
+  "reLogin": "Re-login",
+  "@reLogin": {
+    "description": "Re-login"
+  },
+  "authenticationInfoUpdated": "Authentication information updated",
+  "@authenticationInfoUpdated": {
+    "description": "Authentication information updated"
+  },
+  "updateAuthenticationInformation": "Update authentication information",
+  "@updateAuthenticationInformation": {
+    "description": "Update authentication information"
+  },
+  "registeredWithProvider": "Registered with {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "Registered with {accountTypeProviderName}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "Link account",
+  "@linkAccount": {
+    "description": "Link account"
+  },
+  "withdraw": "Withdraw",
+  "@withdraw": {
+    "description": "Withdraw"
+  },
+  "withdrawalCompleted": "Withdrawal completed",
+  "@withdrawalCompleted": {
+    "description": "Withdrawal completed"
+  },
+  "appExitMessage": "The app will close. Please restart the app and set up the initial settings.",
+  "@appExitMessage": {
+    "description": "The app will close. Please restart the app and set up the initial settings."
+  },
+  "oK": "OK",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "Change pill number",
+  "@changePillNumber": {
+    "description": "Change pill number"
+  },
+  "change": "Change",
+  "@change": {
+    "description": "Change"
+  },
+  "pill": "Pill",
+  "@pill": {
+    "description": "Pill"
+  },
+  "calendar": "Calendar",
+  "@calendar": {
+    "description": "Calendar"
+  },
+  "userInformationWillBeDeleted": "User information will be deleted",
+  "@userInformationWillBeDeleted": {
+    "description": "User information will be deleted"
+  },
+  "withdrawalMessage": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again",
+  "@withdrawalMessage": {
+    "description": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again"
+  },
+  "recordPage": "RecordPage",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "Please re-login",
+  "@doReLogin": {
+    "description": "Please re-login"
+  },
+  "reLoginMessage": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically",
+  "@reLoginMessage": {
+    "description": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically"
+  },
+  "updateAuthenticationAfterReLogin": "Re-login to update authentication information",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "Re-login to update authentication information"
+  },
+  "menstruationPage": "MenstruationPage",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "CalendarPage",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "SettingsPage",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "Menstruation period deleted",
+  "@menstruationDeleted": {
+    "description": "Menstruation period deleted"
+  },
+  "editMenstruationPeriod": "Edit menstruation period",
+  "@editMenstruationPeriod": {
+    "description": "Edit menstruation period"
+  },
+  "menstruationEdited": "Menstruation period edited",
+  "@menstruationEdited": {
+    "description": "Menstruation period edited"
+  },
+  "physicalConditionDetail": "Physical condition details",
+  "@physicalConditionDetail": {
+    "description": "Physical condition details"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "You need to be a premium member to view this",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "You need to be a premium member to view this"
+  },
+  "viewMoreDetails": "View more details",
+  "@viewMoreDetails": {
+    "description": "View more details"
+  },
+  "viewMore": "View more",
+  "@viewMore": {
+    "description": "View more"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}th",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}th",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}th",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}th",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}th",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}th",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}th",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}th",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}th",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}th",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}th",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}th",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}th",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}th",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}th",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}th",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "Select start date for taking a break",
+  "@selectPauseStartDate": {
+    "description": "Select start date for taking a break"
+  },
+  "selectPausePeriod": "Select duration for taking a break",
+  "@selectPausePeriod": {
+    "description": "Select duration for taking a break"
+  },
+  "pauseStartDate": "Start date for taking a break",
+  "@pauseStartDate": {
+    "description": "Start date for taking a break"
+  },
+  "pauseEndDate": "End date for taking a break",
+  "@pauseEndDate": {
+    "description": "End date for taking a break"
+  },
+  "endPillSheet": "End of pill sheet",
+  "@endPillSheet": {
+    "description": "End of pill sheet"
+  },
+  "discardPillSheet": "Discard pill sheet",
+  "@discardPillSheet": {
+    "description": "Discard pill sheet"
+  },
+  "takingTime": "Taking time",
+  "@takingTime": {
+    "description": "Taking time"
+  },
+  "takingHistoryIsPremiumFeature": "Taking history is a premium feature",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "Taking history is a premium feature"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "Taking a break will not advance the pill number",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "Taking a break will not advance the pill number"
+  },
+  "pauseTakingFromNumber": "Do you want to take a break from {number} pills?",
+  "@pauseTakingFromNumber": {
+    "description": "Do you want to take a break from {number} pills?",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}th",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}th",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "Taking",
+  "@taking": {
+    "description": "Taking"
+  },
+  "estimatedEndPillNumber": "Last pill on previous sheet: {estimatedEndPillNumber}th",
+  "@estimatedEndPillNumber": {
+    "description": "Last pill on previous sheet: {estimatedEndPillNumber}th",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "Add pill sheet",
+  "@addPillSheetButton": {
+    "description": "Add pill sheet"
+  },
+  "taken": "Taken",
+  "@taken": {
+    "description": "Taken"
+  },
+  "notTaken": "Not taken",
+  "@notTaken": {
+    "description": "Not taken"
+  },
+  "pillSheetSettings": "Pill sheet settings",
+  "@pillSheetSettings": {
+    "description": "Pill sheet settings"
+  },
+  "unmarkTodayPillAsTakenToPause": "Mark today's pill as not taken to take a break",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "Mark today's pill as not taken to take a break"
+  },
+  "pauseTaking": "Taking a break",
+  "@pauseTaking": {
+    "description": "Taking a break"
+  },
+  "changePauseStartDate": "Change start date for taking a break",
+  "@changePauseStartDate": {
+    "description": "Change start date for taking a break"
+  },
+  "pauseTakingPeriodEnded": "Break ended",
+  "@pauseTakingPeriodEnded": {
+    "description": "Break ended"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "Change number of days for pill intake",
+  "@changePillDaysForSheet": {
+    "description": "Change number of days for pill intake"
+  },
+  "changedStartAndEndNumbers": "Changed start and end numbers",
+  "@changedStartAndEndNumbers": {
+    "description": "Changed start and end numbers"
+  },
+  "startOfPillDays": "Start of pill intake days",
+  "@startOfPillDays": {
+    "description": "Start of pill intake days"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Last pill on previous sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}th day",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "Last pill on previous sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}th day",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "End of pill intake days",
+  "@endOfPillDays": {
+    "description": "End of pill intake days"
+  },
+  "changedToNumber": "Changed to number",
+  "@changedToNumber": {
+    "description": "Changed to number"
+  },
+  "displayMode": "Display mode",
+  "@displayMode": {
+    "description": "Display mode"
+  },
+  "dateDisplay": "Date display",
+  "@dateDisplay": {
+    "description": "Date display"
+  },
+  "pillNumber": "Pill number",
+  "@pillNumber": {
+    "description": "Pill number"
+  },
+  "pillDays": "Number of pill intake days",
+  "@pillDays": {
+    "description": "Number of pill intake days"
+  },
+  "pillDaysCycle": "Number of pill intake days (cycle)",
+  "@pillDaysCycle": {
+    "description": "Number of pill intake days (cycle)"
+  },
+  "pillSheetEnded": "Pill sheet ended",
+  "@pillSheetEnded": {
+    "description": "Pill sheet ended"
+  },
+  "checkLastTakenDate": "Check last taken date",
+  "@checkLastTakenDate": {
+    "description": "Check last taken date"
+  },
+  "pleaseRegisterAccount": "Please register an account",
+  "@pleaseRegisterAccount": {
+    "description": "Please register an account"
+  },
+  "cannotTransferPremiumWithoutAccount": "You cannot carry over the premium feature when changing devices or losing your phone",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "You cannot carry over the premium feature when changing devices or losing your phone"
+  },
+  "reexperiencePremiumFeatures": "You can experience the premium features again for 14 days!\nTap to share on SNS!",
+  "@reexperiencePremiumFeatures": {
+    "description": "You can experience the premium features again for 14 days!\nTap to share on SNS!"
+  },
+  "whereToShare": "Where do you want to share?",
+  "@whereToShare": {
+    "description": "Where do you want to share?"
+  },
+  "pauseTakingDay": "🌙 Taking a break on {day}th day",
+  "@pauseTakingDay": {
+    "description": "🌙 Taking a break on {day}th day",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word}th day",
+  "@withDay": {
+    "description": "{word}th day",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}th day",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}th day",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "There are {diffPlusOne} days until {activePillSheetPillSheetTypeNotTakenWord} period",
+  "@daysUntilPausePeriod": {
+    "description": "There are {diffPlusOne} days until {activePillSheetPillSheetTypeNotTakenWord} period",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "You have {diff} days left to use all features",
+  "@remainingDaysAllFeatures": {
+    "description": "You have {diff} days left to use all features",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 Today is taking",
+  "@todayIsTaking": {
+    "description": "💊 Today is taking"
+  },
+  "todayPillToTake": "💊 Today's pill",
+  "@todayPillToTake": {
+    "description": "💊 Today's pill"
+  },
+  "number": "th",
+  "@number": {
+    "description": "th"
+  },
+  "recordedMenstruationStartDate": "Recorded from {DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "Recorded from {DateTimeFormatterMonthAndDay}",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "Start of menstruation",
+  "@menstruationStartDate": {
+    "description": "Start of menstruation"
+  },
+  "menstruationEndDate": "End of menstruation",
+  "@menstruationEndDate": {
+    "description": "End of menstruation"
+  },
+  "menstruationScheduleDate": "Menstruation schedule date",
+  "@menstruationScheduleDate": {
+    "description": "Menstruation schedule date"
+  },
+  "menstruationScheduleDateWithNumber": "Menstruation schedule: {diffPlusOne}th day",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "Menstruation schedule: {diffPlusOne}th day",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruation schedule: {diffPlusOne}th day's {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "Menstruation schedule: {diffPlusOne}th day's {pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "There are {diff} days left",
+  "@menstruationRemainingDay": {
+    "description": "There are {diff} days left",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne}th day",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}th day",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "Record menstruation",
+  "@recordMenstruation": {
+    "description": "Record menstruation"
+  },
+  "menstruationHistory": "Menstruation history",
+  "@menstruationHistory": {
+    "description": "Menstruation history"
+  },
+  "menstruationFromToday": "Menstruation from today",
+  "@menstruationFromToday": {
+    "description": "Menstruation from today"
+  },
+  "menstruationFromYesterday": "Menstruation from yesterday",
+  "@menstruationFromYesterday": {
+    "description": "Menstruation from yesterday"
+  },
+  "selectMenstruationStartDate": "Select start date for menstruation",
+  "@selectMenstruationStartDate": {
+    "description": "Select start date for menstruation"
+  },
+  "menstruationCycle": "{menstruationDuration} day cycle",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration} day cycle",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "Login",
+  "@login": {
+    "description": "Login"
+  },
+  "beforePremiumRegistration": "Before premium registration...",
+  "@beforePremiumRegistration": {
+    "description": "Before premium registration..."
+  },
+  "createNewAccountIfNotLoggedIn": "If you haven't logged in to Pilll yet, a new account will be created for you",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "If you haven't logged in to Pilll yet, a new account will be created for you"
+  },
+  "registerAccountForDataTransfer": "Registering an account will allow you to transfer and recover data",
+  "@registerAccountForDataTransfer": {
+    "description": "Registering an account will allow you to transfer and recover data"
+  },
+  "registerAccountToKeepData": "In order to keep your account information, please register an account",
+  "@registerAccountToKeepData": {
+    "description": "In order to keep your account information, please register an account"
+  },
+  "signInWith": "Sign in with {loginName}",
+  "@signInWith": {
+    "description": "Sign in with {loginName}",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "Register with {loginName}",
+  "@registerWith": {
+    "description": "Register with {loginName}",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pill Premium registration complete",
+  "@premiumRegistrationComplete": {
+    "description": "Pill Premium registration complete"
+  },
+  "thankYouForRegistration": "Thank you for registering.\nYou now have access to all features!",
+  "@thankYouForRegistration": {
+    "description": "Thank you for registering.\nYou now have access to all features!"
+  },
+  "limitedTimeDiscount": "Limited-time discount available",
+  "@limitedTimeDiscount": {
+    "description": "Limited-time discount available"
+  },
+  "standardMonthlyPlan": "Standard monthly plan",
+  "@standardMonthlyPlan": {
+    "description": "Standard monthly plan"
+  },
+  "annualPlan": "Annual plan",
+  "@annualPlan": {
+    "description": "Annual plan"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/year",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/year",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/month",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/month",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "・The premium subscription period automatically renews every month or every year\n",
+  "@premiumTermsNotice1": {
+    "description": "・The premium subscription period automatically renews every month or every year\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": " / ",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "Displayed under the Specific Commercial Transactions Law",
+  "@premiumTermsNotice2": {
+    "description": "Displayed under the Specific Commercial Transactions Law"
+  },
+  "premiumTermsNotice3": "Please confirm before registering\n",
+  "@premiumTermsNotice3": {
+    "description": "Please confirm before registering\n"
+  },
+  "autoRenewNotice": "・The premium subscription period will automatically renew unless you cancel at least 24 hours before the end of the current period\n",
+  "@autoRenewNotice": {
+    "description": "・The premium subscription period will automatically renew unless you cancel at least 24 hours before the end of the current period\n"
+  },
+  "cancelAutoRenewInfo": "・You can cancel auto-renewal in the {storeName} app's account settings. (Auto-renewal cannot be canceled in the app)",
+  "@cancelAutoRenewInfo": {
+    "description": "・You can cancel auto-renewal in the app's account settings. (Auto-renewal cannot be canceled in the app)",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "More details",
+  "@moreDetails": {
+    "description": "More details"
+  },
+  "restorePurchase": "Purchase information restored",
+  "@restorePurchase": {
+    "description": "Purchase information restored"
+  },
+  "previouslyPurchased": "Previous purchasers, please check here",
+  "@previouslyPurchased": {
+    "description": "Previous purchasers, please check here"
+  },
+  "noPreviousPurchaseInfo": "No previous purchase information found. Please check your account again",
+  "@noPreviousPurchaseInfo": {
+    "description": "No previous purchase information found. Please check your account again"
+  },
+  "monthlyPlan": "Monthly plan",
+  "@monthlyPlan": {
+    "description": "Monthly plan"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/month",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/month",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "You are a\npremium member",
+  "@youArePremiumMember": {
+    "description": "You are a\npremium member"
+  },
+  "thankYouMessage": "Thank you for using our service.\nWe're grateful for your patronage.",
+  "@thankYouMessage": {
+    "description": "Thank you for using our service.\nWe're grateful for your patronage."
+  },
+  "premiumFeaturesList": "List of premium features",
+  "@premiumFeaturesList": {
+    "description": "List of premium features"
+  },
+  "pushNotificationForTakingRecord": "Taking record from push notification",
+  "@pushNotificationForTakingRecord": {
+    "description": "Taking record from push notification"
+  },
+  "viewAndRecordTakingHistory": "🗂 Record and view taking history",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 Record and view taking history"
+  },
+  "displayDateOnPillSheet": "📆 Display date on pill sheet",
+  "@displayDateOnPillSheet": {
+    "description": "📆 Display date on pill sheet"
+  },
+  "autoRefillNewPillSheet": "📦 Automatically refill new pill sheet",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 Automatically refill new pill sheet"
+  },
+  "viewPastData": "👀 View past data",
+  "@viewPastData": {
+    "description": "👀 View past data"
+  },
+  "customizeHealthTags": "🏷 Customize health tags",
+  "@customizeHealthTags": {
+    "description": "🏷 Customize health tags"
+  },
+  "hideAds": "🚫 Hide ads",
+  "@hideAds": {
+    "description": "🚫 Hide ads"
+  },
+  "seeDetailsOfPremiumFeatures": "View details of premium features",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "View details of premium features"
+  },
+  "popularFeatures": "Popular\nfeatures",
+  "@popularFeatures": {
+    "description": "Popular\nfeatures"
+  },
+  "viewPremiumFeatures": "View premium features",
+  "@viewPremiumFeatures": {
+    "description": "View premium features"
+  },
+  "addedDisplayModePillDaysCycle": "Display mode pill intake days (cycle) added",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "Display mode pill intake days (cycle) added"
+  },
+  "seeDetails": "See details",
+  "@seeDetails": {
+    "description": "See details"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "Missed pill reminder",
+  "@missedPillNotification": {
+    "description": "Missed pill reminder"
+  },
+  "setMultipleReminders": "Multiple reminders to prevent missing pills",
+  "@setMultipleReminders": {
+    "description": "Multiple reminders to prevent missing pills"
+  },
+  "and": "and",
+  "@and": {
+    "description": "and"
+  },
+  "readAndStartUsing": "Read and start using",
+  "@readAndStartUsing": {
+    "description": "Read and start using"
+  },
+  "next": "Next",
+  "@next": {
+    "description": "Next"
+  },
+  "notificationIndex": "Notification {number}",
+  "@notificationIndex": {
+    "description": "Notification {number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "\\ Taking record from notification /",
+  "@takingRecordFromNotification": {
+    "description": "\\ Taking record from notification /"
+  },
+  "startApp": "Start the app",
+  "@startApp": {
+    "description": "Start the app"
+  },
+  "loggedInWithProvider": "Logged in with {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "Logged in with {accountTypeProviderName}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "Please tell us about the pill you use",
+  "@tellAboutPrescribedSheet": {
+    "description": "Please tell us about the pill you use"
+  },
+  "existingAccountUsers": "Already have an account? Log in here",
+  "@existingAccountUsers": {
+    "description": "Already have an account? Log in here"
+  },
+  "selectTodayPillNumber": "Tap today's ({todayString}) pill number",
+  "@selectTodayPillNumber": {
+    "description": "Tap today's ({todayString}) pill number",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "Not yet known",
+  "@notYetKnown": {
+    "description": "Not yet known"
+  },
+  "pillForToday": "The pill for {today} is",
+  "@pillForToday": {
+    "description": "The pill for {today} is",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "Preview",
+  "@preview": {
+    "description": "Preview"
+  },
+  "normal": "Normal",
+  "@normal": {
+    "description": "Normal"
+  },
+  "missed": "Missed",
+  "@missed": {
+    "description": "Missed"
+  },
+  "showsDate": "Show date",
+  "@showsDate": {
+    "description": "Show date"
+  },
+  "showsPillNumber": "Show pill number",
+  "@showsPillNumber": {
+    "description": "Show pill number"
+  },
+  "showsDescription": "Show description",
+  "@showsDescription": {
+    "description": "Show description"
+  },
+  "title": "Title",
+  "@title": {
+    "description": "Title"
+  },
+  "message": "Message",
+  "@message": {
+    "description": "Message"
+  },
+  "option": "Option",
+  "@option": {
+    "description": "Option"
+  },
+  "completed": "Completed",
+  "@completed": {
+    "description": "Completed"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "You can change the text of the missed notification",
+  "@changeMissedNotificationMessage": {
+    "description": "You can change the text of the missed notification"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "You can change the header of the notification",
+  "@changeNotificationHeader": {
+    "description": "You can change the header of the notification"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "Please enter at least one character",
+  "@enterAtLeastOneCharacter": {
+    "description": "Please enter at least one character"
+  },
+  "changeDailyNotificationMessage": "You can change the text of the notification for when you haven't taken your pill",
+  "@changeDailyNotificationMessage": {
+    "description": "You can change the text of the notification for when you haven't taken your pill"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "Receive notification at 9:00 AM",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "Receive notification at 9:00 AM"
+  },
+  "save": "Save",
+  "@save": {
+    "description": "Save"
+  },
+  "physicalCondition": "Physical condition",
+  "@physicalCondition": {
+    "description": "Physical condition"
+  },
+  "deletedDiaryCannotBeRecovered": "Deleted diary cannot be recovered",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "Deleted diary cannot be recovered"
+  },
+  "sex": "Sex",
+  "@sex": {
+    "description": "Sex"
+  },
+  "previousPillSheetGroup": "Previous pill sheet group",
+  "@previousPillSheetGroup": {
+    "description": "Previous pill sheet group"
+  },
+  "noPreviousPillSheetGroup": "Previous pill sheet group does not exist",
+  "@noPreviousPillSheetGroup": {
+    "description": "Previous pill sheet group does not exist"
+  },
+  "failedToFetchPillHistory": "Failed to get pill history. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "Failed to get pill history. {error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "View FAQ",
+  "@seeFAQ": {
+    "description": "View FAQ"
+  },
+  "reloadScreen": "Reload screen",
+  "@reloadScreen": {
+    "description": "Reload screen"
+  },
+  "contactIfNotResolved": "If you cannot resolve the issue, please contact us",
+  "@contactIfNotResolved": {
+    "description": "If you cannot resolve the issue, please contact us"
+  },
+  "shareFeedback": "We'd love to hear your thoughts about Pilll",
+  "@shareFeedback": {
+    "description": "We'd love to hear your thoughts about Pilll"
+  },
+  "confirm": "Confirm",
+  "@confirm": {
+    "description": "Confirm"
+  },
+  "surveyForServiceImprovement": "We'd love your input on how we can improve our service",
+  "@surveyForServiceImprovement": {
+    "description": "We'd love your input on how we can improve our service"
+  },
+  "participate": "Participate",
+  "@participate": {
+    "description": "Participate"
+  },
+  "notHelp": "Not helpful",
+  "@notHelp": {
+    "description": "Not helpful"
+  },
+  "serviceImprovementSurvey": "Service improvement survey",
+  "@serviceImprovementSurvey": {
+    "description": "Service improvement survey"
+  },
+  "satisfied": "Satisfied",
+  "@satisfied": {
+    "description": "Satisfied"
+  },
+  "notSatisfied": "Not satisfied",
+  "@notSatisfied": {
+    "description": "Not satisfied"
+  },
+  "perNumber": "per number",
+  "@perNumber": {
+    "description": "per number"
+  },
+  "howManyDaysDoesMenstruationLast": "How many days does menstruation last?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "How many days does menstruation last?"
+  },
+  "daysMenstruationLasts": " days menstruation lasts",
+  "@daysMenstruationLasts": {
+    "description": " days menstruation lasts"
+  },
+  "selectPillNumberForMenstruationStart": "Tap the pill number for the start of menstruation",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "Tap the pill number for the start of menstruation"
+  },
+  "countOfSheet": "{number}th sheet",
+  "@countOfSheet": {
+    "description": "{number}th sheet",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "New pill sheet start ▶︎",
+  "@newPillSheetStart": {
+    "description": "New pill sheet start ▶︎"
+  },
+  "selectPillType": "Select pill type",
+  "@selectPillType": {
+    "description": "Select pill type"
+  },
+  "twentyOnePills": "21 pills",
+  "@twentyOnePills": {
+    "description": "21 pills"
+  },
+  "twentyEightPills": "28 pills",
+  "@twentyEightPills": {
+    "description": "28 pills"
+  },
+  "twentyFourPills": "24 pills",
+  "@twentyFourPills": {
+    "description": "24 pills"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 pills + 7 days break",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21 pills + 7 days break"
+  },
+  "twentyFourPlusFourPlacebo": "24 pills + 4 placebo pills",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24 pills + 4 placebo pills"
+  },
+  "twentyOnePlusSevenPlacebo": "21 pills + 7 placebo pills",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21 pills + 7 placebo pills"
+  },
+  "allActivePills": "All active pills",
+  "@allActivePills": {
+    "description": "All active pills"
+  },
+  "twentyFourPlusFourDaysBreak": "24 pills + 4 days break",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24 pills + 4 days break"
+  },
+  "choosePillType": "Choose pill type",
+  "@choosePillType": {
+    "description": "Choose pill type"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} period notification",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord} period notification",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "If notifications are off, taking record will also be automatically recorded for the {pillSheetPillSheetTypeNotTakenWord} period",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "If notifications are off, taking record will also be automatically recorded for the {pillSheetPillSheetTypeNotTakenWord} period",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "Request for cancellation survey",
+  "@requestForCancelSurvey": {
+    "description": "Request for cancellation survey"
+  },
+  "pilllDescription": "Pilll pill reminder app",
+  "@pilllDescription": {
+    "description": "Pilll pill reminder app"
+  },
+  "reachedMaximumCountOfReminderTimes": "You have reached the maximum number of reminder times. Please limit to {ReminderTimeMaximumCount} items",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "You have reached the maximum number of reminder times. Please limit to {ReminderTimeMaximumCount} items",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "Notification time is at least {ReminderTimeMinimumCount} items",
+  "@minimumCountOfReminderTimes": {
+    "description": "Notification time is at least {ReminderTimeMinimumCount} items",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "An unknown error occurred. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "An unknown error occurred. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName} is having issues. Please try again later",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} is having issues. Please try again later",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "Purchase not allowed for this device",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "Purchase not allowed for this device"
+  },
+  "purchaseErrorPurchaseInvalidError": "Failed to make payment. Please check if your payment method is valid",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "Failed to make payment. Please check if your payment method is valid"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "The plan is not currently available for purchase. Please try restarting the app",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "The plan is not currently available for purchase. Please try restarting the app"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "Purchase already in use. The pill sheet information is being used by another user. Please check {accountName}",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "Purchase already in use. The pill sheet information is being used by another user. Please check {accountName}",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "Invalid purchase information. Please check your purchase information",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "Invalid purchase information. Please check your purchase information"
+  },
+  "purchaseErrorMissingReceiptFileError": "No purchase information found. Please try signing with {accountName} in on the device",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "No purchase information found. Please try signing in on the device",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "Network status is unstable. Please check your connection and try again",
+  "@purchaseErrorNetworkError": {
+    "description": "Network status is unstable. Please check your connection and try again"
+  },
+  "purchaseErrorInvalidCredentialsError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "The pill sheet information is being used by another user. Please check {accountName}",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "The pill sheet information is being used by another user. Please check {accountName}",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "Unable to verify user. Please try restarting the app. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "Unable to verify user. Please try restarting the app",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Another purchase process is in progress. Please try again later",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "Another purchase process is in progress. Please try again later"
+  },
+  "purchaseErrorUnknownBackendError": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "Currently unable to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Your {accountName} cannot subscribe to the plan. Please check your payment information and try again",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "Your {accountName} cannot subscribe to the plan. Please check your payment information and try again",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Failed to purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "Failed to purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Failed to retrieve user information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "Failed to retrieve user information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "Failed to retrieve purchase information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "Failed to retrieve purchase information. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "An unknown error occurred. Could not retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "An unknown error occurred. Could not retrieve purchase information in advance. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "There is a problem with the device settings. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "There is a problem with the device settings. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "A refund process has been initiated. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "A refund process has been initiated. Please check and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "Timed out. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "Timed out. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "Poor connection. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "Poor connection. Please check your network environment and try again. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "Please update the app",
+  "@forceUpdateTitle": {
+    "description": "Please update the app"
+  },
+  "forceUpdateMessage": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
+  "@forceUpdateMessage": {
+    "description": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "Visit hospital",
+  "@visitHospital": {
+    "description": "Visit hospital"
+  },
+  "receiveNotificationAt9AM": "Receive notification at 9:00 AM",
+  "@receiveNotificationAt9AM": {
+    "description": "Receive notification at 9:00 AM"
+  },
+  "deletedScheduleCannotBeRestored": "Deleted schedule cannot be restored",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "Deleted schedule cannot be restored"
+  },
+  "deleteSchedule": "Delete schedule",
+  "@deleteSchedule": {
+    "description": "Delete schedule"
+  },
+  "onlySupportiOS": "Only supported on iOS app",
+  "@onlySupportiOS": {
+    "description": "Only supported on iOS app"
+  },
+  "healthKitDoesNotSupport": "Not available on devices that do not support HealthKit",
+  "@healthKitDoesNotSupport": {
+    "description": "Not available on devices that do not support HealthKit"
+  },
+  "enableHealthKitFromSettings": "Please enable HealthKit from the settings app",
+  "@enableHealthKitFromSettings": {
+    "description": "Please enable HealthKit from the settings app"
+  },
+  "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "This {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "This {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "The email address you are using with the {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "The email address you are using with the {accountTypeProviderName} account is already linked to another Pilll account, so registration is not possible. Also check the FAQ. Details: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "Today's schedule",
+  "@todaySchedule": {
+    "description": "Today's schedule"
+  },
+  "calendarSchedule": "Calendar schedule",
+  "@calendarSchedule": {
+    "description": "Calendar schedule"
+  },
+  "newPillSheetNotificationTitle": "A new sheet starts today",
+  "@newPillSheetNotificationTitle": {
+    "description": "A new sheet starts today"
+  },
+  "newPillSheetNotificationMessage": "🆕 A new sheet starts today\nDon't forget to take it 👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 A new sheet starts today\nDon't forget to take it 👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "Premium information not found",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "Premium information not found"
+  },
+  "purchaseErrorPurchasePendingError": "The activation of the purchase is not yet complete. Please check again after some time",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "The activation of the purchase is not yet complete. Please check again after some time"
+  },
+  "launchError": "An error occurred at startup\n{ErrorMessagesConnection}\nDetails:",
+  "@launchError": {
+    "description": "An error occurred at startup\n{ErrorMessagesConnection}\nDetails:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "For example, if you take a break from 1/12 for 3 days",
+  "@exampleRestDurationDate": {
+    "description": "For example, if you take a break from 1/12 for 3 days"
+  },
+  "exampleRestDurationNumber": "For example, if you take a break from number 18 for 3 days",
+  "@exampleRestDurationNumber": {
+    "description": "For example, if you take a break from number 18 for 3 days"
+  },
+  "withNumber": "{number} number",
+  "@withNumber": {
+    "description": "{number} number",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "The current pill sheet could not be found",
+  "@currentPillSheetNotFound": {
+    "description": "The current pill sheet could not be found"
+  },
+  "doNotRevertTakePillInPausePeriod": "The operation to cancel taking the pill cannot be performed during the pause period",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "The operation to cancel taking the pill cannot be performed during the pause period"
+  },
+  "googleAccount": "Google account",
+  "@googleAccount": {
+    "description": "Google account"
+  },
+  "diaryRecord": "Record diary",
+  "@diaryRecord": {
+    "description": "Record diary"
+  },
+  "scheduleRecord": "Enter schedule",
+  "@scheduleRecord": {
+    "description": "Enter schedule"
+  },
+  "previousPillSheetGroupNotFound": "The previous pill sheet group does not yet exist",
+  "@previousPillSheetGroupNotFound": {
+    "description": "The previous pill sheet group does not yet exist"
+  },
+  "withPillSheetCount": "{number} sheets",
+  "@withPillSheetCount": {
+    "description": "{number} sheets",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "The communication environment seems unstable. Please try again after some time",
+  "@connectionError": {
+    "description": "The communication environment seems unstable. Please try again after some time"
+  },
+  "unknownErrorAndRetryAfter": "An error occurred. Please try again after some time",
+  "@unknownErrorAndRetryAfter": {
+    "description": "An error occurred. Please try again after some time"
+  },
+  "errorOccurred": "An error occurred",
+  "@errorOccurred": {
+    "description": "An error occurred"
+  },
+  "unknownError": "An unknown error occurred",
+  "@unknownError": {
+    "description": "An unknown error occurred"
+  },
+  "unexpectedErrorOccurred": "An unexpected error occurred",
+  "@unexpectedErrorOccurred": {
+    "description": "An unexpected error occurred"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "You can record taking by long-pressing the notification",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "You can record taking by long-pressing the notification"
+  },
+  "letsTryIt": "Please try it!",
+  "@letsTryIt": {
+    "description": "Please try it!"
+  },
+  "trialDeadlineDateOffsetDay": "You can use all features for {number} days!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "You can use all features for {number} days!",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "Input and add",
+  "@inputAndAdd": {
+    "description": "Input and add"
+  },
+  "averagePeriod": "Average cycle",
+  "@averagePeriod": {
+    "description": "Average cycle"
+  },
+  "averageDays": "Average days",
+  "@averageDays": {
+    "description": "Average days"
+  },
+  "days": "Days",
+  "@days": {
+    "description": "Days"
+  },
+  "memo": "Memo",
+  "@memo": {
+    "description": "Memo"
+  },
+  "failedToUpdate": "Failed to update. Please check your communication environment and try again",
+  "@failedToUpdate": {
+    "description": "Failed to update. Please check your communication environment and try again"
+  },
+  "headache": "Headache",
+  "@headache": {
+    "description": "Headache"
+  },
+  "abdominalPain": "Abdominal pain",
+  "@abdominalPain": {
+    "description": "Abdominal pain"
+  },
+  "nausea": "Nausea",
+  "@nausea": {
+    "description": "Nausea"
+  },
+  "anemia": "Anemia",
+  "@anemia": {
+    "description": "Anemia"
+  },
+  "diarrhea": "Diarrhea",
+  "@diarrhea": {
+    "description": "Diarrhea"
+  },
+  "constipation": "Constipation",
+  "@constipation": {
+    "description": "Constipation"
+  },
+  "drowsiness": "Drowsiness",
+  "@drowsiness": {
+    "description": "Drowsiness"
+  },
+  "backPain": "Back pain",
+  "@backPain": {
+    "description": "Back pain"
+  },
+  "palpitation": "Palpitation",
+  "@palpitation": {
+    "description": "Palpitation"
+  },
+  "irregularBleeding": "Irregular bleeding",
+  "@irregularBleeding": {
+    "description": "Irregular bleeding"
+  },
+  "lossOfAppetite": "Loss of appetite",
+  "@lossOfAppetite": {
+    "description": "Loss of appetite"
+  },
+  "chestTightness": "Chest tightness",
+  "@chestTightness": {
+    "description": "Chest tightness"
+  },
+  "insomnia": "Insomnia",
+  "@insomnia": {
+    "description": "Insomnia"
+  },
+  "pauseStartingOtherDaysInstructions": "Please take a break. If you want to take a break from a day other than today, please refer to the following.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "Please take a break. If you want to take a break from a day other than today, please refer to the following."
+  },
+  "seeHowToUsePauseTakingFeature": "See how to use the pause taking feature",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "See how to use the pause taking feature"
+  },
+  "startPauseTakingLabel": "Start pause taking",
+  "@startPauseTakingLabel": {
+    "description": "Start pause taking"
+  },
+  "pauseTakingChanged": "Pause taking has been changed",
+  "@pauseTakingChanged": {
+    "description": "Pause taking has been changed"
+  },
+  "editPausePeriod": "Edit pause period",
+  "@editPausePeriod": {
+    "description": "Edit pause period"
+  },
+  "changePillDays": "Change pill days",
+  "@changePillDays": {
+    "description": "Change pill days"
+  },
+  "beginToEndNumbers": "{begin} to {end} number",
+  "@beginToEndNumbers": {
+    "description": "{begin} to {end} number",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "Resume taking",
+  "@resumeTaking": {
+    "description": "Resume taking"
+  },
+  "changePausePeriod": "Change pause period",
+  "@changePausePeriod": {
+    "description": "Change pause period"
+  },
+  "changedPausePeriod": "Pause period has been changed",
+  "@changedPausePeriod": {
+    "description": "Pause period has been changed"
+  },
+  "changedToDate": "Changed to {date}",
+  "@changedToDate": {
+    "description": "Changed to {date}",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "The record of taking the pill may have failed",
+  "@quickRecordTakePillFailed": {
+    "description": "The record of taking the pill may have failed"
+  },
+  "quickRecordTakePillFailedMessage": "Please open the app and check",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "Please open the app and check"
+  },
+  "alreadyTaken": "Already taken",
+  "@alreadyTaken": {
+    "description": "Already taken"
+  },
+  "startPauseTaking": "Start pause taking",
+  "@startPauseTaking": {
+    "description": "Start pause taking"
+  },
+  "startedPauseTaking": "Started pause taking",
+  "@startedPauseTaking": {
+    "description": "Started pause taking"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} number",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber} number",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "Start from number",
+  "@startFromNumber": {
+    "description": "Start from number"
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Add"
+  },
+  "addPillSheet": "Add pill sheet",
+  "@addPillSheet": {
+    "description": "Add pill sheet"
+  },
+  "duringPauseTaking": "During pause taking",
+  "@duringPauseTaking": {
+    "description": "During pause taking"
+  },
+  "cannotPauseAlreadyTakenToday": "If today's pill is already taken\nYou cannot \"pause taking\"",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "If today's pill is already taken, you cannot \"pause taking\""
+  },
+  "pauseTakingStarted": "Pause taking has started",
+  "@pauseTakingStarted": {
+    "description": "Pause taking has started"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "Edit pause start date",
+  "@editPauseStartDate": {
+    "description": "Edit pause start date"
+  },
+  "shareWithFriends": "Share with friends",
+  "@shareWithFriends": {
+    "description": "Share with friends"
+  },
+  "termsOfService": "Terms of service",
+  "@termsOfService": {
+    "description": "Terms of service"
+  },
+  "privacyPolicy": "Privacy policy",
+  "@privacyPolicy": {
+    "description": "Privacy policy"
+  },
+  "linkCopiedToClipboard": "Copied to clipboard",
+  "@linkCopiedToClipboard": {
+    "description": "Copied to clipboard"
+  },
+  "notificationNumber": "Notification {number}",
+  "@notificationNumber": {
+    "description": "Notification {number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "Notification time",
+  "@notificationTime": {
+    "description": "Notification time"
+  },
+  "timeZoneChangedTo": "Changed to {tz}",
+  "@timeZoneChangedTo": {
+    "description": "Changed to {tz}",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "Change start of pill days",
+  "@changeStartOfPillDays": {
+    "description": "Change start of pill days"
+  },
+  "changeEndOfPillDays": "Change end of pill days",
+  "@changeEndOfPillDays": {
+    "description": "Change end of pill days"
+  },
+  "cannotUpdateToReplacePillSheet": "Cannot update to replace pill sheet id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "Cannot update to replace pill sheet id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "Failed to get pill sheet history. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "Failed to get pill sheet history. {error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "Cancel taking",
+  "@cancelTaking": {
+    "description": "Cancel taking"
+  },
+  "deletedDiaryCannotBeRestored": "Deleted diary cannot be restored",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "Deleted diary cannot be restored"
+  },
+  "editMenstruation": "Edit menstruation period",
+  "@editMenstruation": {
+    "description": "Edit menstruation period"
+  },
+  "changedPillNumber": "Changed pill number",
+  "@changedPillNumber": {
+    "description": "Changed pill number"
+  },
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF for regularly monthly price",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "{offPercent}% OFF for regularly monthly price",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "You can continue to use all features with premium registration",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "You can continue to use all features with premium registration"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} left to purchase with {offPercent}% OFF",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown} left to purchase with {offPercent}% OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "Pill reminder has been changed to {value}",
+  "@pillReminderChanged": {
+    "description": "Pill reminder has been changed to {value}",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "medicationNotification": "Medication Reminder",
+  "@medicationNotification": {
+    "description": "服用通知"
+  }
 }

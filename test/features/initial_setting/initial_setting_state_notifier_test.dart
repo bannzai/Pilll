@@ -370,7 +370,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
       );
-      final pillShee$2 = PillSheet(
+      final pillSheet2 = PillSheet(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
@@ -383,7 +383,7 @@ void main() {
         pillSheetIDs: ["sheet_id", "sheet_id2"],
         pillSheets: [
           pillSheet.copyWith(id: "sheet_id"),
-          pillShee$2.copyWith(id: "sheet_id2"),
+          pillSheet2.copyWith(id: "sheet_id2"),
         ],
         createdAt: now(),
         pillSheetAppearanceMode: PillSheetAppearanceMode.date,
@@ -401,7 +401,7 @@ void main() {
       when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
       const setting = Setting(
-        pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
+        pillSheetAppearanceMode: PillSheetAppearanceMode.cyclicSequential,
         pillNumberForFromMenstruation: 52,
         durationMenstruation: 4,
         isOnReminder: true,

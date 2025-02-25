@@ -72,9 +72,9 @@
   "@pillSheet": {
     "description": "ピルシート"
   },
-  "notification": "通知です",
+  "notification": "通知",
   "@notification": {
-    "description": "通知です"
+    "description": "通知"
   },
   "menstruation": "生理",
   "@menstruation": {
@@ -258,6 +258,10 @@
   "@customizeMedicationNotifications": {
     "description": "服用通知のカスタマイズ"
   },
+  "medicationNotification": "服用通知",
+  "@medicationNotification": {
+    "description": "服用通知"
+  },
   "xCanBeCustomized": "{x}のカスタマイズができます",
   "@xCanBeCustomized": {
     "description": "{x}のカスタマイズができます",
@@ -327,15 +331,6 @@
   "changePillNumber": "ピル番号の変更",
   "@changePillNumber": {
     "description": "ピル番号の変更"
-  },
-  "selectOrChangePillNumber": "今日({today})\n飲む・飲んだピルの番号をタップ",
-  "@selectOrChangePillNumber": {
-    "description": "今日飲む・飲んだピルの番号をタップ",
-    "placeholders": {
-      "today": {
-        "type": "String"
-      }
-    }
   },
   "change": "変更",
   "@change": {
@@ -646,13 +641,9 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "服用日数",
-  "@pillDays": {
-    "description": "服用日数"
-  },
-  "pillDaysCycle": "服用日数(周期)",
+  "pillDaysCycle": "服用日数",
   "@pillDaysCycle": {
-    "description": "服用日数(周期)"
+    "description": "服用日数"
   },
   "pillSheetEnded": "ピルシートが終了しました",
   "@pillSheetEnded": {
@@ -1019,10 +1010,6 @@
   "viewPremiumFeatures": "プレミアム機能を見る",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能を見る"
-  },
-  "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
   },
   "seeDetails": "詳細を見る",
   "@seeDetails": {

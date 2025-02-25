@@ -29,7 +29,7 @@ class MenstruationCard extends StatelessWidget {
                     SvgPicture.asset(
                       'images/menstruation.svg',
                       width: 24,
-                      colorFilter: const ColorFilter.mode(PilllColors.red, BlendMode.srcIn),
+                      colorFilter: const ColorFilter.mode(AppColors.red, BlendMode.srcIn),
                     ),
                     Text(
                       state.title,
@@ -53,7 +53,7 @@ class MenstruationCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
               decoration: BoxDecoration(
-                color: PilllColors.primary,
+                color: AppColors.primary,
                 borderRadius: BorderRadius.circular(30),
               ),
               child: Text(state.countdownString,

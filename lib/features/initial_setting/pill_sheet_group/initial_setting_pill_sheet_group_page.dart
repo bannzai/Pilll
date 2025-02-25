@@ -63,13 +63,13 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     return HUD(
       shown: state.isLoading,
       child: Scaffold(
-        backgroundColor: PilllColors.background,
+        backgroundColor: AppColors.background,
         appBar: AppBar(
           title: const Text(
             '1/3',
             style: TextStyle(color: TextColor.black),
           ),
-          backgroundColor: PilllColors.white,
+          backgroundColor: AppColors.white,
         ),
         body: SafeArea(
           child: Container(
@@ -99,7 +99,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     width: MediaQuery.of(context).size.width,
-                    color: PilllColors.background,
+                    color: AppColors.background,
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [

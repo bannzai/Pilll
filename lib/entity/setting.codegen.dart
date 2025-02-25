@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -24,30 +25,6 @@ class ReminderTime with _$ReminderTime {
 
   static const int maximumCount = 3;
   static const int minimumCount = 1;
-}
-
-enum PillSheetAppearanceMode {
-  @JsonValue('number')
-  number,
-  @JsonValue('date')
-  date,
-  @JsonValue('sequential')
-  sequential,
-  @JsonValue('cyclicSequential')
-  cyclicSequential,
-}
-
-extension PillSheetAppearanceModeExt on PillSheetAppearanceMode {
-  bool get isSequential {
-    switch (this) {
-      case PillSheetAppearanceMode.number:
-      case PillSheetAppearanceMode.date:
-        return false;
-      case PillSheetAppearanceMode.sequential:
-      case PillSheetAppearanceMode.cyclicSequential:
-        return true;
-    }
-  }
 }
 
 class SettingFirestoreFieldKeys {

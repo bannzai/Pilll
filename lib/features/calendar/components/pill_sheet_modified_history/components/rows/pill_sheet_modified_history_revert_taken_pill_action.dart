@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
@@ -8,21 +11,34 @@ import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final int? beforeLastTakenPillNumber;
-  final int? afterLastTakenPillNumber;
+  final PillSheetModifiedHistory history;
 
   const PillSheetModifiedHistoryRevertTakenPillAction({
     super.key,
     required this.estimatedEventCausingDate,
-    required this.beforeLastTakenPillNumber,
-    required this.afterLastTakenPillNumber,
+    required this.history,
   });
   @override
   Widget build(BuildContext context) {
-    final beforeLastTakenPillNumber = this.beforeLastTakenPillNumber;
-    final afterLastTakenPillNumber = this.afterLastTakenPillNumber;
-    if (beforeLastTakenPillNumber == null || afterLastTakenPillNumber == null) {
-      return Container();
+    final beforePillSheetGroup = history.beforePillSheetGroup;
+    final afterPillSheetGroup = history.afterPillSheetGroup;
+    if (beforePillSheetGroup == null || afterPillSheetGroup == null) {
+      return Text(L.failedToGetPillSheetHistory('revertTakenPill'));
+    }
+    final beforeLastTakenPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZero(
+      // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、afterPillSheetGroup.pillSheetAppearanceModeを引数にする
+      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+      pageIndex: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+      pillNumberInPillSheet: beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+    );
+    int? afterLastTakenPillNumber = afterPillSheetGroup.pillNumberWithoutDateOrZero(
+      pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+      pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+      pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+    );
+    // そのピルシートの服用番号が最後の場合は、1つ前のピルシートと認識する。その場合は表記を省略するためにnullにする
+    if (afterLastTakenPillNumber == afterPillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
+      afterLastTakenPillNumber = null;
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),

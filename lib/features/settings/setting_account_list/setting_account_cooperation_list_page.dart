@@ -31,14 +31,14 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
       child: Builder(
         builder: (BuildContext context) {
           return Scaffold(
-            backgroundColor: PilllColors.background,
+            backgroundColor: AppColors.background,
             appBar: AppBar(
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back, color: Colors.black),
                 onPressed: () => Navigator.of(context).pop(),
               ),
               title: Text(L.accountSettings, style: const TextStyle(color: TextColor.main)),
-              backgroundColor: PilllColors.white,
+              backgroundColor: AppColors.white,
             ),
             body: ListView(
               children: [

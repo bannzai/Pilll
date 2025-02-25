@@ -6,7 +6,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/setting.codegen.dart';
 
 class TodayTakenPillNumber extends StatelessWidget {
   final PillSheetGroup? pillSheetGroup;

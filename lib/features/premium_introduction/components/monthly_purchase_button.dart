@@ -23,11 +23,11 @@ class MonthlyPurchaseButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.fromLTRB(32, 24, 32, 45),
         decoration: BoxDecoration(
-          color: PilllColors.blueBackground,
+          color: AppColors.blueBackground,
           borderRadius: const BorderRadius.all(Radius.circular(4)),
           border: Border.all(
             width: 2,
-            color: PilllColors.primary,
+            color: AppColors.primary,
           ),
         ),
         child: Column(

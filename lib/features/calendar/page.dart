@@ -123,11 +123,11 @@ class _CalendarPageBody extends StatelessWidget {
             analytics.logEvent(name: 'calendar_fab_pressed');
             Navigator.of(context).push(DiaryPostPageRoute.route(today(), todayDiary));
           },
-          backgroundColor: PilllColors.primary,
+          backgroundColor: AppColors.primary,
           child: const Icon(Icons.add, color: Colors.white),
         ),
       ),
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         title: CalendarPageTitle(
           displayedMonth: displayedMonth,
@@ -136,7 +136,7 @@ class _CalendarPageBody extends StatelessWidget {
         ),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
       ),
       extendBodyBehindAppBar: true,
       body: SafeArea(
@@ -203,10 +203,10 @@ class MonthCalendarPager extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: PilllColors.white,
+        color: AppColors.white,
         boxShadow: [
           BoxShadow(
-            color: PilllColors.shadow,
+            color: AppColors.shadow,
             blurRadius: 6.0,
             offset: const Offset(0, _shadowHeight),
           ),

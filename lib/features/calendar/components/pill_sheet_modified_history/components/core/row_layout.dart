@@ -28,7 +28,7 @@ class RowLayout extends StatelessWidget {
           const SizedBox(
             height: 26,
             child: VerticalDivider(
-              color: PilllColors.divider,
+              color: AppColors.divider,
               width: 0.5,
             ),
           ),

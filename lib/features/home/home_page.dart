@@ -142,18 +142,18 @@ class HomePageBody extends HookConsumerWidget {
     return DefaultTabController(
       length: HomePageTabType.values.length,
       child: Scaffold(
-        backgroundColor: PilllColors.background,
+        backgroundColor: AppColors.background,
         appBar: null,
         bottomNavigationBar: Container(
           decoration: const BoxDecoration(
-            border: Border(top: BorderSide(width: 1, color: PilllColors.border)),
+            border: Border(top: BorderSide(width: 1, color: AppColors.border)),
           ),
           child: Ink(
-            color: PilllColors.bottomBar,
+            color: AppColors.bottomBar,
             child: SafeArea(
               child: TabBar(
                 controller: tabController,
-                labelColor: PilllColors.primary,
+                labelColor: AppColors.primary,
                 labelStyle: const TextStyle(fontSize: 12),
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,

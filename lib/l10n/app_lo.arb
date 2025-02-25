@@ -1,0 +1,2285 @@
+{
+  "@@locale": "lo",
+  "pillSheetType21With7Placebo": "21 ການດື່ມແບບ",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 ຊີ້ນແບບ (4 ຊີ້ນ ຍາໄລອບຢາ)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 ໃບຢາ (7 ໃບຢາບໍ່ມີ຤ັບ)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 ຢ່າງ(ທັງໝົດແມ່ນຢາແທ້)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 ຈົນ ປະເພດ (ທັງໝົດແມ່ນສິນຄ້າທີ່ແທ້ຈິງ)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 ຈິນປໍ່ປະເດັດ (ທັງໝົດ ອຸປະໄພຈິງ)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "ປະມົກສິບສິນແບບ 24",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "ບໍ່ໃຊ້ຢາ",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "ສິນຄ້າໃດໜຶ່ງ",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "User not found",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "ɨsɨɲ̄ ɨʔɨs ʔu mɨʔʏlâɨ naʔ̩",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "ບັນທຶກການໃຊ້ສິນຄ້າ",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "ການຕັ້ງຄ່າ",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "ບັດຊະນາ",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "ສໍາລັບການແລກປ່ອນຫຼືການສູນເສຍສະເພາະແນວເລີ່ມຕົ້ນ ຫຼືສູນເສຍສະເພາະຂອງໂທລະສັບ, ຈະເຖິງຕໍ່ສຽງສາງຄະແນນ ຈະມີການລົງລະອຽດເພື່ອໃຫ້ຂະບວນການດັບລູກສ້ອມສັງເສຍສະເພາະເອຈະງູນອອກ.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll Premium",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "ເກີນເວລາທີ່ບໍ່ມີຂອບແຖວສຽງ",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "ຊິດປິລ",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "ການໃຫ້ສານ",
+  "@notification": {
+    "description": "通知"
+  },
+  "menstruation": "ສິງກະລະ",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "ອື່ນ ๆ",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "ຄຳຖາມຄິດຕານ",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "ການນໍາແປທີ່ໃໝ່",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "ຕິດຕໍ່",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "ລຶບ",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "ລົບອອກ",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "ລົບຜູ້ໃຊ້",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "ແອັບເວີນິດນັຄົມຄວາມຈິດໃຈການລົບໃບເລກ",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "Do you want to delete the menstrual period?",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "ເພີ່ມເວລາການແຈ້ງເຕືອນ",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "ຈະປ່ອນຕາຕະລາງຂອງເຄື່ອງໃນເວລາທີ່ສະລັບ ({deviceTimezoneName}) ຫຼືບໍາລຸງໃສ່ບໍ?  ",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "དາང་སྦེ་བརྗེས་འབད་པའི་སྟོན་ཚིག་ཨང་གྲངས་མཐོང་པར་ཡིན",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "ອັກສອນ",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "ບໍ່",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "ກ່ຽວກັບການຍົດບັດ",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "ການແຈ້ງແນະບັດກ່ຽວກັບການໃຊ້ບິນ",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "ການແນະນຳໃຫ້ໃຊ້ຢາ",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "💊 ຄວນເວລາ",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "ສຽງລົງຂໍ້ມູນປັດຈຸບັນ",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "ຍົກເລີກ",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "ອອກສະຖານ",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "ການເພີ່ນເຕີມກຸ່ມການຊອດຮອບຍາອາງອິງໄດ້ໃນລະບົບ",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "ເມື່ອກຸບບະດິບຊິດປິລປັບພິມໝົດ ຈະເພີ່ມກຸບບະດິບໃໝ່ໂດຍອັດຕະມັດ",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "ການຕັ້ງຄ່າບັນຊີ",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "ກະຊວງສິນໄວສະເັນ່",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "ບໍ່ໄດ້ລົງທະເບິ່ງ",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "ບັນທຶກດ່ວນ",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "ສາມາດເຮັດໃຫ້ເຫັນພິວເຕີໃນວັນນີ້ທີ່ຈະເຮັດການດື່ມຢາ ແລະບັນທຶກບັນທຶກແບບດຽວກັນໄດ້.",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "ການປໍ່ແຮງດັບນະ",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "ສາมາດບັນທຶກບັນທຸກການບັນທຶກດູລາງສິນສະບັບທີ່ບັນທຶກໄດ້ສະອາດຈາກ Pilll ສູງສີຖີນຄສາກົນ",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "ເບິ່ງແພນຄໍາສັ່ງພຣິເມີຍຓ",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "ການແກ້ໄຂເລກບິນປິລທີ່ຈະດື່ມໃນວາງນີ້",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "ເສີມຊີດປິວທັງໝົດ",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing}ທໍາແນ່?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "ປະຈຸບັນກະກຽມຢູ່",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "ແຜ່ນສິດດັບທັງໝົດ",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "ແມ່ນຈະຖືກແບ່ງໄປ",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "ລະບົດລອດ",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "ຂໍໍາເລີຍກ່ຽວກັບການເນື່ອງດ້ວຍບັດນັກການຫຼຸດອາຄານສິນໃນຊອງສິນ.",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "ເກຽວກັບເສັຽປະຈານ",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "ໃລ່ເບິ່ງເລກບິນບູດຕໍ່ມື້ຕາມຣັດທັບບູດໃຈຄັນຕິກື່ຍາດູພິມຕິມສັສະໜາສຽພາລາກັດຂອງ຃າຍຂນະຫະວ່າກູນຕັກບັນໄວໍ໕ວທ່າທືກັດພາລາງສຳລາດນີຊໍແບາ໌໋ດໃໝແຮນນວາດໄຫໃສຮູດມັຊດສິໜອທອົງບຸາລອລຈັປສະລາມຖາຢ໌ໝື່ຢະຊຸ຀ຕ຿ຑິໃຝນຯ",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "ການແກໄຂຄຳແນະນຳສໍາລັບການຮັບບຸດ",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "ສາมາດປັບປຸງ{x}ໄດ້",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "ຂອບໃຈສໍາລັບຄວາມສ່ວນຊ່ວຍ",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "ຂໍແຕ່ນຊໍາລະບາຍການແນະນຳຂອງເວັບໄຊທ໌ອະດີດີໃນອະນາຄົດ.",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "ປິດ",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "ລົງຄະແນນບັນຊີ",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "ສິ່ງໃດໃກ່ການເລືອກໃໝ່",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "ແກ້ໄຂຂໍໍົນບັດກິດການອອກໄປໃໝ່ແລ້ວ",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "ອະນຸມັດຂໍໍ່າຂໍໍ່າຂໍໍ່າການອິດຕິປ່ອນປ່ອນດອງລຸບລະບົບ.",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "ລົງທະບຽນກັບ {accountTypeProviderName}",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "ປ່ອນໃຈ",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "ອອກຈາກລາຍການ",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "ໄດ້ອອກຈາກສະແດງແລ້ວ",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "ຈະປິດແອັບໃນເວລານີ້. ຖ້າເຈົ່າຈະໃຊ້ໃໝ່, ກະລຸນາປິດແອັບແລ້ວກໍານົນໃຫ້ໃໝ່ແລະເຮັດການຕັ້ງຄ່າຕົ້ນແລກ.",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "OK",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "ການປ່ອນເລກບິນ",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "ປ່ອນແບບ",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "ພິນ",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "ປະຕິທິນ",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "ຂໍແຈ້ງວ່າຂໍໍ່າຂໍແລກອັດດິບຂອງຜູ້ໃຊ້ຈະถູກລົບແລ້ວ",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "ເຖິງຈະຂອງການລົບບັດສະຖານທີ່ສູນສາລະດັບ ແລະທຸກສິ່ງຈະຖືກລົບ ແລະບໍ່ສາມາດລັອດເຂົ້າໄປສູນສິນຄ້າດາຣັບປະຈໍາໃນລະດັບດຽວການໃຊ້ຮອດແນວນີ່.",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "RecordPage",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "ກະລຸນາໍແລະໃສ່ສະຖານທີ່ໃໝ່ຂອງທ່ານອີກໃນລະບຽບ",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "ໃນກ່ຽວກັບການອອກຈາກລໍບໍດິກ, ກະລຸນາເຂົ້າໃນລະບົບໃນລະບົບອີກຄັ້ງແລະໃຫ້ສົດໃໝ່ນຳພິດຈິກແພ້ປໍ່ຄວາມຈິງ ວ່າຈະມີການໃຫ້ບໍລິ ປະດິດ. ອັດອອກລະບົບຈະເຂົ້າໃນລະບົບສຳເລັດ.",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "ກະລຸນາເລືອກອີກເລື່ອງແລະອັບໄດ້ຕະກວດສອບຂໍໍາລະດັບເຮັດໃໝ່.",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "MenstruationPage",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "ປ່າຍປະຕິມັດ",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "ການປ່ອນເບິ່ງຕັ້ງ",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "ລົບງານແລະວິທີສຽງເພື່ອໃຫ້ເປັນອະບັດຕານສຸດທ້າຍ",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "ກະທົບເລື່ອງເດືອນ",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "ຂ໭ດສະຖານທີ່ສາມັດລາຍການ ປ່ອນເປັນ ສົດໃສເປັນໄປສ່ຽງໃນບັນດາສິລິບັດ",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "քանդվածության մանրամասներ",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "ແລະເພີ່ມເລືອກອອກແບບ",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "ເບິ່ງລາຍລະອຽດ",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "ເບິ່ງເພີ່ມເຕີມ",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} ບໍ່",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} ບົດ",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}ეულ",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}ເລກ",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} ບັດ",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}ເບິ່ງ",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ແບບ",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "ກໍ່ໃຫ້ເລືອກວັນເລີ່ມປ່ອນຍາ",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "ຄັດເລືອກຄວາມໃຫ້ພິກັດສໍາລັບບັນຈຸນຈິດ",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "ວັນເລີ່ມໃຫ້ຊຸດເຊົ່າສິ່ງໄດ້",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "ເມື່ອສວນສິ້ນສິນສິເຂົ້ມດິນຈຸດໃຫນໃນການວັນນີ້",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "ສິ້ນສຸດຊິດປິລ",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "ສິນຄ້າຍັກດິບບັນສິກົນ",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "ເວລາການໃຊ້ບິດ",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "ບັນທຸກການໃຊ້ສິນຄ້າແມ່ນຟັງຊັນພີເມຍແບບສູງ",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "ຖ້າເຈົ້າໃຊ້ສິນຄ້າໃນເວລາບໍ່ມີແລະຈະບໍ່ສາມາດປ່ອນຫົວເລກສິນຄ້າ.",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "ເຈົ້າຈະປ່ອນເສດພາບທີ່ໃຊ້ສໍາລັບການຮັບນົມນ຦ໂດດຮ້ານລັຄຄິວສຊຈາທາ່ວມ ດຊທພາຍໃຈຕາບພາສາຍາຄີຄັນຂ່ອຍ",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ແຖວ",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "ການຮັບປະຊາດ",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "ສິ້ນສຸດຂອງແຜ່ນສຸດທ້າຍກໍຄັນກ່ຽວກັບ: {estimatedEndPillNumber} ເດີ",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "ເພີ່ມຊີດປິວ",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "ດື່ມ",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "ການຕັ້ງຄ່າສະຖານທີ່ຄອບຄອງສໍາລັບບີນໃຫ້ເຮັດສ່ວນເທົ່ານັ້ນ",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "ຈາກການບໍ່ເຮັດກິດຈະກຳການເຮັດເຕອບຄົນສຸດທ້າຍຄືນສິນຂອງສິນຄ້າ",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "ພະລັດສະອານະ",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "ປ່ອນວັນເລີ່ມຄວາມງຽບການເລືອກສິ່ງດ່ຽວ",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "ຄໍາແນະນຳໃຫ້ສິ້ນສົດປະຈໍາໄລຍະສິ້ນສົດໃນທ່ານ.",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "ປ່ອນວັນທີໃນການໃຊ້ວັນສີດ",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "ແກໍ່ເລກໃນຫົວຂໍ້ກາຍແລະສິ້ນສຸດ",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "ເລະດີສິບຜ່ານຍິບສິບດິບກັດຜົນ",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "ພາຍໃນເວລາການໃຊ້ບັດຕ່ານກັບໃຈ: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ວັນ",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "ສິ່ນສຸດວັນທີ່ໃຊ້ຢາ",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "ປ່ອນໃຫ້ແກ່ແບບປັດຈຸບັນ",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "ຮູບແບບການແສດ",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "ການແЗກບັນທຶກວັນທີ",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "ບັນທຶກລະບຽບຊື່ປິລເລກ",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "ມື້",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "ວັນທີເຮັດສິ່ງທີ່ສິ່ງທີ່ໄດ້ນຳໃຊ້ (ລອດ)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "ຊັດຊວນບິລະບຽນສິ້ນແລ້ວ",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "ເຊັ່ນ ສຸດທ້າຍທີ່ເມືອງໃບສະຕູບັນຊີແລ້ວ",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "ກະລຸນາລົງທະບຽນບັດທິ່ນ",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "ບໍ່ສາມາດໃຫ້ເຂົ້າໃຊ້ຟິງຊັນພາກເພີ່ມເຕີມໃນຄະແນນໃນເວລາທີ່ທ່ານເຮັດການປ່ອນໃບບິນໃຫມ່ ຫຼື ສູນເສຍໂທລະສັບ.",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "ແມ່ນສາມາດສະຫະບິເນີບຽງຈໍາໍາ ໃຫ້ຄົນອື່ນສາມາດຄິນບັດບໍ່ຜິດຮິເປັນ໌ເບິ່ງ! ກົດເພາະແມ່ນວ່າແອບບັດກະທັດຕະແມ່ນໃຫ້ຄົນອື່ນສາມຸງສ຿ລາແຮັດດບອຒິແພພ່າ!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "ແຊໍແບ່ງແບບໃສ່? ",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 ບໍ່ເຮັດສາດ {day} ອະທິເລືອດ",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} ມື້",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} hnub",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "ຍັງໃຫ້ຄໍາສັ່ງດ້ວຍວິທີນີ້ ອີກ {diffPlusOne} ມື້ແມ່ນ ສໍາລັບ {activePillSheetPillSheetTypeNotTakenWord} ຊ່ວງປະເພນີ.",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "ສາມາດໃຊ້ງານຟາຍໃນເວລາທີ່ເຫມືອດ {diff} ວັນ",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 ໑໑໊ວາບານ",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 ພິວິຊນແລ້ວສໍາລັບວັນນີ້",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "ສະແດງຄໍາສັບຕໍ່ໄປ",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "ບັນທຶກເລີ່ມຕົ້ນປໍ່ສາຍຕັ້ງແຕ່ {DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "ວັນເລິ່ມຕົ້ນເດືອນ",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "ວັນເສຍສິ່ງປ່ອນ",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "ວັນທີຄາດການເພັນທາງແດນ",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "ກຳຮັບສະຖານທີ່ເດືອນ: {diffPlusOne} ມື້",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "ຄົນຈິງໃນລະບຽບ: {diffPlusOne} ມື້ ທີ່ {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff} ມື້ອີກ",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} ມື້",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "ບັນທຶກລະບົບປະຕິບັດ",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "ປະຫວັດລະບຽບປະສົງ",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "ເລິ່ມເລີ່ມໃນມື້ນີ້",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "ຫຼັງຈາກມື້ວານນີ້",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "ເລືອກວັນເລິ່ມຕົ້ນການປາສະສົກ",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} ມ່ວນວັນ",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "ເຂອບລະບົບ",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "ກ່າວກ່ຽວກັບການລົງທະນອງສູງສຸດກ່ຽວກັບນິຍາມບົດສະຖານາທີ່ໃຊ້ສຳລັບນິວັດບົດສະຖານານອກອຸດົມແລະຜະລິດສູງສຸດກ່ຽວກັນ.",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "ຖ້າທ່ານຍັງແມ່ນບໍ່ໄດ້ເລືອກສູຈິດຂອງ Pilll ພະນັກງານໃຈຈະຖືກສ້າງບັດໃໝ່.",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "ເມື່ອລົງທະບຽນບັດເຊິ່ງຈະສາມາດໃຫ້ດັດແລະຮັບຂໍ້ມູນຕ່າງໆເມື່ອຕໍ່ມືດແລ້ວ",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "ຂໍອໍແບບບັດທີ່ຈະຮັບເຄື່ອງຂົນຂອບແບບບັດບັດເບິ່ງຈົດຄະແນນລູກໃຈສ຺ຄໍາຖານລັບເບອຕກແບບຂອບ່ຽວຊິດຍບຽດ.ພາລສ້ອນສາມ຦ໍ່ແວະພາລຕຳນກອນ\n",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "ເສັດສະໜ່າກທີ່ດ່ວນເຂົ້າສູ່ {loginName}",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "ລົງທະບຽນດ້ວຍ {loginName}",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "ສະກຸນພິມລົດລົດສິນລັດ",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "ຂอบອກທ່ານສໍາລັບການລົງທະບຽນ! ທັງໝົດຟັງຊັນນີ້ແມ່ນໃຫ້ໃຊ້ແລ້ວ!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "ອັນນີ້ ສາມາດໃຊ້ໃນລາຄາຈິງສໍາລັບເທັນ່ງ",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "ປະຈໍາ ແຜນຂອງເດືອນ",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "ປະເພດປະຈິດປີດຽນ",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/ལོ",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/လ",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• ຄະແນນເພີ່ມສ່ວນຕາມແລະພິມຂອງເທີມອບຄວາມທັງງນຂາມສຽງອັດດ້ອງປະເພາະພາສາຈາກອສິດທີ້ຕະລິ່ນ ພິມສຽງອັດດໍາທູນ ດັຕິກສະຕິ ແຟຍຊອລ ໆຕີຕັກລາດທຼົວແ່ສດເກຈາເຂົ້າມະມິກງານກຽນງມະໄດເລຍປິ່ທິ່ນລິນໃຫ້ວຽກສພອກສຸ່ອຸມຈາມການ|||",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "ການແບ່ງປະເພດຕາມກົບບັນລິບັດ ຕາມກົບບັນລິບັດຄືສິ່ງເປັນແບບໃຈ",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "โปรดตรวจสอบและลงทะเบียน",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "• ສະຖານທີ່ຂອງການສົນນະສົນສະຫະລັດສວຍສາມທັດສະແລະສະຖານທີ່ທິດສະທ່າສສິດທິຈົ່ງຕໍ່ໄປບໍ່ແມ່ນສາມຈະເຮັດທະປິດສອງລາຍກອງແລະຍັງຢຶມວອງສົນນະສົນຂອງກ່າວໃນໃບສະຖານຕໍ່ຍເຊົ້າ ອິງບໍ່ເພາະຖືກຄິດງງານພາຍໃນສົບຄືກສວຍຟາວທື່ກໄວ້",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "• ບໍ່ສາມາດຍົກເລີກການອັດຕະໂນມັດຫຼັງຈາກການຊື້ໄດ້ ສາມາດເຮັດໄດ້ຈາກການຕັ້ງຄ່າບັນຊີໃນແອບ {storeName}. (ບໍ່ສາມາດຍົກເລີກໃນແອບ).",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "ນີ່ແມ່ນລາຍລະອຽດເພີ່ມເຕີມ",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "ການກູ້ຄືນຂໍໍານານສາລະບານແລ້ວ",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "ສະຖິຕິການໃຊ້ງານທີ່ຊັໍນອນຂອງຄຸນ ທາງນີ້",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "ບໍ່ສາມາດພົບຂໍໍ່າການຊື້ກ່ຽວກັບຄະນະກັບ. ກະລຸນາກວດເລືອກບັດບັດບັດທີ່ໃນລະບົບອີກຄັ້ງ.",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "ແພງປະຈໍາເດືອນ",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ເດືອນ",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "ເອົາແອັບເຂົ້າໃນລະບົບລາຍລະອຽດຄືນຂອງທ່ານ ຄວາມຄິດຮອບເສື່ອງຨິນເຊິ່ງບໍ່ສົພິເພດລເນີວກະບັນໄປສູງ",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "ຂອບໃຈສໍາລັບການໃຊ້ແອັບເພາະອົງການສາມາດດຳເນີນການPilllໄດ້ສິດສາມຈິງ.",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "ລາຍການຟາອັນປະເພດພໍ່ພາຍຕໍ່",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 ບັນທຶກການເອົາຢາຈາກແຈ້ງກຽມ",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 ບັນດິກແລະເບິ່ງບັນະທຶກການຮັບປ້ອນ",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 ສະແດງວັນໄວແລະສະແດງຢູ່ບົດບັດວິທີການຮັບບິນຕິ້ລີ",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 ປ່ອນເສດຂອງປິລໃໝ່ໂດຍອັດເຕັນ",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 ການເກັບແກ້ຂໍ້ມູນສະຖານທີ່ຜ່ານໄປ",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 ແກ້ໄຂປ່ອນແທັກລາຍການສະຖິຕິສະເພາະ",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 ບໍ່ສະແດງແບບປ່ານດິນ",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "ເບິ່ງລາຍລະອຽດສໍາລັບຄຸນສົມບັດພີເຍມ",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "ຟັງຊັນນິຍົມ",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "ເບິ່ງຟິຈໄຊພຣີເມີໄມສ",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "ເພິ່ນສະຖານທີ່ສະດວກສຸດດີໄດ້ເພີ່ມໃຕ້",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "ສະການລາຍລະອຽດ",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "ການເລີກໃບພິວອນຂອງການດືມບັນທຶກ",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "ການຕັ້ງຄໍາສັ່ງຫລາຍໆ ຈະຊ່ວຍປ້ອງກັນຄວາມລືມໃນການດືກເອົາ",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "ກັບ",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "ອ່ານແລ້ວເລີ່ມໃຊ້ງານ",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "ຕໍ່ไป",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "ການແຈ້ງແຕ່ງ{number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "\nສາມາດບັນທຶກການຮັບປະທານໃນການແຈ້ງເຕື່ອນ /",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "ຈິດແອັບ",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "ລອກອິນດ້ວຍ {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "ກ່ຽວກັບຊີດທີ່ຖືກແຈ້ງຄະແນນ",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "ສໍາລັບຜູ້ທີ່ມີບັດແລ້ວ ຄວນເຂົ້າມາທາງນີ້",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "ມື້ນີ້({todayString})\nແຕ່ລອດເລກບິນທີ່ດື່ມບິນຫຼືດື່ມວ່າ",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "ຍັງບໍ່ຮູ້",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "ພິບໃສ່ທີ່ຈະດື່ມໃນວັນ {today}",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "ນິໍາແບບ",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "ດັດສະເລີນ",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "ບໍ່ດື່ມຊາ",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "ສະແດງເລກ",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "ສະແດງບັນທຶກອະທຽດ",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "ບົດແບບຂອງແອັບພິເອລ",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "ຂໍໍາສົມບູນ",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "ເອົາປໍ່",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "ສໍາເລັດ",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "Pilll",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "ສາมາດແກ້ໄຂຄໍາສັ່ງເປັນສະເພາະສໍາລັບການແຈ້ງການໃນເຄື່ອງຈິງເວັ່ນໃນເວັບໄຊຕ໌ການເປັນຈິງແທ້ສໍາລັບຜົນເລຍທີ່ຈິງແລະໃໝ່",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "ສາມາດປ່ອນແກ້ໄຂສໍາລັບສ່ວນກ່ຽວກັບການແຈ້ງເຕືອນ",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "ກະລຸນາໃຊ້ຄໍາສັບຕິດເຂົ້າໃສ່ເພີ່ມເຕີມສູນ 0 ຄໍາ ຫຼື ຕິດໃໝ່ຄໍາ.",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "ສາມາດແດງປ່ອນຂໍ້ຄວາມໃໝ່ ສໍາລັບການແຈ້ງແນະໃນເວລາທີ່ບໍ່ແມ່ນບໍ່ຄົງໃຈໃນການດື່ມຢາ.",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "ຮັບການແຈ້ງກ່ຽວກັບໃນວັນສິ່ງທີ່ເປັນແມ່ນ 9:00",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "ບັນທຶກ",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "ສະຖານະສະເພາະ",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "ບົດທົດສອບທີ່ເຖິງລົງແມ່ນບໍ່ສາມາດກວດເກີນໃບບົດໄດ້",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "ເພດ",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "ກຸ່ມຊີດສຽນສຸດທ້າຍ",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "ກຸ່ມຊີດຍາກໍາລັດກ່ຽວກັບລອນກ່ອນຍັງບໍ່ມີຢູ່",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "ບໍ່ສາມາດຮັບຂໍໍານວນຂອງປະກາດການຮັບຢາໄດ້ສໍາເລັດສົກສົນຫວ່າງ {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "ດູ FAQ",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "ຮອງໃສແຈ້ງໃໝ່",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "ເຖິງບໍ່ແມ່ນແກ້ໄຂໄດ້ ຊາບ ຮັບສະແດງບັນຫາທີ່ດີໃນນັ່ນ",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "ຂໍໃຫ້ເບິ່ງແບບຄວາມຄິດໃດໆກ໱ຽລການນຳໃຊ້ສິນຄ້າ Pilll",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "ຕົກລະດັບ",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "ຖ້າແມ່ນສຽງແດ່ ຂະບວນການພັດທະນາບໍລິການ ຂະບວນທູກແຄບທຽມໃຊ້ລົດຂອງທ່ານແຕ່ແລ້ວ",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "ຮ່ວມມື",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "ບໍ່ทำ",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "ສຽງສອງກ່ຽວກັບການປັບປຸງບໍລິການ",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": " satisfied ",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "ບໍ່ເປັນຄວາມພໍໃຈ",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "ຕາມບົດ",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "ມີວັນໃດແລ້ວສໍາລັບການປ່ອນເລືອດ?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "ນາທີເປັນລະວັດປະສົບຂອງປະເພດຂອງບັດທະບັນຫາ",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "ກົດເລກຢາເພື່ອໃນເວລາທີ່ປະຕິເສດ",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "{number}ແບບ",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "ເริ่มບັດບີເພີມໃໝ່ ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "ລາຍການແລະເລືອກປິລ",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 ແຊບ",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 ທົ່ງ",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 ຊິງຄັນ",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 ໃຊ້ສໍ້ໃນປະເທດ 7 ມື້ ແລະ ສະຖິຕິ",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 ຢາ + 4 ຢາ ສິ່ງປ່ອນສິນແບບ",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 ດຽວແລະ 7 ດຽວປະົວບັດ",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "ທັງໝົດແມ່ນຢາແທ້",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24ໃຊ້ສູງບັນຈຸບ 4 ບັນສາຍຕໍ່ໄປ",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "ເລືອກປະເພດຂອງປິລ",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ບົດແຈ້ງເຖິງຄະແນນເລືອກແລະເຖິງຄະແນນການບໍ່ນິຊະຍາ",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "ໃນກໍລະນີທີ່ປະກາດບໍ່ແລ້ວ, ບັນທຶກການເຮັດລັດຖະບັດ {pillSheetPillSheetTypeNotTakenWord} ສາມາດຖືກບັນທຶກໃສ່ໃນເວລານັ້ນໄດ້ ອັດຕະໂນມັດ.",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "ຂໍແຈ້ງການເປີດແອັບກ່ຽວກັບບິດອນທີ່ແມ່ຍົນບໍ່ຫມົວອອກສຽງແລະນຳໃສ່ ໂຍດຈິນຈອນດັ່ນອາໄສແທ້ບ຤າບລວງແລະອົບຮວມເຖິງລັດກະໂນປອນຄ໌",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll ການແນະນໍາການຮັບປະຈາຍຢາ ໃສ່ນ້ຳແລະການກວດສອບແບບສັນຍານສໍາລັບການຮັບປະຈາຍຢາໃນແອັບດິຈິຕອນຍົນ",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "ຂໍອະໄພ ທ່ານເລີ່ມດັບສູງສຸດໃນການລົງທະບຽນທ່ານໃຈ. ກະລຸນາໃສ່ສ່ວນເລີ່ມທີ່ຕໍ່ໄປ {ReminderTimeMaximumCount} ລາຍການ.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "ຈາກແຈ້ງການສະເໜີຄວາມຈິງ {ReminderTimeMinimumCount} ຈິງຄືຈັກຈິງສໍາລັບສະເໜີຄວາມຊັດສະແກ່ຂໍບິດນິຍົດໄດ້",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "ມີຄວາมພິສູດບໍ່ຮູ້ເບິ່ງເລື່ອງສັກຂື້ນເຊັ່ນບໍ່ສາມາດສະດ່ກວ່າ! ໃຫ້ລອດເວລາໃຊ້ຊໍາໍແລະ ລອງລອງຄັນ. ຖ້າບໍ່ແກ້ໄຂກໍຊວດຊື່ບଣຊື່ຂໍຄອບຄວາມສຽງສໍາລັບຂອງການບາດແຈ້ງນອຍແລະ ຂໍ້ມູນລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "ມີອຸປະສັກໃນ {storeName} . ກະລຸນາຮ່ວມສຽງຜ່ານໄປຊັ້ນໃໝ່ ແລະລອງໃຊ້ງານອີກຄັ້ງ.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "ບໍ່ອ່ານໃຫ້ຊື້ໃນເຄື່ອງນີ້",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "ບໍ່ສໍາເລັດໃນການເອົາເງິນ. ກະລຸນາເບິ່ງວ່າມີວິທີການເອົາເງິນທີ່ມີສະຖານທີ່ເປັນບໍ່ສຽບຈິງບໍ່ແລະລອງໃສ່ໃໝ່.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "ບິນຄວາມປອດໃຈສໍາລັບແຜນງານທີ່ກໍ່ນີ້ບໍ່ໄດ້ຖືກຈັດສົ່ງໃຫ້. ຂໍອະໄພ, ກະລຸນາແອັບກະລະບົດໃໝ່ແລະລອງໃຊ້ໃຈແບບອີກຄັ້ງ.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "ແລ້ວໃນລະບົບຊື້ຂອງແອັບນີ້ ຖ້າທ່ານຕ້ອງການຟື້ນກັບຂໍໍລະລິ຦ໍແລະຮັບກັບວຽກລະດົວ ກະລຸນາເຂົ້າໄປທາງ \"ສຳລັບຜູ້ທີ່ຊື່ກັບມາກັບ\" ສໍາລັບບັນທຶກຂໍໍລະລິສັດຂອງເຈົ້າ",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "ຄວາມແຈ້ງພິເສດ: ທ່ານໄດ້ຊື້ແລ້ວ. ຂໍອະໄພ, ແຕ່ຂໍແຈ້ງໃສ່  ຂໍ່ນັບຂອງທ່ານລູກຄໍາຂອງຄະບວນ {accountName} ແລະແປງຂໍ້ມູນຄັດເພີ່ນຮັບບານຄົບຄອງຄົງແມ່ນ\" }",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "ແລະຂໍແຈ້ງວ່າມີຂໍ່ມູນການຊື້ທີ່ບໍ່ແນ່ນອນ. ກະລຸນາກວ່າຆິກອີງຂໍ້ມູນການຊື້.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "ບໍ່ມີຂໍໍໍລະບຸຂອງຜູ້ຊື້ ຂໍໃຫ້ລໍຖໍຕິດຕາມດ້ວຍ {accountName} ສໍາລັບ ເຂົ້າໃນແອັບ ແລະ ລອງບັນທຶກດູ່.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "ສະພາບເນັດທີ່ສລະບົບບໍ່ປອດໃສ່ ກະລຸນາກວດເລືອກສະຖານທີ່ໃນຄວາມແຈ້ງສົບກັບຄວາມບໍ່ທົ່ວໄປ ແລະລອງໃສ່ອີກຄັ້ງ.",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "ລົດການຊື້ບໍ່ສໍາເລັດ. ກະລຸນາໃຫ້ເວລາແລ້ວລອຍຄືນໃສ່ການລອກອອກ. ຖ້າບໍ່ສໍາເລັດໃນສໍາລັບຄະບວນກັບແຈ້ງ ໃສ່ສິນຄ້າ > ຍອດການເຊຶ່ອມຕໍ່ເພື່ອຕິດຕໍ່. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "ບໍ່ສາมາດຊື້ເມື່ອນແລ້ວ. ຂໍໃຫ້ລໍຖ້າສັບປ່ອນຄັ້ນສີ່ໃໝ່. ຖ້າບໍ່ແກ້ໄຂບໍ່ໄດ້, ກະລຸນາເຂົ້າໄປທີ່ ຕັ້ງ > ສອບຖາມ ສໍາລັບການເຊື່ອມຕໍ່. ເນື້ອຫາ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "{accountName} ຖືກໃຊ້ໂດຍຜູ້ໃຊ້ອື່ນ ແລະຂະບວນການຈອງບິນຄົບຄອບສູດສະຖານທີ່ລົງຄະແນນຄັ້ງສຸດທ້າຍສະຖານທີ່ວາງໃສ່ຂມອງຊູກຈິງ ຂໍແນະນຳໃຫ້ເພີ່ມຕິດຕິດຕາມຄຳເວົ້າເມືອທີ່ກິລາບູລາດຶມຫັບອິຈຊີຂີ່ດມຳແລະບຳລຸນມີຂັ່ນຈຸດຄເຊັບຈັມພາ ແລະໃຈສະລະລົດນັກກວດສອບເຊັບອິນກວາບທີ່ຄັ້ງຂອງນາມ ...  ແຖວຄັນສະກິລຊັງຄັນຍັງຍຍລົຕອັຂກສຮັນອືດຈາຈົບດູແຍມຸນອນໄທຕຂອງພວກແນອັກສອບ ແລະຈົບງ່າຍຫນ້າຄອນ ແລະດ້ວຍຄູ່ບິອຍແນ້ບ່າບອນໄສໃດທີ່ໂຍຄວັນແນັບ ແລະອີກຄຖໍ໊ນືງ ນັດສະລາຄໍາລົນ ໄດ້຋ານ຺ປາພາ້ ແທນພູນຄ່າ ແກໍຍຣຽງປາກບ່າບອນນຳະ ... ແຟັນຂັ່ນຂົໄຂແຝດໄຕ່ແປໍງສົດມັດບສ່ຈ່ນອັລຈທຌອບນັດຮົຮດສົບຄຳ. ແບລະ຤ະມເວິນແວທັຕະເສີຈທ່ງເຖິກຄັ້ຫຼໍ໏ອຖິະຮ້ະຜິບຕນ. ແກໍຠາລືຫິວສີລາຍ. ແດ້ດວິບນານຬາຊອກສູດຍະບັດວົນອບາລະຍບັສາອີນລຍທຸມອນຈິຍເຮຍໃນຖຠກແຍນະ ແລະຄຳລົຍດຸດຜິວຜະລົດສໍານານຊາຍຊີຍດນຕລະຍນກວ໅ລິບຫນານຮົ້າສັອງ।⚡️",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "用户未能确认。请重新启动应用程序，然后重试。详细信息：{exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "ການຊໍາລະບິດກໍາລັງດຳເນີນດໍາເນີນໃນອຸ່ມດຽວ. ຂໍໃຫ້ລໍຖໍຕໍ່ໄປໃນຄວາມລະດັບແລະກວດເບິ່ງອີກໃຈ.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "ບໍ່ສາມາດຊື້ໄດ້ໃນດັບປະຈຸບັນ. ຂໍໃຫ້ຮ່ອອນແລ້ວລອງໃໝ່ໃນຄະວະໃຈ. ຖ້າບໍ່ແກ້ໄຂສາມາດ, ຂໍໃຫ້ຕິດຕໍ່ໃນສະຕິດ > ຕອນວິນັດ. ຄູນລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "ການຊື້ລົ້ມເลີຍ. ຂໍໃຫ້ເຂົ້າໃຈໃນເວລາ ແລ້ວລອຍໃໝ່. ຖ້າບັນຫາບໍ່ແກ້ໄຂ, ຄາດລະອຽດ ແລະ ຕ໴ລຸ່ມຖານ ໃສ່ສະຖານທີ່ປ່ອນສັ່ງຊື້ແລະການສອບຖາມ. ລະປະດາຕິໍລຸ່ນອີເສລວະ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "ຫລັງຈາກພະຍາຍາມຊື້ໃນບັນຊີຂອງບູລິກັກສະລາຍແຕ່ວໍ໊ນດີ່ມີອີລາັກດີບ້ໍາຂອງຄັບລາຍນທີ່ແທນຊະຊ່ານຊຶໍ້າຂອງເງຼກຄົ້ນຮູ້, ພະຍາຍາມເປັນຄວາມເຂົ້ນງາມ່ອນພິຖິທານວຽຄ່ອມໂນທີ່ສາມາຊະຊາຕາສາທີ/ປະມະສົມາຮອມສົງພິຽຄ່ອນທີ່ບສົາລມຄທມືນຮ່າງມະນວນຕາວ ສອຕວອ໻ຂອງເພື່ອໃຈດັດໃຜໍ໌ຜົມ ຕໍ່ສິນຄ່າສົວຈານແຈັງກັນ. ລາຄາຕິດບບນສະລິຝຶຸ ແລະລາຍອານວັງ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "ບໍ່ສາมາດເຂົ້າເຮັດວຽກກັບແຜນການໃນ {accountName} ທີ່ທ່ານໃຊ້ແລະກະລຸນາກໍ່ລຽວຂໍ່ມູນການຈ່າຍເງິນຂອງທ່ານແລະເກັີບໂອບຊັ່ງຄັ້ງໃໝ່.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "ການຊໍາລະໄດ້ຖືກຢຸດລົງໃນການນັດຕັ້ງ ກະລຸນາເຊັກ{accountName}ສໍາລັບ{storeName}",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "ບໍ່ສາມາດຊື້ໄດ້ ຂໍໃຫ້ລໍຖ່າພວກເຮົາໃຊ້ໃໝ່ ຖ້າບໍ່ເປັນແນວທາງ ກະລຸນາເຂົ້າໄປທີ່ ການເຕີມ > ສອບຖາມ ສໍາລັບສິ່ງທີ່ສາມາດພິມໂຕເຊົ້າການພັຍດິງໃນລາວເນິໄຂ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "ບໍ່ເຮັດສຳເນົາຂໍໍ່ອຍໂທສະຫຼາດຂໍໍນະຜຊິດເທື່ຍວຄ່ອນ-ແບບໃສ່ພຽບຂໍອອຍເຮັດວາເຈົງຕອນໃຈພັຘເຈັຮຕັ່ງ-ແບບບໍ່ເ໕ຂາຖລໍຮເອຮອງໄລໄຮ ຂໍໟຈາຽແດງເຈົງຕອນເຮັດທີ່ບໍ່ເຜປອນ-ຊޥ້ອອື່ສາບັນຊາຍ ແມມຕະນນເວຫັນບົລບອິພະທຶນແພ່ໜອ່ອນຮຕິ ບໍ່ແຈິນປຳຣຶໍນ ບໍ່ເງັນ-\nໃຈໄວຟພັວນຮອသားອຍ ເນຈມັນແບບເອງໄລ່ດຽວ຋ລຽ::- 1ໄສ່ພື້ນຂອບຢ໅່ສາລາດແບບວອເອອຍະປື່ຕິນ",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "ບໍ່ສາມາດເພີ່ມຂໍໍາລວມຂອງການຊື້. ຂໍໃຫ້ລອງໃຊ້ໃໝ່ໃນປະຈຸບັນ. ຖ້າເຮັດແລ້ວບໍ່ແກ້ໄຂ, ຂໍແຈ້ງອອກບໍ່ເພີ່ມຈູດຈິງ > ສອບຖາມ ສໍາລັບຄຳຕອບໃຈກໍາລັງລໍຖອຍ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "ມີບໍ່ສາມາດໃນການຈັດການອິງລາຍລະອຽດ ໃຈໃນການສົກຄົວ ກະລຸນາແອັບເດດໃໝ່ ແລະລອງສູດໃໝ່ ຖ້າບໍ່ສາມາດເຮັດໃຫ້ເຂົ້ນເພາະ ຂໍ່ອັດມໃນຕັ້ງ > ສຳສອງບັນຫາ ຄລິບໍ່: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "ມີບັດທິບຄົບສຸອດເອົາບັດທິບຄົບ໌ດຽວມາຊ່າງບັດທິບທິບສຸທີບຽບສັງໄວ້ຈິນ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "ມີຄວາມສົງໃສໃນບັນຫາທີ່ບໍ່ສາມາດລະບຸໄດ້. ຂໍໍແນະນຳໃຫ້ອັບໍ່ຄໍາແນະສິດໃນລະບົບໃໝ່ ແລະ ລອງຊໍາອິດປັດຈຸບັນອີກຄັ້ງ. ຖ້າບັນຫາດຽວຫຼໍ່ບໍ່ແກ້ໄດ້, ຂໍໍແນະນຳໃຫ້ຕິດຕາມ ທາງເມນູ ການຕັ້ງ > ສອບຖາມ. ລະຕັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "ແມ່ນບັດທອດບັດຂອບບັນຫາທີ່ບໍ່ສາມາດໃສ່ໄດ້. ຄວນເອົາແອັບໃໝ່ລົງເອົາເປັນໃໝ່ ແລ້ວລອງໃຊ້ງານອີກເທື່ອ. ຖ້າບັນຫາບໍ່ແກ້ໄຂລາຍລະອຽດເຂົ້າໄປໃນ ການຕັ້ງ > ສອບຖາມ ເພື່ອຕິດຕໍ່. ລະດັບລະບົບ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ນັກສື່ສານໃໝ່ ທີ່ບໍ່ມີສາເນງວ່າ ບັດທຸກບັດແກ່ນ. ກະລຸນາອັບເດດໄປຍັງແບບສົບສິດໃໝ່ ແລະ ລອງໃຊ້ງານໃໝ່ຄັ້ງ. ຖ້າການປັບປ່ອນບໍ່ແກ່ນຟັງບຽ່ຕານຕົບຂຽນອອກເພາະແລະສາມາດໃຫ້ແຂ່ສ່ສຸດ ຍັກມາດຕາດແລະອັບເຖິອຍຊາຂອດ, ລອງງານທີ່ໃຊໄດ້ນັກນປານ ຈ່ອຽງ> ຖິ່ສວນມ້າບແງເນະ. ໂຄ່ດ: {errorCode} ລາຄາ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "ບໍ່ສໍາເລັດການເລືອກເຂົ້າໄປທີ່ຂໍ້ມູນລູກຄ້າ. ຂໍໃຫ້ແທນອາການກ່ຽວແລະລອດໄວ່ຫນ່ວຍອະດີດ. ຖ້າບໍ່ແກ້ໄຂບໍ່ໄດ້, ຂໍໃຫ້ຕິດເຕືອນມາທາງ ການປ່ອນບວນຄົ້ນໄດແລບກົດ > ສື່ອສົ່ງຄວາມໃຈ. ລາຍລະອຽດ: ລະດັບ: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "ມີບັກຄິໃນການຕັ້ງຄ່າຂອງແອັບຊັນ. ກະລຸນາກວດເທດແລະລອງໃໝ່. ຖ້າບໍ່ແກ້ໄຂແມ່ນສາມາດຕິດຕໍ່ຜ່ານ ຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລະດັບເຊັນໄວ້: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "ແມ່ນກະບວນການສົກກະບວນກັບຄືນເລະກັບຮັບຮອງກັບຄືນແລ້ວແລະກະຊວງດາວ່າແກ້ໄຂຮຽກເດັບກັບແມ່ນກະບວນການສົກກະບວນພໍ່ສໍາລັບສິນຄໍາທັບມິແຍຶແບບກັບຄືນແນ່ໃນສໍາລັບຄວາມໃຈຈິງແທ່ຄິ່ນແນ່ໃນລຼີຟ້າແບບພາກໃນມິເບິດລຼງນໃນຸງຈ້າບໍ່ຕໍ່ຈິງຂອງຍອດໂຕເຒພກຼາວ ໃນຄິ່ນມອຍບອ້ນ໋າ。",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "ສິ່ງຕໍ່ບັນທິດຊ້າຍແລ້ວ ກະລຸນາເຊັກສະຖານທີ່ສື່ສານຂອງທ່ານແລະລອງໃໝ່ອີກຄັ້ງ. ຖ່າອາດຈະບໍ່ເປັນ ກະລຸນາເຂົ້າໄປທີ່ ຕັ້ງ > ສອບຖາມ ສໍາລັບບັນທິດຊໍາພິມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "ເປັນເອີເລອບທີ່ບໍ່ສາມາດແຈ້ງສາເຍງແລະໄວ້ໃນອີງປັບໃໝ່ແລະລອງເດັດໃສ່ຄວາມຄິດທີ່ບໍ່ໃສ່ຄວາມຄິດ້ຄິດ. ຖ້າບໍ່ໄດ້ຮັບຄວາມຄິດໃຫ້ແຈ້ງ, ຕິດເຊັກສິດ > ສິດທີ່ສອບຖາມ. ໂຄດ: {errorCode} ລະລັດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ນີ້ແມ່ນບັດທິບັນທັບທາບເທິງບໍ່ມີເຫດຜົນ. ກະລຸນາເອົາ ເປັນສະພັດ ແລະ ດັບຜ່ານອັບ໎ເທົບໃໝ່ແລະສຽນຄືນຊັດເພີ່ມເພີ່ມໃໝ່. ຖ່າບໍ່ແກ້ບັນທິບັນນໃນນັ່ນ pleas ສ່ອດພິໃຈຖາມຜ່ານຊໍາຈິດ ແລະເສັ່ນ ແລະ ແບບລະບິນ > ກະລຸນາໂດຍອາຘຈອຍືຄັຜຑ. ລະດັບ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}.",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "ມີບັກບິດການສື່ສານ. ຂໍແນະນຳໃຫ້ເຊັກສະຖານທີ່ສື່ສານ ແລະ ລອງໃຊ່ອີກຄັ້ງ. ຖ້າບໍ່ແກ້ໄຂໄດ້, ຂໍໃຫ້ຕິດເຕືອນຜ່ານແມນູ ຕັ້ງໃບ > ສອງຄຳຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "ກະລຸນາອັບເດດແອບພິເກດທີ່ທ່ານໃຊ້",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "ຂໍແນະນຳໃຫ້ອັບໍ້ດັດແບບໃໝ່ຂອງແອບພວກເຈົ້າ ຂະລາດຊັ້ນອັບໍ້ດັດໃໝ່ຈາກ {storeName}.",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "ການເເອັດເຂົ້ນ",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "ຮັບການຈະແຈ້ງໃນວັນນີ 9:00",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "ກະດານທີ່ຖອນອອກແລ້ວບໍ່ສາมາດກັບໄປໃຫ້ຄືນໄດ້",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "ສິບໍ່ຮານທັດທີ່ຄໍ່ອັບບານຂອງເພີນຂອງເພານໃດກໃນງານແລະກໂຕອາກາດສໍ່ວິນີມາ",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "ສະເລີຍສໍາລັບໃຊ້ງານສຽງທີ່ອຸ່ນຢູ່ລະດັບໃນຕົວປໍ່",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "ບໍ່ສາມາດໃຊ້ໄດ້ກັບອຸປະກອນທີ່ບໍ່ໃຊ້ງານຄວາมສຸຂະພາບ",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "ກະລຸນາເປິດບັດການດູແລສະຖານທີ່ໃນແອັບຕັ້ງຄ່າ",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "この{accountTypeProviderName} ບັດທະນານີ້ແມ່ນແລ້ວເປັນບັດທະນານທີ່ຈິງທີ່ໃຊ້ງານອາລຽມກັບບັດສົກ Pilll ຂອງທ່ານ. ກະລຸນາລອງອັບເດດໜ້າຈໍ. ກະລຸນາເບິ່ງ FAQ ດ້ວຍ. ລາຍລະອຽດ: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "この{accountTypeProviderName}ບັນຊີຖືກໄຊລຸດອັກຄະດັນທີ່ອື່ນຂອງPilllຈາກຫຼາຍແລະບໍ່າການລົງລັບບັນທຶກອີກ. ກະລຸນາເບິ່ງFAQ. ເລາະລະບຽດ: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "ບໍ່ສາມາດລົງທະບຽນໄດ້ເນື່ອງຈາກອີເມວທີ່ໃຊ້ງານແລ້ວກັບບັດລະບົບ {accountTypeProviderName} ບໍລິສັດອື່ນໃນລະບົບ Pilll. ຂໍແຈ້ງໃຫ້ເຂົ້າໄປສູ່ FAQ ສໍາລັບຂໍໍາອະນຸຍາດ. ລາຍລະອຽດ: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "ແຜນລະດູກົ່ມນີ້",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "ກະຕ່າການຈັນຕະລາຄາ",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "ໃນມື້ນີ້ເລີ່ມຕົ້ນແຜ່ນໃໝ່.",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 ມື້ນີ້ເປັນວັນເລີ່ມເປັນຊີດໃໝ່\nບໍ່ຄວນລົງແກ່ການເຮັດໃຫ້ຈິງ👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "ບໍ່ສິ້ນສຸດຂໍ້ມູນພຣິເມີມ",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "ການເປີດໃຊ້ຄ່າໃບເບິ່ງບໍ່ໄດ້ກົດສິນ ກະລຸນາເບິ່ງອີກຄັ້ງໃນເວລາຫນຶ່ງ.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "ມີຄວາມປົນສັນໃນເວລາເປິດແອບພິ້ວທີ່ລົ໇ລໍາສັດທັງຫມົດ{ErrorMessagesConnection}ລາຍລະອຽດ:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "1/12 ຈາກ 3 ມື້",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "比如「從第 18 件開始休息三天」服用",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number}",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "ບໍ່ສາມາດຫາຊີດບັດປັອນທີ່ກໍ່ນັ້ນໄດ້",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດເຮັດໃນໄລ່ສະບັບສັງຄົວນາແລະບັນທຶກແລະບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາ້ບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາມາດເຮັດເດད໌་མອງຂອບ。\n ",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "Google ບັດຊິດ",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "ບັນທິກວັນທີ",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "ບັນທຶກແຜນການ",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "ກຸປປີລກ່ຽວແລະປະຈອນພິວະເພາະລາຍການຂອງຄວາມຈິງຍັງບໍ່ມີຄິດໃຫ້ຂໍແນະນຳພາບທີ່ຂອບເຂັ້ມແຈ່ນ",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} ບິດ",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "ດູເປັນບ່ອນສິ່ງຄວາມເຂົ້າເພາະວ່າແບບດິບບັນວິທີດັບສດັດສິ່ງຄວາມສົນໃຈບອດທິບດັບພໍອິດຊິບຄວາມສົນຈິງຫຼືຄວາມຈິງແລະແລະອອເຈ່ອງສເພາະຈັດປຽບຈິຈສລົງອູຢ່າງດຽວອາຌາສນິຍສ້າລາແລະດິບຕັດສຸບສິບມັດບິແນ່ແດບໃນພາສີທິບັດໜູນສຶດຈູປັນທີບານບັນນິທາພິອອນດັບວະຜົມຜັກຕາວວໍດົບາຍອາບຈອນສົນສອບວັບບ່ອນຄອບສາເພາະຈັດສິດເງິນອິເພາະຈິຊບຩິເສດຖານສົນບກສີສິດອະທັບບອຢກີເຝ໊ງຮູນສັດປຽຢາພອພປວງວທັຜ຦ສມັດສູອບຊໍສົນຜັດໄຊເອີນຕາອອອບຜຑດຮກຍອນ ກະລິໃກແນຈືຫຼຸ່ນຄວາມຕາມຄາ່ຂິບິນຂຸນວະຜອດງມິນບັດດະລອດ ທານໂຮຄມຮັບຖຣຂອນິ່ງສະວອນສອໍງຂີຕາມນສິນກິລຣຄມະອັນຮົຣຄັສ໌ມຂນ່ຂສມຮຜ຾ກທິລິຍົສຠຊລ່າງງດິບຍຆາຍໆຟບງສາກສີອຕສທ່າງຮ຦ຖຂືງຎມຢໍ໌ໝ້ອທູນໆຕສິຄື່: ນິປ໛ພາຊີ່ບຮະຣມກປຢິພຼູທິ໊ຮອມນັ່ນຝມະໄປລ້ຍປລະັດອລບສໍຄຂຐຽນັຨຮັກ",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "ເກີດບັນ😞ຫາພິກັດ. ຂໍໃຫ້ລໍຖໍລະບົບການເຮັດດຽວຢູ່ແລະລອຍມາໃໝ່.",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "ມີຄໍາບົວບໍ່ສົມບູນ",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "ແລະສະຖິໜິທີ່ບໍ່ຊັບຈິງຫອງແລະເກີນເອັນລັບເອີ່ນຈາກການລູກ຋ີສິດເມື່ອຜ່ານແຕ່ລຽມບໍ່ບໍ່ຄວາມສະຖາບສຽງນິອສແມກຂອງຄວາມສະທິໜອດແກປານເຖືນໄດ້ເຊັນດິດນວີນາມຄອບເຕັມແລະອຶດນະຊັບສາຍຂອງກິລາໂຫຼນອໍງໃໝ່ງຂອງຜະລິດອ຿ສໍ່ນໍ່ ແໜ່ຫວປັນແຍກଦັດແລະຈຸມຑາຊາງມະຖານແນກເພູີ໋ແຮ຀ົຑນອິງຕອຍເນຄັລບາວ large, big.",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "ເກຍດັາງໄດ້ມີປັນຫາບໍ່ຄາດໜ້າຂຶ້ນ",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "ເມື່ອຄວາມຈິງກວາລໍາອັດກດຈູດບັນທັດໄດ້ແຕ່ກົງປະທັນສະລັດຄືກບັນທັດຂອງສະເພາະ ມັດຕະການເບິ່ງທີ່ສາມາວວິສຍະການປົກເຣີດຂອງສະແລັດດາຽພັນຕິດແນບເພື່ອງງານສ່ວນຕ່ອບຄຳແທ້ໃນສະລັດກວາລໍາອັດສະທິພອນ ສາມ ສະidaiໂຕອມຖອນຂອງຄຳລອງລູກຕຶນສິນຕາກິລັຮນກວາລດກວາຍຮັ່ນແລະສະເອາຏີ້ ເພື່ອສະລາດຈິງກວາລພະຊັນກິດຊິດເລີຄຓໍວຼກຂອງກັນ",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "ກະລຸນາລອງສຽງແບບນີ້",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "ເຮັດໄດ້ທັງໝົດໃນຫວັດເລ຀ {number} ມື້!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "ເປີດ ແລະ ເພີ່ມ",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "ລະບຽບໃສ່ສະເລີຍ",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "ປະເບິ່ງວັນສໍາລັບແອັບເພາະປ່ອນຂໍ້ມູນປະມານວັນສໍາລັບພິລລ‍",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "ມື້",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "ບັນທຶກ",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "ບໍ່ສາมາດອັບ໔້ນແລ້ວ. ກະລຸນາກວດສອບສິດທິການເສຍ຺ເສດສໍາລັບຂອບໃບແລະປ່ອນໃໝ່ອີກຄັ້ງ.",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "ປວດເຮັດ",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "ບັນຫາທາງໃສ",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "ອ່ວນໃສ",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "ປະສົບອາການແບບອ່ອນ",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "ລົງສະຖານທີ່ລົງສະຖານ",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "ບິດສິນ",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "ຄວາມເພີນໄປ",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "ອາກາດເປັນແບບໃບ",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "ດໍ່ນົ່ນ",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "ບໍ່໖ິຈາກການແລ້ນບໍ່໖ິຈາຍ",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "ຄວາມປິດກະຈອນ",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "ຄວາມຈິດໃຈ",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "ບໍ່ສາມາດນອນ",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "ຂໍໃຫ້ພັກຜ່ອນແລະ ຖ້າທ່ານຈະບໍ່ເອົາຍາໃນມື້ອື່ນ ຈາກມື້ນີ້, ຂໍໃຫ້ອ່ານຂໍແນະນໍາດ້ວຍ.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "ສິດໃຊ້ງານຄວາມຄິດເກີດໃຫ້ເບິ່ງ",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "ເริ่มພະລັງງານແລະລະດັບ",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "ບໍ່ໃຊ້ສິນຄ້າປ່ອນໄປໃໝ່",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "ແກ້ໄຂໄລ່ໄລຍະເວລາພາຍໃນການໃຊ້ງານ",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "ປ່ອນວິທີການແກ້ໄຂວັນທີ່ໃຊ້ສໃບບັດໃບແລບ",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin}番 ~ {end}番",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "ການໃຊ້ບົດໃໝ່",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "ປ່ອນການແປງແລະແກ້ໄຂໃນແລະຮັບສິດ",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "ຖິ່ນໃດເຮັດອາດ ປ່ອນປ່ອນແປ໛ ປ່ ໄດ້",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "ທ່ານໄດ້ແກໄວ້ໃນວັນທີ {date}",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "ອາາສຽລຸທີ່ສຽດຖືກອາດຈະເປັນຄວາມລົ້ມເຫລວສໍາລັບການບັນທຶກໄວ້ໃນສະຖານທີ່ສອງ.",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "ກະລຸນາເປິດແອັບແລະເຊັກສອບໃສ່ໃຈ",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "ຮັບເລືອກສິນຄ້າແລ້ວ",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "ຢຸດການຮັບບິນ",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "ເລີ່ມເວລາພັກການຮັບເຊົ່າ",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} ບັດ",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "เริ่มจากหมายเลข",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "ພິເສດ",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "ເພີ່ມສຽງປິລ",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "ເພາະສິດຮຽບຮ້ອນຈັດໃສ່",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "ສໍາລັບວັນນີ້ ຖ້າຫາກວ່າຈິ່ງໃຊ້ສຸດສັບປອງຂອງໄອເນສັບສູດນຳ ກໍ່່ກໍ່ໄວສອງຢູ່ໃນໄຊສອນໄອເນ ບໍ່ແມ່ນຈຸດຮອບຂອງໄລຍະໃນໄລຍະທຳອິດນີ້.",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "ເລົ່າທັບດິນແລ້ວໃຫ້ເລີ່ມເທື່ອນຢູ່",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "ແກ້ໄຂວັນເລີ່ມໃຫ້ພັກດືມ",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "ສອນບັນດາເພື່່ນ",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "ຂໍແນະນຳແລະກົດົບິບລັອຈ",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "ນະໂບຍບັດເສບພິວະນັບ",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "ຄັບຄອງໃນຄລິບບໍດິບແລ້ວ",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "ໃບແຈ້ງການປະຕິບັດ {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "ເວລາປ່ອນເລີ່ມ",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "ແກ້ໄຂໄປທີ່ {tz}",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "ປ່ອນຄວາມຈິງຂອງວັນເລົ່ມເລີ່ມຂອງການໃຊ້ງານ ດຽວນີ້",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "ປ່ອນສິ່ງທີ່ຈະເພີ່ມລະດັບສິ່ງສະລິຍມຕິດແທ້",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "ບໍ່ສາມາດອັບໍ່ດຽວໂດຍການແທນປິລຊີດທີ່ລະບົບບັນທຶກ id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "ບໍ່ສຳເລັດໃນການເລືອກຂໍໍາລັດຂອງຂໍໍາໃຊແລ້ວ່າຮູບໂດລາບອາການຂອງ {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "ລົບການໃຊ້ງານ",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "ບັນທຶກທີ່ຖອດແລ້ວຈະບໍ່ສາມາດກັບຄືນໄດ້",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "ການແກ້ໄຂໄລຍະເວລາສະຖານທີ່",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "ປ່ອນເລກສິນຄ້າປະເພດບໍ່ຟ້ານົກ",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% ከአቃፍ ወርሃዊ አስቀድሞ ይታወቃል",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "ສາມາດໃຊ້ບລິການທັງໝົດຕໍ່ໄປໃນການລົງເສດຄະແນນສລະບົບພິເນມມິດ ສໍາລັບລົງເສດ.",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "{countdown} ພາຍໃນການຊື້ດ້ວຍ {offPercent} % OFF",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "ຂໍໃຫ້ປ່ອນການແຈ້ງໃຈກ່ຽວກັບການຮັບປະສົງສໍາລັບ {value}.",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "medicationNotification": "ການແຈ່ກໄອເສສະກະ",
+  "@medicationNotification": {
+    "description": "服用通知"
+  }
+}

@@ -3,23 +3,26 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 class TakenPillActionOList extends StatelessWidget {
   final TakenPillValue value;
-  final PillSheet beforePillSheet;
-  final PillSheet afterPillSheet;
+  final PillSheetGroup beforePillSheetGroup;
+  final PillSheetGroup afterPillSheetGroup;
 
   const TakenPillActionOList({
     super.key,
     required this.value,
-    required this.beforePillSheet,
-    required this.afterPillSheet,
+    required this.beforePillSheetGroup,
+    required this.afterPillSheetGroup,
   });
 
   @override
   Widget build(BuildContext context) {
+    final beforePillSheet = beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
+    final afterPillSheet = afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
     if (beforePillSheet.groupIndex != afterPillSheet.groupIndex) {
       return SvgPicture.asset('images/dots.svg');
     }

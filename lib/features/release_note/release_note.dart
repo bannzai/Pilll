@@ -20,7 +20,7 @@ class ReleaseNote extends StatelessWidget {
         child: Center(
           child: Container(
             decoration: BoxDecoration(
-              color: PilllColors.white,
+              color: AppColors.white,
               borderRadius: BorderRadius.circular(4),
             ),
             constraints: const BoxConstraints(maxWidth: 320),
@@ -42,9 +42,12 @@ class ReleaseNote extends StatelessWidget {
                       alignment: Alignment.center,
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
-                        child: Text(
-                          L.addedDisplayModePillDaysCycle,
-                          style: const TextStyle(
+                        child: const Text(
+                          '',
+                          // (周期)を消すことになったので無効化。リリースノート自体も無効化する
+                          // "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
+                          // L.addedDisplayModePillDaysCycle,
+                          style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
                             fontSize: 16,
@@ -102,15 +105,18 @@ void showReleaseNotePreDialog(BuildContext context) async {
   if (storage.getBool(key) ?? false) {
     return;
   }
-  await storage.setBool(key, true);
 
-  if (context.mounted) {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return const ReleaseNote();
-        });
-  }
+  await storage.setBool(key, true);
+  // NOTE: (周期)のリリース後に、(周期)を消すことにした。リリースノートに現在記載されている。そのため一旦リリースノート自体を無効
+  return;
+
+  // if (context.mounted) {
+  //   showDialog(
+  //       context: context,
+  //       builder: (context) {
+  //         return const ReleaseNote();
+  //       });
+  // }
 }
 
 void openReleaseNote() async {

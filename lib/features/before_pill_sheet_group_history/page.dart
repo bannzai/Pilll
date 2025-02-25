@@ -59,14 +59,14 @@ class _Page extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     if (pillSheetGroup == null) {
       return Scaffold(
-        backgroundColor: PilllColors.background,
+        backgroundColor: AppColors.background,
         appBar: AppBar(
           titleSpacing: 0,
           leading: IconButton(
             icon: const Icon(Icons.arrow_back, color: Colors.black),
             onPressed: () => Navigator.of(context).pop(),
           ),
-          backgroundColor: PilllColors.white,
+          backgroundColor: AppColors.white,
           title: Text(L.previousPillSheetGroup),
           foregroundColor: TextColor.main,
         ),
@@ -88,14 +88,14 @@ class _Page extends HookConsumerWidget {
     final end = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.estimatedEndTakenDate);
 
     return Scaffold(
-      backgroundColor: PilllColors.background,
+      backgroundColor: AppColors.background,
       appBar: AppBar(
         titleSpacing: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: AppColors.white,
         title: Text(L.previousPillSheetGroup),
         foregroundColor: TextColor.main,
       ),

@@ -37,7 +37,7 @@ class PillSheetSettingSheet extends HookConsumerWidget {
     return Theme(
       data: themeData.copyWith(
         listTileTheme: themeData.listTileTheme.copyWith(
-          iconColor: PilllColors.primary,
+          iconColor: AppColors.primary,
           titleTextStyle: const TextStyle(
             color: TextColor.main,
             fontSize: 14,

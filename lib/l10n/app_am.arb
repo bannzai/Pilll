@@ -1,0 +1,2285 @@
+{
+  "@@locale": "am",
+  "pillSheetType21With7Placebo": "21 ይዘት አይነት (7 ይዘት የማይሆን)",
+  "@pillSheetType21With7Placebo": {
+    "description": "21錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28With4Placebo": "28 ኩባያ ዓይነት (4 ኩባያ ዩፍቂ)",
+  "@pillSheetType28With4Placebo": {
+    "description": "28錠タイプ(4錠偽薬)"
+  },
+  "pillSheetType28With7Placebo": "28 ሴት አንደኛ (7 ሴት አይነት)",
+  "@pillSheetType28With7Placebo": {
+    "description": "28錠タイプ(7錠偽薬)"
+  },
+  "pillSheetType28": "28 ቁምፊ አይነት (ሁሉም የእርዳታ መድሀኒቶች)",
+  "@pillSheetType28": {
+    "description": "28錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24": "24 ይዘት አይበቃ (ሁሉም እውነተኛ መድሀኒት)",
+  "@pillSheetType24": {
+    "description": "24錠タイプ(すべて実薬)"
+  },
+  "pillSheetType21": "21 የጭምር ዓይነት (ሁሉም እውነተኛ መድሀኒቶች)",
+  "@pillSheetType21": {
+    "description": "21錠タイプ(すべて実薬)"
+  },
+  "pillSheetType24WithRest4": "24 ክብጥ አይነት",
+  "@pillSheetType24WithRest4": {
+    "description": "24錠タイプ"
+  },
+  "restPeriod": "መርዳት",
+  "@restPeriod": {
+    "description": "休薬"
+  },
+  "placebo": "የማትንቀቅና",
+  "@placebo": {
+    "description": "偽薬"
+  },
+  "userNotFound": "ተጠቃሚው አልተገኘም",
+  "@userNotFound": {
+    "description": "ユーザーが見つかりません"
+  },
+  "userAlreadyExists": "እንደገና ተጠቃሚ አለ",
+  "@userAlreadyExists": {
+    "description": "すでにユーザーが存在してます"
+  },
+  "medicationHistory": "የንብረት ታሪክ",
+  "@medicationHistory": {
+    "description": "服用履歴"
+  },
+  "settings": "ቅንብር",
+  "@settings": {
+    "description": "設定"
+  },
+  "account": "አካውንት",
+  "@account": {
+    "description": "アカウント"
+  },
+  "dataTransferRequiresAccount": "መንግስታት ወይም ስልክ መጥፎነት ጊዜ መረጃ መለወጥ እና እይታ ማስመልከቻ ይፈልጋል፡፡ የመለወጥ መደብ መወዳደር ይፈልጋል።",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+  },
+  "pillPremium": "Pilll ፕሪሚየም",
+  "@pillPremium": {
+    "description": "Pilllプレミアム"
+  },
+  "unlimitedFeatureDuration": "ስለ የተገኘ ምርት ዝግጅት ይችላሉ",
+  "@unlimitedFeatureDuration": {
+    "description": "機能無制限の期間について"
+  },
+  "pillSheet": "ፒል ቅድሚያ",
+  "@pillSheet": {
+    "description": "ピルシート"
+  },
+  "notification": "የንብረት መረጃ",
+  "@notification": {
+    "description": "通知"
+  },
+  "menstruation": "ሴት ሴይፍ",
+  "@menstruation": {
+    "description": "生理"
+  },
+  "others": "ከሌላ",
+  "@others": {
+    "description": "その他"
+  },
+  "faq": "ጥያቄ እና መግለጫ",
+  "@faq": {
+    "description": "FAQ"
+  },
+  "newFeaturesIntroduction": "አዲስ የስራ ባለሙያ ያቀርባሉ",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
+  },
+  "contactUs": "እቅፍ ግንባር",
+  "@contactUs": {
+    "description": "お問い合わせ"
+  },
+  "delete": "አስወግድ",
+  "@delete": {
+    "description": "削除"
+  },
+  "doDelete": "አስወግድ",
+  "@doDelete": {
+    "description": "削除する"
+  },
+  "deleteUser": "የተጠቃሚውን ማጥፊያ",
+  "@deleteUser": {
+    "description": "ユーザーを削除"
+  },
+  "deleteDiary": "እቅፍ መስክ እንደተለየ ይሰርዝ?",
+  "@deleteDiary": {
+    "description": "日記を削除します"
+  },
+  "confirmDeletingMenstruation": "ወርሃዊ ጊዜውን ይሰርዙ? እባክዎን ወርሃዊ ጊዜውን ይሰርዙ? ይቃኝ እንደነዚህ ይሔቅ! ደላይ? ባለጌው ዋቢነቱ ይበል ګረ-ሰለኝ በህመማፕ መለኮም የማይሱ አዳም ዲጉተ አይነቢዮም ማከል ሰንዴ ያሪገባሐ፣ ዝተያዝቱ",
+  "@confirmDeletingMenstruation": {
+    "description": "生理期間を削除しますか？"
+  },
+  "addNotificationTime": "እቅፍ ሰዓታት መጨመር",
+  "@addNotificationTime": {
+    "description": "通知時間の追加"
+  },
+  "syncWithDeviceTimeZone": "የመሣሪያ የታይም ዞን ({deviceTimezoneName}) ጋር ይታያያይ ይቻላል?",
+  "@syncWithDeviceTimeZone": {
+    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
+  },
+  "currentTimeZone": "ወቅታዊ ተመራቂ የጊዜ አካባቢ የተወሰነ እና አሁን በመሥራት ውስጥ ይገኛል",
+  "@currentTimeZone": {
+    "description": "現在設定されているタイムゾーン"
+  },
+  "yes": "ዮስ",
+  "@yes": {
+    "description": "はい"
+  },
+  "no": "አይደለም",
+  "@no": {
+    "description": "いいえ"
+  },
+  "unsubscribeInfo": "እንደአንድ ስምምነት እንደ ውህደት ይሆናል",
+  "@unsubscribeInfo": {
+    "description": "解約について"
+  },
+  "pillReminder": "መርዳት የፍየል ማስታወሻ",
+  "@pillReminder": {
+    "description": "ピルの服用通知"
+  },
+  "takePillReminderChannelName": "የተወሰነ አሳይ",
+  "@takePillReminderChannelName": {
+    "description": "服用通知"
+  },
+  "takePillReminder": "እባክህ ወቅታው ለመጠቀም እትም ይህ ባልዳም ይወስዳል ፡፡",
+  "@takePillReminder": {
+    "description": "💊の時間です"
+  },
+  "copyDebugInfo": "አስተያየት መረጃ ይቅርታ",
+  "@copyDebugInfo": {
+    "description": "COPY DEBUG INFO"
+  },
+  "cancel": "እንደዚህ ይቀርባሉ",
+  "@cancel": {
+    "description": "キャンセル"
+  },
+  "signOut": "ወደ ውስጥ መግባት",
+  "@signOut": {
+    "description": "サインアウト"
+  },
+  "autoAddPillSheetGroup": "የፒል ሻይት ቡድን እንደ እንደ እንደ ተወዳዳሪ ተጨማሪ ይውሰድ",
+  "@autoAddPillSheetGroup": {
+    "description": "ピルシートグループの自動追加"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "አሁን ያለው የፒል የተማሪ ቡድን ከዚህ በፊት የተወሰደ ሲሆን አዲስ ማስጀመሪያ ይገባል።",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+  },
+  "accountSettings": "መለያ ዝግጅት",
+  "@accountSettings": {
+    "description": "アカウント設定"
+  },
+  "linked": "ተያይዞ ነው",
+  "@linked": {
+    "description": "連携済み"
+  },
+  "unregistered": "ወይም ውድድር",
+  "@unregistered": {
+    "description": "未登録"
+  },
+  "quickRecord": "አብራሪ መዝገብ",
+  "@quickRecord": {
+    "description": "クイックレコード"
+  },
+  "quickRecordDescription": "በማስታወቂያ ገጽ የዛሬ ጠቅላላ የምን ድንጋይ የሚመጣ ይታወቃል እና ቀጥሎ የገበከ ታሪክ መዝገብ ይታወቃል።",
+  "@quickRecordDescription": {
+    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+  },
+  "healthCareIntegration": "እንኳን ወደ ምግባረ እንክብካቤ ይደህን! ይህ ምንዛሬ እንኳን ወይም በሠርጉት ደቂቀ መውጣት እና መውጣት ስለ ወርቅ ይረዳይ ወይyam ኃይል እንዲወጣ አለበት።",
+  "@healthCareIntegration": {
+    "description": "ヘルスケア連携"
+  },
+  "healthCareIntegrationDescription": "የPilll ውስጥ ተያያዥ የተመዘገመ የሴት ግድግዳ መዝገብ በእርግጥ ወደ ምርጥ የህይወት እና እንክብካቤ ውስጥ ይተካል።",
+  "@healthCareIntegrationDescription": {
+    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+  },
+  "viewPremiumPlan": "ፕሪምየም እቅድ ይመልከቱ",
+  "@viewPremiumPlan": {
+    "description": "プレミアムプランを見る"
+  },
+  "changePillNumberForToday": "የዛሬ የፒል ቁጥር ለማሻሻል",
+  "@changePillNumberForToday": {
+    "description": "今日飲むピル番号の変更"
+  },
+  "discardAllPillSheets": "የፒል እንደንቀሳቃሽ አንድ ይሁን",
+  "@discardAllPillSheets": {
+    "description": "ピルシートをすべて破棄"
+  },
+  "areYouSureDoing": "{doing} ይሠርዝ ወ?",
+  "@areYouSureDoing": {
+    "description": "{doing}しますか？",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
+  },
+  "currentlyDisplayed": "አሁን የሚታይ ነው",
+  "@currentlyDisplayed": {
+    "description": "現在表示されている"
+  },
+  "allPillSheets": "ሁሉም የፒል ዝርዝሮች",
+  "@allPillSheets": {
+    "description": "すべてのピルシート"
+  },
+  "willBeDiscarded": "ይወቅሳል",
+  "@willBeDiscarded": {
+    "description": "が破棄されます"
+  },
+  "discard": "እንፈትሹ",
+  "@discard": {
+    "description": "破棄する"
+  },
+  "pillSheetDiscarded": "እባኮትን የፒል ገብያን አወውም።",
+  "@pillSheetDiscarded": {
+    "description": "ピルシートを破棄しました"
+  },
+  "aboutMenstruation": "ስለ ወለድ",
+  "@aboutMenstruation": {
+    "description": "生理について"
+  },
+  "checkPillNumberForMenstruationStart": "እባክህ የእምጣው እንቅልፍ ቀን ቁጥር ይምረጡ። አሁን የተመረጠው የእምጣው የውርድ አይነት ባለው ቁጥር የማይገኝ ቁጥር ይቆሙበታል.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+  },
+  "customizeMedicationNotifications": "መድሃኒት መረጃ ማስታወሻውን እንዴት እንደሚከተለው ወይም መረጃውን በየጊዜው መለወጥ ይችላሉ።",
+  "@customizeMedicationNotifications": {
+    "description": "服用通知のカスタマイズ"
+  },
+  "xCanBeCustomized": "{x} ማስተካከል ይቻላል",
+  "@xCanBeCustomized": {
+    "description": "{x}のカスタマイズができます",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
+  },
+  "thankYouForCooperation": "እናመሰግናለን ለእርዳታዎት",
+  "@thankYouForCooperation": {
+    "description": "ご協力ありがとうございます"
+  },
+  "feedbackUsage": "እባኮትን የተሰጠን አስተያየት በወደፊት ለማሻሻል እንክብካቤ እንደሚሆን ጥቅም እናቀባለን።",
+  "@feedbackUsage": {
+    "description": "いただいた意見は今後の改善へと活用させていただきます。"
+  },
+  "close": "ቅርጸ ተክክል",
+  "@close": {
+    "description": "閉じる"
+  },
+  "registerAccount": "አካውንት መዝግብ",
+  "@registerAccount": {
+    "description": "アカウント登録"
+  },
+  "reLogin": "ወደ አይነት መውጫ ወደ መግቢያ እንድትመለስ",
+  "@reLogin": {
+    "description": "再ログイン"
+  },
+  "authenticationInfoUpdated": "የማረጋገጫ መረጃ ተዳውሏል",
+  "@authenticationInfoUpdated": {
+    "description": "認証情報を更新しました"
+  },
+  "updateAuthenticationInformation": "እቅፍ መረጃዎችን እንደገና እንደአዲስ እንዲመለከት እንደገና አንዳች መረጃ እንርበር ይታወቃል።",
+  "@updateAuthenticationInformation": {
+    "description": "認証情報を更新します"
+  },
+  "registeredWithProvider": "እኔ በ{accountTypeProviderName} ተመዝግቧለሁ",
+  "@registeredWithProvider": {
+    "description": "{accountTypeProviderName}で登録しました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "linkAccount": "መዋቅር ይውሰድ",
+  "@linkAccount": {
+    "description": "連携する"
+  },
+  "withdraw": "ከአባልነት ተለይ",
+  "@withdraw": {
+    "description": "退会する"
+  },
+  "withdrawalCompleted": "እቅፍ ወይም ወዲያውን ተመልከት አይነት ታወቅ ተመልከት ይበጅ።",
+  "@withdrawalCompleted": {
+    "description": "退会しました"
+  },
+  "appExitMessage": "እባኮትን አፕሊኬሽን አንድ ጊዜ ወይም ወይንን አጽዳለን። አዲስ በማጀብ ወቅታዊ አምራች ከፈለጉ እባኮትን ይሄዱ አፕሊኬሽን ወይንን እንዲቆይ አሁን ወይንን አንልን እንዲያሟል።",
+  "@appExitMessage": {
+    "description": "アプリを一度終了します。新しく始める場合はアプリを再起動後、初期設定を行ってください。"
+  },
+  "oK": "አዎ",
+  "@oK": {
+    "description": "OK"
+  },
+  "changePillNumber": "መዋቅር ቁጥር ለማሻሻል",
+  "@changePillNumber": {
+    "description": "ピル番号の変更"
+  },
+  "change": "ለዚህ ተቀይሮች",
+  "@change": {
+    "description": "変更"
+  },
+  "pill": "ፒል",
+  "@pill": {
+    "description": "ピル"
+  },
+  "calendar": "ካሌንደር",
+  "@calendar": {
+    "description": "カレンダー"
+  },
+  "userInformationWillBeDeleted": "የውሉ መረጃ ይሰረዝ",
+  "@userInformationWillBeDeleted": {
+    "description": "ユーザー情報が削除されます"
+  },
+  "withdrawalMessage": "ከአካውንትዎ ሲወጡ ሁሉም ውሂብ ይሰወዳል እና ከዚያ በአንደኛው አካውንት ይማርከዋል።",
+  "@withdrawalMessage": {
+    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+  },
+  "recordPage": "መዝግብ ገጽ",
+  "@recordPage": {
+    "description": "RecordPage"
+  },
+  "doReLogin": "እባኮትን ዳግመ ይግቡ",
+  "@doReLogin": {
+    "description": "再ログインしてください"
+  },
+  "reLoginMessage": "ይቅርታ እንዲያውቁ ለንደን ሰንደቅ ማስጠንቀቂያ ለይዞ መታችው ማሳሰቢያ ወይም ገፅም መዘገባ ከመድረክን ይምጣ መጀመሪያ ይመልክታል።",
+  "@reLoginMessage": {
+    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+  },
+  "updateAuthenticationAfterReLogin": "እባኮትን እንደገና ይግቡ እና የምርጫ መረጃዎችዎን ያዘምኑ።",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "再度ログインをして認証情報を更新します"
+  },
+  "menstruationPage": "የሴቶች የግንድ ጊዜ ገጽ",
+  "@menstruationPage": {
+    "description": "MenstruationPage"
+  },
+  "calendarPage": "የቀን መለያ ገፅ",
+  "@calendarPage": {
+    "description": "CalendarPage"
+  },
+  "settingsPage": "መቅረፅ ገጽ",
+  "@settingsPage": {
+    "description": "SettingsPage"
+  },
+  "menstruationDeleted": "የወርቅ ጊዜ አወግድኩ",
+  "@menstruationDeleted": {
+    "description": "生理期間を削除しました"
+  },
+  "editMenstruationPeriod": "ወቅታዊ መዋቅርን አስተካክል",
+  "@editMenstruationPeriod": {
+    "description": "生理期間を編集"
+  },
+  "menstruationEdited": "እቅፍ ወቅት ተሻሽል ተደርጎ አልሁ",
+  "@menstruationEdited": {
+    "description": "生理期間を編集しました"
+  },
+  "physicalConditionDetail": "ምርት ዝርዝር",
+  "@physicalConditionDetail": {
+    "description": "体調詳細"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "ይህ በተጨማሪ እይታ የፕሪምየም ስብስ ነው።",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "これ以上の閲覧はプレミアム機能になります"
+  },
+  "viewMoreDetails": "መርሃ ግብር ይመልከቱ",
+  "@viewMoreDetails": {
+    "description": "くわしくみる"
+  },
+  "viewMore": "መታወቂያ ይጨምሩ",
+  "@viewMore": {
+    "description": "もっと見る"
+  },
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} እትም",
+  "@afterLastTakenPillNumber": {
+    "description": "{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber} አምባ",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "{left}-{afterLastTakenPillNumber}番",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} ቁጥር",
+  "@beforeLastTakenPillNumber": {
+    "description": "{beforeLastTakenPillNumber}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} ቁጥር",
+  "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
+    "description": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} የሚመለከተው",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "1→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "ከ{beforeBeginPillNumber} ወደ {afterDisplayNumberSettingBeginPillNumber} አይነት",
+  "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
+    "description": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番",
+    "placeholders": {
+      "beforeBeginPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} እትም",
+  "@oneToAfterDisplayNumberEndPillNumber": {
+    "description": "1→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}ክፍያ",
+  "@beforeEndToAfterDisplayNumberEndPillNumber": {
+    "description": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番",
+    "placeholders": {
+      "beforeEndPillNumber": {
+        "type": "String"
+      },
+      "afterDisplayNumberSettingEndPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "selectPauseStartDate": "የመድረክ ዕለት መረጃ ምረጥ",
+  "@selectPauseStartDate": {
+    "description": "服用お休み開始日選択"
+  },
+  "selectPausePeriod": "የመውጣት ዕለታትን ምረጥ",
+  "@selectPausePeriod": {
+    "description": "服用お休み期間を選択"
+  },
+  "pauseStartDate": "እንቅፍ መጀመሪያ ቀን",
+  "@pauseStartDate": {
+    "description": "服用お休み開始日"
+  },
+  "pauseEndDate": "የመዋቅር ቀን መጨረሻ",
+  "@pauseEndDate": {
+    "description": "服用お休み終了日"
+  },
+  "endPillSheet": "ግምገማ በክልል ውስጥ የሚያደርጉ ፈቃድ ተመታት በህግ ባህላን ይሁን ምንም ይምሣረ በአጭር ጊዜ አንድ ቦታ ይሆናል፥ ከፊል አይደለም፤ ይህ ውርክ፣ የማስታወቂያ ዕቅድ ነው።",
+  "@endPillSheet": {
+    "description": "ピルシート終了"
+  },
+  "discardPillSheet": "እባብ በታች የተያይዞ በዚህ እቀድስ የእንቅልፍ ፈን መእደብ የሚለው ሂደት ይደርሳል።",
+  "@discardPillSheet": {
+    "description": "ピルシート破棄"
+  },
+  "takingTime": "የተወሰነ ጊዜ",
+  "@takingTime": {
+    "description": "服用時間"
+  },
+  "takingHistoryIsPremiumFeature": "የመድኃኒት ታሪክ የፕሪምየም ባለቤት ነው።",
+  "@takingHistoryIsPremiumFeature": {
+    "description": "服用履歴はプレミアム機能です"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "እንደነጻ ይወርዱ ይህ የመደበኛ ቁጥር/የገንዘብ ቁጥር ላይ እንደነጻ ይህ የመደበኛ ቁጥር/የገንዘብ ቁጥር ቀውስ አድርግ",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "服用をお休みするとピル番号は進みません"
+  },
+  "pauseTakingFromNumber": "¿Te gustaría hacer un descanso de la toma a partir del {number}? ",
+  "@pauseTakingFromNumber": {
+    "description": "{number}から服用をお休みしますか？",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}፡",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
+  },
+  "taking": "መውጣት",
+  "@taking": {
+    "description": "服用"
+  },
+  "estimatedEndPillNumber": "የድረስታው መዝገብ መጨረሻ፡ {estimatedEndPillNumber} ቁጥር",
+  "@estimatedEndPillNumber": {
+    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "addPillSheetButton": "ግድም ተጨማሪ ያድርጉ",
+  "@addPillSheetButton": {
+    "description": "ピルシートを追加"
+  },
+  "taken": "ጠጣሁ",
+  "@taken": {
+    "description": "飲んだ"
+  },
+  "notTaken": "አልጠጣም",
+  "@notTaken": {
+    "description": "飲んでない"
+  },
+  "pillSheetSettings": "ፒል ሺይት መቅረብ",
+  "@pillSheetSettings": {
+    "description": "ピルシートの設定"
+  },
+  "unmarkTodayPillAsTakenToPause": "ዛሬ የማብላት የሚገባውን ፒል እንደማታጠቅ ወደ ማስታወሻው የተመለሰ",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "今日飲むピルを未服用にしてから"
+  },
+  "pauseTaking": "በመውጣት ጊዜ",
+  "@pauseTaking": {
+    "description": "服用お休み"
+  },
+  "changePauseStartDate": "በመውጣት የሚያስቀርበውን ዕለት ለማሻሻል",
+  "@changePauseStartDate": {
+    "description": "服用お休み開始日変更"
+  },
+  "pauseTakingPeriodEnded": "የእንቅፋት ጊዜ ወቅቱ ተጠናቋል",
+  "@pauseTakingPeriodEnded": {
+    "description": "服用のお休み期間が終了しました"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "changePillDaysForSheet": "የታውክ ቀን ቀይረት",
+  "@changePillDaysForSheet": {
+    "description": "シートの服用日数を変更"
+  },
+  "changedStartAndEndNumbers": "ወዲያውን ቁጥር ማስተካከል ተመልሳ ነው፤ እንዲሁም ቁጥሮች የወንድሞች መለወጥ ይቻላል።",
+  "@changedStartAndEndNumbers": {
+    "description": "始まりと終わりの番号を変更しました"
+  },
+  "startOfPillDays": "መድረሻ ቀኖች መጀመሪያ",
+  "@startOfPillDays": {
+    "description": "服用日数の始まり"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "የቀዳሚው ማቀዝቀዣ መጨረሻ: {beforePillSheetGroupSequentialEstimatedEndPillNumber} ቀን",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
+  },
+  "endOfPillDays": "መድኃኒታችን ወቅታቸው ወደ መጨረሻ ይወስዳል",
+  "@endOfPillDays": {
+    "description": "服用日数の終わり"
+  },
+  "changedToNumber": "ቁጥር ይለውጣ",
+  "@changedToNumber": {
+    "description": "番に変更"
+  },
+  "displayMode": "የታይት ሞዴይ",
+  "@displayMode": {
+    "description": "表示モード"
+  },
+  "dateDisplay": "ዕለት እየታየ ነው",
+  "@dateDisplay": {
+    "description": "日付表示"
+  },
+  "pillNumber": "ፒል ቁጥር",
+  "@pillNumber": {
+    "description": "ピル番号"
+  },
+  "pillDays": "የተወሰኑ ቀናት",
+  "@pillDays": {
+    "description": "服用日数"
+  },
+  "pillDaysCycle": "እንደ ቀን አይነት (ዐቀባ)",
+  "@pillDaysCycle": {
+    "description": "服用日数(周期)"
+  },
+  "pillSheetEnded": "በፒል ስንቅ ተጠናቀቀ",
+  "@pillSheetEnded": {
+    "description": "ピルシートが終了しました"
+  },
+  "checkLastTakenDate": "ከዚህ በፊት ያደረጉትን ቀን ይፈትሹ",
+  "@checkLastTakenDate": {
+    "description": "最後に服用した日を確認"
+  },
+  "pleaseRegisterAccount": "እባክዎ አካውንት ይምረጡ",
+  "@pleaseRegisterAccount": {
+    "description": "アカウント登録をしてください"
+  },
+  "cannotTransferPremiumWithoutAccount": "እቅፍ መለወጥ ወይም ስልክ ማጥፍ ጊዜ የፕሪምየም ባለሙያ ተጠቃሚ እንደገና አይተያዩም",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+  },
+  "reexperiencePremiumFeatures": "እባክዎ የፕሪምየም ባለቤትን 14 ቀናት ይወውሉ! ላለመለክም በኤርትራ ጥቅስ ይጫኑ!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+  },
+  "whereToShare": "ወዴት እንደት እንደምን እንሰክብል؟",
+  "@whereToShare": {
+    "description": "どちらにシェアしますか？"
+  },
+  "pauseTakingDay": "🌙 መውረድ እንቅልፍ {day} ቀን",
+  "@pauseTakingDay": {
+    "description": "🌙 服用お休み {day}日目",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
+  },
+  "withDay": "{word} ቀን",
+  "@withDay": {
+    "description": "{word}日目",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} ቀን",
+  "@restDurationDays": {
+    "description": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
+  },
+  "daysUntilPausePeriod": "ወቅታዊ ውስጥ {diffPlusOne} ቀናት ባለ {activePillSheetPillSheetTypeNotTakenWord} ጊዜ ነው",
+  "@daysUntilPausePeriod": {
+    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "remainingDaysAllFeatures": "ቀሪ {diff} ቀናት ሁሉም ምርቶች ይጠቀሙ ይችላሉ",
+  "@remainingDaysAllFeatures": {
+    "description": "残り{diff}日間すべての機能を使えます",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "todayIsTaking": "💊 ዛሬ ይወዳድሩ",
+  "@todayIsTaking": {
+    "description": "💊 今日は服用"
+  },
+  "todayPillToTake": "💊 ዛሬ የሚወድዱት ፒል",
+  "@todayPillToTake": {
+    "description": "💊 今日飲むピル"
+  },
+  "number": "ቁጥር",
+  "@number": {
+    "description": "番"
+  },
+  "recordedMenstruationStartDate": "ከ{DateTimeFormatterMonthAndDay} ጀምረው የእርግዚአት ጀምሮ ተመዝግቧል",
+  "@recordedMenstruationStartDate": {
+    "description": "{DateTimeFormatterMonthAndDay}から生理開始で記録しました",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationStartDate": "የወርቅ መነሻ ቀን",
+  "@menstruationStartDate": {
+    "description": "生理開始日"
+  },
+  "menstruationEndDate": "የወርሃዊ ጊዜ መጨረሻ ቀን",
+  "@menstruationEndDate": {
+    "description": "生理終了日"
+  },
+  "menstruationScheduleDate": "የግምባባ ቀን",
+  "@menstruationScheduleDate": {
+    "description": "生理予定日"
+  },
+  "menstruationScheduleDateWithNumber": "የወርቅ እቅድ ፡፡ {diffPlusOne} ቀን ቀን",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理予定：{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationScheduleDateWithNumberAndPillNumber": "ሴቶች ግንቦት: {diffPlusOne} ቀን ላይ የሚገኝ {pillNumber}",
+  "@menstruationScheduleDateWithNumberAndPillNumber": {
+    "description": "生理予定：{diffPlusOne}日目の{pillNumber}",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      },
+      "pillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "menstruationRemainingDay": "{diff} ከቀናት",
+  "@menstruationRemainingDay": {
+    "description": "あと{diff}日",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
+  },
+  "menstruationProgressingDay": "{diffPlusOne} ዕለት",
+  "@menstruationProgressingDay": {
+    "description": "{diffPlusOne}日目",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
+  },
+  "recordMenstruation": "ወንበር ይመዝገብ",
+  "@recordMenstruation": {
+    "description": "生理を記録"
+  },
+  "menstruationHistory": "ፀግም ታሪክ",
+  "@menstruationHistory": {
+    "description": "生理履歴"
+  },
+  "menstruationFromToday": "ዛሬ መነሻ ቀን ነው",
+  "@menstruationFromToday": {
+    "description": "今日から生理"
+  },
+  "menstruationFromYesterday": "ከእንቅልፍ በኋላ እስከ ቀን ነጻ የወርቅ ቀን ወይም ወንበር ሥር ቆሞ ወይም ከመ482 እንኳን መነሻ على متاهة الرشيدة",
+  "@menstruationFromYesterday": {
+    "description": "昨日から生理"
+  },
+  "selectMenstruationStartDate": "የወተት ጀምሮ ቀንን ይምረጡ",
+  "@selectMenstruationStartDate": {
+    "description": "生理開始日を選択"
+  },
+  "menstruationCycle": "{menstruationDuration} ዕለት ክብደት",
+  "@menstruationCycle": {
+    "description": "{menstruationDuration}日周期",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
+  },
+  "login": "መግቢያ",
+  "@login": {
+    "description": "ログイン"
+  },
+  "beforePremiumRegistration": "የፕሪምየም መመዘገብ ከዚህ በፊት...",
+  "@beforePremiumRegistration": {
+    "description": "プレミアム登録の前に…"
+  },
+  "createNewAccountIfNotLoggedIn": "እንደ ተመለከተ ይህ በPilll ውስጥ የተጠቀሰ እንዲሆን ወይም እንደ ይህ ሐሳብ የሚሆን ካልነበረ የገቢ መደብ፣ እና ሌላ የመንፈስ አመልካች እንዲሆን እንደ ተጠቀሰ ይህ ያለው የሚደረገው ሂደት ወይም የኔ ይመጣል። አካውንት እንደ ተቀናጀ ይቆጠሩ።",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+  },
+  "registerAccountForDataTransfer": "አካውንት መጻፍ ይቻላል እና ዳታውን ወደ አዳዲስ መረጃዎች መዋበቅ ይችላል",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+  },
+  "registerAccountToKeepData": "እባክዎ የአካውንት መረጃ ለመያዝ የአካውንት ቅጽ ይሙሉ።",
+  "@registerAccountToKeepData": {
+    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+  },
+  "signInWith": "ወቅታዊ ይሞላ በ{loginName} ይግባ",
+  "@signInWith": {
+    "description": "{loginName}でサインイン",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "registerWith": "የ{loginName} ምዝገባ",
+  "@registerWith": {
+    "description": "{loginName}で登録",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumRegistrationComplete": "Pilll የፕሪምየም መመዘገብ ተጠናቋል",
+  "@premiumRegistrationComplete": {
+    "description": "Pilllプレミアム登録完了"
+  },
+  "thankYouForRegistration": "እንኳን ወደ ተመዝግበው ደንበኛ በማለት ይቀበሉ! እንደነበረው የሚጠቀሙት ሁሉንም ባለው ጥቅሞች ከአሁን ጀምሮ ላይ ይዘዋል!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "አሁን የተገደብ ዋጋ ለእስከ መጨረሻው ይጠቀሙ",
+  "@limitedTimeDiscount": {
+    "description": "今なら限定価格でずっと使える"
+  },
+  "standardMonthlyPlan": "መደበኛ ወርሃዊ እቃ",
+  "@standardMonthlyPlan": {
+    "description": "通常 月額プラン"
+  },
+  "annualPlan": "ዓመታዊ ክፍያ ዕቅፍ",
+  "@annualPlan": {
+    "description": "年額プラン"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/ዓመት",
+  "@annualPrice": {
+    "description": "{annualPackageStoreProductPriceString}/年",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "monthlyPrice": "{monthlyPriceString}/ወር",
+  "@monthlyPrice": {
+    "description": "{monthlyPriceString}/月",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "ፕሪሚየም ውል በመጀመሪያ ቀን እንደ ተመለከተ 1 ወር ወይም 1 ዓመት በሚከተለው ይደገፋል።",
+  "@premiumTermsNotice1": {
+    "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
+  },
+  "premiumTermsBullet": "・",
+  "@premiumTermsBullet": {
+    "description": "・"
+  },
+  "slashSeparator": "/",
+  "@slashSeparator": {
+    "description": " / "
+  },
+  "premiumTermsNotice2": "እንደ ይገመገም እና የንግድ መድረክ ዳይሬክተሬ የሚያመለክት ዝግጅት",
+  "@premiumTermsNotice2": {
+    "description": "特定商取引法に基づく表示"
+  },
+  "premiumTermsNotice3": "እባክዎ ይምረጡ እና ይመዝግቡ።",
+  "@premiumTermsNotice3": {
+    "description": "をご確認のうえ登録してください\n"
+  },
+  "autoRenewNotice": "ፕረሚየም ውል የመጨረሻ ቀን ከ24 ሰዓት በፊት ያቋርጧል፣ ውል ሂደት እንደነበር ይቀጥላል።",
+  "@autoRenewNotice": {
+    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+  },
+  "cancelAutoRenewInfo": "ከግዢ በኋላ የሚባል አውታረ እይታ እንዲወገድ በ{storeName} አፕ ውስጥ ያሉ የአካውንት ዝርዝር ይከናወን። (በአፕ ውስጥ የሚለው ጊዜ ወቅታዊ መርጃ አይመገባም)።",
+  "@cancelAutoRenewInfo": {
+    "description": "・購入後、自動更新の解約は{storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "moreDetails": "ዝርዝር እዚህ ነው",
+  "@moreDetails": {
+    "description": "詳細はこちら"
+  },
+  "restorePurchase": "የግዢ መረጃዎችን እንደገና አስተውሏል",
+  "@restorePurchase": {
+    "description": "購入情報を復元しました"
+  },
+  "previouslyPurchased": "ያለውን ግዢ ያደረጉ ይህን ይመለከቱ",
+  "@previouslyPurchased": {
+    "description": "以前購入した方はこちら"
+  },
+  "noPreviousPurchaseInfo": "የቀደም ተከስቷል መግዛት መረጃ ተገኝቷል። እባኮትን መለያውን ይረጋግጡ እና ድጋፍ ይደርሱ።",
+  "@noPreviousPurchaseInfo": {
+    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+  },
+  "monthlyPlan": "እለታዊ እቅድ",
+  "@monthlyPlan": {
+    "description": "月額プラン"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/ወር",
+  "@monthlyPlanPrice": {
+    "description": "{monthlyPackageStoreProductPriceString}/月",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "youArePremiumMember": "አንተ የፕሪምየም አባል ነህ",
+  "@youArePremiumMember": {
+    "description": "あなたは\nプレミアムメンバーです"
+  },
+  "thankYouMessage": "እናመሰግናለን ወደ አፕሊኬሽንታችን በመጣጣት ይገኛሉ። በርካታ ምክንያቶች ይህ የPilll አባልነት ማስቀጠል አለበት።",
+  "@thankYouMessage": {
+    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+  },
+  "premiumFeaturesList": "ፕረሚየም ባለቤቶች ዝርዝር",
+  "@premiumFeaturesList": {
+    "description": "プレミアム機能一覧"
+  },
+  "pushNotificationForTakingRecord": "📩 ከፕሩሽ የማስታወቂያ ወቅት የመውሪያ ታቅዶ",
+  "@pushNotificationForTakingRecord": {
+    "description": "📩 プッシュ通知から服用記録"
+  },
+  "viewAndRecordTakingHistory": "🗂 የመድኃኒት ዝርዝር መታን እና እንቅስቃሴ ይመልክቱ",
+  "@viewAndRecordTakingHistory": {
+    "description": "🗂 服用履歴の記録・閲覧"
+  },
+  "displayDateOnPillSheet": "📆 በፒል ዝርዝር ላይ ቀን ይታይ",
+  "@displayDateOnPillSheet": {
+    "description": "📆 ピルシート上に日付表示"
+  },
+  "autoRefillNewPillSheet": "📦 አዲስ ፒል ማሽን ይከተላል",
+  "@autoRefillNewPillSheet": {
+    "description": "📦 新しいピルシートを自動補充"
+  },
+  "viewPastData": "👀 ወቅታዊ ውሂብ ገጽታ",
+  "@viewPastData": {
+    "description": "👀 過去のデータ閲覧"
+  },
+  "customizeHealthTags": "🏷 እንቅስቃሴ መስመር እንደ ተለዋዋጭ ተመልከት",
+  "@customizeHealthTags": {
+    "description": "🏷 体調タグをカスタマイズ"
+  },
+  "hideAds": "🚫 ማስታወቂያዎች እንደሚታይ ይቆሟ",
+  "@hideAds": {
+    "description": "🚫 広告の非表示"
+  },
+  "seeDetailsOfPremiumFeatures": "የፕሪሚየም ባህሪያትን መግለጫ ይቀበሉ",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細を見る"
+  },
+  "popularFeatures": "ተወዳጅ ባህሪዎች",
+  "@popularFeatures": {
+    "description": "人気の\n機能"
+  },
+  "viewPremiumFeatures": "ፕሪምየም ባለቤቶችን ይመልከቱ",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能を見る"
+  },
+  "addedDisplayModePillDaysCycle": "የታይቦ ሞዴል የየቀን መዋቅር (ወቅታዊ) ተጨምሯል።",
+  "@addedDisplayModePillDaysCycle": {
+    "description": "表示モード服用日数(周期)が追加されました"
+  },
+  "seeDetails": "ዝርዝር ይነብሱ",
+  "@seeDetails": {
+    "description": "詳細を見る"
+  },
+  "stepThreeOfThree": "3/3",
+  "@stepThreeOfThree": {
+    "description": "3/3"
+  },
+  "missedPillNotification": "የወፍራሽ መድሃኒት መተንበይ ማስታወቂያ",
+  "@missedPillNotification": {
+    "description": "ピルの飲み忘れ通知"
+  },
+  "setMultipleReminders": "ብዙ ዝርዝር ማቀናበር እንደሚያደርግ በመጭያዊ መድህናችን እንዲረዳ ይችላሉ።",
+  "@setMultipleReminders": {
+    "description": "複数設定しておく事で飲み忘れを防げます"
+  },
+  "and": "እና",
+  "@and": {
+    "description": "と"
+  },
+  "readAndStartUsing": "እባኮትን ይይዙ እና በማግኘት ይጀምሩ",
+  "@readAndStartUsing": {
+    "description": "を読んで\n利用をはじめてください"
+  },
+  "next": "ወደ ዋነኛ ይሂዱ",
+  "@next": {
+    "description": "次へ"
+  },
+  "notificationIndex": "ዝርዝር {number}",
+  "@notificationIndex": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "takingRecordFromNotification": "በመግለጫ ውስጥ የተጠቀሰ መረጃ ይኖርብዎታል፣ እንደ አዳዲስ ወይም አንደኛ ይዛምነት ይችላሉ።",
+  "@takingRecordFromNotification": {
+    "description": "\\ 通知から服用記録ができます /"
+  },
+  "startApp": "መተግበሪያውን መጀመር",
+  "@startApp": {
+    "description": "アプリをはじめる"
+  },
+  "loggedInWithProvider": "ወደ {accountTypeProviderName} ግባ ወይም ወደ መዋቅር ይገኙ",
+  "@loggedInWithProvider": {
+    "description": "{accountTypeProviderName}でログインしました",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
+  },
+  "tellAboutPrescribedSheet": "እባኮትን ስለ የታነሱ ሱመቶች አሳየኝ።",
+  "@tellAboutPrescribedSheet": {
+    "description": "処方されるシートについて\n教えてください"
+  },
+  "existingAccountUsers": "የቀድሞ አካውንት ያላችሁ እባክዎን እዚህ ይገኙ",
+  "@existingAccountUsers": {
+    "description": "すでにアカウントをお持ちの方はこちら"
+  },
+  "selectTodayPillNumber": "ዛሬ ({todayString})\nይወስዱ ወይም ወደዚህ ቁጥር ይጫኑ",
+  "@selectTodayPillNumber": {
+    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
+  },
+  "notYetKnown": "እጅግ አልታውቅም",
+  "@notYetKnown": {
+    "description": "まだ分からない"
+  },
+  "pillForToday": "{today} ይወዳድር የመድሀኒት ነው",
+  "@pillForToday": {
+    "description": "{today}に飲むピルは",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
+  },
+  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "@todayPillNumber": {
+    "description": "{todayPillNumberPillNumberInPillSheet}",
+    "placeholders": {
+      "todayPillNumberPillNumberInPillSheet": {
+        "type": "String"
+      }
+    }
+  },
+  "preview": "እይታ",
+  "@preview": {
+    "description": "プレビュー"
+  },
+  "normal": "ሐምሌ",
+  "@normal": {
+    "description": "通常"
+  },
+  "missed": "እንደምንዛሬ",
+  "@missed": {
+    "description": "飲み忘れ"
+  },
+  "showsDate": "ቀን ይታያል",
+  "@showsDate": {
+    "description": "日付を表示"
+  },
+  "showsPillNumber": "ቁጥር እንዲታይ",
+  "@showsPillNumber": {
+    "description": "番号を表示"
+  },
+  "showsDescription": "እትም ጽሁፍ ይገልጻል",
+  "@showsDescription": {
+    "description": "説明文を表示"
+  },
+  "title": "መርዳት",
+  "@title": {
+    "description": "タイトル"
+  },
+  "message": "መልእክት",
+  "@message": {
+    "description": "メッセージ"
+  },
+  "option": "አማራጭ",
+  "@option": {
+    "description": "オプション"
+  },
+  "completed": "ከአቅፍ",
+  "@completed": {
+    "description": "完了"
+  },
+  "pilll": "ፒልል",
+  "@pilll": {
+    "description": "Pilll"
+  },
+  "changeMissedNotificationMessage": "የማይገኙባቸው ጊዜ የመታየት ግታ ማስታወቂያውን መለወጥ ይቻላል።",
+  "@changeMissedNotificationMessage": {
+    "description": "飲み忘れてる場合の通知文言を変更できます"
+  },
+  "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
+  "@missedNotificationMessageLength": {
+    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "missedTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "changeNotificationHeader": "ማስታወቂያ የመጀመሪያ ክፍል ማሻሻል ይቻላል",
+  "@changeNotificationHeader": {
+    "description": "通知の先頭部分の変更ができます"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "{wordValueCharactersLength}/8",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "enterAtLeastOneCharacter": "0 የደቂቀ ጽሁፎች ይግቡ እባኮትን",
+  "@enterAtLeastOneCharacter": {
+    "description": "0文字以上入力してください"
+  },
+  "changeDailyNotificationMessage": "መይምነን ለማስታወሻ ቃልን ማሻሻያ ይችላሉ",
+  "@changeDailyNotificationMessage": {
+    "description": "飲み忘れていない場合の通知文言を変更できます"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
+  },
+  "receiveDailyNotificationAt9AM": "በዕለቱ 9:00 ምልክት ማቅረብ",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "save": "ቀይር",
+  "@save": {
+    "description": "保存"
+  },
+  "physicalCondition": "የእንቅስቃሴ",
+  "@physicalCondition": {
+    "description": "体調"
+  },
+  "deletedDiaryCannotBeRecovered": "ይህን ቀይርዞ የተወሰደ መዝገብ አልቻልኩም",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "削除された日記は復元ができません"
+  },
+  "sex": "ጾታ",
+  "@sex": {
+    "description": "sex"
+  },
+  "previousPillSheetGroup": "ወቅታዊ የጭማቂ ቅርጸ በኃይል ቡድን",
+  "@previousPillSheetGroup": {
+    "description": "前回のピルシートグループ"
+  },
+  "noPreviousPillSheetGroup": "የመጨረሻው የፒል ሲት ቡድን ምንም አልተኖርም",
+  "@noPreviousPillSheetGroup": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "failedToFetchPillHistory": "የዕ药 መረጃ መቀመጫ አይቻልም። {error}",
+  "@failedToFetchPillHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "seeFAQ": "የFAQ ቅጽ ይመልከቱ",
+  "@seeFAQ": {
+    "description": "FAQを見る"
+  },
+  "reloadScreen": "የመገኛ ገፅ ይታይ",
+  "@reloadScreen": {
+    "description": "画面を再読み込み"
+  },
+  "contactIfNotResolved": "እባክዎ አልተፈቀደውም እንዲሁ ነኝ",
+  "@contactIfNotResolved": {
+    "description": "解決しない場合はこちら"
+  },
+  "shareFeedback": "እቅፍ ይህን ስለ Pilll አመልካች እባኮትን እንደምን ዐይነት እንደገና ይማርኩት።",
+  "@shareFeedback": {
+    "description": "Pilllの感想をお聞かせください"
+  },
+  "confirm": "ውሳኔ",
+  "@confirm": {
+    "description": "決定"
+  },
+  "surveyForServiceImprovement": "በእባኮት የአገልግሎት ማሻሻያ ምንጭ ላይ የምትሰጡትን እንኳን ይማሩ እባኮት።",
+  "@surveyForServiceImprovement": {
+    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+  },
+  "participate": "አንድ ስራ ለመካፈል",
+  "@participate": {
+    "description": "協力する"
+  },
+  "notHelp": "አይደለም",
+  "@notHelp": {
+    "description": "しない"
+  },
+  "serviceImprovementSurvey": "አገልግሎት የሚሻሻል አንቀጽ",
+  "@serviceImprovementSurvey": {
+    "description": "サービス改善アンケート"
+  },
+  "satisfied": "እርግጥ ነኝ",
+  "@satisfied": {
+    "description": "満足している"
+  },
+  "notSatisfied": "መደስክ የለኝም",
+  "@notSatisfied": {
+    "description": "満足では無い"
+  },
+  "perNumber": "እያንዳንዱ በተመለከተ",
+  "@perNumber": {
+    "description": "番ごとに"
+  },
+  "howManyDaysDoesMenstruationLast": "እንደ ጊዜ ምን ያህል ወርቅ ይቀጥላል?",
+  "@howManyDaysDoesMenstruationLast": {
+    "description": "何日間生理が続く？"
+  },
+  "daysMenstruationLasts": "ቀን ወደ ወቅታዊ ሴት ሕይወት ይኖር ይችላል",
+  "@daysMenstruationLasts": {
+    "description": "日間生理が続く"
+  },
+  "selectPillNumberForMenstruationStart": "ግመል መነሻ የጋዜጣ ቁጥርን አንቀጽ",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "生理がはじまるピル番号をタップ"
+  },
+  "countOfSheet": "በ{number} ወረቀት",
+  "@countOfSheet": {
+    "description": "{number}枚目",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "newPillSheetStart": "አዲስ ፒል ማዕድ መጀመር ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート開始 ▶︎"
+  },
+  "selectPillType": "ዝርዝር ይምረጡ",
+  "@selectPillType": {
+    "description": "ピルの種類を選択"
+  },
+  "twentyOnePills": "21 ቅድሚያ",
+  "@twentyOnePills": {
+    "description": "21錠"
+  },
+  "twentyEightPills": "28 ትኩስ",
+  "@twentyEightPills": {
+    "description": "28錠"
+  },
+  "twentyFourPills": "24 ቅባቶች",
+  "@twentyFourPills": {
+    "description": "24錠"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 ካብር + 7 ቀን ዝብቃ",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "21錠＋7日休薬"
+  },
+  "twentyFourPlusFourPlacebo": "24 ቃል እና 4 ቃል የዋጋ ምርት",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "24錠＋4錠偽薬"
+  },
+  "twentyOnePlusSevenPlacebo": "21 ክባቢ + 7 ክባቢ ማስታወቂያ",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "21錠＋7錠偽薬"
+  },
+  "allActivePills": "ሁሉም የእውነተኛ መድሃኒቶች ናቸው",
+  "@allActivePills": {
+    "description": "すべて実薬"
+  },
+  "twentyFourPlusFourDaysBreak": "24 ቅርጾች በማህደር ውስጥ 4 ቅርጾች እንቅስቃሴ",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24錠＋4錠休薬"
+  },
+  "choosePillType": "የፒል ዓይነት ይምረጡ",
+  "@choosePillType": {
+    "description": "ピルの種類を選ぶ"
+  },
+  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}ክታቦች መደበኛ የቦታ ዕረፍት",
+  "@notificationForNotTakenPeriod": {
+    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "እቅፍ ከማውጣት ጋር በሚያዳርድ ጊዜ፣ {pillSheetPillSheetTypeNotTakenWord} ወቅት ላይ የተወሰነ የመድሃኒት ታቦች በእርስዎ ማስታወቅያ ይታወቃል።",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
+  },
+  "requestForCancelSurvey": "እቅፍ ወደው ምንጭ ዓለም እንድህ በስሙ በአንዱ እቅፍ መሪ ፍይዛላችው ትርጓሜ ድሮ ምንጩን ይህ ወቅት ወይዘም መርኮእ በሚቁም ይይዘም ልትረዳው ወይዚም በማዕበለ አንድ ነው ይዐ ዦኩሊ ጦቀዬን",
+  "@requestForCancelSurvey": {
+    "description": "解約後のアンケートご協力のお願い"
+  },
+  "pilllDescription": "Pilll የፒል መድሃኒት በተቀባይነት የተመለከተ ፒል የማስታወሻ  애플리케ትን",
+  "@pilllDescription": {
+    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+  },
+  "reachedMaximumCountOfReminderTimes": "በመሆን የሚታይ የመድሃኒት ቦታዎች አልተገኘም። {ReminderTimeMaximumCount} ቦታዎች በእርስዎ ማስታወሻ ይታወቃሉ",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "minimumCountOfReminderTimes": "እቅፍ ጊዜ ቢያንስ {ReminderTimeMinimumCount} ጊዜ ይፈልጋል።",
+  "@minimumCountOfReminderTimes": {
+    "description": "通知時間は最低{ReminderTimeMinimumCount}件必要です",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
+  },
+  "purchaseErrorUnknownError": "በወቅቱ አልተገኘም ነብስ ጉዳት ተከስቷል። እባኮትን ጊዜ ይወድዱ እና ደግሞ ይሞክሩ። እንዲህ ይነቃነር ባለመጻፍ ከእባኮት ይሁን ውስጥ ይገኝ በተቀጣሪ > አግኙኝ ይገኛሉ። ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorStoreProblemError": "{storeName} አደጋ እንዳለ ተደርጎ አለ። እባክዎ አንዳንድ ጊዜ ጠነቀቁ እና ወደ መለኪያችሁ ውስጥ ተመልሱ።",
+  "@purchaseErrorStoreProblemError": {
+    "description": "{storeName} でエラーが発生しています。しばらくお時間をおいて再度お試しください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "እባክዎን በዚህ መሳሪያ ግዢ እንደማይፈቀድ ተገልጿል",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "このデバイスで購入が許可されていません"
+  },
+  "purchaseErrorPurchaseInvalidError": "መክፈል ማቅረብ አልተቻለም። እባኮትን ተገናኝ የሚታይ መክፈል መንግድ ይረጋገጡ እና እንደገና ሞክሩ።",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "እቅዱ የተመለከተ የታዘዘ እቅድ አሁን የሚሸጥ አይደለም። እባኮትን እባኮትን አፕ ድጋፍ በመልካም ይነቅቡ።",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "ይህን እንዲህ ለመጻፍ አለብዎት፡ ያም ግን የገንዘብ ምርጥ ድምጽ ይዟቹ እንግዲኛ የምልክት ማብራሪያ ይፈልጋሉ። ምንፋብ፡ ይቅርታ",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "እንደዚህ ተገናኝ የተገዙ ነው። እቅፍ ዝርዝር ከሌላ ተጠቃሚ ይጠቀም ባለበት ነው። {accountName}ን ይመልከቱ።",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidReceiptError": "የተሳሳተ ግዢ መረጃ ነው። የግዢ መረጃውን ይፈትሹ።",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "不正な購入情報です。購入情報を確かめてください"
+  },
+  "purchaseErrorMissingReceiptFileError": "የግዥ መረጃ የለም። {accountName} በመሣሪያው ላይ እንዲገቡ ይሞክሩ።",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorNetworkError": "እቅፍ የዚህ ይዞታ በአገልግሎቱ ውስጥ ተግባር ነው። አመልካች የኔን ይመለከቱ እና ይይዙ ፈቃድ ይፈልጋሉ።",
+  "@purchaseErrorNetworkError": {
+    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "ውድድር አልተከናወነም። ጊዜ በመካከለኛ ተመልስ ይደርስ እና ይሞክሩ። ከመወዳደሪያው በተቀረው ከማይመለስ መነቃቃ እንዲደርስ በይፈቀይ ፍሬዋ ፣ የተሻሻለ ከማይመለስ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "አሁን ግዢ እንደማይቻል አለ። ጊዜ ቆርጥ እንደገና ሞክረው እባክዎን ይሞክሩ። በተለይ አልተፈቀደም እንዲሆን ከቅንጡ መደብ > የጥያቄ ተመልሰው ዝውውር ይችሉት። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "የግዥ መረጃዎች በሌላ ተጠቃሚ ተጠቃሚ እንደተጠቀም ተደግሞ ነው። በመነሻው ላይ የተገኙትን {accountName} ይፈትሹ።",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "購入情報は別のユーザーで使用されています。端末にログインしている{accountName}を確認してください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppUserIdError": "用户未能确认。请重新启动应用并重试。详情: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "የግዢ ሂደት በተለይ ቀጥቶ እንቀጥቀጥ እንደሚኖር ነው። እባኮትን ገንዘብ ያስቀመጡ እና ወደ ውስጥ በማቅረብ ላይ እንቀጥቀጥ፣ እባክዎን ደግሞ ጊዜ ይቀርበዋችሁ።",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+  },
+  "purchaseErrorUnknownBackendError": "አሁን ግዢ አልቻልኩም። እባኮትን ጊዜ ይቆይበት እና ድጋሚ ይቀጥሉ። እንደዚህ ያልተፈቀደ ከሆነ እባኮትን በ ምርጥ > ጥያቄ ይገናኙ። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "ግድይ አልተቻለም። ይቅርታ ይወድቃ፣ እባኮትን በጊዜ ይሞክሩ። እንደማይታወቅ አቅም ባለው እንግዳ ገንዘብ መሞክር አለብዎት ወይም ማጥናኝ እባኮትን ምንድን ፈቃድ ይገኝ:? በዚህ በኩል ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorIneligibleError": "እቅፍ የሚያገኙ ተጠቃሚዎች ግዢ አሻሽ አልቻሉም። ጊዜ ቆሞ እንደገና ይሞክሩ። ተፈቅዷል ከሆነ እባክዎት ወደ እንቅርብ ቃል ወደ ይህ መንገድ ፈጽሞ ይደርሱ። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInsufficientPermissionsError": "የእርስዎ {accountName} ላይ ወደ ፕላን መግባት አልቻሉም። የክፍያ መረጃዎችን ይዘጋጁና ወደ አንድ ጊዜ እንደገና ይሞክሩ።",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorPaymentPendingError": "እቅፍ በመነሻ ጊዜ ቆሞበት ነው። እባክህ ከ{accountName} ጋር {storeName}ን እንደተመለከትክ ይመልከቱ።",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "የግዢ ማስተካከል አልቻልኩም። እባክዎን ጊዜ ይቆርጡ እና ድገም ይሞክሩ። አሁንም ይፈታል ከሆነ እባክዎን በመምሪያ > የግዥ ጠይቅ ይወዳድሩ። ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "መገናኛ መረጃ ማግኘት ወይም ማጠቃለያ አልቻሉም። እባኮትን ጊዜ ይቆይ እና ውድቅ ማክረ ይሞክሩ። እርግጠኛ የሆነ ይቅርታ ስለሚገኝ ማሳወቂያ ይቀርበዋል። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorConfigurationError": "የግዢ መረጃ ማግኘት  failed እቅፍ ቱተይ። እባኮትን ጊዜ ይቆርጥበት እና እንደገና ይቀጥሉ። አስቀድሞ ይረባል፤ ወበቃየል ሂደት > ፍላጎት ዝርዝር በሚይሰር ቅድመ ናት  ይተወክም። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnsupportedError": "የማይታወቅ እንቅስቃሴ ነው። ወቅቱን ወደ አዳዲስ ማሻሻያ ይዘው ይሞክሩ። ማሻሻያ ማይሆን እንደሆነ እባክዎት በእንቅስቃሴ > ጥያቄ ላይ ይገናኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "ምንም የማይታወቅ ስህተት ነው። የግዢ መረጃ በቅድሚያ ሊወይዙ አልቻሉም። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "ያልታወቀ ስህተት ነው። እባኮትን ወደ አዳዲስ እትም ይሂዱ እና እንደገና ይሞክሩ። አልተፈቀደም ከሆነ በቅንጡ መደብ > ጥያቄ ይገናኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorUnknownNonNativeError": "የማይታወቀው ስህተት ነው። ወቅታዊ እትም ወደ መለወጥ ለመቀየር እባክዎ ይሞክሩ። እንዲሁም አለመፍታት እንደሆነ እባክዎ በቅንብር > ጥያቄ ይወዳድሩ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ምንም አስቀድሞ ያልታወቀ ድህረ ትንበይ ነው። ወቅታዊውን ይዘው እንደገና ይሞክሩ። የማይፈጽም ቢሆን እባክዎ ወቅታዊ ይከታተሉ > መረጃ ይመልከቱ ይምን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorCustomerInfoError": "ክስተት መረጃ ማግኘት አልቻልንም። እባኮትን ጊዜ ይወስዱ እና ዳግመ ይሞክሩ። አቅም አልቋም ቢሆን ወደ አመልክተኞች > የመግባቢያ ጥያቄ ይተናገዱ። ዝርዝር፡ ቁጥር፡ {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorSystemInfoError": "በመሳሪያው ውስጥ ችግኝ አለ። እባኮትን ያስተካክሉ እና ወደፊት ሞክሩ። በመፍትሄ አልተደረገም እንዲሆን እባኮትን ወደ እቅፍ > ጥያቄ ይገቡ እና ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorBeginRefundRequestError": "እቅፍ ተደርጎ እንደሚኖር ታወቀ። እባኮትን ይመልከቱ እና ድጋፍ ይውሰዱ። በዚህ ጉዞ አልተፈቀደም ከሆነ እባኮትን በቅድሚያ ይገናኙ ወይም አስተያየት ይላኩ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorProductRequestTimeout": "ጊዜ ወይዘር ወዲ ተሳክቶ ሞተ ያለው ትንቢት ነው። የግንኙነት አካባቢን እባክዎን ይረጋገጡ እና ድጋፍ ይደርሱ። እንደገና ይሞክሩ። እንደሚለው እንዲቀጥሉ ባለሙያውን በማስታወሻ አገናኙ። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorApiEndpointBlocked": "መረጃ የማይታወቅ የስህተት ነው። እባኮትን ወደ ዚህ ዕቅፍ ያነሱ ከዚያ ይሞክሩ። የተፈቀደ እና ከተወሰነው ነገር ይሁን፣ እንደ ዚህ የመጀመሪያ ሃሳብ ይሞክሩ። እንዴት ይችላሉ የአቅጣጫው፣ የእቅፍ ወይም የእርዳታ ቦታ ከዚያ ይዛዙ ወይም ይገኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ምንም እንደማይታወቅ ስህተት ነው። አዳዲስ በግምት ተመልሰው ይሞክሩ። እንዲህ በማይሄድ ከመሠረቱ ወደ ቅንብር > ጥያቄ ይገናኛሉ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "purchaseErrorOfflineConnectionError": "ምንም አይነት አካባቢ አይኖርም። ምንም እንኳን ይህን እንደገና ሞክሩ። አልተፈቀደም እንዲሁ ወደ ቅንብሮች > ጥያቄ። ዝርዝር ፡ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "forceUpdateTitle": "እባኮትን አፕሊኬሽን ይታይቁ",
+  "@forceUpdateTitle": {
+    "description": "アプリをアップデートしてください"
+  },
+  "forceUpdateMessage": "እባክዎ የተጠቀሙትን የአፕሊኬሽን እትም ወደ አዳዲስ ትንበያ ይሂዱ። {storeName} ከሆነ ወደ አዳዲስ ትንበያ ይሂዱ።",
+  "@forceUpdateMessage": {
+    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
+  },
+  "visitHospital": "ወቅታዊ ሂደት ይወክል",
+  "@visitHospital": {
+    "description": "通院する"
+  },
+  "receiveNotificationAt9AM": "በዕለት 9:00 ማስታወሻ እንዲቀበሉ",
+  "@receiveNotificationAt9AM": {
+    "description": "当日9:00に通知を受け取る"
+  },
+  "deletedScheduleCannotBeRestored": "ዝግጅቱ የተሰቀለ ትዕዛዝ ይታወቃል ይህ አይቻልም",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "削除された予定は復元ができません"
+  },
+  "deleteSchedule": "እቅድ እሰርዝ",
+  "@deleteSchedule": {
+    "description": "予定を削除します"
+  },
+  "onlySupportiOS": "ግብረ መልእክት በ iOS አፕሊኬሽን ብቻ ይደጋገማል።",
+  "@onlySupportiOS": {
+    "description": "iOSアプリにのみ対応しています"
+  },
+  "healthKitDoesNotSupport": "እቅፍ ምርመራ የማይደግፍ መነሻ ይገኛል።",
+  "@healthKitDoesNotSupport": {
+    "description": "ヘルスケアに対応していない端末ではご利用できません"
+  },
+  "enableHealthKitFromSettings": "እባኮትን ከቅንጅት መተግበሪያ ጋር የጤና እንደአስተዳደር አስተዋይ አድርጉ",
+  "@enableHealthKitFromSettings": {
+    "description": "設定アプリよりヘルスケアを有効にしてください"
+  },
+  "accountAlreadyLinked": "ይህ {accountTypeProviderName} አካውንት በዚህ ውስጥ የተጠቀሰው ነው እና ዋነኛ ያህል እንደሚገኝ ma{accountTypeProviderName} አካውንት ከዚህ ውስጥ ጊዜ ይቀይሩ። ማዕከላዊነትን ወይም {exceptionMessage} ይመልክቱ።",
+  "@accountAlreadyLinked": {
+    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "ይህ {accountTypeProviderName} መለያ እንደዚህ ያለ ሌላ የPilll መለያ ጋር የተያያዘ ስለሆነ ይመዘገባል። FAQንም ይመልከቱ። ዝርዝር: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "emailAlreadyInUse": "እቅፍ ማድረግ እንደ ተገናኝ ይህ ኢሜይል አድራሻ በሌላ የPilll አካውንት ጋር ይይዞ እንደ ተወዳድር አቅባቢ ይይዞ እንዲህ ነው {accountTypeProviderName} አካውንት እየተጠቀምነው የገለበጠ አድራሻ በ@gmail.com ኢሜይል እንደገና ገባኝ፡፡ አቅፋያ ይይዞ እቃ አከርፍህ እንዴ የተገናኘ ምስሌ ኦይ እንዲህ ጭፈ. ዝርዝር: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
+  },
+  "todaySchedule": "ዛሬ የምን እንደምን አዘጋጁ ነው",
+  "@todaySchedule": {
+    "description": "本日の予定です"
+  },
+  "calendarSchedule": "የካሌንደር እቅድ",
+  "@calendarSchedule": {
+    "description": "カレンダーの予定"
+  },
+  "newPillSheetNotificationTitle": "ዛሬ ከዚህ ወዲያ አዲስ ሲታስ ይጀምራል።",
+  "@newPillSheetNotificationTitle": {
+    "description": "今日から新しいシートがはじまります"
+  },
+  "newPillSheetNotificationMessage": "🆕 ከዚህ ወዲያ አዲስ ሽያጭ ይጀምራል\nትርፍ መቀበል አለብን👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "የፕሪምየም መረጃ ይገኝ አልቻለም",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "プレミアム情報が見つかりませんでした"
+  },
+  "purchaseErrorPurchasePendingError": "እቅፍ ይቀርባል፣ ንቅድም ይድረስ አልተጠናቀቀም። እባኮትን ጊዜ ማለቁን ይጠብቁ እና እንደገና ይይዙ።",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+  },
+  "launchError": "መውጣት ጊዜ እቅፍ ይከሰት አለፈ ተገኝቷል።\n{ErrorMessagesConnection}\n ዝርዝር:",
+  "@launchError": {
+    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
+  },
+  "exampleRestDurationDate": "እንደ ምሳሌ \"1/12 እስከ 3 ቀናት\" መወዳደሪያ በአስተዳደር ቢቀንስ እባክህ ይመለከታል",
+  "@exampleRestDurationDate": {
+    "description": "例えば「1/12から3日間」服用お休みした場合"
+  },
+  "exampleRestDurationNumber": "ምሳሌ እንደ \"18 ቁጥር ማለት 3 ቀን\" መዋቅር ስለ መታገይ የተነሱህ ተመለስ ነን።",
+  "@exampleRestDurationNumber": {
+    "description": "例えば「18番から3日間」服用お休みした場合"
+  },
+  "withNumber": "{number} ቁጥር",
+  "@withNumber": {
+    "description": "{number}番",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
+  },
+  "currentPillSheetNotFound": "በአሁኑ ጊዜ ተመራቂ የፒል ቅርጸ ቁምፊ አልተፈለገም።",
+  "@currentPillSheetNotFound": {
+    "description": "現在対象となっているピルシートが見つかりませんでした"
+  },
+  "doNotRevertTakePillInPausePeriod": "የፒል ከፍተኛ ዝርካ መግደያ በቅርብ ጊዜ እንደሚቀ Sudan ይወስዳል።",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+  },
+  "googleAccount": "ጉግል መለያ",
+  "@googleAccount": {
+    "description": "Google アカウント"
+  },
+  "diaryRecord": "ዕቃ ይታይ",
+  "@diaryRecord": {
+    "description": "日記を記録"
+  },
+  "scheduleRecord": "ዕቅድ ይጻፉ",
+  "@scheduleRecord": {
+    "description": "予定を記入"
+  },
+  "previousPillSheetGroupNotFound": "አሁንም የቅድመ የፒልን ማቅረብ ቡድን አልተገኘም",
+  "@previousPillSheetGroupNotFound": {
+    "description": "前回のピルシートグループがまだ存在しません"
+  },
+  "withPillSheetCount": "{number} ዐቃል",
+  "@withPillSheetCount": {
+    "description": "{number}枚",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "connectionError": "የኮምዩኒኬሽን አካባቢ በተለመዱ መገኛ ይታወቃል። ጊዜ ይወስዱ እና ድጋፍ ይወዳድሩ ወደ እኛ ለመሙላት ይሞክሩ።",
+  "@connectionError": {
+    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+  },
+  "unknownErrorAndRetryAfter": "ችግር ተከስቷል። እባክዎ ገና ይሞክሩ።",
+  "@unknownErrorAndRetryAfter": {
+    "description": "エラーが発生しました。時間をおいて再度お試しください"
+  },
+  "errorOccurred": "ግልባጭ ተፈጥሯል",
+  "@errorOccurred": {
+    "description": "エラーが発生しました"
+  },
+  "unknownError": "በሚስጥር ወቅት እንተደረገ ስህተት ተከስቷል።",
+  "@unknownError": {
+    "description": "不明なエラーが発生しました"
+  },
+  "unexpectedErrorOccurred": "አይታወቅ መሰረታዊ እቅፍ ተደርጎ አይኖርም",
+  "@unexpectedErrorOccurred": {
+    "description": "予期しないエラーが発生しました"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "በአማርኛ ዝርዝር በሚከተለው የመነሻ መረጃ በመጠቀም ሊሰጥ ይችላል።",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "通知を長押しすると服用記録ができます"
+  },
+  "letsTryIt": "እባኮትን ይሞክሩ",
+  "@letsTryIt": {
+    "description": "ぜひお試しください"
+  },
+  "trialDeadlineDateOffsetDay": "{number} ዕቅፍ እንዲሁም ሁሉን ባህሪያት መጠቀም ይቻላል!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "{number}日間すべての機能が使えます！",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "inputAndAdd": "እባክዎ ይግቡ እና ያክሉ",
+  "@inputAndAdd": {
+    "description": "入力して追加"
+  },
+  "averagePeriod": "መሠረታዊ ወቅት",
+  "@averagePeriod": {
+    "description": "平均周期"
+  },
+  "averageDays": "ምሳሌ ቀን",
+  "@averageDays": {
+    "description": "平均日数"
+  },
+  "days": "ዕለት",
+  "@days": {
+    "description": "日"
+  },
+  "memo": "መዝሙር",
+  "@memo": {
+    "description": "メモ"
+  },
+  "failedToUpdate": "ዝርዝር ወይም እቅፍ ይከውን። እባክዎ የአገልግሎት አካባቢውን ያረጋግጡ እና ድጋፍ ይሞክሩ።",
+  "@failedToUpdate": {
+    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+  },
+  "headache": "ራስ ታማኝ",
+  "@headache": {
+    "description": "頭痛"
+  },
+  "abdominalPain": "ምግር በሽብር",
+  "@abdominalPain": {
+    "description": "腹痛"
+  },
+  "nausea": "መቀርሳ",
+  "@nausea": {
+    "description": "吐き気"
+  },
+  "anemia": "ነፍሳዊ ጥገና",
+  "@anemia": {
+    "description": "貧血"
+  },
+  "diarrhea": "የበሽታ ተወርዳ",
+  "@diarrhea": {
+    "description": "下痢"
+  },
+  "constipation": "ክትክት",
+  "@constipation": {
+    "description": "便秘"
+  },
+  "drowsiness": "ከዕረፍት",
+  "@drowsiness": {
+    "description": "眠気"
+  },
+  "backPain": "የእርቅ ሽታ",
+  "@backPain": {
+    "description": "腰痛"
+  },
+  "palpitation": "የእምቅዋማ",
+  "@palpitation": {
+    "description": "動悸"
+  },
+  "irregularBleeding": "የተወሰነ ዝግጅት",
+  "@irregularBleeding": {
+    "description": "不正出血"
+  },
+  "lossOfAppetite": "የምግብ መግባት አሳይ",
+  "@lossOfAppetite": {
+    "description": "食欲不振"
+  },
+  "chestTightness": "የትንቢት ቤት",
+  "@chestTightness": {
+    "description": "胸の張り"
+  },
+  "insomnia": "የእንቅልታ መግለጫ",
+  "@insomnia": {
+    "description": "不眠"
+  },
+  "pauseStartingOtherDaysInstructions": "እባክዎ ምንም አይደርስም። ዛሬ ከሚሉት ቀኖች ውስጥ ከመውሰድ ይብሉት እባኮትን ወይም እነነ እንደተገናኙት ይመግኙ።",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+  },
+  "seeHowToUsePauseTakingFeature": "የመድኃኒት አነሱ ተግባር እንዴት መጠቀም ነው? ",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "服用お休み機能の使い方を見る"
+  },
+  "startPauseTakingLabel": "መዋል መጀመሪያ መቃጠል",
+  "@startPauseTakingLabel": {
+    "description": "服用お休み開始"
+  },
+  "pauseTakingChanged": "እንደተቀየረው የመድሃኒት በሰሌዳ ቀን ማሻሻያ ይሆናል",
+  "@pauseTakingChanged": {
+    "description": "服用お休みを変更しました"
+  },
+  "editPausePeriod": "የመድሃኒት ማብረር ቀንን እንደ ተነሱ ይማርታል",
+  "@editPausePeriod": {
+    "description": "服用お休み期間を編集"
+  },
+  "changePillDays": "የተወሰነ እንደ ቀን ቁጥር ለውጥ ያስቀምጡ",
+  "@changePillDays": {
+    "description": "服用日数を変更"
+  },
+  "beginToEndNumbers": "{begin} ቁጥር ~ {end} ቁጥር",
+  "@beginToEndNumbers": {
+    "description": "{begin}番 ~ {end}番",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
+  },
+  "resumeTaking": "እንደገና መጠቀም",
+  "@resumeTaking": {
+    "description": "服用再開"
+  },
+  "changePausePeriod": "መውጣት የሚያደርጉ ጊዜ ለመቀየር",
+  "@changePausePeriod": {
+    "description": "服用お休み期間変更"
+  },
+  "changedPausePeriod": "የእንቅልቅል ጊዜን ቀይርሁ።",
+  "@changedPausePeriod": {
+    "description": "服用お休み期間を変更しました"
+  },
+  "changedToDate": "{date}ወዲያው ተለውጦ አዘገየ።",
+  "@changedToDate": {
+    "description": "{date}に変更しました",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
+  },
+  "quickRecordTakePillFailed": "የእንቀባይ መዝገብ መከር አለበት ወይም አስቸጋሪ ይባላል",
+  "@quickRecordTakePillFailed": {
+    "description": "服用記録が失敗した可能性があります"
+  },
+  "quickRecordTakePillFailedMessage": "እቅፍ አይለኝ እና ይመልከቱ",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "アプリを開いてご確認ください"
+  },
+  "alreadyTaken": "ተወስዷል",
+  "@alreadyTaken": {
+    "description": "服用済み"
+  },
+  "startPauseTaking": "ይቅርታ የመጠጥ በስሩ አለኝ",
+  "@startPauseTaking": {
+    "description": "服用をお休みする"
+  },
+  "startedPauseTaking": "የመድሃኒት እንቅልፍ መጀመሪያ ተጀምሯል",
+  "@startedPauseTaking": {
+    "description": "服用お休みを開始しました"
+  },
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}የተወከለው ቁጥር",
+  "@sequentialLastTakenPlusOnePillNumber": {
+    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "placeholders": {
+      "pillSheetGroupSequentialLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
+  },
+  "startFromNumber": "መስመር ላይ እንደ መጀመሪያ ይጀምሩ",
+  "@startFromNumber": {
+    "description": "番からスタート"
+  },
+  "add": "አንጻር",
+  "@add": {
+    "description": "追加"
+  },
+  "addPillSheet": "ሊንክ ይጨምሩ",
+  "@addPillSheet": {
+    "description": "ピルシートを追加"
+  },
+  "duringPauseTaking": "ተወው የተወሰነ አቀጣጠር",
+  "@duringPauseTaking": {
+    "description": "服用お休み中"
+  },
+  "cannotPauseAlreadyTakenToday": "እቅፍ የተወሰነ የሚሆን እንደሆነ አለ፣ ይህ በዚህ ምክንያት \"ንቀይ ከማነሳት\" አይቻልም።",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+  },
+  "pauseTakingStarted": "የመጠቀሚያ እንቅልፍ መጀመር ተጀምሯል",
+  "@pauseTakingStarted": {
+    "description": "服用お休みを開始しました"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
+  },
+  "editPauseStartDate": "የበሽታ እንቅስቃሴ ዕለት ማስረጃ ይሻሽሉ",
+  "@editPauseStartDate": {
+    "description": "服用お休み開始日を編集"
+  },
+  "shareWithFriends": "እባክህ ለወዳጆችህ አሳይ",
+  "@shareWithFriends": {
+    "description": "友達に教える"
+  },
+  "termsOfService": "የእቅፍ ቃል ይዘት",
+  "@termsOfService": {
+    "description": "利用規約"
+  },
+  "privacyPolicy": "እንደ ድርጅቱ የይለፍ ትርጉም",
+  "@privacyPolicy": {
+    "description": "プライバシーポリシー"
+  },
+  "linkCopiedToClipboard": "ወቅታዊ የዕቃ ዝርዝር ወይም 〖ቃል ቢንግር ይበቃላችሁ ይመስለዋል፡፡",
+  "@linkCopiedToClipboard": {
+    "description": "クリップボードにコピーしました"
+  },
+  "notificationNumber": "ንብረት {number}",
+  "@notificationNumber": {
+    "description": "通知{number}",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "notificationTime": "የንባብ ጊዜ",
+  "@notificationTime": {
+    "description": "通知時間"
+  },
+  "timeZoneChangedTo": "{tz} ተለውጦ ይፈልጋል",
+  "@timeZoneChangedTo": {
+    "description": "{tz}に変更しました",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
+  },
+  "changeStartOfPillDays": "የትኩረት ቀኑን ለመለወጥ",
+  "@changeStartOfPillDays": {
+    "description": "服用日数の始まりを変更"
+  },
+  "changeEndOfPillDays": "የወርቅ ቀን መጨረሻ ለመለወጥ",
+  "@changeEndOfPillDays": {
+    "description": "服用日数の終わりを変更"
+  },
+  "cannotUpdateToReplacePillSheet": "ከፒል ሼት ማቀያያ በመነሣት ወይም መደባበር የማይቻል አለ፣ መታወቂያ: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
+  },
+  "failedToGetPillSheetHistory": "የተከተለ መረጃ ማግኘት በማቅረብ ላይ ተሳክቷል። {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
+  },
+  "cancelTaking": "የተወሰደ ትክክለኛ ዝርዝር",
+  "@cancelTaking": {
+    "description": "服用取り消し"
+  },
+  "deletedDiaryCannotBeRestored": "የወፍራ ዳይሬታይ ይታወቃሉ ይዟ አይቻልም",
+  "@deletedDiaryCannotBeRestored": {
+    "description": "削除した日記は復元できません"
+  },
+  "editMenstruation": "እስቲ ወቅት ይቀይር",
+  "@editMenstruation": {
+    "description": "生理期間を編集"
+  },
+  "changedPillNumber": "የፒል ቁጥር ለውጥ",
+  "@changedPillNumber": {
+    "description": "ピル番号変更"
+  },
+  "offPercentForMonthlyPremiumPackage": "ከወቅታዊ ወጪ ጋር የሚነፃፀር ይህን በ{offPercent} በተመን ግብይ አስተዋይ ትርዕይት ነው።",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "通常月額と比べて{offPercent}％OFF",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "በፕሪምየም መመዘግቢያ ጋር ሁሉንም ባለቤት ተግባራት ይጠቀሙ ይቻላል።",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+  },
+  "countdownForDiscountPriceDeadline": "በ{countdown} ውስጥ የተገዙ ላይ {offPercent} በሚቀንስ ይታወቃሉ።",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
+  },
+  "pillReminderChanged": "መወዳደር ማስታወሻውን {value} አድርግልህ።",
+  "@pillReminderChanged": {
+    "description": "服用通知を{value}にしました",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
+  },
+  "medicationNotification": "የተያዙ መረጃ",
+  "@medicationNotification": {
+    "description": "服用通知"
+  }
+}

@@ -144,7 +144,7 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         const SizedBox(
             height: 64,
             child: VerticalDivider(
-              color: PilllColors.divider,
+              color: AppColors.divider,
               width: 3,
             )),
         const SizedBox(width: 30),

@@ -24,7 +24,7 @@ class WordTextField extends StatelessWidget {
       focusNode: focusNode,
       decoration: InputDecoration(
         focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: PilllColors.secondary),
+          borderSide: BorderSide(color: AppColors.secondary),
         ),
         counter: Row(children: [
           Text(

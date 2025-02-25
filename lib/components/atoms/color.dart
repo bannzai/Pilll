@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class PilllColors {
+abstract class AppColors {
   static const Color primary = Color(0xFF4E6287);
   static const Color secondary = Color(0xFFE56A45);
   static const Color calendarHeader = Color(0XFFB9D7F1);
@@ -38,7 +38,7 @@ abstract class PilllColors {
   static final Color modalBackground = const Color(0xFF333333).withAlpha((255 * 0.7).round());
   static const Color white = Colors.white;
 
-  static Color get disabledSheet => PilllColors.pillSheet;
+  static Color get disabledSheet => AppColors.pillSheet;
   static final Color thinSecondary = const Color(0xFF4E6287).withAlpha(20);
   static final Color shadow = const Color(0xFF212121).withOpacity(0.14);
   static final Color tinBackground = const Color(0xFF212121).withOpacity(0.08);
