@@ -325,10 +325,11 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
               // 特に何もしない
             }
           }
+
           if (endPillNumber != null && number > endPillNumber) {
-            // 終了番号が設定されていて、それを超えたらbeginPillNumberに戻る
-            // 終了番号が設定されてない場合にピルシートの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
-            number = beginPillNumber;
+            // 終了番号が設定されていて、それを超えたら1番から始まる
+            // 終了番号が設定されてない場合にピルシートのピルの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
+            number = 1;
           }
           pillMarks.add(
             PillSheetGroupPillNumberDomainPillMarkValue(
