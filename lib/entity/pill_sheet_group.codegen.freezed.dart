@@ -480,7 +480,8 @@ PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(
 
 /// @nodoc
 mixin _$PillSheetGroupDisplayNumberSetting {
-  int? get beginPillNumber => throw _privateConstructorUsedError;
+// 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
+  int? get beginPillNumber => throw _privateConstructorUsedError; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
   int? get endPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -571,8 +572,10 @@ class _$PillSheetGroupDisplayNumberSettingImpl implements _PillSheetGroupDisplay
 
   factory _$PillSheetGroupDisplayNumberSettingImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetGroupDisplayNumberSettingImplFromJson(json);
 
+// 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
   @override
   final int? beginPillNumber;
+// 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
   @override
   final int? endPillNumber;
 
@@ -614,9 +617,9 @@ abstract class _PillSheetGroupDisplayNumberSetting implements PillSheetGroupDisp
 
   factory _PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) = _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
 
-  @override
+  @override // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
   int? get beginPillNumber;
-  @override
+  @override // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
   int? get endPillNumber;
   @override
   @JsonKey(ignore: true)
