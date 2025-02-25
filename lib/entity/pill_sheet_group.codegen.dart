@@ -450,7 +450,9 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
 class PillSheetGroupDisplayNumberSetting with _$PillSheetGroupDisplayNumberSetting {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroupDisplayNumberSetting({
+    // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
     int? beginPillNumber,
+    // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
     int? endPillNumber,
   }) = _PillSheetGroupDisplayNumberSetting;
 
