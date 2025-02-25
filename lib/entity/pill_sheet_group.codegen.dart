@@ -317,8 +317,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             final endDate = restDuration.endDate;
             if (endDate != null) {
               if (isSameDay(endDate, date)) {
-                // 服用お休みと期間の終了日とかぶっていたら、終了日から番号が開始される
-                number = beginPillNumber;
+                // 服用お休みと期間の終了日と一緒な場合=服用お休みが終了したので、番号は1番から始まる
+                number = 1;
               }
             } else {
               // 服用お休みが終わってない
