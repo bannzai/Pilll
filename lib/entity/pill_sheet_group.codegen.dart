@@ -304,7 +304,6 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       for (final date in pillSheet.dates) {
         // 1つ目はbeginNumber or 1が設定される。2つ目以降は前のピル番号+1を基本的に設定していく
         if (pillMarks.isEmpty) {
-          debugPrint('pillMarks.add: beginPillNumber: ${beginPillNumber}, date: ${date}');
           pillMarks.add(
             PillSheetGroupPillNumberDomainPillMarkValue(
               pillSheet: pillSheet,
@@ -319,7 +318,6 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             if (endDate != null) {
               if (isSameDay(endDate, date)) {
                 // 服用お休みと期間の終了日と一緒な場合=服用お休みが終了したので、番号は1番から始まる
-                debugPrint('isSameDay(endDate, date): number: ${number}, endDate: ${endDate}, date: ${date}');
                 number = 1;
               }
             } else {
@@ -331,11 +329,8 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
           if (endPillNumber != null && number > endPillNumber) {
             // 終了番号が設定されていて、それを超えたら1番から始まる
             // 終了番号が設定されてない場合にピルシートのピルの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
-            debugPrint('endPillNumber != null && number > endPillNumber: number: ${number}, endPillNumber: ${endPillNumber}, date: ${date}');
             number = 1;
           }
-
-          debugPrint('pillMarks.add: number: ${number}, date: ${date}');
           pillMarks.add(
             PillSheetGroupPillNumberDomainPillMarkValue(
               pillSheet: pillSheet,
