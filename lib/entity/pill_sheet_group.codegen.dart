@@ -317,18 +317,19 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             final endDate = restDuration.endDate;
             if (endDate != null) {
               if (isSameDay(endDate, date)) {
-                // 服用お休みと期間の終了日とかぶっていたら、終了日から番号が開始される
-                number = beginPillNumber;
+                // 服用お休みと期間の終了日と一緒な場合=服用お休みが終了したので、番号は1番から始まる
+                number = 1;
               }
             } else {
               // 服用お休みが終わってない
               // 特に何もしない
             }
           }
+
           if (endPillNumber != null && number > endPillNumber) {
-            // 終了番号が設定されていて、それを超えたらbeginPillNumberに戻る
-            // 終了番号が設定されてない場合にピルシートの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
-            number = beginPillNumber;
+            // 終了番号が設定されていて、それを超えたら1番から始まる
+            // 終了番号が設定されてない場合にピルシートのピルの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
+            number = 1;
           }
           pillMarks.add(
             PillSheetGroupPillNumberDomainPillMarkValue(
@@ -449,7 +450,9 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
 class PillSheetGroupDisplayNumberSetting with _$PillSheetGroupDisplayNumberSetting {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroupDisplayNumberSetting({
+    // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
     int? beginPillNumber,
+    // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
     int? endPillNumber,
   }) = _PillSheetGroupDisplayNumberSetting;
 
