@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/settings/emergency_alert_notification/page.dart';
+import 'package:pilll/features/settings/critical_alert/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
-class EmergencyAlertNotification extends HookConsumerWidget {
-  const EmergencyAlertNotification({super.key});
+class CriticalAlert extends HookConsumerWidget {
+  const CriticalAlert({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -25,7 +25,7 @@ class EmergencyAlertNotification extends HookConsumerWidget {
         analytics.logEvent(
           name: 'did_select_emergency_alert_notification',
         );
-        Navigator.of(context).push(EmergencyAlertNotificationPage.route());
+        Navigator.of(context).push(CriticalAlertPage.route());
       },
     );
   }

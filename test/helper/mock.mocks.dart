@@ -593,6 +593,18 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
       ) as _i5.ReminderNotificationCustomization);
 
   @override
+  bool get useCriticalAlert => (super.noSuchMethod(
+        Invocation.getter(#useCriticalAlert),
+        returnValue: false,
+      ) as bool);
+
+  @override
+  double get criticalAlertVolume => (super.noSuchMethod(
+        Invocation.getter(#criticalAlertVolume),
+        returnValue: 0.0,
+      ) as double);
+
+  @override
   _i7.PillSheetAppearanceMode get pillSheetAppearanceMode =>
       (super.noSuchMethod(
         Invocation.getter(#pillSheetAppearanceMode),
