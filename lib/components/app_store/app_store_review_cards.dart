@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'app_store_review_card.dart'; // 作成したカードWidgetをインポート
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/provider/locale.dart';
+import 'app_store_review_card.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
-class AppStoreReviewCards extends HookWidget {
+class AppStoreReviewCards extends HookConsumerWidget {
   const AppStoreReviewCards({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    final locale = Localizations.localeOf(context);
-    if (locale.languageCode == 'ja') {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final isJaLocale = ref.watch(isJaLocaleProvider);
+    if (isJaLocale) {
       final pageController = usePageController(viewportFraction: 0.85);
       final currentPage = useState(0);
 
