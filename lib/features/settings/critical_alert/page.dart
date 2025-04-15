@@ -30,6 +30,13 @@ class CriticalAlertPage extends HookConsumerWidget {
             title: Text(L.enableNotificationInSilentMode),
             subtitle: Text(L.silentModeNotificationDescription),
           ),
+          Slider(
+            value: ciritcalAlertVolume.value,
+            label: ciritcalAlertVolume.value.toString(),
+            onChanged: (value) {
+              ciritcalAlertVolume.value = value;
+            },
+          ),
         ],
       ),
     );
