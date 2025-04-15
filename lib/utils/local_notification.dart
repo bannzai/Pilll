@@ -108,9 +108,10 @@ class LocalNotificationService {
           sound: 'becho.caf',
           presentBadge: true,
           presentSound: true,
+          interruptionLevel: InterruptionLevel.timeSensitive,
         ),
       ),
-      uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+      androidScheduleMode: AndroidScheduleMode.alarmClock,
     );
   }
 
@@ -422,10 +423,10 @@ class RegisterReminderLocalNotification {
                       presentBanner: true,
                       presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
+                      interruptionLevel: InterruptionLevel.timeSensitive,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.alarmClock,
-                  uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
                 analytics.debug(name: 'rrrn_premium', parameters: {
@@ -475,10 +476,10 @@ class RegisterReminderLocalNotification {
                       presentBanner: true,
                       presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
+                      interruptionLevel: InterruptionLevel.timeSensitive,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.alarmClock,
-                  uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
                 analytics.debug(name: 'rrrn_non_premium', parameters: {
@@ -582,10 +583,10 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
           ),
           iOS: const DarwinNotificationDetails(
             sound: 'becho.caf',
+            interruptionLevel: InterruptionLevel.timeSensitive,
           ),
         ),
         androidScheduleMode: AndroidScheduleMode.alarmClock,
-        uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }
   }
@@ -639,10 +640,10 @@ class NewPillSheetNotification {
               presentAlert: false,
               presentBanner: true,
               presentList: true,
+              interruptionLevel: InterruptionLevel.timeSensitive,
             ),
           ),
           androidScheduleMode: AndroidScheduleMode.alarmClock,
-          uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
         );
       } catch (e, st) {
         // NOTE: エラーが発生しても他の通知のスケジュールを続ける
