@@ -57,7 +57,7 @@ class AppStoreReviewCards extends HookWidget {
     return Column(
       children: [
         SizedBox(
-          height: 250, // カードの高さを設定
+          height: 260,
           child: PageView.builder(
             controller: pageController,
             itemCount: reviews.length,

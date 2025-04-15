@@ -17,24 +17,16 @@ class AppStoreReviewCard extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    // flutter_hooksを使って展開状態を管理
-    final isExpanded = useState(false);
-
-    // UIに関する設定を直接buildメソッド内に記述
-    const padding = EdgeInsets.all(16);
-    const borderRadius = BorderRadius.all(Radius.circular(12));
-    const backgroundColor = Colors.white;
-
     return GestureDetector(
       onTap: () {
-        // タップで展開状態を切り替え
-        isExpanded.value = !isExpanded.value;
+        // タップで詳細ダイアログを表示
+        _showReviewDetailDialog(context);
       },
       child: Container(
-        padding: padding,
+        padding: const EdgeInsets.all(16),
         decoration: BoxDecoration(
-          color: backgroundColor,
-          borderRadius: borderRadius,
+          color: Colors.white,
+          borderRadius: const BorderRadius.all(Radius.circular(12)),
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.1),
@@ -91,21 +83,20 @@ class AppStoreReviewCard extends HookWidget {
                 ),
               ),
 
-            // レビュー本文
+            // レビュー本文（常に最大5行まで）
             if (message.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Text(
                   message,
                   style: const TextStyle(fontSize: 14),
-                  // 展開状態に応じてmaxLinesを切り替え
-                  maxLines: isExpanded.value ? null : 5,
-                  overflow: isExpanded.value ? TextOverflow.visible : TextOverflow.ellipsis,
+                  maxLines: 5,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
 
-            // 展開状態の表示（オプション）
-            if (message.isNotEmpty && !isExpanded.value)
+            // 「もっと見る」ボタン
+            if (message.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
@@ -119,6 +110,66 @@ class AppStoreReviewCard extends HookWidget {
               ),
           ],
         ),
+      ),
+    );
+  }
+
+  void _showReviewDetailDialog(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: title.isNotEmpty ? Text(title) : null,
+        content: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              // 評価（星）
+              Row(
+                children: [
+                  _buildStarRating(),
+                  const SizedBox(width: 8),
+                  Text(
+                    rating.toString(),
+                    style: const TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+
+              // 著者
+              if (author.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 8.0),
+                  child: Text(
+                    author,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Colors.grey[600],
+                    ),
+                  ),
+                ),
+
+              // メッセージ全文
+              if (message.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.only(top: 16.0),
+                  child: Text(
+                    message,
+                    style: const TextStyle(fontSize: 14),
+                  ),
+                ),
+            ],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text('閉じる'),
+          ),
+        ],
       ),
     );
   }
