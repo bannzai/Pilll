@@ -17,7 +17,6 @@ import 'app_store_review_card.dart'; // 作成したカードWidgetをインポ�
 class AppStoreReviewCards extends StatelessWidget {
   const AppStoreReviewCards({
     super.key,
-    // cardDataList 引数は削除
     this.spacing = 8.0, // カード間のデフォルトスペース
   });
 
@@ -28,32 +27,80 @@ class AppStoreReviewCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // サンプルデータに基づいて AppStoreReviewCard を直接配置
+    // 実際のレビューデータに基づいて AppStoreReviewCard を直接配置
     final reviews = [
-      // レビュー1: ★★★★★
-      const AppStoreReviewCard(rating: 5.0),
-      // レビュー2: ★★★★★
-      const AppStoreReviewCard(rating: 5.0),
-      // レビュー3: ★★★★★
-      const AppStoreReviewCard(rating: 5.0),
-      // レビュー4: ★★
-      const AppStoreReviewCard(rating: 2.0), // 提示されたレビューに基づき★2に設定
+      // レビュー1
+      const AppStoreReviewCard(
+        rating: 5.0,
+        title: '対応が早い。愛用アプリです',
+        date: '7月4日',
+        author: 'えりりんー',
+        message: '数日前に、「1年以上前のカレンダーが見れない」と問い合わせをしたら、「1年以上前のデータの閲覧は想定されていない」「過去データを見るきっかけを今後の改善の参考にしたい」とのお返事をいただきました。そのあときっかけとなる出来事があったことを返信しました。'
+            'そうしたらなんと、このやり取りの数日後に「10年分のカレンダーを閲覧出来るようにアプデしました」とのメールが届きました。アプデしてみると、つい数日前まで見れていなかった過去データも確認できるようになっていました！'
+            'このアプリに体調管理を任せていたので本当に助かりました。'
+            '問い合わせからお返事を頂くまで、そこからアップデートまで、全ての対応が丁寧で早く、とてもありがたかったです。'
+            'このアプリに携わる皆様本当にありがとうございました！これからも使っていきます！',
+      ),
+
+      // レビュー2
+      const AppStoreReviewCard(
+        rating: 5.0,
+        title: '丁寧に作られているアプリです。',
+        date: '3年前',
+        author: '縁の下のぬか床',
+        message: 'ピル服用を始めるにあたって、いくつかアプリを試しましたが、このアプリが1番気に入っています。'
+            'まずはデザインがいいこと。'
+            '余計な情報が少なく、デザインも洗練されていて、使い易さを感じます。'
+            '次に、要望へのレスポンスが早いことがとても素晴らしいです。'
+            '対応していただくのはとても大変だと思うのですが、こちらのアプリでは良いアプリを作ろうという気概が伝わってきます。'
+            '実際、私の要望も検討していただき、さらに使いやすくなっていました。'
+            'ピルの利用法は人によって様々なので、万人に合うアプリではないかもしれませんが、進化し続けている誠意あるアプリです。'
+            '実際使いやすいので、アプリに迷っている方にまずお勧めしたいです。',
+      ),
+
+      // レビュー3
+      const AppStoreReviewCard(
+        rating: 5.0,
+        title: 'シンプルで使いやすい',
+        date: '1年前',
+        author: 'Julie0209',
+        message: '以前有名どころを使っていましたが、多機能ゆえ煩わしい点が多かったです。（受診日を設定しないと次のシートを表示できない等）'
+            'こちらのアプリは非常にシンプルで通知も複数回設定でき飲み忘れ防止にも期待できます。',
+      ),
+
+      // レビュー4
+      const AppStoreReviewCard(
+        rating: 2.0,
+        title: '欲しかった機能です',
+        date: '1年前',
+        author: 'げんしちゃん',
+        message: '月経に関連するアプリは様々ありますが、今まで試した中で一番使いやすいです。'
+            '他のアプリではどうしても妊娠や生理周期に関する記録がメインで、ピルの服用を忘れずに記録していきたいが主目的の場合どうしても余計なものが多く、目的を果たせませんでした。'
+            'このアプリはシートの種別を選択して管理できるので本当に助かります！'
+            '長く続いて欲しいので追々課金もさせていただきます。どうかこの痒いところに手が届くけど記入するものは多すぎない感じで今後もよろしくお願いします。',
+      ),
     ];
 
-    return Row(
-      // Row内の要素を均等に配置するか、Startに寄せるかなどは必要に応じて調整
-      mainAxisAlignment: MainAxisAlignment.start, // 左寄せにする場合
-      // mainAxisAlignment: MainAxisAlignment.spaceEvenly, // 均等配置にする場合
-      children: List.generate(reviews.length * 2 - 1, (index) {
-        if (index.isEven) {
-          final reviewIndex = index ~/ 2;
-          // 各カードをExpandedでラップ
-          return Expanded(child: reviews[reviewIndex]);
-        } else {
-          // カード間のスペース
-          return SizedBox(width: spacing);
-        }
-      }),
+    // スクロール可能なレイアウトに変更
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: List.generate(reviews.length * 2 - 1, (index) {
+          if (index.isEven) {
+            final reviewIndex = index ~/ 2;
+            // カードの幅を固定
+            return SizedBox(
+              width: 300, // カードの幅を固定
+              child: reviews[reviewIndex],
+            );
+          } else {
+            // カード間のスペース
+            return SizedBox(width: spacing);
+          }
+        }),
+      ),
     );
   }
 }

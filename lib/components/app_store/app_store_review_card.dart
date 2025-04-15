@@ -5,6 +5,10 @@ class AppStoreReviewCard extends StatelessWidget {
   const AppStoreReviewCard({
     super.key,
     this.rating = 5,
+    this.title = '',
+    this.author = '',
+    this.date = '',
+    this.message = '',
     this.onTap,
     this.backgroundColor = Colors.white,
     this.padding = const EdgeInsets.all(16),
@@ -12,6 +16,10 @@ class AppStoreReviewCard extends StatelessWidget {
   });
 
   final double rating;
+  final String title;
+  final String author;
+  final String date;
+  final String message;
   final VoidCallback? onTap;
   final Color backgroundColor;
   final EdgeInsets padding;
@@ -37,6 +45,22 @@ class AppStoreReviewCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // タイトル
+            if (title.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: Text(
+                  title,
+                  style: const TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+
+            // 評価（星）
             Row(
               children: [
                 _buildStarRating(),
@@ -44,12 +68,39 @@ class AppStoreReviewCard extends StatelessWidget {
                 Text(
                   rating.toString(),
                   style: const TextStyle(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
               ],
             ),
+
+            // 日付と著者
+            if (date.isNotEmpty || author.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: Text(
+                  '$date・$author',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey[600],
+                  ),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+
+            // レビュー本文
+            if (message.isNotEmpty)
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0),
+                child: Text(
+                  message,
+                  style: const TextStyle(fontSize: 14),
+                  maxLines: 5,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
           ],
         ),
       ),
