@@ -1,29 +1,10 @@
 import 'package:flutter/material.dart';
 import 'app_store_review_card.dart'; // 作成したカードWidgetをインポート
 
-// レビューカードのデータを保持するクラスは削除
-// class AppStoreReviewCardData {
-//   final double rating;
-//   final int reviewCount;
-//   final VoidCallback? onTap;
-//
-//   const AppStoreReviewCardData({
-//     required this.rating,
-//     required this.reviewCount,
-//     this.onTap,
-//   });
-// }
-
 class AppStoreReviewCards extends StatelessWidget {
   const AppStoreReviewCards({
     super.key,
-    this.spacing = 8.0, // カード間のデフォルトスペース
   });
-
-  // 表示するレビューカードデータのリストは削除
-  // final List<AppStoreReviewCardData> cardDataList;
-  // カード間のスペース
-  final double spacing;
 
   @override
   Widget build(BuildContext context) {
@@ -97,7 +78,7 @@ class AppStoreReviewCards extends StatelessWidget {
             );
           } else {
             // カード間のスペース
-            return SizedBox(width: spacing);
+            return const SizedBox(width: 16);
           }
         }),
       ),
