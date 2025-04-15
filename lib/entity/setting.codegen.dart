@@ -46,8 +46,8 @@ class Setting with _$Setting {
     @Default(false) bool isAutomaticallyCreatePillSheet,
     @Default(ReminderNotificationCustomization()) ReminderNotificationCustomization reminderNotificationCustomization,
     // 緊急アラート関連の設定
-    @Default(false) bool? emergencyAlertEnabled,
-    @Default(0.8) double? emergencyAlertVolume,
+    @Default(false) bool useCriticalAlert,
+    @Default(0.5) double criticalAlertVolume,
     // Deprecated
     // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
