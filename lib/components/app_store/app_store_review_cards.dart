@@ -12,7 +12,6 @@ class AppStoreReviewCards extends StatelessWidget {
       const AppStoreReviewCard(
         rating: 5.0,
         title: '対応が早い。愛用アプリです',
-        date: '7月4日',
         author: 'えりりんー',
         message: '数日前に、「1年以上前のカレンダーが見れない」と問い合わせをしたら、「1年以上前のデータの閲覧は想定されていない」「過去データを見るきっかけを今後の改善の参考にしたい」とのお返事をいただきました。そのあときっかけとなる出来事があったことを返信しました。'
             'そうしたらなんと、このやり取りの数日後に「10年分のカレンダーを閲覧出来るようにアプデしました」とのメールが届きました。アプデしてみると、つい数日前まで見れていなかった過去データも確認できるようになっていました！'
@@ -23,7 +22,6 @@ class AppStoreReviewCards extends StatelessWidget {
       const AppStoreReviewCard(
         rating: 5.0,
         title: '丁寧に作られているアプリです。',
-        date: '3年前',
         author: '縁の下のぬか床',
         message: 'ピル服用を始めるにあたって、いくつかアプリを試しましたが、このアプリが1番気に入っています。'
             'まずはデザインがいいこと。'
@@ -37,7 +35,6 @@ class AppStoreReviewCards extends StatelessWidget {
       const AppStoreReviewCard(
         rating: 5.0,
         title: 'シンプルで使いやすい',
-        date: '1年前',
         author: 'Julie0209',
         message: '以前有名どころを使っていましたが、多機能ゆえ煩わしい点が多かったです。（受診日を設定しないと次のシートを表示できない等）'
             'こちらのアプリは非常にシンプルで通知も複数回設定でき飲み忘れ防止にも期待できます。',
@@ -45,7 +42,6 @@ class AppStoreReviewCards extends StatelessWidget {
       const AppStoreReviewCard(
         rating: 5.0,
         title: '欲しかった機能です',
-        date: '1年前',
         author: 'げんしちゃん',
         message: '月経に関連するアプリは様々ありますが、今まで試した中で一番使いやすいです。'
             '他のアプリではどうしても妊娠や生理周期に関する記録がメインで、ピルの服用を忘れずに記録していきたいが主目的の場合どうしても余計なものが多く、目的を果たせませんでした。'

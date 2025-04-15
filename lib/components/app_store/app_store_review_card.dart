@@ -6,14 +6,12 @@ class AppStoreReviewCard extends StatelessWidget {
     required this.rating,
     required this.title,
     required this.author,
-    required this.date,
     required this.message,
   });
 
   final double rating;
   final String title;
   final String author;
-  final String date;
   final String message;
 
   @override
@@ -70,11 +68,11 @@ class AppStoreReviewCard extends StatelessWidget {
           ),
 
           // 日付と著者
-          if (date.isNotEmpty || author.isNotEmpty)
+          if (author.isNotEmpty)
             Padding(
               padding: const EdgeInsets.only(top: 4.0),
               child: Text(
-                '$date・$author',
+                author,
                 style: TextStyle(
                   fontSize: 12,
                   color: Colors.grey[600],
