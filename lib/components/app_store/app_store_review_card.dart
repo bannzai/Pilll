@@ -4,15 +4,12 @@ import 'package:url_launcher/url_launcher.dart';
 class AppStoreReviewCard extends StatelessWidget {
   const AppStoreReviewCard({
     super.key,
-    this.rating = 5,
-    this.title = '',
-    this.author = '',
-    this.date = '',
-    this.message = '',
-    this.onTap,
-    this.backgroundColor = Colors.white,
-    this.padding = const EdgeInsets.all(16),
-    this.borderRadius = const BorderRadius.all(Radius.circular(12)),
+    required this.rating,
+    required this.title,
+    required this.author,
+    required this.date,
+    required this.message,
+    required this.onTap,
   });
 
   final double rating;
@@ -20,15 +17,17 @@ class AppStoreReviewCard extends StatelessWidget {
   final String author;
   final String date;
   final String message;
-  final VoidCallback? onTap;
-  final Color backgroundColor;
-  final EdgeInsets padding;
-  final BorderRadius borderRadius;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
+    // UIに関する設定を直接buildメソッド内に記述
+    const padding = EdgeInsets.all(16);
+    const borderRadius = BorderRadius.all(Radius.circular(12));
+    const backgroundColor = Colors.white;
+
     return GestureDetector(
-      onTap: onTap ?? _launchAppStore,
+      onTap: onTap,
       child: Container(
         padding: padding,
         decoration: BoxDecoration(
@@ -126,13 +125,5 @@ class AppStoreReviewCard extends StatelessWidget {
         );
       }),
     );
-  }
-
-  Future<void> _launchAppStore() async {
-    const appStoreId = 'YOUR_APP_STORE_ID'; // ここにアプリのApp Store IDを設定
-    final url = Uri.parse('https://apps.apple.com/app/id$appStoreId?action=write-review');
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    }
   }
 }
