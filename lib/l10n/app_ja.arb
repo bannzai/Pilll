@@ -2273,5 +2273,13 @@
         "type": "String"
       }
     }
+  },
+  "silentModeNotificationDescription": "集中モードがONまたはデバイスが消音時でも、重大な通知はロック画面に表示されますサウンドが再生されます",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、重大な通知はロック画面に表示されますサウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "マナーモードでも通知する",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
   }
 }

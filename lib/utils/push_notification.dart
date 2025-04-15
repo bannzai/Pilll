@@ -5,9 +5,6 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:pilll/utils/local_notification.dart';
-import 'package:shared_preferences/shared_preferences.dart';
-
-const String _keyEmergencyAlertEnabled = 'emergency_alert_enabled';
 
 Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken registerRemotePushNotificationToken) async {
   if (Platform.isIOS) {
