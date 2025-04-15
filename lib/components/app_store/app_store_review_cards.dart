@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
 import 'app_store_review_card.dart'; // 作成したカードWidgetをインポート
+import 'package:flutter_hooks/flutter_hooks.dart';
 
-class AppStoreReviewCards extends StatelessWidget {
+class AppStoreReviewCards extends HookWidget {
   const AppStoreReviewCards({
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+    final pageController = usePageController(viewportFraction: 0.85);
+    final currentPage = useState(0);
+
     final reviews = [
       const AppStoreReviewCard(
         rating: 5.0,
@@ -50,26 +54,43 @@ class AppStoreReviewCards extends StatelessWidget {
       ),
     ];
 
-    return SingleChildScrollView(
-      scrollDirection: Axis.horizontal,
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: List.generate(reviews.length * 2 - 1, (index) {
-          if (index.isEven) {
-            final reviewIndex = index ~/ 2;
-            // カードの幅を固定
-            return SizedBox(
-              width: 300, // カードの幅を固定
-              child: reviews[reviewIndex],
-            );
-          } else {
-            // カード間のスペース
-            return const SizedBox(width: 16);
-          }
-        }),
-      ),
+    return Column(
+      children: [
+        SizedBox(
+          height: 250, // カードの高さを設定
+          child: PageView.builder(
+            controller: pageController,
+            itemCount: reviews.length,
+            onPageChanged: (index) {
+              currentPage.value = index;
+            },
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: reviews[index],
+              );
+            },
+          ),
+        ),
+        const SizedBox(height: 16),
+        // ページインジケーター
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(
+            reviews.length,
+            (index) => AnimatedContainer(
+              duration: const Duration(milliseconds: 300),
+              margin: const EdgeInsets.symmetric(horizontal: 4),
+              height: 8,
+              width: currentPage.value == index ? 24 : 8,
+              decoration: BoxDecoration(
+                color: currentPage.value == index ? Theme.of(context).primaryColor : Colors.grey.shade300,
+                borderRadius: BorderRadius.circular(4),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
