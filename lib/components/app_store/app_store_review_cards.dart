@@ -43,7 +43,7 @@ class AppStoreReviewCards extends StatelessWidget {
             'こちらのアプリは非常にシンプルで通知も複数回設定でき飲み忘れ防止にも期待できます。',
       ),
       const AppStoreReviewCard(
-        rating: 2.0,
+        rating: 5.0,
         title: '欲しかった機能です',
         date: '1年前',
         author: 'げんしちゃん',
@@ -56,6 +56,7 @@ class AppStoreReviewCards extends StatelessWidget {
 
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
+      padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
