@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/provider/locale.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'app_store_review_card.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
@@ -11,8 +12,9 @@ class AppStoreReviewCards extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     final isJaLocale = ref.watch(isJaLocaleProvider);
-    if (isJaLocale) {
+    if (isJaLocale && remoteConfigParameter.premiumIntroductionShowsAppStoreReviewCard) {
       final pageController = usePageController(viewportFraction: 0.85);
       final currentPage = useState(0);
 
