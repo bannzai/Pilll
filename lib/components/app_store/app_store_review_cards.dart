@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'app_store_review_card.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 

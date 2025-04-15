@@ -286,6 +286,8 @@ void main() {
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
+                isJaLocaleProvider.overrideWithValue(false),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: sheet,
