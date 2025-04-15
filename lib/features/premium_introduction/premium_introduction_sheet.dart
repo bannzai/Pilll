@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -127,6 +128,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           },
                           text: L.viewPremiumFeatures,
                         ),
+                        const SizedBox(height: 24),
+                        const AppStoreReviewCards(),
                         const SizedBox(height: 24),
                         PremiumIntroductionFooter(
                           isLoading: isLoading,
