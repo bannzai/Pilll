@@ -35,3 +35,12 @@ class CriticalAlertPage extends HookConsumerWidget {
     );
   }
 }
+
+extension CriticalAlertPageRoutes on CriticalAlertPage {
+  static Route<dynamic> route({required Setting setting}) {
+    return MaterialPageRoute(
+      settings: const RouteSettings(name: 'CriticalAlertPage'),
+      builder: (_) => CriticalAlertPage(setting: setting),
+    );
+  }
+}
