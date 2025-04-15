@@ -37,7 +37,6 @@ class AppStoreReviewCards extends StatelessWidget {
         final data = entry.value;
         final card = AppStoreReviewCard(
           rating: data.rating,
-          reviewCount: data.reviewCount,
           onTap: data.onTap,
           // AppStoreReviewCardの他のプロパティ（backgroundColorなど）も
           // 必要に応じてAppStoreReviewCardDataに追加して渡すことができます

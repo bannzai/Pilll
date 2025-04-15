@@ -5,7 +5,6 @@ class AppStoreReviewCard extends StatelessWidget {
   const AppStoreReviewCard({
     super.key,
     this.rating = 5,
-    this.reviewCount = 4927,
     this.onTap,
     this.backgroundColor = Colors.white,
     this.padding = const EdgeInsets.all(16),
@@ -13,7 +12,6 @@ class AppStoreReviewCard extends StatelessWidget {
   });
 
   final double rating;
-  final int reviewCount;
   final VoidCallback? onTap;
   final Color backgroundColor;
   final EdgeInsets padding;
@@ -51,14 +49,6 @@ class AppStoreReviewCard extends StatelessWidget {
                   ),
                 ),
               ],
-            ),
-            const SizedBox(height: 4),
-            Text(
-              '$reviewCount件のレビュー',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.grey[600],
-              ),
             ),
           ],
         ),
