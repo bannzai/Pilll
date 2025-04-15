@@ -26,6 +26,7 @@ mixin _$RemoteConfigParameter {
   int get discountEntitlementOffsetDay => throw _privateConstructorUsedError;
   int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
   String get premiumIntroductionPattern => throw _privateConstructorUsedError;
+  bool get premiumIntroductionShowsAppStoreReviewCard => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,7 +44,8 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour,
-      String premiumIntroductionPattern});
+      String premiumIntroductionPattern,
+      bool premiumIntroductionShowsAppStoreReviewCard});
 }
 
 /// @nodoc
@@ -64,6 +66,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? discountEntitlementOffsetDay = null,
     Object? discountCountdownBoundaryHour = null,
     Object? premiumIntroductionPattern = null,
+    Object? premiumIntroductionShowsAppStoreReviewCard = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -90,6 +93,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.premiumIntroductionPattern
           : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
               as String,
+      premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
+          ? _value.premiumIntroductionShowsAppStoreReviewCard
+          : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
+              as bool,
     ) as $Val);
   }
 }
@@ -106,7 +113,8 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int trialDeadlineDateOffsetDay,
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour,
-      String premiumIntroductionPattern});
+      String premiumIntroductionPattern,
+      bool premiumIntroductionShowsAppStoreReviewCard});
 }
 
 /// @nodoc
@@ -124,6 +132,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? discountEntitlementOffsetDay = null,
     Object? discountCountdownBoundaryHour = null,
     Object? premiumIntroductionPattern = null,
+    Object? premiumIntroductionShowsAppStoreReviewCard = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -150,6 +159,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.premiumIntroductionPattern
           : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
               as String,
+      premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
+          ? _value.premiumIntroductionShowsAppStoreReviewCard
+          : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -163,7 +176,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.trialDeadlineDateOffsetDay = RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
       this.discountEntitlementOffsetDay = RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
       this.discountCountdownBoundaryHour = RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
-      this.premiumIntroductionPattern = RemoteConfigParameterDefaultValues.premiumIntroductionPattern})
+      this.premiumIntroductionPattern = RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+      this.premiumIntroductionShowsAppStoreReviewCard = RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
@@ -186,10 +200,13 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @override
   @JsonKey()
   final String premiumIntroductionPattern;
+  @override
+  @JsonKey()
+  final bool premiumIntroductionShowsAppStoreReviewCard;
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard)';
   }
 
   @override
@@ -206,13 +223,15 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(other.discountCountdownBoundaryHour, discountCountdownBoundaryHour) ||
                 other.discountCountdownBoundaryHour == discountCountdownBoundaryHour) &&
             (identical(other.premiumIntroductionPattern, premiumIntroductionPattern) ||
-                other.premiumIntroductionPattern == premiumIntroductionPattern));
+                other.premiumIntroductionPattern == premiumIntroductionPattern) &&
+            (identical(other.premiumIntroductionShowsAppStoreReviewCard, premiumIntroductionShowsAppStoreReviewCard) ||
+                other.premiumIntroductionShowsAppStoreReviewCard == premiumIntroductionShowsAppStoreReviewCard));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, isPaywallFirst, skipInitialSetting, trialDeadlineDateOffsetDay, discountEntitlementOffsetDay,
-      discountCountdownBoundaryHour, premiumIntroductionPattern);
+      discountCountdownBoundaryHour, premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard);
 
   @JsonKey(ignore: true)
   @override
@@ -235,7 +254,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int trialDeadlineDateOffsetDay,
       final int discountEntitlementOffsetDay,
       final int discountCountdownBoundaryHour,
-      final String premiumIntroductionPattern}) = _$RemoteConfigParameterImpl;
+      final String premiumIntroductionPattern,
+      final bool premiumIntroductionShowsAppStoreReviewCard}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
@@ -252,6 +272,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   int get discountCountdownBoundaryHour;
   @override
   String get premiumIntroductionPattern;
+  @override
+  bool get premiumIntroductionShowsAppStoreReviewCard;
   @override
   @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;

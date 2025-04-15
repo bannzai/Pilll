@@ -3,11 +3,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/premium_introduction/ab_test/c/premium_introduction_sheet.dart';
-import 'package:pilll/features/premium_introduction/ab_test/b/premium_introduction_sheet.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -23,9 +22,9 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/links.dart';
-import 'package:pilll/utils/remote_config.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:pilll/provider/locale.dart';
 
 class PremiumIntroductionSheet extends HookConsumerWidget {
   const PremiumIntroductionSheet({super.key});
@@ -72,8 +71,11 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 
     final isLoading = useState(false);
 
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
+    final isJaLocale = ref.watch(isJaLocaleProvider);
+
     return DraggableScrollableSheet(
-      initialChildSize: 0.8,
+      initialChildSize: 1,
       builder: (context, scrollController) {
         return HUD(
           shown: isLoading.value,
@@ -131,6 +133,10 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           },
                           text: L.viewPremiumFeatures,
                         ),
+                        if (isJaLocale && remoteConfigParameter.premiumIntroductionShowsAppStoreReviewCard) ...[
+                          const SizedBox(height: 24),
+                          const AppStoreReviewCards(),
+                        ],
                         const SizedBox(height: 24),
                         PremiumIntroductionFooter(
                           isLoading: isLoading,
@@ -157,44 +163,11 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 }
 
 Future<void> showPremiumIntroductionSheet(BuildContext context) async {
-  final premiumIntroductionPattern = remoteConfig.getString(RemoteConfigKeys.premiumIntroductionPattern);
-  switch (premiumIntroductionPattern) {
-    case 'B':
-      await _showPremiumIntroductionSheetB(context);
-      break;
-    case 'C':
-      await _showPremiumIntroductionSheetC(context);
-      break;
-    default:
-      analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheet');
-
-      await showModalBottomSheet(
-        context: context,
-        builder: (_) => const PremiumIntroductionSheet(),
-        backgroundColor: Colors.transparent,
-        isScrollControlled: true,
-      );
-      break;
-  }
-}
-
-Future<void> _showPremiumIntroductionSheetC(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheetC');
+  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheet');
 
   await showModalBottomSheet(
     context: context,
-    builder: (_) => const PremiumIntroductionSheetC(),
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-  );
-}
-
-Future<void> _showPremiumIntroductionSheetB(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheetB');
-
-  await showModalBottomSheet(
-    context: context,
-    builder: (_) => const PremiumIntroductionSheetB(),
+    builder: (_) => const PremiumIntroductionSheet(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );

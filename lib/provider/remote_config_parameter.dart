@@ -29,6 +29,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.discountCountdownBoundaryHour,
       RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
     ),
+    premiumIntroductionShowsAppStoreReviewCard: remoteConfig.getBoolOrDefault(
+      RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard,
+      RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
+    ),
   );
 }
 

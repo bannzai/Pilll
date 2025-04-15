@@ -1,5 +1,8 @@
 import 'package:flutter/rendering.dart';
+import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/provider/locale.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
@@ -107,6 +110,8 @@ void main() {
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(true),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
+                isJaLocaleProvider.overrideWithValue(false),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -149,6 +154,8 @@ void main() {
                     .overrideWithValue(isOverDiscountDeadline),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
+                isJaLocaleProvider.overrideWithValue(false),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -191,6 +198,8 @@ void main() {
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
+                isJaLocaleProvider.overrideWithValue(false),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -234,6 +243,8 @@ void main() {
                     .overrideWithValue(isOverDiscountDeadline),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
+                isJaLocaleProvider.overrideWithValue(false),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -275,6 +286,8 @@ void main() {
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(const Duration(seconds: 1000)),
+                isJaLocaleProvider.overrideWithValue(false),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
               ],
               child: const MaterialApp(
                 home: sheet,

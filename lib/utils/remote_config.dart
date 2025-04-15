@@ -25,6 +25,7 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.discountCountdownBoundaryHour: RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
         RemoteConfigKeys.releasedVersion: RemoteConfigParameterDefaultValues.releasedVersion,
         RemoteConfigKeys.premiumIntroductionPattern: RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+        RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard: RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
       }),
       remoteConfig.fetchAndActivate()
     ).wait;
