@@ -88,6 +88,18 @@ class LocalNotificationService {
     );
   }
 
+  Future<void> requestPermission() async {
+    plugin
+        .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
+        ?.requestPermissions(sound: true, badge: true, alert: true, provisional: true);
+  }
+
+  Future<bool?> requestPermissionWithCriticalAlert() async {
+    return await plugin
+        .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
+        ?.requestPermissions(sound: true, badge: true, alert: true, provisional: true, critical: true);
+  }
+
   // iOSでは 以下の二つを実行しているだけなので今のところエラーは発生しない
   // center.removePendingNotificationRequests(withIdentifiers: ids), center.removeDeliveredNotifications(withIdentifiers: ids)
   Future<void> cancelNotification({required int localNotificationID}) async {
