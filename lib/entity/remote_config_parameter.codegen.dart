@@ -11,6 +11,7 @@ abstract class RemoteConfigKeys {
   static const discountCountdownBoundaryHour = 'discountCountdownBoundaryHour';
   static const releasedVersion = 'releasedVersion';
   static const premiumIntroductionPattern = 'premiumIntroductionPattern';
+  static const premiumIntroductionShowsAppStoreReviewCard = 'premiumIntroductionShowsAppStoreReviewCard';
 }
 
 abstract class RemoteConfigParameterDefaultValues {
@@ -22,6 +23,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const releasedVersion = '202407.29.133308';
   // default(A) or B or C ...
   static const premiumIntroductionPattern = 'default';
+  static const premiumIntroductionShowsAppStoreReviewCard = false;
 }
 
 @freezed
@@ -33,6 +35,7 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
     @Default(RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay) int discountEntitlementOffsetDay,
     @Default(RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour) int discountCountdownBoundaryHour,
     @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern) String premiumIntroductionPattern,
+    @Default(RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard) bool premiumIntroductionShowsAppStoreReviewCard,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

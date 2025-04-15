@@ -16,6 +16,8 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dyn
       discountCountdownBoundaryHour:
           (json['discountCountdownBoundaryHour'] as num?)?.toInt() ?? RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
       premiumIntroductionPattern: json['premiumIntroductionPattern'] as String? ?? RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+      premiumIntroductionShowsAppStoreReviewCard: json['premiumIntroductionShowsAppStoreReviewCard'] as bool? ??
+          RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterImpl instance) => <String, dynamic>{
@@ -25,4 +27,5 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterI
       'discountEntitlementOffsetDay': instance.discountEntitlementOffsetDay,
       'discountCountdownBoundaryHour': instance.discountCountdownBoundaryHour,
       'premiumIntroductionPattern': instance.premiumIntroductionPattern,
+      'premiumIntroductionShowsAppStoreReviewCard': instance.premiumIntroductionShowsAppStoreReviewCard,
     };
