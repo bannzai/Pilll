@@ -73,7 +73,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final isLoading = useState(false);
 
     return DraggableScrollableSheet(
-      initialChildSize: 0.8,
+      initialChildSize: 1,
       builder: (context, scrollController) {
         return HUD(
           shown: isLoading.value,
