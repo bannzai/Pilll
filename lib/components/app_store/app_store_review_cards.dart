@@ -8,9 +8,7 @@ class AppStoreReviewCards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 実際のレビューデータに基づいて AppStoreReviewCard を直接配置
     final reviews = [
-      // レビュー1
       const AppStoreReviewCard(
         rating: 5.0,
         title: '対応が早い。愛用アプリです',
@@ -22,8 +20,6 @@ class AppStoreReviewCards extends StatelessWidget {
             '問い合わせからお返事を頂くまで、そこからアップデートまで、全ての対応が丁寧で早く、とてもありがたかったです。'
             'このアプリに携わる皆様本当にありがとうございました！これからも使っていきます！',
       ),
-
-      // レビュー2
       const AppStoreReviewCard(
         rating: 5.0,
         title: '丁寧に作られているアプリです。',
@@ -38,8 +34,6 @@ class AppStoreReviewCards extends StatelessWidget {
             'ピルの利用法は人によって様々なので、万人に合うアプリではないかもしれませんが、進化し続けている誠意あるアプリです。'
             '実際使いやすいので、アプリに迷っている方にまずお勧めしたいです。',
       ),
-
-      // レビュー3
       const AppStoreReviewCard(
         rating: 5.0,
         title: 'シンプルで使いやすい',
@@ -48,8 +42,6 @@ class AppStoreReviewCards extends StatelessWidget {
         message: '以前有名どころを使っていましたが、多機能ゆえ煩わしい点が多かったです。（受診日を設定しないと次のシートを表示できない等）'
             'こちらのアプリは非常にシンプルで通知も複数回設定でき飲み忘れ防止にも期待できます。',
       ),
-
-      // レビュー4
       const AppStoreReviewCard(
         rating: 2.0,
         title: '欲しかった機能です',
@@ -62,7 +54,6 @@ class AppStoreReviewCards extends StatelessWidget {
       ),
     ];
 
-    // スクロール可能なレイアウトに変更
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       child: Row(
