@@ -155,44 +155,11 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 }
 
 Future<void> showPremiumIntroductionSheet(BuildContext context) async {
-  final premiumIntroductionPattern = remoteConfig.getString(RemoteConfigKeys.premiumIntroductionPattern);
-  switch (premiumIntroductionPattern) {
-    case 'B':
-      await _showPremiumIntroductionSheetB(context);
-      break;
-    case 'C':
-      await _showPremiumIntroductionSheetC(context);
-      break;
-    default:
-      analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheet');
-
-      await showModalBottomSheet(
-        context: context,
-        builder: (_) => const PremiumIntroductionSheet(),
-        backgroundColor: Colors.transparent,
-        isScrollControlled: true,
-      );
-      break;
-  }
-}
-
-Future<void> _showPremiumIntroductionSheetC(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheetC');
+  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheet');
 
   await showModalBottomSheet(
     context: context,
-    builder: (_) => const PremiumIntroductionSheetC(),
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-  );
-}
-
-Future<void> _showPremiumIntroductionSheetB(BuildContext context) async {
-  analytics.setCurrentScreen(screenName: 'PremiumIntroductionSheetB');
-
-  await showModalBottomSheet(
-    context: context,
-    builder: (_) => const PremiumIntroductionSheetB(),
+    builder: (_) => const PremiumIntroductionSheet(),
     backgroundColor: Colors.transparent,
     isScrollControlled: true,
   );
