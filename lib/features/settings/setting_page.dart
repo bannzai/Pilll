@@ -196,6 +196,7 @@ class SettingPageBody extends StatelessWidget {
                         if (Platform.isIOS) ...[
                           CriticalAlert(
                             setting: setting,
+                            isPremium: user.isPremium,
                           ),
                           _separator(),
                         ],
