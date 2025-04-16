@@ -17,6 +17,17 @@ class CriticalAlertPage extends HookConsumerWidget {
     final useCriticalAlert = useState(setting.useCriticalAlert);
     final ciritcalAlertVolume = useState(setting.criticalAlertVolume);
     final setSetting = ref.watch(setSettingProvider);
+    final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+
+    void updateSetting() async {
+      await setSetting(
+        setting.copyWith(
+          useCriticalAlert: useCriticalAlert.value,
+          criticalAlertVolume: ciritcalAlertVolume.value,
+        ),
+      );
+      await registerReminderLocalNotification();
+    }
 
     return Scaffold(
       appBar: AppBar(
@@ -38,10 +49,10 @@ class CriticalAlertPage extends HookConsumerWidget {
                     final granted = await localNotificationService.requestPermissionWithCriticalAlert();
                     if (granted == true) {
                       useCriticalAlert.value = value;
-                      setSetting(setting.copyWith(useCriticalAlert: value, criticalAlertVolume: ciritcalAlertVolume.value));
+                      updateSetting();
                     } else {
                       useCriticalAlert.value = false;
-                      setSetting(setting.copyWith(useCriticalAlert: false, criticalAlertVolume: 0));
+                      updateSetting();
                     }
                   },
                   title: Text(
@@ -90,7 +101,7 @@ class CriticalAlertPage extends HookConsumerWidget {
                       },
                       onChangeEnd: (value) {
                         ciritcalAlertVolume.value = value;
-                        setSetting(setting.copyWith(criticalAlertVolume: value));
+                        updateSetting();
                       },
                     ),
                   ],
