@@ -1565,6 +1565,25 @@ class MockLocalNotificationService extends _i1.Mock
       ) as _i9.Future<void>);
 
   @override
+  _i9.Future<void> requestPermission() => (super.noSuchMethod(
+        Invocation.method(
+          #requestPermission,
+          [],
+        ),
+        returnValue: _i9.Future<void>.value(),
+        returnValueForMissingStub: _i9.Future<void>.value(),
+      ) as _i9.Future<void>);
+
+  @override
+  _i9.Future<bool?> requestPermissionWithCriticalAlert() => (super.noSuchMethod(
+        Invocation.method(
+          #requestPermissionWithCriticalAlert,
+          [],
+        ),
+        returnValue: _i9.Future<bool?>.value(),
+      ) as _i9.Future<bool?>);
+
+  @override
   _i9.Future<void> cancelNotification({required int? localNotificationID}) =>
       (super.noSuchMethod(
         Invocation.method(
@@ -1581,6 +1600,18 @@ class MockLocalNotificationService extends _i1.Mock
         Invocation.method(
           #test,
           [],
+        ),
+        returnValue: _i9.Future<void>.value(),
+        returnValueForMissingStub: _i9.Future<void>.value(),
+      ) as _i9.Future<void>);
+
+  @override
+  _i9.Future<void> testCriticalAlert({required double? volume}) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #testCriticalAlert,
+          [],
+          {#volume: volume},
         ),
         returnValue: _i9.Future<void>.value(),
         returnValueForMissingStub: _i9.Future<void>.value(),
