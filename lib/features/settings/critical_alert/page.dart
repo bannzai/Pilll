@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -95,6 +96,7 @@ class CriticalAlertPage extends HookConsumerWidget {
                     ),
                     Slider(
                       value: ciritcalAlertVolume.value,
+                      activeColor: AppColors.primary,
                       label: ciritcalAlertVolume.value.toString(),
                       onChanged: (value) {
                         ciritcalAlertVolume.value = value;
