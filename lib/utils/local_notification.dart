@@ -404,11 +404,6 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
-                // 緊急アラート設定を読み込む
-
-                // 緊急アラートの設定に基づいて通知の詳細を設定
-                final interruptionLevel = setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
-
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
@@ -444,7 +439,7 @@ class RegisterReminderLocalNotification {
                       presentBanner: true,
                       presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
-                      interruptionLevel: interruptionLevel,
+                      interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.alarmClock,
@@ -473,9 +468,6 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
-                // 緊急アラートの設定に基づいて通知の詳細を設定
-                final interruptionLevel = setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
-
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
@@ -504,7 +496,7 @@ class RegisterReminderLocalNotification {
                       presentBanner: true,
                       presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
-                      interruptionLevel: interruptionLevel,
+                      interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.alarmClock,
@@ -645,9 +637,6 @@ class NewPillSheetNotification {
     Future<void> register(TZDateTime reminderDateTime) async {
       debugPrint('NewPillSheetNotification register time: $reminderDateTime');
       try {
-        // 緊急アラートの設定に基づいて通知の詳細を設定
-        final interruptionLevel = setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
-
         await localNotificationService.plugin.zonedSchedule(
           newPillSheetNotificationIdentifier,
           L.newPillSheetNotificationTitle,
@@ -675,7 +664,7 @@ class NewPillSheetNotification {
               presentAlert: false,
               presentBanner: true,
               presentList: true,
-              interruptionLevel: interruptionLevel,
+              interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive,
             ),
           ),
           androidScheduleMode: AndroidScheduleMode.alarmClock,
