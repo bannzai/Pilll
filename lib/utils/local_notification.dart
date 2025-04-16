@@ -23,7 +23,6 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
@@ -35,11 +34,6 @@ const iOSQuickRecordPillCategoryIdentifier = 'PILL_REMINDER';
 const androidReminderNotificationChannelID = 'androidReminderNotificationChannelID';
 const androidCalendarScheduleNotificationChannelID = 'androidCalendarScheduleNotificationChannelID';
 const androidReminderNotificationGroupKey = 'androidReminderNotificationGroupKey';
-
-// Emergency Alert Notification
-const androidEmergencyAlertNotificationChannelID = 'androidEmergencyAlertNotificationChannelID';
-const _keyEmergencyAlertEnabled = 'emergency_alert_enabled';
-const _keyEmergencyAlertVolume = 'emergency_alert_volume';
 
 // General Android Notification Setting
 // Doc: https://developer.android.com/reference/androidx/core/app/NotificationCompat#CATEGORY_REMINDER()
@@ -411,15 +405,9 @@ class RegisterReminderLocalNotification {
             Future(() async {
               try {
                 // 緊急アラート設定を読み込む
-                final emergencyAlertSettings = await _loadEmergencyAlertSettings();
-                final isEmergencyAlertEnabled = emergencyAlertSettings['enabled'] as bool;
-                final emergencyAlertVolume = emergencyAlertSettings['volume'] as double;
 
                 // 緊急アラートの設定に基づいて通知の詳細を設定
-                final interruptionLevel = isEmergencyAlertEnabled ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
-
-                final notificationChannelID =
-                    isEmergencyAlertEnabled ? androidEmergencyAlertNotificationChannelID : androidReminderNotificationChannelID;
+                final interruptionLevel = setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
 
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
@@ -428,14 +416,15 @@ class RegisterReminderLocalNotification {
                   reminderDateTime,
                   NotificationDetails(
                     android: AndroidNotificationDetails(
-                      notificationChannelID,
+                      androidReminderNotificationChannelID,
                       L.takePillReminderChannelName,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
                       category: AndroidNotificationCategory.reminder,
-                      importance: isEmergencyAlertEnabled ? Importance.high : Importance.defaultImportance,
-                      priority: isEmergencyAlertEnabled ? Priority.high : Priority.defaultPriority,
+                      // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+                      importance: Importance.defaultImportance,
+                      priority: Priority.defaultPriority,
                       actions: [
                         AndroidNotificationAction(
                           actionIdentifier,
@@ -445,7 +434,8 @@ class RegisterReminderLocalNotification {
                     ),
                     iOS: DarwinNotificationDetails(
                       categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                      sound: isEmergencyAlertEnabled ? 'critical_alert.aiff' : 'becho.caf',
+                      sound: setting.useCriticalAlert ? null : 'becho.caf',
+                      criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
                       presentBadge: true,
                       presentSound: true,
                       // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
@@ -483,16 +473,8 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
-                // 緊急アラート設定を読み込む
-                final emergencyAlertSettings = await _loadEmergencyAlertSettings();
-                final isEmergencyAlertEnabled = emergencyAlertSettings['enabled'] as bool;
-                final emergencyAlertVolume = emergencyAlertSettings['volume'] as double;
-
                 // 緊急アラートの設定に基づいて通知の詳細を設定
-                final interruptionLevel = isEmergencyAlertEnabled ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
-
-                final notificationChannelID =
-                    isEmergencyAlertEnabled ? androidEmergencyAlertNotificationChannelID : androidReminderNotificationChannelID;
+                final interruptionLevel = setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
 
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
@@ -501,17 +483,19 @@ class RegisterReminderLocalNotification {
                   reminderDateTime,
                   NotificationDetails(
                     android: AndroidNotificationDetails(
-                      notificationChannelID,
+                      androidReminderNotificationChannelID,
                       L.takePillReminderChannelName,
                       channelShowBadge: true,
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
                       category: AndroidNotificationCategory.reminder,
-                      importance: isEmergencyAlertEnabled ? Importance.high : Importance.defaultImportance,
-                      priority: isEmergencyAlertEnabled ? Priority.high : Priority.defaultPriority,
+                      // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+                      importance: Importance.defaultImportance,
+                      priority: Priority.defaultPriority,
                     ),
                     iOS: DarwinNotificationDetails(
-                      sound: isEmergencyAlertEnabled ? 'critical_alert.aiff' : 'becho.caf',
+                      sound: setting.useCriticalAlert ? null : 'becho.caf',
+                      criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
                       presentBadge: true,
                       presentSound: true,
                       // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
@@ -661,15 +645,8 @@ class NewPillSheetNotification {
     Future<void> register(TZDateTime reminderDateTime) async {
       debugPrint('NewPillSheetNotification register time: $reminderDateTime');
       try {
-        // 緊急アラート設定を読み込む
-        final emergencyAlertSettings = await _loadEmergencyAlertSettings();
-        final isEmergencyAlertEnabled = emergencyAlertSettings['enabled'] as bool;
-        final emergencyAlertVolume = emergencyAlertSettings['volume'] as double;
-
         // 緊急アラートの設定に基づいて通知の詳細を設定
-        final interruptionLevel = isEmergencyAlertEnabled ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
-
-        final notificationChannelID = isEmergencyAlertEnabled ? androidEmergencyAlertNotificationChannelID : androidReminderNotificationChannelID;
+        final interruptionLevel = setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.timeSensitive;
 
         await localNotificationService.plugin.zonedSchedule(
           newPillSheetNotificationIdentifier,
@@ -678,17 +655,19 @@ class NewPillSheetNotification {
           reminderDateTime,
           NotificationDetails(
             android: AndroidNotificationDetails(
-              notificationChannelID,
+              androidReminderNotificationChannelID,
               L.takePillReminderChannelName,
               channelShowBadge: true,
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
               category: AndroidNotificationCategory.reminder,
-              importance: isEmergencyAlertEnabled ? Importance.high : Importance.defaultImportance,
-              priority: isEmergencyAlertEnabled ? Priority.high : Priority.defaultPriority,
+              // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+              importance: Importance.defaultImportance,
+              priority: Priority.defaultPriority,
             ),
             iOS: DarwinNotificationDetails(
-              sound: isEmergencyAlertEnabled ? 'critical_alert.aiff' : 'becho.caf',
+              sound: setting.useCriticalAlert ? null : 'becho.caf',
+              criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
               presentBadge: true,
               presentSound: true,
               // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
@@ -748,15 +727,3 @@ class NewPillSheetNotification {
 }
 
 var localNotificationService = LocalNotificationService();
-
-// 緊急アラート設定を読み込む関数
-Future<Map<String, dynamic>> _loadEmergencyAlertSettings() async {
-  final prefs = await SharedPreferences.getInstance();
-  final enabled = prefs.getBool(_keyEmergencyAlertEnabled) ?? false;
-  final volume = prefs.getDouble(_keyEmergencyAlertVolume) ?? 0.8;
-
-  return {
-    'enabled': enabled,
-    'volume': volume,
-  };
-}
