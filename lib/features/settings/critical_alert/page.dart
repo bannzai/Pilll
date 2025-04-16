@@ -108,6 +108,20 @@ class CriticalAlertPage extends HookConsumerWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 20),
+                TextButton(
+                  onPressed: () {
+                    localNotificationService.testCriticalAlert();
+                  },
+                  child: const Text(
+                    'テスト通知を送信',
+                    style: TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.bold,
+                      color: TextColor.danger,
+                    ),
+                  ),
+                ),
               ],
             ),
           ),

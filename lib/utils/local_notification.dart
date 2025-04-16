@@ -127,6 +127,34 @@ class LocalNotificationService {
     );
   }
 
+  Future<void> testCriticalAlert() async {
+    await plugin.zonedSchedule(
+      Random().nextInt(1000000),
+      '通知のテスト',
+      'これは通知のテストです',
+      tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),
+      NotificationDetails(
+        android: AndroidNotificationDetails(
+          androidReminderNotificationChannelID,
+          L.takePillReminderChannelName,
+          channelShowBadge: true,
+          setAsGroupSummary: true,
+          groupKey: androidReminderNotificationGroupKey,
+          category: AndroidNotificationCategory.reminder,
+          importance: Importance.defaultImportance,
+          priority: Priority.defaultPriority,
+        ),
+        iOS: const DarwinNotificationDetails(
+          presentBadge: true,
+          presentSound: true,
+          interruptionLevel: InterruptionLevel.critical,
+          sound: null,
+        ),
+      ),
+      androidScheduleMode: AndroidScheduleMode.alarmClock,
+    );
+  }
+
   // iOSではgetPendingNotificationRequestsWithCompletionHandlerを実行しているだけなのでおそらくエラーは発生しない
   Future<List<PendingNotificationRequest>> pendingReminderNotifications() async {
     final pendingNotifications = await plugin.pendingNotificationRequests();
