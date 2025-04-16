@@ -33,8 +33,8 @@ class CriticalAlertPage extends HookConsumerWidget {
                 SwitchListTile(
                   value: useCriticalAlert.value,
                   onChanged: (value) async {
-                    final grand = await localNotificationService.requestPermissionWithCriticalAlert();
-                    if (grand == true) {
+                    final granted = await localNotificationService.requestPermissionWithCriticalAlert();
+                    if (granted == true) {
                       useCriticalAlert.value = value;
                     } else {
                       useCriticalAlert.value = false;
