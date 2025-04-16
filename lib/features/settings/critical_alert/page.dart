@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class CriticalAlertPage extends HookConsumerWidget {
@@ -15,6 +16,7 @@ class CriticalAlertPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final useCriticalAlert = useState(setting.useCriticalAlert);
     final ciritcalAlertVolume = useState(setting.criticalAlertVolume);
+    final setSetting = ref.watch(setSettingProvider);
 
     return Scaffold(
       appBar: AppBar(
@@ -36,8 +38,10 @@ class CriticalAlertPage extends HookConsumerWidget {
                     final granted = await localNotificationService.requestPermissionWithCriticalAlert();
                     if (granted == true) {
                       useCriticalAlert.value = value;
+                      setSetting(setting.copyWith(useCriticalAlert: value, criticalAlertVolume: ciritcalAlertVolume.value));
                     } else {
                       useCriticalAlert.value = false;
+                      setSetting(setting.copyWith(useCriticalAlert: false, criticalAlertVolume: 0));
                     }
                   },
                   title: Text(
@@ -83,6 +87,10 @@ class CriticalAlertPage extends HookConsumerWidget {
                       label: ciritcalAlertVolume.value.toString(),
                       onChanged: (value) {
                         ciritcalAlertVolume.value = value;
+                      },
+                      onChangeEnd: (value) {
+                        ciritcalAlertVolume.value = value;
+                        setSetting(setting.copyWith(criticalAlertVolume: value));
                       },
                     ),
                   ],
