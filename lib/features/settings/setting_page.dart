@@ -197,6 +197,7 @@ class SettingPageBody extends StatelessWidget {
                           CriticalAlert(
                             setting: setting,
                             isPremium: user.isPremium,
+                            isTrial: user.isTrial,
                           ),
                           _separator(),
                         ],
