@@ -96,6 +96,8 @@ class CriticalAlertPage extends HookConsumerWidget {
                     ),
                     Slider(
                       value: ciritcalAlertVolume.value,
+                      min: 0,
+                      max: 1,
                       activeColor: AppColors.primary,
                       label: ciritcalAlertVolume.value.toString(),
                       onChanged: (value) {
@@ -111,7 +113,7 @@ class CriticalAlertPage extends HookConsumerWidget {
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    localNotificationService.testCriticalAlert();
+                    localNotificationService.testCriticalAlert(volume: ciritcalAlertVolume.value);
                   },
                   child: const Text(
                     'テスト通知を送信',

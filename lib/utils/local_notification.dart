@@ -127,7 +127,9 @@ class LocalNotificationService {
     );
   }
 
-  Future<void> testCriticalAlert() async {
+  Future<void> testCriticalAlert({
+    required double volume,
+  }) async {
     await plugin.zonedSchedule(
       Random().nextInt(1000000),
       '通知のテスト',
@@ -144,10 +146,11 @@ class LocalNotificationService {
           importance: Importance.defaultImportance,
           priority: Priority.defaultPriority,
         ),
-        iOS: const DarwinNotificationDetails(
+        iOS: DarwinNotificationDetails(
           presentBadge: true,
           presentSound: true,
           interruptionLevel: InterruptionLevel.critical,
+          criticalSoundVolume: volume,
           sound: null,
         ),
       ),
