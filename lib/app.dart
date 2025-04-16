@@ -1,6 +1,7 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -26,6 +27,7 @@ class App extends StatelessWidget {
           centerTitle: true,
           color: AppColors.white,
           elevation: 3,
+          foregroundColor: TextColor.main,
         ),
         textSelectionTheme: const TextSelectionThemeData(
           cursorColor: AppColors.secondary,
