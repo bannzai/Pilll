@@ -18,7 +18,7 @@ class CriticalAlertPage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(L.enableNotificationInSilentMode),
+        title: Text(L.enableNotificationInSilentModeSetting),
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
           icon: const Icon(Icons.arrow_back),
