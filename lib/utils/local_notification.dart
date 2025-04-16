@@ -132,7 +132,7 @@ class LocalNotificationService {
       Random().nextInt(1000000),
       '通知のテスト',
       'これは通知のテストです',
-      tz.TZDateTime.from(now().add(const Duration(minutes: 1)), tz.local),
+      tz.TZDateTime.from(now().add(const Duration(seconds: 2)), tz.local),
       NotificationDetails(
         android: AndroidNotificationDetails(
           androidReminderNotificationChannelID,
