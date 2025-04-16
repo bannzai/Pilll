@@ -2281,5 +2281,9 @@
   "enableNotificationInSilentMode": "マナーモードでも通知する",
   "@enableNotificationInSilentMode": {
     "description": "マナーモードでも通知する"
+  },
+  "criticalAlertVolume": "音量",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }
