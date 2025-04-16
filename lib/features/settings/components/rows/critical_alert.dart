@@ -29,7 +29,6 @@ class CriticalAlert extends HookConsumerWidget {
           fontSize: 14,
         ),
       ),
-      trailing: const Icon(Icons.chevron_right),
       contentPadding: const EdgeInsets.fromLTRB(14, 4, 6, 0),
       onTap: () {
         analytics.logEvent(
