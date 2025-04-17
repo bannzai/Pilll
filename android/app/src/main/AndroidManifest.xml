@@ -123,6 +123,12 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+    <!-- ref: https://qiita.com/h-nimrod/items/ac206786239d7447133e -->
+    <property
+        android:name="android.adservices.AD_SERVICES_CONFIG"
+        android:resource="@xml/gma_ad_services_config"
+        tools:replace="android:resource" />
     </application>
 
 </manifest>
