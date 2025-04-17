@@ -140,25 +140,13 @@ tasks.whenTaskAdded { task ->
 }
 
 task selectGoogleServicesJson(type: Copy) {
-    from "src/$dartDefines.FLAVOR/google-services.json"
-    into './'
+    doFirst {
+        from "src/$dartDefines.FLAVOR/google-services.json"
+        into './'
+    }
 }
 tasks.whenTaskAdded { task ->
     if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
         task.dependsOn selectGoogleServicesJson
-    }
-}
-
-afterEvaluate {
-    if (tasks.findByName('compileFlutterBuildDebug')) {
-        tasks.getByName('compileFlutterBuildDebug').dependsOn selectGoogleServicesJson
-    }
-    
-    if (tasks.findByName('mergeDebugResources')) {
-        tasks.getByName('mergeDebugResources').dependsOn selectGoogleServicesJson
-    }
-    
-    if (tasks.findByName('generateDebugResources')) {
-        tasks.getByName('generateDebugResources').dependsOn selectGoogleServicesJson
     }
 }
