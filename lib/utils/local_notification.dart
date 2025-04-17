@@ -25,7 +25,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/timezone.dart';
 
 // Reminder Notification
@@ -51,7 +51,7 @@ class LocalNotificationService {
 
   static Future<void> setupTimeZone() async {
     tz.initializeTimeZones();
-    tz.setLocalLocation(tz.getLocation(await FlutterNativeTimezone.getLocalTimezone()));
+    tz.setLocalLocation(tz.getLocation(await FlutterTimezone.getLocalTimezone()));
   }
 
   Future<void> initialize() async {

@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:flutter/foundation.dart';
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/package.codegen.dart';
@@ -179,7 +179,7 @@ class SaveUserLaunchInfo {
     final now = DateTime.now().toLocal();
     final timeZoneName = now.timeZoneName;
     final timeZoneOffset = now.timeZoneOffset;
-    final timeZoneDatabaseName = await FlutterNativeTimezone.getLocalTimezone();
+    final timeZoneDatabaseName = await FlutterTimezone.getLocalTimezone();
 
     // Package
     final packageInfo = await PackageInfo.fromPlatform();
