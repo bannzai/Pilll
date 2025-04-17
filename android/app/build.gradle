@@ -148,3 +148,13 @@ tasks.whenTaskAdded { task ->
         task.dependsOn selectGoogleServicesJson
     }
 }
+
+afterEvaluate {
+    if (tasks.findByName('compileFlutterBuildDebug')) {
+        tasks.getByName('compileFlutterBuildDebug').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('mergeDebugResources')) {
+        tasks.getByName('mergeDebugResources').dependsOn selectGoogleServicesJson
+    }
+}
