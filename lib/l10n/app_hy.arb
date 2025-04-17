@@ -2281,5 +2281,21 @@
   "medicationNotification": "օգտագործման ծանուցում",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Խտացրած ռեժիմը ON է կամ սարքը մաստ է, տեղեկացումները դեռևս ցուցադրվում են կողպված էկրանին և ձայնը լսելի է։",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Հուշում տալ նաև ունկնդրման ռեժիմում",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Ծանուցումների կարգավորումներ բեն ջանք չդարձնելու համար",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ճնշում",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

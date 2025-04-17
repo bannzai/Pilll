@@ -2281,5 +2281,21 @@
   "medicationNotification": "Paalala sa pag-inom",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Kahit na naka-ON ang Focus Mode o naka-silent ang device, ang mga notification ay ipapakita sa lock screen at ang tunog ay ipe-play.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Magbigay ng abiso kahit na nasa silent mode.",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Mga setting ng notification kahit na nasa silent mode",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Saka",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

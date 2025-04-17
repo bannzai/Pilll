@@ -2281,5 +2281,21 @@
   "medicationNotification": "ادویات کی اطلاع",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "چوکر کی حالت آن ہے یا ڈیوائس خاموش ہے ، نوٹیفیکیشن لاک اسکرین پر نظر آئے گا اور آواز بجے گی۔",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "خاموش موڈ میں بھی اطلاع دیں",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "خاموش موڈ میں بھی اطلاع کی ترتیبات",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "حجم",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

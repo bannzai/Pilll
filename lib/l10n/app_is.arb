@@ -2281,5 +2281,21 @@
   "medicationNotification": "Lyfjaskilaboð",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Þó svo að einbeitingarmótið sé virkt eða tækið sé í hljóðlausu ferli, munu tilkynningar birtast á låsaskjánum og hljóð mun spila.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Tilkynni jafnvel þegar í hljóðlausu ham.",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Tilkynningarstillingar jafnvel í hljóðlausu lægi",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Hljómstill",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

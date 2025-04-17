@@ -2281,5 +2281,21 @@
   "medicationNotification": "Upozornění na užití",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Oznámení se zobrazí na uzamčené obrazovce a bude přehráno zvuk i při aktivním režimu soustředění nebo při ztlumeném zařízení.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Odeslat oznámení i v tichém režimu",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Nastavení oznámení i v režimu tichého módu",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Hlasitost",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "服用通知",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "即使集中模式开启或设备处于静音状态，通知仍将在锁屏上显示，并播放声音。",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "在静音模式下也会通知",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "即使在静音模式下也可设置通知",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "音量",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

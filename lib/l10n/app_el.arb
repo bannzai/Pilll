@@ -2281,5 +2281,21 @@
   "medicationNotification": "Ειδοποίηση λήψης φαρμάκων",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Ακόμα και όταν η λειτουργία \"Εστίαση\" είναι ενεργοποιημένη ή όταν η συσκευή είναι σε σίγαση, οι ειδοποιήσεις θα εμφανίζονται στην οθόνη κλειδώματος και ο ήχος θα αναπαράγεται.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Ειδοποιεί ακόμη και σε σιωπηλή λειτουργία",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Ρυθμίσεις ειδοποίησης ακόμα και σε αθόρυβη λειτουργία",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Όγκος",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

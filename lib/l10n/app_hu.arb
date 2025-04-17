@@ -2281,5 +2281,21 @@
   "medicationNotification": "Bevételi értesítés",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "A középpont üzemmódban vagy a készülék némítva is, az értesítések megjelennek a zárképernyőn, és a hang lejátszásra kerül.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Értesít a néma módban is",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Értesítési beállítás csendes módban",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "hanger",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "Thông báo dùng thuốc",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Thông báo sẽ hiển thị trên màn hình khóa và âm thanh sẽ được phát ngay cả khi chế độ tập trung đang bật hoặc thiết bị ở chế độ im lặng.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Thông báo ngay cả khi ở chế độ Im lặng",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Cài đặt thông báo ngay cả khi ở chế độ im lặng",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Âm lượng",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

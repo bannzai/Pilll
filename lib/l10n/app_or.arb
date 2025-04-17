@@ -2281,5 +2281,21 @@
   "medicationNotification": "ପିଲ୍ ନେବା ବିବେକୀକରଣ",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "ନିଜର କେନ୍ଦ୍ରିତ ସ୍ଥିତି ଓନ୍ ହୋଇଥିଲେ କିମ୍ବା ଡିଭାଇସ୍ ମୁନ୍ଦାରଣ ହେବା ସମୟରେ, ସୂଚନା ଲକ୍ କ୍ରିୟାପଧାରାରେ ଦିଖାଯିବ, ଏବଂ ସାଉଣ୍ଡ ଚାଲିବ।",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "માણઆર્ મૉડમાં પણ સુચિત કરો",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "ନିୟମିତ ନୋଟିଫିକେସନ ସେଟିଂ ମାନର ମୋଡରେ ବହୁତ ପ୍ରୟୋଗ ହୁଏ",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ଧ୍ୱନିର ସ୍ଥର",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

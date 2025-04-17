@@ -2281,5 +2281,21 @@
   "medicationNotification": "ការប្រាប់អំពីការទទួលមេដឹកនាំ",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "ការជូនដំណឹងត្រូវបានបង្ហាញនៅលើអេក្រង់ដណ្ដឹងទៀតទាំងពេលស្ថានភាពផ្តោតកម្រិតកំពុងON ឬឧបករណ៍មានសំឡេងបិទ។",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "សូមជូនដំណឹងនៅពេលដែលមានស្ថានភាពម៉ាណូដមិនថាទៅក្នុងម៉ូដថQuiet",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "ការកំណត់ការជូនដំណឹងចំពោះម៉ូដអំពីមន្រ្តី",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "សូម្បីតែ",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

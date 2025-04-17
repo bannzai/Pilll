@@ -2281,5 +2281,21 @@
   "medicationNotification": "Vaistų vartojimo pranešimas",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Net jeigu koncentracijos režimas įjungtas arba įrenginys yra be garso, pranešimai bus rodomi užrakto ekrane ir garsas bus atkuriamas.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Pranešimai net ir tyliajame režime",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Pranešimų nustatymas net ir tyliajame režime",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Garsas",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

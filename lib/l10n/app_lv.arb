@@ -2281,5 +2281,21 @@
   "medicationNotification": "Zāļu lietošanas paziņojums",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Paziņas tiks rādītas bloķētajā ekrānā un tiks atskaņota skaņa pat tad, ja koncentrācijas režīms ir ieslēgts vai ierīce ir skaņas izslēgšanas režīmā.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Paziņot pat klusā režīmā",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Paziņojumu iestatījumi pat klusuma režīmā",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "skaņas līmenis",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

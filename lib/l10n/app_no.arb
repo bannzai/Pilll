@@ -2281,5 +2281,21 @@
   "medicationNotification": "Inntaksvarsel",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Varslingsmeldinger vises på låseskjerm og lyd spilles av selv når fokustilstand er aktiv eller enheten er i lydløs modus.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Varsle selv om mobilen er i lydløsmodus",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Varsler innstillinger selv i stille modus",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Lydnivå",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

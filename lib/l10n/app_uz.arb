@@ -2281,5 +2281,21 @@
   "medicationNotification": "Doriq qilish bildirishnomasi",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "E'tibor rejimi yoqilgan yoki qurilma ovozsiz holatda bo'lsa ham, bildirishnomalar qulflash ekranida ko'rsatiladi va ovoz chiqariladi.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Xavot qilish rejimida ham bildirishnoma yuboradi",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Alomat rejimidagi bildirishnomalar sozlamalari",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Hajm",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

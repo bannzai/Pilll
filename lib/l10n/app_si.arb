@@ -2281,5 +2281,21 @@
   "medicationNotification": "පැමිණීමේ දැනුම",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "ආකර්ෂණ ශේෂය ON හෝ උපකරණය සක්‍රිය නොවන විට, අනාවරණයන් ආවරණ රෙදුමට පැමිණේ සහ හවා ශබ්දයක් වාදනය වේ",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "මනා ගමන් ආකාරයේදීම දැනුම්දීම",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "ආචාරධර්ම මොඩ් හිදී දැනුම්දීම සැකසුම්",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ශ්‍රව්‍යතා",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

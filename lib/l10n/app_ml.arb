@@ -2281,5 +2281,21 @@
   "medicationNotification": "ഡോസിംഗ് അറിയിപ്പ്",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "കেন্দ്രീകൃത മോഡ് ON ആണെങ്കിൽ അല്ലെങ്കിൽ ഡിവൈസ് മ്യൂട്ട് ചെയ്തിട്ടുണ്ടെങ്കിൽ പോലും, അറിയിപ്പുകൾ ലോക്ക് സ്ക്രീനിൽ പ്രദർശിതമാകും, ശബ്ദം தொடர்ந்து നണി നൽകും.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "മനോഭാവം മോഡ് ആണെങ്കിലും അറിയിപ്പ alerts",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "മാനർ മോഡിൽ എവിടെ വന്നാല്‍ അറിയിപ്പുകൾ ക്രമീകരിക്കുക",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ശബ്ദനില",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "पिल लेने की सूचना",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "नोटिफिकेशन लॉक स्क्रीन पर दिखाई देंगे और जब कंसंट्रेशन मोड चालू हो या डिवाइस वाइब्रेटिंग मोड में हो तब भी साउंड चलाने का काम करेंगे।",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "ध्यान मोड में भी सूचित करें",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "म्यूट मोड में भी सूचनाएँ सेट करना",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ध्वनि स्तर",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

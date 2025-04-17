@@ -2281,5 +2281,21 @@
   "medicationNotification": "Notificació de presa",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Les notificacions es mostraran a la pantalla de bloqueig i sonaran, fins i tot quan el mode d'enfocament està activat o el dispositiu està en silenci.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Notifica també amb el mode silenci activat.",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Configuració de notificacions en modalitat silenciosa",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Volum",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

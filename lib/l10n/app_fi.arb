@@ -2281,5 +2281,21 @@
   "medicationNotification": "Lääkkeiden muistutus",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Ilmoitukset näytetään lukitusnäytöllä ja ääni toistetaan, vaikka keskittymis tila on päällä tai laite on äänettömällä.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Ilmoita myös äänettömässä tilassa",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Ilmoitusasetukset myös äänettömällä tilalla",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ääni",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

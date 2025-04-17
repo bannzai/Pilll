@@ -2281,5 +2281,21 @@
   "medicationNotification": "దవాఖానా పరిహారాలు",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "సెంట్రల్ మోడ్ ఆన్ లేదా పరికరం మ్యూట్ లో ఉన్నప్పటికీ, నోటిఫికేషన్‌లు లాక్ స్క్రీన్‌పై చూపించబడతాయి మరియు శాతం పాడవుతాయి.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "మానర్ మోడ్‌లోనూ నోటిఫికేషన్ ఇవ్వండి",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "మానర్ మోడ్ లోనూ నోటిఫికేషన్ సెట్టింగ్స్",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ఒక ఏకకాలిక చొప్పిత వాల్యూమ్",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

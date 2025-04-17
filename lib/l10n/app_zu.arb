@@ -2281,5 +2281,21 @@
   "medicationNotification": "ukukhumbuza ukuthatha",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Noma imodi yokugxila ivuliwe noma idivayisi icishiwe, izaziso zizozo zivele esikrinini sokuvula, futhi umsindo uzodlalwa.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Ukuze uqinisekise ukuthi izaziso zifika nakuma-mode okuthula",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Ukucushwa kokwaziswa nakuma-mode we-manner",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ivolumu",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

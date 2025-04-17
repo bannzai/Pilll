@@ -2281,5 +2281,21 @@
   "medicationNotification": "Hysbysiad cymryd",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Mae hysbysiadau yn cael eu harddangos ar y sgrin gloi, a bydd sain yn chwarae, hyd yn oed pan fo'r modd canolbwyntio i ffwrdd neu pan fydd y ddyfais mewn sordd.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Hysbysu hyd yn oed yn y modd distaw",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Hysbysiadau wedi'u gosod hyd yn oed pan fyddwch yn y modd grym",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Llethder",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

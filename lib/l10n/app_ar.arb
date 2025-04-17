@@ -2281,5 +2281,21 @@
   "medicationNotification": "إشعار تناول الدواء",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "عند تفعيل وضع التركيز أو إذا كان الجهاز في وضع الصامت، ستظهر الإشعارات على شاشة القفل وستتم إعادة تشغيل الصوت.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "يُخطِر حتى في وضع عدم الإزعاج",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "إعدادات الإشعارات حتى في وضع عدم الإزعاج",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "حجم الصوت",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

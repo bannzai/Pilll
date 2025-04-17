@@ -2281,5 +2281,21 @@
   "medicationNotification": "የተያዙ መረጃ",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "አንድ ምርጥ ሞዴዝ ወይም መሣሪያው ዝም ሳይኖረው እንኳን ማሳያዎች በተዘጋጀ አይነት ይታያሉ፣ ድምጽ ይገኛል።",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "የተመለከተ ዕቅፍ ምንም ያለም ማለት ይቻላል",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "እንቅስቃሴ ሞዴ ውስጥ ቢሆንም ማስታወቂያ ቅንብር",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ድምፅ",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

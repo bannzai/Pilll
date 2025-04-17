@@ -2281,5 +2281,21 @@
   "medicationNotification": "ການແຈ່ກໄອເສສະກະ",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "ໃນເບັດມອງສົດທີ່ອະດີດມີສະດາດໄວ້ຫຼືອຸປະກອນຈິບບິ່ນບັດບາດຈື່ເທົ່ານັ້ນການເຂົ້າຮອບຕິດຕາມແລະເຊິ່ອດເຄື່ອນສົນຈະໃຊ້ ດຽວນັ້ນ ແລະ ເສຽງຊັດຕິລສົມປັຣ ນິຍັບສາດສົດໄວ້.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "ແຈ້ງເລື່ອນສະເໜີໃນແມ່ນບໍ່ວ່າຈະເປັນປະຈຸກດຽວ",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "ການເອົ້າຈິດໃນແບບສະຖານທີ່ສະມາດ ໃນຄວາມຈິງເປັນການລົງຄະແນນສະຖານນິຍາມເຊັ່ນແບບມະນຸດ PSI ໃນພາຍໃນລະດັບສູງແລະສະກຸນຂອງມາດສະຢິງໃນຫລຸດໄປທັງທົນທີ່ສຽງດິນຄລິງຊຽງສາຍຈຶຈອບຫລືໂຕໃນຄວາມຈິງເນອມສລະຊາຍ LymonBLA.",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ເສຽງດັດ",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

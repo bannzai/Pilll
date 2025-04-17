@@ -2281,5 +2281,21 @@
   "medicationNotification": "Einnahme-Benachrichtigung",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Die Benachrichtigungen werden auch im Fokusmodus oder wenn das Gerät stummgeschaltet ist, auf dem Sperrbildschirm angezeigt und der Ton wird abgespielt.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Im verständigen Modus auche benachrichtige.",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Benachrichtigunge im Maanaermodus aunstelle",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Lautstärke",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

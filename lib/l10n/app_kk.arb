@@ -2281,5 +2281,21 @@
   "medicationNotification": "Дозалау хабарламасы",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Орталық режим қосулы немесе құрылғы үнсіз болғанда да, хабарламалар құлыптау экранында көрсетіліп, дыбыс ойнатылуда.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Кешіріңіз, күйзеліске түскенде хабарландыру жіберу",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Тыныш режимінде де хабарламаларды баптау",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Дауысы",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }
