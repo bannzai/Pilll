@@ -7,7 +7,7 @@ prepare:
 .PHONY: secret
 secret:
 	echo $(FILE_FIREBASE_ANDROID) | base64 -D > android/app/src/google-services.json
-	echo $(FILE_FIREBASE_IOS) | base64 -D > ios/Firebase/GoogleService-Info-dev.plist
+	echo $(FILE_FIREBASE_IOS) | base64 -D > ios/Firebase/GoogleService-Info.plist
 	echo $(XCCONFIG_SECRET) | base64 -D > ios/Flutter/Secret.xcconfig
 	echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
 	echo $(DART_DEFINE_FROM_FILE_DEV) | base64 -D > environment/dev.json
