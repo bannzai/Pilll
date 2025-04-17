@@ -53,8 +53,17 @@ if (project.hasProperty('dart-defines')) {
         }
 }
 
+// デバッグ出力を追加
+println "======= DEBUG dart-defines ======="
+println "FLAVOR: ${dartDefines.FLAVOR}"
+println "ANDROID_APPLICATION_ID: ${dartDefines.ANDROID_APPLICATION_ID}"
+println "APP_NAME: ${dartDefines.APP_NAME}"
+println "=================================="
+
 android {
     namespace 'com.mizuki.Ohashi.Pilll'
+    println "DEBUG NAMESPACE: com.mizuki.Ohashi.Pilll (fixed)"
+    println "DEBUG APPLICATION_ID: ${dartDefines.ANDROID_APPLICATION_ID}"
 
     compileSdkVersion 35
 
@@ -136,6 +145,7 @@ dependencies {
 }
 
 task copySources(type: Copy) {
+   println "DEBUG COPY SOURCES FLAVOR: ${dartDefines.FLAVOR}"
    from "src/$dartDefines.FLAVOR/res"
    into 'src/main/res'
 }
@@ -143,12 +153,37 @@ tasks.whenTaskAdded { task ->
    task.dependsOn copySources
 }
 
+// Google Servicesのセットアップを追加
 task selectGoogleServicesJson(type: Copy) {
-    from "src/$dartDefines.FLAVOR/google-services.json"
-    into './'
+    println "DEBUG GOOGLE SERVICES FLAVOR: ${dartDefines.FLAVOR}"
+    doFirst {
+        from "src/${dartDefines.FLAVOR}/google-services.json"
+        into './'
+        println "Copying google-services.json from src/${dartDefines.FLAVOR}/ to project root directory"
+    }
 }
-tasks.whenTaskAdded { task ->
-    if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
-        task.dependsOn selectGoogleServicesJson
+
+// FirebaseのセットアップとResourcesの依存関係を確立
+afterEvaluate {
+    // 既存のタスク依存関係
+    if (tasks.findByName('compileFlutterBuildDebug')) {
+        tasks.getByName('compileFlutterBuildDebug').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('mergeDebugResources')) {
+        tasks.getByName('mergeDebugResources').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('generateDebugResources')) {
+        tasks.getByName('generateDebugResources').dependsOn selectGoogleServicesJson
+    }
+    
+    // Firebase関連タスクの依存関係
+    if (tasks.findByName('processDebugGoogleServices')) {
+        tasks.getByName('processDebugGoogleServices').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('processReleaseGoogleServices')) {
+        tasks.getByName('processReleaseGoogleServices').dependsOn selectGoogleServicesJson
     }
 }
