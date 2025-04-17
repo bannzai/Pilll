@@ -41,6 +41,7 @@ jobs:
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
         XCCONFIG_SECRET: ${{ secrets.XCCONFIG_SECRET_DEVELOPMENT }}
+        ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.29.3'
@@ -62,6 +63,7 @@ jobs:
         FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
         DART_DEFINE_FROM_FILE_DEV: ${{ secrets.DART_DEFINE_FROM_FILE_DEV }}
+        ANDROID_RES_VALUES: ${{ secrets.ANDROID_RES_VALUES }}
     - uses: subosito/flutter-action@v2
       with:
         flutter-version: '3.29.3'
