@@ -119,7 +119,6 @@ dependencies {
     // > There have been reports that enabling desugaring may result in a Flutter apps crashing on Android 12L and above. This would be an issue with Flutter itself, not the plugin. One possible fix is adding the WindowManager library as a dependency:
     implementation 'androidx.window:window:1.0.0'
     implementation 'androidx.window:window-java:1.0.0'
-    implementation 'com.google.errorprone:error_prone_annotations:2.15.0'
 }
 
 apply plugin: 'com.google.gms.google-services'
