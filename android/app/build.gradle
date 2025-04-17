@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
 def secretProperties = new Properties()
 def secretPropertiesFile = rootProject.file('secret.properties')
