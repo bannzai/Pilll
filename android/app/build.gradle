@@ -21,9 +21,13 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+    id "com.google.firebase.crashlytics"
+}
 
 def secretProperties = new Properties()
 def secretPropertiesFile = rootProject.file('secret.properties')
@@ -115,7 +119,6 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.firebase:firebase-messaging:20.1.6'
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
     // https://pub.dev/packages/flutter_local_notifications#-android-setup
@@ -125,9 +128,6 @@ dependencies {
     implementation 'androidx.window:window:1.0.0'
     implementation 'androidx.window:window-java:1.0.0'
 }
-
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
 
 task copySources(type: Copy) {
    from "src/$dartDefines.FLAVOR/res"
