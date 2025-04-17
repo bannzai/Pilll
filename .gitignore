@@ -50,3 +50,7 @@ scripts/venv
 translation_scripts/
 
 fastlane/
+
+android/app/src/dev/res/values/values.xml
+android/app/src/main/res/values/values.xml
+android/app/src/prod/res/values/values.xml
