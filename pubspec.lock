@@ -520,7 +520,7 @@ packages:
     description:
       path: "."
       ref: master
-      resolved-ref: c461a88869c07dee9e00ab794d05e53debde0aca
+      resolved-ref: "24ab53785612af789a862bab902b908856eb2a5b"
       url: "https://github.com/bannzai/flutter_native_timezone.git"
     source: git
     version: "2.0.1"
