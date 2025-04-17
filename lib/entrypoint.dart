@@ -37,8 +37,6 @@ Future<void> entrypoint() async {
     Intl.defaultLocale = 'ja';
 
     WidgetsFlutterBinding.ensureInitialized();
-    final packageInfo = await PackageInfo.fromPlatform();
-    print('DEBUG packageInfo: ${packageInfo.version}, packageName: ${packageInfo.packageName}');
 
     await Firebase.initializeApp();
     await MobileAds.instance.initialize();
