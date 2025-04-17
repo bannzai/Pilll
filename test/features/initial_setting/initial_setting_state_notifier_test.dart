@@ -28,7 +28,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 void main() {
-  const MethodChannel timezoneChannel = MethodChannel('flutter_native_timezone');
+  const MethodChannel timezoneChannel = MethodChannel('flutter_timezone');
   late RegisterReminderLocalNotificationRunner registerReminderLocalNotificationRunner;
 
   setUp(() async {
