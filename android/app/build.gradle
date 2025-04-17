@@ -54,6 +54,8 @@ if (project.hasProperty('dart-defines')) {
 }
 
 android {
+    namespace dartDefines.ANDROID_APPLICATION_ID
+
     compileSdkVersion 35
 
     compileOptions {
@@ -74,7 +76,6 @@ android {
     }
     
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId dartDefines.ANDROID_APPLICATION_ID
         minSdkVersion 26
         targetSdkVersion flutter.targetSdkVersion
