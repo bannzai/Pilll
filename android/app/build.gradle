@@ -54,7 +54,7 @@ if (project.hasProperty('dart-defines')) {
 }
 
 android {
-    namespace dartDefines.ANDROID_APPLICATION_ID
+    namespace 'com.mizuki.Ohashi.Pilll'
 
     compileSdkVersion 35
 
