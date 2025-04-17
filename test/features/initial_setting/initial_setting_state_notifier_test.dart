@@ -3,6 +3,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
+import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -68,6 +69,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -96,6 +98,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -132,6 +135,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -163,6 +167,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -195,6 +200,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -231,6 +237,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -259,6 +266,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
         ],
       );
       final store = container.read(initialSettingStateNotifierProvider.notifier);
@@ -330,6 +338,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
         ],
       );
@@ -420,6 +429,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
         ],
       );
@@ -501,6 +511,7 @@ void main() {
           batchSetPillSheetModifiedHistoryProvider.overrideWith((ref) => batchSetPillSheetModifiedHistory),
           batchSetPillSheetGroupProvider.overrideWith((ref) => batchSetPillSheetGroup),
           remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+          deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
           registerReminderLocalNotificationRunnerProvider.overrideWithValue(registerReminderLocalNotificationRunner),
         ],
       );
