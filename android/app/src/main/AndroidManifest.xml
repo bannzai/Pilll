@@ -31,7 +31,7 @@
             android:value="${ADMOB_APP_ID}" />
 
         <receiver
-            android:name=".PilllAppWidget"
+            android:name="com.mizuki.Ohashi.Pilll.PilllAppWidget"
             android:exported="false" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -60,7 +60,7 @@
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" />
         
         <activity
-            android:name=".MainActivity"
+            android:name="com.mizuki.Ohashi.Pilll.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:exported="true"
             android:hardwareAccelerated="true"
