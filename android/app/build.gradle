@@ -65,7 +65,11 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '11'
+// * What went wrong:
+// Execution failed for task ':flutter_native_timezone:compileDebugKotlin'.
+// > 'compileDebugJavaWithJavac' task (current target is 1.8) and 'compileDebugKotlin' task (current target is 17) jvm target compatibility should be set to the same Java version.
+//   Consider using JVM toolchain: https://kotl.in/gradle/jvm/toolchain
+        jvmTarget = '17'
     }
 
     sourceSets {
