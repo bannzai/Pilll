@@ -157,4 +157,8 @@ afterEvaluate {
     if (tasks.findByName('mergeDebugResources')) {
         tasks.getByName('mergeDebugResources').dependsOn selectGoogleServicesJson
     }
+    
+    if (tasks.findByName('generateDebugResources')) {
+        tasks.getByName('generateDebugResources').dependsOn selectGoogleServicesJson
+    }
 }
