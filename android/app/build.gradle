@@ -144,10 +144,8 @@ tasks.whenTaskAdded { task ->
 }
 
 task selectGoogleServicesJson(type: Copy) {
-    doFirst {
-        from "src/$dartDefines.FLAVOR/google-services.json"
-        into './'
-    }
+    from "src/$dartDefines.FLAVOR/google-services.json"
+    into './'
 }
 tasks.whenTaskAdded { task ->
     if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
