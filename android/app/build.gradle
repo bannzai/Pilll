@@ -53,16 +53,8 @@ if (project.hasProperty('dart-defines')) {
         }
 }
 
-// デバッグ出力を追加
-println "======= DEBUG dart-defines ======="
-println "FLAVOR: ${dartDefines.FLAVOR}"
-println "ANDROID_APPLICATION_ID: ${dartDefines.ANDROID_APPLICATION_ID}"
-println "APP_NAME: ${dartDefines.APP_NAME}"
-println "=================================="
-
 android {
     namespace dartDefines.ANDROID_APPLICATION_ID
-    println "DEBUG NAMESPACE: ${dartDefines.ANDROID_APPLICATION_ID}"
 
     compileSdkVersion 35
 
@@ -144,7 +136,6 @@ dependencies {
 }
 
 task copySources(type: Copy) {
-   println "DEBUG COPY SOURCES FLAVOR: ${dartDefines.FLAVOR}"
    from "src/$dartDefines.FLAVOR/res"
    into 'src/main/res'
 }
@@ -154,7 +145,6 @@ tasks.whenTaskAdded { task ->
 
 task selectGoogleServicesJson(type: Copy) {
     doFirst {
-        println "DEBUG GOOGLE SERVICES FLAVOR: ${dartDefines.FLAVOR}"
         from "src/$dartDefines.FLAVOR/google-services.json"
         into './'
     }
