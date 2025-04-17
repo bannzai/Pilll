@@ -33,7 +33,12 @@ if (secretPropertiesFile.exists()) {
 
 // ref: https://github.com/flutter/flutter/issues/142976#issuecomment-1949602247
 // dart-define-from-filesに渡すjsonの内容をapp/build.gradleで使えるようにしている。使い方はdartDefines.appIdのような具合でアクセスできる
-def dartDefines = [:];
+// gradleを直接実行するときに dart defines の指定なしになりエラーが起きるのでデフォルトで値を設定している
+def dartDefines = [
+    FLAVOR: 'production',
+    ANDROID_APPLICATION_ID: 'com.mizuki.Ohashi.Pilll',
+    APP_NAME: 'Pilll',
+];
 if (project.hasProperty('dart-defines')) {
     // Decode dart-defines, which are comma-separated and encoded in Base64, and store them in a variable.
     dartDefines = dartDefines + project.property('dart-defines')
