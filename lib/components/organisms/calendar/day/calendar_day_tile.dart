@@ -118,13 +118,5 @@ class CalendarDayTile extends StatelessWidget {
     return weekdayColor.withAlpha(alpha);
   }
 
-  Widget _diaryMarkWidget() {
-    return const Icon(Icons.edit_calendar, color: AppColors.gray, size: 12);
-  }
-
-  Widget _scheduleMarkWidget() {
-    return const Icon(Icons.schedule, color: AppColors.primary, size: 12);
-  }
-
   bool get _isToday => isSameDay(date, today());
 }

@@ -1,4 +1,4 @@
-package com.example.Pilll
+package com.mizuki.Ohashi.Pilll
 
 abstract class Const {
     companion object {

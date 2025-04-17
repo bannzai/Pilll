@@ -4,6 +4,7 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/settings/components/rows/critical_alert.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -189,6 +190,14 @@ class SettingPageBody extends StatelessWidget {
                           QuickRecordRow(
                             isTrial: user.isTrial,
                             trialDeadlineDate: user.trialDeadlineDate,
+                          ),
+                          _separator(),
+                        ],
+                        if (Platform.isIOS) ...[
+                          CriticalAlert(
+                            setting: setting,
+                            isPremium: user.isPremium,
+                            isTrial: user.isTrial,
                           ),
                           _separator(),
                         ],

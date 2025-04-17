@@ -176,7 +176,9 @@ mixin _$Setting {
   bool get isOnReminder => throw _privateConstructorUsedError;
   bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
-  ReminderNotificationCustomization get reminderNotificationCustomization => throw _privateConstructorUsedError; // Deprecated
+  ReminderNotificationCustomization get reminderNotificationCustomization => throw _privateConstructorUsedError; // 緊急アラート関連の設定
+  bool get useCriticalAlert => throw _privateConstructorUsedError;
+  double get criticalAlertVolume => throw _privateConstructorUsedError; // Deprecated
 // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
   @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する')
@@ -201,6 +203,8 @@ abstract class $SettingCopyWith<$Res> {
       bool isOnNotifyInNotTakenDuration,
       bool isAutomaticallyCreatePillSheet,
       ReminderNotificationCustomization reminderNotificationCustomization,
+      bool useCriticalAlert,
+      double criticalAlertVolume,
       @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') PillSheetAppearanceMode pillSheetAppearanceMode,
       String? timezoneDatabaseName});
 
@@ -227,6 +231,8 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
     Object? isOnNotifyInNotTakenDuration = null,
     Object? isAutomaticallyCreatePillSheet = null,
     Object? reminderNotificationCustomization = null,
+    Object? useCriticalAlert = null,
+    Object? criticalAlertVolume = null,
     Object? pillSheetAppearanceMode = null,
     Object? timezoneDatabaseName = freezed,
   }) {
@@ -263,6 +269,14 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
+      useCriticalAlert: null == useCriticalAlert
+          ? _value.useCriticalAlert
+          : useCriticalAlert // ignore: cast_nullable_to_non_nullable
+              as bool,
+      criticalAlertVolume: null == criticalAlertVolume
+          ? _value.criticalAlertVolume
+          : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
+              as double,
       pillSheetAppearanceMode: null == pillSheetAppearanceMode
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
@@ -297,6 +311,8 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
       bool isOnNotifyInNotTakenDuration,
       bool isAutomaticallyCreatePillSheet,
       ReminderNotificationCustomization reminderNotificationCustomization,
+      bool useCriticalAlert,
+      double criticalAlertVolume,
       @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') PillSheetAppearanceMode pillSheetAppearanceMode,
       String? timezoneDatabaseName});
 
@@ -319,6 +335,8 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
     Object? isOnNotifyInNotTakenDuration = null,
     Object? isAutomaticallyCreatePillSheet = null,
     Object? reminderNotificationCustomization = null,
+    Object? useCriticalAlert = null,
+    Object? criticalAlertVolume = null,
     Object? pillSheetAppearanceMode = null,
     Object? timezoneDatabaseName = freezed,
   }) {
@@ -355,6 +373,14 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
           ? _value.reminderNotificationCustomization
           : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
               as ReminderNotificationCustomization,
+      useCriticalAlert: null == useCriticalAlert
+          ? _value.useCriticalAlert
+          : useCriticalAlert // ignore: cast_nullable_to_non_nullable
+              as bool,
+      criticalAlertVolume: null == criticalAlertVolume
+          ? _value.criticalAlertVolume
+          : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
+              as double,
       pillSheetAppearanceMode: null == pillSheetAppearanceMode
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
@@ -380,6 +406,8 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       this.isOnNotifyInNotTakenDuration = true,
       this.isAutomaticallyCreatePillSheet = false,
       this.reminderNotificationCustomization = const ReminderNotificationCustomization(),
+      this.useCriticalAlert = false,
+      this.criticalAlertVolume = 0.5,
       @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
       required this.timezoneDatabaseName})
       : _pillSheetTypes = pillSheetTypes,
@@ -421,6 +449,13 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   @override
   @JsonKey()
   final ReminderNotificationCustomization reminderNotificationCustomization;
+// 緊急アラート関連の設定
+  @override
+  @JsonKey()
+  final bool useCriticalAlert;
+  @override
+  @JsonKey()
+  final double criticalAlertVolume;
 // Deprecated
 // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
@@ -433,7 +468,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, pillSheetAppearanceMode: $pillSheetAppearanceMode, timezoneDatabaseName: $timezoneDatabaseName)';
+    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, useCriticalAlert: $useCriticalAlert, criticalAlertVolume: $criticalAlertVolume, pillSheetAppearanceMode: $pillSheetAppearanceMode, timezoneDatabaseName: $timezoneDatabaseName)';
   }
 
   @override
@@ -449,6 +484,8 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('isOnNotifyInNotTakenDuration', isOnNotifyInNotTakenDuration))
       ..add(DiagnosticsProperty('isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet))
       ..add(DiagnosticsProperty('reminderNotificationCustomization', reminderNotificationCustomization))
+      ..add(DiagnosticsProperty('useCriticalAlert', useCriticalAlert))
+      ..add(DiagnosticsProperty('criticalAlertVolume', criticalAlertVolume))
       ..add(DiagnosticsProperty('pillSheetAppearanceMode', pillSheetAppearanceMode))
       ..add(DiagnosticsProperty('timezoneDatabaseName', timezoneDatabaseName));
   }
@@ -470,6 +507,8 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
                 other.isAutomaticallyCreatePillSheet == isAutomaticallyCreatePillSheet) &&
             (identical(other.reminderNotificationCustomization, reminderNotificationCustomization) ||
                 other.reminderNotificationCustomization == reminderNotificationCustomization) &&
+            (identical(other.useCriticalAlert, useCriticalAlert) || other.useCriticalAlert == useCriticalAlert) &&
+            (identical(other.criticalAlertVolume, criticalAlertVolume) || other.criticalAlertVolume == criticalAlertVolume) &&
             (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
             (identical(other.timezoneDatabaseName, timezoneDatabaseName) || other.timezoneDatabaseName == timezoneDatabaseName));
   }
@@ -486,6 +525,8 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       isOnNotifyInNotTakenDuration,
       isAutomaticallyCreatePillSheet,
       reminderNotificationCustomization,
+      useCriticalAlert,
+      criticalAlertVolume,
       pillSheetAppearanceMode,
       timezoneDatabaseName);
 
@@ -512,6 +553,8 @@ abstract class _Setting extends Setting {
       final bool isOnNotifyInNotTakenDuration,
       final bool isAutomaticallyCreatePillSheet,
       final ReminderNotificationCustomization reminderNotificationCustomization,
+      final bool useCriticalAlert,
+      final double criticalAlertVolume,
       @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する') final PillSheetAppearanceMode pillSheetAppearanceMode,
       required final String? timezoneDatabaseName}) = _$SettingImpl;
   const _Setting._() : super._();
@@ -534,6 +577,10 @@ abstract class _Setting extends Setting {
   bool get isAutomaticallyCreatePillSheet;
   @override
   ReminderNotificationCustomization get reminderNotificationCustomization;
+  @override // 緊急アラート関連の設定
+  bool get useCriticalAlert;
+  @override
+  double get criticalAlertVolume;
   @override // Deprecated
 // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る

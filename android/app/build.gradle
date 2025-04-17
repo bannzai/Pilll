@@ -1,3 +1,11 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+    id "com.google.gms.google-services"
+    id "com.google.firebase.crashlytics"
+}
+
 def localProperties = new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
@@ -21,10 +29,6 @@ if (flutterVersionName == null) {
     flutterVersionName = '1.0'
 }
 
-apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-
 def secretProperties = new Properties()
 def secretPropertiesFile = rootProject.file('secret.properties')
 if (secretPropertiesFile.exists()) {
@@ -33,7 +37,12 @@ if (secretPropertiesFile.exists()) {
 
 // ref: https://github.com/flutter/flutter/issues/142976#issuecomment-1949602247
 // dart-define-from-filesに渡すjsonの内容をapp/build.gradleで使えるようにしている。使い方はdartDefines.appIdのような具合でアクセスできる
-def dartDefines = [:];
+// gradleを直接実行するときに dart defines の指定なしになりエラーが起きるのでデフォルトで値を設定している
+def dartDefines = [
+    FLAVOR: 'production',
+    ANDROID_APPLICATION_ID: 'com.mizuki.Ohashi.Pilll',
+    APP_NAME: 'Pilll',
+];
 if (project.hasProperty('dart-defines')) {
     // Decode dart-defines, which are comma-separated and encoded in Base64, and store them in a variable.
     dartDefines = dartDefines + project.property('dart-defines')
@@ -44,15 +53,31 @@ if (project.hasProperty('dart-defines')) {
         }
 }
 
+// デバッグ出力を追加
+println "======= DEBUG dart-defines ======="
+println "FLAVOR: ${dartDefines.FLAVOR}"
+println "ANDROID_APPLICATION_ID: ${dartDefines.ANDROID_APPLICATION_ID}"
+println "APP_NAME: ${dartDefines.APP_NAME}"
+println "=================================="
+
 android {
-    compileSdkVersion 34
+    namespace 'com.mizuki.Ohashi.Pilll'
+    println "DEBUG NAMESPACE: com.mizuki.Ohashi.Pilll (fixed)"
+    println "DEBUG APPLICATION_ID: ${dartDefines.ANDROID_APPLICATION_ID}"
+
+    compileSdkVersion 35
 
     compileOptions {
+        coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
     }
 
     kotlinOptions {
+// * What went wrong:
+// Execution failed for task ':flutter_native_timezone:compileDebugKotlin'.
+// > 'compileDebugJavaWithJavac' task (current target is 1.8) and 'compileDebugKotlin' task (current target is 17) jvm target compatibility should be set to the same Java version.
+//   Consider using JVM toolchain: https://kotl.in/gradle/jvm/toolchain
         jvmTarget = '17'
     }
 
@@ -65,10 +90,9 @@ android {
     }
     
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId dartDefines.ANDROID_APPLICATION_ID
         minSdkVersion 26
-        targetSdkVersion flutter.targetSdkVersion
+        targetSdkVersion 35
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         resValue "string", "app_name", dartDefines.APP_NAME
@@ -99,7 +123,7 @@ android {
             signingConfig signingConfigs.release
         }
     }
-    ndkVersion '23.1.7779620'
+    ndkVersion '27.0.12077973'
     buildFeatures {
         viewBinding true
     }
@@ -110,21 +134,18 @@ flutter {
 }
 
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'com.google.firebase:firebase-messaging:20.1.6'
     implementation 'com.jakewharton.threetenabp:threetenabp:1.2.1'
     // https://pub.dev/packages/flutter_local_notifications#-android-setup
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.2.2'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
     // https://pub.dev/packages/flutter_local_notifications#-android-setup
     // > There have been reports that enabling desugaring may result in a Flutter apps crashing on Android 12L and above. This would be an issue with Flutter itself, not the plugin. One possible fix is adding the WindowManager library as a dependency:
     implementation 'androidx.window:window:1.0.0'
     implementation 'androidx.window:window-java:1.0.0'
 }
 
-apply plugin: 'com.google.gms.google-services'
-apply plugin: 'com.google.firebase.crashlytics'
-
 task copySources(type: Copy) {
+   println "DEBUG COPY SOURCES FLAVOR: ${dartDefines.FLAVOR}"
    from "src/$dartDefines.FLAVOR/res"
    into 'src/main/res'
 }
@@ -132,12 +153,37 @@ tasks.whenTaskAdded { task ->
    task.dependsOn copySources
 }
 
+// Google Servicesのセットアップを追加
 task selectGoogleServicesJson(type: Copy) {
-    from "src/$dartDefines.FLAVOR/google-services.json"
-    into './'
+    println "DEBUG GOOGLE SERVICES FLAVOR: ${dartDefines.FLAVOR}"
+    doFirst {
+        from "src/${dartDefines.FLAVOR}/google-services.json"
+        into './'
+        println "Copying google-services.json from src/${dartDefines.FLAVOR}/ to project root directory"
+    }
 }
-tasks.whenTaskAdded { task ->
-    if (task.name == 'processDebugGoogleServices' || task.name == 'processReleaseGoogleServices') {
-        task.dependsOn selectGoogleServicesJson
+
+// FirebaseのセットアップとResourcesの依存関係を確立
+afterEvaluate {
+    // 既存のタスク依存関係
+    if (tasks.findByName('compileFlutterBuildDebug')) {
+        tasks.getByName('compileFlutterBuildDebug').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('mergeDebugResources')) {
+        tasks.getByName('mergeDebugResources').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('generateDebugResources')) {
+        tasks.getByName('generateDebugResources').dependsOn selectGoogleServicesJson
+    }
+    
+    // Firebase関連タスクの依存関係
+    if (tasks.findByName('processDebugGoogleServices')) {
+        tasks.getByName('processDebugGoogleServices').dependsOn selectGoogleServicesJson
+    }
+    
+    if (tasks.findByName('processReleaseGoogleServices')) {
+        tasks.getByName('processReleaseGoogleServices').dependsOn selectGoogleServicesJson
     }
 }

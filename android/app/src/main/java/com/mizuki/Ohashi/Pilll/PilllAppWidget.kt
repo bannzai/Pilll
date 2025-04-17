@@ -9,7 +9,7 @@ import android.content.SharedPreferences
 import android.util.Log
 import android.view.View
 import android.widget.RemoteViews
-import com.example.Pilll.Const
+import com.mizuki.Ohashi.Pilll.Const
 import org.threeten.bp.Instant
 import org.threeten.bp.LocalDate
 import org.threeten.bp.ZoneId

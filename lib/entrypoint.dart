@@ -8,6 +8,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:home_widget/home_widget.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/app.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -36,7 +37,9 @@ Future<void> entrypoint() async {
     Intl.defaultLocale = 'ja';
 
     WidgetsFlutterBinding.ensureInitialized();
-    await (MobileAds.instance.initialize(), Firebase.initializeApp()).wait;
+
+    await Firebase.initializeApp();
+    await MobileAds.instance.initialize();
     // QuickRecordの処理などFirebaseを使用するのでFirebase.initializeApp()の後に時刻する
     // また、同じくQuickRecordの処理開始までにMethodChannelが確立されていてほしいのでこの処理はなるべく早く実行する
     definedChannel();

@@ -25,7 +25,7 @@ import 'package:pilll/utils/error_log.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:timezone/data/latest_all.dart' as tz;
 import 'package:timezone/timezone.dart' as tz;
-import 'package:flutter_native_timezone/flutter_native_timezone.dart';
+import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/timezone.dart';
 
 // Reminder Notification
@@ -51,7 +51,7 @@ class LocalNotificationService {
 
   static Future<void> setupTimeZone() async {
     tz.initializeTimeZones();
-    tz.setLocalLocation(tz.getLocation(await FlutterNativeTimezone.getLocalTimezone()));
+    tz.setLocalLocation(tz.getLocation(await FlutterTimezone.getLocalTimezone()));
   }
 
   Future<void> initialize() async {
@@ -82,6 +82,18 @@ class LocalNotificationService {
     );
   }
 
+  Future<void> requestPermission() async {
+    plugin
+        .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
+        ?.requestPermissions(sound: true, badge: true, alert: true, provisional: true);
+  }
+
+  Future<bool?> requestPermissionWithCriticalAlert() async {
+    return await plugin
+        .resolvePlatformSpecificImplementation<IOSFlutterLocalNotificationsPlugin>()
+        ?.requestPermissions(sound: true, badge: true, alert: true, provisional: true, critical: true);
+  }
+
   // iOSでは 以下の二つを実行しているだけなので今のところエラーは発生しない
   // center.removePendingNotificationRequests(withIdentifiers: ids), center.removeDeliveredNotifications(withIdentifiers: ids)
   Future<void> cancelNotification({required int localNotificationID}) async {
@@ -108,9 +120,41 @@ class LocalNotificationService {
           sound: 'becho.caf',
           presentBadge: true,
           presentSound: true,
+          interruptionLevel: InterruptionLevel.active,
         ),
       ),
-      uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
+      androidScheduleMode: AndroidScheduleMode.alarmClock,
+    );
+  }
+
+  Future<void> testCriticalAlert({
+    required double volume,
+  }) async {
+    await plugin.zonedSchedule(
+      Random().nextInt(1000000),
+      '通知のテスト',
+      'これは通知のテストです',
+      tz.TZDateTime.from(now().add(const Duration(seconds: 2)), tz.local),
+      NotificationDetails(
+        android: AndroidNotificationDetails(
+          androidReminderNotificationChannelID,
+          L.takePillReminderChannelName,
+          channelShowBadge: true,
+          setAsGroupSummary: true,
+          groupKey: androidReminderNotificationGroupKey,
+          category: AndroidNotificationCategory.reminder,
+          importance: Importance.defaultImportance,
+          priority: Priority.defaultPriority,
+        ),
+        iOS: DarwinNotificationDetails(
+          presentBadge: true,
+          presentSound: true,
+          interruptionLevel: InterruptionLevel.critical,
+          criticalSoundVolume: volume,
+          sound: null,
+        ),
+      ),
+      androidScheduleMode: AndroidScheduleMode.alarmClock,
     );
   }
 
@@ -180,6 +224,7 @@ class RegisterReminderLocalNotification {
   // - ピルシートの表示を変更した時
   // - 久しぶりにアプリを開いたが、通知がスケジュールされていない時
   // - トライアル終了後/プレミアム加入後 → これは服用は続けられているので何もしない。有料機能をしばらく使えてもヨシとする
+  // - CriticalAlertの設定が変更された時
   // NOTE: 本日分の服用記録がある場合は、本日分の通知はスケジュールしないようになっている
   // 10日間分の通知をスケジュールする
   // ちなみに64個までのリミットがある
@@ -404,6 +449,9 @@ class RegisterReminderLocalNotification {
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
                       category: AndroidNotificationCategory.reminder,
+                      // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+                      importance: Importance.defaultImportance,
+                      priority: Priority.defaultPriority,
                       actions: [
                         AndroidNotificationAction(
                           actionIdentifier,
@@ -413,7 +461,8 @@ class RegisterReminderLocalNotification {
                     ),
                     iOS: DarwinNotificationDetails(
                       categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                      sound: 'becho.caf',
+                      sound: setting.useCriticalAlert ? null : 'becho.caf',
+                      criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
                       presentBadge: true,
                       presentSound: true,
                       // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
@@ -422,10 +471,10 @@ class RegisterReminderLocalNotification {
                       presentBanner: true,
                       presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
+                      interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.alarmClock,
-                  uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
                 analytics.debug(name: 'rrrn_premium', parameters: {
@@ -464,9 +513,13 @@ class RegisterReminderLocalNotification {
                       setAsGroupSummary: true,
                       groupKey: androidReminderNotificationGroupKey,
                       category: AndroidNotificationCategory.reminder,
+                      // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+                      importance: Importance.defaultImportance,
+                      priority: Priority.defaultPriority,
                     ),
                     iOS: DarwinNotificationDetails(
-                      sound: 'becho.caf',
+                      sound: setting.useCriticalAlert ? null : 'becho.caf',
+                      criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
                       presentBadge: true,
                       presentSound: true,
                       // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
@@ -475,10 +528,10 @@ class RegisterReminderLocalNotification {
                       presentBanner: true,
                       presentList: true,
                       badgeNumber: badgeNumber + dayOffset,
+                      interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
                     ),
                   ),
                   androidScheduleMode: AndroidScheduleMode.alarmClock,
-                  uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
                 );
 
                 analytics.debug(name: 'rrrn_non_premium', parameters: {
@@ -582,10 +635,10 @@ extension ScheduleLocalNotificationService on LocalNotificationService {
           ),
           iOS: const DarwinNotificationDetails(
             sound: 'becho.caf',
+            interruptionLevel: InterruptionLevel.active,
           ),
         ),
         androidScheduleMode: AndroidScheduleMode.alarmClock,
-        uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       );
     }
   }
@@ -629,9 +682,13 @@ class NewPillSheetNotification {
               setAsGroupSummary: true,
               groupKey: androidReminderNotificationGroupKey,
               category: AndroidNotificationCategory.reminder,
+              // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+              importance: Importance.defaultImportance,
+              priority: Priority.defaultPriority,
             ),
-            iOS: const DarwinNotificationDetails(
-              sound: 'becho.caf',
+            iOS: DarwinNotificationDetails(
+              sound: setting.useCriticalAlert ? null : 'becho.caf',
+              criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
               presentBadge: true,
               presentSound: true,
               // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
@@ -639,10 +696,10 @@ class NewPillSheetNotification {
               presentAlert: false,
               presentBanner: true,
               presentList: true,
+              interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
             ),
           ),
           androidScheduleMode: AndroidScheduleMode.alarmClock,
-          uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
         );
       } catch (e, st) {
         // NOTE: エラーが発生しても他の通知のスケジュールを続ける

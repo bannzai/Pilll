@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.mizuki.Ohashi.Pilll" >
+    xmlns:tools="http://schemas.android.com/tools" >
 
 
     <!-- https://stackoverflow.com/questions/76309215/unhandled-exception-platformexceptionexact-alarms-not-permitted-exact-alarms -->
@@ -32,7 +31,7 @@
             android:value="${ADMOB_APP_ID}" />
 
         <receiver
-            android:name=".PilllAppWidget"
+            android:name="com.mizuki.Ohashi.Pilll.PilllAppWidget"
             android:exported="false" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -61,7 +60,7 @@
         <receiver android:exported="false" android:name="com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver" />
         
         <activity
-            android:name=".MainActivity"
+            android:name="com.mizuki.Ohashi.Pilll.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:exported="true"
             android:hardwareAccelerated="true"
@@ -124,6 +123,12 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+    <!-- ref: https://qiita.com/h-nimrod/items/ac206786239d7447133e -->
+    <property
+        android:name="android.adservices.AD_SERVICES_CONFIG"
+        android:resource="@xml/gma_ad_services_config"
+        tools:replace="android:resource" />
     </application>
 
 </manifest>

@@ -8,3 +8,5 @@ _google-services.json
 secret.properties
 _secret.properties
 app/src/main/res/mipmap*/
+
+.cxx
