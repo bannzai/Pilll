@@ -331,7 +331,6 @@
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
 				D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */,
-				BA158DA124E4413900164799 /* Replace GoogleService-Info.plist */,
 				2006A7D428B0BB680066E4DD /* Embed App Extensions */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
@@ -502,25 +501,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		BA158DA124E4413900164799 /* Replace GoogleService-Info.plist */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = "Replace GoogleService-Info.plist";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(SRCROOT)/Firebase/GoogleService-Info.plist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./scripts/prepare_firebase_config.sh\n";
 		};
 		D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
