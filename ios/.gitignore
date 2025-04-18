@@ -47,3 +47,4 @@ fastlane
 !fastlane/.gitkeep
 
 vendor
+.bundle
