@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
@@ -43,10 +45,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          '',
-                          // (周期)を消すことになったので無効化。リリースノート自体も無効化する
-                          // "addedDisplayModePillDaysCycle": "表示モード服用日数(周期)が追加されました",
-                          // L.addedDisplayModePillDaysCycle,
+                          'マナーモード中でも通知を送る設定を追加しました',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -66,7 +65,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-表示モード「服用日数」をご利用していた方はぜひご確認ください。「服用お休み」を起点に番号表示されるようになりました。
+集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
@@ -100,23 +99,25 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version20240823;
+  const String key = ReleaseNoteKey.version20250418;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
   }
+  // iOSのみのリリースノート
+  if (Platform.isAndroid) {
+    return;
+  }
 
   await storage.setBool(key, true);
-  // NOTE: (周期)のリリース後に、(周期)を消すことにした。リリースノートに現在記載されている。そのため一旦リリースノート自体を無効
-  return;
 
-  // if (context.mounted) {
-  //   showDialog(
-  //       context: context,
-  //       builder: (context) {
-  //         return const ReleaseNote();
-  //       });
-  // }
+  if (context.mounted) {
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const ReleaseNote();
+        });
+  }
 }
 
 void openReleaseNote() async {
