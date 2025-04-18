@@ -121,5 +121,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse('https://pilll.wraptas.site/b265e214877f432f9e7f62807c280d57'), mode: LaunchMode.inAppBrowserView);
+  launchUrl(Uri.parse('https://pilll.wraptas.site/1d929383171780a0af78c2a01f3b18ae'), mode: LaunchMode.inAppBrowserView);
 }
