@@ -2281,5 +2281,21 @@
   "medicationNotification": "Inname notificatie",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Zelfs als de de concentratiemodus in staat is of het apparaat op stil staat, worden notificaties weergegeven op het vergrendelscherm en wordt er geluid afgespeeld.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Meldingen zelfs in de stille modus",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Meldingsinstellingen in stille modus",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Geluidsterkte",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

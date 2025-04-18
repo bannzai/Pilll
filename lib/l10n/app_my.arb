@@ -2281,5 +2281,21 @@
   "medicationNotification": "Pemberitahuan Pengambilan",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Walaupun Mod Tumpuan dihidupkan atau peranti dalam mod senyap, pemberitahuan akan dipaparkan di skrin kunci dan bunyi akan dimainkan.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Menghantar pemberitahuan walaupun dalam mod senyap",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Tetapan pemberitahuan dalam mod senyap",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Kekuatan suara",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

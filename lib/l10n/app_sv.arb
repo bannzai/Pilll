@@ -2281,5 +2281,21 @@
   "medicationNotification": "Medicineringsnotification",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Notiser visas på låsskärmen och ljudet spelas upp även när fokusläget är på eller enheten är på ljudlös.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Meddela även i tyst läge",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Avstängningsläge för meddelanden",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Volym",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

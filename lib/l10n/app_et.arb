@@ -2281,5 +2281,21 @@
   "medicationNotification": "Pillide teavitus",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Teavitused kuvatakse lukustuskuval ja heli esitatakse ka siis, kui keskendumise režiim on sisse lülitatud või seade on vaikses režiimis.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Teavitab isegi häiritud režiimis",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Teavituste seadistamine ka häirimata režiimis",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Heli",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

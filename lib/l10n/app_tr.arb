@@ -2281,5 +2281,21 @@
   "medicationNotification": "İlaç Bildirimi",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Dikkat modu açık olduğunda veya cihaz sessizde olduğunda bile, bildirimler kilit ekranında görüntülenir ve ses çalınır.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Sessiz modda bile bildirim gönderir",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Sessiz modda bildirim ayarları",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ses seviyesi",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "Эмчилгээний сануулга",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Анхааралд байх горим включэгдсэн эсвэл төхөөрөмжийн дуу унтраалтын горимд байдалд байхад ч, мэдэгдэл нь хаалттай дэлгэц дээр гарч ирнэ, дуу тоглогдоно.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Дуу чимээгүй горимд ч мэдээлэл өгнө",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Чимээгүй горимд ч мэдээлэл авах тохиргоо",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Дууны хэмжүүр",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

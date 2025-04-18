@@ -2281,5 +2281,21 @@
   "medicationNotification": "Notificare de administrare",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Chiar și când modul de concentrare este activat sau când dispozitivul este pe silent, notificările sunt afișate pe ecranul de blocare și se reda sunet.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Notifică chiar și în modul silențios",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Set notifications even in silent mode",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Volum",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

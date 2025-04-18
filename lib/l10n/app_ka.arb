@@ -2281,5 +2281,21 @@
   "medicationNotification": "მიღების შეტყობინება",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "დაფინანსების რეჟიმი ჩართვაზე ან მოწყობილობა ჩუმად რომ იყოს, შეტყობინებები მაინც ვურგებთ იმ ადგილზე და ს صوتWhite დანახვას.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "გაუგებარია, თუ სასწავლო რეჟიმში გამოტოვება ენიჭება.",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "შეტყობინების პარამეტრები მონიტორის რეჟიმში",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "შეტყობინება",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

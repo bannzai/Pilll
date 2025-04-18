@@ -2281,5 +2281,21 @@
   "medicationNotification": "Уведомление за прием",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Уведомления ще се показват на заключения екран и звуковете ще се възпроизвеждат дори когато е активиран режим \"Концентрация\" или устройството е в беззвучен режим.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Уведомете дори в режим \"Не безпокойте\"",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Нотификации дори в режим \"Не безпокойте\"",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Сила на звука",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

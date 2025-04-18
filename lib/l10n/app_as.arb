@@ -2281,5 +2281,21 @@
   "medicationNotification": "পিল গ্রহণের বিজ্ঞপ্তি",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "বৰ্তমানে কেন্দ্ৰীকৃত মোড অন থাকা অৱস্থাটোত বা ডিভাইছৰ শব্দ নিস্ক্রিয় থাকিলেও, সূচনাবোৰ লক স্ক্ৰিনত প্ৰদৰ্শিত হৈ শব্দ উভাৱিত হব।",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "মেনার মোডে জানানো হবে",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "মনা মোডেও বিজ্ঞপ্তি সেটিং",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ভলিউম",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "Hartzearen jakinarazpena",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Kontzentrazio modua ON dagoenean edo gailua isilpean dagoenean ere, jakinarazpenak lokatuta dagoen pantailan agertuko dira eta soinua joko da.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Atenea moduan ere jakinaraziko du",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Notifikazio ezarpenak modu isilenean",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Bolumen",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

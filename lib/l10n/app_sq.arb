@@ -2281,5 +2281,21 @@
   "medicationNotification": "Notifikimi i marrjes",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Edhe kur është aktivifikimi i Modit të Përqendrimit ose kur pajisja është në heshtje, njoftimet shfaqen në ekranin e bllokimit dhe tingujt luhen.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Njoftoni edhe në modin e heshtur",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Njoftimi në mënyrë të parashikuar dhe në modalitetin e heshtur",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Të drejtat e zërit",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

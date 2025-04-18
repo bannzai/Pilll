@@ -2281,5 +2281,21 @@
   "medicationNotification": "İdman bildirişi",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Konsentrasiya rejimi açıq olduğu zaman və ya cihaz səssiz olsa belə, bildirişlər kilid ekranında göstərilir və səs ifa edilir.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Səsini söndürmüş rejimdə də bildiriş göndərir",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Sessiz rejimdə bildiriş ayarları",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Səs tutumu",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "Notifica assunzione",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Anche quando la modalità di concentrazione è attivata o il dispositivo è in silenzioso, le notifiche vengono visualizzate sulla schermata di blocco e viene riprodotto il suono.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Notificare anche in modalità silenziosa",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Impostazioni di notifica anche in modalità silenziosa",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Volume",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

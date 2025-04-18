@@ -2281,5 +2281,21 @@
   "medicationNotification": "પેટ્રોલીાઉસ",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "કેન્દ્રિત મોડ ચાલુ હોય કે ઉપકરણ મ્યૂટ હોય ત્યારે પણ, સુચનાઓ લોક સ્ક્રીન પર દર્શાવેલ છે અને ધ્વનિ হয়েছে.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "મેઠોડ મોડમાં પણ સૂચના આપવાની",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "માણરામોડમાં નૉટિફિકેશન સેટિંગ",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ઓટન",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

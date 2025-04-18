@@ -2281,5 +2281,21 @@
   "medicationNotification": "اعلان مصرف",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "حتی زمانی که حالت تمرکز فعال است یا دستگاه بی صدا است، اعلان‌ها در صفحه قفل نمایش داده می‌شوند و صدا پخش می‌شود.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "در حالت سایلنسر هم اطلاع‌رسانی کند",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "تنظیم اعلان در حالت بی‌صدا",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "صدا",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

@@ -2281,5 +2281,21 @@
   "medicationNotification": "Arifa ya kutotumia",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Hata mod ya kuzingatia ikiwa iko ON au kifaa kina hali ya kimya, arifa zinaonyeshwa kwenye skrini ya kufungwa na sauti inachezwa.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Mara ya kimaada ya tahadhari",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Mpangilio wa arifa hata wakati wa hali ya kimya",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "sauti",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

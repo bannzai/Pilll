@@ -2281,5 +2281,21 @@
   "medicationNotification": "Pillepåmindelse",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Selv når fokusmodussen er tændt, eller enheden er på lydløs, vises meddelelserne på låseskærmen, og lyden afspilles.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Underret selv i lydløs tilstand",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Notifikationer i lydløs tilstand",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Lydstyrke",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

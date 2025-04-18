@@ -2281,5 +2281,21 @@
   "medicationNotification": "Дарыны эскертүү",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "Концентрация режими ON же аппарат үнсүз болгондо да, билдирүүлөр лок экранда көрсөтүлөт жана звук ойнолууда.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "Уйку режиминде да билдирүү",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "Кыйынчылыктарды эске албастан кабарландыруу жөндөө",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "Көчөт",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

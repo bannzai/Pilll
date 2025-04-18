@@ -2281,5 +2281,21 @@
   "medicationNotification": "धरण सूचना",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "एकाग्रता मोड चालू असताना किंवा डिव्हाइस शांत असताना, सूचना लॉक स्क्रीनवर दर्शविल्या जातात आणि ध्वनी चालविला जातो.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "मॅनर मोडमध्ये देखील सूचना करा",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "मौन मोडमध्ये देखील सूचना सेटिंग",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "आवाजाची पातळी",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

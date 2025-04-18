@@ -2281,5 +2281,21 @@
   "medicationNotification": "ਦਵਾਈ ਚੇਤਾਵਨੀ",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "ਜੇ ਕਰ ਕੇਂਦਰੀ ਮੋਡ ਚਾਲੂ ਹੈ ਜਾਂ ਉਪਕਰਣ ਨੂੰ ਸੁਨਾਮੀ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਵੀ ਸੂਚਨਾਵਾਂ ਲਾਕ ਸਕ੍ਰੀਨ 'ਤੇ ਦਿਖਾਈਆਂ ਜਾਣਗੀਆਂ, ਅਤੇ ਧੁਨ ਵਜਾਈ ਜਾਵੇਗੀ।",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "ਮਰਿਆਦਾ ਮੋਡ ਵਿਚ ਵੀ ਸੂਚਨਾ ਕਰਨਾਂ",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "ਮਨਰ ਮੋਡ ਵਿੱਚ ਵੀ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੈਟਿੰਗ",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ਵੋਲਯੂਮ",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

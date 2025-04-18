@@ -2281,5 +2281,21 @@
   "medicationNotification": "הודעה על נטילה",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "התראה תוצג על מסך הנעילה ויושמע צליל גם כאשר מצב ריכוז פעיל או כאשר המכשיר במצב השתק.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "לְהוֹדִיעַ גַּם בִּמצָב שֶׁל טִיּוּךְ",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "הגדרות התראות במצב שקט",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "עוצמה",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }

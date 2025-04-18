@@ -2281,5 +2281,21 @@
   "medicationNotification": "ಪಿಲ್ಲ್ ತೆಗೆದುಕೊಳ್ಳುವ ಮಾಹಿತಿಯು",
   "@medicationNotification": {
     "description": "服用通知"
+  },
+  "silentModeNotificationDescription": "ಒಚ್ಚು ಮೋಡ್ ON ಅಥವಾ ಸಾಧನ ಶಬ್ದವಿಲ್ಲದಾಗಿರುವಾಗಲೂ, ಸೂಚನೆಗಳು ಲಾಕ್ ಪರ্দೆಯಲ್ಲಿ ತೋರಿಸಲಾಗುತ್ತದೆ ಮತ್ತು ಧ್ವನಿ ಪ್ರಸಾರವಾಗುತ್ತದೆ.",
+  "@silentModeNotificationDescription": {
+    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+  },
+  "enableNotificationInSilentMode": "ಮಣಾಯ್ಡ್ ಮೋಡ್‌ನಲ್ಲಿ ಸಹ ಸೂಚನೆ ನೀಡುತ್ತದೆ",
+  "@enableNotificationInSilentMode": {
+    "description": "マナーモードでも通知する"
+  },
+  "enableNotificationInSilentModeSetting": "ಮಣ್ಣಾವಿನ ಶ್ರೇಣಿಯಲ್ಲಿ ವಿವರಿಸುವಕ್ತಲೆಗಳನ್ನು ನಿರ್ದೇಶಿಸುವ ಅವಕಾಶ",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "マナーモードでも通知設定"
+  },
+  "criticalAlertVolume": "ಶಬ್ದಶ್ರುತಿ",
+  "@criticalAlertVolume": {
+    "description": "音量"
   }
 }
