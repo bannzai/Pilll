@@ -16,7 +16,7 @@ class CriticalAlertPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final useCriticalAlert = useState(setting.useCriticalAlert);
-    final ciritcalAlertVolume = useState(setting.criticalAlertVolume);
+    final criticalAlertVolume = useState(setting.criticalAlertVolume);
     final setSetting = ref.watch(setSettingProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
@@ -24,7 +24,7 @@ class CriticalAlertPage extends HookConsumerWidget {
       await setSetting(
         setting.copyWith(
           useCriticalAlert: useCriticalAlert.value,
-          criticalAlertVolume: ciritcalAlertVolume.value,
+          criticalAlertVolume: criticalAlertVolume.value,
         ),
       );
       await registerReminderLocalNotification();
@@ -95,16 +95,16 @@ class CriticalAlertPage extends HookConsumerWidget {
                       ),
                     ),
                     Slider(
-                      value: ciritcalAlertVolume.value,
+                      value: criticalAlertVolume.value,
                       min: 0,
                       max: 1,
                       activeColor: AppColors.primary,
-                      label: ciritcalAlertVolume.value.toString(),
+                      label: criticalAlertVolume.value.toString(),
                       onChanged: (value) {
-                        ciritcalAlertVolume.value = value;
+                        criticalAlertVolume.value = value;
                       },
                       onChangeEnd: (value) {
-                        ciritcalAlertVolume.value = value;
+                        criticalAlertVolume.value = value;
                         updateSetting();
                       },
                     ),
@@ -113,7 +113,7 @@ class CriticalAlertPage extends HookConsumerWidget {
                 const SizedBox(height: 20),
                 TextButton(
                   onPressed: () {
-                    localNotificationService.testCriticalAlert(volume: ciritcalAlertVolume.value);
+                    localNotificationService.testCriticalAlert(volume: criticalAlertVolume.value);
                   },
                   child: const Text(
                     'テスト通知を送信',

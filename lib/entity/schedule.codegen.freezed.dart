@@ -29,8 +29,12 @@ mixin _$Schedule {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
 
+  /// Serializes this Schedule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Schedule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ScheduleCopyWith<Schedule> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule> implements $ScheduleCo
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Schedule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule> implements $ScheduleCo
     ) as $Val);
   }
 
+  /// Create a copy of Schedule
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalNotificationCopyWith<$Res>? get localNotification {
@@ -125,6 +133,8 @@ abstract class _$$ScheduleImplCopyWith<$Res> implements $ScheduleCopyWith<$Res> 
 class __$$ScheduleImplCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res, _$ScheduleImpl> implements _$$ScheduleImplCopyWith<$Res> {
   __$$ScheduleImplCopyWithImpl(_$ScheduleImpl _value, $Res Function(_$ScheduleImpl) _then) : super(_value, _then);
 
+  /// Create a copy of Schedule
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,11 +215,13 @@ class _$ScheduleImpl extends _Schedule {
             (identical(other.createdDateTime, createdDateTime) || other.createdDateTime == createdDateTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, date, localNotification, createdDateTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Schedule
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ScheduleImplCopyWith<_$ScheduleImpl> get copyWith => __$$ScheduleImplCopyWithImpl<_$ScheduleImpl>(this, _$identity);
@@ -248,8 +260,11 @@ abstract class _Schedule extends Schedule {
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime;
+
+  /// Create a copy of Schedule
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ScheduleImplCopyWith<_$ScheduleImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -263,8 +278,12 @@ mixin _$LocalNotification {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get remindDateTime => throw _privateConstructorUsedError;
 
+  /// Serializes this LocalNotification to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of LocalNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LocalNotificationCopyWith<LocalNotification> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -288,6 +307,8 @@ class _$LocalNotificationCopyWithImpl<$Res, $Val extends LocalNotification> impl
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of LocalNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -324,6 +345,8 @@ class __$$LocalNotificationImplCopyWithImpl<$Res> extends _$LocalNotificationCop
     implements _$$LocalNotificationImplCopyWith<$Res> {
   __$$LocalNotificationImplCopyWithImpl(_$LocalNotificationImpl _value, $Res Function(_$LocalNotificationImpl) _then) : super(_value, _then);
 
+  /// Create a copy of LocalNotification
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -375,11 +398,13 @@ class _$LocalNotificationImpl extends _LocalNotification {
             (identical(other.remindDateTime, remindDateTime) || other.remindDateTime == remindDateTime));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, localNotificationID, remindDateTime);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LocalNotification
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalNotificationImplCopyWith<_$LocalNotificationImpl> get copyWith =>
@@ -407,7 +432,10 @@ abstract class _LocalNotification extends LocalNotification {
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get remindDateTime;
+
+  /// Create a copy of LocalNotification
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LocalNotificationImplCopyWith<_$LocalNotificationImpl> get copyWith => throw _privateConstructorUsedError;
 }

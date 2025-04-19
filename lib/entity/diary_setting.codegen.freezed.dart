@@ -24,8 +24,12 @@ mixin _$DiarySetting {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
 
+  /// Serializes this DiarySetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of DiarySetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DiarySettingCopyWith<DiarySetting> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +51,8 @@ class _$DiarySettingCopyWithImpl<$Res, $Val extends DiarySetting> implements $Di
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of DiarySetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -81,6 +87,8 @@ class __$$DiarySettingImplCopyWithImpl<$Res> extends _$DiarySettingCopyWithImpl<
     implements _$$DiarySettingImplCopyWith<$Res> {
   __$$DiarySettingImplCopyWithImpl(_$DiarySettingImpl _value, $Res Function(_$DiarySettingImpl) _then) : super(_value, _then);
 
+  /// Create a copy of DiarySetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
             (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_physicalConditions), createdAt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of DiarySetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith => __$$DiarySettingImplCopyWithImpl<_$DiarySettingImpl>(this, _$identity);
@@ -180,7 +190,10 @@ abstract class _DiarySetting extends DiarySetting {
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+
+  /// Create a copy of DiarySetting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DiarySettingImplCopyWith<_$DiarySettingImpl> get copyWith => throw _privateConstructorUsedError;
 }

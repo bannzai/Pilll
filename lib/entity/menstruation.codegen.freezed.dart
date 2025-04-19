@@ -32,8 +32,12 @@ mixin _$Menstruation {
   DateTime get createdAt => throw _privateConstructorUsedError;
   String? get healthKitSampleDataUUID => throw _privateConstructorUsedError;
 
+  /// Serializes this Menstruation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Menstruation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MenstruationCopyWith<Menstruation> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -59,6 +63,8 @@ class _$MenstruationCopyWithImpl<$Res, $Val extends Menstruation> implements $Me
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Menstruation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -117,6 +123,8 @@ class __$$MenstruationImplCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<
     implements _$$MenstruationImplCopyWith<$Res> {
   __$$MenstruationImplCopyWithImpl(_$MenstruationImpl _value, $Res Function(_$MenstruationImpl) _then) : super(_value, _then);
 
+  /// Create a copy of Menstruation
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -209,11 +217,13 @@ class _$MenstruationImpl extends _Menstruation {
             (identical(other.healthKitSampleDataUUID, healthKitSampleDataUUID) || other.healthKitSampleDataUUID == healthKitSampleDataUUID));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, beginDate, endDate, deletedAt, createdAt, healthKitSampleDataUUID);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Menstruation
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MenstruationImplCopyWith<_$MenstruationImpl> get copyWith => __$$MenstruationImplCopyWithImpl<_$MenstruationImpl>(this, _$identity);
@@ -258,7 +268,10 @@ abstract class _Menstruation extends Menstruation {
   DateTime get createdAt;
   @override
   String? get healthKitSampleDataUUID;
+
+  /// Create a copy of Menstruation
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MenstruationImplCopyWith<_$MenstruationImpl> get copyWith => throw _privateConstructorUsedError;
 }

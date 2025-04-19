@@ -20,7 +20,9 @@ mixin _$MenstruationCardState {
   DateTime get scheduleDate => throw _privateConstructorUsedError;
   String get countdownString => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MenstruationCardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MenstruationCardStateCopyWith<MenstruationCardState> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -41,6 +43,8 @@ class _$MenstruationCardStateCopyWithImpl<$Res, $Val extends MenstruationCardSta
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of MenstruationCardState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -80,6 +84,8 @@ class __$$MenstruationCardStateImplCopyWithImpl<$Res> extends _$MenstruationCard
   __$$MenstruationCardStateImplCopyWithImpl(_$MenstruationCardStateImpl _value, $Res Function(_$MenstruationCardStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of MenstruationCardState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -134,7 +140,9 @@ class _$MenstruationCardStateImpl extends _MenstruationCardState {
   @override
   int get hashCode => Object.hash(runtimeType, title, scheduleDate, countdownString);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of MenstruationCardState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl> get copyWith =>
@@ -152,7 +160,10 @@ abstract class _MenstruationCardState extends MenstruationCardState {
   DateTime get scheduleDate;
   @override
   String get countdownString;
+
+  /// Create a copy of MenstruationCardState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MenstruationCardStateImplCopyWith<_$MenstruationCardStateImpl> get copyWith => throw _privateConstructorUsedError;
 }

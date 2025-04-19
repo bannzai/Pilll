@@ -28,8 +28,12 @@ mixin _$ReminderNotificationCustomization {
   String get dailyTakenMessage => throw _privateConstructorUsedError; // TODO: [Localizations]
   String get missedTakenMessage => throw _privateConstructorUsedError;
 
+  /// Serializes this ReminderNotificationCustomization to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReminderNotificationCustomization
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReminderNotificationCustomizationCopyWith<ReminderNotificationCustomization> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -58,6 +62,8 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends Reminde
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReminderNotificationCustomization
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -127,6 +133,8 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
       _$ReminderNotificationCustomizationImpl _value, $Res Function(_$ReminderNotificationCustomizationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of ReminderNotificationCustomization
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -230,12 +238,14 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
             (identical(other.missedTakenMessage, missedTakenMessage) || other.missedTakenMessage == missedTakenMessage));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType, version, word, isInVisibleReminderDate, isInVisiblePillNumber, isInVisibleDescription, dailyTakenMessage, missedTakenMessage);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReminderNotificationCustomization
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReminderNotificationCustomizationImplCopyWith<_$ReminderNotificationCustomizationImpl> get copyWith =>
@@ -271,12 +281,15 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
   @override
   bool get isInVisiblePillNumber;
   @override
-  bool get isInVisibleDescription;
-  @override // BEGIN: From v2
-  String get dailyTakenMessage;
-  @override // TODO: [Localizations]
-  String get missedTakenMessage;
+  bool get isInVisibleDescription; // BEGIN: From v2
   @override
-  @JsonKey(ignore: true)
+  String get dailyTakenMessage; // TODO: [Localizations]
+  @override
+  String get missedTakenMessage;
+
+  /// Create a copy of ReminderNotificationCustomization
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReminderNotificationCustomizationImplCopyWith<_$ReminderNotificationCustomizationImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -31,8 +31,12 @@ mixin _$PilllAds {
   String get closeButtonColor => throw _privateConstructorUsedError;
   String get chevronRightColor => throw _privateConstructorUsedError;
 
+  /// Serializes this PilllAds to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PilllAds
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PilllAdsCopyWith<PilllAds> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -61,6 +65,8 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds> implements $PilllAdsCo
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PilllAds
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,6 +137,8 @@ abstract class _$$PilllAdsImplCopyWith<$Res> implements $PilllAdsCopyWith<$Res> 
 class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$PilllAdsImpl> implements _$$PilllAdsImplCopyWith<$Res> {
   __$$PilllAdsImplCopyWithImpl(_$PilllAdsImpl _value, $Res Function(_$PilllAdsImpl) _then) : super(_value, _then);
 
+  /// Create a copy of PilllAds
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -240,12 +248,14 @@ class _$PilllAdsImpl extends _PilllAds {
             (identical(other.chevronRightColor, chevronRightColor) || other.chevronRightColor == chevronRightColor));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, startDateTime, endDateTime, description, imageURL, destinationURL, hexColor, closeButtonColor, chevronRightColor);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PilllAds
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith => __$$PilllAdsImplCopyWithImpl<_$PilllAdsImpl>(this, _$identity);
@@ -292,7 +302,10 @@ abstract class _PilllAds extends PilllAds {
   String get closeButtonColor;
   @override
   String get chevronRightColor;
+
+  /// Create a copy of PilllAds
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith => throw _privateConstructorUsedError;
 }

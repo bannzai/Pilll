@@ -25,8 +25,12 @@ mixin _$Package {
   String get appVersion => throw _privateConstructorUsedError;
   String get buildNumber => throw _privateConstructorUsedError;
 
+  /// Serializes this Package to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Package
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PackageCopyWith<Package> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -46,6 +50,8 @@ class _$PackageCopyWithImpl<$Res, $Val extends Package> implements $PackageCopyW
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Package
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -87,6 +93,8 @@ abstract class _$$PackageImplCopyWith<$Res> implements $PackageCopyWith<$Res> {
 class __$$PackageImplCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res, _$PackageImpl> implements _$$PackageImplCopyWith<$Res> {
   __$$PackageImplCopyWithImpl(_$PackageImpl _value, $Res Function(_$PackageImpl) _then) : super(_value, _then);
 
+  /// Create a copy of Package
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$PackageImpl implements _Package {
             (identical(other.buildNumber, buildNumber) || other.buildNumber == buildNumber));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, latestOS, appName, appVersion, buildNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Package
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PackageImplCopyWith<_$PackageImpl> get copyWith => __$$PackageImplCopyWithImpl<_$PackageImpl>(this, _$identity);
@@ -183,7 +193,10 @@ abstract class _Package implements Package {
   String get appVersion;
   @override
   String get buildNumber;
+
+  /// Create a copy of Package
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PackageImplCopyWith<_$PackageImpl> get copyWith => throw _privateConstructorUsedError;
 }
