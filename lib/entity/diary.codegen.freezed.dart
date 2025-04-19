@@ -29,8 +29,12 @@ mixin _$Diary {
   bool get hasSex => throw _privateConstructorUsedError;
   String get memo => throw _privateConstructorUsedError;
 
+  /// Serializes this Diary to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Diary
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $DiaryCopyWith<Diary> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -56,6 +60,8 @@ class _$DiaryCopyWithImpl<$Res, $Val extends Diary> implements $DiaryCopyWith<$R
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Diary
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -113,6 +119,8 @@ abstract class _$$DiaryImplCopyWith<$Res> implements $DiaryCopyWith<$Res> {
 class __$$DiaryImplCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res, _$DiaryImpl> implements _$$DiaryImplCopyWith<$Res> {
   __$$DiaryImplCopyWithImpl(_$DiaryImpl _value, $Res Function(_$DiaryImpl) _then) : super(_value, _then);
 
+  /// Create a copy of Diary
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -208,12 +216,14 @@ class _$DiaryImpl extends _Diary {
             (identical(other.memo, memo) || other.memo == memo));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode =>
       Object.hash(runtimeType, date, createdAt, physicalConditionStatus, const DeepCollectionEquality().hash(_physicalConditions), hasSex, memo);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Diary
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DiaryImplCopyWith<_$DiaryImpl> get copyWith => __$$DiaryImplCopyWithImpl<_$DiaryImpl>(this, _$identity);
@@ -241,8 +251,8 @@ abstract class _Diary extends Diary {
 
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get date;
-  @override // NOTE: OLD data does't have createdAt
+  DateTime get date; // NOTE: OLD data does't have createdAt
+  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt;
   @override
@@ -253,7 +263,10 @@ abstract class _Diary extends Diary {
   bool get hasSex;
   @override
   String get memo;
+
+  /// Create a copy of Diary
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DiaryImplCopyWith<_$DiaryImpl> get copyWith => throw _privateConstructorUsedError;
 }

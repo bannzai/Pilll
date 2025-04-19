@@ -23,8 +23,12 @@ mixin _$ReminderTime {
   int get hour => throw _privateConstructorUsedError;
   int get minute => throw _privateConstructorUsedError;
 
+  /// Serializes this ReminderTime to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of ReminderTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $ReminderTimeCopyWith<ReminderTime> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -44,6 +48,8 @@ class _$ReminderTimeCopyWithImpl<$Res, $Val extends ReminderTime> implements $Re
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of ReminderTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -76,6 +82,8 @@ class __$$ReminderTimeImplCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<
     implements _$$ReminderTimeImplCopyWith<$Res> {
   __$$ReminderTimeImplCopyWithImpl(_$ReminderTimeImpl _value, $Res Function(_$ReminderTimeImpl) _then) : super(_value, _then);
 
+  /// Create a copy of ReminderTime
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -131,11 +139,13 @@ class _$ReminderTimeImpl extends _ReminderTime with DiagnosticableTreeMixin {
             (identical(other.minute, minute) || other.minute == minute));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, hour, minute);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of ReminderTime
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReminderTimeImplCopyWith<_$ReminderTimeImpl> get copyWith => __$$ReminderTimeImplCopyWithImpl<_$ReminderTimeImpl>(this, _$identity);
@@ -158,8 +168,11 @@ abstract class _ReminderTime extends ReminderTime {
   int get hour;
   @override
   int get minute;
+
+  /// Create a copy of ReminderTime
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReminderTimeImplCopyWith<_$ReminderTimeImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -185,8 +198,12 @@ mixin _$Setting {
   PillSheetAppearanceMode get pillSheetAppearanceMode => throw _privateConstructorUsedError;
   String? get timezoneDatabaseName => throw _privateConstructorUsedError;
 
+  /// Serializes this Setting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of Setting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $SettingCopyWith<Setting> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -220,6 +237,8 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Setting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -288,6 +307,8 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
     ) as $Val);
   }
 
+  /// Create a copy of Setting
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReminderNotificationCustomizationCopyWith<$Res> get reminderNotificationCustomization {
@@ -324,6 +345,8 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
 class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$SettingImpl> implements _$$SettingImplCopyWith<$Res> {
   __$$SettingImplCopyWithImpl(_$SettingImpl _value, $Res Function(_$SettingImpl) _then) : super(_value, _then);
 
+  /// Create a copy of Setting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -513,7 +536,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
             (identical(other.timezoneDatabaseName, timezoneDatabaseName) || other.timezoneDatabaseName == timezoneDatabaseName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -530,7 +553,9 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       pillSheetAppearanceMode,
       timezoneDatabaseName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Setting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SettingImplCopyWith<_$SettingImpl> get copyWith => __$$SettingImplCopyWithImpl<_$SettingImpl>(this, _$identity);
@@ -576,19 +601,22 @@ abstract class _Setting extends Setting {
   @override
   bool get isAutomaticallyCreatePillSheet;
   @override
-  ReminderNotificationCustomization get reminderNotificationCustomization;
-  @override // 緊急アラート関連の設定
+  ReminderNotificationCustomization get reminderNotificationCustomization; // 緊急アラート関連の設定
+  @override
   bool get useCriticalAlert;
   @override
-  double get criticalAlertVolume;
-  @override // Deprecated
+  double get criticalAlertVolume; // Deprecated
 // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
+  @override
   @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する')
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
   String? get timezoneDatabaseName;
+
+  /// Create a copy of Setting
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SettingImplCopyWith<_$SettingImpl> get copyWith => throw _privateConstructorUsedError;
 }
