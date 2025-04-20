@@ -5,6 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'remote_config_parameter.g.dart';
 
+// [RemoteConfigDefaultValues] でgrepした場所に全て設定する
 @Riverpod()
 RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
   // fetchAndActiveをentrypointで完了しているので値が取れる想定

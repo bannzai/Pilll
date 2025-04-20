@@ -17,6 +17,7 @@ Future<void> setupRemoteConfig() async {
         fetchTimeout: const Duration(minutes: 1),
         minimumFetchInterval: const Duration(hours: 1),
       )),
+      // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
       remoteConfig.setDefaults({
         RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,
         RemoteConfigKeys.skipInitialSetting: RemoteConfigParameterDefaultValues.skipInitialSetting,

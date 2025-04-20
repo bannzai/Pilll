@@ -26,6 +26,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const premiumIntroductionShowsAppStoreReviewCard = false;
 }
 
+// [RemoteConfigDefaultValues] でgrepした場所に全て設定する
 @freezed
 class RemoteConfigParameter with _$RemoteConfigParameter {
   factory RemoteConfigParameter({
