@@ -31,8 +31,12 @@ mixin _$PillSheetGroup {
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting => throw _privateConstructorUsedError;
   PillSheetAppearanceMode get pillSheetAppearanceMode => throw _privateConstructorUsedError;
 
+  /// Serializes this PillSheetGroup to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PillSheetGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PillSheetGroupCopyWith<PillSheetGroup> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -61,6 +65,8 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup> implements
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PillSheetGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -104,6 +110,8 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup> implements
     ) as $Val);
   }
 
+  /// Create a copy of PillSheetGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting {
@@ -141,6 +149,8 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res> extends _$PillSheetGroupCopyWithI
     implements _$$PillSheetGroupImplCopyWith<$Res> {
   __$$PillSheetGroupImplCopyWithImpl(_$PillSheetGroupImpl _value, $Res Function(_$PillSheetGroupImpl) _then) : super(_value, _then);
 
+  /// Create a copy of PillSheetGroup
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -255,12 +265,14 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
             (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, id, const DeepCollectionEquality().hash(_pillSheetIDs),
       const DeepCollectionEquality().hash(_pillSheets), createdAt, deletedAt, displayNumberSetting, pillSheetAppearanceMode);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PillSheetGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith => __$$PillSheetGroupImplCopyWithImpl<_$PillSheetGroupImpl>(this, _$identity);
@@ -299,13 +311,16 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   DateTime get createdAt;
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get deletedAt;
-  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  DateTime? get deletedAt; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  @override
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
   @override
   PillSheetAppearanceMode get pillSheetAppearanceMode;
+
+  /// Create a copy of PillSheetGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -315,7 +330,9 @@ mixin _$PillSheetGroupPillNumberDomainPillMarkValue {
   DateTime get date => throw _privateConstructorUsedError;
   int get number => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PillSheetGroupPillNumberDomainPillMarkValueCopyWith<PillSheetGroupPillNumberDomainPillMarkValue> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -341,6 +358,8 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, $Val exten
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -364,6 +383,8 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueCopyWithImpl<$Res, $Val exten
     ) as $Val);
   }
 
+  /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetCopyWith<$Res> get pillSheet {
@@ -395,6 +416,8 @@ class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>
       _$PillSheetGroupPillNumberDomainPillMarkValueImpl _value, $Res Function(_$PillSheetGroupPillNumberDomainPillMarkValueImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -449,7 +472,9 @@ class _$PillSheetGroupPillNumberDomainPillMarkValueImpl implements _PillSheetGro
   @override
   int get hashCode => Object.hash(runtimeType, pillSheet, date, number);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<_$PillSheetGroupPillNumberDomainPillMarkValueImpl> get copyWith =>
@@ -468,8 +493,11 @@ abstract class _PillSheetGroupPillNumberDomainPillMarkValue implements PillSheet
   DateTime get date;
   @override
   int get number;
+
+  /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWith<_$PillSheetGroupPillNumberDomainPillMarkValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -484,8 +512,12 @@ mixin _$PillSheetGroupDisplayNumberSetting {
   int? get beginPillNumber => throw _privateConstructorUsedError; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
   int? get endPillNumber => throw _privateConstructorUsedError;
 
+  /// Serializes this PillSheetGroupDisplayNumberSetting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of PillSheetGroupDisplayNumberSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $PillSheetGroupDisplayNumberSettingCopyWith<PillSheetGroupDisplayNumberSetting> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -508,6 +540,8 @@ class _$PillSheetGroupDisplayNumberSettingCopyWithImpl<$Res, $Val extends PillSh
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of PillSheetGroupDisplayNumberSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -545,6 +579,8 @@ class __$$PillSheetGroupDisplayNumberSettingImplCopyWithImpl<$Res>
       _$PillSheetGroupDisplayNumberSettingImpl _value, $Res Function(_$PillSheetGroupDisplayNumberSettingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of PillSheetGroupDisplayNumberSetting
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -593,11 +629,13 @@ class _$PillSheetGroupDisplayNumberSettingImpl implements _PillSheetGroupDisplay
             (identical(other.endPillNumber, endPillNumber) || other.endPillNumber == endPillNumber));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, beginPillNumber, endPillNumber);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of PillSheetGroupDisplayNumberSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetGroupDisplayNumberSettingImplCopyWith<_$PillSheetGroupDisplayNumberSettingImpl> get copyWith =>
@@ -617,11 +655,15 @@ abstract class _PillSheetGroupDisplayNumberSetting implements PillSheetGroupDisp
 
   factory _PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) = _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
 
-  @override // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
-  int? get beginPillNumber;
-  @override // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
-  int? get endPillNumber;
+// 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
   @override
-  @JsonKey(ignore: true)
+  int? get beginPillNumber; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
+  @override
+  int? get endPillNumber;
+
+  /// Create a copy of PillSheetGroupDisplayNumberSetting
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PillSheetGroupDisplayNumberSettingImplCopyWith<_$PillSheetGroupDisplayNumberSettingImpl> get copyWith => throw _privateConstructorUsedError;
 }

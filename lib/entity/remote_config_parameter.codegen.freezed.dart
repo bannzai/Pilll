@@ -28,8 +28,12 @@ mixin _$RemoteConfigParameter {
   String get premiumIntroductionPattern => throw _privateConstructorUsedError;
   bool get premiumIntroductionShowsAppStoreReviewCard => throw _privateConstructorUsedError;
 
+  /// Serializes this RemoteConfigParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of RemoteConfigParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -57,6 +61,8 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of RemoteConfigParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -123,6 +129,8 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
   __$$RemoteConfigParameterImplCopyWithImpl(_$RemoteConfigParameterImpl _value, $Res Function(_$RemoteConfigParameterImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of RemoteConfigParameter
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -228,12 +236,14 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
                 other.premiumIntroductionShowsAppStoreReviewCard == premiumIntroductionShowsAppStoreReviewCard));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, isPaywallFirst, skipInitialSetting, trialDeadlineDateOffsetDay, discountEntitlementOffsetDay,
       discountCountdownBoundaryHour, premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RemoteConfigParameter
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith =>
@@ -274,7 +284,10 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   String get premiumIntroductionPattern;
   @override
   bool get premiumIntroductionShowsAppStoreReviewCard;
+
+  /// Create a copy of RemoteConfigParameter
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;
 }
