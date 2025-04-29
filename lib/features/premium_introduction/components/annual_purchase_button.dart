@@ -122,7 +122,7 @@ class _DiscountBadge extends StatelessWidget {
         color: AppColors.secondary,
       ),
       child: Text(
-        offeringType == OfferingType.limited
+        offeringType == OfferingType.discount
             ? L.offPercentForMonthlyPremiumPackage(offPercentForMonthlyPremiumPackage)
             : '$offPercentForMonthlyPackage％OFF',
         style: const TextStyle(

@@ -16,12 +16,13 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 
-enum OfferingType { limited, premium }
+enum OfferingType { discount, premium }
 
 extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
-      case OfferingType.limited:
+      case OfferingType.discount:
+        // NOTE: RevenueCatの設定は変えれないので、ここは "Limited" のまま
         return 'Limited';
       case OfferingType.premium:
         return 'Premium2';
@@ -39,7 +40,7 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user)
   if (isOverDiscountDeadline) {
     return OfferingType.premium;
   } else {
-    return OfferingType.limited;
+    return OfferingType.discount;
   }
 });
 final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
