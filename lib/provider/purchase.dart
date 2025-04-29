@@ -16,14 +16,16 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 
-enum OfferingType { discount, premium }
+enum OfferingType { superDiscount, discount, premium }
 
 extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
-      case OfferingType.discount:
+      case OfferingType.superDiscount:
         // NOTE: RevenueCatの設定は変えれないので、ここは "Limited" のまま
         return 'Limited';
+      case OfferingType.discount:
+        return 'Premium';
       case OfferingType.premium:
         return 'Premium2';
     }
