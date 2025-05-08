@@ -22,7 +22,6 @@ import 'package:pilll/features/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/datetime/day.dart';
-import 'package:pilll/utils/push_notification.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
@@ -36,18 +35,6 @@ class HomePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider);
-    final registerRemotePushNotificationToken = ref.watch(registerRemotePushNotificationTokenProvider);
-
-    useEffect(() {
-      final userValue = user.valueOrNull;
-      if (userValue != null) {
-        // Android 13ユーザー向けに通知の許可を取る必要がある。古いバージョンからアップグレードしたユーザーへの許可はアプリのメインストリームが始まってから取得するようにする
-        // https://developer.android.com/guide/topics/ui/notifiers/notification-permission
-        requestNotificationPermissions(registerRemotePushNotificationToken);
-      }
-      return null;
-    }, [user.valueOrNull]);
-
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
     return AsyncValueGroup.group2(
       user,
