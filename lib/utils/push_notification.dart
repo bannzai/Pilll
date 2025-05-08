@@ -22,6 +22,9 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
     registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: null);
 
     await AndroidFlutterLocalNotificationsPlugin().requestNotificationsPermission();
-    await AndroidFlutterLocalNotificationsPlugin().requestExactAlarmsPermission();
+    final granted = await AndroidFlutterLocalNotificationsPlugin().requestExactAlarmsPermission();
+    if (granted == false) {
+      throw Exception('正確なアラーム権限が許可されていません。設定から許可してください。');
+    }
   }
 }
