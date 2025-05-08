@@ -1,0 +1,5 @@
+lib/secret
+lib/secret/secret.dart
+.envrc
+.env
+ios/Flutter/Secret.xcconfig
