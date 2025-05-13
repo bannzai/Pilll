@@ -165,12 +165,14 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
   }) {
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.number:
-        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, targetDate)).number;
+        return _pillNumbersInPillSheet(estimatedEventCausingDate: estimatedEventCausingDate).firstWhere((e) => isSameDay(e.date, targetDate)).number;
       case PillSheetAppearanceMode.date:
-        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, targetDate)).number;
+        return _pillNumbersInPillSheet(estimatedEventCausingDate: estimatedEventCausingDate).firstWhere((e) => isSameDay(e.date, targetDate)).number;
       case PillSheetAppearanceMode.sequential:
       case PillSheetAppearanceMode.cyclicSequential:
-        return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, targetDate)).number;
+        return _pillNumbersForCyclicSequential(estimatedEventCausingDate: estimatedEventCausingDate)
+            .firstWhere((e) => isSameDay(e.date, targetDate))
+            .number;
     }
   }
 

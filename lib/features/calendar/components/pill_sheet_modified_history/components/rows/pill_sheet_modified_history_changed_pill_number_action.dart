@@ -27,10 +27,12 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     final beforeTodayPillNumber = beforePillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
       pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
       targetDate: estimatedEventCausingDate,
+      estimatedEventCausingDate: estimatedEventCausingDate,
     );
     final afterTodayPillNumber = afterPillSheetGroup.pillNumberWithoutDateOrZeroFromDate(
       pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
       targetDate: estimatedEventCausingDate,
+      estimatedEventCausingDate: estimatedEventCausingDate,
     );
 
     return RowLayout(
