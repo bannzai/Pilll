@@ -37,6 +37,15 @@ class SpecialOfferingModal extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    return SpecialOfferingPageBody();
+  }
+}
+
+class SpecialOfferingPageBody extends HookConsumerWidget {
+  const SpecialOfferingPageBody({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
     final isClosing = useState(false);
     final isLoading = useState(false);
 
