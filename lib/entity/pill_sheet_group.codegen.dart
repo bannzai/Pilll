@@ -153,7 +153,7 @@ class PillSheetGroup with _$PillSheetGroup {
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
 
-extension PillSheetGroupDisplayDomain on PillSheetGroup {
+extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
   int pillNumberWithoutDateOrZero({
     // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     required PillSheetAppearanceMode pillSheetAppearanceMode,
@@ -192,7 +192,9 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
         return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, date)).number;
     }
   }
+}
 
+extension PillSheetGroupDisplayDomain on PillSheetGroup {
   // 日付以外を返す
   String displayPillNumberWithoutDate({
     required int pageIndex,
