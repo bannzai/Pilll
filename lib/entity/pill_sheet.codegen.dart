@@ -206,8 +206,10 @@ class PillSheet with _$PillSheet {
     return max(daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
   }
 
+  late final List<DateTime> dates = buildDates();
+
   // ピルシートのピルの日付を取得する
-  late final List<DateTime> dates = () {
+  List<DateTime> buildDates({DateTime? estimatedEventCausingDate}) {
     final List<DateTime> dates = [];
     var offset = 0;
     for (int index = 0; index < typeInfo.totalCount; index++) {
@@ -215,9 +217,11 @@ class PillSheet with _$PillSheet {
 
       for (final restDuration in restDurations) {
         if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
-          final restDurationEndDateOrToday = restDuration.endDate ?? today();
-          if (restDurationEndDateOrToday.isAfter(date)) {
-            final diff = daysBetween(date, restDurationEndDateOrToday);
+          // estimatedEventCausingDateに値がある場合は、服用履歴のスナップショットの日付を返したい。 estimatedEventCausingDate もしくは today をこのメソッドでの計算式の上限の日付とする
+          final upperDate = estimatedEventCausingDate ?? today().date();
+          final restDurationEndDateOrUpperDate = restDuration.endDate ?? upperDate;
+          if (restDurationEndDateOrUpperDate.isAfter(date)) {
+            final diff = daysBetween(date, restDurationEndDateOrUpperDate);
             date = date.addDays(diff);
             offset += diff;
           }
@@ -227,7 +231,7 @@ class PillSheet with _$PillSheet {
       dates.add(date);
     }
     return dates;
-  }();
+  }
 }
 
 // upperDate までの休薬期間を集計する

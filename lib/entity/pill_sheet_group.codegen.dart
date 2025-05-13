@@ -153,12 +153,16 @@ class PillSheetGroup with _$PillSheetGroup {
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
 }
 
+// PillSheetGroupの表示用の番号を取得する際にnow(),today()が使われ計算するが、PillSheetModifiedHistoryは、イベントが起きた日に応じた番号が必要になる
+// なのでメソッドの引数にestimatedEventCausingDateを追加して、その日に応じた番号を返すようにする
+// _pillNumbersInPillSheet,_pillNumbersForCyclicSequential を直接呼び出し、引数に estimatedEventCausingDate を渡す
 extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
   int pillNumberWithoutDateOrZero({
     // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pageIndex,
     required int pillNumberInPillSheet,
+    required DateTime estimatedEventCausingDate,
   }) {
     // pillNumberInPillSheet: lastTakenOrZeroPillNumberが0の場合に0を返す
     // PillSheetModifiedHistoryPillNumberOrDate.taken で beforeLastTakenPillNumber にプラス1しており、整合性を保つため
@@ -180,16 +184,17 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
   int pillNumberWithoutDateOrZeroFromDate({
     // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     required PillSheetAppearanceMode pillSheetAppearanceMode,
-    required DateTime date,
+    required DateTime targetDate,
+    required DateTime estimatedEventCausingDate,
   }) {
     switch (pillSheetAppearanceMode) {
       case PillSheetAppearanceMode.number:
-        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
+        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, targetDate)).number;
       case PillSheetAppearanceMode.date:
-        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, date)).number;
+        return pillNumbersInPillSheet.firstWhere((e) => isSameDay(e.date, targetDate)).number;
       case PillSheetAppearanceMode.sequential:
       case PillSheetAppearanceMode.cyclicSequential:
-        return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, date)).number;
+        return pillNumbersForCyclicSequential.firstWhere((e) => isSameDay(e.date, targetDate)).number;
     }
   }
 }
@@ -200,10 +205,12 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
+    // NOTE: 内容が同じ処理を呼び出すので、特別にestimatedEventCausingDateにnowを渡して処理をしている
     return pillNumberWithoutDateOrZero(
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       pageIndex: pageIndex,
       pillNumberInPillSheet: pillNumberInPillSheet,
+      estimatedEventCausingDate: today(),
     ).toString();
   }
 
@@ -289,21 +296,23 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
     }
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet({DateTime? estimatedEventCausingDate}) {
     return pillSheets
-        .map((pillSheet) => pillSheet.dates.indexed
+        .map((pillSheet) => pillSheet
+            .buildDates(estimatedEventCausingDate: estimatedEventCausingDate)
+            .indexed
             .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1 + 1))
             .toList())
         .flattened
         .toList();
   }
 
-  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForCyclicSequential() {
+  List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersForCyclicSequential({DateTime? estimatedEventCausingDate}) {
     List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks = [];
     final beginPillNumber = displayNumberSetting?.beginPillNumber ?? 1;
     final endPillNumber = displayNumberSetting?.endPillNumber;
     for (final pillSheet in pillSheets) {
-      for (final date in pillSheet.dates) {
+      for (final date in pillSheet.buildDates(estimatedEventCausingDate: estimatedEventCausingDate)) {
         // 1つ目はbeginNumber or 1が設定される。2つ目以降は前のピル番号+1を基本的に設定していく
         if (pillMarks.isEmpty) {
           pillMarks.add(
