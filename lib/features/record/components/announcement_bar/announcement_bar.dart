@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -46,15 +47,6 @@ class AnnouncementBar extends HookConsumerWidget {
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
     final userBeginDate = firebaseAuthUser?.metadata.creationTime;
 
-    final showsSpecialOffering = () {
-      if (userBeginDate == null) {
-        return false;
-      }
-      final now = DateTime.now();
-      final diff = now.difference(userBeginDate);
-      return diff.inDays >= 730;
-    }();
-
     final isAdsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
@@ -71,13 +63,13 @@ class AnnouncementBar extends HookConsumerWidget {
       return Container();
     }
 
+    if (kDebugMode) {
+      return const SpecialOfferingAnnouncementBar();
+    }
+
     // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
     if (!appIsReleased && !user.isPremium && Environment.flavor == Flavor.PRODUCTION) {
       return const AdMob();
-    }
-
-    if (showsSpecialOffering) {
-      return const SpecialOfferingAnnouncementBar();
     }
 
     if (!user.isPremium) {
@@ -114,6 +106,10 @@ class AnnouncementBar extends HookConsumerWidget {
 
         if (!isAdsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        }
+
+        if (userBeginDate != null && daysBetween(today(), userBeginDate) >= 730) {
+          return const SpecialOfferingAnnouncementBar();
         }
 
         return const AdMob();
