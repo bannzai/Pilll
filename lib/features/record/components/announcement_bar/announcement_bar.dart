@@ -35,6 +35,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
   Widget? _body(BuildContext context, WidgetRef ref) {
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
+    final firebaseAuthUser = ref.watch(firebaseUserStateProvider).valueOrNull;
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
@@ -43,6 +44,17 @@ class AnnouncementBar extends HookConsumerWidget {
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
+    final userBeginDate = firebaseAuthUser?.metadata.creationTime;
+
+    final showsSpecialOffering = () {
+      if (userBeginDate == null) {
+        return false;
+      }
+      final now = DateTime.now();
+      final diff = now.difference(userBeginDate);
+      return diff.inDays >= 730;
+    }();
+
     final isAdsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
@@ -62,6 +74,10 @@ class AnnouncementBar extends HookConsumerWidget {
     // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
     if (!appIsReleased && !user.isPremium && Environment.flavor == Flavor.PRODUCTION) {
       return const AdMob();
+    }
+
+    if (showsSpecialOffering) {
+      return const SpecialOfferingAnnouncementBar();
     }
 
     if (!user.isPremium) {
