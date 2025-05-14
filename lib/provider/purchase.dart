@@ -68,6 +68,14 @@ final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, User use
   }
   return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });
+final specialOfferingPackageProvider = Provider.family.autoDispose((ref, User user) {
+  const specialOfferingPackageOfferingType = OfferingType.specialOffering;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.annual);
+});
 
 final purchaseProvider = Provider((ref) => Purchase());
 
