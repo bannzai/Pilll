@@ -89,7 +89,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                                   analytics.logEvent(name: 'special_offering_alert_cancel');
                                   Navigator.of(context).pop(false);
                                 },
-                                text: 'キャンセル',
+                                text: '閉じない',
                               ),
                               AlertButton(
                                 onPressed: () async {
