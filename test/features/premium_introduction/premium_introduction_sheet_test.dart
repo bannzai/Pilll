@@ -105,7 +105,7 @@ void main() {
               overrides: [
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
                 userProvider.overrideWith((ref) => Stream.value(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(true),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
@@ -148,7 +148,10 @@ void main() {
               overrides: [
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                monthlyPremiumPackageProvider.overrideWith((
+                  ref,
+                ) =>
+                    _MonthlyFakePackage()),
                 userProvider.overrideWith((ref) => Stream.value(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(isOverDiscountDeadline),
@@ -193,7 +196,7 @@ void main() {
               overrides: [
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
                 userProvider.overrideWith((ref) => Stream.value(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
@@ -237,7 +240,7 @@ void main() {
               overrides: [
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
                 userProvider.overrideWith((ref) => Stream.value(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
                     .overrideWithValue(isOverDiscountDeadline),
@@ -281,7 +284,7 @@ void main() {
               overrides: [
                 purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
                 currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref, arg) => _MonthlyFakePackage()),
+                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
                 userProvider.overrideWith((ref) => Stream.value(user)),
                 isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
                 durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
