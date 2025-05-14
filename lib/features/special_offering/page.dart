@@ -2,36 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
 
 const _specialOfferingClosedKey = 'special_offering_paywall_closed_at';
-
-Future<bool> shouldShowSpecialOffering() async {
-  final prefs = await SharedPreferences.getInstance();
-  return !prefs.containsKey(_specialOfferingClosedKey);
-}
-
-Future<void> setSpecialOfferingClosed() async {
-  final prefs = await SharedPreferences.getInstance();
-  await prefs.setInt(_specialOfferingClosedKey, DateTime.now().millisecondsSinceEpoch);
-}
-
-void showSpecialOfferingModal(BuildContext context) async {
-  if (await shouldShowSpecialOffering()) {
-    showDialog(
-      context: context,
-      barrierDismissible: false,
-      builder: (_) => const SpecialOfferingModal(),
-    );
-  }
-}
 
 class SpecialOfferingModal extends HookConsumerWidget {
   const SpecialOfferingModal({super.key});
@@ -68,7 +47,9 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isLoading = useState(false);
+    final isClosing = useState(false);
 
+    final purchase = ref.watch(purchaseProvider);
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
     final annualSpecialOfferingPackage = ref.watch(annualSpecialOfferingPackageProvider);
 
@@ -89,35 +70,25 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                 onTap: (package) async {
                   if (isLoading.value) return;
                   isLoading.value = true;
+
                   try {
                     final shouldShowCompleteDialog = await purchase(package);
                     if (shouldShowCompleteDialog) {
-                      // ignore: use_build_context_synchronously
-                      showDialog(
-                        context: context,
-                        builder: (_) {
-                          return PremiumCompleteDialog(onClose: () {
-                            Navigator.of(context).pop();
-                          });
-                        },
-                      );
+                      if (context.mounted) {
+                        showDialog(
+                          context: context,
+                          builder: (_) {
+                            return PremiumCompleteDialog(onClose: () {
+                              Navigator.of(context).pop();
+                            });
+                          },
+                        );
+                      }
                     }
                   } catch (error) {
                     debugPrint('caused purchase error for $error');
                     if (context.mounted) {
-                      showDialog(
-                        context: context,
-                        builder: (_) => AlertDialog(
-                          title: const Text('エラー'),
-                          content: Text(error.toString()),
-                          actions: [
-                            TextButton(
-                              onPressed: () => Navigator.of(context).pop(),
-                              child: const Text('閉じる'),
-                            ),
-                          ],
-                        ),
-                      );
+                      showErrorAlert(context, error);
                     }
                   } finally {
                     isLoading.value = false;
@@ -135,8 +106,11 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
               ? null
               : () async {
                   isClosing.value = true;
-                  await setSpecialOfferingClosed();
-                  Navigator.of(context).pop();
+                  final prefs = await SharedPreferences.getInstance();
+                  await prefs.setInt(_specialOfferingClosedKey, DateTime.now().millisecondsSinceEpoch);
+                  if (context.mounted) {
+                    Navigator.of(context).pop();
+                  }
                 },
           child: const Text('閉じる（この画面は再表示されません）'),
         ),
