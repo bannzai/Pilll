@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:async_value_group/async_value_group.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
@@ -37,63 +38,37 @@ class SpecialOfferingModal extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isClosing = useState(false);
-    final isLoading = useState(false);
-
-    return AsyncValueGroup.group2(
-      ref.watch(purchaseOfferingsProvider),
-      ref.watch(userProvider),
-    ).when(
-      data: (data) {
-        final offerings = data.$1;
-        final user = data.$2;
-        return SpecialOfferingPageBody(
-          offerings: offerings,
-          user: user,
-          isClosing: isClosing,
-          isLoading: isLoading,
-        );
-      },
-      error: (error, stack) => AlertDialog(
-        title: const Text('エラー'),
-        content: Text(error.toString()),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('閉じる'),
+    return ref.watch(userProvider).when(
+          data: (user) {
+            return SpecialOfferingPageBody(user: user);
+          },
+          error: (error, stack) => AlertDialog(
+            title: const Text('エラー'),
+            content: Text(error.toString()),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.of(context).pop(),
+                child: const Text('閉じる'),
+              ),
+            ],
           ),
-        ],
-      ),
-      loading: () => const Center(child: CircularProgressIndicator()),
-    );
+          loading: () => const Center(child: CircularProgressIndicator()),
+        );
   }
 }
 
 class SpecialOfferingPageBody extends HookConsumerWidget {
-  final dynamic offerings;
-  final dynamic user;
-  final ValueNotifier<bool> isClosing;
-  final ValueNotifier<bool> isLoading;
+  final User user;
 
   const SpecialOfferingPageBody({
     super.key,
-    required this.offerings,
     required this.user,
-    required this.isClosing,
-    required this.isLoading,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    if (offerings == null || user == null) {
-      return const Center(child: CircularProgressIndicator());
-    }
-    // パッケージ取得
-    final offeringType = ref.watch(currentOfferingTypeProvider(user));
-    final monthlyPackage = ref.watch(monthlyPackageProvider(user));
-    final annualPackage = ref.watch(annualPackageProvider(user));
-    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
-    final purchase = ref.watch(purchaseProvider);
+    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
+    final annualSpecialOfferingPackage = ref.watch(annualSpecialOfferingPackageProvider);
 
     return AlertDialog(
       title: const Text('今回限りの特別オファー'),
@@ -103,12 +78,10 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
           children: [
             const Text('今だけ特別価格でプレミアム機能をゲット！'),
             const SizedBox(height: 16),
-            if (annualPackage != null && monthlyPackage != null && monthlyPremiumPackage != null)
+            if (annualSpecialOfferingPackage != null && monthlyPremiumPackage != null)
               AnnualPurchaseButton(
-                annualPackage: annualPackage,
-                monthlyPackage: monthlyPackage,
-                monthlyPremiumPackage: monthlyPremiumPackage,
-                offeringType: offeringType,
+                annualPackage: annualSpecialOfferingPackage,
+                monthlyPackage: monthlyPremiumPackage,
                 onTap: (package) async {
                   if (isLoading.value) return;
                   isLoading.value = true;
