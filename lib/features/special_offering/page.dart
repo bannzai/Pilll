@@ -72,11 +72,32 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
               onPressed: isClosing.value
                   ? null
                   : () async {
-                      isClosing.value = true;
-                      final prefs = await SharedPreferences.getInstance();
-                      await prefs.setInt(_specialOfferingClosedKey, DateTime.now().millisecondsSinceEpoch);
-                      if (context.mounted) {
-                        Navigator.of(context).pop();
+                      final shouldClose = await showDialog<bool>(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: const Text('本当に閉じますか？'),
+                            content: const Text('この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？'),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.of(context).pop(false),
+                                child: const Text('キャンセル'),
+                              ),
+                              TextButton(
+                                onPressed: () => Navigator.of(context).pop(true),
+                                child: const Text('閉じる'),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                      if (shouldClose == true) {
+                        isClosing.value = true;
+                        final prefs = await SharedPreferences.getInstance();
+                        await prefs.setInt(_specialOfferingClosedKey, DateTime.now().millisecondsSinceEpoch);
+                        if (context.mounted) {
+                          Navigator.of(context).pop();
+                        }
                       }
                     },
             ),
