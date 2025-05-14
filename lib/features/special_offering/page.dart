@@ -6,6 +6,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
+import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
@@ -174,6 +175,10 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                         ),
                         const SizedBox(height: 24),
                         const AppStoreReviewCards(),
+                        const SizedBox(height: 24),
+                        PremiumIntroductionFooter(
+                          isLoading: isLoading,
+                        ),
                       ],
                     ),
                   ),
