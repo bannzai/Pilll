@@ -20,6 +20,8 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
           showModalBottomSheet(
             context: context,
             builder: (context) => const SpecialOfferingPage(),
+            backgroundColor: Colors.transparent,
+            isScrollControlled: true,
           );
         },
         child: Stack(
