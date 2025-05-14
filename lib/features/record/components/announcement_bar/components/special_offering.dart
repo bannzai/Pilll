@@ -22,6 +22,7 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
             builder: (context) => const SpecialOfferingPage(),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
+            isDismissible: false,
           );
         },
         child: Stack(

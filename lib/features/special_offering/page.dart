@@ -74,56 +74,59 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
               child: const Text('閉じる（この画面は再表示されません）'),
             ),
           ),
-          body: Column(
-            children: [
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Text('今だけ特別価格でプレミアム機能をゲット！'),
-                      const SizedBox(height: 16),
-                      if (annualSpecialOfferingPackage != null && monthlyPremiumPackage != null)
-                        AnnualPurchaseButton(
-                          annualPackage: annualSpecialOfferingPackage,
-                          monthlyPackage: monthlyPremiumPackage,
-                          monthlyPremiumPackage: monthlyPremiumPackage,
-                          offeringType: OfferingType.specialOffering,
-                          onTap: (package) async {
-                            if (isLoading.value) return;
-                            isLoading.value = true;
+          body: SafeArea(
+            child: Column(
+              children: [
+                Expanded(
+                  child: SingleChildScrollView(
+                    padding: const EdgeInsets.symmetric(vertical: 20),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        const Text('今だけ特別価格でプレミアム機能をゲット！'),
+                        const SizedBox(height: 16),
+                        if (annualSpecialOfferingPackage != null && monthlyPremiumPackage != null)
+                          AnnualPurchaseButton(
+                            annualPackage: annualSpecialOfferingPackage,
+                            monthlyPackage: monthlyPremiumPackage,
+                            monthlyPremiumPackage: monthlyPremiumPackage,
+                            offeringType: OfferingType.specialOffering,
+                            onTap: (package) async {
+                              if (isLoading.value) return;
+                              isLoading.value = true;
 
-                            try {
-                              final shouldShowCompleteDialog = await purchase(package);
-                              if (shouldShowCompleteDialog) {
-                                if (context.mounted) {
-                                  showDialog(
-                                    context: context,
-                                    builder: (_) {
-                                      return PremiumCompleteDialog(onClose: () {
-                                        Navigator.of(context).pop();
-                                      });
-                                    },
-                                  );
+                              try {
+                                final shouldShowCompleteDialog = await purchase(package);
+                                if (shouldShowCompleteDialog) {
+                                  if (context.mounted) {
+                                    showDialog(
+                                      context: context,
+                                      builder: (_) {
+                                        return PremiumCompleteDialog(onClose: () {
+                                          Navigator.of(context).pop();
+                                        });
+                                      },
+                                    );
+                                  }
                                 }
+                              } catch (error) {
+                                debugPrint('caused purchase error for $error');
+                                if (context.mounted) {
+                                  showErrorAlert(context, error);
+                                }
+                              } finally {
+                                isLoading.value = false;
                               }
-                            } catch (error) {
-                              debugPrint('caused purchase error for $error');
-                              if (context.mounted) {
-                                showErrorAlert(context, error);
-                              }
-                            } finally {
-                              isLoading.value = false;
-                            }
-                          },
-                        ),
-                      const SizedBox(height: 24),
-                      const AppStoreReviewCards(),
-                    ],
+                            },
+                          ),
+                        const SizedBox(height: 24),
+                        const AppStoreReviewCards(),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         );
       },
