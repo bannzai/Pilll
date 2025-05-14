@@ -67,7 +67,8 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
         return Scaffold(
           appBar: AppBar(
             title: const Text('今回限りの特別オファー'),
-            leading: TextButton(
+            leading: IconButton(
+              icon: const Icon(Icons.close),
               onPressed: isClosing.value
                   ? null
                   : () async {
@@ -78,12 +79,22 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                         Navigator.of(context).pop();
                       }
                     },
-              child: const Text('閉じる（この画面は再表示されません）'),
             ),
           ),
           body: SafeArea(
-            child: Column(
+            child: Stack(
               children: [
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.transparent,
+                    image: DecorationImage(
+                      image: AssetImage('images/premium_background.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                  padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                  width: MediaQuery.of(context).size.width,
+                ),
                 Expanded(
                   child: SingleChildScrollView(
                     padding: const EdgeInsets.symmetric(vertical: 20),
