@@ -6,6 +6,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
+import 'package:pilll/utils/analytics.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
@@ -72,6 +73,8 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
               onPressed: isClosing.value
                   ? null
                   : () async {
+                      analytics.logEvent(name: 'special_offering_close_button_tapped');
+
                       final shouldClose = await showDialog<bool>(
                         context: context,
                         builder: (context) {
@@ -80,11 +83,17 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                             content: const Text('この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？'),
                             actions: [
                               TextButton(
-                                onPressed: () => Navigator.of(context).pop(false),
+                                onPressed: () {
+                                  analytics.logEvent(name: 'special_offering_alert_cancel');
+                                  Navigator.of(context).pop(false);
+                                },
                                 child: const Text('キャンセル'),
                               ),
                               TextButton(
-                                onPressed: () => Navigator.of(context).pop(true),
+                                onPressed: () {
+                                  analytics.logEvent(name: 'special_offering_alert_close');
+                                  Navigator.of(context).pop(true);
+                                },
                                 child: const Text('閉じる'),
                               ),
                             ],
