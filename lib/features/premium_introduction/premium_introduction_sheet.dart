@@ -133,7 +133,9 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                           },
                           text: L.viewPremiumFeatures,
                         ),
-                        if (isJaLocale && remoteConfigParameter.premiumIntroductionShowsAppStoreReviewCard) ...[
+
+                        // if (isJaLocale && remoteConfigParameter.premiumIntroductionShowsAppStoreReviewCard) ...[
+                        if (isJaLocale) ...[
                           const SizedBox(height: 24),
                           const AppStoreReviewCards(),
                         ],
