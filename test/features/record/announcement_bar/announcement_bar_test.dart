@@ -109,8 +109,8 @@ void main() {
                   .overrideWithValue(const Duration(seconds: 1000)),
               sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
               remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-              currentAnnualPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
-              currentMonthlyPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
+              annualPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
+              monthlyPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
             ],
             child: const MaterialApp(
               home: Material(child: AnnouncementBar()),

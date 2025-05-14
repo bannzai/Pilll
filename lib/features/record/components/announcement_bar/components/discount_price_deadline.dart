@@ -22,7 +22,7 @@ class DiscountPriceDeadline extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider).valueOrNull;
     final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
-    final annualPackage = user != null ? ref.watch(currentAnnualPackageProvider(user)) : null;
+    final annualPackage = user != null ? ref.watch(annualPackageProvider(user)) : null;
     final monthlyPremiumPackage = user != null ? ref.watch(monthlyPremiumPackageProvider(user)) : null;
     if (difference.inSeconds <= 0 || annualPackage == null || monthlyPremiumPackage == null) {
       return Container();
