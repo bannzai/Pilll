@@ -67,6 +67,8 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final isLoading = useState(false);
+
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
     final annualSpecialOfferingPackage = ref.watch(annualSpecialOfferingPackageProvider);
 
@@ -82,6 +84,8 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
               AnnualPurchaseButton(
                 annualPackage: annualSpecialOfferingPackage,
                 monthlyPackage: monthlyPremiumPackage,
+                monthlyPremiumPackage: monthlyPremiumPackage,
+                offeringType: OfferingType.specialOffering,
                 onTap: (package) async {
                   if (isLoading.value) return;
                   isLoading.value = true;
