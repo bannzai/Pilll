@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
@@ -83,19 +84,19 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                             title: const Text('本当に閉じますか？'),
                             content: const Text('この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？'),
                             actions: [
-                              TextButton(
-                                onPressed: () {
+                              AlertButton(
+                                onPressed: () async {
                                   analytics.logEvent(name: 'special_offering_alert_cancel');
                                   Navigator.of(context).pop(false);
                                 },
-                                child: const Text('キャンセル'),
+                                text: 'キャンセル',
                               ),
-                              TextButton(
-                                onPressed: () {
+                              AlertButton(
+                                onPressed: () async {
                                   analytics.logEvent(name: 'special_offering_alert_close');
                                   Navigator.of(context).pop(true);
                                 },
-                                child: const Text('閉じる'),
+                                text: '閉じる',
                               ),
                             ],
                           );
