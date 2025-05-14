@@ -67,7 +67,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final offeringType = ref.watch(currentOfferingTypeProvider(user));
     final monthlyPackage = ref.watch(monthlyPackageProvider(user));
     final annualPackage = ref.watch(annualPackageProvider(user));
-    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
+    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
 
     final isLoading = useState(false);
 
