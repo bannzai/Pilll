@@ -12,8 +12,8 @@ import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart
 
 const _specialOfferingClosedKey = 'special_offering_paywall_closed_at';
 
-class SpecialOfferingModal extends HookConsumerWidget {
-  const SpecialOfferingModal({super.key});
+class SpecialOfferingPage extends HookConsumerWidget {
+  const SpecialOfferingPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
