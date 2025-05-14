@@ -69,44 +69,58 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
               ),
             ),
           const SizedBox(height: 20),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text(
-                L.standardMonthlyPlan,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                  fontWeight: FontWeight.w400,
-                  fontSize: 12,
-                  fontFamily: FontFamily.japanese,
-                  color: TextColor.black,
-                ),
-              ),
-              const SizedBox(height: 4),
-              Stack(
-                children: [
-                  Text(
-                    monthlyPremiumPackage.storeProduct.priceString,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 28,
-                      fontFamily: FontFamily.japanese,
-                      color: TextColor.main,
-                    ),
-                  ),
-                  Positioned(
-                    left: 24,
-                    child: SvgPicture.asset('images/strikethrough.svg'),
-                  ),
-                ],
-              ),
-            ],
-          ),
+          PremiumIntroductionDiscountAppeal(monthlyPremiumPackage: monthlyPremiumPackage),
           const SizedBox(height: 8),
           SvgPicture.asset('images/arrow_down.svg'),
         ],
       ),
+    );
+  }
+}
+
+class PremiumIntroductionDiscountAppeal extends StatelessWidget {
+  const PremiumIntroductionDiscountAppeal({
+    super.key,
+    required this.monthlyPremiumPackage,
+  });
+
+  final Package monthlyPremiumPackage;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children: [
+        Text(
+          L.standardMonthlyPlan,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            fontWeight: FontWeight.w400,
+            fontSize: 12,
+            fontFamily: FontFamily.japanese,
+            color: TextColor.black,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Stack(
+          children: [
+            Text(
+              monthlyPremiumPackage.storeProduct.priceString,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 28,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.main,
+              ),
+            ),
+            Positioned(
+              left: 24,
+              child: SvgPicture.asset('images/strikethrough.svg'),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
@@ -53,6 +56,10 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
     final annualSpecialOfferingPackage = ref.watch(annualSpecialOfferingPackageProvider);
 
+    if (annualSpecialOfferingPackage == null || monthlyPremiumPackage == null) {
+      return const ScaffoldIndicator();
+    }
+
     return DraggableScrollableSheet(
       initialChildSize: 0.9,
       maxChildSize: 0.9,
@@ -83,42 +90,47 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        const Text('今だけ特別価格でプレミアム機能をゲット！'),
-                        const SizedBox(height: 16),
-                        if (annualSpecialOfferingPackage != null && monthlyPremiumPackage != null)
-                          AnnualPurchaseButton(
-                            annualPackage: annualSpecialOfferingPackage,
-                            monthlyPackage: monthlyPremiumPackage,
-                            monthlyPremiumPackage: monthlyPremiumPackage,
-                            offeringType: OfferingType.specialOffering,
-                            onTap: (package) async {
-                              if (isLoading.value) return;
-                              isLoading.value = true;
+                        PremiumIntroductionDiscountAppeal(
+                          monthlyPremiumPackage: monthlyPremiumPackage,
+                        ),
+                        const SizedBox(height: 10),
+                        SvgPicture.asset('images/arrow_down.svg'),
+                        const SizedBox(height: 10),
+                        const Text('今回だけの特別価格でプレミアム機能をゲット！'),
+                        const SizedBox(height: 20),
+                        AnnualPurchaseButton(
+                          annualPackage: annualSpecialOfferingPackage,
+                          monthlyPackage: monthlyPremiumPackage,
+                          monthlyPremiumPackage: monthlyPremiumPackage,
+                          offeringType: OfferingType.specialOffering,
+                          onTap: (package) async {
+                            if (isLoading.value) return;
+                            isLoading.value = true;
 
-                              try {
-                                final shouldShowCompleteDialog = await purchase(package);
-                                if (shouldShowCompleteDialog) {
-                                  if (context.mounted) {
-                                    showDialog(
-                                      context: context,
-                                      builder: (_) {
-                                        return PremiumCompleteDialog(onClose: () {
-                                          Navigator.of(context).pop();
-                                        });
-                                      },
-                                    );
-                                  }
-                                }
-                              } catch (error) {
-                                debugPrint('caused purchase error for $error');
+                            try {
+                              final shouldShowCompleteDialog = await purchase(package);
+                              if (shouldShowCompleteDialog) {
                                 if (context.mounted) {
-                                  showErrorAlert(context, error);
+                                  showDialog(
+                                    context: context,
+                                    builder: (_) {
+                                      return PremiumCompleteDialog(onClose: () {
+                                        Navigator.of(context).pop();
+                                      });
+                                    },
+                                  );
                                 }
-                              } finally {
-                                isLoading.value = false;
                               }
-                            },
-                          ),
+                            } catch (error) {
+                              debugPrint('caused purchase error for $error');
+                              if (context.mounted) {
+                                showErrorAlert(context, error);
+                              }
+                            } finally {
+                              isLoading.value = false;
+                            }
+                          },
+                        ),
                         const SizedBox(height: 24),
                         const AppStoreReviewCards(),
                       ],
