@@ -16,13 +16,15 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 
-enum OfferingType { limited, premium }
+enum OfferingType { limited, specialOffering, premium }
 
 extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
       case OfferingType.limited:
         return 'Limited';
+      case OfferingType.specialOffering:
+        return 'Premium';
       case OfferingType.premium:
         return 'Premium2';
     }
