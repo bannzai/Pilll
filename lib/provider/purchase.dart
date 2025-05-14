@@ -52,11 +52,11 @@ final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package
   }
   return [];
 });
-final annualPackageProvider = Provider.family.autoDispose((ref, User user) {
+final currentAnnualPackageProvider = Provider.family.autoDispose((ref, User user) {
   final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
 });
-final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
+final currentMonthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
   final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });

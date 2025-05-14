@@ -90,8 +90,8 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
     }
     // パッケージ取得
     final offeringType = ref.watch(currentOfferingTypeProvider(user));
-    final monthlyPackage = ref.watch(monthlyPackageProvider(user));
-    final annualPackage = ref.watch(annualPackageProvider(user));
+    final monthlyPackage = ref.watch(currentMonthlyPackageProvider(user));
+    final annualPackage = ref.watch(currentAnnualPackageProvider(user));
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider(user));
     final purchase = ref.watch(purchaseProvider);
 
