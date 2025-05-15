@@ -91,7 +91,15 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: const Text('本当に閉じますか？'),
+                            title: const Text(
+                              '本当に閉じますか？',
+                              style: TextStyle(
+                                color: TextColor.main,
+                                fontFamily: FontFamily.japanese,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 20,
+                              ),
+                            ),
                             content: const Text(
                               'この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？',
                               style: TextStyle(
@@ -197,7 +205,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                             }
                           },
                         ),
-                        const SizedBox(height: 24),
+                        const SizedBox(height: 40),
                         const AppStoreReviewCards(),
                         const SizedBox(height: 24),
                         PremiumIntroductionFooter(

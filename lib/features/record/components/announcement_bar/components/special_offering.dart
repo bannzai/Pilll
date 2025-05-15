@@ -22,16 +22,17 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
             builder: (context) => const SpecialOfferingPage(),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
+            enableDrag: false,
             isDismissible: false,
           );
         },
         child: Stack(
           children: [
-            Align(
+            const Align(
               alignment: Alignment.center,
               child: Text(
                 '97.2%の人が「飲み忘れが減った」と回答\n今回だけの特別価格でプレミアムプランをゲット!',
-                style: const TextStyle(
+                style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 14,
