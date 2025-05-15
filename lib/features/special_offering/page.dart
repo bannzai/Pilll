@@ -3,6 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
@@ -69,7 +71,15 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
       builder: (context, scrollController) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('今回限りの特別オファー'),
+            title: const Text(
+              '今回限りの特別オファー',
+              style: TextStyle(
+                color: TextColor.main,
+                fontSize: 20,
+                fontWeight: FontWeight.w600,
+                fontFamily: FontFamily.japanese,
+              ),
+            ),
             leading: IconButton(
               icon: const Icon(Icons.close),
               onPressed: isClosing.value
@@ -82,7 +92,13 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                         builder: (context) {
                           return AlertDialog(
                             title: const Text('本当に閉じますか？'),
-                            content: const Text('この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？'),
+                            content: const Text(
+                              'この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？',
+                              style: TextStyle(
+                                color: TextColor.main,
+                                fontSize: 16,
+                              ),
+                            ),
                             actions: [
                               AlertButton(
                                 onPressed: () async {
@@ -139,7 +155,14 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                         const SizedBox(height: 10),
                         SvgPicture.asset('images/arrow_down.svg'),
                         const SizedBox(height: 10),
-                        const Text('今回だけの特別価格でプレミアム機能をゲット！'),
+                        const Text(
+                          '今回だけの特別価格でプレミアム機能をゲット！',
+                          style: TextStyle(
+                            color: TextColor.main,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16,
+                          ),
+                        ),
                         const SizedBox(height: 20),
                         AnnualPurchaseButton(
                           annualPackage: annualSpecialOfferingPackage,
