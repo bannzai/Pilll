@@ -136,10 +136,8 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
 
                         // NOTE:  remoteconfigがうまく動いてない説があるので、一旦このifごと消す
                         // if (isJaLocale && remoteConfigParameter.premiumIntroductionShowsAppStoreReviewCard) ...[
-                        if (isJaLocale) ...[
-                          const SizedBox(height: 24),
-                          const AppStoreReviewCards(),
-                        ],
+                        const SizedBox(height: 24),
+                        const AppStoreReviewCards(),
                         const SizedBox(height: 24),
                         PremiumIntroductionFooter(
                           isLoading: isLoading,

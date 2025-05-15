@@ -58,7 +58,7 @@ class AppStoreReviewCards extends HookConsumerWidget {
     return Column(
       children: [
         const Text(
-          'みなさんの評価もご覧ください',
+          'ストアの評価もご覧ください',
           style: TextStyle(
             fontSize: 20,
             fontWeight: FontWeight.w600,
