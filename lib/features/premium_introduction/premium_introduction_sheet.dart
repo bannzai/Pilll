@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -24,7 +23,6 @@ import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/links.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:pilll/provider/locale.dart';
 
 class PremiumIntroductionSheet extends HookConsumerWidget {
   const PremiumIntroductionSheet({super.key});
@@ -70,9 +68,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
 
     final isLoading = useState(false);
-
-    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
-    final isJaLocale = ref.watch(isJaLocaleProvider);
 
     return DraggableScrollableSheet(
       initialChildSize: 1,
