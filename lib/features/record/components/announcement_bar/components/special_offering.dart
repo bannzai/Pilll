@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/special_offering/page.dart';
+import 'package:pilll/utils/analytics.dart';
 
 class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
   const SpecialOfferingAnnouncementBar({
@@ -12,6 +14,10 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    useEffect(() {
+      analytics.logEvent(name: 'special_offering_announcement_bar_viewed');
+      return null;
+    }, []);
     return Container(
       padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
       color: AppColors.primary,
