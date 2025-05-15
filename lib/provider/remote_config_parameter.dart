@@ -34,6 +34,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard,
       RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
     ),
+    specialOfferingUserCreationDateTimeOffset: remoteConfig.getIntOrDefault(
+      RemoteConfigKeys.specialOfferingUserCreationDateTimeOffset,
+      RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
+    ),
   );
 }
 

@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -39,6 +40,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
   Widget? _body(BuildContext context, WidgetRef ref) {
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
     final firebaseAuthUser = ref.watch(firebaseUserStateProvider).valueOrNull;
     final user = ref.watch(userProvider).valueOrNull;
@@ -122,7 +124,9 @@ class AnnouncementBar extends HookConsumerWidget {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
 
-        if (userBeginDate != null && daysBetween(userBeginDate, today()) >= 600 && !specialOfferingIsClosed.value) {
+        if (userBeginDate != null &&
+            daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
+            !specialOfferingIsClosed.value) {
           return SpecialOfferingAnnouncementBar(
             specialOfferingIsClosed: specialOfferingIsClosed,
           );
