@@ -56,12 +56,14 @@ class AnnouncementBar extends HookConsumerWidget {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed, specialOfferingIsClosed.value);
     });
 
-    DateTime? userBeginDate;
-    if (kDebugMode) {
-      userBeginDate = DateTime(2023, 1, 1);
-    } else {
-      userBeginDate = firebaseAuthUser?.metadata.creationTime;
-    }
+    // Test code 安定したら消す
+    // DateTime? userBeginDate;
+    // if (kDebugMode) {
+    //   userBeginDate = DateTime(2023, 1, 1);
+    // } else {
+    //   userBeginDate = firebaseAuthUser?.metadata.creationTime;
+    // }
+    final userBeginDate = firebaseAuthUser?.metadata.creationTime;
 
     final isAdsDisabled = () {
       if (!kDebugMode) {
@@ -78,10 +80,6 @@ class AnnouncementBar extends HookConsumerWidget {
     if (user == null) {
       return Container();
     }
-
-    // if (kDebugMode) {
-    //   return const SpecialOfferingAnnouncementBar();
-    // }
 
     // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
     if (!appIsReleased && !user.isPremium && Environment.flavor == Flavor.PRODUCTION) {
