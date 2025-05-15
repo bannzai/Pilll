@@ -11,23 +11,24 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
 import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
 
-const _specialOfferingClosedKey = 'special_offering_paywall_closed_at';
-
 class SpecialOfferingPage extends HookConsumerWidget {
-  const SpecialOfferingPage({super.key});
+  final ValueNotifier<bool> specialOfferingIsClosed;
+  const SpecialOfferingPage({super.key, required this.specialOfferingIsClosed});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ref.watch(userProvider).when(
           data: (user) {
-            return SpecialOfferingPageBody(user: user);
+            return SpecialOfferingPageBody(
+              user: user,
+              specialOfferingIsClosed: specialOfferingIsClosed,
+            );
           },
           error: (error, stack) => AlertDialog(
             title: const Text('エラー'),
@@ -46,10 +47,12 @@ class SpecialOfferingPage extends HookConsumerWidget {
 
 class SpecialOfferingPageBody extends HookConsumerWidget {
   final User user;
+  final ValueNotifier<bool> specialOfferingIsClosed;
 
   const SpecialOfferingPageBody({
     super.key,
     required this.user,
+    required this.specialOfferingIsClosed,
   });
 
   @override
@@ -118,6 +121,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                               AlertButton(
                                 onPressed: () async {
                                   analytics.logEvent(name: 'special_offering_alert_close');
+                                  specialOfferingIsClosed.value = true;
                                   Navigator.of(context).pop(true);
                                 },
                                 text: '閉じる',
@@ -128,8 +132,6 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       );
                       if (shouldClose == true) {
                         isClosing.value = true;
-                        final prefs = await SharedPreferences.getInstance();
-                        await prefs.setInt(_specialOfferingClosedKey, DateTime.now().millisecondsSinceEpoch);
                         if (context.mounted) {
                           Navigator.of(context).pop();
                         }
