@@ -9,9 +9,12 @@ import 'package:pilll/features/special_offering/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
 class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
+  final ValueNotifier<bool> specialOfferingIsClosed;
   const SpecialOfferingAnnouncementBar({
     super.key,
+    required this.specialOfferingIsClosed,
   });
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
@@ -25,7 +28,7 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
         onTap: () {
           showModalBottomSheet(
             context: context,
-            builder: (context) => const SpecialOfferingPage(),
+            builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
             enableDrag: false,
