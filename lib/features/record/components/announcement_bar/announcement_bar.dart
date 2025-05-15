@@ -45,7 +45,12 @@ class AnnouncementBar extends HookConsumerWidget {
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
-    final userBeginDate = firebaseAuthUser?.metadata.creationTime;
+    DateTime? userBeginDate;
+    if (kDebugMode) {
+      userBeginDate = DateTime(2023, 1, 1);
+    } else {
+      userBeginDate = firebaseAuthUser?.metadata.creationTime;
+    }
 
     final isAdsDisabled = () {
       if (!kDebugMode) {
@@ -63,9 +68,9 @@ class AnnouncementBar extends HookConsumerWidget {
       return Container();
     }
 
-    if (kDebugMode) {
-      return const SpecialOfferingAnnouncementBar();
-    }
+    // if (kDebugMode) {
+    //   return const SpecialOfferingAnnouncementBar();
+    // }
 
     // NOTE: アプリがリリースされていない場合 & ユーザーがプレミアムでない場合は広告を表示する
     if (!appIsReleased && !user.isPremium && Environment.flavor == Flavor.PRODUCTION) {
@@ -108,7 +113,7 @@ class AnnouncementBar extends HookConsumerWidget {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
         }
 
-        if (userBeginDate != null && daysBetween(today(), userBeginDate) >= 730) {
+        if (userBeginDate != null && daysBetween(userBeginDate, today()) >= 600) {
           return const SpecialOfferingAnnouncementBar();
         }
 
