@@ -86,6 +86,10 @@ class AnnouncementBar extends HookConsumerWidget {
       return const AdMob();
     }
 
+    if (kDebugMode) {
+      return SpecialOfferingAnnouncementBar(specialOfferingIsClosed: ValueNotifier(false));
+    }
+
     if (!user.isPremium) {
       if (user.hasDiscountEntitlement) {
         if (!user.isTrial) {

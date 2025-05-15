@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
+import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -16,6 +17,8 @@ import 'package:pilll/features/premium_introduction/components/annual_purchase_b
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
+import 'package:pilll/utils/links.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class SpecialOfferingPage extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed;
@@ -207,7 +210,15 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                             }
                           },
                         ),
-                        const SizedBox(height: 40),
+                        const SizedBox(height: 20),
+                        AlertButton(
+                          onPressed: () async {
+                            analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
+                            await launchUrl(Uri.parse(preimumLink));
+                          },
+                          text: L.viewPremiumFeatures,
+                        ),
+                        const SizedBox(height: 20),
                         const AppStoreReviewCards(),
                         const SizedBox(height: 24),
                         PremiumIntroductionFooter(
