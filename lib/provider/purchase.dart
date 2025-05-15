@@ -16,13 +16,15 @@ import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 
-enum OfferingType { limited, premium }
+enum OfferingType { limited, specialOffering, premium }
 
 extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
       case OfferingType.limited:
         return 'Limited';
+      case OfferingType.specialOffering:
+        return 'Premium';
       case OfferingType.premium:
         return 'Premium2';
     }
@@ -58,13 +60,21 @@ final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
   final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
 });
-final monthlyPremiumPackageProvider = Provider.family.autoDispose((ref, User user) {
+final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
   return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.monthly);
+});
+final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
+  const specialOfferingPackageOfferingType = OfferingType.specialOffering;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.annual);
 });
 
 final purchaseProvider = Provider((ref) => Purchase());

@@ -12,6 +12,7 @@ abstract class RemoteConfigKeys {
   static const releasedVersion = 'releasedVersion';
   static const premiumIntroductionPattern = 'premiumIntroductionPattern';
   static const premiumIntroductionShowsAppStoreReviewCard = 'premiumIntroductionShowsAppStoreReviewCard';
+  static const specialOfferingUserCreationDateTimeOffset = 'specialOfferingUserCreationDateTimeOffset';
 }
 
 abstract class RemoteConfigParameterDefaultValues {
@@ -24,6 +25,7 @@ abstract class RemoteConfigParameterDefaultValues {
   // default(A) or B or C ...
   static const premiumIntroductionPattern = 'default';
   static const premiumIntroductionShowsAppStoreReviewCard = false;
+  static const specialOfferingUserCreationDateTimeOffset = 730;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
@@ -37,6 +39,7 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
     @Default(RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour) int discountCountdownBoundaryHour,
     @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern) String premiumIntroductionPattern,
     @Default(RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard) bool premiumIntroductionShowsAppStoreReviewCard,
+    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset) int specialOfferingUserCreationDateTimeOffset,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

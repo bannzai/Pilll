@@ -1,7 +1,11 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
+import 'package:pilll/provider/remote_config_parameter.dart';
+import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
@@ -19,6 +23,7 @@ import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/remote_config.dart';
+import 'package:pilll/utils/shared_preference/keys.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({super.key});
@@ -34,7 +39,10 @@ class AnnouncementBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
+    final sharedPreferences = ref.watch(sharedPreferencesProvider);
+    final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
+    final firebaseAuthUser = ref.watch(firebaseUserStateProvider).valueOrNull;
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
@@ -43,6 +51,20 @@ class AnnouncementBar extends HookConsumerWidget {
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
+    final specialOfferingIsClosed = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed) ?? false);
+    specialOfferingIsClosed.addListener(() {
+      sharedPreferences.setBool(BoolKey.specialOfferingIsClosed, specialOfferingIsClosed.value);
+    });
+
+    // Test code 安定したら消す
+    // DateTime? userBeginDate;
+    // if (kDebugMode) {
+    //   userBeginDate = DateTime(2023, 1, 1);
+    // } else {
+    //   userBeginDate = firebaseAuthUser?.metadata.creationTime;
+    // }
+    final userBeginDate = firebaseAuthUser?.metadata.creationTime;
+
     final isAdsDisabled = () {
       if (!kDebugMode) {
         if (!isJaLocale) {
@@ -98,6 +120,14 @@ class AnnouncementBar extends HookConsumerWidget {
 
         if (!isAdsDisabled && pilllAds != null) {
           return PilllAdsAnnouncementBar(pilllAds: pilllAds, onClose: () => showPremiumIntroductionSheet(context));
+        }
+
+        if (userBeginDate != null &&
+            daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
+            !specialOfferingIsClosed.value) {
+          return SpecialOfferingAnnouncementBar(
+            specialOfferingIsClosed: specialOfferingIsClosed,
+          );
         }
 
         return const AdMob();
