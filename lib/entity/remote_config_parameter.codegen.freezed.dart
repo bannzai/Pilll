@@ -27,6 +27,7 @@ mixin _$RemoteConfigParameter {
   int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
   String get premiumIntroductionPattern => throw _privateConstructorUsedError;
   bool get premiumIntroductionShowsAppStoreReviewCard => throw _privateConstructorUsedError;
+  int get specialOfferingUserCreationDateTimeOffset => throw _privateConstructorUsedError;
 
   /// Serializes this RemoteConfigParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -49,7 +50,8 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour,
       String premiumIntroductionPattern,
-      bool premiumIntroductionShowsAppStoreReviewCard});
+      bool premiumIntroductionShowsAppStoreReviewCard,
+      int specialOfferingUserCreationDateTimeOffset});
 }
 
 /// @nodoc
@@ -73,6 +75,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? discountCountdownBoundaryHour = null,
     Object? premiumIntroductionPattern = null,
     Object? premiumIntroductionShowsAppStoreReviewCard = null,
+    Object? specialOfferingUserCreationDateTimeOffset = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -103,6 +106,10 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.premiumIntroductionShowsAppStoreReviewCard
           : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
               as bool,
+      specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
+          ? _value.specialOfferingUserCreationDateTimeOffset
+          : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 }
@@ -120,7 +127,8 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int discountEntitlementOffsetDay,
       int discountCountdownBoundaryHour,
       String premiumIntroductionPattern,
-      bool premiumIntroductionShowsAppStoreReviewCard});
+      bool premiumIntroductionShowsAppStoreReviewCard,
+      int specialOfferingUserCreationDateTimeOffset});
 }
 
 /// @nodoc
@@ -141,6 +149,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? discountCountdownBoundaryHour = null,
     Object? premiumIntroductionPattern = null,
     Object? premiumIntroductionShowsAppStoreReviewCard = null,
+    Object? specialOfferingUserCreationDateTimeOffset = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -171,6 +180,10 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.premiumIntroductionShowsAppStoreReviewCard
           : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
               as bool,
+      specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
+          ? _value.specialOfferingUserCreationDateTimeOffset
+          : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -185,7 +198,8 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.discountEntitlementOffsetDay = RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
       this.discountCountdownBoundaryHour = RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
       this.premiumIntroductionPattern = RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
-      this.premiumIntroductionShowsAppStoreReviewCard = RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard})
+      this.premiumIntroductionShowsAppStoreReviewCard = RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
+      this.specialOfferingUserCreationDateTimeOffset = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
@@ -211,10 +225,13 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @override
   @JsonKey()
   final bool premiumIntroductionShowsAppStoreReviewCard;
+  @override
+  @JsonKey()
+  final int specialOfferingUserCreationDateTimeOffset;
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset)';
   }
 
   @override
@@ -233,13 +250,23 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(other.premiumIntroductionPattern, premiumIntroductionPattern) ||
                 other.premiumIntroductionPattern == premiumIntroductionPattern) &&
             (identical(other.premiumIntroductionShowsAppStoreReviewCard, premiumIntroductionShowsAppStoreReviewCard) ||
-                other.premiumIntroductionShowsAppStoreReviewCard == premiumIntroductionShowsAppStoreReviewCard));
+                other.premiumIntroductionShowsAppStoreReviewCard == premiumIntroductionShowsAppStoreReviewCard) &&
+            (identical(other.specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffset) ||
+                other.specialOfferingUserCreationDateTimeOffset == specialOfferingUserCreationDateTimeOffset));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, isPaywallFirst, skipInitialSetting, trialDeadlineDateOffsetDay, discountEntitlementOffsetDay,
-      discountCountdownBoundaryHour, premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard);
+  int get hashCode => Object.hash(
+      runtimeType,
+      isPaywallFirst,
+      skipInitialSetting,
+      trialDeadlineDateOffsetDay,
+      discountEntitlementOffsetDay,
+      discountCountdownBoundaryHour,
+      premiumIntroductionPattern,
+      premiumIntroductionShowsAppStoreReviewCard,
+      specialOfferingUserCreationDateTimeOffset);
 
   /// Create a copy of RemoteConfigParameter
   /// with the given fields replaced by the non-null parameter values.
@@ -265,7 +292,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int discountEntitlementOffsetDay,
       final int discountCountdownBoundaryHour,
       final String premiumIntroductionPattern,
-      final bool premiumIntroductionShowsAppStoreReviewCard}) = _$RemoteConfigParameterImpl;
+      final bool premiumIntroductionShowsAppStoreReviewCard,
+      final int specialOfferingUserCreationDateTimeOffset}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
@@ -284,6 +312,8 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   String get premiumIntroductionPattern;
   @override
   bool get premiumIntroductionShowsAppStoreReviewCard;
+  @override
+  int get specialOfferingUserCreationDateTimeOffset;
 
   /// Create a copy of RemoteConfigParameter
   /// with the given fields replaced by the non-null parameter values.
