@@ -24,9 +24,13 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
     final fcmToken = await FirebaseMessaging.instance.getToken();
     registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: null);
 
-    await AndroidFlutterLocalNotificationsPlugin().requestNotificationsPermission();
+    final androidNotificationGranded = await AndroidFlutterLocalNotificationsPlugin().requestNotificationsPermission();
+    if (androidNotificationGranded != true) {
+      throw Exception('通知権限が許可されていません。設定から許可してください。');
+    }
+
     final granted = await AndroidFlutterLocalNotificationsPlugin().requestExactAlarmsPermission();
-    if (granted == false) {
+    if (granted != true) {
       throw Exception('正確なアラーム権限が許可されていません。設定から許可してください。');
     }
   }
