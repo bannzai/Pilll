@@ -26,6 +26,7 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
       color: AppColors.primary,
       child: GestureDetector(
         onTap: () {
+          analytics.logEvent(name: 'special_offering_announcement_bar_tap');
           showModalBottomSheet(
             context: context,
             builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed),
