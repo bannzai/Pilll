@@ -25,6 +25,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/push_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -137,7 +138,8 @@ class HomePageBody extends HookConsumerWidget {
         try {
           debugPrint('[DEBUG] PushNotificationResolver');
           await requestNotificationPermissions(registerRemotePushNotificationToken);
-        } catch (e) {
+        } catch (e, stack) {
+          errorLogger.recordError(e, stack);
           if (context.mounted) {
             showErrorAlert(context, e);
           }
