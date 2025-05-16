@@ -10,7 +10,7 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
   if (Platform.isIOS) {
     await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: true, sound: true);
     await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
-    await localNotificationService.requestPermission();
+    await localNotificationService.requestiOSPermission();
     final apnsToken = await FirebaseMessaging.instance.getAPNSToken();
     final fcmToken = await FirebaseMessaging.instance.getToken();
     registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: apnsToken);
@@ -18,6 +18,8 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
 
   if (Platform.isAndroid) {
     await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
+    await localNotificationService.requestiOSPermission();
+
     final fcmToken = await FirebaseMessaging.instance.getToken();
     registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: null);
 
