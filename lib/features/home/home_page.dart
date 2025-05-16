@@ -5,6 +5,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/web_view.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
+import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/universal_error_page.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
@@ -24,6 +25,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/utils/error_log.dart';
+import 'package:pilll/utils/push_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -71,6 +74,7 @@ class HomePageBody extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final registerRemotePushNotificationToken = ref.watch(registerRemotePushNotificationTokenProvider);
     final tabIndex = useState(0);
     final ticker = useSingleTickerProvider();
     final tabController = useTabController(initialLength: HomePageTabType.values.length, vsync: ticker);
@@ -95,6 +99,7 @@ class HomePageBody extends HookConsumerWidget {
     } else {
       isOneMonthPassedTrialDeadline = false;
     }
+    final error = useState<String?>(null);
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
@@ -125,6 +130,36 @@ class HomePageBody extends HookConsumerWidget {
 
       return null;
     }, []);
+
+    // NOTE: iOSではBackground Resolver的なアプローチで許可ダイアログが出たが、Androidではダイアログが出ない。ホーム画面で呼び出すことで表示されるのでここでrequestPermissionを呼び出す
+    useEffect(() {
+      // Android 13ユーザー向けに通知の許可を取る必要がある。古いバージョンからアップグレードしたユーザーへの許可はアプリのメインストリームが始まってから取得するようにする
+      // https://developer.android.com/guide/topics/ui/notifiers/notification-permission
+      Future<void> f() async {
+        try {
+          debugPrint('[DEBUG] PushNotificationResolver');
+          await requestNotificationPermissions(registerRemotePushNotificationToken);
+        } catch (e, stack) {
+          errorLogger.recordError(e, stack);
+          error.value = e.toString();
+        }
+      }
+
+      f();
+
+      return null;
+    }, []);
+
+    useEffect(() {
+      final errorValue = error.value;
+      if (errorValue != null) {
+        WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
+          showErrorAlert(context, errorValue);
+          error.value = null;
+        });
+      }
+      return null;
+    }, [error.value]);
 
     return DefaultTabController(
       length: HomePageTabType.values.length,

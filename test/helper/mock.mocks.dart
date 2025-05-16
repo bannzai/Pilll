@@ -1566,9 +1566,9 @@ class MockLocalNotificationService extends _i1.Mock
       ) as _i9.Future<void>);
 
   @override
-  _i9.Future<void> requestPermission() => (super.noSuchMethod(
+  _i9.Future<void> requestiOSPermission() => (super.noSuchMethod(
         Invocation.method(
-          #requestPermission,
+          #requestiOSPermission,
           [],
         ),
         returnValue: _i9.Future<void>.value(),

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:pilll/features/home/home_page.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/features/localizations/resolver.dart';
-import 'package:pilll/features/push_notification/resolver.dart';
 import 'package:pilll/features/root/resolver/firebase_auth_resolver.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
@@ -29,7 +28,6 @@ class RootPage extends HookConsumerWidget {
             builder: (_) => Stack(
               children: [
                 UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
-                UserStreamResolver(stream: (user) => PushNotificationResolver(user: user)),
                 const SyncDataResolver(),
                 const Migration20240819(),
                 InitialSettingOrAppPage(
