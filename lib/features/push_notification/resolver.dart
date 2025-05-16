@@ -23,6 +23,7 @@ class PushNotificationResolver extends HookConsumerWidget {
       // https://developer.android.com/guide/topics/ui/notifiers/notification-permission
       Future<void> f() async {
         try {
+          debugPrint('[DEBUG] PushNotificationResolver');
           await requestNotificationPermissions(registerRemotePushNotificationToken);
         } catch (e) {
           if (context.mounted) {
@@ -36,6 +37,6 @@ class PushNotificationResolver extends HookConsumerWidget {
       return null;
     }, []);
 
-    return const SizedBox.shrink();
+    return const SizedBox();
   }
 }
