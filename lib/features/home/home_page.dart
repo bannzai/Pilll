@@ -99,6 +99,7 @@ class HomePageBody extends HookConsumerWidget {
     } else {
       isOneMonthPassedTrialDeadline = false;
     }
+    final error = useState<String?>(null);
 
     useEffect(() {
       WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
@@ -140,9 +141,7 @@ class HomePageBody extends HookConsumerWidget {
           await requestNotificationPermissions(registerRemotePushNotificationToken);
         } catch (e, stack) {
           errorLogger.recordError(e, stack);
-          if (context.mounted) {
-            showErrorAlert(context, e);
-          }
+          error.value = e.toString();
         }
       }
 
@@ -150,6 +149,18 @@ class HomePageBody extends HookConsumerWidget {
 
       return null;
     }, []);
+
+    useEffect(() {
+      final errorValue = error.value;
+      if (errorValue != null) {
+        WidgetsBinding.instance.addPostFrameCallback((timestamp) async {
+          showErrorAlert(context, errorValue);
+          error.value = null;
+        });
+      }
+      return null;
+    }, [error.value]);
+
     return DefaultTabController(
       length: HomePageTabType.values.length,
       child: Scaffold(
