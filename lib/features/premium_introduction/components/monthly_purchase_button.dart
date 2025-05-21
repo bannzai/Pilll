@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -16,6 +17,15 @@ class MonthlyPurchaseButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    Locale locale = Localizations.localeOf(context);
+    // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったら dailyPriceString を表示しないようにする
+    final String dailyPriceString;
+    if (locale.toString().contains('ja')) {
+      dailyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPackage.storeProduct.price / 30);
+    } else {
+      dailyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(monthlyPackage.storeProduct.price / 30);
+    }
+
     return GestureDetector(
       onTap: () {
         onTap(monthlyPackage);
@@ -50,6 +60,13 @@ class MonthlyPurchaseButton extends StatelessWidget {
                 fontFamily: FontFamily.japanese,
                 fontSize: 16,
                 fontWeight: FontWeight.w600,
+              ),
+            ),
+            // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったら dailyPriceString を表示しないようにする(Widget削除)
+            Text(
+              L.dailyPrice(dailyPriceString),
+              style: const TextStyle(
+                color: TextColor.main,
               ),
             ),
           ],
