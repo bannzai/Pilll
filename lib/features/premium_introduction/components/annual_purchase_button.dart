@@ -24,9 +24,11 @@ class AnnualPurchaseButton extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final monthlyPrice = annualPackage.storeProduct.price / 12;
     Locale locale = Localizations.localeOf(context);
-    final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
+    // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったらmonthlyPriceString を表示するように戻す
+    // final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
+    final String dailyPriceString =
+        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(monthlyPackage.storeProduct.price / 30);
 
     return GestureDetector(
       onTap: () {
@@ -68,7 +70,9 @@ class AnnualPurchaseButton extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '(${L.monthlyPrice(monthlyPriceString)})',
+                  // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったらmonthlyPriceString を表示するように戻す
+                  // '(${L.monthlyPrice(monthlyPriceString)})',
+                  '(${L.dailyPrice(dailyPriceString)})',
                   style: const TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
