@@ -31,7 +31,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
         onTap(monthlyPackage);
       },
       child: Container(
-        padding: const EdgeInsets.fromLTRB(32, 24, 32, 45),
+        padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
         decoration: BoxDecoration(
           color: AppColors.blueBackground,
           borderRadius: const BorderRadius.all(Radius.circular(4)),
