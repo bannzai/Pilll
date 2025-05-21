@@ -8,7 +8,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
-import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/features/error/page.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/user.dart';
 

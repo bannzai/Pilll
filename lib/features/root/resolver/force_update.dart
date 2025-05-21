@@ -7,7 +7,7 @@ import 'package:pilll/provider/force_update.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/features/error/page.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/platform/platform.dart';

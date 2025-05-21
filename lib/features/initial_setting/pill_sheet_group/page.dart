@@ -9,7 +9,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
-import 'package:pilll/features/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
+import 'package:pilll/features/initial_setting/today_pill_number/page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';

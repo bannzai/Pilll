@@ -9,7 +9,7 @@ import 'package:pilll/components/organisms/calendar/week/week_calendar.dart';
 import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/features/menstruation/data.dart';
-import 'package:pilll/features/menstruation/menstruation_page.dart';
+import 'package:pilll/features/menstruation/page.dart';
 import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
