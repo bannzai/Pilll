@@ -41,7 +41,7 @@ class SpecialOfferingAnnouncementBar extends HookConsumerWidget {
             const Align(
               alignment: Alignment.center,
               child: Text(
-                '97.2%の人が「飲み忘れが減った」と回答！\n半額でプレミアムプランをゲットできます！',
+                '97.2%の人が「飲み忘れが減った」と回答！\n今だけ半額でプレミアムプランをゲット！',
                 style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
