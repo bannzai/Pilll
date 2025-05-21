@@ -1,7 +1,7 @@
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
-import 'package:pilll/features/initial_setting/premium_trial/initial_setting_premium_trial_start_page.dart';
+import 'package:pilll/features/initial_setting/premium_trial/page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';

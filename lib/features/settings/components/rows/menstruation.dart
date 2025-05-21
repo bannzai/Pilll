@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/features/settings/menstruation/setting_menstruation_page.dart';
+import 'package:pilll/features/settings/menstruation/page.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 

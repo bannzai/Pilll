@@ -7,7 +7,7 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/root.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/features/error/template.dart';
-import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/features/error/page.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:flutter/material.dart';

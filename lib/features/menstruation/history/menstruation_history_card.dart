@@ -9,7 +9,7 @@ import 'package:pilll/components/molecules/counter_unit_layout.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/features/menstruation/history/menstruation_history_card_state.dart';
 import 'package:pilll/features/menstruation_list/menstruation_list_row.dart';
-import 'package:pilll/features/menstruation_list/menstruation_list_page.dart';
+import 'package:pilll/features/menstruation_list/page.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
 

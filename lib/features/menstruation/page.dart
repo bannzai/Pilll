@@ -20,7 +20,7 @@ import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/features/error/page.dart';
 import 'package:pilll/provider/diary.dart';
 import 'package:pilll/provider/menstruation.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';

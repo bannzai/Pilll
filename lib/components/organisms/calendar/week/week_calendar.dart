@@ -12,9 +12,9 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_function.
 import 'package:pilll/features/calendar/components/diary_or_schedule/diary_or_schedule_sheet.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
-import 'package:pilll/features/diary_post/diary_post_page.dart';
+import 'package:pilll/features/diary_post/page.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/features/schedule_post/schedule_post_page.dart';
+import 'package:pilll/features/schedule_post/page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/entity/schedule.codegen.dart';
 import 'package:pilll/entity/weekday.dart';

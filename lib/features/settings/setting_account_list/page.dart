@@ -14,7 +14,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/features/settings/setting_account_list/components/delete_user_button.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/error/error_alert.dart';
-import 'package:pilll/features/error/universal_error_page.dart';
+import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {

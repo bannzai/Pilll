@@ -1,7 +1,7 @@
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/features/diary_post/diary_post_page.dart';
+import 'package:pilll/features/diary_post/page.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
