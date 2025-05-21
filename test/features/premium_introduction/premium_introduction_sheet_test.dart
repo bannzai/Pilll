@@ -78,7 +78,7 @@ void main() {
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(
         view: WidgetsBinding.instance.platformDispatcher.views.single,
-        size: const Size(375.0, 667.0),
+        size: const Size(414.0, 896.0),
       );
     }
   });
