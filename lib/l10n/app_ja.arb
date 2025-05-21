@@ -897,6 +897,15 @@
       }
     }
   },
+  "dailyPrice": "{dailyPriceString}/日",
+  "@dailyPrice": {
+    "description": "{dailyPriceString}/日",
+    "placeholders": {
+      "dailyPriceString": {
+        "type": "String"
+      }
+    }
+  },
   "premiumTermsNotice1": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n",
   "@premiumTermsNotice1": {
     "description": "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"
