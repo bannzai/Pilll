@@ -29,8 +29,6 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) => _$SettingImpl
           : ReminderNotificationCustomization.fromJson(json['reminderNotificationCustomization'] as Map<String, dynamic>),
       useCriticalAlert: json['useCriticalAlert'] as bool? ?? false,
       criticalAlertVolume: (json['criticalAlertVolume'] as num?)?.toDouble() ?? 0.5,
-      pillSheetAppearanceMode:
-          $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
       timezoneDatabaseName: json['timezoneDatabaseName'] as String?,
     );
 
@@ -45,7 +43,6 @@ Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) => <String, dy
       'reminderNotificationCustomization': instance.reminderNotificationCustomization.toJson(),
       'useCriticalAlert': instance.useCriticalAlert,
       'criticalAlertVolume': instance.criticalAlertVolume,
-      'pillSheetAppearanceMode': _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode]!,
       'timezoneDatabaseName': instance.timezoneDatabaseName,
     };
 
@@ -57,11 +54,4 @@ const _$PillSheetTypeEnumMap = {
   PillSheetType.pillsheet_24_0: 'pillsheet_24_0',
   PillSheetType.pillsheet_21_0: 'pillsheet_21_0',
   PillSheetType.pillsheet_24_rest_4: 'pillsheet_24_rest_4',
-};
-
-const _$PillSheetAppearanceModeEnumMap = {
-  PillSheetAppearanceMode.number: 'number',
-  PillSheetAppearanceMode.date: 'date',
-  PillSheetAppearanceMode.sequential: 'sequential',
-  PillSheetAppearanceMode.cyclicSequential: 'cyclicSequential',
 };

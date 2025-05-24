@@ -23,7 +23,6 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final setting = ref.watch(settingProvider).requireValue;
     final pillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
-    final setSetting = ref.watch(setSettingProvider);
     final setPillSheetGroup = ref.watch(setPillSheetGroupProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
@@ -54,7 +53,6 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
-                  setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
@@ -66,7 +64,6 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
-                  setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
@@ -78,7 +75,6 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
                   context,
                   setting: setting,
                   pillSheetGroup: pillSheetGroup,
-                  setSetting: setSetting,
                   setPillSheetGroup: setPillSheetGroup,
                   registerReminderLocalNotification: registerReminderLocalNotification,
                   user: user,
@@ -96,7 +92,6 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
 
   Widget _row(
     BuildContext context, {
-    required SetSetting setSetting,
     required SetPillSheetGroup setPillSheetGroup,
     required RegisterReminderLocalNotification registerReminderLocalNotification,
     required Setting setting,
@@ -114,16 +109,12 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
         );
 
         if (user.isPremium || user.isTrial) {
-          // NOTE: [Migrate:PillSheetAppearanceMode] settingも同期する
-          await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
           await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         } else if (isPremiumFunction) {
           showPremiumIntroductionSheet(context);
         } else {
           // User selected non premium function mode
-          // NOTE: [Migrate:PillSheetAppearanceMode] settingも同期する
-          await setSetting(setting.copyWith(pillSheetAppearanceMode: mode));
           await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
           await registerReminderLocalNotification();
         }

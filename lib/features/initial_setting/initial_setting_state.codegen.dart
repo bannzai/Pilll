@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -61,7 +60,6 @@ class InitialSettingState with _$InitialSettingState {
       isOnReminder: isOnReminder,
       timezoneDatabaseName: await FlutterTimezone.getLocalTimezone(),
       // BEGIN: Release function for trial user
-      pillSheetAppearanceMode: PillSheetAppearanceMode.date,
       isAutomaticallyCreatePillSheet: true,
       // END: Release function for trial user
     );

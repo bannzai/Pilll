@@ -47,7 +47,6 @@ void main() {
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
@@ -60,7 +59,7 @@ void main() {
           pillSheetIDs: ["pill_sheet_id"],
           pillSheets: [pillSheet],
           createdAt: today(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         for (int i = 0; i < 28; i++) {
           final pillNumberInPillSheet = i + 1;
@@ -106,7 +105,6 @@ void main() {
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
         final pillSheet = PillSheet(
@@ -120,7 +118,7 @@ void main() {
           pillSheetIDs: ["pill_sheet_id"],
           pillSheets: [pillSheet],
           createdAt: today(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
         for (int i = 0; i < 28; i++) {
@@ -166,7 +164,6 @@ void main() {
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
@@ -179,7 +176,7 @@ void main() {
           pillSheetIDs: ["pill_sheet_id"],
           pillSheets: [pillSheet],
           createdAt: today(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
         for (int i = 0; i < 28; i++) {
@@ -228,7 +225,6 @@ void main() {
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
@@ -241,7 +237,7 @@ void main() {
           pillSheetIDs: ["pill_sheet_id"],
           pillSheets: [pillSheet],
           createdAt: today(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
         for (int i = 0; i < 28; i++) {
@@ -287,7 +283,6 @@ void main() {
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
@@ -300,7 +295,7 @@ void main() {
           pillSheetIDs: ["pill_sheet_id"],
           pillSheets: [pillSheet],
           createdAt: today(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
         for (int i = 0; i < 28; i++) {
@@ -347,7 +342,6 @@ void main() {
           durationMenstruation: durationMenstruation,
           isOnReminder: true,
           timezoneDatabaseName: null,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         final pillSheet = PillSheet(
           id: firestoreIDGenerator(),
@@ -360,7 +354,7 @@ void main() {
           pillSheetIDs: ["pill_sheet_id"],
           pillSheets: [pillSheet],
           createdAt: today(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
 
         for (int i = 0; i < 28; i++) {

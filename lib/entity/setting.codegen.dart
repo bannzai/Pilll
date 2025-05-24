@@ -1,4 +1,3 @@
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -48,12 +47,6 @@ class Setting with _$Setting {
     // 緊急アラート関連の設定
     @Default(false) bool useCriticalAlert,
     @Default(0.5) double criticalAlertVolume,
-    // Deprecated
-    // NOTE: [Migrate:PillSheetAppearanceMode] 頃合いを見て強制アップデートして浸透してから削除。since: 2024-10-12
-    // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる。[Migrate:PillSheetAppearanceMode] で削除が完了するタイミングで PillSheetGroupの同様のプロパティで同期を測る
-    @Deprecated('PillSheetGroupのpillSheetAppearanceModeを使用する')
-    @Default(PillSheetAppearanceMode.number)
-    PillSheetAppearanceMode pillSheetAppearanceMode,
     required String? timezoneDatabaseName,
   }) = _Setting;
 

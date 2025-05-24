@@ -77,13 +77,17 @@ class FetchOrCreateUser {
 
   Future<User> _fetch(String uid) async {
     debugPrint('#fetch $uid');
-    final document = await databaseConnection.userReference().get();
-    if (!document.exists) {
-      debugPrint('user does not exists $uid');
-      throw UserNotFound();
+    try {
+      final document = await databaseConnection.userReference().get();
+      if (!document.exists) {
+        debugPrint('user does not exists $uid');
+        throw UserNotFound();
+      }
+      return document.data()!;
+    } catch (e, st) {
+      debugPrint('error: $e, stackTrace: $st');
+      rethrow;
     }
-
-    return document.data()!;
   }
 
   Future<void> _create(String uid) async {
