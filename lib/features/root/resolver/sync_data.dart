@@ -35,22 +35,6 @@ class SyncDataResolver extends HookConsumerWidget {
 
     useEffect(() {
       final f = (() async {
-        if (setting.isLoading) {
-          return;
-        }
-        try {
-          syncSetting(setting: setting.asData?.value);
-        } catch (error) {
-          debugPrint(error.toString());
-        }
-      });
-
-      f();
-      return null;
-    }, [setting.asData?.value]);
-
-    useEffect(() {
-      final f = (() async {
         if (latestPillSheetGroup.isLoading) {
           return;
         }
