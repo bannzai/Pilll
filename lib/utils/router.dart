@@ -11,10 +11,3 @@ class AppRouter {
     await didEndInitialSettingNotifier.set(true);
     navigator.popUntil((router) => router.isFirst);
   }
-
-  static Future<void> routeToInitialSetting(NavigatorState navigator, BoolSharedPreferences didEndInitialSettingNotifier) async {
-    analytics.logEvent(name: 'route_to_initial_settings');
-    await didEndInitialSettingNotifier.set(false);
-    navigator.popUntil((router) => router.isFirst);
-  }
-}
