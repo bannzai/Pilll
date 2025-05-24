@@ -28,7 +28,7 @@ class AnnualPurchaseButton extends StatelessWidget {
     // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったらmonthlyPriceString を表示するように戻す
     // final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
     final String dailyPriceString =
-        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(monthlyPackage.storeProduct.price / 30);
+        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(annualPackage.storeProduct.price / 365);
 
     return GestureDetector(
       onTap: () {
