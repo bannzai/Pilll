@@ -6,7 +6,6 @@ import 'package:pilll/features/localizations/resolver.dart';
 import 'package:pilll/features/root/resolver/firebase_auth_resolver.dart';
 import 'package:pilll/features/root/resolver/force_update.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
-import 'package:pilll/features/root/resolver/migration20240819.dart';
 import 'package:pilll/features/root/resolver/show_paywall_on_app_launch.dart';
 import 'package:pilll/features/root/resolver/skip_initial_setting.dart';
 import 'package:pilll/features/root/resolver/sync_data.dart';
@@ -35,7 +34,6 @@ class RootPage extends HookConsumerWidget {
                     children: [
                       UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
                       const SyncDataResolver(),
-                      const Migration20240819(),
                       InitialSettingOrAppPage(
                         initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
                           builder: (_) => SkipInitialSetting(
