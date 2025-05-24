@@ -156,76 +156,74 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                   padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                   width: MediaQuery.of(context).size.width,
                 ),
-                Expanded(
-                  child: SingleChildScrollView(
-                    padding: const EdgeInsets.symmetric(vertical: 20),
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        PremiumIntroductionDiscountAppeal(
-                          monthlyPremiumPackage: monthlyPremiumPackage,
+                SingleChildScrollView(
+                  padding: const EdgeInsets.symmetric(vertical: 20),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      PremiumIntroductionDiscountAppeal(
+                        monthlyPremiumPackage: monthlyPremiumPackage,
+                      ),
+                      const SizedBox(height: 10),
+                      SvgPicture.asset('images/arrow_down.svg'),
+                      const SizedBox(height: 10),
+                      const Text(
+                        '今回だけの特別価格でプレミアム機能をゲット！',
+                        style: TextStyle(
+                          color: TextColor.main,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 16,
                         ),
-                        const SizedBox(height: 10),
-                        SvgPicture.asset('images/arrow_down.svg'),
-                        const SizedBox(height: 10),
-                        const Text(
-                          '今回だけの特別価格でプレミアム機能をゲット！',
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16,
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        AnnualPurchaseButton(
-                          annualPackage: annualSpecialOfferingPackage,
-                          monthlyPackage: monthlyPremiumPackage,
-                          monthlyPremiumPackage: monthlyPremiumPackage,
-                          offeringType: OfferingType.specialOffering,
-                          onTap: (package) async {
-                            if (isLoading.value) return;
-                            isLoading.value = true;
+                      ),
+                      const SizedBox(height: 20),
+                      AnnualPurchaseButton(
+                        annualPackage: annualSpecialOfferingPackage,
+                        monthlyPackage: monthlyPremiumPackage,
+                        monthlyPremiumPackage: monthlyPremiumPackage,
+                        offeringType: OfferingType.specialOffering,
+                        onTap: (package) async {
+                          if (isLoading.value) return;
+                          isLoading.value = true;
 
-                            try {
-                              final shouldShowCompleteDialog = await purchase(package);
-                              if (shouldShowCompleteDialog) {
-                                if (context.mounted) {
-                                  showDialog(
-                                    context: context,
-                                    builder: (_) {
-                                      return PremiumCompleteDialog(onClose: () {
-                                        Navigator.of(context).pop();
-                                      });
-                                    },
-                                  );
-                                }
-                              }
-                            } catch (error) {
-                              debugPrint('caused purchase error for $error');
+                          try {
+                            final shouldShowCompleteDialog = await purchase(package);
+                            if (shouldShowCompleteDialog) {
                               if (context.mounted) {
-                                showErrorAlert(context, error);
+                                showDialog(
+                                  context: context,
+                                  builder: (_) {
+                                    return PremiumCompleteDialog(onClose: () {
+                                      Navigator.of(context).pop();
+                                    });
+                                  },
+                                );
                               }
-                            } finally {
-                              isLoading.value = false;
                             }
-                          },
-                        ),
-                        const SizedBox(height: 20),
-                        AlertButton(
-                          onPressed: () async {
-                            analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
-                            await launchUrl(Uri.parse(preimumLink));
-                          },
-                          text: L.viewPremiumFeatures,
-                        ),
-                        const SizedBox(height: 20),
-                        const AppStoreReviewCards(),
-                        const SizedBox(height: 24),
-                        PremiumIntroductionFooter(
-                          isLoading: isLoading,
-                        ),
-                      ],
-                    ),
+                          } catch (error) {
+                            debugPrint('caused purchase error for $error');
+                            if (context.mounted) {
+                              showErrorAlert(context, error);
+                            }
+                          } finally {
+                            isLoading.value = false;
+                          }
+                        },
+                      ),
+                      const SizedBox(height: 20),
+                      AlertButton(
+                        onPressed: () async {
+                          analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
+                          await launchUrl(Uri.parse(preimumLink));
+                        },
+                        text: L.viewPremiumFeatures,
+                      ),
+                      const SizedBox(height: 20),
+                      const AppStoreReviewCards(),
+                      const SizedBox(height: 24),
+                      PremiumIntroductionFooter(
+                        isLoading: isLoading,
+                      ),
+                    ],
                   ),
                 ),
               ],
