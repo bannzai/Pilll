@@ -54,11 +54,11 @@ final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package
 });
 final annualPackageProvider = Provider.family.autoDispose((ref, User user) {
   final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.annual);
+  return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.annual);
 });
 final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
   final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
-  return currentOfferingPackages.firstWhere((element) => element.packageType == PackageType.monthly);
+  return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
 });
 final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
@@ -66,7 +66,7 @@ final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.monthly);
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
 });
 final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   const specialOfferingPackageOfferingType = OfferingType.specialOffering;
@@ -74,7 +74,7 @@ final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   if (offering == null) {
     return null;
   }
-  return offering.availablePackages.firstWhere((element) => element.packageType == PackageType.annual);
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.annual);
 });
 
 final purchaseProvider = Provider((ref) => Purchase());

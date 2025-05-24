@@ -4,26 +4,27 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/purchase.dart';
-import 'package:pilll/provider/user.dart';
 
 class DiscountPriceDeadline extends HookConsumerWidget {
+  final User user;
   final DateTime discountEntitlementDeadlineDate;
   final VoidCallback onTap;
 
   const DiscountPriceDeadline({
     super.key,
+    required this.user,
     required this.discountEntitlementDeadlineDate,
     required this.onTap,
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final user = ref.watch(userProvider).valueOrNull;
     final difference = ref.watch(durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
-    final annualPackage = user != null ? ref.watch(annualPackageProvider(user)) : null;
-    final monthlyPremiumPackage = user != null ? ref.watch(monthlyPremiumPackageProvider) : null;
+    final annualPackage = ref.watch(annualPackageProvider(user));
+    final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
     if (difference.inSeconds <= 0 || annualPackage == null || monthlyPremiumPackage == null) {
       return Container();
     }

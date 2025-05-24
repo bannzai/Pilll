@@ -111,7 +111,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                                 discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                               ),
                           const SizedBox(height: 12),
-                          if (monthlyPremiumPackage != null)
+                          if (monthlyPremiumPackage != null && monthlyPackage != null && annualPackage != null)
                             PurchaseButtons(
                               offeringType: offeringType,
                               monthlyPackage: monthlyPackage,

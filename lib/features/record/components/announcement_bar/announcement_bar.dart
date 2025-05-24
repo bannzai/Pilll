@@ -92,6 +92,7 @@ class AnnouncementBar extends HookConsumerWidget {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
+                  user: user,
                   discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
                   onTap: () {
                     analytics.logEvent(name: 'pressed_discount_announcement_bar');
