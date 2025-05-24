@@ -11,3 +11,4 @@ class AppRouter {
     await didEndInitialSettingNotifier.set(true);
     navigator.popUntil((router) => router.isFirst);
   }
+}
