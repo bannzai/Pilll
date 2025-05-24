@@ -18,21 +18,12 @@ Future<void> syncActivePillSheetValue({
       'pillSheetGroupTodayPillNumber': pillSheetGroup?.sequentialTodayPillNumber,
       'pillSheetEndDisplayPillNumber': pillSheetGroup?.displayNumberSetting?.endPillNumber,
       'pillSheetValueLastUpdateDateTime': DateTime.now().millisecondsSinceEpoch,
+      // NOTE: 昔はSetting.pillSheetAppearanceModeがWidgetに同期されていたが、PillSheetGroupに移行したため、PillSheetGroupのものを使用する。気が向いたらkeyもリネームする
+      'settingPillSheetAppearanceMode': pillSheetGroup?.pillSheetAppearanceMode.name,
     };
     for (final element in map.entries) {
       await HomeWidget.saveWidgetData(element.key, element.value);
     }
-    await updateWidget();
-  } catch (error) {
-    debugPrint(error.toString());
-  }
-}
-
-Future<void> syncSetting({
-  required Setting? setting,
-}) async {
-  try {
-    await HomeWidget.saveWidgetData('settingPillSheetAppearanceMode', setting?.pillSheetAppearanceMode.name);
     await updateWidget();
   } catch (error) {
     debugPrint(error.toString());
