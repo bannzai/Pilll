@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:pilll/native/widget.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:pilll/provider/setting.dart';
 
 // NOTE: [SyncData:Widget]
 class SyncDataResolver extends HookConsumerWidget {
@@ -13,7 +12,6 @@ class SyncDataResolver extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider);
-    final setting = ref.watch(settingProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider);
     useAutomaticKeepAlive(wantKeepAlive: true);
 
