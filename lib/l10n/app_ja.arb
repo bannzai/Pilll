@@ -2314,5 +2314,9 @@
   "logoutCompleted": "ログアウトしました",
   "@logoutCompleted": {
     "description": "ログアウトしました"
+  },
+  "specialDiscountPriceNow": "特別価格でプレミアムプランをゲット！",
+  "@specialDiscountPriceNow": {
+    "description": "特別価格でプレミアムプランをゲット！"
   }
 }

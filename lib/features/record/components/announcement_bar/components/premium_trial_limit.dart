@@ -19,14 +19,14 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      color: AppColors.primary,
-      child: GestureDetector(
-        onTap: () async {
-          analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
-          await launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'));
-        },
+    return GestureDetector(
+      onTap: () async {
+        analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
+        await launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'));
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+        color: AppColors.primary,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -68,11 +68,9 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
       return null;
     }
 
-    if (trialDeadlineDate.isBefore(now())) {
-      return null;
-    }
-
     final diff = daysBetween(now(), trialDeadlineDate);
-    return L.remainingDaysAllFeatures(diff);
+    // NOTE: L.specialDiscountPriceNow を追加してみて、割引時のプレミアム加入率に変化があるかウォッチしてみる
+    // return '${L.remainingDaysAllFeatures(diff)}'
+    return '${L.remainingDaysAllFeatures(diff)}\n${L.specialDiscountPriceNow}';
   }
 }
