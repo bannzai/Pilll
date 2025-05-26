@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -26,14 +25,6 @@ class Logout extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final firebaseUser = ref.watch(firebaseUserStateProvider);
-    final firebaseUserValue = firebaseUser.valueOrNull;
-    if (firebaseUserValue == null) {
-      return const SizedBox.shrink();
-    }
-    if (firebaseUserValue.isAnonymous) {
-      return const SizedBox.shrink();
-    }
 
     return ListTile(
       title: Text(
