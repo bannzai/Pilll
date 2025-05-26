@@ -20,7 +20,7 @@ Future<UserCredential?> linkWithGoogle(User user) async {
   }
 }
 
-Future<UserCredential?> signInWithGoogle({required bool loginMode}) async {
+Future<UserCredential?> signInWithGoogle() async {
   try {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
