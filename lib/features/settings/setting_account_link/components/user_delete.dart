@@ -2,9 +2,11 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -26,6 +28,19 @@ class UserDelete extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
+    final firebaseAuthUser = ref.watch(firebaseUserStateProvider);
+
+    useEffect(() {
+      if (firebaseAuthUser.asData?.value == null) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          showDialog(
+            context: context,
+            builder: (context) => const _CompletedDialog(),
+          );
+        });
+      }
+      return null;
+    }, [firebaseAuthUser]);
 
     return ListTile(
       title: Text(
@@ -80,11 +95,6 @@ class UserDelete extends HookConsumerWidget {
       final sharedPreferences = await SharedPreferences.getInstance();
       sharedPreferences.setBool(BoolKey.didEndInitialSetting, false);
       await FirebaseAuth.instance.currentUser?.delete();
-      showDialog(
-        // ignore: use_build_context_synchronously
-        context: context,
-        builder: (context) => const _CompletedDialog(),
-      );
     } on FirebaseAuthException catch (error, stackTrace) {
       if (error.code == 'requires-recent-login') {
         if (!context.mounted) return;

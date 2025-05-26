@@ -2,10 +2,12 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -26,6 +28,19 @@ class Logout extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    final firebaseAuthUser = ref.watch(firebaseUserStateProvider);
+
+    useEffect(() {
+      if (firebaseAuthUser.asData?.value == null) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          showDialog(
+            context: context,
+            builder: (context) => const _CompletedDialog(),
+          );
+        });
+      }
+      return null;
+    }, [firebaseAuthUser]);
 
     return ListTile(
       title: Text(
@@ -76,12 +91,6 @@ class Logout extends HookConsumerWidget {
       (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
       await CancelReminderLocalNotification().call();
       await FirebaseAuth.instance.signOut();
-
-      showDialog(
-        // ignore: use_build_context_synchronously
-        context: context,
-        builder: (context) => const _CompletedDialog(),
-      );
     } on FirebaseAuthException catch (e, stackTrace) {
       if (e.code == 'requires-recent-login') {
         showDiscardDialog(
