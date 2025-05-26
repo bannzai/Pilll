@@ -75,15 +75,6 @@ InitialSettingOrAppPageScreenType? retrieveScreenType({
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
-  if (didEndInitialSetting == null) {
-    analytics.logEvent(name: 'did_end_i_s_is_null');
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  }
-  if (!didEndInitialSetting) {
-    analytics.logEvent(name: 'did_end_i_s_is_false');
-    return InitialSettingOrAppPageScreenType.initialSetting;
-  }
-
   analytics.logEvent(name: 'screen_type_is_home');
   return InitialSettingOrAppPageScreenType.app;
 }
