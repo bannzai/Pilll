@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/settings/setting_account_link/components/logout.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -162,6 +163,8 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                     );
                   },
                 ),
+                const Divider(indent: 16),
+                const Logout(),
                 const Divider(indent: 16),
                 const UserDelete(),
               ],
