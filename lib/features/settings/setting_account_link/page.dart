@@ -17,8 +17,8 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
-class SettingAccountCooperationListPage extends HookConsumerWidget {
-  const SettingAccountCooperationListPage({super.key});
+class SettingAccountCooperationLinkPage extends HookConsumerWidget {
+  const SettingAccountCooperationLinkPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -190,11 +190,11 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
   }
 }
 
-extension SettingAccountCooperationListPageRoute on SettingAccountCooperationListPage {
+extension SettingAccountCooperationListPageRoute on SettingAccountCooperationLinkPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'SettingAccountCooperationListPage'),
-      builder: (_) => const SettingAccountCooperationListPage(),
+      builder: (_) => const SettingAccountCooperationLinkPage(),
     );
   }
 }
