@@ -163,7 +163,7 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   },
                 ),
                 const Divider(indent: 16),
-                const DeleteUserButton(),
+                const DeleteUser(),
               ],
             ),
           );

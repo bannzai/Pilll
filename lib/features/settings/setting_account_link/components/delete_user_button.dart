@@ -17,8 +17,8 @@ import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class DeleteUserButton extends HookConsumerWidget {
-  const DeleteUserButton({super.key});
+class DeleteUser extends HookConsumerWidget {
+  const DeleteUser({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
