@@ -25,9 +25,6 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
     final error = useState<Object?>(null);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    // final firebaseUser = ref.watch(firebaseUserStateProvider);
-    // final firebaseUserValue = firebaseUser.valueOrNull;
-    // final userIsNotAnonymous = firebaseUserValue?.isAnonymous == false;
 
     return UniversalErrorPage(
       error: error.value,
@@ -178,10 +175,6 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                     ),
                   ),
                 ),
-                // if (userIsNotAnonymous) ...[
-                //   const Divider(indent: 16),
-                //   const Logout(),
-                // ],
                 const Divider(indent: 16),
                 const UserDelete(),
               ],
