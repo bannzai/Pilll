@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -69,6 +70,6 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     }
 
     final diff = daysBetween(now(), trialDeadlineDate);
-    return L.remainingDaysAllFeatures(diff);
+    return '${L.remainingDaysAllFeatures(diff)} ${L.specialDiscountPriceNow}';
   }
 }
