@@ -288,7 +288,7 @@ class SignInSheet extends HookConsumerWidget {
   Future<SignInWithGoogleState> _handleGoogle(LinkGoogle linkGoogle) {
     if (_isLoginMode) {
       analytics.logEvent(name: 'signin_sheet_sign_in_google');
-      return signInWithGoogle(loginMode: _isLoginMode).then(
+      return signInWithGoogle().then(
         (value) => value == null ? SignInWithGoogleState.cancel : SignInWithGoogleState.determined,
       );
     } else {

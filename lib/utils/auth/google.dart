@@ -27,11 +27,8 @@ Future<UserCredential?> signInWithGoogle({required bool loginMode}) async {
       throw const FormatException('Anonymous User not found');
     }
 
-    var provider = GoogleAuthProvider().addScope('email');
-    if (loginMode) {
-      // NOTE: ログインモードの場合は、ログイン画面ではなく、アカウント選択画面を表示するようにする
-      provider = provider.setCustomParameters({'prompt': 'select_account'});
-    }
+    // NOTE: ログインモードの場合は、ログイン画面ではなく、アカウント選択画面を表示するようにする
+    final provider = GoogleAuthProvider().addScope('email').setCustomParameters({'prompt': 'select_account'});
     return await FirebaseAuth.instance.signInWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
