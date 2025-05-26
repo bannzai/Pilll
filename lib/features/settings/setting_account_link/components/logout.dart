@@ -62,6 +62,7 @@ class Logout extends HookConsumerWidget {
                   ),
                   cancelReminderLocalNotification(),
                 ).wait;
+                Navigator.maybePop(context);
               },
             ),
           ],
