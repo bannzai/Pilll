@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
@@ -25,41 +26,48 @@ class UserDelete extends HookConsumerWidget {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
-    return Container(
-      padding: const EdgeInsets.only(top: 54),
-      child: AlertButton(
-        onPressed: () async {
-          showDiscardDialog(
-            context,
-            title: L.userInformationWillBeDeleted,
-            message: L.withdrawalMessage,
-            actions: [
-              AlertButton(
-                text: L.cancel,
-                onPressed: () async {
-                  analytics.logEvent(name: 'cancel_delete_user');
-                  Navigator.of(context).pop();
-                },
-              ),
-              AlertButton(
-                text: L.withdraw,
-                onPressed: () async {
-                  analytics.logEvent(name: 'pressed_delete_user_button');
-                  await (
-                    _delete(
-                      context,
-                      isAppleLinked: isAppleLinked,
-                      isGoogleLinked: isGoogleLinked,
-                    ),
-                    cancelReminderLocalNotification()
-                  ).wait;
-                },
-              ),
-            ],
-          );
-        },
-        text: L.withdraw,
+
+    return ListTile(
+      title: Text(
+        L.withdraw,
+        style: const TextStyle(
+          color: AppColors.danger,
+          fontSize: 16,
+          fontFamily: FontFamily.japanese,
+        ),
       ),
+      trailing: const Icon(Icons.delete, color: AppColors.danger),
+      horizontalTitleGap: 4,
+      onTap: () async {
+        showDiscardDialog(
+          context,
+          title: L.userInformationWillBeDeleted,
+          message: L.withdrawalMessage,
+          actions: [
+            AlertButton(
+              text: L.cancel,
+              onPressed: () async {
+                analytics.logEvent(name: 'cancel_delete_user');
+                Navigator.of(context).pop();
+              },
+            ),
+            AlertButton(
+              text: L.withdraw,
+              onPressed: () async {
+                analytics.logEvent(name: 'pressed_delete_user_button');
+                await (
+                  _delete(
+                    context,
+                    isAppleLinked: isAppleLinked,
+                    isGoogleLinked: isGoogleLinked,
+                  ),
+                  cancelReminderLocalNotification()
+                ).wait;
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 
