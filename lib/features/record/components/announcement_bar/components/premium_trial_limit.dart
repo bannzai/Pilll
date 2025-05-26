@@ -20,14 +20,14 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
-      color: AppColors.primary,
-      child: GestureDetector(
-        onTap: () async {
-          analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
-          await launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'));
-        },
+    return GestureDetector(
+      onTap: () async {
+        analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
+        await launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'));
+      },
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
+        color: AppColors.primary,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -70,6 +70,6 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     }
 
     final diff = daysBetween(now(), trialDeadlineDate);
-    return '${L.remainingDaysAllFeatures(diff)} ${L.specialDiscountPriceNow}';
+    return '${L.remainingDaysAllFeatures(diff)}\n${L.specialDiscountPriceNow}';
   }
 }

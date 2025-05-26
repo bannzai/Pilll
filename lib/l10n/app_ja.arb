@@ -711,9 +711,9 @@
       }
     }
   },
-  "remainingDaysAllFeatures": "残り{diff}日間すべての機能を使えます。",
+  "remainingDaysAllFeatures": "残り{diff}日間すべての機能を使えます",
   "@remainingDaysAllFeatures": {
-    "description": "残り{diff}日間すべての機能を使えます。",
+    "description": "残り{diff}日間すべての機能を使えます",
     "placeholders": {
       "diff": {
         "type": "int"
@@ -2315,8 +2315,8 @@
   "@logoutCompleted": {
     "description": "ログアウトしました"
   },
-  "specialDiscountPriceNow": "今なら特別割引価格でプレミアムプランをゲットできます",
+  "specialDiscountPriceNow": "特別価格でプレミアムプランをゲット！",
   "@specialDiscountPriceNow": {
-    "description": "今なら特別割引価格でプレミアムプランをゲットできます"
+    "description": "特別価格でプレミアムプランをゲット！"
   }
 }
