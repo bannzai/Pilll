@@ -33,7 +33,7 @@ class Logout extends HookConsumerWidget {
           fontFamily: FontFamily.japanese,
         ),
       ),
-      trailing: const Icon(Icons.delete, color: AppColors.danger),
+      trailing: const Icon(Icons.logout, color: AppColors.primary),
       horizontalTitleGap: 4,
       onTap: () async {
         showDiscardDialog(
