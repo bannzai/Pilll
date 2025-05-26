@@ -51,7 +51,7 @@ class Logout extends HookConsumerWidget {
               },
             ),
             AlertButton(
-              text: L.withdraw,
+              text: L.logout,
               onPressed: () async {
                 analytics.logEvent(name: 'pressed_delete_user_button');
                 await (

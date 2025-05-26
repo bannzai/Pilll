@@ -8,7 +8,7 @@ enum SignInWithGoogleState { determined, cancel }
 
 Future<UserCredential?> linkWithGoogle(User user) async {
   try {
-    final provider = GoogleAuthProvider().addScope('email');
+    final provider = GoogleAuthProvider().addScope('email').setCustomParameters({'prompt': 'select_account'});
     return await user.linkWithProvider(provider);
   } on FirebaseAuthException catch (e) {
     // sign-in-failed という code で返ってくるが、コードを読んでると該当するエラーが多かったので実際にdumpしてみたメッセージでマッチしている
@@ -27,7 +27,6 @@ Future<UserCredential?> signInWithGoogle() async {
       throw const FormatException('Anonymous User not found');
     }
 
-    // NOTE: ログインモードの場合は、ログイン画面ではなく、アカウント選択画面を表示するようにする
     final provider = GoogleAuthProvider().addScope('email').setCustomParameters({'prompt': 'select_account'});
     return await FirebaseAuth.instance.signInWithProvider(provider);
   } on FirebaseAuthException catch (e) {
