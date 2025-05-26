@@ -2307,9 +2307,9 @@
   "@goToInitialSettingAndReloginIfNeededMessage": {
     "description": "初期設定に戻ります。ログインが必要な場合は初期設定下部からお願いします"
   },
-  "forUserOperation": "ユーザー操作について",
-  "@forUserOperation": {
-    "description": "ユーザー操作について"
+  "logoutAndDeleteAccount": "ログアウトとアカウント削除",
+  "@logoutAndDeleteAccount": {
+    "description": "ログアウトとアカウント削除"
   },
   "logoutCompleted": "ログアウトしました",
   "@logoutCompleted": {

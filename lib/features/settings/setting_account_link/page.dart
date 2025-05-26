@@ -171,7 +171,7 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                 Container(
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: Text(
-                    L.forUserOperation,
+                    L.logoutAndDeleteAccount,
                     style: const TextStyle(
                       fontFamily: FontFamily.japanese,
                       fontWeight: FontWeight.w300,
