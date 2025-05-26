@@ -163,6 +163,18 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                     );
                   },
                 ),
+                Container(
+                  padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
+                  child: Text(
+                    L.forUserOperation,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.primary,
+                    ),
+                  ),
+                ),
                 const Divider(indent: 16),
                 const Logout(),
                 const Divider(indent: 16),
