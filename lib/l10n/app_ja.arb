@@ -2310,5 +2310,9 @@
   "forUserOperation": "ユーザー操作について",
   "@forUserOperation": {
     "description": "ユーザー操作について"
+  },
+  "logoutCompleted": "ログアウトしました",
+  "@logoutCompleted": {
+    "description": "ログアウトしました"
   }
 }
