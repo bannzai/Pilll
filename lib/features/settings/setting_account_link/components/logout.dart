@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
@@ -76,6 +77,12 @@ class Logout extends HookConsumerWidget {
       (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
       await CancelReminderLocalNotification().call();
       await FirebaseAuth.instance.signOut();
+
+      showDialog(
+        // ignore: use_build_context_synchronously
+        context: context,
+        builder: (context) => const _CompletedDialog(),
+      );
     } on FirebaseAuthException catch (e, stackTrace) {
       if (e.code == 'requires-recent-login') {
         showDiscardDialog(
@@ -121,5 +128,52 @@ class Logout extends HookConsumerWidget {
       errorLogger.recordError(e, stackTrace);
       if (context.mounted) showErrorAlert(context, e);
     }
+  }
+}
+
+class _CompletedDialog extends StatelessWidget {
+  const _CompletedDialog();
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      contentPadding: const EdgeInsets.fromLTRB(24, 48, 24, 24),
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            L.logoutCompleted,
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+              fontSize: 16,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          Text(
+            L.appExitMessage,
+            style: const TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 14,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 24),
+          SizedBox(
+            width: 180,
+            child: PrimaryButton(
+              onPressed: () async {
+                exit(0);
+              },
+              text: L.oK,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
