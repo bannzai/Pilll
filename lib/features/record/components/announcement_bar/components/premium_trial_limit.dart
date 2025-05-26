@@ -70,6 +70,8 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     }
 
     final diff = daysBetween(now(), trialDeadlineDate);
+    // NOTE: L.specialDiscountPriceNow を追加してみて、割引時のプレミアム加入率に変化があるかウォッチしてみる
+    // return '${L.remainingDaysAllFeatures(diff)}'
     return '${L.remainingDaysAllFeatures(diff)}\n${L.specialDiscountPriceNow}';
   }
 }
