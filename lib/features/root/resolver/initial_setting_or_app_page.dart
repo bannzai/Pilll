@@ -75,6 +75,18 @@ InitialSettingOrAppPageScreenType? retrieveScreenType({
     return InitialSettingOrAppPageScreenType.initialSetting;
   }
 
+  // 通常のパターンでは user.setting が存在していればアプリのメインストリームに進んで良い
+  // ユーザーが間違えたアカウントで間違えてログインした時にアプリをアンインストールして再ログインしやすいようにアプリ内ストレージのフラグ管理を生かす
+  // 消しても良い。以前からこうなっていたので残してあると言う意図が大きい。あとヘルプページの編集も面倒
+  if (didEndInitialSetting == null) {
+    analytics.logEvent(name: 'did_end_i_s_is_null');
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  }
+  if (!didEndInitialSetting) {
+    analytics.logEvent(name: 'did_end_i_s_is_false');
+    return InitialSettingOrAppPageScreenType.initialSetting;
+  }
+
   analytics.logEvent(name: 'screen_type_is_home');
   return InitialSettingOrAppPageScreenType.app;
 }
