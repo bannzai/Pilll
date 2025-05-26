@@ -11,20 +11,24 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/features/settings/setting_account_list/components/delete_user_button.dart';
+import 'package:pilll/features/settings/setting_account_link/components/user_delete.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
-class SettingAccountCooperationListPage extends HookConsumerWidget {
-  const SettingAccountCooperationListPage({super.key});
+class SettingAccountCooperationLinkPage extends HookConsumerWidget {
+  const SettingAccountCooperationLinkPage({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final error = useState<Object?>(null);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    // final firebaseUser = ref.watch(firebaseUserStateProvider);
+    // final firebaseUserValue = firebaseUser.valueOrNull;
+    // final userIsNotAnonymous = firebaseUserValue?.isAnonymous == false;
+
     return UniversalErrorPage(
       error: error.value,
       reload: () => error.value = null,
@@ -162,8 +166,24 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     );
                   },
                 ),
+                Container(
+                  padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
+                  child: Text(
+                    L.deleteAccount,
+                    style: const TextStyle(
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w300,
+                      fontSize: 14,
+                      color: TextColor.primary,
+                    ),
+                  ),
+                ),
+                // if (userIsNotAnonymous) ...[
+                //   const Divider(indent: 16),
+                //   const Logout(),
+                // ],
                 const Divider(indent: 16),
-                const DeleteUserButton(),
+                const UserDelete(),
               ],
             ),
           );
@@ -190,11 +210,11 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
   }
 }
 
-extension SettingAccountCooperationListPageRoute on SettingAccountCooperationListPage {
+extension SettingAccountCooperationListPageRoute on SettingAccountCooperationLinkPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'SettingAccountCooperationListPage'),
-      builder: (_) => const SettingAccountCooperationListPage(),
+      builder: (_) => const SettingAccountCooperationLinkPage(),
     );
   }
 }

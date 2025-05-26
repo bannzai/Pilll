@@ -2,8 +2,11 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/provider/auth.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
@@ -17,49 +20,69 @@ import 'package:pilll/utils/local_notification.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class DeleteUserButton extends HookConsumerWidget {
-  const DeleteUserButton({super.key});
+class UserDelete extends HookConsumerWidget {
+  const UserDelete({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
-    return Container(
-      padding: const EdgeInsets.only(top: 54),
-      child: AlertButton(
-        onPressed: () async {
-          showDiscardDialog(
-            context,
-            title: L.userInformationWillBeDeleted,
-            message: L.withdrawalMessage,
-            actions: [
-              AlertButton(
-                text: L.cancel,
-                onPressed: () async {
-                  analytics.logEvent(name: 'cancel_delete_user');
-                  Navigator.of(context).pop();
-                },
-              ),
-              AlertButton(
-                text: L.withdraw,
-                onPressed: () async {
-                  analytics.logEvent(name: 'pressed_delete_user_button');
-                  await (
-                    _delete(
-                      context,
-                      isAppleLinked: isAppleLinked,
-                      isGoogleLinked: isGoogleLinked,
-                    ),
-                    cancelReminderLocalNotification()
-                  ).wait;
-                },
-              ),
-            ],
+    final firebaseAuthUser = ref.watch(firebaseUserStateProvider);
+
+    useEffect(() {
+      if (firebaseAuthUser.asData?.value == null) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
+          showDialog(
+            context: context,
+            builder: (context) => const _CompletedDialog(),
           );
-        },
-        text: L.withdraw,
+        });
+      }
+      return null;
+    }, [firebaseAuthUser]);
+
+    return ListTile(
+      title: Text(
+        L.withdraw,
+        style: const TextStyle(
+          color: AppColors.danger,
+          fontSize: 16,
+          fontFamily: FontFamily.japanese,
+        ),
       ),
+      trailing: const Icon(Icons.delete, color: AppColors.danger),
+      horizontalTitleGap: 4,
+      onTap: () async {
+        showDiscardDialog(
+          context,
+          title: L.userInformationWillBeDeleted,
+          message: L.withdrawalMessage,
+          actions: [
+            AlertButton(
+              text: L.cancel,
+              onPressed: () async {
+                analytics.logEvent(name: 'cancel_delete_user');
+                Navigator.of(context).pop();
+              },
+            ),
+            AlertButton(
+              text: L.withdraw,
+              onPressed: () async {
+                analytics.logEvent(name: 'pressed_delete_user_button');
+                await (
+                  _delete(
+                    context,
+                    isAppleLinked: isAppleLinked,
+                    isGoogleLinked: isGoogleLinked,
+                  ),
+                  cancelReminderLocalNotification()
+                ).wait;
+              },
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -72,11 +95,6 @@ class DeleteUserButton extends HookConsumerWidget {
       final sharedPreferences = await SharedPreferences.getInstance();
       sharedPreferences.setBool(BoolKey.didEndInitialSetting, false);
       await FirebaseAuth.instance.currentUser?.delete();
-      // ignore: use_build_context_synchronously
-      showDialog(
-        context: context,
-        builder: (context) => const _CompletedDialog(),
-      );
     } on FirebaseAuthException catch (error, stackTrace) {
       if (error.code == 'requires-recent-login') {
         if (!context.mounted) return;

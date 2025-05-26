@@ -29,32 +29,29 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final state = ref.watch(initialSettingStateNotifierProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final userIsAnonymous = FirebaseAuth.instance.currentUser?.isAnonymous == true;
 
     // For linked user
     useEffect(() {
-      if (userIsAnonymous) {
-        analytics.logEvent(name: 'initial_setting_signin_account', parameters: {'uid': FirebaseAuth.instance.currentUser?.uid});
+      analytics.logEvent(name: 'initial_setting_signin_account', parameters: {'uid': FirebaseAuth.instance.currentUser?.uid});
 
-        final LinkAccountType? accountType = () {
-          if (isAppleLinked) {
-            return LinkAccountType.apple;
-          } else if (isGoogleLinked) {
-            return LinkAccountType.google;
-          } else {
-            return null;
-          }
-        }();
-        if (accountType != null) {
-          Future.microtask(() {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: const Duration(seconds: 2),
-                content: Text(L.loggedInWithProvider(accountType.providerName)),
-              ),
-            );
-          });
+      final LinkAccountType? accountType = () {
+        if (isAppleLinked) {
+          return LinkAccountType.apple;
+        } else if (isGoogleLinked) {
+          return LinkAccountType.google;
+        } else {
+          return null;
         }
+      }();
+      if (accountType != null) {
+        Future.microtask(() {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              duration: const Duration(seconds: 2),
+              content: Text(L.loggedInWithProvider(accountType.providerName)),
+            ),
+          );
+        });
       }
 
       return null;
@@ -114,22 +111,20 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                               },
                             ),
                           ),
-                        if (userIsAnonymous) ...[
-                          const SizedBox(height: 20),
-                          AlertButton(
-                            text: L.existingAccountUsers,
-                            onPressed: () async {
-                              analytics.logEvent(name: 'pressed_initial_setting_signin');
-                              showSignInSheet(
-                                context,
-                                SignInSheetStateContext.initialSetting,
-                                (accountType) async {
-                                  store.showHUD();
-                                },
-                              );
-                            },
-                          ),
-                        ],
+                        const SizedBox(height: 20),
+                        AlertButton(
+                          text: L.existingAccountUsers,
+                          onPressed: () async {
+                            analytics.logEvent(name: 'pressed_initial_setting_signin');
+                            showSignInSheet(
+                              context,
+                              SignInSheetStateContext.initialSetting,
+                              (accountType) async {
+                                store.showHUD();
+                              },
+                            );
+                          },
+                        ),
                         const SizedBox(height: 35),
                       ],
                     ),

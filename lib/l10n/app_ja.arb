@@ -2298,5 +2298,21 @@
   "criticalAlertVolume": "音量",
   "@criticalAlertVolume": {
     "description": "音量"
+  },
+  "logout": "ログアウト",
+  "@logout": {
+    "description": "ログアウト"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "初期設定に戻ります。ログインが必要な場合は初期設定下部からお願いします",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "初期設定に戻ります。ログインが必要な場合は初期設定下部からお願いします"
+  },
+  "deleteAccount": "アカウント削除",
+  "@deleteAccount": {
+    "description": "アカウント削除"
+  },
+  "logoutCompleted": "ログアウトしました",
+  "@logoutCompleted": {
+    "description": "ログアウトしました"
   }
 }

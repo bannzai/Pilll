@@ -7,7 +7,7 @@ import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/settings/setting_account_list/page.dart';
+import 'package:pilll/features/settings/setting_account_link/page.dart';
 
 class AccountLinkRow extends HookConsumerWidget {
   const AccountLinkRow({super.key});
