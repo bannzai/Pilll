@@ -80,8 +80,8 @@ class UserDelete extends HookConsumerWidget {
       final sharedPreferences = await SharedPreferences.getInstance();
       sharedPreferences.setBool(BoolKey.didEndInitialSetting, false);
       await FirebaseAuth.instance.currentUser?.delete();
-      // ignore: use_build_context_synchronously
       showDialog(
+        // ignore: use_build_context_synchronously
         context: context,
         builder: (context) => const _CompletedDialog(),
       );
