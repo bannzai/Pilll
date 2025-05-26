@@ -68,10 +68,6 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
       return null;
     }
 
-    if (trialDeadlineDate.isBefore(now())) {
-      return null;
-    }
-
     final diff = daysBetween(now(), trialDeadlineDate);
     return L.remainingDaysAllFeatures(diff);
   }
