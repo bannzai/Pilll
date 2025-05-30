@@ -26,7 +26,7 @@ class TakenPillActionOList extends StatelessWidget {
     if (beforePillSheet.groupIndex != afterPillSheet.groupIndex) {
       return SvgPicture.asset('images/dots.svg');
     }
-    final count = max(value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
+    final count = max(value.afterLastTakenPillNumber - value.beforeLastTakenPillNumber, 1);
     return Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
