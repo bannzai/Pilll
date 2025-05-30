@@ -23,14 +23,20 @@ class TakenPillActionOList extends StatelessWidget {
   Widget build(BuildContext context) {
     final beforePillSheet = beforePillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
     final afterPillSheet = afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
-    if (beforePillSheet.groupIndex != afterPillSheet.groupIndex) {
-      return SvgPicture.asset('images/dots.svg');
+    final int takenPillCount;
+    if (beforePillSheet.groupIndex == afterPillSheet.groupIndex) {
+      takenPillCount = max(afterPillSheet.lastTakenOrZeroPillNumber - beforePillSheet.lastTakenOrZeroPillNumber, 1);
+    } else {
+      // beforePillSheet.groupIndex != afterPillSheet.groupIndex
+      // groupIndexが異なる場合は、beforePillSheetの合計数 - 最後に飲んだ番号を beforePilSheetの服用した数。それにafterPillSheetで記録した番号を足すことで服用したピルの数を計算する
+      // 厳密にはbeforePillSheetが最後のピルシートで、服用記録対象がafterPillSheetの最初のピルシートの場合に合致する条件だが、それ以外のケースがレアケースのため条件式を省く
+      takenPillCount =
+          (beforePillSheet.pillSheetType.totalCount - beforePillSheet.lastTakenOrZeroPillNumber) + afterPillSheet.lastTakenOrZeroPillNumber;
     }
-    final count = max(value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
     return Row(
         mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: List.generate(min(count, 4), (index) {
+        children: List.generate(min(takenPillCount, 4), (index) {
           final inRestDuration = _inRestDuration(afterPillSheet, value.afterLastTakenPillNumber, index);
           if (index == 0) {
             return inRestDuration ? SvgPicture.asset('images/dash_o.svg') : SvgPicture.asset('images/o.svg');
