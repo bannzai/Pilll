@@ -28,6 +28,8 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.premiumIntroductionPattern: RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
         RemoteConfigKeys.premiumIntroductionShowsAppStoreReviewCard: RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffset: RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
+        RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetSince: RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
+        RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil: RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
       }),
       remoteConfig.fetchAndActivate()
     ).wait;
