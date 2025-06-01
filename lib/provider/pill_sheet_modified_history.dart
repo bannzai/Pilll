@@ -69,3 +69,53 @@ class SetPillSheetModifiedHistory {
     await databaseConnection.pillSheetModifiedHistoryReference(pillSheetModifiedHistoryID: history.id).set(history, SetOptions(merge: true));
   }
 }
+
+// 過去30日間で服用記録がない日数をカウントするProvider
+@riverpod
+int missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) {
+  final now = DateTime.now();
+  final thirtyDaysAgo = now.subtract(const Duration(days: 30));
+
+  final histories = ref.watch(
+    pillSheetModifiedHistoriesWithRangeProvider(
+      begin: thirtyDaysAgo,
+      end: now,
+    ),
+  );
+
+  return histories.when(
+    data: (historyList) {
+      // takenPillアクションの日付を収集
+      final takenDates = <DateTime>{};
+
+      for (final history in historyList) {
+        if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
+          // estimatedEventCausingDateの日付部分のみを使用
+          final date = DateTime(
+            history.estimatedEventCausingDate.year,
+            history.estimatedEventCausingDate.month,
+            history.estimatedEventCausingDate.day,
+          );
+          takenDates.add(date);
+        }
+      }
+
+      // 過去30日間の日付を生成
+      final allDates = <DateTime>{};
+      for (int i = 0; i < 30; i++) {
+        final date = DateTime(
+          now.year,
+          now.month,
+          now.day,
+        ).subtract(Duration(days: i));
+        allDates.add(date);
+      }
+
+      // 服用記録がない日数を計算
+      final missedDays = allDates.difference(takenDates).length;
+      return missedDays;
+    },
+    loading: () => 0,
+    error: (_, __) => 0,
+  );
+}
