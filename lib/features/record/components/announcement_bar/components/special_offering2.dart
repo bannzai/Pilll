@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/special_offering/page2.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed2;
@@ -17,6 +18,8 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider);
+
     useEffect(() {
       analytics.logEvent(name: 'special_offering_announcement_bar2_view');
       return null;
@@ -38,11 +41,12 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
         },
         child: Stack(
           children: [
-            const Align(
+            Align(
               alignment: Alignment.center,
               child: Text(
-                '97.2%の人が「飲み忘れが減った」と回答！\n特別価格でプレミアムプランをゲット！',
-                style: TextStyle(
+                // TODO: 訴求文言を調整してください。missedDaysに過去30日間で服用記録がない日数が入っています
+                '過去30日間で$missedDays日の飲み忘れがありました\n特別価格でプレミアムプランをゲット！',
+                style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
                   fontSize: 14,

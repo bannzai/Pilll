@@ -25,6 +25,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/remote_config.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
+import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({super.key});
@@ -60,6 +61,7 @@ class AnnouncementBar extends HookConsumerWidget {
     specialOfferingIsClosed2.addListener(() {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
     });
+    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider);
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
@@ -139,7 +141,8 @@ class AnnouncementBar extends HookConsumerWidget {
         if (userBeginDate != null &&
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffsetSince &&
             daysBetween(userBeginDate, today()) <= remoteConfigParameter.specialOfferingUserCreationDateTimeOffsetUntil &&
-            !specialOfferingIsClosed2.value) {
+            !specialOfferingIsClosed2.value &&
+            missedDays >= 1) {
           return SpecialOfferingAnnouncementBar2(
             specialOfferingIsClosed2: specialOfferingIsClosed2,
           );
