@@ -20,6 +20,10 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dyn
           RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
       specialOfferingUserCreationDateTimeOffset: (json['specialOfferingUserCreationDateTimeOffset'] as num?)?.toInt() ??
           RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
+      specialOfferingUserCreationDateTimeOffsetSince: (json['specialOfferingUserCreationDateTimeOffsetSince'] as num?)?.toInt() ??
+          RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
+      specialOfferingUserCreationDateTimeOffsetUntil: (json['specialOfferingUserCreationDateTimeOffsetUntil'] as num?)?.toInt() ??
+          RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterImpl instance) => <String, dynamic>{
@@ -31,4 +35,6 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterI
       'premiumIntroductionPattern': instance.premiumIntroductionPattern,
       'premiumIntroductionShowsAppStoreReviewCard': instance.premiumIntroductionShowsAppStoreReviewCard,
       'specialOfferingUserCreationDateTimeOffset': instance.specialOfferingUserCreationDateTimeOffset,
+      'specialOfferingUserCreationDateTimeOffsetSince': instance.specialOfferingUserCreationDateTimeOffsetSince,
+      'specialOfferingUserCreationDateTimeOffsetUntil': instance.specialOfferingUserCreationDateTimeOffsetUntil,
     };
