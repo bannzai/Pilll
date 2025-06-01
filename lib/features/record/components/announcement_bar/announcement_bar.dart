@@ -4,6 +4,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/admob.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/special_offering.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/special_offering2.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
 import 'package:pilll/utils/analytics.dart';
@@ -127,6 +128,15 @@ class AnnouncementBar extends HookConsumerWidget {
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
             !specialOfferingIsClosed.value) {
           return SpecialOfferingAnnouncementBar(
+            specialOfferingIsClosed: specialOfferingIsClosed,
+          );
+        }
+
+        if (userBeginDate != null &&
+            daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffsetSince &&
+            daysBetween(userBeginDate, today()) <= remoteConfigParameter.specialOfferingUserCreationDateTimeOffsetUntil &&
+            !specialOfferingIsClosed.value) {
+          return SpecialOfferingAnnouncementBar2(
             specialOfferingIsClosed: specialOfferingIsClosed,
           );
         }
