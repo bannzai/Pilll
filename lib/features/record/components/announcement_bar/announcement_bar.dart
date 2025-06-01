@@ -41,6 +41,7 @@ class AnnouncementBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
+    debugPrint('[AnnouncementBar] _body called at ${DateTime.now()}');
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
@@ -61,7 +62,9 @@ class AnnouncementBar extends HookConsumerWidget {
     specialOfferingIsClosed2.addListener(() {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
     });
-    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider).asData?.valueOrNull ?? 0;
+    debugPrint('[AnnouncementBar] About to watch missedPillDaysInLast30DaysProvider');
+    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider);
+    debugPrint('[AnnouncementBar] missedDays value: $missedDays');
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;

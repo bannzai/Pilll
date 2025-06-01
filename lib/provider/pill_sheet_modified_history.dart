@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -71,51 +72,69 @@ class SetPillSheetModifiedHistory {
 }
 
 // 過去30日間で服用記録がない日数をカウントするProvider
-@Riverpod(keepAlive: true)
-Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async {
+@riverpod
+int missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) {
+  debugPrint('[missedPillDaysInLast30Days] Provider called at ${DateTime.now()}');
+  
+  // 日付を固定して、同じ日の間は同じ値を返すようにする
   final now = DateTime.now();
-  final thirtyDaysAgo = now.subtract(const Duration(days: 30));
+  final todayStart = DateTime(now.year, now.month, now.day);
+  final thirtyDaysAgo = todayStart.subtract(const Duration(days: 30));
 
-  final histories = ref
-          .watch(
-            pillSheetModifiedHistoriesWithRangeProvider(
-              begin: thirtyDaysAgo,
-              end: now,
-            ),
-          )
-          .asData
-          ?.valueOrNull ??
-      [];
+  debugPrint('[missedPillDaysInLast30Days] Watching pillSheetModifiedHistoriesWithRange from $thirtyDaysAgo to $todayStart');
+  
+  final historiesAsync = ref.watch(
+    pillSheetModifiedHistoriesWithRangeProvider(
+      begin: thirtyDaysAgo,
+      end: todayStart,
+    ),
+  );
 
-  if (histories.isEmpty) {
-    return 0;
-  }
+  return historiesAsync.when(
+    data: (histories) {
+      debugPrint('[missedPillDaysInLast30Days] Histories count: ${histories.length}');
 
-  final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
-  final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
+      if (histories.isEmpty) {
+        debugPrint('[missedPillDaysInLast30Days] No histories found, returning 0');
+        return 0;
+      }
 
-  final allDates = <DateTime>{};
-  final days = daysBetween(minDate, maxDate);
-  for (var i = 0; i < days; i++) {
-    allDates.add(minDate.add(Duration(days: i)));
-  }
+      final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+      final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
 
-  // takenPillアクションの日付を収集
-  final takenDates = <DateTime>{};
+      final allDates = <DateTime>{};
+      final days = daysBetween(minDate, maxDate);
+      for (var i = 0; i < days; i++) {
+        allDates.add(minDate.add(Duration(days: i)));
+      }
 
-  for (final history in histories) {
-    if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
-      // estimatedEventCausingDateの日付部分のみを使用
-      final date = DateTime(
-        history.estimatedEventCausingDate.year,
-        history.estimatedEventCausingDate.month,
-        history.estimatedEventCausingDate.day,
-      );
-      takenDates.add(date);
-    }
-  }
+      // takenPillアクションの日付を収集
+      final takenDates = <DateTime>{};
 
-  // 服用記録がない日数を計算
-  final missedDays = allDates.difference(takenDates).length;
-  return missedDays;
+      for (final history in histories) {
+        if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
+          // estimatedEventCausingDateの日付部分のみを使用
+          final date = DateTime(
+            history.estimatedEventCausingDate.year,
+            history.estimatedEventCausingDate.month,
+            history.estimatedEventCausingDate.day,
+          );
+          takenDates.add(date);
+        }
+      }
+
+      // 服用記録がない日数を計算
+      final missedDays = allDates.difference(takenDates).length;
+      debugPrint('[missedPillDaysInLast30Days] Calculated missed days: $missedDays');
+      return missedDays;
+    },
+    loading: () {
+      debugPrint('[missedPillDaysInLast30Days] Loading state, returning 0');
+      return 0;
+    },
+    error: (error, stack) {
+      debugPrint('[missedPillDaysInLast30Days] Error: $error');
+      return 0;
+    },
+  );
 }
