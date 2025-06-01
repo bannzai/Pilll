@@ -294,7 +294,7 @@ class _PillSheetModifiedHistoriesWithRangeProviderElement extends StreamProvider
   DateTime get end => (origin as PillSheetModifiedHistoriesWithRangeProvider).end;
 }
 
-String _$missedPillDaysInLast30DaysHash() => r'c7224d8f9396fd7eef7af600e8d490298d4aef30';
+String _$missedPillDaysInLast30DaysHash() => r'aca0c5f5661eb47ab08e7099e28121194b163929';
 
 /// See also [missedPillDaysInLast30Days].
 @ProviderFor(missedPillDaysInLast30Days)
