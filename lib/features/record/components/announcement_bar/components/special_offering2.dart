@@ -18,7 +18,7 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     useEffect(() {
-      analytics.logEvent(name: 'special_offering_announcement_bar2_viewed');
+      analytics.logEvent(name: 'special_offering_announcement_bar2_view');
       return null;
     }, []);
     return Container(
