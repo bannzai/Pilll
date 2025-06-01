@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/special_offering/page.dart';
+import 'package:pilll/features/special_offering/page2.dart';
 import 'package:pilll/utils/analytics.dart';
 
 class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
@@ -29,7 +29,7 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
           analytics.logEvent(name: 'special_offering_announcement_bar2_tap');
           showModalBottomSheet(
             context: context,
-            builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed2),
+            builder: (context) => SpecialOfferingPage2(specialOfferingIsClosed2: specialOfferingIsClosed2),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
             enableDrag: false,
