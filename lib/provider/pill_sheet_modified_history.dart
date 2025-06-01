@@ -85,6 +85,15 @@ int missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) {
 
   return histories.when(
     data: (historyList) {
+      final minDate = historyList.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+      final maxDate = historyList.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
+
+      final allDates = <DateTime>{};
+      final days = daysBetween(minDate, maxDate);
+      for (var i = 0; i < days; i++) {
+        allDates.add(minDate.add(Duration(days: i)));
+      }
+
       // takenPillアクションの日付を収集
       final takenDates = <DateTime>{};
 
@@ -98,17 +107,6 @@ int missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) {
           );
           takenDates.add(date);
         }
-      }
-
-      // 過去30日間の日付を生成
-      final allDates = <DateTime>{};
-      for (int i = 0; i < 30; i++) {
-        final date = DateTime(
-          now.year,
-          now.month,
-          now.day,
-        ).subtract(Duration(days: i));
-        allDates.add(date);
       }
 
       // 服用記録がない日数を計算
