@@ -29,7 +29,7 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
           analytics.logEvent(name: 'special_offering_announcement_bar2_tap');
           showModalBottomSheet(
             context: context,
-            builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed),
+            builder: (context) => SpecialOfferingPage(specialOfferingIsClosed: specialOfferingIsClosed2),
             backgroundColor: Colors.transparent,
             isScrollControlled: true,
             enableDrag: false,
