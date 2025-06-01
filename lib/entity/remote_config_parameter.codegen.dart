@@ -27,9 +27,9 @@ abstract class RemoteConfigParameterDefaultValues {
   // default(A) or B or C ...
   static const premiumIntroductionPattern = 'default';
   static const premiumIntroductionShowsAppStoreReviewCard = false;
-  static const specialOfferingUserCreationDateTimeOffset = 730;
-  static const specialOfferingUserCreationDateTimeOffsetSince = 0;
-  static const specialOfferingUserCreationDateTimeOffsetUntil = 730;
+  static const specialOfferingUserCreationDateTimeOffset = 40000;
+  static const specialOfferingUserCreationDateTimeOffsetSince = 100;
+  static const specialOfferingUserCreationDateTimeOffsetUntil = 400;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
