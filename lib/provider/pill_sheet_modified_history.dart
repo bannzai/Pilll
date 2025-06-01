@@ -71,49 +71,51 @@ class SetPillSheetModifiedHistory {
 }
 
 // 過去30日間で服用記録がない日数をカウントするProvider
-@riverpod
-int missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) {
+@Riverpod(keepAlive: true)
+Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async {
   final now = DateTime.now();
   final thirtyDaysAgo = now.subtract(const Duration(days: 30));
 
-  final histories = ref.watch(
-    pillSheetModifiedHistoriesWithRangeProvider(
-      begin: thirtyDaysAgo,
-      end: now,
-    ),
-  );
+  final histories = ref
+          .watch(
+            pillSheetModifiedHistoriesWithRangeProvider(
+              begin: thirtyDaysAgo,
+              end: now,
+            ),
+          )
+          .asData
+          ?.valueOrNull ??
+      [];
 
-  return histories.when(
-    data: (historyList) {
-      final minDate = historyList.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
-      final maxDate = historyList.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
+  if (histories.isEmpty) {
+    return 0;
+  }
 
-      final allDates = <DateTime>{};
-      final days = daysBetween(minDate, maxDate);
-      for (var i = 0; i < days; i++) {
-        allDates.add(minDate.add(Duration(days: i)));
-      }
+  final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+  final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
 
-      // takenPillアクションの日付を収集
-      final takenDates = <DateTime>{};
+  final allDates = <DateTime>{};
+  final days = daysBetween(minDate, maxDate);
+  for (var i = 0; i < days; i++) {
+    allDates.add(minDate.add(Duration(days: i)));
+  }
 
-      for (final history in historyList) {
-        if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
-          // estimatedEventCausingDateの日付部分のみを使用
-          final date = DateTime(
-            history.estimatedEventCausingDate.year,
-            history.estimatedEventCausingDate.month,
-            history.estimatedEventCausingDate.day,
-          );
-          takenDates.add(date);
-        }
-      }
+  // takenPillアクションの日付を収集
+  final takenDates = <DateTime>{};
 
-      // 服用記録がない日数を計算
-      final missedDays = allDates.difference(takenDates).length;
-      return missedDays;
-    },
-    loading: () => 0,
-    error: (_, __) => 0,
-  );
+  for (final history in histories) {
+    if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
+      // estimatedEventCausingDateの日付部分のみを使用
+      final date = DateTime(
+        history.estimatedEventCausingDate.year,
+        history.estimatedEventCausingDate.month,
+        history.estimatedEventCausingDate.day,
+      );
+      takenDates.add(date);
+    }
+  }
+
+  // 服用記録がない日数を計算
+  final missedDays = allDates.difference(takenDates).length;
+  return missedDays;
 }
