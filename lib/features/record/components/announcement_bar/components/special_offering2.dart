@@ -7,19 +7,18 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/special_offering/page2.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:pilll/provider/pill_sheet_modified_history.dart';
 
 class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed2;
+  final int missedDays;
   const SpecialOfferingAnnouncementBar2({
     super.key,
     required this.specialOfferingIsClosed2,
+    required this.missedDays,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider);
-
     useEffect(() {
       analytics.logEvent(name: 'special_offering_announcement_bar2_view');
       return null;
@@ -44,7 +43,6 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                // TODO: 訴求文言を調整してください。missedDaysに過去30日間で服用記録がない日数が入っています
                 '過去30日間で$missedDays日の飲み忘れがありました\n特別価格でプレミアムプランをゲット！',
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,

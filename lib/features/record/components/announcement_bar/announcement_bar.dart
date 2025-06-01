@@ -145,6 +145,7 @@ class AnnouncementBar extends HookConsumerWidget {
             missedDays >= 1) {
           return SpecialOfferingAnnouncementBar2(
             specialOfferingIsClosed2: specialOfferingIsClosed2,
+            missedDays: missedDays,
           );
         }
 
