@@ -73,68 +73,57 @@ class SetPillSheetModifiedHistory {
 
 // 過去30日間で服用記録がない日数をカウントするProvider
 @riverpod
-int missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) {
+Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async {
   debugPrint('[missedPillDaysInLast30Days] Provider called at ${DateTime.now()}');
-  
+
   // 日付を固定して、同じ日の間は同じ値を返すようにする
   final now = DateTime.now();
   final todayStart = DateTime(now.year, now.month, now.day);
   final thirtyDaysAgo = todayStart.subtract(const Duration(days: 30));
 
   debugPrint('[missedPillDaysInLast30Days] Watching pillSheetModifiedHistoriesWithRange from $thirtyDaysAgo to $todayStart');
-  
-  final historiesAsync = ref.watch(
+
+  // Streamの最初の値を待つ
+  final histories = await ref.watch(
     pillSheetModifiedHistoriesWithRangeProvider(
       begin: thirtyDaysAgo,
       end: todayStart,
-    ),
+    ).future,
   );
 
-  return historiesAsync.when(
-    data: (histories) {
-      debugPrint('[missedPillDaysInLast30Days] Histories count: ${histories.length}');
+  debugPrint('[missedPillDaysInLast30Days] Histories count: ${histories.length}');
 
-      if (histories.isEmpty) {
-        debugPrint('[missedPillDaysInLast30Days] No histories found, returning 0');
-        return 0;
-      }
+  if (histories.isEmpty) {
+    debugPrint('[missedPillDaysInLast30Days] No histories found, returning 0');
+    return 0;
+  }
 
-      final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
-      final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
+  final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+  final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
 
-      final allDates = <DateTime>{};
-      final days = daysBetween(minDate, maxDate);
-      for (var i = 0; i < days; i++) {
-        allDates.add(minDate.add(Duration(days: i)));
-      }
+  final allDates = <DateTime>{};
+  final days = daysBetween(minDate, maxDate);
+  for (var i = 0; i < days; i++) {
+    allDates.add(minDate.add(Duration(days: i)));
+  }
 
-      // takenPillアクションの日付を収集
-      final takenDates = <DateTime>{};
+  // takenPillアクションの日付を収集
+  final takenDates = <DateTime>{};
 
-      for (final history in histories) {
-        if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
-          // estimatedEventCausingDateの日付部分のみを使用
-          final date = DateTime(
-            history.estimatedEventCausingDate.year,
-            history.estimatedEventCausingDate.month,
-            history.estimatedEventCausingDate.day,
-          );
-          takenDates.add(date);
-        }
-      }
+  for (final history in histories) {
+    if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
+      // estimatedEventCausingDateの日付部分のみを使用
+      final date = DateTime(
+        history.estimatedEventCausingDate.year,
+        history.estimatedEventCausingDate.month,
+        history.estimatedEventCausingDate.day,
+      );
+      takenDates.add(date);
+    }
+  }
 
-      // 服用記録がない日数を計算
-      final missedDays = allDates.difference(takenDates).length;
-      debugPrint('[missedPillDaysInLast30Days] Calculated missed days: $missedDays');
-      return missedDays;
-    },
-    loading: () {
-      debugPrint('[missedPillDaysInLast30Days] Loading state, returning 0');
-      return 0;
-    },
-    error: (error, stack) {
-      debugPrint('[missedPillDaysInLast30Days] Error: $error');
-      return 0;
-    },
-  );
+  // 服用記録がない日数を計算
+  final missedDays = allDates.difference(takenDates).length;
+  debugPrint('[missedPillDaysInLast30Days] Calculated missed days: $missedDays');
+  return missedDays;
 }

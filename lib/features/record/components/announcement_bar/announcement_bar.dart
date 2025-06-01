@@ -63,8 +63,21 @@ class AnnouncementBar extends HookConsumerWidget {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
     });
     debugPrint('[AnnouncementBar] About to watch missedPillDaysInLast30DaysProvider');
-    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider);
-    debugPrint('[AnnouncementBar] missedDays value: $missedDays');
+    final missedDaysAsync = ref.watch(missedPillDaysInLast30DaysProvider);
+    final missedDays = missedDaysAsync.when(
+      data: (value) {
+        debugPrint('[AnnouncementBar] missedDays value: $value');
+        return value;
+      },
+      loading: () {
+        debugPrint('[AnnouncementBar] missedDays loading');
+        return 0;
+      },
+      error: (error, stack) {
+        debugPrint('[AnnouncementBar] missedDays error: $error');
+        return 0;
+      },
+    );
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
