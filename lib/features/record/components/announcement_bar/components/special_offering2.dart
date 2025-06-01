@@ -41,8 +41,7 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
             const Align(
               alignment: Alignment.center,
               child: Text(
-                // TODO: 訴求文言を後から埋める
-                'TODO: 訴求文言をここに入れる',
+                '97.2%の人が「飲み忘れが減った」と回答！\n特別価格でプレミアムプランをゲット！',
                 style: TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
