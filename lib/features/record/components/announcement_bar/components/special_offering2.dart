@@ -9,10 +9,10 @@ import 'package:pilll/features/special_offering/page.dart';
 import 'package:pilll/utils/analytics.dart';
 
 class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
-  final ValueNotifier<bool> specialOfferingIsClosed;
+  final ValueNotifier<bool> specialOfferingIsClosed2;
   const SpecialOfferingAnnouncementBar2({
     super.key,
-    required this.specialOfferingIsClosed,
+    required this.specialOfferingIsClosed2,
   });
 
   @override

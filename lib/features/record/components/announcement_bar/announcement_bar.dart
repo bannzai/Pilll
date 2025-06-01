@@ -56,6 +56,10 @@ class AnnouncementBar extends HookConsumerWidget {
     specialOfferingIsClosed.addListener(() {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed, specialOfferingIsClosed.value);
     });
+    final specialOfferingIsClosed2 = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed2) ?? false);
+    specialOfferingIsClosed2.addListener(() {
+      sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
+    });
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
@@ -135,9 +139,9 @@ class AnnouncementBar extends HookConsumerWidget {
         if (userBeginDate != null &&
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffsetSince &&
             daysBetween(userBeginDate, today()) <= remoteConfigParameter.specialOfferingUserCreationDateTimeOffsetUntil &&
-            !specialOfferingIsClosed.value) {
+            !specialOfferingIsClosed2.value) {
           return SpecialOfferingAnnouncementBar2(
-            specialOfferingIsClosed: specialOfferingIsClosed,
+            specialOfferingIsClosed2: specialOfferingIsClosed2,
           );
         }
 
