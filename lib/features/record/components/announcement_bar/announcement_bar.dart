@@ -61,7 +61,7 @@ class AnnouncementBar extends HookConsumerWidget {
     specialOfferingIsClosed2.addListener(() {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
     });
-    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider);
+    final missedDays = ref.watch(missedPillDaysInLast30DaysProvider).asData?.valueOrNull ?? 0;
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
