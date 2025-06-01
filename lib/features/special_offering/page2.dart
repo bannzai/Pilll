@@ -13,7 +13,7 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/app_store/app_store_review_cards.dart';
-import 'package:pilll/features/premium_introduction/components/annual_purchase_button.dart';
+import 'package:pilll/features/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/features/premium_introduction/premium_complete_dialog.dart';
@@ -65,9 +65,9 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
 
     final purchase = ref.watch(purchaseProvider);
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
-    final annualSpecialOfferingPackage = ref.watch(annualSpecialOfferingPackageProvider);
+    final monthlySpecialOfferingPackage = ref.watch(monthlySpecialOfferingPackageProvider);
 
-    if (annualSpecialOfferingPackage == null || monthlyPremiumPackage == null) {
+    if (monthlySpecialOfferingPackage == null || monthlyPremiumPackage == null) {
       return const ScaffoldIndicator();
     }
 
@@ -176,11 +176,8 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                         ),
                       ),
                       const SizedBox(height: 20),
-                      AnnualPurchaseButton(
-                        annualPackage: annualSpecialOfferingPackage,
-                        monthlyPackage: monthlyPremiumPackage,
-                        monthlyPremiumPackage: monthlyPremiumPackage,
-                        offeringType: OfferingType.specialOffering,
+                      MonthlyPurchaseButton(
+                        monthlyPackage: monthlySpecialOfferingPackage,
                         onTap: (package) async {
                           if (isLoading.value) return;
                           isLoading.value = true;
