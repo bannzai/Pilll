@@ -32,6 +32,7 @@ Future<void> setupRemoteConfig() async {
             RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil:
             RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
+        RemoteConfigKeys.specialOffering2UseAlternativeText: RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
       }),
       remoteConfig.fetchAndActivate()
     ).wait;
