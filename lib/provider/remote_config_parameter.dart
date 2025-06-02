@@ -46,6 +46,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil,
       RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
     ),
+    specialOffering2UseAlternativeText: remoteConfig.getBoolOrDefault(
+      RemoteConfigKeys.specialOffering2UseAlternativeText,
+      RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+    ),
   );
 }
 
