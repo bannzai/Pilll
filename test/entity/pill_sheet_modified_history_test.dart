@@ -1,41 +1,16 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
-import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/utils/datetime/day.dart';
-
-import '../helper/mock.mocks.dart';
 
 void main() {
-  group("#missedPillDaysInLast30Days", () {
-    test("履歴が空の場合は0を返す", () async {
-      final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(<PillSheetModifiedHistory>[]);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
-
+  group("#missedPillDays", () {
+    test("履歴が空の場合は0を返す", () {
+      final result = missedPillDays([]);
       expect(result, 0);
-      container.dispose();
     });
 
-    test("30日間すべて服用記録がある場合は0を返す", () async {
+    test("30日間すべて服用記録がある場合は0を返す", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = <PillSheetModifiedHistory>[];
 
@@ -61,26 +36,12 @@ void main() {
         );
       }
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
-
+      final result = missedPillDays(histories);
       expect(result, 0);
-      container.dispose();
     });
 
-    test("30日間で1日だけ服用記録がある場合は、履歴が1日分なので計算対象が0日となり0を返す", () async {
+    test("30日間で1日だけ服用記録がある場合は、履歴が1日分なので計算対象が0日となり0を返す", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         PillSheetModifiedHistory(
@@ -100,27 +61,14 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // minDateとmaxDateが同じ日なので、計算対象の日数が0になる
       expect(result, 0);
-      container.dispose();
     });
 
-    test("automaticallyRecordedLastTakenDateも服用記録として扱われる", () async {
+    test("automaticallyRecordedLastTakenDateも服用記録として扱われる", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         PillSheetModifiedHistory(
@@ -155,27 +103,14 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // 2日分の記録があり、minDateからmaxDateまでの日数が1日なので0を返す
       expect(result, 0);
-      container.dispose();
     });
 
-    test("服用お休み期間中の日数は飲み忘れとしてカウントされない", () async {
+    test("服用お休み期間中の日数は飲み忘れとしてカウントされない", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         // 10日前から5日前まで服用お休み
@@ -227,27 +162,14 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // 10日前から4日前までの6日間のうち、5日間は服用お休み期間なので、飲み忘れは0日
       expect(result, 0);
-      container.dispose();
     });
 
-    test("複数の服用お休み期間がある場合も正しく処理される", () async {
+    test("複数の服用お休み期間がある場合も正しく処理される", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         // 20日前から18日前まで服用お休み（2日間）
@@ -345,30 +267,17 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // 20日前から7日前までの13日間のうち：
       // - 服用お休み: 4日間（20-18日前、10-8日前）
       // - 服用記録: 2日間（17日前、7日前）
       // - 飲み忘れ: 7日間
       expect(result, 7);
-      container.dispose();
     });
 
-    test("同じ日に複数の履歴がある場合も正しく処理される", () async {
+    test("同じ日に複数の履歴がある場合も正しく処理される", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
       final targetDate = baseDate.subtract(const Duration(days: 5));
 
@@ -421,27 +330,14 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // 同じ日の複数の履歴は1日としてカウントされる
       expect(result, 0);
-      container.dispose();
     });
 
-    test("履歴が1日分しかない場合でも正しく計算される", () async {
+    test("履歴が1日分しかない場合でも正しく計算される", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
 
       final histories = [
@@ -462,27 +358,14 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // 1日分の履歴しかない場合、minDateとmaxDateが同じで、計算対象が0日になる
       expect(result, 0);
-      container.dispose();
     });
 
-    test("服用お休み期間が継続中の場合も正しく処理される", () async {
+    test("服用お休み期間が継続中の場合も正しく処理される", () {
       final today = DateTime.parse("2020-09-28");
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(today);
-
       final baseDate = DateTime(today.year, today.month, today.day);
 
       final histories = [
@@ -520,19 +403,10 @@ void main() {
         ),
       ];
 
-      final container = ProviderContainer(
-        overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
-            return Stream.value(histories);
-          }),
-        ],
-      );
-
-      final result = await container.read(missedPillDaysInLast30DaysProvider.future);
+      final result = missedPillDays(histories);
 
       // 11日前から10日前までの1日間のうち、1日は服用記録があり、1日は服用お休み期間なので、飲み忘れは0日
       expect(result, 0);
-      container.dispose();
     });
   });
 }

@@ -493,3 +493,54 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     );
   }
 }
+
+/// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
+int missedPillDays(List<PillSheetModifiedHistory> histories) {
+  if (histories.isEmpty) {
+    return 0;
+  }
+
+  final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+  final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
+
+  final allDates = <DateTime>{};
+  final days = daysBetween(minDate, maxDate);
+  for (var i = 0; i < days; i++) {
+    allDates.add(minDate.add(Duration(days: i)));
+  }
+
+  // takenPill || automaticallyRecordedLastTakenDate アクションの日付を収集
+  final takenDates = <DateTime>{};
+  // beganRestDuration から endedRestDuration の間の日付を収集
+  final restDurationDates = <DateTime>{};
+
+  var isRestDuration = false;
+  for (final history in histories) {
+    // estimatedEventCausingDateの日付部分のみを使用
+    final date = DateTime(
+      history.estimatedEventCausingDate.year,
+      history.estimatedEventCausingDate.month,
+      history.estimatedEventCausingDate.day,
+    );
+    if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
+        history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
+      takenDates.add(date);
+    }
+
+    // 服用お休み中は記録されないので集計から除外
+    if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
+      isRestDuration = true;
+      restDurationDates.add(date);
+    }
+    if (isRestDuration) {
+      restDurationDates.add(date);
+    }
+    if (history.actionType == PillSheetModifiedActionType.endedRestDuration.name) {
+      isRestDuration = false;
+    }
+  }
+
+  // 服用記録がない日数を計算
+  final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
+  return missedDays;
+}

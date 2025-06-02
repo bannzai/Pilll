@@ -26,6 +26,7 @@ import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/remote_config.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 
 class AnnouncementBar extends HookConsumerWidget {
   const AnnouncementBar({super.key});
@@ -62,22 +63,18 @@ class AnnouncementBar extends HookConsumerWidget {
     specialOfferingIsClosed2.addListener(() {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
     });
-    debugPrint('[AnnouncementBar] About to watch missedPillDaysInLast30DaysProvider');
-    final missedDaysAsync = ref.watch(missedPillDaysInLast30DaysProvider);
-    final missedDays = missedDaysAsync.when(
-      data: (value) {
-        debugPrint('[AnnouncementBar] missedDays value: $value');
-        return value;
-      },
-      loading: () {
-        debugPrint('[AnnouncementBar] missedDays loading');
-        return 0;
-      },
-      error: (error, stack) {
-        debugPrint('[AnnouncementBar] missedDays error: $error');
-        return 0;
-      },
-    );
+    // 過去30日間の履歴を取得して飲み忘れ日数を計算
+    final now = DateTime.now();
+    final todayStart = DateTime(now.year, now.month, now.day);
+    final thirtyDaysAgo = todayStart.subtract(const Duration(days: 30));
+    
+    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
+      begin: thirtyDaysAgo,
+      end: todayStart,
+    ));
+    final histories = historiesAsync.asData?.value ?? [];
+    final missedDays = missedPillDays(histories);
+    debugPrint('[AnnouncementBar] missedDays calculated: $missedDays');
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
