@@ -29,7 +29,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const premiumIntroductionPattern = 'default';
   static const premiumIntroductionShowsAppStoreReviewCard = false;
   static const specialOfferingUserCreationDateTimeOffset = 40000;
-  static const specialOfferingUserCreationDateTimeOffsetSince = 100;
+  static const specialOfferingUserCreationDateTimeOffsetSince = 390;
   static const specialOfferingUserCreationDateTimeOffsetUntil = 400;
   static const specialOffering2UseAlternativeText = true;
 }
