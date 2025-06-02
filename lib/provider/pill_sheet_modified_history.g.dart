@@ -293,19 +293,5 @@ class _PillSheetModifiedHistoriesWithRangeProviderElement extends StreamProvider
   @override
   DateTime get end => (origin as PillSheetModifiedHistoriesWithRangeProvider).end;
 }
-
-String _$missedPillDaysInLast30DaysHash() => r'c37ad7a3a6b9e0bceb66a415ca4cf2a99ea64a96';
-
-/// See also [missedPillDaysInLast30Days].
-@ProviderFor(missedPillDaysInLast30Days)
-final missedPillDaysInLast30DaysProvider = AutoDisposeFutureProvider<int>.internal(
-  missedPillDaysInLast30Days,
-  name: r'missedPillDaysInLast30DaysProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$missedPillDaysInLast30DaysHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
-
-typedef MissedPillDaysInLast30DaysRef = AutoDisposeFutureProviderRef<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
