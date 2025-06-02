@@ -61,10 +61,10 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            const Positioned(
+            Positioned(
               right: 0,
-              top: 20,
-              child: Icon(
+              top: useAlternativeText ? 10 : 20,
+              child: const Icon(
                 Icons.chevron_right,
                 color: Colors.white,
                 size: 24,
