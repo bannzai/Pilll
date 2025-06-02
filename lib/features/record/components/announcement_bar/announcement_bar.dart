@@ -42,7 +42,6 @@ class AnnouncementBar extends HookConsumerWidget {
   }
 
   Widget? _body(BuildContext context, WidgetRef ref) {
-    debugPrint('[AnnouncementBar] _body called at ${DateTime.now()}');
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
     final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
@@ -73,7 +72,6 @@ class AnnouncementBar extends HookConsumerWidget {
       histories: histories,
       maxDate: today(),
     );
-    debugPrint('[AnnouncementBar] missedDays calculated: $missedDays');
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
