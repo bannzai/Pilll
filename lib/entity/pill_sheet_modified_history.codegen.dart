@@ -495,13 +495,15 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 }
 
 /// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
-int missedPillDays(List<PillSheetModifiedHistory> histories) {
+int missedPillDays({
+  required List<PillSheetModifiedHistory> histories,
+  required DateTime maxDate,
+}) {
   if (histories.isEmpty) {
     return 0;
   }
 
   final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
-  final maxDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isAfter(b) ? a : b);
 
   final allDates = <DateTime>{};
   final days = daysBetween(minDate, maxDate);
