@@ -114,23 +114,24 @@ Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async 
 
   var isRestDuration = false;
   for (final history in histories) {
+    // estimatedEventCausingDateの日付部分のみを使用
+    final date = DateTime(
+      history.estimatedEventCausingDate.year,
+      history.estimatedEventCausingDate.month,
+      history.estimatedEventCausingDate.day,
+    );
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
-      // estimatedEventCausingDateの日付部分のみを使用
-      final date = DateTime(
-        history.estimatedEventCausingDate.year,
-        history.estimatedEventCausingDate.month,
-        history.estimatedEventCausingDate.day,
-      );
       takenDates.add(date);
     }
 
+    // 服用お休み中は記録されないので集計から除外
     if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
       isRestDuration = true;
-      restDurationDates.add(history.estimatedEventCausingDate);
+      restDurationDates.add(date);
     }
     if (isRestDuration) {
-      restDurationDates.add(history.estimatedEventCausingDate);
+      restDurationDates.add(date);
     }
     if (history.actionType == PillSheetModifiedActionType.endedRestDuration.name) {
       isRestDuration = false;
@@ -138,7 +139,7 @@ Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async 
   }
 
   // 服用記録がない日数を計算
-  final missedDays = allDates.difference(takenDates).length;
+  final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
   debugPrint('[missedPillDaysInLast30Days] Calculated missed days: $missedDays');
   return missedDays;
 }
