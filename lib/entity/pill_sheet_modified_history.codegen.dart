@@ -516,7 +516,7 @@ int missedPillDays({
   // beganRestDuration から endedRestDuration の間の日付を収集
   final restDurationDates = <DateTime>{};
 
-  var isRestDuration = false;
+  DateTime? historyBeginRestDurationDate;
   for (final history in histories) {
     // estimatedEventCausingDateの日付部分のみを使用
     final date = DateTime(
@@ -531,14 +531,16 @@ int missedPillDays({
 
     // 服用お休み中は記録されないので集計から除外
     if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
-      isRestDuration = true;
-      restDurationDates.add(date);
+      historyBeginRestDurationDate = date;
     }
-    if (isRestDuration) {
-      restDurationDates.add(date);
-    }
-    if (history.actionType == PillSheetModifiedActionType.endedRestDuration.name) {
-      isRestDuration = false;
+    if (historyBeginRestDurationDate != null) {
+      // PillSheetModifiedActionType.endedRestDuration.name であるか内科に関わらず計算に含めてしまう
+      // 服用お休みが開始されて、次の履歴が服用お休み終了の場合は、服用お休みの日数を計算する
+      // 服用お休みが開始されて、次の履歴が服用お休み以外の時は考慮パターンが多い。のでallDatesから除外するように計算に含めてしまう
+      for (var i = 0; i < daysBetween(historyBeginRestDurationDate, date); i++) {
+        restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
+      }
+      historyBeginRestDurationDate = null;
     }
   }
 
