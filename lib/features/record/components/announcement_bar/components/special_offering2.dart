@@ -46,6 +46,7 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
               child: Text(
                 useAlternativeText
                     ? '''
+飲み忘れの不安ありませんか？
 97.2%の人が「飲み忘れが減った」と回答！
 特別価格でプレミアムプランをゲット！'''
                     : '''
@@ -61,10 +62,10 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-            Positioned(
+            const Positioned(
               right: 0,
-              top: useAlternativeText ? 10 : 20,
-              child: const Icon(
+              top: 20,
+              child: Icon(
                 Icons.chevron_right,
                 color: Colors.white,
                 size: 24,
