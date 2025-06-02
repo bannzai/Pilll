@@ -24,6 +24,8 @@ _$RemoteConfigParameterImpl _$$RemoteConfigParameterImplFromJson(Map<String, dyn
           RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
       specialOfferingUserCreationDateTimeOffsetUntil: (json['specialOfferingUserCreationDateTimeOffsetUntil'] as num?)?.toInt() ??
           RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
+      specialOffering2UseAlternativeText:
+          json['specialOffering2UseAlternativeText'] as bool? ?? RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     );
 
 Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterImpl instance) => <String, dynamic>{
@@ -37,4 +39,5 @@ Map<String, dynamic> _$$RemoteConfigParameterImplToJson(_$RemoteConfigParameterI
       'specialOfferingUserCreationDateTimeOffset': instance.specialOfferingUserCreationDateTimeOffset,
       'specialOfferingUserCreationDateTimeOffsetSince': instance.specialOfferingUserCreationDateTimeOffsetSince,
       'specialOfferingUserCreationDateTimeOffsetUntil': instance.specialOfferingUserCreationDateTimeOffsetUntil,
+      'specialOffering2UseAlternativeText': instance.specialOffering2UseAlternativeText,
     };
