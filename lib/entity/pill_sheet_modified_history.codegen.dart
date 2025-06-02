@@ -503,7 +503,10 @@ int missedPillDays({
     return 0;
   }
 
-  final minDate = histories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+  // 昇順に並べ替える。服用お休み期間の集計時に、服用お休みが開始された後の差分の日付を集計するために順番を整える必要がある
+  final orderedHistories = histories.sortedBy((history) => history.estimatedEventCausingDate);
+
+  final minDate = orderedHistories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
 
   final allDates = <DateTime>{};
   final days = daysBetween(minDate, maxDate);
@@ -517,7 +520,7 @@ int missedPillDays({
   final restDurationDates = <DateTime>{};
 
   DateTime? historyBeginRestDurationDate;
-  for (final history in histories) {
+  for (final history in orderedHistories) {
     // estimatedEventCausingDateの日付部分のみを使用
     final date = DateTime(
       history.estimatedEventCausingDate.year,
