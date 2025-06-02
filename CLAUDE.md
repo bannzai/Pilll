@@ -90,3 +90,4 @@ Pilllは、ピル（経口避妊薬）の服用管理をサポートするモバ
 - test,testWidgetsではユースケース、シナリオ、条件式を書く。日本語で
 - ディレクトリ構成、ファイル構成は、lib/配下と一緒にする
 - ファイルの命名規則は {NAME}_test.dart
+- FirestoreのclassはMockしない。例えば、Query,QuerySnapshot,Document,DocumentRef,DocumentSnapshot,Collection,CollectionRef,CollectionSnapshot は Mock にしない。Mockがしづらい
