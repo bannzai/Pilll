@@ -111,7 +111,8 @@ Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async 
   final takenDates = <DateTime>{};
 
   for (final history in histories) {
-    if (history.actionType == PillSheetModifiedActionType.takenPill.name) {
+    if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
+        history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
       // estimatedEventCausingDateの日付部分のみを使用
       final date = DateTime(
         history.estimatedEventCausingDate.year,
