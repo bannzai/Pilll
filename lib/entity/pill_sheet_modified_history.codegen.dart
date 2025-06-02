@@ -530,9 +530,7 @@ int missedPillDays({
     }
 
     // 服用お休み中は記録されないので集計から除外
-    if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
-      historyBeginRestDurationDate = date;
-    }
+    // 先にhistoryBeginRestDurationDate != null チェックする必要がある。なぜなら、PillSheetModifiedActionType.beganRestDuration の時に値が入るから
     if (historyBeginRestDurationDate != null) {
       // PillSheetModifiedActionType.endedRestDuration.name であるか内科に関わらず計算に含めてしまう
       // 服用お休みが開始されて、次の履歴が服用お休み終了の場合は、服用お休みの日数を計算する
@@ -541,6 +539,10 @@ int missedPillDays({
         restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
       }
       historyBeginRestDurationDate = null;
+    }
+
+    if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
+      historyBeginRestDurationDate = date;
     }
   }
 
