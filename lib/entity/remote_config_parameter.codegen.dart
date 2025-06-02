@@ -13,6 +13,9 @@ abstract class RemoteConfigKeys {
   static const premiumIntroductionPattern = 'premiumIntroductionPattern';
   static const premiumIntroductionShowsAppStoreReviewCard = 'premiumIntroductionShowsAppStoreReviewCard';
   static const specialOfferingUserCreationDateTimeOffset = 'specialOfferingUserCreationDateTimeOffset';
+  static const specialOfferingUserCreationDateTimeOffsetSince = 'specialOfferingUserCreationDateTimeOffsetSince';
+  static const specialOfferingUserCreationDateTimeOffsetUntil = 'specialOfferingUserCreationDateTimeOffsetUntil';
+  static const specialOffering2UseAlternativeText = 'specialOffering2UseAlternativeText';
 }
 
 abstract class RemoteConfigParameterDefaultValues {
@@ -25,7 +28,10 @@ abstract class RemoteConfigParameterDefaultValues {
   // default(A) or B or C ...
   static const premiumIntroductionPattern = 'default';
   static const premiumIntroductionShowsAppStoreReviewCard = false;
-  static const specialOfferingUserCreationDateTimeOffset = 730;
+  static const specialOfferingUserCreationDateTimeOffset = 40000;
+  static const specialOfferingUserCreationDateTimeOffsetSince = 390;
+  static const specialOfferingUserCreationDateTimeOffsetUntil = 400;
+  static const specialOffering2UseAlternativeText = true;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
@@ -40,6 +46,9 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
     @Default(RemoteConfigParameterDefaultValues.premiumIntroductionPattern) String premiumIntroductionPattern,
     @Default(RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard) bool premiumIntroductionShowsAppStoreReviewCard,
     @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset) int specialOfferingUserCreationDateTimeOffset,
+    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince) int specialOfferingUserCreationDateTimeOffsetSince,
+    @Default(RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil) int specialOfferingUserCreationDateTimeOffsetUntil,
+    @Default(RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText) bool specialOffering2UseAlternativeText,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

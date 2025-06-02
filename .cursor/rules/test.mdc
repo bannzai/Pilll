@@ -1,0 +1,21 @@
+---
+description: 
+globs: test/**/*.dart
+alwaysApply: false
+---
+
+## プログラムテスト方針
+- いわゆるロジックを検証するUnit Test と Widget Test を中心に書いていく
+- Widget Test では Button をタップすると言った操作を行うものは書かない。状態を用意して、どういうWidgetの状態になるかを検証する
+- Pilllでは日付を扱うテストが多区、境界値テストが多い。端末での動作確認が大変なので、日付部分で境界値がある場合は積極的に・網羅的にテストを書く
+
+## コーディング規約・ルール
+- mainのスコープでテストに使う変数を宣言してsetUpで用意する方式ではなく、各group,test,testWidgetsの中で必要に応じた最小限のスコープに収まるように宣言する。もちろんmainのスコープが適切ならそこに宣言する
+- Unit Test ではメソッドや、Riverpodのproviderごとにgroupを作りテストを書く
+- Widget Test では表示を期待する値・Widgetのclass単位でgroupを作りテストを書く
+- groupでは、 group("#someMethod") のように #から始める
+- test,testWidgetsではユースケース、シナリオ、条件式を書く。日本語で
+- ディレクトリ構成、ファイル構成は、lib/配下と一緒にする
+- ファイルの命名規則は {NAME}_test.dart
+- FirestoreのclassはMockしない。例えば、Query,QuerySnapshot,Document,DocumentRef,DocumentSnapshot,Collection,CollectionRef,CollectionSnapshot は Mock にしない。Mockがしづらい
+

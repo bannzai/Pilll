@@ -493,3 +493,70 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     );
   }
 }
+
+/// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
+int missedPillDays({
+  required List<PillSheetModifiedHistory> histories,
+  required DateTime maxDate,
+}) {
+  if (histories.isEmpty) {
+    return 0;
+  }
+
+  // 昇順に並べ替える。服用お休み期間の集計時に、服用お休みが開始された後の差分の日付を集計するために順番を整える必要がある
+  final orderedHistories = histories.sortedBy((history) => history.estimatedEventCausingDate);
+
+  final minDate = orderedHistories.map((history) => history.estimatedEventCausingDate).reduce((a, b) => a.isBefore(b) ? a : b);
+
+  final allDates = <DateTime>{};
+  final days = daysBetween(minDate, maxDate);
+  for (var i = 0; i < days; i++) {
+    allDates.add(minDate.add(Duration(days: i)));
+  }
+
+  // takenPill || automaticallyRecordedLastTakenDate アクションの日付を収集
+  final takenDates = <DateTime>{};
+  // beganRestDuration から endedRestDuration の間の日付を収集
+  final restDurationDates = <DateTime>{};
+
+  DateTime? historyBeginRestDurationDate;
+  for (final history in orderedHistories) {
+    // estimatedEventCausingDateの日付部分のみを使用
+    final date = DateTime(
+      history.estimatedEventCausingDate.year,
+      history.estimatedEventCausingDate.month,
+      history.estimatedEventCausingDate.day,
+    );
+    if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
+        history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
+      takenDates.add(date);
+    }
+
+    // 服用お休み中は記録されないので集計から除外
+    // 先にhistoryBeginRestDurationDate != null チェックする必要がある。なぜなら、PillSheetModifiedActionType.beganRestDuration の時に値が入るから
+    if (historyBeginRestDurationDate != null) {
+      // PillSheetModifiedActionType.endedRestDuration.name であるか内科に関わらず計算に含めてしまう
+      // 服用お休みが開始されて、次の履歴が服用お休み終了の場合は、服用お休みの日数を計算する
+      // 服用お休みが開始されて、次の履歴が服用お休み以外の時は考慮パターンが多い。のでallDatesから除外するように計算に含めてしまう
+      for (var i = 0; i < daysBetween(historyBeginRestDurationDate, date); i++) {
+        restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
+      }
+      historyBeginRestDurationDate = null;
+    }
+
+    if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
+      historyBeginRestDurationDate = date;
+    }
+  }
+
+  // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
+  if (historyBeginRestDurationDate != null) {
+    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, maxDate); i++) {
+      restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
+    }
+  }
+
+  // 服用記録がない日数を計算
+  final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
+  return missedDays;
+}

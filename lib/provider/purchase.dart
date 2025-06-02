@@ -76,6 +76,14 @@ final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   }
   return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.annual);
 });
+final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
+  const specialOfferingPackageOfferingType = OfferingType.specialOffering;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
+});
 
 final purchaseProvider = Provider((ref) => Purchase());
 
