@@ -63,14 +63,10 @@ class AnnouncementBar extends HookConsumerWidget {
     specialOfferingIsClosed2.addListener(() {
       sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
     });
-    // 過去30日間の履歴を取得して飲み忘れ日数を計算
-    final now = DateTime.now();
-    final todayStart = DateTime(now.year, now.month, now.day);
-    final thirtyDaysAgo = todayStart.subtract(const Duration(days: 30));
-    
+
     final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
-      begin: thirtyDaysAgo,
-      end: todayStart,
+      begin: today().subtract(const Duration(days: 30)),
+      end: today(),
     ));
     final histories = historiesAsync.asData?.value ?? [];
     final missedDays = missedPillDays(histories);
