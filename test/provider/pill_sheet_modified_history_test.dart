@@ -31,8 +31,12 @@ void main() {
     });
 
     test("30日間すべて服用記録がある場合は0を返す", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
       final histories = <PillSheetModifiedHistory>[];
 
       // 30日分の服用記録を作成
@@ -59,7 +63,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -72,8 +76,12 @@ void main() {
     });
 
     test("30日間で1日だけ服用記録がある場合は、履歴が1日分なので計算対象が0日となり0を返す", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         PillSheetModifiedHistory(
           id: 'history_1',
@@ -94,7 +102,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -108,8 +116,12 @@ void main() {
     });
 
     test("automaticallyRecordedLastTakenDateも服用記録として扱われる", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         PillSheetModifiedHistory(
           id: 'history_1',
@@ -145,7 +157,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -159,8 +171,12 @@ void main() {
     });
 
     test("服用お休み期間中の日数は飲み忘れとしてカウントされない", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         // 10日前から5日前まで服用お休み
         PillSheetModifiedHistory(
@@ -213,7 +229,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -227,8 +243,12 @@ void main() {
     });
 
     test("複数の服用お休み期間がある場合も正しく処理される", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
         // 20日前から18日前まで服用お休み（2日間）
         PillSheetModifiedHistory(
@@ -327,7 +347,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -344,8 +364,12 @@ void main() {
     });
 
     test("同じ日に複数の履歴がある場合も正しく処理される", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
       final targetDate = baseDate.subtract(const Duration(days: 5));
 
       final histories = [
@@ -399,7 +423,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -413,8 +437,12 @@ void main() {
     });
 
     test("履歴が1日分しかない場合でも正しく計算される", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
 
       final histories = [
         PillSheetModifiedHistory(
@@ -436,7 +464,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
@@ -450,8 +478,12 @@ void main() {
     });
 
     test("服用お休み期間が継続中の場合も正しく処理される", () async {
-      final now = DateTime.now();
-      final baseDate = DateTime(now.year, now.month, now.day);
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
+      final baseDate = DateTime(today.year, today.month, today.day);
 
       final histories = [
         // 10日前から服用お休み開始（終了していない）
@@ -490,7 +522,7 @@ void main() {
 
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(histories);
           }),
         ],
