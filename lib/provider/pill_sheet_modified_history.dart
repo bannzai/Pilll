@@ -107,9 +107,12 @@ Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async 
     allDates.add(minDate.add(Duration(days: i)));
   }
 
-  // takenPillアクションの日付を収集
+  // takenPill || automaticallyRecordedLastTakenDate アクションの日付を収集
   final takenDates = <DateTime>{};
+  // beganRestDuration から endedRestDuration の間の日付を収集
+  final restDurationDates = <DateTime>{};
 
+  var isRestDuration = false;
   for (final history in histories) {
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
@@ -120,6 +123,17 @@ Future<int> missedPillDaysInLast30Days(MissedPillDaysInLast30DaysRef ref) async 
         history.estimatedEventCausingDate.day,
       );
       takenDates.add(date);
+    }
+
+    if (history.actionType == PillSheetModifiedActionType.beganRestDuration.name) {
+      isRestDuration = true;
+      restDurationDates.add(history.estimatedEventCausingDate);
+    }
+    if (isRestDuration) {
+      restDurationDates.add(history.estimatedEventCausingDate);
+    }
+    if (history.actionType == PillSheetModifiedActionType.endedRestDuration.name) {
+      isRestDuration = false;
     }
   }
 
