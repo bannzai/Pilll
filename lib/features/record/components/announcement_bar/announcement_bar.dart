@@ -55,13 +55,7 @@ class AnnouncementBar extends HookConsumerWidget {
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
     final specialOfferingIsClosed = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed) ?? false);
-    specialOfferingIsClosed.addListener(() {
-      sharedPreferences.setBool(BoolKey.specialOfferingIsClosed, specialOfferingIsClosed.value);
-    });
     final specialOfferingIsClosed2 = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed2) ?? false);
-    specialOfferingIsClosed2.addListener(() {
-      sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
-    });
 
     final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
       begin: today().subtract(const Duration(days: 30)),
@@ -72,6 +66,16 @@ class AnnouncementBar extends HookConsumerWidget {
       histories: histories,
       maxDate: today(),
     );
+
+    useEffect(() {
+      specialOfferingIsClosed.addListener(() {
+        sharedPreferences.setBool(BoolKey.specialOfferingIsClosed, specialOfferingIsClosed.value);
+      });
+      specialOfferingIsClosed2.addListener(() {
+        sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
+      });
+      return null;
+    }, [missedDays]);
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
