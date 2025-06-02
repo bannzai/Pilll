@@ -160,6 +160,7 @@ class AnnouncementBar extends HookConsumerWidget {
           return SpecialOfferingAnnouncementBar2(
             specialOfferingIsClosed2: specialOfferingIsClosed2,
             missedDays: missedDays,
+            useAlternativeText: remoteConfigParameter.specialOffering2UseAlternativeText,
           );
         }
 

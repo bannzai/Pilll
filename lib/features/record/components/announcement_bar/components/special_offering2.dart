@@ -10,10 +10,12 @@ import 'package:pilll/utils/analytics.dart';
 class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
   final ValueNotifier<bool> specialOfferingIsClosed2;
   final int missedDays;
+  final bool useAlternativeText;
   const SpecialOfferingAnnouncementBar2({
     super.key,
     required this.specialOfferingIsClosed2,
     required this.missedDays,
+    required this.useAlternativeText,
   });
 
   @override
@@ -42,7 +44,11 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                '''
+                useAlternativeText
+                    ? '''
+97.2%の人が「飲み忘れが減った」と回答！
+特別価格でプレミアムプランをゲット！'''
+                    : '''
 過去30日間で$missedDays日記録がなかったようです
 97.2%の人が「飲み忘れが減った」と回答！
 特別価格でプレミアムプランをゲット！''',
