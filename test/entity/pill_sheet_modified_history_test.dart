@@ -129,8 +129,8 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.beganRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 10)),
-          createdAt: baseDate.subtract(const Duration(days: 10)),
+          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 4)),
+          createdAt: baseDate.subtract(const Duration(days: 4)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
           afterPillSheetGroup: null,
@@ -144,8 +144,8 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_2',
           actionType: PillSheetModifiedActionType.endedRestDuration.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 5)),
-          createdAt: baseDate.subtract(const Duration(days: 5)),
+          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 2)),
+          createdAt: baseDate.subtract(const Duration(days: 2)),
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
           afterPillSheetGroup: null,
@@ -160,8 +160,8 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_3',
           actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 4)),
-          createdAt: baseDate.subtract(const Duration(days: 4)),
+          estimatedEventCausingDate: baseDate,
+          createdAt: baseDate,
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
           afterPillSheetGroup: null,
@@ -179,11 +179,11 @@ void main() {
         maxDate: today,
       );
 
-      // 10日前から今日までの10日間のうち：
-      // - 服用記録: 1日（4日前）
-      // - 服用お休み: 5日間（10日前から5日前まで）
-      // - 飲み忘れ: 4日間（5日前から4日前の前日まで、および3日前から今日まで）
-      expect(result, 4);
+      // 4日前から今日までの5日間のうち：
+      // - 服用記録: 1日（今日)
+      // - 服用お休み: 2日間（4日前から2日前まで）
+      // - 飲み忘れ: 2日間 (1日前と2日前の2日間)
+      expect(result, 2);
     });
 
     test("複数の服用お休み期間がある場合も正しく処理される", () {
