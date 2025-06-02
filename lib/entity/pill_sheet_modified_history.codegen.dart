@@ -546,6 +546,13 @@ int missedPillDays({
     }
   }
 
+  // 現在まで服用お休み中の場合には、差分の日付をrestDurationDatesに追加する
+  if (historyBeginRestDurationDate != null) {
+    for (var i = 0; i < daysBetween(historyBeginRestDurationDate, maxDate); i++) {
+      restDurationDates.add(historyBeginRestDurationDate.add(Duration(days: i)));
+    }
+  }
+
   // 服用記録がない日数を計算
   final missedDays = allDates.difference(takenDates).difference(restDurationDates).length;
   return missedDays;
