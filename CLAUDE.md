@@ -88,4 +88,5 @@ Pilllは、ピル（経口避妊薬）の服用管理をサポートするモバ
 - Widget Test では表示を期待する値・Widgetのclass単位でgroupを作りテストを書く
 - groupでは、 group("#someMethod") のように #から始める
 - test,testWidgetsではユースケース、シナリオ、条件式を書く。日本語で
-
+- ディレクトリ構成、ファイル構成は、lib/配下と一緒にする
+- ファイルの命名規則は {NAME}_test.dart
