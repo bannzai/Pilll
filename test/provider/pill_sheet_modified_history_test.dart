@@ -1,15 +1,24 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
+import 'package:pilll/utils/datetime/day.dart';
+
+import '../helper/mock.mocks.dart';
 
 void main() {
   group("#missedPillDaysInLast30Days", () {
     test("履歴が空の場合は0を返す", () async {
+      final today = DateTime.parse("2020-09-28");
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+
       final container = ProviderContainer(
         overrides: [
-          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+          pillSheetModifiedHistoriesWithRangeProvider(begin: today.subtract(const Duration(days: 30)), end: today).overrideWith((ref) {
             return Stream.value(<PillSheetModifiedHistory>[]);
           }),
         ],
@@ -338,7 +347,7 @@ void main() {
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final targetDate = baseDate.subtract(const Duration(days: 5));
-      
+
       final histories = [
         // 同じ日に複数の履歴
         PillSheetModifiedHistory(
@@ -406,7 +415,7 @@ void main() {
     test("履歴が1日分しかない場合でも正しく計算される", () async {
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
-      
+
       final histories = [
         PillSheetModifiedHistory(
           id: 'history_1',
@@ -443,7 +452,7 @@ void main() {
     test("服用お休み期間が継続中の場合も正しく処理される", () async {
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
-      
+
       final histories = [
         // 10日前から服用お休み開始（終了していない）
         PillSheetModifiedHistory(
