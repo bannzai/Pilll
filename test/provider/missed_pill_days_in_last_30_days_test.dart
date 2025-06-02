@@ -1,8 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
-import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/provider/database.dart';
@@ -11,26 +9,65 @@ import 'package:pilll/utils/datetime/day.dart';
 
 import '../helper/mock.mocks.dart';
 
+// Mock classes for testing
+class MockQuerySnapshot<T> implements QuerySnapshot<T> {
+  final List<T> data;
+
+  MockQuerySnapshot(this.data);
+
+  @override
+  List<QueryDocumentSnapshot<T>> get docs => data.map((item) => MockQueryDocumentSnapshot(item)).toList();
+
+  @override
+  List<DocumentChange<T>> get docChanges => throw UnimplementedError();
+
+  @override
+  SnapshotMetadata get metadata => throw UnimplementedError();
+
+  @override
+  int get size => data.length;
+}
+
+class MockQueryDocumentSnapshot<T> implements QueryDocumentSnapshot<T> {
+  final T _data;
+
+  MockQueryDocumentSnapshot(this._data);
+
+  @override
+  T data() => _data;
+
+  @override
+  String get id => throw UnimplementedError();
+
+  @override
+  DocumentReference<T> get reference => throw UnimplementedError();
+
+  @override
+  bool get exists => true;
+
+  @override
+  Map<String, dynamic> data({SnapshotOptions? options}) => throw UnimplementedError();
+
+  @override
+  dynamic get(Object field) => throw UnimplementedError();
+
+  @override
+  dynamic operator [](Object field) => throw UnimplementedError();
+
+  @override
+  SnapshotMetadata get metadata => throw UnimplementedError();
+}
+
 void main() {
-  late ProviderContainer container;
-  late MockDatabaseConnection mockDatabaseConnection;
+  group("#missedPillDaysInLast30Days", () {
+    test("履歴が空の場合は0を返す", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
 
-  setUp(() {
-    mockDatabaseConnection = MockDatabaseConnection();
-    container = ProviderContainer(
-      overrides: [
-        databaseProvider.overrideWithValue(mockDatabaseConnection),
-      ],
-    );
-  });
-
-  tearDown(() {
-    container.dispose();
-  });
-
-  group('missedPillDaysInLast30Days', () {
-    test('履歴が空の場合は0を返す', () async {
-      // Arrange
       when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
         final mockQuery = MockQuery<PillSheetModifiedHistory>();
         when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
@@ -40,18 +77,23 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       expect(result, 0);
+      container.dispose();
     });
 
-    test('30日間すべて服用記録がある場合は0を返す', () async {
-      // Arrange
-      final histories = <PillSheetModifiedHistory>[];
+    test("30日間すべて服用記録がある場合は0を返す", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
+      final histories = <PillSheetModifiedHistory>[];
 
       // 30日分の服用記録を作成
       for (int i = 0; i < 30; i++) {
@@ -84,15 +126,20 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       expect(result, 0);
+      container.dispose();
     });
 
-    test('30日間で1日だけ服用記録がある場合は29を返す', () async {
-      // Arrange
+    test("30日間で1日だけ服用記録がある場合は、履歴が1日分なので計算対象が0日となり0を返す", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -122,15 +169,21 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
-      expect(result, 0); // minDateとmaxDateが同じ日なので、計算対象の日数が0になる
+      // minDateとmaxDateが同じ日なので、計算対象の日数が0になる
+      expect(result, 0);
+      container.dispose();
     });
 
-    test('automaticallyRecordedLastTakenDateも服用記録として扱われる', () async {
-      // Arrange
+    test("automaticallyRecordedLastTakenDateも服用記録として扱われる", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -175,15 +228,21 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
-      expect(result, 0); // 2日分の記録があり、minDateからmaxDateまでの日数が1日なので0を返す
+      // 2日分の記録があり、minDateからmaxDateまでの日数が1日なので0を返す
+      expect(result, 0);
+      container.dispose();
     });
 
-    test('服用お休み期間中の日数は飲み忘れとしてカウントされない', () async {
-      // Arrange
+    test("服用お休み期間中の日数は飲み忘れとしてカウントされない", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -245,16 +304,21 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       // 10日前から4日前までの6日間のうち、5日間は服用お休み期間なので、飲み忘れは0日
       expect(result, 0);
+      container.dispose();
     });
 
-    test('複数の服用お休み期間がある場合も正しく処理される', () async {
-      // Arrange
+    test("複数の服用お休み期間がある場合も正しく処理される", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -362,19 +426,24 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       // 20日前から7日前までの13日間のうち：
       // - 服用お休み: 4日間（20-18日前、10-8日前）
       // - 服用記録: 2日間（17日前、7日前）
       // - 飲み忘れ: 7日間
       expect(result, 7);
+      container.dispose();
     });
 
-    test('同じ日に複数の履歴がある場合も正しく処理される', () async {
-      // Arrange
+    test("同じ日に複数の履歴がある場合も正しく処理される", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final targetDate = baseDate.subtract(const Duration(days: 5));
@@ -437,16 +506,21 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       // 同じ日の複数の履歴は1日としてカウントされる
       expect(result, 0);
+      container.dispose();
     });
 
-    test('履歴が1日分しかない場合でも正しく計算される', () async {
-      // Arrange
+    test("履歴が1日分しかない場合でも正しく計算される", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       
@@ -477,16 +551,21 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       // 1日分の履歴しかない場合、minDateとmaxDateが同じで、計算対象が0日になる
       expect(result, 0);
+      container.dispose();
     });
 
-    test('服用お休み期間が継続中の場合も正しく処理される', () async {
-      // Arrange
+    test("服用お休み期間が継続中の場合も正しく処理される", () async {
+      final mockDatabaseConnection = MockDatabaseConnection();
+      final container = ProviderContainer(
+        overrides: [
+          databaseProvider.overrideWithValue(mockDatabaseConnection),
+        ],
+      );
+
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       
@@ -534,63 +613,11 @@ void main() {
         return mockQuery;
       });
 
-      // Act
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
-      // Assert
       // 11日前から10日前までの1日間のうち、1日は服用記録があり、1日は服用お休み期間なので、飲み忘れは0日
       expect(result, 0);
+      container.dispose();
     });
   });
-}
-
-// Mock classes for testing
-class MockQuerySnapshot<T> implements QuerySnapshot<T> {
-  final List<T> data;
-
-  MockQuerySnapshot(this.data);
-
-  @override
-  List<QueryDocumentSnapshot<T>> get docs => data
-      .map((item) => MockQueryDocumentSnapshot(item))
-      .toList();
-
-  @override
-  List<DocumentChange<T>> get docChanges => throw UnimplementedError();
-
-  @override
-  SnapshotMetadata get metadata => throw UnimplementedError();
-
-  @override
-  int get size => data.length;
-}
-
-class MockQueryDocumentSnapshot<T> implements QueryDocumentSnapshot<T> {
-  final T _data;
-
-  MockQueryDocumentSnapshot(this._data);
-
-  @override
-  T data() => _data;
-
-  @override
-  String get id => throw UnimplementedError();
-
-  @override
-  DocumentReference<T> get reference => throw UnimplementedError();
-
-  @override
-  bool get exists => true;
-
-  @override
-  Map<String, dynamic> data({SnapshotOptions? options}) => throw UnimplementedError();
-
-  @override
-  dynamic get(Object field) => throw UnimplementedError();
-
-  @override
-  dynamic operator [](Object field) => throw UnimplementedError();
-
-  @override
-  SnapshotMetadata get metadata => throw UnimplementedError();
 }
