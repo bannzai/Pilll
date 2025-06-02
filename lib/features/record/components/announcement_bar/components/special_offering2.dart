@@ -24,7 +24,7 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
       return null;
     }, []);
     return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 4, left: 8, right: 8),
+      padding: const EdgeInsets.only(top: 10, bottom: 10, left: 8, right: 8),
       color: AppColors.primary,
       child: GestureDetector(
         onTap: () {
@@ -43,7 +43,10 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                '過去30日間で$missedDays日の飲み忘れがありました\n特別価格でプレミアムプランをゲット！',
+                '''
+過去30日間で$missedDays日記録がなかったようです
+97.2%の人が「飲み忘れが減った」と回答！
+特別価格でプレミアムプランをゲット！''',
                 style: const TextStyle(
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w600,
