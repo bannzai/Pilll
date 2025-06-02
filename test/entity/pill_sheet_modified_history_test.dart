@@ -46,7 +46,7 @@ void main() {
       expect(result, 0);
     });
 
-    test("30日間で1日だけ服用記録がある場合は、履歴が1日分なので計算対象が0日となり0を返す", () {
+    test("15日前に1日だけ服用記録がある場合は14日の飲み忘れ", () {
       final today = DateTime.parse("2020-09-28");
       final baseDate = DateTime(today.year, today.month, today.day);
       final histories = [
@@ -72,8 +72,8 @@ void main() {
         maxDate: today,
       );
 
-      // minDateとmaxDateが同じ日なので、計算対象の日数が0になる
-      expect(result, 0);
+      // 15日前から今日までの15日間のうち、1日だけ服用記録があるので14日の飲み忘れ
+      expect(result, 14);
     });
 
     test("automaticallyRecordedLastTakenDateも服用記録として扱われる", () {
@@ -117,8 +117,8 @@ void main() {
         maxDate: today,
       );
 
-      // 2日分の記録があり、minDateからmaxDateまでの日数が1日なので0を返す
-      expect(result, 0);
+      // 3日前から今日までの3日間のうち、2日分の服用記録があるので1日の飲み忘れ
+      expect(result, 1);
     });
 
     test("服用お休み期間中の日数は飲み忘れとしてカウントされない", () {
@@ -179,8 +179,11 @@ void main() {
         maxDate: today,
       );
 
-      // 10日前から4日前までの6日間のうち、5日間は服用お休み期間なので、飲み忘れは0日
-      expect(result, 0);
+      // 10日前から今日までの10日間のうち：
+      // - 服用記録: 1日（4日前）
+      // - 服用お休み: 5日間（10日前から5日前まで）
+      // - 飲み忘れ: 4日間（5日前から4日前の前日まで、および3日前から今日まで）
+      expect(result, 4);
     });
 
     test("複数の服用お休み期間がある場合も正しく処理される", () {
@@ -287,11 +290,11 @@ void main() {
         maxDate: today,
       );
 
-      // 20日前から7日前までの13日間のうち：
+      // 20日前から今日までの20日間のうち：
       // - 服用お休み: 4日間（20-18日前、10-8日前）
       // - 服用記録: 2日間（17日前、7日前）
-      // - 飲み忘れ: 7日間
-      expect(result, 7);
+      // - 飲み忘れ: 14日間
+      expect(result, 14);
     });
 
     test("同じ日に複数の履歴がある場合も正しく処理される", () {
@@ -353,11 +356,11 @@ void main() {
         maxDate: today,
       );
 
-      // 同じ日の複数の履歴は1日としてカウントされる
-      expect(result, 0);
+      // 5日前から今日までの5日間のうち、1日だけ服用記録があるので4日の飲み忘れ
+      expect(result, 4);
     });
 
-    test("履歴が1日分しかない場合でも正しく計算される", () {
+    test("今日服用した場合は飲み忘れが0日", () {
       final today = DateTime.parse("2020-09-28");
       final baseDate = DateTime(today.year, today.month, today.day);
 
@@ -365,8 +368,8 @@ void main() {
         PillSheetModifiedHistory(
           id: 'history_1',
           actionType: PillSheetModifiedActionType.takenPill.name,
-          estimatedEventCausingDate: baseDate.subtract(const Duration(days: 15)),
-          createdAt: baseDate.subtract(const Duration(days: 15)),
+          estimatedEventCausingDate: baseDate,
+          createdAt: baseDate,
           value: const PillSheetModifiedHistoryValue(),
           beforePillSheetGroup: null,
           afterPillSheetGroup: null,
@@ -384,7 +387,7 @@ void main() {
         maxDate: today,
       );
 
-      // 1日分の履歴しかない場合、minDateとmaxDateが同じで、計算対象が0日になる
+      // 今日から今日までの0日間で、服用記録があるので飲み忘れは0日
       expect(result, 0);
     });
 
@@ -432,7 +435,10 @@ void main() {
         maxDate: today,
       );
 
-      // 11日前から10日前までの1日間のうち、1日は服用記録があり、1日は服用お休み期間なので、飲み忘れは0日
+      // 11日前から今日までの11日間のうち：
+      // - 服用記録: 1日（11日前）
+      // - 服用お休み: 10日分（10日前から今日まで継続中）
+      // - 飲み忘れ: 0日
       expect(result, 0);
     });
   });
