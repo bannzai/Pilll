@@ -69,7 +69,10 @@ class AnnouncementBar extends HookConsumerWidget {
       end: today(),
     ));
     final histories = historiesAsync.asData?.value ?? [];
-    final missedDays = missedPillDays(histories);
+    final missedDays = missedPillDays(
+      histories: histories,
+      maxDate: today(),
+    );
     debugPrint('[AnnouncementBar] missedDays calculated: $missedDays');
 
     // Test code 安定したら消す

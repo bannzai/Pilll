@@ -5,7 +5,10 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 void main() {
   group("#missedPillDays", () {
     test("履歴が空の場合は0を返す", () {
-      final result = missedPillDays([]);
+      final result = missedPillDays(
+        histories: [],
+        maxDate: DateTime.parse("2020-09-28"),
+      );
       expect(result, 0);
     });
 
@@ -36,7 +39,10 @@ void main() {
         );
       }
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
       expect(result, 0);
     });
 
@@ -61,7 +67,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // minDateとmaxDateが同じ日なので、計算対象の日数が0になる
       expect(result, 0);
@@ -103,7 +112,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // 2日分の記録があり、minDateからmaxDateまでの日数が1日なので0を返す
       expect(result, 0);
@@ -162,7 +174,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // 10日前から4日前までの6日間のうち、5日間は服用お休み期間なので、飲み忘れは0日
       expect(result, 0);
@@ -267,7 +282,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // 20日前から7日前までの13日間のうち：
       // - 服用お休み: 4日間（20-18日前、10-8日前）
@@ -330,7 +348,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // 同じ日の複数の履歴は1日としてカウントされる
       expect(result, 0);
@@ -358,7 +379,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // 1日分の履歴しかない場合、minDateとmaxDateが同じで、計算対象が0日になる
       expect(result, 0);
@@ -403,7 +427,10 @@ void main() {
         ),
       ];
 
-      final result = missedPillDays(histories);
+      final result = missedPillDays(
+        histories: histories,
+        maxDate: today,
+      );
 
       // 11日前から10日前までの1日間のうち、1日は服用記録があり、1日は服用お休み期間なので、飲み忘れは0日
       expect(result, 0);
