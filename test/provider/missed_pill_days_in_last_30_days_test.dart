@@ -1,81 +1,19 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
-import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/utils/datetime/day.dart';
-
-import '../helper/mock.mocks.dart';
-
-// Mock classes for testing
-class MockQuerySnapshot<T> implements QuerySnapshot<T> {
-  final List<T> data;
-
-  MockQuerySnapshot(this.data);
-
-  @override
-  List<QueryDocumentSnapshot<T>> get docs => data.map((item) => MockQueryDocumentSnapshot(item)).toList();
-
-  @override
-  List<DocumentChange<T>> get docChanges => throw UnimplementedError();
-
-  @override
-  SnapshotMetadata get metadata => throw UnimplementedError();
-
-  @override
-  int get size => data.length;
-}
-
-class MockQueryDocumentSnapshot<T> implements QueryDocumentSnapshot<T> {
-  final T _data;
-
-  MockQueryDocumentSnapshot(this._data);
-
-  @override
-  T data() => _data;
-
-  @override
-  String get id => throw UnimplementedError();
-
-  @override
-  DocumentReference<T> get reference => throw UnimplementedError();
-
-  @override
-  bool get exists => true;
-
-  @override
-  Map<String, dynamic> data({SnapshotOptions? options}) => throw UnimplementedError();
-
-  @override
-  dynamic get(Object field) => throw UnimplementedError();
-
-  @override
-  dynamic operator [](Object field) => throw UnimplementedError();
-
-  @override
-  SnapshotMetadata get metadata => throw UnimplementedError();
-}
 
 void main() {
   group("#missedPillDaysInLast30Days", () {
     test("履歴が空の場合は0を返す", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
       final container = ProviderContainer(
         overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(<PillSheetModifiedHistory>[]);
+          }),
         ],
       );
-
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot([])));
-        return mockQuery;
-      });
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -84,13 +22,6 @@ void main() {
     });
 
     test("30日間すべて服用記録がある場合は0を返す", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = <PillSheetModifiedHistory>[];
@@ -117,14 +48,13 @@ void main() {
         );
       }
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -133,13 +63,6 @@ void main() {
     });
 
     test("30日間で1日だけ服用記録がある場合は、履歴が1日分なので計算対象が0日となり0を返す", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -160,14 +83,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -177,13 +99,6 @@ void main() {
     });
 
     test("automaticallyRecordedLastTakenDateも服用記録として扱われる", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -219,14 +134,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -236,13 +150,6 @@ void main() {
     });
 
     test("服用お休み期間中の日数は飲み忘れとしてカウントされない", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -295,14 +202,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -312,13 +218,6 @@ void main() {
     });
 
     test("複数の服用お休み期間がある場合も正しく処理される", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final histories = [
@@ -417,14 +316,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -437,13 +335,6 @@ void main() {
     });
 
     test("同じ日に複数の履歴がある場合も正しく処理される", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       final targetDate = baseDate.subtract(const Duration(days: 5));
@@ -497,14 +388,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -514,13 +404,6 @@ void main() {
     });
 
     test("履歴が1日分しかない場合でも正しく計算される", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       
@@ -542,14 +425,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
@@ -559,13 +441,6 @@ void main() {
     });
 
     test("服用お休み期間が継続中の場合も正しく処理される", () async {
-      final mockDatabaseConnection = MockDatabaseConnection();
-      final container = ProviderContainer(
-        overrides: [
-          databaseProvider.overrideWithValue(mockDatabaseConnection),
-        ],
-      );
-
       final now = DateTime.now();
       final baseDate = DateTime(now.year, now.month, now.day);
       
@@ -604,14 +479,13 @@ void main() {
         ),
       ];
 
-      when(mockDatabaseConnection.pillSheetModifiedHistoriesReference()).thenAnswer((_) {
-        final mockQuery = MockQuery<PillSheetModifiedHistory>();
-        when(mockQuery.where(any, isLessThanOrEqualTo: anyNamed('isLessThanOrEqualTo'), isGreaterThanOrEqualTo: anyNamed('isGreaterThanOrEqualTo')))
-            .thenReturn(mockQuery);
-        when(mockQuery.orderBy(any, descending: anyNamed('descending'))).thenReturn(mockQuery);
-        when(mockQuery.snapshots()).thenAnswer((_) => Stream.value(MockQuerySnapshot(histories)));
-        return mockQuery;
-      });
+      final container = ProviderContainer(
+        overrides: [
+          pillSheetModifiedHistoriesWithRangeProvider.overrideWith((ref, {required DateTime begin, required DateTime end}) {
+            return Stream.value(histories);
+          }),
+        ],
+      );
 
       final result = await container.read(missedPillDaysInLast30DaysProvider.future);
 
