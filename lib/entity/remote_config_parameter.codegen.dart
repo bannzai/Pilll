@@ -31,7 +31,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const specialOfferingUserCreationDateTimeOffset = 40000;
   static const specialOfferingUserCreationDateTimeOffsetSince = 100;
   static const specialOfferingUserCreationDateTimeOffsetUntil = 400;
-  static const specialOffering2UseAlternativeText = false;
+  static const specialOffering2UseAlternativeText = true;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
