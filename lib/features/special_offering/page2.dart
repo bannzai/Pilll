@@ -209,7 +209,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       const SizedBox(height: 20),
                       AlertButton(
                         onPressed: () async {
-                          analytics.logEvent(name: 'pressed_premium_functions_on_sheet');
+                          analytics.logEvent(name: 'pressed_premium_functions_on_sheet2');
                           await launchUrl(Uri.parse(preimumLink));
                         },
                         text: L.viewPremiumFeatures,
