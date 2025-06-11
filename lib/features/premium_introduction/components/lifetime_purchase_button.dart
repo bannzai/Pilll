@@ -20,39 +20,45 @@ class LifetimePurchaseButton extends StatelessWidget {
       onTap: () {
         onTap(lifetimePackage);
       },
-      child: Container(
-        padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
-        decoration: BoxDecoration(
-          color: AppColors.blueBackground,
-          borderRadius: const BorderRadius.all(Radius.circular(4)),
-          border: Border.all(
-            width: 2,
-            color: AppColors.primary,
+      child: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 44),
+          child: Container(
+            padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
+            decoration: BoxDecoration(
+              color: AppColors.blueBackground,
+              borderRadius: const BorderRadius.all(Radius.circular(4)),
+              border: Border.all(
+                width: 2,
+                color: AppColors.primary,
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  L.lifetimePlan,
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  lifetimePackage.storeProduct.priceString,
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              L.lifetimePlan,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            Text(
-              lifetimePackage.storeProduct.priceString,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
         ),
       ),
     );

@@ -33,29 +33,34 @@ class PurchaseButtons extends HookConsumerWidget {
     final purchase = ref.watch(purchaseProvider);
     final lifetimePackage = this.lifetimePackage;
 
-    return Row(
+    return Column(
       children: [
-        const Spacer(),
-        MonthlyPurchaseButton(
-          monthlyPackage: monthlyPackage,
-          onTap: (monthlyPackage) async {
-            analytics.logEvent(name: 'pressed_monthly_purchase_button');
-            await _purchase(context, monthlyPackage, purchase);
-          },
-        ),
-        const SizedBox(width: 16),
-        AnnualPurchaseButton(
-          annualPackage: annualPackage,
-          monthlyPackage: monthlyPackage,
-          monthlyPremiumPackage: monthlyPremiumPackage,
-          offeringType: offeringType,
-          onTap: (annualPackage) async {
-            analytics.logEvent(name: 'pressed_annual_purchase_button');
-            await _purchase(context, annualPackage, purchase);
-          },
+        Row(
+          children: [
+            const Spacer(),
+            MonthlyPurchaseButton(
+              monthlyPackage: monthlyPackage,
+              onTap: (monthlyPackage) async {
+                analytics.logEvent(name: 'pressed_monthly_purchase_button');
+                await _purchase(context, monthlyPackage, purchase);
+              },
+            ),
+            const SizedBox(width: 16),
+            AnnualPurchaseButton(
+              annualPackage: annualPackage,
+              monthlyPackage: monthlyPackage,
+              monthlyPremiumPackage: monthlyPremiumPackage,
+              offeringType: offeringType,
+              onTap: (annualPackage) async {
+                analytics.logEvent(name: 'pressed_annual_purchase_button');
+                await _purchase(context, annualPackage, purchase);
+              },
+            ),
+            const Spacer(),
+          ],
         ),
         if (lifetimePackage != null) ...[
-          const SizedBox(width: 16),
+          const SizedBox(height: 20),
           LifetimePurchaseButton(
             lifetimePackage: lifetimePackage,
             onTap: (lifetimePackage) async {
@@ -64,7 +69,6 @@ class PurchaseButtons extends HookConsumerWidget {
             },
           ),
         ],
-        const Spacer(),
       ],
     );
   }
