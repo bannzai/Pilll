@@ -60,6 +60,10 @@ final monthlyPackageProvider = Provider.family.autoDispose((ref, User user) {
   final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
   return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
 });
+final lifetimePackageProvider = Provider.family.autoDispose((ref, User user) {
+  final currentOfferingPackages = ref.watch(currentOfferingPackagesProvider(user));
+  return currentOfferingPackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+});
 final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];

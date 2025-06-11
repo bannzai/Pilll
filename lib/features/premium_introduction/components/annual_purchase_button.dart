@@ -77,7 +77,7 @@ class AnnualPurchaseButton extends StatelessWidget {
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,
                     fontSize: 14,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w400,
                   ),
                 ),
               ],
