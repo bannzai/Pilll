@@ -56,6 +56,15 @@ class LifetimePurchaseButton extends StatelessWidget {
                     fontWeight: FontWeight.w600,
                   ),
                 ),
+                Text(
+                  '一度の購入でずっとプレミアム',
+                  style: const TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
               ],
             ),
           ),

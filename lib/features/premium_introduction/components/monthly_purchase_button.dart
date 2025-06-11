@@ -54,7 +54,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
                 fontSize: 16,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w400,
               ),
             ),
             // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったら dailyPriceString を表示しないようにする(Widget削除)

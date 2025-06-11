@@ -60,7 +60,7 @@ class PurchaseButtons extends HookConsumerWidget {
           ],
         ),
         if (lifetimePackage != null) ...[
-          const SizedBox(height: 20),
+          const SizedBox(height: 10),
           LifetimePurchaseButton(
             lifetimePackage: lifetimePackage,
             onTap: (lifetimePackage) async {
