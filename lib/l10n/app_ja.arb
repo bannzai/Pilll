@@ -968,6 +968,10 @@
       }
     }
   },
+  "lifetimePlan": "買い切り",
+  "@lifetimePlan": {
+    "description": "買い切り"
+  },
   "youArePremiumMember": "あなたは\nプレミアムメンバーです",
   "@youArePremiumMember": {
     "description": "あなたは\nプレミアムメンバーです"
