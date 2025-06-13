@@ -15,6 +15,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
+import 'package:pilll/utils/remote_config.dart';
 
 enum OfferingType { limited, specialOffering, premium }
 
@@ -87,6 +88,45 @@ final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
     return null;
   }
   return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
+});
+final lifetimeLimitedPackageProvider = Provider.autoDispose((ref) {
+  const limitedPackageOfferingType = OfferingType.limited;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+});
+final lifetimePremiumPackageProvider = Provider.autoDispose((ref) {
+  const premiumPackageOfferingType = OfferingType.premium;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+});
+final lifetimeDiscountRateProvider = Provider.autoDispose<double?>((ref) {
+  final appIsReleased = ref.watch(appIsReleasedProvider).valueOrNull ?? false;
+  if (!appIsReleased) {
+    return null;
+  }
+  
+  final lifetimeLimited = ref.watch(lifetimeLimitedPackageProvider);
+  final lifetimePremium = ref.watch(lifetimePremiumPackageProvider);
+  
+  if (lifetimeLimited == null || lifetimePremium == null) {
+    return null;
+  }
+  
+  final limitedPrice = lifetimeLimited.storeProduct.price;
+  final premiumPrice = lifetimePremium.storeProduct.price;
+  
+  if (premiumPrice <= 0) {
+    return null;
+  }
+  
+  final discountRate = ((premiumPrice - limitedPrice) / premiumPrice) * 100;
+  return discountRate;
 });
 
 final purchaseProvider = Provider((ref) => Purchase());
