@@ -160,7 +160,6 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -251,7 +250,6 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -295,7 +293,6 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
