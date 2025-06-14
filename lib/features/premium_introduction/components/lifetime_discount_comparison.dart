@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:purchases_flutter/models/package_wrapper.dart';
 
 class LifetimeDiscountComparison extends HookConsumerWidget {
   const LifetimeDiscountComparison({
@@ -105,7 +106,7 @@ class _LifetimePriceComparison extends StatelessWidget {
             fontWeight: FontWeight.w700,
             fontSize: 16,
             fontFamily: FontFamily.japanese,
-            color: TextColor.secondary,
+            color: TextColor.main,
           ),
         ),
       ],
