@@ -110,21 +110,21 @@ final lifetimeDiscountRateProvider = Provider.autoDispose<double?>((ref) {
   if (!appIsReleased) {
     return null;
   }
-  
+
   final lifetimeLimited = ref.watch(lifetimeLimitedPackageProvider);
   final lifetimePremium = ref.watch(lifetimePremiumPackageProvider);
-  
+
   if (lifetimeLimited == null || lifetimePremium == null) {
     return null;
   }
-  
+
   final limitedPrice = lifetimeLimited.storeProduct.price;
   final premiumPrice = lifetimePremium.storeProduct.price;
-  
+
   if (premiumPrice <= 0) {
     return null;
   }
-  
+
   final discountRate = ((premiumPrice - limitedPrice) / premiumPrice) * 100;
   return discountRate;
 });

@@ -32,6 +32,8 @@ class PurchaseButtons extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final purchase = ref.watch(purchaseProvider);
     final lifetimePackage = this.lifetimePackage;
+    final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
+    final lifetimePremiumPackage = ref.watch(lifetimePremiumPackageProvider);
 
     return Column(
       children: [
@@ -63,6 +65,9 @@ class PurchaseButtons extends HookConsumerWidget {
           const SizedBox(height: 10),
           LifetimePurchaseButton(
             lifetimePackage: lifetimePackage,
+            lifetimePremiumPackage: lifetimePremiumPackage,
+            discountRate: lifetimeDiscountRate,
+            offeringType: offeringType,
             onTap: (lifetimePackage) async {
               analytics.logEvent(name: 'pressed_lifetime_purchase_button');
               await _purchase(context, lifetimePackage, purchase);
