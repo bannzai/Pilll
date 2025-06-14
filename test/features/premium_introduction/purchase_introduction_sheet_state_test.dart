@@ -77,7 +77,7 @@ void main() {
         ],
       );
       final currentOfferingType = container.read(currentOfferingTypeProvider(user));
-      expect(currentOfferingType, equals(OfferingType.limited));
+      expect(currentOfferingType, equals(OfferingType.discount));
     });
   });
 }

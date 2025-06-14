@@ -15,14 +15,15 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
+import 'package:pilll/utils/remote_config.dart';
 
-enum OfferingType { limited, specialOffering, premium }
+enum OfferingType { discount, specialOffering, premium }
 
 extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
-      case OfferingType.limited:
-        return 'Limited';
+      case OfferingType.discount:
+        return 'Discount';
       case OfferingType.specialOffering:
         return 'Premium';
       case OfferingType.premium:
@@ -41,7 +42,7 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user)
   if (isOverDiscountDeadline) {
     return OfferingType.premium;
   } else {
-    return OfferingType.limited;
+    return OfferingType.discount;
   }
 });
 final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
@@ -87,6 +88,45 @@ final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
     return null;
   }
   return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
+});
+final lifetimeDiscountPackageProvider = Provider.autoDispose((ref) {
+  const limitedPackageOfferingType = OfferingType.discount;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+});
+final lifetimePremiumPackageProvider = Provider.autoDispose((ref) {
+  const premiumPackageOfferingType = OfferingType.premium;
+  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
+  if (offering == null) {
+    return null;
+  }
+  return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
+});
+final lifetimeDiscountRateProvider = Provider.autoDispose<double?>((ref) {
+  final appIsReleased = ref.watch(appIsReleasedProvider).valueOrNull ?? false;
+  if (!appIsReleased) {
+    return null;
+  }
+
+  final lifetimeDiscount = ref.watch(lifetimeDiscountPackageProvider);
+  final lifetimePremium = ref.watch(lifetimePremiumPackageProvider);
+
+  if (lifetimeDiscount == null || lifetimePremium == null) {
+    return null;
+  }
+
+  final discountePrice = lifetimeDiscount.storeProduct.price;
+  final premiumPrice = lifetimePremium.storeProduct.price;
+
+  if (premiumPrice <= 0) {
+    return null;
+  }
+
+  final discountRate = ((premiumPrice - discountePrice) / premiumPrice) * 100;
+  return discountRate;
 });
 
 final purchaseProvider = Provider((ref) => Purchase());

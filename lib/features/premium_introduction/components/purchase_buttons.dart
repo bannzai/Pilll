@@ -17,6 +17,8 @@ class PurchaseButtons extends HookConsumerWidget {
   final Package? lifetimePackage;
   final Package monthlyPremiumPackage;
   final ValueNotifier<bool> isLoading;
+  final double? lifetimeDiscountRate;
+  final Package? lifetimePremiumPackage;
 
   const PurchaseButtons({
     super.key,
@@ -26,6 +28,8 @@ class PurchaseButtons extends HookConsumerWidget {
     required this.lifetimePackage,
     required this.monthlyPremiumPackage,
     required this.isLoading,
+    required this.lifetimeDiscountRate,
+    required this.lifetimePremiumPackage,
   });
 
   @override
@@ -63,6 +67,9 @@ class PurchaseButtons extends HookConsumerWidget {
           const SizedBox(height: 10),
           LifetimePurchaseButton(
             lifetimePackage: lifetimePackage,
+            lifetimePremiumPackage: lifetimePremiumPackage,
+            discountRate: lifetimeDiscountRate,
+            offeringType: offeringType,
             onTap: (lifetimePackage) async {
               analytics.logEvent(name: 'pressed_lifetime_purchase_button');
               await _purchase(context, lifetimePackage, purchase);

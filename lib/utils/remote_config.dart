@@ -1,4 +1,5 @@
 import 'package:firebase_remote_config/firebase_remote_config.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
@@ -52,6 +53,9 @@ Future<void> setupRemoteConfig() async {
 
 @Riverpod()
 Future<bool> appIsReleased(AppIsReleasedRef ref) async {
+  if (kDebugMode) {
+    return true;
+  }
   final releasedVersion = Version.parse(remoteConfig.getString(RemoteConfigKeys.releasedVersion));
   final packageInfo = await PackageInfo.fromPlatform();
   final appVersion = Version.parse(packageInfo.version);
