@@ -54,7 +54,7 @@ Future<void> setupRemoteConfig() async {
 @Riverpod()
 Future<bool> appIsReleased(AppIsReleasedRef ref) async {
   if (kDebugMode) {
-    return false;
+    return true;
   }
   final releasedVersion = Version.parse(remoteConfig.getString(RemoteConfigKeys.releasedVersion));
   final packageInfo = await PackageInfo.fromPlatform();
