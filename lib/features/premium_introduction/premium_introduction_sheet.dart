@@ -16,7 +16,6 @@ import 'package:pilll/features/premium_introduction/components/premium_introduct
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/components/purchase_buttons.dart';
-import 'package:pilll/features/premium_introduction/components/lifetime_discount_comparison.dart';
 import 'package:pilll/features/error/page.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/root.dart';
@@ -68,7 +67,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
     final annualPackage = ref.watch(annualPackageProvider(user));
     final lifetimePackage = ref.watch(lifetimePackageProvider(user));
     final monthlyPremiumPackage = ref.watch(monthlyPremiumPackageProvider);
-    final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
 
     final isLoading = useState(false);
 
@@ -113,10 +111,6 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                                 monthlyPremiumPackage: monthlyPremiumPackage,
                                 discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                               ),
-                          if (lifetimeDiscountRate != null && lifetimePackage != null && offeringType == OfferingType.discount) ...[
-                            const SizedBox(height: 24),
-                            const LifetimeDiscountComparison(),
-                          ],
                           const SizedBox(height: 12),
                           if (monthlyPremiumPackage != null && monthlyPackage != null && annualPackage != null)
                             PurchaseButtons(
