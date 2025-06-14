@@ -17,6 +17,8 @@ class PurchaseButtons extends HookConsumerWidget {
   final Package? lifetimePackage;
   final Package monthlyPremiumPackage;
   final ValueNotifier<bool> isLoading;
+  final double? lifetimeDiscountRate;
+  final Package? lifetimePremiumPackage;
 
   const PurchaseButtons({
     super.key,
@@ -26,14 +28,14 @@ class PurchaseButtons extends HookConsumerWidget {
     required this.lifetimePackage,
     required this.monthlyPremiumPackage,
     required this.isLoading,
+    required this.lifetimeDiscountRate,
+    required this.lifetimePremiumPackage,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final purchase = ref.watch(purchaseProvider);
     final lifetimePackage = this.lifetimePackage;
-    final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
-    final lifetimePremiumPackage = ref.watch(lifetimePremiumPackageProvider);
 
     return Column(
       children: [

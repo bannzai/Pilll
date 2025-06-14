@@ -17,6 +17,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:pilll/utils/remote_config.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
 
 import '../../helper/mock.mocks.dart';
@@ -159,6 +160,7 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -203,6 +205,7 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -248,6 +251,7 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
@@ -291,6 +295,7 @@ void main() {
                     .overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
                 remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
               child: const MaterialApp(
                 home: sheet,
