@@ -80,8 +80,8 @@ class LifetimePurchaseButton extends StatelessWidget {
                 ),
                 if (discountRate != null && offeringType == OfferingType.discount)
                   Positioned(
-                    top: -11,
-                    right: 8,
+                    top: -8,
+                    right: -8,
                     child: _LifetimeDiscountBadge(
                       discountRate: discountRate!,
                       lifetimePremiumPackage: lifetimePremiumPackage,
@@ -114,7 +114,7 @@ class _LifetimeDiscountBadge extends StatelessWidget {
         color: AppColors.secondary,
       ),
       child: Text(
-        '${discountRate.toInt()}％OFF',
+        '通常買い切り価格の ${lifetimePremiumPackage?.storeProduct.priceString ?? "¥20,000"} よりも ${discountRate.toInt()}％OFF',
         style: const TextStyle(
           fontWeight: FontWeight.w700,
           fontSize: 10,
