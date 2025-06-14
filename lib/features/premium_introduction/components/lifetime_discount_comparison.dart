@@ -16,7 +16,7 @@ class LifetimeDiscountComparison extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
     final lifetimePremiumPackage = ref.watch(lifetimePremiumPackageProvider);
-    final lifetimeLimitedPackage = ref.watch(lifetimeLimitedPackageProvider);
+    final lifetimeLimitedPackage = ref.watch(lifetimeDiscountPackageProvider);
 
     if (lifetimeDiscountRate == null || lifetimePremiumPackage == null || lifetimeLimitedPackage == null) {
       return Container();

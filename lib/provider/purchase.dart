@@ -89,7 +89,7 @@ final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   }
   return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
 });
-final lifetimeLimitedPackageProvider = Provider.autoDispose((ref) {
+final lifetimeDiscountPackageProvider = Provider.autoDispose((ref) {
   const limitedPackageOfferingType = OfferingType.discount;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];
   if (offering == null) {
@@ -111,7 +111,7 @@ final lifetimeDiscountRateProvider = Provider.autoDispose<double?>((ref) {
     return null;
   }
 
-  final lifetimeLimited = ref.watch(lifetimeLimitedPackageProvider);
+  final lifetimeLimited = ref.watch(lifetimeDiscountPackageProvider);
   final lifetimePremium = ref.watch(lifetimePremiumPackageProvider);
 
   if (lifetimeLimited == null || lifetimePremium == null) {
