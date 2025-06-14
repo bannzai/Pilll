@@ -16,9 +16,9 @@ class LifetimeDiscountComparison extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final lifetimeDiscountRate = ref.watch(lifetimeDiscountRateProvider);
     final lifetimePremiumPackage = ref.watch(lifetimePremiumPackageProvider);
-    final lifetimeLimitedPackage = ref.watch(lifetimeDiscountPackageProvider);
+    final lifetimeDiscountPackage = ref.watch(lifetimeDiscountPackageProvider);
 
-    if (lifetimeDiscountRate == null || lifetimePremiumPackage == null || lifetimeLimitedPackage == null) {
+    if (lifetimeDiscountRate == null || lifetimePremiumPackage == null || lifetimeDiscountPackage == null) {
       return Container();
     }
 
@@ -42,7 +42,7 @@ class LifetimeDiscountComparison extends HookConsumerWidget {
           const SizedBox(height: 20),
           _LifetimePriceComparison(
             lifetimePremiumPackage: lifetimePremiumPackage,
-            lifetimeLimitedPackage: lifetimeLimitedPackage,
+            lifetimeDiscountPackage: lifetimeDiscountPackage,
             discountRate: lifetimeDiscountRate,
           ),
           const SizedBox(height: 8),
@@ -56,12 +56,12 @@ class LifetimeDiscountComparison extends HookConsumerWidget {
 class _LifetimePriceComparison extends StatelessWidget {
   const _LifetimePriceComparison({
     required this.lifetimePremiumPackage,
-    required this.lifetimeLimitedPackage,
+    required this.lifetimeDiscountPackage,
     required this.discountRate,
   });
 
   final Package lifetimePremiumPackage;
-  final Package lifetimeLimitedPackage;
+  final Package lifetimeDiscountPackage;
   final double discountRate;
 
   @override
