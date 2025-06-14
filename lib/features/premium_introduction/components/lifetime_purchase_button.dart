@@ -27,25 +27,25 @@ class LifetimePurchaseButton extends StatelessWidget {
       onTap: () {
         onTap(lifetimePackage);
       },
-      child: SizedBox(
-        width: double.infinity,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 44),
-          child: Container(
-            padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
-            decoration: BoxDecoration(
-              color: AppColors.blueBackground,
-              borderRadius: const BorderRadius.all(Radius.circular(4)),
-              border: Border.all(
-                width: 2,
-                color: AppColors.primary,
-              ),
-            ),
-            child: Stack(
-              alignment: Alignment.center,
-              clipBehavior: Clip.none,
-              children: [
-                Column(
+      child: Stack(
+        alignment: Alignment.center,
+        clipBehavior: Clip.none,
+        children: [
+          SizedBox(
+            width: double.infinity,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 44),
+              child: Container(
+                padding: const EdgeInsets.fromLTRB(33, 24, 33, 24),
+                decoration: BoxDecoration(
+                  color: AppColors.blueBackground,
+                  borderRadius: const BorderRadius.all(Radius.circular(4)),
+                  border: Border.all(
+                    width: 2,
+                    color: AppColors.primary,
+                  ),
+                ),
+                child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -78,19 +78,18 @@ class LifetimePurchaseButton extends StatelessWidget {
                     ),
                   ],
                 ),
-                if (discountRate != null && offeringType == OfferingType.discount)
-                  Positioned(
-                    top: -8,
-                    right: -8,
-                    child: _LifetimeDiscountBadge(
-                      discountRate: discountRate!,
-                      lifetimePremiumPackage: lifetimePremiumPackage,
-                    ),
-                  ),
-              ],
+              ),
             ),
           ),
-        ),
+          if (discountRate != null && offeringType == OfferingType.discount)
+            Positioned(
+              top: -5,
+              child: _LifetimeDiscountBadge(
+                discountRate: discountRate!,
+                lifetimePremiumPackage: lifetimePremiumPackage,
+              ),
+            ),
+        ],
       ),
     );
   }
