@@ -78,7 +78,7 @@ class LifetimePurchaseButton extends StatelessWidget {
                     ),
                   ],
                 ),
-                if (discountRate != null && offeringType == OfferingType.limited)
+                if (discountRate != null && offeringType == OfferingType.discount)
                   Positioned(
                     top: -11,
                     right: 8,

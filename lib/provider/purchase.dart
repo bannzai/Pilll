@@ -17,13 +17,13 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/utils/remote_config.dart';
 
-enum OfferingType { limited, specialOffering, premium }
+enum OfferingType { discount, specialOffering, premium }
 
 extension OfferingTypeFunction on OfferingType {
   String get identifier {
     switch (this) {
-      case OfferingType.limited:
-        return 'Limited';
+      case OfferingType.discount:
+        return 'Discount';
       case OfferingType.specialOffering:
         return 'Premium';
       case OfferingType.premium:
@@ -42,7 +42,7 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user)
   if (isOverDiscountDeadline) {
     return OfferingType.premium;
   } else {
-    return OfferingType.limited;
+    return OfferingType.discount;
   }
 });
 final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
@@ -90,7 +90,7 @@ final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.monthly);
 });
 final lifetimeLimitedPackageProvider = Provider.autoDispose((ref) {
-  const limitedPackageOfferingType = OfferingType.limited;
+  const limitedPackageOfferingType = OfferingType.discount;
   final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];
   if (offering == null) {
     return null;

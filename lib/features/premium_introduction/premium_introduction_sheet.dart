@@ -113,7 +113,7 @@ class PremiumIntroductionSheetBody extends HookConsumerWidget {
                                 monthlyPremiumPackage: monthlyPremiumPackage,
                                 discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
                               ),
-                          if (lifetimeDiscountRate != null && lifetimePackage != null && offeringType == OfferingType.limited) ...[
+                          if (lifetimeDiscountRate != null && lifetimePackage != null && offeringType == OfferingType.discount) ...[
                             const SizedBox(height: 24),
                             const LifetimeDiscountComparison(),
                           ],
