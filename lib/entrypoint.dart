@@ -31,6 +31,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> entrypoint() async {
   runZonedGuarded(() async {
+    // [Locale:Setup] ほかのエントリーポイントでもよぶ必要がある
     // 日本語のフォーマットに頼っている部分があるので、jaは絶対に初期化しておく
     await (initializeDateFormatting('ja'), initializeDateFormatting(Platform.localeName)).wait;
     Intl.defaultLocale = 'ja';
@@ -79,6 +80,12 @@ Future<void> entrypoint() async {
 @pragma('vm:entry-point')
 Future<void> handleNotificationAction(NotificationResponse notificationResponse) async {
   if (notificationResponse.actionId == actionIdentifier) {
+    // [Locale:Setup] LocaleDataException: Locale data has not been initialized, call initializeDateFormatting(<locale>)
+    // UninitializedLocaleData._throwException (package:intl/src/intl_helpers.dart:80:5)
+    // ロケールをinitializeしないとエラーになる。おそらくsetupTimeZoneの前に呼ぶ必要がある
+    await (initializeDateFormatting('ja'), initializeDateFormatting(Platform.localeName)).wait;
+    Intl.defaultLocale = 'ja';
+
     await LocalNotificationService.setupTimeZone();
 
     // 通知からの起動の時に、FirebaseAuth.instanceを参照すると、まだinitializeされてないよ．的なエラーが出る
