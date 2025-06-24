@@ -1,6 +1,7 @@
+import 'dart:async';
+
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/widgets.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/utils/error_log.dart';
@@ -35,8 +36,9 @@ Future<void> setupRemoteConfig() async {
             RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
         RemoteConfigKeys.specialOffering2UseAlternativeText: RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
       }),
-      remoteConfig.fetchAndActivate()
     ).wait;
+    // 項目が増えて来てfetchが重たくなっていてアプリが開かない説があるので非同期にする。計測はしてない。since: 2025-06-25
+    unawaited(remoteConfig.fetchAndActivate());
 
     debugPrintRemoteConfig();
 
