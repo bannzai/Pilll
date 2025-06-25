@@ -38,7 +38,14 @@ Future<void> setupRemoteConfig() async {
       }),
     ).wait;
     // 項目が増えて来てfetchが重たくなっていてアプリが開かない説があるので非同期にする。計測はしてない。since: 2025-06-25
-    unawaited(remoteConfig.fetchAndActivate());
+    unawaited(() async {
+      try {
+        await remoteConfig.fetchAndActivate();
+      } catch (error, st) {
+        debugPrint('Error during fetchAndActivate: ${error.toString()}');
+        errorLogger.recordError(error, st);
+      }
+    }());
 
     debugPrintRemoteConfig();
 
