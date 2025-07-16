@@ -70,7 +70,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         AppOutlinedButton(
           onPressed: () async {
             analytics.logEvent(name: 'invalid_already_taken_pill_faq');
-            launchUrl(Uri.parse('https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5'));
+            launchUrl(Uri.parse('https://pilll.notion.site/467128e667ae4d6cbff4d61ee370cce5'));
           },
           text: L.seeHowToUsePauseTakingFeature,
         ),
