@@ -197,7 +197,16 @@ class PillSheet with _$PillSheet {
   // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
   // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
-    return dates[pillNumberInPillSheet - 1];
+    final index = pillNumberInPillSheet - 1;
+    if (index < 0 || index >= dates.length) {
+      // pillNumberInPillSheetが無効な場合は、最初または最後の日付を返す
+      if (index < 0) {
+        return dates.first;
+      } else {
+        return dates.last;
+      }
+    }
+    return dates[index];
   }
 
   // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] beginDate > targetDate(lastTakenDate) の場合がある。「本日の服用日」を編集して1番目を未服用にした場合
