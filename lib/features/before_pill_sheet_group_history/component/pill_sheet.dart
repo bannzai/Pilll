@@ -196,7 +196,9 @@ class PillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
 
-    final containedMenstruationDuration =
+    // pillNumberInPillSheetが範囲外の場合は生理期間判定をスキップ
+    final containedMenstruationDuration = pillNumberInPillSheet > 0 && 
+        pillNumberInPillSheet <= pillSheet.typeInfo.totalCount &&
         menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
     final text = pillSheetGroup.displayPillNumberOrDate(

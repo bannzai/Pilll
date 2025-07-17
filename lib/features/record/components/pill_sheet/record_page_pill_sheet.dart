@@ -193,6 +193,11 @@ class RecordPagePillSheet extends HookConsumerWidget {
     if (activePillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
+    
+    // pillNumberInPillSheetが有効範囲内かチェック
+    if (pillNumberInPillSheet < 1 || pillNumberInPillSheet > pillSheet.typeInfo.totalCount) {
+      return null;
+    }
 
     final takenDate = pillSheet.displayPillTakeDate(pillNumberInPillSheet);
     final updatedPillSheetGroup = await takePill(
@@ -297,7 +302,9 @@ class PillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
 
-    final containedMenstruationDuration =
+    // pillNumberInPillSheetが範囲外の場合は生理期間判定をスキップ
+    final containedMenstruationDuration = pillNumberInPillSheet > 0 && 
+        pillNumberInPillSheet <= pillSheet.typeInfo.totalCount &&
         menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
 
     final text = pillSheetGroup.displayPillNumberOrDate(
