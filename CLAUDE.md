@@ -89,6 +89,10 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 ## 開発時の注意点
 1. Firebaseの設定ファイルは環境ごとに分かれている（main.dev.dart/main.prod.dart）
 2. RemoteConfigでフィーチャーフラグを管理
+3. 配列アクセス時の範囲チェック
+   - displayPillTakeDateメソッドを呼ぶ際は、pillNumberInPillSheetが有効範囲内か確認
+   - 特にrest_duration絡みの処理では、ピルシートの最後のピル後の処理に注意
+   - 21錠タイプのピルシートでは、インデックスは0-20（ピル番号は1-21）
 
 ------------------------------------
 
