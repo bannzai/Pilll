@@ -80,7 +80,8 @@ class PremiumIntroductionFooter extends StatelessWidget {
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://pilll.wraptas.site/b10fd76f1d2246d286ad5cff03f22940'), mode: LaunchMode.inAppBrowserView);
+                        launchUrl(Uri.parse('https://pilll.notion.site/Pilll-b10fd76f1d2246d286ad5cff03f22940?pvs=25'),
+                            mode: LaunchMode.inAppBrowserView);
                       },
                   ),
                 ],

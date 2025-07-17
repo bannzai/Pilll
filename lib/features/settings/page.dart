@@ -132,7 +132,7 @@ class SettingPageBody extends StatelessWidget {
                             ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_about_trial', parameters: {});
-                              launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'), mode: LaunchMode.inAppBrowserView);
+                              launchUrl(Uri.parse('https://pilll.notion.site/3abd690f501549c48f813fd310b5f242'), mode: LaunchMode.inAppBrowserView);
                             },
                           ),
                           _separator(),
@@ -293,7 +293,7 @@ Android: https://onl.sc/c9xnQUk''';
                             ),
                             onTap: () {
                               analytics.logEvent(name: 'did_select_faq', parameters: {});
-                              launchUrl(Uri.parse('https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69'), mode: LaunchMode.inAppBrowserView);
+                              launchUrl(Uri.parse('https://pilll.notion.site/bb1f49eeded64b57929b7a13e9224d69'), mode: LaunchMode.inAppBrowserView);
                             }),
                         _separator(),
                         ListTile(
@@ -307,7 +307,7 @@ Android: https://onl.sc/c9xnQUk''';
                             ),
                             onTap: () {
                               analytics.logEvent(name: 'setting_did_select_release_note', parameters: {});
-                              launchUrl(Uri.parse('https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61'));
+                              launchUrl(Uri.parse('https://pilll.notion.site/172cae6bced04bbabeab1d8acad91a61'));
                             }),
                         _separator(),
                         ListTile(

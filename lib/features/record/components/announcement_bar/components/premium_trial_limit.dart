@@ -22,7 +22,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     return GestureDetector(
       onTap: () async {
         analytics.logEvent(name: 'pressed_trial_limited_announcement_bar');
-        await launchUrl(Uri.parse('https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242'));
+        await launchUrl(Uri.parse('https://pilll.notion.site/3abd690f501549c48f813fd310b5f242'));
       },
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 8),
