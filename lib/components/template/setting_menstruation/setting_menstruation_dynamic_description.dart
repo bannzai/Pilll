@@ -10,7 +10,8 @@ import 'package:flutter/material.dart';
 import 'package:pilll/features/localizations/l.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
-  static final List<String> durationList = ['-', ...List<String>.generate(7, (index) => (index + 1).toString())];
+  // NOTE: 30日という上限値は特に医学的根拠があるわけではなく、十分な選択肢を提供するための適当な値です
+  static final List<String> durationList = ['-', ...List<String>.generate(30, (index) => (index + 1).toString())];
 }
 
 class SettingMenstruationDynamicDescription extends StatelessWidget {
