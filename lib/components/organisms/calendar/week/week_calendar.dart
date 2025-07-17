@@ -106,8 +106,11 @@ class CalendarWeekLine extends HookConsumerWidget {
   }
 
   bool _contains(CalendarBandModel calendarBandModel) {
-    final isInRange = dateRange.inRange(calendarBandModel.begin) || dateRange.inRange(calendarBandModel.end);
-    return isInRange;
+    // 週の期間と生理期間が重なるかどうかを判定
+    // 週の開始が生理期間の終了より前 かつ 週の終了が生理期間の開始より後
+    final isOverlapping = dateRange.begin.isBefore(calendarBandModel.end.add(const Duration(days: 1))) &&
+        dateRange.end.isAfter(calendarBandModel.begin.subtract(const Duration(days: 1)));
+    return isOverlapping;
   }
 
   Widget _buildBand({
