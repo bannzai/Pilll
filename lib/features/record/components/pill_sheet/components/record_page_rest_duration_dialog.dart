@@ -115,8 +115,17 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
       case PillSheetAppearanceMode.number:
         return L.withNumber((pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1).toString());
       case PillSheetAppearanceMode.date:
-        final date = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet
-            .displayPillTakeDate(pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1);
+        final pillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
+        final nextPillNumber = pillSheet.lastTakenOrZeroPillNumber + 1;
+        
+        // ピルシートの範囲を超える場合は、最後のピルの翌日の日付を表示
+        if (nextPillNumber > pillSheet.typeInfo.totalCount) {
+          final lastPillDate = pillSheet.displayPillTakeDate(pillSheet.typeInfo.totalCount);
+          final nextDate = lastPillDate.add(const Duration(days: 1));
+          return DateTimeFormatter.monthAndDay(nextDate);
+        }
+        
+        final date = pillSheet.displayPillTakeDate(nextPillNumber);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:
