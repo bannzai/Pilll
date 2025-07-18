@@ -42,12 +42,12 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    
+
     // targetRevertPillNumberIntoPillSheetが有効範囲内かチェック
     if (targetRevertPillNumberIntoPillSheet < 1 || targetRevertPillNumberIntoPillSheet > targetPillSheet.typeInfo.totalCount) {
       throw FormatException('Invalid pill number: $targetRevertPillNumberIntoPillSheet');
     }
-    
+
     final revertDate = targetPillSheet.displayPillTakeDate(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
     debugPrint('revertDate: $revertDate');
 
