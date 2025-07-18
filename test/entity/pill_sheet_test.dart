@@ -699,6 +699,53 @@ void main() {
       });
     });
   });
+  group("#displayPillTakeDate with boundary checks", () {
+    test("範囲外アクセス: pillNumberInPillSheetが0の場合", () {
+      final originalTodayRepository = todayRepository;
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+      addTearDown(() {
+        todayRepository = originalTodayRepository;
+      });
+
+      final PillSheet pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+      );
+
+      // 0番目（存在しない）にアクセスしても、最初の日付が返される
+      expect(pillSheet.displayPillTakeDate(0), DateTime.parse("2020-09-01"));
+    });
+
+    test("範囲外アクセス: pillNumberInPillSheetが配列サイズを超える場合", () {
+      final originalTodayRepository = todayRepository;
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+      addTearDown(() {
+        todayRepository = originalTodayRepository;
+      });
+
+      final PillSheet pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+      );
+
+      // 29番目（存在しない）にアクセスしても、最後の日付が返される
+      expect(pillSheet.displayPillTakeDate(29), DateTime.parse("2020-09-28"));
+      expect(pillSheet.displayPillTakeDate(100), DateTime.parse("2020-09-28"));
+    });
+  });
+
   group("#estimatedEndTakenDate", () {
     test("spec", () {
       final mockTodayRepository = MockTodayService();

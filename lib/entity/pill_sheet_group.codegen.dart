@@ -249,7 +249,16 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
+    if (pageIndex < 0 || pageIndex >= pillSheets.length) {
+      // pageIndexが無効な場合は空文字を返す
+      return '';
+    }
+    final pillSheet = pillSheets[pageIndex];
+    // pillNumberInPillSheetが有効範囲内かチェック
+    if (pillNumberInPillSheet < 1 || pillNumberInPillSheet > pillSheet.typeInfo.totalCount) {
+      return '';
+    }
+    return DateTimeFormatter.monthAndDay(pillSheet.displayPillTakeDate(pillNumberInPillSheet));
   }
 
   @visibleForTesting
@@ -264,7 +273,15 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
     required int pageIndex,
     required int pillNumberInPillSheet,
   }) {
-    return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
+    final filteredList = pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList();
+    final index = pillNumberInPillSheet - 1;
+
+    if (filteredList.isEmpty || index < 0 || index >= filteredList.length) {
+      // フィルタリング結果が空、またはインデックスが無効な場合はpillNumberInPillSheetをそのまま返す
+      return pillNumberInPillSheet;
+    }
+
+    return filteredList[index].number;
   }
 }
 
@@ -388,7 +405,7 @@ extension PillSheetGroupMenstruationDomain on PillSheetGroup {
 
     final menstruationDateRanges = <DateRange>[];
     for (final pillSheet in pillSheets) {
-      if (setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount) {
+      if (setting.pillNumberForFromMenstruation > 0 && setting.pillNumberForFromMenstruation <= pillSheet.typeInfo.totalCount) {
         final left = pillSheet.displayPillTakeDate(setting.pillNumberForFromMenstruation);
         final right = left.addDays(setting.durationMenstruation - 1);
         menstruationDateRanges.add(DateRange(left, right));
@@ -411,9 +428,13 @@ extension PillSheetGroupMenstruationDomain on PillSheetGroup {
         final end = begin + (pillSheet.typeInfo.totalCount - 1);
         for (final fromMenstruation in fromMenstruations) {
           if (begin <= fromMenstruation && fromMenstruation <= end) {
-            final left = pillSheet.displayPillTakeDate(fromMenstruation - offset);
-            final right = left.addDays(setting.durationMenstruation - 1);
-            menstruationDateRanges.add(DateRange(left, right));
+            final pillNumberInPillSheet = fromMenstruation - offset;
+            // pillNumberInPillSheetが有効範囲内かチェック
+            if (pillNumberInPillSheet > 0 && pillNumberInPillSheet <= pillSheet.typeInfo.totalCount) {
+              final left = pillSheet.displayPillTakeDate(pillNumberInPillSheet);
+              final right = left.addDays(setting.durationMenstruation - 1);
+              menstruationDateRanges.add(DateRange(left, right));
+            }
           }
         }
       }
