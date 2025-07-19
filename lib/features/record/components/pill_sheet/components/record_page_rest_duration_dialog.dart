@@ -101,6 +101,20 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final targetPillSheet = pillSheetGroup.targetBeginRestDurationPillSheet;
+    final lastTakenPillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
+
+    // 最後のピルシートが全て飲み終わっていて、次のピルシートがない場合
+    if (lastTakenPillSheet.isTakenAll && targetPillSheet.id == lastTakenPillSheet.id) {
+      return Text(L.pauseTakingConfirm,
+          style: const TextStyle(
+            color: TextColor.main,
+            fontSize: 16,
+            fontWeight: FontWeight.w700,
+            fontFamily: FontFamily.japanese,
+          ));
+    }
+
     return Text(L.pauseTakingFromNumber(_number),
         style: const TextStyle(
           color: TextColor.main,
@@ -111,26 +125,30 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   }
 
   String get _number {
+    final targetPillSheet = pillSheetGroup.targetBeginRestDurationPillSheet;
+
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return L.withNumber((pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber + 1).toString());
+        // targetPillSheetのlastTakenOrZeroPillNumberが0の場合は1番から
+        final nextNumber = targetPillSheet.lastTakenOrZeroPillNumber == 0 ? 1 : targetPillSheet.lastTakenOrZeroPillNumber + 1;
+        return L.withNumber(nextNumber.toString());
       case PillSheetAppearanceMode.date:
-        final pillSheet = pillSheetGroup.lastTakenPillSheetOrFirstPillSheet;
-        final nextPillNumber = pillSheet.lastTakenOrZeroPillNumber + 1;
-
-        // ピルシートの範囲を超える場合は、最後のピルの翌日の日付を表示
-        if (nextPillNumber > pillSheet.typeInfo.totalCount) {
-          final lastPillDate = pillSheet.displayPillTakeDate(pillSheet.typeInfo.totalCount);
-          final nextDate = lastPillDate.add(const Duration(days: 1));
-          return DateTimeFormatter.monthAndDay(nextDate);
-        }
-
-        final date = pillSheet.displayPillTakeDate(nextPillNumber);
+        // targetPillSheetのavailableRestDurationBeginDateを使用
+        final date = pillSheetGroup.availableRestDurationBeginDate;
         final dateString = DateTimeFormatter.monthAndDay(date);
         return dateString;
       case PillSheetAppearanceMode.sequential:
       case PillSheetAppearanceMode.cyclicSequential:
-        return L.withNumber((pillSheetGroup.sequentialLastTakenPillNumber + 1).toString());
+        // 複数ピルシートの場合の通算番号
+        int sequentialNumber;
+        if (targetPillSheet.id != pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.id) {
+          // 次のピルシートの1番目
+          final offset = pillSheetGroup.pillSheets.take(targetPillSheet.groupIndex).fold<int>(0, (sum, sheet) => sum + sheet.typeInfo.totalCount);
+          sequentialNumber = offset + 1;
+        } else {
+          sequentialNumber = pillSheetGroup.sequentialLastTakenPillNumber + 1;
+        }
+        return L.withNumber(sequentialNumber.toString());
     }
   }
 }
