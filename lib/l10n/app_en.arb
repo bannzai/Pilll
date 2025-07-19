@@ -533,6 +533,10 @@
       }
     }
   },
+  "pauseTakingConfirm": "Do you want to start a break period?",
+  "@pauseTakingConfirm": {
+    "description": "Do you want to start a break period?"
+  },
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}th",
   "@lastTakenPlusOnePillNumber": {
     "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}th",

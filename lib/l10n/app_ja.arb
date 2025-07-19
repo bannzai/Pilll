@@ -537,6 +537,10 @@
       }
     }
   },
+  "pauseTakingConfirm": "服用お休み期間を始めますか？",
+  "@pauseTakingConfirm": {
+    "description": "服用お休み期間を始めますか？"
+  },
   "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
   "@lastTakenPlusOnePillNumber": {
     "description": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番",
