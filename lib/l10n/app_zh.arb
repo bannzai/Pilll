@@ -1205,7 +1205,7 @@
   },
   "physicalCondition": "身体状况",
   "@physicalCondition": {
-    "description": "体調"
+    "description": "日記機能において、ユーザーが体調や身体の状態を記録する際の項目名として表示されます。ピル服用による体調の変化や身体のコンディションを記録するために使用されます。"
   },
   "deletedDiaryCannotBeRecovered": "已删除的日记无法恢复",
   "@deletedDiaryCannotBeRecovered": {
