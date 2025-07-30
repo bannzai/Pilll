@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "فشل في الحصول على معلومات العميل. يرجى الانتظار قليلاً والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى الاتصال من خلال الإعدادات > الاستفسارات. التفاصيل: الرمز: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "فشل في الحصول على معلومات العميل. يرجى المحاولة مرة أخرى بعد فترة. إذا لم يتم حل المشكلة، يرجى الاتصال بنا عبر الإعدادات > الاستفسارات. التفاصيل: الكود: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
