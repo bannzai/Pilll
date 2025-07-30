@@ -1935,7 +1935,7 @@
   },
   "errorOccurred": "Mae error wedi digwydd.",
   "@errorOccurred": {
-    "description": "エラーが発生しました"
+    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示される基本的なエラーメッセージです。具体的な原因を伝えずに、シンプルにエラーの発生を通知する場合に使用されます。"
   },
   "unknownError": "Cafodd gwall anhysbys ddigwydd.",
   "@unknownError": {
