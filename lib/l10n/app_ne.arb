@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll - विशेष रूप से यौन बर्थ कंट्रोल की दवाओं के लिए ध्यान देने वाला अनुप्रयोग",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "अनुप्रयोगमा दर्ता गर्न सकिने अधिकतम सङ्ख्या पुगेर पुगेको छ। कृपया {ReminderTimeMaximumCount} वटा भित्र राख्नुहोस्।",
   "@reachedMaximumCountOfReminderTimes": {

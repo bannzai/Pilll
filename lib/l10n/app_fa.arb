@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll برنامه یادآوری مصرف قرص است که به طور خاص برای مصرف قرص طراحی شده است",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "به حداکثر تعداد قابل ثبت رسیده‌اید. لطفاً تا {ReminderTimeMaximumCount} مورد محدود کنید.",
   "@reachedMaximumCountOfReminderTimes": {

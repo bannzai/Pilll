@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll, l'aplicació de recordatori de píndoles especialitzada en la presa de píndoles.",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "S'ha arribat al límit de registres possibles. Si us plau, mantingueu-vos dins de {ReminderTimeMaximumCount} registres.",
   "@reachedMaximumCountOfReminderTimes": {

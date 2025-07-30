@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll é unha aplicación de recordatorio de pílulas especializada na toma de pílulas.",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "Alcanzou o límite de rexistro. Debe permanecer dentro de {ReminderTimeMaximumCount} elementos.",
   "@reachedMaximumCountOfReminderTimes": {

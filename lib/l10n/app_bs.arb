@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll aplikacija za podsjećanje na uzimanje pilula specijalizovana za uzimanje pilula",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "Dostigli ste maksimalni broj registracija. Molimo vas da smanjite na {ReminderTimeMaximumCount} ili manje.",
   "@reachedMaximumCountOfReminderTimes": {

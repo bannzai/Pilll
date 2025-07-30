@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll កម្មវិធីរំឭងការទទួលប៉ៅដែលផ្តោតលើការទទួលប៉ៅ",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "បានដល់អតិបរិមាដែលអាចចុះឈ្មោះបាន។ សូមរក្សាទុកនៅក្រោម {ReminderTimeMaximumCount} 件",
   "@reachedMaximumCountOfReminderTimes": {

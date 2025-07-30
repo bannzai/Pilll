@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll - aplikacja do przypominania o zażywaniu tabletek, skoncentrowana na tabletkach antykoncepcyjnych.",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "Osiągnięto maksymalny limit rejestracji. Proszę zredukować do maksymalnie {ReminderTimeMaximumCount} pozycji.",
   "@reachedMaximumCountOfReminderTimes": {

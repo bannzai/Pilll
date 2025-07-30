@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll একটি পিল স্মরণ করিয়ে দেওয়া অ্যাপ যা পিল গ্রহণের উপর বিশেষভাবে মনোনিবেশ করে।",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "নিবন্ধন করার সর্বাধিক সীমাতে পৌঁছে গেছে। অনুগ্রহ করে {ReminderTimeMaximumCount}件ের মধ্যে সীমাবদ্ধ রাখুন।",
   "@reachedMaximumCountOfReminderTimes": {

@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll, një aplikacion për kujtesë për pilulat i specializuar për marrëveshjen e pilulave.",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "Keni arritur në kufirin maksimal të regjistrimit. Ju lutemi, mbani në {ReminderTimeMaximumCount} ose më pak",
   "@reachedMaximumCountOfReminderTimes": {

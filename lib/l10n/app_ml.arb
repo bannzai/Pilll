@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll സ്‌പ്പം മരുന്ന് മുളച്ചതിന്റെ പ്രത്യേകമായ മരുന്ന് മുളച്ച Reminder ആപ്പാണ്",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "നിങ്ങൾക്ക് രജിസ്റ്റർ ചെയ്യാനുള്ള പരമാവധി എത്തിച്ചേരുകയും ചെയ്തു. ദയവായി {ReminderTimeMaximumCount}件以内に収めてください",
   "@reachedMaximumCountOfReminderTimes": {

@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll යනු පියෙන් පිළිකුල් භාවිතය සඳහා විශේෂිත පියෙන් මතකයකාරක යෙදුම වේ",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "ඔබට ලියාපදිංචි කළ හැකි උපරිමය ෙලඟට පැමිණී ඇත. {ReminderTimeMaximumCount} කට අවසන් කරන්න.",
   "@reachedMaximumCountOfReminderTimes": {

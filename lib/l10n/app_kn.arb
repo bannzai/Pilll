@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "ಪಿಲ್ಲ್ ಪಿಲ್ಲು ತೆಗೆದುಕಳ್ಳುವ ಉದ್ದೇಶಕ್ಕೆ 特化 ਕਰಿರುವ ਪਿਲ੍ਲ ਰਿਮਾਈਂਡਰ ਐਪ",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "ನೀವು ನೋಂದಾಯಿಸುವ ಗರಿಷ್ಠ ಸಂಖ್ಯೆಗೆ ತಲುಪಿದ್ದೀರಿ. {ReminderTimeMaximumCount} 件ಗಳಲ್ಲಿ ಮಾತ್ರ ಇರಬೇಕು.",
   "@reachedMaximumCountOfReminderTimes": {

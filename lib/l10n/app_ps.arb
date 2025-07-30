@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll د پيل د کارولو لپاره ځانګړې شوې د پيل یادولو غوښتنلیک",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "تاسو د ثبت کولو اعظمي حد ته رسیدلي یاست. مهرباني وکړئ د {ReminderTimeMaximumCount} پیغامونو په لږو کې وساتئ.",
   "@reachedMaximumCountOfReminderTimes": {

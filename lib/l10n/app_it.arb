@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll, l'app per promemoria delle pillole specializzata per l'assunzione di pillole",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "Hai raggiunto il limite massimo di registrazione. Per favore, mantieni il numero entro {ReminderTimeMaximumCount}.",
   "@reachedMaximumCountOfReminderTimes": {

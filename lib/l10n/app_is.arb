@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "Pilll - Fyrirbyggjandi pillur áminningarforrit",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "Þú hefur náð hámarks skráningu. Vinsamlegast taktu það innan {ReminderTimeMaximumCount} skráninga.",
   "@reachedMaximumCountOfReminderTimes": {

@@ -1369,7 +1369,7 @@
   },
   "pilllDescription": "పిల్ల్స్ యొక్క సమయాన్ని గుర్తుచేసే ప్రత్యేకంగా రూపొందించబడిన పిల్ల్స్ రిమైండర్ యాప్",
   "@pilllDescription": {
-    "description": "Pilll ピル服用に特化したピルリマインダーアプリ"
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
   "reachedMaximumCountOfReminderTimes": "మీరు నమోదు చేసుకునే గరిష్ట సంఖ్య చేరుకుంది. దయచేసి {ReminderTimeMaximumCount}件 లోపు ఉంచండి.",
   "@reachedMaximumCountOfReminderTimes": {
