@@ -1927,7 +1927,7 @@
   },
   "unknownError": "Une erreur inconnue s'est produite.",
   "@unknownError": {
-    "description": "不明なエラーが発生しました"
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
   },
   "unexpectedErrorOccurred": "Une erreur inattendue s'est produite.",
   "@unexpectedErrorOccurred": {
