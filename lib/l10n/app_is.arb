@@ -310,7 +310,7 @@
   },
   "withdraw": "Afar",
   "@withdraw": {
-    "description": "退会する"
+    "description": "ユーザーがPilllアプリのサービスから完全に退会（アカウント削除）する際にボタンやメニューに表示されるテキストです。アプリの利用を停止し、すべてのデータを削除する最終的な操作を表します。"
   },
   "withdrawalCompleted": "Hætt er við",
   "@withdrawalCompleted": {
