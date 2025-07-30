@@ -285,7 +285,7 @@
   },
   "reLogin": "Rilogimi",
   "@reLogin": {
-    "description": "再ログイン"
+    "description": "ログインセッションが切れた際やエラーが発生した際に、ユーザーがアプリに再度ログインするためのボタンや項目です。健康管理アプリの継続的な利用において、セキュリティやセッション管理の観点から再認証が必要になった場合に表示されます。"
   },
   "authenticationInfoUpdated": "Informacionet e verifikimit u perditen.",
   "@authenticationInfoUpdated": {
