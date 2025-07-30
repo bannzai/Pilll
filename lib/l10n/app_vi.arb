@@ -598,7 +598,7 @@
   },
   "changePillDaysForSheet": "Thay đổi số ngày dùng thuốc trong vỉ",
   "@changePillDaysForSheet": {
-    "description": "シートの服用日数を変更"
+    "description": "ピルシート（ブリスターパック）の服用期間日数を変更する設定項目。ユーザーが21日間、28日間など、そのシートを何日間服用するかを設定できる機能のラベルです。"
   },
   "changedStartAndEndNumbers": "Đã thay đổi số bắt đầu và số kết thúc",
   "@changedStartAndEndNumbers": {

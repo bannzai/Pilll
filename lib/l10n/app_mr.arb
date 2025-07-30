@@ -598,7 +598,7 @@
   },
   "changePillDaysForSheet": "शिटचा औषध घेण्याचा दिवस बदलू",
   "@changePillDaysForSheet": {
-    "description": "シートの服用日数を変更"
+    "description": "ピルシート（ブリスターパック）の服用期間日数を変更する設定項目。ユーザーが21日間、28日間など、そのシートを何日間服用するかを設定できる機能のラベルです。"
   },
   "changedStartAndEndNumbers": "सुरुवात आणि समाप्तीच्या क्रमांकात बदल केला आहे",
   "@changedStartAndEndNumbers": {
