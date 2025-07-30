@@ -573,7 +573,7 @@
   },
   "unmarkTodayPillAsTakenToPause": "Sinds ik de pil die ik vandaag moet innemen niet heb ingenomen",
   "@unmarkTodayPillAsTakenToPause": {
-    "description": "今日飲むピルを未服用にしてから"
+    "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
   },
   "pauseTaking": "Pauze inname",
   "@pauseTaking": {
