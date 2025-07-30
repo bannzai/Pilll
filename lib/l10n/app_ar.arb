@@ -1609,7 +1609,7 @@
       }
     }
   },
-  "purchaseErrorEmptySubscriberAttributesError": "خطأ غير معروف. لم يمكن الحصول على معلومات الشراء مسبقاً. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "خطأ غير معروف السبب. لم نتمكن من الحصول على معلومات الشراء مسبقاً. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
