@@ -1570,7 +1570,7 @@
       }
     }
   },
-  "purchaseErrorLogOutWithAnonymousUserError": "Daar was 'n fout om gebruikersinligting te verkry. Probeer asseblief weer na 'n rukkie. As dit nie opgelos word nie, kontak asseblief ons via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Kon nie gebruikersinligting kry nie. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
     "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
