@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "በአሁኑ ጊዜ ተመራቂ የፒል ቅርጸ ቁምፊ አልተፈለገም።",
+  "currentPillSheetNotFound": "አሁን የሚወሰደው የክኒን ወረቀት አልተገኘም",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
