@@ -1902,7 +1902,7 @@
   },
   "googleAccount": "Google account",
   "@googleAccount": {
-    "description": "Google account"
+    "description": "アプリへのログインや設定画面で表示されるGoogleアカウントのラベルです。ユーザー認証やデータ同期に使用されます。"
   },
   "diaryRecord": "Record diary",
   "@diaryRecord": {
