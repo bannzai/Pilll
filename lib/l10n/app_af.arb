@@ -1769,7 +1769,7 @@
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
-  "forceUpdateMessage": "Ons versoek dat u die weergawe van die aansoek wat u gebruik, opdateer. U kan die nuutste weergawe op {storeName} opdateer.",
+  "forceUpdateMessage": "Ons versoek dat jy jou app se weergawe opdateer. Dateer asseblief op na die nuutste weergawe vanaf {storeName}.",
   "@forceUpdateMessage": {
     "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
