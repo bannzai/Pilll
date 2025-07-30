@@ -2292,7 +2292,7 @@
   },
   "enableNotificationInSilentModeSetting": "ການເອົ້າຈິດໃນແບບສະຖານທີ່ສະມາດ ໃນຄວາມຈິງເປັນການລົງຄະແນນສະຖານນິຍາມເຊັ່ນແບບມະນຸດ PSI ໃນພາຍໃນລະດັບສູງແລະສະກຸນຂອງມາດສະຢິງໃນຫລຸດໄປທັງທົນທີ່ສຽງດິນຄລິງຊຽງສາຍຈຶຈອບຫລືໂຕໃນຄວາມຈິງເນອມສລະຊາຍ LymonBLA.",
   "@enableNotificationInSilentModeSetting": {
-    "description": "マナーモードでも通知設定"
+    "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
   },
   "criticalAlertVolume": "ເສຽງດັດ",
   "@criticalAlertVolume": {

@@ -2292,7 +2292,7 @@
   },
   "enableNotificationInSilentModeSetting": "మానర్ మోడ్ లోనూ నోటిఫికేషన్ సెట్టింగ్స్",
   "@enableNotificationInSilentModeSetting": {
-    "description": "マナーモードでも通知設定"
+    "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
   },
   "criticalAlertVolume": "ఒక ఏకకాలిక చొప్పిత వాల్యూమ్",
   "@criticalAlertVolume": {
