@@ -191,7 +191,7 @@
   },
   "quickRecord": "Enregistrement rapide",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Vous pouvez voir les pilules à prendre aujourd'hui sur l'écran de notification et enregistrer directement votre prise.",
   "@quickRecordDescription": {

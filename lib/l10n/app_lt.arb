@@ -191,7 +191,7 @@
   },
   "quickRecord": "Greitas įrašas",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Šiame pranešimų ekrane galite pamatyti, kokius vaistus reikia išgerti šiandien, ir iš karto užregistruoti jų vartojimą.",
   "@quickRecordDescription": {

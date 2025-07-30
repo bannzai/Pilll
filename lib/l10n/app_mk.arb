@@ -191,7 +191,7 @@
   },
   "quickRecord": "Brza evidencija",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "На екранот за известувања можете да видите кои таблети треба да ги земете денес и веднаш да ја запишете вашата доза.",
   "@quickRecordDescription": {

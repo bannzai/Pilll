@@ -191,7 +191,7 @@
   },
   "quickRecord": "Hurtig registrering",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Du kan se de piller, du skal tage i dag, på meddelelsesskærmen, og du kan registrere indtagelsen direkte der.",
   "@quickRecordDescription": {

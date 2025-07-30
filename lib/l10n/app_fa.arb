@@ -191,7 +191,7 @@
   },
   "quickRecord": "ثبت سریع",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "شما می‌توانید در صفحه اعلان‌ها قرص‌هایی که امروز باید مصرف کنید را ببینید و مستقیماً آنها را ثبت کنید.",
   "@quickRecordDescription": {

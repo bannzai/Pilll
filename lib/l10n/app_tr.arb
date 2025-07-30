@@ -191,7 +191,7 @@
   },
   "quickRecord": "Hızlı Kayıt",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Bu bildirim ekranında bugün almanız gereken hapları görebilir ve doğrudan alım kaydınızı gerçekleştirebilirsiniz.",
   "@quickRecordDescription": {

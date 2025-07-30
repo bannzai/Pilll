@@ -191,7 +191,7 @@
   },
   "quickRecord": "Hiterni zapis",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Na obvestilnem zaslonu lahko vidite, katere tablete morate vzeti danes, in jih takoj evidentirate.",
   "@quickRecordDescription": {

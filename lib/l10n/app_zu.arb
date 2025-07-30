@@ -191,7 +191,7 @@
   },
   "quickRecord": "Qhuba irekhodi",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Inombolo yokwazisa ikuvumela ukuthi ubone ukuthi iyiphi iphilisi okufanele uyithathe namuhla, futhi ungayirekhoda ngqo.",
   "@quickRecordDescription": {

@@ -191,7 +191,7 @@
   },
   "quickRecord": "Vinige rekord",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Jy kan vandag se pille op die kennisgewing skerm sien en dit direk aanteken.",
   "@quickRecordDescription": {

@@ -191,7 +191,7 @@
   },
   "quickRecord": "Quick record",
   "@quickRecord": {
-    "description": "Quick record"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "You can record your pill intake on the notification screen",
   "@quickRecordDescription": {

@@ -191,7 +191,7 @@
   },
   "quickRecord": "Schnellrekord",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Du chasch i de Benachrichtigungsschirme gseh, weli Pille hüt zämmehesch und direkt din Einnahme recording mache.",
   "@quickRecordDescription": {

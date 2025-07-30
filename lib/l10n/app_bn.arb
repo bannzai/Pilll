@@ -191,7 +191,7 @@
   },
   "quickRecord": "কুইক রেকর্ড",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "নোটিফিকেশন স্ক্রীনে আজ আপনার নেওয়া পিলটি দেখতে পাবেন এবং সরাসরি ব্যবহার রেকর্ড করতে সক্ষম হবেন।",
   "@quickRecordDescription": {

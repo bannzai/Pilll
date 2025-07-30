@@ -191,7 +191,7 @@
   },
   "quickRecord": "퀵 레코드",
   "@quickRecord": {
-    "description": "퀵 레코드"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "오늘 복용할 딜을 알 수 있고 그대로 복용 기록을 할 수 있습니다.",
   "@quickRecordDescription": {

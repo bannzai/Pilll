@@ -191,7 +191,7 @@
   },
   "quickRecord": "快速记录",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "您可以在通知界面查看今天需要服用的药丸，并直接记录服用情况。",
   "@quickRecordDescription": {

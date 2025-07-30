@@ -191,7 +191,7 @@
   },
   "quickRecord": "Tez yozuv",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Bugun ichish kerak bo'lgan dori-tabletkalarni bilib olib, aynan shu joyda qabul qilish tarixini yozish imkoniyatiga egasiz.",
   "@quickRecordDescription": {

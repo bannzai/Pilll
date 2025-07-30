@@ -191,7 +191,7 @@
   },
   "quickRecord": "クイックレコード",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。",
   "@quickRecordDescription": {

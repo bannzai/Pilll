@@ -191,7 +191,7 @@
   },
   "quickRecord": "Kiirete registreerimine",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Teavituse ekraanil on näha, millised pillid tuleb täna võtta, ja saate neid kohe ka sisse võtta.",
   "@quickRecordDescription": {

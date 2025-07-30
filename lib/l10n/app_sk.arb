@@ -191,7 +191,7 @@
   },
   "quickRecord": "Rýchly záznam",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Na obrazovke upozornení vidíte, aké pilulky máte užiť dnes, a môžete si ich rovno zaznamenať.",
   "@quickRecordDescription": {

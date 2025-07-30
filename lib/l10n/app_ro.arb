@@ -191,7 +191,7 @@
   },
   "quickRecord": "Înregistrare rapidă",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Puteți vedea pastilele pe care trebuie să le luați astăzi în ecranul de notificări și puteți înregistra direct consumul.",
   "@quickRecordDescription": {

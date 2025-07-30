@@ -191,7 +191,7 @@
   },
   "quickRecord": "क्विक रिकॉर्ड",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "आप सूचनाओं के माध्यम से आज की दवा यानी पिल की पहचान कर सकते हैं और इसे सीधे रिकॉर्ड कर सकते हैं।",
   "@quickRecordDescription": {

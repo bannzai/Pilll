@@ -191,7 +191,7 @@
   },
   "quickRecord": "سجل سريع",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "يمكنك معرفة الحبوب التي يجب تناولها اليوم مباشرة من شاشة الإشعارات وتسجل تناولها.",
   "@quickRecordDescription": {

@@ -191,7 +191,7 @@
   },
   "quickRecord": "កំណត់ត្រាលឿន",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "អ្នកអាចដឹងពីថវិកាដែលត្រូវភ្លេចចំណីនៅថ្ងៃនេះនៅលើផ្ទាំងជូនដំណឹង ហើយអ្នកអាចកត់ត្រាការបរិ consumir ដោយផ្ទាល់បាន។",
   "@quickRecordDescription": {

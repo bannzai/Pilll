@@ -191,7 +191,7 @@
   },
   "quickRecord": "Schnellaufnahme",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Im Benachrichtigungsbildschirm können Sie sehen, welche Pillen Sie heute einnehmen müssen, und können Ihre Einnahme direkt aufzeichnen.",
   "@quickRecordDescription": {

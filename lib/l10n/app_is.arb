@@ -191,7 +191,7 @@
   },
   "quickRecord": "Fljótleg skráning",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Þú getur séð hvaða pillur þú átt að taka í dag á tilkynningarskjánum og skráð inntöku beint þar.",
   "@quickRecordDescription": {

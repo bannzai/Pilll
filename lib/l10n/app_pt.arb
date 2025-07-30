@@ -191,7 +191,7 @@
   },
   "quickRecord": "Registro Rápido",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Você pode ver os comprimidos que deve tomar hoje na tela de notificações e registrar sua tomada diretamente.",
   "@quickRecordDescription": {

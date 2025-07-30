@@ -191,7 +191,7 @@
   },
   "quickRecord": "Tez qeyd",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Bu gün içməli olduğunuz həbləri bildiriş ekranında görə və birbaşa qəbul qeydini edə bilərsiniz.",
   "@quickRecordDescription": {

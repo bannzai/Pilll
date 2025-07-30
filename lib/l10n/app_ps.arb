@@ -191,7 +191,7 @@
   },
   "quickRecord": "فوري ریکارڈ",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "تاسې کولی شئ د خبرتیا په صفحه کې د نن ورځې د درملو مهال ویش وپیژنئ او په آسانۍ سره د درملو ریکارډ وساتئ.",
   "@quickRecordDescription": {

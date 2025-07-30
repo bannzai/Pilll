@@ -191,7 +191,7 @@
   },
   "quickRecord": "ක්වික් පැමණි",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "ඔබට සහයවන දිනපත අත්සන් සටහනේ ඇති පොළොව සොයා ගන්නා අතර සිටින්න.",
   "@quickRecordDescription": {

@@ -191,7 +191,7 @@
   },
   "quickRecord": "Mabilis na Tala",
   "@quickRecord": {
-    "description": "クイックレコード"
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
   "quickRecordDescription": "Sa screen ng abiso, malalaman mo ang mga gamot na iinumin ngayon at maaari mong agad na itala ang pag-inom nito.",
   "@quickRecordDescription": {
