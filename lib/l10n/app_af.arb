@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Onbekende fout. Werk opdatering na en probeer dit weer. As dit nie oplos nie, kontak ons asseblief via Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "'n Onbekende fout het voorgekom. Werk asseblief op na die nuutste weergawe en probeer weer. As die probleem voortduur, kontak ons asseblief by Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
