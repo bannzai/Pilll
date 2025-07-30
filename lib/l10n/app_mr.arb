@@ -1832,7 +1832,7 @@
   },
   "emailAlreadyInUse": "तुम्ही आधीच {accountTypeProviderName} खात्यासह वापरत असलेल्या ई-मेल पत्त्यासाठी तुम्ही इतर Pilll खात्यासोबत जोडलेले आहे त्यामुळे तुम्ही नोंदणी करू शकत नाही. कृपया FAQ पहा. तपशील: {exceptionMessage}",
   "@emailAlreadyInUse": {
-    "description": "すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
