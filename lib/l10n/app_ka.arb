@@ -26,7 +26,7 @@
   },
   "pillSheetType24WithRest4": "24 აბი ტიპი",
   "@pillSheetType24WithRest4": {
-    "description": "24錠タイプ"
+    "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
   "restPeriod": "გათიშვა",
   "@restPeriod": {
