@@ -823,7 +823,7 @@
   },
   "login": "Iniciar sessió",
   "@login": {
-    "description": "ログイン"
+    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
   "beforePremiumRegistration": "Abans de registrar-se a la versió premium...",
   "@beforePremiumRegistration": {

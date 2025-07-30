@@ -823,7 +823,7 @@
   },
   "login": "Mewngofnodi",
   "@login": {
-    "description": "ログイン"
+    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
   "beforePremiumRegistration": "Cyn gyfeiriad cyn cofrestru wedi'i bremium...",
   "@beforePremiumRegistration": {

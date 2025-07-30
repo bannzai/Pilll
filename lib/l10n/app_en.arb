@@ -823,7 +823,7 @@
   },
   "login": "Login",
   "@login": {
-    "description": "Login"
+    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
   "beforePremiumRegistration": "Before premium registration...",
   "@beforePremiumRegistration": {

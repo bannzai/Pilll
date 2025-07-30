@@ -823,7 +823,7 @@
   },
   "login": "ଲଗଇନ୍",
   "@login": {
-    "description": "ログイン"
+    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
   "beforePremiumRegistration": "ପ୍ରିମିୟମ୍ ରେଜିଷ୍ଟ୍ରେସନ୍ ପୂର୍ବରୁ…",
   "@beforePremiumRegistration": {

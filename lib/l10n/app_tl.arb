@@ -823,7 +823,7 @@
   },
   "login": "Mag-login",
   "@login": {
-    "description": "ログイン"
+    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
   "beforePremiumRegistration": "Bago magparehistro sa premium...",
   "@beforePremiumRegistration": {

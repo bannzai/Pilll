@@ -823,7 +823,7 @@
   },
   "login": "Prijavite se",
   "@login": {
-    "description": "ログイン"
+    "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
   "beforePremiumRegistration": "Prije registracije za premium...",
   "@beforePremiumRegistration": {
