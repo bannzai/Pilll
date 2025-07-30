@@ -1197,7 +1197,7 @@
   },
   "receiveDailyNotificationAt9AM": "Пријем обавештења у 9:00 истог дана",
   "@receiveDailyNotificationAt9AM": {
-    "description": "当日9:00に通知を受け取る"
+    "description": "ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。"
   },
   "save": "Сачувај",
   "@save": {
