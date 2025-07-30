@@ -1075,7 +1075,7 @@
   },
   "existingAccountUsers": "Juba konto omavate isetage siit",
   "@existingAccountUsers": {
-    "description": "すでにアカウントをお持ちの方はこちら"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "Täna({todayString})\nKutsu üles pillide numbrid, mida tuleb võtta või on juba võetud",
   "@selectTodayPillNumber": {

@@ -1075,7 +1075,7 @@
   },
   "existingAccountUsers": "Already have an account? Log in here",
   "@existingAccountUsers": {
-    "description": "Already have an account? Log in here"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "Tap today's ({todayString}) pill number",
   "@selectTodayPillNumber": {

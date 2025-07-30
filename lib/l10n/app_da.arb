@@ -1071,7 +1071,7 @@
   },
   "existingAccountUsers": "Hvis du allerede har en konto, kan du klikke her",
   "@existingAccountUsers": {
-    "description": "すでにアカウントをお持ちの方はこちら"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "I dag ({todayString})\nTryk på antallet af piller, du skal tage eller har taget.",
   "@selectTodayPillNumber": {

@@ -1075,7 +1075,7 @@
   },
   "existingAccountUsers": "Ilova hisobiga ega bo'lganlar uchun bu yerga kirish",
   "@existingAccountUsers": {
-    "description": "すでにアカウントをお持ちの方はこちら"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "Bugun({todayString})\nIchilgan yoki ichilgan pillaning raqamini bosing",
   "@selectTodayPillNumber": {

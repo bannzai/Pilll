@@ -1075,7 +1075,7 @@
   },
   "existingAccountUsers": "اگر آپ کے پاس پہلے سے اکاؤنٹ ہے تو یہاں کلک کریں",
   "@existingAccountUsers": {
-    "description": "すでにアカウントをお持ちの方はこちら"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "آج ({todayString})\nپیل کے نمبر پر ٹیپ کریں جو آپ نے لینی ہے یا لے چکے ہیں۔",
   "@selectTodayPillNumber": {

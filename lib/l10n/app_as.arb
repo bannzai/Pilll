@@ -1075,7 +1075,7 @@
   },
   "existingAccountUsers": "আগে থেকেই অ্যাকাউন্ট থাকা ব্যক্তিরা এখানে ক্লিক করুন",
   "@existingAccountUsers": {
-    "description": "すでにアカウントをお持ちの方はこちら"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "আজ ({todayString})\nদেবার বা খাওয়া পিলের নম্বর ট্যাপ করুন",
   "@selectTodayPillNumber": {

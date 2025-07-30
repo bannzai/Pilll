@@ -1075,7 +1075,7 @@
   },
   "existingAccountUsers": "이미 계정이 있는 분은 여기를 클릭하세요",
   "@existingAccountUsers": {
-    "description": "이미 계정이 있는 분은 여기를 클릭하세요"
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
   "selectTodayPillNumber": "오늘({todayString})\n먹는/먹은 알약 번호를 탭하세요",
   "@selectTodayPillNumber": {
