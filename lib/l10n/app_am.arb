@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "የማይታወቅ እንቅስቃሴ ነው። ወቅቱን ወደ አዳዲስ ማሻሻያ ይዘው ይሞክሩ። ማሻሻያ ማይሆን እንደሆነ እባክዎት በእንቅስቃሴ > ጥያቄ ላይ ይገናኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "የማይታወቅ ስህተት ነው። ወደ ቅርብ ስሪት ማዘመን እና እንደገና መሞከር። ችግሩ ካልተፈታ ቅንብሮች > መጠይቅ በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
