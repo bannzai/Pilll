@@ -1290,7 +1290,7 @@
   },
   "selectPillNumberForMenstruationStart": "Сарнийн эмийн дугаарыг дарна",
   "@selectPillNumberForMenstruationStart": {
-    "description": "生理がはじまるピル番号をタップ"
+    "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
   },
   "countOfSheet": "{number} дахь",
   "@countOfSheet": {
