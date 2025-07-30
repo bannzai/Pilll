@@ -54,7 +54,7 @@
   },
   "account": "账户",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "在更换设备或手机丢失时，需要注册账户才能进行数据的继承和恢复。",
   "@dataTransferRequiresAccount": {

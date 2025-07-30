@@ -54,7 +54,7 @@
   },
   "account": "አካውንት",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "መንግስታት ወይም ስልክ መጥፎነት ጊዜ መረጃ መለወጥ እና እይታ ማስመልከቻ ይፈልጋል፡፡ የመለወጥ መደብ መወዳደር ይፈልጋል።",
   "@dataTransferRequiresAccount": {

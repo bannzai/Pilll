@@ -54,7 +54,7 @@
   },
   "account": "Hesab",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Cihazın dəyişdirilməsi və ya smartfonun itirilməsi zamanı məlumatların ötürülməsi və bərpası üçün hesab qeydiyyatı tələb olunur.",
   "@dataTransferRequiresAccount": {

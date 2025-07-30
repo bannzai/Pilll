@@ -54,7 +54,7 @@
   },
   "account": "Tài khoản",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Để chuyển dữ liệu hoặc khôi phục khi thay đổi thiết bị hoặc mất điện thoại, cần phải đăng ký tài khoản.",
   "@dataTransferRequiresAccount": {

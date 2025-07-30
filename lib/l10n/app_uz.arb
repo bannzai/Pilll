@@ -54,7 +54,7 @@
   },
   "account": "Hisob",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Aloqa o'rnatish yoki mobil telefonni yo'qotish kabi vaziyatlarda ma'lumotlarni o'zaro o'tkazish va tiklash uchun hisob qaydnomasi ro'yxatdan o'tkazilishi kerak.",
   "@dataTransferRequiresAccount": {

@@ -54,7 +54,7 @@
   },
   "account": "Kontua",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Talde aldaketetan edo telefono galduetan, datuen transferentzia edo berreskurapena egiteko, kontu bat erregistratzea beharrezkoa da.",
   "@dataTransferRequiresAccount": {

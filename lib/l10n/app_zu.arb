@@ -54,7 +54,7 @@
   },
   "account": "i-akhawunti",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Uhlanga lokushintsha imishini noma uma umakhalekhukhwini ulahlekile, ukudluliswa kokugcina kanye nokubuyiselwa kudinga uk registering an account.",
   "@dataTransferRequiresAccount": {

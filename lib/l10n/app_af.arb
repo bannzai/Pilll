@@ -54,7 +54,7 @@
   },
   "account": "rekening",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Vir u dataverlies, soos by toestelverandering of verlies van jou slimfoon, is dit nodig om 'n rekening te registreer om data oor te dra of te herstel.",
   "@dataTransferRequiresAccount": {

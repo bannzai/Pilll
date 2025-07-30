@@ -54,7 +54,7 @@
   },
   "account": "Konta",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Kailangang magparehistro ng account para sa paglipat o pagbawi ng data sa mga pagkakataon ng pagpapalit ng device o pagkawala ng smartphone.",
   "@dataTransferRequiresAccount": {

@@ -54,7 +54,7 @@
   },
   "account": "Akaun",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "Untuk pemindahan data dan pemulihan semasa menukar peranti atau kehilangan telefon pintar, pendaftaran akaun adalah diperlukan.",
   "@dataTransferRequiresAccount": {

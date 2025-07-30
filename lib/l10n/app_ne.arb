@@ -54,7 +54,7 @@
   },
   "account": "खाता",
   "@account": {
-    "description": "アカウント"
+    "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
   "dataTransferRequiresAccount": "जुनस Fact वा इन्फोर्मेसन हरु दुखका उन्दा, डाटा स्विचिंग र रेस्टोरको लागि खाता दर्ता हुनु आवश्यक छ।",
   "@dataTransferRequiresAccount": {
