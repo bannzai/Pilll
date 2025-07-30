@@ -74,7 +74,7 @@
   },
   "notification": "اطلاعیه",
   "@notification": {
-    "description": "通知"
+    "description": "アプリがユーザーに送るプッシュ通知や画面内の通知のことで、ピルの服用時刻を知らせるリマインダーや重要な情報を伝える機能を指します。"
   },
   "menstruation": "قاعدگی",
   "@menstruation": {
