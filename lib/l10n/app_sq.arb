@@ -78,7 +78,7 @@
   },
   "menstruation": "period",
   "@menstruation": {
-    "description": "生理"
+    "description": "ピル服用管理アプリにおける女性の生理（月経）を指し、生理周期の記録・管理機能で使用される医学的な用語です。ユーザーが生理日を記録して健康管理を行う際に表示されます。"
   },
   "others": "Tjetër",
   "@others": {
