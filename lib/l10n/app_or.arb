@@ -1278,7 +1278,7 @@
   },
   "perNumber": "ଧାରାନୁଷ୍ଠାନ",
   "@perNumber": {
-    "description": "番ごとに"
+    "description": "ピルシートの薬の番号（1番、2番...）ごとに何かを行う際に使用される表現です。ピル管理機能で薬の順番や番号に基づいた表示・操作を示すフレーズです。"
   },
   "howManyDaysDoesMenstruationLast": "ପରେ ଖୁବ ଦିନ ତାଲିକା? ",
   "@howManyDaysDoesMenstruationLast": {
