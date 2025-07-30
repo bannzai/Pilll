@@ -1041,7 +1041,7 @@
   },
   "next": "ਅੱਗੇ",
   "@next": {
-    "description": "次へ"
+    "description": "画面やフォームで次のステップに進むためのボタンラベルです。初回設定、チュートリアル、各種設定画面などで使用されます。"
   },
   "notificationIndex": "ਨੋਟੀਫਿਕੇਸ਼ਨ {number}",
   "@notificationIndex": {
