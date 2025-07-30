@@ -1784,7 +1784,7 @@
   },
   "receiveNotificationAt9AM": "අදාළ දිනයේ 9:00 ට නිවේදනයක් ලබා ගන්න",
   "@receiveNotificationAt9AM": {
-    "description": "当日9:00に通知を受け取る"
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
   "deletedScheduleCannotBeRestored": "ඉවත් කරන ලද සැලසුම් යළි ලබා ගත නොහැක.",
   "@deletedScheduleCannotBeRestored": {

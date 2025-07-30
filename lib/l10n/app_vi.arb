@@ -1784,7 +1784,7 @@
   },
   "receiveNotificationAt9AM": "Nhận thông báo vào lúc 9:00 sáng trong ngày.",
   "@receiveNotificationAt9AM": {
-    "description": "当日9:00に通知を受け取る"
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
   "deletedScheduleCannotBeRestored": "Các lịch trình đã bị xóa không thể phục hồi.",
   "@deletedScheduleCannotBeRestored": {

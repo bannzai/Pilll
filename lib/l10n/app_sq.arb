@@ -1784,7 +1784,7 @@
   },
   "receiveNotificationAt9AM": "Merrni njoftimin në orën 9:00 të ditës.",
   "@receiveNotificationAt9AM": {
-    "description": "当日9:00に通知を受け取る"
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
   "deletedScheduleCannotBeRestored": "Planet e fshirë nuk mund të rivendosen.",
   "@deletedScheduleCannotBeRestored": {

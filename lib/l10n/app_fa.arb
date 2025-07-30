@@ -1784,7 +1784,7 @@
   },
   "receiveNotificationAt9AM": "در روز مورد نظر در ساعت ۹:۰۰ صبح اعلان دریافت کنید",
   "@receiveNotificationAt9AM": {
-    "description": "当日9:00に通知を受け取る"
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
   "deletedScheduleCannotBeRestored": "برنامه هایی که حذف شده اند قابل بازیابی نیستند",
   "@deletedScheduleCannotBeRestored": {

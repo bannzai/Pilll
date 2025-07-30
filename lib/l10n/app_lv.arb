@@ -1784,7 +1784,7 @@
   },
   "receiveNotificationAt9AM": "Saņemt paziņojumu plkst. 9:00 tajā dienā",
   "@receiveNotificationAt9AM": {
-    "description": "当日9:00に通知を受け取る"
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
   "deletedScheduleCannotBeRestored": "Dzēsti plāni nav iespējams atjaunot.",
   "@deletedScheduleCannotBeRestored": {
