@@ -743,7 +743,7 @@
   },
   "menstruationStartDate": "ਮਹੀਨੇ ਦੇ ਪਹਿਲੇ ਦਿਨ",
   "@menstruationStartDate": {
-    "description": "生理開始日"
+    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
   "menstruationEndDate": "ਮਹਾਵਰਤ ਦੀ ਖਤਮੀ ਮਿਤੀ",
   "@menstruationEndDate": {

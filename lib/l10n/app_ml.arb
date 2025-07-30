@@ -743,7 +743,7 @@
   },
   "menstruationStartDate": "സ്ത്രീവантәи ആരംഭിക്കുന്ന ദിവസം",
   "@menstruationStartDate": {
-    "description": "生理開始日"
+    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
   "menstruationEndDate": "അവസാനമായ മാസികയുടെയോ ദിവസങ്ങളിലെത്തിയാക്കല്‍",
   "@menstruationEndDate": {

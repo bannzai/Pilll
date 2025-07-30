@@ -743,7 +743,7 @@
   },
   "menstruationStartDate": "მენსტრუალური ციკლის დაწყების დღე",
   "@menstruationStartDate": {
-    "description": "生理開始日"
+    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
   "menstruationEndDate": "რეცეპტების დასრულების თარიღი",
   "@menstruationEndDate": {

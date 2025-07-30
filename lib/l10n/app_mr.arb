@@ -743,7 +743,7 @@
   },
   "menstruationStartDate": "मासिक धर्माची सुरुवात तारीख",
   "@menstruationStartDate": {
-    "description": "生理開始日"
+    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
   "menstruationEndDate": "महिन्याची समाप्तीची तारीख",
   "@menstruationEndDate": {
