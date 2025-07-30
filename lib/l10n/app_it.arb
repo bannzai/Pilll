@@ -526,7 +526,7 @@
   },
   "pauseTakingFromNumber": "Vuoi smettere di assumere a partire da {number}?",
   "@pauseTakingFromNumber": {
-    "description": "{number}から服用をお休みしますか？",
+    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
     "placeholders": {
       "number": {
         "type": "String"
