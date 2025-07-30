@@ -1266,7 +1266,7 @@
   },
   "satisfied": "Tilfreds",
   "@satisfied": {
-    "description": "満足している"
+    "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足している」という回答を選択する際に表示される文字列です。"
   },
   "notSatisfied": "Ikke tilfreds",
   "@notSatisfied": {
