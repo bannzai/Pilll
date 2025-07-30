@@ -2212,7 +2212,7 @@
   },
   "cannotUpdateToReplacePillSheet": "ບໍ່ສາມາດອັບໍ່ດຽວໂດຍການແທນປິລຊີດທີ່ລະບົບບັນທຶກ id: {id}",
   "@cannotUpdateToReplacePillSheet": {
-    "description": "ピルシートの置き換えによる更新できません id: {id}",
+    "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
     "placeholders": {
       "id": {
         "type": "String"

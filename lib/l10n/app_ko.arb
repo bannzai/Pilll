@@ -2212,7 +2212,7 @@
   },
   "cannotUpdateToReplacePillSheet": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
   "@cannotUpdateToReplacePillSheet": {
-    "description": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
+    "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
     "placeholders": {
       "id": {
         "type": "String"
