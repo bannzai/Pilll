@@ -2284,7 +2284,7 @@
   },
   "silentModeNotificationDescription": "ការជូនដំណឹងត្រូវបានបង្ហាញនៅលើអេក្រង់ដណ្ដឹងទៀតទាំងពេលស្ថានភាពផ្តោតកម្រិតកំពុងON ឬឧបករណ៍មានសំឡេងបិទ។",
   "@silentModeNotificationDescription": {
-    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+    "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
   "enableNotificationInSilentMode": "សូមជូនដំណឹងនៅពេលដែលមានស្ថានភាពម៉ាណូដមិនថាទៅក្នុងម៉ូដថQuiet",
   "@enableNotificationInSilentMode": {

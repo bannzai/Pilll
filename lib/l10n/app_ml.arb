@@ -2284,7 +2284,7 @@
   },
   "silentModeNotificationDescription": "കেন্দ്രീകൃത മോഡ് ON ആണെങ്കിൽ അല്ലെങ്കിൽ ഡിവൈസ് മ്യൂട്ട് ചെയ്തിട്ടുണ്ടെങ്കിൽ പോലും, അറിയിപ്പുകൾ ലോക്ക് സ്ക്രീനിൽ പ്രദർശിതമാകും, ശബ്ദം தொடர்ந்து നണി നൽകും.",
   "@silentModeNotificationDescription": {
-    "description": "集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます"
+    "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
   "enableNotificationInSilentMode": "മനോഭാവം മോഡ് ആണെങ്കിലും അറിയിപ്പ alerts",
   "@enableNotificationInSilentMode": {
