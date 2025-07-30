@@ -1079,7 +1079,7 @@
   },
   "selectTodayPillNumber": "ننړئ ({todayString}) \nپه تېرو درملو کې د خوړلو یا خوړولو شمیرې ته ټيک وکړئ",
   "@selectTodayPillNumber": {
-    "description": "今日({todayString})\n飲む・飲んだピルの番号をタップ",
+    "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
     "placeholders": {
       "todayString": {
         "type": "String"
