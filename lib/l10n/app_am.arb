@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "አሁን ግዢ እንደማይቻል አለ። ጊዜ ቆርጥ እንደገና ሞክረው እባክዎን ይሞክሩ። በተለይ አልተፈቀደም እንዲሆን ከቅንጡ መደብ > የጥያቄ ተመልሰው ዝውውር ይችሉት። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "አሁን ግዢ ማድረግ አይቻልም። ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
