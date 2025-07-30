@@ -1286,7 +1286,7 @@
   },
   "daysMenstruationLasts": " 일 동안 생리가 지속됩니다",
   "@daysMenstruationLasts": {
-    "description": " 일 동안 생리가 지속됩니다"
+    "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
   },
   "selectPillNumberForMenstruationStart": "생리가 시작되는 알약 번호를 탭하세요",
   "@selectPillNumberForMenstruationStart": {

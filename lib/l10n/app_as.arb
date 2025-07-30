@@ -1286,7 +1286,7 @@
   },
   "daysMenstruationLasts": "দিন পালিত হয়",
   "@daysMenstruationLasts": {
-    "description": "日間生理が続く"
+    "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
   },
   "selectPillNumberForMenstruationStart": "期間 শুরু হওয়া পিল নম্বর টেপ করুন",
   "@selectPillNumberForMenstruationStart": {
