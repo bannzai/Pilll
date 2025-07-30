@@ -1021,7 +1021,7 @@
   },
   "stepThreeOfThree": "3/3",
   "@stepThreeOfThree": {
-    "description": "3/3"
+    "description": "アプリの初期設定やオンボーディングプロセスにおける3番目（最終）のステップを示すテキストで、「3/3」の形式で進捗を表示します。画面上部などに表示され、ユーザーに現在のステップ位置を分数形式で伝える役割があります。"
   },
   "missedPillNotification": "Dərman qəbulunu unutmamaq barədə bildiriş",
   "@missedPillNotification": {
