@@ -1209,7 +1209,7 @@
   },
   "deletedDiaryCannotBeRecovered": "Ibhukwana elisusiwe alinakubuyiselwa.",
   "@deletedDiaryCannotBeRecovered": {
-    "description": "削除された日記は復元ができません"
+    "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
   },
   "sex": "ubulili",
   "@sex": {
