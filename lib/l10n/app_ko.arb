@@ -207,7 +207,7 @@
   },
   "viewPremiumPlan": "프리미엄 플랜 보기",
   "@viewPremiumPlan": {
-    "description": "프리미엄 플랜 보기"
+    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
   "changePillNumberForToday": "오늘 복용할 딜 번호 변경",
   "@changePillNumberForToday": {

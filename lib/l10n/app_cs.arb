@@ -207,7 +207,7 @@
   },
   "viewPremiumPlan": "Zobrazit prémiový plán",
   "@viewPremiumPlan": {
-    "description": "プレミアムプランを見る"
+    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
   "changePillNumberForToday": "Změna čísla pilulky, kterou je třeba dnes užít",
   "@changePillNumberForToday": {

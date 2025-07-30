@@ -207,7 +207,7 @@
   },
   "viewPremiumPlan": "د پریمیم پلان کتنه",
   "@viewPremiumPlan": {
-    "description": "プレミアムプランを見る"
+    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
   "changePillNumberForToday": "د نن ورځې د اخیستلو د پيل شمیرې بدلون",
   "@changePillNumberForToday": {

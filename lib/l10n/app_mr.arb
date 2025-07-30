@@ -207,7 +207,7 @@
   },
   "viewPremiumPlan": "प्रीमियम योजना पहा",
   "@viewPremiumPlan": {
-    "description": "プレミアムプランを見る"
+    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
   "changePillNumberForToday": "आजच्या पिल नं‍बरात बदल",
   "@changePillNumberForToday": {

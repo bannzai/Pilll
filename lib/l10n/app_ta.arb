@@ -207,7 +207,7 @@
   },
   "viewPremiumPlan": "பிரீமியம் திட்டத்தைப் பார்க்கவும்",
   "@viewPremiumPlan": {
-    "description": "プレミアムプランを見る"
+    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
   "changePillNumberForToday": "இன்று எடுத்துக் கொள்ளும் மாதவிடாய் மருந்தின் எண் மாற்றம்",
   "@changePillNumberForToday": {

@@ -207,7 +207,7 @@
   },
   "viewPremiumPlan": "View premium plan",
   "@viewPremiumPlan": {
-    "description": "View premium plan"
+    "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
   "changePillNumberForToday": "Change the pill number for today",
   "@changePillNumberForToday": {
