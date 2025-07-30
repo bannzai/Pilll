@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "请确认后注册",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "除非在 Premium 合同到期日前 24 小时之前取消，否则合同期限将自动续期。",
   "@autoRenewNotice": {

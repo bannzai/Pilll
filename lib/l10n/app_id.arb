@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "Silakan periksa dan daftarkan.",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "• Kontrak premium akan diperpanjang secara otomatis kecuali jika Anda membatalkan lebih dari 24 jam sebelum tanggal berakhirnya kontrak.",
   "@autoRenewNotice": {

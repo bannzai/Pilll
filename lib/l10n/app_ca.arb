@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "feu posar-se en contacte per a registrar-se",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "El període de contracte premium es renovarà automàticament a menys que es cancel·li amb més de 24 hores d'antelació respecte a la data de finalització.",
   "@autoRenewNotice": {

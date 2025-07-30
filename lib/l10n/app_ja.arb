@@ -924,7 +924,7 @@
   },
   "premiumTermsNotice3": "をご確認のうえ登録してください\n",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
   "@autoRenewNotice": {

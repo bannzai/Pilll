@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "Vui lòng kiểm tra và đăng ký",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "Hợp đồng sẽ tự động gia hạn trừ khi bạn hủy trước 24 giờ của ngày kết thúc thời gian hợp đồng cao cấp.",
   "@autoRenewNotice": {

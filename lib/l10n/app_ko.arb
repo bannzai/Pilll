@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "확인하신 후 등록해주세요\n",
   "@premiumTermsNotice3": {
-    "description": "확인하신 후 등록해주세요\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "・프리미엄 계약 기간의 종료일 24시간 이상 전에 해지하지 않는 한 계약 기간이 자동 갱신됩니다\n",
   "@autoRenewNotice": {

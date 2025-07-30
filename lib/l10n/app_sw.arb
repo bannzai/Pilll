@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "Tafadhali hakiki na ujiandikishe",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "Mkataba wa premium utajiendesha kiotomatiki isipokuwa usitake kabla ya masaa 24 kabla ya kumalizika kwa kipindi cha mkataba.",
   "@autoRenewNotice": {

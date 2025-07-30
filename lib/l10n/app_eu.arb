@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "Izan ezazu eta erregistratu",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "• Kontratuan amaitzeko egunaren 24 ordutik gorako epean ezeztatu ezean, kontratua automatikoki berrituko da.",
   "@autoRenewNotice": {

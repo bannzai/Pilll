@@ -911,7 +911,7 @@
   },
   "premiumTermsNotice3": "Venligst bekræft dette og registrer dig.",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "Din kontrakt for premium-abonnementet fornyes automatisk, medmindre du opsiger det mindst 24 timer før udløbet af abonnementsperioden.",
   "@autoRenewNotice": {

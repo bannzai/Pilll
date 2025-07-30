@@ -915,7 +915,7 @@
   },
   "premiumTermsNotice3": "Por favor, confirme e regístrese.",
   "@premiumTermsNotice3": {
-    "description": "をご確認のうえ登録してください\n"
+    "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
   "autoRenewNotice": "A menos que canceles antes de 24 horas da data de finalización do período de subscrición premium, o período de subscrición actualizarase automaticamente.",
   "@autoRenewNotice": {
