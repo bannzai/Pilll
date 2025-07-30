@@ -619,7 +619,7 @@
   },
   "endOfPillDays": "సాధించిన మందులను ఎక్కడకు తీసుకురావాలి",
   "@endOfPillDays": {
-    "description": "服用日数の終わり"
+    "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
   "changedToNumber": "సిరీని మార్చు",
   "@changedToNumber": {

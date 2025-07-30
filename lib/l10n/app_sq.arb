@@ -619,7 +619,7 @@
   },
   "endOfPillDays": "Mbarimi i ditëve të përdorimit",
   "@endOfPillDays": {
-    "description": "服用日数の終わり"
+    "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
   "changedToNumber": "Ndrysho numrin",
   "@changedToNumber": {

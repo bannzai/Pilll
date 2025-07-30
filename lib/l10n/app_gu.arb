@@ -619,7 +619,7 @@
   },
   "endOfPillDays": "પિલ લેવાના દિવસોનો અંત",
   "@endOfPillDays": {
-    "description": "服用日数の終わり"
+    "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
   "changedToNumber": "કે ક્રમમાં ફેરફાર",
   "@changedToNumber": {
