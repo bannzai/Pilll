@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Hindi sa ngayon natagpuan ang kasalukuyang mga tablet na nagpapaalam.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Ang operasyon ng pagkansela ng pag-inom ng pill ay hindi maaaring isagawa sa panahon ng pahinga.",
   "@doNotRevertTakePillInPausePeriod": {

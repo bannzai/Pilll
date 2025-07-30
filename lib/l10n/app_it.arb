@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Non è stata trovata alcuna scheda di pillole attualmente in uso.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "L'operazione di annullamento dell'assunzione della pillola non può essere eseguita durante il periodo di sospensione.",
   "@doNotRevertTakePillInPausePeriod": {

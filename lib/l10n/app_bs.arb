@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Trenutno nije pronađen odgovarajući blister pilula.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Akcija otkazivanja uzimanja pilule ne može se izvršiti tokom perioda pauze.",
   "@doNotRevertTakePillInPausePeriod": {

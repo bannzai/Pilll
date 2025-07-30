@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "មិនអាចរកឃើញកំណត់ត្រាពីការប៉ះពាល់ដែលទាក់ទងនឹងការប្រើប្រាស់គ្រាប់បែកបាន។",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "ការបន្ថយការប្រើប្រាស់ពូកឹងមិនអាចអនុវត្តបានក្នុងអំឡុងពេលឈប់ពូកាំង",
   "@doNotRevertTakePillInPausePeriod": {

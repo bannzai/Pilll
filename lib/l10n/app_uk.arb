@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "No applicable pill sheet was found.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "The cancellation of the pill-taking operation cannot be performed during the placebo period.",
   "@doNotRevertTakePillInPausePeriod": {

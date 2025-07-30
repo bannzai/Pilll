@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "В момента не можете да најдете таблетките што се наменети.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Операцијата за откажување на земањето пилула не може да се изврши за време на периодот на одмор.",
   "@doNotRevertTakePillInPausePeriod": {

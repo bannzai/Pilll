@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Enginn pillupakki fannst sem fellur núverandi skilyrðum.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Hægt er ekki að framkvæma aðgerðina til að afskrá notkun pilla á þann tíma sem er í fríi frá pilla.",
   "@doNotRevertTakePillInPausePeriod": {

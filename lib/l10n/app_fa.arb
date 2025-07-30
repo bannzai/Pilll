@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "متاسفیم، هیچ شیت قرص فعلی پیدا نشد.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "عملیات لغو مصرف قرص در دوران معافیت از مصرف امکان‌پذیر نیست.",
   "@doNotRevertTakePillInPausePeriod": {

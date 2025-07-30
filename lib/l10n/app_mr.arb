@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "सध्याच्या लक्षात घेतलेल्या पिल शीट सापडली नाही",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "गर्भनिरोधक गोल्या घेण्याची रद्द करण्याची प्रक्रिया विश्रांतीच्या कालावीत लागू केली जाऊ शकत नाही.",
   "@doNotRevertTakePillInPausePeriod": {

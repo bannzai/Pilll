@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Não foi encontrado nenhum bloco de pílulas atualmente em uso.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Não é possível cancelar a operação de utilização da pílula durante o período de suspensão.",
   "@doNotRevertTakePillInPausePeriod": {

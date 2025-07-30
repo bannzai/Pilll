@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Daar is tans geen pilblaadjie beskikbaar nie.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Die kans om die pil se inname te kanselleer, kan nie gedurende die rustyd uitgevoer word.",
   "@doNotRevertTakePillInPausePeriod": {

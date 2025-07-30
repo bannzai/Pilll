@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Es wurde kein aktuelles Pillenblatt gefunden.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Die Stornierung der Pilleneinnahme kann während der Pause nicht durchgeführt werden.",
   "@doNotRevertTakePillInPausePeriod": {

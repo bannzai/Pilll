@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "നിലവിലുള്ള പിൽഷീറ്റ് കണ്ടെത്താൻ കഴിയില്ല",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "ഗർഭനിരോധകത്തി നാളികേരത്തിന്റെ ഉപാധി കാലങ്ങളിൽ, പില്ലുകൾ പിന്തിരിപ്പിക്കാൻ സാധ്യമല്ല.",
   "@doNotRevertTakePillInPausePeriod": {

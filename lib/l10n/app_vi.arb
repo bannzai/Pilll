@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Không tìm thấy tấm thuốc nào đang được sử dụng.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Việc hủy bỏ việc sử dụng thuốc tránh thai không thể thực hiện được trong thời gian nghỉ thuốc.",
   "@doNotRevertTakePillInPausePeriod": {

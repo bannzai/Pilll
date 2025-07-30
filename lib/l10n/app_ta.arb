@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "இந்த நேரத்தில் தொடர்புடைய பில் அலகு கிடைக்கவில்லை",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "மருத்துவக் கண்ணி உட்கொள்ளும் செயல்பாடுகளை உட்கொள்வதற்கான இடைவெளி காலத்தில் நிறுத்த முடியாது",
   "@doNotRevertTakePillInPausePeriod": {

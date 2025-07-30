@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "No se encontró la hoja de píldoras correspondiente.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "No se puede realizar la operación de cancelación de la toma de la píldora durante el período de descanso.",
   "@doNotRevertTakePillInPausePeriod": {

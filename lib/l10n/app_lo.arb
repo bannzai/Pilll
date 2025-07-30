@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "ບໍ່ສາມາດຫາຊີດບັດປັອນທີ່ກໍ່ນັ້ນໄດ້",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "ບໍ່ສາມາດເຮັດໃນໄລ່ສະບັບສັງຄົວນາແລະບັນທຶກແລະບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາ້ບໍ່ສາມາດປ່ອນໃນສະຖານທີ່ຍັງສາມາດເຮັດເດད໌་མອງຂອບ。\n ",
   "@doNotRevertTakePillInPausePeriod": {

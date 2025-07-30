@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "当前未找到相关的服药计划",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "在休药期内无法执行取消服用药丸的操作",
   "@doNotRevertTakePillInPausePeriod": {

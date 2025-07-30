@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "هیڅ کارټ د اوسني هدف سره پیدا نه شو.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "د پيل اخيستنې د لغو کولو عمل د موقتي د مياشتنۍ اراحت په دوران کې نشي ترسره کېدی.",
   "@doNotRevertTakePillInPausePeriod": {

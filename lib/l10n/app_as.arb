@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "ଆପଣରେ ବର୍ତ୍ତମାନ ସମ୍ମିଳିତ ପିଲ୍ ଶୀଟ୍ ମିଳୁନି।",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "পিল গ্রহণের বাতিল করার কার্যকলাপটি বিশ্রামকালীন সময়ে চালিত করা যাবে না।",
   "@doNotRevertTakePillInPausePeriod": {

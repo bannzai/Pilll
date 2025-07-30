@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନ ଲକ୍ଷ୍ୟ ହୋଇଥିବା ପିଲ୍ ସିଟ୍ ମିଳିଲା ନାହିଁ।",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "ପିଲ୍ ଗ୍ରହଣ ନିବୃତ୍ତି ଚାଳିତାବେଳେ ଅବହିତ ଅବସ୍ଥାତେ କାର୍ଯ୍ୟକ୍ଷମ ହୋଇ ପାରେ ନାହିଁ।",
   "@doNotRevertTakePillInPausePeriod": {

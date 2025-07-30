@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Հայտնի չէ առկա հակաբեղմնավորիչի թերթիկը",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Պիլի ընդունման չեղարկման գործողությունը հանգստի ընթացքում իրականացնել հնարավոր չէ",
   "@doNotRevertTakePillInPausePeriod": {

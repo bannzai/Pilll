@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Tidak dapat menemukan lembar pil yang menjadi target saat ini.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Operasi pembatalan minum pil tidak dapat dilakukan selama periode istirahat.",
   "@doNotRevertTakePillInPausePeriod": {

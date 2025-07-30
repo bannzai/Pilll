@@ -1882,7 +1882,7 @@
   },
   "currentPillSheetNotFound": "Aucun pilulier correspondant n'a été trouvé.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "L'opération d'annulation de la prise de pilules ne peut pas être effectuée pendant la période d'arrêt.",
   "@doNotRevertTakePillInPausePeriod": {

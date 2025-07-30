@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "Nid oedd y tablet pil a gynhelir ar hyn o bryd i'w gael.",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "Ni ellir gwneud gweithrediadau dileu ar gyfer cymryd y bilsen yn ystod y cyfnod seibiant.",
   "@doNotRevertTakePillInPausePeriod": {

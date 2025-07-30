@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "हालमा लक्षित गरिएको पिल पत्रिका फेला परेन।",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "को सेवन रद्द गर्ने प्रक्रिया मुक्ति अवधिमा कार्यान्वयन गरिदैन।",
   "@doNotRevertTakePillInPausePeriod": {

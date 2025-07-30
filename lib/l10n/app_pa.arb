@@ -1894,7 +1894,7 @@
   },
   "currentPillSheetNotFound": "ਇਸ ਵੇਲੇ ਲਕੜੀ ਰੌਜ਼ਾਨਾ ਨਹੀਂ ਮਿਲੀ।",
   "@currentPillSheetNotFound": {
-    "description": "現在対象となっているピルシートが見つかりませんでした"
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
   "doNotRevertTakePillInPausePeriod": "ਗੋਲੀਆਂ ਨੂੰ ਲੈਣ ਦੀ ਸਖਤ ਉਲੰਗਨਾ ਥਕਨ ਵਾਲੀ ਮਿਆਦ ਦੇ ਦੌਰਾਨ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ।",
   "@doNotRevertTakePillInPausePeriod": {
