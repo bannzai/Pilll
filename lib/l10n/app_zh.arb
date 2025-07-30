@@ -1254,7 +1254,7 @@
   },
   "surveyForServiceImprovement": "如果可以的话，请协助我们进行服务改进调查。",
   "@surveyForServiceImprovement": {
-    "description": "よろしければサービス改善のためのアンケートにもご協力ください"
+    "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
   },
   "participate": "合作",
   "@participate": {
