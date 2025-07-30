@@ -973,7 +973,7 @@
   },
   "pushNotificationForTakingRecord": "📩 පූෂ් නිවේදන වෙතින් වේලාව පිළිබඳ වාර්තාව",
   "@pushNotificationForTakingRecord": {
-    "description": "📩 プッシュ通知から服用記録"
+    "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
   "viewAndRecordTakingHistory": "🗂 ඖෂධ පවතින්නේ කෙටි කාලයක්ක බවත් අධ්‍යයන මගින් පෙනී යන ආකාරයෙන් අයිතිකරාරී රටා සහ ශක්තිමත් වැඩිමාවක් අතින්වීම",
   "@viewAndRecordTakingHistory": {
