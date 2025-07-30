@@ -1943,7 +1943,7 @@
   },
   "unexpectedErrorOccurred": "ଅପେକ୍ଷିତ ବ୍ୟତିକ୍ରମ ଘଟିଛି",
   "@unexpectedErrorOccurred": {
-    "description": "予期しないエラーが発生しました"
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
   "pressAndHoldNotificationToRecordPillTaking": "ଜଣାଣୀକୁ ଦୀର୍ଘ ସମୟ ପାଇଁ ଦବାଇଲେ, ଓଡ଼ାଣର ରେକର୍ଡ୍ ପାଇଁ ବର୍ଣ୍ଣା କରାଯିବ",
   "@pressAndHoldNotificationToRecordPillTaking": {

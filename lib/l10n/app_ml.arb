@@ -1943,7 +1943,7 @@
   },
   "unexpectedErrorOccurred": "അണിക്കൂട്ടമായ പിശക് സംഭവിച്ചു",
   "@unexpectedErrorOccurred": {
-    "description": "予期しないエラーが発生しました"
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
   "pressAndHoldNotificationToRecordPillTaking": "അറിയിപ്പിനെ ദീര്UGHമായിട്ട് സമ്മര്‍ദ്ദിക്കുകയാണെങ്കില്‍, ഉറപ്പാക്കലിന്റെ രേഖ വികസിപ്പിക്കും",
   "@pressAndHoldNotificationToRecordPillTaking": {

@@ -1943,7 +1943,7 @@
   },
   "unexpectedErrorOccurred": "예기치 않은 오류가 발생했습니다",
   "@unexpectedErrorOccurred": {
-    "description": "예기치 않은 오류가 발생했습니다"
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
   "pressAndHoldNotificationToRecordPillTaking": "알림을 길게 누르면 복용 기록을 할 수 있습니다",
   "@pressAndHoldNotificationToRecordPillTaking": {

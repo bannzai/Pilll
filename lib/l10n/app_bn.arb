@@ -1943,7 +1943,7 @@
   },
   "unexpectedErrorOccurred": "অপ্রত্যাশিত ত্রুটি ঘটেছে",
   "@unexpectedErrorOccurred": {
-    "description": "予期しないエラーが発生しました"
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
   "pressAndHoldNotificationToRecordPillTaking": "নোটিফিকেশনটি দীর্ঘক্ষণ চাপ দিলে ফার্মাস্যুটিক্যাল রেকর্ড তৈরি করা যায়।",
   "@pressAndHoldNotificationToRecordPillTaking": {
