@@ -2044,7 +2044,7 @@
   },
   "seeHowToUsePauseTakingFeature": "Bekijk hoe u de functie voor het pauzeren van inname kunt gebruiken",
   "@seeHowToUsePauseTakingFeature": {
-    "description": "服用お休み機能の使い方を見る"
+    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   },
   "startPauseTakingLabel": "Start pill break",
   "@startPauseTakingLabel": {

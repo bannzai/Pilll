@@ -2044,7 +2044,7 @@
   },
   "seeHowToUsePauseTakingFeature": "See how to use the pause taking feature",
   "@seeHowToUsePauseTakingFeature": {
-    "description": "See how to use the pause taking feature"
+    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   },
   "startPauseTakingLabel": "Start pause taking",
   "@startPauseTakingLabel": {
