@@ -342,7 +342,7 @@
   },
   "userInformationWillBeDeleted": "User information will be deleted",
   "@userInformationWillBeDeleted": {
-    "description": "User information will be deleted"
+    "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   },
   "withdrawalMessage": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again",
   "@withdrawalMessage": {

@@ -342,7 +342,7 @@
   },
   "userInformationWillBeDeleted": "Používateľské informácie budú vymazané.",
   "@userInformationWillBeDeleted": {
-    "description": "ユーザー情報が削除されます"
+    "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   },
   "withdrawalMessage": "Ak aktívne odstránite svoj účet, všetky údaje budú vymazané a už sa nebudete môcť prihlásiť do rovnakého účtu.",
   "@withdrawalMessage": {
