@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "ምንም እንደማይታወቅ ስህተት ነው። አዳዲስ በግምት ተመልሰው ይሞክሩ። እንዲህ በማይሄድ ከመሠረቱ ወደ ቅንብር > ጥያቄ ይገናኛሉ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "በማይታወቅ ምክንያት የተፈጠረ ስህተት ነው። ወደ ቅርብ እትም ካሻሻሉ በኋላ እንደገና ይሞክሩ። ካልተፈታ በማቀናብሪያ > ጥያቄ በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
