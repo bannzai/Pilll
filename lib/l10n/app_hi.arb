@@ -1339,7 +1339,7 @@
   },
   "twentyFourPlusFourDaysBreak": "24 गोलियाँ + 4 गोलियाँ आराम",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24錠＋4錠休薬"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
   "choosePillType": "गोलियों के प्रकार का चयन करें",
   "@choosePillType": {

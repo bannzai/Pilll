@@ -1339,7 +1339,7 @@
   },
   "twentyFourPlusFourDaysBreak": "24 comprimés + 4 jours de pause",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24錠＋4錠休薬"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
   "choosePillType": "Sélectionnez le type de pilule",
   "@choosePillType": {

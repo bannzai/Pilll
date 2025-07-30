@@ -1360,7 +1360,7 @@
   },
   "twentyFourPlusFourDaysBreak": "24錠＋4錠休薬",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24錠＋4錠休薬"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
   "choosePillType": "ピルの種類を選ぶ",
   "@choosePillType": {

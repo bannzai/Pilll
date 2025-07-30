@@ -1339,7 +1339,7 @@
   },
   "twentyFourPlusFourDaysBreak": "24 மாதங்கள் + 4 மாதங்கள் விடை",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24錠＋4錠休薬"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
   "choosePillType": "மருந்தின் வகையை தேர்ந்தெடு",
   "@choosePillType": {

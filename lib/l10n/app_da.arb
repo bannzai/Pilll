@@ -1335,7 +1335,7 @@
   },
   "twentyFourPlusFourDaysBreak": "24 tabletter + 4 dages pause",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24錠＋4錠休薬"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
   "choosePillType": "Vælg typen af piller",
   "@choosePillType": {

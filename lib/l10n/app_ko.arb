@@ -1339,7 +1339,7 @@
   },
   "twentyFourPlusFourDaysBreak": "24정＋4정 휴약",
   "@twentyFourPlusFourDaysBreak": {
-    "description": "24정＋4정 휴약"
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
   "choosePillType": "알약 종류 선택",
   "@choosePillType": {
