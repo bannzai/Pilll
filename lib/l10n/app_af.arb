@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Oorsakeless fout. Werk opdatering na die jongste weergawe en probeer weer. As dit nie opgelos word nie, kontak asseblief via instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Dit is 'n onbekende fout. Werk asseblief op na die nuutste weergawe en probeer weer. As dit nie opgelos word nie, kontak ons via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
