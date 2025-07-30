@@ -1885,7 +1885,7 @@
   },
   "withNumber": "{number} nummer",
   "@withNumber": {
-    "description": "{number}番",
+    "description": "ピルシートの錠剤番号を表示するためのテキストです。{number}には具体的な錠剤番号（例：18）が入り、ユーザーがピルシート上のどの錠剤かを特定するために使用されます。",
     "placeholders": {
       "number": {
         "type": "String"
