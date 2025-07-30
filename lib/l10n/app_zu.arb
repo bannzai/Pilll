@@ -663,7 +663,7 @@
   },
   "reexperiencePremiumFeatures": "Ungakuzwa ukuthi ungaphinda uzozama izici eziphezulu kweyama-14! Thinta ukuze wabelane ku-SNS!",
   "@reexperiencePremiumFeatures": {
-    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
   "whereToShare": "Uphi lapho uzokwenza khona ukwabelana?",
   "@whereToShare": {

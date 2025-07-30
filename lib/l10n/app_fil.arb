@@ -663,7 +663,7 @@
   },
   "reexperiencePremiumFeatures": "Maaari mong muling maranasan ang mga premium na tampok sa loob ng 14 na araw! I-tap upang i-share sa SNS!",
   "@reexperiencePremiumFeatures": {
-    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
   "whereToShare": "Saan mo ito ibabahagi?",
   "@whereToShare": {

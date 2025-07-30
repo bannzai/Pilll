@@ -663,7 +663,7 @@
   },
   "reexperiencePremiumFeatures": "Lahko ponovno izkusite premium funkcije 14 dni! Tapnite, da delite na družbenih omrežjih!",
   "@reexperiencePremiumFeatures": {
-    "description": "プレミアム機能を14日間再体験できます！\nタップしてSNSにシェアしましょう！"
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
   "whereToShare": "Kamor želite deliti?",
   "@whereToShare": {

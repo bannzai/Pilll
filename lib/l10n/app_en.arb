@@ -663,7 +663,7 @@
   },
   "reexperiencePremiumFeatures": "You can experience the premium features again for 14 days!\nTap to share on SNS!",
   "@reexperiencePremiumFeatures": {
-    "description": "You can experience the premium features again for 14 days!\nTap to share on SNS!"
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
   "whereToShare": "Where do you want to share?",
   "@whereToShare": {

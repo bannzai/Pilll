@@ -663,7 +663,7 @@
   },
   "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!",
   "@reexperiencePremiumFeatures": {
-    "description": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!"
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
   "whereToShare": "어디에 공유하시겠습니까?",
   "@whereToShare": {
