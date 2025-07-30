@@ -1062,7 +1062,7 @@
   },
   "loggedInWithProvider": "{accountTypeProviderName}లో లాగిన్ అయ్యారు",
   "@loggedInWithProvider": {
-    "description": "{accountTypeProviderName}でログインしました",
+    "description": "ユーザーが外部認証プロバイダー（Google、Apple、Facebookなど）を使用してログインに成功した際に表示される確認メッセージです。{accountTypeProviderName}には使用したサービス名が入ります。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
