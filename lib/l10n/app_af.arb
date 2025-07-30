@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Huidige aankoop is nie moontlik nie. Wacht 'n bietjie en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Aankope is tans nie moontlik nie. Probeer asseblief weer na 'n rukkie. As die probleem voortduur, kontak ons via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
