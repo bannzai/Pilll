@@ -1906,7 +1906,7 @@
   },
   "diaryRecord": "Bhala idayari",
   "@diaryRecord": {
-    "description": "日記を記録"
+    "description": "アプリ内の日記機能で体調や気分を記録する際に表示されるボタンやラベルのテキストです。カレンダー画面から日々の体調記録を行う機能に使用されます。"
   },
   "scheduleRecord": "Faka i-odolo",
   "@scheduleRecord": {
