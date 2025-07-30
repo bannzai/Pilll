@@ -1877,7 +1877,7 @@
   },
   "exampleRestDurationDate": "For example, if you take a break from 1/12 for 3 days",
   "@exampleRestDurationDate": {
-    "description": "For example, if you take a break from 1/12 for 3 days"
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
   "exampleRestDurationNumber": "For example, if you take a break from number 18 for 3 days",
   "@exampleRestDurationNumber": {

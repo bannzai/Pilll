@@ -1856,7 +1856,7 @@
   },
   "launchError": "Une erreur est survenue au démarrage\n{ErrorMessagesConnection}\nDétails:",
   "@launchError": {
-    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
       "ErrorMessagesConnection": {
         "type": "String"
@@ -1865,7 +1865,7 @@
   },
   "exampleRestDurationDate": "par exemple, si vous prenez un repos de 3 jours à partir du 12/1",
   "@exampleRestDurationDate": {
-    "description": "例えば「1/12から3日間」服用お休みした場合"
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
   "exampleRestDurationNumber": "par exemple, si vous arrêtez de prendre le médicament pendant 3 jours à partir du 18",
   "@exampleRestDurationNumber": {

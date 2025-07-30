@@ -1887,9 +1887,9 @@
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+  "launchError": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
   "@launchError": {
-    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
       "ErrorMessagesConnection": {
         "type": "String"
@@ -1898,7 +1898,7 @@
   },
   "exampleRestDurationDate": "例えば「1/12から3日間」服用お休みした場合",
   "@exampleRestDurationDate": {
-    "description": "例えば「1/12から3日間」服用お休みした場合"
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
   "exampleRestDurationNumber": "例えば「18番から3日間」服用お休みした場合",
   "@exampleRestDurationNumber": {

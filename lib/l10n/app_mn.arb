@@ -1868,7 +1868,7 @@
   },
   "launchError": "Програмыг эхлүүлэх үед алдаа гарлаа\n{ErrorMessagesConnection}\nДэлгэрэнгүй:",
   "@launchError": {
-    "description": "起動時にエラーが発生しました\n{ErrorMessagesConnection}\n詳細:",
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
       "ErrorMessagesConnection": {
         "type": "String"
@@ -1877,7 +1877,7 @@
   },
   "exampleRestDurationDate": "Жишээлбэл, \"1/12-ноос 3 хоног\" эм уухыг амраасан бол",
   "@exampleRestDurationDate": {
-    "description": "例えば「1/12から3日間」服用お休みした場合"
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
   "exampleRestDurationNumber": "Жишээлбэл, \"18 дугаараас 3 хоног\" эм уух завсарласан тохиолдолд",
   "@exampleRestDurationNumber": {
