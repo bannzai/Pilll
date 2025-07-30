@@ -2259,7 +2259,7 @@
   },
   "editMenstruation": "生理期間を編集",
   "@editMenstruation": {
-    "description": "生理期間を編集"
+    "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
   },
   "changedPillNumber": "ピル番号変更",
   "@changedPillNumber": {

@@ -2238,7 +2238,7 @@
   },
   "editMenstruation": "생리 기간 편집",
   "@editMenstruation": {
-    "description": "생리 기간 편집"
+    "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
   },
   "changedPillNumber": "피임약 번호 변경",
   "@changedPillNumber": {
