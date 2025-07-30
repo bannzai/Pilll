@@ -1154,7 +1154,7 @@
   },
   "changeMissedNotificationMessage": "You can change the text of the missed notification",
   "@changeMissedNotificationMessage": {
-    "description": "You can change the text of the missed notification"
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {

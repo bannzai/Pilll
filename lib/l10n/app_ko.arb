@@ -1154,7 +1154,7 @@
   },
   "changeMissedNotificationMessage": "복용 잊음 알림 메시지를 변경할 수 있습니다",
   "@changeMissedNotificationMessage": {
-    "description": "복용 잊음 알림 메시지를 변경할 수 있습니다"
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {

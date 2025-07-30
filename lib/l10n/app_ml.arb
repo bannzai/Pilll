@@ -1154,7 +1154,7 @@
   },
   "changeMissedNotificationMessage": "ൽ വീഡിയോ ഇനമുമായി ബന്ധമുള്ള പ്രവര്‍ത്തനങ്ങള്‍ പരിശോധിക്കുന്നു.",
   "@changeMissedNotificationMessage": {
-    "description": "飲み忘れてる場合の通知文言を変更できます"
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {
