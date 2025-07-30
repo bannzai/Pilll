@@ -14,7 +14,7 @@
   },
   "pillSheetType28": "uhlobo lwezixhumi eziyi-28 (z ukuze zibe khona emithini)",
   "@pillSheetType28": {
-    "description": "28錠タイプ(すべて実薬)"
+    "description": "ピルシートの種類で、28錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない28錠タイプであることを示します。"
   },
   "pillSheetType24": "uhlobo lwezinkanyezi eziyi-24 (konke kuyimidlayo yangempela)",
   "@pillSheetType24": {

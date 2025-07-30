@@ -14,7 +14,7 @@
   },
   "pillSheetType28": "Tipus de 28 pastilles (totes medicaments)",
   "@pillSheetType28": {
-    "description": "28錠タイプ(すべて実薬)"
+    "description": "ピルシートの種類で、28錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない28錠タイプであることを示します。"
   },
   "pillSheetType24": "Tipus de 24 comprimits (tots medicaments reals)",
   "@pillSheetType24": {
