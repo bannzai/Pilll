@@ -2097,7 +2097,7 @@
   },
   "quickRecordTakePillFailed": "எதிர்காலத்தில் ஊசி பதிவு தோல்வியடைகூடிய வாய்ப்பு இருக்கலாம்",
   "@quickRecordTakePillFailed": {
-    "description": "服用記録が失敗した可能性があります"
+    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
   "quickRecordTakePillFailedMessage": "அப்பிளிக்கேஷனை திறந்து அழுத்தவும்",
   "@quickRecordTakePillFailedMessage": {

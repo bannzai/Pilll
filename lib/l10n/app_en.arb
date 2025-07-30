@@ -2097,7 +2097,7 @@
   },
   "quickRecordTakePillFailed": "The record of taking the pill may have failed",
   "@quickRecordTakePillFailed": {
-    "description": "The record of taking the pill may have failed"
+    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
   "quickRecordTakePillFailedMessage": "Please open the app and check",
   "@quickRecordTakePillFailedMessage": {

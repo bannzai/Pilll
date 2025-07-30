@@ -2097,7 +2097,7 @@
   },
   "quickRecordTakePillFailed": "Det kan ha vært en feil med inntak av registrering.",
   "@quickRecordTakePillFailed": {
-    "description": "服用記録が失敗した可能性があります"
+    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
   "quickRecordTakePillFailedMessage": "Åpne appen og sjekk.",
   "@quickRecordTakePillFailedMessage": {

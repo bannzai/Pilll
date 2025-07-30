@@ -2097,7 +2097,7 @@
   },
   "quickRecordTakePillFailed": "복용 기록이 실패했을 가능성이 있습니다",
   "@quickRecordTakePillFailed": {
-    "description": "복용 기록이 실패했을 가능성이 있습니다"
+    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
   "quickRecordTakePillFailedMessage": "앱을 열어 확인해 주세요",
   "@quickRecordTakePillFailedMessage": {
