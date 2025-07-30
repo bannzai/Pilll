@@ -293,7 +293,7 @@
   },
   "updateAuthenticationInformation": "인증 정보 업데이트",
   "@updateAuthenticationInformation": {
-    "description": "인증 정보 업데이트"
+    "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
   },
   "registeredWithProvider": "{accountTypeProviderName}으로 등록했습니다",
   "@registeredWithProvider": {

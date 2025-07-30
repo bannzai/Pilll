@@ -293,7 +293,7 @@
   },
   "updateAuthenticationInformation": "আপনি প্রমাণীকরণের তথ্য আপডেট করছেন",
   "@updateAuthenticationInformation": {
-    "description": "認証情報を更新します"
+    "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
   },
   "registeredWithProvider": "{accountTypeProviderName} ৰে পঞ্জীয়ন কৰা হৈছে",
   "@registeredWithProvider": {
