@@ -726,7 +726,7 @@
   },
   "todayPillToTake": "💊 Today's pill",
   "@todayPillToTake": {
-    "description": "💊 Today's pill"
+    "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
   "number": "th",
   "@number": {

@@ -726,7 +726,7 @@
   },
   "todayPillToTake": "💊 오늘 복용할 딜",
   "@todayPillToTake": {
-    "description": "💊 오늘 복용할 딜"
+    "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
   "number": "번",
   "@number": {
