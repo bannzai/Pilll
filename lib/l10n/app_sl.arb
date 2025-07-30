@@ -1307,7 +1307,7 @@
   },
   "selectPillType": "Izberite vrsto tablet",
   "@selectPillType": {
-    "description": "ピルの種類を選択"
+    "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
   },
   "twentyOnePills": "21 tablet",
   "@twentyOnePills": {
