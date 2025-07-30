@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "لم يتم العثور على ورقة الحبوب المستهدفة حاليًا",
+  "currentPillSheetNotFound": "لم يتم العثور على شريط الحبوب المستهدف حالياً",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
