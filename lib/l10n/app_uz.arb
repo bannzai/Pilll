@@ -1138,7 +1138,7 @@
   },
   "message": "Xabar",
   "@message": {
-    "description": "メッセージ"
+    "description": "エラー発生時やシステム処理時に表示される汎用的なメッセージです。主にプレミアム機能の購入・復元処理やSNSシェア機能でのエラーメッセージとして使用されます。"
   },
   "option": "Variantlar",
   "@option": {
