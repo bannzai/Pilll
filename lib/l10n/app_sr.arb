@@ -427,7 +427,7 @@
   },
   "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} broj",
   "@beforeLastTakenPillNumber": {
-    "description": "{beforeLastTakenPillNumber}番",
+    "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
     "placeholders": {
       "beforeLastTakenPillNumber": {
         "type": "String"
