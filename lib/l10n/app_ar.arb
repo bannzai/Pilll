@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "تتم معالجة الشراء بشكل منفصل. يرجى الانتظار لبعض الوقت ثم إعادة التحقق.",
+  "purchaseErrorOperationAlreadyInProgressError": "يتم معالجة عملية شراء أخرى. يرجى الانتظار والمحاولة مرة أخرى لاحقاً",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
