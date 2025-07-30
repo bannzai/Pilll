@@ -2052,7 +2052,7 @@
   },
   "pauseTakingChanged": "복용 쉬기를 변경했습니다",
   "@pauseTakingChanged": {
-    "description": "복용 쉬기를 변경했습니다"
+    "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
   },
   "editPausePeriod": "복용 쉬기 기간 편집",
   "@editPausePeriod": {
