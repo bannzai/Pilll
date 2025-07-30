@@ -1154,7 +1154,7 @@
   },
   "missedNotificationMessageLength": "{missedTakenMessageValueCharactersLength}/100",
   "@missedNotificationMessageLength": {
-    "description": "{missedTakenMessageValueCharactersLength}/100",
+    "description": "ピルの服用を忘れた際のカスタム通知メッセージの文字数制限を表示するテキストです。現在の入力文字数と最大文字数（100文字）を「現在文字数/100」の形式で表示します。",
     "placeholders": {
       "missedTakenMessageValueCharactersLength": {
         "type": "int"
