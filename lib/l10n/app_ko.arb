@@ -997,7 +997,7 @@
   },
   "hideAds": "🚫 광고 표시 안함",
   "@hideAds": {
-    "description": "🚫 광고 표시 안함"
+    "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
   },
   "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
   "@seeDetailsOfPremiumFeatures": {

@@ -997,7 +997,7 @@
   },
   "hideAds": "🚫 ការយកព័ត៌មានសម្រាប់អាក្រក់",
   "@hideAds": {
-    "description": "🚫 広告の非表示"
+    "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
   },
   "seeDetailsOfPremiumFeatures": "មើលព័ត៌មានលម្អិតអំពីមុខងារព្រីមៀម",
   "@seeDetailsOfPremiumFeatures": {
