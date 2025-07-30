@@ -1373,7 +1373,7 @@
   },
   "reachedMaximumCountOfReminderTimes": "ຂໍອະໄພ ທ່ານເລີ່ມດັບສູງສຸດໃນການລົງທະບຽນທ່ານໃຈ. ກະລຸນາໃສ່ສ່ວນເລີ່ມທີ່ຕໍ່ໄປ {ReminderTimeMaximumCount} ລາຍການ.",
   "@reachedMaximumCountOfReminderTimes": {
-    "description": "登録できる上限に達しました。{ReminderTimeMaximumCount}件以内に収めてください",
+    "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
     "placeholders": {
       "ReminderTimeMaximumCount": {
         "type": "int"

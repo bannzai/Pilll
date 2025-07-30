@@ -1373,7 +1373,7 @@
   },
   "reachedMaximumCountOfReminderTimes": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
   "@reachedMaximumCountOfReminderTimes": {
-    "description": "등록 가능한 상한에 도달했습니다. {ReminderTimeMaximumCount}건 이내로 제한해 주세요",
+    "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
     "placeholders": {
       "ReminderTimeMaximumCount": {
         "type": "int"
