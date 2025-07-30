@@ -344,7 +344,7 @@
   "@userInformationWillBeDeleted": {
     "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   },
-  "withdrawalMessage": "As jy uitdroog, sal al die data verwyder word en jy sal nooit weer met dieselfde rekening kan aanmeld nie.",
+  "withdrawalMessage": "As jy jou rekening beëindig, sal alle data permanent uitgewis word en jy sal nooit weer met dieselfde rekening kan aanteken nie.",
   "@withdrawalMessage": {
     "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
