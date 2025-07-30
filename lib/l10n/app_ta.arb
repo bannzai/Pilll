@@ -627,7 +627,7 @@
   },
   "displayMode": "காண்பிக்கும் முறை",
   "@displayMode": {
-    "description": "表示モード"
+    "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
   },
   "dateDisplay": "தேதி காட்சிப்படுத்தல்",
   "@dateDisplay": {

@@ -627,7 +627,7 @@
   },
   "displayMode": "Display mode",
   "@displayMode": {
-    "description": "Display mode"
+    "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
   },
   "dateDisplay": "Date display",
   "@dateDisplay": {

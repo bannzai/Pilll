@@ -627,7 +627,7 @@
   },
   "displayMode": "មុខមាត់បង្ហាញ",
   "@displayMode": {
-    "description": "表示モード"
+    "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
   },
   "dateDisplay": "កាលបរិច្ឆេទបង្ហាញ",
   "@dateDisplay": {
