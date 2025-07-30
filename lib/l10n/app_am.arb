@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "የማይታወቀው ስህተት ነው። ወቅታዊ እትም ወደ መለወጥ ለመቀየር እባክዎ ይሞክሩ። እንዲሁም አለመፍታት እንደሆነ እባክዎ በቅንብር > ጥያቄ ይወዳድሩ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "የማይታወቅ ስህተት ነው። ወደ ቅርብ ስሪት ያዘምኑ እና እንደገና ይሞክሩ። ባይፈታ ቅንብሮች > የመጠይቅ በኩል ያገናኙን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
