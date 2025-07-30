@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "Die betaling is gedurende die proses gestop. Kontroleer asseblief {storeName} met die aanmelding van {accountName}.",
+  "purchaseErrorPaymentPendingError": "Die betaling is onderbreek. Gaan asseblief jou {storeName} na met die {accountName} rekening.",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
