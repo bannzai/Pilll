@@ -798,7 +798,7 @@
   },
   "menstruationHistory": "Historia menstruacyjna",
   "@menstruationHistory": {
-    "description": "生理履歴"
+    "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
   },
   "menstruationFromToday": "Dziś zaczyna się menstruacja",
   "@menstruationFromToday": {
