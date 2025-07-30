@@ -1962,7 +1962,7 @@
       }
     }
   },
-  "inputAndAdd": "Voeg in",
+  "inputAndAdd": "Tik in en voeg by",
   "@inputAndAdd": {
     "description": "何かの情報を手動で入力・追加する際のボタンやラベルのテキストです。服用記録や予定などをユーザーが自分で入力して追加する場面で使用されます。"
   },
