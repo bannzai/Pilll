@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "Le contrat sera automatiquement renouvelé sauf si vous annulez plus de 24 heures avant la date de fin de votre abonnement premium.",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "Après l'achat, l'annulation de l'auto-renouvellement peut être effectuée dans les paramètres du compte de l'application {storeName}. (L'annulation de l'auto-renouvellement ne peut pas être effectuée depuis l'application).",
   "@cancelAutoRenewInfo": {

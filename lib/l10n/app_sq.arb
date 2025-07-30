@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "• Kontrata e Premium gjithmonë do të rinovohet automatikisht për sa kohë që nuk anuloni më shumë se 24 orë para përfundimit të periudhës së kontratës.",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "Pas blerjes, mund të anulohet rinovimi automatik në cilësimet e llogarisë në aplikacionin {storeName}. (Nuk mund të anulohet rinovimi automatik nga brenda aplikacionit).",
   "@cancelAutoRenewInfo": {

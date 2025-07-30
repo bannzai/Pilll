@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "• Kontrak premium akan diperpanjang secara otomatis kecuali jika Anda membatalkan lebih dari 24 jam sebelum tanggal berakhirnya kontrak.",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "Setelah pembelian, pembatalan pembaruan otomatis dapat dilakukan di pengaturan akun aplikasi {storeName}. (Pembatalan pembaruan otomatis tidak dapat dilakukan dari dalam aplikasi).",
   "@cancelAutoRenewInfo": {

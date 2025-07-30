@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "除非在 Premium 合同到期日前 24 小时之前取消，否则合同期限将自动续期。",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "・购买后，可以在{storeName}应用的账户设置中取消自动续订。（无法在应用内取消自动续订）.",
   "@cancelAutoRenewInfo": {

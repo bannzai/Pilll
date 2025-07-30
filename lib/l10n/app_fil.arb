@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "Ang kontrata ay awtomatikong mare-renew maliban kung ito ay kanselahin ng higit sa 24 na oras bago ang pagtatapos ng premium na kontrata.",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "Matapos bumili, maaari mong i-unsubscribe ang awtomatikong pag-update sa mga setting ng account ng {storeName} app. (Hindi mo magagawa ang pag-unsubscribe mula sa awtomatikong pag-update mula sa loob ng app.)",
   "@cancelAutoRenewInfo": {

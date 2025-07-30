@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "A menos que canceles antes de 24 horas da data de finalización do período de subscrición premium, o período de subscrición actualizarase automaticamente.",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "Despois da compra, a anulación da renovación automática pódese realizar na configuración da conta da app {storeName}. (Non se pode anular a renovación automática dende a app).",
   "@cancelAutoRenewInfo": {

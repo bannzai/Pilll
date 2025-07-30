@@ -919,7 +919,7 @@
   },
   "autoRenewNotice": "Umaze kube khona, isikhathi sokwakha umphathizinhleli uzovuselelwa ngokuzenzakalelayo ngaphandle kokuthi uhoxise ngaphambi kwezinsuku eziyi-24 ngaphambi kosuku lokuphela kwesivumelwano se-premium.",
   "@autoRenewNotice": {
-    "description": "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n"
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
   "cancelAutoRenewInfo": "• Ngemuva kokuthenga, ukukhipha ukuvuselelwa ngokuzenzakalelayo kungenziwa kuzilungiselelo ze-akhawunti ye-{storeName} uhlelo lokusebenza. (Akukwazi ukukhipha ukuvuselelwa ngokuzenzakalelayo kusuka ohlelweni lokusebenza).",
   "@cancelAutoRenewInfo": {
