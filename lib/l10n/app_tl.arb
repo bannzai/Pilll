@@ -548,7 +548,7 @@
   },
   "estimatedEndPillNumber": "Huling ng nakaraang sheet: {estimatedEndPillNumber}",
   "@estimatedEndPillNumber": {
-    "description": "前回のシートの最後：{estimatedEndPillNumber}番",
+    "description": "前回使用していたピルシート（ブリスターパック）の最後に服用したピルの番号を表示するテキストです。新しいシートに移る際の継続性を示すために使用されます。",
     "placeholders": {
       "estimatedEndPillNumber": {
         "type": "int"
