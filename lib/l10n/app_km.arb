@@ -2204,7 +2204,7 @@
   },
   "changeStartOfPillDays": "ប្តូរថ្ងៃរាប់ចូលគេ",
   "@changeStartOfPillDays": {
-    "description": "服用日数の始まりを変更"
+    "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
   },
   "changeEndOfPillDays": "ប្ដូរទីបញ្ចប់រយៈពេលនៃការបរិភោគ",
   "@changeEndOfPillDays": {

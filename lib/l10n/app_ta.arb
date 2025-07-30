@@ -2204,7 +2204,7 @@
   },
   "changeStartOfPillDays": "மோசடியைக் கொண்டு அண்டிக்கொள்ளும் மாதங்கள் மாற்ற",
   "@changeStartOfPillDays": {
-    "description": "服用日数の始まりを変更"
+    "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
   },
   "changeEndOfPillDays": "கொள்ளும் நாட்களின் கடைசி நாளை மாற்று",
   "@changeEndOfPillDays": {

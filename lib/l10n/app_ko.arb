@@ -2204,7 +2204,7 @@
   },
   "changeStartOfPillDays": "복용 일수의 시작",
   "@changeStartOfPillDays": {
-    "description": "복용 일수의 시작"
+    "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
   },
   "changeEndOfPillDays": "복용 일수의 끝",
   "@changeEndOfPillDays": {
