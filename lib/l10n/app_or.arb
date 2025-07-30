@@ -1323,7 +1323,7 @@
   },
   "twentyOnePlusSevenDaysBreak": "21 ଗୋଲି + 7 ଦିନ ବିଶ୍ରାମ",
   "@twentyOnePlusSevenDaysBreak": {
-    "description": "21錠＋7日休薬"
+    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
   "twentyFourPlusFourPlacebo": "24 ଜ୍ରୀ + 4 ଜ୍ରୀ ନକଲୀ ଔଷଧ",
   "@twentyFourPlusFourPlacebo": {
