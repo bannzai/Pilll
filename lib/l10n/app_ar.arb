@@ -1426,7 +1426,7 @@
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   },
-  "purchaseErrorReceiptAlreadyInUseError": "تم الشراء بالفعل. تم استخدام معلومات الشراء من قبل مستخدم آخر. يرجى التحقق من {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "تم الشراء بالفعل، أو تم استخدام معلومات الشراء من قبل مستخدم آخر. يرجى التحقق من {accountName}",
   "@purchaseErrorReceiptAlreadyInUseError": {
     "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
     "placeholders": {
