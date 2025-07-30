@@ -398,7 +398,7 @@
   },
   "viewMoreDetails": "Se detaljer",
   "@viewMoreDetails": {
-    "description": "くわしくみる"
+    "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
   },
   "viewMore": "Se mer",
   "@viewMore": {

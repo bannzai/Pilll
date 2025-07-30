@@ -398,7 +398,7 @@
   },
   "viewMoreDetails": "세세하게 보기",
   "@viewMoreDetails": {
-    "description": "세세하게 보기"
+    "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
   },
   "viewMore": "더 많이 보기",
   "@viewMore": {
