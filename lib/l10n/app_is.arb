@@ -277,7 +277,7 @@
   },
   "close": "Loka",
   "@close": {
-    "description": "閉じる"
+    "description": "ダイアログ、モーダル、各種設定画面などを閉じるためのボタンのラベルです。アプリ全体で汎用的に使用される基本的なUI要素のため、その言語で最も自然で一般的な「閉じる」の表現を使用してください。"
   },
   "registerAccount": "Skráning á reikningi",
   "@registerAccount": {
