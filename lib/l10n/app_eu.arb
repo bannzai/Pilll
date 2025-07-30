@@ -358,7 +358,7 @@
   },
   "reLoginMessage": "Saioa huts egin aurretik, mesedez, saio berriz hasi zaitez berretsi asmoa. Saio berriz hasi ondoren, automatikoki hasiko da saioaren amaiera prozesua.",
   "@reLoginMessage": {
-    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+    "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
   "updateAuthenticationAfterReLogin": "Sartu berriro eta egiaztapen informazioa eguneratuko dugu.",
   "@updateAuthenticationAfterReLogin": {

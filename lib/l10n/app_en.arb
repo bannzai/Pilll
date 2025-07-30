@@ -358,7 +358,7 @@
   },
   "reLoginMessage": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically",
   "@reLoginMessage": {
-    "description": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically"
+    "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
   "updateAuthenticationAfterReLogin": "Re-login to update authentication information",
   "@updateAuthenticationAfterReLogin": {

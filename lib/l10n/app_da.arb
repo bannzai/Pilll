@@ -358,7 +358,7 @@
   },
   "reLoginMessage": "Log ind igen for identitetsbekræftelse før du melder dig ud. Efter genindlæsning påbegyndes afmeldingsprocessen automatisk.",
   "@reLoginMessage": {
-    "description": "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります"
+    "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
   "updateAuthenticationAfterReLogin": "Log ind igen og opdater dine legitimationsoplysninger",
   "@updateAuthenticationAfterReLogin": {
