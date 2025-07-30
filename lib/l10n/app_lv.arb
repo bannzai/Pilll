@@ -94,7 +94,7 @@
   },
   "contactUs": "Sazināties",
   "@contactUs": {
-    "description": "お問い合わせ"
+    "description": "アプリ内のメニューやボタンで表示される、ユーザーがサポートチームに問い合わせや相談をするための機能名です。"
   },
   "delete": "Dzēst",
   "@delete": {
