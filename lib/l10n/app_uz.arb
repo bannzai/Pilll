@@ -102,7 +102,7 @@
   },
   "doDelete": "O'chirish",
   "@doDelete": {
-    "description": "削除する"
+    "description": "服用記録や生理記録などのデータを削除する際のボタンに表示される動詞形の文言です。"
   },
   "deleteUser": "Foydalanuvchini o'chirish",
   "@deleteUser": {
