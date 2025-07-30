@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "ያልታወቀ ስህተት ነው። እባኮትን ወደ አዳዲስ እትም ይሂዱ እና እንደገና ይሞክሩ። አልተፈቀደም ከሆነ በቅንጡ መደብ > ጥያቄ ይገናኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "የማይታወቅ ስህተት ነው። ወደ ዘመናዊ ስሪት በማሻሻል እንደገና ይሞክሩ። ካልተፈታ ቅንብሮች > ግንኙነት በኩል ያነጋግሩን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
