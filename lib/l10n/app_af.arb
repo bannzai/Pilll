@@ -1513,7 +1513,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Aankoop het verkeerd gegaan. Wag 'n bietjie en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Die aankoop het misluk. Probeer asseblief weer later. Indien dit nie opgelos word nie, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppleSubscriptionKeyError": {
     "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
     "placeholders": {
