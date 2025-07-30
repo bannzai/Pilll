@@ -228,7 +228,7 @@
   },
   "currentlyDisplayed": "පෙන්වා ඇති මේවර",
   "@currentlyDisplayed": {
-    "description": "現在表示されている"
+    "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   },
   "allPillSheets": "සියලුම පීල් තැටීල",
   "@allPillSheets": {

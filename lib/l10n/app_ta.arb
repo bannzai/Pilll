@@ -228,7 +228,7 @@
   },
   "currentlyDisplayed": "இப்போது காட்சியளிக்கப்படுகிறது",
   "@currentlyDisplayed": {
-    "description": "現在表示されている"
+    "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   },
   "allPillSheets": "எல்லா மாதவிடாய் மாத்திரை தாள்கள்",
   "@allPillSheets": {
