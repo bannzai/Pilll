@@ -1126,7 +1126,7 @@
   },
   "showsPillNumber": "Ipakita ang numero",
   "@showsPillNumber": {
-    "description": "番号を表示"
+    "description": "ピルシートの各薬に表示される順番の数字（1日目、2日目など）を表示するかどうかを切り替える設定項目のラベルです。ユーザーがピルシートUI上で薬の服用順序を数字で確認したい場合に使用されます。"
   },
   "showsDescription": "Ipinapakita ang paglalarawan",
   "@showsDescription": {
