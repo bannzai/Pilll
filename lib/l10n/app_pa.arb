@@ -2040,7 +2040,7 @@
   },
   "pauseStartingOtherDaysInstructions": "ਕਿਰਪਾ ਕਰਕੇ ਸ਼ਾਂਤ ਰਹਿਣਾ। ਜੇ ਤੁਸੀਂ ਅੱਜ ਤੋਂ ਬਿਨਾਂ ਕਿਸੇ ਹੋਰ ਦਿਨ ਲਈ ਗੋਲੀ ਖਾਂਣਾ ਰੋਕਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹੇਠਾਂ ਦਿੱਤੀਆਂ ਜਿਨ੍ਹਾਂ ਨੂੰ ਦੇਖੋ।",
   "@pauseStartingOtherDaysInstructions": {
-    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
   "seeHowToUsePauseTakingFeature": "ਦਵਾਈਆਂ ਬੰਦ ਕਰਨ ਦੀ ਵਿਧੀ ਦੇਖੋ",
   "@seeHowToUsePauseTakingFeature": {

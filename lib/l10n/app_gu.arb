@@ -2040,7 +2040,7 @@
   },
   "pauseStartingOtherDaysInstructions": "કૃપયા આરામ કરો. જો તમે આજના દિવસ બાદ સ્થાપનાની ઢીલી લીધા ઇચ્છતા હો, તો નીચે આપેલી માહિતીનો સંદર્ભ લો.",
   "@pauseStartingOtherDaysInstructions": {
-    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
   "seeHowToUsePauseTakingFeature": "ઉપરાંત પિલ્સ લેવાની સુવિધાના ઉપયોગનો માર્ગદર્શન જુઓ",
   "@seeHowToUsePauseTakingFeature": {

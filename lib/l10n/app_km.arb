@@ -2040,7 +2040,7 @@
   },
   "pauseStartingOtherDaysInstructions": "សូមឈប់ផ្លូវចិត្ត។ ប្រសិនបើអ្នកចង់ឈប់យកពីថ្ងៃផ្សេងឬថ្ងៃនេះ សូមយោងទៅកាន់អត្ថបទក្រោមនេះ។",
   "@pauseStartingOtherDaysInstructions": {
-    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
   "seeHowToUsePauseTakingFeature": "មើលរបៀបប្រើប្រាស់មុខងារ​សម្រាក​ការប្រាស់",
   "@seeHowToUsePauseTakingFeature": {

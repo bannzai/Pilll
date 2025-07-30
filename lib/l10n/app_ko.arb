@@ -2040,7 +2040,7 @@
   },
   "pauseStartingOtherDaysInstructions": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요.",
   "@pauseStartingOtherDaysInstructions": {
-    "description": "쉬어 주세요. 오늘 이외의 날부터 복용을 쉬고 싶다면 아래를 참고해 주세요."
+    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
   "seeHowToUsePauseTakingFeature": "복용 쉬기 기능 사용 방법 보기",
   "@seeHowToUsePauseTakingFeature": {

@@ -2040,7 +2040,7 @@
   },
   "pauseStartingOtherDaysInstructions": "Одморите се. Ако желите да направите паузу у узимању лекова од дана који није данас, молимо погледајте доле.",
   "@pauseStartingOtherDaysInstructions": {
-    "description": "お休みしてください。今日以外の日から服用お休みしたい場合は下記を参考にしてください。"
+    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
   "seeHowToUsePauseTakingFeature": "Погледајте како да користите функцију паузе у узимању лекова",
   "@seeHowToUsePauseTakingFeature": {
