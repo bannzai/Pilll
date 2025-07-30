@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "0자 이상 입력하세요",
   "@enterAtLeastOneCharacter": {
-    "description": "0자 이상 입력하세요"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "복용 잊�� 않음 알림 ��시지를 변경할 수 있습니다",
   "@changeDailyNotificationMessage": {

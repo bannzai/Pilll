@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "कृपया 0 किंवा त्यापेक्षा जास्त वर्णen प्रविष्ट करा",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "आपण चुकता घेतलेली नक्कीच नाही हे लक्षात घेण्यासाठी नोटिफिकेशन मजकूर बदलू शकता.",
   "@changeDailyNotificationMessage": {

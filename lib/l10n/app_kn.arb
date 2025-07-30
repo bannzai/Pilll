@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "0 ಅಕ್ಷರಗಳಲ್ಲಿ ಹೆಚ್ಚು ನಮೂದಿಸಿ",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "ಕ್ಕೆ ಉದಾಹರಣೆ ನೀಡುವ ಮೂಲಕ ನೀವು ಏನನ್ನು ಮರೆತಿಲ್ಲ ಎಂಬುದನ್ನು ಪರಿಶೀಲಿಸಬಹುದು.",
   "@changeDailyNotificationMessage": {

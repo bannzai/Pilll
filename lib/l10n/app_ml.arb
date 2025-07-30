@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "0 അക്ഷരങ്ങൾക്കായി ദയവായി എനിക്കു നൽകുക",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "നിങ്ങൾ പിലുകൾ വടിക്കാനുള്ള സമയം മറന്നിട്ടില്ലെങ്കിൽ, അറിയിപ്പുകൾക്കായി വാക്കുകൾ മാറ്റാൻ കഴിയും.",
   "@changeDailyNotificationMessage": {

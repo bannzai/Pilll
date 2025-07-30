@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "ກະລຸນາໃຊ້ຄໍາສັບຕິດເຂົ້າໃສ່ເພີ່ມເຕີມສູນ 0 ຄໍາ ຫຼື ຕິດໃໝ່ຄໍາ.",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "ສາມາດແດງປ່ອນຂໍ້ຄວາມໃໝ່ ສໍາລັບການແຈ້ງແນະໃນເວລາທີ່ບໍ່ແມ່ນບໍ່ຄົງໃຈໃນການດື່ມຢາ.",
   "@changeDailyNotificationMessage": {

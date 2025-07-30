@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "0 எழுத்துகளுக்குமேல் உள்ளீடு செய்யவும்",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "உங்கள் மருந்துகளை மறக்கவில்லை என்றால், அறிவிப்பை மாற்றலாம்",
   "@changeDailyNotificationMessage": {

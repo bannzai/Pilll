@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "Vui lòng nhập từ 0 ký tự trở lên",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "Bạn có thể thay đổi nội dung thông báo khi không quên uống thuốc.",
   "@changeDailyNotificationMessage": {

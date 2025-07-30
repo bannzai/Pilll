@@ -1180,7 +1180,7 @@
   },
   "enterAtLeastOneCharacter": "Please enter at least 0 characters.",
   "@enterAtLeastOneCharacter": {
-    "description": "0文字以上入力してください"
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
   "changeDailyNotificationMessage": "You can change the notification text when you have not missed a dose.",
   "@changeDailyNotificationMessage": {
