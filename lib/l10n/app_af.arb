@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Die aankoopproses is aparte voortgang. Neem 'n paar minute en kyk asseblief weer.",
+  "purchaseErrorOperationAlreadyInProgressError": "'n Aankoop proses is reeds aan die gang. Wag asseblief 'n rukkie en probeer weer.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
