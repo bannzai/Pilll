@@ -1354,7 +1354,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "As die kennisgewings afgeskakel is, word daar ook outomaties 'n gebruiksregister vir die {pillSheetPillSheetTypeNotTakenWord}-periode gemaak.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Wanneer kennisgewings af is, sal {pillSheetPillSheetTypeNotTakenWord}-periode inname rekords ook outomaties aangeteken word",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
