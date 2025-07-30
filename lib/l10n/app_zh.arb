@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "这是一个未知错误。请更新到最新版本并重试。如果仍然未能解决，请通过设置 > 联系我们 联系我们。代码: {errorCode} 详细信息: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"

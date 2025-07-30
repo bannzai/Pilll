@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ਗੈਰ-ਲੱਭਿਆ ਜਾਅਨ ਵਾਲਾ ਗਲਤੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਸਭ ਤੋਂ ਨਵੀਂ ਵਰਜਨ ਵਿੱਚ ਅੱਪਡੇਟ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਇਹ ਹੱਲ ਨਾ ਹੋਵੇ ਤਾਂ ਕਿਰਪਾ ਕਰਕੇ ਸੈਟਿੰਗਸ > ਸੰਪਰਕ ਤੋਂ ਸੰਪਰਕ ਕਰੋ। ਕੋਡ: {errorCode} ਵਿਸਥਾਰ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"

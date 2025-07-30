@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "අනාගතයට හෝ සම්පූර්ණයෙන් නිවැරදි නැති දෝෂයකි. නවතම සංස්කරණයට යාවත්කාලීන කරන ලෙසින් කරුණාකර නැවත පරීක්ෂා කරන්න. නවීනත්වය සාර්ථක වූයේ නම්, කරුණාකර සැකසුම් > ප්‍රශ්න විමසීමෙන් අප අමතන්න. කේතය: {errorCode} විශේෂිත: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"

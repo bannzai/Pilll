@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "എങ്ങനെ ചെയ്യണമെന്ന് അറിയാത്ത ഒരു പിശക് അനുഭവമാണ്. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്ഡേറ്റ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിച്ചില്ലെങ്കിൽ, മതയിൽ > അന്വേഷണത്തിൽ നിന്ന് ഞങ്ങളെ ബന്ധപ്പെടുക. കോഡ്: {errorCode} വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"

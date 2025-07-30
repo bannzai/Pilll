@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ಅನೇಕವು ತಿಳಿಯದ ದೋಷವಾಗಿದೆ. ದಯವಿಟ್ಟು ತಾಜಾ ಆವೃತ್ತಿಗೆ ಅಪ್‌ಡೇಟ್ ಮಾಡಿ ಮತ್ತು ಮರುಕೆಲಸ ಮಾಡಿರಿ. ಪರಿಹಾರವಾಗದಿದ್ದರೆ, ಕೋರಿಕೆಗಳನ್ನು ತಿಳಿಸಲು ಸೆಟ್ಟಿಂಗ್ಸ್ > ಸಂಪರ್ಕವನ್ನು ವಿಶ್ವಾಸಿಸಲು ದಯವಿಟ್ಟು ಸಂಪರ್ಕಿಸಿ. ಕೋಡ್: {errorCode} ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"

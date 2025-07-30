@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "원인 불명의 오류입니다. 최신 버전으로 업데이트 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 코드: {errorCode} 상세: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"

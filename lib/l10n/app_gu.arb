@@ -1653,7 +1653,7 @@
   },
   "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "અપરિચિત ભૂલ છે. કૃપા કરીને નવીનতমમાં અપગ્રેડ કરો અને પુનરાવૃત કરવાનો પ્રયત્ન કરો. જો સમસ્યા ઉકેલાઇ ન થાય, તો કૃપા કરીને સુયોજનો > સંપર્ક દ્વારા સંપર્ક કરો. કોડ: {errorCode} વિગત: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
       "errorCode": {
         "type": "String"
