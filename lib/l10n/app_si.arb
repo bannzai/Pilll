@@ -1947,7 +1947,7 @@
   },
   "pressAndHoldNotificationToRecordPillTaking": "සංවේදනා සංඝටනය කිරීමෙන් පශ්චාත් පියවර ලේඛනයක් සාදිය හැක",
   "@pressAndHoldNotificationToRecordPillTaking": {
-    "description": "通知を長押しすると服用記録ができます"
+    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
   "letsTryIt": "කරුණාකර අත්හදා බලන්න",
   "@letsTryIt": {

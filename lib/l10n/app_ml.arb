@@ -1947,7 +1947,7 @@
   },
   "pressAndHoldNotificationToRecordPillTaking": "അറിയിപ്പിനെ ദീര്UGHമായിട്ട് സമ്മര്‍ദ്ദിക്കുകയാണെങ്കില്‍, ഉറപ്പാക്കലിന്റെ രേഖ വികസിപ്പിക്കും",
   "@pressAndHoldNotificationToRecordPillTaking": {
-    "description": "通知を長押しすると服用記録ができます"
+    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
   "letsTryIt": "ദയവായി പരീക്ഷിക്കുക",
   "@letsTryIt": {

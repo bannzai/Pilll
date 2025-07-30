@@ -1947,7 +1947,7 @@
   },
   "pressAndHoldNotificationToRecordPillTaking": "Долгото на притискањето на известувањето, можете да запишете запис за земање на пилула.",
   "@pressAndHoldNotificationToRecordPillTaking": {
-    "description": "通知を長押しすると服用記録ができます"
+    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
   "letsTryIt": "Обидете да пробате",
   "@letsTryIt": {

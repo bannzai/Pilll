@@ -1947,7 +1947,7 @@
   },
   "pressAndHoldNotificationToRecordPillTaking": "Хабарламаны ұзақ басып тұрып, дәрі қабылдауға қатысты жазбаны жасауға болады.",
   "@pressAndHoldNotificationToRecordPillTaking": {
-    "description": "通知を長押しすると服用記録ができます"
+    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
   "letsTryIt": "Сіздерді сынап көруге шақырамыз",
   "@letsTryIt": {

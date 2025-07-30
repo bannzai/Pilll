@@ -1947,7 +1947,7 @@
   },
   "pressAndHoldNotificationToRecordPillTaking": "Duke të mbani mend të marrëni ilaçin, mbani mend të regjistroni marrjen tuaj duke mbajtur për një kohë të gjatë njoftimin.",
   "@pressAndHoldNotificationToRecordPillTaking": {
-    "description": "通知を長押しすると服用記録ができます"
+    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
   "letsTryIt": "Ju lutem provojeni.",
   "@letsTryIt": {
