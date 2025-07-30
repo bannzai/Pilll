@@ -1134,7 +1134,7 @@
   },
   "title": "Název",
   "@title": {
-    "description": "タイトル"
+    "description": "予定やスケジュールの件名・タイトルを表します。通院予定や体調記録などの見出しとして使用されます。"
   },
   "message": "Zpráva",
   "@message": {
