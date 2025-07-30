@@ -2218,7 +2218,7 @@
   },
   "cancelTaking": "Annulation de la prise",
   "@cancelTaking": {
-    "description": "服用取り消し"
+    "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
   "deletedDiaryCannotBeRestored": "Le journal supprimé ne peut pas être restauré.",
   "@deletedDiaryCannotBeRestored": {

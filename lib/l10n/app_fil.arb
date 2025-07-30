@@ -2230,7 +2230,7 @@
   },
   "cancelTaking": "Kanselasyon ng pag-inom",
   "@cancelTaking": {
-    "description": "服用取り消し"
+    "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
   "deletedDiaryCannotBeRestored": "Hindi na maibabalik ang tinanggal na talaarawan.",
   "@deletedDiaryCannotBeRestored": {

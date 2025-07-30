@@ -2230,7 +2230,7 @@
   },
   "cancelTaking": "복용 취소",
   "@cancelTaking": {
-    "description": "복용 취소"
+    "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
   "deletedDiaryCannotBeRestored": "삭제된 일기는 복원할 수 없습니다",
   "@deletedDiaryCannotBeRestored": {

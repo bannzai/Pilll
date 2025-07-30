@@ -2251,7 +2251,7 @@
   },
   "cancelTaking": "服用取り消し",
   "@cancelTaking": {
-    "description": "服用取り消し"
+    "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
   "deletedDiaryCannotBeRestored": "削除した日記は復元できません",
   "@deletedDiaryCannotBeRestored": {
