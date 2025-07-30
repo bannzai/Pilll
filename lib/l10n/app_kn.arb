@@ -1527,7 +1527,7 @@
   },
   "purchaseErrorIneligibleError": "ನಿಮ್ಮ ಬಳಕೆದಾರರಲ್ಲಿ ಖರೀದಿಗೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಕಾಲ ಕಾಯಿರಿ ಮತ್ತು ಪುನಃ ಪ್ರಯತ್ನಿಸಿ. ಪರಿಹಾರವಾಗದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಕಾರ್ಯಪಡಿಸಿ > ಸಂಪರ್ಕದ ಮೂಲಕ ಒತ್ತಿರಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
-    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

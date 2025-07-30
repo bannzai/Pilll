@@ -1527,7 +1527,7 @@
   },
   "purchaseErrorIneligibleError": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
-    "description": "사용 중인 사용자로 구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

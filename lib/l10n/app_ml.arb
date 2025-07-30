@@ -1527,7 +1527,7 @@
   },
   "purchaseErrorIneligibleError": "നിങ്ങളുടെ ഉപയോക്താവിൽ വാങ്ങലിൽ പരാജയം സംഭവിച്ചു. ദയവായി സമയം ഉല്പാദിപ്പിച്ച് വീണ്ടും ശ്രമിക്കുക. പരിഹാരം കണ്ടെത്താൻ കഴിയാത്ത പക്ഷം നിലവിലുള്ള >ചോദ്യങ്ങൾ വഴി ഞങ്ങളെ ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ:{exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
-    "description": "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
