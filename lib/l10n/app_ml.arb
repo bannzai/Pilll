@@ -62,7 +62,7 @@
   },
   "pillPremium": "പിൽക് പ്രീമിയം",
   "@pillPremium": {
-    "description": "Pilllプレミアム"
+    "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
   },
   "unlimitedFeatureDuration": "സാധനങ്ങള്‍ പരിമിതിയില്ലാത്ത ഇടവേളയ്ക്ക് കുറിച്ച്",
   "@unlimitedFeatureDuration": {
