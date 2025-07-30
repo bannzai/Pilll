@@ -1058,7 +1058,7 @@
   },
   "startApp": "അപ്ലിക്കേഷൻ ആരംഭിക്കുക",
   "@startApp": {
-    "description": "アプリをはじめる"
+    "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
   },
   "loggedInWithProvider": "{accountTypeProviderName} ലോഗിൻ ചെയ്തു",
   "@loggedInWithProvider": {
