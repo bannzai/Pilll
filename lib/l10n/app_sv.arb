@@ -2242,7 +2242,7 @@
   },
   "changedPillNumber": "Ändra piller nummer",
   "@changedPillNumber": {
-    "description": "ピル番号変更"
+    "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
   },
   "offPercentForMonthlyPremiumPackage": "{offPercent}% rabatt jämfört med den vanliga månadskostnaden",
   "@offPercentForMonthlyPremiumPackage": {

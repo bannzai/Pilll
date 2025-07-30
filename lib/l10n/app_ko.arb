@@ -2242,7 +2242,7 @@
   },
   "changedPillNumber": "피임약 번호 변경",
   "@changedPillNumber": {
-    "description": "피임약 번호 변경"
+    "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
   },
   "offPercentForMonthlyPremiumPackage": "{offPercent}% 정기 월간 가격 할인",
   "@offPercentForMonthlyPremiumPackage": {
