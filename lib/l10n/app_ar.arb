@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "فشل في استرداد معلومات الشراء. يرجى المحاولة مرة أخرى بعد بعض الوقت. إذا لم يتم حل المشكلة، يرجى الاتصال بنا من خلال الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "فشل في استرداد معلومات الشراء. يرجى الانتظار والمحاولة مرة أخرى. إذا استمرت المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
