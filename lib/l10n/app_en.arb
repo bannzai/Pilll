@@ -1771,7 +1771,7 @@
   },
   "forceUpdateMessage": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
   "@forceUpdateMessage": {
-    "description": "We are requesting an update to the version of your app. Please update to the latest version from {storeName}",
+    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
       "storeName": {
         "type": "String"

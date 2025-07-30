@@ -1771,7 +1771,7 @@
   },
   "forceUpdateMessage": "ನೀವು ಬಳಸುತ್ತಿರುವ ಅಪ್ಲಿಕೇಶನ್‌ನ ಆವೃತ್ತಿಯ ನವೀಕರಣವನ್ನುお願いしております。{storeName} ನಿಂದ ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಯನ್ನು ನವೀಕರಣ ಮಾಡಿರಿ.",
   "@forceUpdateMessage": {
-    "description": "お使いのアプリのバージョンのアップデートをお願いしております。{storeName}から最新バージョンにアップデートしてください",
+    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
       "storeName": {
         "type": "String"

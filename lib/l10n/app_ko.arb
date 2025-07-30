@@ -1771,7 +1771,7 @@
   },
   "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
   "@forceUpdateMessage": {
-    "description": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
+    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
       "storeName": {
         "type": "String"
