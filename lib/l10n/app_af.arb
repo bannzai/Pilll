@@ -1651,7 +1651,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Dit is 'n onopgeloste fout. Werk na ywerigste weer op. As dit nie opgelos is nie, kontak asseblief via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Dit is 'n fout met 'n onbekende oorsaak. Dateer asseblief op na die nuutste weergawe en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
