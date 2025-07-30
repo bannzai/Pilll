@@ -1877,7 +1877,7 @@
   },
   "exampleRestDurationNumber": "For example, if you take a break from medication for \"3 days from the 18th\"",
   "@exampleRestDurationNumber": {
-    "description": "例えば「18番から3日間」服用お休みした場合"
+    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   },
   "withNumber": "{number} nummer",
   "@withNumber": {

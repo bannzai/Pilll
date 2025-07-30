@@ -1881,7 +1881,7 @@
   },
   "exampleRestDurationNumber": "ઉદાહરણ તરીકે, \"18 નંબરથી 3 દિવસ\" દવા લેવાનું બંધ કર્યું હોય તો.",
   "@exampleRestDurationNumber": {
-    "description": "例えば「18番から3日間」服用お休みした場合"
+    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   },
   "withNumber": "{number} નંબરના",
   "@withNumber": {
