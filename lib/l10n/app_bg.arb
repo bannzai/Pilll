@@ -2080,7 +2080,7 @@
   },
   "changePausePeriod": "Промяна на периода на почивка от прием",
   "@changePausePeriod": {
-    "description": "服用お休み期間変更"
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
   "changedPausePeriod": "Промених периода на почивка от приема",
   "@changedPausePeriod": {

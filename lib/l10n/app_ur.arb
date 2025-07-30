@@ -2080,7 +2080,7 @@
   },
   "changePausePeriod": "دوائی کے آرام کے دورانیے میں تبدیلی",
   "@changePausePeriod": {
-    "description": "服用お休み期間変更"
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
   "changedPausePeriod": "میں نے خوراک کی چھٹی کی مدت کو تبدیل کر دیا ہے۔",
   "@changedPausePeriod": {

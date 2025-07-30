@@ -2080,7 +2080,7 @@
   },
   "changePausePeriod": "മരുന്ന് ബ്രേക്കിന്റെ കാലയരെ മാറ്റുക",
   "@changePausePeriod": {
-    "description": "服用お休み期間変更"
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
   "changedPausePeriod": "മരുന്നിന്റെ വിശ്രമ കാലാവധി മാറ്റി",
   "@changedPausePeriod": {

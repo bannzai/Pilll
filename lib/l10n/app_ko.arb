@@ -2080,7 +2080,7 @@
   },
   "changePausePeriod": "복용 쉬기 기간 변경",
   "@changePausePeriod": {
-    "description": "복용 쉬기 기간 변경"
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
   "changedPausePeriod": "복용 쉬기 기간을 변경했습니다",
   "@changedPausePeriod": {
