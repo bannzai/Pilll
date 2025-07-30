@@ -1130,7 +1130,7 @@
   },
   "showsDescription": "Tavsif matnini ko'rsatish",
   "@showsDescription": {
-    "description": "説明文を表示"
+    "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
   },
   "title": "Sarlavha",
   "@title": {

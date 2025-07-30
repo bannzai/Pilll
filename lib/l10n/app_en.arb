@@ -1130,7 +1130,7 @@
   },
   "showsDescription": "Show description",
   "@showsDescription": {
-    "description": "Show description"
+    "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
   },
   "title": "Title",
   "@title": {
