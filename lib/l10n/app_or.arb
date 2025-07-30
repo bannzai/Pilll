@@ -1683,7 +1683,7 @@
   },
   "purchaseErrorSystemInfoError": "ଏହାର ଅବସ୍ଥାନ ଗଠନରେ କିଛି ସମସ୍ୟା ରହିଛି। କୃପୟା ପରୀକ୍ଷା କରନ୍ତୁ ଏବଂ ପुनର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ଏହା ସମାଧାନ ନ ହୁଏ, ତେବେ ସେଟିଂସ୍ > ସମ୍ପୃକ୍ତ ମାଧ୍ୟମରେ ଯୋଗାযোগ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିସ୍ତୃତ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
-    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
       "errorCode": {
         "type": "String"

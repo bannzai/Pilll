@@ -1683,7 +1683,7 @@
   },
   "purchaseErrorSystemInfoError": "ඉන්ද්‍රණී ඉන්ද්‍රණී ඉන්ද්‍රණීෙදෙත් බොහෝම නිවැරදිව සලකා බලන්න. නැවත උත්සාහ කරන්න. යථාර්ථයක් නොවන්නේනම්, සැකසුම > සම්බන්ධතා යටතේ අප හා සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
-    "description": "端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
       "errorCode": {
         "type": "String"
