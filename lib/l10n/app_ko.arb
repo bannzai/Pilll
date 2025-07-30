@@ -1242,7 +1242,7 @@
   },
   "contactIfNotResolved": "해결되지 않는 경우 여기를 클릭하세요",
   "@contactIfNotResolved": {
-    "description": "해결되지 않는 경우 여기를 클릭하세요"
+    "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
   },
   "shareFeedback": "Pilll의 감상을 들려주세요",
   "@shareFeedback": {
