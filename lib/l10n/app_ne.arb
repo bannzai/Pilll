@@ -835,7 +835,7 @@
   },
   "registerAccountForDataTransfer": "एउटा खाता दर्ता गर्दा डाटा स्थानान्तरण गर्न सम्भव हुन्छ।",
   "@registerAccountForDataTransfer": {
-    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
   "registerAccountToKeepData": "कृपया खाता पंजीकरण गर्नुहोस् ताकि खाता जानकारी राख्न सकियोस",
   "@registerAccountToKeepData": {

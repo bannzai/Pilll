@@ -835,7 +835,7 @@
   },
   "registerAccountForDataTransfer": "Reģistrējoties kontā, datu pārsūtīšana būs iespējama.",
   "@registerAccountForDataTransfer": {
-    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
   "registerAccountToKeepData": "Lūdzu, reģistrējiet savu kontu, lai saglabātu konta informāciju.",
   "@registerAccountToKeepData": {

@@ -835,7 +835,7 @@
   },
   "registerAccountForDataTransfer": "Kapag nagrehistro ka ng account, magiging posible ang paglipat ng datos.",
   "@registerAccountForDataTransfer": {
-    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
   "registerAccountToKeepData": "Mangyaring magrehistro ng account upang mapanatili ang impormasyon ng account.",
   "@registerAccountToKeepData": {

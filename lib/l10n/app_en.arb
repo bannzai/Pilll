@@ -835,7 +835,7 @@
   },
   "registerAccountForDataTransfer": "Registering an account will allow you to transfer and recover data",
   "@registerAccountForDataTransfer": {
-    "description": "Registering an account will allow you to transfer and recover data"
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
   "registerAccountToKeepData": "In order to keep your account information, please register an account",
   "@registerAccountToKeepData": {

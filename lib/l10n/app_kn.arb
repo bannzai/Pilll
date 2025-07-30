@@ -835,7 +835,7 @@
   },
   "registerAccountForDataTransfer": "ಖಾತೆ ನೋಂದಣಿ ಮಾಡಿದಾಗ ಡೇಟಾ ವರ್ಗಾವಣೆ ಸಾಧ್ಯವಾಗುತ್ತದೆ",
   "@registerAccountForDataTransfer": {
-    "description": "アカウント登録するとデータの引き継ぎが可能になります"
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
   "registerAccountToKeepData": "ಖಾತೆಯ ಮಾಹಿತಿ ಉಳಿಸಲು, ದಯವಿಟ್ಟು ಖಾತೆ ನೋಂದಣಿ ಪ್ರಕ್ರಿಯೆ ಪರಿಚಯಿಸಿ.",
   "@registerAccountToKeepData": {

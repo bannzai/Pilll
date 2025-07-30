@@ -835,7 +835,7 @@
   },
   "registerAccountForDataTransfer": "계정 등록하면 데이터의 인계가 가능합니다",
   "@registerAccountForDataTransfer": {
-    "description": "계정 등록하면 데이터의 인계가 가능합니다"
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
   "registerAccountToKeepData": "데이터를 유지하기 위해 계정 등록을 부탁드립니다",
   "@registerAccountToKeepData": {
