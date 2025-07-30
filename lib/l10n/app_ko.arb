@@ -2221,7 +2221,7 @@
   },
   "failedToGetPillSheetHistory": "복용 이력 정보를 가져오지 못했습니다. {error}",
   "@failedToGetPillSheetHistory": {
-    "description": "복용 이력 정보를 가져오지 못했습니다. {error}",
+    "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
     "placeholders": {
       "error": {
         "type": "String"

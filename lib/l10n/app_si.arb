@@ -2221,7 +2221,7 @@
   },
   "failedToGetPillSheetHistory": "ඉකුත් ආහාර ගැනීමේ තොරතුරු ලබා ගැනීමට අපොසොක් විය. {error}",
   "@failedToGetPillSheetHistory": {
-    "description": "服用履歴情報の取得に失敗しました。{error}",
+    "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
     "placeholders": {
       "error": {
         "type": "String"
