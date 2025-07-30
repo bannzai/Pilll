@@ -1753,7 +1753,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "ምንም አይነት አካባቢ አይኖርም። ምንም እንኳን ይህን እንደገና ሞክሩ። አልተፈቀደም እንዲሁ ወደ ቅንብሮች > ጥያቄ። ዝርዝር ፡ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "የኔትወርክ ግንኙነት ችግር አለ። የኔትወርክ ሁኔታዎን ያረጋግጡ እና እንደገና ይሞክሩ። ችግሩ ከቀጠለ ቅንብሮች > አግኙን በመሄድ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
