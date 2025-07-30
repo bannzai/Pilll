@@ -1037,7 +1037,7 @@
   },
   "readAndStartUsing": "Inizia a utilizzare leggendo",
   "@readAndStartUsing": {
-    "description": "を読んで\n利用をはじめてください"
+    "description": "利用規約やプライバシーポリシー等の重要な情報を読んでから、アプリの使用を開始することを促すボタンまたは案内文です。ユーザーに対して情報の確認と利用開始の両方のアクションを促している表現です。"
   },
   "next": "Avanti",
   "@next": {
