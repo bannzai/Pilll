@@ -219,7 +219,7 @@
   },
   "areYouSureDoing": "{doing}ທໍາແນ່?",
   "@areYouSureDoing": {
-    "description": "{doing}しますか？",
+    "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
     "placeholders": {
       "doing": {
         "type": "String"
