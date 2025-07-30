@@ -2288,7 +2288,7 @@
   },
   "enableNotificationInSilentMode": "매너 모드에서도 알림",
   "@enableNotificationInSilentMode": {
-    "description": "マナーモードでも通知する"
+    "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
   },
   "enableNotificationInSilentModeSetting": "진동 모드에서도 알림 설정",
   "@enableNotificationInSilentModeSetting": {
