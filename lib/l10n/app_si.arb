@@ -1808,7 +1808,7 @@
   },
   "accountAlreadyLinked": "ආයුබෝවන්, දිනයේ{accountTypeProviderName} ගිණුමක් ඔබේ Pilll ගිණුමට සම්බන්ධ වී ඇත. ඉදිරිපස යාවත්කාලීන කිරීමේ සටහන නිරීක්ෂණය කරන්න. FAQ පරීක්ෂා කරන්න. විස්තරය: {exceptionMessage}",
   "@accountAlreadyLinked": {
-    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"

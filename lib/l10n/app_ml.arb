@@ -1808,7 +1808,7 @@
   },
   "accountAlreadyLinked": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനോടകം നിങ്ങൾ നിലവിൽ ഉപയോഗിക്കുന്ന Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നു. സ്ക്രീൻ പുതുക്കാൻ ശ്രമിക്കൂ. FAQ-യും നോക്കൂ. വിശദവിവരം: {exceptionMessage}",
   "@accountAlreadyLinked": {
-    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"

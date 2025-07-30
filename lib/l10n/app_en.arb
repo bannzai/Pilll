@@ -1808,7 +1808,7 @@
   },
   "accountAlreadyLinked": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: {exceptionMessage}",
   "@accountAlreadyLinked": {
-    "description": "This {accountTypeProviderName} account is already linked to your Pilll account. Please try refreshing the screen. Also check the FAQ. Details: {exceptionMessage}",
+    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"

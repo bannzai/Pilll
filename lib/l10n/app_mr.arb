@@ -1808,7 +1808,7 @@
   },
   "accountAlreadyLinked": "हा {accountTypeProviderName} खाते आधीच वापरत असलेल्या Pilll खात्याशी संबंधित आहे. कृपया स्क्रीन अपडेट करण्याचा प्रयत्न करा. FAQs ही पहा. तपशील: {exceptionMessage}",
   "@accountAlreadyLinked": {
-    "description": "この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}",
+    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
