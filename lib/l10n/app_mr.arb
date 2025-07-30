@@ -589,7 +589,7 @@
   },
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "@endValue": {
-    "description": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+    "description": "ピルシートの最後のピル番号を表示するテキストです。ピルシートUIで「何番目まで飲むか」を示す数値が入ります。",
     "placeholders": {
       "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
         "type": "int"
