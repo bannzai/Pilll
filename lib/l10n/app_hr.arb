@@ -1294,7 +1294,7 @@
   },
   "countOfSheet": "{number}-ta",
   "@countOfSheet": {
-    "description": "{number}枚目",
+    "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
     "placeholders": {
       "number": {
         "type": "int"
