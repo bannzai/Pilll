@@ -873,7 +873,7 @@
   },
   "standardMonthlyPlan": "Kawaida Mpangilio wa Kila Mwezi",
   "@standardMonthlyPlan": {
-    "description": "通常 月額プラン"
+    "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   },
   "annualPlan": "Mpango wa kila mwaka",
   "@annualPlan": {

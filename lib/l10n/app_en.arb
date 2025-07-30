@@ -873,7 +873,7 @@
   },
   "standardMonthlyPlan": "Standard monthly plan",
   "@standardMonthlyPlan": {
-    "description": "Standard monthly plan"
+    "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   },
   "annualPlan": "Annual plan",
   "@annualPlan": {
