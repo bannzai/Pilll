@@ -1217,7 +1217,7 @@
   },
   "previousPillSheetGroup": "മുമ്പത്തെ പിൽഷീറ്റ് ഗ്രൂപ്പ്",
   "@previousPillSheetGroup": {
-    "description": "前回のピルシートグループ"
+    "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
   },
   "noPreviousPillSheetGroup": "മുമ്പത്തെ പിൽ ഷീറ്റ് ഗ്രൂപ്പ് ഇപ്പോഴും ഉണ്ട്",
   "@noPreviousPillSheetGroup": {

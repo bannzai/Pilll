@@ -1217,7 +1217,7 @@
   },
   "previousPillSheetGroup": "Previous pill sheet group",
   "@previousPillSheetGroup": {
-    "description": "Previous pill sheet group"
+    "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
   },
   "noPreviousPillSheetGroup": "Previous pill sheet group does not exist",
   "@noPreviousPillSheetGroup": {
