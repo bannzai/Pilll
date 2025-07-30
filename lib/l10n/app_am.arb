@@ -1069,7 +1069,7 @@
       }
     }
   },
-  "tellAboutPrescribedSheet": "እባኮትን ስለ የታነሱ ሱመቶች አሳየኝ።",
+  "tellAboutPrescribedSheet": "እባክዎን ስለ የተወሰደላችሁ የመድኃኒት ሉህ ያሳውቁን",
   "@tellAboutPrescribedSheet": {
     "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
