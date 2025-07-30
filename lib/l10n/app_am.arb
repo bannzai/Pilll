@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "መረጃ የማይታወቅ የስህተት ነው። እባኮትን ወደ ዚህ ዕቅፍ ያነሱ ከዚያ ይሞክሩ። የተፈቀደ እና ከተወሰነው ነገር ይሁን፣ እንደ ዚህ የመጀመሪያ ሃሳብ ይሞክሩ። እንዴት ይችላሉ የአቅጣጫው፣ የእቅፍ ወይም የእርዳታ ቦታ ከዚያ ይዛዙ ወይም ይገኙ። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "አልታወቀ ስህተት ነው። ወደ ቅርብ ስሪት ወርድ እና እንደገና ሞክር። ካልተፈታ ቅንብሮች > ጥያቄ በኩል አግኝን። ኮድ: {errorCode} ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
