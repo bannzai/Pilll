@@ -2093,7 +2093,7 @@
   },
   "alreadyTaken": "Prise",
   "@alreadyTaken": {
-    "description": "服用済み"
+    "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
   },
   "startPauseTaking": "Faire une pause dans la prise",
   "@startPauseTaking": {

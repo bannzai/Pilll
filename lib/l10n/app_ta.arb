@@ -2105,7 +2105,7 @@
   },
   "alreadyTaken": "முதல் எடுத்துக்கொள்ளப்பட்டது",
   "@alreadyTaken": {
-    "description": "服用済み"
+    "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
   },
   "startPauseTaking": "மருந்து எடுத்துக் கொள்ள அழைக்கின்றேன்",
   "@startPauseTaking": {
