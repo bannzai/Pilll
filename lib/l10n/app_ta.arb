@@ -167,7 +167,7 @@
   },
   "signOut": "Saiṉāuṭ",
   "@signOut": {
-    "description": "サインアウト"
+    "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
   "autoAddPillSheetGroup": "மருந்துப் பிண்ட குழு தானாகவே சேர்க்கப்பட்டுள்ளது",
   "@autoAddPillSheetGroup": {

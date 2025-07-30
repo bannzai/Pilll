@@ -167,7 +167,7 @@
   },
   "signOut": "Kujiandaa",
   "@signOut": {
-    "description": "サインアウト"
+    "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
   "autoAddPillSheetGroup": "Kuhakikisha otomatiki ya kikundi cha vidonge",
   "@autoAddPillSheetGroup": {

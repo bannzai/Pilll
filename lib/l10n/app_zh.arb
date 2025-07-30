@@ -167,7 +167,7 @@
   },
   "signOut": "退出",
   "@signOut": {
-    "description": "サインアウト"
+    "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
   "autoAddPillSheetGroup": "自动添加药丸排程组",
   "@autoAddPillSheetGroup": {

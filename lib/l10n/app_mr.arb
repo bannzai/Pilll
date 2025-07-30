@@ -167,7 +167,7 @@
   },
   "signOut": "साइन आउट",
   "@signOut": {
-    "description": "サインアウト"
+    "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
   "autoAddPillSheetGroup": "पिल शीट ग्रुपची स्वयंचलित भरती",
   "@autoAddPillSheetGroup": {
