@@ -1725,7 +1725,7 @@
   },
   "purchaseErrorApiEndpointBlocked": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
-    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
       "errorCode": {
         "type": "String"

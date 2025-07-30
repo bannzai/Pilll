@@ -1725,7 +1725,7 @@
   },
   "purchaseErrorApiEndpointBlocked": "ప్రామాణికంగా తెలియని లోపం. దయచేసి తాజా వర్షన్‌కు అప్డేట్ చేసి మళ్లీ ప్రయత్నించండి. పరిష్కారమవకపోతే, దయచేసి సెట్టింగ్స్ > ప్రశ్నలు ద్వారా సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
       "errorCode": {
         "type": "String"

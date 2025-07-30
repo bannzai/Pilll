@@ -1725,7 +1725,7 @@
   },
   "purchaseErrorApiEndpointBlocked": "នេះគឺជា​កំហុស​ដែល​មិនបាន​ពន្យល់។ សូម​ធ្វើ​ឱ្យ​ទាន់​សម័យ​ក្នុង​កំណែ​ចុង​ក្រោយ ហើយ​ព្យាយាម​មرة​ទៀត។ នៅ​រ៉ូវកមែនទេ ប្រសិនបើ​មិនមាន​ការ​ដោះស្រូវ សូម​ទៅ​កាន់ ការកំណត់ > សំនួរ ដើម្បី​ទំនាក់ទំនង​មក​ពួក​យើង។ កូដ: {errorCode}​លម្អិត: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
       "errorCode": {
         "type": "String"
