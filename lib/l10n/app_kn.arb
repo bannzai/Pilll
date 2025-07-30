@@ -118,7 +118,7 @@
   },
   "addNotificationTime": "ಅತ್ಯಾವಶ್ಯಕ ಸಮಯದ ಸೂಚನೆಯನ್ನು ಸೇರಿಸು",
   "@addNotificationTime": {
-    "description": "通知時間の追加"
+    "description": "ピルの服用リマインダー機能で、ユーザーが新しい通知時間を追加する際に表示されるボタンやメニュー項目の文言です。簡潔で分かりやすい表現を使用してください。"
   },
   "syncWithDeviceTimeZone": "ನೀವು ಆಯ್ಕೆಯಾದ ಸಾಧನದ ಸಮಯ ವಲಯವನ್ನು ({deviceTimezoneName}) ನಿಯೋಜಿಸಬಹುದೆ?",
   "@syncWithDeviceTimeZone": {
