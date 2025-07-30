@@ -1466,7 +1466,7 @@
   },
   "purchaseErrorUnexpectedBackendResponseError": "இந்த மணிக்கு வாங்க முடியவில்லை. கொஞ்சம் நேரம் கழித்து மீண்டும் முயற்சிக்கவும். சிக்கல் தீராத பட்சத்தில், அமைப்புகள் > தொடர்புக்கு சென்று தொடர்புகொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
-    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

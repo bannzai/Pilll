@@ -1466,7 +1466,7 @@
   },
   "purchaseErrorUnexpectedBackendResponseError": "କାଳାଣ୍ଡର କ୍ରୟ କରାଯାଇପାରିବ ନାହିଁ। ଦୟାକରି କିଛି ସମୟ ଅପେକ୍ଷା କରନ୍ତୁ ଏବଂ ପুনରାୟା ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହେବ ନାହିଁ, ତେବେ ସେଟିଂସ୍ > ପ୍ରଶ୍ନରେ ଯାଇ ଆପଣଙ୍କ ସମ୍ପର୍କ କରନ୍ତୁ। ବିସ୍ତାରିତ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
-    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
