@@ -510,7 +510,7 @@
   },
   "discardPillSheet": "Kontraceptinių tablečių lapo šalinimas",
   "@discardPillSheet": {
-    "description": "ピルシート破棄"
+    "description": "服用が完了した空のピルシート（ブリスターパック）を適切に廃棄・処分する際に表示されるアクションやメッセージです。環境に配慮した廃棄方法の案内や、次のシートへの切り替えを促す文脈で使用されます。"
   },
   "takingTime": "Vartojimo laikas",
   "@takingTime": {
