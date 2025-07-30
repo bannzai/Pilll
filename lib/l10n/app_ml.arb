@@ -1780,7 +1780,7 @@
   },
   "visitHospital": "മറന്നു പോകാതെ പോകുക",
   "@visitHospital": {
-    "description": "通院する"
+    "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
   "receiveNotificationAt9AM": "അദ്ദേഹഭേദത്തിൽ 9:00 മണിക്ക് അറിയിപ്പ് ലഭിക്കുന്നു",
   "@receiveNotificationAt9AM": {

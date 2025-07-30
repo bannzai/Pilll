@@ -1780,7 +1780,7 @@
   },
   "visitHospital": "병원에 방문하기",
   "@visitHospital": {
-    "description": "병원에 방문하기"
+    "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
   "receiveNotificationAt9AM": "당일 9:00에 알림을 받습니다",
   "@receiveNotificationAt9AM": {

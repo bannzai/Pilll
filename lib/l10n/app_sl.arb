@@ -1780,7 +1780,7 @@
   },
   "visitHospital": "Obisk zdravnika",
   "@visitHospital": {
-    "description": "通院する"
+    "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
   "receiveNotificationAt9AM": "Prejete obvestilo ob 9:00 na dan.",
   "@receiveNotificationAt9AM": {

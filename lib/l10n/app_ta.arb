@@ -1780,7 +1780,7 @@
   },
   "visitHospital": "மருத்துவமனை செல்ல",
   "@visitHospital": {
-    "description": "通院する"
+    "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
   "receiveNotificationAt9AM": "அந்த நாளுக்கான 9:00 மணிக்கு அறிவிப்பு பெறுங்கள்.",
   "@receiveNotificationAt9AM": {
