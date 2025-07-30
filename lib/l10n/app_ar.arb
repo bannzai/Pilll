@@ -1435,7 +1435,7 @@
       }
     }
   },
-  "purchaseErrorInvalidReceiptError": "معلومات الشراء غير صحيحة. يرجى التحقق من معلومات الشراء.",
+  "purchaseErrorInvalidReceiptError": "معلومات الشراء غير صالحة. يرجى التحقق من تفاصيل الشراء",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
