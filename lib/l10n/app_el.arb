@@ -981,7 +981,7 @@
   },
   "displayDateOnPillSheet": "📆 Εμφάνιση ημερομηνίας στο φύλλο των χαπιών",
   "@displayDateOnPillSheet": {
-    "description": "📆 ピルシート上に日付表示"
+    "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
   },
   "autoRefillNewPillSheet": "📦 Αυτόματη ανανέωση νέων φύλλων χαπιών",
   "@autoRefillNewPillSheet": {
