@@ -370,7 +370,7 @@
   },
   "calendarPage": "Календарь",
   "@calendarPage": {
-    "description": "CalendarPage"
+    "description": "ピルアプリ内で体調記録や通院予定などの将来の予定を管理するカレンダーページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
   "settingsPage": "Тохируудын хуудас",
   "@settingsPage": {
