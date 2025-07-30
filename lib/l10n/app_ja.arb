@@ -2321,7 +2321,7 @@
   },
   "goToInitialSettingAndReloginIfNeededMessage": "初期設定に戻ります。ログインが必要な場合は初期設定下部からお願いします",
   "@goToInitialSettingAndReloginIfNeededMessage": {
-    "description": "初期設定に戻ります。ログインが必要な場合は初期設定下部からお願いします"
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
   },
   "deleteAccount": "アカウント削除",
   "@deleteAccount": {
