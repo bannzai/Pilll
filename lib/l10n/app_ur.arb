@@ -1584,7 +1584,7 @@
   },
   "purchaseErrorConfigurationError": "خریداری کی معلومات حاصل کرنے میں ناکامی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔ اگر مسئلہ حل نہ ہو تو براہ کرم سیٹنگ > رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
-    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

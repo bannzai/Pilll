@@ -1584,7 +1584,7 @@
   },
   "purchaseErrorConfigurationError": "కొనుగోలు సమాచారం పొందడంలో విఫలం అయ్యింది. కొద్దికాలం వె ESPN ఎంకో మళ్ళీ ప్రయత్నించండి. సమస్య పరిష్కారమైతే, దయచేసి సెట్టింగ్స్ > సంప్రదించండి ద్వారా సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
-    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

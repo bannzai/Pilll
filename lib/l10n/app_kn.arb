@@ -1584,7 +1584,7 @@
   },
   "purchaseErrorConfigurationError": "ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಪಡೆಯಲು ವಿಫಲವಾಯಿತು. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಪುನತ್ನಿಸಿದರೆ ಉತ್ತಮವಾಗಿರುತ್ತದೆ. ಪರಿಹಾರ ಕಂಡುಕೊಳ್ಳದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಸೆಟಿಂಗ್ > ಸಂಪರ್ಕದ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
-    "description": "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
