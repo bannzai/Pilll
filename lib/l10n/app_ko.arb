@@ -215,7 +215,7 @@
   },
   "discardAllPillSheets": "딜셔트 모두 폐기",
   "@discardAllPillSheets": {
-    "description": "딜셔트 모두 폐기"
+    "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
   },
   "areYouSureDoing": "{doing}하시겠습니까?",
   "@areYouSureDoing": {
