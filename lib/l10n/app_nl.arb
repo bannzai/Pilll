@@ -1796,7 +1796,7 @@
   },
   "onlySupportiOS": "Alleen compatibel met de iOS-app",
   "@onlySupportiOS": {
-    "description": "iOSアプリにのみ対応しています"
+    "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   },
   "healthKitDoesNotSupport": "Deze app kan niet worden gebruikt op apparaten die niet compatibel zijn met gezondheidszorg.",
   "@healthKitDoesNotSupport": {

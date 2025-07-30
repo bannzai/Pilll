@@ -1796,7 +1796,7 @@
   },
   "onlySupportiOS": "ਇਹ ਸਿਰਫ iOS ਐਪ ਲਈ ਸਮਰਥਿਤ ਹੈ।",
   "@onlySupportiOS": {
-    "description": "iOSアプリにのみ対応しています"
+    "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   },
   "healthKitDoesNotSupport": "ਇਹ ਸਿਹਤ ਸੇਵਾ ਦੇ ਅਨੁਕੂਲ ਸਥਾਨਾਂ 'ਤੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ।",
   "@healthKitDoesNotSupport": {

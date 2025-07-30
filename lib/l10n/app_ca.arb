@@ -1796,7 +1796,7 @@
   },
   "onlySupportiOS": "Només és compatible amb l'aplicació iOS.",
   "@onlySupportiOS": {
-    "description": "iOSアプリにのみ対応しています"
+    "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   },
   "healthKitDoesNotSupport": "No es compatible amb dispositius que no tinguin suport per a la salut.",
   "@healthKitDoesNotSupport": {
