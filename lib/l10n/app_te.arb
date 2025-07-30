@@ -199,7 +199,7 @@
   },
   "healthCareIntegration": "హెల్త్‌కేర్ అనుసంధానం",
   "@healthCareIntegration": {
-    "description": "ヘルスケア連携"
+    "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
   "healthCareIntegrationDescription": "మీరు Pilll లో నమోదు చేసిన మెన్స్ట్రుయేషన్ బుల్లెట్లను ఆటోమేటిక్‌గా హెల్త్‌కేర్‌లో నమోదు చేయవచ్చు.",
   "@healthCareIntegrationDescription": {

@@ -199,7 +199,7 @@
   },
   "healthCareIntegration": "እንኳን ወደ ምግባረ እንክብካቤ ይደህን! ይህ ምንዛሬ እንኳን ወይም በሠርጉት ደቂቀ መውጣት እና መውጣት ስለ ወርቅ ይረዳይ ወይyam ኃይል እንዲወጣ አለበት።",
   "@healthCareIntegration": {
-    "description": "ヘルスケア連携"
+    "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
   "healthCareIntegrationDescription": "የPilll ውስጥ ተያያዥ የተመዘገመ የሴት ግድግዳ መዝገብ በእርግጥ ወደ ምርጥ የህይወት እና እንክብካቤ ውስጥ ይተካል።",
   "@healthCareIntegrationDescription": {

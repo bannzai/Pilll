@@ -199,7 +199,7 @@
   },
   "healthCareIntegration": "건강 관리 연동",
   "@healthCareIntegration": {
-    "description": "건강 관리 연동"
+    "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
   "healthCareIntegrationDescription": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다",
   "@healthCareIntegrationDescription": {

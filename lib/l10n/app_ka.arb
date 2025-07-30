@@ -199,7 +199,7 @@
   },
   "healthCareIntegration": "გამაჯიბური მილების ინტეგრაცია",
   "@healthCareIntegration": {
-    "description": "ヘルスケア連携"
+    "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
   "healthCareIntegrationDescription": "თქვენ შეგიძლიათ ავტომატურად ჩაიწეროთ თქვენი არტერიული წნევის ჩანაწერები Pilll-ით ჯანდაცვის პროგრამაში.",
   "@healthCareIntegrationDescription": {
