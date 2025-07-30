@@ -1071,7 +1071,7 @@
   },
   "tellAboutPrescribedSheet": "ଛାତ୍ର ପ୍ରସ୍ତାବିତ ହେଉଥିବା ସିଟ୍ ବିଷୟରେ ସୂଚନାଦିଅନ୍ତୁ",
   "@tellAboutPrescribedSheet": {
-    "description": "処方されるシートについて\n教えてください"
+    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
   "existingAccountUsers": "ଏହିଠାରେ ସଂପର୍କିତ ଅକାଉଣ୍ଟ ଅଛି",
   "@existingAccountUsers": {

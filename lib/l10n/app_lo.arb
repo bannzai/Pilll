@@ -1071,7 +1071,7 @@
   },
   "tellAboutPrescribedSheet": "ກ່ຽວກັບຊີດທີ່ຖືກແຈ້ງຄະແນນ",
   "@tellAboutPrescribedSheet": {
-    "description": "処方されるシートについて\n教えてください"
+    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
   "existingAccountUsers": "ສໍາລັບຜູ້ທີ່ມີບັດແລ້ວ ຄວນເຂົ້າມາທາງນີ້",
   "@existingAccountUsers": {

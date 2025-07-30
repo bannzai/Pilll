@@ -1071,7 +1071,7 @@
   },
   "tellAboutPrescribedSheet": "Sobre la làmina que es prescrita\nDigue'm",
   "@tellAboutPrescribedSheet": {
-    "description": "処方されるシートについて\n教えてください"
+    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
   "existingAccountUsers": "Si ja teniu un compte, feu clic aquí",
   "@existingAccountUsers": {

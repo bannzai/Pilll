@@ -1071,7 +1071,7 @@
   },
   "tellAboutPrescribedSheet": "Please tell us about the pill you use",
   "@tellAboutPrescribedSheet": {
-    "description": "Please tell us about the pill you use"
+    "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
   "existingAccountUsers": "Already have an account? Log in here",
   "@existingAccountUsers": {
