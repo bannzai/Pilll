@@ -643,7 +643,7 @@
   },
   "pillDaysCycle": "পিল গ্রহণের দিন সংখ্যা (চক্র)",
   "@pillDaysCycle": {
-    "description": "服用日数(周期)"
+    "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
   },
   "pillSheetEnded": "পিল শীট শেষ হয়েছে",
   "@pillSheetEnded": {
