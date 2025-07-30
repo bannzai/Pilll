@@ -722,7 +722,7 @@
   },
   "todayIsTaking": "💊 ዛሬ ይወዳድሩ",
   "@todayIsTaking": {
-    "description": "💊 今日は服用"
+    "description": "ピルの服用管理画面で、今日がピル服用の予定日であることをユーザーに通知するメッセージです。カレンダーやホーム画面などで、今日が服用日であることを示すステータス表示として使用されます。"
   },
   "todayPillToTake": "💊 ዛሬ የሚወድዱት ፒል",
   "@todayPillToTake": {
