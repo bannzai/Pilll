@@ -151,7 +151,7 @@
   },
   "takePillReminderChannelName": "Obvestilo o jemanju",
   "@takePillReminderChannelName": {
-    "description": "服用通知"
+    "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
   },
   "takePillReminder": "💊 je čas",
   "@takePillReminder": {
