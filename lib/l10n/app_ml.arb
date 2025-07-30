@@ -1017,7 +1017,7 @@
   },
   "seeDetails": "വിവരം കാണുക",
   "@seeDetails": {
-    "description": "詳細を見る"
+    "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
   },
   "stepThreeOfThree": "3/3",
   "@stepThreeOfThree": {
