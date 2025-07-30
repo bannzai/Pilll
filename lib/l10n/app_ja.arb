@@ -2191,7 +2191,7 @@
   },
   "termsOfService": "利用規約",
   "@termsOfService": {
-    "description": "利用規約"
+    "description": "アプリの設定画面や法的情報画面で表示される利用規約へのリンクテキストです。ユーザーがアプリの使用条件や規約を確認する際にタップする項目として使用されます。"
   },
   "privacyPolicy": "プライバシーポリシー",
   "@privacyPolicy": {
