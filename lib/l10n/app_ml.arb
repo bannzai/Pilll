@@ -1820,7 +1820,7 @@
   },
   "accountAlreadyLinkedWithOtherPilllAccount": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനകം മറ്റൊരു Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നത് എന്നിവ കൊണ്ട് ഞങ്ങൾ രജിസ്റ്റർ ചെയ്യാൻ കഴിയുന്നില്ല. FAQ കാണുക. വിശദാംശങ്ങൾ: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
-    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"

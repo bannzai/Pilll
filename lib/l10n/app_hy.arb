@@ -1820,7 +1820,7 @@
   },
   "accountAlreadyLinkedWithOtherPilllAccount": "Այս {accountTypeProviderName} հաշիվն արդեն կապված է մեկ այլ Pilll հաշվի հետ, ուստի դուք չեք կարող գրանցվել: Խնդրում ենք ստուգել FAQ-ը: Մանրամասն տեղեկություն: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
-    "description": "この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}",
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
       "accountTypeProviderName": {
         "type": "String"
