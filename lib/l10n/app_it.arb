@@ -106,7 +106,7 @@
   },
   "deleteUser": "Eliminare utente",
   "@deleteUser": {
-    "description": "ユーザーを削除"
+    "description": "アカウント削除機能で表示される文言で、ユーザーのアカウントと関連する全ての服用記録・生理記録データを完全に削除することを示します。重要な操作のため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
   "deleteDiary": "Elimino il diario",
   "@deleteDiary": {
