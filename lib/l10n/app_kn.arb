@@ -1910,7 +1910,7 @@
   },
   "scheduleRecord": "ಯೋಜನೆಗಳನ್ನು ಬರೆಯಿರಿ",
   "@scheduleRecord": {
-    "description": "予定を記入"
+    "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
   },
   "previousPillSheetGroupNotFound": "ಹಾಗೆಲಾದರೂ ಹಿಂದಿನ ಪಿಲ್ ಶೀಟ್ ಗುಂಪು ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ",
   "@previousPillSheetGroupNotFound": {
