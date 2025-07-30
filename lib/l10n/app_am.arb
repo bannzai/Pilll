@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "የግዢ መረጃ ማግኘት  failed እቅፍ ቱተይ። እባኮትን ጊዜ ይቆርጥበት እና እንደገና ይቀጥሉ። አስቀድሞ ይረባል፤ ወበቃየል ሂደት > ፍላጎት ዝርዝር በሚይሰር ቅድመ ናት  ይተወክም። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "የግዢ መረጃ ማግኘት አልተቻለም። እባክዎ ትንሽ ቆይተው እንደገና ይሞክሩ። ችግሩ ቢቀጥል ቅንብሮች > ጥያቄዎች በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
