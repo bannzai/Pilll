@@ -211,7 +211,7 @@
   },
   "changePillNumberForToday": "ಇಂದು ತೆಗೆದುಕೊಳ್ಳುವ подп pill ಸಂಖ್ಯೆಯ ಬದಲಾವಣೆ",
   "@changePillNumberForToday": {
-    "description": "今日飲むピル番号の変更"
+    "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
   "discardAllPillSheets": "ಎಲ್ಲಾ ಪಿಲ್‌ಗಾತ್ರಗಳನ್ನು ನಾಶಮಾಡಿ",
   "@discardAllPillSheets": {

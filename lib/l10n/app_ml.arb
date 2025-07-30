@@ -211,7 +211,7 @@
   },
   "changePillNumberForToday": "ഈ ദിവസത്തെ നിറയ്ക്കേണ്ട പില്ലിന്റെ നമ്പർ മാറ്റുക",
   "@changePillNumberForToday": {
-    "description": "今日飲むピル番号の変更"
+    "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
   "discardAllPillSheets": "എല്ലാ പില്ലുകളുടെ ഷീറ്റ് തകര്‍ക്കുക",
   "@discardAllPillSheets": {

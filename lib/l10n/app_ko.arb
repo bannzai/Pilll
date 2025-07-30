@@ -211,7 +211,7 @@
   },
   "changePillNumberForToday": "오늘 복용할 딜 번호 변경",
   "@changePillNumberForToday": {
-    "description": "오늘 복용할 딜 번호 변경"
+    "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
   "discardAllPillSheets": "딜셔트 모두 폐기",
   "@discardAllPillSheets": {

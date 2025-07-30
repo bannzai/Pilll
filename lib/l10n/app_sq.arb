@@ -211,7 +211,7 @@
   },
   "changePillNumberForToday": "Ndryshimi i numrit të pilulave që do të marr sot",
   "@changePillNumberForToday": {
-    "description": "今日飲むピル番号の変更"
+    "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
   "discardAllPillSheets": "Dërrmimi i të gjitha fletëve të pilulave",
   "@discardAllPillSheets": {

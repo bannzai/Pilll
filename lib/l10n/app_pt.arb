@@ -211,7 +211,7 @@
   },
   "changePillNumberForToday": "Mudança do número da pílula a ser tomada hoje",
   "@changePillNumberForToday": {
-    "description": "今日飲むピル番号の変更"
+    "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
   "discardAllPillSheets": "Descartar todas as cartelas de pílulas",
   "@discardAllPillSheets": {
