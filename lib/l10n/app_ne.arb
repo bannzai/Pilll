@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "नेटवर्क स्थिति अस्थिर छ। कृपया जडानको अवस्था जाँच गर्नुभयो भने पुनः प्रयास गर्नुहोस्।",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "खरीदारीमा असफल भयो। कृपया केही समय पछि पुनः प्रयास गर्नुहोस्। यदि समस्या समाधान हुँदैन भने कृपया सेटिङ्हरू > सम्पर्कमा जान्नुहोस्। विस्तृत जानकारी: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "ನಿಟ್‌ವರ್ಕ್ ಸ್ಥಿತಿ ಅಹಿತಕರವಾಗಿದೆ. ನೀವು ಸಂಪರ್ಕ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ, ನಂತರ ಪುನಃ ಪ್ರಯತ್ನಿಸಿ.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "ಖರ್ಚುದಾರಿನಲ್ಲಿ ವೈಫಲ್ಯ ಮಧ್ಯೆ ಮುಂಚೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಹಾಳಾಗದಿದ್ದರೆ, ದಯವಿಟ್ಟು ಅಪ್ಪರಾರ > ಸಂಪರ್ಕದ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

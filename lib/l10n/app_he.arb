@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "מְדִינַת הַרְשָׁמָה הִיא בְּמַצָּב שֶׁל חֲסָרוּת סָבִירָה. אֲנָא בְּקָשָׁה לוודא אֶת מַצָּב הַחִבּוּר וְלִנְסוֹת שֵׁנִית.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "הקנייה נכשלה. אנא המתן והנסה שוב. אם הבעיה נמשכת, צור קשר דרך הגדרות > פניות. פרטים נוספים: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

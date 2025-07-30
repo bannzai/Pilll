@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "Network status is unstable. Please check your connection and try again",
   "@purchaseErrorNetworkError": {
-    "description": "Network status is unstable. Please check your connection and try again"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "Failed to make purchase. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

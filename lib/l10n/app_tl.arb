@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "Hindi ang matatag ang estado ng network. Mangyaring suriin ang iyong koneksyon at subukan muli.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "Bumili ka ng pagbili. Mangyaring subukan muli pagkatapos ng ilang oras. Kung hindi ito malulutas, mangyaring makipag-ugnay sa pamamagitan ng Mga Setting > Makipag-ugnayan. Detalye: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

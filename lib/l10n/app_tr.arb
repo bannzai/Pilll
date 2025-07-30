@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "Ağ bağlantısı kararsız. Lütfen bağlantı durumunu kontrol ettikten sonra yeniden deneyin.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "Satın alma işlemi başarısız oldu. Lütfen biraz bekleyip tekrar deneyin. Sorun çözülmezse, Ayarlar > İletişim üzerinden bizimle iletişime geçin. Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

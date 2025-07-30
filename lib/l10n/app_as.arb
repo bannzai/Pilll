@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "নেটওয়ার্ক পরিস্থিতি অস্থির। সংযোগের অবস্থা পরীক্ষা করে দেখুন এবং তারপর আবার চেষ্টা করুন।",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "বৰ্তমান ডাঙৰ হব নিবেদন। এক সময়ৰে পিছত পুনৰ চেষ্টা কৰক। সমাধান নহ'লে তাক প্ৰক্ষেপণ কৰক > যোগাযোগৰ বাবে অনুগ্ৰহ কৰি যোগাযোগ করক। বিশদ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

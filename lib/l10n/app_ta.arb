@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "கணினி நிலை அசுபதாக உள்ளது. இணைப்பின் நிலையை அதை உறுதி செய்து பார்க்கவும்.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "கயின் வாங்குவதில் தோல்வியுற்றதாகும். சில நேரமாக காத்திருந்து மீண்டும் முயற்சிக்கவும். இதற்கான தீர்வு கிடைக்காவிட்டால், அமைப்புகள் > தொடர்புகளுக்கு சென்று தொடர்புகொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

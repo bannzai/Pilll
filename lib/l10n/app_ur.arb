@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "نیٹ ورک کا حالت غیر مستحکم ہے۔ براہ کرم کنکشن کی حالت کی تصدیق کرنے کے بعد دوبارہ کوشش کریں۔",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "خرید میں ناکامی ہوئی۔ براہ کرم کچھ وقت انتظار کریں اور دوبارہ کوشش کریں۔ اگر مسئلہ حل نہ ہو تو براہ کرم سیٹنگز > رابطہ کے ذریعے ہم سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

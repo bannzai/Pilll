@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "Sarean egoera ezegonkorra da. Konexio egoera egiaztatu eta probatu mesedez.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "Ezin izan da erosketa burutzea. Itxaron eta saiatu berriro. Arazoa konpontzen ez bada, mesedez, joan ezazu Ezarpenak > Kontsulta atzera eta jarri harremanetan. Xehetasunak: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

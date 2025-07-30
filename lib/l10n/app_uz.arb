@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "Tarmoq holati noma'muliy. Aloqa holatini tekshirib ko'ring va qayta urinib ko'ring.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "Sotib olishda xato yuz berdi. Iltimos, bir muncha vaqt kutib, yana urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali biz bilan bog'lanishingiz mumkin. Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "وضعیت شبکه ناپایدار است. لطفاً وضعیت اتصال را بررسی کرده و دوباره امتحان کنید.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "خرید ناموفق بود. لطفاً کمی صبر کنید و دوباره تلاش کنید. اگر مشکل حل نشد، لطفاً از طریق تنظیمات > تماس با ما اقدام کنید. جزئیات: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

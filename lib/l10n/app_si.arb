@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "ජාලයෙහි තත්ත්වය අසමාන්‍ය වේ. සම්බන්ධතාවය තහවුරු කළ පසු නැවත එක්වන්න.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "ඇඳුම් මිලදී ගැනීමට අසාර්ථක විය. කරුණාකර කාලයක් රැක ඉන්පසු නැවත උත්සාහ කරන්න. ඕනෑම විසඳුමක් නොලැබුවහොත් සැකසුම් > පරීක්ෂාවට යන්න. විශේෂයි: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {

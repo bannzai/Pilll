@@ -1450,7 +1450,7 @@
   },
   "purchaseErrorNetworkError": "അനന്തരം കണക്ഷൻ നില്യം അച്ചായമാണ്. ദയവായി കണക്ഷൻ നില്യം പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
   "@purchaseErrorNetworkError": {
-    "description": "ネットワーク状態が不安定です。接続状況を確認した上でお試しください。"
+    "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
   "purchaseErrorInvalidCredentialsError": "ക്രയത്തിൽ പരാജയമായി. കുറച്ച് സമയം കളഞ്ഞു വീണ്ടും ശ്രമിക്കുക. പരിഹരിക്കുന്നില്ലെങ്കിൽ ക്രമീകരണം > മുൻഗണനകൾ വഴി ഞങ്ങളെ ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
