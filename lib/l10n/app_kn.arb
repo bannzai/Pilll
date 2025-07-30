@@ -1800,7 +1800,7 @@
   },
   "healthKitDoesNotSupport": "ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಬೆಂಬಲಿಸದ ಸಾಧನಗಳಲ್ಲಿ ನೀವು ಬಳಸಲು ಸಾಧ್ಯವಿಲ್ಲ",
   "@healthKitDoesNotSupport": {
-    "description": "ヘルスケアに対応していない端末ではご利用できません"
+    "description": "AppleのHealthKit（ヘルスケア機能）に対応していない端末で、健康データ連携機能を利用しようとした際に表示されるエラーメッセージです。ユーザーに機能制限があることを丁寧に伝える文章として翻訳してください。"
   },
   "enableHealthKitFromSettings": "ಸೆಟಿಂಗ್ ಅಪ್ಲಿಕೇಶನ್ ಮೂಲಕ ಹೆಲ್ತ್‌ಕೇರ್ ಅನ್ನು ಸಕ್ರಿಯಗೊಳ್ಳಿ",
   "@enableHealthKitFromSettings": {
