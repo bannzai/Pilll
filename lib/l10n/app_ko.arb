@@ -1792,7 +1792,7 @@
   },
   "deleteSchedule": "일정을 삭제합니다",
   "@deleteSchedule": {
-    "description": "일정을 삭제합니다"
+    "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
   },
   "onlySupportiOS": "iOS 앱에만 지원됩니다",
   "@onlySupportiOS": {
