@@ -730,7 +730,7 @@
   },
   "number": "Número",
   "@number": {
-    "description": "番"
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   },
   "recordedMenstruationStartDate": "S'ha enregistrat l'inici de la regla a partir de {DateTimeFormatterMonthAndDay}.",
   "@recordedMenstruationStartDate": {
