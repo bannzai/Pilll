@@ -346,7 +346,7 @@
   },
   "withdrawalMessage": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again",
   "@withdrawalMessage": {
-    "description": "If you withdraw, all data will be deleted and you will not be able to log in with the same account again"
+    "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
   "recordPage": "RecordPage",
   "@recordPage": {

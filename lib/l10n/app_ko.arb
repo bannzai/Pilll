@@ -346,7 +346,7 @@
   },
   "withdrawalMessage": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다.",
   "@withdrawalMessage": {
-    "description": "탈퇴하면 모든 데이터가 삭제되고 다시 같은 계정으로 로그인할 수 없습니다."
+    "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
   "recordPage": "RecordPage",
   "@recordPage": {

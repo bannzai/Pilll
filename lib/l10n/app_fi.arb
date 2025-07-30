@@ -346,7 +346,7 @@
   },
   "withdrawalMessage": "Jos poistut järjestelmästä, kaikki tietosi poistetaan, etkä voi enää koskaan kirjautua sisään samalla käyttäjätilillä.",
   "@withdrawalMessage": {
-    "description": "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。"
+    "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
   "recordPage": "Taltanäkymä",
   "@recordPage": {
