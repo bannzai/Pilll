@@ -1898,7 +1898,7 @@
   },
   "doNotRevertTakePillInPausePeriod": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다",
   "@doNotRevertTakePillInPausePeriod": {
-    "description": "피임약 복용 취소 작업은 휴약 기간 중에는 실행할 수 없습니다"
+    "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   },
   "googleAccount": "Google 계정",
   "@googleAccount": {

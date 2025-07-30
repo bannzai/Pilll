@@ -1898,7 +1898,7 @@
   },
   "doNotRevertTakePillInPausePeriod": "ঔষধ গ্রহণের বাতিল করার ক্রিয়া বিরতিহীন সময়ে কার্যকর করা যাবে না",
   "@doNotRevertTakePillInPausePeriod": {
-    "description": "ピルの服用の取り消し操作は休薬期間中は実行できません"
+    "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   },
   "googleAccount": "গুগল অ্যাকাউন্ট",
   "@googleAccount": {
