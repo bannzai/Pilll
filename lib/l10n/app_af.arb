@@ -959,7 +959,7 @@
       }
     }
   },
-  "youArePremiumMember": "Jy is 'n premium lid.",
+  "youArePremiumMember": "U is 'n Premium lid",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
