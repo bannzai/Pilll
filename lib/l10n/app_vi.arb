@@ -1005,7 +1005,7 @@
   },
   "popularFeatures": "Chức năng phổ biến",
   "@popularFeatures": {
-    "description": "人気の\n機能"
+    "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
   },
   "viewPremiumFeatures": "Xem các tính năng cao cấp",
   "@viewPremiumFeatures": {
