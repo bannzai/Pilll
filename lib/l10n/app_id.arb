@@ -2036,7 +2036,7 @@
   },
   "insomnia": "Insomnia",
   "@insomnia": {
-    "description": "不眠"
+    "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
   },
   "pauseStartingOtherDaysInstructions": "Silakan istirahat. Jika Anda ingin berhenti minum dari hari lain selain hari ini, silakan lihat di bawah.",
   "@pauseStartingOtherDaysInstructions": {

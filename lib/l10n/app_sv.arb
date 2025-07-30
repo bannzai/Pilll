@@ -2036,7 +2036,7 @@
   },
   "insomnia": "Sömnproblem",
   "@insomnia": {
-    "description": "不眠"
+    "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
   },
   "pauseStartingOtherDaysInstructions": "Vänligen ta en paus. Om du vill ta en paus från att ta pillerna utöver idag, vänligen se nedan för referens.",
   "@pauseStartingOtherDaysInstructions": {
