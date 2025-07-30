@@ -1389,7 +1389,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "حدث خطأ غير معروف. يُرجى الانتظار لبعض الوقت والمحاولة مرة أخرى. إذا لم يتم الحل، يُرجى التواصل من خلال الإعدادات > الاستفسار. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "حدث خطأ غير معروف السبب. يرجى المحاولة مرة أخرى بعد فترة. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
