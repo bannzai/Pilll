@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "Si us plau, actualitzeu l'aplicació.",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "Li demanem que actualitzeu la versió de la vostra aplicació. Actualitzeu a la versió més recent des de {storeName}.",
   "@forceUpdateMessage": {

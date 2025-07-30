@@ -1755,7 +1755,7 @@
   },
   "forceUpdateTitle": "Veuillez mettre à jour l'application.",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "Nous vous demandons de mettre à jour votre version de l'application. Veuillez mettre à jour vers la dernière version depuis {storeName}.",
   "@forceUpdateMessage": {

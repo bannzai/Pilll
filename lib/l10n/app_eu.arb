@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "Eguneratu aplikazioa",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "Aldezka aplikazioaren bertsioa eguneratzeko eskatzen dizugu. Mesedez, eguneratu azken bertsiora {storeName}-etik.",
   "@forceUpdateMessage": {

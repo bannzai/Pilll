@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "앱을 업데이트해 주세요",
   "@forceUpdateTitle": {
-    "description": "앱을 업데이트해 주세요"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "현재 사용하고 있는 앱의 업데이트를 아래에서 받아 주세요. {storeName}",
   "@forceUpdateMessage": {

@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "يرجى تحديث التطبيق",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "نطلب منك تحديث إصدار التطبيق الخاص بك. يرجى تحديثه إلى أحدث إصدار من {storeName}.",
   "@forceUpdateMessage": {

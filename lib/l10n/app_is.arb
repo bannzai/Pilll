@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "Vinsamlegast uppfærðu appið",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "Við biðjum um að uppfæra útgáfu forritsins þíns. Vinsamlegast uppfærðu í síðustu útgáfu frá {storeName}.",
   "@forceUpdateMessage": {

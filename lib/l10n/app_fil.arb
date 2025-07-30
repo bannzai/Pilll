@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "Mangyaring i-update ang app",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "Paki-update ang bersyon ng iyong app. Mangyaring i-update ito sa pinakabagong bersyon mula sa {storeName}.",
   "@forceUpdateMessage": {

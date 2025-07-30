@@ -1767,7 +1767,7 @@
   },
   "forceUpdateTitle": "Hãy cập nhật ứng dụng",
   "@forceUpdateTitle": {
-    "description": "アプリをアップデートしてください"
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
   "forceUpdateMessage": "Chúng tôi đề nghị bạn cập nhật phiên bản ứng dụng của mình. Vui lòng cập nhật lên phiên bản mới nhất từ {storeName}.",
   "@forceUpdateMessage": {
