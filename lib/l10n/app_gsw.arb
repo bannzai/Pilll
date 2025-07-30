@@ -38,7 +38,7 @@
   },
   "userNotFound": "Kei Benutzer gfunne",
   "@userNotFound": {
-    "description": "ユーザーが見つかりません"
+    "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
   },
   "userAlreadyExists": "Es gibt bereits einen Benutzer.",
   "@userAlreadyExists": {

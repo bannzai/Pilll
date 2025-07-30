@@ -38,7 +38,7 @@
   },
   "userNotFound": "Vartotojas nerastas",
   "@userNotFound": {
-    "description": "ユーザーが見つかりません"
+    "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
   },
   "userAlreadyExists": "Jau egzistuoja vartotojas.",
   "@userAlreadyExists": {
