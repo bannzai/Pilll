@@ -1335,7 +1335,7 @@
   },
   "allActivePills": "සියලුම සැත්කම්",
   "@allActivePills": {
-    "description": "すべて実薬"
+    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   },
   "twentyFourPlusFourDaysBreak": "24 තැටි සහ 4 තැටි විවේක",
   "@twentyFourPlusFourDaysBreak": {

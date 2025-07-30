@@ -1335,7 +1335,7 @@
   },
   "allActivePills": "모두 실약",
   "@allActivePills": {
-    "description": "모두 실약"
+    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   },
   "twentyFourPlusFourDaysBreak": "24정＋4정 휴약",
   "@twentyFourPlusFourDaysBreak": {
