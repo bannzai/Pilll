@@ -1184,7 +1184,7 @@
   },
   "changeDailyNotificationMessage": "Jūs varat mainīt paziņojuma tekstu, ja zāles netika aizmirstas.",
   "@changeDailyNotificationMessage": {
-    "description": "飲み忘れていない場合の通知文言を変更できます"
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "@dailyNotificationMessageLength": {

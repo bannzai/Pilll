@@ -1184,7 +1184,7 @@
   },
   "changeDailyNotificationMessage": "복용 잊�� 않음 알림 ��시지를 변경할 수 있습니다",
   "@changeDailyNotificationMessage": {
-    "description": "복용 잊지 않음 알림 메시지를 변경할 수 있습니다"
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   },
   "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
   "@dailyNotificationMessageLength": {
