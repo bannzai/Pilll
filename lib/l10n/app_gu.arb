@@ -1221,7 +1221,7 @@
   },
   "noPreviousPillSheetGroup": "ગત વખતેનો પિલ શીટ ગ્રુપ હજુ સુધી અસ્તિત્વમાં નથી",
   "@noPreviousPillSheetGroup": {
-    "description": "前回のピルシートグループがまだ存在しません"
+    "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
   },
   "failedToFetchPillHistory": "ડોઝનો ઇતિહાસ મેળવવામાં નિષ્ફળ વ્યુહવાદ હતો. {error}",
   "@failedToFetchPillHistory": {
