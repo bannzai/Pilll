@@ -565,7 +565,7 @@
   },
   "notTaken": "not taken",
   "@notTaken": {
-    "description": "飲んでない"
+    "description": "ピルの服用状態を示すステータス表示で、ユーザーがその日にピルを服用していない状態を表します。服用履歴画面やピルシートUIで「taken」（服用済み）と対になって表示される重要な状態表示です。"
   },
   "pillSheetSettings": "Pill Sheet Settings",
   "@pillSheetSettings": {

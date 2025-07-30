@@ -565,7 +565,7 @@
   },
   "notTaken": "복용하지 않았습니다",
   "@notTaken": {
-    "description": "복용하지 않았습니다"
+    "description": "ピルの服用状態を示すステータス表示で、ユーザーがその日にピルを服用していない状態を表します。服用履歴画面やピルシートUIで「taken」（服用済み）と対になって表示される重要な状態表示です。"
   },
   "pillSheetSettings": "딜셔트 설정",
   "@pillSheetSettings": {
