@@ -1955,7 +1955,7 @@
   },
   "trialDeadlineDateOffsetDay": "আপনি {number} দিন ধরে সমস্ত ফিচার ব্যবহার করতে পারবেন!",
   "@trialDeadlineDateOffsetDay": {
-    "description": "{number}日間すべての機能が使えます！",
+    "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
     "placeholders": {
       "number": {
         "type": "int"
