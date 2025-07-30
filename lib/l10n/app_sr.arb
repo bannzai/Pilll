@@ -776,7 +776,7 @@
   },
   "menstruationRemainingDay": "За {diff} дана",
   "@menstruationRemainingDay": {
-    "description": "あと{diff}日",
+    "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
     "placeholders": {
       "diff": {
         "type": "int"
