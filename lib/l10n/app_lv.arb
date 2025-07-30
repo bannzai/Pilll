@@ -406,7 +406,7 @@
   },
   "afterLastTakenPillNumber": "{afterLastTakenPillNumber} numurs",
   "@afterLastTakenPillNumber": {
-    "description": "{afterLastTakenPillNumber}番",
+    "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
     "placeholders": {
       "afterLastTakenPillNumber": {
         "type": "String"
