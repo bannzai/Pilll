@@ -306,7 +306,7 @@
   },
   "linkAccount": "Συνεργασία",
   "@linkAccount": {
-    "description": "連携する"
+    "description": "ユーザーアカウントを外部サービス（GoogleやAppleアカウントなど）と連携してデータの同期やバックアップを行う機能のボタンやメニューに表示されるテキストです。"
   },
   "withdraw": "Ακύρωση συνδρομής",
   "@withdraw": {

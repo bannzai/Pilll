@@ -306,7 +306,7 @@
   },
   "linkAccount": "연동하기",
   "@linkAccount": {
-    "description": "연동하기"
+    "description": "ユーザーアカウントを外部サービス（GoogleやAppleアカウントなど）と連携してデータの同期やバックアップを行う機能のボタンやメニューに表示されるテキストです。"
   },
   "withdraw": "탈퇴하기",
   "@withdraw": {
