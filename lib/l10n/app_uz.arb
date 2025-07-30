@@ -1927,7 +1927,7 @@
   },
   "connectionError": "Aloqa muhitining barqaror emasligini ko'rsatmoqda. Iltimos, bir muncha vaqt kutib, qayta urinib ko'ring.",
   "@connectionError": {
-    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
   "unknownErrorAndRetryAfter": "Xatolik yuz berdi. Iltimos, bir oz vaqt kuting va qayta urinib ko'ring.",
   "@unknownErrorAndRetryAfter": {

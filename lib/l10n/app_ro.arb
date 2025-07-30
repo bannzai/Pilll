@@ -1927,7 +1927,7 @@
   },
   "connectionError": "Se pare că conexiunea la internet este instabilă. Vă rugăm să încercați din nou după un timp.",
   "@connectionError": {
-    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
   "unknownErrorAndRetryAfter": "A apărut o eroare. Vă rugăm să așteptați și să încercați din nou.",
   "@unknownErrorAndRetryAfter": {

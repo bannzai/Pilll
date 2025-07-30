@@ -1927,7 +1927,7 @@
   },
   "connectionError": "Inaonekana kuwa hali ya mawasiliano sio thabiti. Tafadhali subiri muda kisha jaribu tena.",
   "@connectionError": {
-    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
   "unknownErrorAndRetryAfter": "Kullabainisha makosa. Tafadhali subiri kwa muda kisha ujitahidi tena.",
   "@unknownErrorAndRetryAfter": {

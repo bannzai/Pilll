@@ -1927,7 +1927,7 @@
   },
   "connectionError": "Sembla que la connexió és inestable. Si us plau, torna-ho a provar més tard.",
   "@connectionError": {
-    "description": "通信環境が不安定のようです。時間をおいて再度お試しください"
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
   "unknownErrorAndRetryAfter": "Hi ha hagut un error. Si us plau, proveu-ho de nou més tard.",
   "@unknownErrorAndRetryAfter": {

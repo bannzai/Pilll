@@ -1927,7 +1927,7 @@
   },
   "connectionError": "The communication environment seems unstable. Please try again after some time",
   "@connectionError": {
-    "description": "The communication environment seems unstable. Please try again after some time"
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
   "unknownErrorAndRetryAfter": "An error occurred. Please try again after some time",
   "@unknownErrorAndRetryAfter": {
