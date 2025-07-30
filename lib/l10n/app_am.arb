@@ -1389,7 +1389,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "በወቅቱ አልተገኘም ነብስ ጉዳት ተከስቷል። እባኮትን ጊዜ ይወድዱ እና ደግሞ ይሞክሩ። እንዲህ ይነቃነር ባለመጻፍ ከእባኮት ይሁን ውስጥ ይገኝ በተቀጣሪ > አግኙኝ ይገኛሉ። ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "ያልታወቀ ስህተት ተከስቷል፡፡ እባክዎ ትንሽ ጊዜ ቆይተው እንደገና ይሞክሩ፡፡ ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያግኙን፡፡ ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
