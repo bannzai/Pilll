@@ -850,7 +850,7 @@
       }
     }
   },
-  "registerWith": "የ{loginName} ምዝገባ",
+  "registerWith": "በ{loginName} ይመዝገቡ",
   "@registerWith": {
     "description": "アカウント新規登録時に、指定されたログイン方法（Google、Apple、メールアドレスなど）を使って登録することを示すボタンやメッセージ。{loginName}には具体的なサービス名が入ります。",
     "placeholders": {
