@@ -1485,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppUserIdError": "用户未能确认。请重新启动应用并重试。详情: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "ተጠቃሚው መረጋገጥ አልቻለም። እባክዎ መተግበሪያውን እንደገና ጀምረው ይሞክሩ። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
     "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
