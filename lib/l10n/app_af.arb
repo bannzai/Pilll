@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "Klantinligting kon nie verkry word nie. Probeer asseblief weer later. As die probleem nie opgelos kan word nie, kontak ons via Instellings > Navraag. Besonderhede: Kode: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Kliëntinligting kon nie verkry word nie. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons via Instellings > Navrae. Besonderhede: Kode: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
