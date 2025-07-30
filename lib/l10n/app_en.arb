@@ -814,7 +814,7 @@
   },
   "menstruationCycle": "{menstruationDuration} day cycle",
   "@menstruationCycle": {
-    "description": "{menstruationDuration} day cycle",
+    "description": "生理周期の日数を表示する際に使用されるテキストです。{menstruationDuration}には28日、30日などの周期日数が入ります。",
     "placeholders": {
       "menstruationDuration": {
         "type": "int"
