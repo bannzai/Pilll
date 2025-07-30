@@ -155,7 +155,7 @@
   },
   "takePillReminder": "💊 ordua da",
   "@takePillReminder": {
-    "description": "💊の時間です"
+    "description": "ピルの服用時刻になった時にユーザーに送信されるプッシュ通知のメッセージです。簡潔で親しみやすく、服用を促すトーンで翻訳してください。"
   },
   "copyDebugInfo": "KOPI DEBUG INFO",
   "@copyDebugInfo": {
