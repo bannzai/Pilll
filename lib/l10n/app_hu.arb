@@ -70,7 +70,7 @@
   },
   "pillSheet": "tabletta lap",
   "@pillSheet": {
-    "description": "ピルシート"
+    "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。"
   },
   "notification": "Értesítés",
   "@notification": {
