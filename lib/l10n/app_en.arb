@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Please register an account",
   "@pleaseRegisterAccount": {
-    "description": "Please register an account"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "You cannot carry over the premium feature when changing devices or losing your phone",
   "@cannotTransferPremiumWithoutAccount": {

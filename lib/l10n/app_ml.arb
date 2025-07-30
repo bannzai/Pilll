@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "അക്കൗണ്ട് രജിസ്റ്റർ ചെയ്യാൻ ദയവായി",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "സ്മാർട്ട് ഫോൺ മാറ്റുമ്പോഴും അല്ലെങ്കിൽ ഫോൺ നഷ്ടപ്പെടുമ്പോഴും, പ്രീമിയോം ഫീച്ചറുകൾ കൈമാറാൻ കഴിയുന്നില്ല.",
   "@cannotTransferPremiumWithoutAccount": {

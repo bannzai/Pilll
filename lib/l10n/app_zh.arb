@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "请注册账户",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "在更换设备或手机丢失时，无法继承高级功能",
   "@cannotTransferPremiumWithoutAccount": {

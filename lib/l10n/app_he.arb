@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "אנא הירשם לחשבון",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "לא ניתן להעביר את הפונקציות הפרימיום בעת שינוי מכשיר או אובדן הטלפון",
   "@cannotTransferPremiumWithoutAccount": {

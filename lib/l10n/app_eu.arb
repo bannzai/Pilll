@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Mesedez, erregistratu kontua",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "Ezin da premium funtzioak bereizi ateratzeko mugitzea edo telefonoa galdu denean.",
   "@cannotTransferPremiumWithoutAccount": {

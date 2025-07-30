@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Խնդրում ենք մուտքագրել ձեր հաշիվը",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "Այս հնարավորությունն անջատում է Պրեմիում գործառույթի փոխանցումը հեռախոսը փոխելու կամ խոշոր զանգվածը կորցնելու ժամանակ",
   "@cannotTransferPremiumWithoutAccount": {

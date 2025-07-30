@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "ਕਿਰਪਾ ਕਰਕੇ ਖਾਤਾ ਬੰਨ੍ਹੋ",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "ਤੁਸੀਂ ਮੋਬਾਈਲ ਦੇ ਬਦਲਾਅ ਜਾਂ ਸਮਾਰਟਫੋਨ ਦੀ ਗੁੰਮਿਵਾਦੀ `ਤੇ ਪ੍ਰੀਮੀਅਮ ਫੰਕਸ਼ਨ ਸਿਰਫ਼ ਨਹੀਂ ਲੈ ਸਕਦੇ।",
   "@cannotTransferPremiumWithoutAccount": {

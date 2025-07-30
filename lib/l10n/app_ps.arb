@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "خپل حساب جوړ کړئ",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "تاسو د وسیلې بدلون یا د ګرځنده تلیفون د ورکیدو په حالت کې د ممتازو ځانګړتیاوو د انتقال وړتیا نلرئ.",
   "@cannotTransferPremiumWithoutAccount": {

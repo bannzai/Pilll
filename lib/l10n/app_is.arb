@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Vinsamlegast skráðu þig inn á reikning.",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "Þegar þú skiptir um tæki eða ef þú tapar símalausninni geturðu ekki flutt framlengingu Premium.",
   "@cannotTransferPremiumWithoutAccount": {

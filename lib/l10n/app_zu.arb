@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Sicela ubhalise i-akhawunti",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "Awodwa, awukwazi ukudlulisela izici eziphezulu uma ushintshela kwenye imishini noma uma umakhalekhukhwini wakho uphumele ngaphandle.",
   "@cannotTransferPremiumWithoutAccount": {

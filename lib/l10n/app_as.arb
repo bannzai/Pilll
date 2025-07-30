@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "অনুগ্রহ করে আপনার অ্যাকাউন্ট নিবন্ধন করুন",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "আপনি ডিভাইস পরিবর্তন বা স্মার্টফোন হারানোর সময় প্রিমিয়াম ফিচার স্থানান্তর করতে পারবেন না।",
   "@cannotTransferPremiumWithoutAccount": {

@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "សូមចុះឈ្មោះគណនី",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "មិនអាចផ្ទេរ​មុខងារ​ព្រីមៀម​នៅពេលប្តូរស្តង់ដារ ឬ ផ្គ្មុំទូរស័ព្ទ។",
   "@cannotTransferPremiumWithoutAccount": {

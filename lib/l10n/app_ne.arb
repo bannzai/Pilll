@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "कृपया खाता दर्ता गर्नुहोस्",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "तपाईंले मोवाईल फोन परिवर्तन गर्दा वा फोन हराएको अवस्थामा प्रीमियम सुविधाहरू निरन्तरता दिन सक्नुहुन्न।",
   "@cannotTransferPremiumWithoutAccount": {

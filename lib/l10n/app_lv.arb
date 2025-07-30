@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Lūdzu, reģistrējiet kontu.",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "Jaunu ierīču maiņas vai viedtālruņa zaudēšanas gadījumā nevarēsiet pārnest premium funkcijas.",
   "@cannotTransferPremiumWithoutAccount": {

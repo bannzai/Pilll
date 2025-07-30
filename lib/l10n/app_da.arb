@@ -655,7 +655,7 @@
   },
   "pleaseRegisterAccount": "Opret en konto",
   "@pleaseRegisterAccount": {
-    "description": "アカウント登録をしてください"
+    "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
   "cannotTransferPremiumWithoutAccount": "Ved skift af enhed eller hvis din smartphone bliver mistet, kan du ikke overføre premium-funktionerne.",
   "@cannotTransferPremiumWithoutAccount": {
