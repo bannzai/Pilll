@@ -741,7 +741,7 @@
       }
     }
   },
-  "menstruationStartDate": "የወርቅ መነሻ ቀን",
+  "menstruationStartDate": "ወር አበባ መጀመሪያ ቀን",
   "@menstruationStartDate": {
     "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
