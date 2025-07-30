@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "មិនមានព័ត៌មានព្រិតម៉ានៃប្រភេទពិសេសទេ",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "プレミアム情報が見つかりませんでした"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "ការបញ្ចុះតម្លៃមិនត្រូវបានបញ្ចូលសព្វថ្ងៃ។ សូមរាប់អានវិញបន្ទាប់ពីពេលវេលាតិច។",
   "@purchaseErrorPurchasePendingError": {

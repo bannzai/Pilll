@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "Premium information not found",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "Premium information not found"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "The activation of the purchase is not yet complete. Please check again after some time",
   "@purchaseErrorPurchasePendingError": {

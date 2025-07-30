@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "ບໍ່ສິ້ນສຸດຂໍ້ມູນພຣິເມີມ",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "プレミアム情報が見つかりませんでした"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "ການເປີດໃຊ້ຄ່າໃບເບິ່ງບໍ່ໄດ້ກົດສິນ ກະລຸນາເບິ່ງອີກຄັ້ງໃນເວລາຫນຶ່ງ.",
   "@purchaseErrorPurchasePendingError": {

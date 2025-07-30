@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "프리미엄 정보가 발견되지 않았습니다",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "프리미엄 정보가 발견되지 않았습니다"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요",
   "@purchaseErrorPurchasePendingError": {

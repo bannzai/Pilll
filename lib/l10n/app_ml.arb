@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "പ്രീമിയം വിവരങ്ങൾ കണ്ടെത്താനായില്ല",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "プレミアム情報が見つかりませんでした"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "നിങ്ങളുടെ ചാർജിങ്ങ് സജീവമാകുന്നത് ഇപ്പോഴും പൂർത്തിയാകാതെ പോയിരിക്കുന്നു. ദയവായി കുറച്ച് നേരം കാത്തിരിക്കുക.",
   "@purchaseErrorPurchasePendingError": {

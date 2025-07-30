@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "प्रीमियम जानकारी नहीं मिली",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "プレミアム情報が見つかりませんでした"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "आपका भुगतान सक्रिय नहीं हुआ है। कृपया कुछ समय बाद पुनः प्रयास करें।",
   "@purchaseErrorPurchasePendingError": {

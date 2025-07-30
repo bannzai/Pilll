@@ -1860,7 +1860,7 @@
   },
   "unexpectedPremiumEntitlementsIsNotExists": "ප්‍රිමේරම් තොරතුරු සොයා ගන්න බෑ",
   "@unexpectedPremiumEntitlementsIsNotExists": {
-    "description": "プレミアム情報が見つかりませんでした"
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
   "purchaseErrorPurchasePendingError": "සක්‍රිය කිරීම තවමත් සම්පූර්ණ වී නැත. කමක් නැත, කාලයක් බidingෙන්න පසුව නැවත පිරික්සුම් කරන්න.",
   "@purchaseErrorPurchasePendingError": {
