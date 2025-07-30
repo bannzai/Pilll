@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "هناك مشكلة في إعدادات الجهاز. يرجى التحقق والمحاولة مرة أخرى. إذا لم يتم الحل، يرجى الاتصال بنا من خلال الإعدادات > الاستفسارات. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "هناك مشكلة في إعدادات الجهاز. يرجى التحقق والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > الاستفسارات. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
