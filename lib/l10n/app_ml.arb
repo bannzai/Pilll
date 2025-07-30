@@ -1424,7 +1424,7 @@
   },
   "purchaseErrorProductAlreadyPurchasedError": "നിങ്ങൾ ഇതിനകം പദ്ധതി കൈപ്പറ്റിയിട്ടുണ്ട്. ഈ ഉപകരണത്തിൽ വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കാൻ \"മുമ്പ് വാങ്ങിയ ആളുകൾ ഇവിടെ\" എന്ന പ്രസ്താവനയിൽ നിന്ന് വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കണം.",
   "@purchaseErrorProductAlreadyPurchasedError": {
-    "description": "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい"
+    "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   },
   "purchaseErrorReceiptAlreadyInUseError": "മുമ്പത്തെ വാങ്ങി. ഈ വിവരങ്ങൾ മറ്റൊരു ഉപഭോക്താവിനും ഉപയോഗത്തിലാണ്. {accountName} പരിശോധിക്കുക.",
   "@purchaseErrorReceiptAlreadyInUseError": {
