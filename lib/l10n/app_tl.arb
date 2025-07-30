@@ -965,7 +965,7 @@
   },
   "thankYouMessage": "Salamat sa paggamit mo. Dahil sa iyo, nagagawa naming ipagpatuloy ang operasyon ng Pilll.",
   "@thankYouMessage": {
-    "description": "ご利用ありがとうございます。\nお陰様でPilllの運営を継続できています。"
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
   "premiumFeaturesList": "Listahan ng mga premium na tampok",
   "@premiumFeaturesList": {

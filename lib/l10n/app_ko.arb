@@ -965,7 +965,7 @@
   },
   "thankYouMessage": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다.",
   "@thankYouMessage": {
-    "description": "이용에 감사합니다.\n오네 여기서 Pilll의 運営을 계속할 수 있습니다."
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
   "premiumFeaturesList": "프리미엄 기능 목록",
   "@premiumFeaturesList": {

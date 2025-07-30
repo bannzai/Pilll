@@ -965,7 +965,7 @@
   },
   "thankYouMessage": "Thank you for using our service.\nWe're grateful for your patronage.",
   "@thankYouMessage": {
-    "description": "Thank you for using our service.\nWe're grateful for your patronage."
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
   "premiumFeaturesList": "List of premium features",
   "@premiumFeaturesList": {
