@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "اضافه کردن گروه قرص به طور خودکار",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "پس از پایان گروه فعلی نوار قرص، یک نوار جدید به‌طور خودکار اضافه می‌شود.",
   "@autoAddNewSheetAfterCurrentEnds": {

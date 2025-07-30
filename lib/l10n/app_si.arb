@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "පිල් ශීට් කාණ්ඩය ස්වයංක්‍රීයව එක් කිරීම",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "ඔබගේ වත්මන් පැලැන්ඩම් පීල් ශීට් කණ්ඩායම අවසන් වූ බවයි, නව ශීට් එකක් ස්වයංක‍්‍රියව එකතු කළ යුතුය.",
   "@autoAddNewSheetAfterCurrentEnds": {

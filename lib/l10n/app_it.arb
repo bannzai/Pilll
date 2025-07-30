@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "Aggiunta automatica del gruppo di blister",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "Quando il gruppo di pillole attuale è completato, verrà aggiunto automaticamente un nuovo foglio.",
   "@autoAddNewSheetAfterCurrentEnds": {

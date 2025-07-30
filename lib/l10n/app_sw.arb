@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "Kuhakikisha otomatiki ya kikundi cha vidonge",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "Wakati kundi la sasa la vidonge likimalizika, kiotomatiki kitongeza karatasi mpya.",
   "@autoAddNewSheetAfterCurrentEnds": {

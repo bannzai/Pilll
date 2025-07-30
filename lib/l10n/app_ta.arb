@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "மருந்துப் பிண்ட குழு தானாகவே சேர்க்கப்பட்டுள்ளது",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "இந்த pills குழு முடிந்ததும், புதிய குழுவை தானாகச் சேர்க்கும்.",
   "@autoAddNewSheetAfterCurrentEnds": {

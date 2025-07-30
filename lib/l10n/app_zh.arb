@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "自动添加药丸排程组",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "当前的药片组结束后，将自动添加新的药片组。",
   "@autoAddNewSheetAfterCurrentEnds": {

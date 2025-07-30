@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "Ajout automatique de groupe de pilules",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "Une nouvelle plaquette sera automatiquement ajoutée lorsque le groupe de plaquettes actuel sera terminé.",
   "@autoAddNewSheetAfterCurrentEnds": {

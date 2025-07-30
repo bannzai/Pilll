@@ -171,7 +171,7 @@
   },
   "autoAddPillSheetGroup": "Автоматско додавање на група на таблети",
   "@autoAddPillSheetGroup": {
-    "description": "ピルシートグループの自動追加"
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
   "autoAddNewSheetAfterCurrentEnds": "Откако сегашната група на таблети ќе заврши, нова група автоматски ќе биде добавена.",
   "@autoAddNewSheetAfterCurrentEnds": {
