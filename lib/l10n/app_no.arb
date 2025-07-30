@@ -314,7 +314,7 @@
   },
   "withdrawalCompleted": "Du har avregistrert deg",
   "@withdrawalCompleted": {
-    "description": "退会しました"
+    "description": "ユーザーがPilllアプリのアカウント削除（退会）処理を完了した後に表示される確認メッセージです。退会操作が正常に完了したことをユーザーに伝える重要な通知文言になります。"
   },
   "appExitMessage": "Appen avsluttes. Hvis du ønsker å begynne på nytt, vennligst start appen på nytt og sett opp de innledende innstillingene.",
   "@appExitMessage": {
