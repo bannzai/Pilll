@@ -2166,7 +2166,7 @@
   },
   "shareWithFriends": "ប្រាប់មិត្តភក្តិ",
   "@shareWithFriends": {
-    "description": "友達に教える"
+    "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   },
   "termsOfService": "លក្ខណៈ និងលក្ខខ័ណ្ឌ",
   "@termsOfService": {

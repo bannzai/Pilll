@@ -2166,7 +2166,7 @@
   },
   "shareWithFriends": "A învăța un prieten",
   "@shareWithFriends": {
-    "description": "友達に教える"
+    "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   },
   "termsOfService": "Termeni și condiții",
   "@termsOfService": {

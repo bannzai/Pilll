@@ -2187,7 +2187,7 @@
   },
   "shareWithFriends": "友達に教える",
   "@shareWithFriends": {
-    "description": "友達に教える"
+    "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   },
   "termsOfService": "利用規約",
   "@termsOfService": {
