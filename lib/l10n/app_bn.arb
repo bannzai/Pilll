@@ -175,7 +175,7 @@
   },
   "autoAddNewSheetAfterCurrentEnds": "এখনকার পিল শিট গ্রুপ শেষ হলে নতুন শিট স্বয়ংক্রিয়ভাবে যোগ করা হবে ।",
   "@autoAddNewSheetAfterCurrentEnds": {
-    "description": "今のピルシートグループが終了したら、新しいシートを自動で追加します"
+    "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
   },
   "accountSettings": "অ্যাকাউন্ট সেটিংস",
   "@accountSettings": {
