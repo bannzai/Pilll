@@ -1980,7 +1980,7 @@
   },
   "failedToUpdate": "Opdateringen mislykkedes. Kontroller venligst din netværksforbindelse, og prøv igen.",
   "@failedToUpdate": {
-    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+    "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
   },
   "headache": "Hovedpine",
   "@headache": {

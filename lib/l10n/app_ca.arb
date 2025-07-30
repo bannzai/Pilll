@@ -1984,7 +1984,7 @@
   },
   "failedToUpdate": "S'ha produït un error en l'actualització. Si us plau, comproveu la vostra connexió de xarxa i torneu a intentar fer el canvi.",
   "@failedToUpdate": {
-    "description": "更新に失敗しました。通信環境をお確かめの上、再度変更してください"
+    "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
   },
   "headache": "mal de cap",
   "@headache": {
