@@ -1454,7 +1454,7 @@
   },
   "purchaseErrorInvalidCredentialsError": "खरीदारीमा असफल भयो। कृपया केही समय पछि पुनः प्रयास गर्नुहोस्। यदि समस्या समाधान हुँदैन भने कृपया सेटिङ्हरू > सम्पर्कमा जान्नुहोस्। विस्तृत जानकारी: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
-    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
