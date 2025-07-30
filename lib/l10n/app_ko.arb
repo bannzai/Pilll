@@ -2255,7 +2255,7 @@
   },
   "premiumIntroductionDiscountPriceDeadline": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다",
   "@premiumIntroductionDiscountPriceDeadline": {
-    "description": "프리미엄 등록으로 계속 모든 기능을 사용할 수 있습니다"
+    "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   },
   "countdownForDiscountPriceDeadline": "{countdown} 내 구매 시 {offPercent}% 할인",
   "@countdownForDiscountPriceDeadline": {

@@ -2255,7 +2255,7 @@
   },
   "premiumIntroductionDiscountPriceDeadline": "ପ୍ରେମିୟମ୍ ରେଜିଷ୍ଟର୍ ମାଧ୍ୟମରେ ଆପଣ ସଭିର ସୁବିଧା ଜାରି ରଖିପାରିବେ",
   "@premiumIntroductionDiscountPriceDeadline": {
-    "description": "プレミアム登録で引き続きすべての機能が利用できます"
+    "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   },
   "countdownForDiscountPriceDeadline": "{countdown} ମଧ୍ୟରେ କିଣିବାରେ {offPercent} % ଅବନତି",
   "@countdownForDiscountPriceDeadline": {
