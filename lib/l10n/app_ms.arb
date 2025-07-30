@@ -903,7 +903,7 @@
   },
   "premiumTermsBullet": "•",
   "@premiumTermsBullet": {
-    "description": "・"
+    "description": "プレミアムプランの利用規約で項目を列挙する際に使用する箇条書きのバレット記号です。各言語の慣習に合わせた適切な箇条書き記号（・、•、-など）に翻訳してください。"
   },
   "slashSeparator": "Aplikasi pengurusan pengambilan pil mudah alih Pilll sedang dibangunkan untuk menghilangkan kebimbangan terlupa mengambil pil. Aplikasi ini membolehkan anda mengingatkan masa pengambilan pil, menguruskan rekod pengambilan, dan menguruskan kitaran haid.",
   "@slashSeparator": {
