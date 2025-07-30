@@ -755,7 +755,7 @@
   },
   "menstruationScheduleDateWithNumber": "Менструация күтүлүүдө: {diffPlusOne}-кү",
   "@menstruationScheduleDateWithNumber": {
-    "description": "生理予定：{diffPlusOne}日目",
+    "description": "生理管理機能で、アプリが予測した次回生理開始日までの残り日数を「生理予定：X日目」形式で表示する際に使用される文字列です。{diffPlusOne}には具体的な日数（1日目、2日目など）が入り、ユーザーのピル服用スケジュールと連動した生理周期予測を示します。",
     "placeholders": {
       "diffPlusOne": {
         "type": "int"
