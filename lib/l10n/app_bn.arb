@@ -506,7 +506,7 @@
   },
   "endPillSheet": "পিল শীট শেষ",
   "@endPillSheet": {
-    "description": "ピルシート終了"
+    "description": "ピル（経口避妊薬）の一包装（通常シート状で28日分程度）がすべて服用完了した際に表示されるメッセージです。次のピルシートへの切り替えやタイミングを知らせる重要な通知として使用されます。"
   },
   "discardPillSheet": "পিল শিট নিষ্পত্তি",
   "@discardPillSheet": {
