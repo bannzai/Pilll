@@ -1150,7 +1150,7 @@
   },
   "pilll": "පිල්ල",
   "@pilll": {
-    "description": "Pilll"
+    "description": "ピルの服用管理アプリ「Pilll」のアプリ名です。基本的には「Pilll」のまま使用しますが、各言語の文字体系に合わせて表記を調整してください。"
   },
   "changeMissedNotificationMessage": "ඔබ බිඳ වැටී ඇති අවස්ථාවේදී නිවේදන පණිවිඩය වෙනස් කළ හැක.",
   "@changeMissedNotificationMessage": {
