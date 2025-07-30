@@ -46,7 +46,7 @@
   },
   "medicationHistory": "Hanesgriw",
   "@medicationHistory": {
-    "description": "服用履歴"
+    "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。"
   },
   "settings": "Gosodiad",
   "@settings": {

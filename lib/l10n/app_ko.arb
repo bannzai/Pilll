@@ -46,7 +46,7 @@
   },
   "medicationHistory": "복용 이력",
   "@medicationHistory": {
-    "description": "복용 이력"
+    "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。"
   },
   "settings": "설정",
   "@settings": {
