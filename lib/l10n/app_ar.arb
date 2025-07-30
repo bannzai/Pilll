@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "لا يمكن الشراء حالياً. يرجى الانتظار لبعض الوقت والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى الاتصال بنا من خلال الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "لا يمكن إجراء الشراء حالياً. يرجى الانتظار قليلاً والمحاولة مرة أخرى. إذا لم تحل المشكلة، يرجى التواصل معنا من الإعدادات > اتصل بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
