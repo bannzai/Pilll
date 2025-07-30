@@ -244,7 +244,7 @@
   },
   "pillSheetDiscarded": "딜셔트를 폐기했습니다",
   "@pillSheetDiscarded": {
-    "description": "딜셔트를 폐기했습니다"
+    "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
   },
   "aboutMenstruation": "생리에 대해",
   "@aboutMenstruation": {
