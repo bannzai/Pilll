@@ -2105,7 +2105,7 @@
   },
   "sequentialLastTakenPlusOnePillNumber": "pilule numéro {pillSheetGroupSequentialLastTakenPillNumber}",
   "@sequentialLastTakenPlusOnePillNumber": {
-    "description": "{pillSheetGroupSequentialLastTakenPillNumber}番",
+    "description": "次に服用すべきピルの番号を表示するテキストです。プレースホルダーには数字が入るため、各言語の序数や番号表現に適合させて翻訳してください。",
     "placeholders": {
       "pillSheetGroupSequentialLastTakenPillNumber": {
         "type": "String"
