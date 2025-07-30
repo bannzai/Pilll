@@ -989,7 +989,7 @@
   },
   "viewPastData": "👀 Pregled prethodnih podataka",
   "@viewPastData": {
-    "description": "👀 過去のデータ閲覧"
+    "description": "プレミアム機能の一覧で表示される機能名です。過去の服用記録、生理記録、体調記録などの履歴データを閲覧できる機能を表しています。"
   },
   "customizeHealthTags": "🏷 Prilagodite oznake za stanje",
   "@customizeHealthTags": {
