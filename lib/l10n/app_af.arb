@@ -1609,7 +1609,7 @@
       }
     }
   },
-  "purchaseErrorEmptySubscriberAttributesError": "Dit is 'n onbekende fout. Koopinligting kon nie vooraf verkry word nie. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "Onbekende fout. Kon nie die aankoopinligting vooraf verkry nie. Details: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
