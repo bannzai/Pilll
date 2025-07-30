@@ -1201,7 +1201,7 @@
   },
   "save": "сақтоо",
   "@save": {
-    "description": "保存"
+    "description": "設定変更や入力内容を確定・保存する際に表示されるボタンのテキストです。アプリ内の様々な画面（服用設定、通知設定、プロフィール編集など）で汎用的に使用されます。"
   },
   "physicalCondition": "илим",
   "@physicalCondition": {

@@ -1201,7 +1201,7 @@
   },
   "save": "Desarrollem un gestor de presa de píndoles per elimina la preocupació de oblidar-se'n de prendre les píndoles. L'aplicació recorda el moment de presa dels píndoles, gestiona l'historial de presa i permet la gestió del cicle menstrual.",
   "@save": {
-    "description": "保存"
+    "description": "設定変更や入力内容を確定・保存する際に表示されるボタンのテキストです。アプリ内の様々な画面（服用設定、通知設定、プロフィール編集など）で汎用的に使用されます。"
   },
   "physicalCondition": "estat",
   "@physicalCondition": {
