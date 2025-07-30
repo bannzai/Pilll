@@ -322,7 +322,7 @@
   },
   "oK": "సరే",
   "@oK": {
-    "description": "OK"
+    "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
   },
   "changePillNumber": "పిల్ సంఖ్యను మారుస్తున్నాం",
   "@changePillNumber": {
