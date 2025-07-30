@@ -289,7 +289,7 @@
   },
   "authenticationInfoUpdated": "પ્રમાણિત માહિતી અપડેટ કરવામાં આવી છે",
   "@authenticationInfoUpdated": {
-    "description": "認証情報を更新しました"
+    "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）の更新が正常に完了した際に表示される成功メッセージです。健康管理アプリのセキュリティ強化や問題解決後にユーザーに安心感を与える通知として使用されます。"
   },
   "updateAuthenticationInformation": "પ્રમાણીકરણ માહિતીને અપડેટ કરો",
   "@updateAuthenticationInformation": {
