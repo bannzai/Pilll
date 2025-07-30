@@ -1238,7 +1238,7 @@
   },
   "reloadScreen": "화면을 다시 로드",
   "@reloadScreen": {
-    "description": "화면을 다시 로드"
+    "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
   },
   "contactIfNotResolved": "해결되지 않는 경우 여기를 클릭하세요",
   "@contactIfNotResolved": {

@@ -1238,7 +1238,7 @@
   },
   "reloadScreen": "重新加载屏幕",
   "@reloadScreen": {
-    "description": "画面を再読み込み"
+    "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
   },
   "contactIfNotResolved": "如果仍未解决，请点击这里",
   "@contactIfNotResolved": {
