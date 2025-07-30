@@ -1258,7 +1258,7 @@
   },
   "participate": "Collaborare",
   "@participate": {
-    "description": "協力する"
+    "description": "サービス改善アンケートに参加・協力するためのボタンやリンクのテキストです。ユーザーがアンケート調査に協力することを表現する動詞として使用されます。"
   },
   "notHelp": "non fare",
   "@notHelp": {
