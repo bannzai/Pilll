@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "Die aankoopinligting kon nie verkry word nie. Probeer asseblief weer in 'n ander tyd. As die probleem voortduur, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Aankoopinligting kon nie verkry word nie. Wag asseblief 'n bietjie en probeer weer. As die probleem voortduur, kontak ons by Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
