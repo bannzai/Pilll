@@ -110,7 +110,7 @@
   },
   "deleteDiary": "दिवसपत्रिका हटवित आहे",
   "@deleteDiary": {
-    "description": "日記を削除します"
+    "description": "アプリ内の日記機能（体調記録）で特定の日記エントリを削除する際に表示される文言です。ユーザーの大切な体調記録が削除されることを示すため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
   "confirmDeletingMenstruation": "तुम्ही मासिक पाळीचा कालावधी हटवू इच्छिता का?",
   "@confirmDeletingMenstruation": {
