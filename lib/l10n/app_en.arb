@@ -610,7 +610,7 @@
   },
   "beforePillSheetGroupSequentialEstimatedEndDay": "Last pill on previous sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}th day",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {
-    "description": "Last pill on previous sheet: {beforePillSheetGroupSequentialEstimatedEndPillNumber}th day",
+    "description": "ピルシート管理画面で、前回使用していたピルシートの最後の服用日を示すテキストです。ユーザーがピルの服用進度や次のシートとの関連性を把握するために表示される情報です。",
     "placeholders": {
       "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
         "type": "int"
