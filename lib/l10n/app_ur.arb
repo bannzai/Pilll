@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "اس منصوبے کی وجہ سے اس وقت فروخت پر نہیں ہے۔ براہ کرم ایپ کو دوبارہ شروع کریں اور کوشش کریں۔",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "آپ نے پہلے ہی منصوبہ خریدا ہے۔ اگر آپ اس ڈیوائس پر خریداری کی معلومات بحال کرنا چاہتے ہیں تو \"پہلے خریدار یہاں\" سے خریداری کی معلومات بحال کریں۔",
   "@purchaseErrorProductAlreadyPurchasedError": {

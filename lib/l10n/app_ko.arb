@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "이미 플랜을 구매하셨습니다. 이 기기에서 구매 정보를 복원하려면 '이전에 구매한 분은 여기를 참고하세요'에서 구매 정보를 복원해 주세요",
   "@purchaseErrorProductAlreadyPurchasedError": {

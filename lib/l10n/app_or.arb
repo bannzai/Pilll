@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ଉଲ୍ଲେଖିତ ପ୍ରଣାଳୀ ବର୍ତ୍ମାନ ବିକ୍ରୟ ହେଉ ନାହିଁ। କୃପୟା ଆପ୍ପକୁ ମୁଣ୍ଡାଇ ଦେଖିବାକୁ ପ୍ରୟାସ କରନ୍ତୁ।",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "ଅତିକ୍ରମ ସେଇକାନ୍ତୁ। ଯଦି ଆପଣ ଏହି ଡିଭାଇସରେ କିଣା ସୂଚନା ଫେରାଇବାକୁ ଚାହାନ୍ତି, \"ପୂର୍ବରୁ କିଣିଥିବା ଲୋକମାନେ ଏଠାରୁ\" ରେ ଯାଇ କିଣା ସୂଚନାକୁ ଫେରାଇବାକୁ ପplease।",
   "@purchaseErrorProductAlreadyPurchasedError": {

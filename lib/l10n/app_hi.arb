@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "लक्षित योजना अब उपलब्ध नहीं है। कृपया ऐप को पुनः शुरू करें और फिर प्रयास करें।",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "आप पहले ही योजना खरीद चुके हैं। यदि आप इस डिवाइस पर खरीदारी की जानकारी को पुनर्स्थापित करना चाहते हैं, तो कृपया \"पहले खरीदे हुए लोगों के लिए यहाँ क्लिक करें\" से खरीदारी की जानकारी पुनर्स्थापित करें।",
   "@purchaseErrorProductAlreadyPurchasedError": {

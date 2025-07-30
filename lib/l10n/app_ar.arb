@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "الخطة المستهدفة غير متاحة حاليًا للبيع. نعتذر عن الإزعاج، ولكن يرجى إعادة تشغيل التطبيق والمحاولة مرة أخرى.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "لقد تم شراء الخطة بالفعل. إذا كنت ترغب في استعادة معلومات الشراء على هذا الجهاز، يرجى استعادة معلومات الشراء من \"إذا كنت قد اشتريت من قبل، انقر هنا\".",
   "@purchaseErrorProductAlreadyPurchasedError": {

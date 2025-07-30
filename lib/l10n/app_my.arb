@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Rancangan yang ditargetkan tidak tersedia untuk dijual pada masa ini. Sila cuba lagi selepas memulakan semula aplikasi.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan. Jika anda ingin memulihkan maklumat pembelian pada peranti ini, sila pulihkan maklumat pembelian dari \"Klik di sini jika anda telah membeli sebelum ini\".",
   "@purchaseErrorProductAlreadyPurchasedError": {

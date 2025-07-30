@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Izbrani načrt trenutno ni na voljo. Opravičujemo se za nevšečnosti, vendar prosimo, da aplikacijo znova zaženete in poskusite znova.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "Že imate načrt že kupljen. Če želite obnoviti informacije o nakupu na tem napravi, kliknite na \"Tisti, ki so kupili prej, tukaj\".",
   "@purchaseErrorProductAlreadyPurchasedError": {

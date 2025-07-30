@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית הרלוונטית אינה זמינה למכירה כיום. אנו מתנצלים, אך אנא הפעל מחדש את האפליקציה והניסיון שוב.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "כבר רכשת את התוכנית. אם ברצונך לשחזר את מידע הרכישה במכשיר זה, אנא שחזר את מידע הרכישה דרך \"כאן עבור קונים קודמים\".",
   "@purchaseErrorProductAlreadyPurchasedError": {

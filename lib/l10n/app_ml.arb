@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "തിരഞ്ഞെടുത്ത പദ്ധതി നിലവില്‍ വിറ്റുഞ്ഞില്ല. ദയവായി ഏല്‍പ്പിക്കുന്നത് ശ്രമിക്കുക.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "നിങ്ങൾ ഇതിനകം പദ്ധതി കൈപ്പറ്റിയിട്ടുണ്ട്. ഈ ഉപകരണത്തിൽ വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കാൻ \"മുമ്പ് വാങ്ങിയ ആളുകൾ ഇവിടെ\" എന്ന പ്രസ്താവനയിൽ നിന്ന് വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കണം.",
   "@purchaseErrorProductAlreadyPurchasedError": {

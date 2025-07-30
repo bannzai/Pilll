@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ਮਾਫ ਕਰਨਾ, ਇਸ ਸਮੇਂ ਲਕੜੀ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰਕੇ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "ਤੁਸੀਂ ਪਹਿਲਾਂ ਹੀ ਯੋਜਨਾ ਖਰੀਦ ਲਈ ਹੈ। ਜੇ ਤੁਸੀਂ ਇਸ ਡਿਵਾਈਸ 'ਤੇ ਖਰੀਦ ਜਾਣਕਾਰੀ ਦੁਬਾਰਾ ਪ੍ਰਾਪਤ ਕਰਨਾ ਚਾਹੁਂਦੇ ਹੋ ਤਾਂ \"ਜੋ ਪਹਿਲਾਂ ਖਰੀਦਿਆ ਸੀ ਉਹਥੋਂ ਆਓ\" ਤੋਂ ਖਰੀਦ ਜਾਣਕਾਰੀ ਦੁਬਾਰਾ ਪ੍ਰਾਪਤ ਕਰੋ।",
   "@purchaseErrorProductAlreadyPurchasedError": {

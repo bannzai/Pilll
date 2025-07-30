@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Plani i synuar aktualisht nuk është në shitje. Na vjen keq, por ju lutemi ri-nisni aplikacionin dhe provoni përsëri.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "Ju tashmë keni blerë një plan. Nëse dëshironi të rikuperoni informacionin mbi blerjen në këtë pajisje, ju lutem klikoni \"Këtu nëse keni blerë më parë\" për të rikuperuar informacionin mbi blerjen.",
   "@purchaseErrorProductAlreadyPurchasedError": {

@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ផ្លា​ន៍​ដែល​ត្រូវគ្នា​មិន​ទាន់អាជីវកម្ម​ឡើយ។ សូមអភ័យទោស ប៉ុន្តែសូមធ្វើការផ្ទះវិញនៃកម្មវិធី។",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "អ្នក​បានទិញ​គ្រោងខាងមុន។ ប្រសិនបើ​អ្នកចង់ស្តារព័ត៌មានការទិញនៅលើឧបករណ៍នេះ សូមអញ្ជើញចុច \"អ្នកដែលបានទិញមុននេះនេះ\" ដើម្បីស្តារព័ត៌មានការទិញ។",
   "@purchaseErrorProductAlreadyPurchasedError": {

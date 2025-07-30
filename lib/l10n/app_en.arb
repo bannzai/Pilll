@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "The plan is not currently available for purchase. Please try restarting the app",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "The plan is not currently available for purchase. Please try restarting the app"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "You have already purchased this plan. If you want to restore your purchase information, please check the \"previously purchased\" section",
   "@purchaseErrorProductAlreadyPurchasedError": {

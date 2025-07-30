@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Ang planong ito ay hindi kasalukuyang ibinibenta. Pasensya na, ngunit mangyaring i-restart ang app at subukan muli.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "Mayroon ka nang nabiling plano. Kung nais mong ibalik ang impormasyon ng pagbili sa aparatong ito, mangyaring ibalik ang impormasyon ng pagbili mula sa \"Dito ang mga dating bumili\"",
   "@purchaseErrorProductAlreadyPurchasedError": {

@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ఈ ప్లాన్ ప్రస్తుతం విక్రయంలో లేదు. దయచేసి అప్లికేషన్‌ను మళ్లీ ప్రారంభించి ప్రయత్నించండి.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "మీరు ఇప్పటికే ప్లాన్‌ను కొనుగోలు చేసారు. ఈ డివైస్‌లో కొనుగోలు సమాచారం పునరుద్ధరించాలంటే \"మునుపటి కొనుగోలు చేసినవాళ్లు ఇక్కడ\" నుండి కొనుగోలు సమాచారాన్ని పునరుద్ధరించండి.",
   "@purchaseErrorProductAlreadyPurchasedError": {

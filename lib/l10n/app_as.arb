@@ -1420,7 +1420,7 @@
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "বৰ্তমান উপলব্ধ পৰিকল্পনা নাই। অনুগ্রহ কৰি एप্‌টি পুনৰ প্ৰাৰম্ভ কৰি চেষ্টা কৰক।",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
-    "description": "対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
   "purchaseErrorProductAlreadyPurchasedError": "আপনি ইতিমধ্যে পরিকল্পনা কিনে ফেলেছেন। এই ডিভাইসে কেনার তথ্য পুনরুদ্ধার করতে চাইলে \"পূর্বে কেনা ব্যক্তিরা এখানে ক্লিক করুন\" থেকে কেনার তথ্য পুনরুদ্ধার করুন।",
   "@purchaseErrorProductAlreadyPurchasedError": {
