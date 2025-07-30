@@ -362,7 +362,7 @@
   },
   "updateAuthenticationAfterReLogin": "पुन्हा लॉगिन केले जाईल आणि प्रमाणपत्र माहिती अद्यतनित केली जाईल.",
   "@updateAuthenticationAfterReLogin": {
-    "description": "再度ログインをして認証情報を更新します"
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
   "menstruationPage": "मासिक पाळी पृष्ठ",
   "@menstruationPage": {

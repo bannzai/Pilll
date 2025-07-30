@@ -362,7 +362,7 @@
   },
   "updateAuthenticationAfterReLogin": "Re-login to update authentication information",
   "@updateAuthenticationAfterReLogin": {
-    "description": "Re-login to update authentication information"
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
   "menstruationPage": "MenstruationPage",
   "@menstruationPage": {

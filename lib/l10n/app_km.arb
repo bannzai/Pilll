@@ -362,7 +362,7 @@
   },
   "updateAuthenticationAfterReLogin": "ការចូលរួមឡើងវិញនិងធ្វើអាប់ដេចព័ត៌មានអត្តសញ្ញាណ។",
   "@updateAuthenticationAfterReLogin": {
-    "description": "再度ログインをして認証情報を更新します"
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
   "menstruationPage": "ទំព័រមានសម័យរំខាន",
   "@menstruationPage": {

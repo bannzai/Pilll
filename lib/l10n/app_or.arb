@@ -362,7 +362,7 @@
   },
   "updateAuthenticationAfterReLogin": "ପুনରାବୃତ୍ତି ଲଗଇନ୍ କରି ନିଜର ଆଧାର ତଥ୍ୟ ସଂପ୍ରକୃତ କରନ୍ତୁ",
   "@updateAuthenticationAfterReLogin": {
-    "description": "再度ログインをして認証情報を更新します"
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
   "menstruationPage": "ମେନସ୍ଟ୍ରୁୟେସନ୍ପେଜ୍",
   "@menstruationPage": {
