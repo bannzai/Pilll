@@ -1968,7 +1968,7 @@
   },
   "memo": "Mémos",
   "@memo": {
-    "description": "メモ"
+    "description": "日記機能で体調や症状と合わせて自由にメモを記録できる入力欄のラベルです。短い単語で「メモ」や「記録」のような意味の翻訳が適切です。"
   },
   "failedToUpdate": "Échec de la mise à jour. Veuillez vérifier votre environnement de communication et réessayez de modifier.",
   "@failedToUpdate": {
