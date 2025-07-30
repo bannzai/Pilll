@@ -122,7 +122,7 @@
   },
   "syncWithDeviceTimeZone": "Wil jy die toestel se tydsone ({deviceTimezoneName}) sinchroniseer?",
   "@syncWithDeviceTimeZone": {
-    "description": "端末のタイムゾーン({deviceTimezoneName})と同期しますか？",
+    "description": "ピル服用リマインダーの時刻設定で、ユーザーが設定した時間と端末のタイムゾーンが異なる場合に、端末のタイムゾーンに合わせて同期するかを確認するダイアログメッセージです。{deviceTimezoneName}には実際のタイムゾーン名（例：Asia/Tokyo）が表示されます。",
     "placeholders": {
       "deviceTimezoneName": {
         "type": "String"
