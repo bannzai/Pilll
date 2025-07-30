@@ -1428,7 +1428,7 @@
   },
   "purchaseErrorReceiptAlreadyInUseError": "पहले से खरीदी गई। मोक खरीद जानकारी किसी अन्य उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया {accountName} की जांच करें",
   "@purchaseErrorReceiptAlreadyInUseError": {
-    "description": "既に購入済み。もくは購入情報は別のユーザーで使用されています。{accountName}を確認してください",
+    "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
     "placeholders": {
       "accountName": {
         "type": "String"

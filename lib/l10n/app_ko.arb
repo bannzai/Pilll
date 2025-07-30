@@ -1428,7 +1428,7 @@
   },
   "purchaseErrorReceiptAlreadyInUseError": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
   "@purchaseErrorReceiptAlreadyInUseError": {
-    "description": "이미 구매하셨습니다. 또는 구매 정보는 다른 사용자에 의해 사용되고 있습니다. {accountName}을 확인해 주세요",
+    "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
     "placeholders": {
       "accountName": {
         "type": "String"
