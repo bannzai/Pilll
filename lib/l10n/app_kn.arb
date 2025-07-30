@@ -827,7 +827,7 @@
   },
   "beforePremiumRegistration": "ಪ್ರೀಮಿಯಮ್ ನೋಂದಣಿಯ ಮುಂಚೆ...",
   "@beforePremiumRegistration": {
-    "description": "プレミアム登録の前に…"
+    "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
   "createNewAccountIfNotLoggedIn": "ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ನೀವು Pilll ಗೆ ಇನ್ನೂ ಲಾಗಿನ್ ಆಗಿಲ್ಲದಿದ್ದರೆ ಹೊಸ ಖಾತೆ ಅನ್ನು ರಚಿಸಲಾಗುತ್ತದೆ.",
   "@createNewAccountIfNotLoggedIn": {

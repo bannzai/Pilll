@@ -827,7 +827,7 @@
   },
   "beforePremiumRegistration": "அதிகம் சமூகத்தை பதிவு செய்வதற்கு முன்...",
   "@beforePremiumRegistration": {
-    "description": "プレミアム登録の前に…"
+    "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
   "createNewAccountIfNotLoggedIn": "ஒன்றும் இல்லாமல் உள்நுழைவதில், புதிய கணக்கொன்றை உருவாக்கப்படும்.",
   "@createNewAccountIfNotLoggedIn": {

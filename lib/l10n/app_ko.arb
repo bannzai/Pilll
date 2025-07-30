@@ -827,7 +827,7 @@
   },
   "beforePremiumRegistration": "프리미엄 등록 전에…",
   "@beforePremiumRegistration": {
-    "description": "프리미엄 등록 전에…"
+    "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
   "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로�� 계정이 작성됩니다",
   "@createNewAccountIfNotLoggedIn": {
