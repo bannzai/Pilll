@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Dit is 'n onbekende fout. Werk op na die nuutste weergawe en probeer weer. As dit steeds nie opgelos is nie, kontak ons asseblief via Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "'n Onbekende fout het voorgekom. Dateer asseblief na die nuutste weergawe op en probeer weer. As die probleem voortduur, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
