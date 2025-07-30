@@ -1525,7 +1525,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "فشل شراء المستخدم الخاص بك. يرجى الانتظار لبعض الوقت والمحاولة مرة أخرى. إذا لم يتم حل المشكلة ، يرجى الاتصال بنا من خلال الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "فشل الشراء لحسابك. يرجى المحاولة مرة أخرى بعد قليل. إذا لم تحل المشكلة، يرجى التواصل معنا من خلال الإعدادات > اتصل بنا. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
