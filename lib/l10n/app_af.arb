@@ -1,46 +1,46 @@
 {
   "@@locale": "af",
-  "pillSheetType21With7Placebo": "21-tablet tipe",
+  "pillSheetType21With7Placebo": "21-pil tipe",
   "@pillSheetType21With7Placebo": {
     "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
-  "pillSheetType28With4Placebo": "28-tablet tipe (4 tablet placebo)",
+  "pillSheetType28With4Placebo": "28-pil tipe (4 plasebo pille)",
   "@pillSheetType28With4Placebo": {
     "description": "ピルシートの種類で、28錠の薬剤のうち24錠が薬効成分を含み4錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "pillSheetType28With7Placebo": "28 tablette tipe (7 tablette placebo)",
+  "pillSheetType28With7Placebo": "28-pille tipe (7 plasebo)",
   "@pillSheetType28With7Placebo": {
     "description": "ピルシートの種類で、28錠の薬剤のうち21錠が薬効成分を含み7錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "pillSheetType28": "28-tablet tipe (alles is werklike medikasie)",
+  "pillSheetType28": "28-pil tipe (alle aktief)",
   "@pillSheetType28": {
     "description": "ピルシートの種類で、28錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない28錠タイプであることを示します。"
   },
-  "pillSheetType24": "24 tablet tipe (alle werklike medisyne)",
+  "pillSheetType24": "24-pil tipe (almal aktiewe pille)",
   "@pillSheetType24": {
     "description": "ピルシートの種類で、24錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない24錠タイプであることを示します。"
   },
-  "pillSheetType21": "21 tablette tipe (alle werklike medikasie)",
+  "pillSheetType21": "21-pil tipe (almal aktiewe pille)",
   "@pillSheetType21": {
     "description": "ピルシートの種類で、21錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない21錠タイプであることを示します。"
   },
-  "pillSheetType24WithRest4": "24-tablet tipe",
+  "pillSheetType24WithRest4": "24-pil tipe",
   "@pillSheetType24WithRest4": {
     "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "restPeriod": "Pill tyd",
+  "restPeriod": "pouse",
   "@restPeriod": {
     "description": "ピルの服用サイクル中の休薬期間を指す用語です。通常はプラセボ錠を服用するか薬を飲まない期間で、この期間中に生理が来ることが多いです。"
   },
-  "placebo": "Placebo",
+  "placebo": "placebo",
   "@placebo": {
     "description": "ピルパックに含まれるホルモン非含有錠で、休薬期間中に服用する錠剤を指します。プラセボ錠を服用している期間中に生理が来ることが一般的です。"
   },
-  "userNotFound": "Geen gebruiker gevind",
+  "userNotFound": "Gebruiker nie gevind nie",
   "@userNotFound": {
     "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
   },
-  "userAlreadyExists": "Daar is reeds 'n gebruiker.",
+  "userAlreadyExists": "Gebruiker bestaan reeds",
   "@userAlreadyExists": {
     "description": "アカウント作成やユーザー登録時に、入力されたメールアドレスや電話番号が既に他のアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーに対して既存のアカウントでログインするか、別の認証情報を使用するよう促す文脈で使用されます。"
   },
@@ -52,11 +52,11 @@
   "@settings": {
     "description": "ピルアプリ内で、ユーザーがアプリの各種設定（通知設定、服用時間設定、プロフィール設定など）を変更できる設定画面のタイトルやメニュー項目として使用されます。アプリの動作や表示をカスタマイズするための設定機能全般を指す用語です。"
   },
-  "account": "rekening",
+  "account": "Rekening",
   "@account": {
     "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
-  "dataTransferRequiresAccount": "Vir u dataverlies, soos by toestelverandering of verlies van jou slimfoon, is dit nodig om 'n rekening te registreer om data oor te dra of te herstel.",
+  "dataTransferRequiresAccount": "Vir toestel vervanging of verlore smartfone, is rekening registrasie nodig vir data oordrag en herstel.",
   "@dataTransferRequiresAccount": {
     "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   },
@@ -64,7 +64,7 @@
   "@pillPremium": {
     "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
   },
-  "unlimitedFeatureDuration": "Onbeperkte funksie tydperk",
+  "unlimitedFeatureDuration": "Oor die onbeperkte funksie periode",
   "@unlimitedFeatureDuration": {
     "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
   },
@@ -72,11 +72,11 @@
   "@pillSheet": {
     "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。"
   },
-  "notification": "Kennisgewing",
+  "notification": "Kennisgewings",
   "@notification": {
     "description": "アプリがユーザーに送るプッシュ通知や画面内の通知のことで、ピルの服用時刻を知らせるリマインダーや重要な情報を伝える機能を指します。"
   },
-  "menstruation": "Menstruasie",
+  "menstruation": "menstruasie",
   "@menstruation": {
     "description": "ピル服用管理アプリにおける女性の生理（月経）を指し、生理周期の記録・管理機能で使用される医学的な用語です。ユーザーが生理日を記録して健康管理を行う際に表示されます。"
   },
@@ -84,11 +84,11 @@
   "@others": {
     "description": "各種選択肢や分類項目において、既存の選択肢に該当しない場合に選択する汎用的な「その他」オプションです。"
   },
-  "faq": "VRAAG EN ANTWOORD",
+  "faq": "Veel gestelde vrae",
   "@faq": {
     "description": "アプリ内のヘルプ・サポートセクションで表示される「よくある質問」を意味するラベルです。ユーザーがピルの服用方法や機能について疑問を持った際にアクセスするページのタイトルとして使用されます。"
   },
-  "newFeaturesIntroduction": "Nuwe kenmerke bekendstelling",
+  "newFeaturesIntroduction": "Nuwe funksies inleiding",
   "@newFeaturesIntroduction": {
     "description": "新機能紹介"
   },
@@ -96,7 +96,7 @@
   "@contactUs": {
     "description": "アプリ内のメニューやボタンで表示される、ユーザーがサポートチームに問い合わせや相談をするための機能名です。"
   },
-  "delete": "Verwyder",
+  "delete": "Skrap",
   "@delete": {
     "description": "アプリ内の各種データ（服用記録、生理記録、日記など）を削除する際に表示されるボタンやメニューの文言です。ユーザーが操作を取り消したい時に使用される汎用的な削除機能を表します。"
   },
@@ -104,23 +104,23 @@
   "@doDelete": {
     "description": "服用記録や生理記録などのデータを削除する際のボタンに表示される動詞形の文言です。"
   },
-  "deleteUser": "Verwyder gebruiker",
+  "deleteUser": "Skrap gebruiker",
   "@deleteUser": {
     "description": "アカウント削除機能で表示される文言で、ユーザーのアカウントと関連する全ての服用記録・生理記録データを完全に削除することを示します。重要な操作のため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
-  "deleteDiary": "Ek gaan die dagboek verwyder.",
+  "deleteDiary": "Dagboek sal verwyder word",
   "@deleteDiary": {
     "description": "アプリ内の日記機能（体調記録）で特定の日記エントリを削除する際に表示される文言です。ユーザーの大切な体調記録が削除されることを示すため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
-  "confirmDeletingMenstruation": "Verwyder jy die menstruasieperiode?",
+  "confirmDeletingMenstruation": "Wil jy die menstruasieperiode verwyder?",
   "@confirmDeletingMenstruation": {
     "description": "生理管理機能でユーザーが記録した生理期間のデータを削除する際に表示される確認ダイアログの文言です。重要な記録の削除を確認するため、各言語で慎重で丁寧な表現を使用してください。"
   },
-  "addNotificationTime": "Voeg kennisgewing tyd aan",
+  "addNotificationTime": "Voeg kennisgewingstyd by",
   "@addNotificationTime": {
     "description": "ピルの服用リマインダー機能で、ユーザーが新しい通知時間を追加する際に表示されるボタンやメニュー項目の文言です。簡潔で分かりやすい表現を使用してください。"
   },
-  "syncWithDeviceTimeZone": "Wil jy die toestel se tydsone ({deviceTimezoneName}) sinchroniseer?",
+  "syncWithDeviceTimeZone": "Wil jy sinchroniseer met die toestel se tydsone ({deviceTimezoneName})?",
   "@syncWithDeviceTimeZone": {
     "description": "ピル服用リマインダーの時刻設定で、ユーザーが設定した時間と端末のタイムゾーンが異なる場合に、端末のタイムゾーンに合わせて同期するかを確認するダイアログメッセージです。{deviceTimezoneName}には実際のタイムゾーン名（例：Asia/Tokyo）が表示されます。",
     "placeholders": {
@@ -129,7 +129,7 @@
       }
     }
   },
-  "currentTimeZone": "Huidige tydsone wat gestel is.",
+  "currentTimeZone": "Huidige tydsone",
   "@currentTimeZone": {
     "description": "設定画面等で表示される、ユーザーの端末で現在設定されているタイムゾーンを示すラベルです。ピルの服用リマインド機能で正確な時刻管理を行うため、タイムゾーン設定の確認に使用されます。"
   },
@@ -141,23 +141,23 @@
   "@no": {
     "description": "アプリ内のダイアログボックスやアラートで使用される否定的な応答ボタンのラベルです。ユーザーが何かの確認や質問に対して「いいえ」と答える際に表示されます。"
   },
-  "unsubscribeInfo": "Kansellasie",
+  "unsubscribeInfo": "Oor kansellasie",
   "@unsubscribeInfo": {
     "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
   },
-  "pillReminder": "Pillinname",
+  "pillReminder": "Pil inname kennisgewings",
   "@pillReminder": {
     "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
-  "takePillReminderChannelName": "Skeduleer kennisgewings",
+  "takePillReminderChannelName": "Pil kennisgewings",
   "@takePillReminderChannelName": {
     "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
   },
-  "takePillReminder": "💊 tyd is",
+  "takePillReminder": "💊 Tyd!",
   "@takePillReminder": {
     "description": "ピルの服用時刻になった時にユーザーに送信されるプッシュ通知のメッセージです。簡潔で親しみやすく、服用を促すトーンで翻訳してください。"
   },
-  "copyDebugInfo": "KOPIE FOUTSPORINGSINLIGTING",
+  "copyDebugInfo": "KOPIEER DEBUG INFO",
   "@copyDebugInfo": {
     "description": "アプリに問題が発生した際に、サポートや開発者への報告のために技術的なデバッグ情報をクリップボードにコピーするボタンのテキストです。ユーザーにとって分かりやすく、行動を促す表現で翻訳してください。"
   },
@@ -169,11 +169,11 @@
   "@signOut": {
     "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
-  "autoAddPillSheetGroup": "Outomatiese byvoeging van pilblokgroepe",
+  "autoAddPillSheetGroup": "Outomatiese byvoeging van pillevelgroep",
   "@autoAddPillSheetGroup": {
     "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
-  "autoAddNewSheetAfterCurrentEnds": "Wanneer die huidige pilbladgroep voltooi is, sal 'n nuwe blad outomaties bygevoeg word.",
+  "autoAddNewSheetAfterCurrentEnds": "Wanneer die huidige pilbladgroep voltooi is, sal 'n nuwe blad outomaties bygevoeg word",
   "@autoAddNewSheetAfterCurrentEnds": {
     "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
   },
@@ -185,15 +185,15 @@
   "@linked": {
     "description": "外部サービスやアカウントとの連携が完了している状態を表すステータス表示です。設定画面などで「連携済み」として表示されます。"
   },
-  "unregistered": "Nie geregistreer",
+  "unregistered": "Ongeregistreer",
   "@unregistered": {
     "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。"
   },
-  "quickRecord": "Vinige rekord",
+  "quickRecord": "Snel Rekord",
   "@quickRecord": {
     "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
-  "quickRecordDescription": "Jy kan vandag se pille op die kennisgewing skerm sien en dit direk aanteken.",
+  "quickRecordDescription": "Jy kan op die kennisgewing skerm sien watter pil jy vandag moet drink en dit onmiddellik aanteken.",
   "@quickRecordDescription": {
     "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
@@ -201,23 +201,23 @@
   "@healthCareIntegration": {
     "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
-  "healthCareIntegrationDescription": "U kan u menstruasie rekords wat in Pilll aangedui is, outomaties in gesondheidsorg rekords aanteken.",
+  "healthCareIntegrationDescription": "Menstruasie rekords wat in Pilll aangeteken is, kan outomaties na die Health-app oorgedra word",
   "@healthCareIntegrationDescription": {
     "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
-  "viewPremiumPlan": "Kyk na die premium plan",
+  "viewPremiumPlan": "Bekyk Premium Plan",
   "@viewPremiumPlan": {
     "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
-  "changePillNumberForToday": "Verandering van die nommer pille wat vandag geneem moet word",
+  "changePillNumberForToday": "Verander vandag se pilnommer",
   "@changePillNumberForToday": {
     "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
-  "discardAllPillSheets": "Gooi alle pil blaaie weg",
+  "discardAllPillSheets": "Verwyder alle pilvelle",
   "@discardAllPillSheets": {
     "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
   },
-  "areYouSureDoing": "Sal jy {doing}?",
+  "areYouSureDoing": "Wil jy {doing}?",
   "@areYouSureDoing": {
     "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
     "placeholders": {
@@ -226,7 +226,7 @@
       }
     }
   },
-  "currentlyDisplayed": "Huidig vertoon",
+  "currentlyDisplayed": "Tans vertoon",
   "@currentlyDisplayed": {
     "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   },
@@ -234,31 +234,31 @@
   "@allPillSheets": {
     "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
   },
-  "willBeDiscarded": "sal verwyder word",
+  "willBeDiscarded": "sal weggegooi word",
   "@willBeDiscarded": {
     "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。"
   },
-  "discard": "verwyder",
+  "discard": "Weggooi",
   "@discard": {
     "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。"
   },
-  "pillSheetDiscarded": "Ek het die pilbladsy weggegooi.",
+  "pillSheetDiscarded": "Pillpakkie weggegooi",
   "@pillSheetDiscarded": {
     "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
   },
-  "aboutMenstruation": "Menstruasie",
+  "aboutMenstruation": "Oor menstruasie",
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
-  "checkPillNumberForMenstruationStart": "Verifieer die pilnommer vir die begin van jou periode. Die pilnommer wat tans vir die gekose pilblad tipe ingestel is, bestaan nie.",
+  "checkPillNumberForMenstruationStart": "Kontroleer asseblief die pil nommer vir u menstruasie aanvang datum. Die ingestelde pil nommer bestaan nie in die gekose pil vel tipe nie.",
   "@checkPillNumberForMenstruationStart": {
     "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
-  "customizeMedicationNotifications": "Aangepaste medisyne kennisgewing",
+  "customizeMedicationNotifications": "Innamekennisgewings aanpas",
   "@customizeMedicationNotifications": {
     "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   },
-  "xCanBeCustomized": "Jy kan {x} aanpas.",
+  "xCanBeCustomized": "Jy kan {x} aanpas",
   "@xCanBeCustomized": {
     "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
     "placeholders": {
@@ -271,7 +271,7 @@
   "@thankYouForCooperation": {
     "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   },
-  "feedbackUsage": "Die ontvangde menings sal gebruik word vir toekomstige verbeterings.",
+  "feedbackUsage": "Ons waardeer u terugvoer en sal dit gebruik om ons app voortdurend te verbeter.",
   "@feedbackUsage": {
     "description": "ユーザーがアプリに対してフィードバックや意見を送信した際に表示される、運営側がそのフィードバックをどのように活用するかを説明するメッセージです。丁寧で感謝の気持ちが伝わり、今後のサービス改善への活用を約束する表現にしてください。"
   },
@@ -279,23 +279,23 @@
   "@close": {
     "description": "ダイアログ、モーダル、各種設定画面などを閉じるためのボタンのラベルです。アプリ全体で汎用的に使用される基本的なUI要素のため、その言語で最も自然で一般的な「閉じる」の表現を使用してください。"
   },
-  "registerAccount": "Rekeningregistrasie",
+  "registerAccount": "Registreer",
   "@registerAccount": {
     "description": "新規ユーザーがピル服用管理アプリPilllのアカウントを作成するためのボタンや項目です。アプリの初回利用時やログイン画面で表示される、アカウント新規登録を促すUI要素として使用されます。"
   },
-  "reLogin": "Herinloga",
+  "reLogin": "Heraanmeld",
   "@reLogin": {
     "description": "ログインセッションが切れた際やエラーが発生した際に、ユーザーがアプリに再度ログインするためのボタンや項目です。健康管理アプリの継続的な利用において、セキュリティやセッション管理の観点から再認証が必要になった場合に表示されます。"
   },
-  "authenticationInfoUpdated": "Ouditeur-inligting is opgedateer.",
+  "authenticationInfoUpdated": "Geloofsbriewe is opgedateer",
   "@authenticationInfoUpdated": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）の更新が正常に完了した際に表示される成功メッセージです。健康管理アプリのセキュリティ強化や問題解決後にユーザーに安心感を与える通知として使用されます。"
   },
-  "updateAuthenticationInformation": "Die bewysigingsinligting word opgedateer",
+  "updateAuthenticationInformation": "Werk outentiseringsinligting op",
   "@updateAuthenticationInformation": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
   },
-  "registeredWithProvider": "Geregistreer deur {accountTypeProviderName}",
+  "registeredWithProvider": "Geregistreer met {accountTypeProviderName}",
   "@registeredWithProvider": {
     "description": "アカウント登録完了時にユーザーに表示される確認メッセージで、{accountTypeProviderName}にはGoogleやAppleなどのソーシャルログインサービス名が入ります。ユーザーが正常に登録できたことを伝える肯定的なメッセージとして使用されます。",
     "placeholders": {
@@ -308,15 +308,15 @@
   "@linkAccount": {
     "description": "ユーザーアカウントを外部サービス（GoogleやAppleアカウントなど）と連携してデータの同期やバックアップを行う機能のボタンやメニューに表示されるテキストです。"
   },
-  "withdraw": "Trek om te kanselleer",
+  "withdraw": "Uittree",
   "@withdraw": {
     "description": "ユーザーがPilllアプリのサービスから完全に退会（アカウント削除）する際にボタンやメニューに表示されるテキストです。アプリの利用を停止し、すべてのデータを削除する最終的な操作を表します。"
   },
-  "withdrawalCompleted": "Ek is uitgestap",
+  "withdrawalCompleted": "Uitgemeld",
   "@withdrawalCompleted": {
     "description": "ユーザーがPilllアプリのアカウント削除（退会）処理を完了した後に表示される確認メッセージです。退会操作が正常に完了したことをユーザーに伝える重要な通知文言になります。"
   },
-  "appExitMessage": "Die toepassing sal een keer sluit. As jy nuut wil begin, herbegin die toepassing en doen die aanvanklike instellings.",
+  "appExitMessage": "Die app sal nou gesluit word. As jy opnuut wil begin, herlaai die app en voltooi die aanvanklike opstelling.",
   "@appExitMessage": {
     "description": "データリセットや初期化などの重要な操作の後に表示される確認メッセージです。ユーザーにアプリの再起動と初期設定のやり直しが必要であることを伝える重要な通知文言になります。"
   },
@@ -324,7 +324,7 @@
   "@oK": {
     "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
   },
-  "changePillNumber": "Verander pilnommer",
+  "changePillNumber": "Wysig pilnommers",
   "@changePillNumber": {
     "description": "ピルシートUI上で表示される各ピルの番号（1番、2番など）を変更・調整する機能です。ユーザーが自分の使いやすい番号表示にカスタマイズできる設定項目として使用されます。"
   },
@@ -336,35 +336,35 @@
   "@pill": {
     "description": "避妊ピル（経口避妊薬）を指す医療用語です。アプリの核となる概念で、各言語の医療分野で一般的に使用される「ピル」「錠剤」に相当する用語で翻訳してください。"
   },
-  "calendar": "Kalender",
+  "calendar": "kalender",
   "@calendar": {
     "description": "アプリ内で生理記録、服用履歴、体調日記、予定管理などを表示・入力するためのカレンダー機能を指します。各言語で一般的に使用される「カレンダー」「暦」に相当する用語で翻訳してください。"
   },
-  "userInformationWillBeDeleted": "Gebruikersinligting sal verwyder word.",
+  "userInformationWillBeDeleted": "Gebruikersinligting sal uitgewis word",
   "@userInformationWillBeDeleted": {
     "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   },
-  "withdrawalMessage": "As jy uitdroog, sal al die data verwyder word en jy sal nooit weer met dieselfde rekening kan aanmeld nie.",
+  "withdrawalMessage": "As jy jou rekening beëindig, sal alle data permanent uitgewis word en jy sal nooit weer met dieselfde rekening kan aanteken nie.",
   "@withdrawalMessage": {
     "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
-  "recordPage": "RecordPage",
+  "recordPage": "Rekordblad",
   "@recordPage": {
     "description": "ピルの服用記録を確認・管理するページの名前です。ユーザーが過去の服用履歴を閲覧したり、服用状況を記録したりする機能を持つメインページの一つとして翻訳してください。"
   },
-  "doReLogin": "Meld asseblief weer in.",
+  "doReLogin": "Meld asseblief weer aan",
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
-  "reLoginMessage": "Sluit asseblief weer aan voordat jy jou rekening kanselleer ter bevestiging van jou identiteit. Na die herlogin sal die kansellasie outomaties begin.",
+  "reLoginMessage": "Teken asseblief weer aan vir identiteitsverifikasie voor u rekening gesluit word. Die rekening sluitingspreses sal outomaties begin nadat u weer aangemeld het.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
-  "updateAuthenticationAfterReLogin": "Meld weer in om jou verifikasiedetails op te dateer.",
+  "updateAuthenticationAfterReLogin": "Log weer in om jou verifikasie-inligting by te werk",
   "@updateAuthenticationAfterReLogin": {
     "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
-  "menstruationPage": "MenstruationPage",
+  "menstruationPage": "Menstruasie",
   "@menstruationPage": {
     "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
@@ -372,39 +372,39 @@
   "@calendarPage": {
     "description": "ピルアプリ内で体調記録や通院予定などの将来の予定を管理するカレンダーページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "settingsPage": "Instellingsblad",
+  "settingsPage": "Instellings",
   "@settingsPage": {
     "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "menstruationDeleted": "Menstruasieperiode verwyder",
+  "menstruationDeleted": "Die menstruasieperiode is verwyder",
   "@menstruationDeleted": {
     "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
   },
-  "editMenstruationPeriod": "Wysig tydperk van menstruasie",
+  "editMenstruationPeriod": "Redigeer menstruasieperiode",
   "@editMenstruationPeriod": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
   },
-  "menstruationEdited": "Ek het die menstruasieperiode gewysig",
+  "menstruationEdited": "Die menstruasieperiode is geredigeer",
   "@menstruationEdited": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を編集完了した後に表示される確認メッセージです。生理管理機能での編集操作の完了を知らせる文言として翻訳してください。"
   },
-  "physicalConditionDetail": "Gesondheid besonderhede",
+  "physicalConditionDetail": "Gesondheidsbesonderhede",
   "@physicalConditionDetail": {
     "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
   },
-  "medicationHistoryPremiumFeatureRestriction": "Jy meer as dit, sal toegang premiumfunksie wees.",
+  "medicationHistoryPremiumFeatureRestriction": "Verdere besigtiging vereis premium",
   "@medicationHistoryPremiumFeatureRestriction": {
     "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
   },
-  "viewMoreDetails": "Kyk in meer detail",
+  "viewMoreDetails": "Lees meer",
   "@viewMoreDetails": {
     "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
   },
-  "viewMore": "Meer weergawe",
+  "viewMore": "Meer sien",
   "@viewMore": {
     "description": "追加の詳細情報を表示するためのボタンテキストです。リストや概要表示で、さらに多くの項目や詳細を見たい時にタップするリンクとして使用されます。"
   },
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber} nommer",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}de",
   "@afterLastTakenPillNumber": {
     "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
     "placeholders": {
@@ -425,7 +425,7 @@
       }
     }
   },
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} nommer",
+  "beforeLastTakenPillNumber": "nommer {beforeLastTakenPillNumber}",
   "@beforeLastTakenPillNumber": {
     "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
     "placeholders": {
@@ -446,7 +446,7 @@
       }
     }
   },
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber} nommer",
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
   "@oneToAfterDisplayNumberBeginPillNumber": {
     "description": "ピルシートの表示番号設定で、1番から設定した開始番号までの範囲を示すテキストです。ピルシート上での番号表示のカスタマイズ機能で使用されます。",
     "placeholders": {
@@ -455,7 +455,7 @@
       }
     }
   },
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} Nommer",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} no.",
   "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
     "description": "ピルシートの表示番号設定で、元の開始番号から変更後の開始番号への変更を示すテキストです。番号の変更前後を矢印で表現しています。",
     "placeholders": {
@@ -467,7 +467,7 @@
       }
     }
   },
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} nommer",
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "@oneToAfterDisplayNumberEndPillNumber": {
     "description": "ピルシートUIでピルの番号表示範囲を示すテキストです。「1番目から設定された最後の番号まで」という意味で、ピルシートの表示範囲を表します。",
     "placeholders": {
@@ -476,7 +476,7 @@
       }
     }
   },
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} nommer",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "@beforeEndToAfterDisplayNumberEndPillNumber": {
     "description": "ピルシートの最後の薬の表示番号を変更する際に使用されます。変更前の番号から変更後の番号への変更を矢印で示します。",
     "placeholders": {
@@ -488,27 +488,27 @@
       }
     }
   },
-  "selectPauseStartDate": "Seleksie van die begin datum vir die onderbreking van die medikasie",
+  "selectPauseStartDate": "Kies begindatum vir pil-pouse",
   "@selectPauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "selectPausePeriod": "Kies die tydperk vir medikasie-rus",
+  "selectPausePeriod": "Kies pilruspause periode",
   "@selectPausePeriod": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "pauseStartDate": "Beginner dosage rest start date",
+  "pauseStartDate": "Pil pouse begindatum",
   "@pauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "pauseEndDate": "Einddatum van die onderbreking van die gebruik",
+  "pauseEndDate": "Pil pouse einddatum",
   "@pauseEndDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "endPillSheet": "Einde van die pilblaar",
+  "endPillSheet": "Pilblad voltooi",
   "@endPillSheet": {
     "description": "ピル（経口避妊薬）の一包装（通常シート状で28日分程度）がすべて服用完了した際に表示されるメッセージです。次のピルシートへの切り替えやタイミングを知らせる重要な通知として使用されます。"
   },
-  "discardPillSheet": "pille-blad verwyder",
+  "discardPillSheet": "Pillerdoosie weggooi",
   "@discardPillSheet": {
     "description": "服用が完了した空のピルシート（ブリスターパック）を適切に廃棄・処分する際に表示されるアクションやメッセージです。環境に配慮した廃棄方法の案内や、次のシートへの切り替えを促す文脈で使用されます。"
   },
@@ -516,15 +516,15 @@
   "@takingTime": {
     "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
   },
-  "takingHistoryIsPremiumFeature": "Die innamegeschiedenis is 'n premiumfunksie.",
+  "takingHistoryIsPremiumFeature": "Dosis geskiedenis is 'n premium funksie",
   "@takingHistoryIsPremiumFeature": {
     "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
-  "pauseTakingDoesNotAdvancePillNumber": "As jy nie die medikasie neem nie, gaan die pilnommer nie voort nie.",
+  "pauseTakingDoesNotAdvancePillNumber": "As jy die pille pouse, sal die pilnommer nie vorder nie",
   "@pauseTakingDoesNotAdvancePillNumber": {
     "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
   },
-  "pauseTakingFromNumber": "Wil jy {number} ophou om dit te neem?",
+  "pauseTakingFromNumber": "Wil jy vanaf {number} 'n pouse neem met die inname?",
   "@pauseTakingFromNumber": {
     "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
     "placeholders": {
@@ -533,7 +533,7 @@
       }
     }
   },
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}e stoel",
+  "lastTakenPlusOnePillNumber": "Nommer {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "@lastTakenPlusOnePillNumber": {
     "description": "次に服用すべきピルの番号を表示するためのテキストです。ピルシートUIで「◯番目のピルを飲む」という形で使用されます。",
     "placeholders": {
@@ -542,11 +542,11 @@
       }
     }
   },
-  "taking": "Inname",
+  "taking": "inneem",
   "@taking": {
     "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
   },
-  "estimatedEndPillNumber": "Laaste van die vorige skinkbord: {estimatedEndPillNumber} nommer",
+  "estimatedEndPillNumber": "Laaste van vorige vel: pil {estimatedEndPillNumber}",
   "@estimatedEndPillNumber": {
     "description": "前回使用していたピルシート（ブリスターパック）の最後に服用したピルの番号を表示するテキストです。新しいシートに移る際の継続性を示すために使用されます。",
     "placeholders": {
@@ -555,35 +555,35 @@
       }
     }
   },
-  "addPillSheetButton": "Voeg pilblaaie by",
+  "addPillSheetButton": "Voeg pilpakkie toe",
   "@addPillSheetButton": {
     "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
   },
-  "taken": "Geen probleem",
+  "taken": "Geneem",
   "@taken": {
     "description": "ピルを服用したことを示すステータス表示です。服用履歴画面などで、ユーザーが既にピルを飲み終えた状態を表現するために使用されます。"
   },
-  "notTaken": "nie geneem",
+  "notTaken": "Nie geneem nie",
   "@notTaken": {
     "description": "ピルの服用状態を示すステータス表示で、ユーザーがその日にピルを服用していない状態を表します。服用履歴画面やピルシートUIで「taken」（服用済み）と対になって表示される重要な状態表示です。"
   },
-  "pillSheetSettings": "Pill-blad instelling",
+  "pillSheetSettings": "Pilvél-instellings",
   "@pillSheetSettings": {
     "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
   },
-  "unmarkTodayPillAsTakenToPause": "Vandag se pille is nie geneem nie",
+  "unmarkTodayPillAsTakenToPause": "Nadat vandag se pil as ongenome gemerk is",
   "@unmarkTodayPillAsTakenToPause": {
     "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
   },
-  "pauseTaking": "Pill laat",
+  "pauseTaking": "Pil pouse",
   "@pauseTaking": {
     "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
   },
-  "changePauseStartDate": "Verandering van die begindatum van die afleweringsonderbreking",
+  "changePauseStartDate": "Verander pouse begindatum",
   "@changePauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
   },
-  "pauseTakingPeriodEnded": "Die pille se rusperiode is verby.",
+  "pauseTakingPeriodEnded": "Jou pilpause is verby",
   "@pauseTakingPeriodEnded": {
     "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
   },
@@ -596,19 +596,19 @@
       }
     }
   },
-  "changePillDaysForSheet": "Verander die pil se gebruiksdae",
+  "changePillDaysForSheet": "Verander pakkie inneemdae",
   "@changePillDaysForSheet": {
     "description": "ピルシート（ブリスターパック）の服用期間日数を変更する設定項目。ユーザーが21日間、28日間など、そのシートを何日間服用するかを設定できる機能のラベルです。"
   },
-  "changedStartAndEndNumbers": "Ek het die begin- en eindnommers verander.",
+  "changedStartAndEndNumbers": "Begin- en eindnommers is verander",
   "@changedStartAndEndNumbers": {
     "description": "ピルシートの表示番号（開始番号と終了番号）をユーザーが変更した際に表示される確認메ッセージです。例えば「1番～28番」から「3番～30番」に変更した場合などに使用されます。"
   },
-  "startOfPillDays": "Begin van die inname dae",
+  "startOfPillDays": "Begin van innamedae",
   "@startOfPillDays": {
     "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
   },
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Laaste van die vorige skaal: {beforePillSheetGroupSequentialEstimatedEndPillNumber} dag",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Laaste van vorige vel: {beforePillSheetGroupSequentialEstimatedEndPillNumber} dag",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {
     "description": "ピルシート管理画面で、前回使用していたピルシートの最後の服用日を示すテキストです。ユーザーがピルの服用進度や次のシートとの関連性を把握するために表示される情報です。",
     "placeholders": {
@@ -617,23 +617,23 @@
       }
     }
   },
-  "endOfPillDays": "Einde van die dosis dae",
+  "endOfPillDays": "Einde van innamedae",
   "@endOfPillDays": {
     "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
-  "changedToNumber": "verander nommer",
+  "changedToNumber": "Verander na nommer",
   "@changedToNumber": {
     "description": "ピルシートUIでピルの表示番号を変更する機能に関するメッセージです。ユーザーがピルの番号表示を調整する際に使用されます。"
   },
-  "displayMode": "Vertoonmodus",
+  "displayMode": "Vertoonsmode",
   "@displayMode": {
     "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
   },
-  "dateDisplay": "Datum vertoon",
+  "dateDisplay": "Datumvertoning",
   "@dateDisplay": {
     "description": "設定画面で日付の表示形式を選択する機能のラベルです。ピルの服用記録や生理日などの日付情報をどのような形式で表示するかを設定する際に使用されます。"
   },
-  "pillNumber": "Pillnommer",
+  "pillNumber": "Pilnommer",
   "@pillNumber": {
     "description": "ピル番号"
   },
@@ -641,15 +641,15 @@
   "@pillDays": {
     "description": "服用日数"
   },
-  "pillDaysCycle": "Gebruik dae (siklus)",
+  "pillDaysCycle": "Innamedae",
   "@pillDaysCycle": {
     "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
   },
-  "pillSheetEnded": "Die pilblad is beëindig.",
+  "pillSheetEnded": "Die pilpakkie is voltooi",
   "@pillSheetEnded": {
     "description": "1つのピルシート（通常21日分のピルが入った包装シート）を全て服用し終えた時に表示されるメッセージです。ユーザーにピルシートの終了を通知し、次のシートの準備や休薬期間への移行を促します。"
   },
-  "checkLastTakenDate": "Kontroleer die laaste datum wat jy geneem het",
+  "checkLastTakenDate": "Kontroleer laaste inname datum",
   "@checkLastTakenDate": {
     "description": "ユーザーが最後にピルを服用した日付を確認するためのボタンやリンクに表示されるテキストです。服用履歴の確認や飲み忘れ防止のために使用されます。"
   },
@@ -657,19 +657,19 @@
   "@pleaseRegisterAccount": {
     "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
-  "cannotTransferPremiumWithoutAccount": "Jy kan nie die premiumfunksies oorgedra wanneer jy jou toestel verander of jou slimfoon verloor nie.",
+  "cannotTransferPremiumWithoutAccount": "Premium funksies kan nie oorgedra word wanneer jy van toestel verander of jou slimfoon verloor nie",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
-  "reexperiencePremiumFeatures": "Jy kan die premiumfunksie vir 14 dae weer ervaar! Tik om op sosiale media te deel!",
+  "reexperiencePremiumFeatures": "Ondervind premium funksies weer vir 14 dae!\nTik om op sosiale media te deel!",
   "@reexperiencePremiumFeatures": {
     "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
-  "whereToShare": "Waar wil jy deel? ",
+  "whereToShare": "Waarheen wil jy deel?",
   "@whereToShare": {
     "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
   },
-  "pauseTakingDay": "🌙 Duidelike pille gebruik rus {day}de dag",
+  "pauseTakingDay": "🌙 Pil-vry dag {day}",
   "@pauseTakingDay": {
     "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
     "placeholders": {
@@ -678,7 +678,7 @@
       }
     }
   },
-  "withDay": "{word} dag",
+  "withDay": "dag {word}",
   "@withDay": {
     "description": "ピルシートや服用履歴で「何日目」かを表示する際に使用されます。{word}には数字（1、2、3など）が入り、「1日目」「2日目」のように表示されます。",
     "placeholders": {
@@ -687,7 +687,7 @@
       }
     }
   },
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} dae",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} dag",
   "@restDurationDays": {
     "description": "休薬期間（ピルを服用しない期間）の経過日数を表示する際に使用されます。{restDurationDays}には日数が入り、全体で「休薬〇日目」のような形で表示されます。",
     "placeholders": {
@@ -699,7 +699,7 @@
       }
     }
   },
-  "daysUntilPausePeriod": "Daar is net {diffPlusOne} dag oor voor die {activePillSheetPillSheetTypeNotTakenWord} periode.",
+  "daysUntilPausePeriod": "Nog {diffPlusOne} dae tot die {activePillSheetPillSheetTypeNotTakenWord} periode",
   "@daysUntilPausePeriod": {
     "description": "ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。",
     "placeholders": {
@@ -711,7 +711,7 @@
       }
     }
   },
-  "remainingDaysAllFeatures": "Jy kan al die funksies vir die volgende {diff} dae gebruik.",
+  "remainingDaysAllFeatures": "Alle funksies beskikbaar vir nog {diff} dae",
   "@remainingDaysAllFeatures": {
     "description": "プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。",
     "placeholders": {
@@ -720,19 +720,19 @@
       }
     }
   },
-  "todayIsTaking": "💊 Vandag se dosis",
+  "todayIsTaking": "💊 Vandag neem",
   "@todayIsTaking": {
     "description": "ピルの服用管理画面で、今日がピル服用の予定日であることをユーザーに通知するメッセージです。カレンダーやホーム画面などで、今日が服用日であることを示すステータス表示として使用されます。"
   },
-  "todayPillToTake": "💊 Pill wat jy vandag moet neem",
+  "todayPillToTake": "💊 Vandag se pil",
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
-  "number": "nommer",
+  "number": "e",
   "@number": {
     "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   },
-  "recordedMenstruationStartDate": "Ek het die begin van menstruasie op {DateTimeFormatterMonthAndDay} aangeteken.",
+  "recordedMenstruationStartDate": "Vanaf {DateTimeFormatterMonthAndDay} is as menstruasie begin aangeteken",
   "@recordedMenstruationStartDate": {
     "description": "ユーザーが生理開始日を記録した後に表示される確認メッセージです。「○月○日から生理開始として記録しました」という意味で、記録が完了したことをユーザーに知らせる文言です。",
     "placeholders": {
@@ -741,19 +741,19 @@
       }
     }
   },
-  "menstruationStartDate": "Menstruasie begin datum",
+  "menstruationStartDate": "Menstruasie begindatum",
   "@menstruationStartDate": {
     "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
-  "menstruationEndDate": "Einde van menstruasie",
+  "menstruationEndDate": "Menstruasie einddatum",
   "@menstruationEndDate": {
     "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
   },
-  "menstruationScheduleDate": "Menstruasie verwagte datum",
+  "menstruationScheduleDate": "Verwagte menstruasiedatum",
   "@menstruationScheduleDate": {
     "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
   },
-  "menstruationScheduleDateWithNumber": "Menstruasie verwagting: {diffPlusOne}de dag",
+  "menstruationScheduleDateWithNumber": "Verwagte menstruasie: dag {diffPlusOne}",
   "@menstruationScheduleDateWithNumber": {
     "description": "生理管理機能で、アプリが予測した次回生理開始日までの残り日数を「生理予定：X日目」形式で表示する際に使用される文字列です。{diffPlusOne}には具体的な日数（1日目、2日目など）が入り、ユーザーのピル服用スケジュールと連動した生理周期予測を示します。",
     "placeholders": {
@@ -762,7 +762,7 @@
       }
     }
   },
-  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruasie verwagting: {diffPlusOne}de dag van {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Verwagte menstruasie: dag {diffPlusOne}, pil {pillNumber}",
   "@menstruationScheduleDateWithNumberAndPillNumber": {
     "description": "ピルシート上で生理予定日の表示に使用される文字列。{diffPlusOne}は周期の何日目か、{pillNumber}はその日に服用するピルの番号を表示します。",
     "placeholders": {
@@ -774,7 +774,7 @@
       }
     }
   },
-  "menstruationRemainingDay": "oor {diff} dae",
+  "menstruationRemainingDay": "nog {diff} dae",
   "@menstruationRemainingDay": {
     "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
     "placeholders": {
@@ -783,7 +783,7 @@
       }
     }
   },
-  "menstruationProgressingDay": "{diffPlusOne} dag",
+  "menstruationProgressingDay": "Dag {diffPlusOne}",
   "@menstruationProgressingDay": {
     "description": "生理開始から経過した日数を表示する際に使用されるテキストです。生理管理画面で「3日目」「5日目」のように現在の生理周期の進行状況を示します。",
     "placeholders": {
@@ -792,27 +792,27 @@
       }
     }
   },
-  "recordMenstruation": "Menstruasie registreer",
+  "recordMenstruation": "Teken menstruasie aan",
   "@recordMenstruation": {
     "description": "生理記録機能のラベルです。ユーザーが生理の開始や期間を入力・記録する際に表示されるテキストです。"
   },
-  "menstruationHistory": "Menstruasie geskiedenis",
+  "menstruationHistory": "Menstruasiegeskiedenis",
   "@menstruationHistory": {
     "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
   },
-  "menstruationFromToday": "Vandag begin die menstruasie",
+  "menstruationFromToday": "Menstruasie begin vandag",
   "@menstruationFromToday": {
     "description": "生理記録機能で、ユーザーが今日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を今日として登録するための操作に使用されます。"
   },
-  "menstruationFromYesterday": "Gister af begin menstruasie",
+  "menstruationFromYesterday": "Menstruasie vanaf gister",
   "@menstruationFromYesterday": {
     "description": "生理記録機能で、ユーザーが昨日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を昨日として登録するための操作に使用されます。"
   },
-  "selectMenstruationStartDate": "Kies 'n begindatum van jou menstruele siklus",
+  "selectMenstruationStartDate": "Kies periode begindatum",
   "@selectMenstruationStartDate": {
     "description": "生理記録機能で、ユーザーが新しい生理期間の開始日を設定する際に表示されるボタンやメニューのラベルです。生理周期の管理において、生理開始日を記録するための操作に使用されます。"
   },
-  "menstruationCycle": "{menstruationDuration} dae siklus",
+  "menstruationCycle": "{menstruationDuration}-dag siklus",
   "@menstruationCycle": {
     "description": "生理周期の日数を表示する際に使用されるテキストです。{menstruationDuration}には28日、30日などの周期日数が入ります。",
     "placeholders": {
@@ -825,23 +825,23 @@
   "@login": {
     "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
-  "beforePremiumRegistration": "Voor premium-registrasie...",
+  "beforePremiumRegistration": "Voor premium registrasie...",
   "@beforePremiumRegistration": {
     "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
-  "createNewAccountIfNotLoggedIn": "As jy nog nie in Pilll aangemeld is nie, sal 'n nuwe rekening geskep word.",
+  "createNewAccountIfNotLoggedIn": "As jy nog nie voorheen by Pilll aangemeld het nie, sal 'n nuwe rekening outomaties geskep word.",
   "@createNewAccountIfNotLoggedIn": {
     "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
-  "registerAccountForDataTransfer": "As u 'n rekening registreer, sal dit moontlik wees om data oor te dra.",
+  "registerAccountForDataTransfer": "Deur 'n rekening te registreer, word data oordrag moontlik",
   "@registerAccountForDataTransfer": {
     "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
-  "registerAccountToKeepData": "Aangesien ons rekeninginligting wil behou, vra ons dat u 'n rekening registreer.",
+  "registerAccountToKeepData": "Registreer asseblief 'n rekening om jou inligting te bewaar",
   "@registerAccountToKeepData": {
     "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   },
-  "signInWith": "Teken in met {loginName}",
+  "signInWith": "Teken aan met {loginName}",
   "@signInWith": {
     "description": "外部サービス（Google、Apple等）を使用してアプリにサインインするためのボタンテキストです。{loginName}にはGoogleやAppleなどの認証サービス名が動的に挿入され、ユーザーの服用データや生理記録を安全に保管するためのアカウント作成・ログイン機能の一部として使用されます。",
     "placeholders": {
@@ -850,7 +850,7 @@
       }
     }
   },
-  "registerWith": " geregistreer met {loginName}",
+  "registerWith": "Registreer met {loginName}",
   "@registerWith": {
     "description": "アカウント新規登録時に、指定されたログイン方法（Google、Apple、メールアドレスなど）を使って登録することを示すボタンやメッセージ。{loginName}には具体的なサービス名が入ります。",
     "placeholders": {
@@ -859,23 +859,23 @@
       }
     }
   },
-  "premiumRegistrationComplete": "Pilll-premieuml; registrasie voltooi",
+  "premiumRegistrationComplete": "Pilll Premium registrasie voltooi",
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
   },
-  "thankYouForRegistration": "Baie dankie vir u registrasie.\nU het toegang tot alle funksies! ",
+  "thankYouForRegistration": "Dankie vir jou registrasie.\nAlle funksies is nou beskikbaar!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   },
-  "limitedTimeDiscount": "Nou kan jy dit teen 'n beperkte prys gebruik.",
+  "limitedTimeDiscount": "Nou teen beperkte prys vir altyd",
   "@limitedTimeDiscount": {
     "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   },
-  "standardMonthlyPlan": "Gewone Maandelikse Plan",
+  "standardMonthlyPlan": "Standaard Maandelikse Plan",
   "@standardMonthlyPlan": {
     "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   },
-  "annualPlan": "Jaarlikse plan",
+  "annualPlan": "Jaarlikse Plan",
   "@annualPlan": {
     "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
   },
@@ -897,11 +897,11 @@
       }
     }
   },
-  "premiumTermsNotice1": "Die premier-kontrakperiode is 'n outomatiese hernuwing van 1 maand of 1 jaar vanaf die aanvangsdatum.",
+  "premiumTermsNotice1": "• Die Premium-kontraktydperk sal outomaties elke 1 maand of 1 jaar vanaf die begindatum hernu word",
   "@premiumTermsNotice1": {
     "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
   },
-  "premiumTermsBullet": "・",
+  "premiumTermsBullet": "•",
   "@premiumTermsBullet": {
     "description": "プレミアムプランの利用規約で項目を列挙する際に使用する箇条書きのバレット記号です。各言語の慣習に合わせた適切な箇条書き記号（・、•、-など）に翻訳してください。"
   },
@@ -909,19 +909,19 @@
   "@slashSeparator": {
     "description": "UIで項目を区切る際に使用するスラッシュ記号です。各言語の慣習に合わせて、適切な区切り文字（/、｜、-など）とスペースの有無を調整してください。"
   },
-  "premiumTermsNotice2": "Weergawes volgens die Wet op Bepaalde Handelsdefinisies",
+  "premiumTermsNotice2": "Regtelike Openbaarmaking",
   "@premiumTermsNotice2": {
     "description": "プレミアムプラン（有料機能）の法的情報を表示する際のタイトルです。日本の特定商取引法に基づく事業者情報の表示義務に対応します。"
   },
-  "premiumTermsNotice3": "Kontroleer dit en registreer asseblief.",
+  "premiumTermsNotice3": "gaan asseblief na en registreer",
   "@premiumTermsNotice3": {
     "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
-  "autoRenewNotice": "As long as you do not cancel at least 24 hours before the end date of the premium subscription period, the contract period will be automatically renewed.",
+  "autoRenewNotice": "• Die kontrakperiode sal outomaties hernu word tensy u dit ten minste 24 uur voor die einddatum van die Premium kontrakperiode kanselleer",
   "@autoRenewNotice": {
     "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
-  "cancelAutoRenewInfo": "Na aankoop kan jy die outomatiese hernuwingsaflegging in die {storeName} app se rekeninginstellingen doen. (Jy kan nie die outomatiese hernuwingsaflegging deur die app doen).",
+  "cancelAutoRenewInfo": "• Na die aankoop kan die kansellasie van outomatiese vernuwing in die {storeName}-program se rekeningingstellings gedoen word. (Outomatiese vernuwing kan nie vanuit die program gekanselleer word nie).",
   "@cancelAutoRenewInfo": {
     "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
     "placeholders": {
@@ -930,23 +930,23 @@
       }
     }
   },
-  "moreDetails": "Besonderhede hier",
+  "moreDetails": "Meer besonderhede",
   "@moreDetails": {
     "description": "詳細情報を表示するためのリンクやボタンに使用されるテキストです。ユーザーが追加の情報を確認したい時にタップ/クリックする要素の表示文言として使用されます。"
   },
-  "restorePurchase": "Koop-inligting is herstel.",
+  "restorePurchase": "Aankoop inligting is herstel",
   "@restorePurchase": {
     "description": "ピルアプリのプレミアムプラン（有料機能）を復元した際に表示される成功メッセージです。ユーザーが機種変更や再インストール後に、以前購入したプレミアム機能を復元完了したことを知らせる通知文言として使用されます。"
   },
-  "previouslyPurchased": "Asseblief hier vir mense wat voorheen gekoop het",
+  "previouslyPurchased": "Herstel vorige aankoop",
   "@previouslyPurchased": {
     "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
   },
-  "noPreviousPurchaseInfo": "Daar is geen vorige aankoopinligting gevind nie. Kontroleer asseblief u rekening en probeer weer.",
+  "noPreviousPurchaseInfo": "Kan nie vorige aankope vind nie. Kontroleer jou rekening en probeer weer.",
   "@noPreviousPurchaseInfo": {
     "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
   },
-  "monthlyPlan": "Maandelikse plan",
+  "monthlyPlan": "Maandelikse Plan",
   "@monthlyPlan": {
     "description": "プレミアム機能を利用するための月額課金プラン名です。年額プランと対比して表示される課金オプションとして使用されます。"
   },
@@ -959,55 +959,55 @@
       }
     }
   },
-  "youArePremiumMember": "Jy is 'n premium lid.",
+  "youArePremiumMember": "U is 'n Premium lid",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
-  "thankYouMessage": "Baie dankie vir u gebruik. Danksy u kan ons Pilll voortgezet aanhou bestuur.",
+  "thankYouMessage": "Baie dankie dat jy ons gebruik. Danksy jou kan ons Pilll voortgaan bedryf.",
   "@thankYouMessage": {
     "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
-  "premiumFeaturesList": "Lys van premie funksies",
+  "premiumFeaturesList": "Premium Funksieslys",
   "@premiumFeaturesList": {
     "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
   },
-  "pushNotificationForTakingRecord": "📩 Geneesmiddelregistrasie via stoot kennisgewings",
+  "pushNotificationForTakingRecord": "📩 Pil inname vanaf stoot kennisgewings",
   "@pushNotificationForTakingRecord": {
     "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
-  "viewAndRecordTakingHistory": "🗂 Die rekord en besigtiging van die innamegeskiedenis",
+  "viewAndRecordTakingHistory": "🗂 Dosering geskiedenis rekords & insiening",
   "@viewAndRecordTakingHistory": {
     "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
-  "displayDateOnPillSheet": "📆 Datum vertoon op die pilblad",
+  "displayDateOnPillSheet": "📆 Datumvertoning op pilblad",
   "@displayDateOnPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
   },
-  "autoRefillNewPillSheet": "📦 Vul outomaties nuwe pilblads",
+  "autoRefillNewPillSheet": "📦 Outomatiese aanvulling van nuwe pilvelle",
   "@autoRefillNewPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
   },
-  "viewPastData": "👀 Beskouldata",
+  "viewPastData": "👀 Verlede data bekyk",
   "@viewPastData": {
     "description": "プレミアム機能の一覧で表示される機能名です。過去の服用記録、生理記録、体調記録などの履歴データを閲覧できる機能を表しています。"
   },
-  "customizeHealthTags": "🏷 Pasiëntetikette persoonlik maak",
+  "customizeHealthTags": "🏷 Pas welstandsetikette aan",
   "@customizeHealthTags": {
     "description": "プレミアム機能の一覧で表示される機能名です。ユーザーが日記機能で体調を記録する際に使用するタグ（頭痛、吐き気、気分など）を自分好みにカスタマイズできる機能を表しています。"
   },
-  "hideAds": "🚫 Versteek advertensies",
+  "hideAds": "🚫 Verwyder advertensies",
   "@hideAds": {
     "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
   },
-  "seeDetailsOfPremiumFeatures": "Beskou die Premium funksies se besonderhede",
+  "seeDetailsOfPremiumFeatures": "Bekyk premium funksies",
   "@seeDetailsOfPremiumFeatures": {
     "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
-  "popularFeatures": "gewilde funksie",
+  "popularFeatures": "Gewilde\nFunksies",
   "@popularFeatures": {
     "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
   },
-  "viewPremiumFeatures": "Kyk na premium funksies",
+  "viewPremiumFeatures": "Bekyk premium funksies",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
@@ -1015,7 +1015,7 @@
   "@addedDisplayModePillDaysCycle": {
     "description": "表示モード服用日数(周期)が追加されました"
   },
-  "seeDetails": "Sien meer",
+  "seeDetails": "Sien besonderhede",
   "@seeDetails": {
     "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
   },
@@ -1023,11 +1023,11 @@
   "@stepThreeOfThree": {
     "description": "アプリの初期設定やオンボーディングプロセスにおける3番目（最終）のステップを示すテキストで、「3/3」の形式で進捗を表示します。画面上部などに表示され、ユーザーに現在のステップ位置を分数形式で伝える役割があります。"
   },
-  "missedPillNotification": "Pille-omslag kennisgewing",
+  "missedPillNotification": "Gemiste pil kennisgewing",
   "@missedPillNotification": {
     "description": "設定した服用時刻にピルを飲み忘れた際にユーザーに送信されるプッシュ通知のタイトルまたは内容として表示されるテキストです。アプリの主要機能である「飲み忘れ防止」のためのリマインド機能の一部として使用されます。"
   },
-  "setMultipleReminders": "Deur verskeie instellings te maak, kan jy vergeetgelegde inname voorkom.",
+  "setMultipleReminders": "Deur veelvoudige herinneringe in te stel, kan jy voorkom dat jy vergeet om te neem",
   "@setMultipleReminders": {
     "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
   },
@@ -1035,7 +1035,7 @@
   "@and": {
     "description": "2つの項目や要素を並列に繋ぐ際に使用される接続詞です。アプリ内のテキストで「設定と履歴」「朝と夜」などの表現に使われます。"
   },
-  "readAndStartUsing": "Lees en begin om te gebruik.",
+  "readAndStartUsing": "Lees asseblief en begin gebruik",
   "@readAndStartUsing": {
     "description": "利用規約やプライバシーポリシー等の重要な情報を読んでから、アプリの使用を開始することを促すボタンまたは案内文です。ユーザーに対して情報の確認と利用開始の両方のアクションを促している表現です。"
   },
@@ -1043,7 +1043,7 @@
   "@next": {
     "description": "画面やフォームで次のステップに進むためのボタンラベルです。初回設定、チュートリアル、各種設定画面などで使用されます。"
   },
-  "notificationIndex": "kennisgewing{number}",
+  "notificationIndex": "Kennisgewing {number}",
   "@notificationIndex": {
     "description": "複数のピル服用リマインダー通知がある場合に、各通知を番号で区別するためのラベルです。通知設定画面や通知一覧で「通知1」「通知2」のように表示されます。",
     "placeholders": {
@@ -1052,7 +1052,7 @@
       }
     }
   },
-  "takingRecordFromNotification": "Jy kan van die kennisgewings af jou inname registreer.",
+  "takingRecordFromNotification": "\\ Jy kan jou pil-inname direk vanaf kennisgewings aanteken /",
   "@takingRecordFromNotification": {
     "description": "プッシュ通知から直接ピルの服用記録を行える機能を説明するユーザー向けの案内文です。リマインド通知を受け取ったユーザーが、アプリを開かなくても通知から服用記録できる便利さを伝える文言です。"
   },
@@ -1060,7 +1060,7 @@
   "@startApp": {
     "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
   },
-  "loggedInWithProvider": "U het ingelogde met {accountTypeProviderName}",
+  "loggedInWithProvider": "Aangemeld met {accountTypeProviderName}",
   "@loggedInWithProvider": {
     "description": "ユーザーが外部認証プロバイダー（Google、Apple、Facebookなど）を使用してログインに成功した際に表示される確認メッセージです。{accountTypeProviderName}には使用したサービス名が入ります。",
     "placeholders": {
@@ -1069,15 +1069,15 @@
       }
     }
   },
-  "tellAboutPrescribedSheet": "Vertel my oor die voorgeskrewe bladsy",
+  "tellAboutPrescribedSheet": "Vertel ons asseblief oor\ndie voorgeskrewe pillefoelie",
   "@tellAboutPrescribedSheet": {
     "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
-  "existingAccountUsers": "Asseblief hier as jy reeds 'n rekening het",
+  "existingAccountUsers": "Het jy reeds 'n rekening? Klik hier",
   "@existingAccountUsers": {
     "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
-  "selectTodayPillNumber": "Vandag ({todayString})\nTik die nommer van die pil wat jy moet neem/gedrink het",
+  "selectTodayPillNumber": "Tik die pilnommer vir vandag ({todayString}) wat jy moet neem of geneem het",
   "@selectTodayPillNumber": {
     "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
     "placeholders": {
@@ -1086,11 +1086,11 @@
       }
     }
   },
-  "notYetKnown": "nog nie seker nie",
+  "notYetKnown": "Nog onbekend",
   "@notYetKnown": {
     "description": "ユーザーがまだ情報を入力していない、または設定していない状態を表示する際に使用されます。生理予定日や服用スケジュールなど、アプリの各機能でデータが未確定の場合に表示されるテキストです。"
   },
-  "pillForToday": "Die pille wat op {today} geneem moet word",
+  "pillForToday": "Pil vir {today} is",
   "@pillForToday": {
     "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
     "placeholders": {
@@ -1108,27 +1108,27 @@
       }
     }
   },
-  "preview": "Voorvertoning",
+  "preview": "Voorskou",
   "@preview": {
     "description": "設定や入力内容を事前に確認するためのプレビュー表示に使用される文字列です。ユーザーが何かを実行・保存する前の確認画面で表示されます。"
   },
-  "normal": "Normaal",
+  "normal": "normaal",
   "@normal": {
     "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。"
   },
-  "missed": "Vergeet om te neem",
+  "missed": "Gemis",
   "@missed": {
     "description": "ピルの服用予定時刻を過ぎても服用していない状態を表す表示ラベルです。アプリ内でユーザーがピルを飲み忘れた際に表示される状態表示として使用されます。"
   },
-  "showsDate": "&lt;date&gt;",
+  "showsDate": "Toon datum",
   "@showsDate": {
     "description": "設定画面やオプションメニューで使用される、日付表示の有無を切り替える設定項目のラベルです。ユーザーがアプリ内で日付情報を表示するかどうかを選択する際に表示されます。"
   },
-  "showsPillNumber": "Wys nommer",
+  "showsPillNumber": "Toon nommers",
   "@showsPillNumber": {
     "description": "ピルシートの各薬に表示される順番の数字（1日目、2日目など）を表示するかどうかを切り替える設定項目のラベルです。ユーザーがピルシートUI上で薬の服用順序を数字で確認したい場合に使用されます。"
   },
-  "showsDescription": "Vertoon beskrywingstekst",
+  "showsDescription": "Wys beskrywings",
   "@showsDescription": {
     "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
   },
@@ -1136,7 +1136,7 @@
   "@title": {
     "description": "予定やスケジュールの件名・タイトルを表します。通院予定や体調記録などの見出しとして使用されます。"
   },
-  "message": "Boodskap",
+  "message": "boodskap",
   "@message": {
     "description": "エラー発生時やシステム処理時に表示される汎用的なメッセージです。主にプレミアム機能の購入・復元処理やSNSシェア機能でのエラーメッセージとして使用されます。"
   },
@@ -1144,7 +1144,7 @@
   "@option": {
     "description": "アプリ内の設定項目やメニューでの選択肢を表す汎用的な用語です。設定画面やダイアログでの選択項目として使用されます。"
   },
-  "completed": "voltooi",
+  "completed": "Klaar",
   "@completed": {
     "description": "テキスト入力やピッカーでの選択などの作業を完了・確定する際に押すボタンのテキストです。日記投稿、スケジュール投稿、通知設定などの画面で使用されます。"
   },
@@ -1152,7 +1152,7 @@
   "@pilll": {
     "description": "ピルの服用管理アプリ「Pilll」のアプリ名です。基本的には「Pilll」のまま使用しますが、各言語の文字体系に合わせて表記を調整してください。"
   },
-  "changeMissedNotificationMessage": "U kan die kennisgewingstekste verander as u vergeet om u medikasie te neem.",
+  "changeMissedNotificationMessage": "Jy kan die kennisgewing boodskap verander vir wanneer jy vergeet het om te neem",
   "@changeMissedNotificationMessage": {
     "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   },
@@ -1165,7 +1165,7 @@
       }
     }
   },
-  "changeNotificationHeader": "Jy kan die begin gedeelte van die kennisgewings verander.",
+  "changeNotificationHeader": "Jy kan die begin van die kennisgewing verander",
   "@changeNotificationHeader": {
     "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
   },
@@ -1178,11 +1178,11 @@
       }
     }
   },
-  "enterAtLeastOneCharacter": "Voer asseblief meer as 0 karakters in.",
+  "enterAtLeastOneCharacter": "Voer asseblief iets in",
   "@enterAtLeastOneCharacter": {
     "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
-  "changeDailyNotificationMessage": "Jy sal die kennisgewingsteks kan verander as jy nie vergeet het om jou pille te neem.",
+  "changeDailyNotificationMessage": "Jy kan die kennisgewing boodskap aanpas vir wanneer jy nie jou pil vergeet het nie",
   "@changeDailyNotificationMessage": {
     "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   },
@@ -1195,7 +1195,7 @@
       }
     }
   },
-  "receiveDailyNotificationAt9AM": "Ontvang 'n kennisgewing om 9:00 op die dag.",
+  "receiveDailyNotificationAt9AM": "Ontvang kennisgewing om 9:00 dieselfde dag",
   "@receiveDailyNotificationAt9AM": {
     "description": "ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。"
   },
@@ -1203,11 +1203,11 @@
   "@save": {
     "description": "設定変更や入力内容を確定・保存する際に表示されるボタンのテキストです。アプリ内の様々な画面（服用設定、通知設定、プロフィール編集など）で汎用的に使用されます。"
   },
-  "physicalCondition": "gesondheid",
+  "physicalCondition": "Gesondheid",
   "@physicalCondition": {
     "description": "日記機能において、ユーザーが体調や身体の状態を記録する際の項目名として表示されます。ピル服用による体調の変化や身体のコンディションを記録するために使用されます。"
   },
-  "deletedDiaryCannotBeRecovered": "Verwyderde dagboeke kan nie herstel word nie.",
+  "deletedDiaryCannotBeRecovered": "Geskrapte dagboekinskrywings kan nie herstel word nie",
   "@deletedDiaryCannotBeRecovered": {
     "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
   },
@@ -1215,15 +1215,15 @@
   "@sex": {
     "description": "日記機能において、体調記録の一項目として性的活動の有無を記録する際のラベルです。ピル服用管理との関連で重要な体調データとして使用されます。"
   },
-  "previousPillSheetGroup": "Vorige pilblaadjie groep",
+  "previousPillSheetGroup": "Vorige pilpakketgroep",
   "@previousPillSheetGroup": {
     "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
   },
-  "noPreviousPillSheetGroup": "Die vorige pillebladgroep bestaan nog nie.",
+  "noPreviousPillSheetGroup": "Die vorige pilblad groep bestaan nog nie",
   "@noPreviousPillSheetGroup": {
     "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
   },
-  "failedToFetchPillHistory": "Versuingsgeskiedenis is nie verkry nie. {error}",
+  "failedToFetchPillHistory": "Het gefaal om inname geskiedenis inligting te verkry. {error}",
   "@failedToFetchPillHistory": {
     "description": "アプリ内でユーザーが過去のピル服用履歴を確認しようとした際に、システムエラーやネットワーク障害などでデータの取得に失敗した場合に表示されるエラーメッセージです。{error}部分には具体的なエラー内容が挿入されます。",
     "placeholders": {
@@ -1232,39 +1232,39 @@
       }
     }
   },
-  "seeFAQ": "KYK na FAQ",
+  "seeFAQ": "Sien FAQ",
   "@seeFAQ": {
     "description": "アプリ内でFAQ（よくある質問）ページへ移動するためのボタンやリンクのテキストです。ピルの服用方法やアプリの操作方法に関する質問と回答を確認できるページに誘導します。"
   },
-  "reloadScreen": "herlaai die skerm weer",
+  "reloadScreen": "Herlaai skerm",
   "@reloadScreen": {
     "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
   },
-  "contactIfNotResolved": "As dit nie opgelos word nie, gaan hierheen.",
+  "contactIfNotResolved": "Klik hier as dit nie help nie",
   "@contactIfNotResolved": {
     "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
   },
-  "shareFeedback": "Laat weet ons jou gedagtes oor Pilll",
+  "shareFeedback": "Vertel ons van jou Pilll-ervaring",
   "@shareFeedback": {
     "description": "ユーザーにアプリに対する感想やフィードバックの提供を促すメッセージです。設定画面やフィードバック画面で、アプリの改善のためにユーザーの意見を求める際に表示されます。"
   },
-  "confirm": "Besluit",
+  "confirm": "Bevestig",
   "@confirm": {
     "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
   },
-  "surveyForServiceImprovement": "Asseblief, help ons met 'n opname om ons diens te verbeter.",
+  "surveyForServiceImprovement": "As jy wil, help ons asseblief ook met ons vraelys vir diensverlening verbetering",
   "@surveyForServiceImprovement": {
     "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
   },
-  "participate": "Samewerk",
+  "participate": "Werk saam",
   "@participate": {
     "description": "サービス改善アンケートに参加・協力するためのボタンやリンクのテキストです。ユーザーがアンケート調査に協力することを表現する動詞として使用されます。"
   },
-  "notHelp": "nie",
+  "notHelp": "Nie nuttig nie",
   "@notHelp": {
     "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
   },
-  "serviceImprovementSurvey": "diensverbetering-opname",
+  "serviceImprovementSurvey": "Diensverbeteringvraelys",
   "@serviceImprovementSurvey": {
     "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
   },
@@ -1272,7 +1272,7 @@
   "@satisfied": {
     "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足している」という回答を選択する際に表示される文字列です。"
   },
-  "notSatisfied": "nie tevrede nie",
+  "notSatisfied": "Nie tevrede nie",
   "@notSatisfied": {
     "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足していない」という回答を選択する際に表示される文字列です。"
   },
@@ -1284,15 +1284,15 @@
   "@howManyDaysDoesMenstruationLast": {
     "description": "生理管理機能で、ユーザーの生理期間（日数）を入力してもらう際の質問文です。通常3-7日程度の期間を想定した設定画面で使用されます。"
   },
-  "daysMenstruationLasts": "Dae menstruasie duur",
+  "daysMenstruationLasts": "dae menstruasie duur",
   "@daysMenstruationLasts": {
     "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
   },
-  "selectPillNumberForMenstruationStart": "Tik die pil nommer aan wat jou periode begin",
+  "selectPillNumberForMenstruationStart": "Tik die pilnommer wanneer menstruasie begin",
   "@selectPillNumberForMenstruationStart": {
     "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
   },
-  "countOfSheet": "{number}de blad",
+  "countOfSheet": "{number}de vel",
   "@countOfSheet": {
     "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
     "placeholders": {
@@ -1301,15 +1301,15 @@
       }
     }
   },
-  "newPillSheetStart": "Nuwe pilleblad begin ▶︎",
+  "newPillSheetStart": "Begin nuwe pil pak ▶︎",
   "@newPillSheetStart": {
     "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
   },
-  "selectPillType": "Kies die tipe pil",
+  "selectPillType": "Kies piltipe",
   "@selectPillType": {
     "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
   },
-  "twentyOnePills": "21 tablette",
+  "twentyOnePills": "21 pilletjies",
   "@twentyOnePills": {
     "description": "ピルの種類選択時に表示される選択肢で、1シートに21錠入ったピル（21日間服用タイプ）を表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
   },
@@ -1321,27 +1321,27 @@
   "@twentyFourPills": {
     "description": "ピルの種類選択時に表示される選択肢で、1シートに24錠入ったピルを表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
   },
-  "twentyOnePlusSevenDaysBreak": "21 tablette + 7 dae onderbreking",
+  "twentyOnePlusSevenDaysBreak": "21 pille + 7 dae rus",
   "@twentyOnePlusSevenDaysBreak": {
     "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
-  "twentyFourPlusFourPlacebo": "24 tablette + 4 placebo tablette",
+  "twentyFourPlusFourPlacebo": "24 tablette + 4 plasebo tablette",
   "@twentyFourPlusFourPlacebo": {
     "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
-  "twentyOnePlusSevenPlacebo": "21 tablette + 7 placebo tablette",
+  "twentyOnePlusSevenPlacebo": "21 tablette + 7 plasebo",
   "@twentyOnePlusSevenPlacebo": {
     "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
   },
-  "allActivePills": "alle werklike medikasie",
+  "allActivePills": "Alle aktiewe pille",
   "@allActivePills": {
     "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   },
-  "twentyFourPlusFourDaysBreak": "24 tablette + 4 tablette sonder",
+  "twentyFourPlusFourDaysBreak": "24 pille + 4 pillvrye",
   "@twentyFourPlusFourDaysBreak": {
     "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
-  "choosePillType": "Kies die tipe pil",
+  "choosePillType": "Kies pil tipe",
   "@choosePillType": {
     "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   },
@@ -1354,7 +1354,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "As die kennisgewings afgeskakel is, word daar ook outomaties 'n gebruiksregister vir die {pillSheetPillSheetTypeNotTakenWord}-periode gemaak.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Wanneer kennisgewings af is, sal {pillSheetPillSheetTypeNotTakenWord}-periode inname rekords ook outomaties aangeteken word",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
@@ -1363,15 +1363,15 @@
       }
     }
   },
-  "requestForCancelSurvey": "Versoek om deel te neem aan die opname na kansellasie.",
+  "requestForCancelSurvey": "Versoek om hulp met ons vraelys na kansellasie",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
-  "pilllDescription": "Pilll, 'n' pil reminder app wat spesifiek vir pil gebruik is.",
+  "pilllDescription": "Pilll - Gespesialiseerde pil-herinneringsapp",
   "@pilllDescription": {
     "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
-  "reachedMaximumCountOfReminderTimes": "U het die maksimum aantal geregistreerde herinnerings bereik. Hou asseblief binne {ReminderTimeMaximumCount} items.",
+  "reachedMaximumCountOfReminderTimes": "Jy het die maksimum limiet bereik. Hou dit asseblief binne {ReminderTimeMaximumCount} items.",
   "@reachedMaximumCountOfReminderTimes": {
     "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
     "placeholders": {
@@ -1380,7 +1380,7 @@
       }
     }
   },
-  "minimumCountOfReminderTimes": "Die kennisgewingstyd moet minstens {ReminderTimeMinimumCount} items wees.",
+  "minimumCountOfReminderTimes": "Minimum {ReminderTimeMinimumCount} kennisgewingstye word vereis",
   "@minimumCountOfReminderTimes": {
     "description": "ピルの服用リマインド通知を設定する際に、必要最低限の通知時間数が設定されていない場合に表示されるエラーメッセージです。ユーザーが通知設定で最低限必要な件数を満たしていない時に警告として表示されます。",
     "placeholders": {
@@ -1389,7 +1389,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "Daar het is 'n onbekende fout voorgekom. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "'n Onbekende fout het voorgekom. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
@@ -1401,7 +1401,7 @@
       }
     }
   },
-  "purchaseErrorStoreProblemError": "{storeName} het 'n fout opgetree. Wag asseblief 'n bietjie en probeer weer.",
+  "purchaseErrorStoreProblemError": "'n Fout het in {storeName} voorgekom. Wag asseblief 'n oomblik en probeer weer.",
   "@purchaseErrorStoreProblemError": {
     "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
     "placeholders": {
@@ -1410,23 +1410,23 @@
       }
     }
   },
-  "purchaseErrorPurchaseNotAllowedError": "Hierdie toestel is nie toegelaat om aankope te doen nie.",
+  "purchaseErrorPurchaseNotAllowedError": "Aankope is nie op hierdie toestel toegelaat nie",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorPurchaseInvalidError": "Die betaling het misluk. Gaan asseblief na of u 'n geldige betalingsmetode het en probeer weer.",
+  "purchaseErrorPurchaseInvalidError": "Betaling het misluk. Bevestig asseblief dat jou betaalmetode geldig is en probeer weer.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorProductNotAvailableForPurchaseError": "Die betrokke plan is tans nie beskikbaar nie. Verskoon die ongerief, maar herbegin die app en probeer weer.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Die gekose plan is tans nie beskikbaar nie. Herstart asseblief die toepassing en probeer weer.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
-  "purchaseErrorProductAlreadyPurchasedError": "U het reeds 'n plan gekoop. As u die aankoopinligting op hierdie toestel wil herstel, gebruik asseblief die opsie \"Kopers van voorheen, klik hier\" om u aankoopinligting te herstel.",
+  "purchaseErrorProductAlreadyPurchasedError": "Jy het reeds 'n plan gekoop. As jy koop-inligting op hierdie toestel wil herstel, herstel die koop-inligting asseblief via 'Vir diegene wat voorheen gekoop het'.",
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   },
-  "purchaseErrorReceiptAlreadyInUseError": "Jou is reeds aankoop. Die aankoopinligting word deur 'n ander gebruiker gebruik. Kontroleer asseblief {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Reeds aangekoop, of die koop inligting word deur 'n ander gebruiker gebruik. Gaan {accountName} na.",
   "@purchaseErrorReceiptAlreadyInUseError": {
     "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
     "placeholders": {
@@ -1435,11 +1435,11 @@
       }
     }
   },
-  "purchaseErrorInvalidReceiptError": "Ongeldige aankoopinligting. Gaan asseblief u aankoopinligting na.",
+  "purchaseErrorInvalidReceiptError": "Ongeldige aankoopinligting. Kontroleer asseblief jou aankoopinligting.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
-  "purchaseErrorMissingReceiptFileError": "Daar is geen inligting oor die aankoop. Probeer om in te teken op die toestel met {accountName}.",
+  "purchaseErrorMissingReceiptFileError": "Geen koper inligting gevind nie. Teken asseblief aan met {accountName} op jou toestel en probeer weer.",
   "@purchaseErrorMissingReceiptFileError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
@@ -1448,11 +1448,11 @@
       }
     }
   },
-  "purchaseErrorNetworkError": "Die netwerktoestand is onbetroubaar. Kontroleer die verbinings toestand en probeer weer.",
+  "purchaseErrorNetworkError": "Die netwerkverbinding is onstabiel. Kontroleer asseblief jou internetverbinding en probeer weer.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
-  "purchaseErrorInvalidCredentialsError": "Die aankoop het mislukking. Probeer asseblief weer na 'n rukkie. As dit nie opgelos word nie, kontak ons asseblief via Instelling > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Aankoop het gefaal. Probeer asseblief weer na 'n ruk. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
     "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
     "placeholders": {
@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Huidige aankoop is nie moontlik nie. Wacht 'n bietjie en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Aankope is tans nie moontlik nie. Probeer asseblief weer na 'n rukkie. As die probleem voortduur, kontak ons via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
@@ -1476,7 +1476,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Aankoopinligting word deur 'n ander gebruiker gebruik. Kontroleer asseblief {accountName} waarmee jy op die toestel ingeteken is.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Aankoop inligting word reeds deur 'n ander gebruiker gebruik. Kontroleer asseblief die {accountName} wat op hierdie toestel aangemeld is.",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
@@ -1485,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppUserIdError": "Die gebruiker kon nie bevestig nie. Herbegin die aansoek en probeer weer. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Die gebruiker kon nie geverifieer word nie. Herstart asseblief die toepassing en probeer weer. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
     "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
@@ -1497,11 +1497,11 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Die aankoopproses is aparte voortgang. Neem 'n paar minute en kyk asseblief weer.",
+  "purchaseErrorOperationAlreadyInProgressError": "'n Aankoop proses is reeds aan die gang. Wag asseblief 'n rukkie en probeer weer.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
-  "purchaseErrorUnknownBackendError": "Die aankoop kan tans nie gedoen word nie. Wacht 'n bietjie en probeer weer. As dit nie opgelos word nie, kontak ons asseblief deur na Instellings > Navraag te gaan. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Aankope is tans nie beskikbaar nie. Probeer weer oor 'n rukkie. As die probleem voortduur, kontak ons asseblief via Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
     "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
@@ -1513,7 +1513,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Aankoop het verkeerd gegaan. Wag 'n bietjie en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Die aankoop het misluk. Probeer asseblief weer later. Indien dit nie opgelos word nie, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppleSubscriptionKeyError": {
     "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
     "placeholders": {
@@ -1525,7 +1525,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "Daar was 'n mislukking met die aankoop op u gebruikersrekening. Probeer asseblief weer na 'n rukkie. As dit nie oplos nie, kan u ons kontak deur na Instellings > Kontak ons te gaan. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Die aankoop het gefaal. Probeer asseblief weer oor 'n rukkie. As die probleem voortduur, kontak ons via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
@@ -1537,7 +1537,7 @@
       }
     }
   },
-  "purchaseErrorInsufficientPermissionsError": "U kan nie by die plan aansluit met {accountName}. Kontroleer asseblief u betalingsinligting en probeer weer.",
+  "purchaseErrorInsufficientPermissionsError": "Jou {accountName} kan nie by 'n plan inskryf nie. Kontroleer jou betaalinligting en probeer weer.",
   "@purchaseErrorInsufficientPermissionsError": {
     "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "Die betaling is gedurende die proses gestop. Kontroleer asseblief {storeName} met die aanmelding van {accountName}.",
+  "purchaseErrorPaymentPendingError": "Die betaling is onderbreek. Gaan asseblief jou {storeName} na met die {accountName} rekening.",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
@@ -1558,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "Die aankoop het mislukking. Probeer dit asseblief weer na 'n rukkie. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Aankoop het misluk. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
@@ -1570,7 +1570,7 @@
       }
     }
   },
-  "purchaseErrorLogOutWithAnonymousUserError": "Daar was 'n fout om gebruikersinligting te verkry. Probeer asseblief weer na 'n rukkie. As dit nie opgelos word nie, kontak asseblief ons via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Kon nie gebruikersinligting kry nie. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
     "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "Die aankoopinligting kon nie verkry word nie. Probeer asseblief weer in 'n ander tyd. As die probleem voortduur, kontak ons asseblief via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Aankoopinligting kon nie verkry word nie. Wag asseblief 'n bietjie en probeer weer. As die probleem voortduur, kontak ons by Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Oorsakeless fout. Werk opdatering na die jongste weergawe en probeer weer. As dit nie opgelos word nie, kontak asseblief via instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Dit is 'n onbekende fout. Werk asseblief op na die nuutste weergawe en probeer weer. As dit nie opgelos word nie, kontak ons via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
@@ -1609,7 +1609,7 @@
       }
     }
   },
-  "purchaseErrorEmptySubscriberAttributesError": "Dit is 'n onbekende fout. Koopinligting kon nie vooraf verkry word nie. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "Onbekende fout. Kon nie die aankoopinligting vooraf verkry nie. Details: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Onbekende fout. Werk opdatering na en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instelling > Navraag. kode: {errorCode} besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Dit is 'n onverklaarbare fout. Dateer asseblief op na die nuutste weergawe en probeer weer. As die probleem voortduur, kontak ons deur Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Onbekende fout. Werk opdatering na en probeer dit weer. As dit nie oplos nie, kontak ons asseblief via Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "'n Onbekende fout het voorgekom. Werk asseblief op na die nuutste weergawe en probeer weer. As die probleem voortduur, kontak ons asseblief by Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
@@ -1651,7 +1651,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Dit is 'n onopgeloste fout. Werk na ywerigste weer op. As dit nie opgelos is nie, kontak asseblief via Instellings > Kontak. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Dit is 'n fout met 'n onbekende oorsaak. Dateer asseblief op na die nuutste weergawe en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "Klantinligting kon nie verkry word nie. Probeer asseblief weer later. As die probleem nie opgelos kan word nie, kontak ons via Instellings > Navraag. Besonderhede: Kode: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Kliëntinligting kon nie verkry word nie. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons via Instellings > Navrae. Besonderhede: Kode: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Daar is 'n probleem met die toestel se instellings. Kontroleer dit en probeer weer. As dit nie opgelos word nie, kontak asseblief ons deur Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Daar is 'n probleem met jou toestel se instellings. Gaan dit na en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
@@ -1696,7 +1696,7 @@
       }
     }
   },
-  "purchaseErrorBeginRefundRequestError": "Die terugbetalingsproses is aan die gang. Gaan dit na en probeer weer. As dit nie opgelos word nie, kontak asseblief ons via Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorBeginRefundRequestError": "'n Terugbetaling proses is begin. Gaan dit na en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
     "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
@@ -1711,7 +1711,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "Die tyd het verstryk. Kontroleer asseblief u netwerkverbinding en probeer weer. As die probleem nie opgelos kan word nie, kontak asseblief ons by Instellings > Kontak ons. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "Tyduit verlope. Kontroleer asseblief jou internetverbinding en probeer weer. As die probleem voortduur, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Dit is 'n onverklaarde fout. Werk op na die nuutste weergawe en probeer asseblief weer. As dit nie opgelos word nie, kontak asseblief ons via Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Dit is 'n onbekende fout. Dateer asseblief op na die nuutste weergawe en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Dit is 'n onbekende fout. Werk op na die nuutste weergawe en probeer weer. As dit steeds nie opgelos is nie, kontak ons asseblief via Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "'n Onbekende fout het voorgekom. Dateer asseblief na die nuutste weergawe op en probeer weer. As die probleem voortduur, kontak ons asseblief via Instellings > Navrae. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
@@ -1753,7 +1753,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "Daar is 'n kommunikasiefout. Kontroleer u kommunikasie‑omgewing en probeer dit weer. As dit nie opgelos is nie, kan u kontak met ons neem via Instellings > Navraag. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Kommunikasie fout. Gaan jou internetverbinding na en probeer weer. As die probleem voortduur, kontak ons via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
@@ -1765,11 +1765,11 @@
       }
     }
   },
-  "forceUpdateTitle": "Upgade die toepassing asseblief.",
+  "forceUpdateTitle": "Werk asseblief die program by",
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
-  "forceUpdateMessage": "Ons versoek dat u die weergawe van die aansoek wat u gebruik, opdateer. U kan die nuutste weergawe op {storeName} opdateer.",
+  "forceUpdateMessage": "Ons versoek dat jy jou app se weergawe opdateer. Dateer asseblief op na die nuutste weergawe vanaf {storeName}.",
   "@forceUpdateMessage": {
     "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
@@ -1778,35 +1778,35 @@
       }
     }
   },
-  "visitHospital": "om jou dokter te besoek",
+  "visitHospital": "Na dokter gaan",
   "@visitHospital": {
     "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
-  "receiveNotificationAt9AM": "Ontvang 'n kennisgewing om 09:00 op die dag",
+  "receiveNotificationAt9AM": "Ontvang kennisgewing om 9:00 op die dag",
   "@receiveNotificationAt9AM": {
     "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
-  "deletedScheduleCannotBeRestored": "Verwijderde skedules kan nie herwin word nie.",
+  "deletedScheduleCannotBeRestored": "Geskrapte afsprake kan nie herstel word nie",
   "@deletedScheduleCannotBeRestored": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
   },
-  "deleteSchedule": "Ekstra sal شيئڅ ليسهولة هجر الباسي לערך",
+  "deleteSchedule": "Verwyder afspraak",
   "@deleteSchedule": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
   },
-  "onlySupportiOS": "Die app ondersteun enkel iOS.",
+  "onlySupportiOS": "Slegs beskikbaar op iOS-toepassings",
   "@onlySupportiOS": {
     "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   },
-  "healthKitDoesNotSupport": "Hierdie toepassing kan nie op toestelle gebruik word wat nie gesondheidsorg ondersteun nie.",
+  "healthKitDoesNotSupport": "Hierdie funksie is nie beskikbaar op toestelle wat nie gesondheidsorgfunksies ondersteun nie",
   "@healthKitDoesNotSupport": {
     "description": "AppleのHealthKit（ヘルスケア機能）に対応していない端末で、健康データ連携機能を利用しようとした際に表示されるエラーメッセージです。ユーザーに機能制限があることを丁寧に伝える文章として翻訳してください。"
   },
-  "enableHealthKitFromSettings": "Aktiveer die gesondheidsorg deur die instellingsprogram.",
+  "enableHealthKitFromSettings": "Aktiveer asseblief Gesondheidsorg vanaf die Instellings-app",
   "@enableHealthKitFromSettings": {
     "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
-  "accountAlreadyLinked": "Hierdie {accountTypeProviderName} rekening is reeds gekoppel aan jou bestaande Pilll rekening. Probeer om die skerm op te dateer. Gaan ook die FAQ na. Besonderhede: {exceptionMessage}",
+  "accountAlreadyLinked": "Hierdie {accountTypeProviderName}-rekening is reeds aan jou Pilll-rekening gekoppel. Probeer asseblief om die skerm te verfris. Kyk ook na die FAQ. Besonderhede: {exceptionMessage}",
   "@accountAlreadyLinked": {
     "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
@@ -1818,7 +1818,7 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "Hierdie {accountTypeProviderName}-rekening is reeds aan 'n ander Pilll-rekening gekoppel, so jy kan nie registreer nie. Kyk asseblief na die FAQ. Besonderhede: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Hierdie {accountTypeProviderName}-rekening is reeds aan 'n ander Pilll-rekening gekoppel en kan nie geregistreer word nie. Sien ook die FAQ. Details: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
     "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
@@ -1830,7 +1830,7 @@
       }
     }
   },
-  "emailAlreadyInUse": "Die e-posadres wat jy reeds met 'n {accountTypeProviderName} rekening gebruik, is aan 'n ander Pilll-rekening gekoppel, daarom kan jy nie registreer nie. Gaan asseblief ook die FAQ na. Besonderhede: {exceptionMessage}",
+  "emailAlreadyInUse": "Die e-posadres wat jy met jou {accountTypeProviderName}-rekening gebruik is reeds gekoppel aan 'n ander Pilll-rekening, dus registrasie is nie moontlik nie. Kyk asseblief ook na die FAQ. Besonderhede: {exceptionMessage}",
   "@emailAlreadyInUse": {
     "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
     "placeholders": {
@@ -1842,31 +1842,31 @@
       }
     }
   },
-  "todaySchedule": "Vandag se skedule.",
+  "todaySchedule": "Vandag se skedule",
   "@todaySchedule": {
     "description": "カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。"
   },
-  "calendarSchedule": "Kalender se skedule",
+  "calendarSchedule": "Kalendergebeure",
   "@calendarSchedule": {
     "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   },
-  "newPillSheetNotificationTitle": "Vanaf vandag begin 'n nuwe blad.",
+  "newPillSheetNotificationTitle": "Vanaf vandag begin 'n nuwe pil-pakkie",
   "@newPillSheetNotificationTitle": {
     "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
   },
-  "newPillSheetNotificationMessage": "🆕 'n Nuwe blad begin vandag.\nMoet dit nie vergeet om te neem nie 👍",
+  "newPillSheetNotificationMessage": "🆕 'n Nuwe blad begin vandag\nOnthou om dit te neem👍",
   "@newPillSheetNotificationMessage": {
     "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   },
-  "unexpectedPremiumEntitlementsIsNotExists": "Geen premium-inligting gevind.",
+  "unexpectedPremiumEntitlementsIsNotExists": "Premium inligting nie gevind nie",
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
-  "purchaseErrorPurchasePendingError": "Die aktivering van die betaling is nog nie voltooi nie. Gaan asseblief weer in 'n rukkie kyk.",
+  "purchaseErrorPurchasePendingError": "Die betalingsaktivering is nog nie voltooi nie. Wag asseblief 'n rukkie en kontroleer weer.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "`'n` '{ErrorMessagesConnection}: 'n fout het voorgekom tydens opstart.",
+  "launchError": "'n Tegniese fout het voorgekom tydens die opstartproses van die app (die oomblik toe die app geopen word). Aangesien gedetailleerde inligting soos konneksiefoute ook ingesluit word, vertaal asseblief sodat gebruikers die situasie kan verstaan.",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -1875,15 +1875,15 @@
       }
     }
   },
-  "exampleRestDurationDate": "Byvoorbeeld, as jy van \"1/12\" vir 3 dae ophou om te neem.",
+  "exampleRestDurationDate": "Byvoorbeeld \"vanaf 1/12 vir 3 dae\" wanneer jy 'n pouse van die medisyne neem",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
-  "exampleRestDurationNumber": "byvoorbeeld \"van die 18de vir 3 dae\" neem 'n kans om nie te neem.",
+  "exampleRestDurationNumber": "Byvoorbeeld wanneer jy \"vanaf pil 18 vir 3 dae\" ophou inneem",
   "@exampleRestDurationNumber": {
     "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   },
-  "withNumber": "{number} nommer",
+  "withNumber": "Pil {number}",
   "@withNumber": {
     "description": "ピルシートの錠剤番号を表示するためのテキストです。{number}には具体的な錠剤番号（例：18）が入り、ユーザーがピルシート上のどの錠剤かを特定するために使用されます。",
     "placeholders": {
@@ -1892,11 +1892,11 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Daar is tans geen pilblaadjie beskikbaar nie.",
+  "currentPillSheetNotFound": "Die huidige pilvel kon nie gevind word nie",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
-  "doNotRevertTakePillInPausePeriod": "Die kans om die pil se inname te kanselleer, kan nie gedurende die rustyd uitgevoer word.",
+  "doNotRevertTakePillInPausePeriod": "Pilinname kan nie tydens die rusperiode gekanselleer word nie",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   },
@@ -1904,19 +1904,19 @@
   "@googleAccount": {
     "description": "アプリへのログインや設定画面で表示されるGoogleアカウントのラベルです。ユーザー認証やデータ同期に使用されます。"
   },
-  "diaryRecord": "Dagboek registratie",
+  "diaryRecord": "Teken dagboek op",
   "@diaryRecord": {
     "description": "アプリ内の日記機能で体調や気分を記録する際に表示されるボタンやラベルのテキストです。カレンダー画面から日々の体調記録を行う機能に使用されます。"
   },
-  "scheduleRecord": "Skeduleer jou afspraak",
+  "scheduleRecord": "Voeg afspraak by",
   "@scheduleRecord": {
     "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
   },
-  "previousPillSheetGroupNotFound": "Die vorige pilboks groep bestaan nog nie.",
+  "previousPillSheetGroupNotFound": "Die vorige pilblad groep bestaan nog nie",
   "@previousPillSheetGroupNotFound": {
     "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   },
-  "withPillSheetCount": "{number} tablette",
+  "withPillSheetCount": "{number} velle",
   "@withPillSheetCount": {
     "description": "ピルシートの枚数を表示する際に使用される文字列で、数値の後に枚数を表す単位語が続きます。ピルの在庫管理や履歴表示などで「3枚」「5枚」のように表示されます。",
     "placeholders": {
@@ -1925,35 +1925,35 @@
       }
     }
   },
-  "connectionError": "Dit lyk asof die kommunikasie-omgewing onbetroubaar is. Probeer asseblief weer later.",
+  "connectionError": "Dit lyk asof die netwerkverbinding onstabiel is. Probeer asseblief weer later.",
   "@connectionError": {
     "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
-  "unknownErrorAndRetryAfter": "Daar het 'n fout opgetree. Probeer asseblief weer later.",
+  "unknownErrorAndRetryAfter": "'n Fout het voorgekom. Probeer asseblief weer later.",
   "@unknownErrorAndRetryAfter": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
   },
-  "errorOccurred": "Daar het 'n fout opgetree",
+  "errorOccurred": "'n Fout het voorgekom",
   "@errorOccurred": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示される基本的なエラーメッセージです。具体的な原因を伝えずに、シンプルにエラーの発生を通知する場合に使用されます。"
   },
-  "unknownError": "Daar het 'n onbekende fout voorgekom.",
+  "unknownError": "'n Onbekende fout het voorgekom",
   "@unknownError": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
   },
-  "unexpectedErrorOccurred": "Daar het 'n onverwagte fout voorgekom.",
+  "unexpectedErrorOccurred": "'n Onverwagse fout het voorgekom",
   "@unexpectedErrorOccurred": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
-  "pressAndHoldNotificationToRecordPillTaking": "As jy die kennisgewing lank druk, kan jy 'n medikasie geskiedenis aanbring.",
+  "pressAndHoldNotificationToRecordPillTaking": "Hou die kennisgewing ingedruk om 'n inname rekord te skep",
   "@pressAndHoldNotificationToRecordPillTaking": {
     "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
-  "letsTryIt": "Probeer dit asseblief.",
+  "letsTryIt": "Probeer dit gerus!",
   "@letsTryIt": {
     "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
-  "trialDeadlineDateOffsetDay": "Jy kan al die funksies vir {number} dae gebruik!",
+  "trialDeadlineDateOffsetDay": "Jy kan alle funksies vir {number} dae gebruik!",
   "@trialDeadlineDateOffsetDay": {
     "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
     "placeholders": {
@@ -1962,7 +1962,7 @@
       }
     }
   },
-  "inputAndAdd": "Voeg in",
+  "inputAndAdd": "Tik in en voeg by",
   "@inputAndAdd": {
     "description": "何かの情報を手動で入力・追加する際のボタンやラベルのテキストです。服用記録や予定などをユーザーが自分で入力して追加する場面で使用されます。"
   },
@@ -1982,11 +1982,11 @@
   "@memo": {
     "description": "日記機能で体調や症状と合わせて自由にメモを記録できる入力欄のラベルです。短い単語で「メモ」や「記録」のような意味の翻訳が適切です。"
   },
-  "failedToUpdate": "Die opdatering het misluk. Kontroleer asseblief die kommunikasie-omgewing en probeer weer.",
+  "failedToUpdate": "Opdatering het misluk. Kontroleer asseblief jou internetverbinding en probeer weer.",
   "@failedToUpdate": {
     "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
   },
-  "headache": "Migraine",
+  "headache": "hoofpyn",
   "@headache": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「頭痛」の適切な医療用語で翻訳してください。"
   },
@@ -1994,23 +1994,23 @@
   "@abdominalPain": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「腹痛」の適切な医療用語で翻訳してください。"
   },
-  "nausea": "nausheid",
+  "nausea": "naarheid",
   "@nausea": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「吐き気」の適切な医療用語で翻訳してください。"
   },
-  "anemia": "bloedarmoede",
+  "anemia": "anemie",
   "@anemia": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「貧血」の適切な医療用語で翻訳してください。"
   },
-  "diarrhea": "Diarree",
+  "diarrhea": "diarree",
   "@diarrhea": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「下痢」の適切な医療用語で翻訳してください。"
   },
-  "constipation": "verstopting",
+  "constipation": "verstoping",
   "@constipation": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「便秘」の適切な医療用語で翻訳してください。"
   },
-  "drowsiness": "Slaperigheid",
+  "drowsiness": "slaperigheid",
   "@drowsiness": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「眠気」の適切な医療用語で翻訳してください。"
   },
@@ -2022,47 +2022,47 @@
   "@palpitation": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「動悸」の適切な医療用語で翻訳してください。"
   },
-  "irregularBleeding": "onregelmatige bloeding",
+  "irregularBleeding": "abnormale bloeding",
   "@irregularBleeding": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「不正出血」の適切な医療用語で翻訳してください。"
   },
-  "lossOfAppetite": "Eetlus",
+  "lossOfAppetite": "appetitverlies",
   "@lossOfAppetite": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「食欲不振」の適切な医療用語で翻訳してください。"
   },
-  "chestTightness": "Borsgevoel",
+  "chestTightness": "borsswelling",
   "@chestTightness": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「胸の張り」の適切な医療用語で翻訳してください。"
   },
-  "insomnia": "slaangebore",
+  "insomnia": "slapeloosheid",
   "@insomnia": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
   },
-  "pauseStartingOtherDaysInstructions": "Rustig aan. As jy wil stook om nie vandag nie, volg die onderstaande.",
+  "pauseStartingOtherDaysInstructions": "Neem asseblief 'n pauze. As jy jou pilinname vanaf 'n ander dag as vandag wil onderbreek, verwys asseblief na die volgende.",
   "@pauseStartingOtherDaysInstructions": {
     "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
-  "seeHowToUsePauseTakingFeature": "Sien hoe om die neem pouses funksie te gebruik",
+  "seeHowToUsePauseTakingFeature": "Bekyk hoe om die medikasie pouse funksie te gebruik",
   "@seeHowToUsePauseTakingFeature": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   },
-  "startPauseTakingLabel": "Begin pill break",
+  "startPauseTakingLabel": "Begin dosering-pous",
   "@startPauseTakingLabel": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。"
   },
-  "pauseTakingChanged": "U het die gebruiksperiode verander",
+  "pauseTakingChanged": "Medisyne pouse-periode is verander",
   "@pauseTakingChanged": {
     "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
   },
-  "editPausePeriod": "Bewerk die tydperk van onthouding van die medikasie",
+  "editPausePeriod": "Redigeer pilpouse periode",
   "@editPausePeriod": {
     "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
   },
-  "changePillDays": "Verander die aantal dae wat geneem moet word",
+  "changePillDays": "Verander gebruik dae",
   "@changePillDays": {
     "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
   },
-  "beginToEndNumbers": "{begin}ste ~ {end}ste",
+  "beginToEndNumbers": "No. {begin} tot No. {end}",
   "@beginToEndNumbers": {
     "description": "ピルシートの番号範囲を表示する際に使用される文字列です。例えば「1番 ~ 21番」のように、連続する番号の開始と終了を示すフォーマットです。",
     "placeholders": {
@@ -2074,19 +2074,19 @@
       }
     }
   },
-  "resumeTaking": "Hervat neem",
+  "resumeTaking": "Hervat inname",
   "@resumeTaking": {
     "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
-  "changePausePeriod": "Verander die periode van pille wat nie geneem word nie",
+  "changePausePeriod": "Verander rusperiode",
   "@changePausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
-  "changedPausePeriod": "Die tydperk van pille gebruik was verander.",
+  "changedPausePeriod": "Pillvrye periode is verander",
   "@changedPausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。"
   },
-  "changedToDate": "Ek het dit op {date} verander.",
+  "changedToDate": "Gewysig na {date}",
   "@changedToDate": {
     "description": "何かの日付設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。",
     "placeholders": {
@@ -2095,11 +2095,11 @@
       }
     }
   },
-  "quickRecordTakePillFailed": "Daar is 'n moontlikheid dat die inname rekord gefaal het.",
+  "quickRecordTakePillFailed": "Die pil-inname rekord het moontlik gefaal",
   "@quickRecordTakePillFailed": {
     "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
-  "quickRecordTakePillFailedMessage": "Maak asseblief die aansoek oop en bevestig.",
+  "quickRecordTakePillFailedMessage": "Maak asseblief die app oop om te kontroleer",
   "@quickRecordTakePillFailedMessage": {
     "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
   },
@@ -2107,15 +2107,15 @@
   "@alreadyTaken": {
     "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
   },
-  "startPauseTaking": "Blaai oor na periode van die pille",
+  "startPauseTaking": "Neem 'n pouse van pille",
   "@startPauseTaking": {
     "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
   },
-  "startedPauseTaking": "Ek het die pille-inname-pouse begin.",
+  "startedPauseTaking": "Medisyne-onderbreking het begin",
   "@startedPauseTaking": {
     "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。"
   },
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber} pil",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}",
   "@sequentialLastTakenPlusOnePillNumber": {
     "description": "次に服用すべきピルの番号を表示するテキストです。プレースホルダーには数字が入るため、各言語の序数や番号表現に適合させて翻訳してください。",
     "placeholders": {
@@ -2124,31 +2124,31 @@
       }
     }
   },
-  "startFromNumber": "Begin from number",
+  "startFromNumber": "Start vanaf",
   "@startFromNumber": {
     "description": "ピルシートUIで表示する薬の番号の開始位置を設定する機能のテキストです。ユーザーが任意の番号からピルシートの表示をスタートできるようにする設定項目で使用されます。"
   },
-  "add": "byvoeg",
+  "add": "Voeg by",
   "@add": {
     "description": "ピルの服用記録、生理記録、未来の予定、日記などの新しいデータを追加する際に表示される汎用的なボタンやアクションのテキストです。アプリ内の様々な画面で新規登録や追加機能において使用されます。"
   },
-  "addPillSheet": "Voeg 'n pilleblad by",
+  "addPillSheet": "Voeg pilpakket by",
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
-  "duringPauseTaking": "Tydelik nie aan die gang nie",
+  "duringPauseTaking": "Inneem gepauzeer",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
-  "cannotPauseAlreadyTakenToday": "As u vandag jou pil geneem het, kan jy nie \"Gebruik pouse\" neem nie.",
+  "cannotPauseAlreadyTakenToday": "Kan nie pil onderbreek as vandag se pil reeds geneem is nie",
   "@cannotPauseAlreadyTakenToday": {
     "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
   },
-  "pauseTakingStarted": "Jy het die onderbreking van die medikasie begin.",
+  "pauseTakingStarted": "Die pilgebruik-pouse is begin",
   "@pauseTakingStarted": {
     "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
   },
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "@formattedDateAndWeekday": {
     "description": "日付と曜日を組み合わせて表示するためのフォーマットです。「12月15日(月)」のように月日の後に括弧内で曜日を表示する形式で、カレンダーや服用記録の日付表示に使用されます。",
     "placeholders": {
@@ -2160,11 +2160,11 @@
       }
     }
   },
-  "editPauseStartDate": "Wysig die begin datum van medikasiepauses",
+  "editPauseStartDate": "Wysig pouse begindatum",
   "@editPauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
   },
-  "shareWithFriends": "Vertel jou vriende",
+  "shareWithFriends": "Vertel vriende",
   "@shareWithFriends": {
     "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   },
@@ -2176,11 +2176,11 @@
   "@privacyPolicy": {
     "description": "アプリの設定画面や法的情報画面で表示されるプライバシーポリシーへのリンクテキストです。ユーザーが個人情報の取り扱いに関する規約を確認する際にタップする項目として使用されます。"
   },
-  "linkCopiedToClipboard": "Kopiere na die klembord",
+  "linkCopiedToClipboard": "Na klipbord gekopieër",
   "@linkCopiedToClipboard": {
     "description": "ユーザーがリンクやテキストをクリップボードにコピーした際に表示される成功通知メッセージです。シェア機能やURL共有時などに、コピー操作が完了したことをユーザーに知らせるフィードバックとして使用されます。"
   },
-  "notificationNumber": "kennisgewing{number}",
+  "notificationNumber": "kennisgewing {number}",
   "@notificationNumber": {
     "description": "アプリ内の通知メッセージに番号を付ける際に使用される文字列です。{number}には通知を識別するための数字が入り、複数のピル服用リマインド通知を区別するために使用されます。",
     "placeholders": {
@@ -2189,11 +2189,11 @@
       }
     }
   },
-  "notificationTime": "Kennisgewings tyd",
+  "notificationTime": "Herinnertyd",
   "@notificationTime": {
     "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
   },
-  "timeZoneChangedTo": "{tz} is verander",
+  "timeZoneChangedTo": "Het na {tz} verander",
   "@timeZoneChangedTo": {
     "description": "ユーザーがアプリの設定でタイムゾーンを変更した際に表示される確認メッセージです。{tz}部分には具体的なタイムゾーン名（例：Asia/Tokyo）が入り、ピルの服用リマインダー時間に影響する重要な設定変更を知らせます。",
     "placeholders": {
@@ -2202,15 +2202,15 @@
       }
     }
   },
-  "changeStartOfPillDays": "Verander die begin van die geneem dae",
+  "changeStartOfPillDays": "Verander die begin van doseringsdae",
   "@changeStartOfPillDays": {
     "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
   },
-  "changeEndOfPillDays": "Verander die einde van die inname dae",
+  "changeEndOfPillDays": "Verander einde van innamedae",
   "@changeEndOfPillDays": {
     "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
-  "cannotUpdateToReplacePillSheet": "Die nuus kan nie opgedateer word weens die vervanging van die pilblad nie, id: {id}",
+  "cannotUpdateToReplacePillSheet": "Kon nie pilvel vervang nie id: {id}",
   "@cannotUpdateToReplacePillSheet": {
     "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
     "placeholders": {
@@ -2219,7 +2219,7 @@
       }
     }
   },
-  "failedToGetPillSheetHistory": "Die verkryging van die inligting oor gebruiksgeskiedenis het misluk. {error}",
+  "failedToGetPillSheetHistory": "Die ophaal van medikasiegeskiedensinligting het misluk. {error}",
   "@failedToGetPillSheetHistory": {
     "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
     "placeholders": {
@@ -2228,11 +2228,11 @@
       }
     }
   },
-  "cancelTaking": "Bruikbaarheid terugtrek",
+  "cancelTaking": "Kanselleer inname",
   "@cancelTaking": {
     "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
-  "deletedDiaryCannotBeRestored": "Verwijderde dagboeke kan nie herstel word nie.",
+  "deletedDiaryCannotBeRestored": "Verwyderde dagboekinskrywings kan nie herstel word nie",
   "@deletedDiaryCannotBeRestored": {
     "description": "アプリ内の日記機能（体調記録）で、ユーザーが日記を削除する際に表示される警告メッセージ。削除された記録は元に戻せないことを伝える重要な注意事項です。"
   },
@@ -2240,11 +2240,11 @@
   "@editMenstruation": {
     "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
   },
-  "changedPillNumber": "Pill nommer verandering",
+  "changedPillNumber": "Pilnommer wysiging",
   "@changedPillNumber": {
     "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
   },
-  "offPercentForMonthlyPremiumPackage": "Vergeleke met die normale maandelikse tarief is dit {offPercent}% AF.",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% AF vergeleke met gewone maandelikse",
   "@offPercentForMonthlyPremiumPackage": {
     "description": "アプリのプレミアムプラン（有料機能）で、年額プランが通常の月額プランと比較して何パーセント安くなるかを示す割引表示メッセージです。課金画面やプラン選択画面で表示されます。",
     "placeholders": {
@@ -2253,11 +2253,11 @@
       }
     }
   },
-  "premiumIntroductionDiscountPriceDeadline": "Met 'n premie-lidmaatskap kan jy voortaan toegang tot al die funksies hou.",
+  "premiumIntroductionDiscountPriceDeadline": "Met premium registrasie kan jy voortgaan om alle funksies te gebruik",
   "@premiumIntroductionDiscountPriceDeadline": {
     "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   },
-  "countdownForDiscountPriceDeadline": "{countdown} aankoop met {offPercent}% afslag",
+  "countdownForDiscountPriceDeadline": "Koop binne {countdown} vir {offPercent}% afslag",
   "@countdownForDiscountPriceDeadline": {
     "description": "限定割引キャンペーンの締切時間を知らせるメッセージです。プレミアムプラン購入画面で、残り時間（countdown）内に購入すると指定された割引率（offPercent）が適用されることをユーザーに伝えます。",
     "placeholders": {
@@ -2269,7 +2269,7 @@
       }
     }
   },
-  "pillReminderChanged": "Die inname kennisgewing is op {value} gestel.",
+  "pillReminderChanged": "Dosering herinnering is gestel vir {value}",
   "@pillReminderChanged": {
     "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
     "placeholders": {
@@ -2278,24 +2278,69 @@
       }
     }
   },
-  "medicationNotification": "Pillinligting",
+  "medicationNotification": "Inname kennisgewing",
   "@medicationNotification": {
     "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
-  "silentModeNotificationDescription": "Al die tyd wanneer die konsentrasiemodus aan is of die toestel op stil is, sal kennisgewings op die sluiter-vertoning vertoon word en klank sal gespeel word.",
+  "silentModeNotificationDescription": "Selfs wanneer fokus modus aan is of die toestel stil is, sal kennisgewings op die slotskerm vertoon word en klanke sal gespeel word",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
-  "enableNotificationInSilentMode": "Stuur kennisgewings selfs in stilmodus",
+  "enableNotificationInSilentMode": "Kennisgewing selfs in stil modus",
   "@enableNotificationInSilentMode": {
     "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
   },
-  "enableNotificationInSilentModeSetting": "Kennisgewing instelling selfs in stilmodus",
+  "enableNotificationInSilentModeSetting": "Kennisgewings in stille modus",
   "@enableNotificationInSilentModeSetting": {
     "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
   },
-  "criticalAlertVolume": "volume",
+  "criticalAlertVolume": "Volume",
   "@criticalAlertVolume": {
     "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
+  },
+  "dailyPrice": "{dailyPriceString}/dag",
+  "@dailyPrice": {
+    "description": "プレミアムプランの1日あたりの料金を表示する際に使用されます。{dailyPriceString}は計算された1日の価格が入ります。",
+    "placeholders": {
+      "dailyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "lifetimePlan": "Eenmalige koop",
+  "@lifetimePlan": {
+    "description": "アプリ内の有料プランの支払い方式の1つで、一度購入すれば永続的に利用できるプランを指します。サブスクリプション（月額・年額）とは異なる買い切り型の課金方式です。"
+  },
+  "lifetimePlanDescription": "Premium vir altyd met een enkele aankoop",
+  "@lifetimePlanDescription": {
+    "description": "買い切り型有料プランの説明文で、一度の支払いで永続的にプレミアム機能が利用できることを示すテキストです。"
+  },
+  "lifetimePlanSpecialOffer": "Lewenslange plan\nBeperkte tyd spesiale prys",
+  "@lifetimePlanSpecialOffer": {
+    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
+  },
+  "lifetimePlanStandardPrice": "Normale prys",
+  "@lifetimePlanStandardPrice": {
+    "description": "買い切り型プレミアムプランの通常価格を表示するラベルテキストです。課金画面で特別価格オファーと対比して表示される際に使用されます。"
+  },
+  "logout": "Uitlog",
+  "@logout": {
+    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "Keer terug na aanvanklike instellings. Indien teken in benodig word, doen dit asseblief vanaf die onderkant van die aanvanklike instellingsskerm.",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
+  },
+  "deleteAccount": "Rekening verwyder",
+  "@deleteAccount": {
+    "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
+  },
+  "logoutCompleted": "Afgemeld",
+  "@logoutCompleted": {
+    "description": "ユーザーがログアウト操作を完了した後に表示される確認メッセージです。アプリからサインアウトされ、認証状態が解除されたことをユーザーに伝えるために使用されます。"
+  },
+  "specialDiscountPriceNow": "Kry die premiumplan teen 'n spesiale prys!",
+  "@specialDiscountPriceNow": {
+    "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
   }
 }
