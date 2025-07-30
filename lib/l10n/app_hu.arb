@@ -1856,7 +1856,7 @@
   },
   "newPillSheetNotificationMessage": "🆕 Ma kezdődik az új lap\nNe feledkezz meg a bevételről👍",
   "@newPillSheetNotificationMessage": {
-    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+    "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   },
   "unexpectedPremiumEntitlementsIsNotExists": "Nem található prémium információ.",
   "@unexpectedPremiumEntitlementsIsNotExists": {

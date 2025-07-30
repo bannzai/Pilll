@@ -1844,7 +1844,7 @@
   },
   "newPillSheetNotificationMessage": "🆕 Un nouveau cycle commence aujourd'hui.\nN'oubliez pas de prendre votre médicament 👍",
   "@newPillSheetNotificationMessage": {
-    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+    "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   },
   "unexpectedPremiumEntitlementsIsNotExists": "Aucune information premium trouvée.",
   "@unexpectedPremiumEntitlementsIsNotExists": {

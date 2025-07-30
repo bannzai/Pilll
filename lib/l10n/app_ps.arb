@@ -1856,7 +1856,7 @@
   },
   "newPillSheetNotificationMessage": "🆕 له ننه ورځ نهه نوى شيت پيل کېږي \n هیر مو نه شي د درملو اخیستلو 👍",
   "@newPillSheetNotificationMessage": {
-    "description": "🆕 今日から新しいシートが始まります\n忘れずに服用しましょう👍"
+    "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   },
   "unexpectedPremiumEntitlementsIsNotExists": "معلومات پریمیم پیدا نشد",
   "@unexpectedPremiumEntitlementsIsNotExists": {
