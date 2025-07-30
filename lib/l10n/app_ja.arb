@@ -978,7 +978,7 @@
   },
   "lifetimePlanSpecialOffer": "買い切りプラン\n期間限定特別価格",
   "@lifetimePlanSpecialOffer": {
-    "description": "買い切りプラン期間限定特別価格"
+    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
   },
   "lifetimePlanStandardPrice": "通常価格",
   "@lifetimePlanStandardPrice": {
