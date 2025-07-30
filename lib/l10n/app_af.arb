@@ -1015,7 +1015,7 @@
   "@addedDisplayModePillDaysCycle": {
     "description": "表示モード服用日数(周期)が追加されました"
   },
-  "seeDetails": "Sien meer",
+  "seeDetails": "Sien besonderhede",
   "@seeDetails": {
     "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
   },
