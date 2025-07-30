@@ -907,7 +907,7 @@
   },
   "slashSeparator": "اس مضمون کا پہلے ہی ایپ کے اندر ترجمہ کیا جا چکا ہے",
   "@slashSeparator": {
-    "description": " / "
+    "description": "UIで項目を区切る際に使用するスラッシュ記号です。各言語の慣習に合わせて、適切な区切り文字（/、｜、-など）とスペースの有無を調整してください。"
   },
   "premiumTermsNotice2": "خصوصی تجارتی قانون کے تحت معلومات",
   "@premiumTermsNotice2": {
