@@ -1487,7 +1487,7 @@
   },
   "purchaseErrorInvalidAppUserIdError": "ব্যবহারকারী নিশ্চিত করতে পারেনি। অ্যাপটি পুনরায় চালু করে আবার চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
-    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

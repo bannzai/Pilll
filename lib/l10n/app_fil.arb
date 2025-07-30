@@ -1487,7 +1487,7 @@
   },
   "purchaseErrorInvalidAppUserIdError": "Hindi hindi hindi hodi ku hoda in na po ngak guguri na cara alet ki fal ay in sa kawugio na po napas sahi na hodiin sa sim ta tumud na mragi hanggang hodoso itin upo at ang {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
-    "description": "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
