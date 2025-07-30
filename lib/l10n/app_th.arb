@@ -802,7 +802,7 @@
   },
   "menstruationFromToday": "วันนี้เริ่มมีประจำเดือน",
   "@menstruationFromToday": {
-    "description": "今日から生理"
+    "description": "生理記録機能で、ユーザーが今日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を今日として登録するための操作に使用されます。"
   },
   "menstruationFromYesterday": "มีประจำเดือนตั้งแต่เมื่อวาน",
   "@menstruationFromYesterday": {
