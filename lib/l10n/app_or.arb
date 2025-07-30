@@ -390,7 +390,7 @@
   },
   "physicalConditionDetail": "ଅବସ୍ଥା ବିବରଣୀ",
   "@physicalConditionDetail": {
-    "description": "体調詳細"
+    "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
   },
   "medicationHistoryPremiumFeatureRestriction": "ଏହାରୁ ଅଧିକ ଦେଖାଯିବା ପ୍ରଭାବ ପ୍ରିମିଆମ୍ ସୁବିଧା ହେବ।",
   "@medicationHistoryPremiumFeatureRestriction": {

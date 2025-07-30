@@ -390,7 +390,7 @@
   },
   "physicalConditionDetail": "체온 세부 정보",
   "@physicalConditionDetail": {
-    "description": "체온 세부 정보"
+    "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
   },
   "medicationHistoryPremiumFeatureRestriction": "이 이상의 보기는 프리미엄 기능에 해당됩니다",
   "@medicationHistoryPremiumFeatureRestriction": {
