@@ -1844,7 +1844,7 @@
   },
   "todaySchedule": "uhlu lwemisebenzi lwansuku zonke",
   "@todaySchedule": {
-    "description": "本日の予定です"
+    "description": "カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。"
   },
   "calendarSchedule": "Icalenda yomcimbi",
   "@calendarSchedule": {
