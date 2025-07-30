@@ -1848,7 +1848,7 @@
   },
   "calendarSchedule": "캘린더의 일정",
   "@calendarSchedule": {
-    "description": "캘린더의 일정"
+    "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   },
   "newPillSheetNotificationTitle": "오늘부터 새로운 시트가 시작됩니다",
   "@newPillSheetNotificationTitle": {

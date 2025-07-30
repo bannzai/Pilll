@@ -1848,7 +1848,7 @@
   },
   "calendarSchedule": "Kalender Jadual",
   "@calendarSchedule": {
-    "description": "カレンダーの予定"
+    "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   },
   "newPillSheetNotificationTitle": "Mulai dari hari ini, lembaran baru akan dimulakan.",
   "@newPillSheetNotificationTitle": {

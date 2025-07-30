@@ -1836,7 +1836,7 @@
   },
   "calendarSchedule": "Événements du calendrier",
   "@calendarSchedule": {
-    "description": "カレンダーの予定"
+    "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   },
   "newPillSheetNotificationTitle": "Le nouveau cycle commence aujourd'hui.",
   "@newPillSheetNotificationTitle": {
