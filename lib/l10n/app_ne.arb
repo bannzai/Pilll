@@ -1009,7 +1009,7 @@
   },
   "viewPremiumFeatures": "प्रीमियम सुविधाहरू जाँच्नुहोस्",
   "@viewPremiumFeatures": {
-    "description": "プレミアム機能を見る"
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
   "addedDisplayModePillDaysCycle": "प्रदर्शन मोडमा औषधिको प्रयोगको दिन (चक्र) थपिएको छ।",
   "@addedDisplayModePillDaysCycle": {

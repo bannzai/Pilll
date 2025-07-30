@@ -1009,7 +1009,7 @@
   },
   "viewPremiumFeatures": "프리미엄 기능 보기",
   "@viewPremiumFeatures": {
-    "description": "프리미엄 기능 보기"
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
   "addedDisplayModePillDaysCycle": "표시 모드 복용 일수(주기)가 추가되었습니다",
   "@addedDisplayModePillDaysCycle": {

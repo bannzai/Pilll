@@ -1009,7 +1009,7 @@
   },
   "viewPremiumFeatures": "প্ৰিমিয়াম ফিচাৰসমূহ চাওক",
   "@viewPremiumFeatures": {
-    "description": "プレミアム機能を見る"
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
   "addedDisplayModePillDaysCycle": "প্রদর্শন মোডে ব্যবহারের দিন সংখ্যা (চক্র) যোগ করা হয়েছে",
   "@addedDisplayModePillDaysCycle": {

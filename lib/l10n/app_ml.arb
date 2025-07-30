@@ -1009,7 +1009,7 @@
   },
   "viewPremiumFeatures": "പ്രിമിയം ഫീച്ചറുകൾ കാണുക",
   "@viewPremiumFeatures": {
-    "description": "プレミアム機能を見る"
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
   "addedDisplayModePillDaysCycle": "ദൃശ്യ മോഡ് കഴിവിന്റെ ദിവസങ്ങൾ (ചക്രം) ചേർക്കപ്പെട്ടിട്ടുണ്ട്",
   "@addedDisplayModePillDaysCycle": {

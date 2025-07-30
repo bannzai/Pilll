@@ -1009,7 +1009,7 @@
   },
   "viewPremiumFeatures": "Xem các tính năng cao cấp",
   "@viewPremiumFeatures": {
-    "description": "プレミアム機能を見る"
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
   "addedDisplayModePillDaysCycle": "Chế độ hiển thị số ngày uống thuốc (chu kỳ) đã được thêm vào.",
   "@addedDisplayModePillDaysCycle": {

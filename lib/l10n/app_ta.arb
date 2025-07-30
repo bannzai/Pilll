@@ -1009,7 +1009,7 @@
   },
   "viewPremiumFeatures": "பிரீமியம் செயல்திறனைப் பார்க்கவும்",
   "@viewPremiumFeatures": {
-    "description": "プレミアム機能を見る"
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
   "addedDisplayModePillDaysCycle": "காண்பிக்கப்படும் முறை - மருந்து எடுத்த நாள்கள் (சுழற்சி) கூடுதல் செய்யப்பட்டுள்ளன.",
   "@addedDisplayModePillDaysCycle": {
