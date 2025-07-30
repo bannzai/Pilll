@@ -281,7 +281,7 @@
   },
   "registerAccount": "Konto registrering",
   "@registerAccount": {
-    "description": "アカウント登録"
+    "description": "新規ユーザーがピル服用管理アプリPilllのアカウントを作成するためのボタンや項目です。アプリの初回利用時やログイン画面で表示される、アカウント新規登録を促すUI要素として使用されます。"
   },
   "reLogin": "Genindel og adgang",
   "@reLogin": {
