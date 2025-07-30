@@ -1537,7 +1537,7 @@
       }
     }
   },
-  "purchaseErrorInsufficientPermissionsError": "የእርስዎ {accountName} ላይ ወደ ፕላን መግባት አልቻሉም። የክፍያ መረጃዎችን ይዘጋጁና ወደ አንድ ጊዜ እንደገና ይሞክሩ።",
+  "purchaseErrorInsufficientPermissionsError": "{accountName} በተባለው መለያዎ በዚህ እቅድ ላይ መቀላቀል አይችሉም። የክፍያ መረጃዎን ያረጋግጡ እና እንደገና ይሞክሩ።",
   "@purchaseErrorInsufficientPermissionsError": {
     "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
