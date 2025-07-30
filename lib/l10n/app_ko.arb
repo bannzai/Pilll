@@ -2174,7 +2174,7 @@
   },
   "privacyPolicy": "개인정보 보호정책",
   "@privacyPolicy": {
-    "description": "개인정보 보호정책"
+    "description": "アプリの設定画面や法的情報画面で表示されるプライバシーポリシーへのリンクテキストです。ユーザーが個人情報の取り扱いに関する規約を確認する際にタップする項目として使用されます。"
   },
   "linkCopiedToClipboard": "클립보드에 복사되었습니다",
   "@linkCopiedToClipboard": {

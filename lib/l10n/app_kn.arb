@@ -2174,7 +2174,7 @@
   },
   "privacyPolicy": "ಗೌಪ್ಯತೆಯ ನೀತಿ",
   "@privacyPolicy": {
-    "description": "プライバシーポリシー"
+    "description": "アプリの設定画面や法的情報画面で表示されるプライバシーポリシーへのリンクテキストです。ユーザーが個人情報の取り扱いに関する規約を確認する際にタップする項目として使用されます。"
   },
   "linkCopiedToClipboard": "ಕ್ಲಿಪ್‌ಬೋರ್ಡ್‌ಗೆ ನಕಲಿಸಲಾಗಿದೆ",
   "@linkCopiedToClipboard": {
