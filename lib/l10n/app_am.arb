@@ -959,7 +959,7 @@
       }
     }
   },
-  "youArePremiumMember": "አንተ የፕሪምየም አባል ነህ",
+  "youArePremiumMember": "እርስዎ\nፕሪሚየም አባል ነዎት",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
