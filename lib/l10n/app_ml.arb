@@ -1623,7 +1623,7 @@
   },
   "purchaseErrorProductDiscountMissingIdentifierError": "അവകാശമില്ലാത്ത പിശക് ആണ്. യോഗ്യമായ അപ്‌ഡേറ്റ് ചെയ്യുകയും വീണ്ടും ശ്രമിക്കുക. പരിഹാരമുണ്ടാക്കാത്ത പശ്ചാത്തലത്തിൽ, ക്രമീകരണം > ബന്ധപ്പെടൽ എന്ന വഴി ബന്ധപ്പെടുക. കോഡ്: {errorCode} വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
       "errorCode": {
         "type": "String"

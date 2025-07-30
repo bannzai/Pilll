@@ -1623,7 +1623,7 @@
   },
   "purchaseErrorProductDiscountMissingIdentifierError": "அந்த விளக்கம் மற்றும் விஷயங்களைப் புரிந்துகொள்ள முடியாமல் இருக்கிறது. புதிய பதிப்புக்கு புதுப்பித்து மீண்டும் முயற்சி செய்யவும். இது தீர்வாதியாக இல்லாவிட்டால், துணை > தொடர்பு மூலம் நமக்கு தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விபரம்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
       "errorCode": {
         "type": "String"

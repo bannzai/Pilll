@@ -1623,7 +1623,7 @@
   },
   "purchaseErrorProductDiscountMissingIdentifierError": "ಅರ್ಥವಿಲ್ಲದ ದೋಷವಿದೆ. ದಯವಿಟ್ಟು تازಾ ಆವೃತ್ತಿಗೆ ನವೀಕರಿಸಿ ಮತ್ತು ಪುನಃ ಪ್ರಯತ್ನಿಸಿ. ಪರಿಹಾರವಾಗದಿದ್ದರೆ, ಸೆಟಿಂಗ್‌ಗಳನ್ನು ತೆರೆಯಿರಿ > ಸಂಪರ್ಕ ಮಾಡಿ ಅನ್ನು ಆಯ್ಕೆ ಮಾಡಿ. ಕೋಡ್: {errorCode} ವಿವರ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
       "errorCode": {
         "type": "String"
