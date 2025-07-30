@@ -606,7 +606,7 @@
   },
   "startOfPillDays": "복용 일수의 시작",
   "@startOfPillDays": {
-    "description": "복용 일수의 시작"
+    "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
   },
   "beforePillSheetGroupSequentialEstimatedEndDay": "이전 셔트의 마지막: {beforePillSheetGroupSequentialEstimatedEndPillNumber}일째",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {

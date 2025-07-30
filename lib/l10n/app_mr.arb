@@ -606,7 +606,7 @@
   },
   "startOfPillDays": "गोळ्या घेण्याच्या दिवसांचा प्रारंभ",
   "@startOfPillDays": {
-    "description": "服用日数の始まり"
+    "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
   },
   "beforePillSheetGroupSequentialEstimatedEndDay": "अखेरच्या पत्रकाचा अंतिम दिवस: {beforePillSheetGroupSequentialEstimatedEndPillNumber}वा दिवस",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {

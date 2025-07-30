@@ -606,7 +606,7 @@
   },
   "startOfPillDays": "ចំណាត់កាលបរិច្ឆេទចាប់ផ្តើមរយៈពេលប្រើប្រាស់",
   "@startOfPillDays": {
-    "description": "服用日数の始まり"
+    "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
   },
   "beforePillSheetGroupSequentialEstimatedEndDay": "ថ្ងៃចុងក្រោយនៃប្រអប់មុន：{beforePillSheetGroupSequentialEstimatedEndPillNumber} ថ្ងៃ",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {
