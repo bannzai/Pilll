@@ -985,7 +985,7 @@
   },
   "autoRefillNewPillSheet": "📦 Új tabletta csomag automatikus utánpótlása",
   "@autoRefillNewPillSheet": {
-    "description": "📦 新しいピルシートを自動補充"
+    "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
   },
   "viewPastData": "👀 Korábbi adatok megtekintése",
   "@viewPastData": {
