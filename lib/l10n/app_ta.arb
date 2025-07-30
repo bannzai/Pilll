@@ -522,7 +522,7 @@
   },
   "pauseTakingDoesNotAdvancePillNumber": "உங்களுடைய மருந்து எடுத்துக் கொள்வதை நிறுத்தும் போது கணக்கீட்டின் எண் மேம்படாது",
   "@pauseTakingDoesNotAdvancePillNumber": {
-    "description": "服用をお休みするとピル番号は進みません"
+    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
   },
   "pauseTakingFromNumber": "{number}யில் மருந்தை எடுத்துக் கொள்ளாமல் இருப்பீர்களா?",
   "@pauseTakingFromNumber": {
