@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "ແລະຂໍແຈ້ງວ່າມີຂໍ່ມູນການຊື້ທີ່ບໍ່ແນ່ນອນ. ກະລຸນາກວ່າຆິກອີງຂໍ້ມູນການຊື້.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "ບໍ່ມີຂໍໍໍລະບຸຂອງຜູ້ຊື້ ຂໍໃຫ້ລໍຖໍຕິດຕາມດ້ວຍ {accountName} ສໍາລັບ ເຂົ້າໃນແອັບ ແລະ ລອງບັນທຶກດູ່.",
   "@purchaseErrorMissingReceiptFileError": {

@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Informații de achiziție invalidă. Vă rugăm să verificați informațiile de achiziție.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Nu există informații despre cumpărător. Vă rugăm să vă conectați la dispozitiv cu {accountName} și să încercați din nou.",
   "@purchaseErrorMissingReceiptFileError": {

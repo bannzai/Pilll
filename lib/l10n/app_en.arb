@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Invalid purchase information. Please check your purchase information",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "Invalid purchase information. Please check your purchase information"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "No purchase information found. Please try signing with {accountName} in on the device",
   "@purchaseErrorMissingReceiptFileError": {

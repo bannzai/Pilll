@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Ito ay maling impormasyon sa pagbili. Pakisuri ang impormasyon sa pagbili.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Walang impormasyon ng mamimili. Mangyaring subukan muli pagkatapos mag-sign in sa device gamit ang {accountName}.",
   "@purchaseErrorMissingReceiptFileError": {

@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Informació de compra no vàlida. Si us plau, comproveu la informació de compra.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "No s'ha trobat informació sobre el comprador. Si us plau, connecteu-vos al dispositiu amb {accountName} i torneu-ho a provar.",
   "@purchaseErrorMissingReceiptFileError": {

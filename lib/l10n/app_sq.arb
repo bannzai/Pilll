@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Informacioni i blerjes është i pavlefshëm. Ju lutemi verifikoni informacionin e blerjes.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Nuk ka informacione për blerësin. Ju lutemi identifikohuni në aparat me {accountName} dhe provoni përsëri.",
   "@purchaseErrorMissingReceiptFileError": {

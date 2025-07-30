@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Thông tin giao dịch không hợp lệ. Vui lòng kiểm tra thông tin giao dịch.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Không tồn tại thông tin người mua. Vui lòng đăng nhập vào thiết bị bằng {accountName} và thử lại.",
   "@purchaseErrorMissingReceiptFileError": {

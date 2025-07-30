@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "ತೆರಿಗೆ ಮಾಹಿತಿಯಿಲ್ಲದ ಖರೀದಿ ವಿವರ. ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "ಖರೀದಿದಾರಿಗೆ ಯಾವ ಮಾಹಿತಿ ದೊರಕದಾಗಿದೆ. {accountName} ಬಳಸಿ ಸಾಧನದಲ್ಲಿ ಪ್ರವೇಶಿಸುತ್ತಿರುವುದಿಲ್ಲ, ದಯವಿಟ್ಟು ಪ್ರಯತ್ನಿಸಿ.",
   "@purchaseErrorMissingReceiptFileError": {

@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Невалидни информации за купување. Ве молиме проверете ги информациите за купување.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Нема информации за купувачот. Ве молиме, пријавете се на уредот со {accountName} и обидете се повторно.",
   "@purchaseErrorMissingReceiptFileError": {

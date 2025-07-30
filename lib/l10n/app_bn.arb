@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "অবৈধ ক্রয়ের তথ্য। ক্রয় সম্পর্কিত তথ্য পরীক্ষা করুন।",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "ক্রেতার তথ্য বিদ্যমান নেই। {accountName} দিয়ে ডিভাইসে সাইন ইন করে চেষ্টা করুন।",
   "@purchaseErrorMissingReceiptFileError": {

@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "ข้อมูลการซื้อไม่ถูกต้อง โปรดยืนยันข้อมูลการซื้อของคุณ",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "ไม่พบข้อมูลผู้ซื้อ กรุณาลงชื่อเข้าสู่ระบบด้วย {accountName} ก่อนทดลองใช้งาน",
   "@purchaseErrorMissingReceiptFileError": {

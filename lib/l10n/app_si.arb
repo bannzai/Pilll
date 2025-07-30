@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "අනුමත නොකළ මිලදී ගැනීම් තොරතුරු වේ. මිලදී ගැනීමේ තොරතුරුවලට විමසන්න.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "මෙම කතුවැකියට අනුව මිලදී ගැනුම්කරුවාගේ තොරතුරු නොමැත। කරුණාකර {accountName} සමඟ උපාංගය ඉන්විදුලීන් කර පරික්ෂා කරන්න.",
   "@purchaseErrorMissingReceiptFileError": {

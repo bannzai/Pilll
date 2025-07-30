@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "అన్‌లా కల్పించిన కొనుగోలు సమాచారం ఉంది. దయచేసి కొనుగోలు సమాచారాన్ని నిర్ధారించుకోండి.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "కొనుగోలుదారుని సమాచారం లేదు. {accountName} తో పరికరంలో సైన్ ఇన్ చేసి ప్రయత్నించండి",
   "@purchaseErrorMissingReceiptFileError": {

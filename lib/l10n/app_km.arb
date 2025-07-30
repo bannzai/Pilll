@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "ព័ត៌មានការទិញមិនត្រឹមត្រូវ។ សូមពិនិត្យព័ត៌មានការទិញ។",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "មិនមានព័ត៌មានអំពីអ្នកទិញ។ សូមធ្វើការចុះបញ្ជីនៅលើឧបករណ៍ជាមួយ {accountName} ហើយសូមព្យាយាមម្តងទៀត។",
   "@purchaseErrorMissingReceiptFileError": {

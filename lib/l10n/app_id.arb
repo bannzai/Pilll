@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Informasi pembelian tidak valid. Silakan periksa informasi pembelian Anda.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Informasi pembeli tidak ada. Silakan masuk ke perangkat menggunakan {accountName} dan coba lagi.",
   "@purchaseErrorMissingReceiptFileError": {

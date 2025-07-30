@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "ਯਹ ਇੱਕ ਗਲਤ ਖਰੀਦ ਜਾਣਕਾਰੀ ਹੈ। ਖਰੀਦ ਜਾਣਕਾਰੀ ਦੀ ਜਾਂਚ ਕਰੋ।",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "ਖਰੀਦਦਾਰ ਦਾ ਜਾਣਕਾਰੀ ਮੌਜੂਦ ਨਹੀਂ ਹੈ। {accountName} ਨਾਲ ਯੰਤਰ ਵਿੱਚ ਸਾਈਨ ਇਨ ਕਰਨ ਦੇ ਬਾਅਦ ਉਸਨੂੰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "@purchaseErrorMissingReceiptFileError": {

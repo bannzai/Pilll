@@ -1437,7 +1437,7 @@
   },
   "purchaseErrorInvalidReceiptError": "Ongeldige aankoopinformatie. Controleer uw aankoopinformatie.",
   "@purchaseErrorInvalidReceiptError": {
-    "description": "不正な購入情報です。購入情報を確かめてください"
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
   "purchaseErrorMissingReceiptFileError": "Er zijn geen koperinformatie aanwezig. Probeer in te loggen op het apparaat met {accountName}.",
   "@purchaseErrorMissingReceiptFileError": {
