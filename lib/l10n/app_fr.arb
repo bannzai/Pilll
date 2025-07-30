@@ -2179,7 +2179,7 @@
   },
   "notificationTime": "Heure des notifications",
   "@notificationTime": {
-    "description": "通知時間"
+    "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
   },
   "timeZoneChangedTo": "La modification a été effectuée sur {tz}.",
   "@timeZoneChangedTo": {
