@@ -2056,7 +2056,7 @@
   },
   "editPausePeriod": "복용 쉬기 기간 편집",
   "@editPausePeriod": {
-    "description": "복용 쉬기 기간 편집"
+    "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
   },
   "changePillDays": "복용 일수 변경",
   "@changePillDays": {
