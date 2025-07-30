@@ -544,7 +544,7 @@
   },
   "taking": "മരുന്ന് ഉപയോഗിക്കുക",
   "@taking": {
-    "description": "服用"
+    "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
   },
   "estimatedEndPillNumber": "മുമ്പത്തെ ഷീറ്റിന്റെ അവസാനത്: {estimatedEndPillNumber}",
   "@estimatedEndPillNumber": {

@@ -544,7 +544,7 @@
   },
   "taking": "កាន់កាប់",
   "@taking": {
-    "description": "服用"
+    "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
   },
   "estimatedEndPillNumber": "សត្វស្រវាំងចុងក្រោយនៃសន្លឹកមុន៖ {estimatedEndPillNumber}",
   "@estimatedEndPillNumber": {
