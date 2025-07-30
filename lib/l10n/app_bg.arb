@@ -1788,7 +1788,7 @@
   },
   "deletedScheduleCannotBeRestored": "Изтритите планирания не могат да бъдат възстановени.",
   "@deletedScheduleCannotBeRestored": {
-    "description": "削除された予定は復元ができません"
+    "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
   },
   "deleteSchedule": "Ще изтрием планираното",
   "@deleteSchedule": {
