@@ -969,7 +969,7 @@
   },
   "premiumFeaturesList": "ప్రేమియం ఫీచర్‌ల జాబితా",
   "@premiumFeaturesList": {
-    "description": "プレミアム機能一覧"
+    "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
   },
   "pushNotificationForTakingRecord": "📩 మోసపూరిత నోటీసుల ద్వారా ఔషధాలు తీసుకునే రికార్డ్",
   "@pushNotificationForTakingRecord": {

@@ -969,7 +969,7 @@
   },
   "premiumFeaturesList": "高级功能列表",
   "@premiumFeaturesList": {
-    "description": "プレミアム機能一覧"
+    "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
   },
   "pushNotificationForTakingRecord": "📩 从推送通知记录服用",
   "@pushNotificationForTakingRecord": {
