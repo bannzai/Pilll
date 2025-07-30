@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "在更换设备或手机丢失时，无法继承高级功能",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "您可以重新体验14天的专业功能！\n点击分享至社交媒体！",
   "@reexperiencePremiumFeatures": {

@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "ආකෘතියන් මාරු කිරීමේදී හෝ ජංගම දුරකථනය කොයිඳු බවේදී, ප්‍රයෝජනවත් ලක්ෂණ ඉදිරියට ගෙන යා හැකියාවක් නැත.",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "14 ක් මාලා පිරිමියන් ප්‍රතිශක්තිකරණය කළ හැක! එය මාලාවට කටයුතු කරන්න!",
   "@reexperiencePremiumFeatures": {

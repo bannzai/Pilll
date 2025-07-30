@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "Awodwa, awukwazi ukudlulisela izici eziphezulu uma ushintshela kwenye imishini noma uma umakhalekhukhwini wakho uphumele ngaphandle.",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "Ungakuzwa ukuthi ungaphinda uzozama izici eziphezulu kweyama-14! Thinta ukuze wabelane ku-SNS!",
   "@reexperiencePremiumFeatures": {

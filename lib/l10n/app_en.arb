@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "You cannot carry over the premium feature when changing devices or losing your phone",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "You cannot carry over the premium feature when changing devices or losing your phone"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "You can experience the premium features again for 14 days!\nTap to share on SNS!",
   "@reexperiencePremiumFeatures": {

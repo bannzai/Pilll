@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "તમારા ફોનને બદલવા અથવા ગુમાવા પર, પ્રીમિયમ સુવિધાઓને જોડાવી શકાય નહીં.",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "પ્રિમિયમ ફીચર્સને 14 દિવસ માટે પુનર્મધુર અનુભવ મેળવી શકો છો! \nટૅપ કરો અને SNS પર શેર કરો!",
   "@reexperiencePremiumFeatures": {

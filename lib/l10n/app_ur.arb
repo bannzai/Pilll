@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "آپ پریمیم خصوصیات کو تبدیل کرنے یا اسمارٹ فون کھونے کی صورت میں منتقل نہیں کرسکتے ہیں۔",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "آپ 14 دن کے لئے پریمیم خصوصیات دوبارہ تجربہ کر سکتے ہیں! سوشل میڈیا پر شیئر کرنے کے لئے ٹیپ کریں!",
   "@reexperiencePremiumFeatures": {

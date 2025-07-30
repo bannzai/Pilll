@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "تاسو د وسیلې بدلون یا د ګرځنده تلیفون د ورکیدو په حالت کې د ممتازو ځانګړتیاوو د انتقال وړتیا نلرئ.",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "تاسې کولی شئ ۱۴ ورځې لپاره د پریمیوم ځانګړتیاوې بیا تجربه کړئ! په ټپ سره، دا د ټولنیزو شبکو سره شریک کړئ!",
   "@reexperiencePremiumFeatures": {

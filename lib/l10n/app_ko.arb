@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "기기 변경이나 스마트폰 분실 시 프리미엄 기능을 이어받을 수 없습니다"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "프리미엄 기능을 14일 동안 재경험할 수 있습니다!\nSNS에 공유하세요!",
   "@reexperiencePremiumFeatures": {

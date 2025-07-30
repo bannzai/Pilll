@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "A prémium funkciók nem vihetők át a készülékcserénél vagy okostelefon elvesztésénél.",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "14 napon keresztül újra megtapasztalhatja a prémium funkciókat!\nKoppintson, és ossza meg a közösségi médiában!",
   "@reexperiencePremiumFeatures": {

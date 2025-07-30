@@ -659,7 +659,7 @@
   },
   "cannotTransferPremiumWithoutAccount": "Jy kan nie die premiumfunksies oorgedra wanneer jy jou toestel verander of jou slimfoon verloor nie.",
   "@cannotTransferPremiumWithoutAccount": {
-    "description": "機種変更やスマホ紛失時に、プレミアム機能を引き継げません"
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
   "reexperiencePremiumFeatures": "Jy kan die premiumfunksie vir 14 dae weer ervaar! Tik om op sosiale media te deel!",
   "@reexperiencePremiumFeatures": {
