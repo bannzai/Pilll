@@ -1250,7 +1250,7 @@
   },
   "confirm": "ନିଷ୍ପତ୍ତି",
   "@confirm": {
-    "description": "決定"
+    "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
   },
   "surveyForServiceImprovement": "ଦୟାକରି ସେବା ପ୍ରବୃତ୍ତିରେ ସୁଧାର ପାଇଁ ସର୍ବେକ୍ଷଣରେ ଏହାରେ ସahayog କରନ୍ତୁ",
   "@surveyForServiceImprovement": {

@@ -1250,7 +1250,7 @@
   },
   "confirm": "Decisión",
   "@confirm": {
-    "description": "決定"
+    "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
   },
   "surveyForServiceImprovement": "Se está a su disposición, colabore por favor cun cuestionario para a mellora do servizo.",
   "@surveyForServiceImprovement": {

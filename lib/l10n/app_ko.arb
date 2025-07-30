@@ -1250,7 +1250,7 @@
   },
   "confirm": "확인",
   "@confirm": {
-    "description": "확인"
+    "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
   },
   "surveyForServiceImprovement": "서비스 개선을 위한 설문조사에 협조해 주세요",
   "@surveyForServiceImprovement": {
