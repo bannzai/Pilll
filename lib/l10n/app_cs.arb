@@ -2134,7 +2134,7 @@
   },
   "addPillSheet": "Přidat pilulkový plánek",
   "@addPillSheet": {
-    "description": "ピルシートを追加"
+    "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
   "duringPauseTaking": "Odmítání léků",
   "@duringPauseTaking": {
