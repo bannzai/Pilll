@@ -502,7 +502,7 @@
   },
   "pauseEndDate": "복용 휴식 종료일",
   "@pauseEndDate": {
-    "description": "복용 휴식 종료일"
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
   "endPillSheet": "딜셔트 종료",
   "@endPillSheet": {
