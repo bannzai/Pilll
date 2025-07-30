@@ -1864,7 +1864,7 @@
   },
   "purchaseErrorPurchasePendingError": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요",
   "@purchaseErrorPurchasePendingError": {
-    "description": "과금 활성화가 완료되지 않았습니다. 잠시 후 확인해 주세요"
+    "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
   "launchError": "시작 시 오류가 발생했습니다\n{ErrorMessagesConnection}\n상세:",
   "@launchError": {

@@ -1864,7 +1864,7 @@
   },
   "purchaseErrorPurchasePendingError": "د پیسو چارج فعالول بشپړ نه دي. مهرباني وکړئ د وروسته څه وخت بیا وګورئ.",
   "@purchaseErrorPurchasePendingError": {
-    "description": "課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください"
+    "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
   "launchError": "د پیل پر مهال یوه تېروتنه رامنځته شوه\n{ErrorMessagesConnection}\nتفصیل:",
   "@launchError": {
