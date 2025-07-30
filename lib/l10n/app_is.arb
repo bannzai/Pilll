@@ -66,7 +66,7 @@
   },
   "unlimitedFeatureDuration": "Ótakala á aðgerðum",
   "@unlimitedFeatureDuration": {
-    "description": "機能無制限の期間について"
+    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
   },
   "pillSheet": "Pillablatt",
   "@pillSheet": {
