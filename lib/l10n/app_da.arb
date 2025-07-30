@@ -2097,7 +2097,7 @@
   },
   "quickRecordTakePillFailedMessage": "Åbn appen og tjek venligst.",
   "@quickRecordTakePillFailedMessage": {
-    "description": "アプリを開いてご確認ください"
+    "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
   },
   "alreadyTaken": "Indtaget",
   "@alreadyTaken": {
