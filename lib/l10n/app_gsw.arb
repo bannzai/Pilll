@@ -2109,7 +2109,7 @@
   },
   "startPauseTaking": "Dä Pill abbräche",
   "@startPauseTaking": {
-    "description": "服用をお休みする"
+    "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
   },
   "startedPauseTaking": "D'Breihe für d'Verwendung hätt a'GFANG",
   "@startedPauseTaking": {
