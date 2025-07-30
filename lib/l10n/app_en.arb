@@ -1274,7 +1274,7 @@
   },
   "notSatisfied": "Not satisfied",
   "@notSatisfied": {
-    "description": "Not satisfied"
+    "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足していない」という回答を選択する際に表示される文字列です。"
   },
   "perNumber": "per number",
   "@perNumber": {
