@@ -977,7 +977,7 @@
   },
   "viewAndRecordTakingHistory": "🗂 Vartojimo istorijos įrašymas ir peržiūra",
   "@viewAndRecordTakingHistory": {
-    "description": "🗂 服用履歴の記録・閲覧"
+    "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
   "displayDateOnPillSheet": "📆 Datos rodojimas ant piliulių lapo",
   "@displayDateOnPillSheet": {

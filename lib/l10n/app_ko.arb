@@ -977,7 +977,7 @@
   },
   "viewAndRecordTakingHistory": "🗂 복용 이력의 기록과 보기",
   "@viewAndRecordTakingHistory": {
-    "description": "🗂 복용 이력의 기록과 보기"
+    "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
   "displayDateOnPillSheet": "📆 딜셔트 위에 날짜 표시",
   "@displayDateOnPillSheet": {
