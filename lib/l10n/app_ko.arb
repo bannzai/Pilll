@@ -236,7 +236,7 @@
   },
   "willBeDiscarded": "가 폐기됩니다",
   "@willBeDiscarded": {
-    "description": "가 폐기됩니다"
+    "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。"
   },
   "discard": "폐기하기",
   "@discard": {
