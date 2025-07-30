@@ -1875,7 +1875,7 @@
       }
     }
   },
-  "exampleRestDurationDate": "Byvoorbeeld, as jy van \"1/12\" vir 3 dae ophou om te neem.",
+  "exampleRestDurationDate": "Byvoorbeeld \"vanaf 1/12 vir 3 dae\" wanneer jy 'n pouse van die medisyne neem",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
