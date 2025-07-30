@@ -2142,7 +2142,7 @@
   },
   "cannotPauseAlreadyTakenToday": "오늘 복용할 피임약이 이미 복용된 경우\n'복용 쉬기'를 할 수 없습니다",
   "@cannotPauseAlreadyTakenToday": {
-    "description": "오늘 복용할 피임약이 이미 복용된 경우 '복용 쉬기'를 할 수 없습니다"
+    "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
   },
   "pauseTakingStarted": "복용 쉬기를 시작했습니다",
   "@pauseTakingStarted": {

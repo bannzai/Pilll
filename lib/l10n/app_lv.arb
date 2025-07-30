@@ -2142,7 +2142,7 @@
   },
   "cannotPauseAlreadyTakenToday": "Ja šodien lietotā tablete ir lietota, šodien \"pārtraukumu\" nav iespējams veikt.",
   "@cannotPauseAlreadyTakenToday": {
-    "description": "今日飲むピルが服用済みの場合「服用お休み」できません"
+    "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
   },
   "pauseTakingStarted": "Sākta pārtraukuma tablešu lietošanā",
   "@pauseTakingStarted": {
