@@ -1441,7 +1441,7 @@
   },
   "purchaseErrorMissingReceiptFileError": "खरेदीदाराची माहिती उपलब्ध नाही. {accountName} वर डिव्हाइसवर साइन इन करून पहा.",
   "@purchaseErrorMissingReceiptFileError": {
-    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
       "accountName": {
         "type": "String"

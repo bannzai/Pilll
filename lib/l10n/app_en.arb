@@ -1441,7 +1441,7 @@
   },
   "purchaseErrorMissingReceiptFileError": "No purchase information found. Please try signing with {accountName} in on the device",
   "@purchaseErrorMissingReceiptFileError": {
-    "description": "No purchase information found. Please try signing in on the device",
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
       "accountName": {
         "type": "String"

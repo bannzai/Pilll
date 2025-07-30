@@ -1441,7 +1441,7 @@
   },
   "purchaseErrorMissingReceiptFileError": "വാങ്ങുന്നവരുടെ വിവരം ഉണ്ടാവുന്നില്ല. {accountName} ഉപയോഗിച്ച് ഫോൺസൈനിന് ശ്രമിക്കുക.",
   "@purchaseErrorMissingReceiptFileError": {
-    "description": "購入者の情報が存在しません。{accountName} で端末にサインインをした上でお試しください",
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
       "accountName": {
         "type": "String"
