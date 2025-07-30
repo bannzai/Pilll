@@ -2138,7 +2138,7 @@
   },
   "duringPauseTaking": "In pausa assunzione",
   "@duringPauseTaking": {
-    "description": "服用お休み中"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
   "cannotPauseAlreadyTakenToday": "Se hai già assunto la pillola di oggi, non puoi fare \"pausa nell'assunzione\".",
   "@cannotPauseAlreadyTakenToday": {

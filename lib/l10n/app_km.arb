@@ -2138,7 +2138,7 @@
   },
   "duringPauseTaking": "កំពុងអាងប្រាប់",
   "@duringPauseTaking": {
-    "description": "服用お休み中"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
   "cannotPauseAlreadyTakenToday": "បើសិនជា មេរោគដែលត្រូវផ្តល់ថ្នាំនៅថ្ងៃនេះ បានផ្តល់ស្រាប់។ \"មិនអាចផ្តាច់ការប្រើប្រាស់\"",
   "@cannotPauseAlreadyTakenToday": {

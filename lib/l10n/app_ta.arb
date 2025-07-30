@@ -2138,7 +2138,7 @@
   },
   "duringPauseTaking": "கைக்கு அப்போதுகாலம்",
   "@duringPauseTaking": {
-    "description": "服用お休み中"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
   "cannotPauseAlreadyTakenToday": "இன்று எடுத்த பில் ஏற்கனவே எடுக்கப்பட்டிருந்தால் \"எடுக்க விடாது\".",
   "@cannotPauseAlreadyTakenToday": {

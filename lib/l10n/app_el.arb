@@ -2138,7 +2138,7 @@
   },
   "duringPauseTaking": "Διακοπή φαρμακευτικής αγωγής",
   "@duringPauseTaking": {
-    "description": "服用お休み中"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
   "cannotPauseAlreadyTakenToday": "Αν έχετε ήδη πάρει το χάπι που πρέπει να πάρετε σήμερα, δεν μπορείτε να διακόψετε την πρόσληψη.",
   "@cannotPauseAlreadyTakenToday": {

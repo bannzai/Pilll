@@ -2138,7 +2138,7 @@
   },
   "duringPauseTaking": "Ravimite võtmise paus",
   "@duringPauseTaking": {
-    "description": "服用お休み中"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
   "cannotPauseAlreadyTakenToday": "Kui tänane pill on juba võetud, ei ole võimalik \"võtmise puhkust\" võtta.",
   "@cannotPauseAlreadyTakenToday": {

@@ -2138,7 +2138,7 @@
   },
   "duringPauseTaking": "दवा की खुराक के लिए ब्रेक पर",
   "@duringPauseTaking": {
-    "description": "服用お休み中"
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
   "cannotPauseAlreadyTakenToday": "अगर आज लिए जाने वाले पिल का सेवन हो चुका है, तो \"सेवा की छुट्टी\" नहीं ले सकते।",
   "@cannotPauseAlreadyTakenToday": {
