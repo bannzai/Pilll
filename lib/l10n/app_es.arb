@@ -179,7 +179,7 @@
   },
   "accountSettings": "Configuración de cuenta",
   "@accountSettings": {
-    "description": "アカウント設定"
+    "description": "設定画面で表示される「アカウント設定」メニュー項目のラベルです。ユーザーの個人情報やアカウント関連の設定を管理する画面へのナビゲーションとして使用されます。"
   },
   "linked": "Vinculado",
   "@linked": {

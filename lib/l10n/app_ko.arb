@@ -179,7 +179,7 @@
   },
   "accountSettings": "계정 설정",
   "@accountSettings": {
-    "description": "계정 설정"
+    "description": "設定画面で表示される「アカウント設定」メニュー項目のラベルです。ユーザーの個人情報やアカウント関連の設定を管理する画面へのナビゲーションとして使用されます。"
   },
   "linked": "연동 완료",
   "@linked": {
