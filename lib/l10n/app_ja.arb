@@ -2317,7 +2317,7 @@
   },
   "logout": "ログアウト",
   "@logout": {
-    "description": "ログアウト"
+    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
   },
   "goToInitialSettingAndReloginIfNeededMessage": "初期設定に戻ります。ログインが必要な場合は初期設定下部からお願いします",
   "@goToInitialSettingAndReloginIfNeededMessage": {
