@@ -899,7 +899,7 @@
   },
   "dailyPrice": "{dailyPriceString}/日",
   "@dailyPrice": {
-    "description": "{dailyPriceString}/日",
+    "description": "プレミアムプランの1日あたりの料金を表示する際に使用されます。{dailyPriceString}は計算された1日の価格が入ります。",
     "placeholders": {
       "dailyPriceString": {
         "type": "String"
