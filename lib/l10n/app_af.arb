@@ -1363,7 +1363,7 @@
       }
     }
   },
-  "requestForCancelSurvey": "Versoek om deel te neem aan die opname na kansellasie.",
+  "requestForCancelSurvey": "Versoek om hulp met ons vraelys na kansellasie",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
