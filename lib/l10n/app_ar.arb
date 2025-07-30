@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "خطأ غير معروف. يرجى التحديث إلى الإصدار الأحدث والمحاولة مرة أخرى. إذا لم يتم الحل، يرجى الاتصال بنا من خلال الإعدادات > الاستعلام. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "حدث خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا من خلال الإعدادات > اتصل بنا. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
