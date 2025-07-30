@@ -1651,7 +1651,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "خطأ غير محدد. يرجى تحديث التطبيق إلى الإصدار الأحدث والمحاولة مرة أخرى. إذا استمرت المشكلة، يرجى الاتصال بنا من خلال: الإعدادات > استفسار. الكود: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسار. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
