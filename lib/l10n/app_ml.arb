@@ -1951,7 +1951,7 @@
   },
   "letsTryIt": "ദയവായി പരീക്ഷിക്കുക",
   "@letsTryIt": {
-    "description": "ぜひお試しください"
+    "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
   "trialDeadlineDateOffsetDay": "{number} ദിവസങ്ങള്‍ മുഴുവന്‍ എല്ലാ ഫംഗ്ഷനുകളും ലഭ്യമാണ്!",
   "@trialDeadlineDateOffsetDay": {

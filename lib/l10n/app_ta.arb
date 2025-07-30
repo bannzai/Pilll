@@ -1951,7 +1951,7 @@
   },
   "letsTryIt": "कृपया ஒரு முறையே முயற்சி செய்யவும்",
   "@letsTryIt": {
-    "description": "ぜひお試しください"
+    "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
   "trialDeadlineDateOffsetDay": "{number} நாட்கள் முழுவதும் அனைத்து செயல்பாடுகளும் பயன்படுத்த வசதியாக இருக்கும்!",
   "@trialDeadlineDateOffsetDay": {

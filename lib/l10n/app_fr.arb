@@ -1939,7 +1939,7 @@
   },
   "letsTryIt": "N'hésitez pas à l'essayer",
   "@letsTryIt": {
-    "description": "ぜひお試しください"
+    "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
   "trialDeadlineDateOffsetDay": "Vous pouvez utiliser toutes les fonctionnalités pendant {number} jours !",
   "@trialDeadlineDateOffsetDay": {

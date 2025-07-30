@@ -1951,7 +1951,7 @@
   },
   "letsTryIt": "অবশ্যই আপনার চেষ্টা করুন",
   "@letsTryIt": {
-    "description": "ぜひお試しください"
+    "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
   "trialDeadlineDateOffsetDay": "আপনি {number} দিন ধরে সমস্ত ফিচার ব্যবহার করতে পারবেন!",
   "@trialDeadlineDateOffsetDay": {
