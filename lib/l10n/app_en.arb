@@ -1852,7 +1852,7 @@
   },
   "newPillSheetNotificationTitle": "A new sheet starts today",
   "@newPillSheetNotificationTitle": {
-    "description": "A new sheet starts today"
+    "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
   },
   "newPillSheetNotificationMessage": "🆕 A new sheet starts today\nDon't forget to take it 👍",
   "@newPillSheetNotificationMessage": {

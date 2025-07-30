@@ -1840,7 +1840,7 @@
   },
   "newPillSheetNotificationTitle": "Le nouveau cycle commence aujourd'hui.",
   "@newPillSheetNotificationTitle": {
-    "description": "今日から新しいシートがはじまります"
+    "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
   },
   "newPillSheetNotificationMessage": "🆕 Un nouveau cycle commence aujourd'hui.\nN'oubliez pas de prendre votre médicament 👍",
   "@newPillSheetNotificationMessage": {
