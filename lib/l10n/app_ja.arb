@@ -2097,7 +2097,7 @@
   },
   "resumeTaking": "服用再開",
   "@resumeTaking": {
-    "description": "服用再開"
+    "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
   "changePausePeriod": "服用お休み期間変更",
   "@changePausePeriod": {

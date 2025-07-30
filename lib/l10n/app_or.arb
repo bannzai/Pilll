@@ -2076,7 +2076,7 @@
   },
   "resumeTaking": "ପୁନର୍ଭାବନ",
   "@resumeTaking": {
-    "description": "服用再開"
+    "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
   "changePausePeriod": "ପିଲ୍ ଗ୍ରହଣ ବିରତୀ ସମୟରେ ପରିବର୍ତ୍ତନ",
   "@changePausePeriod": {

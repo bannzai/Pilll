@@ -2076,7 +2076,7 @@
   },
   "resumeTaking": "പിക്കേണ്ടതിന്റെ വീണ്ടും ആരംഭിക്കുക",
   "@resumeTaking": {
-    "description": "服用再開"
+    "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
   "changePausePeriod": "മരുന്ന് ബ്രേക്കിന്റെ കാലയരെ മാറ്റുക",
   "@changePausePeriod": {

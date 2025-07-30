@@ -2076,7 +2076,7 @@
   },
   "resumeTaking": "Pokračovat v užívání",
   "@resumeTaking": {
-    "description": "服用再開"
+    "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
   "changePausePeriod": "Změna období přestávky v užívání",
   "@changePausePeriod": {
