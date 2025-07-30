@@ -1001,7 +1001,7 @@
   },
   "seeDetailsOfPremiumFeatures": "ప్రీమియుమ్ ఫీచర్ వివరాలను చూడండి",
   "@seeDetailsOfPremiumFeatures": {
-    "description": "プレミアム機能の詳細を見る"
+    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
   "popularFeatures": "ప్రాచుర్యం పొందిన యొక్క ఫీచర్లు",
   "@popularFeatures": {

@@ -1001,7 +1001,7 @@
   },
   "seeDetailsOfPremiumFeatures": "Premium funksiyalar haqida batafsil ma'lumotni ko'ring",
   "@seeDetailsOfPremiumFeatures": {
-    "description": "プレミアム機能の詳細を見る"
+    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
   "popularFeatures": "Mashhur funksiyalar",
   "@popularFeatures": {

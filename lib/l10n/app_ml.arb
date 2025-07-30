@@ -1001,7 +1001,7 @@
   },
   "seeDetailsOfPremiumFeatures": "പ്രിയംഫംഗ്ഷന്റെ വിശദാംശങ്ങൾ കാണുക",
   "@seeDetailsOfPremiumFeatures": {
-    "description": "プレミアム機能の詳細を見る"
+    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
   "popularFeatures": "പ്രശസ്തമായ\nസൗകര്യം",
   "@popularFeatures": {

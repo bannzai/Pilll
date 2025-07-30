@@ -1001,7 +1001,7 @@
   },
   "seeDetailsOfPremiumFeatures": "프리미엄 기능의 세세한 정보 보기",
   "@seeDetailsOfPremiumFeatures": {
-    "description": "프리미엄 기���의 세세한 정보 보기"
+    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
   "popularFeatures": "인기 있는\n기능",
   "@popularFeatures": {

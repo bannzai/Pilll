@@ -1001,7 +1001,7 @@
   },
   "seeDetailsOfPremiumFeatures": "உயர்தர அம்சங்களின் விவரங்களை பார்க்கின்றேன்",
   "@seeDetailsOfPremiumFeatures": {
-    "description": "プレミアム機能の詳細を見る"
+    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
   "popularFeatures": "பிரபலமான செயல்பாடு",
   "@popularFeatures": {
