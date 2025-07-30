@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "মেন্সট্রিউশনের বিষয়ে",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "মেনস্ট্রুয়েশন শুরুর তারিখের পিল নম্বরটি চেক করুন। বর্তমানে নির্বাচিত পিল শীটের ধরনে যে পিল নম্বর সেট করা হয়েছে তা বিদ্যমান নেই।",
   "@checkPillNumberForMenstruationStart": {

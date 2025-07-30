@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Menstruasjon",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Vennligst sjekk pillekoden for den første dagen i menstruasjonen. Det er angitt en pillekode som ikke finnes i den valgte pillearktypen.",
   "@checkPillNumberForMenstruationStart": {

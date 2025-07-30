@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "మహిళల ఆరోగ్యం గురించి",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "మీ తెలుగు పదాలను తనిఖీ చేయండి. ప్రస్తుత వాడుతున్న పైల్ షీట్ రకం నిర్వహించని పైల్ సంఖ్య సెట్ చేయబడింది.",
   "@checkPillNumberForMenstruationStart": {

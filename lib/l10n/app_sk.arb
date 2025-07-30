@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "O menštruácii",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Skontrolujte číslo pilulky začiatku menštruácie. Je nastavené číslo pilulky, ktoré v súčasne vybranom type pilulkového blistra neexistuje.",
   "@checkPillNumberForMenstruationStart": {

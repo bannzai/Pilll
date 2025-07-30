@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "මෙම පැවැත්ම පිළිබඳ",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "කරුණාකර ඔබගේ මාසික ගැසට් ආරම්භයේ පටිගත අංකය සහතික කරන්න. දැන් ඔබ තෝරාගෙන ඇති ගැසට් පත්‍රය වර්ගය තුළ නොනැඟිල්ලක් වන ගැසට් අංකයක් සකසා ඇත.",
   "@checkPillNumberForMenstruationStart": {

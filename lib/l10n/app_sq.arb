@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Për menstruacionin",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Juaj Kontrolloni numrin e pilulave për ditën e fillimit të menstruacioneve. Numri i pilulave që keni vendosur nuk ekziston në llojin e fletës së pilulave që keni zgjedhur aktualisht.",
   "@checkPillNumberForMenstruationStart": {

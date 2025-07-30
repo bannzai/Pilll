@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Մինա ցանկի մասին",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Խնդրեմ ստուգեք պիլերի համարի ամսաթիվը: Ներկայումս ընտրված պիլ շիթի տիպերի մեջ գոյություն չունեցող պիլերի համար է կարգավորվել։",
   "@checkPillNumberForMenstruationStart": {

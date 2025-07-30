@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "در مورد قاعدگی",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "لطفاً شماره قرص تاریخ شروع قاعدگی را تأیید کنید. شماره قرسی که در حال حاضر برای نوع ورق قرص انتخاب شده تنظیم شده است، وجود ندارد.",
   "@checkPillNumberForMenstruationStart": {

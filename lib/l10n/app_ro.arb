@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Despre menstruație",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Vă rugăm să verificați numărul pilulei pentru data începerii menstruației. Numărul pilulei setat nu există pentru tipul de planșă de pilule selectat în prezent.",
   "@checkPillNumberForMenstruationStart": {

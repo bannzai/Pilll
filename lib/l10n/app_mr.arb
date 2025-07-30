@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "महिला चक्राबद्दल",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "कृपया मासिक धर्म सुरू होण्याची तारीखची पिल नंबर तपासा. सध्या निवडलेल्या पिल शीट प्रकारामध्ये अस्तित्वात नसलेला पिल नंबर सेट करण्यात आला आहे.",
   "@checkPillNumberForMenstruationStart": {

@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "អំពីរោគសញ្ញា",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "សូមពិនិត្យលេខថ្នាំក្នុងថ្ងៃចាប់ផ្តើមរដូវស្រ្តី។ លេខថ្នាំដែលបានកំណត់មិនមានក្នុងប្រភេទថ្នាំដែលបានជ្រើសរើសនៅបច្ចុប្បន្ន។",
   "@checkPillNumberForMenstruationStart": {

@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Tentang haid",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Sila semak nombor pil untuk hari pertama haid. Nombor pil yang ditetapkan tidak wujud untuk jenis helai pil yang sedang dipilih.",
   "@checkPillNumberForMenstruationStart": {

@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "About menstruation",
   "@aboutMenstruation": {
-    "description": "About menstruation"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Please check the pill number for the start of menstruation. The pill number you selected does not exist in the pill sheet type you are currently using",
   "@checkPillNumberForMenstruationStart": {

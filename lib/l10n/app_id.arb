@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Tentang menstruasi",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Silakan periksa nomor pil untuk tanggal mulai menstruasi. Nomor pil yang diatur tidak ada dalam jenis lembar pil yang Anda pilih saat ini.",
   "@checkPillNumberForMenstruationStart": {

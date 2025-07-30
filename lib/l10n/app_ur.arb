@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "حیض کے بارے میں",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "براہ کرم حیض کے آغاز کے دن کی گولی نمبر کی تصدیق کریں۔ موجودہ منتخب شدہ گولی شیٹ کی نوعیت میں کوئی موجودہ گولی نمبر مرتب کیا گیا ہے۔",
   "@checkPillNumberForMenstruationStart": {

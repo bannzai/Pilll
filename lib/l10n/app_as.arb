@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "মাসিক সম্পর্কে",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "生理開始日の পিল সংখ্যা চেক কৰক। বৰ্তমান নির্বাচন কৰা পিল শীট ধৰণত উপস্থিত নথকা পিল সংখ্যাৰ বিন্যাস কৰা হৈছে।",
   "@checkPillNumberForMenstruationStart": {

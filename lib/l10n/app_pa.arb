@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "ਪ੍ਰੋਸੇਸ ਬਾਰੇ",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "ਕ੍ਰਿਪਾ ਕਰਕੇ ਅਪਣੀ ਮਾਸਿਕ ਚੱਕਰ ਦੇ ਸ਼ੁਰੂ ਹੋਣ ਵਾਲੇ ਦਿਨ ਦੇ ਪਿਅਲ ਨੰਬਰ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ। ਮੌਜੂਦਾ ਚੁਣੀ ਗਈ ਪਿਅਲ ਸ਼ੀਟ ਟਾਈਪ ਵਿੱਚ ਕੋਈ ਪ੍ਰਾਪਤ ਪਿਅਲ ਨੰਬਰ ਸੈਟ ਕੀਤਾ ਗਿਆ ਹੈ।",
   "@checkPillNumberForMenstruationStart": {

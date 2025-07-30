@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Menstruasie",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Verifieer die pilnommer vir die begin van jou periode. Die pilnommer wat tans vir die gekose pilblad tipe ingestel is, bestaan nie.",
   "@checkPillNumberForMenstruationStart": {

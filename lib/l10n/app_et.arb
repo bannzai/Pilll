@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Menstruatsiooni kohta",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Palun kontrollige menstruatsiooni alguskuupäeva pillide numbrit. Praegu valitud pillideleht ei sisalda seda pillide numbrit.",
   "@checkPillNumberForMenstruationStart": {

@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Sobre a menstruación",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Por favor, verifique o número da pílula do primeiro dia do seu ciclo menstrual. O número da pílula configurado não existe no tipo de folha de pílula atualmente selecionado.",
   "@checkPillNumberForMenstruationStart": {

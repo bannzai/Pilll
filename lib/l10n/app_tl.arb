@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Tungkol sa buwanang daloy",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Pakisuyurin ang bilang ng mga pill para sa pagsisimula ng iyong regla. Ang bilang ng pill na itinakda ay hindi umiiral sa kasalukuyang piniling uri ng pill sheet.",
   "@checkPillNumberForMenstruationStart": {

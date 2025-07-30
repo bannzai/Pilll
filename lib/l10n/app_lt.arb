@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Apie menstruacijas",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Prašome patikrinti menstruacijų pradžios dienos piliulės numerį. Šiuo metu pasirinkto piliulių lapelio tipo nustatytas piliulės numeris, kurio nėra.",
   "@checkPillNumberForMenstruationStart": {

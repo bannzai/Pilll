@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "생리에 대해",
   "@aboutMenstruation": {
-    "description": "생리에 대해"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다",
   "@checkPillNumberForMenstruationStart": {

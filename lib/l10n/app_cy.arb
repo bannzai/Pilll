@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Am y fronwen",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Gofynnwch am rif y bil yn dechrau mislif. Mae gan y math o ddalen bil sy'n cael ei ddewis ar hyn o bryd rif bil nad yw'n bodoli.",
   "@checkPillNumberForMenstruationStart": {

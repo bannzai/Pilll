@@ -248,7 +248,7 @@
   },
   "aboutMenstruation": "Kuhusu kipindi",
   "@aboutMenstruation": {
-    "description": "生理について"
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
   "checkPillNumberForMenstruationStart": "Tafadhali angalia nambari ya kidonge cha siku ya kuanza kwa hedhi. Nambari ya kidonge iliyowekwa haiwezi kupatikana katika aina ya kidonge uliyochagua.",
   "@checkPillNumberForMenstruationStart": {
