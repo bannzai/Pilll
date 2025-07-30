@@ -911,7 +911,7 @@
   },
   "premiumTermsNotice2": "ಖಾಸಸಿ ವ್ಯಾಪಾರ ಕಾನೂನಿನ ಆಧಾರದಲ್ಲಿ ಪ್ರದರ್ಶನ",
   "@premiumTermsNotice2": {
-    "description": "特定商取引法に基づく表示"
+    "description": "プレミアムプラン（有料機能）の法的情報を表示する際のタイトルです。日本の特定商取引法に基づく事業者情報の表示義務に対応します。"
   },
   "premiumTermsNotice3": "ದಯವಿಟ್ಟು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನೋಂದಾಯಿಸು",
   "@premiumTermsNotice3": {

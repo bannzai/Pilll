@@ -911,7 +911,7 @@
   },
   "premiumTermsNotice2": "විශේෂිත වාණිජ ගනුදෙනු නීතිය යටතේ පෙන්වීම",
   "@premiumTermsNotice2": {
-    "description": "特定商取引法に基づく表示"
+    "description": "プレミアムプラン（有料機能）の法的情報を表示する際のタイトルです。日本の特定商取引法に基づく事業者情報の表示義務に対応します。"
   },
   "premiumTermsNotice3": "කරුණාකර පරික්ෂා කරන්න සහ ලියාපදිංචි වන්න",
   "@premiumTermsNotice3": {
