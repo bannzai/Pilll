@@ -1391,7 +1391,7 @@
   },
   "purchaseErrorUnknownError": "अनजान त्रुटि उत्पन्न भएको छ। कृपया केही समय पछि पुन: प्रयास गर्नुहोस्। यदि यो समाधान भएन भने, कृपया सेटिङ > सोधपुछ बाट सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
-    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

@@ -1391,7 +1391,7 @@
   },
   "purchaseErrorUnknownError": "An unknown error occurred. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
-    "description": "An unknown error occurred. Please try again later. If the problem persists, please contact support. Details: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

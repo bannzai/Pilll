@@ -1391,7 +1391,7 @@
   },
   "purchaseErrorUnknownError": "ଅସ୍ପଷ୍ଟ କାରଣରେ ଏକ ତ୍ରୁଟି ଘଟିଛି। ଅବସର ନିଅନ୍ତୁ ଏବଂ ପुनର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହେବାକୁ ନାହିଁ, ତେବେ ସେଟିଂସ୍ > ପ୍ରଶ୍ନ କରନ୍ତୁ ମାଧ୍ୟମରେ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତୃତ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
-    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

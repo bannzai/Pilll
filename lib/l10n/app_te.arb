@@ -1391,7 +1391,7 @@
   },
   "purchaseErrorUnknownError": "ఏమాత్రం వివరములేని పొరపాటు సంభవించింది. కొంత సమయం తర్వాత మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కారమవ్వక పోతే, దయచేసి సెట్టింగ్స్ > ప్ర ఒక విషయములో సంప్రదించండి. వివరణ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
-    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

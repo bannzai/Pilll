@@ -1391,7 +1391,7 @@
   },
   "purchaseErrorUnknownError": "Isang hindi pagkakaunawang error ang nangyari. Mangyaring subukan muli makalipas ang ilang sandali. Kung hindi ito malulutas, mangyaring makipag-ugnay sa pamamagitan ng Mga Setting > Makipag-ugnay. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
-    "description": "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
