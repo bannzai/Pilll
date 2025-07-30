@@ -2208,7 +2208,7 @@
   },
   "changeEndOfPillDays": "সেবনের দিনের শেষ পরিবর্তন করুন",
   "@changeEndOfPillDays": {
-    "description": "服用日数の終わりを変更"
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
   "cannotUpdateToReplacePillSheet": "পিল শিটের পরিবর্তনের মাধ্যমে হালনাগাদ করা যায় না আইডি: {id}",
   "@cannotUpdateToReplacePillSheet": {

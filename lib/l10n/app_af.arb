@@ -2208,7 +2208,7 @@
   },
   "changeEndOfPillDays": "Verander die einde van die inname dae",
   "@changeEndOfPillDays": {
-    "description": "服用日数の終わりを変更"
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
   "cannotUpdateToReplacePillSheet": "Die nuus kan nie opgedateer word weens die vervanging van die pilblad nie, id: {id}",
   "@cannotUpdateToReplacePillSheet": {

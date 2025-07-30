@@ -2208,7 +2208,7 @@
   },
   "changeEndOfPillDays": "Baguhin ang katapusan ng bilang ng araw ng pag-inom",
   "@changeEndOfPillDays": {
-    "description": "服用日数の終わりを変更"
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
   "cannotUpdateToReplacePillSheet": "Hindi hindi nga mga olup Papela pamamagitan daghetti nang id: {id}",
   "@cannotUpdateToReplacePillSheet": {

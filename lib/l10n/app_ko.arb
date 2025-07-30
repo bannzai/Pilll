@@ -2208,7 +2208,7 @@
   },
   "changeEndOfPillDays": "복용 일수의 끝",
   "@changeEndOfPillDays": {
-    "description": "복용 일수의 끝"
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
   "cannotUpdateToReplacePillSheet": "피임약 시트를 교체하여 업데이트할 수 없습니다 id: {id}",
   "@cannotUpdateToReplacePillSheet": {

@@ -2208,7 +2208,7 @@
   },
   "changeEndOfPillDays": "ഓടുന്ന ദിവസങ്ങളിൽ അവസാനത്തെ മാറ്റുക",
   "@changeEndOfPillDays": {
-    "description": "服用日数の終わりを変更"
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
   "cannotUpdateToReplacePillSheet": "ദിവസം: {id}  കൊണ്ടുള്ള കഷണശേഖരം പുതുക്കാൻ കഴിയുന്നില്ല",
   "@cannotUpdateToReplacePillSheet": {
