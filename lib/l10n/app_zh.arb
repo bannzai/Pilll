@@ -514,7 +514,7 @@
   },
   "takingTime": "服用时间",
   "@takingTime": {
-    "description": "服用時間"
+    "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
   },
   "takingHistoryIsPremiumFeature": "服用历史是高级功能。",
   "@takingHistoryIsPremiumFeature": {
