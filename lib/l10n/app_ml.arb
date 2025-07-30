@@ -747,7 +747,7 @@
   },
   "menstruationEndDate": "അവസാനമായ മാസികയുടെയോ ദിവസങ്ങളിലെത്തിയാക്കല്‍",
   "@menstruationEndDate": {
-    "description": "生理終了日"
+    "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
   },
   "menstruationScheduleDate": "മാസവിട്ടിലെ തീയതി",
   "@menstruationScheduleDate": {

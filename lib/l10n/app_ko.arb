@@ -747,7 +747,7 @@
   },
   "menstruationEndDate": "생리 종료일",
   "@menstruationEndDate": {
-    "description": "생리 종료일"
+    "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
   },
   "menstruationScheduleDate": "생리 예정일",
   "@menstruationScheduleDate": {
