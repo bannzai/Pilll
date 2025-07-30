@@ -2052,7 +2052,7 @@
   },
   "beginToEndNumbers": "{begin} à {end}",
   "@beginToEndNumbers": {
-    "description": "{begin}番 ~ {end}番",
+    "description": "ピルシートの番号範囲を表示する際に使用される文字列です。例えば「1番 ~ 21番」のように、連続する番号の開始と終了を示すフォーマットです。",
     "placeholders": {
       "begin": {
         "type": "int"
