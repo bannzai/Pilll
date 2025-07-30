@@ -557,7 +557,7 @@
   },
   "addPillSheetButton": "딜셔트 추가",
   "@addPillSheetButton": {
-    "description": "딜셔트 추가"
+    "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
   },
   "taken": "복용했습니다",
   "@taken": {

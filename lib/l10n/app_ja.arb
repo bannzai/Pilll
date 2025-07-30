@@ -561,7 +561,7 @@
   },
   "addPillSheetButton": "ピルシートを追加",
   "@addPillSheetButton": {
-    "description": "ピルシートを追加"
+    "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
   },
   "taken": "飲んだ",
   "@taken": {
