@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "ክስተት መረጃ ማግኘት አልቻልንም። እባኮትን ጊዜ ይወስዱ እና ዳግመ ይሞክሩ። አቅም አልቋም ቢሆን ወደ አመልክተኞች > የመግባቢያ ጥያቄ ይተናገዱ። ዝርዝር፡ ቁጥር፡ {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "የደንበኛ መረጃ ማግኘት አልተሳካም። ትንሽ ቆይተው በድጋሚ ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: ኮድ: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
