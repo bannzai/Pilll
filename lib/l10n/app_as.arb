@@ -366,7 +366,7 @@
   },
   "menstruationPage": "মেন্সট্রুয়েশন পৃষ্ঠা",
   "@menstruationPage": {
-    "description": "MenstruationPage"
+    "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
   "calendarPage": "KalendaraPuni",
   "@calendarPage": {
