@@ -114,7 +114,7 @@
   },
   "confirmDeletingMenstruation": "Chcete načasovanie menštruačného cyklu odstrániť?",
   "@confirmDeletingMenstruation": {
-    "description": "生理期間を削除しますか？"
+    "description": "生理管理機能でユーザーが記録した生理期間のデータを削除する際に表示される確認ダイアログの文言です。重要な記録の削除を確認するため、各言語で慎重で丁寧な表現を使用してください。"
   },
   "addNotificationTime": "Pridať čas oznámenia",
   "@addNotificationTime": {
