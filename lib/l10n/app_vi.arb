@@ -58,7 +58,7 @@
   },
   "dataTransferRequiresAccount": "Để chuyển dữ liệu hoặc khôi phục khi thay đổi thiết bị hoặc mất điện thoại, cần phải đăng ký tài khoản.",
   "@dataTransferRequiresAccount": {
-    "description": "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"
+    "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   },
   "pillPremium": "Pilll Premium",
   "@pillPremium": {

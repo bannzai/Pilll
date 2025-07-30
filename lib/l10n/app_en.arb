@@ -58,7 +58,7 @@
   },
   "dataTransferRequiresAccount": "Account registration is required for data transfer and recovery in case of device change or loss.",
   "@dataTransferRequiresAccount": {
-    "description": "Account registration is required for data transfer and recovery in case of device change or loss."
+    "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   },
   "pillPremium": "Pill Premium",
   "@pillPremium": {
