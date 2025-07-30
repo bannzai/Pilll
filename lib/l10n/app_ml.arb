@@ -1365,7 +1365,7 @@
   },
   "requestForCancelSurvey": "കാര്‍ക്കയുമായി പിണğininട്ട്്",
   "@requestForCancelSurvey": {
-    "description": "解約後のアンケートご協力のお願い"
+    "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
   "pilllDescription": "Pilll സ്‌പ്പം മരുന്ന് മുളച്ചതിന്റെ പ്രത്യേകമായ മരുന്ന് മുളച്ച Reminder ആപ്പാണ്",
   "@pilllDescription": {

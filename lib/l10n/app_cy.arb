@@ -1365,7 +1365,7 @@
   },
   "requestForCancelSurvey": "Cais gwyn am gymryd rhan yng nghwestiwn yn dilyn eich diddymiad",
   "@requestForCancelSurvey": {
-    "description": "解約後のアンケートご協力のお願い"
+    "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
   "pilllDescription": "Pilll - ap dyblygu atgoffa am ddewisiadau pilsen",
   "@pilllDescription": {
