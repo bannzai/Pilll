@@ -34,7 +34,7 @@
   },
   "placebo": "Falskur",
   "@placebo": {
-    "description": "偽薬"
+    "description": "ピルパックに含まれるホルモン非含有錠で、休薬期間中に服用する錠剤を指します。プラセボ錠を服用している期間中に生理が来ることが一般的です。"
   },
   "userNotFound": "Ekkert notandi finnst",
   "@userNotFound": {
