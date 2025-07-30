@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "ສາມາດເຮັດໃຫ້ເຫັນພິວເຕີໃນວັນນີ້ທີ່ຈະເຮັດການດື່ມຢາ ແລະບັນທຶກບັນທຶກແບບດຽວກັນໄດ້.",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "ການປໍ່ແຮງດັບນະ",
   "@healthCareIntegration": {

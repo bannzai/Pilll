@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "Bugun ichish kerak bo'lgan dori-tabletkalarni bilib olib, aynan shu joyda qabul qilish tarixini yozish imkoniyatiga egasiz.",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "Sog'liqni saqlash bilan bog'lanish",
   "@healthCareIntegration": {

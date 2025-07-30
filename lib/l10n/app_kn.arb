@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "ಈ ಮಾಹಿತಿ ನೀಡುವ ಮೂಲಕ ನೀವು ಇಂದು ತೆಗೆದುಕೊಳ್ಳುವ ಪಿಲ್‌ನ್ನು ಮತ್ತು ಅದರ ಚರಿತ್ರೆಯನ್ನು ದಾಖಲಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "ಹೆಲ್ತ್‌ಕೇರ್ ಸಂಪರ್ಕ",
   "@healthCareIntegration": {

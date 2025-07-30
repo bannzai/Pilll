@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "ଆଜି ଯାହାକୁ ଗୋଷ୍ଠୀ ହୋଇଛି, ସେହି ପିଲ୍ ସ୍ମୃତିକୁ ସ୍ପଷ୍ଟ କରି ପାରିବେ, ଏବଂ ସେହିସହିତ ପିଲ୍ ବ୍ୟବହାର କିମ୍ବା ନୋଟ ରଖିବେ।",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "ହେଲ୍ଥକେୟାର ସହଯୋଗ",
   "@healthCareIntegration": {

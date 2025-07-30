@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "ඔබට සහයවන දිනපත අත්සන් සටහනේ ඇති පොළොව සොයා ගන්නා අතර සිටින්න.",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "ආරෝග්‍ය සම්බන්ධතා",
   "@healthCareIntegration": {

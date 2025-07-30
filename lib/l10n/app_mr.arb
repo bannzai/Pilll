@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "सूचना स्क्रीनवर आज घेतल्या जाणार्‍या गोळ्या समजतात, आणि त्याच्याशी संबंधित रेकॉर्ड सहेजता येतो.",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "आरोग्य व्यवस्थेचा समन्वय",
   "@healthCareIntegration": {

@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "You can record your pill intake on the notification screen",
   "@quickRecordDescription": {
-    "description": "You can record your pill intake on the notification screen"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "Healthcare integration",
   "@healthCareIntegration": {

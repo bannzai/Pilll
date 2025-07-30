@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "您可以在通知界面查看今天需要服用的药丸，并直接记录服用情况。",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "健康管理集成",
   "@healthCareIntegration": {

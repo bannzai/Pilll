@@ -195,7 +195,7 @@
   },
   "quickRecordDescription": "អ្នកអាចដឹងពីថវិកាដែលត្រូវភ្លេចចំណីនៅថ្ងៃនេះនៅលើផ្ទាំងជូនដំណឹង ហើយអ្នកអាចកត់ត្រាការបរិ consumir ដោយផ្ទាល់បាន។",
   "@quickRecordDescription": {
-    "description": "通知画面で今日飲むピルが分かり、そのまま服用記録できます。"
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
   "healthCareIntegration": "ការតភ្ជាប់សុខភាព",
   "@healthCareIntegration": {
