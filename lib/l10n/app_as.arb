@@ -861,7 +861,7 @@
   },
   "premiumRegistrationComplete": "Pilll প্ৰিমিয়াম নামভৰ্তি সম্পূৰ্ণ",
   "@premiumRegistrationComplete": {
-    "description": "Pilllプレミアム登録完了"
+    "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
   },
   "thankYouForRegistration": "আপনার নিবন্ধনের জন্য ধন্যবাদ। সমস্ত ফিচারগুলো এখন ব্যবহারযোগ্য!",
   "@thankYouForRegistration": {
