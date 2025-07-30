@@ -203,7 +203,7 @@
   },
   "healthCareIntegrationDescription": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다",
   "@healthCareIntegrationDescription": {
-    "description": "Pilll로 기록한 생리 기록을 자동으로 건강 관리에 기록할 수 있습니다"
+    "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
   "viewPremiumPlan": "프리미엄 플랜 보기",
   "@viewPremiumPlan": {

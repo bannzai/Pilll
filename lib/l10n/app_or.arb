@@ -203,7 +203,7 @@
   },
   "healthCareIntegrationDescription": "ପିଲ୍‌ଲ୍‌ରେ ରେକର୍ଡ କରାଯାଇଥିବା ମାସିକ ରେକର୍ଡକୁ ସ୍ୱୟଂଚାଳିତ ଭାବେ ହେଲ୍ଥକେୟାରେ ରେକର୍ଡ କରାଯାଇପାରିବା।",
   "@healthCareIntegrationDescription": {
-    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+    "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
   "viewPremiumPlan": "ପ୍ରେମିୟମ୍ ପ୍ଲାନ୍ ଦେଖନ୍ତୁ",
   "@viewPremiumPlan": {

@@ -203,7 +203,7 @@
   },
   "healthCareIntegrationDescription": "మీరు Pilll లో నమోదు చేసిన మెన్స్ట్రుయేషన్ బుల్లెట్లను ఆటోమేటిక్‌గా హెల్త్‌కేర్‌లో నమోదు చేయవచ్చు.",
   "@healthCareIntegrationDescription": {
-    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+    "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
   "viewPremiumPlan": "ప్రీమియమ్ ప్లాన్‌ను చూడండి",
   "@viewPremiumPlan": {

@@ -203,7 +203,7 @@
   },
   "healthCareIntegrationDescription": "Pilll மூலம் பதிவுசெய்யப்பட்ட மாதவருக்கான பதிவுகளை தானாகவே ஹெல்த்கேர் இல் பதிவு செய்யலாம்",
   "@healthCareIntegrationDescription": {
-    "description": "Pilllで記録した生理記録を自動でヘルスケアに記録できます"
+    "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
   "viewPremiumPlan": "பிரீமியம் திட்டத்தைப் பார்க்கவும்",
   "@viewPremiumPlan": {
