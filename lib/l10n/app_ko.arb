@@ -256,7 +256,7 @@
   },
   "customizeMedicationNotifications": "복용 알림 커스터마이즈",
   "@customizeMedicationNotifications": {
-    "description": "복용 알림 커스터마이즈"
+    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   },
   "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
   "@xCanBeCustomized": {
