@@ -1558,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "Die aankoop het mislukking. Probeer dit asseblief weer na 'n rukkie. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Kontak. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Aankoop het misluk. Probeer asseblief weer later. As dit nie opgelos word nie, kontak ons asseblief via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
