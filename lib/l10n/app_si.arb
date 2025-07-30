@@ -1539,7 +1539,7 @@
   },
   "purchaseErrorInsufficientPermissionsError": "ඔබගේ {accountName} ක්‍රමය සමඟ මෙය ප්‍රතිපත්ති එකතු කිරීමේ හැකියාවක් නොමැත. කරුණාකර ඔබේ ගෙවිම් තොරතුරු පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
   "@purchaseErrorInsufficientPermissionsError": {
-    "description": "お使いの {accountName} ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください",
+    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
       "accountName": {
         "type": "String"
