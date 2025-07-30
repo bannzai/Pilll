@@ -143,7 +143,7 @@
   },
   "unsubscribeInfo": "O zrušení predplatného",
   "@unsubscribeInfo": {
-    "description": "解約について"
+    "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
   },
   "pillReminder": "Upozornenie na užitie pilulky",
   "@pillReminder": {

@@ -143,7 +143,7 @@
   },
   "unsubscribeInfo": "해지에 대해",
   "@unsubscribeInfo": {
-    "description": "해지에 대해"
+    "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
   },
   "pillReminder": "딜의 복용 알림",
   "@pillReminder": {

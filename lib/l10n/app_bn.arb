@@ -143,7 +143,7 @@
   },
   "unsubscribeInfo": "বাতিল সম্পর্কে",
   "@unsubscribeInfo": {
-    "description": "解約について"
+    "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
   },
   "pillReminder": "পিল নেওয়ার বিজ্ঞপ্তি",
   "@pillReminder": {
