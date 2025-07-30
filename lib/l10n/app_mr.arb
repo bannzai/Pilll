@@ -2,7 +2,7 @@
   "@@locale": "mr",
   "pillSheetType21With7Placebo": "21 गोल्या प्रकार",
   "@pillSheetType21With7Placebo": {
-    "description": "21錠タイプ(7錠偽薬)"
+    "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
   "pillSheetType28With4Placebo": "28 गटांचा प्रकार (4 गट फेक औषध)",
   "@pillSheetType28With4Placebo": {

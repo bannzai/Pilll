@@ -2,7 +2,7 @@
   "@@locale": "fr",
   "pillSheetType21With7Placebo": "type de 21 comprimés (7 comprimés placebo)",
   "@pillSheetType21With7Placebo": {
-    "description": "21錠タイプ(7錠偽薬)"
+    "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
   "pillSheetType28With4Placebo": "Type de 28 comprimés (4 comprimés placebo)",
   "@pillSheetType28With4Placebo": {

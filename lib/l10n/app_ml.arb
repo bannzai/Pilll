@@ -2,7 +2,7 @@
   "@@locale": "ml",
   "pillSheetType21With7Placebo": "21 നയ്ക്കുള്ള തരം (7 നയ്ക്കളുടെ വ്യാജമയക്കങ്ങൾ)",
   "@pillSheetType21With7Placebo": {
-    "description": "21錠タイプ(7錠偽薬)"
+    "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
   "pillSheetType28With4Placebo": "28മില്ലിയൻ ടൈപ്പ്(4മില്ലിയൻ പന്ധിരം)",
   "@pillSheetType28With4Placebo": {
