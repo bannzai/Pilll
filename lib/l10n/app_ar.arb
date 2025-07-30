@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "خطأ غير معروف. يُرجى تحديث التطبيق إلى أحدث إصدار والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يُرجى الاتصال من خلال الإعدادات > الاستفسار. الكود: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "خطأ غير معروف السبب. يرجى التحديث إلى أحدث إصدار والمحاولة مرة أخرى. في حالة عدم حل المشكلة، يرجى التواصل معنا عبر الإعدادات > الاستفسارات. الرمز: {errorCode} التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
