@@ -877,7 +877,7 @@
   },
   "annualPlan": "Gada plāns",
   "@annualPlan": {
-    "description": "年額プラン"
+    "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
   },
   "annualPrice": "{annualPackageStoreProductPriceString}/gads",
   "@annualPrice": {
