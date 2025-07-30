@@ -147,7 +147,7 @@
   },
   "pillReminder": "딜의 복용 알림",
   "@pillReminder": {
-    "description": "딜의 복용 알림"
+    "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
   "takePillReminderChannelName": "알림",
   "@takePillReminderChannelName": {

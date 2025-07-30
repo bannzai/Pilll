@@ -147,7 +147,7 @@
   },
   "pillReminder": "පිල් භාවිතා වීමේ දුරකතන දැනුම්දීම",
   "@pillReminder": {
-    "description": "ピルの服用通知"
+    "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
   "takePillReminderChannelName": "පැමිණිලි නිවේදනය",
   "@takePillReminderChannelName": {

@@ -147,7 +147,7 @@
   },
   "pillReminder": "Pill reminder",
   "@pillReminder": {
-    "description": "Pill reminder"
+    "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
   "takePillReminderChannelName": "Take pill reminder",
   "@takePillReminderChannelName": {

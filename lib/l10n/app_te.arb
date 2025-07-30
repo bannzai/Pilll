@@ -147,7 +147,7 @@
   },
   "pillReminder": "గర్భ నిరోధక మందుల తీసుకోవడానికి నోటిఫికేషన్",
   "@pillReminder": {
-    "description": "ピルの服用通知"
+    "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
   "takePillReminderChannelName": "తింటున్నదిగా మరువకుండా గుర్తు చేస్తుంది",
   "@takePillReminderChannelName": {
