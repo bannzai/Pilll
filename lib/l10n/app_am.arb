@@ -1558,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "የግዢ ማስተካከል አልቻልኩም። እባክዎን ጊዜ ይቆርጡ እና ድገም ይሞክሩ። አሁንም ይፈታል ከሆነ እባክዎን በመምሪያ > የግዥ ጠይቅ ይወዳድሩ። ዝርዝር፡ {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "ግዢ አልተሳካም። ትንሽ ጊዜ ቆይተው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በኩል ያነጋግሩን። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
