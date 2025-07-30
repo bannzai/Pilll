@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "ਖਰੀਦ ਪ੍ਰਕਿਰਿਆ ਵੱਖਰੇ ਤੌਰ 'ਤੇ ਚੱਲ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇਕਿਸੇ ਹੋਰ ਸਮੇਂ ਜਾਂਚ ਕਰੋ।",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "ਵਰਤਮਾਨ 'ਚ ਖਰੀਦारी ਨਹੀਂ ਹੋ ਸਕਦੀ। ਕਿਰਪਾ ਕਰਕੇ ਕੁੱਝ ਸਮਾਂ ਰਿਪੀਟ ਕਰੋ। ਜੇ ਇਹ ਹੱਲ ਨਹੀਂ ਹੁੰਦਾ ਤਾਂ ਸੈਟਿੰਗ > ਸੰਪਰਕ ਤੋਂ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

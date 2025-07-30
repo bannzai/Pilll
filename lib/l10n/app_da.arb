@@ -1495,7 +1495,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Købsprocessen er i gang separat. Vent venligst et øjeblik og prøv igen.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Det er ikke muligt at foretage køb lige nu. Prøv venligst igen senere. Hvis problemet fortsætter, kan du kontakte os via Indstillinger > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

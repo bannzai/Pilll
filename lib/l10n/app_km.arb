@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "ការប្រកបអាជីវកម្មទិញបានកំពុងត្រូវបានដំណើរការលักបដីបន្ថែម។ សូមអនុលោមរយៈពេលមួយហើយពិនិត្យមើលម្ដងទៀត។",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "មិនអាចទិញបានក្នុងពេលបច្ចុប្បន្ន។ សូមរង់ចាំបន្តပြီးសូមព្យាយាមម្តងទៀត។ ប្រសិនបើមិនដោះស្រាយសូមទំនាក់ទំនងតាមរយៈ ការកំណត់ > ការសួរព័ត៌មាន។ ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

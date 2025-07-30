@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "购买处理正在进行中。请稍等一段时间后再次确认。",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "当前无法购买。请稍等一段时间再试。如果问题仍然存在，请通过设置 > 联系我们与我们联系。详细信息: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

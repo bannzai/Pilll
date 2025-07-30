@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "വാങ്ങൽ പ്രവർത്തനം ആണെന്ന് ബന്ധപരമായ പ്രോസസിൽ തുടരുന്നു. ദയവായി അല്പം സമയം കാത്തിരിക്കുന്ന ശേഷം വീണ്ടും പരിശോധിക്കുക.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "നിലവില്‍ വാങ്ങാന്‍ കഴിയുന്നില്ല. ഒരു സമയം കാത്തിരിക്കാന്‍ ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കാത്ത പക്ഷം, സന്ദര്‍ശിക്കുക ക്രമീകരണം > ചോദ്യം ചെയ്യല്‍.",
   "@purchaseErrorUnknownBackendError": {

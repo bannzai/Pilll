@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "ಖರೀದಿ ಪ್ರಕ್ರಿಯೆ ಬೇರೆಯದಾಗಿ ಮುಂದುವರಿಸಿದ್ದು, ದಯವಿಟ್ಟು ಕೆಲ ಕಾಲ ಕಾಯಿಸಿ ಪುನಃ ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "ಈಗ ಖರೀದಿ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲ. ದಯವಿಟ್ಟು ಮತ್ತೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಲು ಕೆಲವು ಕಾಲ ಕಾಯಿರಿ. ಪರಿಹಾರವಾಗದಿದ್ದರೆ, ಕಸ್ಟಮ್ಸ್ > ಸಂಪರ್ಕದಿಂದ ಪತ್ತೆಹಚ್ಚಿರಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

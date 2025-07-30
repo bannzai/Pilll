@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Сатып алуу процессу башка жерде улантылып жатат. Жабуу убактысын күтүп, кайрадан текшериңиз.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Учурда сатып алуу мүмкүн эмес. Кийинки жолу аракет кылуу үчүн убакыт өткөнүн күтүңүз. Эгер маселе чечилбесе, \"Настройка > Байланыш\" аркылуу байланышууга заказ бериңиз. Тиешелүү маалымат: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

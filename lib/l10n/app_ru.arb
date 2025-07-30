@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Обработка покупки продолжается отдельно. Пожалуйста, подождите некоторое время и проверьте снова.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "В данный момент невозможно выполнить покупку. Пожалуйста, подождите некоторое время и попробуйте снова. Если проблема не решится, свяжитесь с нами через Настройки > Связаться с нами. Подробности: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

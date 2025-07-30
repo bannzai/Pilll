@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Iegādes process tiek apstrādāts atsevišķi. Lūdzu, pārliecinieties vēlreiz pēc dažām minūtēm.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Pašlaik nav iespējams veikt pirkumu. Lūdzu, uzgaidiet un mēģiniet vēlreiz. Ja problēma nepazūd, sazinieties ar mums, dodoties uz Iestatījumi > Sazināties. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

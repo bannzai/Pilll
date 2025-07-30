@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "ගැනීමේ ක්‍රියාවලියක් වෙන්කරමින් ඊට අනුව ගමන් කරයි. කල්පනාවට සමාව දෙන්න.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "මෙම වර්තමානයේ මිලදී ගැනීමට නොහැක. කාලයක් යැයි නැවත උත්සාහ කරන්න. විසඳුමක් නොහොත්, සමීපයෙන් සම්බන්ධ වීමට පිටුවේ යන්න: සැකසීම් > අභියාචන. විස්තර: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

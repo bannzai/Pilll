@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Ang proseso ng pagbili ay isinasagawa nang hiwalay. Mangyaring suriin muli pagkatapos ng ilang sandali.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Sa ngayon, hindi ka makakabili. Mangyaring subukan muli mamaya. Kung hindi ito malulutas, makipag-ugnayan sa pamamagitan ng Mga Setting > Tanong. Mga detalye: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

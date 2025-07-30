@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Procesul de achiziție este în curs de desfășurare separat. Vă rugăm să așteptați un timp și să verificați din nou.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Achiziția nu este disponibilă în prezent. Vă rugăm să încercați din nou mai târziu. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Întrebări. Detalii: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "د پېرود پروسه په جلا ډول روانه ده. مهرباني وکړئ ځینې وخت وروسته بیا چک کړئ.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "اوس لږ ځنډ وکړئ، او بیا هڅه وکړئ. که حل نشي، نو مهرباني وکړئ د تنظیماتو > اړيکې له لارې موږ سره اړیکه ونیسئ. تفصیل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

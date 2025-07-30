@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Обрада куповине се одвија одвојено. Пожалите, проверите поново после неког времена.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Тренутно није могуће купити. Молимо вас да сачекате и покушате поново. Ако проблем остане, контактирајте нас преко Подешавања > Контакт. Детаљи: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

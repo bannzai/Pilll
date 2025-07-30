@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "வாங்கும் செயல்முறை தனியாக நடைபெற்று வருகின்றது. தயவுசெய்து குறும் நேரத்தில் மீண்டும் சரிபார்க்கவும்.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "தற்போது வாங்க முடியாதது. மீண்டும் முயற்சிக்குள்ள நேரத்தை காத்திருங்கள். தெளிவாகாத பட்சத்தில் அமைப்பு > அழைக்கவும் மூலம் தொடர்புகொள்ளவும். விரிவான தகவல்கள்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Борлуулалтын процесс өөрөө явагдаж байна. Түр тасалж дахин шалгана уу.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Одоогийн байдлаар сатып авах боломжгүй байна. Түр зуур хүлээгээд дахин оролдоно уу. Хэрэв шийдэгдэхгүй байвал Тохиргоо > Асуугаарай дээр хандана уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

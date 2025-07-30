@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Quá trình mua đang được thực hiện riêng. Vui lòng kiểm tra lại sau một thời gian.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Hiện tại không thể thực hiện mua hàng. Vui lòng thử lại sau một thời gian. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

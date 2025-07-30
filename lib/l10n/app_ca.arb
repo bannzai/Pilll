@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "El procés de compra s'està duent a terme per separat. Si us plau, espereu un moment i torneu a verificar.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "Actualment no es pot comprar. Si us plau, espereu un moment i torneu a provar. Si no es resol, poseu-vos en contacte amb nosaltres a través de Configuració > Consultes. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "ক্ৰয় প্ৰক্ৰিয়া বেলেগে আগবাঢ়িত হৈছে। অনুগ্ৰহ কৰি অলপ সময়ৰ পাছত পুনৰ চাই চাওক।",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "আপনি এখন কেনাকাটা করতে পারছেন না। পরে আবার চেষ্টা করুন। সমস্যা সমাধান না হলে, সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {

@@ -1499,7 +1499,7 @@
   },
   "purchaseErrorOperationAlreadyInProgressError": "Alış-veriş prosesi ayrıca davam edir. Zəhmət olmasa, bir müddət gözləyin və yenidən yoxlayın.",
   "@purchaseErrorOperationAlreadyInProgressError": {
-    "description": "購入処理が別途進んでおります。お時間をおいて再度ご確認ください"
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
   "purchaseErrorUnknownBackendError": "İndiki vaxtda satın almaq mümkün deyil. Zəhmət olmasa bir az gözləyin və yenidən cəhd edin. Hələ də probleminiz həll olmursa, zəhmət olmasa Ayarlar > Əlaqə bölməsinə daxil olun. Ətraflı: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
