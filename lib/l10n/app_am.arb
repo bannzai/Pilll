@@ -1711,7 +1711,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "ጊዜ ወይዘር ወዲ ተሳክቶ ሞተ ያለው ትንቢት ነው። የግንኙነት አካባቢን እባክዎን ይረጋገጡ እና ድጋፍ ይደርሱ። እንደገና ይሞክሩ። እንደሚለው እንዲቀጥሉ ባለሙያውን በማስታወሻ አገናኙ። ዝርዝር: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "ጊዜ ያለቀ። የመገናኛ አካባቢዎን ያረጋግጡ እና እንደገና ይሞክሩ። ችግሩ ካልተፈታ ቅንብሮች > ጥያቄ በማድረግ ያግኙን። ዝርዝሮች: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
