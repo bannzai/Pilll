@@ -585,7 +585,7 @@
   },
   "pauseTakingPeriodEnded": "복용 휴식 기간이 종료되었습니다",
   "@pauseTakingPeriodEnded": {
-    "description": "복용 휴식 기간이 종료되었습니다"
+    "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
   },
   "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
   "@endValue": {
