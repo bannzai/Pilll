@@ -1167,7 +1167,7 @@
   },
   "changeNotificationHeader": "알림의 시작 부분을 변경할 수 있습니다",
   "@changeNotificationHeader": {
-    "description": "알림의 시작 부분을 변경할 수 있습니다"
+    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
   },
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "@notificationHeaderLength": {

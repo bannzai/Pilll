@@ -1167,7 +1167,7 @@
   },
   "changeNotificationHeader": "Та мэдээлэл таны түгээлтийн эхлэлийн хэсгийг өөрчлөх боломжтой.",
   "@changeNotificationHeader": {
-    "description": "通知の先頭部分の変更ができます"
+    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
   },
   "notificationHeaderLength": "{wordValueCharactersLength}/8",
   "@notificationHeaderLength": {
