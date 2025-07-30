@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Onbekende fout. Werk opdatering na en probeer weer. As dit nie opgelos word nie, kontak ons asseblief via Instelling > Navraag. kode: {errorCode} besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Dit is 'n onverklaarbare fout. Dateer asseblief op na die nuutste weergawe en probeer weer. As die probleem voortduur, kontak ons deur Instellings > Navraag. Kode: {errorCode} Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
