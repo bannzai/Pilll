@@ -1711,7 +1711,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "انتهى الوقت. يرجى التحقق من بيئة الاتصال الخاصة بك والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى الاتصال عبر الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "انتهت مهلة الاتصال. يرجى التحقق من بيئة الاتصال الخاصة بك والمحاولة مرة أخرى. إذا لم يتم حل المشكلة، يرجى الاتصال بنا من خلال الإعدادات > الاستفسارات. التفاصيل: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
