@@ -1713,7 +1713,7 @@
   },
   "purchaseErrorProductRequestTimeout": "操作超時。請檢查您的網路環境後再試一次。如果問題仍然存在，請在設定 > 聯繫中聯繫我們。詳細：{exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
-    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

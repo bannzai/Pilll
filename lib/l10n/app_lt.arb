@@ -1713,7 +1713,7 @@
   },
   "purchaseErrorProductRequestTimeout": "Laikas pasibaigė. Patikrinkite savo ryšio aplinkybes ir bandykite dar kartą. Jei problema neišsprendžiama, susisiekite su mumis per Nustatymai > Klausimai. Išsamiau: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
-    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

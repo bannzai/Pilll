@@ -1713,7 +1713,7 @@
   },
   "purchaseErrorProductRequestTimeout": "సమయ పరిమితి ముగిసింది. దయచేసి మీ కమ్యూనికేషన్ వాతావరణాన్ని ఒకసారి పరీక్షించండి మరియు మళ్లీ ప్రయత్నించండి. మీరు అధికారం పొందని పక్షంలో, దయచేసి సెట్టింగ్స్ > సంప్రదించండి నుండి సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
-    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

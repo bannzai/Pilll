@@ -1713,7 +1713,7 @@
   },
   "purchaseErrorProductRequestTimeout": "সময়সীমা শেষ হয়েছে। দয়া করে আপনার সংযোগের অবস্থা পরীক্ষা করুন এবং আবার চেষ্টা করুন। যদি এই সমস্যার সমাধান না হয় তবে দয়া করে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
-    "description": "タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
