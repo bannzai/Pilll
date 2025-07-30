@@ -1347,7 +1347,7 @@
   },
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} období oznámení",
   "@notificationForNotTakenPeriod": {
-    "description": "{pillSheetPillSheetTypeNotTakenWord}期間の通知",
+    "description": "ピルシートの休薬期間やプラセボ期間など、薬を服用しない期間に関するプッシュ通知のタイトルとして使用されます。プレースホルダーには「休薬」「プラセボ」などの期間タイプが入ります。",
     "placeholders": {
       "pillSheetPillSheetTypeNotTakenWord": {
         "type": "String"
