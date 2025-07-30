@@ -1142,7 +1142,7 @@
   },
   "option": "Izinketho",
   "@option": {
-    "description": "オプション"
+    "description": "アプリ内の設定項目やメニューでの選択肢を表す汎用的な用語です。設定画面やダイアログでの選択項目として使用されます。"
   },
   "completed": "qedile",
   "@completed": {

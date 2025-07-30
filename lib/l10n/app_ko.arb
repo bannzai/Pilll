@@ -1142,7 +1142,7 @@
   },
   "option": "옵션",
   "@option": {
-    "description": "옵션"
+    "description": "アプリ内の設定項目やメニューでの選択肢を表す汎用的な用語です。設定画面やダイアログでの選択項目として使用されます。"
   },
   "completed": "완료",
   "@completed": {
