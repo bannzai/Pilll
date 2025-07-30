@@ -1804,7 +1804,7 @@
   },
   "enableHealthKitFromSettings": "ଦୟାକରି ସେଟିଂସ୍ ଆପ୍ଲିକେସନରୁ ହେଲ୍ଥକେୟାର ସକ୍ରିୟ କରନ୍ତୁ",
   "@enableHealthKitFromSettings": {
-    "description": "設定アプリよりヘルスケアを有効にしてください"
+    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
   "accountAlreadyLinked": "${accountTypeProviderName} ଆକାଉଣ୍ଟ ଏAlreadyଆପଣଙ୍କର Pilll ଆକାଉଣ୍ଟ ସହିତ ଜୁଡିଛି। ପ୍ରଦର୍ଶନରେ ଅଦ୍ୟତନ କରିବା ପ୍ରୟାସ କରନ୍ତୁ। FAQ ବି ଦେଖନ୍ତୁ। ବିସ୍ତୃତ: ${exceptionMessage}",
   "@accountAlreadyLinked": {

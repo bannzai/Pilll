@@ -1804,7 +1804,7 @@
   },
   "enableHealthKitFromSettings": "Palun aktiveerige tervishoid seadete rakendusest",
   "@enableHealthKitFromSettings": {
-    "description": "設定アプリよりヘルスケアを有効にしてください"
+    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
   "accountAlreadyLinked": "See {accountTypeProviderName} konto on juba seotud teie kasutatava Pilll konto. Palun proovige ekraani värskendamist. Vaadake ka KKK-d. Täiendavad üksikasjad: {exceptionMessage}",
   "@accountAlreadyLinked": {

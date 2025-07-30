@@ -1804,7 +1804,7 @@
   },
   "enableHealthKitFromSettings": "请在设置应用中启用健康管理",
   "@enableHealthKitFromSettings": {
-    "description": "設定アプリよりヘルスケアを有効にしてください"
+    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
   "accountAlreadyLinked": "此{accountTypeProviderName}账户已与您使用的Pilll账户相关联。请尝试更新屏幕。请查看常见问题解答。详情：{exceptionMessage}",
   "@accountAlreadyLinked": {

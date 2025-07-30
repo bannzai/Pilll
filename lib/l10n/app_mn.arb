@@ -1804,7 +1804,7 @@
   },
   "enableHealthKitFromSettings": "Тохиргооны апп-ыг ашиглаж Эрүүл мэндийн үйлчилгээнийг идэвхжүүлнэ үү",
   "@enableHealthKitFromSettings": {
-    "description": "設定アプリよりヘルスケアを有効にしてください"
+    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
   "accountAlreadyLinked": "Энэ {accountTypeProviderName} данс нь аль хэдийн ашиглаж буй Pilll данстай холбогдсон байна. Экраныг шинэчлэхийг оролдоно уу. Чанараас авсан асуулт (FAQ)-г ч хараарай. Дэлгэрэнгүй: {exceptionMessage}",
   "@accountAlreadyLinked": {

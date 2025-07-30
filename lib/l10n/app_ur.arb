@@ -1804,7 +1804,7 @@
   },
   "enableHealthKitFromSettings": "براہ کرم سیٹنگز ایپ سے ہیلتھ کیئر کو فعال کریں۔",
   "@enableHealthKitFromSettings": {
-    "description": "設定アプリよりヘルスケアを有効にしてください"
+    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
   "accountAlreadyLinked": "یہ {accountTypeProviderName} اکاؤنٹ پہلے سے آپ کے استعمال میں موجود Pilll اکاؤنٹ سے منسلک ہے۔ براہ کرم اسکرین کو دوبارہ تازہ کرنے کی کوشش کریں۔ FAQ بھی دیکھیں۔ تفصیلات: {exceptionMessage}",
   "@accountAlreadyLinked": {

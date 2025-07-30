@@ -1804,7 +1804,7 @@
   },
   "enableHealthKitFromSettings": "ടസ്ഇറ്റിംഗ് ആപ്ലിക്കേഷനിൽ നിന്ന് ഹെൽത്ത്‌കെയർ സജീവമാക്കുക",
   "@enableHealthKitFromSettings": {
-    "description": "設定アプリよりヘルスケアを有効にしてください"
+    "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
   "accountAlreadyLinked": "ഈ {accountTypeProviderName} അക്കൗണ്ട് ഇതിനോടകം നിങ്ങൾ നിലവിൽ ഉപയോഗിക്കുന്ന Pilll അക്കൗണ്ടുമായി ബന്ധിപ്പിച്ചിരിക്കുന്നു. സ്ക്രീൻ പുതുക്കാൻ ശ്രമിക്കൂ. FAQ-യും നോക്കൂ. വിശദവിവരം: {exceptionMessage}",
   "@accountAlreadyLinked": {
