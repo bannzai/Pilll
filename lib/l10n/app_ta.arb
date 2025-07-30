@@ -240,7 +240,7 @@
   },
   "discard": "அகற்றவும்",
   "@discard": {
-    "description": "破棄する"
+    "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。"
   },
   "pillSheetDiscarded": "பில் ஷீட்டை அழித்துவிட்டேன்",
   "@pillSheetDiscarded": {

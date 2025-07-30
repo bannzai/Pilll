@@ -240,7 +240,7 @@
   },
   "discard": "Hylkää",
   "@discard": {
-    "description": "破棄する"
+    "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。"
   },
   "pillSheetDiscarded": "Olen hävittänyt pillerilevyn.",
   "@pillSheetDiscarded": {
