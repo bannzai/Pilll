@@ -6,7 +6,7 @@
   },
   "pillSheetType28With4Placebo": "28 மாதங்கள் வகை (4 மாதங்கள் அதிகாரிகளின்)",
   "@pillSheetType28With4Placebo": {
-    "description": "28錠タイプ(4錠偽薬)"
+    "description": "ピルシートの種類で、28錠の薬剤のうち24錠が薬効成分を含み4錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
   "pillSheetType28With7Placebo": "28 மாத காலம் (7 மாத மூலப்பொருள்)",
   "@pillSheetType28With7Placebo": {
