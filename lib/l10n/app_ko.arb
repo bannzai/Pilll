@@ -1503,7 +1503,7 @@
   },
   "purchaseErrorUnknownBackendError": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
-    "description": "현재 구매가 불가능합니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

@@ -1503,7 +1503,7 @@
   },
   "purchaseErrorUnknownBackendError": "Huwezi kununua sasa. Tafadhali jaribu tena baada ya muda. Ikiwa bado haijatatuliwa, tafadhali wasiliana kupitia Mipangilio > Mawasiliano. Maelezo zaidi: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
-    "description": "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
