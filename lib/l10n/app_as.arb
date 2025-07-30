@@ -1560,7 +1560,7 @@
   },
   "purchaseErrorInvalidSubscriberAttributesError": "আপনার ক্রয়ে ব্যর্থ হয়েছে। দয়া করে কিছুক্ষণ অপেক্ষা করে আবার চেষ্টা করুন। পরিস্থিতি সমাধান না হলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
-    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
