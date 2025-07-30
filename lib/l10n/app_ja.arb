@@ -2325,7 +2325,7 @@
   },
   "deleteAccount": "アカウント削除",
   "@deleteAccount": {
-    "description": "アカウント削除"
+    "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
   },
   "logoutCompleted": "ログアウトしました",
   "@logoutCompleted": {
