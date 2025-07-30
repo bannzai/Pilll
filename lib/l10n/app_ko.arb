@@ -1303,7 +1303,7 @@
   },
   "newPillSheetStart": "새로운 알약 시트 시작 ▶︎",
   "@newPillSheetStart": {
-    "description": "새로운 알약 시트 시작 ▶︎"
+    "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
   },
   "selectPillType": "알약 종류 선택",
   "@selectPillType": {
