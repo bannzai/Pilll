@@ -1343,7 +1343,7 @@
   },
   "choosePillType": "پِل کی قسم منتخب کریں",
   "@choosePillType": {
-    "description": "ピルの種類を選ぶ"
+    "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   },
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} کی مدت کی اطلاع",
   "@notificationForNotTakenPeriod": {

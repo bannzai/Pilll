@@ -1343,7 +1343,7 @@
   },
   "choosePillType": "மருந்தின் வகையை தேர்ந்தெடு",
   "@choosePillType": {
-    "description": "ピルの種類を選ぶ"
+    "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   },
   "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord}கால இடைவேளையின் குறிப்பு",
   "@notificationForNotTakenPeriod": {
