@@ -232,7 +232,7 @@
   },
   "allPillSheets": "모든 딜셔트",
   "@allPillSheets": {
-    "description": "모든 딜셔트"
+    "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
   },
   "willBeDiscarded": "가 폐기됩니다",
   "@willBeDiscarded": {
