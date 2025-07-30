@@ -1572,7 +1572,7 @@
   },
   "purchaseErrorLogOutWithAnonymousUserError": "ਵਰਤੋਂਕਾਰੀ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨਾ ਅਸਫਲ ਰਹਿਅਾ। ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਇਹ ਸਥਾਈ ਨਹੀਂ ਹੁੰਦਾ ਤਾਂ ਸੈਟਿੰਗ > ਪੁੱਛਗਿੱਛ ਰਾਹੀਂ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
-    "description": "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
