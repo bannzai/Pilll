@@ -701,7 +701,7 @@
   },
   "daysUntilPausePeriod": "{diffPlusOne} {activePillSheetPillSheetTypeNotTakenWord} 𑑖𑑉𑑒𑑓𑑅𑑌𑑝𑑛𑑟𑑓𑑌𑑟𑑒𑑎𑑉𑑖𑑒𑑜𑑓𑑅𑑌𑑝𑑗𑑉𑑑𑑓𑑅𑑖𑑐𑑡𑑕𑑖𑑙𑑉𑑚𑑏𑑊𑑒𑑉𑑖𑑟𑑌𑑖𑑢𑑘𑑅𑑚𑑞𑑟𑑍𑑟𑑆𑑕𑑉𑑖𑑐𑑗𑑌𑑟𑑒𑑍𑑖𑑚𑑝𑑡𑑏𑑝𑑌𑑑𑑖𑑞𑑉𑑘𑑀𑑚𑑍𑑀𑑞𑑘𑑌𑑌𑑉𑑝𑑟𑑌𑑁𑑚𑑓𑑚𑑎𑑖𑑎𑑌𑑅𑑏𑑖𑑡𑑗𑑎𑑔𑑕𑑕𑑝𑑑𑑗𑑍𑑊𑑅𑑉𑑚𑑉𑑚𑑍𑑓𑑌𑑘𑑊𑑡𑑅𑑕𑑛𑑧𑑑𑑏𑑅𑑙𑑒𑑕𑑝𑑌𑑉𑑚𑑚𑑌𑑖𑑡𑑌𑑏𑑌𑑈𑑒𑑇𑑖𑑣𑑛𑑍𑑩𑑔𑑕𑑦𑑨𑑆𑑝𑑌𑑃𑑖𑑚𑑋𑑟𑑎𑑌𑑝𑑗𑑌𑑚𑑗𑑎𑑒𑑌𑑷𑑙𑑖𑑚𑑢𑑖𑑇𑑟𑑗𑑝𑑎𑑔",
   "@daysUntilPausePeriod": {
-    "description": "あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です",
+    "description": "ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。",
     "placeholders": {
       "diffPlusOne": {
         "type": "int"
