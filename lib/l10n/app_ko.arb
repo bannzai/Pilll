@@ -394,7 +394,7 @@
   },
   "medicationHistoryPremiumFeatureRestriction": "이 이상의 보기는 프리미엄 기능에 해당됩니다",
   "@medicationHistoryPremiumFeatureRestriction": {
-    "description": "이 이상의 보기는 프리미엄 기능에 해당됩니다"
+    "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
   },
   "viewMoreDetails": "세세하게 보기",
   "@viewMoreDetails": {
