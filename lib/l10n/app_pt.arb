@@ -1029,7 +1029,7 @@
   },
   "setMultipleReminders": "Você pode prevenir o esquecimento de tomar os comprimidos configurando múltiplos lembretes.",
   "@setMultipleReminders": {
-    "description": "複数設定しておく事で飲み忘れを防げます"
+    "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
   },
   "and": "e",
   "@and": {
