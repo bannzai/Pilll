@@ -869,7 +869,7 @@
   },
   "limitedTimeDiscount": "ఇప్పుడు పరిమిత గరిష్ట ధరలో శాశ్వతంగా ఉపయోగించండి",
   "@limitedTimeDiscount": {
-    "description": "今なら限定価格でずっと使える"
+    "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   },
   "standardMonthlyPlan": "సాధారణంగా నెలకు ఒకసారి ప్రణాళిక",
   "@standardMonthlyPlan": {
