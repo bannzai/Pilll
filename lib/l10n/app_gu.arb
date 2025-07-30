@@ -378,7 +378,7 @@
   },
   "menstruationDeleted": "મહેનોનો સમય સમયગાળો દૂર કરવામાં આવ્યો છે",
   "@menstruationDeleted": {
-    "description": "生理期間を削除しました"
+    "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
   },
   "editMenstruationPeriod": "માહેનીઅલ સમયગાળાને સંપાદિત કરો",
   "@editMenstruationPeriod": {
