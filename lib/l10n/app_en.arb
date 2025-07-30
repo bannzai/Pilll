@@ -1548,7 +1548,7 @@
   },
   "purchaseErrorPaymentPendingError": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
   "@purchaseErrorPaymentPendingError": {
-    "description": "Payment is pending. Please check {storeName} with your logged-in {accountName}",
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
       "accountName": {
         "type": "String"

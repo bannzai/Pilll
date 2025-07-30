@@ -1548,7 +1548,7 @@
   },
   "purchaseErrorPaymentPendingError": "మీ చెల్లింపు మధ్యలో ఆగిపోయింది. {accountName}లో లాగిన్ అయినప్పుడు {storeName}ని తనిఖీ చేయండి.",
   "@purchaseErrorPaymentPendingError": {
-    "description": "支払いが途中で止まっております。ログイン中の{accountName}で{storeName}をお確かめくだい",
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
       "accountName": {
         "type": "String"
