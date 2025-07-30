@@ -2271,7 +2271,7 @@
   },
   "pillReminderChanged": "Nimeweka arifa ya kukamata kwa {value}",
   "@pillReminderChanged": {
-    "description": "服用通知を{value}にしました",
+    "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
     "placeholders": {
       "value": {
         "type": "String"
