@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "ಮಹಿಳಾ ಶಕ್ತಿಯ ಆರಂಭ ದಿನಾಂಕದ ಪಿಲ್ ಸಂಖ್ಯೆಯನ್ನು ಖಾತ್ರಿ ಪಡಿಸಿ. ಪ್ರಸ್ತುತ ಆಯ್ಕೆ ಮಾಡಿರುವ ಪಿಲ್ ಹೀಟ್ ಪ್ರಕಾರದಲ್ಲಿ ಇರುವುದಿಲ್ಲದ ಪಿಲ್ ಸಂಖ್ಯೆಯು ಹೊಂದಿಸಲಾಗಿದೆ.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "ಊಹಿತ ಮಾರ್ಕ್",
   "@customizeMedicationNotifications": {

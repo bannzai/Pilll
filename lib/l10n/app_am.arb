@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "እባክህ የእምጣው እንቅልፍ ቀን ቁጥር ይምረጡ። አሁን የተመረጠው የእምጣው የውርድ አይነት ባለው ቁጥር የማይገኝ ቁጥር ይቆሙበታል.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "መድሃኒት መረጃ ማስታወሻውን እንዴት እንደሚከተለው ወይም መረጃውን በየጊዜው መለወጥ ይችላሉ።",
   "@customizeMedicationNotifications": {

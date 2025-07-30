@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "Si us plau, comproveu el número de píndoles de la data d'inici de la menstruació. S'ha establert un número de píndoles que no existeix en el tipus de full de píndoles seleccionat actualment.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "Personalització de les notificacions de presa",
   "@customizeMedicationNotifications": {

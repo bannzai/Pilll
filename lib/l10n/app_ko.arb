@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다",
   "@checkPillNumberForMenstruationStart": {
-    "description": "생리 시작일의 딜 번호를 확인해주세요. 현재 선택한 딜셔트 타입에는 존재하지 않는 딜 번호가 설정되어 있습니다"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "복용 알림 커스터마이즈",
   "@customizeMedicationNotifications": {

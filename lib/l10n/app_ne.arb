@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "कृपया मासिक धर्मको सुरुवातको मिति अनुसारको पिल नम्बर जाँच गर्नुहोस्। हाल चयन गरिएको पिल सीट प्रकारमा मौजूद नभएको पिल नम्बर सेट गरिएको छ।",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "पिल सेवनको सूचनाको अनुकूलन",
   "@customizeMedicationNotifications": {

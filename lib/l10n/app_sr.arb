@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "Проверите број пилуле за дан почетка менструације. Постављен је број пилуле који не постоји у тренутно изабраном типу плочице пилула.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "Прилагођавање обавештења о узимању",
   "@customizeMedicationNotifications": {

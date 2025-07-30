@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "Silakan periksa nomor pil untuk tanggal mulai menstruasi. Nomor pil yang diatur tidak ada dalam jenis lembar pil yang Anda pilih saat ini.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "Kustomisasi Pemberitahuan Penggunaan",
   "@customizeMedicationNotifications": {

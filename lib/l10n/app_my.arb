@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "Sila semak nombor pil untuk hari pertama haid. Nombor pil yang ditetapkan tidak wujud untuk jenis helai pil yang sedang dipilih.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "Penyesuaian pemberitahuan pengambilan",
   "@customizeMedicationNotifications": {

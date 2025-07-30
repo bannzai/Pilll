@@ -252,7 +252,7 @@
   },
   "checkPillNumberForMenstruationStart": "يرجى التحقق من رقم حبوب منع الحمل في تاريخ بدء الدورة الشهرية. تم تعيين رقم حبوب منع الحمل غير الموجود في نوع شريط الحبوب الذي تم تحديده حاليًا.",
   "@checkPillNumberForMenstruationStart": {
-    "description": "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています"
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
   "customizeMedicationNotifications": "تخصيص إشعارات تناول الدواء",
   "@customizeMedicationNotifications": {
