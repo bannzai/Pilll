@@ -1755,7 +1755,7 @@
   },
   "purchaseErrorOfflineConnectionError": "தொடர்பு பிழை உள்ளது. தயவுசெய்து உங்கள் தொடர்பு சூழலை சரிபார்க்கவும் மற்றும் மீண்டும் முயற்சிக்கவும். சரியாகச் சிக்கல்களைச் தீர்க்க முடியாதால், அமைப்புகள் > தொடர்பு மூலம் எங்களை தொடர்புகொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
-    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

@@ -1755,7 +1755,7 @@
   },
   "purchaseErrorOfflineConnectionError": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
-    "description": "통신 불량입니다. 통신 환경을 확인한 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"

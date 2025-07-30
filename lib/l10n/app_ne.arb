@@ -1755,7 +1755,7 @@
   },
   "purchaseErrorOfflineConnectionError": "संकेत कमजोर छ। कृपया आफ्नो संचार वातावरणको जाँच गर्नुहोस् र फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान गर्दैन भने सेटिङ्ग > सम्पर्क माध्यमबाट सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
-    "description": "通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
