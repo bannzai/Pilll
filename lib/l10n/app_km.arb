@@ -1515,7 +1515,7 @@
   },
   "purchaseErrorInvalidAppleSubscriptionKeyError": "បានបរាជ័យក្នុងការទិញ។ សូមរំពឹងចាំហើយសាកសម្រួលម្ដងទៀត។ បើមិនដោះស្រាយមានតែ សូមពិនិត្យទៅកាន់ ការកំណត់ > ការសាកសួរ ដើម្បីទាក់ទងមកយើង។ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppleSubscriptionKeyError": {
-    "description": "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
