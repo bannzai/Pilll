@@ -940,7 +940,7 @@
   },
   "previouslyPurchased": "Cei care au cumpărat anterior, aici",
   "@previouslyPurchased": {
-    "description": "以前購入した方はこちら"
+    "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
   },
   "noPreviousPurchaseInfo": "Nu am găsit informațiile anterioare de achiziție. Vă rugăm să verificați contul și să încercați din nou.",
   "@noPreviousPurchaseInfo": {

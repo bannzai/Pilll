@@ -940,7 +940,7 @@
   },
   "previouslyPurchased": "이전에 구매한 분은 여기를 참고하세요",
   "@previouslyPurchased": {
-    "description": "이전에 구매한 분은 여기를 참고하세요"
+    "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
   },
   "noPreviousPurchaseInfo": "이전의 구매 정보를 찾을 수 없습니다. 계정을 확인해주세요",
   "@noPreviousPurchaseInfo": {
