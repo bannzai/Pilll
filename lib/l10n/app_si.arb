@@ -2060,7 +2060,7 @@
   },
   "changePillDays": "පිල් ගත होने वाले දිනයන් වෙනස් කරන්න",
   "@changePillDays": {
-    "description": "服用日数を変更"
+    "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
   },
   "beginToEndNumbers": "{begin} අංකය ~ {end} අංකය",
   "@beginToEndNumbers": {
