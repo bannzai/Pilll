@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "የግዢ ሂደት በተለይ ቀጥቶ እንቀጥቀጥ እንደሚኖር ነው። እባኮትን ገንዘብ ያስቀመጡ እና ወደ ውስጥ በማቅረብ ላይ እንቀጥቀጥ፣ እባክዎን ደግሞ ጊዜ ይቀርበዋችሁ።",
+  "purchaseErrorOperationAlreadyInProgressError": "ሌላ ግዢ ሂደት በመካሄድ ላይ ነው። እባክዎ ትንሽ ጊዜ ይጠብቁ እና እንደገና ይሞክሩ።",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
