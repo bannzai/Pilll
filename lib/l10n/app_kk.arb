@@ -382,7 +382,7 @@
   },
   "editMenstruationPeriod": "Айлық кезеңді өңдеу",
   "@editMenstruationPeriod": {
-    "description": "生理期間を編集"
+    "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
   },
   "menstruationEdited": "Менструациялық кезең редакталды",
   "@menstruationEdited": {
