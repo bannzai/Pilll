@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "ഡോസിംഗ് അറിയിപ്പ്",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "കেন্দ്രീകൃത മോഡ് ON ആണെങ്കിൽ അല്ലെങ്കിൽ ഡിവൈസ് മ്യൂട്ട് ചെയ്തിട്ടുണ്ടെങ്കിൽ പോലും, അറിയിപ്പുകൾ ലോക്ക് സ്ക്രീനിൽ പ്രദർശിതമാകും, ശബ്ദം தொடர்ந்து നണി നൽകും.",
   "@silentModeNotificationDescription": {

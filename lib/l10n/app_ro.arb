@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "Notificare de administrare",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "Chiar și când modul de concentrare este activat sau când dispozitivul este pe silent, notificările sunt afișate pe ecranul de blocare și se reda sunet.",
   "@silentModeNotificationDescription": {

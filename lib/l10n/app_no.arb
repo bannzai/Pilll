@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "Inntaksvarsel",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "Varslingsmeldinger vises på låseskjerm og lyd spilles av selv når fokustilstand er aktiv eller enheten er i lydløs modus.",
   "@silentModeNotificationDescription": {

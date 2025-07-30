@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "Vaistų vartojimo pranešimas",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "Net jeigu koncentracijos režimas įjungtas arba įrenginys yra be garso, pranešimai bus rodomi užrakto ekrane ir garsas bus atkuriamas.",
   "@silentModeNotificationDescription": {

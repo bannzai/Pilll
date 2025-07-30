@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "Bevételi értesítés",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "A középpont üzemmódban vagy a készülék némítva is, az értesítések megjelennek a zárképernyőn, és a hang lejátszásra kerül.",
   "@silentModeNotificationDescription": {

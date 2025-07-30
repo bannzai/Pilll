@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "ਦਵਾਈ ਚੇਤਾਵਨੀ",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "ਜੇ ਕਰ ਕੇਂਦਰੀ ਮੋਡ ਚਾਲੂ ਹੈ ਜਾਂ ਉਪਕਰਣ ਨੂੰ ਸੁਨਾਮੀ ਕੀਤਾ ਗਿਆ ਹੈ, ਤਾਂ ਵੀ ਸੂਚਨਾਵਾਂ ਲਾਕ ਸਕ੍ਰੀਨ 'ਤੇ ਦਿਖਾਈਆਂ ਜਾਣਗੀਆਂ, ਅਤੇ ਧੁਨ ਵਜਾਈ ਜਾਵੇਗੀ।",
   "@silentModeNotificationDescription": {

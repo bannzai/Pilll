@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "Notificació de presa",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "Les notificacions es mostraran a la pantalla de bloqueig i sonaran, fins i tot quan el mode d'enfocament està activat o el dispositiu està en silenci.",
   "@silentModeNotificationDescription": {

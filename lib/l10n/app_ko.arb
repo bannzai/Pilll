@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "복용 알림",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "집중 모드가 켜져 있거나 장치가 음소거 상태일 때에도 알림은 잠금 화면에 표시되며, 소리가 재생됩니다.",
   "@silentModeNotificationDescription": {

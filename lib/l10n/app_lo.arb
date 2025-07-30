@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "ການແຈ່ກໄອເສສະກະ",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "ໃນເບັດມອງສົດທີ່ອະດີດມີສະດາດໄວ້ຫຼືອຸປະກອນຈິບບິ່ນບັດບາດຈື່ເທົ່ານັ້ນການເຂົ້າຮອບຕິດຕາມແລະເຊິ່ອດເຄື່ອນສົນຈະໃຊ້ ດຽວນັ້ນ ແລະ ເສຽງຊັດຕິລສົມປັຣ ນິຍັບສາດສົດໄວ້.",
   "@silentModeNotificationDescription": {

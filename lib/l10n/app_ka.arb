@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "მიღების შეტყობინება",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "დაფინანსების რეჟიმი ჩართვაზე ან მოწყობილობა ჩუმად რომ იყოს, შეტყობინებები მაინც ვურგებთ იმ ადგილზე და ს صوتWhite დანახვას.",
   "@silentModeNotificationDescription": {

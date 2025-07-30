@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "Ειδοποίηση λήψης φαρμάκων",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "Ακόμα και όταν η λειτουργία \"Εστίαση\" είναι ενεργοποιημένη ή όταν η συσκευή είναι σε σίγαση, οι ειδοποιήσεις θα εμφανίζονται στην οθόνη κλειδώματος και ο ήχος θα αναπαράγεται.",
   "@silentModeNotificationDescription": {

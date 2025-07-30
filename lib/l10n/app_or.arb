@@ -2280,7 +2280,7 @@
   },
   "medicationNotification": "ପିଲ୍ ନେବା ବିବେକୀକରଣ",
   "@medicationNotification": {
-    "description": "服用通知"
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
   "silentModeNotificationDescription": "ନିଜର କେନ୍ଦ୍ରିତ ସ୍ଥିତି ଓନ୍ ହୋଇଥିଲେ କିମ୍ବା ଡିଭାଇସ୍ ମୁନ୍ଦାରଣ ହେବା ସମୟରେ, ସୂଚନା ଲକ୍ କ୍ରିୟାପଧାରାରେ ଦିଖାଯିବ, ଏବଂ ସାଉଣ୍ଡ ଚାଲିବ।",
   "@silentModeNotificationDescription": {
