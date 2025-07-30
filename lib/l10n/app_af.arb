@@ -269,7 +269,7 @@
   },
   "thankYouForCooperation": "Baie dankie vir jou samewerking",
   "@thankYouForCooperation": {
-    "description": "ご協力ありがとうございます"
+    "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   },
   "feedbackUsage": "Die ontvangde menings sal gebruik word vir toekomstige verbeterings.",
   "@feedbackUsage": {

@@ -269,7 +269,7 @@
   },
   "thankYouForCooperation": "感谢您的合作",
   "@thankYouForCooperation": {
-    "description": "ご協力ありがとうございます"
+    "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   },
   "feedbackUsage": "我们将利用您提出的意见来进行今后的改进。",
   "@feedbackUsage": {
