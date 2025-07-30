@@ -974,7 +974,7 @@
   },
   "lifetimePlanDescription": "一度の購入でずっとプレミアム",
   "@lifetimePlanDescription": {
-    "description": "一度の購入でずっとプレミアム"
+    "description": "買い切り型有料プランの説明文で、一度の支払いで永続的にプレミアム機能が利用できることを示すテキストです。"
   },
   "lifetimePlanSpecialOffer": "買い切りプラン\n期間限定特別価格",
   "@lifetimePlanSpecialOffer": {
