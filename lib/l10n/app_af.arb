@@ -356,7 +356,7 @@
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
-  "reLoginMessage": "Sluit asseblief weer aan voordat jy jou rekening kanselleer ter bevestiging van jou identiteit. Na die herlogin sal die kansellasie outomaties begin.",
+  "reLoginMessage": "Teken asseblief weer aan vir identiteitsverifikasie voor u rekening gesluit word. Die rekening sluitingspreses sal outomaties begin nadat u weer aangemeld het.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
