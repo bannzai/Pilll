@@ -2162,7 +2162,7 @@
   },
   "editPauseStartDate": "ഉൽപ്പന്നം നിർത്തൽ ആരംഭിക്കുന്ന തീയതി തിരുത്തുക",
   "@editPauseStartDate": {
-    "description": "服用お休み開始日を編集"
+    "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
   },
   "shareWithFriends": "സുഹൃത്ത് അറിയിക്കുക",
   "@shareWithFriends": {
