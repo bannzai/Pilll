@@ -1113,7 +1113,7 @@
   },
   "pillForToday": "{today}に飲むピルは",
   "@pillForToday": {
-    "description": "{today}に飲むピルは",
+    "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
     "placeholders": {
       "today": {
         "type": "String"
