@@ -1262,7 +1262,7 @@
   },
   "notHelp": "도움이 되지 않음",
   "@notHelp": {
-    "description": "도움이 되지 않음"
+    "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
   },
   "serviceImprovementSurvey": "서비스 개선 설문조사",
   "@serviceImprovementSurvey": {

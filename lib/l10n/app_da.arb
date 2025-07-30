@@ -1258,7 +1258,7 @@
   },
   "notHelp": "gør ikke",
   "@notHelp": {
-    "description": "しない"
+    "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
   },
   "serviceImprovementSurvey": "Tjenesteforbedringsundersøgelse",
   "@serviceImprovementSurvey": {
