@@ -1525,7 +1525,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "Daar was 'n mislukking met die aankoop op u gebruikersrekening. Probeer asseblief weer na 'n rukkie. As dit nie oplos nie, kan u ons kontak deur na Instellings > Kontak ons te gaan. Besonderhede: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Die aankoop het gefaal. Probeer asseblief weer oor 'n rukkie. As die probleem voortduur, kontak ons via Instellings > Navrae. Besonderhede: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
