@@ -577,7 +577,7 @@
   },
   "pauseTaking": "ادویات کی غیر موجودگی",
   "@pauseTaking": {
-    "description": "服用お休み"
+    "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
   },
   "changePauseStartDate": "ادویات کا وقفہ شروع ہونے کی تاریخ میں تبدیلی",
   "@changePauseStartDate": {

@@ -577,7 +577,7 @@
   },
   "pauseTaking": "पिल लिउँदै विश्राम",
   "@pauseTaking": {
-    "description": "服用お休み"
+    "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
   },
   "changePauseStartDate": "पिल लिन्छु भन्‍ने विश्रामको सुरुवात मिति परिवर्तन",
   "@changePauseStartDate": {
