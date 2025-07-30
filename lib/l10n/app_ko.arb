@@ -260,7 +260,7 @@
   },
   "xCanBeCustomized": "{x}의 커스터마이즈가 가능합니다",
   "@xCanBeCustomized": {
-    "description": "{x}의 커스터마이즈가 가능합니다",
+    "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
     "placeholders": {
       "x": {
         "type": "String"
