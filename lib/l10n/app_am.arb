@@ -1452,7 +1452,7 @@
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
-  "purchaseErrorInvalidCredentialsError": "ውድድር አልተከናወነም። ጊዜ በመካከለኛ ተመልስ ይደርስ እና ይሞክሩ። ከመወዳደሪያው በተቀረው ከማይመለስ መነቃቃ እንዲደርስ በይፈቀይ ፍሬዋ ፣ የተሻሻለ ከማይመለስ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "ግዢው አልተሳካም። ትንሽ ጊዜ ጠብቀው እንደገና ይሞክሩ። ችግሩ ካልተፈታ ማሳያ > ጥያቄ በኩል ያነጋግሩን። ዝርዝር፦ {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
     "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
     "placeholders": {
