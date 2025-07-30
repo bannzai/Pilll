@@ -671,7 +671,7 @@
   },
   "pauseTakingDay": "🌙 ಔಷಧಿ ವಿಸ್ತಾರ {day}ನೇ ದಿನ",
   "@pauseTakingDay": {
-    "description": "🌙 服用お休み {day}日目",
+    "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
     "placeholders": {
       "day": {
         "type": "int"
