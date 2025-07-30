@@ -581,7 +581,7 @@
   },
   "changePauseStartDate": "ඇප්පන කාලය ආරම්භ දිනය වෙනස් කිරීම",
   "@changePauseStartDate": {
-    "description": "服用お休み開始日変更"
+    "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
   },
   "pauseTakingPeriodEnded": "ඉඟුරු පමණක් භාවිතා කිරීමේ අ කල කාලය අවසන් විය",
   "@pauseTakingPeriodEnded": {

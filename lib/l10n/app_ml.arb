@@ -581,7 +581,7 @@
   },
   "changePauseStartDate": "മെടം നിർത്തിയെടുക്കുന്നതിന് ആരംഭ തീയതി മാറ്റം",
   "@changePauseStartDate": {
-    "description": "服用お休み開始日変更"
+    "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
   },
   "pauseTakingPeriodEnded": "അരോഗ്യത്തിന് വിരാമം കൊടുക്കുന്നതിനുള്ള കാലയളവാകട്ടെ അവസാനിച്ചു",
   "@pauseTakingPeriodEnded": {
