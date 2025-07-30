@@ -1694,7 +1694,7 @@
   },
   "purchaseErrorBeginRefundRequestError": "Refusionsprocessen er begyndt. Bekræft og prøv igen. Hvis det ikke løser problemet, bedes du kontakte os via Indstillinger > Forespørgsel. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
-    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
       "errorCode": {
         "type": "String"

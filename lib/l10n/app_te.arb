@@ -1698,7 +1698,7 @@
   },
   "purchaseErrorBeginRefundRequestError": "ధనరాకల పోదు ప్రారంభించబడింది. దయచేసి నిర్ధారించుకోండి మరియు మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కారముకాకపోతే, దయచేసి సెటింగ్స్ > సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
-    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
       "errorCode": {
         "type": "String"

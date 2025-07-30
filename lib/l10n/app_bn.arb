@@ -1698,7 +1698,7 @@
   },
   "purchaseErrorBeginRefundRequestError": "রিফান্ড প্রক্রিয়া শুরু করা হয়েছে। দয়া করে নিশ্চিত করুন এবং আবার চেষ্টা করুন। যদি এটি সমাধান না হয় তবে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
-    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
       "errorCode": {
         "type": "String"

@@ -1698,7 +1698,7 @@
   },
   "purchaseErrorBeginRefundRequestError": "កំពុងដាក់ចាប់ផ្តើមដំណើរការចាំបាច់។ សូមផ្ទៀងផ្ទាត់ហើយសាកល្បងម្តងទៀត។ ប្រសិនបើមិនដោះសោបាន សូមធ្វើការទំនាក់ទំនងតាមគេហទំព័រ ការកំណត់ > សំណួរ។ កូដៈ {errorCode} ព័ត៌មានលម្អិតៈ {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
-    "description": "返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
       "errorCode": {
         "type": "String"
