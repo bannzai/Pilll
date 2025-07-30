@@ -209,7 +209,7 @@
   "@viewPremiumPlan": {
     "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
-  "changePillNumberForToday": "የዛሬ የፒል ቁጥር ለማሻሻል",
+  "changePillNumberForToday": "የዛሬ ፒል ቁጥር መቀየር",
   "@changePillNumberForToday": {
     "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
