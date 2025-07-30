@@ -1914,7 +1914,7 @@
   },
   "previousPillSheetGroupNotFound": "Wala pang umiiral na grupo ng nakaraang pill sheet.",
   "@previousPillSheetGroupNotFound": {
-    "description": "前回のピルシートグループがまだ存在しません"
+    "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   },
   "withPillSheetCount": "{number} mga piraso",
   "@withPillSheetCount": {
