@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Purchase not allowed for this device",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "Purchase not allowed for this device"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Failed to make payment. Please check if your payment method is valid",
   "@purchaseErrorPurchaseInvalidError": {

@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "ບໍ່ອ່ານໃຫ້ຊື້ໃນເຄື່ອງນີ້",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "ບໍ່ສໍາເລັດໃນການເອົາເງິນ. ກະລຸນາເບິ່ງວ່າມີວິທີການເອົາເງິນທີ່ມີສະຖານທີ່ເປັນບໍ່ສຽບຈິງບໍ່ແລະລອງໃສ່ໃໝ່.",
   "@purchaseErrorPurchaseInvalidError": {

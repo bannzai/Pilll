@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Die Käufe sind auf diesem Gerät nicht erlaubt.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "D'Zahlung isch fehlgeschlage. Bitte überprüfe, ob e gültigi Zahyligsmetode vorhande isch und versuech's nomol.",
   "@purchaseErrorPurchaseInvalidError": {

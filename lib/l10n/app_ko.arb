@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "이 기기에서 구매가 허용되지 않았습니다",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "이 기기에서 구매가 허용되지 않았습니다"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요",
   "@purchaseErrorPurchaseInvalidError": {

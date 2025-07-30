@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "ഈ ഉപകരണത്തിൽ വാങ്ങലുകൾ അനുവദിച്ചിട്ടില്ല.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "അടായ്മ പരാജയപ്പെട്ടു. ദയവായി സാധൂകൃതമായ അടായ്മ മാർഗങ്ങൾ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
   "@purchaseErrorPurchaseInvalidError": {

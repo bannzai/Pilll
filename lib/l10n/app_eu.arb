@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Ezin da erosketa haundu gailu honetan.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Ordainketa huts egin da. Mesedez, egiaztatu ordainketa-modu baliagarria den ala ez eta saiatu berriro.",
   "@purchaseErrorPurchaseInvalidError": {

@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "මෙම උපාංගය හරහා මිලදී ගැනීම් කල හැකි නොවේ.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "ගෙවීම අදාල වශයෙන් අසාර්ථක විය. කරුණාකර වලංගු ගෙවීමේ ශේෂය නොවන්න යළි උත්සාහ කරන්න.",
   "@purchaseErrorPurchaseInvalidError": {

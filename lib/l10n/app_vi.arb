@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Không được phép mua sắm trên thiết bị này.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Thanh toán không thành công. Vui lòng kiểm tra xem phương thức thanh toán có hợp lệ hay không và thử lại.",
   "@purchaseErrorPurchaseInvalidError": {

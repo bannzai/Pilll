@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Ang pagbili ay hindi pinahihintulutan sa aparatong ito.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Nabigo ang pagbabayad. Pakisuri kung ito ay isang wastong paraan ng pagbabayad at subukan muli.",
   "@purchaseErrorPurchaseInvalidError": {

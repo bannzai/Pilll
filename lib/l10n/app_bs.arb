@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Ova uređaj nije ovlašten za kupovinu.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Plaćanje nije uspjelo. Molimo provjerite da li je metoda plaćanja valjana i pokušajte ponovo.",
   "@purchaseErrorPurchaseInvalidError": {

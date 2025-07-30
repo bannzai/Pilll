@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Le nxhasa le ngeke kuvunyelwa ukunqunywa",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Intela okuhluleka ukukhokha. Sicela uqinisekise ukuthi indlela yokukhokha iyasebenza bese uzama futhi.",
   "@purchaseErrorPurchaseInvalidError": {

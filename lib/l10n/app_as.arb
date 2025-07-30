@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইসে ক্রয় অনুমোদিত নয়",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "ଟଙ୍କର ଭୁ଼ଳିଲେ ପଇସା ଦେଖା ନାହିଁ। ଦୟାକରି ଏକ କାର୍ୟକ୍ଷମ ପଇସା ପ୍ରଣାଳୀର ଯାଞ୍ଚ କରନ୍ତୁ ଓ ପୁନରୁତ୍ସାହ କରନ୍ତୁ।",
   "@purchaseErrorPurchaseInvalidError": {

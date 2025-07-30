@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Hierdie toestel is nie toegelaat om aankope te doen nie.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Die betaling het misluk. Gaan asseblief na of u 'n geldige betalingsmetode het en probeer weer.",
   "@purchaseErrorPurchaseInvalidError": {

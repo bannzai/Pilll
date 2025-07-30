@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইসে কেনাকাটা করার অনুমতি নাই",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "পেমেন্ট ব্যর্থ হয়েছে। বৈধ পেমেন্ট পদ্ধতি আছে কি না তা যাচাই করে আবার চেষ্টা করুন।",
   "@purchaseErrorPurchaseInvalidError": {

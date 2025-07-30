@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "На гэтым прыладзе набыцці не дазволена.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Аплата не ўдалася. Калі ласка, праверыце, ці з'яўляецца ваш метад аплаты дзеючым, і паспрабуйце зноў.",
   "@purchaseErrorPurchaseInvalidError": {

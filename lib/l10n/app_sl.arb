@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Na tem napravi nakup ni dovoljen.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Plačilo ni uspelo. Preverite, ali je plačilna metoda veljavna, in poskusite znova.",
   "@purchaseErrorPurchaseInvalidError": {

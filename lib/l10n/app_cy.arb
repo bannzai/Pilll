@@ -1412,7 +1412,7 @@
   },
   "purchaseErrorPurchaseNotAllowedError": "Nid yw prynu ar yr ddyfais hon wedi'i ganiatáu.",
   "@purchaseErrorPurchaseNotAllowedError": {
-    "description": "このデバイスで購入が許可されていません"
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorPurchaseInvalidError": "Methiant i dalu. Gwiriwch a ydy'r dull talu yn weithredol a cheisiwch eto.",
   "@purchaseErrorPurchaseInvalidError": {
