@@ -2259,7 +2259,7 @@
   },
   "countdownForDiscountPriceDeadline": "Sleva {offPercent}% na nákup do {countdown}",
   "@countdownForDiscountPriceDeadline": {
-    "description": "{countdown}内の購入で{offPercent}％OFF",
+    "description": "限定割引キャンペーンの締切時間を知らせるメッセージです。プレミアムプラン購入画面で、残り時間（countdown）内に購入すると指定された割引率（offPercent）が適用されることをユーザーに伝えます。",
     "placeholders": {
       "countdown": {
         "type": "String"
