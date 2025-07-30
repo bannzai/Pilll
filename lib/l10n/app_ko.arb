@@ -831,7 +831,7 @@
   },
   "createNewAccountIfNotLoggedIn": "Pilll에 아직 로그인하지 않은 경우 새로�� 계정이 작성됩니다",
   "@createNewAccountIfNotLoggedIn": {
-    "description": "Pilll에 아직 로그인하지 않은 경우 새로운 계정이 작성됩니다"
+    "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
   "registerAccountForDataTransfer": "계정 등록하면 데이터의 인계가 가능합니다",
   "@registerAccountForDataTransfer": {

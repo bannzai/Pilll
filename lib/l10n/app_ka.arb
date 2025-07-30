@@ -831,7 +831,7 @@
   },
   "createNewAccountIfNotLoggedIn": "თუ ჯერ არ იქ_PRODUCTS_NAME -ში შესულხართ, ახალ ანგარიშს შექმნით.",
   "@createNewAccountIfNotLoggedIn": {
-    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+    "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
   "registerAccountForDataTransfer": "როდესაც დაარეგისტრირებთ ანგარიშს, მონაცემების გადატანა შესაძლებელი იქნება.",
   "@registerAccountForDataTransfer": {

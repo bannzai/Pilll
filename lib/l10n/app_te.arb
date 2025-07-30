@@ -831,7 +831,7 @@
   },
   "createNewAccountIfNotLoggedIn": "మీరు Pilllలో ఇప్పటివరకు లాగిన్ కాలేదు అంటే, కొత్త అకౌంట్ రూపొందించబడుతుంది.",
   "@createNewAccountIfNotLoggedIn": {
-    "description": "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
+    "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
   "registerAccountForDataTransfer": "ఖాతా నమోదు చేయడం ద్వారా డేటా బదిలీ చేయడం సాధ్యమవుతుంది.",
   "@registerAccountForDataTransfer": {
