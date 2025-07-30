@@ -2012,7 +2012,7 @@
   },
   "irregularBleeding": "Saignement anormal",
   "@irregularBleeding": {
-    "description": "不正出血"
+    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「不正出血」の適切な医療用語で翻訳してください。"
   },
   "lossOfAppetite": "perte d'appétit",
   "@lossOfAppetite": {
