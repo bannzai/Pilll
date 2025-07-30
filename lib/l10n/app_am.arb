@@ -1818,7 +1818,7 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "ይህ {accountTypeProviderName} መለያ እንደዚህ ያለ ሌላ የPilll መለያ ጋር የተያያዘ ስለሆነ ይመዘገባል። FAQንም ይመልከቱ። ዝርዝር: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "ይህ {accountTypeProviderName} መለያ ቀድሞውንም ከሌላ Pilll መለያ ጋር የተገናኘ ስለሆነ መመዝገብ አይችሉም። እባክዎ የተደጋጋሚ ጥያቄዎችንም ይመልከቱ። ዝርዝር: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
     "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
