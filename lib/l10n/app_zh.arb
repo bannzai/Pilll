@@ -1213,7 +1213,7 @@
   },
   "sex": "性别",
   "@sex": {
-    "description": "sex"
+    "description": "日記機能において、体調記録の一項目として性的活動の有無を記録する際のラベルです。ピル服用管理との関連で重要な体調データとして使用されます。"
   },
   "previousPillSheetGroup": "上次的药丸片组",
   "@previousPillSheetGroup": {
