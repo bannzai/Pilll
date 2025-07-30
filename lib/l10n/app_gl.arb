@@ -569,7 +569,7 @@
   },
   "pillSheetSettings": "Configuración da folga de pílulas",
   "@pillSheetSettings": {
-    "description": "ピルシートの設定"
+    "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
   },
   "unmarkTodayPillAsTakenToPause": "Desde que non tomei a pílula que debo tomar hoxe",
   "@unmarkTodayPillAsTakenToPause": {
