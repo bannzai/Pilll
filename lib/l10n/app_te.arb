@@ -1740,7 +1740,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "అస్పష్టమైన పొరలు ఉన్నాయి. కచ్చితమైన చెల్లింపుకు అప్‌డేట్ చేసి మళ్లీ ప్రయత్నించగలరు. అలాగే, ఇది పరిష్కరించడంలో సమస్య ఉంటే సెట్టింగ్స్ > సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

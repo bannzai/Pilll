@@ -1740,7 +1740,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "அதிகாரப்பூர்வமாக தெரியாத பிழை ஏற்பட்டுள்ளது. தாயாராக்கப்பட்ட பதிப்புக்கு மேம்படுத்தவும் மீண்டும் முயற்சிக்கவும். தீர்வு இல்லையென்றால் அமைப்புகள் > கணக்கீடு மூலம் தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விவரம்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

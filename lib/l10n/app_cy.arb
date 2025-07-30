@@ -1740,7 +1740,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "Mae hwn yn wall anhysbys. Diweddarwch i'r fersiwn ddiweddaraf a cheisiwch eto. Os nad yw'n cael ei ddatrys, cysylltwch â ni trwy fynd i Gosodiadau > Cysylltiad. Cod: {errorCode} Manylion: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

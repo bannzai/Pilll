@@ -1740,7 +1740,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "Ito ay isang error na walang tiyak na dahilan. Mangyaring mag-update sa pinakabagong bersyon at subukan muli. Kung hindi ito malulutas, mangyaring makipag-ugnayan sa pamamagitan ng Mga Setting > Tanong. Kodigo: {errorCode} Mga Detalye: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

@@ -1740,7 +1740,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "Ismeretlen hiba történt. Kérjük, frissítse a legújabb verzióra és próbálja újra. Ha a probléma továbbra is fennáll, lépjen kapcsolatba velünk a Beállítások > Kapcsolatfelvétel menüpont alatt. Kód: {errorCode} Részletek: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

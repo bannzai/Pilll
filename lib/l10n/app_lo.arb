@@ -1740,7 +1740,7 @@
   },
   "purchaseErrorInvalidPromotionalOfferError": "ນີ້ແມ່ນບັດທິບັນທັບທາບເທິງບໍ່ມີເຫດຜົນ. ກະລຸນາເອົາ ເປັນສະພັດ ແລະ ດັບຜ່ານອັບ໎ເທົບໃໝ່ແລະສຽນຄືນຊັດເພີ່ມເພີ່ມໃໝ່. ຖ່າບໍ່ແກ້ບັນທິບັນນໃນນັ່ນ pleas ສ່ອດພິໃຈຖາມຜ່ານຊໍາຈິດ ແລະເສັ່ນ ແລະ ແບບລະບິນ > ກະລຸນາໂດຍອາຘຈອຍືຄັຜຑ. ລະດັບ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}.",
   "@purchaseErrorInvalidPromotionalOfferError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
       "errorCode": {
         "type": "String"
