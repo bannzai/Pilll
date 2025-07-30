@@ -2182,7 +2182,7 @@
   },
   "notificationNumber": "мэдэгдэл{number}",
   "@notificationNumber": {
-    "description": "通知{number}",
+    "description": "アプリ内の通知メッセージに番号を付ける際に使用される文字列です。{number}には通知を識別するための数字が入り、複数のピル服用リマインド通知を区別するために使用されます。",
     "placeholders": {
       "number": {
         "type": "int"
