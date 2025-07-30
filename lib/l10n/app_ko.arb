@@ -1234,7 +1234,7 @@
   },
   "seeFAQ": "FAQ 보기",
   "@seeFAQ": {
-    "description": "FAQ 보기"
+    "description": "アプリ内でFAQ（よくある質問）ページへ移動するためのボタンやリンクのテキストです。ピルの服用方法やアプリの操作方法に関する質問と回答を確認できるページに誘導します。"
   },
   "reloadScreen": "화면을 다시 로드",
   "@reloadScreen": {

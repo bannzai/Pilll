@@ -1230,7 +1230,7 @@
   },
   "seeFAQ": "Se FAQ'en",
   "@seeFAQ": {
-    "description": "FAQを見る"
+    "description": "アプリ内でFAQ（よくある質問）ページへ移動するためのボタンやリンクのテキストです。ピルの服用方法やアプリの操作方法に関する質問と回答を確認できるページに誘導します。"
   },
   "reloadScreen": "Genindlæsning af skærmen",
   "@reloadScreen": {

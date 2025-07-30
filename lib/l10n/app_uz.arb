@@ -1234,7 +1234,7 @@
   },
   "seeFAQ": "FAQ ni ko'rish",
   "@seeFAQ": {
-    "description": "FAQを見る"
+    "description": "アプリ内でFAQ（よくある質問）ページへ移動するためのボタンやリンクのテキストです。ピルの服用方法やアプリの操作方法に関する質問と回答を確認できるページに誘導します。"
   },
   "reloadScreen": "Sahifani qayta yuklash",
   "@reloadScreen": {
