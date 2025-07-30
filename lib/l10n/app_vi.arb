@@ -839,7 +839,7 @@
   },
   "registerAccountToKeepData": "Vui lòng đăng ký tài khoản để giữ thông tin tài khoản.",
   "@registerAccountToKeepData": {
-    "description": "アカウント情報を保持するため、アカウント登録をお願いします"
+    "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   },
   "signInWith": "Đăng nhập với {loginName}",
   "@signInWith": {

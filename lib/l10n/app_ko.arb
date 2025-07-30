@@ -839,7 +839,7 @@
   },
   "registerAccountToKeepData": "데이터를 유지하기 위해 계정 등록을 부탁드립니다",
   "@registerAccountToKeepData": {
-    "description": "데이터를 유지하기 위해 계정 등록을 부탁드립니다"
+    "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   },
   "signInWith": "{loginName}으로 로그인",
   "@signInWith": {

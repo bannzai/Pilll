@@ -839,7 +839,7 @@
   },
   "registerAccountToKeepData": "In order to keep your account information, please register an account",
   "@registerAccountToKeepData": {
-    "description": "In order to keep your account information, please register an account"
+    "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   },
   "signInWith": "Sign in with {loginName}",
   "@signInWith": {
