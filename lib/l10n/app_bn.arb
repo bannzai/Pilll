@@ -1638,7 +1638,7 @@
   },
   "purchaseErrorUnknownNonNativeError": "অজানা ত্রুটি। অনুগ্রহ করে সর্বশেষ সংস্করণে আপডেট করুন এবং আবার চেষ্টা করুন। যদি এটি সমাধান না হয়, তাহলে অনুগ্রহ করে সেটিংস > যোগাযোগে যান এবং আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
       "errorCode": {
         "type": "String"

@@ -1638,7 +1638,7 @@
   },
   "purchaseErrorUnknownNonNativeError": "ଏହା କାରଣ ଅଜଣା ତ୍ରୁଟି ଅଟେ। ଅନୁଗ୍ରହ କରି ଶେଷ ବଡନାନ୍ତୁ କରନ୍ତୁ ଏବଂ ପুনରାୟ ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହେବ ନାହିଁ, ତେବେ ସଂରକ୍ଷଣ > ପ୍ରଶ୍ନ କରଣରେ ଯାଇ ପ୍ରଶ୍ନ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିସ୍ତୃତ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
       "errorCode": {
         "type": "String"

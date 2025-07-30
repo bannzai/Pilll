@@ -1638,7 +1638,7 @@
   },
   "purchaseErrorUnknownNonNativeError": "எண்ட் காரணம் தெரியாத பிழை. உங்களின் ஆப்பின் புதிய பதிப்புக்கு மேம்படுத்தி மீண்டும் முயற்சிக்கவும். இவை சீராகவில்லை என்றால், அமைப்புகள் > கேள்விகள் மூலம் எங்களை தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விரிவான: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
       "errorCode": {
         "type": "String"

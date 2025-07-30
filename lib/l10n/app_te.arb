@@ -1638,7 +1638,7 @@
   },
   "purchaseErrorUnknownNonNativeError": "నికి తెలియని తప్పు ఉంది. దయచేసి తాజా వెర్షన్‌కు అప్‌డేట్ చేసి మళ్ళీ ప్రయత్నించండి. ఇబ్బంది నెలకొల్పుతున్నట్లైతే, పద్ధతులు > సంప్రదించండి ద్వారా మమ్మల్ని సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
       "errorCode": {
         "type": "String"
