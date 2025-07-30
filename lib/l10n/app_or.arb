@@ -2178,7 +2178,7 @@
   },
   "linkCopiedToClipboard": "କ୍ଲିପ୍‌ବୋର୍ଡକୁ କପି କରାଗଲା",
   "@linkCopiedToClipboard": {
-    "description": "クリップボードにコピーしました"
+    "description": "ユーザーがリンクやテキストをクリップボードにコピーした際に表示される成功通知メッセージです。シェア機能やURL共有時などに、コピー操作が完了したことをユーザーに知らせるフィードバックとして使用されます。"
   },
   "notificationNumber": "ସୂଚନା{number}",
   "@notificationNumber": {
