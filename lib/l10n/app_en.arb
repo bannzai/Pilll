@@ -1668,7 +1668,7 @@
   },
   "purchaseErrorCustomerInfoError": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
-    "description": "Failed to retrieve customer information. Please try again later. If the problem persists, please contact support. Details: Code: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
       "errorCode": {
         "type": "String"

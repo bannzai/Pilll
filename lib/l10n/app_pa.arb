@@ -1668,7 +1668,7 @@
   },
   "purchaseErrorCustomerInfoError": "ਗਾਹਕ ਜਾਣਕਾਰੀ ਪ੍ਰਾਪਤ ਕਰਨ ਵਿੱਚ ਅਸਫਲ ਰਹੇ। ਕ੍ਰਿਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਦੇਖੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਇਹ ਸੁਧਾਰ ਨਾਹੀ ਕਰਦਾ ਹੈ ਤਾਂ ਕ੍ਰਿਪਾ ਕਰਕੇ ਸੈਟਿੰਗ > ਪੁੱਛਗਿੱਛ ਕੇ ਦਿਰਖ਼ਾਸਤ ਕਰੋ। ਵੇਰਵਾ: ਕੋਡ: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
-    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
       "errorCode": {
         "type": "String"

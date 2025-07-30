@@ -1668,7 +1668,7 @@
   },
   "purchaseErrorCustomerInfoError": "دریافت اطلاعات مشتری با شکست مواجه شد. لطفاً مدتی صبر کرده و دوباره تلاش کنید. در صورتی که حل نشد، لطفاً از طریق تنظیمات > تماس با ما، با ما تماس بگیرید. جزئیات: کد: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
-    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
       "errorCode": {
         "type": "String"

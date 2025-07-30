@@ -1668,7 +1668,7 @@
   },
   "purchaseErrorCustomerInfoError": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
-    "description": "고객 정보 획득에 실패했습니다. 잠시 후 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의하기에서 문의해 주세요. 상세: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
       "errorCode": {
         "type": "String"

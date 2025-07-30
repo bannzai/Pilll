@@ -1668,7 +1668,7 @@
   },
   "purchaseErrorCustomerInfoError": "Неуспешно получаване на информация за клиента. Моля, опитайте отново след известно време. Ако проблемът не се реши, свържете се с нас чрез Настройки > Запитвания. Подробности: Код: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
-    "description": "顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}",
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
       "errorCode": {
         "type": "String"
