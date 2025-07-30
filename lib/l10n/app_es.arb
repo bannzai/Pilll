@@ -354,7 +354,7 @@
   },
   "doReLogin": "Vuelve a iniciar sesión por favor",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Por favor, inicie sesión nuevamente para verificación de identidad antes de cancelar la suscripción. Después de iniciar sesión nuevamente, el proceso de cancelación se iniciará automáticamente.",
   "@reLoginMessage": {

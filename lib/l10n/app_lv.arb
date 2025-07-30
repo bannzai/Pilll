@@ -354,7 +354,7 @@
   },
   "doReLogin": "Lūdzu, piesakieties vēlreiz.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Lūdzu, veiciet atkārtotu pieteikšanos, lai veiktu personas identifikāciju pirms izstāšanās. Pēc atkārtotas pieteikšanās automātiski tiks uzsākta izstāšanās procedūra.",
   "@reLoginMessage": {

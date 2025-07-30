@@ -354,7 +354,7 @@
   },
   "doReLogin": "Si us plau, torneu a iniciar sessió.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Si us plau, torna a iniciar sessió per verificar la teva identitat abans de donar-te de baixa. Després de tornar a iniciar sessió, el procés de baixa es començarà automàticament.",
   "@reLoginMessage": {

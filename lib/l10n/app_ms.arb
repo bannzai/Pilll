@@ -354,7 +354,7 @@
   },
   "doReLogin": "Sila log masuk semula",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Sila log masuk semula untuk pengesahan identiti anda sebelum menyertai. Pengendalian pengunduran akan bermula secara automatik selepas log masuk semula.",
   "@reLoginMessage": {

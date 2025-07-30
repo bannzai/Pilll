@@ -354,7 +354,7 @@
   },
   "doReLogin": "Por favor, inicie sesión novamente.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Antes de dar de baixa, por favor inicie sesión novamente para verificar a identidade. Despois de iniciar sesión novamente, o proceso de dar de baixa comezará automáticamente.",
   "@reLoginMessage": {

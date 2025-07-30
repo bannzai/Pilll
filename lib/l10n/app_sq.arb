@@ -354,7 +354,7 @@
   },
   "doReLogin": "Ju lutem, logohuni përsëri",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Ju lutem, regjistrohuni përsëri për verifikimin e identitetit para se të largoheni nga shërbimi. Pas regjistrimit të përsëritur, procesi i largimit do të fillojë automatikisht.",
   "@reLoginMessage": {

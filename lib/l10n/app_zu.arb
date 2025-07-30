@@ -354,7 +354,7 @@
   },
   "doReLogin": "Sicela ubuye ungene.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Ngaphambi kokuphuma, sicela ungene ngemvume ukuze uqinisekise ubuqiniso bakho. Ngemva kokungena, inqubo yokuphuma izoqala ngokuzenzakalelayo.",
   "@reLoginMessage": {

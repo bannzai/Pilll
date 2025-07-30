@@ -354,7 +354,7 @@
   },
   "doReLogin": "Kérjük, jelentkezzen be újra",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Kérjük, jelentkezzen be újra az azonosítás érdekében a tagság törlése előtt. A bejelentkezés után automatikusan megkezdődik a tagság törlése.",
   "@reLoginMessage": {

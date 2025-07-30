@@ -354,7 +354,7 @@
   },
   "doReLogin": "Meld asseblief weer in.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Sluit asseblief weer aan voordat jy jou rekening kanselleer ter bevestiging van jou identiteit. Na die herlogin sal die kansellasie outomaties begin.",
   "@reLoginMessage": {

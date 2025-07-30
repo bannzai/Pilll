@@ -354,7 +354,7 @@
   },
   "doReLogin": "Vinsamlegast skráðu þig aftur inn.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Vinsamlegast skráðu þig inn aftur fyrir persónuvernd áður en þú segir þig úr. Eftir að þú skráir þig inn aftur fer aðgerðin að segja sig úr sjálfkrafa í gang.",
   "@reLoginMessage": {

@@ -354,7 +354,7 @@
   },
   "doReLogin": "Prašome vėl prisijungti.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Prieš atsisakiant paskyros, prašome dar kartą prisijungti. Po prisijungimo automatiškai prasidės paskyros atsisakymo procesas.",
   "@reLoginMessage": {

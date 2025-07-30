@@ -354,7 +354,7 @@
   },
   "doReLogin": "Mesedez, saioa berriro hasi",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Saioa huts egin aurretik, mesedez, saio berriz hasi zaitez berretsi asmoa. Saio berriz hasi ondoren, automatikoki hasiko da saioaren amaiera prozesua.",
   "@reLoginMessage": {

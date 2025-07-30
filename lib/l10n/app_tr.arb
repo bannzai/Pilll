@@ -354,7 +354,7 @@
   },
   "doReLogin": "Lütfen tekrar giriş yapın.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Lütfen, üyeliğinizden çıkmadan önce doğrulama için tekrar giriş yapın. Tekrar giriş yaptıktan sonra, otomatik olarak üyelikten çıkma işlemi başlayacaktır.",
   "@reLoginMessage": {

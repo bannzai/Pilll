@@ -354,7 +354,7 @@
   },
   "doReLogin": "Qayta tizimga kiring",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Obunani voz kechirish uchun yana kirishingiz kerak. Qayta kirganingizdan so'ng, avtomatik ravishda obunani bekor qilish jarayoni boshlanadi.",
   "@reLoginMessage": {

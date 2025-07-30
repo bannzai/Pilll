@@ -354,7 +354,7 @@
   },
   "doReLogin": "Ailwch i gyd-fynd â'r cyfrif.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Dylech chi ail-logi i gadarnhau eich hun cyn dyddio allan. Ar ôl ail-logi, bydd y broses ddyddio yn dechrau'n awtomatig.",
   "@reLoginMessage": {

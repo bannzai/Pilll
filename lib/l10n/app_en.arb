@@ -354,7 +354,7 @@
   },
   "doReLogin": "Please re-login",
   "@doReLogin": {
-    "description": "Please re-login"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Before withdrawing, please re-login to confirm your identity. Your withdrawal process will start automatically",
   "@reLoginMessage": {

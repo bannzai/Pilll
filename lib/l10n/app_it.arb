@@ -354,7 +354,7 @@
   },
   "doReLogin": "Si prega di effettuare nuovamente il login",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Per favore accedi nuovamente per la verifica dell'identità prima di disiscriverti. Dopo aver effettuato nuovamente l'accesso, il processo di disiscrizione verrà avviato automaticamente.",
   "@reLoginMessage": {

@@ -354,7 +354,7 @@
   },
   "doReLogin": "Mangyaring muling mag-log in",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Mangyaring mag-login muli para sa pag-verify ng pagkatao bago mag-unsubscribe. Pagkatapos ng muling pag-login, awtomatikong magsisimula ang proseso ng pag-unsubscribe.",
   "@reLoginMessage": {

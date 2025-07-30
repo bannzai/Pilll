@@ -354,7 +354,7 @@
   },
   "doReLogin": "Vui lòng đăng nhập lại",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Vui lòng đăng nhập lại để xác nhận danh tính trước khi hủy đăng ký. Sau khi đăng nhập lại, quá trình hủy đăng ký sẽ tự động bắt đầu.",
   "@reLoginMessage": {

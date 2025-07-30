@@ -354,7 +354,7 @@
   },
   "doReLogin": "Te rugăm să te reinscrii",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Vă rugăm să vă reconectați pentru confirmarea identității înainte de a vă dezactiva contul. Procesul de dezactivare va începe automat după reconectare.",
   "@reLoginMessage": {

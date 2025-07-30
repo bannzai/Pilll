@@ -354,7 +354,7 @@
   },
   "doReLogin": "Palun logige uuesti sisse",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Palun logige uuesti sisse, et kontrollida oma isikut enne lahkumist. Pärast uuesti sisselogimist algab automaatselt lahkumisprotsess.",
   "@reLoginMessage": {

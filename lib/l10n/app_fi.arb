@@ -354,7 +354,7 @@
   },
   "doReLogin": "Kirjaudu uudelleen sisään.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Ennen tilin sulkemista, kirjaudu takaisin sisään henkilöllisyyden vahvistamiseksi. Kirjautumisen jälkeen tilin sulkeminen alkaa automaattisesti.",
   "@reLoginMessage": {

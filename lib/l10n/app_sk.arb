@@ -354,7 +354,7 @@
   },
   "doReLogin": "Prosím, prihláste sa znova.",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Pred odhlásením sa, prosím, znovu sa prihláste kvôli overeniu identity. Po opätovnom prihlásení sa automaticky začne proces odhlásenia.",
   "@reLoginMessage": {

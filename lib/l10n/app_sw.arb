@@ -354,7 +354,7 @@
   },
   "doReLogin": "Tafadhali ingia tena",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Tafadhali ingia tena ili kuthibitisha utambulisho wako kabla ya kujiunga. Baada ya kuingia tena, utaratibu wa kujiunga utaanza kiotomatiki.",
   "@reLoginMessage": {

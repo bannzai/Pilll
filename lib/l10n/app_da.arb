@@ -354,7 +354,7 @@
   },
   "doReLogin": "Log ind igen venligst",
   "@doReLogin": {
-    "description": "再ログインしてください"
+    "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
   "reLoginMessage": "Log ind igen for identitetsbekræftelse før du melder dig ud. Efter genindlæsning påbegyndes afmeldingsprocessen automatisk.",
   "@reLoginMessage": {
