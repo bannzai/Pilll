@@ -1931,7 +1931,7 @@
   },
   "unknownErrorAndRetryAfter": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요",
   "@unknownErrorAndRetryAfter": {
-    "description": "오류가 발생했습니다. 잠시 후 다시 시도해 주세요"
+    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
   },
   "errorOccurred": "오류가 발생했습니다",
   "@errorOccurred": {

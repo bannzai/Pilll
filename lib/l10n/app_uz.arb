@@ -1931,7 +1931,7 @@
   },
   "unknownErrorAndRetryAfter": "Xatolik yuz berdi. Iltimos, bir oz vaqt kuting va qayta urinib ko'ring.",
   "@unknownErrorAndRetryAfter": {
-    "description": "エラーが発生しました。時間をおいて再度お試しください"
+    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
   },
   "errorOccurred": "Xato yuz berdi",
   "@errorOccurred": {
