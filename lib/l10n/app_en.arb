@@ -944,7 +944,7 @@
   },
   "noPreviousPurchaseInfo": "No previous purchase information found. Please check your account again",
   "@noPreviousPurchaseInfo": {
-    "description": "No previous purchase information found. Please check your account again"
+    "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
   },
   "monthlyPlan": "Monthly plan",
   "@monthlyPlan": {

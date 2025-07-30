@@ -940,7 +940,7 @@
   },
   "noPreviousPurchaseInfo": "Ingen tidligere køb oplysninger kunne findes. Kontroller din konto og prøv igen.",
   "@noPreviousPurchaseInfo": {
-    "description": "以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください"
+    "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
   },
   "monthlyPlan": "Månedligt abonnement",
   "@monthlyPlan": {
