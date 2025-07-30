@@ -623,7 +623,7 @@
   },
   "changedToNumber": "Ändra till nummer",
   "@changedToNumber": {
-    "description": "番に変更"
+    "description": "ピルシートUIでピルの表示番号を変更する機能に関するメッセージです。ユーザーがピルの番号表示を調整する際に使用されます。"
   },
   "displayMode": "Visningsläge",
   "@displayMode": {
