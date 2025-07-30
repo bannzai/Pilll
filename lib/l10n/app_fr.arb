@@ -518,7 +518,7 @@
   },
   "takingHistoryIsPremiumFeature": "L'historique des prises est une fonctionnalité premium.",
   "@takingHistoryIsPremiumFeature": {
-    "description": "服用履歴はプレミアム機能です"
+    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
   "pauseTakingDoesNotAdvancePillNumber": "Si vous arrêtez de prendre vos pilules, le numéro de pilule ne progresse pas.",
   "@pauseTakingDoesNotAdvancePillNumber": {

@@ -518,7 +518,7 @@
   },
   "takingHistoryIsPremiumFeature": "यो भनेको प्रीमियम सुविधाको रूपमा अनुवाद गरिन्छ।",
   "@takingHistoryIsPremiumFeature": {
-    "description": "服用履歴はプレミアム機能です"
+    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
   "pauseTakingDoesNotAdvancePillNumber": "यदि तपाईं सेवन गर्न रोक्नु हुँदा गोलीको क्रमांक अगाडि बढी गर्दैन।",
   "@pauseTakingDoesNotAdvancePillNumber": {

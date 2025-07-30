@@ -518,7 +518,7 @@
   },
   "takingHistoryIsPremiumFeature": "পিল ব্যবহারের ইতিহাস প্রিমিয়াম ফিচার।",
   "@takingHistoryIsPremiumFeature": {
-    "description": "服用履歴はプレミアム機能です"
+    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
   "pauseTakingDoesNotAdvancePillNumber": "যখন আপনি পিল নেওয়া বন্ধ করে দেন, তখন পিলের সংখ্যা বাড়বে না",
   "@pauseTakingDoesNotAdvancePillNumber": {

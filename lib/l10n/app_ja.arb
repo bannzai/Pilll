@@ -522,7 +522,7 @@
   },
   "takingHistoryIsPremiumFeature": "服用履歴はプレミアム機能です",
   "@takingHistoryIsPremiumFeature": {
-    "description": "服用履歴はプレミアム機能です"
+    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
   "pauseTakingDoesNotAdvancePillNumber": "服用をお休みするとピル番号は進みません",
   "@pauseTakingDoesNotAdvancePillNumber": {

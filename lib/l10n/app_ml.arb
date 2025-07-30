@@ -518,7 +518,7 @@
   },
   "takingHistoryIsPremiumFeature": "ഉപയോഗത്തിലെ രേഖകള്‍ പ്രീമിയം ഫീച്ചര്‍ ആണ്",
   "@takingHistoryIsPremiumFeature": {
-    "description": "服用履歴はプレミアム機能です"
+    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
   "pauseTakingDoesNotAdvancePillNumber": "മരുന്ന് ഉൾക്കൊണ്ടതു നിർത്തിയാൽ പിൽ നമ്പർ മുന്നോട്ട് പോരുന്നു",
   "@pauseTakingDoesNotAdvancePillNumber": {

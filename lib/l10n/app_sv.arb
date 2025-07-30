@@ -518,7 +518,7 @@
   },
   "takingHistoryIsPremiumFeature": "Användarhistorik är en premiumfunktion.",
   "@takingHistoryIsPremiumFeature": {
-    "description": "服用履歴はプレミアム機能です"
+    "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
   "pauseTakingDoesNotAdvancePillNumber": "När du tar en paus från att ta pillret, kommer nummer för piller att inte gå framåt.",
   "@pauseTakingDoesNotAdvancePillNumber": {
