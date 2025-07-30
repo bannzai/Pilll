@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Не успеа да ја изврши уплатата. Ве молиме проверете дали вашата платна метода е валидна и обидете се повторно.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Целната програма не се продава во моментов. Ве молиме да ја рестартирате апликацијата и повторно да пробате.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

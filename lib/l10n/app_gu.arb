@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "ચુકવણીમાં નિષ્ફળતા થઇ ગઈ છે. કૃપા કરીને માન્ય ચુકવણી પદ્ધતિ છે કે નહીં તે તપાસો અને ફરીને પ્રયત્ન કરો.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ઑર્દાવેલા યોજના હાલ વેચાણમાં નથી. કૃપા કરીને એપ્લિકેશન પુનઃપ્રારંભ કરવા પ્રયત્ન કરો.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

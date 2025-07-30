@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "การชำระเงินล้มเหลว กรุณาตรวจสอบว่าเป็นวิธีการชำระเงินที่ถูกต้องและลองอีกครั้ง",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "แผนที่เลือกไม่ได้ขายในขณะนี้ ขออภัยในความไม่สะดวก กรุณาปิดและเปิดแอปพลิเคชันอีกครั้งแล้วลองใหม่อีกครั้ง",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

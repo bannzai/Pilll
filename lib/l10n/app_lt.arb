@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Mokėjimas nepavyko. Patikrinkite, ar turite galiojantį mokėjimo metodą, ir bandykite dar kartą.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Pasirinktas planas šiuo metu nėra parduodamas. Atsiprašome, bet bandykite dar kartą iš naujo paleidę programą.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

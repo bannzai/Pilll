@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Thanh toán không thành công. Vui lòng kiểm tra xem phương thức thanh toán có hợp lệ hay không và thử lại.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Gói mục tiêu hiện không được bán. Xin vui lòng khởi động lại ứng dụng và thử lại.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

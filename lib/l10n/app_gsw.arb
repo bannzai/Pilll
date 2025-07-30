@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "D'Zahlung isch fehlgeschlage. Bitte überprüfe, ob e gültigi Zahyligsmetode vorhande isch und versuech's nomol.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Der betroffene Plan wird zurzeit nicht verkauft. Bitte starten Sie die App neu und versuchen Sie es erneut.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

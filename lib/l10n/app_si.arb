@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "ගෙවීම අදාල වශයෙන් අසාර්ථක විය. කරුණාකර වලංගු ගෙවීමේ ශේෂය නොවන්න යළි උත්සාහ කරන්න.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ඉලක්කය වූ සැලසුම් දැනට අලෙවි කිරීමට නොමැත. කරුණාකර යෙදුම නැවත ආරම්භ කර නැවත පරීක්ෂා කරන්න.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

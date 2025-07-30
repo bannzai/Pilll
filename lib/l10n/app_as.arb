@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "ଟଙ୍କର ଭୁ଼ଳିଲେ ପଇସା ଦେଖା ନାହିଁ। ଦୟାକରି ଏକ କାର୍ୟକ୍ଷମ ପଇସା ପ୍ରଣାଳୀର ଯାଞ୍ଚ କରନ୍ତୁ ଓ ପୁନରୁତ୍ସାହ କରନ୍ତୁ।",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "বৰ্তমান উপলব্ধ পৰিকল্পনা নাই। অনুগ্রহ কৰি एप্‌টি পুনৰ প্ৰাৰম্ভ কৰি চেষ্টা কৰক।",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

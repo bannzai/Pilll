@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "ਭੁਗਤਾਨ ਵਿੱਚ ਅਸਫਲਤਾ ਹੋ ਗਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਆਪਣੇ ਭੁਗਤਾਨ ਦੇ ਤਰੀਕੇ ਦੀ ਪ੍ਰਮਾਣਿਕਤਾ ਦੀ ਜਾਂਚ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ਮਾਫ ਕਰਨਾ, ਇਸ ਸਮੇਂ ਲਕੜੀ ਦੀਆਂ ਯੋਜਨਾਵਾਂ ਉਪਲਬਧ ਨਹੀਂ ਹਨ। ਕਿਰਪਾ ਕਰਕੇ ਐਪ ਨੂੰ ਮੁੜ ਚਾਲੂ ਕਰਕੇ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

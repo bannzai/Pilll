@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Methiant i dalu. Gwiriwch a ydy'r dull talu yn weithredol a cheisiwch eto.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Nid yw'r cynllun penodol ar gael ar hyn o bryd. Mae'n ddrwg gennyf, ond gwnewch yn siŵr eich bod yn ailgychwyn y cais a phrofi eto.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

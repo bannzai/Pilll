@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "ការទិញបានបរាជ័យ។ សូមពិនិត្យមើលវិធីសាស្ដ្រទូទាត់ដែលមានសុពលភាព ហើយសូម​ធ្វើ​ព្យាយាមម្ដងទៀត។",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "ផ្លា​ន៍​ដែល​ត្រូវគ្នា​មិន​ទាន់អាជីវកម្ម​ឡើយ។ សូមអភ័យទោស ប៉ុន្តែសូមធ្វើការផ្ទះវិញនៃកម្មវិធី។",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

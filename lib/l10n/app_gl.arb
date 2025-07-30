@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Fai un pagamento. Verifica se a forma de pagamento é válida e proba de novo.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "O plan correspondente non está dispoñible actualmente. Por favor, reinicia a aplicación e inténtao de novo.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

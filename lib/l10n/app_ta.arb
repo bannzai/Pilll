@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "பணம் செலுத்துவதை மேற்கொள்வதில் தோல்வி அடைந்தது. முயற்சி செய்வதற்கு முன் செல்லுபடியாகும் பண செலுத்தும் முறைமைகளை சரிபார்க்கவும்.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "இந்த திட்டம் தற்போது விற்பனைக்கு இல்லை. உங்களுக்கு சிரமம் ஏற்பட்டல், தயவுசெய்து செயலியை மறுபடியும் துவக்கி முயற்சிக்கவும்.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "支付失败。请确认您的支付方式是否有效，然后再试一次。",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "当前该计划尚未销售。非常抱歉，请重新启动应用程序并再试一次。",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Ελέγξτε αν η μέθοδος πληρωμής είναι έγκυρη και προσπαθήστε ξανά.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Το συγκεκριμένο πρόγραμμα δεν είναι διαθέσιμο προς πώληση αυτή τη στιγμή. Σας παρακαλούμε να επανεκκινήσετε την εφαρμογή και να δοκιμάσετε ξανά.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

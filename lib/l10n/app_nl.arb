@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "Betaling is mislukt. Controleer of u een geldige betaalmethode heeft en probeer het opnieuw.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "Het geselecteerde abonnement is momenteel niet beschikbaar. Onze excuses voor het ongemak, maar probeer het alstublieft opnieuw na het herstarten van de app.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

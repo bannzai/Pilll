@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "결제에 실패했습니다. 유효한 결제 방법인지 확인 후 다시 시도해 주세요"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "대상 플랜은 현재 판매하고 있지 않습니다. 번거로우시겠지만 앱을 재시작한 후 시도해 주세요",
   "@purchaseErrorProductNotAvailableForPurchaseError": {

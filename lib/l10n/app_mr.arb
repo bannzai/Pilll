@@ -1416,7 +1416,7 @@
   },
   "purchaseErrorPurchaseInvalidError": "अदा करण्यात अयशस्वी झाले. कृपया एक वैध अदा पद्धती असल्याची खात्री करा आणि पुन्हा प्रयत्न करा.",
   "@purchaseErrorPurchaseInvalidError": {
-    "description": "支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください"
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
   "purchaseErrorProductNotAvailableForPurchaseError": "संबंधित योजना सध्या विक्रीसाठी उपलब्ध नाही. कृपया अॅप पुनःप्रारंभ करून पुन्हा प्रयत्न करा.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
