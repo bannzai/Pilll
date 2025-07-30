@@ -993,7 +993,7 @@
   },
   "customizeHealthTags": "🏷 Kustomisasi Tag Kesehatan",
   "@customizeHealthTags": {
-    "description": "🏷 体調タグをカスタマイズ"
+    "description": "プレミアム機能の一覧で表示される機能名です。ユーザーが日記機能で体調を記録する際に使用するタグ（頭痛、吐き気、気分など）を自分好みにカスタマイズできる機能を表しています。"
   },
   "hideAds": "🚫 Sembunyikan iklan",
   "@hideAds": {
