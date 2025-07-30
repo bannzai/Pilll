@@ -651,7 +651,7 @@
   },
   "checkLastTakenDate": "Check last taken date",
   "@checkLastTakenDate": {
-    "description": "Check last taken date"
+    "description": "ユーザーが最後にピルを服用した日付を確認するためのボタンやリンクに表示されるテキストです。服用履歴の確認や飲み忘れ防止のために使用されます。"
   },
   "pleaseRegisterAccount": "Please register an account",
   "@pleaseRegisterAccount": {
