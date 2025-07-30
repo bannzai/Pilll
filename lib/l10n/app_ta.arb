@@ -1596,7 +1596,7 @@
   },
   "purchaseErrorUnsupportedError": "என்னவென்று தெரிந்து கொள்ள முடியாத பிழை. புதிய பதிப்புக்கு மேம்படுத்தி மறு முயற்சிக்கவும். நீங்கள் இதனைத் தீர்க்க முடியவில்லை என்றால் அமைப்புகள் > தொடர்பு மூலம் தொடர்புகொள்ளவும். குறியீடு: {errorCode} விரிவானம்: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

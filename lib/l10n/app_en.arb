@@ -1596,7 +1596,7 @@
   },
   "purchaseErrorUnsupportedError": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "An unknown error occurred. Please update to the latest version and try again. If the problem persists, please contact support. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

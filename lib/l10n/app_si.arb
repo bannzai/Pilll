@@ -1596,7 +1596,7 @@
   },
   "purchaseErrorUnsupportedError": "මෙය කිසිඳු හේතුකාරකයක් නොමැති දෝෂයකි. නවතම වාර්තාවට යාවත්කාලීන කර 다시 prøාත්න කරන්න. මෙය විසදා නොගත් ආකාරයක් නම්, සැකසුම් > විමසුම් යන්නෙහි සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

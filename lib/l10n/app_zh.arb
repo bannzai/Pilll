@@ -1596,7 +1596,7 @@
   },
   "purchaseErrorUnsupportedError": "这是一个未知的错误。请更新到最新版本并重试。如果仍未解决，请通过 设置 > 联系我们 与我们联系。代码：{errorCode} 详细信息：{exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

@@ -1596,7 +1596,7 @@
   },
   "purchaseErrorUnsupportedError": "यो कारण नखुलेको त्रुटी हो। कृपया पछिल्लो संस्करणमा अपडेट गर्नुहोस् र फेरि प्रयास गर्नुहोस्। यदि यो समाधान भएन भने, कृपया सेटिंग्स > सम्पर्कमार्फत सम्पर्क गर्नुहोस्। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
       "errorCode": {
         "type": "String"

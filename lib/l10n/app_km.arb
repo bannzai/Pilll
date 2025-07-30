@@ -1596,7 +1596,7 @@
   },
   "purchaseErrorUnsupportedError": "កំហុសដែលមិនទាន់បានកំណត់មុខមាត់។ សូមធ្វើការអាប់ដេតទៅជាភាពថ្មីបំផុត និងសូមព្យាយាមម្តងទៀត។ ប្រសិនបើបញ្ហានេះមិនបានដំណើរការឡើយ សូមទាក់ទងមកតាមផ្លូវ ការកំណត់ > សំណួរ។ កូដ: {errorCode} ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
-    "description": "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
       "errorCode": {
         "type": "String"
