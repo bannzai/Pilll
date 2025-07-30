@@ -1611,7 +1611,7 @@
   },
   "purchaseErrorEmptySubscriberAttributesError": "අවිස්කාරක දෝෂයක්. මිලදී ගැනීමේ තොරතුරු පෙර ලබා ගත නොහැකි විය. විශේෂණ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
-    "description": "原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}",
+    "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
       "exceptionMessage": {
         "type": "String"
