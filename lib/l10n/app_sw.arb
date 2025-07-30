@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "Wewe ni mwanachama wa premium",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "Asante kwa kutumia huduma zetu. Kwa sababu yenu, tunaweza kuendelea na uendeshaji wa Pilll.",
   "@thankYouMessage": {

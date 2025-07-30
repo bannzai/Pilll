@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "Rydych chi'n aelod premiwm.",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "Diolch am ddefnyddio ein gwasanaeth. Oherwydd hynny, rydym wedi gallu parhau i weithredu Pilll.",
   "@thankYouMessage": {

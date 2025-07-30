@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "ପ୍ରେମିଅମ୍ ସଦସ୍ୟ ଅଟେ",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "ଧନ୍ୟବାଦ ଆପଣଙ୍କ ଅବନ୍ନାର ସେବା ଡୋଉନା କରାଯାଇଛି। ଆମେ Pilll କାର୍ଯ୍ୟକଳାପକୁ ସୁରକ୍ଷିତ ରଖିପାରୁଛୁ।",
   "@thankYouMessage": {

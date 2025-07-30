@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "Anda adalah\nahli premium",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "Terima kasih kerana menggunakan aplikasi kami.\nDengan bantuan anda, kami dapat terus menjalankan Pilll.",
   "@thankYouMessage": {

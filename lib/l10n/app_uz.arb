@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "Siz premium a'zo siz",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "Sizga rahmat. Sizning yordamlaringiz bilan Pilllni boshqarishni davom ettira olishimiz mumkin.",
   "@thankYouMessage": {

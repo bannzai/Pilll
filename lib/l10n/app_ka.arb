@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "თქვენი პრემიერი წევრია",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "მადლობთ მომსახურებისთვის. თქვენი დახმარებით Pilll-ის მართვა გრძელდება.",
   "@thankYouMessage": {

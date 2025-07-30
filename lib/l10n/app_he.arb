@@ -961,7 +961,7 @@
   },
   "youArePremiumMember": "אתה חבר פרימיום",
   "@youArePremiumMember": {
-    "description": "あなたは\nプレミアムメンバーです"
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
   "thankYouMessage": "תודה על השימוש שלך.\nבעזרתך אנחנו יכולים להמשיך להפעיל את אפליקציית Pilll.",
   "@thankYouMessage": {
