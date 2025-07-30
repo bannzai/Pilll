@@ -1266,7 +1266,7 @@
   },
   "serviceImprovementSurvey": "சேவை மேம்பாட்டு கணேடிக்கை",
   "@serviceImprovementSurvey": {
-    "description": "サービス改善アンケート"
+    "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
   },
   "satisfied": "பாநாட்டில் இருக்கு",
   "@satisfied": {
