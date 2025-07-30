@@ -374,7 +374,7 @@
   },
   "settingsPage": "Настройки",
   "@settingsPage": {
-    "description": "SettingsPage"
+    "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
   "menstruationDeleted": "Периодът на менструация беше изтрит.",
   "@menstruationDeleted": {

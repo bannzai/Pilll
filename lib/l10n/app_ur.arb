@@ -374,7 +374,7 @@
   },
   "settingsPage": "سیٹنگز صفحہ",
   "@settingsPage": {
-    "description": "SettingsPage"
+    "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
   "menstruationDeleted": "حیض کی مدت کو ہٹا دیا گیا ہے",
   "@menstruationDeleted": {

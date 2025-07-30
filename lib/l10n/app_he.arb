@@ -374,7 +374,7 @@
   },
   "settingsPage": "עמוד ההגדרות",
   "@settingsPage": {
-    "description": "SettingsPage"
+    "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
   "menstruationDeleted": "המועד של המחזור הוסרה",
   "@menstruationDeleted": {
