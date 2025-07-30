@@ -2282,7 +2282,7 @@
   "@medicationNotification": {
     "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
-  "silentModeNotificationDescription": "Al die tyd wanneer die konsentrasiemodus aan is of die toestel op stil is, sal kennisgewings op die sluiter-vertoning vertoon word en klank sal gespeel word.",
+  "silentModeNotificationDescription": "Selfs wanneer fokus modus aan is of die toestel stil is, sal kennisgewings op die slotskerm vertoon word en klanke sal gespeel word",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
