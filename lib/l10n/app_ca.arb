@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "No s'ha trobat el full de píndoles actualment seleccionat.",
+  "currentPillSheetNotFound": "No s'ha trobat la plaqueta de píndoles actual",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
