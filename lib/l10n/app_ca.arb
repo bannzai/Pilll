@@ -711,7 +711,7 @@
       }
     }
   },
-  "remainingDaysAllFeatures": "Podeu utilitzar totes les funcions durant els pròxims {diff} dies.",
+  "remainingDaysAllFeatures": "Pots utilitzar totes les funcions durant {diff} dies més",
   "@remainingDaysAllFeatures": {
     "description": "プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。",
     "placeholders": {
