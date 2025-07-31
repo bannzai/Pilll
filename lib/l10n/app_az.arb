@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Bilinməyən bir xəta var. Ən son versiyaya yeniləyin və yenidən cəhd edin. Hələ də həll olunmursa, xahiş edirik ayarlara gedin > Sorğu və əlaqə bölməsindən bizimlə əlaqə saxlayın. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Naməlum xəta. Ən son versiyaya yeniləyin və yenidən cəhd edin. Həll olunmadığı təqdirdə Ayarlar > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüat: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
