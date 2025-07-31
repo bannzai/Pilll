@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Bilinməyən bir xətadır. Ən son versiyaya yeniləyin və yenidən cəhd edin. Hələ də həll olunmadıqda, Ayarlar > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Naməlum xəta baş verdi. Lütfən ən son versiyaya yeniləyin və yenidən cəhd edin. Əgər problem həll olmazsa, Tənzimləmələr > Müraciət bölməsindən bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüat: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
