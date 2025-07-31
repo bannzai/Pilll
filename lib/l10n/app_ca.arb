@@ -825,7 +825,7 @@
   "@login": {
     "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
-  "beforePremiumRegistration": "Abans de registrar-se a la versió premium...",
+  "beforePremiumRegistration": "Abans de la subscripció premium...",
   "@beforePremiumRegistration": {
     "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
