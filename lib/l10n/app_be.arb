@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Невядомая памылка. Абнавіце да апошняй версіі і паспрабуйце яшчэ раз. Калі праблема не будзе вырашаная, звяжыцеся з намі праз Налады > Запыт. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Невядомая памылка. Абнавіце да апошняй версіі і паспрабуйце зноў. Калі праблема не вырашаецца, звернецеся ў Налады > Звароты. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
