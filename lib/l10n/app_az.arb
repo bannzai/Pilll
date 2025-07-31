@@ -1753,7 +1753,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "Rabıtə pozulub. Xahiş edirik, rabitə mühitinizi yoxlayın və yenidən cəhd edin. Hələ də problemi həll edə bilmirsinizsə, tənzimləmələr > Sorğu bölməsindən bizimlə əlaqə saxlayın. Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Rabitə problemi var. Rabitə şəraitinizi yoxlayın və yenidən cəhd edin. Problem həll olmursa, Ayarlar > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
