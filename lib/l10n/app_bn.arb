@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "ক্রয় তথ্য পাওয়ার ক্ষেত্রে ভুল। আবার চেষ্টা করার জন্য সময় নিন। সমাধান না হলে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "ক্রয় তথ্য পুনরুদ্ধার করতে ব্যর্থ হয়েছে। অনুগ্রহ করে কিছুক্ষণ অপেক্ষা করে আবার চেষ্টা করুন। সমস্যার সমাধান না হলে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
