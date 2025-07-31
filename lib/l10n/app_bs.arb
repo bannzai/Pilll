@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Trenutno nije moguće izvršiti kupovinu. Molimo vas da sačekate i pokušate ponovo. Ako problem nije rešen, kontaktirajte nas putem Podešavanja > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Kupovina trenutno nije dostupna. Molimo pokušajte ponovo kasnije. Ako se problem ne riješi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
