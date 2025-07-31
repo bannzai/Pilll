@@ -1570,7 +1570,7 @@
       }
     }
   },
-  "purchaseErrorLogOutWithAnonymousUserError": "ব্যবহারকারী তথ্য পেতে ব্যর্থ হয়েছে। কিছু সময় পরে আবার চেষ্টা করুন। যদি সমস্যাটি সমাধান না হয় তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "ব্যবহারকারীর তথ্য পেতে ব্যর্থ হয়েছে। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
     "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
