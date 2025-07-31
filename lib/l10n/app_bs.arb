@@ -2253,7 +2253,7 @@
       }
     }
   },
-  "premiumIntroductionDiscountPriceDeadline": "Sve funkcije možete nastaviti koristiti uz premium registraciju.",
+  "premiumIntroductionDiscountPriceDeadline": "Sa premium pretplatom možete i dalje koristiti sve funkcije",
   "@premiumIntroductionDiscountPriceDeadline": {
     "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   },
