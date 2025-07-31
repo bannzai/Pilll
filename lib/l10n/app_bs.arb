@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Postavke uređaja imaju problema. Provjerite ih i pokušajte ponovo. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Upit. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Postoji problem s postavkama uređaja. Molimo provjerite i pokušajte ponovo. Ako se problem ne riješi, kontaktirajte nas preko Postavke > Kontakt. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
