@@ -2269,7 +2269,7 @@
       }
     }
   },
-  "pillReminderChanged": "Postavio sam obavijest o uzimanju za {value}",
+  "pillReminderChanged": "Postavili smo notifikaciju za uzimanje na {value}",
   "@pillReminderChanged": {
     "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
     "placeholders": {
