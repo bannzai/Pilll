@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Kupovina se obrađuje zasebno. Molimo vas da pokušate ponovo nakon nekog vremena.",
+  "purchaseErrorOperationAlreadyInProgressError": "Kupovina je već u toku. Molimo pričekajte i pokušajte ponovo.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
