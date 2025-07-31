@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Trenutno nije pronađen odgovarajući blister pilula.",
+  "currentPillSheetNotFound": "Trenutno aktivna tabletka pilula nije pronađena",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
