@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "Plaćanje je prekinuto. Provjerite {storeName} s {accountName} koji je trenutno prijavljen.",
+  "purchaseErrorPaymentPendingError": "Plaćanje je prekinuto. Molimo provjerite {storeName} sa računom {accountName}.",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
