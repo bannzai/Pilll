@@ -1485,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppUserIdError": "No s'ha pogut confirmar l'usuari. Torneu a intentar-ho després de reiniciar l'aplicació. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "No s'ha pogut verificar l'usuari. Reinicieu l'aplicació i torneu-ho a provar. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
     "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
