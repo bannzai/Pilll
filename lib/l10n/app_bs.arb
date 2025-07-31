@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "To je nepoznata greška. Ažurirajte na najnoviju verziju i pokušajte ponovo. Ako problem i dalje postoji, kontaktirajte nas putem Podešavanja > Upit. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Došlo je do nepoznate greške. Molimo ažurirajte na najnoviju verziju i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas preko Postavke > Kontakt. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
