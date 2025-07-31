@@ -1389,7 +1389,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "S'ha produït un error desconegut. Si us plau, torneu-ho a provar més tard. Si no es resol, poseu-vos en contacte a Configuració > Consulta. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "S'ha produït un error desconegut. Espereu una estona i torneu-ho a provar. Si el problema persisteix, contacteu-nos a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
