@@ -555,7 +555,7 @@
       }
     }
   },
-  "addPillSheetButton": "পিল শীট যুক্ত করুন",
+  "addPillSheetButton": "পিল শিট যোগ করুন",
   "@addPillSheetButton": {
     "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
   },
