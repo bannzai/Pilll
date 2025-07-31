@@ -1651,7 +1651,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Error desconegut. Actualitzeu a l'última versió i torneu-ho a provar. Si no es soluciona, poseu-vos en contacte a Configuració > Suport. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Error de causa desconeguda. Actualitzeu a la versió més recent i torneu-ho a provar. Si no es resol, poseu-vos en contacte amb nosaltres des de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
