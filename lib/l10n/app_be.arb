@@ -1439,7 +1439,7 @@
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
-  "purchaseErrorMissingReceiptFileError": "Інфармацыя пра пакупніка адсутнічае. Калі ласка, ўвайдзіце ў сістэму на прыладзе пад {accountName} і паспрабуйце яшчэ раз.",
+  "purchaseErrorMissingReceiptFileError": "Інфармацыя пра пакупніка адсутнічае. Увайдзіце ў сістэму на прыладзе з уліковым запісам {accountName} і паспрабуйце яшчэ раз",
   "@purchaseErrorMissingReceiptFileError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
