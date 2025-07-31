@@ -1410,7 +1410,7 @@
       }
     }
   },
-  "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইসে ক্রয় অনুমোদিত নয়",
+  "purchaseErrorPurchaseNotAllowedError": "এই ডিভাইছত ক্ৰয়ৰ অনুমতি নাই",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
