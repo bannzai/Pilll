@@ -1435,7 +1435,7 @@
       }
     }
   },
-  "purchaseErrorInvalidReceiptError": "Neispravne informacije o kupovini. Molimo vas da provjerite informacije o kupovini.",
+  "purchaseErrorInvalidReceiptError": "Nevažeće informacije o kupovini. Molimo provjerite podatke o kupovini.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
