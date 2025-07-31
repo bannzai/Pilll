@@ -1410,7 +1410,7 @@
       }
     }
   },
-  "purchaseErrorPurchaseNotAllowedError": "На гэтым прыладзе набыцці не дазволена.",
+  "purchaseErrorPurchaseNotAllowedError": "Пакупкі на гэтай прыладзе не дазволеныя",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
