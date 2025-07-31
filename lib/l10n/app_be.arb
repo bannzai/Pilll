@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "У вас праблема з наладкамі прылады. Праверце і паспрабуйце яшчэ раз. Калі праблема не вырашана, звяжыцеся з намі праз Налады > Запыт. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Праблема з наладамі прылады. Праверце і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Звярнуцца. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
