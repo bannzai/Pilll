@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Nepoznata greška. Ažurirajte na najnoviju verziju i pokušajte ponovo. Ako problem nije rešen, kontaktirajte nas putem Podešavanja > Upit. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Nepoznata greška. Molimo ažurirajte na najnoviju verziju i pokušajte ponovo. Ako se problem ne riješi, obratite nam se preko Postavke > Kontakt. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
