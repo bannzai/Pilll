@@ -792,7 +792,7 @@
       }
     }
   },
-  "recordMenstruation": "Zabilježi menstruaciju",
+  "recordMenstruation": "Zabilježiti menstruaciju",
   "@recordMenstruation": {
     "description": "生理記録機能のラベルです。ユーザーが生理の開始や期間を入力・記録する際に表示されるテキストです。"
   },
