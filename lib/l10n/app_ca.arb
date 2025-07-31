@@ -1806,7 +1806,7 @@
   "@enableHealthKitFromSettings": {
     "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
-  "accountAlreadyLinked": "Aquest compte {accountTypeProviderName} ja està vinculat al compte de Pilll que ja utilitzeu. Si us plau, proveu d'actualitzar la pantalla. Consulteu també les preguntes freqüents. Detalls: {exceptionMessage}",
+  "accountAlreadyLinked": "Aquest compte de {accountTypeProviderName} ja està enllaçat al vostre compte de Pilll. Proveu de refrescar la pantalla. També consulteu les preguntes freqüents. Detalls: {exceptionMessage}",
   "@accountAlreadyLinked": {
     "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
