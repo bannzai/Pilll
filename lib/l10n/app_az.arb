@@ -1711,7 +1711,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "Zaman bitdi. Xahiş edirik, şəbəkə mühitinizi yoxlayın və yenidən cəhd edin. Hələ də işləmirsə, ayarlar > Sorğu bölməsindən bizimlə əlaqə saxlayın. Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "Zaman bitdi. Şəbəkə bağlantınızı yoxlayıb yenidən cəhd edin. Problem həll edilmirsə, Ayarlar > Müraciət bölməsi vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
