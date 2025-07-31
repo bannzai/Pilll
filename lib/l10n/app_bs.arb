@@ -1753,7 +1753,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "Došlo je do greške u komunikaciji. Provjerite svoju mrežnu vezu i pokušajte ponovno. Ako problem nije riješen, kontaktirajte nas putem Postavke > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Greška u komunikaciji. Molimo provjerite internetsku konekciju i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
