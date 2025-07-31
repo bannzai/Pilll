@@ -1448,7 +1448,7 @@
       }
     }
   },
-  "purchaseErrorNetworkError": "La connexió de xarxa és inestable. Si us plau, comproveu l'estat de la connexió abans de tornar-ho a provar.",
+  "purchaseErrorNetworkError": "La connexió de xarxa és inestable. Comproveu l'estat de la connexió i torneu-ho a provar.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
