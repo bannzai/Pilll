@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "No s'ha pogut obtenir la informació del client. Si us plau, espereu un moment i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a Configuració > Consulta. Detalls: Codi: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Ha fallat l'obtenció de la informació del client. Torneu-ho a provar més tard. Si el problema persisteix, contacteu amb nosaltres des de Configuració > Contacte. Detalls: Codi: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
