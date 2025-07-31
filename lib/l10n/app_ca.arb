@@ -250,7 +250,7 @@
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
-  "checkPillNumberForMenstruationStart": "Si us plau, comproveu el número de píndoles de la data d'inici de la menstruació. S'ha establert un número de píndoles que no existeix en el tipus de full de píndoles seleccionat actualment.",
+  "checkPillNumberForMenstruationStart": "Si us plau, comproveu el número de píndola de la data d'inici de la menstruació. El número de píndola configurat no existeix en el tipus de full de píndoles seleccionat actualment",
   "@checkPillNumberForMenstruationStart": {
     "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
