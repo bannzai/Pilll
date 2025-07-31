@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Неизвестна грешка. Моля, актуализирайте до последната версия и опитайте отново. Ако проблемът не бъде решен, моля, свържете се с нас via Настройки > Запитвания. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "Възникна неизвестна грешка. Моля, актуализирайте до най-новата версия и опитайте отново. Ако проблемът не се реши, моля свържете се с нас чрез Настройки > Свържете се с нас. Код: {errorCode} Детайли: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
