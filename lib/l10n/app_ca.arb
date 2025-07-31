@@ -1418,7 +1418,7 @@
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorProductNotAvailableForPurchaseError": "El pla objectiu actualment no està disponible. Si us plau, torneu a iniciar l'aplicació i torneu-ho a provar.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "El pla seleccionat no està disponible actualment. Si us plau, reinicieu l'aplicació i torneu-ho a provar.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
