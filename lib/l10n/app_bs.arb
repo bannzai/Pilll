@@ -699,7 +699,7 @@
       }
     }
   },
-  "daysUntilPausePeriod": "Preostalo je još {diffPlusOne} dana do {activePillSheetPillSheetTypeNotTakenWord} perioda.",
+  "daysUntilPausePeriod": "Još {diffPlusOne} dana do {activePillSheetPillSheetTypeNotTakenWord} perioda",
   "@daysUntilPausePeriod": {
     "description": "ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。",
     "placeholders": {
