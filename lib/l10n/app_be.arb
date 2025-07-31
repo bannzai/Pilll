@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Невядомая памылка. Абнавіце да апошняй версіі і паспрабуйце яшчэ раз. Калі праблема не вырашана, калі ласка, звярніцеся ў настройкі > Запыты. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Узнікла невядомая памылка. Калі ласка, абнавіце да апошняй версіі і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Звярнуцца. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
