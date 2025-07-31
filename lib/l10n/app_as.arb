@@ -1651,7 +1651,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "এই একটি অজানা ত্রুটি। অনুগ্রহ করে সর্বশেষ সংস্করণটিতে আপডেট করুন এবং পুনরায় চেষ্টা করুন। যদি এটি সমাধান না হয় তবে অনুগ্রহ করে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "এটো এটা অজ্ঞাত ত্রুটি। শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে ছেটিংছ > যোগাযোগৰ পৰা আমাৰ লগত যোগাযোগ কৰক। ক'ড: {errorCode} বিস্তাৰিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
