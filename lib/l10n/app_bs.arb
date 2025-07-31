@@ -774,7 +774,7 @@
       }
     }
   },
-  "menstruationRemainingDay": "Još {diff} dana",
+  "menstruationRemainingDay": "još {diff} dana",
   "@menstruationRemainingDay": {
     "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
     "placeholders": {
