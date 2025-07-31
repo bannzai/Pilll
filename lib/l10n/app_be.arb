@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Невядомая памылка. Калі ласка, абнавіце да апошняй версіі і паспрабуйце зноў. Калі не вырашаецца, звяжыцеся з намі праз Налада > Запыт. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Невядомая памылка. Калі ласка, абнавіце да апошняй версіі і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Кантакт. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
