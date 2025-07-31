@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Не можете да направите покупка в момента. Опитайте отново след известно време. Ако проблемът не се реши, свържете се с нас чрез Настройки > Запитване. Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "В момента покупката не е възможна. Моля, опитайте отново след малко. Ако проблемът продължи, се свържете с нас чрез Настройки > Контакт. Детайли: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
