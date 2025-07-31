@@ -1401,7 +1401,7 @@
       }
     }
   },
-  "purchaseErrorStoreProblemError": "{storeName} এ একটি ত্রুটি ঘটেছে। কিছু সময় অপেক্ষা করুন এবং আবার চেষ্টা করুন",
+  "purchaseErrorStoreProblemError": "{storeName} এ ত্রুটি ঘটেছে। কিছুক্ষণ অপেক্ষা করে আবার চেষ্টা করুন",
   "@purchaseErrorStoreProblemError": {
     "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
     "placeholders": {
