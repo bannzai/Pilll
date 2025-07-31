@@ -897,7 +897,7 @@
       }
     }
   },
-  "premiumTermsNotice1": "Premium abunə müddəti başlanğıc tarixindən 1 ay və ya 1 il müddətində avtomatik olaraq uzadılır.",
+  "premiumTermsNotice1": "• Premium müqavilə müddəti başlama tarixindən etibarən hər ay və ya ildə bir dəfə avtomatik olaraq yenilənir",
   "@premiumTermsNotice1": {
     "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
   },
