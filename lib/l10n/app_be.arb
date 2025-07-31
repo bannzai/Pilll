@@ -1696,7 +1696,7 @@
       }
     }
   },
-  "purchaseErrorBeginRefundRequestError": "Працэс вяртання грошай быў ініцыяваны. Праверце і паспрабуйце яшчэ раз. Калі праблема не вырашана, звяжыцеся з намі праз Налады > Запыт. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorBeginRefundRequestError": "Працэс вяртання грошай пачаты. Праверце і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Звяртанне. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
     "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
