@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "অজানা ত্রুটি। সর্বশেষ সংস্করণে আপডেট করুন এবং পুনরায় চেষ্টা করুন। যদি সমস্যাটি সমাধান না হয়, তবে সেটিংসে যান > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "এইটো এটা অজ্ঞাত কাৰণৰ ত্ৰুটি। শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > সহায় ৰ পৰা যোগাযোগ কৰক। ক'ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
