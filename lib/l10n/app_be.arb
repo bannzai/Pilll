@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Невядомая памылка. Калі ласка, абнавіце да апошняй версіі і паспрабуйце яшчэ раз. Калі гэта не дапаможа, калі ласка, звяжыцеся з намі праз Налады > Пытанні. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Невядомая памылка. Абнавіце да апошняй версіі і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся праз Налады > Зваротная сувязь. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
