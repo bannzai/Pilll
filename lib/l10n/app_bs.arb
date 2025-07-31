@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Nepoznata greška. Ažurirajte na najnoviju verziju i pokušajte ponovo. Ako se problem ne reši, kontaktirajte nas putem Postavke > Upit. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Došlo je do greške nepoznatog uzroka. Molimo ažurirajte na najnoviju verziju i pokušajte ponovo. Ako se problem ne riješi, obratite nam se preko Postavke > Kontakt. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
