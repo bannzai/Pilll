@@ -500,7 +500,7 @@
   "@pauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "pauseEndDate": "Datum završetka prekida uzimanja",
+  "pauseEndDate": "Datum završetka pauze",
   "@pauseEndDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
