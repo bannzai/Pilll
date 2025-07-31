@@ -1435,7 +1435,7 @@
       }
     }
   },
-  "purchaseErrorInvalidReceiptError": "অবৈধ ক্রয়ের তথ্য। ক্রয় তথ্য নিশ্চিত করুন।",
+  "purchaseErrorInvalidReceiptError": "ক্ৰয় তথ্য ভুল হৈছে। অনুগ্ৰহ কৰি আপোনাৰ ক্ৰয় তথ্য পৰীক্ষা কৰক।",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
