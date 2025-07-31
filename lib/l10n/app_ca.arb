@@ -1594,7 +1594,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Error desconegut. Actualitzeu a la darrera versió i torneu a provar-ho. Si el problema persisteix, contacteu-nos a Configuració > Consultes. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Es tracta d'un error de causa desconeguda. Si us plau, actualitzeu a la versió més recent i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
