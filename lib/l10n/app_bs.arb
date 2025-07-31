@@ -2297,5 +2297,14 @@
   "criticalAlertVolume": "Jakost zvuka",
   "@criticalAlertVolume": {
     "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
+  },
+  "dailyPrice": "{dailyPriceString}/dan",
+  "@dailyPrice": {
+    "description": "プレミアムプランの1日あたりの料金を表示する際に使用されます。{dailyPriceString}は計算された1日の価格が入ります。",
+    "placeholders": {
+      "dailyPriceString": {
+        "type": "String"
+      }
+    }
   }
 }
