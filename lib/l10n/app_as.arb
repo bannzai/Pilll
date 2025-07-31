@@ -829,7 +829,7 @@
   "@beforePremiumRegistration": {
     "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
-  "createNewAccountIfNotLoggedIn": "যদি আপুনি Pilll ত এতিয়াও লগ ইন কৰা নাই, তেনে নতুন এবাৰ একাউণ্ট সৃষ্টি কৰা হ'ব।",
+  "createNewAccountIfNotLoggedIn": "যদি Pilll ত এতিয়াও লগইন কৰা নাই তেন্তে নতুন একাউন্ট সৃষ্টি হ'ব",
   "@createNewAccountIfNotLoggedIn": {
     "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
