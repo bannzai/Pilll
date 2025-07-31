@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Процесът на покупка продължава отделно. Моля, проверете отново след известно време.",
+  "purchaseErrorOperationAlreadyInProgressError": "В момента се обработва друга покупка. Моля, изчакайте и опитайте отново по-късно.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
