@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Процэс пакупкі ў цяперашні час яшчэ працягваецца. Калі ласка, пачакайце некаторы час і паспрабуйце яшчэ раз.",
+  "purchaseErrorOperationAlreadyInProgressError": "Ужо выконваецца іншы працэс покупкi. Калi ласка, пачакайце і паўтарыце спробу пазней.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
