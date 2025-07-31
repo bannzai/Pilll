@@ -1912,7 +1912,7 @@
   "@scheduleRecord": {
     "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
   },
-  "previousPillSheetGroupNotFound": "El grup anterior de fulls de píndoles encara no existeix.",
+  "previousPillSheetGroupNotFound": "El grup de la placa de píndoles anterior encara no existeix",
   "@previousPillSheetGroupNotFound": {
     "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   },
