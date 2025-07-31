@@ -617,7 +617,7 @@
       }
     }
   },
-  "endOfPillDays": "Qəbulu günlərinin sonu",
+  "endOfPillDays": "Qəbul dövrünün sonu",
   "@endOfPillDays": {
     "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
