@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Hi ha un problema amb la configuració del dispositiu. Comproveu-ho i torneu-ho a provar. Si no es soluciona, poseu-vos en contacte amb nosaltres a Configuració > Contactar. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Hi ha un problema amb la configuració del dispositiu. Comproveu-ho i torneu-ho a provar. Si no es resol, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
