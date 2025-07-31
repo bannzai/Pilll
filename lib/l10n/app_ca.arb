@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Actualment no es pot comprar. Si us plau, torneu-ho a intentar més tard. Si el problema persisteix, contacteu-nos a través de Configuració > Consultes. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Actualment no es pot realitzar la compra. Espereu un moment i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
