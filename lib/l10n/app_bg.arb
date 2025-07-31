@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Неизвестна грешка. Моля, актуализирайте до последната версия и опитайте отново. Ако проблемът не е решен, моля, свържете се с нас чрез Настройки > Запитвания. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Възникна неизвестна грешка. Моля, актуализирайте до най-новата версия и опитайте отново. Ако проблемът не се реши, свържете се с нас чрез Настройки > Запитване. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
