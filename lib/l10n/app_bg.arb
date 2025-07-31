@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Неразрешима грешка. Моля, актуализирайте до последната версия и опитайте отново. Ако проблемът не се реши, моля, свържете се с нас чрез Настройки > Запитване. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Възникна неизвестна грешка. Моля, актуализирайте до най-новата версия и опитайте отново. Ако проблемът не се реши, свържете се с нас чрез Настройки > Запитвания. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
