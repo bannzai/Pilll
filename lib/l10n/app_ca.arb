@@ -1621,7 +1621,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Error desconegut. Actualitzeu a la darrera versió i torneu a provar. Si no es resol, si us plau, poseu-vos en contacte a Configuració > Consulta. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Error de causa desconeguda. Actualitzeu a la versió més recent i torneu-ho a provar. Si no es resol, contacteu-nos a través de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
