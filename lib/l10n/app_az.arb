@@ -1696,7 +1696,7 @@
       }
     }
   },
-  "purchaseErrorBeginRefundRequestError": "Geri ödəmə prosesi başlayıb. Zəhmət olmasa təsdiq edin və bir daha cəhd edin. Hələ də həll olunmursa, Ayarlar > Sorğu ilə bizimlə əlaqə saxlayın. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorBeginRefundRequestError": "Geri ödəmə prosesi başladılıb. Yoxlayın və yenidən cəhd edin. Həll edilməsə, Ayarlar > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüat: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
     "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
