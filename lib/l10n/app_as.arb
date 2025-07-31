@@ -1476,7 +1476,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "購買 তথ্য অন্য একেলগত ব্যৱহৃত হৈছে। দয়া কৰি নিশ্চিত কৰক যে আপুনি যি ডিভাইছত লগ ইন কৰিছে {accountName}।",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ক্ৰয় তথ্য অন্য এজন ব্যৱহাৰকাৰীয়ে ব্যৱহাৰ কৰিছে। ডিভাইচত লগ ইন থকা {accountName} পৰীক্ষা কৰক।",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
