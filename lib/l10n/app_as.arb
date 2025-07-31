@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "আপনার ডিভাইসে একটি সেটিং সমস্যা আছে। অনুগ্রহপূর্বক এটি পরীক্ষা করুন এবং আবার চেষ্টা করুন। যদি সমস্যাটি সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ পরবর্তী যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "আপোনাৰ ডিভাইচৰ ছেটিংত সমস্যা আছে। পৰীক্ষা কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিং > যোগাযোগৰ যোগেদি আমাৰ লগত যোগাযোগ কৰক। ক'ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
