@@ -1476,7 +1476,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Alış-veriş məlumatları başqa bir istifadəçi tərəfindən istifadə olunur. Cihazda daxil olan {accountName} hesabını yoxlayın.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Satın alma məlumatları başqa istifadəçi tərəfindən istifadə edilir. Zəhmət olmasa cihazda daxil olmuş {accountName} hesabını yoxlayın.",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
