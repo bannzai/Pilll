@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "আপনার বিল পরিশোধ চলতি অবস্থায় থেমে গিয়েছে। দয়া করে {accountName} এর সাথে লগ ইন করে {storeName}টি যাচাই করুন।",
+  "purchaseErrorPaymentPendingError": "পেমেন্ট মাঝপথে বন্ধ হয়ে গেছে। লগইন করা {accountName} দিয়ে {storeName} চেক করুন",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
