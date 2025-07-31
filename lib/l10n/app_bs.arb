@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "Neuspjeh u dobivanju informacija o kupovini. Pokušajte ponovo za nekoliko minuta. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Dohvatanje informacija o kupovini nije uspjelo. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, kontaktirajte nas preko Postavke > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
