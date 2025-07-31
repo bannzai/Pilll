@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "ଆପଣରେ ବର୍ତ୍ତମାନ ସମ୍ମିଳିତ ପିଲ୍ ଶୀଟ୍ ମିଳୁନି।",
+  "currentPillSheetNotFound": "বৰ্তমান লক্ষ্যৰ পিল শ্বীট পোৱা নগ'ল",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
