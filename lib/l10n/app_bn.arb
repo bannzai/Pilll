@@ -1609,7 +1609,7 @@
       }
     }
   },
-  "purchaseErrorEmptySubscriberAttributesError": "অজ্ঞাত কারণে ত্রুটি। ক্রয় তথ্য আগে থেকে নেওয়া যায়নি। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "অজানা কারণে ত্রুটি হয়েছে। ক্রয়ের তথ্য আগে থেকে সংগ্রহ করা যায়নি। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
