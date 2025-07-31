@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "আপনার অর্থপ্রদান অর্ধবিচ্ছিন্ন। {accountName} এর মাধ্যমে লগ ইন করে {storeName} যাচাই করুন।",
+  "purchaseErrorPaymentPendingError": "পেমেণ্ট প্ৰক্ৰিয়া মাজতে বন্ধ হৈ গৈছে। লগইন থকা {accountName}ৰ জৰিয়তে {storeName}ত পৰীক্ষা কৰক।",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
