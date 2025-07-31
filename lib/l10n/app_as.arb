@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "গ্ৰাহক তথ্য লাভ কৰিবলৈ ব্যৰ্থ হৈছে। কৃপা কৰি কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে \"ছেটিংছ > যোগাযোগ\"ৰ পৰা আমাদের সংযোগ কৰক। বিশদ: কোড: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "গ্ৰাহকৰ তথ্য আহৰণত বিফল হৈছে। কিছু সময়ৰ পিছত পুনৰ চেষ্টা কৰক। যদি সমাধান নহয়, তেন্তে ছেটিং > যোগাযোগৰ যোগেদি যোগাযোগ কৰক। বিৱৰণ: ক'ড: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
