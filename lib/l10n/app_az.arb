@@ -963,7 +963,7 @@
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
-  "thankYouMessage": "Təşəkkür edirik ki, Pilll-dan istifadə edirsiniz. Sayənizdə, Pilll-ın fəaliyyətini davam etdirə bilirik.",
+  "thankYouMessage": "İstifadə etdiyiniz üçün təşəkkür edirik. Sizin sayənizdə Pilll tətbiqinin fəaliyyətini davam etdirə bilirik.",
   "@thankYouMessage": {
     "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
