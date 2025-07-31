@@ -1501,7 +1501,7 @@
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
-  "purchaseErrorUnknownBackendError": "এই মুহূর্তে কেনাকাটা সম্ভব হচ্ছে না। কিছুক্ষণ পরে আবার চেষ্টা করুন। যদি সমাধান না হয়, তাহলে সেটিংসে যান > অনুসন্ধান এবং আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "বর্তমানে কেনাকাটা করা যাচ্ছে না। কিছুক্ষণ পর আবার চেষ্টা করুন। যদি সমস্যার সমাধান না হয়, তাহলে সেটিংস > যোগাযোগ এর মাধ্যমে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
     "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
