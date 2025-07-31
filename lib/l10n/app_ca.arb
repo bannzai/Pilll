@@ -1354,7 +1354,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, també s'afegirà automàticament el registre de presa de {pillSheetPillSheetTypeNotTakenWord} durant el període.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Si les notificacions estan desactivades, els registres de presa del període {pillSheetPillSheetTypeNotTakenWord} també s'afegeixen automàticament",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
