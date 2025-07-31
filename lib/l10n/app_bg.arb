@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Не можахме да намерим текущия таблетен лист.",
+  "currentPillSheetNotFound": "Не е намерена текущата опаковка хапчета",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
