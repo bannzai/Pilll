@@ -555,7 +555,7 @@
       }
     }
   },
-  "addPillSheetButton": "Dərman çarpazını əlavə et",
+  "addPillSheetButton": "Həb paketini əlavə et",
   "@addPillSheetButton": {
     "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
   },
