@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Error desconegut. Actualitza a l'última versió i torna a provar. Si no es resol, contacta'ns a través de Configuració > Consultes. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Error desconegut. Actualitzeu a la versió més recent i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
