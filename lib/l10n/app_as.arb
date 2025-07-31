@@ -1354,7 +1354,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "যদি বিজ্ঞপ্তি বন্ধ থাকে, তহলে {pillSheetPillSheetTypeNotTakenWord} সময়ের ব্যবহারের ইতিহাস স্বয়ংক্রিয়ভাবে সংরক্ষণ করা হবে।",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "জ্ঞাপন বন্ধ থকা ক্ষেত্ৰত, {pillSheetPillSheetTypeNotTakenWord} সময়কালৰ সেৱনৰ ৰেকৰ্ডো স্বয়ংক্ৰিয়ভাৱে যোগ কৰা হয়",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
