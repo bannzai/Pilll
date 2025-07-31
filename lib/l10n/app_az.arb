@@ -2269,7 +2269,7 @@
       }
     }
   },
-  "pillReminderChanged": "İdman bildirişini {value} etdik.",
+  "pillReminderChanged": "Qəbul bildirişi {value} olaraq təyin edildi",
   "@pillReminderChanged": {
     "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
     "placeholders": {
