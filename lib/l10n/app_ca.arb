@@ -258,7 +258,7 @@
   "@customizeMedicationNotifications": {
     "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   },
-  "xCanBeCustomized": "Es pot personalitzar {x}.",
+  "xCanBeCustomized": "Pots personalitzar {x}",
   "@xCanBeCustomized": {
     "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
     "placeholders": {
