@@ -1,6 +1,6 @@
 {
   "@@locale": "az",
-  "pillSheetType21With7Placebo": "21 tablet type (7 tablet placebo)",
+  "pillSheetType21With7Placebo": "21 tabletli tip",
   "@pillSheetType21With7Placebo": {
     "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
