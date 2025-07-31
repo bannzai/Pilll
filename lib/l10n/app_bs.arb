@@ -897,7 +897,7 @@
       }
     }
   },
-  "premiumTermsNotice1": "• Premium subscription period is automatically renewed every month or year from the start date.",
+  "premiumTermsNotice1": "• Period Premium pretplate se automatski obnavlja svakog mjeseca ili godine, računajući od datuma početka",
   "@premiumTermsNotice1": {
     "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
   },
