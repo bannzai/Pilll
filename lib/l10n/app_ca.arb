@@ -1753,7 +1753,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "Hi ha un problema de connexió. Si us plau, comproveu l'entorn de connexió i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a través de Configuració > Consulta. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Error de connexió. Comprovi la connexió a internet i torneu-ho a intentar. Si el problema persisteix, aneu a Configuració > Contacte per contactar-nos. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
