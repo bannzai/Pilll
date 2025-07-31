@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "অধিক সময়ের জন্য কেনাকাটা করা সম্ভব নয়। দয়া করে কিছুক্ষণ পর পুনরায় চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তবে সেটিংস > যোগাযোগ থেকে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "বৰ্তমান ক্ৰয় কৰিব নোৱাৰি। কিছু সময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। যদি সমস্যাৰ সমাধান নহয় তেন্তে ছেটিংছ > যোগাযোগ ৰ জৰিয়তে যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
