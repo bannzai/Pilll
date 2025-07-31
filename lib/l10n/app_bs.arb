@@ -1501,7 +1501,7 @@
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
-  "purchaseErrorUnknownBackendError": "Trenutno nije moguće kupiti. Molimo pokušajte ponovo kasnije. Ako problem ne bude rešen, kontaktirajte nas putem Postavke > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Trenutno nije moguće izvršiti kupovinu. Molimo sačekajte i pokušajte ponovo. Ako se problem nastavi, kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
     "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
