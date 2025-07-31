@@ -1354,7 +1354,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Калі апавяшчэнні адключаны, запісы аб прыёме таблетак за перыяд {pillSheetPillSheetTypeNotTakenWord} таксама будуць аўтаматычна дададзены.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Пры выключаных апавяшчэннях запісы пра прыём за {pillSheetPillSheetTypeNotTakenWord} перыяд таксама ствараюцца аўтаматычна",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
