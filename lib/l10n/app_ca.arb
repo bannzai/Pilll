@@ -1537,7 +1537,7 @@
       }
     }
   },
-  "purchaseErrorInsufficientPermissionsError": "No es possible unir-se al pla amb el seu {accountName}. Comproveu la vostra informació de pagament i torneu-ho a intentar.",
+  "purchaseErrorInsufficientPermissionsError": "Amb el vostre {accountName} no podeu subscriure-us al pla. Reviseu la informació de pagament i torneu-ho a provar.",
   "@purchaseErrorInsufficientPermissionsError": {
     "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
