@@ -1363,7 +1363,7 @@
       }
     }
   },
-  "requestForCancelSurvey": "Sol·licitud de col·laboració per a l'enquesta després de la cancel·lació",
+  "requestForCancelSurvey": "Sol·licitud de col·laboració per a l'enquesta posterior a la cancel·lació",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
