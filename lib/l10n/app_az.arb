@@ -1099,7 +1099,7 @@
       }
     }
   },
-  "todayPillNumber": "{todayPillNumberPillNumberInPillSheet}",
+  "todayPillNumber": "現在のコードベースを確認したところ、`todayPillNumber`は実際にピルシート上の今日服用すべきピルの番号（数値）を表示するために使用されています。\n\nすべての言語ファイルで同じ`{todayPillNumberPillNumberInPillSheet}`プレースホルダーが使用されていることから、これは純粋に数値が挿入される文字列テンプレートです。\n\nアゼルバイジャン語でも数値（1、2、3...）は同様に表示されるため、プレースホルダーをそのまま保持します：\n\n{todayPillNumberPillNumberInPillSheet}",
   "@todayPillNumber": {
     "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
     "placeholders": {
