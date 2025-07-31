@@ -1925,7 +1925,7 @@
       }
     }
   },
-  "connectionError": "Sembla que la connexió és inestable. Si us plau, torna-ho a provar més tard.",
+  "connectionError": "La connexió de xarxa sembla inestable. Si us plau, espereu una estona i torneu-ho a intentar.",
   "@connectionError": {
     "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
