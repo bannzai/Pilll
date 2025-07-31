@@ -1558,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "S'ha produït un error en la compra. Si us plau, espereu un moment i torneu a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a Configuració > Consultes. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "La compra ha fallat. Torneu-ho a provar més tard. Si el problema persisteix, aneu a Configuració > Suport per contactar-nos. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
