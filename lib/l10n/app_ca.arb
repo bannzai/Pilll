@@ -1525,7 +1525,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "Ha fallat la compra amb l'usuari que utilitzes. Si us plau, intenta-ho de nou més tard. Si el problema persisteix, contacta'ns a Configuració > Consultes. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "La compra ha fallat per al vostre usuari. Espereu una estona i torneu-ho a intentar. Si el problema continua, contacteu amb nosaltres a Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
