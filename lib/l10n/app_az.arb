@@ -1651,7 +1651,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Naməlum bir xətadır. Son versiyaya yeniləyib yenidən cəhd edin. Hələ də həll olunmursa, Ayarlar > Sorğu bölməsindən bizimlə əlaqə saxlayın. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Məlum olmayan xəta baş verib. Ən son versiyaya yeniləyin və yenidən cəhd edin. Əgər həll olmazsa, Ayarlar > Müraciət bölməsindən bizə müraciət edin. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
