@@ -1945,7 +1945,7 @@
   "@unexpectedErrorOccurred": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
-  "pressAndHoldNotificationToRecordPillTaking": "নোটিফিকেশনটি দীর্ঘক্ষণ চাপ দিলে ফার্মাস্যুটিক্যাল রেকর্ড তৈরি করা যায়।",
+  "pressAndHoldNotificationToRecordPillTaking": "বিজ্ঞপ্তিতে দীর্ঘ চাপ দিলে সেবনের রেকর্ড করতে পারবেন",
   "@pressAndHoldNotificationToRecordPillTaking": {
     "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
