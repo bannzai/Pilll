@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "El pagament s'ha interromput. Si us plau, comproveu {storeName} amb l'{accountName} amb el qual heu iniciat sessió.",
+  "purchaseErrorPaymentPendingError": "El pagament s'ha interromput. Si us plau, comproveu {storeName} amb el vostre compte {accountName}",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
