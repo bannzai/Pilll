@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "এটি একটি অজানা ত্রুটি। সর্বশেষ সংস্করণটি আপডেট করুন এবং আবার চেষ্টা করুন। যদি এটি সমাধান না হয় তবে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিশদ: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "অজ্ঞাত কাৰণৰ ত্ৰুটি। শেহতীয়া সংস্কৰণত আপডেট কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > যোগাযোগৰ জৰিয়তে আমাৰ লগত যোগাযোগ কৰক। ক'ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
