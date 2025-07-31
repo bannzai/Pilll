@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Има проблем с настройките на устройството. Моля, проверете и опитайте отново. Ако не се разреши, моля, свържете се с нас чрез Настройки > Запитване. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Има проблем с настройките на устройството. Моля, проверете и опитайте отново. Ако проблемът не се реши, моля, свържете се с нас чрез Настройки > Запитване. Код: {errorCode} Подробности: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
