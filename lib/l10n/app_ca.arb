@@ -762,7 +762,7 @@
       }
     }
   },
-  "menstruationScheduleDateWithNumberAndPillNumber": "Cicle menstrual previst: dia {diffPlusOne} del {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Menstruació prevista: dia {diffPlusOne}, pastilla {pillNumber}",
   "@menstruationScheduleDateWithNumberAndPillNumber": {
     "description": "ピルシート上で生理予定日の表示に使用される文字列。{diffPlusOne}は周期の何日目か、{pillNumber}はその日に服用するピルの番号を表示します。",
     "placeholders": {
