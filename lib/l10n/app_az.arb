@@ -1681,7 +1681,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Cihazın ayarlarında bir sorun var. Lütfen kontrol edin ve tekrar deneyin. Çözülmezse, Ayarlar > İletişim bölümünden bizimle iletişime geçin. Kod: {errorCode} Ayrıntılar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Cihaz parametrlərində problem var. Yoxlayın və yenidən cəhd edin. Həll edilməzsə Parametrlər > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
