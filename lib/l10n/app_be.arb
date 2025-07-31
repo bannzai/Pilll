@@ -1464,7 +1464,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Ця пакупка зараз немагчыма. Спробуйце яшчэ раз праз нейкі час. Калі праблема не знікне, звяжыцеся з намі праз Налады > Запыт. Дадатковыя звесткі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "У дадзены момант пакупка немагчыма. Калі ласка, пачакайце і паспрабуйце зноў. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Зваротная сувязь. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
