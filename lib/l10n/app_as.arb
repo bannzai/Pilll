@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "পণ্য তথ্য উদ্ধার করতে ব্যর্থ হয়েছে। ক৯েক মিনিট পর আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয়, তাহলে সেটিংস > যোগাযোগের মাধ্যমে আমাদের সাথে যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "ক্ৰয় তথ্য সংগ্ৰহত বিফল হৈছে। কিছুসময় অপেক্ষা কৰি পুনৰ চেষ্টা কৰক। সমস্যাটো সমাধান নহ'লে সেটিংছ > যোগাযোগ ৰ জৰিয়তে যোগাযোগ কৰক। বিশদবিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
