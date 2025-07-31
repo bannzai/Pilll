@@ -1354,7 +1354,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Ako su notifikacije isključene, zapis o uzimanju lijekova za period {pillSheetPillSheetTypeNotTakenWord} će takođe biti automatski dodan.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Kada su obavještenja isključena, zapisi uzimanja za {pillSheetPillSheetTypeNotTakenWord} period će takođe biti automatski dodani",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
