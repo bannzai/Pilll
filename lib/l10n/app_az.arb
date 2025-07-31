@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Bilinməyən bir xəta baş verdi. Ən son versiyaya yeniləyin və yenidən cəhd edin. Hələ də problem həll olunmasa, Ayarlar > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüat: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Naməlum xəta. Zəhmət olmasa ən son versiyaya yeniləyin və yenidən cəhd edin. Əgər problem həll olunmursa, Ayarlar > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüat: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
