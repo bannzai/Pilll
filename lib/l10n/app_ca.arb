@@ -1476,7 +1476,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "La informació de compra s'està utilitzant amb un altre usuari. Si us plau, comproveu {accountName} que està connectat al dispositiu.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "La informació de compra ja està sent utilitzada per un altre usuari. Si us plau, comproveu el {accountName} que ha iniciat sessió al dispositiu.",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
