@@ -1582,7 +1582,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "No s'ha pogut obtenir la informació de compra. Torneu a provar més tard. Si el problema persisteix, poseu-vos en contacte amb nosaltres a Configuració > Consultes. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Ha fallat l'obtenció de la informació de compra. Si us plau, espereu una estona i torneu-ho a provar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
