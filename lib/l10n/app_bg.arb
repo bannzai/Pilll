@@ -959,7 +959,7 @@
       }
     }
   },
-  "youArePremiumMember": "Вие сте\nпремиум член.",
+  "youArePremiumMember": "Вие сте\nпремиум член",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
