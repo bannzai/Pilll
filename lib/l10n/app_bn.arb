@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "বর্তমানে প্রয়োজনীয় পিল শিট পাওয়া যায়নি।",
+  "currentPillSheetNotFound": "বর্তমান পিল শীটটি পাওয়া যায়নি",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
