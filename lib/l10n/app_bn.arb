@@ -1485,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppUserIdError": "ব্যবহারকারী নিশ্চিত করতে পারেনি। অ্যাপটি পুনরায় চালু করে আবার চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "ব্যবহারকারী যাচাই করা যায়নি। অ্যাপ পুনঃচালু করে আবার চেষ্টা করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
     "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
