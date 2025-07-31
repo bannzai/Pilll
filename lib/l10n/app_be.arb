@@ -1476,7 +1476,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Інфармацыя пра пакупкі выкарыстоўваецца іншы карыстальнік. Праверце {accountName}, падключаючыся да прылады.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Інфармацыя аб покупцы ўжо выкарыстоўваецца іншым карыстальнікам. Праверце {accountName}, які залагінены на прыладзе",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
