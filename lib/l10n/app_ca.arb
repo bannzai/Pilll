@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Error desconegut. Actualitzeu a la versió més recent i torneu-ho a provar. Si el problema persisteix, contacteu amb nosaltres a Configuració > Consultes. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Error de causa desconeguda. Actualitzeu a la versió més recent i torneu a provar-ho. Si no es resol, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
