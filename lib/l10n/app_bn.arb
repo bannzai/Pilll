@@ -1439,7 +1439,7 @@
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
-  "purchaseErrorMissingReceiptFileError": "ক্রেতার তথ্য বিদ্যমান নেই। {accountName} দিয়ে ডিভাইসে সাইন ইন করে চেষ্টা করুন।",
+  "purchaseErrorMissingReceiptFileError": "ক্রেতার তথ্য পাওয়া যায়নি। {accountName} দিয়ে ডিভাইসে সাইন ইন করে আবার চেষ্টা করুন",
   "@purchaseErrorMissingReceiptFileError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
