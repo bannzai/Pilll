@@ -356,7 +356,7 @@
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
-  "reLoginMessage": "Si us plau, torna a iniciar sessió per verificar la teva identitat abans de donar-te de baixa. Després de tornar a iniciar sessió, el procés de baixa es començarà automàticament.",
+  "reLoginMessage": "Abans de cancel·lar el compte, torneu a iniciar sessió per verificar la vostra identitat. Després de tornar a iniciar sessió, s'iniciarà automàticament el procés de cancel·lació del compte.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
