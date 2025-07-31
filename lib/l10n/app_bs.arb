@@ -1558,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "Kupovina nije uspjela. Pričekajte malo i pokušajte ponovo. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Kupovina nije uspjela. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, molimo kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
