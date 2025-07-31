@@ -1244,7 +1244,7 @@
   "@contactIfNotResolved": {
     "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
   },
-  "shareFeedback": "Molimo vas da podijelite svoje mišljenje o Pilll-u",
+  "shareFeedback": "Podijelite vaše mišljenje o Pilll aplikaciji",
   "@shareFeedback": {
     "description": "ユーザーにアプリに対する感想やフィードバックの提供を促すメッセージです。設定画面やフィードバック画面で、アプリの改善のためにユーザーの意見を求める際に表示されます。"
   },
