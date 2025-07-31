@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Error desconegut. Actualitzeu a l'última versió i torneu a intentar-ho. Si el problema persisteix, poseu-vos en contacte a través de Configuració > Consulta. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "S'ha produït un error desconegut. Si us plau, actualitzeu a la versió més recent i torneu a provar-ho. Si no es resol, contacteu-nos des de Configuració > Contacte. Codi: {errorCode} Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
