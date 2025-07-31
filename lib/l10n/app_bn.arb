@@ -1497,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "ক্রয় প্রক্রিয়া আলাদাভাবে চলমান রয়েছে। দয়া করে কিছু সময় পরে আবার পরীক্ষা করুন।",
+  "purchaseErrorOperationAlreadyInProgressError": "অন্য একটি ক্রয় প্রক্রিয়া চলমান রয়েছে। অনুগ্রহ করে কিছুক্ষণ পর আবার চেক করুন।",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
