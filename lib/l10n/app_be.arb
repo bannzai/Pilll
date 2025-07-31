@@ -1558,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "Не ўдалося завяршыць пакупку. Пачакайце некаторы час і паспрабуйце яшчэ раз. Калі праблема не вырашана, звяжыцеся з намі праз Настройки > Запыт. Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Пакупка не ўдалася. Паспрабуйце яшчэ раз праз некаторы час. Калі праблема не вырашаецца, звярніцеся да нас праз Налады > Звярнуцца. Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
