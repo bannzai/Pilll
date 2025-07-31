@@ -1711,7 +1711,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "S'ha produït un temps d'espera. Comproveu el vostre entorn de comunicació i torneu a intentar-ho. Si no es resol, poseu-vos en contacte amb nosaltres a Configuració > Consultar. Detalls: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "S'ha esgotat el temps d'espera. Comproveu la vostra connexió de xarxa i torneu-ho a intentar. Si el problema persisteix, poseu-vos en contacte amb nosaltres a través de Configuració > Contacte. Detalls: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
