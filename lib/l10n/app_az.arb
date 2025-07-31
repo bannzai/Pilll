@@ -1875,7 +1875,7 @@
       }
     }
   },
-  "exampleRestDurationDate": "məsələn, \"1/12-dən 3 gün ərzində\" dərman qəbulunu dayandırdıqda",
+  "exampleRestDurationDate": "Məsələn «1/12-dən 3 gün» həb qəbuluna fasilə verdiyi halda",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
