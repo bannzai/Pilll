@@ -1389,7 +1389,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "Müəyyən edilməmiş bir xəta baş verdi. Zaman ayırın və yenidən cəhd edin. Hələ də həll olunmursa, Ayarlar > Əlaqə bölməsindən bizimlə əlaqə saxlayın. Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Naməlum səbəb üzündən xəta baş verdi. Bir az vaxt keçdikdən sonra yenidən cəhd edin. Həll olunmadığı halda Tənzimləmələr > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
