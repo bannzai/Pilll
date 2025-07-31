@@ -2282,7 +2282,7 @@
   "@medicationNotification": {
     "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
-  "silentModeNotificationDescription": "Obavijesti će se prikazati na zaključanom ekranu i zvuk će se reproducirati, čak i kada je način rada za koncentraciju uključen ili je uređaj u tišini.",
+  "silentModeNotificationDescription": "Čak i kada je fokus način uključen ili je uređaj utišan, obavještenja će biti prikazana na zaključanom ekranu i zvuk će se reproducirati",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
