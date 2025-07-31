@@ -1439,7 +1439,7 @@
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
-  "purchaseErrorMissingReceiptFileError": "No s'ha trobat informació sobre el comprador. Si us plau, connecteu-vos al dispositiu amb {accountName} i torneu-ho a provar.",
+  "purchaseErrorMissingReceiptFileError": "No existeix informació del comprador. Si us plau, inicieu sessió al dispositiu amb {accountName} i torneu-ho a provar.",
   "@purchaseErrorMissingReceiptFileError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
