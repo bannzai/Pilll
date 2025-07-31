@@ -1723,7 +1723,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Naməlum səhvdir. Ən son versiyaya yeniləyin və yenidən cəhd edin. Hələ də həll olunmazsa, Ayar > Sorğu menyusundan bizimlə əlaqə saxlayın. Kod: {errorCode} Ətraflı: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Səbəbi bilinməyən xətadır. Ən son versiyaya yenilənin və yenidən cəhd edin. Həll olunmadığı halda Tənzimləmələr > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüat: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
