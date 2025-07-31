@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Hazırda müvafiq pil qabını tapmaq mümkün olmadı",
+  "currentPillSheetNotFound": "Hazırda hədəflənən həb səhifəsi tapılmadı",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
