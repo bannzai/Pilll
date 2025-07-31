@@ -1525,7 +1525,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "Kupovina za korisnika je neuspjela. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Kupovina nije uspjela za vašeg korisnika. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, kontaktirajte nas preko Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
