@@ -1389,7 +1389,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "Došlo je do greške nepoznatog uzroka. Molimo vas da pričekate i pokušate ponovo. Ako se problem ne reši, obratite se putem Podešavanja > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Dogodila se nepoznata greška. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, molimo kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
