@@ -271,7 +271,7 @@
   "@thankYouForCooperation": {
     "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   },
-  "feedbackUsage": "Vaša povratna informacija će biti iskorištena za buduća poboljšanja.",
+  "feedbackUsage": "Vaša mišljenja ćemo koristiti za buduća poboljšanja.",
   "@feedbackUsage": {
     "description": "ユーザーがアプリに対してフィードバックや意見を送信した際に表示される、運営側がそのフィードバックをどのように活用するかを説明するメッセージです。丁寧で感謝の気持ちが伝わり、今後のサービス改善への活用を約束する表現にしてください。"
   },
