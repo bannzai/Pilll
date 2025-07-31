@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Səbəbi məlum olmayan bir xətadır. Ən son versiyaya yenilənib yenidən cəhd edin. Hələ də həll olunmasa, Parametrlər > Sorğu bölməsindən bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "Naməlum səbəb üzündən xəta baş verdi. Ən son versiyaya yeniləyin və yenidən cəhd edin. Problem həll olunmursa, Parametrlər > Müraciət bölməsindən bizimlə əlaqə saxlayın. Kod: {errorCode} Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
