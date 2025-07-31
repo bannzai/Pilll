@@ -1738,7 +1738,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "অজ্ঞাত কারণে ত্রুটি ঘটেছে। সর্বশেষ সংস্করণে আপডেট করুন এবং আবার চেষ্টা করুন। যদি এটি সমাধান না হয় তবে সেটিংস > যোগাযোগ এর মাধ্যমে আমাদের সাথে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "অজ্ঞাত কাৰণৰ ত্ৰুটি। শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। সমাধান নহ'লে ছেটিংছ > সোধপোছ ৰ পৰা আমাৰ লগত যোগাযোগ কৰক। ক'ড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
