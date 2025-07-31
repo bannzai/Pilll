@@ -56,7 +56,7 @@
   "@account": {
     "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
-  "dataTransferRequiresAccount": "Per a transferir o restaurar les dades en cas de canvi de dispositiu o pèrdua del telèfon, és necessari registrar-se en un compte.",
+  "dataTransferRequiresAccount": "El registre de compte és necessari per a la transferència i recuperació de dades en cas de canvi de dispositiu o pèrdua del telèfon mòbil.",
   "@dataTransferRequiresAccount": {
     "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   },
