@@ -1892,7 +1892,7 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Не ўдалося знайсці бясспрэчны план піл.",
+  "currentPillSheetNotFound": "Актуальная табліцка пігулак не знойдзена",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
