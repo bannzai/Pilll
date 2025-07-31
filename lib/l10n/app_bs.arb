@@ -1570,7 +1570,7 @@
       }
     }
   },
-  "purchaseErrorLogOutWithAnonymousUserError": "Nismo uspjeli da dobijemo informacije o korisniku. Probajte ponovo nakon nekog vremena. Ako problem i dalje postoji, obratite se putem Podešavanja > Upit. Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Neuspjelo dohvatanje korisničkih informacija. Molimo pokušajte ponovo nakon nekog vremena. Ako se problem ne riješi, kontaktirajte nas putem Postavke > Kontakt. Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
     "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
