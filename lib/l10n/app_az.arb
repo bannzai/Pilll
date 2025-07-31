@@ -1485,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppUserIdError": "İstifadəçi təsdiqləyə bilmədi. Zəhmət olmasa, tətbiqi yenidən başladın və yenidən cəhd et. Detallar: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "İstifadəçi təsdiqlənə bilmədi. Tətbiqi yenidən başladın və yenidən cəhd edin. Təfərrüatlar: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
     "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
