@@ -1753,7 +1753,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "যোগাযোগের সমস্যা। দয়া করে আপনার যোগাযোগের পরিবেশটি পরীক্ষা করুন এবং আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তবে সেটিংস > যোগাযোগ থেকে আমাদের যোগাযোগ করুন। বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "সংযোগ সমস্যা। আপোনাৰ নে'টৱৰ্ক সংযোগ পৰীক্ষা কৰি পুনৰাই চেষ্টা কৰক। যদি সমস্যাটো সমাধান নহয়, তেন্তে ছেটিংছ > যোগাযোগ যোগেদি আমাৰ লগত যোগাযোগ কৰক। বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
