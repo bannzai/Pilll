@@ -1410,7 +1410,7 @@
       }
     }
   },
-  "purchaseErrorPurchaseNotAllowedError": "Тази устройство не е разрешено за покупки.",
+  "purchaseErrorPurchaseNotAllowedError": "Покупките не са разрешени на това устройство",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
