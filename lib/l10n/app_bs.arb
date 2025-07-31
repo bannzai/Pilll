@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "Neuspjeh u preuzimanju podataka o korisniku. Molimo pokušajte ponovo kasnije. Ako problem i dalje postoji, kontaktirajte nas putem Postavke > Upit. Detalji: Kod: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Neuspješno dohvaćanje informacija o korisniku. Molimo pokušajte ponovo kasnije. Ako se problem ne riješi, kontaktirajte nas preko Postavke > Kontakt. Detalji: Kod: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
