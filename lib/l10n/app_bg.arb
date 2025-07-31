@@ -1546,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "Плащането е спряно. Проверете {storeName} с профила {accountName}.",
+  "purchaseErrorPaymentPendingError": "Плащането е прекъснато. Моля, проверете в {storeName} с влезлия акаунт {accountName}",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
