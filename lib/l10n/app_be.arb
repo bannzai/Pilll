@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Невядомая памылка. Калі ласка, абнавіце да апошняй версіі і паспрабуйце зноў. Калі праблема не будзе вырашана, звяжыцеся з намі праз Налады > Запыт. Код: {errorCode} Дэталі: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "Невядомая памылка. Абнавіце да найноўшай версіі і паспрабуйце зноў. Калі праблема не вырашана, звярнуцеся праз Налады > Кантакт. Код: {errorCode} Падрабязнасці: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
