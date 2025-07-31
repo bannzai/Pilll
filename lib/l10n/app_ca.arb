@@ -741,7 +741,7 @@
       }
     }
   },
-  "menstruationStartDate": "Dia d'inici de la menstruació",
+  "menstruationStartDate": "Data d'inici de la menstruació",
   "@menstruationStartDate": {
     "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
