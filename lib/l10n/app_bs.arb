@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Neobjašnjiva greška. Ažurirajte na najnoviju verziju i pokušajte ponovo. Ako to ne reši problem, kontaktirajte nas putem postavki > Upit. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "Nepoznata greška. Molimo ažurirajte aplikaciju na najnoviju verziju i pokušajte ponovo. Ako se problem nastavi, obratite se putem Postavke > Kontakt. Kod: {errorCode} Detalji: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
