@@ -1418,7 +1418,7 @@
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorProductNotAvailableForPurchaseError": "সংশ্লিষ্ট পরিকল্পনাটি বর্তমানে উপলব্ধ নেই। অনুগ্রহ করে অ্যাপটি পুনরায় চালু করুন এবং আবার চেষ্টা করুন",
+  "purchaseErrorProductNotAvailableForPurchaseError": "নির্বাচিত প্ল্যানটি বর্তমানে উপলব্ধ নেই। দয়া করে অ্যাপটি পুনরায় চালু করে আবার চেষ্টা করুন।",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
