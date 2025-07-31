@@ -1666,7 +1666,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "Müştəri məlumatlarının alınması uğursuz oldu. Zəhmət olmasa bir az gözləyin və yenidən cəhd edin. Hələ də problemi həll edə bilmirsinizsə, Zəruri > Sorğu vasitəsilə bizimlə əlaqə saxlayın. Təfərrüatlar: Kod: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Müştəri məlumatlarının alınması uğursuz oldu. Bir az gözləyin və yenidən cəhd edin. Problemi həll olunmursa, Parametrlər > Müraciət vasitəsilə bizimlə əlaqə saxlayın. Ətraflı məlumat: Kod: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
