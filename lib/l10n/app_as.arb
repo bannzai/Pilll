@@ -1636,7 +1636,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "অজ্ঞাত কারণে একটি ত্রুটি ঘটেছে। সর্বশেষ সংস্করণে আপডেট করে আবার চেষ্টা করুন। যদি সমস্যা সমাধান না হয় তবে সেটিংস > সহায়তা থেকে যোগাযোগ করুন। কোড: {errorCode} বিস্তারিত: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "এটা অজ্ঞাত ত্ৰুটি হৈছে। অনুগ্ৰহ কৰি শেহতীয়া সংস্কৰণলৈ আপডেট কৰি পুনৰ চেষ্টা কৰক। যদি সমস্যাটো সমাধান নহয়, তেন্তে ছেটিংছ > যোগাযোগৰ জৰিয়তে আমাৰ সৈতে যোগাযোগ কৰক। কোড: {errorCode} বিৱৰণ: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
