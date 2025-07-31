@@ -1818,7 +1818,7 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} অ্যাকাউন্টটিকে ইতিমধ্যেই অন্য Pilll অ্যাকাউন্টের সাথে যুক্ত করা হয়েছে, তাই এটি নিবন্ধন করা যাবে না। দয়া করে FAQ দেখুন। বিস্তারিত: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "এই {accountTypeProviderName} একাউণ্টটো ইতিমধ্যে Pilll ৰ অন্য একাউণ্টৰ সৈতে সংযুক্ত হৈ আছে, সেয়ে নিবন্ধন কৰিব নোৱাৰি। FAQ ও চাওক। বিৱৰণ: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
     "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
