@@ -1537,7 +1537,7 @@
       }
     }
   },
-  "purchaseErrorInsufficientPermissionsError": "আপনি যে {accountName} ব্যবহার করছেন সেটিতে পরিকল্পনার জন্য সদস্যতা নেওয়া সম্ভব নয়। দয়া করে আপনার অর্থপ্রদান তথ্য যাচাই করুন এবং আবার চেষ্টা করুন।",
+  "purchaseErrorInsufficientPermissionsError": "আপনার {accountName} দিয়ে প্ল্যানে যোগদান করা সম্ভব নয়। অনুগ্রহ করে আপনার পেমেন্ট তথ্য যাচাই করে আবার চেষ্টা করুন।",
   "@purchaseErrorInsufficientPermissionsError": {
     "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
