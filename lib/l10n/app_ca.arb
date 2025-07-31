@@ -617,7 +617,7 @@
       }
     }
   },
-  "endOfPillDays": "Fi del nombre de dies de presa",
+  "endOfPillDays": "Fi del període de presa",
   "@endOfPillDays": {
     "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
