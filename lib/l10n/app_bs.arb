@@ -2278,7 +2278,7 @@
       }
     }
   },
-  "medicationNotification": "Obavijest o uzimanju",
+  "medicationNotification": "Obavještenja o uzimanju",
   "@medicationNotification": {
     "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   },
