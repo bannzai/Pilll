@@ -863,7 +863,7 @@
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
   },
-  "thankYouForRegistration": "Gràcies per registrar-vos.\nTotes les funcions ara són disponibles!",
+  "thankYouForRegistration": "Gràcies per registrar-te.\nJa tens accés a totes les funcions!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   },
