@@ -2322,5 +2322,9 @@
   "lifetimePlanStandardPrice": "সাধারণ মূল্য",
   "@lifetimePlanStandardPrice": {
     "description": "買い切り型プレミアムプランの通常価格を表示するラベルテキストです。課金画面で特別価格オファーと対比して表示される際に使用されます。"
+  },
+  "logout": "লগ আউট",
+  "@logout": {
+    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
   }
 }
