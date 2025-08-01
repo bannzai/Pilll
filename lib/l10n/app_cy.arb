@@ -1562,5 +1562,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPaymentPendingError": "Mae'r taliad wedi atal. Gwiriwch {storeName} gan ddefnyddio {accountName} yr ydych wedi mewngofnodi iddo",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
