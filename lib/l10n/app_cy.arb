@@ -862,5 +862,9 @@
   "thankYouForRegistration": "Diolch am gofrestru.\nMae'r holl nodweddion ar gael i chi nawr!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Pris arbennig nawr - cadwch am byth",
+  "@limitedTimeDiscount": {
+    "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   }
 }
