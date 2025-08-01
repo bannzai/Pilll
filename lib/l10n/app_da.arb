@@ -660,5 +660,9 @@
   "cannotTransferPremiumWithoutAccount": "Premium-funktioner kan ikke overføres ved enhedsskift eller tab af smartphone",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
+  },
+  "reexperiencePremiumFeatures": "Du kan genopleve premium funktionerne i 14 dage! Tap for at dele på sociale medier!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   }
 }
