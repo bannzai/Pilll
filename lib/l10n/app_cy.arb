@@ -921,5 +921,9 @@
   "premiumTermsNotice3": "Gwiriwch ac yna cofrestrwch",
   "@premiumTermsNotice3": {
     "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
+  },
+  "autoRenewNotice": "• Bydd cyfnod y contract yn adnewyddu'n awtomatig oni bai eich bod yn canslo o leiaf 24 awr cyn dyddiad gorffen cyfnod contract y premiwm",
+  "@autoRenewNotice": {
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   }
 }
