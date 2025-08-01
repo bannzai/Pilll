@@ -1886,5 +1886,14 @@
   "purchaseErrorPurchasePendingError": "Die Aktivierung der Bezahlung ist noch nicht abgeschlossen. Bitte warten Sie einen Moment und überprüfen Sie dann erneut.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "launchError": "翻訳対象の具体的な日本語テキストが提供されていません。現在提供されているのは、翻訳対象についての説明文のみです。\n\n翻訳すべき実際の日本語テキスト（エラーメッセージ）を提供してください。例えば：\n\n```\n\"アプリの起動に失敗しました。ネットワーク接続を確認してください。\"\n```\n\nのような具体的なメッセージをお教えください。",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
