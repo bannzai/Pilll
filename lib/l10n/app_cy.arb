@@ -1610,5 +1610,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Mae gwall anhysbys wedi digwydd. Diweddarwch i'r fersiwn ddiweddaraf a rhowch gynnig arall arni. Os nad yw hyn yn datrys y broblem, cysylltwch â ni drwy Gosodiadau > Cyswllt. Cod: {errorCode} Manylion: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
