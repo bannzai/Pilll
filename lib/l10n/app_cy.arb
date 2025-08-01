@@ -1896,5 +1896,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "Ni chanfuwyd y daflen bilsen gyfredol",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
