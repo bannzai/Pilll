@@ -2042,5 +2042,9 @@
   "pauseStartingOtherDaysInstructions": "Cymerwch egwyl. Os ydych chi eisiau rhoi'r gorau i gymryd eich pilsen o ddiwrnod heblaw heddiw, cyfeiriwch at yr isod.",
   "@pauseStartingOtherDaysInstructions": {
     "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
+  },
+  "seeHowToUsePauseTakingFeature": "Gweld sut i ddefnyddio'r nodwedd saib cymryd",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   }
 }
