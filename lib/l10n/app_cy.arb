@@ -2228,5 +2228,9 @@
         "type": "String"
       }
     }
+  },
+  "cancelTaking": "Canslo cymryd",
+  "@cancelTaking": {
+    "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   }
 }
