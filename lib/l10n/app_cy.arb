@@ -858,5 +858,9 @@
   "premiumRegistrationComplete": "Pilll Premium wedi'i gofrestu'n llwyddiannus",
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
+  },
+  "thankYouForRegistration": "Diolch am gofrestru.\nMae'r holl nodweddion ar gael i chi nawr!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   }
 }
