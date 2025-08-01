@@ -2318,5 +2318,9 @@
   "logout": "Log ud",
   "@logout": {
     "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "Vender tilbage til den indledende opsætning. Hvis du skal logge ind, kan du gøre det fra bunden af opsætningssiden.",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
   }
 }
