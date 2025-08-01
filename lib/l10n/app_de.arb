@@ -664,5 +664,9 @@
   "reexperiencePremiumFeatures": "Premium-Funktionen 14 Tage lang erneut erleben! Antippen und in sozialen Medien teilen!",
   "@reexperiencePremiumFeatures": {
     "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
+  },
+  "whereToShare": "Wo möchten Sie teilen?",
+  "@whereToShare": {
+    "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
   }
 }
