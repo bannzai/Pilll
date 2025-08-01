@@ -983,5 +983,9 @@
   "youArePremiumMember": "Rydych chi'n\naelod premiwm",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
+  },
+  "thankYouMessage": "Diolch yn fawr am eich defnydd.\nDiolch i'ch cefnogaeth, gallwn barhau i redeg Pilll.",
+  "@thankYouMessage": {
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   }
 }
