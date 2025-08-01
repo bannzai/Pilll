@@ -2219,7 +2219,7 @@
       }
     }
   },
-  "failedToGetPillSheetHistory": "No s'ha pogut obtenir la informació de l'historial de presa de medicaments. {error}",
+  "failedToGetPillSheetHistory": "No s'ha pogut obtenir la informació de l'historial de presa. {error}",
   "@failedToGetPillSheetHistory": {
     "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
     "placeholders": {
