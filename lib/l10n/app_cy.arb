@@ -1370,5 +1370,14 @@
         "type": "String"
       }
     }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Os yw hysbysiadau wedi'u diffodd, bydd cofnodion cymryd ar gyfer cyfnod {pillSheetPillSheetTypeNotTakenWord} yn cael eu creu'n awtomatig hefyd",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
   }
 }
