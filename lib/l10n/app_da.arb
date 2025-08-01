@@ -1438,5 +1438,9 @@
   "purchaseErrorPurchaseInvalidError": "Betalingen slog fejl. Kontroller din betalingsmetode og prøv igen.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Det valgte abonnement er ikke tilgængeligt i øjeblikket. Genstart venligst appen og prøv igen.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
