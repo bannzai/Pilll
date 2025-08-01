@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Der opstod en ukendt fejl. Opdater til den nyeste version og prøv igen. Hvis problemet fortsætter, skal du kontakte os via Indstillinger > Kontakt os. Kode: {errorCode} Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
