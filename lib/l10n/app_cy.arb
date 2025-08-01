@@ -1929,5 +1929,9 @@
         "type": "int"
       }
     }
+  },
+  "connectionError": "Mae'r cysylltiad rhwydwaith yn ymddangos yn ansefydlog. Rhowch gynnig arall arni ar ôl ychydig o amser.",
+  "@connectionError": {
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   }
 }
