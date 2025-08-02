@@ -1438,5 +1438,9 @@
   "purchaseErrorPurchaseInvalidError": "Ordainketak huts egin du. Mesedez, egiaztatu ordainketa metodoa baliozkoa den eta saiatu berriro.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Plan hau une honetan ez dago eskuragarri. Mesedez, aplikazioa berrabiarazi eta berriro saiatu.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
