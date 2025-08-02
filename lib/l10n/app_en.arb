@@ -1387,5 +1387,14 @@
   "pilllDescription": "Pilll - Birth Control Pill Reminder App",
   "@pilllDescription": {
     "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
+  },
+  "reachedMaximumCountOfReminderTimes": "Maximum limit reached. Please keep within {ReminderTimeMaximumCount} reminders.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
   }
 }
