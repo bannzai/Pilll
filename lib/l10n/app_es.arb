@@ -925,5 +925,9 @@
   "premiumTermsNotice3": "antes de proceder con el registro",
   "@premiumTermsNotice3": {
     "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
+  },
+  "autoRenewNotice": "• La suscripción se renovará automáticamente a menos que canceles al menos 24 horas antes de la fecha de finalización del período premium",
+  "@autoRenewNotice": {
+    "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   }
 }
