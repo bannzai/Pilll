@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Υπάρχει πρόβλημα με τις ρυθμίσεις της συσκευής. Παρακαλώ ελέγξτε και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
