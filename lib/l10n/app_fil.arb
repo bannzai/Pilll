@@ -727,5 +727,9 @@
   "todayPillToTake": "💊 Pill na inumin ngayon",
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
+  },
+  "number": "Looking at the context, this is asking for the translation of \"番\" (ban) which is used as a suffix for pill numbers in the pill sheet UI (like \"1番\", \"2番\").\n\nIn Filipino (Tagalog), ordinal numbers are typically expressed differently than in Japanese. For pill sheet UI showing positions/order, the most natural way would be to either use just the number or use \"ika-\" as a prefix.\n\nSince you're asking specifically for the \"番\" part, and Filipino doesn't use a direct equivalent suffix, the most appropriate translation would be an empty string, as Filipino would typically just display \"1\", \"2\", \"3\" etc. for pill positions.\n\nHowever, if a word is needed, \"bilang\" could work as it means \"number.\"\n\nFor this specific UI context where pills are numbered sequentially:\n\n(empty string)",
+  "@number": {
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   }
 }
