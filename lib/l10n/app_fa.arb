@@ -1964,5 +1964,14 @@
   "letsTryIt": "حتماً امتحان کنید",
   "@letsTryIt": {
     "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
+  },
+  "trialDeadlineDateOffsetDay": "{number} روز تمام امکانات در اختیار شماست！",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
