@@ -987,5 +987,9 @@
   "youArePremiumMember": "Sa oled premium liige",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
+  },
+  "thankYouMessage": "Täname südamest kasutamise eest. Tänu teie toetusele saame jätkata Pilli arendamist ja pakkumist.",
+  "@thankYouMessage": {
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   }
 }
