@@ -862,5 +862,9 @@
   "premiumRegistrationComplete": "ثبت‌نام Pilll پریمیوم تکمیل شد",
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
+  },
+  "thankYouForRegistration": "از ثبت‌نام شما متشکریم.\nهمه امکانات برای شما فعال شد!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   }
 }
