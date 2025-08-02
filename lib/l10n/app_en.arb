@@ -664,5 +664,9 @@
   "reexperiencePremiumFeatures": "Experience premium features again for 14 days! Tap to share on social media!",
   "@reexperiencePremiumFeatures": {
     "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
+  },
+  "whereToShare": "Where would you like to share?",
+  "@whereToShare": {
+    "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
   }
 }
