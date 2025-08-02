@@ -359,5 +359,9 @@
   "doReLogin": "Palun logige uuesti sisse",
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
+  },
+  "reLoginMessage": "Enne konto kustutamist palun logige isiku tuvastamiseks uuesti sisse. Pärast uuesti sisselogimist algab automaatselt konto kustutamise protsess.",
+  "@reLoginMessage": {
+    "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   }
 }
