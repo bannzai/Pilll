@@ -1605,5 +1605,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "خطای نامشخصی رخ داده است. لطفاً به آخرین نسخه به‌روزرسانی کرده و دوباره امتحان کنید. اگر مشکل حل نشد، از طریق تنظیمات > تماس با ما با پشتیبانی تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
