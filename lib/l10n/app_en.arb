@@ -1908,5 +1908,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "The current pill sheet could not be found",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
