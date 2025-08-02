@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma ei korjaannu, ota yhteyttä meihin kohdasta Asetukset > Yhteydenotto. Koodi: {errorCode} Tiedot: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
