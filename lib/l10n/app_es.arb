@@ -1912,5 +1912,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "No se encontró la cartela de píldoras actual",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
