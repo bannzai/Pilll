@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Se ha producido un error desconocido. Por favor, actualice a la versión más reciente e inténtelo de nuevo. Si el problema persiste, contáctenos a través de Configuración > Contacto. Código: {errorCode} Detalles: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
