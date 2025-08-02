@@ -1434,5 +1434,9 @@
   "purchaseErrorPurchaseNotAllowedError": "Erosketak ez dira baimenduta gailu honetan",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorPurchaseInvalidError": "Ordainketak huts egin du. Mesedez, egiaztatu ordainketa metodoa baliozkoa den eta saiatu berriro.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   }
 }
