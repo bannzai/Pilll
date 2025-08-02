@@ -1632,5 +1632,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "خطای نامشخص رخ داده است. لطفاً به آخرین نسخه به‌روزرسانی کرده و دوباره تلاش کنید. در صورت عدم حل مشکل از تنظیمات > تماس با پشتیبانی درخواست کمک کنید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
