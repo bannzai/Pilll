@@ -1202,5 +1202,9 @@
   "enterAtLeastOneCharacter": "Gutxienez 0 karaktere idatzi, mesedez",
   "@enterAtLeastOneCharacter": {
     "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
+  },
+  "changeDailyNotificationMessage": "既存の翻訳パターンを確認した結果、バスク語での翻訳は以下になります：\n\nPilula hartzea ahaztu ez duzunean jakinarazpenaren testua aldatu dezakezu.",
+  "@changeDailyNotificationMessage": {
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   }
 }
