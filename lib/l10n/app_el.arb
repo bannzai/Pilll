@@ -1434,5 +1434,9 @@
   "purchaseErrorPurchaseNotAllowedError": "Οι αγορές δεν επιτρέπονται σε αυτή τη συσκευή",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Παρακαλώ ελέγξτε εάν η μέθοδος πληρωμής σας είναι έγκυρη και δοκιμάστε ξανά.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   }
 }
