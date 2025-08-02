@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "Αποτυχία ανάκτησης πληροφοριών πελάτη. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: Κωδικός: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
