@@ -1758,5 +1758,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "May hindi kilalang error na naganap. I-update sa pinakabagong bersyon at subukan muli. Kung hindi pa rin malulutas, makipag-ugnayan sa amin sa Settings > Contact. Code: {errorCode} Detalye: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
