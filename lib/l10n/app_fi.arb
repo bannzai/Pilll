@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Tuntematon virhe. Päivitä sovellus uusimpaan versioon ja yritä uudelleen. Jos ongelma ei ratkea, ota yhteyttä Asetukset > Ota yhteyttä -toiminnon kautta. Koodi: {errorCode} Yksityiskohdat: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
