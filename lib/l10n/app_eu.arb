@@ -1886,5 +1886,14 @@
   "purchaseErrorPurchasePendingError": "Ordainketaren aktibaketa ez da oraindik osatu. Itxaron ezazu denbora pixka bat eta gero begiratu berriro, mesedez.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "launchError": "翻訳対象の具体的な日本語テキストが提供されていないため確認します。現在「launchError」キーには説明文が入っていますが、実際にアプリで表示される日本語メッセージはどのようなものでしょうか？\n\n「アプリ起動時のエラーメッセージ」について、{ErrorMessagesConnection}プレースホルダーを含む具体的な日本語テキストを教えてください。",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
