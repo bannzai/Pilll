@@ -1886,5 +1886,9 @@
   "purchaseErrorPurchasePendingError": "Hindi pa nakumpleto ang pag-activate ng bayad. Mangyaring maghintay ng ilang sandali at tingnan muli.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "exampleRestDurationDate": "Halimbawa kapag nag-rest sa pag-inom ng pills ng \"1/12 hanggang 3 araw\"",
+  "@exampleRestDurationDate": {
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   }
 }
