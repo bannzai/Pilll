@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Άγνωστο σφάλμα. Παρακαλώ ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Αν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
