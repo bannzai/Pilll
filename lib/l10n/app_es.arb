@@ -192,5 +192,9 @@
   "quickRecord": "Registro Rápido",
   "@quickRecord": {
     "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
+  },
+  "quickRecordDescription": "En la pantalla de notificaciones puedes ver las pastillas que debes tomar hoy y registrar la toma directamente.",
+  "@quickRecordDescription": {
+    "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   }
 }
