@@ -1,50 +1,50 @@
 {
   "@@locale": "el",
-  "pillSheetType21With7Placebo": "21 δισκίων τύπου",
+  "pillSheetType21With7Placebo": "Τύπος 21 δισκίων",
   "@pillSheetType21With7Placebo": {
     "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
-  "pillSheetType28With4Placebo": "28 δισκίων τύπος (4 δισκία εικονικού φαρμάκου)",
+  "pillSheetType28With4Placebo": "Τύπος 28 δισκίων (4 placebo)",
   "@pillSheetType28With4Placebo": {
     "description": "ピルシートの種類で、28錠の薬剤のうち24錠が薬効成分を含み4錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "pillSheetType28With7Placebo": "28 δισκία τύπου (7 δισκία ψεύτικα)",
+  "pillSheetType28With7Placebo": "Τύπος 28 δισκίων (7 πλασέμπο)",
   "@pillSheetType28With7Placebo": {
     "description": "ピルシートの種類で、28錠の薬剤のうち21錠が薬効成分を含み7錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "pillSheetType28": "28 δισκίων τύπος (όλα τα πραγματικά φάρμακα)",
+  "pillSheetType28": "28 χαπιών τύπος (όλα ενεργά)",
   "@pillSheetType28": {
     "description": "ピルシートの種類で、28錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない28錠タイプであることを示します。"
   },
-  "pillSheetType24": "24 δισκίων τύπου (όλα τα ενεργά φάρμακα)",
+  "pillSheetType24": "Τύπος 24 δισκίων (όλα ενεργά)",
   "@pillSheetType24": {
     "description": "ピルシートの種類で、24錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない24錠タイプであることを示します。"
   },
-  "pillSheetType21": "21 δισκίων τύπου (όλα τα λειτουργικά φάρμακα)",
+  "pillSheetType21": "Τύπος 21 δισκίων (όλα ενεργά)",
   "@pillSheetType21": {
     "description": "ピルシートの種類で、21錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない21錠タイプであることを示します。"
   },
-  "pillSheetType24WithRest4": "24 δισκία τύπου",
+  "pillSheetType24WithRest4": "Τύπος 24 χαπιών",
   "@pillSheetType24WithRest4": {
     "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "restPeriod": "Διακοπή φαρμακευτικής αγωγής",
+  "restPeriod": "διάλειμμα",
   "@restPeriod": {
     "description": "ピルの服用サイクル中の休薬期間を指す用語です。通常はプラセボ錠を服用するか薬を飲まない期間で、この期間中に生理が来ることが多いです。"
   },
-  "placebo": "Ψευδοφάρμακο",
+  "placebo": "placebo",
   "@placebo": {
     "description": "ピルパックに含まれるホルモン非含有錠で、休薬期間中に服用する錠剤を指します。プラセボ錠を服用している期間中に生理が来ることが一般的です。"
   },
-  "userNotFound": "Δεν βρέθηκε χρήστης",
+  "userNotFound": "Ο χρήστης δεν βρέθηκε",
   "@userNotFound": {
     "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
   },
-  "userAlreadyExists": "Υπάρχει ήδη χρήστης.",
+  "userAlreadyExists": "Ο χρήστης υπάρχει ήδη",
   "@userAlreadyExists": {
     "description": "アカウント作成やユーザー登録時に、入力されたメールアドレスや電話番号が既に他のアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーに対して既存のアカウントでログインするか、別の認証情報を使用するよう促す文脈で使用されます。"
   },
-  "medicationHistory": "Ιστορικό λαμβάνων",
+  "medicationHistory": "Ιστορικό λήψης",
   "@medicationHistory": {
     "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。"
   },
@@ -56,31 +56,31 @@
   "@account": {
     "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
-  "dataTransferRequiresAccount": "Για τη μεταφορά ή την ανάκτηση δεδομένων σε περίπτωση αλλαγής συσκευής ή απώλειας του κινητού, απαιτείται η εγγραφή λογαριασμού.",
+  "dataTransferRequiresAccount": "Η εγγραφή λογαριασμού απαιτείται για τη μεταφορά και επαναφορά δεδομένων σε περιπτώσεις όπως αλλαγή συσκευής ή απώλεια smartphone.",
   "@dataTransferRequiresAccount": {
     "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   },
-  "pillPremium": "Pilll Premium",
+  "pillPremium": "Pilll Πρίμιουμ",
   "@pillPremium": {
     "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
   },
-  "unlimitedFeatureDuration": "Περίοδος απεριόριστης λειτουργικότητας",
+  "unlimitedFeatureDuration": "Σχετικά με την περίοδο απεριόριστων λειτουργιών",
   "@unlimitedFeatureDuration": {
     "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
   },
-  "pillSheet": "φάρμακο",
+  "pillSheet": "φύλλο χαπιών",
   "@pillSheet": {
     "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。"
   },
-  "notification": "Ειδοποίηση",
+  "notification": "ειδοποίηση",
   "@notification": {
     "description": "アプリがユーザーに送るプッシュ通知や画面内の通知のことで、ピルの服用時刻を知らせるリマインダーや重要な情報を伝える機能を指します。"
   },
-  "menstruation": "έμμηνος ρύση",
+  "menstruation": "περίοδος",
   "@menstruation": {
     "description": "ピル服用管理アプリにおける女性の生理（月経）を指し、生理周期の記録・管理機能で使用される医学的な用語です。ユーザーが生理日を記録して健康管理を行う際に表示されます。"
   },
-  "others": "Άλλα",
+  "others": "Άλλο",
   "@others": {
     "description": "各種選択肢や分類項目において、既存の選択肢に該当しない場合に選択する汎用的な「その他」オプションです。"
   },
@@ -88,7 +88,7 @@
   "@faq": {
     "description": "アプリ内のヘルプ・サポートセクションで表示される「よくある質問」を意味するラベルです。ユーザーがピルの服用方法や機能について疑問を持った際にアクセスするページのタイトルとして使用されます。"
   },
-  "newFeaturesIntroduction": "Εισαγωγή νέων χαρακτηριστικών",
+  "newFeaturesIntroduction": "Παρουσίαση νέων χαρακτηριστικών",
   "@newFeaturesIntroduction": {
     "description": "新機能紹介"
   },
@@ -104,15 +104,15 @@
   "@doDelete": {
     "description": "服用記録や生理記録などのデータを削除する際のボタンに表示される動詞形の文言です。"
   },
-  "deleteUser": "Αφαίρεση χρήστη",
+  "deleteUser": "Διαγραφή χρήστη",
   "@deleteUser": {
     "description": "アカウント削除機能で表示される文言で、ユーザーのアカウントと関連する全ての服用記録・生理記録データを完全に削除することを示します。重要な操作のため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
-  "deleteDiary": "Θα διαγράψετε το ημερολόγιο.",
+  "deleteDiary": "Το ημερολόγιο θα διαγραφεί",
   "@deleteDiary": {
     "description": "アプリ内の日記機能（体調記録）で特定の日記エントリを削除する際に表示される文言です。ユーザーの大切な体調記録が削除されることを示すため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
-  "confirmDeletingMenstruation": "Θα διαγράψετε την περίοδο της εμμήνου ρύσεως;",
+  "confirmDeletingMenstruation": "Θέλετε να διαγράψετε την περίοδο εμμηνόρροιας;",
   "@confirmDeletingMenstruation": {
     "description": "生理管理機能でユーザーが記録した生理期間のデータを削除する際に表示される確認ダイアログの文言です。重要な記録の削除を確認するため、各言語で慎重で丁寧な表現を使用してください。"
   },
@@ -120,7 +120,7 @@
   "@addNotificationTime": {
     "description": "ピルの服用リマインダー機能で、ユーザーが新しい通知時間を追加する際に表示されるボタンやメニュー項目の文言です。簡潔で分かりやすい表現を使用してください。"
   },
-  "syncWithDeviceTimeZone": "Θα συγχρονίσετε με την ζώνη ώρας της συσκευής ({deviceTimezoneName}) ;",
+  "syncWithDeviceTimeZone": "Θέλετε να συγχρονίσετε με τη ζώνη ώρας της συσκευής ({deviceTimezoneName});",
   "@syncWithDeviceTimeZone": {
     "description": "ピル服用リマインダーの時刻設定で、ユーザーが設定した時間と端末のタイムゾーンが異なる場合に、端末のタイムゾーンに合わせて同期するかを確認するダイアログメッセージです。{deviceTimezoneName}には実際のタイムゾーン名（例：Asia/Tokyo）が表示されます。",
     "placeholders": {
@@ -129,7 +129,7 @@
       }
     }
   },
-  "currentTimeZone": "Η τρέχουσα ρυθμισμένη ζώνη ώρας",
+  "currentTimeZone": "Τρέχουσα ζώνη ώρας",
   "@currentTimeZone": {
     "description": "設定画面等で表示される、ユーザーの端末で現在設定されているタイムゾーンを示すラベルです。ピルの服用リマインド機能で正確な時刻管理を行うため、タイムゾーン設定の確認に使用されます。"
   },
@@ -141,23 +141,23 @@
   "@no": {
     "description": "アプリ内のダイアログボックスやアラートで使用される否定的な応答ボタンのラベルです。ユーザーが何かの確認や質問に対して「いいえ」と答える際に表示されます。"
   },
-  "unsubscribeInfo": "Ακύρωση",
+  "unsubscribeInfo": "Σχετικά με την ακύρωση",
   "@unsubscribeInfo": {
     "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
   },
-  "pillReminder": "Ειδοποίηση λήψης χαπιού",
+  "pillReminder": "Ειδοποίηση λήψης αντισυλληπτικού",
   "@pillReminder": {
     "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
-  "takePillReminderChannelName": "Ειδοποίηση λήψης",
+  "takePillReminderChannelName": "Ειδοποιήσεις λήψης",
   "@takePillReminderChannelName": {
     "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
   },
-  "takePillReminder": "Ώρα για χάπια 💊",
+  "takePillReminder": "💊 Ώρα!",
   "@takePillReminder": {
     "description": "ピルの服用時刻になった時にユーザーに送信されるプッシュ通知のメッセージです。簡潔で親しみやすく、服用を促すトーンで翻訳してください。"
   },
-  "copyDebugInfo": "ΑΝΤΙΓΡΑΦΗ ΠΛΗΡΟΦΟΡΙΩΝ ΑΠΟΚΩΔΙΚΟΠΟΙΗΣΗΣ",
+  "copyDebugInfo": "ΑΝΤΙΓΡΑΦΗ DEBUG ΠΛΗΡΟΦΟΡΙΩΝ",
   "@copyDebugInfo": {
     "description": "アプリに問題が発生した際に、サポートや開発者への報告のために技術的なデバッグ情報をクリップボードにコピーするボタンのテキストです。ユーザーにとって分かりやすく、行動を促す表現で翻訳してください。"
   },
@@ -165,15 +165,15 @@
   "@cancel": {
     "description": "各種ダイアログや操作確認画面で、現在の操作を中止して前の画面に戻るためのボタンのテキストです。ユーザーが誤操作を防げるよう、明確で分かりやすい表現で翻訳してください。"
   },
-  "signOut": "Αποσύνδεση",
+  "signOut": "αποσύνδεση",
   "@signOut": {
     "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
-  "autoAddPillSheetGroup": "Αυτόματη προσθήκη ομάδας δισκίων",
+  "autoAddPillSheetGroup": "Αυτόματη προσθήκη ομάδας συσκευασιών χαπιών",
   "@autoAddPillSheetGroup": {
     "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
-  "autoAddNewSheetAfterCurrentEnds": "Αφού τελειώσει η τρέχουσα ομάδα φύλλων, θα προστεθεί αυτόματα ένα νέο φύλλο.",
+  "autoAddNewSheetAfterCurrentEnds": "Θα προστίθεται αυτόματα νέο φύλλο χαπιών όταν ολοκληρωθεί η τρέχουσα ομάδα φύλλων",
   "@autoAddNewSheetAfterCurrentEnds": {
     "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
   },
@@ -181,43 +181,43 @@
   "@accountSettings": {
     "description": "設定画面で表示される「アカウント設定」メニュー項目のラベルです。ユーザーの個人情報やアカウント関連の設定を管理する画面へのナビゲーションとして使用されます。"
   },
-  "linked": "Συνδεδεμένος",
+  "linked": "Συνδεδεμένο",
   "@linked": {
     "description": "外部サービスやアカウントとの連携が完了している状態を表すステータス表示です。設定画面などで「連携済み」として表示されます。"
   },
-  "unregistered": "Μη καταχωρημένος",
+  "unregistered": "Μη εγγεγραμμένο",
   "@unregistered": {
     "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。"
   },
-  "quickRecord": "Γρήγορη καταγραφή",
+  "quickRecord": "Γρήγορη Καταγραφή",
   "@quickRecord": {
     "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
-  "quickRecordDescription": "Στην οθόνη ειδοποιήσεων μπορείτε να δείτε τα χάπια που πρέπει να πάρετε σήμερα και να καταγράψετε αμέσως τη λήψη τους.",
+  "quickRecordDescription": "Στην οθόνη ειδοποιήσεων μπορείτε να δείτε ποιο χάπι πρέπει να πάρετε σήμερα και να καταγράψετε απευθείας τη λήψη του.",
   "@quickRecordDescription": {
     "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
-  "healthCareIntegration": "Σύνδεση υγειονομικής περίθαλψης",
+  "healthCareIntegration": "Σύνδεση Υγείας",
   "@healthCareIntegration": {
     "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
-  "healthCareIntegrationDescription": "Μπορείτε να καταγράψετε αυτόματα τις καταγραφές εμμηνόρροιας που έχετε κάνει στο Pilll στο Health.",
+  "healthCareIntegrationDescription": "Οι καταγραφές περιόδου από το Pilll μπορούν να καταγράφονται αυτόματα στην εφαρμογή Υγεία",
   "@healthCareIntegrationDescription": {
     "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
-  "viewPremiumPlan": "Δείτε το προνομιακό πλάνο",
+  "viewPremiumPlan": "Δες το Πρέμιουμ Πλάνο",
   "@viewPremiumPlan": {
     "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
-  "changePillNumberForToday": "Αλλαγή του αριθμού του χαπιού που πρέπει να ληφθεί σήμερα",
+  "changePillNumberForToday": "Αλλαγή αριθμού σημερινού χαπιού",
   "@changePillNumberForToday": {
     "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
-  "discardAllPillSheets": "Απόρριψη όλων των φύλλων χαπιών",
+  "discardAllPillSheets": "Διαγραφή όλων των φύλλων χαπιών",
   "@discardAllPillSheets": {
     "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
   },
-  "areYouSureDoing": "Θα κάνετε {doing};",
+  "areYouSureDoing": "Θα {doing};",
   "@areYouSureDoing": {
     "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
     "placeholders": {
@@ -226,15 +226,15 @@
       }
     }
   },
-  "currentlyDisplayed": "Τώρα εμφανίζεται",
+  "currentlyDisplayed": "Εμφανίζεται τώρα",
   "@currentlyDisplayed": {
     "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   },
-  "allPillSheets": "Όλα τα φύλλα δισκίων",
+  "allPillSheets": "Όλα τα φύλλα χαπιών",
   "@allPillSheets": {
     "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
   },
-  "willBeDiscarded": "θα καταστραφεί",
+  "willBeDiscarded": "θα διαγραφεί",
   "@willBeDiscarded": {
     "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。"
   },
@@ -242,23 +242,27 @@
   "@discard": {
     "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。"
   },
-  "pillSheetDiscarded": "Έχετε απορρίψει το φύλλο των χαπιών.",
+  "pillSheetDiscarded": "Το φύλλο χαπιών απορρίφθηκε",
   "@pillSheetDiscarded": {
     "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
   },
-  "aboutMenstruation": "Για την περίοδο",
+  "aboutMenstruation": "Σχετικά με την περίοδο",
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
-  "checkPillNumberForMenstruationStart": "Ελέγξτε τον αριθμό του χαπιού της πρώτης ημέρας της περιόδου. Έχει οριστεί ένας αριθμός χαπιού που δεν υπάρχει στον τρέχοντα τύπο φύλλου χαπιών που έχετε επιλέξει.",
+  "checkPillNumberForMenstruationStart": "Παρακαλώ επαληθεύστε τον αριθμό του χαπιού για την ημέρα έναρξης της περιόδου. Ο ρυθμισμένος αριθμός χαπιού δεν υπάρχει στον επιλεγμένο τύπο συσκευασίας.",
   "@checkPillNumberForMenstruationStart": {
     "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
-  "customizeMedicationNotifications": "Προσαρμογή ειδοποιήσεων λήψης",
+  "customizeMedicationNotifications": "Εξατομίκευση ειδοποιήσεων",
   "@customizeMedicationNotifications": {
     "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   },
-  "xCanBeCustomized": "Μπορείτε να προσαρμόσετε το {x}.",
+  "medicationNotification": "Ειδοποίηση λήψης",
+  "@medicationNotification": {
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
+  },
+  "xCanBeCustomized": "Μπορείτε να προσαρμόσετε το {x}",
   "@xCanBeCustomized": {
     "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
     "placeholders": {
@@ -267,15 +271,15 @@
       }
     }
   },
-  "thankYouForCooperation": "Σας ευχαριστούμε για τη συνεργασία",
+  "thankYouForCooperation": "Σας ευχαριστούμε για τη συνεργασία σας",
   "@thankYouForCooperation": {
     "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   },
-  "feedbackUsage": "Η γνώμη σας θα χρησιμοποιηθεί για μελλοντικές βελτιώσεις.",
+  "feedbackUsage": "Θα αξιοποιήσουμε την πολύτιμη γνώμη σας για τη βελτίωση των υπηρεσιών μας στο μέλλον.",
   "@feedbackUsage": {
     "description": "ユーザーがアプリに対してフィードバックや意見を送信した際に表示される、運営側がそのフィードバックをどのように活用するかを説明するメッセージです。丁寧で感謝の気持ちが伝わり、今後のサービス改善への活用を約束する表現にしてください。"
   },
-  "close": "Κλείσιμο",
+  "close": "Κλείσε",
   "@close": {
     "description": "ダイアログ、モーダル、各種設定画面などを閉じるためのボタンのラベルです。アプリ全体で汎用的に使用される基本的なUI要素のため、その言語で最も自然で一般的な「閉じる」の表現を使用してください。"
   },
@@ -287,15 +291,15 @@
   "@reLogin": {
     "description": "ログインセッションが切れた際やエラーが発生した際に、ユーザーがアプリに再度ログインするためのボタンや項目です。健康管理アプリの継続的な利用において、セキュリティやセッション管理の観点から再認証が必要になった場合に表示されます。"
   },
-  "authenticationInfoUpdated": "Η πληροφορία πιστοποίησης ενημερώθηκε.",
+  "authenticationInfoUpdated": "Οι πληροφορίες ταυτοποίησης ενημερώθηκαν",
   "@authenticationInfoUpdated": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）の更新が正常に完了した際に表示される成功メッセージです。健康管理アプリのセキュリティ強化や問題解決後にユーザーに安心感を与える通知として使用されます。"
   },
-  "updateAuthenticationInformation": "Θα ενημερώσω τα διαπιστευτήρια.",
+  "updateAuthenticationInformation": "Ενημέρωση στοιχείων ταυτοποίησης",
   "@updateAuthenticationInformation": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
   },
-  "registeredWithProvider": "Εγγράφηκα με {accountTypeProviderName}",
+  "registeredWithProvider": "Εγγραφήκατε μέσω {accountTypeProviderName}",
   "@registeredWithProvider": {
     "description": "アカウント登録完了時にユーザーに表示される確認メッセージで、{accountTypeProviderName}にはGoogleやAppleなどのソーシャルログインサービス名が入ります。ユーザーが正常に登録できたことを伝える肯定的なメッセージとして使用されます。",
     "placeholders": {
@@ -304,23 +308,23 @@
       }
     }
   },
-  "linkAccount": "Συνεργασία",
+  "linkAccount": "Σύνδεση",
   "@linkAccount": {
     "description": "ユーザーアカウントを外部サービス（GoogleやAppleアカウントなど）と連携してデータの同期やバックアップを行う機能のボタンやメニューに表示されるテキストです。"
   },
-  "withdraw": "Ακύρωση συνδρομής",
+  "withdraw": "Διαγραφή λογαριασμού",
   "@withdraw": {
     "description": "ユーザーがPilllアプリのサービスから完全に退会（アカウント削除）する際にボタンやメニューに表示されるテキストです。アプリの利用を停止し、すべてのデータを削除する最終的な操作を表します。"
   },
-  "withdrawalCompleted": "Αποχώρησα",
+  "withdrawalCompleted": "Διαγράφηκατε επιτυχώς",
   "@withdrawalCompleted": {
     "description": "ユーザーがPilllアプリのアカウント削除（退会）処理を完了した後に表示される確認メッセージです。退会操作が正常に完了したことをユーザーに伝える重要な通知文言になります。"
   },
-  "appExitMessage": "Η εφαρμογή θα τερματιστεί προσωρινά. Για να ξεκινήσετε καινούρια, παρακαλώ επανεκκινήστε την εφαρμογή και κάντε τις αρχικές ρυθμίσεις.",
+  "appExitMessage": "Η εφαρμογή θα τερματιστεί. Για νέα έναρξη, επανεκκινήστε την εφαρμογή και πραγματοποιήστε την αρχική ρύθμιση.",
   "@appExitMessage": {
     "description": "データリセットや初期化などの重要な操作の後に表示される確認メッセージです。ユーザーにアプリの再起動と初期設定のやり直しが必要であることを伝える重要な通知文言になります。"
   },
-  "oK": "Εντάξει",
+  "oK": "OK",
   "@oK": {
     "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
   },
@@ -332,23 +336,23 @@
   "@change": {
     "description": "設定画面やピルシート番号調整などで使用される汎用的な「変更」ボタンやアクションラベルです。ユーザーが何かを変更・調整する際に表示される動詞として使用されます。"
   },
-  "pill": "Χάπι",
+  "pill": "χάπι",
   "@pill": {
     "description": "避妊ピル（経口避妊薬）を指す医療用語です。アプリの核となる概念で、各言語の医療分野で一般的に使用される「ピル」「錠剤」に相当する用語で翻訳してください。"
   },
-  "calendar": "Ημερολόγιο",
+  "calendar": "ημερολόγιο",
   "@calendar": {
     "description": "アプリ内で生理記録、服用履歴、体調日記、予定管理などを表示・入力するためのカレンダー機能を指します。各言語で一般的に使用される「カレンダー」「暦」に相当する用語で翻訳してください。"
   },
-  "userInformationWillBeDeleted": "Οι πληροφορίες χρήστη θα διαγραφούν.",
+  "userInformationWillBeDeleted": "Τα στοιχεία χρήστη θα διαγραφούν",
   "@userInformationWillBeDeleted": {
     "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   },
-  "withdrawalMessage": "Εάν αποχωρήσετε, όλα τα δεδομένα θα διαγραφούν και δεν θα μπορείτε ποτέ ξανά να συνδεθείτε με τον ίδιο λογαριασμό.",
+  "withdrawalMessage": "Εάν ακυρώσετε το λογαριασμό σας, όλα τα δεδομένα θα διαγραφούν και δεν θα μπορείτε ποτέ ξανά να συνδεθείτε με τον ίδιο λογαριασμό.",
   "@withdrawalMessage": {
     "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
-  "recordPage": "RecordPage",
+  "recordPage": "Καταγραφές",
   "@recordPage": {
     "description": "ピルの服用記録を確認・管理するページの名前です。ユーザーが過去の服用履歴を閲覧したり、服用状況を記録したりする機能を持つメインページの一つとして翻訳してください。"
   },
@@ -356,15 +360,15 @@
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
-  "reLoginMessage": "Παρακαλώ συνδεθείτε ξανά για την επαλήθευση της ταυτότητας πριν από την ακύρωση της συνδρομής. Μετά την επανασύνδεση, η διαδικασία ακύρωσης θα αρχίσει αυτόματα.",
+  "reLoginMessage": "Παρακαλούμε συνδεθείτε ξανά για επαλήθευση ταυτότητας πριν από τη διαγραφή του λογαριασμού σας. Μετά την επανασύνδεση, η διαδικασία διαγραφής θα αρχίσει αυτόματα.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
-  "updateAuthenticationAfterReLogin": "Θα συνδεθείτε ξανά και θα ενημερώσετε τις πληροφορίες πιστοποίησης.",
+  "updateAuthenticationAfterReLogin": "Συνδεθείτε ξανά για να ενημερώσετε τις πληροφορίες ταυτοποίησης σας",
   "@updateAuthenticationAfterReLogin": {
     "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
-  "menstruationPage": "ΣελίδαΕμμηνόρροιας",
+  "menstruationPage": "Περίοδος",
   "@menstruationPage": {
     "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
@@ -372,11 +376,11 @@
   "@calendarPage": {
     "description": "ピルアプリ内で体調記録や通院予定などの将来の予定を管理するカレンダーページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "settingsPage": "ΡυθμίσειςΣελίδα",
+  "settingsPage": "Ρυθμίσεις",
   "@settingsPage": {
     "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "menstruationDeleted": "Διαγράφηκε η περίοδος.",
+  "menstruationDeleted": "Η περίοδος διαγράφηκε",
   "@menstruationDeleted": {
     "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
   },
@@ -384,27 +388,27 @@
   "@editMenstruationPeriod": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
   },
-  "menstruationEdited": "Επεξεργάστηκα την περίοδο έμμηνου ρύσεως",
+  "menstruationEdited": "Η περίοδος επεξεργάστηκε",
   "@menstruationEdited": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を編集完了した後に表示される確認メッセージです。生理管理機能での編集操作の完了を知らせる文言として翻訳してください。"
   },
-  "physicalConditionDetail": "Λεπτομέρειες κατάστασης",
+  "physicalConditionDetail": "Λεπτομέρειες Υγείας",
   "@physicalConditionDetail": {
     "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
   },
-  "medicationHistoryPremiumFeatureRestriction": "Αυτή η προβολή πέρα από αυτό το σημείο θα είναι διαθέσιμη μόνο σε προνομιακούς χρήστες.",
+  "medicationHistoryPremiumFeatureRestriction": "Η περαιτέρω προβολή απαιτεί premium συνδρομή",
   "@medicationHistoryPremiumFeatureRestriction": {
     "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
   },
-  "viewMoreDetails": "δείτε λεπτομέρειες",
+  "viewMoreDetails": "Δείτε περισσότερα",
   "@viewMoreDetails": {
     "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
   },
-  "viewMore": "Δείτε περισσότερα",
+  "viewMore": "Περισσότερα",
   "@viewMore": {
     "description": "追加の詳細情報を表示するためのボタンテキストです。リストや概要表示で、さらに多くの項目や詳細を見たい時にタップするリンクとして使用されます。"
   },
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}β",
+  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}ο",
   "@afterLastTakenPillNumber": {
     "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
     "placeholders": {
@@ -413,7 +417,7 @@
       }
     }
   },
-  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}",
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}ο",
   "@leftDashAfterLastTakenPillNumber": {
     "description": "ピルシートUIで表示される「残り服用数-最後に服用したピル番号」の形式です。例：「7-21番」は残り7錠で、21番目のピルまで服用済みを表します。",
     "placeholders": {
@@ -425,7 +429,7 @@
       }
     }
   },
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber} αριθμός",
+  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}ο",
   "@beforeLastTakenPillNumber": {
     "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
     "placeholders": {
@@ -434,7 +438,7 @@
       }
     }
   },
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne} αριθμός",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "αρ. {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
     "description": "ピルシートUIで、最後に服用したピルの番号から次に服用予定のピルの番号までの範囲を「-」でつないで表示するテキストです。「3-4番」のように連続する番号の範囲を示します。",
     "placeholders": {
@@ -446,7 +450,7 @@
       }
     }
   },
-  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}αρ.",
   "@oneToAfterDisplayNumberBeginPillNumber": {
     "description": "ピルシートの表示番号設定で、1番から設定した開始番号までの範囲を示すテキストです。ピルシート上での番号表示のカスタマイズ機能で使用されます。",
     "placeholders": {
@@ -455,7 +459,7 @@
       }
     }
   },
-  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber} αριθμός",
+  "beforeBeginToAfterDisplayNumberBeginPillNumber": "{beforeBeginPillNumber} → {afterDisplayNumberSettingBeginPillNumber}",
   "@beforeBeginToAfterDisplayNumberBeginPillNumber": {
     "description": "ピルシートの表示番号設定で、元の開始番号から変更後の開始番号への変更を示すテキストです。番号の変更前後を矢印で表現しています。",
     "placeholders": {
@@ -467,7 +471,7 @@
       }
     }
   },
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber} αριθμός",
+  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
   "@oneToAfterDisplayNumberEndPillNumber": {
     "description": "ピルシートUIでピルの番号表示範囲を示すテキストです。「1番目から設定された最後の番号まで」という意味で、ピルシートの表示範囲を表します。",
     "placeholders": {
@@ -476,7 +480,7 @@
       }
     }
   },
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber} αριθμός",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "@beforeEndToAfterDisplayNumberEndPillNumber": {
     "description": "ピルシートの最後の薬の表示番号を変更する際に使用されます。変更前の番号から変更後の番号への変更を矢印で示します。",
     "placeholders": {
@@ -488,11 +492,11 @@
       }
     }
   },
-  "selectPauseStartDate": "Επιλογή ημερομηνίας έναρξης διακοπής λήψης",
+  "selectPauseStartDate": "Επιλογή έναρξης διαλείμματος",
   "@selectPauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "selectPausePeriod": "Επιλέξτε την περίοδο διακοπής λήψης",
+  "selectPausePeriod": "Επιλογή περιόδου διακοπής λήψης",
   "@selectPausePeriod": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
@@ -500,15 +504,15 @@
   "@pauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "pauseEndDate": "Ημερομηνία λήξης διακοπής λήψης",
+  "pauseEndDate": "Ημερομηνία λήξης διαλείμματος λήψης",
   "@pauseEndDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "endPillSheet": "Τέλος της θηκών των χαπιών",
+  "endPillSheet": "Τέλος συσκευασίας χαπιών",
   "@endPillSheet": {
     "description": "ピル（経口避妊薬）の一包装（通常シート状で28日分程度）がすべて服用完了した際に表示されるメッセージです。次のピルシートへの切り替えやタイミングを知らせる重要な通知として使用されます。"
   },
-  "discardPillSheet": "Απόρριψη της κάρτας χαπιών",
+  "discardPillSheet": "Απόρριψη φύλλου αντισυλληπτικών",
   "@discardPillSheet": {
     "description": "服用が完了した空のピルシート（ブリスターパック）を適切に廃棄・処分する際に表示されるアクションやメッセージです。環境に配慮した廃棄方法の案内や、次のシートへの切り替えを促す文脈で使用されます。"
   },
@@ -516,15 +520,15 @@
   "@takingTime": {
     "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
   },
-  "takingHistoryIsPremiumFeature": "Η ιστορία λήψης είναι λειτουργία premium.",
+  "takingHistoryIsPremiumFeature": "Το ιστορικό λήψης είναι premium λειτουργία",
   "@takingHistoryIsPremiumFeature": {
     "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
-  "pauseTakingDoesNotAdvancePillNumber": "Εάν διακόψετε τη λήψη, ο αριθμός των χαπιών δεν προχωρά.",
+  "pauseTakingDoesNotAdvancePillNumber": "Όταν παύσετε τη λήψη, ο αριθμός χαπιού δεν προχωρεί",
   "@pauseTakingDoesNotAdvancePillNumber": {
     "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
   },
-  "pauseTakingFromNumber": "Θα κάνετε παύση στη λήψη από τον {number}?",
+  "pauseTakingFromNumber": "Θέλετε να παύσετε τη λήψη από το {number};",
   "@pauseTakingFromNumber": {
     "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
     "placeholders": {
@@ -533,7 +537,7 @@
       }
     }
   },
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}ο",
   "@lastTakenPlusOnePillNumber": {
     "description": "次に服用すべきピルの番号を表示するためのテキストです。ピルシートUIで「◯番目のピルを飲む」という形で使用されます。",
     "placeholders": {
@@ -546,7 +550,7 @@
   "@taking": {
     "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
   },
-  "estimatedEndPillNumber": "Τελευταίο του προηγούμενου φύλλου: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Τέλος προηγούμενου φύλλου: {estimatedEndPillNumber}",
   "@estimatedEndPillNumber": {
     "description": "前回使用していたピルシート（ブリスターパック）の最後に服用したピルの番号を表示するテキストです。新しいシートに移る際の継続性を示すために使用されます。",
     "placeholders": {
@@ -563,19 +567,19 @@
   "@taken": {
     "description": "ピルを服用したことを示すステータス表示です。服用履歴画面などで、ユーザーが既にピルを飲み終えた状態を表現するために使用されます。"
   },
-  "notTaken": "Δεν το έπιασα",
+  "notTaken": "Μη ληφθέν",
   "@notTaken": {
     "description": "ピルの服用状態を示すステータス表示で、ユーザーがその日にピルを服用していない状態を表します。服用履歴画面やピルシートUIで「taken」（服用済み）と対になって表示される重要な状態表示です。"
   },
-  "pillSheetSettings": "Ρύθμιση πίνακα χαπιών",
+  "pillSheetSettings": "Ρυθμίσεις φύλλου χαπιών",
   "@pillSheetSettings": {
     "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
   },
-  "unmarkTodayPillAsTakenToPause": "Από τότε που δεν πήρα το χάπι που πρέπει να πάρω σήμερα",
+  "unmarkTodayPillAsTakenToPause": "Αφού σημειώσετε το σημερινό χάπι ως μη ληφθέν",
   "@unmarkTodayPillAsTakenToPause": {
     "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
   },
-  "pauseTaking": "Διακοπή λήψης",
+  "pauseTaking": "Παύση λήψης",
   "@pauseTaking": {
     "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
   },
@@ -583,7 +587,7 @@
   "@changePauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
   },
-  "pauseTakingPeriodEnded": "Η περίοδος παύσης της λήψης έχει λήξει.",
+  "pauseTakingPeriodEnded": "Η περίοδος διακοπής της λήψης τελείωσε",
   "@pauseTakingPeriodEnded": {
     "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
   },
@@ -596,19 +600,19 @@
       }
     }
   },
-  "changePillDaysForSheet": "Αλλαγή του αριθμού ημερών λήψης της στήλης",
+  "changePillDaysForSheet": "Αλλαγή ημερών λήψης συσκευασίας",
   "@changePillDaysForSheet": {
     "description": "ピルシート（ブリスターパック）の服用期間日数を変更する設定項目。ユーザーが21日間、28日間など、そのシートを何日間服用するかを設定できる機能のラベルです。"
   },
-  "changedStartAndEndNumbers": "Αλλάξαμε τους αριθμούς της αρχής και του τέλους.",
+  "changedStartAndEndNumbers": "Οι αριθμοί αρχής και τέλους άλλαξαν",
   "@changedStartAndEndNumbers": {
     "description": "ピルシートの表示番号（開始番号と終了番号）をユーザーが変更した際に表示される確認메ッセージです。例えば「1番～28番」から「3番～30番」に変更した場合などに使用されます。"
   },
-  "startOfPillDays": "Αρχή ημερών λήψης",
+  "startOfPillDays": "Αρχή λήψης",
   "@startOfPillDays": {
     "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
   },
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Τελευταία ημέρα του προηγούμενου φύλλου: {beforePillSheetGroupSequentialEstimatedEndPillNumber}η μέρα",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Τέλος προηγούμενου φύλλου: {beforePillSheetGroupSequentialEstimatedEndPillNumber}η ημέρα",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {
     "description": "ピルシート管理画面で、前回使用していたピルシートの最後の服用日を示すテキストです。ユーザーがピルの服用進度や次のシートとの関連性を把握するために表示される情報です。",
     "placeholders": {
@@ -617,19 +621,19 @@
       }
     }
   },
-  "endOfPillDays": "Τέλος των ημερών λήψης",
+  "endOfPillDays": "Τέλος ημερών λήψης",
   "@endOfPillDays": {
     "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
-  "changedToNumber": "Αλλαγή αριθμού",
+  "changedToNumber": "Αλλαγή σε αριθμό",
   "@changedToNumber": {
     "description": "ピルシートUIでピルの表示番号を変更する機能に関するメッセージです。ユーザーがピルの番号表示を調整する際に使用されます。"
   },
-  "displayMode": "Λειτουργία παρουσίασης",
+  "displayMode": "Τρόπος εμφάνισης",
   "@displayMode": {
     "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
   },
-  "dateDisplay": "Ημερομηνία Εμφάνισης",
+  "dateDisplay": "Εμφάνιση ημερομηνίας",
   "@dateDisplay": {
     "description": "設定画面で日付の表示形式を選択する機能のラベルです。ピルの服用記録や生理日などの日付情報をどのような形式で表示するかを設定する際に使用されます。"
   },
@@ -637,39 +641,35 @@
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "Ημέρες λήψης",
-  "@pillDays": {
-    "description": "服用日数"
-  },
-  "pillDaysCycle": "Ημερομηνίες λήψης (κύκλος)",
+  "pillDaysCycle": "Ημέρες λήψης",
   "@pillDaysCycle": {
     "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
   },
-  "pillSheetEnded": "Η πλάκα των χαπιών έχει τελειώσει",
+  "pillSheetEnded": "Το δισκίο των χαπιών ολοκληρώθηκε",
   "@pillSheetEnded": {
     "description": "1つのピルシート（通常21日分のピルが入った包装シート）を全て服用し終えた時に表示されるメッセージです。ユーザーにピルシートの終了を通知し、次のシートの準備や休薬期間への移行を促します。"
   },
-  "checkLastTakenDate": "Επιβεβαίωση της τελευταίας ημερομηνίας λήψης",
+  "checkLastTakenDate": "Ελέγξτε την τελευταία ημέρα λήψης",
   "@checkLastTakenDate": {
     "description": "ユーザーが最後にピルを服用した日付を確認するためのボタンやリンクに表示されるテキストです。服用履歴の確認や飲み忘れ防止のために使用されます。"
   },
-  "pleaseRegisterAccount": "Παρακαλώ εγγραφείτε",
+  "pleaseRegisterAccount": "Παρακαλώ δημιουργήστε λογαριασμό",
   "@pleaseRegisterAccount": {
     "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
-  "cannotTransferPremiumWithoutAccount": "Δεν μπορείτε να μεταφέρετε τις premium δυνατότητες όταν αλλάζετε συσκευή ή χάνετε το τηλέφωνό σας.",
+  "cannotTransferPremiumWithoutAccount": "Οι premium λειτουργίες δεν μπορούν να μεταφερθούν σε περίπτωση αλλαγής συσκευής ή απώλειας κινητού",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
-  "reexperiencePremiumFeatures": "Μπορείτε να ξαναζήσετε τις premium δυνατότητες για 14 ημέρες! Πατήστε για να μοιραστείτε στα κοινωνικά δίκτυα!",
+  "reexperiencePremiumFeatures": "Μπορείτε να ξαναδοκιμάσετε τις premium λειτουργίες για 14 ημέρες!\nΠατήστε για να μοιραστείτε στα social media!",
   "@reexperiencePremiumFeatures": {
     "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
-  "whereToShare": "Πού θέλετε να μοιραστείτε;",
+  "whereToShare": "Πού θέλετε να το μοιραστείτε;",
   "@whereToShare": {
     "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
   },
-  "pauseTakingDay": "🌙 Διακοπή λήψης {day} ημέρα",
+  "pauseTakingDay": "🌙 Διάλειμμα δόσης {day}η ημέρα",
   "@pauseTakingDay": {
     "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
     "placeholders": {
@@ -678,7 +678,7 @@
       }
     }
   },
-  "withDay": "{word} ημερών",
+  "withDay": "{word}η ημέρα",
   "@withDay": {
     "description": "ピルシートや服用履歴で「何日目」かを表示する際に使用されます。{word}には数字（1、2、3など）が入り、「1日目」「2日目」のように表示されます。",
     "placeholders": {
@@ -687,7 +687,7 @@
       }
     }
   },
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}η μέρα",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}η ημέρα",
   "@restDurationDays": {
     "description": "休薬期間（ピルを服用しない期間）の経過日数を表示する際に使用されます。{restDurationDays}には日数が入り、全体で「休薬〇日目」のような形で表示されます。",
     "placeholders": {
@@ -699,7 +699,7 @@
       }
     }
   },
-  "daysUntilPausePeriod": "Σε {diffPlusOne} ημέρες είναι η περίοδος {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Υπολείπονται {diffPlusOne} ημέρες για την περίοδο {activePillSheetPillSheetTypeNotTakenWord}",
   "@daysUntilPausePeriod": {
     "description": "ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。",
     "placeholders": {
@@ -711,7 +711,7 @@
       }
     }
   },
-  "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιήσετε όλες τις δυνατότητες για άλλες {diff} ημέρες.",
+  "remainingDaysAllFeatures": "Μπορείτε να χρησιμοποιήσετε όλες τις λειτουργίες για άλλες {diff} ημέρες",
   "@remainingDaysAllFeatures": {
     "description": "プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。",
     "placeholders": {
@@ -720,19 +720,19 @@
       }
     }
   },
-  "todayIsTaking": "💊 Σήμερα λήψη",
+  "todayIsTaking": "💊 Λήψη σήμερα",
   "@todayIsTaking": {
     "description": "ピルの服用管理画面で、今日がピル服用の予定日であることをユーザーに通知するメッセージです。カレンダーやホーム画面などで、今日が服用日であることを示すステータス表示として使用されます。"
   },
-  "todayPillToTake": "💊 Το χάπι που πρέπει να πάρω σήμερα",
+  "todayPillToTake": "💊 Σημερινό χάπι",
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
-  "number": "Αριθμός",
+  "number": "ο",
   "@number": {
     "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   },
-  "recordedMenstruationStartDate": "Καταγράφηκε ότι η περίοδος ξεκίνησε από {DateTimeFormatterMonthAndDay}.",
+  "recordedMenstruationStartDate": "Καταγράφηκε έναρξη περιόδου από {DateTimeFormatterMonthAndDay}",
   "@recordedMenstruationStartDate": {
     "description": "ユーザーが生理開始日を記録した後に表示される確認メッセージです。「○月○日から生理開始として記録しました」という意味で、記録が完了したことをユーザーに知らせる文言です。",
     "placeholders": {
@@ -749,11 +749,11 @@
   "@menstruationEndDate": {
     "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
   },
-  "menstruationScheduleDate": "Ημερομηνία αναμενόμενης περιόδου",
+  "menstruationScheduleDate": "Αναμενόμενη περίοδος",
   "@menstruationScheduleDate": {
     "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
   },
-  "menstruationScheduleDateWithNumber": "Προβλεπόμενη εμμηνόρροια: {diffPlusOne}η ημέρα",
+  "menstruationScheduleDateWithNumber": "Αναμενόμενη περίοδος: {diffPlusOne}η ημέρα",
   "@menstruationScheduleDateWithNumber": {
     "description": "生理管理機能で、アプリが予測した次回生理開始日までの残り日数を「生理予定：X日目」形式で表示する際に使用される文字列です。{diffPlusOne}には具体的な日数（1日目、2日目など）が入り、ユーザーのピル服用スケジュールと連動した生理周期予測を示します。",
     "placeholders": {
@@ -762,7 +762,7 @@
       }
     }
   },
-  "menstruationScheduleDateWithNumberAndPillNumber": "Προβλεπόμενη περίοδος: {diffPlusOne}-η μέρα του {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Αναμενόμενη περίοδος: {diffPlusOne}η ημέρα, {pillNumber}",
   "@menstruationScheduleDateWithNumberAndPillNumber": {
     "description": "ピルシート上で生理予定日の表示に使用される文字列。{diffPlusOne}は周期の何日目か、{pillNumber}はその日に服用するピルの番号を表示します。",
     "placeholders": {
@@ -774,7 +774,7 @@
       }
     }
   },
-  "menstruationRemainingDay": "Σε {diff} ημέρες",
+  "menstruationRemainingDay": "Ακόμη {diff} ημέρες",
   "@menstruationRemainingDay": {
     "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
     "placeholders": {
@@ -783,7 +783,7 @@
       }
     }
   },
-  "menstruationProgressingDay": "ημέρα {diffPlusOne}",
+  "menstruationProgressingDay": "{diffPlusOne}η ημέρα",
   "@menstruationProgressingDay": {
     "description": "生理開始から経過した日数を表示する際に使用されるテキストです。生理管理画面で「3日目」「5日目」のように現在の生理周期の進行状況を示します。",
     "placeholders": {
@@ -796,15 +796,15 @@
   "@recordMenstruation": {
     "description": "生理記録機能のラベルです。ユーザーが生理の開始や期間を入力・記録する際に表示されるテキストです。"
   },
-  "menstruationHistory": "Ιστορικό περιόδου",
+  "menstruationHistory": "Ιστορικό Περιόδων",
   "@menstruationHistory": {
     "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
   },
-  "menstruationFromToday": "Η περίοδος ξεκινά από σήμερα",
+  "menstruationFromToday": "Περίοδος από σήμερα",
   "@menstruationFromToday": {
     "description": "生理記録機能で、ユーザーが今日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を今日として登録するための操作に使用されます。"
   },
-  "menstruationFromYesterday": "Χθες άρχισε η περίοδος",
+  "menstruationFromYesterday": "Περίοδος από χθες",
   "@menstruationFromYesterday": {
     "description": "生理記録機能で、ユーザーが昨日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を昨日として登録するための操作に使用されます。"
   },
@@ -812,7 +812,7 @@
   "@selectMenstruationStartDate": {
     "description": "生理記録機能で、ユーザーが新しい生理期間の開始日を設定する際に表示されるボタンやメニューのラベルです。生理周期の管理において、生理開始日を記録するための操作に使用されます。"
   },
-  "menstruationCycle": "{menstruationDuration} ημέρες κύκλος",
+  "menstruationCycle": "Κύκλος {menstruationDuration} ημερών",
   "@menstruationCycle": {
     "description": "生理周期の日数を表示する際に使用されるテキストです。{menstruationDuration}には28日、30日などの周期日数が入ります。",
     "placeholders": {
@@ -825,19 +825,19 @@
   "@login": {
     "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
-  "beforePremiumRegistration": "Πριν από την εγγραφή στο Premium...",
+  "beforePremiumRegistration": "Πριν από την εγγραφή premium…",
   "@beforePremiumRegistration": {
     "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
-  "createNewAccountIfNotLoggedIn": "Εάν δεν έχετε συνδεθεί ποτέ στο Pilll, θα δημιουργηθεί ένας νέος λογαριασμός.",
+  "createNewAccountIfNotLoggedIn": "Εάν δεν έχετε συνδεθεί ποτέ στο Pilll, θα δημιουργηθεί αυτόματα ένας νέος λογαριασμός",
   "@createNewAccountIfNotLoggedIn": {
     "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
-  "registerAccountForDataTransfer": "Με την εγγραφή λογαριασμού, θα μπορείτε να μεταφέρετε τα δεδομένα σας.",
+  "registerAccountForDataTransfer": "Με την εγγραφή λογαριασμού μπορείτε να μεταφέρετε τα δεδομένα σας",
   "@registerAccountForDataTransfer": {
     "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
-  "registerAccountToKeepData": "Σας παρακαλούμε να εγγραφείτε για να διατηρήσετε τις πληροφορίες του λογαριασμού σας.",
+  "registerAccountToKeepData": "Παρακαλούμε δημιουργήστε λογαριασμό για να διατηρήσουμε τα στοιχεία σας",
   "@registerAccountToKeepData": {
     "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   },
@@ -859,27 +859,27 @@
       }
     }
   },
-  "premiumRegistrationComplete": "Η εγγραφή Pilll Premium ολοκληρώθηκε",
+  "premiumRegistrationComplete": "Η εγγραφή στο Pilll Premium ολοκληρώθηκε",
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
   },
-  "thankYouForRegistration": "Σας ευχαριστούμε για την εγγραφή σας.\nΌλες οι δυνατότητες είναι πλέον διαθέσιμες!",
+  "thankYouForRegistration": "Ευχαριστούμε για την εγγραφή σας.\nΌλες οι λειτουργίες είναι πλέον διαθέσιμες!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   },
-  "limitedTimeDiscount": "Αυτή τη στιγμή μπορείτε να το αποκτήσετε σε περιορισμένη τιμή για πάντα.",
+  "limitedTimeDiscount": "Τώρα με ειδική τιμή για πάντα",
   "@limitedTimeDiscount": {
     "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   },
-  "standardMonthlyPlan": "Συνήθης μηνιαίο σχέδιο",
+  "standardMonthlyPlan": "Κανονικό Μηνιαίο Πλάνο",
   "@standardMonthlyPlan": {
     "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   },
-  "annualPlan": "ετήσιο πρόγραμμα",
+  "annualPlan": "Ετήσιο Πλάνο",
   "@annualPlan": {
     "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
   },
-  "annualPrice": "{annualPackageStoreProductPriceString} το χρόνο",
+  "annualPrice": "{annualPackageStoreProductPriceString}/έτος",
   "@annualPrice": {
     "description": "年額プレミアムプランの価格表示で、placeholderに価格が入り「価格/年」の形式で表示されます。各言語で「年」を表す適切な単位を使用してください。",
     "placeholders": {
@@ -897,11 +897,20 @@
       }
     }
   },
-  "premiumTermsNotice1": "Η περίοδος της Premium συνδρομής ανανεώνεται αυτόματα κάθε μήνα ή χρόνο από την ημερομηνία έναρξης.",
+  "dailyPrice": "{dailyPriceString}/ημέρα",
+  "@dailyPrice": {
+    "description": "プレミアムプランの1日あたりの料金を表示する際に使用されます。{dailyPriceString}は計算された1日の価格が入ります。",
+    "placeholders": {
+      "dailyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "・Η περίοδος συμβολαίου Premium ανανεώνεται αυτόματα κάθε 1 μήνα ή 1 έτος, υπολογιζόμενη από την ημερομηνία έναρξης",
   "@premiumTermsNotice1": {
     "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
   },
-  "premiumTermsBullet": "・",
+  "premiumTermsBullet": "•",
   "@premiumTermsBullet": {
     "description": "プレミアムプランの利用規約で項目を列挙する際に使用する箇条書きのバレット記号です。各言語の慣習に合わせた適切な箇条書き記号（・、•、-など）に翻訳してください。"
   },
@@ -909,19 +918,19 @@
   "@slashSeparator": {
     "description": "UIで項目を区切る際に使用するスラッシュ記号です。各言語の慣習に合わせて、適切な区切り文字（/、｜、-など）とスペースの有無を調整してください。"
   },
-  "premiumTermsNotice2": "Εμφάνιση σύμφωνα με τον Νόμο περί Ειδικών Εμπορικών Συναλλαγών",
+  "premiumTermsNotice2": "Νομικές Πληροφορίες",
   "@premiumTermsNotice2": {
     "description": "プレミアムプラン（有料機能）の法的情報を表示する際のタイトルです。日本の特定商取引法に基づく事業者情報の表示義務に対応します。"
   },
-  "premiumTermsNotice3": "Ελέγξτε το και εγγραφείτε παρακαλώ",
+  "premiumTermsNotice3": "επιβεβαιώστε και προχωρήστε στην εγγραφή",
   "@premiumTermsNotice3": {
     "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
-  "autoRenewNotice": "Η σύμβαση ανανεώνεται αυτόματα εκτός εάν ακυρωθεί τουλάχιστον 24 ώρες πριν από την ημερομηνία λήξης της περιόδου premium.",
+  "autoRenewNotice": "・Η συνδρομή θα ανανεωθεί αυτόματα εάν δεν ακυρωθεί τουλάχιστον 24 ώρες πριν την ημερομηνία λήξης της περιόδου συνδρομής premium",
   "@autoRenewNotice": {
     "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
-  "cancelAutoRenewInfo": "• Μετά την αγορά, η ακύρωση της αυτόματης ανανέωσης μπορεί να γίνει στις ρυθμίσεις του λογαριασμού της εφαρμογής {storeName}. (Η ακύρωση της αυτόματης ανανέωσης δεν μπορεί να γίνει μέσω της εφαρμογής).",
+  "cancelAutoRenewInfo": "• Μετά την αγορά, η ακύρωση της αυτόματης ανανέωσης μπορεί να πραγματοποιηθεί στις ρυθμίσεις λογαριασμού της εφαρμογής {storeName}. (Η ακύρωση της αυτόματης ανανέωσης δεν είναι δυνατή από την εφαρμογή).",
   "@cancelAutoRenewInfo": {
     "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
     "placeholders": {
@@ -930,23 +939,23 @@
       }
     }
   },
-  "moreDetails": "Δείτε περισσότερα εδώ",
+  "moreDetails": "Δείτε περισσότερα",
   "@moreDetails": {
     "description": "詳細情報を表示するためのリンクやボタンに使用されるテキストです。ユーザーが追加の情報を確認したい時にタップ/クリックする要素の表示文言として使用されます。"
   },
-  "restorePurchase": "Αποκατέστησα τις πληροφορίες αγοράς",
+  "restorePurchase": "Οι πληροφορίες αγοράς επαναφέρθηκαν",
   "@restorePurchase": {
     "description": "ピルアプリのプレミアムプラン（有料機能）を復元した際に表示される成功メッセージです。ユーザーが機種変更や再インストール後に、以前購入したプレミアム機能を復元完了したことを知らせる通知文言として使用されます。"
   },
-  "previouslyPurchased": "Αν έχετε αγοράσει προηγουμένως, κάντε κλικ εδώ",
+  "previouslyPurchased": "Για όσους έχουν αγοράσει παλαιότερα",
   "@previouslyPurchased": {
     "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
   },
-  "noPreviousPurchaseInfo": "Δεν βρέθηκαν προηγούμενες πληροφορίες αγοράς. Παρακαλούμε ελέγξτε τον λογαριασμό σας και δοκιμάστε ξανά.",
+  "noPreviousPurchaseInfo": "Δεν βρέθηκαν στοιχεία προηγούμενων αγορών. Παρακαλώ ελέγξτε τον λογαριασμό σας και δοκιμάστε ξανά.",
   "@noPreviousPurchaseInfo": {
     "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
   },
-  "monthlyPlan": "Μηνιαίο σχέδιο",
+  "monthlyPlan": "Μηνιαία Συνδρομή",
   "@monthlyPlan": {
     "description": "プレミアム機能を利用するための月額課金プラン名です。年額プランと対比して表示される課金オプションとして使用されます。"
   },
@@ -959,63 +968,75 @@
       }
     }
   },
-  "youArePremiumMember": "Είστε μέλος premium",
+  "lifetimePlan": "Εφάπαξ αγορά",
+  "@lifetimePlan": {
+    "description": "アプリ内の有料プランの支払い方式の1つで、一度購入すれば永続的に利用できるプランを指します。サブスクリプション（月額・年額）とは異なる買い切り型の課金方式です。"
+  },
+  "lifetimePlanDescription": "Premium διά βίου με μία αγορά",
+  "@lifetimePlanDescription": {
+    "description": "買い切り型有料プランの説明文で、一度の支払いで永続的にプレミアム機能が利用できることを示すテキストです。"
+  },
+  "lifetimePlanSpecialOffer": "Σχέδιο Δια Βίου\nΕιδική Προσφορά Περιορισμένου Χρόνου",
+  "@lifetimePlanSpecialOffer": {
+    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
+  },
+  "lifetimePlanStandardPrice": "Κανονική τιμή",
+  "@lifetimePlanStandardPrice": {
+    "description": "買い切り型プレミアムプランの通常価格を表示するラベルテキストです。課金画面で特別価格オファーと対比して表示される際に使用されます。"
+  },
+  "youArePremiumMember": "Είσαι\nPremium μέλος",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
-  "thankYouMessage": "Σας ευχαριστούμε για τη χρήση της εφαρμογής. Χάρη σε εσάς, μπορούμε να συνεχίσουμε τη λειτουργία του Pilll.",
+  "thankYouMessage": "Σας ευχαριστούμε για τη χρήση της εφαρμογής μας. Χάρη στην υποστήριξή σας, καταφέρνουμε να συνεχίσουμε τη λειτουργία του Pilll.",
   "@thankYouMessage": {
     "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
-  "premiumFeaturesList": "Λίστα προνομιακών λειτουργιών",
+  "premiumFeaturesList": "Λίστα Premium Λειτουργιών",
   "@premiumFeaturesList": {
     "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
   },
-  "pushNotificationForTakingRecord": "📩 Καταγραφή λήψης από ειδοποιήσεις push",
+  "pushNotificationForTakingRecord": "📩 Καταγραφή λήψης από ειδοποιήσεις",
   "@pushNotificationForTakingRecord": {
     "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
-  "viewAndRecordTakingHistory": "🗂 Καταγραφή και προβολή ιστορικού λήψης",
+  "viewAndRecordTakingHistory": "🗂 Καταγραφή και Προβολή Ιστορικού Λήψης",
   "@viewAndRecordTakingHistory": {
     "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
-  "displayDateOnPillSheet": "📆 Εμφάνιση ημερομηνίας στο φύλλο των χαπιών",
+  "displayDateOnPillSheet": "📆 Εμφάνιση ημερομηνίας στο φύλλο χαπιών",
   "@displayDateOnPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
   },
-  "autoRefillNewPillSheet": "📦 Αυτόματη ανανέωση νέων φύλλων χαπιών",
+  "autoRefillNewPillSheet": "📦 Αυτόματη προσθήκη νέας συσκευασίας χαπιών",
   "@autoRefillNewPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
   },
-  "viewPastData": "👀 Προβολή παλαιότερων δεδομένων",
+  "viewPastData": "👀 Προβολή ιστορικών δεδομένων",
   "@viewPastData": {
     "description": "プレミアム機能の一覧で表示される機能名です。過去の服用記録、生理記録、体調記録などの履歴データを閲覧できる機能を表しています。"
   },
-  "customizeHealthTags": "🏷 Προσαρμογή ετικετών υγείας",
+  "customizeHealthTags": "🏷 Προσαρμογή ετικετών συμπτωμάτων",
   "@customizeHealthTags": {
     "description": "プレミアム機能の一覧で表示される機能名です。ユーザーが日記機能で体調を記録する際に使用するタグ（頭痛、吐き気、気分など）を自分好みにカスタマイズできる機能を表しています。"
   },
-  "hideAds": "🚫 Απενεργοποίηση διαφημίσεων",
+  "hideAds": "🚫 Απόκρυψη διαφημίσεων",
   "@hideAds": {
     "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
   },
-  "seeDetailsOfPremiumFeatures": "Δείτε λεπτομέρειες για τις premium δυνατότητες",
+  "seeDetailsOfPremiumFeatures": "Δείτε λεπτομέρειες Premium λειτουργιών",
   "@seeDetailsOfPremiumFeatures": {
     "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
-  "popularFeatures": "Δημοφιλή χαρακτηριστικά",
+  "popularFeatures": "Δημοφιλείς λειτουργίες",
   "@popularFeatures": {
     "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
   },
-  "viewPremiumFeatures": "Δείτε τις premium λειτουργίες",
+  "viewPremiumFeatures": "Δες τις premium λειτουργίες",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
-  "addedDisplayModePillDaysCycle": "Η λειτουργία εμφάνισης για τις ημέρες λήψης (κύκλος) έχει προστεθεί.",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
-  },
-  "seeDetails": "Δείτε λεπτομέρειες",
+  "seeDetails": "Προβολή λεπτομερειών",
   "@seeDetails": {
     "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
   },
@@ -1023,11 +1044,11 @@
   "@stepThreeOfThree": {
     "description": "アプリの初期設定やオンボーディングプロセスにおける3番目（最終）のステップを示すテキストで、「3/3」の形式で進捗を表示します。画面上部などに表示され、ユーザーに現在のステップ位置を分数形式で伝える役割があります。"
   },
-  "missedPillNotification": "Ειδοποίηση για την παράλειψη λήψης χαπιών",
+  "missedPillNotification": "Υπενθύμιση χαπιού",
   "@missedPillNotification": {
     "description": "設定した服用時刻にピルを飲み忘れた際にユーザーに送信されるプッシュ通知のタイトルまたは内容として表示されるテキストです。アプリの主要機能である「飲み忘れ防止」のためのリマインド機能の一部として使用されます。"
   },
-  "setMultipleReminders": "Μπορείτε να αποτρέψετε την παράλειψη δόσεων ορίζοντας πολλές ρυθμίσεις.",
+  "setMultipleReminders": "Μπορείτε να αποφύγετε το ξεχάσιμο λήψης ρυθμίζοντας πολλαπλές υπενθυμίσεις",
   "@setMultipleReminders": {
     "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
   },
@@ -1035,7 +1056,7 @@
   "@and": {
     "description": "2つの項目や要素を並列に繋ぐ際に使用される接続詞です。アプリ内のテキストで「設定と履歴」「朝と夜」などの表現に使われます。"
   },
-  "readAndStartUsing": "Διαβάστε και αρχίστε να χρησιμοποιείτε",
+  "readAndStartUsing": "Διαβάστε και ξεκινήστε τη χρήση",
   "@readAndStartUsing": {
     "description": "利用規約やプライバシーポリシー等の重要な情報を読んでから、アプリの使用を開始することを促すボタンまたは案内文です。ユーザーに対して情報の確認と利用開始の両方のアクションを促している表現です。"
   },
@@ -1052,7 +1073,7 @@
       }
     }
   },
-  "takingRecordFromNotification": "Μπορείτε να καταγράψετε την λήψη μέσω ειδοποίησης",
+  "takingRecordFromNotification": "\\ Μπορείτε να καταγράψετε τη λήψη από την ειδοποίηση /",
   "@takingRecordFromNotification": {
     "description": "プッシュ通知から直接ピルの服用記録を行える機能を説明するユーザー向けの案内文です。リマインド通知を受け取ったユーザーが、アプリを開かなくても通知から服用記録できる便利さを伝える文言です。"
   },
@@ -1060,7 +1081,7 @@
   "@startApp": {
     "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
   },
-  "loggedInWithProvider": "Συνδεθήκατε με το {accountTypeProviderName}",
+  "loggedInWithProvider": "Συνδεθήκατε με {accountTypeProviderName}",
   "@loggedInWithProvider": {
     "description": "ユーザーが外部認証プロバイダー（Google、Apple、Facebookなど）を使用してログインに成功した際に表示される確認メッセージです。{accountTypeProviderName}には使用したサービス名が入ります。",
     "placeholders": {
@@ -1069,15 +1090,15 @@
       }
     }
   },
-  "tellAboutPrescribedSheet": "Πείτε μου για το φύλλο που σας έχει συνταγογραφηθεί.",
+  "tellAboutPrescribedSheet": "Πείτε μας για τη συνταγογραφημένη συσκευασία",
   "@tellAboutPrescribedSheet": {
     "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
-  "existingAccountUsers": "Αν έχετε ήδη λογαριασμό, κάντε κλικ εδώ",
+  "existingAccountUsers": "Έχετε ήδη λογαριασμό; Κάντε κλικ εδώ",
   "@existingAccountUsers": {
     "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
-  "selectTodayPillNumber": "Σήμερα({todayString})\nΠατήστε τον αριθμό του χαπιού που παίρνετε ή πήρατε.",
+  "selectTodayPillNumber": "Σήμερα ({todayString}) πατήστε τον αριθμό του χαπιού που πρέπει να πάρετε ή πήρατε",
   "@selectTodayPillNumber": {
     "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
     "placeholders": {
@@ -1086,11 +1107,11 @@
       }
     }
   },
-  "notYetKnown": "Δεν ξέρω ακόμα",
+  "notYetKnown": "Άγνωστο",
   "@notYetKnown": {
     "description": "ユーザーがまだ情報を入力していない、または設定していない状態を表示する際に使用されます。生理予定日や服用スケジュールなど、アプリの各機能でデータが未確定の場合に表示されるテキストです。"
   },
-  "pillForToday": "Τα δισκία που πρέπει να λάβετε σήμερα",
+  "pillForToday": "Το χάπι για τις {today} είναι",
   "@pillForToday": {
     "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
     "placeholders": {
@@ -1112,11 +1133,11 @@
   "@preview": {
     "description": "設定や入力内容を事前に確認するためのプレビュー表示に使用される文字列です。ユーザーが何かを実行・保存する前の確認画面で表示されます。"
   },
-  "normal": "Συνήθως",
+  "normal": "κανονικό",
   "@normal": {
     "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。"
   },
-  "missed": "Ξέχασα να πάρω το φάρμακο",
+  "missed": "Παραλείφθηκε",
   "@missed": {
     "description": "ピルの服用予定時刻を過ぎても服用していない状態を表す表示ラベルです。アプリ内でユーザーがピルを飲み忘れた際に表示される状態表示として使用されます。"
   },
@@ -1124,11 +1145,11 @@
   "@showsDate": {
     "description": "設定画面やオプションメニューで使用される、日付表示の有無を切り替える設定項目のラベルです。ユーザーがアプリ内で日付情報を表示するかどうかを選択する際に表示されます。"
   },
-  "showsPillNumber": "Εμφάνιση Αριθμού",
+  "showsPillNumber": "Εμφάνιση αριθμών",
   "@showsPillNumber": {
     "description": "ピルシートの各薬に表示される順番の数字（1日目、2日目など）を表示するかどうかを切り替える設定項目のラベルです。ユーザーがピルシートUI上で薬の服用順序を数字で確認したい場合に使用されます。"
   },
-  "showsDescription": "Εμφάνιση περιγραφής",
+  "showsDescription": "Εμφάνιση περιγραφών",
   "@showsDescription": {
     "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
   },
@@ -1136,7 +1157,7 @@
   "@title": {
     "description": "予定やスケジュールの件名・タイトルを表します。通院予定や体調記録などの見出しとして使用されます。"
   },
-  "message": "Μήνυμα",
+  "message": "μήνυμα",
   "@message": {
     "description": "エラー発生時やシステム処理時に表示される汎用的なメッセージです。主にプレミアム機能の購入・復元処理やSNSシェア機能でのエラーメッセージとして使用されます。"
   },
@@ -1144,15 +1165,15 @@
   "@option": {
     "description": "アプリ内の設定項目やメニューでの選択肢を表す汎用的な用語です。設定画面やダイアログでの選択項目として使用されます。"
   },
-  "completed": "Ολοκληρώθηκε",
+  "completed": "Έτοιμο",
   "@completed": {
     "description": "テキスト入力やピッカーでの選択などの作業を完了・確定する際に押すボタンのテキストです。日記投稿、スケジュール投稿、通知設定などの画面で使用されます。"
   },
-  "pilll": "Πίλλ",
+  "pilll": "Pilll",
   "@pilll": {
     "description": "ピルの服用管理アプリ「Pilll」のアプリ名です。基本的には「Pilll」のまま使用しますが、各言語の文字体系に合わせて表記を調整してください。"
   },
-  "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το κείμενο ειδοποίησης σε περίπτωση που έχετε ξεχάσει να πάρετε το φάρμακο.",
+  "changeMissedNotificationMessage": "Μπορείτε να αλλάξετε το μήνυμα ειδοποίησης όταν ξεχνάτε να πάρετε το χάπι",
   "@changeMissedNotificationMessage": {
     "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   },
@@ -1165,7 +1186,7 @@
       }
     }
   },
-  "changeNotificationHeader": "Μπορείτε να αλλάξετε το αρχικό μέρος της ειδοποίησης.",
+  "changeNotificationHeader": "Μπορείτε να προσαρμόσετε το αρχικό μέρος της ειδοποίησης",
   "@changeNotificationHeader": {
     "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
   },
@@ -1178,11 +1199,11 @@
       }
     }
   },
-  "enterAtLeastOneCharacter": "Εισάγετε τουλάχιστον 0 χαρακτήρες",
+  "enterAtLeastOneCharacter": "Παρακαλώ εισάγετε τουλάχιστον 1 χαρακτήρα",
   "@enterAtLeastOneCharacter": {
     "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
-  "changeDailyNotificationMessage": "Μπορείτε να αλλάξετε τη διατύπωση της ειδοποίησης όταν δεν έχετε ξεχάσει να πάρετε το χάπι.",
+  "changeDailyNotificationMessage": "Μπορείτε να προσαρμόσετε το μήνυμα ειδοποίησης όταν δεν έχετε ξεχάσει να πάρετε το χάπι σας",
   "@changeDailyNotificationMessage": {
     "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   },
@@ -1195,7 +1216,7 @@
       }
     }
   },
-  "receiveDailyNotificationAt9AM": "Λάβετε ειδοποίηση στις 9:00 την ημέρα",
+  "receiveDailyNotificationAt9AM": "Ειδοποίηση στις 9:00 την ίδια μέρα",
   "@receiveDailyNotificationAt9AM": {
     "description": "ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。"
   },
@@ -1203,11 +1224,11 @@
   "@save": {
     "description": "設定変更や入力内容を確定・保存する際に表示されるボタンのテキストです。アプリ内の様々な画面（服用設定、通知設定、プロフィール編集など）で汎用的に使用されます。"
   },
-  "physicalCondition": "Κατάσταση υγείας",
+  "physicalCondition": "υγεία",
   "@physicalCondition": {
     "description": "日記機能において、ユーザーが体調や身体の状態を記録する際の項目名として表示されます。ピル服用による体調の変化や身体のコンディションを記録するために使用されます。"
   },
-  "deletedDiaryCannotBeRecovered": "Το διαγραμμένο ημερολόγιο δεν μπορεί να ανακτηθεί.",
+  "deletedDiaryCannotBeRecovered": "Το διαγραμμένο ημερολόγιο δεν μπορεί να επαναφερθεί",
   "@deletedDiaryCannotBeRecovered": {
     "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
   },
@@ -1215,15 +1236,15 @@
   "@sex": {
     "description": "日記機能において、体調記録の一項目として性的活動の有無を記録する際のラベルです。ピル服用管理との関連で重要な体調データとして使用されます。"
   },
-  "previousPillSheetGroup": "Προηγούμενη ομάδα φύλλων χαπιών",
+  "previousPillSheetGroup": "Προηγούμενη ομάδα συσκευασιών",
   "@previousPillSheetGroup": {
     "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
   },
-  "noPreviousPillSheetGroup": "Η προηγούμενη ομάδα φύλλου δισκίων δεν υπάρχει ακόμη.",
+  "noPreviousPillSheetGroup": "Δεν υπάρχει ακόμα προηγούμενη ομάδα φύλλων χαπιών",
   "@noPreviousPillSheetGroup": {
     "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
   },
-  "failedToFetchPillHistory": "Αποτυχία στην απόκτηση πληροφοριών ιστορικού λήψης. {error}",
+  "failedToFetchPillHistory": "Απέτυχε η ανάκτηση των στοιχείων ιστορικού λήψης. {error}",
   "@failedToFetchPillHistory": {
     "description": "アプリ内でユーザーが過去のピル服用履歴を確認しようとした際に、システムエラーやネットワーク障害などでデータの取得に失敗した場合に表示されるエラーメッセージです。{error}部分には具体的なエラー内容が挿入されます。",
     "placeholders": {
@@ -1236,23 +1257,23 @@
   "@seeFAQ": {
     "description": "アプリ内でFAQ（よくある質問）ページへ移動するためのボタンやリンクのテキストです。ピルの服用方法やアプリの操作方法に関する質問と回答を確認できるページに誘導します。"
   },
-  "reloadScreen": "Επαναφόρτωση οθόνης",
+  "reloadScreen": "Ανανέωση οθόνης",
   "@reloadScreen": {
     "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
   },
-  "contactIfNotResolved": "Εάν δεν επιλυθεί, δείτε εδώ",
+  "contactIfNotResolved": "Αν δεν επιλυθεί, κάντε κλικ εδώ",
   "@contactIfNotResolved": {
     "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
   },
-  "shareFeedback": "Παρακαλώ μοιραστείτε την άποψή σας για το Pilll",
+  "shareFeedback": "Πείτε μας την άποψή σας για το Pilll",
   "@shareFeedback": {
     "description": "ユーザーにアプリに対する感想やフィードバックの提供を促すメッセージです。設定画面やフィードバック画面で、アプリの改善のためにユーザーの意見を求める際に表示されます。"
   },
-  "confirm": "Απόφαση",
+  "confirm": "Εντάξει",
   "@confirm": {
     "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
   },
-  "surveyForServiceImprovement": "Εάν μπορείτε, παρακαλούμε συμμετάσχετε στην έρευνα για τη βελτίωση της υπηρεσίας.",
+  "surveyForServiceImprovement": "Εάν επιθυμείτε, θα θέλαμε επίσης τη συνεργασία σας σε ένα ερωτηματολόγιο για τη βελτίωση των υπηρεσιών μας",
   "@surveyForServiceImprovement": {
     "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
   },
@@ -1260,15 +1281,15 @@
   "@participate": {
     "description": "サービス改善アンケートに参加・協力するためのボタンやリンクのテキストです。ユーザーがアンケート調査に協力することを表現する動詞として使用されます。"
   },
-  "notHelp": "δεν κάνω",
+  "notHelp": "Όχι χρήσιμο",
   "@notHelp": {
     "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
   },
-  "serviceImprovementSurvey": "Δημοσκοπική έρευνα για τη βελτίωση υπηρεσιών",
+  "serviceImprovementSurvey": "Έρευνα Βελτίωσης Υπηρεσίας",
   "@serviceImprovementSurvey": {
     "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
   },
-  "satisfied": "Είμαι ικανοποιημένος",
+  "satisfied": "Ικανοποιημένος/-η",
   "@satisfied": {
     "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足している」という回答を選択する際に表示される文字列です。"
   },
@@ -1276,23 +1297,23 @@
   "@notSatisfied": {
     "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足していない」という回答を選択する際に表示される文字列です。"
   },
-  "perNumber": "κατά αριθμό",
+  "perNumber": "ανά αριθμό",
   "@perNumber": {
     "description": "ピルシートの薬の番号（1番、2番...）ごとに何かを行う際に使用される表現です。ピル管理機能で薬の順番や番号に基づいた表示・操作を示すフレーズです。"
   },
-  "howManyDaysDoesMenstruationLast": "Πόσες ημέρες κρατά η περίοδος;",
+  "howManyDaysDoesMenstruationLast": "Πόσες ημέρες διαρκεί η περίοδός σου;",
   "@howManyDaysDoesMenstruationLast": {
     "description": "生理管理機能で、ユーザーの生理期間（日数）を入力してもらう際の質問文です。通常3-7日程度の期間を想定した設定画面で使用されます。"
   },
-  "daysMenstruationLasts": "Διαρκεί η εμμηνόρροια για ημέρες",
+  "daysMenstruationLasts": "ημέρες περιόδου",
   "@daysMenstruationLasts": {
     "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
   },
-  "selectPillNumberForMenstruationStart": "Πατήστε τον αριθμό του χαπιού που αρχίζει την περίοδο.",
+  "selectPillNumberForMenstruationStart": "Πατήστε τον αριθμό του χαπιού που αντιστοιχεί στην έναρξη της περιόδου",
   "@selectPillNumberForMenstruationStart": {
     "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
   },
-  "countOfSheet": "Η {number} σελίδα",
+  "countOfSheet": "{number}η",
   "@countOfSheet": {
     "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
     "placeholders": {
@@ -1301,11 +1322,11 @@
       }
     }
   },
-  "newPillSheetStart": "Νέα έναρξη φύλλου χαπιών ▶︎",
+  "newPillSheetStart": "Έναρξη νέου φύλλου χαπιών ▶︎",
   "@newPillSheetStart": {
     "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
   },
-  "selectPillType": "Επιλέξτε τον τύπο του χαπιού",
+  "selectPillType": "Επιλογή τύπου χαπιού",
   "@selectPillType": {
     "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
   },
@@ -1317,35 +1338,35 @@
   "@twentyEightPills": {
     "description": "ピルの種類選択時に表示される選択肢で、1シートに28錠入ったピル（28日間連続服用タイプ）を表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
   },
-  "twentyFourPills": "24 ταμπλέτες",
+  "twentyFourPills": "24 δισκία",
   "@twentyFourPills": {
     "description": "ピルの種類選択時に表示される選択肢で、1シートに24錠入ったピルを表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
   },
-  "twentyOnePlusSevenDaysBreak": "21 δισκία + 7 ημέρες διακοπής",
+  "twentyOnePlusSevenDaysBreak": "21 δισκία + 7 ημέρες διάλειμμα",
   "@twentyOnePlusSevenDaysBreak": {
     "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
-  "twentyFourPlusFourPlacebo": "24 δισκία + 4 δισκία εικονικού φαρμάκου",
+  "twentyFourPlusFourPlacebo": "24 δισκία + 4 δισκία πλασέμπο",
   "@twentyFourPlusFourPlacebo": {
     "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
-  "twentyOnePlusSevenPlacebo": "21 δισκία + 7 ψευδών δισκίων",
+  "twentyOnePlusSevenPlacebo": "21 ενεργά δισκία + 7 δισκία πλασίμπο",
   "@twentyOnePlusSevenPlacebo": {
     "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
   },
-  "allActivePills": "όλα τα πραγματικά φάρμακα",
+  "allActivePills": "Όλα ενεργά δισκία",
   "@allActivePills": {
     "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   },
-  "twentyFourPlusFourDaysBreak": "24 τεμάχια + 4 τεμάχια διακοπή",
+  "twentyFourPlusFourDaysBreak": "24 χάπια + 4 διάλειμμα",
   "@twentyFourPlusFourDaysBreak": {
     "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
-  "choosePillType": "Επιλέξτε τον τύπο του χαπιού",
+  "choosePillType": "Επιλογή τύπου χαπιού",
   "@choosePillType": {
     "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   },
-  "notificationForNotTakenPeriod": "{pillSheetPillSheetTypeNotTakenWord} ειδοποίηση περιόδου",
+  "notificationForNotTakenPeriod": "Ειδοποίηση περιόδου {pillSheetPillSheetTypeNotTakenWord}",
   "@notificationForNotTakenPeriod": {
     "description": "ピルシートの休薬期間やプラセボ期間など、薬を服用しない期間に関するプッシュ通知のタイトルとして使用されます。プレースホルダーには「休薬」「プラセボ」などの期間タイプが入ります。",
     "placeholders": {
@@ -1354,7 +1375,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Εάν οι ειδοποιήσεις είναι απενεργοποιημένες, η ιστορία λήψης φαρμάκων για την περίοδο {pillSheetPillSheetTypeNotTakenWord} θα καταχωρηθεί αυτόματα.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Όταν οι ειδοποιήσεις είναι απενεργοποιημένες, θα προστεθούν αυτόματα και οι καταγραφές λήψης για την περίοδο {pillSheetPillSheetTypeNotTakenWord}",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
@@ -1363,15 +1384,15 @@
       }
     }
   },
-  "requestForCancelSurvey": "Παρακαλούμε να συμπληρώσετε την έρευνα μετά την ακύρωση",
+  "requestForCancelSurvey": "Παρακαλούμε βοηθήστε μας συμπληρώνοντας το ερωτηματολόγιο μετά την ακύρωση",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
-  "pilllDescription": "Pilll - εφαρμογή υπενθύμισης χαπιών που είναι ειδικά σχεδιασμένη για τη λήψη χαπιών",
+  "pilllDescription": "Pilll - Εφαρμογή υπενθύμισης για αντισυλληπτικά χάπια",
   "@pilllDescription": {
     "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
-  "reachedMaximumCountOfReminderTimes": "Έχετε φτάσει το ανώτατο όριο εγγραφών. Παρακαλώ περιορίστε το σε {ReminderTimeMaximumCount} ή λιγότερες εγγραφές.",
+  "reachedMaximumCountOfReminderTimes": "Έχετε φτάσει το μέγιστο όριο εγγραφής. Παρακαλώ περιορίστε σε {ReminderTimeMaximumCount} ή λιγότερα.",
   "@reachedMaximumCountOfReminderTimes": {
     "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
     "placeholders": {
@@ -1380,7 +1401,7 @@
       }
     }
   },
-  "minimumCountOfReminderTimes": "Ο χρόνος ειδοποίησης απαιτεί τουλάχιστον {ReminderTimeMinimumCount} στοιχεία.",
+  "minimumCountOfReminderTimes": "Απαιτούνται τουλάχιστον {ReminderTimeMinimumCount} ώρες ειδοποίησης",
   "@minimumCountOfReminderTimes": {
     "description": "ピルの服用リマインド通知を設定する際に、必要最低限の通知時間数が設定されていない場合に表示されるエラーメッセージです。ユーザーが通知設定で最低限必要な件数を満たしていない時に警告として表示されます。",
     "placeholders": {
@@ -1389,7 +1410,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "Παρουσιάστηκε σφάλμα άγνωστης αιτίας. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Παρουσιάστηκε άγνωστο σφάλμα. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
@@ -1410,23 +1431,23 @@
       }
     }
   },
-  "purchaseErrorPurchaseNotAllowedError": "Αυτή η συσκευή δεν επιτρέπεται να πραγματοποιεί αγορές.",
+  "purchaseErrorPurchaseNotAllowedError": "Οι αγορές δεν επιτρέπονται σε αυτή τη συσκευή",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Ελέγξτε αν η μέθοδος πληρωμής είναι έγκυρη και προσπαθήστε ξανά.",
+  "purchaseErrorPurchaseInvalidError": "Η πληρωμή απέτυχε. Παρακαλώ ελέγξτε εάν η μέθοδος πληρωμής σας είναι έγκυρη και δοκιμάστε ξανά.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorProductNotAvailableForPurchaseError": "Το συγκεκριμένο πρόγραμμα δεν είναι διαθέσιμο προς πώληση αυτή τη στιγμή. Σας παρακαλούμε να επανεκκινήσετε την εφαρμογή και να δοκιμάσετε ξανά.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Το πλάνο που επιλέξατε δεν είναι διαθέσιμο προς το παρόν. Παρακαλούμε επανεκκινήστε την εφαρμογή και δοκιμάστε ξανά.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
-  "purchaseErrorProductAlreadyPurchasedError": "Έχετε ήδη αγοράσει ένα σχέδιο. Για να επαναφέρετε τις πληροφορίες αγοράς σε αυτήν τη συσκευή, παρακαλώ κάντε κλικ στο \"Αυτοί που έχουν αγοράσει προηγουμένως εδώ\" για να επαναφέρετε τις πληροφορίες αγοράς.",
+  "purchaseErrorProductAlreadyPurchasedError": "Έχετε ήδη αγοράσει το πλάνο. Για να επαναφέρετε τις πληροφορίες αγοράς σε αυτή τη συσκευή, παρακαλώ χρησιμοποιήστε την επιλογή «Αν έχετε αγοράσει προηγουμένως, κάντε κλικ εδώ»",
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   },
-  "purchaseErrorReceiptAlreadyInUseError": "Έχετε ήδη αγοράσει. Οι πληροφορίες αγοράς χρησιμοποιούνται από άλλο χρήστη. Ελέγξτε το {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Έχει ήδη αγοραστεί ή οι πληροφορίες αγοράς χρησιμοποιούνται από άλλον χρήστη. Παρακαλώ ελέγξτε το {accountName}.",
   "@purchaseErrorReceiptAlreadyInUseError": {
     "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
     "placeholders": {
@@ -1435,11 +1456,11 @@
       }
     }
   },
-  "purchaseErrorInvalidReceiptError": "Μη έγκυρες πληροφορίες αγοράς. Παρακαλώ επιβεβαιώστε τις πληροφορίες αγοράς.",
+  "purchaseErrorInvalidReceiptError": "Μη έγκυρες πληροφορίες αγοράς. Παρακαλώ ελέγξτε τις πληροφορίες αγοράς σας.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
-  "purchaseErrorMissingReceiptFileError": "Δεν υπάρχουν πληροφορίες για τον αγοραστή. Παρακαλώ συνδεθείτε στη συσκευή σας με {accountName} και δοκιμάστε.",
+  "purchaseErrorMissingReceiptFileError": "Δεν βρέθηκαν στοιχεία αγοραστή. Συνδεθείτε με {accountName} στη συσκευή σας και δοκιμάστε ξανά.",
   "@purchaseErrorMissingReceiptFileError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
@@ -1448,11 +1469,11 @@
       }
     }
   },
-  "purchaseErrorNetworkError": "Η κατάσταση δικτύου είναι ασταθής. Παρακαλούμε ελέγξτε την κατάσταση σύνδεσης και προσπαθήστε ξανά.",
+  "purchaseErrorNetworkError": "Η σύνδεση δικτύου είναι ασταθής. Παρακαλώ ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
-  "purchaseErrorInvalidCredentialsError": "Αποτυχία αγοράς. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Αν το πρόβλημα παραμένει, επικοινωνήστε με την υποστήριξη μέσω Ρυθμίσεων > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Η αγορά απέτυχε. Παρακαλούμε περιμένετε λίγο και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
     "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
     "placeholders": {
@@ -1464,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Δεν μπορείτε να αγοράσετε αυτή τη στιγμή. Προσπαθήστε ξανά σε λίγη ώρα. Εάν δεν επιλυθεί, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Δεν είναι δυνατή η αγορά αυτή τη στιγμή. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
@@ -1476,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Οι πληροφορίες αγοράς χρησιμοποιούνται από άλλο χρήστη. Ελέγξτε το {accountName} με το οποίο έχετε συνδεθεί στη συσκευή.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Οι πληροφορίες αγοράς χρησιμοποιούνται ήδη από άλλον χρήστη. Παρακαλώ επιβεβαιώστε το {accountName} που είναι συνδεδεμένο στη συσκευή σας.",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
@@ -1485,7 +1506,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppUserIdError": "Ο χρήστης δεν μπόρεσε να επιβεβαιώσει. Παρακαλώ επανεκκινήστε την εφαρμογή και προσπαθήστε ξανά. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppUserIdError": "Ο χρήστης δεν μπόρεσε να επαληθευτεί. Παρακαλώ επανεκκινήστε την εφαρμογή και δοκιμάστε ξανά. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppUserIdError": {
     "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
     "placeholders": {
@@ -1497,11 +1518,11 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Η διαδικασία αγοράς προχωρά ξεχωριστά. Παρακαλώ ελέγξτε ξανά μετά από λίγο.",
+  "purchaseErrorOperationAlreadyInProgressError": "Εκτελείται ήδη μια διαδικασία αγοράς. Παρακαλούμε περιμένετε λίγο και δοκιμάστε ξανά",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
-  "purchaseErrorUnknownBackendError": "Δεν μπορείς να κάνεις αγορά αυτή τη στιγμή. Δοκίμασε ξανά σε λίγο. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινώνησε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Δεν είναι δυνατή η αγορά αυτή τη στιγμή. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα συνεχιστεί, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
     "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
@@ -1513,7 +1534,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Αγορά αποτυχημένη. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά. Αν το πρόβλημα δεν επιλύεται, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Η αγορά απέτυχε. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppleSubscriptionKeyError": {
     "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
     "placeholders": {
@@ -1525,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "Απέτυχε η αγορά με τον χρήστη σας. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα παραμένει, επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Η αγορά απέτυχε για τον χρήστη σας. Παρακαλώ περιμένετε λίγο και δοκιμάστε ξανά. Εάν το πρόβλημα παραμείνει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
@@ -1537,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInsufficientPermissionsError": "Δεν μπορείτε να εγγραφείτε στο σχέδιο με το {accountName} σας. Παρακαλούμε ελέγξτε τις πληροφορίες πληρωμής σας και προσπαθήστε ξανά.",
+  "purchaseErrorInsufficientPermissionsError": "Δεν είναι δυνατή η εγγραφή σε πλάνο με τον λογαριασμό σας {accountName}. Παρακαλώ ελέγξτε τα στοιχεία πληρωμής σας και δοκιμάστε ξανά.",
   "@purchaseErrorInsufficientPermissionsError": {
     "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
@@ -1546,7 +1567,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "Η πληρωμή έχει διακοπεί. Παρακαλώ ελέγξτε το {storeName} με το {accountName} που έχετε συνδεθεί.",
+  "purchaseErrorPaymentPendingError": "Η πληρωμή έχει διακοπεί. Παρακαλώ ελέγξτε το {storeName} με τον λογαριασμό {accountName}",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
@@ -1558,7 +1579,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "Η αγορά απέτυχε. Παρακαλώ προσπαθήστε ξανά μετά από κάποιο χρονικό διάστημα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Η αγορά απέτυχε. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
@@ -1570,7 +1591,7 @@
       }
     }
   },
-  "purchaseErrorLogOutWithAnonymousUserError": "Απέτυχε να αποκτήσει πληροφορίες χρήστη. Παρακαλώ δοκιμάστε ξανά μετά από λίγη ώρα. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Η λήψη των στοιχείων χρήστη απέτυχε. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
     "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
@@ -1582,7 +1603,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "Απέτυχε να αποκτήσει πληροφορίες αγοράς. Παρακαλώ δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επαφή. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Απέτυχε η λήψη πληροφοριών αγοράς. Παρακαλούμε δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
@@ -1594,7 +1615,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Απροσδιόριστο σφάλμα. Παρακαλώ αναβαθμίστε στην τελευταία έκδοση και προσπαθήστε ξανά. Εάν δεν λυθεί το πρόβλημα, επικοινωνήστε με την υποστήριξη μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Παρουσιάστηκε ένα άγνωστο σφάλμα. Παρακαλούμε ενημερώστε την εφαρμογή στην πιο πρόσφατη έκδοση και δοκιμάστε ξανά. Αν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
@@ -1609,7 +1630,7 @@
       }
     }
   },
-  "purchaseErrorEmptySubscriberAttributesError": "Α未知 σφάλμα. Δεν ήταν δυνατή η προετοιμασία πληροφοριών αγοράς εκ των προτέρων. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "Άγνωστο σφάλμα. Δεν ήταν δυνατή η προηγούμενη λήψη των πληροφοριών αγοράς. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
@@ -1621,7 +1642,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Σφάλμα άγνωστης αιτίας. Παρακαλώ ενημερώστε την εφαρμογή στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω ρυθμίσεων > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Άγνωστο σφάλμα. Παρακαλώ ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Αν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
@@ -1636,7 +1657,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Άγνωστο σφάλμα. Ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα δεν επιλυθεί, επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "Άγνωστο σφάλμα. Παρακαλώ ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα δεν λυθεί, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
@@ -1651,7 +1672,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Αβέβαιο σφάλμα. Παρακαλώ ενημερώστε την εφαρμογή στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν δεν επιλυθεί, επικοινωνήστε μαζί μας μέσω Ρυθμίσεων > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Άγνωστο σφάλμα. Ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
@@ -1666,7 +1687,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "Αποτυχία λήψης πληροφοριών πελάτη. Δοκιμάστε ξανά μετά από λίγο. Εάν το πρόβλημα δεν επιλυθεί, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: Κωδικός: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Αποτυχία ανάκτησης πληροφοριών πελάτη. Παρακαλώ δοκιμάστε ξανά αργότερα. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: Κωδικός: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
@@ -1681,7 +1702,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Υπάρχει πρόβλημα με τις ρυθμίσεις της συσκευής. Ελέγξτε και προσπαθήστε ξανά. Αν το πρόβλημα δεν επιλυθεί, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Υπάρχει πρόβλημα με τις ρυθμίσεις της συσκευής. Παρακαλώ ελέγξτε και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
@@ -1696,7 +1717,7 @@
       }
     }
   },
-  "purchaseErrorBeginRefundRequestError": "Η διαδικασία επιστροφής χρημάτων έχει ξεκινήσει. Ελέγξτε το και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorBeginRefundRequestError": "Η διαδικασία επιστροφής χρημάτων έχει ξεκινήσει. Παρακαλώ ελέγξτε και δοκιμάστε ξανά. Εάν το πρόβλημα δεν επιλυθεί, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
     "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
@@ -1711,7 +1732,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "Η χρονική περίοδος έχει λήξει. Ελέγξτε το περιβάλλον δικτύου σας και δοκιμάστε ξανά. Εάν το πρόβλημα δεν επιλυθεί, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "Το χρονικό όριο έληξε. Παρακαλώ ελέγξτε τη σύνδεση δικτύου σας και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
@@ -1723,7 +1744,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Αόριστο σφάλμα. Ενημερώστε στην πιο πρόσφατη έκδοση και προσπαθήστε ξανά. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Σφάλμα άγνωστης αιτίας. Ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα δεν επιλυθεί, επικοινωνήστε μαζί μας από Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
@@ -1738,7 +1759,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Αδιευκρίνιστο σφάλμα. Αναβαθμίστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα παραμείνει, παρακαλούμε επικοινωνήστε μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Σφάλμα άγνωστης αιτίας. Παρακαλώ ενημερώστε στην τελευταία έκδοση και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, παρακαλώ επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Κωδικός: {errorCode} Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
@@ -1753,7 +1774,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "Υπάρχει πρόβλημα σύνδεσης. Παρακαλούμε ελέγξτε το περιβάλλον σύνδεσης και προσπαθήστε ξανά. Αν το πρόβλημα δεν λυθεί, παρακαλώ επικοινωνήστε από τις Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Σφάλμα δικτύου. Παρακαλούμε ελέγξτε τη σύνδεση δικτύου σας και δοκιμάστε ξανά. Εάν το πρόβλημα παραμένει, επικοινωνήστε μαζί μας μέσω Ρυθμίσεις > Επικοινωνία. Λεπτομέρειες: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
@@ -1765,11 +1786,11 @@
       }
     }
   },
-  "forceUpdateTitle": "Ενημερώστε την εφαρμογή σας",
+  "forceUpdateTitle": "Παρακαλώ ενημερώστε την εφαρμογή",
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
-  "forceUpdateMessage": "Σας ζητούμε να ενημερώσετε την έκδοση της εφαρμογής σας. Παρακαλώ αναβαθμίστε την τελευταία έκδοση από το {storeName}.",
+  "forceUpdateMessage": "Παρακαλούμε ενημερώστε την έκδοση της εφαρμογής σας. Κάντε ενημέρωση στην τελευταία έκδοση από το {storeName}",
   "@forceUpdateMessage": {
     "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
@@ -1778,35 +1799,35 @@
       }
     }
   },
-  "visitHospital": "Επισκέπτομαι το γιατρό",
+  "visitHospital": "ιατρική επίσκεψη",
   "@visitHospital": {
     "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
-  "receiveNotificationAt9AM": "Λάβετε ειδοποίηση στις 9:00 την ημέρα εκείνη",
+  "receiveNotificationAt9AM": "Ειδοποίηση στις 9:00 την ίδια ημέρα",
   "@receiveNotificationAt9AM": {
     "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
-  "deletedScheduleCannotBeRestored": "Οι διαγραμμένοι προγραμματισμοί δεν μπορούν να αποκατασταθούν.",
+  "deletedScheduleCannotBeRestored": "Τα διαγραμμένα σχέδια δεν μπορούν να ανακτηθούν",
   "@deletedScheduleCannotBeRestored": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
   },
-  "deleteSchedule": "Θα διαγράψω το προγραμματισμένο.",
+  "deleteSchedule": "Διαγραφή προγράμματος",
   "@deleteSchedule": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
   },
-  "onlySupportiOS": "Υποστηρίζει μόνο την εφαρμογή iOS",
+  "onlySupportiOS": "Διαθέσιμο μόνο στην εφαρμογή iOS",
   "@onlySupportiOS": {
     "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   },
-  "healthKitDoesNotSupport": "Δεν είναι διαθέσιμο σε συσκευές που δεν υποστηρίζουν το HealthKit.",
+  "healthKitDoesNotSupport": "Δεν μπορεί να χρησιμοποιηθεί σε συσκευές που δεν υποστηρίζουν το HealthKit",
   "@healthKitDoesNotSupport": {
     "description": "AppleのHealthKit（ヘルスケア機能）に対応していない端末で、健康データ連携機能を利用しようとした際に表示されるエラーメッセージです。ユーザーに機能制限があることを丁寧に伝える文章として翻訳してください。"
   },
-  "enableHealthKitFromSettings": "Παρακαλούμε ενεργοποιήστε την υγειονομική περίθαλψη από την εφαρμογή ρυθμίσεων.",
+  "enableHealthKitFromSettings": "Ενεργοποιήστε την Υγεία από την εφαρμογή Ρυθμίσεων",
   "@enableHealthKitFromSettings": {
     "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
-  "accountAlreadyLinked": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με τον λογαριασμό Pilll που χρησιμοποιείτε. Παρακαλώ προσπαθήστε να ανανεώσετε την οθόνη. Μπορείτε επίσης να δείτε τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
+  "accountAlreadyLinked": "Αυτός ο {accountTypeProviderName} λογαριασμός είναι ήδη συνδεδεμένος με τον λογαριασμό σας στο Pilll. Δοκιμάστε να ανανεώσετε την οθόνη. Επίσης, συμβουλευτείτε τις FAQ. Λεπτομέρειες: {exceptionMessage}",
   "@accountAlreadyLinked": {
     "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
@@ -1818,7 +1839,7 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "Αυτός ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με άλλον λογαριασμό Pilll, επομένως δεν μπορεί να εγγραφεί. Παρακαλούμε δείτε επίσης τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Ο λογαριασμός {accountTypeProviderName} είναι ήδη συνδεδεμένος με άλλο λογαριασμό Pilll και δεν μπορεί να εγγραφεί. Ανατρέξτε επίσης στο FAQ. Λεπτομέρειες: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
     "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
@@ -1830,7 +1851,7 @@
       }
     }
   },
-  "emailAlreadyInUse": "Δεν μπορείτε να εγγραφείτε γιατί η διεύθυνση email που χρησιμοποιείτε ήδη με τον λογαριασμό {accountTypeProviderName} είναι συνδεδεμένη με άλλους λογαριασμούς Pilll. Παρακαλούμε δείτε τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
+  "emailAlreadyInUse": "Δεν μπορείτε να εγγραφείτε επειδή η διεύθυνση email που χρησιμοποιείτε με τον λογαριασμό {accountTypeProviderName} είναι ήδη συνδεδεμένη με άλλον λογαριασμό Pilll. Παρακαλούμε δείτε επίσης τις Συχνές Ερωτήσεις. Λεπτομέρειες: {exceptionMessage}",
   "@emailAlreadyInUse": {
     "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
     "placeholders": {
@@ -1842,31 +1863,31 @@
       }
     }
   },
-  "todaySchedule": "Σχεδιασμός για σήμερα",
+  "todaySchedule": "Σημερινό πρόγραμμα",
   "@todaySchedule": {
     "description": "カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。"
   },
-  "calendarSchedule": "Η ημερομηνία στο ημερολόγιο",
+  "calendarSchedule": "Γεγονότα ημερολογίου",
   "@calendarSchedule": {
     "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   },
-  "newPillSheetNotificationTitle": "Από σήμερα ξεκινάει νέο φύλλο.",
+  "newPillSheetNotificationTitle": "Σήμερα ξεκινά ένα νέο φύλλο",
   "@newPillSheetNotificationTitle": {
     "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
   },
-  "newPillSheetNotificationMessage": "🆕 Ξεκινά μια νέα κάρτα από σήμερα\nΜην ξεχάσετε να πάρετε το χάπι σας👍",
+  "newPillSheetNotificationMessage": "🆕 Από σήμερα ξεκινά μια νέα συσκευασία\nΜην ξεχάσετε να πάρετε το χάπι σας👍",
   "@newPillSheetNotificationMessage": {
     "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   },
-  "unexpectedPremiumEntitlementsIsNotExists": "Δεν βρέθηκαν πληροφορίες premium.",
+  "unexpectedPremiumEntitlementsIsNotExists": "Δεν βρέθηκαν πληροφορίες premium",
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
-  "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της χρέωσης δεν έχει ολοκληρωθεί. Παρακαλώ ελέγξτε ξανά μετά από λίγη ώρα.",
+  "purchaseErrorPurchasePendingError": "Η ενεργοποίηση της συνδρομής δεν έχει ολοκληρωθεί. Παρακαλώ περιμένετε λίγο και ελέγξτε ξανά.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Παρουσιάστηκε σφάλμα κατά την εκκίνηση\n{ErrorMessagesConnection}\nΛεπτομέρειες:",
+  "launchError": "Μήνυμα σφάλματος που εμφανίζεται στον χρήστη όταν προκύπτει κάποιο τεχνικό σφάλμα κατά την εκκίνηση της εφαρμογής (τη στιγμή που ανοίγει η εφαρμογή). Περιλαμβάνει λεπτομερείς πληροφορίες όπως σφάλματα σύνδεσης, ώστε ο χρήστης να μπορεί να κατανοήσει την κατάσταση.",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -1875,15 +1896,15 @@
       }
     }
   },
-  "exampleRestDurationDate": "Για παράδειγμα, αν σταματήσετε τη λήψη για \"3 ημέρες από 1/12\"",
+  "exampleRestDurationDate": "Για παράδειγμα, εάν «από 1/12 για 3 ημέρες» διακόψατε τη λήψη",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
-  "exampleRestDurationNumber": "Για παράδειγμα, αν σταματήσετε να παίρνετε το φάρμακο για 3 ημέρες από το 18ο.",
+  "exampleRestDurationNumber": "Για παράδειγμα, σε περίπτωση διακοπής λήψης «από το 18ο για 3 ημέρες»",
   "@exampleRestDurationNumber": {
     "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   },
-  "withNumber": "{number} αριθμός",
+  "withNumber": "{number}ο",
   "@withNumber": {
     "description": "ピルシートの錠剤番号を表示するためのテキストです。{number}には具体的な錠剤番号（例：18）が入り、ユーザーがピルシート上のどの錠剤かを特定するために使用されます。",
     "placeholders": {
@@ -1892,11 +1913,11 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Δεν βρέθηκε η τρέχουσα κάρτα χαπιών.",
+  "currentPillSheetNotFound": "Δεν βρέθηκε το τρέχον φύλλο αντισυλληπτικών",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
-  "doNotRevertTakePillInPausePeriod": "Η διαδικασία ακύρωσης της λήψης χαπιών δεν μπορεί να εκτελεστεί κατά τη διάρκεια της περιόδου διακοπής.",
+  "doNotRevertTakePillInPausePeriod": "Δεν μπορείτε να ακυρώσετε τη λήψη του χαπιού κατά τη διάρκεια της περιόδου διακοπής",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   },
@@ -1908,11 +1929,11 @@
   "@diaryRecord": {
     "description": "アプリ内の日記機能で体調や気分を記録する際に表示されるボタンやラベルのテキストです。カレンダー画面から日々の体調記録を行う機能に使用されます。"
   },
-  "scheduleRecord": "Καταχώριση προγράμματος",
+  "scheduleRecord": "Προσθήκη συμβάντος",
   "@scheduleRecord": {
     "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
   },
-  "previousPillSheetGroupNotFound": "Η προηγούμενη ομάδα φύλλων φαρμάκων δεν υπάρχει ακόμη.",
+  "previousPillSheetGroupNotFound": "Η προηγούμενη ομάδα φύλλων χαπιών δεν υπάρχει ακόμη",
   "@previousPillSheetGroupNotFound": {
     "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   },
@@ -1925,15 +1946,15 @@
       }
     }
   },
-  "connectionError": "Φαίνεται ότι το περιβάλλον σύνδεσης είναι ασταθές. Παρακαλώ δοκιμάστε ξανά μετά από λίγο.",
+  "connectionError": "Η σύνδεση δικτύου φαίνεται ασταθής. Παρακαλούμε περιμένετε λίγο και δοκιμάστε ξανά",
   "@connectionError": {
     "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
-  "unknownErrorAndRetryAfter": "Παρουσιάστηκε σφάλμα. Παρακαλώ προσπαθήστε ξανά αργότερα.",
+  "unknownErrorAndRetryAfter": "Παρουσιάστηκε σφάλμα. Παρακαλώ δοκιμάστε ξανά σε λίγο.",
   "@unknownErrorAndRetryAfter": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
   },
-  "errorOccurred": "Ένα σφάλμα προέκυψε",
+  "errorOccurred": "Παρουσιάστηκε σφάλμα",
   "@errorOccurred": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示される基本的なエラーメッセージです。具体的な原因を伝えずに、シンプルにエラーの発生を通知する場合に使用されます。"
   },
@@ -1941,19 +1962,19 @@
   "@unknownError": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
   },
-  "unexpectedErrorOccurred": "Προέκυψε απροσδόκητο σφάλμα",
+  "unexpectedErrorOccurred": "Συνέβη ένα απροσδόκητο σφάλμα",
   "@unexpectedErrorOccurred": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
-  "pressAndHoldNotificationToRecordPillTaking": "Μπορείτε να καταγράψετε την πρόσληψη κάνοντας παρατεταμένο πάτημα στις ειδοποιήσεις.",
+  "pressAndHoldNotificationToRecordPillTaking": "Πατώντας παρατεταμένα την ειδοποίηση μπορείτε να καταγράψετε τη λήψη",
   "@pressAndHoldNotificationToRecordPillTaking": {
     "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
-  "letsTryIt": "Σας παρακαλούμε να το δοκιμάσετε",
+  "letsTryIt": "Δοκιμάστε το οπωσδήποτε!",
   "@letsTryIt": {
     "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
-  "trialDeadlineDateOffsetDay": "Μπορείτε να χρησιμοποιήσετε όλες τις δυνατότητες για {number} ημέρες!",
+  "trialDeadlineDateOffsetDay": "Όλες οι λειτουργίες διαθέσιμες για {number} ημέρες!",
   "@trialDeadlineDateOffsetDay": {
     "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
     "placeholders": {
@@ -1962,7 +1983,7 @@
       }
     }
   },
-  "inputAndAdd": "Προσθήκη με εισαγωγή",
+  "inputAndAdd": "Εισάγετε και προσθέστε",
   "@inputAndAdd": {
     "description": "何かの情報を手動で入力・追加する際のボタンやラベルのテキストです。服用記録や予定などをユーザーが自分で入力して追加する場面で使用されます。"
   },
@@ -1970,11 +1991,11 @@
   "@averagePeriod": {
     "description": "ユーザーの生理の平均周期（日数）を表示するラベルです。生理管理機能で使用され、過去のデータから算出された平均的な生理周期の長さを示します。"
   },
-  "averageDays": "Μέσος αριθμός ημερών",
+  "averageDays": "Μέσες ημέρες",
   "@averageDays": {
     "description": "生理管理機能で、ユーザーの過去のデータから算出された生理周期の平均日数を表示する際に使用されるラベルです。数値と併せて「平均○日」のような形で表示されます。"
   },
-  "days": "ημέρα",
+  "days": "ημ.",
   "@days": {
     "description": "時間の単位を表す「日」で、生理周期や服用日数などの数値と組み合わせて表示されます。言語によって単数形・複数形の使い分けが必要な場合があります。"
   },
@@ -1982,11 +2003,11 @@
   "@memo": {
     "description": "日記機能で体調や症状と合わせて自由にメモを記録できる入力欄のラベルです。短い単語で「メモ」や「記録」のような意味の翻訳が適切です。"
   },
-  "failedToUpdate": "Η ενημέρωση απέτυχε. Παρακαλώ ελέγξτε την κατάσταση σύνδεσης και προσπαθήστε ξανά.",
+  "failedToUpdate": "Η ενημέρωση απέτυχε. Παρακαλώ ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.",
   "@failedToUpdate": {
     "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
   },
-  "headache": "Πονοκέφαλος",
+  "headache": "κεφαλαλγία",
   "@headache": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「頭痛」の適切な医療用語で翻訳してください。"
   },
@@ -2002,11 +2023,11 @@
   "@anemia": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「貧血」の適切な医療用語で翻訳してください。"
   },
-  "diarrhea": "Διάρροια",
+  "diarrhea": "διάρροια",
   "@diarrhea": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「下痢」の適切な医療用語で翻訳してください。"
   },
-  "constipation": "Δυσκοιλιότητα",
+  "constipation": "δυσκοιλιότητα",
   "@constipation": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「便秘」の適切な医療用語で翻訳してください。"
   },
@@ -2014,35 +2035,35 @@
   "@drowsiness": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「眠気」の適切な医療用語で翻訳してください。"
   },
-  "backPain": "Πόνος στην πλάτη",
+  "backPain": "οσφυαλγία",
   "@backPain": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「腰痛」の適切な医療用語で翻訳してください。"
   },
-  "palpitation": "ταχυκαρδία",
+  "palpitation": "παλμοί",
   "@palpitation": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「動悸」の適切な医療用語で翻訳してください。"
   },
-  "irregularBleeding": "ακανόνιστη αιμορραγία",
+  "irregularBleeding": "ανώμαλη αιμορραγία",
   "@irregularBleeding": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「不正出血」の適切な医療用語で翻訳してください。"
   },
-  "lossOfAppetite": "Απώλεια όρεξης",
+  "lossOfAppetite": "ανορεξία",
   "@lossOfAppetite": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「食欲不振」の適切な医療用語で翻訳してください。"
   },
-  "chestTightness": "Φούσκωμα του στήθους",
+  "chestTightness": "πρήξιμο στήθους",
   "@chestTightness": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「胸の張り」の適切な医療用語で翻訳してください。"
   },
-  "insomnia": "Αϋπνία",
+  "insomnia": "αϋπνία",
   "@insomnia": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
   },
-  "pauseStartingOtherDaysInstructions": "Παρακαλώ ξεκουραστείτε. Εάν θέλετε να διακόψετε τη λήψη για ημέρες εκτός από σήμερα, παρακαλώ ανατρέξτε παρακάτω.",
+  "pauseStartingOtherDaysInstructions": "Παρακαλώ κάντε διάλειμμα. Εάν θέλετε να διακόψετε τη λήψη από κάποια άλλη ημέρα (όχι σήμερα), δείτε τις παρακάτω οδηγίες.",
   "@pauseStartingOtherDaysInstructions": {
     "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
-  "seeHowToUsePauseTakingFeature": "Δείτε πώς να χρησιμοποιήσετε τη δυνατότητα διακοπής λήψης",
+  "seeHowToUsePauseTakingFeature": "Δείτε τον τρόπο χρήσης της λειτουργίας παύσης λήψης",
   "@seeHowToUsePauseTakingFeature": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   },
@@ -2050,11 +2071,11 @@
   "@startPauseTakingLabel": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。"
   },
-  "pauseTakingChanged": "Έχετε αλλάξει την περίοδο ανάπαυσης της φαρμακευτικής αγωγής.",
+  "pauseTakingChanged": "Άλλαξε η περίοδος διακοπής",
   "@pauseTakingChanged": {
     "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
   },
-  "editPausePeriod": "Επεξεργασία περιόδου διακοπής φαρμακευτικής αγωγής",
+  "editPausePeriod": "Επεξεργασία περιόδου διαλείμματος",
   "@editPausePeriod": {
     "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
   },
@@ -2062,7 +2083,7 @@
   "@changePillDays": {
     "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
   },
-  "beginToEndNumbers": "{begin} έως {end}",
+  "beginToEndNumbers": "{begin} - {end}",
   "@beginToEndNumbers": {
     "description": "ピルシートの番号範囲を表示する際に使用される文字列です。例えば「1番 ~ 21番」のように、連続する番号の開始と終了を示すフォーマットです。",
     "placeholders": {
@@ -2074,19 +2095,19 @@
       }
     }
   },
-  "resumeTaking": "Επανέναρξη λήψης",
+  "resumeTaking": "Επανάληψη λήψης",
   "@resumeTaking": {
     "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
-  "changePausePeriod": "Αλλαγή περιόδου διακοπής λήψης",
+  "changePausePeriod": "Αλλαγή διαλείμματος λήψης",
   "@changePausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
-  "changedPausePeriod": "Έχετε αλλάξει τη διάρκεια της περιόδου διακοπής λήψης",
+  "changedPausePeriod": "Η περίοδος διαλείμματος λήψης άλλαξε",
   "@changedPausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。"
   },
-  "changedToDate": "Αλλάξαμε σε {date}",
+  "changedToDate": "Άλλαξε σε {date}",
   "@changedToDate": {
     "description": "何かの日付設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。",
     "placeholders": {
@@ -2095,27 +2116,27 @@
       }
     }
   },
-  "quickRecordTakePillFailed": "Ίσως να απέτυχε η καταγραφή της λήψης.",
+  "quickRecordTakePillFailed": "Η καταγραφή της λήψης ενδέχεται να απέτυχε",
   "@quickRecordTakePillFailed": {
     "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
-  "quickRecordTakePillFailedMessage": "Ανοίξτε την εφαρμογή και ελέγξτε.",
+  "quickRecordTakePillFailedMessage": "Παρακαλώ ανοίξτε την εφαρμογή για να ελέγξετε",
   "@quickRecordTakePillFailedMessage": {
     "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
   },
-  "alreadyTaken": "Έχει ληφθεί",
+  "alreadyTaken": "Ληφθέν",
   "@alreadyTaken": {
     "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
   },
-  "startPauseTaking": "Σταματήστε να παίρνετε το φάρμακο",
+  "startPauseTaking": "Παύση λήψης",
   "@startPauseTaking": {
     "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
   },
-  "startedPauseTaking": "Άρχισε η διακοπή της λήψης",
+  "startedPauseTaking": "Ξεκίνησε η διακοπή λήψης",
   "@startedPauseTaking": {
     "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。"
   },
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}ο",
   "@sequentialLastTakenPlusOnePillNumber": {
     "description": "次に服用すべきピルの番号を表示するテキストです。プレースホルダーには数字が入るため、各言語の序数や番号表現に適合させて翻訳してください。",
     "placeholders": {
@@ -2124,7 +2145,7 @@
       }
     }
   },
-  "startFromNumber": "Ξεκινήστε από τον αριθμό",
+  "startFromNumber": "Ξεκίνημα από αριθμό",
   "@startFromNumber": {
     "description": "ピルシートUIで表示する薬の番号の開始位置を設定する機能のテキストです。ユーザーが任意の番号からピルシートの表示をスタートできるようにする設定項目で使用されます。"
   },
@@ -2132,23 +2153,23 @@
   "@add": {
     "description": "ピルの服用記録、生理記録、未来の予定、日記などの新しいデータを追加する際に表示される汎用的なボタンやアクションのテキストです。アプリ内の様々な画面で新規登録や追加機能において使用されます。"
   },
-  "addPillSheet": "Προσθήκη φύλλου χαπιών",
+  "addPillSheet": "Προσθέστε συσκευασία",
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
-  "duringPauseTaking": "Διακοπή φαρμακευτικής αγωγής",
+  "duringPauseTaking": "Σε διάλειμμα λήψης",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
-  "cannotPauseAlreadyTakenToday": "Αν έχετε ήδη πάρει το χάπι που πρέπει να πάρετε σήμερα, δεν μπορείτε να διακόψετε την πρόσληψη.",
+  "cannotPauseAlreadyTakenToday": "Δεν μπορείτε να παυσετε τη λήψη αφού έχετε ήδη πάρει το σημερινό χάπι",
   "@cannotPauseAlreadyTakenToday": {
     "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
   },
-  "pauseTakingStarted": "Έχετε αρχίσει μια παύση στην λήψη",
+  "pauseTakingStarted": "Ξεκίνησε το διάλειμμα λήψης",
   "@pauseTakingStarted": {
     "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
   },
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "@formattedDateAndWeekday": {
     "description": "日付と曜日を組み合わせて表示するためのフォーマットです。「12月15日(月)」のように月日の後に括弧内で曜日を表示する形式で、カレンダーや服用記録の日付表示に使用されます。",
     "placeholders": {
@@ -2160,11 +2181,11 @@
       }
     }
   },
-  "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης διακοπής λήψης",
+  "editPauseStartDate": "Επεξεργασία ημερομηνίας έναρξης παύσης λήψης",
   "@editPauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
   },
-  "shareWithFriends": "Πες το σε έναν φίλο",
+  "shareWithFriends": "Πες σε φίλους",
   "@shareWithFriends": {
     "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   },
@@ -2172,11 +2193,11 @@
   "@termsOfService": {
     "description": "アプリの設定画面や法的情報画面で表示される利用規約へのリンクテキストです。ユーザーがアプリの使用条件や規約を確認する際にタップする項目として使用されます。"
   },
-  "privacyPolicy": "Πολιτική απορρήτου",
+  "privacyPolicy": "Πολιτική Απορρήτου",
   "@privacyPolicy": {
     "description": "アプリの設定画面や法的情報画面で表示されるプライバシーポリシーへのリンクテキストです。ユーザーが個人情報の取り扱いに関する規約を確認する際にタップする項目として使用されます。"
   },
-  "linkCopiedToClipboard": "Αντιγράφτηκε στο πρόχειρο",
+  "linkCopiedToClipboard": "Αντιγράφηκε στο πρόχειρο",
   "@linkCopiedToClipboard": {
     "description": "ユーザーがリンクやテキストをクリップボードにコピーした際に表示される成功通知メッセージです。シェア機能やURL共有時などに、コピー操作が完了したことをユーザーに知らせるフィードバックとして使用されます。"
   },
@@ -2189,11 +2210,11 @@
       }
     }
   },
-  "notificationTime": "Ειδοποίηση ώρα",
+  "notificationTime": "Ώρα ειδοποίησης",
   "@notificationTime": {
     "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
   },
-  "timeZoneChangedTo": "Αλλάξαμε σε {tz}",
+  "timeZoneChangedTo": "Άλλαξε σε {tz}",
   "@timeZoneChangedTo": {
     "description": "ユーザーがアプリの設定でタイムゾーンを変更した際に表示される確認メッセージです。{tz}部分には具体的なタイムゾーン名（例：Asia/Tokyo）が入り、ピルの服用リマインダー時間に影響する重要な設定変更を知らせます。",
     "placeholders": {
@@ -2202,15 +2223,15 @@
       }
     }
   },
-  "changeStartOfPillDays": "Αλλαγή της αρχής του αριθμού ημερών λήψης",
+  "changeStartOfPillDays": "Αλλαγή έναρξης ημερών λήψης",
   "@changeStartOfPillDays": {
     "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
   },
-  "changeEndOfPillDays": "Αλλαγή του τέλους ημερών λήψης",
+  "changeEndOfPillDays": "Αλλαγή τέλους ημερών λήψης",
   "@changeEndOfPillDays": {
     "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
-  "cannotUpdateToReplacePillSheet": "Δεν μπορεί να ενημερωθεί λόγω αντικατάστασης του φύλλου δισκίων id: {id}",
+  "cannotUpdateToReplacePillSheet": "Δεν είναι δυνατή η ενημέρωση λόγω αντικατάστασης φύλλου χαπιών id: {id}",
   "@cannotUpdateToReplacePillSheet": {
     "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
     "placeholders": {
@@ -2219,7 +2240,7 @@
       }
     }
   },
-  "failedToGetPillSheetHistory": "Αποτυχία λήψης πληροφοριών ιστορικού χρήσης. {error}",
+  "failedToGetPillSheetHistory": "Απέτυχε η ανάκτηση των πληροφοριών ιστορικού λήψης. {error}",
   "@failedToGetPillSheetHistory": {
     "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
     "placeholders": {
@@ -2228,11 +2249,11 @@
       }
     }
   },
-  "cancelTaking": "Ακυρώστε τη λήψη",
+  "cancelTaking": "Ακύρωση λήψης",
   "@cancelTaking": {
     "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
-  "deletedDiaryCannotBeRestored": "Δεν μπορείτε να αποκαταστήσετε το ημερολόγιο που διαγράφηκε",
+  "deletedDiaryCannotBeRestored": "Τα διαγραμμένα ημερολόγια δεν μπορούν να αποκατασταθούν",
   "@deletedDiaryCannotBeRestored": {
     "description": "アプリ内の日記機能（体調記録）で、ユーザーが日記を削除する際に表示される警告メッセージ。削除された記録は元に戻せないことを伝える重要な注意事項です。"
   },
@@ -2240,11 +2261,11 @@
   "@editMenstruation": {
     "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
   },
-  "changedPillNumber": "Αλλαγή αριθμού χαπιών",
+  "changedPillNumber": "Αλλαγή αριθμού χαπιού",
   "@changedPillNumber": {
     "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
   },
-  "offPercentForMonthlyPremiumPackage": "Μειωμένο κατά {offPercent} % σε σχέση με την κανονική μηνιαία τιμή.",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% έκπτωση σε σύγκριση με τη μηνιαία συνδρομή",
   "@offPercentForMonthlyPremiumPackage": {
     "description": "アプリのプレミアムプラン（有料機能）で、年額プランが通常の月額プランと比較して何パーセント安くなるかを示す割引表示メッセージです。課金画面やプラン選択画面で表示されます。",
     "placeholders": {
@@ -2253,11 +2274,11 @@
       }
     }
   },
-  "premiumIntroductionDiscountPriceDeadline": "Με την premium εγγραφή, μπορείτε να συνεχίσετε να έχετε πρόσβαση σε όλες τις δυνατότητες.",
+  "premiumIntroductionDiscountPriceDeadline": "Με την εγγραφή premium μπορείτε να συνεχίσετε να χρησιμοποιείτε όλες τις λειτουργίες",
   "@premiumIntroductionDiscountPriceDeadline": {
     "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   },
-  "countdownForDiscountPriceDeadline": "Προβολή {countdown} για αγορά με έκπτωση {offPercent}%",
+  "countdownForDiscountPriceDeadline": "{offPercent}% έκπτωση με αγορά εντός {countdown}",
   "@countdownForDiscountPriceDeadline": {
     "description": "限定割引キャンペーンの締切時間を知らせるメッセージです。プレミアムプラン購入画面で、残り時間（countdown）内に購入すると指定された割引率（offPercent）が適用されることをユーザーに伝えます。",
     "placeholders": {
@@ -2269,7 +2290,7 @@
       }
     }
   },
-  "pillReminderChanged": "Έχω ρυθμίσει την ειδοποίηση λήψης φαρμάκου για {value}",
+  "pillReminderChanged": "Η υπενθύμιση λήψης ορίστηκε στις {value}",
   "@pillReminderChanged": {
     "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
     "placeholders": {
@@ -2278,24 +2299,40 @@
       }
     }
   },
-  "medicationNotification": "Ειδοποίηση λήψης φαρμάκων",
-  "@medicationNotification": {
-    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
-  },
-  "silentModeNotificationDescription": "Ακόμα και όταν η λειτουργία \"Εστίαση\" είναι ενεργοποιημένη ή όταν η συσκευή είναι σε σίγαση, οι ειδοποιήσεις θα εμφανίζονται στην οθόνη κλειδώματος και ο ήχος θα αναπαράγεται.",
+  "silentModeNotificationDescription": "Ακόμη και όταν η λειτουργία συγκέντρωσης είναι ενεργοποιημένη ή η συσκευή είναι σε σίγαση, οι ειδοποιήσεις θα εμφανίζονται στην οθόνη κλειδώματος και θα αναπαράγεται ήχος.",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
-  "enableNotificationInSilentMode": "Ειδοποιεί ακόμη και σε σιωπηλή λειτουργία",
+  "enableNotificationInSilentMode": "Ειδοποίηση ακόμη και σε σιωπηλή λειτουργία",
   "@enableNotificationInSilentMode": {
     "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
   },
-  "enableNotificationInSilentModeSetting": "Ρυθμίσεις ειδοποίησης ακόμα και σε αθόρυβη λειτουργία",
+  "enableNotificationInSilentModeSetting": "Ειδοποιήσεις ακόμη και σε σιωπηλή λειτουργία",
   "@enableNotificationInSilentModeSetting": {
     "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
   },
-  "criticalAlertVolume": "Όγκος",
+  "criticalAlertVolume": "Ένταση",
   "@criticalAlertVolume": {
     "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
+  },
+  "logout": "Αποσύνδεση",
+  "@logout": {
+    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "Θα επιστρέψετε στις αρχικές ρυθμίσεις. Εάν απαιτείται σύνδεση, παρακαλώ συνδεθείτε από το κάτω μέρος των αρχικών ρυθμίσεων.",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
+  },
+  "deleteAccount": "Διαγραφή λογαριασμού",
+  "@deleteAccount": {
+    "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
+  },
+  "logoutCompleted": "Αποσυνδεθήκατε",
+  "@logoutCompleted": {
+    "description": "ユーザーがログアウト操作を完了した後に表示される確認メッセージです。アプリからサインアウトされ、認証状態が解除されたことをユーザーに伝えるために使用されます。"
+  },
+  "specialDiscountPriceNow": "Αποκτήστε το Premium πρόγραμμα σε ειδική τιμή!",
+  "@specialDiscountPriceNow": {
+    "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
   }
 }
