@@ -1749,5 +1749,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "خطای ناشناخته‌ای رخ داده است. لطفاً برنامه را به آخرین نسخه به‌روزرسانی کرده و دوباره تلاش کنید. در صورت عدم حل مشکل، از طریق تنظیمات > تماس با ما با ما تماس بگیرید. کد: {errorCode} جزئیات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
