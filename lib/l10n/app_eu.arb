@@ -2222,5 +2222,9 @@
   "changeStartOfPillDays": "Hartzeko egunen hasiera aldatu",
   "@changeStartOfPillDays": {
     "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
+  },
+  "changeEndOfPillDays": "Hartzeko egunen amaiera aldatu",
+  "@changeEndOfPillDays": {
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   }
 }
