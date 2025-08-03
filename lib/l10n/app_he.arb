@@ -1438,5 +1438,9 @@
   "purchaseErrorPurchaseInvalidError": "התשלום נכשל. אנא ודאו שאמצעי התשלום תקף ונסו שוב",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "התוכנית הנבחרת אינה זמינה כרגע למכירה. אנא הפעל מחדש את האפליקציה ונסה שוב",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
