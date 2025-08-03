@@ -866,5 +866,9 @@
   "thankYouForRegistration": "Merci vilmal für d'Aamäldig!\nAlli Funktione sind jetzt verfüegbar!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Jetzt zum limitierten Preis für immer verfügbar",
+  "@limitedTimeDiscount": {
+    "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   }
 }
