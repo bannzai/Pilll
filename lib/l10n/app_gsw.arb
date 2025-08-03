@@ -2209,5 +2209,14 @@
         "type": "int"
       }
     }
+  },
+  "timeZoneChangedTo": "Uf {tz} gänderet",
+  "@timeZoneChangedTo": {
+    "description": "ユーザーがアプリの設定でタイムゾーンを変更した際に表示される確認メッセージです。{tz}部分には具体的なタイムゾーン名（例：Asia/Tokyo）が入り、ピルの服用リマインダー時間に影響する重要な設定変更を知らせます。",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
   }
 }
