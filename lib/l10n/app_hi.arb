@@ -1409,5 +1409,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "अज्ञात कारण से त्रुटि हुई है। कुछ समय बाद फिर से कोशिश करें। यदि समस्या हल नहीं होती है तो सेटिंग्स > संपर्क से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
