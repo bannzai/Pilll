@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "આ અજ્ઞાત ભૂલ છે. કૃપા કરીને લેટેસ્ટ વર્ઝનમાં અપડેટ કરો અને ફરીથી પ્રયાસ કરો. જો સમસ્યા ઉકેલાતી નથી તો સેટિંગ્સ > સંપર્ક દ્વારા સંપર્ક કરો. કોડ: {errorCode} વિગતો: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
