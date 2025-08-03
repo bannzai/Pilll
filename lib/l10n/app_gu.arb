@@ -1434,5 +1434,9 @@
   "purchaseErrorPurchaseNotAllowedError": "આ ઉપકરણ પર ખરીદીની પરવાનગી નથી",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorPurchaseInvalidError": "પેમેન્ટ નિષ્ફળ થઈ. કૃપા કરીને માન્ય પેમેન્ટ પદ્ધતિ છે કે કેમ તે ચકાસીને ફરીથી પ્રયાસ કરો",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   }
 }
