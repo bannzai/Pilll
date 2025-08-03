@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Probléma van az eszköz beállításaival. Ellenőrizze a beállításokat és próbálja meg újra. Ha a probléma továbbra is fennáll, vegye fel a kapcsolatot velünk a Beállítások > Kapcsolat menüponton keresztül. Kód: {errorCode} Részletek: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
