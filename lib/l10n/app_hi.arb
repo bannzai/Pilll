@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "यह एक अज्ञात त्रुटि है। कृपया नवीनतम संस्करण में अपडेट करके पुनः प्रयास करें। यदि समस्या का समाधान नहीं होता है तो कृपया सेटिंग्स > संपर्क करें से संपर्क करें। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
