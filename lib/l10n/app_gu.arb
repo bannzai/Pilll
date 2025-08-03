@@ -1459,5 +1459,14 @@
   "purchaseErrorInvalidReceiptError": "અમાન્ય ખરીદી માહિતી છે. કૃપયા તમારી ખરીદી માહિતીની ચકાસણી કરો.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "ખરીદદારની માહિતી અસ્તિત્વમાં નથી. {accountName} સાથે ડિવાઇસમાં સાઇન ઇન કરીને પ્રયાસ કરો",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
