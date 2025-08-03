@@ -1496,5 +1496,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "खरीदारी की जानकारी दूसरे उपयोगकर्ता द्वारा उपयोग की जा रही है। कृपया डिवाइस में लॉग इन किए गए {accountName} की जांच करें।",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
