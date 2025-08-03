@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "અજ્ઞાત કારણ ભૂલ છે. કૃપા કરીને નવીનતમ સંસ્કરણમાં અપડેટ કરો અને ફરીથી પ્રયાસ કરો. જો સમસ્યા હલ ન થાય તો સેટિંગ્સ > સંપર્ક દ્વારા અમારો સંપર્ક કરો. કોડ: {errorCode} વિગત: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
