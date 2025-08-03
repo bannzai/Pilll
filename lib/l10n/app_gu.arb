@@ -656,5 +656,9 @@
   "pleaseRegisterAccount": "કૃપા કરીને એકાઉન્ટ રજિસ્ટર કરો",
   "@pleaseRegisterAccount": {
     "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
+  },
+  "cannotTransferPremiumWithoutAccount": "ડિવાઇસ બદલાવ અથવા ફોન ખોવાઈ જવા પર પ્રીમિયમ સુવિધાઓ ટ્રાન્સફર થશે નહીં",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   }
 }
