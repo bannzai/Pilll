@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "נכשל בקבלת מידע הלקוח. אנא נסה שוב מאוחר יותר. אם הבעיה נמשכת, אנא צור איתנו קשר דרך הגדרות > צור קשר. פרטים: קוד: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
