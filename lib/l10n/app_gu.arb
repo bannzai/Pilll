@@ -1496,5 +1496,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ખરીદીની માહિતી અન્ય વપરાશકર્તા દ્વારા ઉપયોગમાં લેવાઈ રહી છે. ઉપકરણમાં લૉગિન કરેલું {accountName} ચકાસો.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
