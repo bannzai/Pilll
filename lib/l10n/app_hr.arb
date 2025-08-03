@@ -2168,5 +2168,17 @@
   "pauseTakingStarted": "Započeta je pauza u uzimanju",
   "@pauseTakingStarted": {
     "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
+  },
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
+  "@formattedDateAndWeekday": {
+    "description": "日付と曜日を組み合わせて表示するためのフォーマットです。「12月15日(月)」のように月日の後に括弧内で曜日を表示する形式で、カレンダーや服用記録の日付表示に使用されます。",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      },
+      "DateTimeFormatterWeekday": {
+        "type": "String"
+      }
+    }
   }
 }
