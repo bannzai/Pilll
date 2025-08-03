@@ -1949,5 +1949,9 @@
   "connectionError": "Parece que a conexión de rede é inestable. Probe de novo despois dun momento.",
   "@connectionError": {
     "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
+  },
+  "unknownErrorAndRetryAfter": "Produciuse un erro. Inténteo de novo máis tarde",
+  "@unknownErrorAndRetryAfter": {
+    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
   }
 }
