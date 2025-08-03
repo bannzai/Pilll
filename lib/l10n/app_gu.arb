@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ગ્રાહક માહિતી મેળવવામાં નિષ્ફળ. કૃપા કરીને થોડી વાર રાહ જોઈને ફરીથી પ્રયાસ કરો. જો સમસ્યા હલ ન થાય તો સેટિંગ્સ > પૂછપરછ માંથી સંપર્ક કરો. વિગતો: કોડ: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
