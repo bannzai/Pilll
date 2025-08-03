@@ -1545,5 +1545,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "De Chauf für Ihre Nutzer isch fehlgeschlage. Bitte warte Sie es Wili und versuche Sie es nomli. Falls s Problem witerbesteit, melde Sie sich über Istellige > Afrog. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
