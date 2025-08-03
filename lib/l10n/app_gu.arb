@@ -1409,5 +1409,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "અજ્ઞાત ભૂલ આવી છે. કૃપા કરીને થોડો સમય રાખીને ફરીથી પ્રયાસ કરો. જો તે ઉકેલાય નહીં તો સેટિંગ્સ > સંપર્ક મારફતે અમારો સંપર્ક કરો. વિગતો: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
