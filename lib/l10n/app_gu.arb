@@ -1743,5 +1743,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "અજ્ઞાત કારણથી ભૂલ થઈ છે. નવીનતમ આવૃત્તિમાં અપડેટ કરીને ફરીથી પ્રયાસ કરો. જો સમસ્યા હલ ન થાય તો સેટિંગ્સ > પૂછપરછ થી સંપર્ક કરો. કોડ: {errorCode} વિગતો: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
