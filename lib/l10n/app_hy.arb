@@ -1566,5 +1566,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPaymentPendingError": "Վճարումը կիսատ է մնացել: Խնդրում ենք ստուգել {storeName}-ը ձեր մտնելու {accountName} հաշվով:",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
