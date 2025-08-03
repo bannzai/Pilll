@@ -1602,5 +1602,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "खरीदारी की जानकारी प्राप्त करने में असफल हुआ। कुछ समय बाद पुन: प्रयास करें। यदि समस्या हल नहीं होती है तो सेटिंग > संपर्क करें से संपर्क करें। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
