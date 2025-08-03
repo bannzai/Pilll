@@ -1459,5 +1459,14 @@
   "purchaseErrorInvalidReceiptError": "מידע רכישה לא תקין. אנא בדקו את פרטי הרכישה שלכם",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "מידע הרוכש לא נמצא. אנא התחבר למכשיר באמצעות {accountName} ונסה שוב",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
