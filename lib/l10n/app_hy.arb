@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Անհայտ սխալ է։ Խնդրում ենք թարմացնել վերջին տարբերակը և նորից փորձել։ Եթե խնդիրը չլուծվի, խնդրում ենք կապվել մեզ հետ Կարգավորումներ > Հարցում բաժնի միջոցով։ Կոդ՝ {errorCode} Մանրամասն՝ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
