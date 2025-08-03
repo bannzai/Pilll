@@ -1206,5 +1206,14 @@
   "changeDailyNotificationMessage": "ગોળી સાચી રીતે લીધી હોય ત્યારેના નોટિફિકેશન મેસેજ બદલી શકાય છે",
   "@changeDailyNotificationMessage": {
     "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
+  },
+  "dailyNotificationMessageLength": "{dailyTakenMessageValueCharactersLength}/100",
+  "@dailyNotificationMessageLength": {
+    "description": "{dailyTakenMessageValueCharactersLength}/100",
+    "placeholders": {
+      "dailyTakenMessageValueCharactersLength": {
+        "type": "int"
+      }
+    }
   }
 }
