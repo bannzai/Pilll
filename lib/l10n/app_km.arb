@@ -1643,5 +1643,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "មានកំហុសដែលមិនស្គាល់បុ័ណ្ណ។ សូមធ្វើបច្ចុប្បន្នភាពទៅកំណែចុងក្រោយ ហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនដោះស្រាយបាន សូមទាក់ទងតាមរយៈ ការកំណត់ > ការសុំជំនួយ។ កូដ: {errorCode} លម្អិត: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
