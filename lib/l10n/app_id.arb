@@ -1682,5 +1682,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "既存のインドネシア語翻訳パターンを参考に、以下のように翻訳します：\n\nGagal mengambil informasi pelanggan. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Kontak. Kode: {errorCode} Detail: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
