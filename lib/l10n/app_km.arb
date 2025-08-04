@@ -1397,5 +1397,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "មានកំហុសដែលមិនស្គាល់មូលហេតុបានកើតឡើង។ សូមរង់ចាំបន្តិចហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការទាក់ទង។ ព័ត៌មានលម្អិត៖ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
