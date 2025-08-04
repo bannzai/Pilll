@@ -1405,5 +1405,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "원인불명의 오류가 발생했습니다. 잠시 후 다시 시도해 주세요. 문제가 해결되지 않을 경우 설정 > 문의하기에서 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
