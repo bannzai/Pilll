@@ -1404,5 +1404,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorStoreProblemError": "Si è verificato un errore su {storeName}. Riprova più tardi.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
