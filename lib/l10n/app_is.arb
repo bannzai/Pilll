@@ -1606,5 +1606,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Óþekkt villa kom upp. Vinsamlegast uppfærðu í nýjustu útgáfu og reyndu aftur. Ef vandamálið leysist ekki, hafðu þá samband við okkur í gegnum Stillingar > Fyrirspurnir. Kóði: {errorCode} Nánar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
