@@ -1509,5 +1509,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "별도의 구매 처리가 진행 중입니다. 잠시 후 다시 확인해 주세요",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   }
 }
