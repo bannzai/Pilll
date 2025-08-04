@@ -1889,5 +1889,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "현재 대상 피임약 시트를 찾을 수 없습니다",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
