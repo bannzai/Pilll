@@ -921,5 +921,14 @@
   "autoRenewNotice": "Samningsíminn endurnýjast sjálfkrafa nema þú segir upp meira en 24 klukkustundum fyrir lokadagsetningu prémíumsamningsímans.",
   "@autoRenewNotice": {
     "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
+  },
+  "cancelAutoRenewInfo": "・Eftir kaup er hægt að hætta við sjálfvirka endurnýjun í reikningsstillingum {storeName} appsins. (Ekki er hægt að hætta við sjálfvirka endurnýjun innan appsins).",
+  "@cancelAutoRenewInfo": {
+    "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
