@@ -1447,5 +1447,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidReceiptError": "유효하지 않은 구매 정보입니다. 구매 정보를 확인해 주세요.",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   }
 }
