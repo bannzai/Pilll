@@ -1434,5 +1434,9 @@
   "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Harap periksa metode pembayaran Anda dan coba lagi.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Paket tersebut sedang tidak tersedia untuk saat ini. Silakan restart aplikasi dan coba kembali.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
