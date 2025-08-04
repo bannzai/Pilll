@@ -2301,5 +2301,9 @@
   "logout": "Esci",
   "@logout": {
     "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "Si ritorna alle impostazioni iniziali. Se è necessario effettuare il login, si prega di farlo dalla parte inferiore delle impostazioni iniziali",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
   }
 }
