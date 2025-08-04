@@ -1878,5 +1878,14 @@
   "purchaseErrorPurchasePendingError": "Greiðslan hefur ekki verið staðfest. Vinsamlegast reyndu aftur eftir smá stund.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "launchError": "Þetta er villuboð sem birtist notendum þegar einhver tæknileg villa kemur upp við ræsingu forritsins (í augnablikinu þegar forritið er opnað). Þar sem það inniheldur nákvæmar upplýsingar eins og tengivillur, vinsamlegast þýðið svo að notendur geti skilið ástandið.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
