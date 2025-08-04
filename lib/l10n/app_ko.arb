@@ -1558,5 +1558,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPaymentPendingError": "결제가 중단되었습니다. 로그인된 {accountName}에서 {storeName}를 확인해 주세요",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
