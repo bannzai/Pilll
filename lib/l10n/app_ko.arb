@@ -1663,5 +1663,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "고객 정보 가져오기에 실패했습니다. 잠시 후 다시 시도해 주세요. 문제가 해결되지 않으면 설정 > 문의하기로 문의해 주세요. 상세 정보: 코드: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
