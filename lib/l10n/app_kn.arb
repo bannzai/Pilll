@@ -1710,5 +1710,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "ಸಮಯಾವಧಿ ಮೀರಿದೆ. ನಿಮ್ಮ ನೆಟ್‌ವರ್ಕ್ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಸಮಸ್ಯೆ ಪರಿಹರಿಸದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
