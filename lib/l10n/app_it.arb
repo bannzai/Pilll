@@ -2272,5 +2272,14 @@
         "type": "int"
       }
     }
+  },
+  "pillReminderChanged": "Il promemoria di assunzione è stato impostato alle {value}",
+  "@pillReminderChanged": {
+    "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   }
 }
