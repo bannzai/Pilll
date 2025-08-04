@@ -978,5 +978,9 @@
   "pushNotificationForTakingRecord": "📩 ಪುಶ್ ನೋಟಿಫಿಕೇಶನ್‌ನಿಂದ ಸೇವನೆ ದಾಖಲೆ",
   "@pushNotificationForTakingRecord": {
     "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
+  },
+  "viewAndRecordTakingHistory": "🗂 ಸೇವನೆ ಇತಿಹಾಸದ ದಾಖಲಿಕೆ ಮತ್ತು ವೀಕ್ಷಣೆ",
+  "@viewAndRecordTakingHistory": {
+    "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   }
 }
