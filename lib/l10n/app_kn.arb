@@ -619,5 +619,9 @@
   "pillNumber": "ಮಾತ್ರೆ ಸಂಖ್ಯೆ",
   "@pillNumber": {
     "description": "ピル番号"
+  },
+  "pillDaysCycle": "ಸೇವನೆಯ ದಿನಗಳು",
+  "@pillDaysCycle": {
+    "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
   }
 }
