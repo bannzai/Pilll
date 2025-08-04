@@ -862,5 +862,9 @@
   "thankYouForRegistration": "Terima kasih telah mendaftar.\nSemua fitur sekarang tersedia untuk Anda!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Dapatkan harga khusus terbatas, gunakan selamanya",
+  "@limitedTimeDiscount": {
+    "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   }
 }
