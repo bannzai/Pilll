@@ -1430,5 +1430,14 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "គម្រោងនេះមិនអាចប្រើបានក្នុងពេលបច្ចុប្បន្ននេះទេ។ សូមចាប់ផ្តើមកម្មវិធីឡើងវិញហើយព្យាយាមម្តងទៀត។",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "បានទិញរួចហើយ ឬព័ត៌មានការទិញត្រូវបានប្រើប្រាស់ដោយអ្នកប្រើប្រាស់ផ្សេង។ សូមពិនិត្យ {accountName}។",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
