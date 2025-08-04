@@ -1570,5 +1570,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "구매에 실패했습니다. 잠시 후 다시 시도해 주세요. 문제가 해결되지 않는 경우 설정 > 문의하기를 통해 문의해 주세요. 세부사항: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
