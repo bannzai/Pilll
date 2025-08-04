@@ -59,5 +59,9 @@
   "dataTransferRequiresAccount": "기종 변경이나 휴대폰 분실 시 데이터 백업 및 복원을 위해서는 계정 등록이 필요합니다.",
   "@dataTransferRequiresAccount": {
     "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
+  },
+  "pillPremium": "Pilll 프리미엄",
+  "@pillPremium": {
+    "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
   }
 }
