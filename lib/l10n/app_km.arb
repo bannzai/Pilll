@@ -1850,5 +1850,9 @@
   "newPillSheetNotificationMessage": "🆕 ថ្ងៃនេះ ចាប់ផ្តើមជីថ្នាំថ្មី\nកុំភ្លេចពិសារថ្នាំ👍",
   "@newPillSheetNotificationMessage": {
     "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
+  },
+  "unexpectedPremiumEntitlementsIsNotExists": "រកមិនឃើញព័ត៌មានពិសេស",
+  "@unexpectedPremiumEntitlementsIsNotExists": {
+    "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   }
 }
