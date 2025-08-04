@@ -1517,5 +1517,17 @@
   "purchaseErrorOperationAlreadyInProgressError": "Proses pembelian lain sedang berlangsung. Silakan tunggu sebentar dan coba lagi",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
+  },
+  "purchaseErrorUnknownBackendError": "Saat ini tidak dapat melakukan pembelian. Silakan coba lagi setelah beberapa saat. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Detail: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
