@@ -723,5 +723,9 @@
   "menstruationStartDate": "ಋತುಚಕ್ರ ಆರಂಭ ದಿನಾಂಕ",
   "@menstruationStartDate": {
     "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
+  },
+  "menstruationEndDate": "ಮುಟ್ಟು ಮುಗಿದ ದಿನ",
+  "@menstruationEndDate": {
+    "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
   }
 }
