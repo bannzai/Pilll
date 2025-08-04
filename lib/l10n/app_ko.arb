@@ -1750,5 +1750,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "통신 오류입니다. 네트워크 환경을 확인하시고 다시 시도해 주세요. 문제가 해결되지 않을 경우 설정 > 문의하기로 문의해 주세요. 상세 정보: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
