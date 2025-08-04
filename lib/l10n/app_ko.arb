@@ -1387,5 +1387,14 @@
   "pilllDescription": "Pilll 피임약 복용 전용 리마인더 앱",
   "@pilllDescription": {
     "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
+  },
+  "reachedMaximumCountOfReminderTimes": "등록할 수 있는 상한에 도달했습니다. {ReminderTimeMaximumCount}개 이내로 설정해 주세요.",
+  "@reachedMaximumCountOfReminderTimes": {
+    "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
+    "placeholders": {
+      "ReminderTimeMaximumCount": {
+        "type": "int"
+      }
+    }
   }
 }
