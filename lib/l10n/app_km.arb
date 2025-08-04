@@ -1426,5 +1426,9 @@
   "purchaseErrorPurchaseInvalidError": "ការទូទាត់បានបរាជ័យ។ សូមពិនិត្យមើលថាតើវិធីសាស្រ្តទូទាត់របស់អ្នកមានសុពលភាពឬទេ រួចព្យាយាមម្តងទៀត។",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "គម្រោងនេះមិនអាចប្រើបានក្នុងពេលបច្ចុប្បន្ននេះទេ។ សូមចាប់ផ្តើមកម្មវិធីឡើងវិញហើយព្យាយាមម្តងទៀត។",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
