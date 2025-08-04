@@ -1629,5 +1629,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Белгісіз қате пайда болды. Қолданбаны соңғы нұсқаға жаңартып, қайта көріңіз. Мәселе шешілмесе, Баптаулар > Байланыс бөлімі арқылы хабарласыңыз. Код: {errorCode} Егжей-тегжейлі: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
