@@ -1417,5 +1417,9 @@
   "purchaseErrorPurchaseInvalidError": "ಪಾವತಿ ವಿಫಲವಾಗಿದೆ. ನಿಮ್ಮ ಪಾವತಿ ವಿಧಾನ ಮಾನ್ಯವಾಗಿದೆಯೇ ಎಂದು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "ಆಯ್ಕೆಮಾಡಿದ ಯೋಜನೆಯು ಪ್ರಸ್ತುತ ಲಭ್ಯವಿಲ್ಲ. ದಯವಿಟ್ಟು ಅಪ್ಲಿಕೇಶನ್ ಅನ್ನು ಮರುಪಾರಂಭಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
