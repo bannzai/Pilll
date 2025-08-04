@@ -1525,5 +1525,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "구매에 실패했습니다. 시간을 두고 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의로 문의해 주세요. 세부사항: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
