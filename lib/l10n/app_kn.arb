@@ -1665,5 +1665,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ಗ್ರಾಹಕ ಮಾಹಿತಿ ಪಡೆಯುವಲ್ಲಿ ವಿಫಲವಾಗಿದೆ. ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಇದು ಪರಿಹರಿಸದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್ಸ್ > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: ಕೋಡ್: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
