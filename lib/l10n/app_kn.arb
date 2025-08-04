@@ -1911,5 +1911,9 @@
   "scheduleRecord": "ವೇಳಾಪಟ್ಟಿ ನಮೂದಿಸಿ",
   "@scheduleRecord": {
     "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
+  },
+  "previousPillSheetGroupNotFound": "ಹಿಂದಿನ ಮಾತ್ರೆ ಶೀಟ್ ಗುಂಪು ಇನ್ನೂ ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ",
+  "@previousPillSheetGroupNotFound": {
+    "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   }
 }
