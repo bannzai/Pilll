@@ -1737,5 +1737,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ಅಜ್ಞಾತ ದೋಷವಾಗಿದೆ. ಇತ್ತೀಚಿನ ಆವೃತ್ತಿಗೆ ಅಪ್‌ಡೇಟ್ ಮಾಡಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಪರಿಹಾರವಾಗದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್‌ಗಳು > ವಿಚಾರಣೆ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ಕೋಡ್: {errorCode} ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
