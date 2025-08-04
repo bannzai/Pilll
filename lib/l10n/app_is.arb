@@ -375,5 +375,9 @@
   "settingsPage": "Stillingasíða",
   "@settingsPage": {
     "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
+  },
+  "editMenstruationPeriod": "Breyta tíðablæðingatímabili",
+  "@editMenstruationPeriod": {
+    "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
   }
 }
