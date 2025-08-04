@@ -1574,5 +1574,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "ការទទួលយកព័ត៌មានការទិញបានបរាជ័យ។ សូមរង់ចាំបន្តិចហើយព្យាយាមម្តងទៀត។ បើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការសួរសំណួរ។ លម្អិត៖ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
