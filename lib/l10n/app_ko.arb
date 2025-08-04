@@ -1779,5 +1779,9 @@
   "visitHospital": "통원하다",
   "@visitHospital": {
     "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
+  },
+  "receiveNotificationAt9AM": "당일 9:00에 알림 받기",
+  "@receiveNotificationAt9AM": {
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   }
 }
