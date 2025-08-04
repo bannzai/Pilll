@@ -1477,5 +1477,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppUserIdError": "មិនអាចផ្ទៀងផ្ទាត់អ្នកប្រើប្រាស់បានទេ។ សូមបិទដើម និងបើកកម្មវិធីម្តងទៀត រួចព្យាយាមម្តងទៀត។ ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
