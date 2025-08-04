@@ -1822,5 +1822,17 @@
         "type": "String"
       }
     }
+  },
+  "emailAlreadyInUse": "អាសយដ្ឋានអ៊ីមែលដែលអ្នកប្រើសម្រាប់គណនី{accountTypeProviderName}រួចហើយត្រូវបានភ្ជាប់ជាមួយគណនី Pilll ផ្សេងទៀត ដូច្នេះមិនអាចចុះឈ្មោះបាន។ សូមពិនិត្យមើល FAQ ផងដែរ។ លម្អិត៖ {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
