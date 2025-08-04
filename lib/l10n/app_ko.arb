@@ -212,5 +212,9 @@
   "changePillNumberForToday": "오늘 복용할 알약 번호 변경",
   "@changePillNumberForToday": {
     "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
+  },
+  "discardAllPillSheets": "전체 피임약 시트 삭제",
+  "@discardAllPillSheets": {
+    "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
   }
 }
