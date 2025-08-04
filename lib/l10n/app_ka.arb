@@ -1605,5 +1605,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "უცნობი შეცდომა მოხდა. გთხოვთ, განაახლოთ უახლეს ვერსიაზე და სცადოთ ხელახლა. თუ პრობლემა არ მოგვარდება, მიმართეთ პარამეტრები > კონტაქტის მეშვეობით. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
