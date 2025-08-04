@@ -253,5 +253,9 @@
   "checkPillNumberForMenstruationStart": "생리 시작일의 알약 번호를 확인해 주세요. 현재 선택한 알약 시트 유형에는 존재하지 않는 알약 번호가 설정되어 있습니다",
   "@checkPillNumberForMenstruationStart": {
     "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
+  },
+  "customizeMedicationNotifications": "복용 알림 맞춤 설정",
+  "@customizeMedicationNotifications": {
+    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   }
 }
