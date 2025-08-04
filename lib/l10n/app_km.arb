@@ -1673,5 +1673,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "មានបញ្ហាជាមួយការកំណត់ឧបករណ៍របស់អ្នក។ សូមពិនិត្យមើលហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងពីការកំណត់ > ការសាកសួរ។ កូដ: {errorCode} លម្អិត: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
