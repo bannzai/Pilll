@@ -172,5 +172,9 @@
   "autoAddPillSheetGroup": "피임약 시트 그룹 자동 추가",
   "@autoAddPillSheetGroup": {
     "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "현재 피임약 시트가 끝나면 새로운 시트를 자동으로 추가합니다",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
   }
 }
