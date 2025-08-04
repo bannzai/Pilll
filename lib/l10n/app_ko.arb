@@ -1497,5 +1497,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppUserIdError": "사용자를 확인할 수 없습니다. 앱을 재시작한 후 다시 시도해주세요. 세부 정보: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
