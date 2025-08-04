@@ -1388,5 +1388,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "ಅಜ್ಞಾತ ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಸ್ವಲ್ಪ ಸಮಯದ ನಂತರ ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ. ಇದು ಪರಿಹರಿಸದಿದ್ದರೆ ಸೆಟ್ಟಿಂಗ್ಸ್ > ಸಂಪರ್ಕಿಸಿ ಮೂಲಕ ಸಂಪರ್ಕಿಸಿ. ವಿವರಗಳು: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
