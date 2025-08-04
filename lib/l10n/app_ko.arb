@@ -1426,5 +1426,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPurchaseNotAllowedError": "이 기기에서 구매가 허용되지 않습니다",
+  "@purchaseErrorPurchaseNotAllowedError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   }
 }
