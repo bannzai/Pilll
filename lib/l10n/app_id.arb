@@ -1637,5 +1637,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Terjadi kesalahan yang tidak diketahui. Silakan perbarui ke versi terbaru dan coba lagi. Jika masalah tidak teratasi, silakan hubungi kami melalui Pengaturan > Hubungi Kami. Kode: {errorCode} Detail: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
