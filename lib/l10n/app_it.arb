@@ -1895,5 +1895,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "Non è stata trovata la confezione di pillole attualmente in uso",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
