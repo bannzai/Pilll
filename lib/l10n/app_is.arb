@@ -1582,5 +1582,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Mistókst að sækja notendaupplýsingar. Vinsamlegast reynið aftur eftir smá stund. Ef vandamálið heldur áfram, farið í Stillingar > Fyrirspurnir til að hafa samband við þjónustuver. Upplýsingar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
