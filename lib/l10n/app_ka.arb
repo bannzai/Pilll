@@ -1692,5 +1692,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "მოწყობილობის პარამეტრებში პრობლემაა. გთხოვთ შეამოწმოთ და სცადოთ ხელახლა. თუ პრობლემა არ მოგვარდება, გთხოვთ დაგვიკავშირდეთ პარამეტრები > დაკავშირება მეშვეობით. კოდი: {errorCode} დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
