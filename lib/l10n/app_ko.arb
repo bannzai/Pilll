@@ -1476,5 +1476,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "현재 구매할 수 없습니다. 시간을 두고 다시 시도해 주세요. 해결되지 않는 경우 설정 > 문의를 통해 문의해 주세요. 상세: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
