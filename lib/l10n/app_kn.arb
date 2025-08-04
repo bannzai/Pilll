@@ -1425,5 +1425,14 @@
   "purchaseErrorProductAlreadyPurchasedError": "ಈಗಾಗಲೇ ಯೋಜನೆಯನ್ನು ಖರೀದಿಸಲಾಗಿದೆ. ಈ ಸಾಧನದಲ್ಲಿ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಲು \"ಹಿಂದೆ ಖರೀದಿಸಿದವರು ಇಲ್ಲಿ ಕ್ಲಿಕ್ ಮಾಡಿ\" ನಿಂದ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಮರುಸ್ಥಾಪಿಸಿ",
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "ಈಗಾಗಲೇ ಖರೀದಿಸಲಾಗಿದೆ. ಅಥವಾ ಖರೀದಿ ಮಾಹಿತಿಯನ್ನು ಬೇರೆ ಬಳಕೆದಾರರು ಬಳಸುತ್ತಿದ್ದಾರೆ. ದಯವಿಟ್ಟು {accountName} ಅನ್ನು ಪರಿಶೀಲಿಸಿ",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
