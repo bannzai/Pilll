@@ -1396,5 +1396,14 @@
         "type": "int"
       }
     }
+  },
+  "minimumCountOfReminderTimes": "알림 시간은 최소 {ReminderTimeMinimumCount}개가 필요합니다",
+  "@minimumCountOfReminderTimes": {
+    "description": "ピルの服用リマインド通知を設定する際に、必要最低限の通知時間数が設定されていない場合に表示されるエラーメッセージです。ユーザーが通知設定で最低限必要な件数を満たしていない時に警告として表示されます。",
+    "placeholders": {
+      "ReminderTimeMinimumCount": {
+        "type": "int"
+      }
+    }
   }
 }
