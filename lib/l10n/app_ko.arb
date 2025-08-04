@@ -1827,5 +1827,17 @@
         "type": "String"
       }
     }
+  },
+  "emailAlreadyInUse": "이미 {accountTypeProviderName} 계정으로 사용 중인 이메일 주소가 다른 Pilll 계정에 연결되어 있어 등록할 수 없습니다. FAQ도 참조해 주세요. 세부사항: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
