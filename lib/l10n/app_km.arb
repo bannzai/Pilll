@@ -91,5 +91,9 @@
   "newFeaturesIntroduction": "ការណែនាំមុខងារថ្មី",
   "@newFeaturesIntroduction": {
     "description": "新機能紹介"
+  },
+  "contactUs": "ទំនាក់ទំនង",
+  "@contactUs": {
+    "description": "アプリ内のメニューやボタンで表示される、ユーザーがサポートチームに問い合わせや相談をするための機能名です。"
   }
 }
