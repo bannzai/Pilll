@@ -1884,5 +1884,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "រកមិនឃើញសន្លឹកពិលដែលកំពុងប្រើប្រាស់បច្ចុប្បន្ន",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
