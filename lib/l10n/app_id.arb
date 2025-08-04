@@ -727,5 +727,14 @@
   "todayPillToTake": "💊 Pil hari ini",
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
+  },
+  "recordedMenstruationStartDate": "Telah dicatat sebagai awal menstruasi mulai {DateTimeFormatterMonthAndDay}",
+  "@recordedMenstruationStartDate": {
+    "description": "ユーザーが生理開始日を記録した後に表示される確認メッセージです。「○月○日から生理開始として記録しました」という意味で、記録が完了したことをユーザーに知らせる文言です。",
+    "placeholders": {
+      "DateTimeFormatterMonthAndDay": {
+        "type": "String"
+      }
+    }
   }
 }
