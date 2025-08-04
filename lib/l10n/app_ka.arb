@@ -1581,5 +1581,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "მომხმარებლის ინფორმაციის მიღება ვერ მოხერხდა. გთხოვთ, სცადოთ ხელახლა გარკვეული დროის შემდეგ. თუ პრობლემა არ მოგვარდება, დაგვიკავშირდით პარამეტრები > მიმართვა-დან. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
