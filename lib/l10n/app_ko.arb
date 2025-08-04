@@ -1451,5 +1451,14 @@
   "purchaseErrorInvalidReceiptError": "유효하지 않은 구매 정보입니다. 구매 정보를 확인해 주세요.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "구매자 정보가 존재하지 않습니다. {accountName}로 기기에 로그인한 후 다시 시도해주세요.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
