@@ -1628,5 +1628,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "នេះជាកំហុសមិនស្គាល់មូលហេតុ។ សូមធ្វើបច្ចុប្បន្នភាពទៅកំណែថ្មីបំផុត ហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការសាកសួរ។ កូដ៖ {errorCode} លម្អិត៖ {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
