@@ -1830,5 +1830,17 @@
         "type": "String"
       }
     }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Þessi {accountTypeProviderName} reikningur er nú þegar tengdur við annan Pilll reikning og því er ekki hægt að skrá sig. Vinsamlegast skoðaðu einnig FAQ. Nánar: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
