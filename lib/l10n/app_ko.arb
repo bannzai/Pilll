@@ -1787,5 +1787,9 @@
   "deletedScheduleCannotBeRestored": "삭제된 일정은 복원할 수 없습니다",
   "@deletedScheduleCannotBeRestored": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
+  },
+  "deleteSchedule": "예정을 삭제합니다",
+  "@deleteSchedule": {
+    "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
   }
 }
