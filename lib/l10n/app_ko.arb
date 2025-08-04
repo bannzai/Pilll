@@ -1678,5 +1678,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "기기 설정에 문제가 있습니다. 확인하고 다시 시도해주세요. 해결되지 않는 경우 설정 > 문의로 문의해주세요. 코드: {errorCode} 세부사항: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
