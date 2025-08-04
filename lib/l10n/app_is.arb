@@ -1723,5 +1723,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "Tímamörk voru yfirfarin. Vinsamlegast athugaðu nettenginguna þína og reyndu aftur. Ef vandamálið leysist ekki, farðu í Stillingar > Fyrirspurnir til að hafa samband við okkur. Upplýsingar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
