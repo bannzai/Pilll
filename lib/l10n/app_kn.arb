@@ -954,5 +954,9 @@
   "lifetimePlanDescription": "ಒಂದೇ ಖರೀದಿಯಲ್ಲಿ ಶಾಶ್ವತ ಪ್ರೀಮಿಯಂ",
   "@lifetimePlanDescription": {
     "description": "買い切り型有料プランの説明文で、一度の支払いで永続的にプレミアム機能が利用できることを示すテキストです。"
+  },
+  "lifetimePlanSpecialOffer": "ಜೀವಿತಾವಧಿ ಯೋಜನೆ\nಸೀಮಿತ ಅವಧಿಯ ವಿಶೇಷ ಬೆಲೆ",
+  "@lifetimePlanSpecialOffer": {
+    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
   }
 }
