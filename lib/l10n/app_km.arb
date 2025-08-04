@@ -1586,5 +1586,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "នេះគឺជាកំហុសដែលមិនស្គាល់មូលហេតុ។ សូមធ្វើបច្ចុប្បន្នភាពកំណែចុងក្រោយហើយព្យាយាមម្តងទៀត។ ប្រសិនបើមិនអាចដោះស្រាយបាន សូមទាក់ទងមកកាន់យើងតាមរយៈ ការកំណត់ > ការទាក់ទង។ កូដ: {errorCode} ព័ត៌មានលម្អិត: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
