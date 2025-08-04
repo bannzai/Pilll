@@ -1693,5 +1693,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Það er vandamál með stillingar tækisins. Vinsamlegast athugaðu og reyndu aftur. Ef vandamálið leysist ekki, vinsamlegast hafðu samband í gegnum Stillingar > Fyrirspurnir. Kóði: {errorCode} Upplýsingar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
