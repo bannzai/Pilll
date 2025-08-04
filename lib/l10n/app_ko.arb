@@ -1383,5 +1383,9 @@
   "requestForCancelSurvey": "해지 후 설문조사 협조 부탁드립니다",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
+  },
+  "pilllDescription": "Pilll 피임약 복용 전용 리마인더 앱",
+  "@pilllDescription": {
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   }
 }
