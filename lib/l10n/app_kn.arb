@@ -1536,5 +1536,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInsufficientPermissionsError": "ನಿಮ್ಮ {accountName} ನೊಂದಿಗೆ ಪ್ಲಾನ್‌ಗೆ ಸೇರಲು ಸಾಧ್ಯವಿಲ್ಲ। ನಿಮ್ಮ ಪಾವತಿ ಮಾಹಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
