@@ -359,5 +359,9 @@
   "reLoginMessage": "Vinsamlegast skráðu þig inn aftur til staðfestingar á deili þinni áður en þú segir upp reikningnum. Eftir endurskráninguna byrjar uppsagnarferlið sjálfkrafa.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
+  },
+  "updateAuthenticationAfterReLogin": "Vinsamlegast skráðu þig inn aftur til að uppfæra auðkenningarupplýsingarnar",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   }
 }
