@@ -1594,5 +1594,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "구매 정보 가져오기에 실패했습니다. 시간을 두고 다시 시도해 주세요. 문제가 해결되지 않는 경우 설정 > 문의하기를 통해 문의해 주세요. 세부사항: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
