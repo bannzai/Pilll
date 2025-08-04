@@ -874,5 +874,9 @@
   "standardMonthlyPlan": "일반 월액 플랜",
   "@standardMonthlyPlan": {
     "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
+  },
+  "annualPlan": "연간 플랜",
+  "@annualPlan": {
+    "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
   }
 }
