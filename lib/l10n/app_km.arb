@@ -1443,5 +1443,14 @@
   "purchaseErrorInvalidReceiptError": "ព័ត៌មានការទិញមិនត្រឹមត្រូវ។ សូមពិនិត្យព័ត៌មានការទិញរបស់អ្នក។",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "ព័ត៌មានអ្នកទិញមិនអាចរកឃើញទេ។ សូមចូលគណនីដោយប្រើ {accountName} នៅលើឧបករណ៍របស់អ្នក ហើយព្យាយាមម្តងទៀត",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
