@@ -1920,5 +1920,9 @@
   "scheduleRecord": "Жоспар енгізу",
   "@scheduleRecord": {
     "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
+  },
+  "previousPillSheetGroupNotFound": "Алдыңғы дәрі парағы тобы табылмады",
+  "@previousPillSheetGroupNotFound": {
+    "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   }
 }
