@@ -1633,5 +1633,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Óþekkt villa. Vinsamlegast uppfærðu í nýjustu útgáfu og reyndu aftur. Ef það leysir ekki vandann, vinsamlegast hafðu samband í gegnum Stillingar > Fyrirspurnir. Kóði: {errorCode} Upplýsingar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
