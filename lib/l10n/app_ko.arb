@@ -261,5 +261,14 @@
   "medicationNotification": "복용 알림",
   "@medicationNotification": {
     "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
+  },
+  "xCanBeCustomized": "{x}를 맞춤 설정할 수 있습니다",
+  "@xCanBeCustomized": {
+    "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
+    "placeholders": {
+      "x": {
+        "type": "String"
+      }
+    }
   }
 }
