@@ -1513,5 +1513,17 @@
   "purchaseErrorOperationAlreadyInProgressError": "별도의 구매 처리가 진행 중입니다. 잠시 후 다시 확인해 주세요",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
+  },
+  "purchaseErrorUnknownBackendError": "현재 구매할 수 없습니다. 잠시 후 다시 시도해 주세요. 문제가 해결되지 않을 경우 설정 > 문의하기로 문의해 주세요. 상세 정보: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
