@@ -1878,5 +1878,9 @@
         "type": "String"
       }
     }
+  },
+  "exampleRestDurationDate": "Ad esempio \\\"dal 1/12 per 3 giorni\\\" di pausa nell'assunzione",
+  "@exampleRestDurationDate": {
+    "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   }
 }
