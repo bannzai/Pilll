@@ -1463,5 +1463,17 @@
   "purchaseErrorNetworkError": "ქსელის მდგომარეობა არასტაბილურია. გთხოვთ შეამოწმოთ კავშირის მდგომარეობა და ხელახლა სცადოთ.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "ყიდვა წარუმატებელი იყო. გთხოვთ, სცადოთ მოგვიანებით. თუ პრობლემა არ იქნება გადაწყვეტილი, გთხოვთ, დაგვიკავშირდით პარამეტრები > დაკავშირება საშუალებით. დეტალები: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
