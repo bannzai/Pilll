@@ -2310,5 +2310,9 @@
   "logout": "Útskrá",
   "@logout": {
     "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "Snúa aftur til upphafsstillinga. Ef þú þarft að skrá þig inn, vinsamlegast gerðu það í neðri hluta upphafsstillinga.",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
   }
 }
