@@ -2295,5 +2295,9 @@
   "logout": "로그아웃",
   "@logout": {
     "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "초기 설정으로 돌아갑니다. 로그인이 필요한 경우 초기 설정 하단에서 해주세요",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
   }
 }
