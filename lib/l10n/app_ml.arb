@@ -1536,5 +1536,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "നിങ്ങളുടെ ഉപയോക്തൃ അക്കൗണ്ടിൽ പർച്ചേസ് പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ സെറ്റിംഗ്സ് > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
