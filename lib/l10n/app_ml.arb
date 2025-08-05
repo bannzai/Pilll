@@ -1548,5 +1548,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInsufficientPermissionsError": "നിങ്ങളുടെ {accountName} ഉപയോഗിച്ച് പ്ലാൻ സബ്‌സ്‌ക്രൈബ് ചെയ്യാൻ കഴിയില്ല. പേയ്‌മെന്റ് വിവരങ്ങൾ പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
