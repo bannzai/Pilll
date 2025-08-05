@@ -1749,5 +1749,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "അജ്ഞാത കാരണത്താൽ പിശക് സംഭവിച്ചു. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്‌ഡേറ്റ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക. പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം എന്നതിലൂടെ ബന്ധപ്പെടുക. കോഡ്: {errorCode} വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
