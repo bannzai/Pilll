@@ -1877,5 +1877,14 @@
   "purchaseErrorPurchasePendingError": "Maksājuma aktivizācija nav pabeigta. Lūdzu, uzgaidiet un pārbaudiet vēlreiz pēc brīža.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "launchError": "実際に翻訳すべき日本語の文言が提供されていないようです。「日本語」の部分には、エラーメッセージの説明文が入っていますが、実際にアプリで表示される具体的なエラーメッセージの文言をお教えください。\n\n例えば：\n- 「エラーが発生しました」\n- 「接続に失敗しました」\n- 「アプリの起動に失敗しました」\n\nのような、実際にユーザーに表示される具体的な文言をお願いします。",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
