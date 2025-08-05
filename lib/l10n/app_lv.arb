@@ -1620,5 +1620,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "Nezināma kļūda. Nevarēja iepriekš iegūt pirkuma informāciju. Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
