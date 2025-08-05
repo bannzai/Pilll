@@ -1581,5 +1581,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "ഉപയോക്തൃ വിവരങ്ങൾ ലഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > സമ്പർക്കം വഴി ഞങ്ങളെ ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
