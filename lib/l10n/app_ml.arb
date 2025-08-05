@@ -1429,5 +1429,9 @@
   "purchaseErrorPurchaseInvalidError": "പേയ്‌മെന്റ് പരാജയപ്പെട്ടു. സാധുവായ പേയ്‌മെന്റ് രീതിയാണോ എന്ന് പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "തിരഞ്ഞെടുത്ത പ്ലാൻ നിലവിൽ ലഭ്യമല്ല. ദയവായി ആപ്പ് പുനരാരംഭിച്ച് വീണ്ടും ശ്രമിക്കുക",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
