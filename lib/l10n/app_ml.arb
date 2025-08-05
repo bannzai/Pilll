@@ -1437,5 +1437,14 @@
   "purchaseErrorProductAlreadyPurchasedError": "നിങ്ങൾ ഇതിനകം പ്ലാൻ വാങ്ങിയിട്ടുണ്ട്. ഈ ഉപകരണത്തിൽ വാങ്angangൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കാൻ ആഗ്രഹിക്കുന്നുവെങ്കിൽ \"മുമ്പ് വാങ്ങിയവർക്കായി ഇവിടെ\" എന്നതിൽ നിന്ന് വാങ്ങൽ വിവരങ്ങൾ പുനഃസ്ഥാപിക്കുക",
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
+  },
+  "purchaseErrorReceiptAlreadyInUseError": "ഇതിനകം വാങ്ങിയതാണു്. വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവു് ഉപയോഗിക്കുന്നു. {accountName} പരിശോധിക്കുക.",
+  "@purchaseErrorReceiptAlreadyInUseError": {
+    "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
