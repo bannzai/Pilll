@@ -1463,5 +1463,17 @@
   "purchaseErrorNetworkError": "ശൃംഖല കണക്ഷൻ അസ്ഥിരമാണ്. കണക്ഷൻ സ്ഥിതി പരിശോധിച്ച് വീണ്ടും ശ്രമിക്കുക.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "വാങ്ങൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പരിഹാരമാകുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
