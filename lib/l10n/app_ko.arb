@@ -2237,5 +2237,9 @@
   "editMenstruation": "생리 기간 수정",
   "@editMenstruation": {
     "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
+  },
+  "changedPillNumber": "알약 번호 변경",
+  "@changedPillNumber": {
+    "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
   }
 }
