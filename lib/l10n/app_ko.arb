@@ -2275,5 +2275,9 @@
         "type": "String"
       }
     }
+  },
+  "silentModeNotificationDescription": "집중 모드가 켜져 있거나 기기가 무음 상태일 때도 알림이 잠금 화면에 표시되고 소리가 재생됩니다",
+  "@silentModeNotificationDescription": {
+    "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   }
 }
