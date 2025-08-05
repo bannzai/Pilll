@@ -1400,5 +1400,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "അറിയാത്ത കാരണത്താൽ ഒരു പിശക് സംഭവിച്ചു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പരിഹരിക്കാൻ കഴിയുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
