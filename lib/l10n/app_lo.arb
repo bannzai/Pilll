@@ -1521,5 +1521,17 @@
   "purchaseErrorOperationAlreadyInProgressError": "ການດຳເນີນການຊື້ອື່ນກຳລັງດຳເນີນຢູ່. ກະລຸນາລໍຖ້າແລ້ວກວດສອບໃໝ່ອີກຄັ້ງ",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
+  },
+  "purchaseErrorUnknownBackendError": "ຕອນນີ້ບໍ່ສາມາດຊື້ໄດ້. ກະລຸນາລໍຖ້າແລ້ວລອງໃໝ່ອີກຄັ້ງ. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້, ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
