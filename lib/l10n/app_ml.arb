@@ -1557,5 +1557,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPaymentPendingError": "പേയ്‌മെന്റ് പ്രക്രിയ മധ്യത്തിൽ നിർത്തിയിരിക്കുന്നു. ലോഗിൻ ചെയ്തിരിക്കുന്ന {accountName} ഉപയോഗിച്ച് {storeName} പരിശോധിക്കുക",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
