@@ -1581,5 +1581,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Neizdevās iegūt lietotāja informāciju. Lūdzu, uzgaidiet brīdi un mēģiniet vēlreiz. Ja problēma turpinās, lūdzu, sazinieties ar mums caur Iestatījumi > Kontakti. Sīkāka informācija: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
