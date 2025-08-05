@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ມີຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາອັບເດດເປັນເວີຊັນຫຼ້າສຸດແລະລອງໃໝ່ອີກຄັ້ງ. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້, ກະລຸນາຕິດຕໍ່ສອບຖາມໂດຍຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລະຫັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
