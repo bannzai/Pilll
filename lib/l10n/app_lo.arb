@@ -1743,5 +1743,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "ຂໍ້ຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາອັບເດດເປັນເວີຊັ່ນລ່າສຸດແລະລອງອີກຄັ້ງ. ຖ້າບໍ່ສາມາດແກ້ໄຂໄດ້, ກະລຸນາຕິດຕໍ່ຈາກ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລະຫັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
