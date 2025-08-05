@@ -1578,5 +1578,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "ການຊື້ບໍ່ສຳເລັດ. ກະລຸນາລອງໃໝ່ອີກຄັ້ງຫຼັງຈາກທີ່ໃຊ້ເວລາຜ່ານໄປແລ້ວ. ຖ້າບັນຫາຍັງບໍ່ຫາຍ ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ຕິດຕໍ່ສອບຖາມ. ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
