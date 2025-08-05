@@ -1487,5 +1487,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "വാങ്ങൽ വിവരങ്ങൾ മറ്റൊരു ഉപയോക്താവ് ഉപയോഗിച്ചിരിക്കുന്നു. ഉപകരണത്തിൽ ലോഗിൻ ചെയ്തിരിക്കുന്ന {accountName} പരിശോധിക്കുക",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
