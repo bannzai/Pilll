@@ -2092,5 +2092,9 @@
         "type": "String"
       }
     }
+  },
+  "quickRecordTakePillFailed": "복용 기록 저장에 실패했을 가능성이 있습니다",
+  "@quickRecordTakePillFailed": {
+    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   }
 }
