@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ການດຶງຂໍ້ມູນລູກຄ້າບໍ່ສຳເລັດ. ລໍຖ້າຄັ້ງນຶ່ງແລ້ວລອງໃໝ່. ຫາກບໍ່ສາມາດແກ້ໄຂໄດ້ ກະລຸນາຕິດຕໍ່ສອບຖາມຜ່ານ ການຕັ້ງຄ່າ > ສອບຖາມ. ລາຍລະອຽດ: ລະຫັດ: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
