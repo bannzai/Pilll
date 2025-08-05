@@ -2250,5 +2250,9 @@
         "type": "int"
       }
     }
+  },
+  "premiumIntroductionDiscountPriceDeadline": "프리미엄에 등록하시면 모든 기능을 계속 이용하실 수 있습니다",
+  "@premiumIntroductionDiscountPriceDeadline": {
+    "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   }
 }
