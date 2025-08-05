@@ -1602,5 +1602,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Белгисиз катадан улам ката пайда болду. Акыркы версияга жаңыртып, кайра аракет кылыңыз. Эгер маселе чечилбесе, Тууралоолор > Байланышуу бөлүмүнөн биз менен байланышыңыз. Код: {errorCode} Деталдар: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
