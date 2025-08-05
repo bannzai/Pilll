@@ -212,5 +212,14 @@
   "changePillNumberForToday": "Бүгүнкү таблетка номурун өзгөртүү",
   "@changePillNumberForToday": {
     "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
+  },
+  "areYouSureDoing": "{doing} кыласызбы?",
+  "@areYouSureDoing": {
+    "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
   }
 }
