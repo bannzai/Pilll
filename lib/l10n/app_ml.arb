@@ -1524,5 +1524,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "വാങ്ങൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയം കഴിഞ്ഞ് വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
