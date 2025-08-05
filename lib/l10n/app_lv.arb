@@ -1605,5 +1605,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Radusies nezināma kļūda. Lūdzu, atjauniniet līdz jaunākajai versijai un mēģiniet vēlreiz. Ja problēma neizrījas, sazinieties ar mums, izmantojot Iestatījumi > Saziņa. Kods: {errorCode} Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
