@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "ຄວາມຜິດພາດທີ່ບໍ່ຮູ້ສາເຫດ. ກະລຸນາອັບເດດເປັນເວີໂຊນລ່າສຸດແລະລອງໃໝ່ອີກຄັ້ງ. ຫາກບໍ່ສາມາດແກ້ໄຂໄດ້, ກະລຸນາຕິດຕໍ່ພວກເຮົາຜ່ານ ການຕັ້ງຄ່າ > ສອບຖາມ. ລະຫັດ: {errorCode} ລາຍລະອຽດ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
