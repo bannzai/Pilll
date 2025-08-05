@@ -1677,5 +1677,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ഉപഭോക്തൃ വിവരങ്ങൾ ലഭിക്കുന്നതിൽ പരാജയപ്പെട്ടു. കുറച്ച് സമയത്തിന് ശേഷം വീണ്ടും ശ്രമിക്കുക. പ്രശ്നം പരിഹരിക്കപ്പെടുന്നില്ലെങ്കിൽ ക്രമീകരണങ്ങൾ > ബന്ധപ്പെടുക വഴി ബന്ധപ്പെടുക. വിശദാംശങ്ങൾ: കോഡ്: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
