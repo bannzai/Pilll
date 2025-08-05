@@ -2110,5 +2110,9 @@
   "quickRecordTakePillFailed": "മരുന്ന് കഴിക്കുന്ന രേഖ പരാജയപ്പെട്ടിരിക്കാം",
   "@quickRecordTakePillFailed": {
     "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
+  },
+  "quickRecordTakePillFailedMessage": "ആപ്പ് തുറന്ന് പരിശോധിക്കുക",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
   }
 }
