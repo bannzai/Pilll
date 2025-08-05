@@ -1632,5 +1632,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Nezināma kļūda. Lūdzu, atjauniniet uz jaunāko versiju un mēģiniet vēlreiz. Ja problēma nav atrisināta, sazinieties ar mums sadaļā Iestatījumi > Kontakti. Kods: {errorCode} Detaļas: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
