@@ -1707,5 +1707,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "റിഫണ്ട് പ്രക്രിയ ആരംഭിച്ചിരിക്കുന്നു. സ്ഥിരീകരിച്ച് വീണ്ടും ശ്രമിക്കുക. പരിഹരിക്കാൻ കഴിയുന്നില്ലെങ്കിൽ സെറ്റിംഗുകൾ > അന്വേഷണം വഴി ബന്ധപ്പെടുക. കോഡ്: {errorCode} വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
