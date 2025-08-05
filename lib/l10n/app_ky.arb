@@ -541,5 +541,14 @@
   "taking": "кабыл алуу",
   "@taking": {
     "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
+  },
+  "estimatedEndPillNumber": "Мурунку барактын соңку: {estimatedEndPillNumber}-номер",
+  "@estimatedEndPillNumber": {
+    "description": "前回使用していたピルシート（ブリスターパック）の最後に服用したピルの番号を表示するテキストです。新しいシートに移る際の継続性を示すために使用されます。",
+    "placeholders": {
+      "estimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
   }
 }
