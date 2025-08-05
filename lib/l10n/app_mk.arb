@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Има проблем со поставките на уредот. Проверете ги и обидете се повторно. Ако проблемот не се реши, контактирајте не преку Поставки > Контакт. Код: {errorCode} Детали: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
