@@ -1746,5 +1746,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Белгисиз катачылык болду. Колдонмону акыркы версияга жаңыртып, кайра аракет кылыңыз. Эгер маселе чечилбесе, Тууралоолор > Байланышуу бөлүмүнөн биз менен байланышыңыз. Код: {errorCode} Чоо-жайы: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
