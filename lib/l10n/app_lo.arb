@@ -1838,5 +1838,17 @@
         "type": "String"
       }
     }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "ບັນຊີ{accountTypeProviderName}ນີ້ໄດ້ເຊື່ອມໂຍງກັບບັນຊີ Pilll ອື່ນແລ້ວ ເນື່ອງຈາກນັ້ນຈຶ່ງບໍ່ສາມາດລົງທະບຽນໄດ້. ກະລຸນາເບິ່ງ FAQ ດ້ວຍ. ລາຍລະອຽດ: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
