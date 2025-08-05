@@ -2216,5 +2216,14 @@
         "type": "String"
       }
     }
+  },
+  "failedToGetPillSheetHistory": "복용 기록 정보를 가져오는 데 실패했습니다. {error}",
+  "@failedToGetPillSheetHistory": {
+    "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   }
 }
