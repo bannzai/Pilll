@@ -1450,5 +1450,14 @@
   "purchaseErrorInvalidReceiptError": "അസാധുവായ വാങ്ങൽ വിവരങ്ങളാണ്. വാങ്ങൽ വിവരങ്ങൾ പരിശോധിക്കുക",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "വാങ്ങുന്നയാളുടെ വിവരങ്ങൾ നിലവിലില്ല. ദയവായി {accountName} ഉപയോഗിച്ച് ഉപകരണത്തിൽ സൈൻ ഇൻ ചെയ്ത് വീണ്ടും ശ്രമിക്കുക",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
