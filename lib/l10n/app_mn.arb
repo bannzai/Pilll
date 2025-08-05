@@ -1590,5 +1590,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Хэрэглэгчийн мэдээллийг авахад алдаа гарлаа. Хэсэг хугацааны дараа дахин оролдоно уу. Хэрэв шийдэгдэхгүй бол Тохиргоо > Хандалт хэсгээр холбогдоно уу. Дэлгэрэнгүй: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
