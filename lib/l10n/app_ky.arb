@@ -824,5 +824,9 @@
   "createNewAccountIfNotLoggedIn": "Эгер сиз Pilll'ге мурда кирбесеңиз, жаңы аккаунт түзүлөт",
   "@createNewAccountIfNotLoggedIn": {
     "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
+  },
+  "registerAccountForDataTransfer": "Эсеп каттасаңыз, маалыматтарды которуп алуу мүмкүн болот",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   }
 }
