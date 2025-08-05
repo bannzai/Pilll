@@ -1662,5 +1662,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "അജ്ഞാത കാരണത്താൽ ഒരു പിശക് സംഭവിച്ചു. ഏറ്റവും പുതിയ പതിപ്പിലേക്ക് അപ്‌ഡേറ്റ് ചെയ്ത് വീണ്ടും ശ്രമിക്കുക. പരിഹാരമാകുന്നില്ലെങ്കിൽ സെറ്റിംഗ്‌സ് > പരാതി എന്നതിലൂടെ ബന്ധപ്പെടുക. കോഡ്: {errorCode} വിശദാംശങ്ങൾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
