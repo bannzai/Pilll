@@ -1517,5 +1517,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "အခြားဝယ်ယူမှုလုပ်ငန်းစဉ်လုပ်ဆောင်နေပါသည်။ အချိန်အနည်းငယ်စောင့်ပြီးပြန်လည်စစ်ဆေးပါ",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   }
 }
