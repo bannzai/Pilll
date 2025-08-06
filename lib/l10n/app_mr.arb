@@ -1727,5 +1727,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "टाइमआउट झाला. कृपया आपले नेटवर्क कनेक्शन तपासून पुन्हा प्रयत्न करा. जर समस्या सुटली नाही तर सेटिंग्स > संपर्क वरून संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
