@@ -1698,5 +1698,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ଅଜଣା ତ୍ରୁଟି ଅଛି। ନୂତନ ସଂସ୍କରଣକୁ ଅପଡେଟ କରନ୍ତୁ ଏବଂ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ନହୁଏ ତେବେ ସେଟିଂସ୍ > ସମ୍ପର୍କ କରନ୍ତୁ ଦ୍ୱାରା ସମ୍ପର୍କ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିସ୍ତୃତ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
