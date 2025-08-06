@@ -1496,5 +1496,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "ဝယ်ယူမှုအချက်အလက်သည် အခြားအသုံးပြုသူဖြင့် အသုံးပြုထားပါသည်။ စက်ပစ္စည်းတွင် လော့အင်ဝင်ထားသော {accountName} ကို စစ်ဆေးကြည့်ပါ။",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
