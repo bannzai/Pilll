@@ -2318,5 +2318,9 @@
   "logout": "लग आउट",
   "@logout": {
     "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "प्रारम्भिक सेटअपमा फर्कनेछ। लगइन आवश्यक भएमा कृपया प्रारम्भिक सेटअपको तलबाट गर्नुहोस्।",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
   }
 }
