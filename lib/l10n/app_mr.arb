@@ -1798,5 +1798,9 @@
   "visitHospital": "डॉक्टरांची भेट",
   "@visitHospital": {
     "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
+  },
+  "receiveNotificationAt9AM": "त्याच दिवशी सकाळी 9:00 वाजता सूचना प्राप्त करा",
+  "@receiveNotificationAt9AM": {
+    "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   }
 }
