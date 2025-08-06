@@ -1566,5 +1566,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPaymentPendingError": "ငွေပေးချေမှုသည် ရပ်တန့်နေပါသည်။ လောဂ်အင်ဝင်ရောက်နေသော {accountName} တွင် {storeName} ကို စစ်ဆေးပါ",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
