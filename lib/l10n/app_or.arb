@@ -1569,5 +1569,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "ଏକ ଅଜ୍ଞାତ କାରଣର ତ୍ରୁଟି ହୋଇଛି। ଦୟାକରି ନୂତନ ସଂସ୍କରଣକୁ ଅପଡେଟ୍ କରନ୍ତୁ ଏବଂ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟାର ସମାଧାନ ହୁଏ ନାହିଁ, ଦୟାକରି ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ମାଧ୍ୟମରେ ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
