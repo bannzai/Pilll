@@ -1908,5 +1908,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "सध्या निवडलेली पिल शीट सापडली नाही",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
