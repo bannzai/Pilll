@@ -1409,5 +1409,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "အကြောင်းရင်းမသိသော အမှားတစ်ခု ဖြစ်ပွားခဲ့သည်။ ခဏစောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြဿနာမပျောက်ပါက ဆက်တင် > စုံစမ်းမေးမြန်းရန် မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
