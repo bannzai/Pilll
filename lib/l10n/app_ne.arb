@@ -1505,5 +1505,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppUserIdError": "प्रयोगकर्ताको पुष्टि गर्न सकिएन। एपलाई पुनः सुरु गरेर फेरि प्रयास गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
