@@ -1081,5 +1081,14 @@
   "existingAccountUsers": "ଆଗରୁ ଆକାଉଣ୍ଟ ଥିବା ବ୍ୟକ୍ତିମାନେ ଏଠାରେ କ୍ଲିକ୍ କରନ୍ତୁ",
   "@existingAccountUsers": {
     "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
+  },
+  "selectTodayPillNumber": "ଆଜି ({todayString}) ଖାଇବାକୁ/ଖାଇଥିବା ପିଲର ନମ୍ବର ଟ୍ୟାପ୍ କରନ୍ତୁ",
+  "@selectTodayPillNumber": {
+    "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
+    "placeholders": {
+      "todayString": {
+        "type": "String"
+      }
+    }
   }
 }
