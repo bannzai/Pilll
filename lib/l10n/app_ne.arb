@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ग्राहक जानकारी प्राप्त गर्न असफल भयो। केही समय पछि फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान भएन भने सेटिङ > सम्पर्क बाट सम्पर्क गर्नुहोस्। विवरण: कोड: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
