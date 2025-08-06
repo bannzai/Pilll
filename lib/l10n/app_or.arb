@@ -1584,5 +1584,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorEmptySubscriberAttributesError": "ଅଜ୍ଞାତ କାରଣର ତ୍ରୁଟି। କିଣା ତଥ୍ୟ ପୂର୍ବରୁ ପ୍ରାପ୍ତ କରିପାରିଲା ନାହିଁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorEmptySubscriberAttributesError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
