@@ -1459,5 +1459,14 @@
   "purchaseErrorInvalidReceiptError": "ဝယ်ယူမှုအချက်အလက်များ မမှန်ကန်ပါ။ ဝယ်ယူမှုအချက်အလက်များကို စစ်ဆေးကြည့်ပါ။",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "ဝယ်ယူသူ၏ အချက်အလက်များ မရှိပါ။ {accountName} ဖြင့် စက်ပေါ်သို့ လက်မှတ်ရေးထိုး၍ ထပ်မံကြိုးစားပါ",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
