@@ -1769,5 +1769,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "संपर्क खराब आहे. आपल्या संपर्क वातावरणाची तपासणी करून पुन्हा प्रयत्न करा. जर समस्या सुटली नाही तर सेटिंग्ज > चौकशी द्वारे संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
