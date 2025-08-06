@@ -1426,5 +1426,14 @@
   "purchaseErrorInvalidReceiptError": "ଅବୈଧ କ୍ରୟ ସୂଚନା। ଦୟାକରି ଆପଣଙ୍କ କ୍ରୟ ସୂଚନା ଯାଞ୍ଚ କରନ୍ତୁ।",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "କ୍ରେତାଙ୍କ ସୂଚନା ମିଳୁନାହିଁ। {accountName} ସହିତ ଡିଭାଇସ୍‌ରେ ସାଇନ୍ ଇନ୍ କରି ଚେଷ୍ଟା କରନ୍ତୁ।",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
