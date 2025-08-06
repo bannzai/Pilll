@@ -1557,5 +1557,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "କ୍ରୟ ସୂଚନା ପାଇବାରେ ବିଫଳ। କିଛି ସମୟ ପରେ ପୁନଃ ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ନହୁଏ ତେବେ ସେଟିଙ୍ଗ > ଯୋଗାଯୋଗ ମାଧ୍ୟମରେ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
