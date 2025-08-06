@@ -1472,5 +1472,17 @@
   "purchaseErrorNetworkError": "नेटवर्क अस्थिर छ। जडान स्थिति जाँच गरेर पुन: प्रयास गर्नुहोस्।",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "खरिदारी असफल भयो। केहि समयपछि पुनः प्रयास गर्नुहोस्। समस्या समाधान नभएमा सेटिङ > सम्पर्क मार्फत हामीलाई जानकारी दिनुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
