@@ -1533,5 +1533,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "खरिदारी असफल भयो। केही समयपछि फेरि प्रयास गर्नुहोस्। यदि समाधान भएन भने सेटिंग > सम्पर्क मार्फत हामीलाई सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
