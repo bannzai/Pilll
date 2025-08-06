@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ଗ୍ରାହକ ସୂଚନା ପାଇବାରେ ବିଫଳ ହେଲା। କିଛି ସମୟ ପରେ ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହୁଏ ନାହିଁ ତେବେ ସେଟିଂ > ଯୋଗାଯୋଗ ରୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: କୋଡ଼: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
