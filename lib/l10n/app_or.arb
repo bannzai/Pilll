@@ -1656,5 +1656,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "ଯନ୍ତ୍ରର ସେଟିଂରେ ସମସ୍ୟା ଅଛି। ଦୟାକରି ଯାଞ୍ଚ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହୁଏ ନାହିଁ ତେବେ ସେଟିଂ > ଯୋଗାଯୋଗ ରୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ଼: {errorCode} ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
