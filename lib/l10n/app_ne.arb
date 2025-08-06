@@ -1969,5 +1969,9 @@
   "pressAndHoldNotificationToRecordPillTaking": "सूचनालाई लामो समय दबाएर राखेर औषधि सेवनको रेकर्ड गर्न सकिन्छ",
   "@pressAndHoldNotificationToRecordPillTaking": {
     "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
+  },
+  "letsTryIt": "जरूर प्रयास गर्नुहोस्",
+  "@letsTryIt": {
+    "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   }
 }
