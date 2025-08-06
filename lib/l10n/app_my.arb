@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "စက်ပစ္စည်းအပြင်အဆင်တွင် ပြဿနာရှိသည်။ စစ်ဆေးပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ မဖြေရှင်းနိုင်ပါက အပြင်အဆင် > မေးမြန်းခြင်း မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ ကုဒ်: {errorCode} အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
