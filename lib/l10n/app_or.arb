@@ -1790,5 +1790,17 @@
         "type": "String"
       }
     }
+  },
+  "emailAlreadyInUse": "ପୂର୍ବରୁ {accountTypeProviderName} ଆକାଉଣ୍ଟରେ ବ୍ୟବହାର କରୁଥିବା ଇମେଲ ଠିକଣା ଅନ୍ୟ ଏକ Pilll ଆକାଉଣ୍ଟ ସହିତ ସଂଯୁକ୍ତ ଥିବାରୁ ପଞ୍ଜୀକରଣ କରିପାରିବେ ନାହିଁ। FAQ ମଧ୍ୟ ଦେଖନ୍ତୁ। ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
