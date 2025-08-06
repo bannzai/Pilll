@@ -1279,5 +1279,14 @@
   "daysMenstruationLasts": "ଦିନ ମାସିକ ଚାଲେ",
   "@daysMenstruationLasts": {
     "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
+  },
+  "countOfSheet": "{number}ତମ ସିଟ୍",
+  "@countOfSheet": {
+    "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
