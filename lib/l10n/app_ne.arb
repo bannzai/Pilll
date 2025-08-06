@@ -1773,5 +1773,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "नेटवर्क समस्या छ। कृपया आफ्नो इन्टरनेट जडान जाँच गरेर पुनः प्रयास गर्नुहोस्। समस्या समाधान नभएमा सेटिङ > सम्पर्क बाट हामीलाई सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
