@@ -1610,5 +1610,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "अज्ञात कारणामुळे त्रुटी आली आहे. कृपया अद्ययावत आवृत्तीवर अपडेट करा आणि पुन्हा प्रयत्न करा. समस्या कायम राहिल्यास सेटिंग्स > चौकशी येथून संपर्क साधा. कोड: {errorCode} तपशील: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
