@@ -1656,5 +1656,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "အကြောင်းအရင်းမသိသော အမှားအယွင်းတစ်ခု ဖြစ်ပေါ်နေပါသည်။ နောက်ဆုံးထွက်ဗားရှင်းကို အပ်ဒိတ်လုပ်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြသနာမပြေလျှင် ဆက်တင်များ > စုံစမ်းမေးမြန်းခြင်း မှတဆင့် ဆက်သွယ်မေးမြန်းပါ။ ကုဒ်: {errorCode} အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
