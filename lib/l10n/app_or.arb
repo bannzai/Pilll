@@ -1376,5 +1376,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। କିଛି ସମୟ ପରେ ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟାଟି ସମାଧାନ ନହୁଏ, ଦୟାକରି ସେଟିଂସ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
