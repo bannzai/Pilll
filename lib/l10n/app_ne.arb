@@ -1602,5 +1602,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "खरिद जानकारी प्राप्त गर्न असफल भयो। समय पछि फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान भएन भने सेटिङ > सम्पर्क बाट सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
