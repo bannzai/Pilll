@@ -1611,5 +1611,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "ଏହା ଏକ ଅଜ୍ଞାତ କାରଣର ତ୍ରୁଟି। ଦୟାକରି ନୂତନ ସଂସ୍କରଣରେ ଅପଡେଟ୍ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟା ସମାଧାନ ହୁଏ ନାହିଁ, ତେବେ ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିସ୍ତୃତ ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
