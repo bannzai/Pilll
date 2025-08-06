@@ -1484,5 +1484,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Aankoop is momenteel niet mogelijk. Probeer het later opnieuw. Als het probleem blijft bestaan, neem dan contact met ons op via Instellingen > Contact. Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
