@@ -1731,5 +1731,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "टाइमआउट भयो। कृपया आफ्नो इन्टरनेट जडान जाँच गरेर फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान हुँदैन भने सेटिङ्ग > इन्क्वायरी बाट सम्पर्क गर्नुहोस्। विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
