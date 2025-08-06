@@ -732,5 +732,9 @@
         "type": "String"
       }
     }
+  },
+  "menstruationStartDate": "ମାସିକ ଆରମ୍ଭ ତାରିଖ",
+  "@menstruationStartDate": {
+    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   }
 }
