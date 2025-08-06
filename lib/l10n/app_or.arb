@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "ଫେରସ୍ତ ପ୍ରକ୍ରିୟା ଆରମ୍ଭ ହୋଇଛି। ନିଶ୍ଚିତ କରନ୍ତୁ ଏବଂ ପୁଣିଥରେ ଚେଷ୍ଟା କରନ୍ତୁ। ସମାଧାନ ନହେଲେ ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ଦ୍ୱାରା ଆମକୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ଼: {errorCode} ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
