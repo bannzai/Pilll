@@ -1758,5 +1758,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "अज्ञात त्रुटि भएको छ। नवीनतम संस्करणमा अपडेट गरेर पुनः प्रयास गर्नुहोस्। समस्या समाधान नभएमा सेटिङहरू > सम्पर्क बाट सम्पर्क गर्नुहोस्। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
