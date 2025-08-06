@@ -1484,5 +1484,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Pembelian tidak dapat dilakukan pada masa ini. Sila cuba lagi selepas beberapa masa. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
