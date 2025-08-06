@@ -221,5 +221,9 @@
         "type": "String"
       }
     }
+  },
+  "currentlyDisplayed": "ବର୍ତ୍ତମାନ ପ୍ରଦର୍ଶିତ",
+  "@currentlyDisplayed": {
+    "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   }
 }
