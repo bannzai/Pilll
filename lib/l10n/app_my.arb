@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ဖောက်သည်အချက်အလက်များ ရယူရန် မအောင်မြင်ပါ။ အချိန်အနည်းငယ် စောင့်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ပြသနာ ဆက်လက်ဖြစ်နေပါက ဆက်တင်များ > စုံစမ်းမေးမြန်းခြင်း မှတစ်ဆင့် ဆက်သွယ်ပါ။ အသေးစိတ်: ကုဒ်: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
