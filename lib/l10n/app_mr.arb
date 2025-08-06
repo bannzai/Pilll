@@ -1652,5 +1652,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "अज्ञात कारणाची त्रुटी आहे. कृपया नवीनतम आवृत्तीवर अपडेट करा आणि पुन्हा प्रयत्न करा. जर समस्या सुटली नाही तर सेटिंग्ज > संपर्क करा यावरून आमच्याशी संपर्क साधा. कोड: {errorCode} तपशील: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
