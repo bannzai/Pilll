@@ -1472,5 +1472,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "କ୍ରୟ ପ୍ରକ୍ରିୟା ଅନ୍ୟତ୍ର ଚାଲୁଅଛି। ଦୟାକରି କିଛି ସମୟ ପରେ ପୁନଃ ଯାଞ୍ଚ କରନ୍ତୁ।",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   }
 }
