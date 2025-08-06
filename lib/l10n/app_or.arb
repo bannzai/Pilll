@@ -850,5 +850,9 @@
         "type": "String"
       }
     }
+  },
+  "thankYouForRegistration": "ପଞ୍ଜୀକରଣ ପାଇଁ ଧନ୍ୟବାଦ ।\nସବୁ ବିଶେଷତା ବର୍ତ୍ତମାନ ବ୍ୟବହାର କରିପାରିବେ!",
+  "@thankYouForRegistration": {
+    "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   }
 }
