@@ -319,9 +319,50 @@ Android: https://onl.sc/c9xnQUk''';
                                 fontSize: 16,
                               ),
                             ),
-                            onTap: () {
+                            onTap: () async {
                               analytics.logEvent(name: 'did_select_inquiry', parameters: {});
-                              inquiry();
+                              await showDialog(
+                                context: context,
+                                builder: (dialogContext) => AlertDialog(
+                                  title: const Icon(
+                                    Icons.help,
+                                    color: AppColors.primary,
+                                  ),
+                                  content: const Text(
+                                    'お問い合わせの前に、よくある質問（FAQ）をご確認ください。\n多くの疑問はFAQで解決できる可能性があります。',
+                                    style: TextStyle(
+                                      fontFamily: FontFamily.japanese,
+                                      fontWeight: FontWeight.w300,
+                                      fontSize: 14,
+                                      color: TextColor.main,
+                                    ),
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(dialogContext).pop();
+                                        analytics.logEvent(name: 'did_select_faq_from_inquiry_dialog', parameters: {});
+                                        launchUrl(Uri.parse('https://pilll.notion.site/bb1f49eeded64b57929b7a13e9224d69'),
+                                            mode: LaunchMode.inAppBrowserView);
+                                      },
+                                      child: const Text(
+                                        'FAQを確認する',
+                                        style: TextStyle(color: AppColors.primary),
+                                      ),
+                                    ),
+                                    TextButton(
+                                      onPressed: () {
+                                        Navigator.of(dialogContext).pop();
+                                        inquiry();
+                                      },
+                                      child: const Text(
+                                        'お問い合わせを続ける',
+                                        style: TextStyle(color: TextColor.darkGray),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
                             }),
                         if (Environment.isDevelopment) ...[
                           _separator(),
