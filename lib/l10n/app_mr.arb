@@ -1912,5 +1912,9 @@
   "currentPillSheetNotFound": "सध्या निवडलेली पिल शीट सापडली नाही",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
+  },
+  "doNotRevertTakePillInPausePeriod": "गोळी सेवनाचे रद्दीकरण कार्य विश्रांती कालावधीत करता येत नाही",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   }
 }
