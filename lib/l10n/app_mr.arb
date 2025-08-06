@@ -1541,5 +1541,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "तुमच्या वापरकर्त्यासाठी खरेदी अयशस्वी झाली. कृपया काही वेळानंतर पुन्हा प्रयत्न करा. समस्या सुटत नसल्यास सेटिंग्ज > चौकशी द्वारे आमच्याशी संपर्क साधा. तपशील: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
