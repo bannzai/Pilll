@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "အကြောင်းရင်းမသိသော အမှားအယွင်းဖြစ်သည်။ နောက်ဆုံးဗားရှင်းသို့ အပ်ဒိတ်လုပ်ပြီး ထပ်မံကြိုးစားကြည့်ပါ။ ဖြေရှင်းမရပါက ဆက်တင်များ > စုံစမ်းမေးမြန်းမှု မှတစ်ဆင့် ဆက်သွယ်မေးမြန်းပါ။ ကုဒ်: {errorCode} အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
