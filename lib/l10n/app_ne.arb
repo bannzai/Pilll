@@ -1590,5 +1590,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "प्रयोगकर्ता जानकारी प्राप्त गर्न असफल भयो। केहि समयपछि फेरि प्रयास गर्नुहोस्। यदि समस्या समाधान भएन भने सेटिङ्ग्स > सम्पर्क गर्नुहोस् बाट सम्पर्क गर्नुहोस्। विस्तृत विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
