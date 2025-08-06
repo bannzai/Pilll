@@ -1822,5 +1822,17 @@
   "enableHealthKitFromSettings": "कृपया सेटिंग्ज अॅप मधून हेल्थकेअर सक्रिय करा",
   "@enableHealthKitFromSettings": {
     "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
+  },
+  "accountAlreadyLinked": "हे {accountTypeProviderName} खाते आधीच तुमच्या Pilll खात्याशी जोडलेले आहे. कृपया स्क्रीन रिफ्रेश करण्याचा प्रयत्न करा. FAQ देखील पहा. तपशील: {exceptionMessage}",
+  "@accountAlreadyLinked": {
+    "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
