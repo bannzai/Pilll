@@ -1,34 +1,34 @@
 {
   "@@locale": "ms",
-  "pillSheetType21With7Placebo": "jenis 21 pil",
+  "pillSheetType21With7Placebo": "Jenis 21 Pil",
   "@pillSheetType21With7Placebo": {
     "description": "ピルシートの種類で、21錠の薬効成分を含む錠剤と7錠の偽薬（プラセボ）で構成される28錠パックのタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示されます。"
   },
-  "pillSheetType28With4Placebo": "28 pil jenis (4 pil plasebo)",
+  "pillSheetType28With4Placebo": "Jenis 28 biji (4 biji plasebo)",
   "@pillSheetType28With4Placebo": {
     "description": "ピルシートの種類で、28錠の薬剤のうち24錠が薬効成分を含み4錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "pillSheetType28With7Placebo": "Jenis 28 biji (7 biji plasebo)",
+  "pillSheetType28With7Placebo": "Jenis 28 pil (7 pil plasebo)",
   "@pillSheetType28With7Placebo": {
     "description": "ピルシートの種類で、28錠の薬剤のうち21錠が薬効成分を含み7錠が偽薬（プラセボ）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "pillSheetType28": "28 tablet type (all active ingredients)",
+  "pillSheetType28": "Jenis 28 tablet (semua ubat aktif)",
   "@pillSheetType28": {
     "description": "ピルシートの種類で、28錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない28錠タイプであることを示します。"
   },
-  "pillSheetType24": "24 tablet type (all active ingredients)",
+  "pillSheetType24": "Jenis 24 biji (semua pil aktif)",
   "@pillSheetType24": {
     "description": "ピルシートの種類で、24錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない24錠タイプであることを示します。"
   },
-  "pillSheetType21": "Jenis 21 tablet (semua ubat sebenar)",
+  "pillSheetType21": "21 Pil (Semua Pil Aktif)",
   "@pillSheetType21": {
     "description": "ピルシートの種類で、21錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない21錠タイプであることを示します。"
   },
-  "pillSheetType24WithRest4": "24 tablet type",
+  "pillSheetType24WithRest4": "Jenis 24 Pil",
   "@pillSheetType24WithRest4": {
     "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   },
-  "restPeriod": "berhenti mengambil pil",
+  "restPeriod": "jeda",
   "@restPeriod": {
     "description": "ピルの服用サイクル中の休薬期間を指す用語です。通常はプラセボ錠を服用するか薬を飲まない期間で、この期間中に生理が来ることが多いです。"
   },
@@ -36,11 +36,11 @@
   "@placebo": {
     "description": "ピルパックに含まれるホルモン非含有錠で、休薬期間中に服用する錠剤を指します。プラセボ錠を服用している期間中に生理が来ることが一般的です。"
   },
-  "userNotFound": "Pengguna tidak dapat dijumpai",
+  "userNotFound": "Pengguna tidak dijumpai",
   "@userNotFound": {
     "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
   },
-  "userAlreadyExists": "Pengguna sudah wujud.",
+  "userAlreadyExists": "Pengguna sudah wujud",
   "@userAlreadyExists": {
     "description": "アカウント作成やユーザー登録時に、入力されたメールアドレスや電話番号が既に他のアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーに対して既存のアカウントでログインするか、別の認証情報を使用するよう促す文脈で使用されます。"
   },
@@ -56,7 +56,7 @@
   "@account": {
     "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
   },
-  "dataTransferRequiresAccount": "Pendaftaran akaun diperlukan untuk pemindahan dan pemulihan data semasa menukar peranti atau kehilangan telefon pintar.",
+  "dataTransferRequiresAccount": "Pendaftaran akaun diperlukan untuk pemindahan dan pemulihan data semasa pertukaran telefon atau kehilangan telefon pintar.",
   "@dataTransferRequiresAccount": {
     "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   },
@@ -64,15 +64,15 @@
   "@pillPremium": {
     "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
   },
-  "unlimitedFeatureDuration": "Tempoh tanpa batasan fungsi",
+  "unlimitedFeatureDuration": "Mengenai Tempoh Fungsi Tanpa Had",
   "@unlimitedFeatureDuration": {
     "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
   },
-  "pillSheet": "Pill Sheet",
+  "pillSheet": "Paket Pil",
   "@pillSheet": {
     "description": "避妊薬が包装されているシート状のパッケージのことで、アプリではピルシートをメタファーとしたUIを提供し、ユーザーがどこまで薬を飲んだか、いつ生理が来るかなどを一目で確認できます。"
   },
-  "notification": "Pemberitahuan",
+  "notification": "Notifikasi",
   "@notification": {
     "description": "アプリがユーザーに送るプッシュ通知や画面内の通知のことで、ピルの服用時刻を知らせるリマインダーや重要な情報を伝える機能を指します。"
   },
@@ -92,11 +92,11 @@
   "@newFeaturesIntroduction": {
     "description": "新機能紹介"
   },
-  "contactUs": "Pertanyaan",
+  "contactUs": "Hubungi Kami",
   "@contactUs": {
     "description": "アプリ内のメニューやボタンで表示される、ユーザーがサポートチームに問い合わせや相談をするための機能名です。"
   },
-  "delete": "Hapus",
+  "delete": "Padam",
   "@delete": {
     "description": "アプリ内の各種データ（服用記録、生理記録、日記など）を削除する際に表示されるボタンやメニューの文言です。ユーザーが操作を取り消したい時に使用される汎用的な削除機能を表します。"
   },
@@ -104,23 +104,23 @@
   "@doDelete": {
     "description": "服用記録や生理記録などのデータを削除する際のボタンに表示される動詞形の文言です。"
   },
-  "deleteUser": "Padam Pengguna",
+  "deleteUser": "Hapus Pengguna",
   "@deleteUser": {
     "description": "アカウント削除機能で表示される文言で、ユーザーのアカウントと関連する全ての服用記録・生理記録データを完全に削除することを示します。重要な操作のため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
-  "deleteDiary": "Saya akan memadamkan diari.",
+  "deleteDiary": "Diari akan dipadamkan",
   "@deleteDiary": {
     "description": "アプリ内の日記機能（体調記録）で特定の日記エントリを削除する際に表示される文言です。ユーザーの大切な体調記録が削除されることを示すため、各言語で適切に警告的なニュアンスを持つ表現にしてください。"
   },
-  "confirmDeletingMenstruation": "Adakah anda ingin memadamkan tempoh haid?",
+  "confirmDeletingMenstruation": "Padam tempoh haid ini?",
   "@confirmDeletingMenstruation": {
     "description": "生理管理機能でユーザーが記録した生理期間のデータを削除する際に表示される確認ダイアログの文言です。重要な記録の削除を確認するため、各言語で慎重で丁寧な表現を使用してください。"
   },
-  "addNotificationTime": "Tambah Waktu Notifikasi",
+  "addNotificationTime": "Tambah Masa Notifikasi",
   "@addNotificationTime": {
     "description": "ピルの服用リマインダー機能で、ユーザーが新しい通知時間を追加する際に表示されるボタンやメニュー項目の文言です。簡潔で分かりやすい表現を使用してください。"
   },
-  "syncWithDeviceTimeZone": "Adakah anda ingin menyegerakkan dengan zon waktu peranti ({deviceTimezoneName})?",
+  "syncWithDeviceTimeZone": "Segerakkan dengan zon waktu peranti ({deviceTimezoneName})?",
   "@syncWithDeviceTimeZone": {
     "description": "ピル服用リマインダーの時刻設定で、ユーザーが設定した時間と端末のタイムゾーンが異なる場合に、端末のタイムゾーンに合わせて同期するかを確認するダイアログメッセージです。{deviceTimezoneName}には実際のタイムゾーン名（例：Asia/Tokyo）が表示されます。",
     "placeholders": {
@@ -129,11 +129,11 @@
       }
     }
   },
-  "currentTimeZone": "Zon waktu yang sedang ditetapkan",
+  "currentTimeZone": "Zon masa yang ditetapkan sekarang",
   "@currentTimeZone": {
     "description": "設定画面等で表示される、ユーザーの端末で現在設定されているタイムゾーンを示すラベルです。ピルの服用リマインド機能で正確な時刻管理を行うため、タイムゾーン設定の確認に使用されます。"
   },
-  "yes": "ya",
+  "yes": "Ya",
   "@yes": {
     "description": "アプリ内のダイアログボックスやアラートで使用される肯定的な応答ボタンのラベルです。ユーザーが何かの確認や質問に対して「はい」と答える際に表示されます。"
   },
@@ -141,19 +141,19 @@
   "@no": {
     "description": "アプリ内のダイアログボックスやアラートで使用される否定的な応答ボタンのラベルです。ユーザーが何かの確認や質問に対して「いいえ」と答える際に表示されます。"
   },
-  "unsubscribeInfo": "Mengenai pembatalan",
+  "unsubscribeInfo": "Tentang Pembatalan",
   "@unsubscribeInfo": {
     "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
   },
-  "pillReminder": "Notifikasi pengambilan pil",
+  "pillReminder": "Notifikasi Pengambilan Pil",
   "@pillReminder": {
     "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   },
-  "takePillReminderChannelName": "Pemberitahuan pengambilan",
+  "takePillReminderChannelName": "Pemberitahuan Pengambilan Pil",
   "@takePillReminderChannelName": {
     "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
   },
-  "takePillReminder": "Ini adalah masa untuk 💊",
+  "takePillReminder": "💊 Masa untuk pil anda",
   "@takePillReminder": {
     "description": "ピルの服用時刻になった時にユーザーに送信されるプッシュ通知のメッセージです。簡潔で親しみやすく、服用を促すトーンで翻訳してください。"
   },
@@ -165,15 +165,15 @@
   "@cancel": {
     "description": "各種ダイアログや操作確認画面で、現在の操作を中止して前の画面に戻るためのボタンのテキストです。ユーザーが誤操作を防げるよう、明確で分かりやすい表現で翻訳してください。"
   },
-  "signOut": "Keluar",
+  "signOut": "Log Keluar",
   "@signOut": {
     "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
   },
-  "autoAddPillSheetGroup": "Penghantaran automatik kumpulan pil",
+  "autoAddPillSheetGroup": "Tambah Automatik Kumpulan Lembaran Pil",
   "@autoAddPillSheetGroup": {
     "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   },
-  "autoAddNewSheetAfterCurrentEnds": "Apabila kumpulan pil sekarang tamat, satu helai baru akan ditambahkan secara automatik.",
+  "autoAddNewSheetAfterCurrentEnds": "Bila kumpulan pil semasa habis, helaian baru akan ditambah secara automatik",
   "@autoAddNewSheetAfterCurrentEnds": {
     "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
   },
@@ -181,27 +181,27 @@
   "@accountSettings": {
     "description": "設定画面で表示される「アカウント設定」メニュー項目のラベルです。ユーザーの個人情報やアカウント関連の設定を管理する画面へのナビゲーションとして使用されます。"
   },
-  "linked": "Disambungkan",
+  "linked": "Telah dipautkan",
   "@linked": {
     "description": "外部サービスやアカウントとの連携が完了している状態を表すステータス表示です。設定画面などで「連携済み」として表示されます。"
   },
-  "unregistered": "tidak didaftarkan",
+  "unregistered": "Belum Berdaftar",
   "@unregistered": {
     "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。"
   },
-  "quickRecord": "Rekod Cepat",
+  "quickRecord": "Rekod Pantas",
   "@quickRecord": {
     "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   },
-  "quickRecordDescription": "Anda dapat mengetahui pil yang perlu diambil hari ini di layar notifikasi dan merekam pengambilan itu secara langsung.",
+  "quickRecordDescription": "Pada skrin pemberitahuan, anda boleh melihat pil yang perlu diminum hari ini dan terus merekodkan pengambilannya.",
   "@quickRecordDescription": {
     "description": "通知画面でのクイック記録機能の説明文です。今日飲むべきピルの確認と服用記録を同じ画面で素早く行えることを表現してください。"
   },
-  "healthCareIntegration": "Penyelarasan penjagaan kesihatan",
+  "healthCareIntegration": "Integrasi Kesihatan",
   "@healthCareIntegration": {
     "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
   },
-  "healthCareIntegrationDescription": "Anda boleh secara automatik merekod rekod haid yang dicatat dalam Pilll ke dalam Kesihatan.",
+  "healthCareIntegrationDescription": "Rekod haid yang dicatat dalam Pilll boleh disimpan secara automatik ke Health",
   "@healthCareIntegrationDescription": {
     "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   },
@@ -209,15 +209,15 @@
   "@viewPremiumPlan": {
     "description": "有料プランの詳細や料金を確認するためのボタンやリンクのテキストです。設定画面やプレミアム機能の紹介画面で、ユーザーがプレミアムプランの内容を見る際に使用されます。"
   },
-  "changePillNumberForToday": "Tukar nombor pil yang perlu diambil hari ini",
+  "changePillNumberForToday": "Ubah nombor pil hari ini",
   "@changePillNumberForToday": {
     "description": "ピルシートUIで今日服用するべきピル番号を手動で変更する機能のテキストです。飲み忘れやピルシートの進捗調整時に、ユーザーが今日の服用予定を修正する際に表示されます。"
   },
-  "discardAllPillSheets": "Buang semua pemadat pil",
+  "discardAllPillSheets": "Padam Semua Lembaran Pil",
   "@discardAllPillSheets": {
     "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
   },
-  "areYouSureDoing": "Adakah anda mahu {doing}?",
+  "areYouSureDoing": "Adakah anda pasti untuk {doing}?",
   "@areYouSureDoing": {
     "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
     "placeholders": {
@@ -226,15 +226,15 @@
       }
     }
   },
-  "currentlyDisplayed": "Sedang dipaparkan",
+  "currentlyDisplayed": "sedang dipaparkan",
   "@currentlyDisplayed": {
     "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
   },
-  "allPillSheets": "Semua lembar pil",
+  "allPillSheets": "Semua Lembaran Pil",
   "@allPillSheets": {
     "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
   },
-  "willBeDiscarded": "akan dibatalkan",
+  "willBeDiscarded": "akan dibuang",
   "@willBeDiscarded": {
     "description": "データやピルシートなどのオブジェクトが削除・破棄される際に使用される文言です。確認ダイアログなどで「〜が破棄されます」として表示される部分に使用されます。"
   },
@@ -242,23 +242,27 @@
   "@discard": {
     "description": "ピルシートやデータなどを削除・廃棄する際のボタンやアクションに使用される動詞です。確認ダイアログなどで「破棄する」「削除する」として表示されます。"
   },
-  "pillSheetDiscarded": "Saya telah membuang helaian pil.",
+  "pillSheetDiscarded": "Lembaran pil telah dibuang",
   "@pillSheetDiscarded": {
     "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
   },
-  "aboutMenstruation": "Mengenai haid",
+  "aboutMenstruation": "Tentang Haid",
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   },
-  "checkPillNumberForMenstruationStart": "Sila semak nombor pil untuk tarikh mula haid. Nombor pil yang ditetapkan tidak wujud dalam jenis helaian pil yang sedang dipilih.",
+  "checkPillNumberForMenstruationStart": "Sila semak nombor pil tarikh mula haid. Nombor pil yang telah ditetapkan tidak wujud dalam jenis lembaran pil yang dipilih sekarang",
   "@checkPillNumberForMenstruationStart": {
     "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   },
-  "customizeMedicationNotifications": "Pemberitahuan pengambilan ubat yang disesuaikan",
+  "customizeMedicationNotifications": "Penyesuaian Pemberitahuan Pengambilan",
   "@customizeMedicationNotifications": {
     "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   },
-  "xCanBeCustomized": "Anda boleh menyesuaikan {x}",
+  "medicationNotification": "Pemberitahuan Pengambilan",
+  "@medicationNotification": {
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
+  },
+  "xCanBeCustomized": "{x} boleh disesuaikan",
   "@xCanBeCustomized": {
     "description": "特定の機能や設定項目（{x}で表される）をユーザーが自分の好みに合わせて調整・変更できることを伝えるメッセージです。設定画面などで「通知設定をカスタマイズできます」のような形で表示されます。",
     "placeholders": {
@@ -271,7 +275,7 @@
   "@thankYouForCooperation": {
     "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   },
-  "feedbackUsage": "Kami akan menggunakan maklum balas yang diberikan untuk penambahbaikan di masa hadapan.",
+  "feedbackUsage": "Maklum balas anda akan kami gunakan untuk penambahbaikan perkhidmatan pada masa hadapan.",
   "@feedbackUsage": {
     "description": "ユーザーがアプリに対してフィードバックや意見を送信した際に表示される、運営側がそのフィードバックをどのように活用するかを説明するメッセージです。丁寧で感謝の気持ちが伝わり、今後のサービス改善への活用を約束する表現にしてください。"
   },
@@ -283,19 +287,19 @@
   "@registerAccount": {
     "description": "新規ユーザーがピル服用管理アプリPilllのアカウントを作成するためのボタンや項目です。アプリの初回利用時やログイン画面で表示される、アカウント新規登録を促すUI要素として使用されます。"
   },
-  "reLogin": "Log masuk semula",
+  "reLogin": "Log Masuk Semula",
   "@reLogin": {
     "description": "ログインセッションが切れた際やエラーが発生した際に、ユーザーがアプリに再度ログインするためのボタンや項目です。健康管理アプリの継続的な利用において、セキュリティやセッション管理の観点から再認証が必要になった場合に表示されます。"
   },
-  "authenticationInfoUpdated": "Maklumat pengesahan telah dikemas kini",
+  "authenticationInfoUpdated": "Maklumat pengesahan telah berjaya dikemas kini",
   "@authenticationInfoUpdated": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）の更新が正常に完了した際に表示される成功メッセージです。健康管理アプリのセキュリティ強化や問題解決後にユーザーに安心感を与える通知として使用されます。"
   },
-  "updateAuthenticationInformation": "Mengemas kini maklumat pengesahan",
+  "updateAuthenticationInformation": "Kemaskini maklumat pengesahan",
   "@updateAuthenticationInformation": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
   },
-  "registeredWithProvider": "Daftar dengan {accountTypeProviderName}",
+  "registeredWithProvider": "Berjaya didaftar dengan {accountTypeProviderName}",
   "@registeredWithProvider": {
     "description": "アカウント登録完了時にユーザーに表示される確認メッセージで、{accountTypeProviderName}にはGoogleやAppleなどのソーシャルログインサービス名が入ります。ユーザーが正常に登録できたことを伝える肯定的なメッセージとして使用されます。",
     "placeholders": {
@@ -304,19 +308,19 @@
       }
     }
   },
-  "linkAccount": "Berhubung",
+  "linkAccount": "Hubungkan",
   "@linkAccount": {
     "description": "ユーザーアカウントを外部サービス（GoogleやAppleアカウントなど）と連携してデータの同期やバックアップを行う機能のボタンやメニューに表示されるテキストです。"
   },
-  "withdraw": "Batalkan keahlian",
+  "withdraw": "Padam akaun",
   "@withdraw": {
     "description": "ユーザーがPilllアプリのサービスから完全に退会（アカウント削除）する際にボタンやメニューに表示されるテキストです。アプリの利用を停止し、すべてのデータを削除する最終的な操作を表します。"
   },
-  "withdrawalCompleted": "Telah berhenti menjadi ahli",
+  "withdrawalCompleted": "Akaun telah dipadamkan",
   "@withdrawalCompleted": {
     "description": "ユーザーがPilllアプリのアカウント削除（退会）処理を完了した後に表示される確認メッセージです。退会操作が正常に完了したことをユーザーに伝える重要な通知文言になります。"
   },
-  "appExitMessage": "Aplikasi akan ditutup sekali. Jika anda ingin memulakan yang baru, sila mulakan semula aplikasi dan lakukan konfigurasi awal.",
+  "appExitMessage": "Aplikasi akan ditutup. Untuk memulakan semula, sila mulakan semula aplikasi dan lakukan tetapan awal.",
   "@appExitMessage": {
     "description": "データリセットや初期化などの重要な操作の後に表示される確認メッセージです。ユーザーにアプリの再起動と初期設定のやり直しが必要であることを伝える重要な通知文言になります。"
   },
@@ -324,31 +328,31 @@
   "@oK": {
     "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
   },
-  "changePillNumber": "Tukar nombor pil",
+  "changePillNumber": "Ubah Nombor Pil",
   "@changePillNumber": {
     "description": "ピルシートUI上で表示される各ピルの番号（1番、2番など）を変更・調整する機能です。ユーザーが自分の使いやすい番号表示にカスタマイズできる設定項目として使用されます。"
   },
-  "change": "Tukar",
+  "change": "Ubah",
   "@change": {
     "description": "設定画面やピルシート番号調整などで使用される汎用的な「変更」ボタンやアクションラベルです。ユーザーが何かを変更・調整する際に表示される動詞として使用されます。"
   },
-  "pill": "Pil",
+  "pill": "pil",
   "@pill": {
     "description": "避妊ピル（経口避妊薬）を指す医療用語です。アプリの核となる概念で、各言語の医療分野で一般的に使用される「ピル」「錠剤」に相当する用語で翻訳してください。"
   },
-  "calendar": "Kalender",
+  "calendar": "kalendar",
   "@calendar": {
     "description": "アプリ内で生理記録、服用履歴、体調日記、予定管理などを表示・入力するためのカレンダー機能を指します。各言語で一般的に使用される「カレンダー」「暦」に相当する用語で翻訳してください。"
   },
-  "userInformationWillBeDeleted": "Maklumat pengguna akan dipadam.",
+  "userInformationWillBeDeleted": "Maklumat pengguna akan dipadamkan",
   "@userInformationWillBeDeleted": {
     "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   },
-  "withdrawalMessage": "Apabila anda membatalkan keahlian, semua data akan dipadam dan anda tidak akan dapat log masuk dengan akaun yang sama lagi.",
+  "withdrawalMessage": "Apabila anda membatalkan akaun, semua data akan dipadamkan dan anda tidak akan dapat log masuk menggunakan akaun yang sama lagi.",
   "@withdrawalMessage": {
     "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   },
-  "recordPage": "HalamanRekod",
+  "recordPage": "Halaman Rekod",
   "@recordPage": {
     "description": "ピルの服用記録を確認・管理するページの名前です。ユーザーが過去の服用履歴を閲覧したり、服用状況を記録したりする機能を持つメインページの一つとして翻訳してください。"
   },
@@ -356,35 +360,35 @@
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
   },
-  "reLoginMessage": "Sila log masuk semula untuk pengesahan identiti anda sebelum menyertai. Pengendalian pengunduran akan bermula secara automatik selepas log masuk semula.",
+  "reLoginMessage": "Sila log masuk semula untuk pengesahan identiti sebelum membatalkan akaun. Selepas log masuk semula, proses pembatalan akaun akan bermula secara automatik.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   },
-  "updateAuthenticationAfterReLogin": "Log masuk semula untuk mengemas kini maklumat pengesahan.",
+  "updateAuthenticationAfterReLogin": "Log masuk semula untuk mengemaskini maklumat pengesahan anda",
   "@updateAuthenticationAfterReLogin": {
     "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   },
-  "menstruationPage": "HalamanMenstruasi",
+  "menstruationPage": "Menstruasi",
   "@menstruationPage": {
     "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "calendarPage": "HalamanKalendar",
+  "calendarPage": "Kalendar",
   "@calendarPage": {
     "description": "ピルアプリ内で体調記録や通院予定などの将来の予定を管理するカレンダーページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "settingsPage": "HalamanTetapan",
+  "settingsPage": "Tetapan",
   "@settingsPage": {
     "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   },
-  "menstruationDeleted": "Tempoh haid telah dibuang",
+  "menstruationDeleted": "Tempoh haid telah dipadamkan",
   "@menstruationDeleted": {
     "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
   },
-  "editMenstruationPeriod": "Edit Menstrual Period",
+  "editMenstruationPeriod": "Edit Tempoh Haid",
   "@editMenstruationPeriod": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
   },
-  "menstruationEdited": "Saya telah mengedit tempoh haid",
+  "menstruationEdited": "Tempoh haid telah dikemaskini",
   "@menstruationEdited": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を編集完了した後に表示される確認メッセージです。生理管理機能での編集操作の完了を知らせる文言として翻訳してください。"
   },
@@ -392,19 +396,19 @@
   "@physicalConditionDetail": {
     "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
   },
-  "medicationHistoryPremiumFeatureRestriction": "Paparan lebih lanjut adalah fungsi premium.",
+  "medicationHistoryPremiumFeatureRestriction": "Paparan selanjutnya memerlukan ciri premium",
   "@medicationHistoryPremiumFeatureRestriction": {
     "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
   },
-  "viewMoreDetails": "Lihat dengan lebih terperinci",
+  "viewMoreDetails": "Lihat butiran",
   "@viewMoreDetails": {
     "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
   },
-  "viewMore": "Lagi Lihat",
+  "viewMore": "Lihat lagi",
   "@viewMore": {
     "description": "追加の詳細情報を表示するためのボタンテキストです。リストや概要表示で、さらに多くの項目や詳細を見たい時にタップするリンクとして使用されます。"
   },
-  "afterLastTakenPillNumber": "{afterLastTakenPillNumber}",
+  "afterLastTakenPillNumber": "ke-{afterLastTakenPillNumber}",
   "@afterLastTakenPillNumber": {
     "description": "ピルシートUI上で、最後に服用したピルの次に飲むべきピルの番号を表示するテキストです。数字の後に付ける序数詞（日本語では「番」、英語では「th」など）を各言語に適した形で翻訳してください。",
     "placeholders": {
@@ -425,7 +429,7 @@
       }
     }
   },
-  "beforeLastTakenPillNumber": "{beforeLastTakenPillNumber}",
+  "beforeLastTakenPillNumber": "No. {beforeLastTakenPillNumber}",
   "@beforeLastTakenPillNumber": {
     "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
     "placeholders": {
@@ -434,7 +438,7 @@
       }
     }
   },
-  "beforeLastDashAfterLastTakenPlusOnePillNumber": "{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
+  "beforeLastDashAfterLastTakenPlusOnePillNumber": "nombor {beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}",
   "@beforeLastDashAfterLastTakenPlusOnePillNumber": {
     "description": "ピルシートUIで、最後に服用したピルの番号から次に服用予定のピルの番号までの範囲を「-」でつないで表示するテキストです。「3-4番」のように連続する番号の範囲を示します。",
     "placeholders": {
@@ -467,7 +471,7 @@
       }
     }
   },
-  "oneToAfterDisplayNumberEndPillNumber": "1→{afterDisplayNumberSettingEndPillNumber}",
+  "oneToAfterDisplayNumberEndPillNumber": "1→nombor {afterDisplayNumberSettingEndPillNumber}",
   "@oneToAfterDisplayNumberEndPillNumber": {
     "description": "ピルシートUIでピルの番号表示範囲を示すテキストです。「1番目から設定された最後の番号まで」という意味で、ピルシートの表示範囲を表します。",
     "placeholders": {
@@ -476,7 +480,7 @@
       }
     }
   },
-  "beforeEndToAfterDisplayNumberEndPillNumber": "{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
+  "beforeEndToAfterDisplayNumberEndPillNumber": "Nombor {beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}",
   "@beforeEndToAfterDisplayNumberEndPillNumber": {
     "description": "ピルシートの最後の薬の表示番号を変更する際に使用されます。変更前の番号から変更後の番号への変更を矢印で示します。",
     "placeholders": {
@@ -488,7 +492,7 @@
       }
     }
   },
-  "selectPauseStartDate": "Pilih tarikh mula rehat pengambilan",
+  "selectPauseStartDate": "Pilih Tarikh Mula Rehat Pengambilan",
   "@selectPauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
@@ -496,35 +500,35 @@
   "@selectPausePeriod": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "pauseStartDate": "Tarikh mula cuti pengambilan",
+  "pauseStartDate": "Tarikh Mula Berehat Pil",
   "@pauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "pauseEndDate": "Tarikh tamat rehat pengambilan",
+  "pauseEndDate": "Tarikh Tamat Rehat Pengambilan",
   "@pauseEndDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   },
-  "endPillSheet": "Akhir Lembaran Pil",
+  "endPillSheet": "Helaian Pil Tamat",
   "@endPillSheet": {
     "description": "ピル（経口避妊薬）の一包装（通常シート状で28日分程度）がすべて服用完了した際に表示されるメッセージです。次のピルシートへの切り替えやタイミングを知らせる重要な通知として使用されます。"
   },
-  "discardPillSheet": "Pembuangan Lembaran Pil",
+  "discardPillSheet": "Buang Helai Pil",
   "@discardPillSheet": {
     "description": "服用が完了した空のピルシート（ブリスターパック）を適切に廃棄・処分する際に表示されるアクションやメッセージです。環境に配慮した廃棄方法の案内や、次のシートへの切り替えを促す文脈で使用されます。"
   },
-  "takingTime": "Waktu pengambilan",
+  "takingTime": "Waktu minum pil",
   "@takingTime": {
     "description": "ユーザーがピルを服用する予定時刻を表示・設定する際に使用されるラベルです。リマインダー機能や服用履歴において、何時に薬を飲むべきかを示す文脈で表示されます。"
   },
-  "takingHistoryIsPremiumFeature": "Sejarah pengambilan ubat adalah fungsi premium.",
+  "takingHistoryIsPremiumFeature": "Rekod pengambilan adalah ciri premium",
   "@takingHistoryIsPremiumFeature": {
     "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
   },
-  "pauseTakingDoesNotAdvancePillNumber": "Jika anda berehat daripada pengambilan, nombor pil tidak akan maju.",
+  "pauseTakingDoesNotAdvancePillNumber": "Apabila anda melewatkan pengambilan, nombor pil tidak akan maju",
   "@pauseTakingDoesNotAdvancePillNumber": {
     "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
   },
-  "pauseTakingFromNumber": "Adakah anda ingin berhenti mengambil pil dari {number}?",
+  "pauseTakingFromNumber": "Adakah anda ingin berhenti mengambil dari {number}?",
   "@pauseTakingFromNumber": {
     "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
     "placeholders": {
@@ -533,7 +537,7 @@
       }
     }
   },
-  "lastTakenPlusOnePillNumber": "{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "lastTakenPlusOnePillNumber": "ke-{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
   "@lastTakenPlusOnePillNumber": {
     "description": "次に服用すべきピルの番号を表示するためのテキストです。ピルシートUIで「◯番目のピルを飲む」という形で使用されます。",
     "placeholders": {
@@ -542,11 +546,11 @@
       }
     }
   },
-  "taking": "Pengambilan",
+  "taking": "pengambilan",
   "@taking": {
     "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
   },
-  "estimatedEndPillNumber": "Hela hela yang terakhir: {estimatedEndPillNumber}",
+  "estimatedEndPillNumber": "Terakhir dari paket sebelumnya: pil nombor {estimatedEndPillNumber}",
   "@estimatedEndPillNumber": {
     "description": "前回使用していたピルシート（ブリスターパック）の最後に服用したピルの番号を表示するテキストです。新しいシートに移る際の継続性を示すために使用されます。",
     "placeholders": {
@@ -555,35 +559,35 @@
       }
     }
   },
-  "addPillSheetButton": "Tambah Lembaran Pil",
+  "addPillSheetButton": "Tambah Pakej Pil",
   "@addPillSheetButton": {
     "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
   },
-  "taken": "diambil",
+  "taken": "Sudah ambil",
   "@taken": {
     "description": "ピルを服用したことを示すステータス表示です。服用履歴画面などで、ユーザーが既にピルを飲み終えた状態を表現するために使用されます。"
   },
-  "notTaken": "tidak diambil",
+  "notTaken": "Tidak diminum",
   "@notTaken": {
     "description": "ピルの服用状態を示すステータス表示で、ユーザーがその日にピルを服用していない状態を表します。服用履歴画面やピルシートUIで「taken」（服用済み）と対になって表示される重要な状態表示です。"
   },
-  "pillSheetSettings": "Tetapan kotak pil",
+  "pillSheetSettings": "Tetapan Lembaran Pil",
   "@pillSheetSettings": {
     "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
   },
-  "unmarkTodayPillAsTakenToPause": "Set the pill to not taken for today",
+  "unmarkTodayPillAsTakenToPause": "Setelah menandakan pil hari ini sebagai belum diminum",
   "@unmarkTodayPillAsTakenToPause": {
     "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
   },
-  "pauseTaking": "Rehat pengambilan",
+  "pauseTaking": "Berehat Pengambilan",
   "@pauseTaking": {
     "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
   },
-  "changePauseStartDate": "Tukar tarikh mula rehat pengambilan",
+  "changePauseStartDate": "Ubah Tarikh Mula Rehat Pengambilan",
   "@changePauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
   },
-  "pauseTakingPeriodEnded": "Tempoh rehat pengambilan telah tamat.",
+  "pauseTakingPeriodEnded": "Tempoh rehat pengambilan telah tamat",
   "@pauseTakingPeriodEnded": {
     "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
   },
@@ -596,19 +600,19 @@
       }
     }
   },
-  "changePillDaysForSheet": "Tukar bilangan hari pengambilan untuk helaian",
+  "changePillDaysForSheet": "Ubah tempoh pengambilan lembaran",
   "@changePillDaysForSheet": {
     "description": "ピルシート（ブリスターパック）の服用期間日数を変更する設定項目。ユーザーが21日間、28日間など、そのシートを何日間服用するかを設定できる機能のラベルです。"
   },
-  "changedStartAndEndNumbers": "Saya telah mengubah nombor permulaan dan penamat.",
+  "changedStartAndEndNumbers": "Nombor permulaan dan akhir telah diubah",
   "@changedStartAndEndNumbers": {
     "description": "ピルシートの表示番号（開始番号と終了番号）をユーザーが変更した際に表示される確認메ッセージです。例えば「1番～28番」から「3番～30番」に変更した場合などに使用されます。"
   },
-  "startOfPillDays": "Permulaan bilangan hari pengambilan",
+  "startOfPillDays": "Permulaan hari pengambilan",
   "@startOfPillDays": {
     "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
   },
-  "beforePillSheetGroupSequentialEstimatedEndDay": "Hari terakhir lembaran sebelumnya: {beforePillSheetGroupSequentialEstimatedEndPillNumber} hari",
+  "beforePillSheetGroupSequentialEstimatedEndDay": "Akhir set sebelumnya: hari ke-{beforePillSheetGroupSequentialEstimatedEndPillNumber}",
   "@beforePillSheetGroupSequentialEstimatedEndDay": {
     "description": "ピルシート管理画面で、前回使用していたピルシートの最後の服用日を示すテキストです。ユーザーがピルの服用進度や次のシートとの関連性を把握するために表示される情報です。",
     "placeholders": {
@@ -617,11 +621,11 @@
       }
     }
   },
-  "endOfPillDays": "Akhir Hari Pengambilan",
+  "endOfPillDays": "Tamat Hari Pengambilan",
   "@endOfPillDays": {
     "description": "ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。"
   },
-  "changedToNumber": "Tukar kepada nombor",
+  "changedToNumber": "Tukar ke nombor",
   "@changedToNumber": {
     "description": "ピルシートUIでピルの表示番号を変更する機能に関するメッセージです。ユーザーがピルの番号表示を調整する際に使用されます。"
   },
@@ -629,47 +633,43 @@
   "@displayMode": {
     "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
   },
-  "dateDisplay": "paparan tarikh",
+  "dateDisplay": "Paparan Tarikh",
   "@dateDisplay": {
     "description": "設定画面で日付の表示形式を選択する機能のラベルです。ピルの服用記録や生理日などの日付情報をどのような形式で表示するかを設定する際に使用されます。"
   },
-  "pillNumber": "Nombor pil",
+  "pillNumber": "Nombor Pil",
   "@pillNumber": {
     "description": "ピル番号"
   },
-  "pillDays": "Jumlah Hari Pengambilan",
-  "@pillDays": {
-    "description": "服用日数"
-  },
-  "pillDaysCycle": "Hari Pengambilan (Kitaran)",
+  "pillDaysCycle": "Hari Pengambilan",
   "@pillDaysCycle": {
     "description": "1つの服用周期において、実際にピルを服用する日数を表示する項目です。通常のピルでは21日間服用、7日間休薬という28日周期が一般的です。"
   },
-  "pillSheetEnded": "Pakej pil telah tamat",
+  "pillSheetEnded": "Pek pil telah selesai",
   "@pillSheetEnded": {
     "description": "1つのピルシート（通常21日分のピルが入った包装シート）を全て服用し終えた時に表示されるメッセージです。ユーザーにピルシートの終了を通知し、次のシートの準備や休薬期間への移行を促します。"
   },
-  "checkLastTakenDate": "Semak tarikh terakhir anda mengambil pil",
+  "checkLastTakenDate": "Semak tarikh terakhir mengambil",
   "@checkLastTakenDate": {
     "description": "ユーザーが最後にピルを服用した日付を確認するためのボタンやリンクに表示されるテキストです。服用履歴の確認や飲み忘れ防止のために使用されます。"
   },
-  "pleaseRegisterAccount": "Sila daftarkan akaun anda",
+  "pleaseRegisterAccount": "Sila daftar akaun",
   "@pleaseRegisterAccount": {
     "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
   },
-  "cannotTransferPremiumWithoutAccount": "Anda tidak dapat meneruskan fungsi premium ketika menukar peranti atau kehilangan telefon pintar.",
+  "cannotTransferPremiumWithoutAccount": "Ciri premium tidak dapat dipindahkan semasa menukar peranti atau kehilangan telefon pintar",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   },
-  "reexperiencePremiumFeatures": "Anda boleh mengalami semula ciri premium selama 14 hari! Ketuk untuk berkongsi di media sosial!",
+  "reexperiencePremiumFeatures": "Nikmati semula ciri premium selama 14 hari! Ketik untuk berkongsi di media sosial!",
   "@reexperiencePremiumFeatures": {
     "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   },
-  "whereToShare": "Di mana anda ingin berkongsi?",
+  "whereToShare": "Di mana anda mahu berkongsi?",
   "@whereToShare": {
     "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
   },
-  "pauseTakingDay": "🌙 Hari rehat dari pengambilan {day}",
+  "pauseTakingDay": "🌙 Hari ke-{day} rehat pengambilan",
   "@pauseTakingDay": {
     "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
     "placeholders": {
@@ -678,7 +678,7 @@
       }
     }
   },
-  "withDay": "Hari ke-{word}",
+  "withDay": "hari ke-{word}",
   "@withDay": {
     "description": "ピルシートや服用履歴で「何日目」かを表示する際に使用されます。{word}には数字（1、2、3など）が入り、「1日目」「2日目」のように表示されます。",
     "placeholders": {
@@ -687,7 +687,7 @@
       }
     }
   },
-  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays} hari",
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}hari ke-{restDurationDays}",
   "@restDurationDays": {
     "description": "休薬期間（ピルを服用しない期間）の経過日数を表示する際に使用されます。{restDurationDays}には日数が入り、全体で「休薬〇日目」のような形で表示されます。",
     "placeholders": {
@@ -699,7 +699,7 @@
       }
     }
   },
-  "daysUntilPausePeriod": "Dalam {diffPlusOne} hari lagi adalah tempoh {activePillSheetPillSheetTypeNotTakenWord}",
+  "daysUntilPausePeriod": "Lagi {diffPlusOne} hari ke tempoh {activePillSheetPillSheetTypeNotTakenWord}",
   "@daysUntilPausePeriod": {
     "description": "ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。",
     "placeholders": {
@@ -711,7 +711,7 @@
       }
     }
   },
-  "remainingDaysAllFeatures": "Anda dapat menggunakan semua fitur selama {diff} hari yang tersisa",
+  "remainingDaysAllFeatures": "Tinggal {diff} hari lagi untuk menggunakan semua ciri",
   "@remainingDaysAllFeatures": {
     "description": "プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。",
     "placeholders": {
@@ -720,19 +720,19 @@
       }
     }
   },
-  "todayIsTaking": "💊 Ambil pada hari ini",
+  "todayIsTaking": "💊 Minum hari ini",
   "@todayIsTaking": {
     "description": "ピルの服用管理画面で、今日がピル服用の予定日であることをユーザーに通知するメッセージです。カレンダーやホーム画面などで、今日が服用日であることを示すステータス表示として使用されます。"
   },
-  "todayPillToTake": "💊 Pil yang perlu diambil hari ini",
+  "todayPillToTake": "💊 Pil hari ini",
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   },
-  "number": "Nombor",
+  "number": "No.",
   "@number": {
     "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   },
-  "recordedMenstruationStartDate": "Direkod bermula haid pada {DateTimeFormatterMonthAndDay}",
+  "recordedMenstruationStartDate": "Permulaan haid dari {DateTimeFormatterMonthAndDay} telah direkod",
   "@recordedMenstruationStartDate": {
     "description": "ユーザーが生理開始日を記録した後に表示される確認メッセージです。「○月○日から生理開始として記録しました」という意味で、記録が完了したことをユーザーに知らせる文言です。",
     "placeholders": {
@@ -741,7 +741,7 @@
       }
     }
   },
-  "menstruationStartDate": "Tarikh mula haid",
+  "menstruationStartDate": "Tarikh Mula Haid",
   "@menstruationStartDate": {
     "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   },
@@ -749,11 +749,11 @@
   "@menstruationEndDate": {
     "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
   },
-  "menstruationScheduleDate": "Tarikh jangkaan haid",
+  "menstruationScheduleDate": "Tarikh Haid Dijangka",
   "@menstruationScheduleDate": {
     "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
   },
-  "menstruationScheduleDateWithNumber": "Jadual haid: Hari ke-{diffPlusOne}",
+  "menstruationScheduleDateWithNumber": "Jangkaan Haid: Hari ke-{diffPlusOne}",
   "@menstruationScheduleDateWithNumber": {
     "description": "生理管理機能で、アプリが予測した次回生理開始日までの残り日数を「生理予定：X日目」形式で表示する際に使用される文字列です。{diffPlusOne}には具体的な日数（1日目、2日目など）が入り、ユーザーのピル服用スケジュールと連動した生理周期予測を示します。",
     "placeholders": {
@@ -762,7 +762,7 @@
       }
     }
   },
-  "menstruationScheduleDateWithNumberAndPillNumber": "Jadual Haid: Hari ke-{diffPlusOne} untuk {pillNumber}",
+  "menstruationScheduleDateWithNumberAndPillNumber": "Jangkaan Haid: Hari ke-{diffPlusOne} pil {pillNumber}",
   "@menstruationScheduleDateWithNumberAndPillNumber": {
     "description": "ピルシート上で生理予定日の表示に使用される文字列。{diffPlusOne}は周期の何日目か、{pillNumber}はその日に服用するピルの番号を表示します。",
     "placeholders": {
@@ -774,7 +774,7 @@
       }
     }
   },
-  "menstruationRemainingDay": "{diff} hari lagi",
+  "menstruationRemainingDay": "lagi {diff} hari",
   "@menstruationRemainingDay": {
     "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
     "placeholders": {
@@ -783,7 +783,7 @@
       }
     }
   },
-  "menstruationProgressingDay": "{diffPlusOne} hari",
+  "menstruationProgressingDay": "Hari ke-{diffPlusOne}",
   "@menstruationProgressingDay": {
     "description": "生理開始から経過した日数を表示する際に使用されるテキストです。生理管理画面で「3日目」「5日目」のように現在の生理周期の進行状況を示します。",
     "placeholders": {
@@ -792,19 +792,19 @@
       }
     }
   },
-  "recordMenstruation": "Rekodkan haid",
+  "recordMenstruation": "Rekod Haid",
   "@recordMenstruation": {
     "description": "生理記録機能のラベルです。ユーザーが生理の開始や期間を入力・記録する際に表示されるテキストです。"
   },
-  "menstruationHistory": "Sejarah haid",
+  "menstruationHistory": "Rekod Haid",
   "@menstruationHistory": {
     "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
   },
-  "menstruationFromToday": "Haid hari ini",
+  "menstruationFromToday": "Haid bermula hari ini",
   "@menstruationFromToday": {
     "description": "生理記録機能で、ユーザーが今日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を今日として登録するための操作に使用されます。"
   },
-  "menstruationFromYesterday": "Haid bermula dari semalam",
+  "menstruationFromYesterday": "Haid dari semalam",
   "@menstruationFromYesterday": {
     "description": "生理記録機能で、ユーザーが昨日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を昨日として登録するための操作に使用されます。"
   },
@@ -812,7 +812,7 @@
   "@selectMenstruationStartDate": {
     "description": "生理記録機能で、ユーザーが新しい生理期間の開始日を設定する際に表示されるボタンやメニューのラベルです。生理周期の管理において、生理開始日を記録するための操作に使用されます。"
   },
-  "menstruationCycle": "{menstruationDuration} hari kitaran",
+  "menstruationCycle": "kitaran {menstruationDuration} hari",
   "@menstruationCycle": {
     "description": "生理周期の日数を表示する際に使用されるテキストです。{menstruationDuration}には28日、30日などの周期日数が入ります。",
     "placeholders": {
@@ -821,23 +821,23 @@
       }
     }
   },
-  "login": "Log Masuk",
+  "login": "Log masuk",
   "@login": {
     "description": "アプリにアカウントでログインする際のボタンやリンクに表示されるテキストです。ユーザーが既存のアカウントでサインインするためのアクション表示に使用されます。"
   },
-  "beforePremiumRegistration": "Sebelum mendaftar premium...",
+  "beforePremiumRegistration": "Sebelum melanggan premium...",
   "@beforePremiumRegistration": {
     "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
   },
-  "createNewAccountIfNotLoggedIn": "Jika anda belum pernah log masuk ke Pilll, akaun baru akan dibuat.",
+  "createNewAccountIfNotLoggedIn": "Jika anda belum pernah log masuk ke Pilll, akaun baru akan dibuat",
   "@createNewAccountIfNotLoggedIn": {
     "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   },
-  "registerAccountForDataTransfer": "Mendaftar untuk akaun akan membolehkan pemindahan data.",
+  "registerAccountForDataTransfer": "Daftar akaun untuk membolehkan pemindahan data",
   "@registerAccountForDataTransfer": {
     "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   },
-  "registerAccountToKeepData": "Sila daftarkan akaun anda untuk menyimpan maklumat akaun.",
+  "registerAccountToKeepData": "Sila daftarkan akaun untuk menyimpan maklumat akaun anda",
   "@registerAccountToKeepData": {
     "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   },
@@ -859,23 +859,23 @@
       }
     }
   },
-  "premiumRegistrationComplete": "Pendaftaran Pilll Premium selesai",
+  "premiumRegistrationComplete": "Pendaftaran Pilll Premium Berjaya",
   "@premiumRegistrationComplete": {
     "description": "有料プラン「Pilll Premium」への登録が正常に完了したことをユーザーに知らせる成功メッセージです。アプリ名「Pilll」は翻訳せずそのまま使用してください。"
   },
-  "thankYouForRegistration": "Terima kasih kerana mendaftar. Semua ciri kini boleh digunakan!",
+  "thankYouForRegistration": "Terima kasih kerana mendaftar.\nSemua ciri kini boleh digunakan!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
   },
-  "limitedTimeDiscount": "Sekarang anda boleh menggunakannya dengan harga terhad buat selamanya",
+  "limitedTimeDiscount": "Kini harga istimewa untuk kegunaan selamanya",
   "@limitedTimeDiscount": {
     "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   },
-  "standardMonthlyPlan": "Pelan Bulanan Biasa",
+  "standardMonthlyPlan": "Pelan Bulanan Standard",
   "@standardMonthlyPlan": {
     "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   },
-  "annualPlan": "Pelan tahunan",
+  "annualPlan": "Pelan Tahunan",
   "@annualPlan": {
     "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
   },
@@ -897,7 +897,16 @@
       }
     }
   },
-  "premiumTermsNotice1": "Tempoh langganan premium akan diperbaharui secara automatik setiap bulan atau setiap tahun bermula dari tarikh mula.",
+  "dailyPrice": "{dailyPriceString}/hari",
+  "@dailyPrice": {
+    "description": "プレミアムプランの1日あたりの料金を表示する際に使用されます。{dailyPriceString}は計算された1日の価格が入ります。",
+    "placeholders": {
+      "dailyPriceString": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumTermsNotice1": "• Tempoh kontrak premium akan diperbaharui secara automatik setiap 1 bulan atau 1 tahun bermula dari tarikh permulaan",
   "@premiumTermsNotice1": {
     "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
   },
@@ -905,23 +914,23 @@
   "@premiumTermsBullet": {
     "description": "プレミアムプランの利用規約で項目を列挙する際に使用する箇条書きのバレット記号です。各言語の慣習に合わせた適切な箇条書き記号（・、•、-など）に翻訳してください。"
   },
-  "slashSeparator": "Aplikasi pengurusan pengambilan pil mudah alih Pilll sedang dibangunkan untuk menghilangkan kebimbangan terlupa mengambil pil. Aplikasi ini membolehkan anda mengingatkan masa pengambilan pil, menguruskan rekod pengambilan, dan menguruskan kitaran haid.",
+  "slashSeparator": "/",
   "@slashSeparator": {
     "description": "UIで項目を区切る際に使用するスラッシュ記号です。各言語の慣習に合わせて、適切な区切り文字（/、｜、-など）とスペースの有無を調整してください。"
   },
-  "premiumTermsNotice2": "Pendedahan berdasarkan Akta Perdagangan tertentu",
+  "premiumTermsNotice2": "Paparan Berdasarkan Undang-undang Perdagangan Tertentu",
   "@premiumTermsNotice2": {
     "description": "プレミアムプラン（有料機能）の法的情報を表示する際のタイトルです。日本の特定商取引法に基づく事業者情報の表示義務に対応します。"
   },
-  "premiumTermsNotice3": "Sila semak dan daftar.",
+  "premiumTermsNotice3": "sila semak terlebih dahulu sebelum mendaftar",
   "@premiumTermsNotice3": {
     "description": "プレミアムプラン登録時に、利用規約や法的事項の確認を促すメッセージの最後の部分です。ユーザーに内容を確認してから登録を進めるよう案内する文言です。"
   },
-  "autoRenewNotice": "• Langganan premium akan diperbaharui secara automatik jika tidak dibatalkan lebih dari 24 jam sebelum tarikh tamat langganan.",
+  "autoRenewNotice": "・Tempoh langganan akan diperbaharui secara automatik melainkan anda membatalkan sekurang-kurangnya 24 jam sebelum tarikh tamat tempoh langganan premium",
   "@autoRenewNotice": {
     "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
   },
-  "cancelAutoRenewInfo": "Selepas pembelian, pembatalan pembaharuan automatik boleh dilakukan dalam tetapan akaun aplikasi {storeName}. (Pembatalan pembaharuan automatik tidak boleh dilakukan dari dalam aplikasi.)",
+  "cancelAutoRenewInfo": "・Selepas pembelian, pembatalan pembaharuan automatik boleh dilakukan dalam tetapan akaun aplikasi {storeName}. (Pembatalan pembaharuan automatik tidak boleh dilakukan dari dalam aplikasi).",
   "@cancelAutoRenewInfo": {
     "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
     "placeholders": {
@@ -930,19 +939,19 @@
       }
     }
   },
-  "moreDetails": "Klik di sini untuk maklumat lanjut",
+  "moreDetails": "Lihat butiran",
   "@moreDetails": {
     "description": "詳細情報を表示するためのリンクやボタンに使用されるテキストです。ユーザーが追加の情報を確認したい時にタップ/クリックする要素の表示文言として使用されます。"
   },
-  "restorePurchase": "Maklumat pembelian telah dipulihkan.",
+  "restorePurchase": "Maklumat pembelian telah dipulihkan",
   "@restorePurchase": {
     "description": "ピルアプリのプレミアムプラン（有料機能）を復元した際に表示される成功メッセージです。ユーザーが機種変更や再インストール後に、以前購入したプレミアム機能を復元完了したことを知らせる通知文言として使用されます。"
   },
-  "previouslyPurchased": "Pengguna yang telah membeli sebelum ini sila ke sini",
+  "previouslyPurchased": "Telah membeli sebelumnya? Klik di sini",
   "@previouslyPurchased": {
     "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
   },
-  "noPreviousPurchaseInfo": "Maklumat pembelian sebelum ini tidak dapat dijumpai. Sila semak akaun anda dan cuba lagi.",
+  "noPreviousPurchaseInfo": "Maklumat pembelian sebelumnya tidak dijumpai. Sila semak akaun anda dan cuba lagi.",
   "@noPreviousPurchaseInfo": {
     "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
   },
@@ -959,11 +968,27 @@
       }
     }
   },
-  "youArePremiumMember": "Anda adalah\nahli premium",
+  "lifetimePlan": "Pembelian sekali",
+  "@lifetimePlan": {
+    "description": "アプリ内の有料プランの支払い方式の1つで、一度購入すれば永続的に利用できるプランを指します。サブスクリプション（月額・年額）とは異なる買い切り型の課金方式です。"
+  },
+  "lifetimePlanDescription": "Premium selamanya dengan sekali pembelian",
+  "@lifetimePlanDescription": {
+    "description": "買い切り型有料プランの説明文で、一度の支払いで永続的にプレミアム機能が利用できることを示すテキストです。"
+  },
+  "lifetimePlanSpecialOffer": "Pelan Beli Sekali\nHarga Istimewa Masa Terhad",
+  "@lifetimePlanSpecialOffer": {
+    "description": "買い切り型プレミアムプランの期間限定特別価格オファーを表示するタイトルテキストです。課金画面で通常価格より安い特別価格で提供される際に使用されます。"
+  },
+  "lifetimePlanStandardPrice": "Harga Biasa",
+  "@lifetimePlanStandardPrice": {
+    "description": "買い切り型プレミアムプランの通常価格を表示するラベルテキストです。課金画面で特別価格オファーと対比して表示される際に使用されます。"
+  },
+  "youArePremiumMember": "Anda adalah ahli premium",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   },
-  "thankYouMessage": "Terima kasih kerana menggunakan aplikasi kami.\nDengan bantuan anda, kami dapat terus menjalankan Pilll.",
+  "thankYouMessage": "Terima kasih atas penggunaan anda.\nBerkat sokongan anda, kami dapat meneruskan operasi Pilll.",
   "@thankYouMessage": {
     "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   },
@@ -971,31 +996,31 @@
   "@premiumFeaturesList": {
     "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
   },
-  "pushNotificationForTakingRecord": "📩 Rekod pengambilan dari pemberitahuan push",
+  "pushNotificationForTakingRecord": "📩 Rekod pengambilan dari notifikasi tolak",
   "@pushNotificationForTakingRecord": {
     "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
-  "viewAndRecordTakingHistory": "🗂 Catatan dan Lihat Sejarah Pengambilan",
+  "viewAndRecordTakingHistory": "🗂 Rekod & Paparan Sejarah Pengambilan",
   "@viewAndRecordTakingHistory": {
     "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   },
-  "displayDateOnPillSheet": "📆 Paparan tarikh pada lembaran pil",
+  "displayDateOnPillSheet": "📆 Paparan Tarikh pada Helaian Pil",
   "@displayDateOnPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
   },
-  "autoRefillNewPillSheet": "📦 Mengisi semula helaian pil baru secara automatik",
+  "autoRefillNewPillSheet": "📦 Isi semula lembaran pil baharu secara automatik",
   "@autoRefillNewPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
   },
-  "viewPastData": "👀 Lihat Data Masa Lalu",
+  "viewPastData": "👀 Paparan Data Masa Lalu",
   "@viewPastData": {
     "description": "プレミアム機能の一覧で表示される機能名です。過去の服用記録、生理記録、体調記録などの履歴データを閲覧できる機能を表しています。"
   },
-  "customizeHealthTags": "🏷 Sesuaikan tag keadaan kesihatan",
+  "customizeHealthTags": "🏷 Sesuaikan tag kesihatan",
   "@customizeHealthTags": {
     "description": "プレミアム機能の一覧で表示される機能名です。ユーザーが日記機能で体調を記録する際に使用するタグ（頭痛、吐き気、気分など）を自分好みにカスタマイズできる機能を表しています。"
   },
-  "hideAds": "🚫 Nyahawai Iklan",
+  "hideAds": "🚫 Tanpa Iklan",
   "@hideAds": {
     "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
   },
@@ -1003,19 +1028,15 @@
   "@seeDetailsOfPremiumFeatures": {
     "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   },
-  "popularFeatures": "Ciri popular",
+  "popularFeatures": "Ciri\nPopular",
   "@popularFeatures": {
     "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
   },
-  "viewPremiumFeatures": "Lihat fungsi premium",
+  "viewPremiumFeatures": "Lihat Ciri Premium",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   },
-  "addedDisplayModePillDaysCycle": "Mod paparan bilangan hari pengambilan (kitaran) telah ditambahkan.",
-  "@addedDisplayModePillDaysCycle": {
-    "description": "表示モード服用日数(周期)が追加されました"
-  },
-  "seeDetails": "Lihat dan ketahui lebih lanjut",
+  "seeDetails": "Lihat Detail",
   "@seeDetails": {
     "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
   },
@@ -1023,11 +1044,11 @@
   "@stepThreeOfThree": {
     "description": "アプリの初期設定やオンボーディングプロセスにおける3番目（最終）のステップを示すテキストで、「3/3」の形式で進捗を表示します。画面上部などに表示され、ユーザーに現在のステップ位置を分数形式で伝える役割があります。"
   },
-  "missedPillNotification": "Notifikasi terlupa mengambil pil",
+  "missedPillNotification": "Peringatan Pil Terlupa",
   "@missedPillNotification": {
     "description": "設定した服用時刻にピルを飲み忘れた際にユーザーに送信されるプッシュ通知のタイトルまたは内容として表示されるテキストです。アプリの主要機能である「飲み忘れ防止」のためのリマインド機能の一部として使用されます。"
   },
-  "setMultipleReminders": "Anda boleh mengelakkan terlupa mengambil pil dengan menetapkan beberapa pengingat.",
+  "setMultipleReminders": "Dengan menetapkan beberapa peringatan, anda dapat mencegah terlupa mengambil pil",
   "@setMultipleReminders": {
     "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
   },
@@ -1035,7 +1056,7 @@
   "@and": {
     "description": "2つの項目や要素を並列に繋ぐ際に使用される接続詞です。アプリ内のテキストで「設定と履歴」「朝と夜」などの表現に使われます。"
   },
-  "readAndStartUsing": "Baca dan mula gunakan",
+  "readAndStartUsing": "Sila baca dan mulakan penggunaan",
   "@readAndStartUsing": {
     "description": "利用規約やプライバシーポリシー等の重要な情報を読んでから、アプリの使用を開始することを促すボタンまたは案内文です。ユーザーに対して情報の確認と利用開始の両方のアクションを促している表現です。"
   },
@@ -1043,7 +1064,7 @@
   "@next": {
     "description": "画面やフォームで次のステップに進むためのボタンラベルです。初回設定、チュートリアル、各種設定画面などで使用されます。"
   },
-  "notificationIndex": "Pemberitahuan {number}",
+  "notificationIndex": "Notifikasi{number}",
   "@notificationIndex": {
     "description": "複数のピル服用リマインダー通知がある場合に、各通知を番号で区別するためのラベルです。通知設定画面や通知一覧で「通知1」「通知2」のように表示されます。",
     "placeholders": {
@@ -1052,15 +1073,15 @@
       }
     }
   },
-  "takingRecordFromNotification": "Anda boleh merekod pengambilan dari pemberitahuan.",
+  "takingRecordFromNotification": "\\ Rekod pengambilan boleh dibuat dari notifikasi /",
   "@takingRecordFromNotification": {
     "description": "プッシュ通知から直接ピルの服用記録を行える機能を説明するユーザー向けの案内文です。リマインド通知を受け取ったユーザーが、アプリを開かなくても通知から服用記録できる便利さを伝える文言です。"
   },
-  "startApp": "Mulaikan aplikasi",
+  "startApp": "Mulakan Aplikasi",
   "@startApp": {
     "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
   },
-  "loggedInWithProvider": "Logged in with {accountTypeProviderName}",
+  "loggedInWithProvider": "Berjaya log masuk dengan {accountTypeProviderName}",
   "@loggedInWithProvider": {
     "description": "ユーザーが外部認証プロバイダー（Google、Apple、Facebookなど）を使用してログインに成功した際に表示される確認メッセージです。{accountTypeProviderName}には使用したサービス名が入ります。",
     "placeholders": {
@@ -1069,15 +1090,15 @@
       }
     }
   },
-  "tellAboutPrescribedSheet": "Sila beritahu mengenai helaian yang diberi preskripsi.",
+  "tellAboutPrescribedSheet": "Sila nyatakan maklumat tentang pakej pil yang dipreskripsikan",
   "@tellAboutPrescribedSheet": {
     "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
   },
-  "existingAccountUsers": "Jika anda sudah mempunyai akaun, sila klik di sini",
+  "existingAccountUsers": "Sudah ada akaun? Klik di sini",
   "@existingAccountUsers": {
     "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   },
-  "selectTodayPillNumber": "Hari ini ({todayString}) \nKetuk nombor pil yang diambil atau telah diambil.",
+  "selectTodayPillNumber": "Ketuk nombor pil yang perlu/telah diminum hari ini ({todayString})",
   "@selectTodayPillNumber": {
     "description": "ピルシート画面で、今日服用予定または服用済みのピルの番号をタップするよう促すユーザー向けの操作説明です。服用記録を行うためのUI要素に表示されます。",
     "placeholders": {
@@ -1086,11 +1107,11 @@
       }
     }
   },
-  "notYetKnown": "belum tahu",
+  "notYetKnown": "Belum ditentukan",
   "@notYetKnown": {
     "description": "ユーザーがまだ情報を入力していない、または設定していない状態を表示する際に使用されます。生理予定日や服用スケジュールなど、アプリの各機能でデータが未確定の場合に表示されるテキストです。"
   },
-  "pillForToday": "Pil yang diambil pada {today}",
+  "pillForToday": "Pil untuk {today} ialah",
   "@pillForToday": {
     "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
     "placeholders": {
@@ -1112,15 +1133,15 @@
   "@preview": {
     "description": "設定や入力内容を事前に確認するためのプレビュー表示に使用される文字列です。ユーザーが何かを実行・保存する前の確認画面で表示されます。"
   },
-  "normal": "Biasa",
+  "normal": "Normal",
   "@normal": {
     "description": "アプリ内で状態や設定を表す際の「通常」や「正常」を意味する汎用的な文字列です。ピルの服用状態、生理の状態、アプリの動作モードなど、標準的・正常な状態を示す場面で使用されます。"
   },
-  "missed": "Lupa mengambil",
+  "missed": "Terlepas",
   "@missed": {
     "description": "ピルの服用予定時刻を過ぎても服用していない状態を表す表示ラベルです。アプリ内でユーザーがピルを飲み忘れた際に表示される状態表示として使用されます。"
   },
-  "showsDate": "Paparan tarikh",
+  "showsDate": "Paparkan tarikh",
   "@showsDate": {
     "description": "設定画面やオプションメニューで使用される、日付表示の有無を切り替える設定項目のラベルです。ユーザーがアプリ内で日付情報を表示するかどうかを選択する際に表示されます。"
   },
@@ -1128,7 +1149,7 @@
   "@showsPillNumber": {
     "description": "ピルシートの各薬に表示される順番の数字（1日目、2日目など）を表示するかどうかを切り替える設定項目のラベルです。ユーザーがピルシートUI上で薬の服用順序を数字で確認したい場合に使用されます。"
   },
-  "showsDescription": "Tunjukkan teks penerangan",
+  "showsDescription": "Paparkan keterangan",
   "@showsDescription": {
     "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
   },
@@ -1152,7 +1173,7 @@
   "@pilll": {
     "description": "ピルの服用管理アプリ「Pilll」のアプリ名です。基本的には「Pilll」のまま使用しますが、各言語の文字体系に合わせて表記を調整してください。"
   },
-  "changeMissedNotificationMessage": "Anda boleh mengubah teks pemberitahuan apabila anda terlupa mengambil pil.",
+  "changeMissedNotificationMessage": "Anda boleh mengubah mesej pemberitahuan apabila terlupa mengambil pil",
   "@changeMissedNotificationMessage": {
     "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   },
@@ -1165,7 +1186,7 @@
       }
     }
   },
-  "changeNotificationHeader": "Anda boleh menukar bahagian awal pemberitahuan.",
+  "changeNotificationHeader": "Anda boleh menukar bahagian awal pemberitahuan",
   "@changeNotificationHeader": {
     "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
   },
@@ -1178,11 +1199,11 @@
       }
     }
   },
-  "enterAtLeastOneCharacter": "Sila masukkan lebih daripada 0 aksara",
+  "enterAtLeastOneCharacter": "Sila masukkan sekurang-kurangnya 0 aksara",
   "@enterAtLeastOneCharacter": {
     "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   },
-  "changeDailyNotificationMessage": "Anda boleh menukar teks pemberitahuan apabila tidak ketinggalan pengambilan.",
+  "changeDailyNotificationMessage": "Anda boleh mengubah mesej pemberitahuan apabila tidak terlupa mengambil pil",
   "@changeDailyNotificationMessage": {
     "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   },
@@ -1195,7 +1216,7 @@
       }
     }
   },
-  "receiveDailyNotificationAt9AM": "Terima pemberitahuan pada 9:00 hari itu",
+  "receiveDailyNotificationAt9AM": "Terima notifikasi pada pukul 9:00 hari itu",
   "@receiveDailyNotificationAt9AM": {
     "description": "ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。"
   },
@@ -1203,11 +1224,11 @@
   "@save": {
     "description": "設定変更や入力内容を確定・保存する際に表示されるボタンのテキストです。アプリ内の様々な画面（服用設定、通知設定、プロフィール編集など）で汎用的に使用されます。"
   },
-  "physicalCondition": "Keadaan",
+  "physicalCondition": "Keadaan Badan",
   "@physicalCondition": {
     "description": "日記機能において、ユーザーが体調や身体の状態を記録する際の項目名として表示されます。ピル服用による体調の変化や身体のコンディションを記録するために使用されます。"
   },
-  "deletedDiaryCannotBeRecovered": "Diari yang telah dipadam tidak boleh dipulihkan.",
+  "deletedDiaryCannotBeRecovered": "Diari yang telah dipadamkan tidak dapat dipulihkan",
   "@deletedDiaryCannotBeRecovered": {
     "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
   },
@@ -1215,11 +1236,11 @@
   "@sex": {
     "description": "日記機能において、体調記録の一項目として性的活動の有無を記録する際のラベルです。ピル服用管理との関連で重要な体調データとして使用されます。"
   },
-  "previousPillSheetGroup": "Kumpulan helaian pil sebelumnya",
+  "previousPillSheetGroup": "Kumpulan Pil Sebelumnya",
   "@previousPillSheetGroup": {
     "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
   },
-  "noPreviousPillSheetGroup": "Kumpulan pil yang terakhir masih tidak wujud.",
+  "noPreviousPillSheetGroup": "Kumpulan lembaran pil sebelum ini belum wujud",
   "@noPreviousPillSheetGroup": {
     "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
   },
@@ -1240,59 +1261,59 @@
   "@reloadScreen": {
     "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
   },
-  "contactIfNotResolved": "Sila rujuk di sini jika masalah tidak diselesaikan",
+  "contactIfNotResolved": "Jika tidak dapat diselesaikan, klik di sini",
   "@contactIfNotResolved": {
     "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
   },
-  "shareFeedback": "Sila berikan maklum balas tentang Pilll",
+  "shareFeedback": "Sila kongsi pendapat anda tentang Pilll",
   "@shareFeedback": {
     "description": "ユーザーにアプリに対する感想やフィードバックの提供を促すメッセージです。設定画面やフィードバック画面で、アプリの改善のためにユーザーの意見を求める際に表示されます。"
   },
-  "confirm": "Tentukan",
+  "confirm": "Sahkan",
   "@confirm": {
     "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
   },
-  "surveyForServiceImprovement": "Sila, berikan kerjasama anda dalam menjawab soal selidik untuk penambahbaikan perkhidmatan.",
+  "surveyForServiceImprovement": "Sekiranya berkenan, sila bantu kami dengan menyertai tinjauan untuk penambahbaikan perkhidmatan",
   "@surveyForServiceImprovement": {
     "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
   },
-  "participate": "Berkongsi",
+  "participate": "Bekerjasama",
   "@participate": {
     "description": "サービス改善アンケートに参加・協力するためのボタンやリンクのテキストです。ユーザーがアンケート調査に協力することを表現する動詞として使用されます。"
   },
-  "notHelp": "tidak",
+  "notHelp": "Tidak membantu",
   "@notHelp": {
     "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
   },
-  "serviceImprovementSurvey": "Tinjauan Peningkatan Perkhidmatan",
+  "serviceImprovementSurvey": "Tinjauan Penambahbaikan Perkhidmatan",
   "@serviceImprovementSurvey": {
     "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
   },
-  "satisfied": "Berpuas hati",
+  "satisfied": "Puas hati",
   "@satisfied": {
     "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足している」という回答を選択する際に表示される文字列です。"
   },
-  "notSatisfied": "Tidak puas",
+  "notSatisfied": "Tidak berpuas hati",
   "@notSatisfied": {
     "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足していない」という回答を選択する際に表示される文字列です。"
   },
-  "perNumber": "Mengikut nombor",
+  "perNumber": "mengikut nombor",
   "@perNumber": {
     "description": "ピルシートの薬の番号（1番、2番...）ごとに何かを行う際に使用される表現です。ピル管理機能で薬の順番や番号に基づいた表示・操作を示すフレーズです。"
   },
-  "howManyDaysDoesMenstruationLast": "Berapa hari haid akan berlanjutan?",
+  "howManyDaysDoesMenstruationLast": "Berapa hari haid anda berlangsung?",
   "@howManyDaysDoesMenstruationLast": {
     "description": "生理管理機能で、ユーザーの生理期間（日数）を入力してもらう際の質問文です。通常3-7日程度の期間を想定した設定画面で使用されます。"
   },
-  "daysMenstruationLasts": "Hari haid berterusan",
+  "daysMenstruationLasts": "hari haid berlangsung",
   "@daysMenstruationLasts": {
     "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
   },
-  "selectPillNumberForMenstruationStart": "Ketuk nombor pil untuk memulakan haid",
+  "selectPillNumberForMenstruationStart": "Ketik nombor pil di mana haid bermula",
   "@selectPillNumberForMenstruationStart": {
     "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
   },
-  "countOfSheet": "{number} keping",
+  "countOfSheet": "Lembar {number}",
   "@countOfSheet": {
     "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
     "placeholders": {
@@ -1305,7 +1326,7 @@
   "@newPillSheetStart": {
     "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
   },
-  "selectPillType": "Pilih jenis pil",
+  "selectPillType": "Pilih Jenis Pil",
   "@selectPillType": {
     "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
   },
@@ -1321,11 +1342,11 @@
   "@twentyFourPills": {
     "description": "ピルの種類選択時に表示される選択肢で、1シートに24錠入ったピルを表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
   },
-  "twentyOnePlusSevenDaysBreak": "21 tablet + 7 hari rehat",
+  "twentyOnePlusSevenDaysBreak": "21 pil + 7 hari rehat",
   "@twentyOnePlusSevenDaysBreak": {
     "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
-  "twentyFourPlusFourPlacebo": "24 tablet + 4 tablet plasebo",
+  "twentyFourPlusFourPlacebo": "24 pil + 4 pil plasebo",
   "@twentyFourPlusFourPlacebo": {
     "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   },
@@ -1333,11 +1354,11 @@
   "@twentyOnePlusSevenPlacebo": {
     "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
   },
-  "allActivePills": "semua ubat sebenar",
+  "allActivePills": "Semua pil aktif",
   "@allActivePills": {
     "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   },
-  "twentyFourPlusFourDaysBreak": "24 biji + 4 biji rehat",
+  "twentyFourPlusFourDaysBreak": "24 pil + 4 hari rehat",
   "@twentyFourPlusFourDaysBreak": {
     "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   },
@@ -1345,7 +1366,7 @@
   "@choosePillType": {
     "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   },
-  "notificationForNotTakenPeriod": "Notifikasi tempoh {pillSheetPillSheetTypeNotTakenWord}",
+  "notificationForNotTakenPeriod": "Pemberitahuan tempoh {pillSheetPillSheetTypeNotTakenWord}",
   "@notificationForNotTakenPeriod": {
     "description": "ピルシートの休薬期間やプラセボ期間など、薬を服用しない期間に関するプッシュ通知のタイトルとして使用されます。プレースホルダーには「休薬」「プラセボ」などの期間タイプが入ります。",
     "placeholders": {
@@ -1354,7 +1375,7 @@
       }
     }
   },
-  "autoRecordForNotTakenPeriodIfNotificationOff": "Jika pemberitahuan dimatikan, rekod pengambilan juga akan ditambahkan secara automatik untuk tempoh {pillSheetPillSheetTypeNotTakenWord}.",
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Apabila pemberitahuan dimatikan, rekod pengambilan pill untuk tempoh {pillSheetPillSheetTypeNotTakenWord} juga akan ditambah secara automatik",
   "@autoRecordForNotTakenPeriodIfNotificationOff": {
     "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
     "placeholders": {
@@ -1363,15 +1384,15 @@
       }
     }
   },
-  "requestForCancelSurvey": "Permintaan kerjasama untuk mengisi borang soal selidik selepas pembatalan",
+  "requestForCancelSurvey": "Mohon Kerjasama Anda untuk Tinjauan Selepas Pembatalan",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
   },
-  "pilllDescription": "Pilll aplikasi pengingat pil yang khusus untuk pengambilan pil",
+  "pilllDescription": "Pilll Aplikasi peringatan khusus pengambilan pil",
   "@pilllDescription": {
     "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   },
-  "reachedMaximumCountOfReminderTimes": "Anda telah mencapai batas maksimum yang boleh didaftarkan. Sila hadkan kepada tidak lebih daripada {ReminderTimeMaximumCount} item.",
+  "reachedMaximumCountOfReminderTimes": "Had maksimum pendaftaran telah dicapai. Sila hadkan kepada {ReminderTimeMaximumCount} item sahaja.",
   "@reachedMaximumCountOfReminderTimes": {
     "description": "ピルの服用リマインダー時刻を登録する際、設定可能な上限数に達した時に表示されるエラーメッセージです。ユーザーに対してリマインダー時刻の数を制限内（{ReminderTimeMaximumCount}で指定された件数以内）に収めるよう促しています。",
     "placeholders": {
@@ -1380,7 +1401,7 @@
       }
     }
   },
-  "minimumCountOfReminderTimes": "Masa notifikasi minimum yang diperlukan adalah {ReminderTimeMinimumCount} item.",
+  "minimumCountOfReminderTimes": "Sekurang-kurangnya {ReminderTimeMinimumCount} masa pemberitahuan diperlukan",
   "@minimumCountOfReminderTimes": {
     "description": "ピルの服用リマインド通知を設定する際に、必要最低限の通知時間数が設定されていない場合に表示されるエラーメッセージです。ユーザーが通知設定で最低限必要な件数を満たしていない時に警告として表示されます。",
     "placeholders": {
@@ -1389,7 +1410,7 @@
       }
     }
   },
-  "purchaseErrorUnknownError": "Ralat tidak diketahui telah berlaku. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownError": "Ralat tidak diketahui telah berlaku. Sila cuba lagi selepas beberapa minit. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownError": {
     "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
     "placeholders": {
@@ -1401,7 +1422,7 @@
       }
     }
   },
-  "purchaseErrorStoreProblemError": "Ralat berlaku di {storeName}. Sila tunggu seketika dan cuba lagi.",
+  "purchaseErrorStoreProblemError": "Ralat telah berlaku di {storeName}. Sila tunggu sebentar dan cuba semula.",
   "@purchaseErrorStoreProblemError": {
     "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
     "placeholders": {
@@ -1410,23 +1431,23 @@
       }
     }
   },
-  "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak dibenarkan pada peranti ini.",
+  "purchaseErrorPurchaseNotAllowedError": "Pembelian tidak dibenarkan pada peranti ini",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Sila semak sama ada kaedah pembayaran yang digunakan adalah sah dan cuba lagi.",
+  "purchaseErrorPurchaseInvalidError": "Pembayaran gagal. Sila pastikan kaedah pembayaran anda sah dan cuba lagi.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   },
-  "purchaseErrorProductNotAvailableForPurchaseError": "Pelan yang dimaksud tidak tersedia untuk dijual pada masa ini. Sila cuba lagi setelah memulakan semula aplikasi.",
+  "purchaseErrorProductNotAvailableForPurchaseError": "Pelan ini tidak tersedia pada masa ini. Sila mulakan semula aplikasi dan cuba lagi.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   },
-  "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan. Jika anda ingin memulihkan maklumat pembelian pada peranti ini, sila pergi ke \"Jika anda telah membeli sebelum ini, klik di sini\" untuk memulihkan maklumat pembelian.",
+  "purchaseErrorProductAlreadyPurchasedError": "Anda sudah membeli pelan ini. Untuk memulihkan maklumat pembelian pada peranti ini, sila klik 'Bagi yang sudah membeli sebelum ini' untuk memulihkan maklumat pembelian anda.",
   "@purchaseErrorProductAlreadyPurchasedError": {
     "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   },
-  "purchaseErrorReceiptAlreadyInUseError": "Telah dibeli. Maklumat pembelian ini telah digunakan oleh pengguna lain. Sila semak {accountName}.",
+  "purchaseErrorReceiptAlreadyInUseError": "Telah dibeli atau maklumat pembelian sedang digunakan oleh pengguna lain. Sila sahkan {accountName}",
   "@purchaseErrorReceiptAlreadyInUseError": {
     "description": "プレミアムプラン購入時に、購入情報（レシート）が既に別のユーザーアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーにアカウント確認を促す内容が含まれます。",
     "placeholders": {
@@ -1435,11 +1456,11 @@
       }
     }
   },
-  "purchaseErrorInvalidReceiptError": "Maklumat pembelian tidak sah. Sila semak maklumat pembelian.",
+  "purchaseErrorInvalidReceiptError": "Maklumat pembelian tidak sah. Sila semak maklumat pembelian anda.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   },
-  "purchaseErrorMissingReceiptFileError": "Tiada maklumat pembeli yang wujud. Sila log masuk ke peranti menggunakan {accountName} dan cuba lagi.",
+  "purchaseErrorMissingReceiptFileError": "Maklumat pembeli tidak dijumpai. Sila log masuk ke peranti menggunakan {accountName} dan cuba lagi.",
   "@purchaseErrorMissingReceiptFileError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
     "placeholders": {
@@ -1448,11 +1469,11 @@
       }
     }
   },
-  "purchaseErrorNetworkError": "Keadaan rangkaian tidak stabil. Sila semak keadaan sambungan sebelum mencuba.",
+  "purchaseErrorNetworkError": "Sambungan rangkaian tidak stabil. Sila periksa sambungan anda dan cuba lagi.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
   },
-  "purchaseErrorInvalidCredentialsError": "Pembelian gagal. Sila cuba lagi selepas beberapa ketika. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidCredentialsError": "Pembelian tidak berjaya. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidCredentialsError": {
     "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
     "placeholders": {
@@ -1464,7 +1485,7 @@
       }
     }
   },
-  "purchaseErrorUnexpectedBackendResponseError": "Anda tidak dapat membeli buat masa ini. Sila tunggu seketika dan cuba lagi. Jika masalah ini tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnexpectedBackendResponseError": "Pembelian tidak dapat dilakukan pada masa ini. Sila cuba lagi selepas beberapa masa. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnexpectedBackendResponseError": {
     "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
     "placeholders": {
@@ -1476,7 +1497,7 @@
       }
     }
   },
-  "purchaseErrorReceiptInUseByOtherSubscriberError": "Maklumat pembelian sedang digunakan oleh pengguna lain. Sila semak {accountName} yang log masuk pada peranti.",
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Maklumat pembelian telah digunakan oleh pengguna lain. Sila semak {accountName} yang log masuk pada peranti ini",
   "@purchaseErrorReceiptInUseByOtherSubscriberError": {
     "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
     "placeholders": {
@@ -1497,11 +1518,11 @@
       }
     }
   },
-  "purchaseErrorOperationAlreadyInProgressError": "Proses pembelian sedang berjalan secara berasingan. Sila semak semula selepas beberapa waktu.",
+  "purchaseErrorOperationAlreadyInProgressError": "Pemprosesan pembelian sedang dijalankan. Sila tunggu sebentar dan semak semula.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   },
-  "purchaseErrorUnknownBackendError": "Pembelian sekarang tidak dapat dilakukan. Sila cuba lagi selepas beberapa waktu. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownBackendError": "Pembelian tidak boleh dibuat pada masa ini. Sila tunggu sebentar dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Hubungi Kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownBackendError": {
     "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
     "placeholders": {
@@ -1513,7 +1534,7 @@
       }
     }
   },
-  "purchaseErrorInvalidAppleSubscriptionKeyError": "Pembelian gagal. Sila cuba lagi selepas beberapa waktu. Jika masalah ini tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Pembelian gagal. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidAppleSubscriptionKeyError": {
     "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
     "placeholders": {
@@ -1525,7 +1546,7 @@
       }
     }
   },
-  "purchaseErrorIneligibleError": "Pembelian anda gagal. Sila cuba lagi selepas beberapa waktu. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Hubungi. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorIneligibleError": "Pembelian gagal untuk pengguna anda. Sila cuba lagi selepas beberapa masa. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Hubungi. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorIneligibleError": {
     "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
     "placeholders": {
@@ -1537,7 +1558,7 @@
       }
     }
   },
-  "purchaseErrorInsufficientPermissionsError": "Anda tidak dapat mendaftar untuk pelan dengan {accountName} anda. Sila semak maklumat pembayaran anda dan cuba lagi.",
+  "purchaseErrorInsufficientPermissionsError": "Akaun {accountName} anda tidak dapat melanggan pelan ini. Sila semak maklumat pembayaran anda dan cuba lagi.",
   "@purchaseErrorInsufficientPermissionsError": {
     "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
     "placeholders": {
@@ -1546,7 +1567,7 @@
       }
     }
   },
-  "purchaseErrorPaymentPendingError": "Pembayaran telah dihentikan. Sila semak {storeName} dengan {accountName} yang sedang log masuk.",
+  "purchaseErrorPaymentPendingError": "Pembayaran telah terhenti di tengah jalan. Sila semak {storeName} dengan {accountName} yang sedang log masuk.",
   "@purchaseErrorPaymentPendingError": {
     "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
     "placeholders": {
@@ -1558,7 +1579,7 @@
       }
     }
   },
-  "purchaseErrorInvalidSubscriberAttributesError": "Pembelian telah gagal. Sila cuba lagi selepas beberapa waktu. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidSubscriberAttributesError": "Pembelian gagal. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidSubscriberAttributesError": {
     "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
     "placeholders": {
@@ -1570,7 +1591,7 @@
       }
     }
   },
-  "purchaseErrorLogOutWithAnonymousUserError": "Pengambilan maklumat pengguna gagal. Sila cuba lagi selepas beberapa waktu. Jika masalah ini berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorLogOutWithAnonymousUserError": "Gagal mendapatkan maklumat pengguna. Sila cuba lagi selepas beberapa ketika. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorLogOutWithAnonymousUserError": {
     "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
     "placeholders": {
@@ -1582,7 +1603,7 @@
       }
     }
   },
-  "purchaseErrorConfigurationError": "Pengesahan pembelian gagal. Sila cuba lagi selepas beberapa waktu. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Sembang. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorConfigurationError": "Gagal mendapatkan maklumat pembelian. Sila cuba lagi selepas beberapa saat. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Hubungi Kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorConfigurationError": {
     "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
     "placeholders": {
@@ -1594,7 +1615,7 @@
       }
     }
   },
-  "purchaseErrorUnsupportedError": "Ralat tidak diketahui. Sila kemas kini kepada versi terkini dan cuba lagi. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnsupportedError": "Ralat yang tidak diketahui punca. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnsupportedError": {
     "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
     "placeholders": {
@@ -1609,7 +1630,7 @@
       }
     }
   },
-  "purchaseErrorEmptySubscriberAttributesError": "Ralat tidak diketahui. Maklumat pembelian tidak dapat diperoleh terlebih dahulu. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorEmptySubscriberAttributesError": "Ralat yang tidak diketahui punca. Tidak dapat mendapatkan maklumat pembelian terlebih dahulu. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorEmptySubscriberAttributesError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。",
     "placeholders": {
@@ -1621,7 +1642,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingIdentifierError": "Ralat tidak diketahui. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingIdentifierError": "Ralat yang tidak diketahui. Sila kemaskini kepada versi terkini dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingIdentifierError": {
     "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
     "placeholders": {
@@ -1636,7 +1657,7 @@
       }
     }
   },
-  "purchaseErrorUnknownNonNativeError": "Ralat tidak diketahui. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Hubungi. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorUnknownNonNativeError": "Ini adalah ralat yang tidak diketahui punca. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorUnknownNonNativeError": {
     "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
     "placeholders": {
@@ -1651,7 +1672,7 @@
       }
     }
   },
-  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Ralat yang tidak diketahui. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah berterusan, sila hubungi melalui Tetapan > Pertanyaan. Kod: {errorCode} Maklumat lanjut: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Ralat tidak dikenali. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Hubungi Kami. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
     "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
     "placeholders": {
@@ -1666,7 +1687,7 @@
       }
     }
   },
-  "purchaseErrorCustomerInfoError": "Gagal mendapatkan maklumat pelanggan. Sila cuba lagi selepas beberapa ketika. Jika isu masih berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: Kod: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorCustomerInfoError": "Gagal mengambil maklumat pelanggan. Sila cuba lagi selepas beberapa ketika. Jika masalah tidak teratasi, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: Kod: {errorCode} {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorCustomerInfoError": {
     "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
     "placeholders": {
@@ -1681,7 +1702,7 @@
       }
     }
   },
-  "purchaseErrorSystemInfoError": "Terdapat masalah dengan tetapan peranti. Sila semak dan cuba semula. Jika tidak diselesaikan, sila hubungi melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorSystemInfoError": "Terdapat masalah dengan tetapan peranti. Sila periksa dan cuba lagi. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Hubungi Kami. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorSystemInfoError": {
     "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
     "placeholders": {
@@ -1696,7 +1717,7 @@
       }
     }
   },
-  "purchaseErrorBeginRefundRequestError": "Proses pemulangan wang telah dimulakan. Sila semak dan cuba lagi. Jika masalah masih tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Maklumat lanjut: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorBeginRefundRequestError": "Proses bayaran balik sedang dimulakan. Sila semak dan cuba lagi. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorBeginRefundRequestError": {
     "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
     "placeholders": {
@@ -1711,7 +1732,7 @@
       }
     }
   },
-  "purchaseErrorProductRequestTimeout": "Terdapat masa tamat. Sila semak persekitaran internet anda dan cuba lagi. Jika masalah tidak diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorProductRequestTimeout": "Masa tamat tempoh. Sila periksa sambungan internet anda dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Hubungi Kami. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorProductRequestTimeout": {
     "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
     "placeholders": {
@@ -1723,7 +1744,7 @@
       }
     }
   },
-  "purchaseErrorApiEndpointBlocked": "Ralat tidak diketahui. Sila kemas kini kepada versi terkini dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Maklumat lanjut: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorApiEndpointBlocked": "Ini adalah ralat yang tidak diketahui punca. Sila kemas kini ke versi terkini dan cuba lagi. Jika masalah tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorApiEndpointBlocked": {
     "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
     "placeholders": {
@@ -1738,7 +1759,7 @@
       }
     }
   },
-  "purchaseErrorInvalidPromotionalOfferError": "Ralat tidak diketahui. Sila kemas kini kepada versi terkini dan cuba lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Maklumat lanjut: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorInvalidPromotionalOfferError": "Ralat yang tidak diketahui punca. Sila kemas kini kepada versi terkini dan cuba lagi. Jika masih tidak dapat diselesaikan, sila hubungi kami melalui Tetapan > Pertanyaan. Kod: {errorCode} Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorInvalidPromotionalOfferError": {
     "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
     "placeholders": {
@@ -1753,7 +1774,7 @@
       }
     }
   },
-  "purchaseErrorOfflineConnectionError": "Terdapat masalah dengan sambungan. Sila semak keadaan sambungan anda dan cuba lagi. Jika masalah berterusan, sila hubungi melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
+  "purchaseErrorOfflineConnectionError": "Gangguan rangkaian. Sila semak sambungan rangkaian anda dan cuba sekali lagi. Jika masalah berterusan, sila hubungi kami melalui Tetapan > Pertanyaan. Butiran: {exceptionMessage}:{exceptionDetails}",
   "@purchaseErrorOfflineConnectionError": {
     "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
     "placeholders": {
@@ -1765,11 +1786,11 @@
       }
     }
   },
-  "forceUpdateTitle": "Sila kemas kini aplikasi.",
+  "forceUpdateTitle": "Sila kemaskini aplikasi",
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   },
-  "forceUpdateMessage": "Kami meminta anda untuk mengemas kini versi aplikasi anda. Sila kemas kini kepada versi terkini dari {storeName}.",
+  "forceUpdateMessage": "Sila kemaskini aplikasi anda ke versi terkini dari {storeName}",
   "@forceUpdateMessage": {
     "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
     "placeholders": {
@@ -1778,35 +1799,35 @@
       }
     }
   },
-  "visitHospital": "berkunjung ke klinik",
+  "visitHospital": "ke hospital",
   "@visitHospital": {
     "description": "アプリの予定機能で使用される項目です。定期的な医療機関への通院予定を指し、継続的な医療ケアのニュアンスを含みます。"
   },
-  "receiveNotificationAt9AM": "Menerima notifikasi pada jam 9:00 hari ini",
+  "receiveNotificationAt9AM": "Terima pemberitahuan pada 9:00 pada hari yang sama",
   "@receiveNotificationAt9AM": {
     "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
   },
-  "deletedScheduleCannotBeRestored": "Jadual yang dibuang tidak boleh dipulihkan.",
+  "deletedScheduleCannotBeRestored": "Jadual yang dipadam tidak dapat dipulihkan",
   "@deletedScheduleCannotBeRestored": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
   },
-  "deleteSchedule": "Saya akan memadamkan jadual.",
+  "deleteSchedule": "Padam jadual",
   "@deleteSchedule": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
   },
-  "onlySupportiOS": "Hanya menyokong aplikasi iOS",
+  "onlySupportiOS": "Hanya tersedia untuk aplikasi iOS",
   "@onlySupportiOS": {
     "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   },
-  "healthKitDoesNotSupport": "Aplikasi ini tidak tersedia untuk peranti yang tidak menyokong kesihatan.",
+  "healthKitDoesNotSupport": "Ciri ini tidak tersedia pada peranti yang tidak menyokong HealthCare",
   "@healthKitDoesNotSupport": {
     "description": "AppleのHealthKit（ヘルスケア機能）に対応していない端末で、健康データ連携機能を利用しようとした際に表示されるエラーメッセージです。ユーザーに機能制限があることを丁寧に伝える文章として翻訳してください。"
   },
-  "enableHealthKitFromSettings": "Sila aktifkan Kesihatan melalui aplikasi Tetapan.",
+  "enableHealthKitFromSettings": "Sila dayakan Kesihatan daripada aplikasi Tetapan",
   "@enableHealthKitFromSettings": {
     "description": "AppleのHealthKit（ヘルスケア機能）との連携を有効にするため、ユーザーにiOSの設定アプリでの操作を促すメッセージです。ピルの服用記録や健康データをHealthKitと同期する機能を使用する際に表示されます。"
   },
-  "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah disambungkan kepada akaun Pilll anda yang sedang digunakan. Sila cuba muat semula skrin. Sila lihat juga FAQ. Butiran: {exceptionMessage}",
+  "accountAlreadyLinked": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll anda. Cuba muat semula skrin. Sila lihat juga FAQ. Butiran: {exceptionMessage}",
   "@accountAlreadyLinked": {
     "description": "ソーシャルログイン（Google、Apple等）のアカウントが既にユーザーのPilllアカウントと連携済みの場合に表示されるエラーメッセージです。アカウント連携時の重複エラーを説明し、画面更新やFAQ確認による解決方法を案内しています。",
     "placeholders": {
@@ -1818,7 +1839,7 @@
       }
     }
   },
-  "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah terikat dengan akaun Pilll yang lain, jadi pendaftaran tidak dapat dilakukan. Sila lihat FAQ. Butiran: {exceptionMessage}",
+  "accountAlreadyLinkedWithOtherPilllAccount": "Akaun {accountTypeProviderName} ini sudah dikaitkan dengan akaun Pilll yang lain, oleh itu tidak dapat didaftarkan. Sila rujuk FAQ juga. Butiran: {exceptionMessage}",
   "@accountAlreadyLinkedWithOtherPilllAccount": {
     "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
     "placeholders": {
@@ -1830,7 +1851,7 @@
       }
     }
   },
-  "emailAlreadyInUse": "Anda tidak dapat mendaftar kerana alamat email yang anda gunakan sudah dikaitkan dengan akaun Pilll yang lain di bawah {accountTypeProviderName}. Sila lihat FAQ untuk maklumat lanjut. Butiran: {exceptionMessage}",
+  "emailAlreadyInUse": "Alamat e-mel yang digunakan dengan akaun {accountTypeProviderName} anda sudah dikaitkan dengan akaun Pilll lain, oleh itu pendaftaran tidak dapat dilakukan. Sila rujuk FAQ untuk maklumat lanjut. Butiran: {exceptionMessage}",
   "@emailAlreadyInUse": {
     "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
     "placeholders": {
@@ -1842,7 +1863,7 @@
       }
     }
   },
-  "todaySchedule": "Jadual hari ini",
+  "todaySchedule": "Jadual Hari Ini",
   "@todaySchedule": {
     "description": "カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。"
   },
@@ -1850,23 +1871,23 @@
   "@calendarSchedule": {
     "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   },
-  "newPillSheetNotificationTitle": "Lembaran baru bermula dari hari ini",
+  "newPillSheetNotificationTitle": "Paket pil baru bermula hari ini",
   "@newPillSheetNotificationTitle": {
     "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
   },
-  "newPillSheetNotificationMessage": "🆕 Sheet baru bermula hari ini\nJangan lupa untuk mengambilnya 👍",
+  "newPillSheetNotificationMessage": "🆕 Lembaran baharu bermula hari ini\nJangan lupa minum pil anda👍",
   "@newPillSheetNotificationMessage": {
     "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   },
-  "unexpectedPremiumEntitlementsIsNotExists": "Maklumat premium tidak dijumpai.",
+  "unexpectedPremiumEntitlementsIsNotExists": "Maklumat premium tidak ditemui",
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
   },
-  "purchaseErrorPurchasePendingError": "Pengesahan pembayaran belum selesai. Sila semak selepas beberapa ketika.",
+  "purchaseErrorPurchasePendingError": "Aktivasi pembayaran belum selesai. Sila tunggu sebentar dan cuba semula.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   },
-  "launchError": "Ralat telah berlaku semasa permulaan aplikasi\n{ErrorMessagesConnection}",
+  "launchError": "Ralat teknikal berlaku semasa aplikasi dimulakan (saat membuka aplikasi). Mesej ralat ini dipaparkan kepada pengguna termasuk maklumat terperinci seperti ralat sambungan supaya pengguna dapat memahami situasi tersebut.",
   "@launchError": {
     "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
     "placeholders": {
@@ -1875,15 +1896,15 @@
       }
     }
   },
-  "exampleRestDurationDate": "Contohnya, jika anda berehat dari pengambilan selama \"1/12 hingga 3 hari\".",
+  "exampleRestDurationDate": "Contohnya \"dari 1/12 selama 3 hari\" apabila berhenti mengambil pil",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
   },
-  "exampleRestDurationNumber": "Sebagai contoh, jika anda tidak mengambil pil selama 3 hari bermula dari nombor 18",
+  "exampleRestDurationNumber": "Contohnya jika tidak mengambil pil selama 3 hari bermula dari pil ke-18",
   "@exampleRestDurationNumber": {
     "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   },
-  "withNumber": "{number}",
+  "withNumber": "No. {number}",
   "@withNumber": {
     "description": "ピルシートの錠剤番号を表示するためのテキストです。{number}には具体的な錠剤番号（例：18）が入り、ユーザーがピルシート上のどの錠剤かを特定するために使用されます。",
     "placeholders": {
@@ -1892,11 +1913,11 @@
       }
     }
   },
-  "currentPillSheetNotFound": "Tiada lembaran pil yang sedang ditujukan ditemui.",
+  "currentPillSheetNotFound": "Lembaran pil sasaran semasa tidak ditemui",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   },
-  "doNotRevertTakePillInPausePeriod": "Tindakan pembatalan pengambilan pil tidak dapat dilakukan semasa tempoh rehat.",
+  "doNotRevertTakePillInPausePeriod": "Operasi pembatalan pengambilan pil tidak dapat dilaksanakan semasa tempoh rehat ubat",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   },
@@ -1904,19 +1925,19 @@
   "@googleAccount": {
     "description": "アプリへのログインや設定画面で表示されるGoogleアカウントのラベルです。ユーザー認証やデータ同期に使用されます。"
   },
-  "diaryRecord": "Mencatat diari",
+  "diaryRecord": "Catat Diari",
   "@diaryRecord": {
     "description": "アプリ内の日記機能で体調や気分を記録する際に表示されるボタンやラベルのテキストです。カレンダー画面から日々の体調記録を行う機能に使用されます。"
   },
-  "scheduleRecord": "Merekod jadual",
+  "scheduleRecord": "Tambah jadual",
   "@scheduleRecord": {
     "description": "アプリ内のカレンダー機能で、ユーザーが将来の予定（通院予定や生理予定など）を記録・追加する際に表示されるボタンやラベルのテキストです。"
   },
-  "previousPillSheetGroupNotFound": "Kumpulan pil yang lalu masih belum wujud.",
+  "previousPillSheetGroupNotFound": "Kumpulan lembaran pil sebelumnya belum wujud",
   "@previousPillSheetGroupNotFound": {
     "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
   },
-  "withPillSheetCount": "{number} keping",
+  "withPillSheetCount": "{number} helai",
   "@withPillSheetCount": {
     "description": "ピルシートの枚数を表示する際に使用される文字列で、数値の後に枚数を表す単位語が続きます。ピルの在庫管理や履歴表示などで「3枚」「5枚」のように表示されます。",
     "placeholders": {
@@ -1925,11 +1946,11 @@
       }
     }
   },
-  "connectionError": "Keadaan rangkaian nampaknya tidak stabil. Sila cuba lagi selepas beberapa waktu.",
+  "connectionError": "Nampaknya sambungan rangkaian tidak stabil. Sila cuba lagi selepas beberapa ketika.",
   "@connectionError": {
     "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   },
-  "unknownErrorAndRetryAfter": "Ralat telah berlaku. Sila cuba lagi selepas beberapa ketika.",
+  "unknownErrorAndRetryAfter": "Ralat telah berlaku. Sila tunggu sebentar dan cuba lagi.",
   "@unknownErrorAndRetryAfter": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
   },
@@ -1941,19 +1962,19 @@
   "@unknownError": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
   },
-  "unexpectedErrorOccurred": "Ralat yang tidak dijangka telah berlaku.",
+  "unexpectedErrorOccurred": "Ralat yang tidak dijangka telah berlaku",
   "@unexpectedErrorOccurred": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   },
-  "pressAndHoldNotificationToRecordPillTaking": "Tahan pemberitahuan untuk merekod pengambilan.",
+  "pressAndHoldNotificationToRecordPillTaking": "Tekan lama notifikasi untuk merekod pengambilan",
   "@pressAndHoldNotificationToRecordPillTaking": {
     "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   },
-  "letsTryIt": "Sila cuba",
+  "letsTryIt": "Jom cuba!",
   "@letsTryIt": {
     "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
   },
-  "trialDeadlineDateOffsetDay": "Semua fungsi boleh digunakan selama {number} hari!",
+  "trialDeadlineDateOffsetDay": "Nikmati semua fungsi selama {number} hari!",
   "@trialDeadlineDateOffsetDay": {
     "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
     "placeholders": {
@@ -1962,39 +1983,39 @@
       }
     }
   },
-  "inputAndAdd": "Masukkan dan Tambah",
+  "inputAndAdd": "Masukkan dan tambah",
   "@inputAndAdd": {
     "description": "何かの情報を手動で入力・追加する際のボタンやラベルのテキストです。服用記録や予定などをユーザーが自分で入力して追加する場面で使用されます。"
   },
-  "averagePeriod": "Kitaran Purata",
+  "averagePeriod": "Purata Kitaran",
   "@averagePeriod": {
     "description": "ユーザーの生理の平均周期（日数）を表示するラベルです。生理管理機能で使用され、過去のデータから算出された平均的な生理周期の長さを示します。"
   },
-  "averageDays": "Purata hari",
+  "averageDays": "Purata Hari",
   "@averageDays": {
     "description": "生理管理機能で、ユーザーの過去のデータから算出された生理周期の平均日数を表示する際に使用されるラベルです。数値と併せて「平均○日」のような形で表示されます。"
   },
-  "days": "Hari",
+  "days": "hari",
   "@days": {
     "description": "時間の単位を表す「日」で、生理周期や服用日数などの数値と組み合わせて表示されます。言語によって単数形・複数形の使い分けが必要な場合があります。"
   },
-  "memo": "Nota",
+  "memo": "Catatan",
   "@memo": {
     "description": "日記機能で体調や症状と合わせて自由にメモを記録できる入力欄のラベルです。短い単語で「メモ」や「記録」のような意味の翻訳が適切です。"
   },
-  "failedToUpdate": "Kemaskini gagal. Sila semak persekitaran komunikasi anda dan cuba lagi.",
+  "failedToUpdate": "Gagal mengemaskini. Sila periksa sambungan internet anda dan cuba sekali lagi.",
   "@failedToUpdate": {
     "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
   },
-  "headache": "Sakit kepala",
+  "headache": "sakit kepala",
   "@headache": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「頭痛」の適切な医療用語で翻訳してください。"
   },
-  "abdominalPain": "sakit perut",
+  "abdominalPain": "Sakit perut",
   "@abdominalPain": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「腹痛」の適切な医療用語で翻訳してください。"
   },
-  "nausea": "Loya",
+  "nausea": "mual",
   "@nausea": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「吐き気」の適切な医療用語で翻訳してください。"
   },
@@ -2002,7 +2023,7 @@
   "@anemia": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「貧血」の適切な医療用語で翻訳してください。"
   },
-  "diarrhea": "Cirit-birit",
+  "diarrhea": "diare",
   "@diarrhea": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「下痢」の適切な医療用語で翻訳してください。"
   },
@@ -2010,7 +2031,7 @@
   "@constipation": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「便秘」の適切な医療用語で翻訳してください。"
   },
-  "drowsiness": "Mengantuk",
+  "drowsiness": "kantuk",
   "@drowsiness": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「眠気」の適切な医療用語で翻訳してください。"
   },
@@ -2018,7 +2039,7 @@
   "@backPain": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「腰痛」の適切な医療用語で翻訳してください。"
   },
-  "palpitation": "degupan jantung",
+  "palpitation": "palpitasi",
   "@palpitation": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「動悸」の適切な医療用語で翻訳してください。"
   },
@@ -2026,43 +2047,43 @@
   "@irregularBleeding": {
     "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「不正出血」の適切な医療用語で翻訳してください。"
   },
-  "lossOfAppetite": "Kurang selera makan",
+  "lossOfAppetite": "hilang selera makan",
   "@lossOfAppetite": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「食欲不振」の適切な医療用語で翻訳してください。"
   },
-  "chestTightness": "Keterasan payudara",
+  "chestTightness": "Payudara tegang",
   "@chestTightness": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で症状として記録する際に使用される医学的な用語です。各言語において一般的に使われる「胸の張り」の適切な医療用語で翻訳してください。"
   },
-  "insomnia": "Insomnia",
+  "insomnia": "insomnia",
   "@insomnia": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
   },
-  "pauseStartingOtherDaysInstructions": "Sila berehat. Jika anda ingin mengambil cuti dari pengambilan pada hari lain selain hari ini, sila rujuk di bawah.",
+  "pauseStartingOtherDaysInstructions": "Sila berhenti mengambil pil. Jika anda ingin berhenti mengambil pil dari hari selain hari ini, sila rujuk maklumat di bawah.",
   "@pauseStartingOtherDaysInstructions": {
     "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   },
-  "seeHowToUsePauseTakingFeature": "Lihat cara menggunakan fungsi menghentikan pengambilan",
+  "seeHowToUsePauseTakingFeature": "Lihat panduan ciri berehat pengambilan",
   "@seeHowToUsePauseTakingFeature": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   },
-  "startPauseTakingLabel": "Mula Cuti Pengambilan",
+  "startPauseTakingLabel": "Mulakan Rehat",
   "@startPauseTakingLabel": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。"
   },
-  "pauseTakingChanged": "Anda telah mengubah cuti pengambilan.",
+  "pauseTakingChanged": "Tempoh berehat pengambilan telah diubah",
   "@pauseTakingChanged": {
     "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
   },
-  "editPausePeriod": "Mengedit tempoh cuti pengambilan",
+  "editPausePeriod": "Edit Tempoh Jeda Pengambilan",
   "@editPausePeriod": {
     "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
   },
-  "changePillDays": "Tukar bilangan hari pengambilan",
+  "changePillDays": "Ubah Tempoh Minum",
   "@changePillDays": {
     "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
   },
-  "beginToEndNumbers": "{begin} hingga {end}",
+  "beginToEndNumbers": "No. {begin} - No. {end}",
   "@beginToEndNumbers": {
     "description": "ピルシートの番号範囲を表示する際に使用される文字列です。例えば「1番 ~ 21番」のように、連続する番号の開始と終了を示すフォーマットです。",
     "placeholders": {
@@ -2074,19 +2095,19 @@
       }
     }
   },
-  "resumeTaking": "Mulakan semula pengambilan",
+  "resumeTaking": "Sambung Minum",
   "@resumeTaking": {
     "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
   },
-  "changePausePeriod": "Tukar Tempoh Rehat Penggunaan",
+  "changePausePeriod": "Ubah Tempoh Rehat Pengambilan",
   "@changePausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   },
-  "changedPausePeriod": "Tempoh bercuti pengambilan telah diubah.",
+  "changedPausePeriod": "Tempoh rehat pengambilan telah diubah",
   "@changedPausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。"
   },
-  "changedToDate": "Telah diubah kepada {date}",
+  "changedToDate": "Sudah ditukar ke {date}",
   "@changedToDate": {
     "description": "何かの日付設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。",
     "placeholders": {
@@ -2095,11 +2116,11 @@
       }
     }
   },
-  "quickRecordTakePillFailed": "Terdapat kemungkinan bahawa rekod pengambilan telah gagal.",
+  "quickRecordTakePillFailed": "Rekod pengambilan mungkin telah gagal",
   "@quickRecordTakePillFailed": {
     "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   },
-  "quickRecordTakePillFailedMessage": "Sila buka aplikasi untuk mengesahkan.",
+  "quickRecordTakePillFailedMessage": "Sila buka aplikasi dan semak",
   "@quickRecordTakePillFailedMessage": {
     "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
   },
@@ -2107,15 +2128,15 @@
   "@alreadyTaken": {
     "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
   },
-  "startPauseTaking": "Rehatkan Pengambilan",
+  "startPauseTaking": "Berehat pengambilan",
   "@startPauseTaking": {
     "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
   },
-  "startedPauseTaking": "Saya telah memulakan rehat pengambilan.",
+  "startedPauseTaking": "Rehat pengambilan pil telah dimulakan",
   "@startedPauseTaking": {
     "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。"
   },
-  "sequentialLastTakenPlusOnePillNumber": "{pillSheetGroupSequentialLastTakenPillNumber}",
+  "sequentialLastTakenPlusOnePillNumber": "ke-{pillSheetGroupSequentialLastTakenPillNumber}",
   "@sequentialLastTakenPlusOnePillNumber": {
     "description": "次に服用すべきピルの番号を表示するテキストです。プレースホルダーには数字が入るため、各言語の序数や番号表現に適合させて翻訳してください。",
     "placeholders": {
@@ -2124,7 +2145,7 @@
       }
     }
   },
-  "startFromNumber": "Mula dari nombor",
+  "startFromNumber": "Mulai dari nombor",
   "@startFromNumber": {
     "description": "ピルシートUIで表示する薬の番号の開始位置を設定する機能のテキストです。ユーザーが任意の番号からピルシートの表示をスタートできるようにする設定項目で使用されます。"
   },
@@ -2132,23 +2153,23 @@
   "@add": {
     "description": "ピルの服用記録、生理記録、未来の予定、日記などの新しいデータを追加する際に表示される汎用的なボタンやアクションのテキストです。アプリ内の様々な画面で新規登録や追加機能において使用されます。"
   },
-  "addPillSheet": "Tambah Lembaran Pil",
+  "addPillSheet": "Tambah Pek Pil",
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
   },
-  "duringPauseTaking": "Sedang bercuti dari pengambilan",
+  "duringPauseTaking": "Sedang Berehat",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   },
-  "cannotPauseAlreadyTakenToday": "Jika pil yang perlu diambil hari ini sudah diambil, anda tidak dapat \"berehat daripada pengambilan\".",
+  "cannotPauseAlreadyTakenToday": "Tidak dapat menggunakan 'Rehat Pengambilan' kerana pil hari ini sudah diminum",
   "@cannotPauseAlreadyTakenToday": {
     "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
   },
-  "pauseTakingStarted": "Anda telah memulakan rehat pengambilan",
+  "pauseTakingStarted": "Rehat pengambilan pil telah dimulakan",
   "@pauseTakingStarted": {
     "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
   },
-  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})",
+  "formattedDateAndWeekday": "{DateTimeFormatterMonthAndDay} ({DateTimeFormatterWeekday})",
   "@formattedDateAndWeekday": {
     "description": "日付と曜日を組み合わせて表示するためのフォーマットです。「12月15日(月)」のように月日の後に括弧内で曜日を表示する形式で、カレンダーや服用記録の日付表示に使用されます。",
     "placeholders": {
@@ -2160,15 +2181,15 @@
       }
     }
   },
-  "editPauseStartDate": "Edit the start date of the break from taking medication",
+  "editPauseStartDate": "Sunting Tarikh Mula Jeda Pengambilan",
   "@editPauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
   },
-  "shareWithFriends": "Ajar kepada rakan",
+  "shareWithFriends": "Beritahu kawan",
   "@shareWithFriends": {
     "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   },
-  "termsOfService": "Terma dan syarat",
+  "termsOfService": "Terma dan Syarat",
   "@termsOfService": {
     "description": "アプリの設定画面や法的情報画面で表示される利用規約へのリンクテキストです。ユーザーがアプリの使用条件や規約を確認する際にタップする項目として使用されます。"
   },
@@ -2202,15 +2223,15 @@
       }
     }
   },
-  "changeStartOfPillDays": "Tukar permulaan hari pengambilan",
+  "changeStartOfPillDays": "Ubah Permulaan Kiraan Hari Pengambilan",
   "@changeStartOfPillDays": {
     "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
   },
-  "changeEndOfPillDays": "Tukar akhir hari pengambilan",
+  "changeEndOfPillDays": "Ubah akhir tempoh pengambilan",
   "@changeEndOfPillDays": {
     "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   },
-  "cannotUpdateToReplacePillSheet": "Tidak dapat mengemas kini disebabkan penggantian helaian pil id: {id}",
+  "cannotUpdateToReplacePillSheet": "Tidak dapat mengemaskini dengan penggantian helaian pil id: {id}",
   "@cannotUpdateToReplacePillSheet": {
     "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
     "placeholders": {
@@ -2219,7 +2240,7 @@
       }
     }
   },
-  "failedToGetPillSheetHistory": "Gagal mendapatkan maklumat sejarah pengambilan. {error}",
+  "failedToGetPillSheetHistory": "Gagal memperoleh data sejarah pengambilan. {error}",
   "@failedToGetPillSheetHistory": {
     "description": "ピルの服用履歴データの取得に失敗した際に表示されるエラーメッセージです。{error}には具体的なエラー内容が挿入されます。",
     "placeholders": {
@@ -2228,23 +2249,23 @@
       }
     }
   },
-  "cancelTaking": "batalkan pengambilan",
+  "cancelTaking": "Batalkan Pengambilan",
   "@cancelTaking": {
     "description": "ユーザーが誤って記録したピルの服用履歴を取り消すためのボタンのラベル。服用管理画面で使用される。"
   },
-  "deletedDiaryCannotBeRestored": "Diari yang dipadamkan tidak boleh dipulihkan.",
+  "deletedDiaryCannotBeRestored": "Diari yang dipadamkan tidak boleh dipulihkan",
   "@deletedDiaryCannotBeRestored": {
     "description": "アプリ内の日記機能（体調記録）で、ユーザーが日記を削除する際に表示される警告メッセージ。削除された記録は元に戻せないことを伝える重要な注意事項です。"
   },
-  "editMenstruation": "Edit Menstrual Period",
+  "editMenstruation": "Sunting Tempoh Haid",
   "@editMenstruation": {
     "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
   },
-  "changedPillNumber": "Tukar nombor pil",
+  "changedPillNumber": "Perubahan Nombor Pil",
   "@changedPillNumber": {
     "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
   },
-  "offPercentForMonthlyPremiumPackage": "Diskaun {offPercent}٪ berbanding harga bulanan biasa",
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% OFF berbanding langganan bulanan biasa",
   "@offPercentForMonthlyPremiumPackage": {
     "description": "アプリのプレミアムプラン（有料機能）で、年額プランが通常の月額プランと比較して何パーセント安くなるかを示す割引表示メッセージです。課金画面やプラン選択画面で表示されます。",
     "placeholders": {
@@ -2253,11 +2274,11 @@
       }
     }
   },
-  "premiumIntroductionDiscountPriceDeadline": "Dengan pendaftaran premium, anda boleh terus menggunakan semua ciri.",
+  "premiumIntroductionDiscountPriceDeadline": "Dengan pendaftaran premium, semua ciri boleh terus digunakan",
   "@premiumIntroductionDiscountPriceDeadline": {
     "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
   },
-  "countdownForDiscountPriceDeadline": "{countdown} pembelian dalam {offPercent}% OFF",
+  "countdownForDiscountPriceDeadline": "{offPercent}% OFF untuk pembelian dalam masa {countdown}",
   "@countdownForDiscountPriceDeadline": {
     "description": "限定割引キャンペーンの締切時間を知らせるメッセージです。プレミアムプラン購入画面で、残り時間（countdown）内に購入すると指定された割引率（offPercent）が適用されることをユーザーに伝えます。",
     "placeholders": {
@@ -2269,7 +2290,7 @@
       }
     }
   },
-  "pillReminderChanged": "Saya telah menetapkan pengingat pengambilan ubat pada {value}.",
+  "pillReminderChanged": "Notifikasi pengambilan telah ditetapkan pada {value}",
   "@pillReminderChanged": {
     "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
     "placeholders": {
@@ -2278,24 +2299,40 @@
       }
     }
   },
-  "medicationNotification": "notifikasi pengambilan",
-  "@medicationNotification": {
-    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
-  },
-  "silentModeNotificationDescription": "Notifikasi akan ditampilkan pada skrin kunci dan bunyi akan dimainkan walaupun mod fokus dihidupkan atau peranti berada dalam mod senyap.",
+  "silentModeNotificationDescription": "Notifikasi akan tetap dipaparkan pada skrin kunci dan bunyi akan dimainkan walaupun mod fokus diaktifkan atau peranti dalam keadaan senyap",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   },
-  "enableNotificationInSilentMode": "Hantar pemberitahuan walaupun dalam mod senyap",
+  "enableNotificationInSilentMode": "Hantar pemberitahuan walaupun mod senyap",
   "@enableNotificationInSilentMode": {
     "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
   },
-  "enableNotificationInSilentModeSetting": "Tetapan pemberitahuan walaupun dalam mod senyap",
+  "enableNotificationInSilentModeSetting": "Tetapan notifikasi mod senyap",
   "@enableNotificationInSilentModeSetting": {
     "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
   },
-  "criticalAlertVolume": "Kekuatan",
+  "criticalAlertVolume": "Volum",
   "@criticalAlertVolume": {
     "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
+  },
+  "logout": "Log Keluar",
+  "@logout": {
+    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
+  },
+  "goToInitialSettingAndReloginIfNeededMessage": "Kembali kepada tetapan awal. Sekiranya log masuk diperlukan, sila lakukan daripada bahagian bawah tetapan awal",
+  "@goToInitialSettingAndReloginIfNeededMessage": {
+    "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
+  },
+  "deleteAccount": "Padam Akaun",
+  "@deleteAccount": {
+    "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
+  },
+  "logoutCompleted": "Telah log keluar",
+  "@logoutCompleted": {
+    "description": "ユーザーがログアウト操作を完了した後に表示される確認メッセージです。アプリからサインアウトされ、認証状態が解除されたことをユーザーに伝えるために使用されます。"
+  },
+  "specialDiscountPriceNow": "Dapatkan Pelan Premium pada Harga Istimewa!",
+  "@specialDiscountPriceNow": {
+    "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
   }
 }
