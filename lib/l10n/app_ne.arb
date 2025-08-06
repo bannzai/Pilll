@@ -1716,5 +1716,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "रिफन्ड प्रक्रिया सुरु भएको छ। कृपया पुष्टि गर्नुहोस् र फेरि प्रयास गर्नुहोस्। यदि समाधान भएन भने सेटिङ > सम्पर्क मार्फत सम्पर्क गर्नुहोस्। कोड: {errorCode} विवरण: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
