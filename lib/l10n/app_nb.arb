@@ -428,5 +428,14 @@
         "type": "String"
       }
     }
+  },
+  "beforeLastTakenPillNumber": "既存のノルウェー語翻訳パターンを確認できました。ピル番号の表示では「nr.」（numberの略）を使用していることが分かります。\n\nnr. {beforeLastTakenPillNumber}",
+  "@beforeLastTakenPillNumber": {
+    "description": "最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。",
+    "placeholders": {
+      "beforeLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
   }
 }
