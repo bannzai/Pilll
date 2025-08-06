@@ -1839,5 +1839,14 @@
   "exampleRestDurationNumber": "ଯେପରିକି \"18 ନମ୍ବରରୁ 3 ଦିନ\" ଔଷଧ ସେବନ ବନ୍ଦ କଲେ",
   "@exampleRestDurationNumber": {
     "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
+  },
+  "withNumber": "{number}ନଂ",
+  "@withNumber": {
+    "description": "ピルシートの錠剤番号を表示するためのテキストです。{number}には具体的な錠剤番号（例：18）が入り、ユーザーがピルシート上のどの錠剤かを特定するために使用されます。",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
   }
 }
