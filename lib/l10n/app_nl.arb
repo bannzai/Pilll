@@ -1421,5 +1421,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorStoreProblemError": "Er is een fout opgetreden in {storeName}. Probeer het later opnieuw.",
+  "@purchaseErrorStoreProblemError": {
+    "description": "アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
