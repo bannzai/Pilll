@@ -1682,5 +1682,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "ग्राहक माहितीची पुनर्प्राप्ती अयशस्वी झाली. काही वेळानंतर पुन्हा प्रयत्न करा. समस्या निराकरण न झाल्यास सेटिंग्स > चौकशी मधून आमच्याशी संपर्क साधा. तपशील: कोड: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
