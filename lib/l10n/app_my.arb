@@ -1806,5 +1806,9 @@
   "receiveNotificationAt9AM": "ယနေ့ 9:00 တွင် အသိပေးချက်ကို လက်ခံရန်",
   "@receiveNotificationAt9AM": {
     "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
+  },
+  "deletedScheduleCannotBeRestored": "ပယ်ဖျက်လိုက်သော အစီအစဉ်များကို ပြန်လည်ရယူ၍မရပါ",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
   }
 }
