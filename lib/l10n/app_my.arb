@@ -1731,5 +1731,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "အချိန်ကုန်ပါပြီ။ ဆက်သွယ်ရေးအခြေအနေကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။ ဖြေရှင်းမရပါက ဆက်တင်များ > စုံစမ်းမေးမြန်းမှု မှ ဆက်သွယ်ပါ။ အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
