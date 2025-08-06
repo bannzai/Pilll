@@ -1743,5 +1743,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "အကြောင်းအရင်းမသိရသော အမှားအယွင်းဖြစ်ပါသည်။ နောက်ဆုံးထွက်ဗားရှင်းသို့ အပ်ဒိတ်လုပ်ပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ မဖြေရှင်းနိုင်ပါက ဆက်တင် > စုံစမ်းမေးမြန်းခြင်း မှတဆင့် ဆက်သွယ်မေးမြန်းပါ။ ကုဒ်: {errorCode} အသေးစိတ်: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
