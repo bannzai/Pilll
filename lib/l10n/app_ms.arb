@@ -449,5 +449,14 @@
         "type": "String"
       }
     }
+  },
+  "oneToAfterDisplayNumberBeginPillNumber": "1→{afterDisplayNumberSettingBeginPillNumber}",
+  "@oneToAfterDisplayNumberBeginPillNumber": {
+    "description": "ピルシートの表示番号設定で、1番から設定した開始番号までの範囲を示すテキストです。ピルシート上での番号表示のカスタマイズ機能で使用されます。",
+    "placeholders": {
+      "afterDisplayNumberSettingBeginPillNumber": {
+        "type": "String"
+      }
+    }
   }
 }
