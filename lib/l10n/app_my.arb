@@ -1438,5 +1438,9 @@
   "purchaseErrorPurchaseInvalidError": "ငွေပေးချေမှု မအောင်မြင်ပါ။ သင့်ပေးငွေနည်းလမ်း မှန်ကန်မှုကို စစ်ဆေးပြီး ပြန်လည်ကြိုးစားပါ။",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "ရွေးချယ်ထားသောပလန်သည် လက်ရှိတွင် ရောင်းချမှုမရှိပါ။ အပ်ပလီကေးရှင်းကို ပြန်လည်စတင်ပြီး ပြန်လည်ကြိုးစားပါ။",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
