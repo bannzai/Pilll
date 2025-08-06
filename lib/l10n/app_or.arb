@@ -1186,5 +1186,9 @@
   "enterAtLeastOneCharacter": "ଦୟାକରି କିଛି ଲେଖନ୍ତୁ",
   "@enterAtLeastOneCharacter": {
     "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
+  },
+  "changeDailyNotificationMessage": "ଭୁଲି ନଯାଇଥିବା ବେଳେ ସୂଚନା ବାର୍ତ୍ତା ବଦଳାଇ ପାରିବେ",
+  "@changeDailyNotificationMessage": {
+    "description": "ピルを正常に服用した場合（飲み忘れていない場合）の通知メッセージをユーザーがカスタマイズできる機能の説明文です。アプリの設定画面で表示される機能説明として使用されます。"
   }
 }
