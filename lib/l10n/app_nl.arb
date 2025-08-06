@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Er is een probleem met de instellingen van uw apparaat. Controleer dit en probeer het opnieuw. Als dit het probleem niet oplost, neem dan contact met ons op via Instellingen > Contact. Code: {errorCode} Details: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
