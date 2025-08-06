@@ -1626,5 +1626,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "ଏହା ଏକ ଅଜଣା କାରଣର ତ୍ରୁଟି। ସର୍ବଶେଷ ସଂସ୍କରଣକୁ ଅପଡେଟ୍ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ସମାଧାନ ନହେଲେ ସେଟିଂସ୍ > ସମ୍ପର୍କ କରନ୍ତୁ ମାଧ୍ୟମରେ ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ୍: {errorCode} ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
