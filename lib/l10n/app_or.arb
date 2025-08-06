@@ -1596,5 +1596,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "ଏକ ଅଜଣା ତ୍ରୁଟି ଘଟିଛି। ଦୟାକରି ନବୀକରଣ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମସ୍ୟାର ସମାଧାନ ହୋଇନାହିଁ, ଦୟାକରି ସେଟିଙ୍ଗ > ଯୋଗାଯୋଗ ମାଧ୍ୟମରେ ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ। କୋଡ଼: {errorCode} ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
