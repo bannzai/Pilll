@@ -1460,5 +1460,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppUserIdError": "ଉପଯୋଗକର୍ତ୍ତା ଯାଞ୍ଚ କରିହେଲା ନାହିଁ। ଆପ୍ ପୁନଃଚାଳୁ କରି ପୁଣି ଚେଷ୍ଟା କରନ୍ତୁ। ବିସ୍ତାର: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppUserIdError": {
+    "description": "アプリ内課金時にユーザーIDの検証に失敗した場合のエラーメッセージです。アプリの再起動を促し、技術的なエラー詳細も表示されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
