@@ -1545,5 +1545,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "သင့်အကောင့်ဖြင့် ဝယ်ယူခြင်းမှာ ပျက်ကွက်သွားပါသည်။ ခေတ္တစောင့်ပြီး ပြန်လည်ကြိုးစားကြည့်ပါ။ ပြဿနာမရှင်းလင်းပါက ဆက်တင် > စုံစမ်းမေးမြန်းရန် တွင် ဆက်သွယ်မေးမြန်းပါ။ အသေးစိတ်အချက်အလက်များ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
