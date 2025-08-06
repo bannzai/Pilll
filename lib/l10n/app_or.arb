@@ -2167,5 +2167,14 @@
   "editMenstruation": "ମାସିକ ଧର୍ମ ସମ୍ପାଦନା",
   "@editMenstruation": {
     "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
+  },
+  "offPercentForMonthlyPremiumPackage": "ସାଧାରଣ ମାସିକ ଠାରୁ {offPercent}% ଛାଡ୍",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "アプリのプレミアムプラン（有料機能）で、年額プランが通常の月額プランと比較して何パーセント安くなるかを示す割引表示メッセージです。課金画面やプラン選択画面で表示されます。",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
   }
 }
