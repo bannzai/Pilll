@@ -1512,5 +1512,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInsufficientPermissionsError": "ଆପଣଙ୍କ {accountName} ରେ ପ୍ଲାନ୍‌ରେ ଯୋଗଦାନ କରିପାରିବେ ନାହିଁ। ଆପଣଙ୍କ ପେମେଣ୍ଟ ସୂଚନା ଯାଞ୍ଚ କରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ।",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
