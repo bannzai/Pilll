@@ -1916,5 +1916,9 @@
   "currentPillSheetNotFound": "हाल सक्रिय गोली शीट फेला परेन",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
+  },
+  "doNotRevertTakePillInPausePeriod": "विश्राम अवधिमा गर्भनिरोधक गोलीको सेवन रद्द गर्न सकिँदैन",
+  "@doNotRevertTakePillInPausePeriod": {
+    "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
   }
 }
