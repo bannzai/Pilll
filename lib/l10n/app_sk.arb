@@ -1007,5 +1007,9 @@
   "displayDateOnPillSheet": "📆 Zobrazenie dátumu na tabletke",
   "@displayDateOnPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
+  },
+  "autoRefillNewPillSheet": "📦 Automatické doplnenie nového blistra piluliek",
+  "@autoRefillNewPillSheet": {
+    "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
   }
 }
