@@ -991,5 +991,9 @@
   "premiumFeaturesList": "ප්‍රිමියම් විශේෂාංග ලැයිස්තුව",
   "@premiumFeaturesList": {
     "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
+  },
+  "pushNotificationForTakingRecord": "📩 නිවේদනයෙන් ඖෂධ වාර්තාව",
+  "@pushNotificationForTakingRecord": {
+    "description": "プッシュ通知を受信した際に、アプリを開かずに通知から直接ピルの服用記録を行う機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
   }
 }
