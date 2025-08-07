@@ -1945,5 +1945,9 @@
         "type": "int"
       }
     }
+  },
+  "connectionError": "Połączenie z internetem wydaje się niestabilne. Spróbuj ponownie za chwilę.",
+  "@connectionError": {
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   }
 }
