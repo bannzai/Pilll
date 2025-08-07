@@ -1553,5 +1553,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInsufficientPermissionsError": "ඔබගේ {accountName} සමඟ සැලැස්මට සම්බන්ධ වීමට නොහැකිය. කරුණාකර ඔබගේ ගෙවීම් තොරතුරු පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
