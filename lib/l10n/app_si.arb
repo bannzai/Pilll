@@ -2119,5 +2119,9 @@
   "quickRecordTakePillFailedMessage": "කරුණාකර යෙදුම විවෘත කර පරීක්ෂා කරන්න",
   "@quickRecordTakePillFailedMessage": {
     "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
+  },
+  "alreadyTaken": "ගත්තා",
+  "@alreadyTaken": {
+    "description": "ピルの服用状態を表示する際に使用される文言で、ユーザーがすでにピルを服用したことを示します。服用履歴やピルシートUIで表示されます。"
   }
 }
