@@ -1517,5 +1517,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "Uma compra já está sendo processada. Aguarde um momento e tente novamente.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   }
 }
