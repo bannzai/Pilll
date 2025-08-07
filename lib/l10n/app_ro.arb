@@ -23,5 +23,9 @@
   "pillSheetType21": "Tip 21 comprimate (toate active)",
   "@pillSheetType21": {
     "description": "ピルシートの種類で、21錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない21錠タイプであることを示します。"
+  },
+  "pillSheetType24WithRest4": "Tip cu 24 de pastile",
+  "@pillSheetType24WithRest4": {
+    "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   }
 }
