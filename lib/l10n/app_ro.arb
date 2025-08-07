@@ -2192,5 +2192,9 @@
   "termsOfService": "Termeni de utilizare",
   "@termsOfService": {
     "description": "アプリの設定画面や法的情報画面で表示される利用規約へのリンクテキストです。ユーザーがアプリの使用条件や規約を確認する際にタップする項目として使用されます。"
+  },
+  "privacyPolicy": "Politica de confidențialitate",
+  "@privacyPolicy": {
+    "description": "アプリの設定画面や法的情報画面で表示されるプライバシーポリシーへのリンクテキストです。ユーザーが個人情報の取り扱いに関する規約を確認する際にタップする項目として使用されます。"
   }
 }
