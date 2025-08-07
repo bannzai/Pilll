@@ -1545,5 +1545,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "آپ کے صارف کے ساتھ خریداری ناکام ہو گئی ہے۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا ہے تو سیٹنگز > رابطہ سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
