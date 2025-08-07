@@ -1727,5 +1727,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "කාලසීමාව ඉක්මවා ගියේය. ඔබගේ සන්නිවේදන පරිසරය පරීක්ෂා කර නැවත උත්සාහ කරන්න. එය නිරාකරණය නොවන්නේ නම් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
