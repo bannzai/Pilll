@@ -611,5 +611,14 @@
   "startOfPillDays": "ගෙඩි ගැනීම ආරම්භය",
   "@startOfPillDays": {
     "description": "ピルシート画面で、ピルの服用を開始する日付または日数を表示するラベルです。ユーザーがピルシートの表示番号を調整する際に使用されます。"
+  },
+  "beforePillSheetGroupSequentialEstimatedEndDay": "පෙර පත්‍රිකාවේ අවසානය: {beforePillSheetGroupSequentialEstimatedEndPillNumber}වන දවස",
+  "@beforePillSheetGroupSequentialEstimatedEndDay": {
+    "description": "ピルシート管理画面で、前回使用していたピルシートの最後の服用日を示すテキストです。ユーザーがピルの服用進度や次のシートとの関連性を把握するために表示される情報です。",
+    "placeholders": {
+      "beforePillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
   }
 }
