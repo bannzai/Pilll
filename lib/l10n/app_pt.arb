@@ -19,5 +19,9 @@
   "pillSheetType24": "Tipo de 24 comprimidos (todos ativos)",
   "@pillSheetType24": {
     "description": "ピルシートの種類で、24錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない24錠タイプであることを示します。"
+  },
+  "pillSheetType21": "Tipo de 21 comprimidos (todos ativos)",
+  "@pillSheetType21": {
+    "description": "ピルシートの種類で、21錠すべてが薬効成分を含む実薬で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用され、プラセボ（偽薬）を含まない21錠タイプであることを示します。"
   }
 }
