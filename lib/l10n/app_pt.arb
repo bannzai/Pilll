@@ -152,5 +152,9 @@
   "takePillReminderChannelName": "Notificação de Tomada",
   "@takePillReminderChannelName": {
     "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
+  },
+  "takePillReminder": "Hora da pílula! 💊",
+  "@takePillReminder": {
+    "description": "ピルの服用時刻になった時にユーザーに送信されるプッシュ通知のメッセージです。簡潔で親しみやすく、服用を促すトーンで翻訳してください。"
   }
 }
