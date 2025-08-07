@@ -523,5 +523,9 @@
   "takingHistoryIsPremiumFeature": "පිල් සේවන ඉතිහාසය ප්‍රිමියම් විශේෂාංගයකි",
   "@takingHistoryIsPremiumFeature": {
     "description": "ユーザーが服用履歴機能にアクセスしようとした際に表示される、その機能がプレミアムプラン限定であることを伝えるメッセージです。無料ユーザーに対して有料プランへのアップグレードを促す文脈で使用されます。"
+  },
+  "pauseTakingDoesNotAdvancePillNumber": "ඔසු නොගන්නා විට පෙති අංකය ඉදිරියට නොයයි",
+  "@pauseTakingDoesNotAdvancePillNumber": {
+    "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
   }
 }
