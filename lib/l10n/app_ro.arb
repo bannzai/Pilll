@@ -1284,5 +1284,9 @@
   "notHelp": "Nu ajută",
   "@notHelp": {
     "description": "フィードバックやアンケートで「役に立ったか」という質問に対する否定的な回答選択肢として使用されます。英語版では「Not helpful」として表示されるボタンやリンクのテキストです。"
+  },
+  "serviceImprovementSurvey": "Chestionar pentru îmbunătățirea serviciului",
+  "@serviceImprovementSurvey": {
+    "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
   }
 }
