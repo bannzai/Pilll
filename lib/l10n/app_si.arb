@@ -298,5 +298,14 @@
   "updateAuthenticationInformation": "සත්‍යාපන තොරතුරු යාවත්කාලීන කරන්න",
   "@updateAuthenticationInformation": {
     "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）を更新する機能で表示されるボタンやメニューのテキストです。健康管理アプリのセキュリティ強化や問題解決の際にユーザーが操作する重要な機能として使用されます。"
+  },
+  "registeredWithProvider": "{accountTypeProviderName} සමඟ ලියාපදිංචි කරන ලදී",
+  "@registeredWithProvider": {
+    "description": "アカウント登録完了時にユーザーに表示される確認メッセージで、{accountTypeProviderName}にはGoogleやAppleなどのソーシャルログインサービス名が入ります。ユーザーが正常に登録できたことを伝える肯定的なメッセージとして使用されます。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
   }
 }
