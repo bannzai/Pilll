@@ -1590,5 +1590,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Falha ao obter informações do usuário. Tente novamente após um tempo. Se o problema persistir, entre em contato através de Configurações > Contato. Detalhes: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
