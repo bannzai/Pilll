@@ -1578,5 +1578,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "ਖਰੀਦਾਰੀ ਅਸਫਲ ਹੋ ਗਈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ, ਤਾਂ ਸੈਟਿੰਗਸ > ਸੰਪਰਕ ਤੋਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
