@@ -1882,5 +1882,9 @@
   "unexpectedPremiumEntitlementsIsNotExists": "Informações premium não foram encontradas",
   "@unexpectedPremiumEntitlementsIsNotExists": {
     "description": "アプリ内でプレミアム機能の権限情報を取得できない場合に表示されるエラーメッセージです。ユーザーには技術的な問題が発生していることを簡潔に伝える文言として翻訳してください。"
+  },
+  "purchaseErrorPurchasePendingError": "A ativação do pagamento ainda não foi concluída. Aguarde um momento e verifique novamente.",
+  "@purchaseErrorPurchasePendingError": {
+    "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
   }
 }
