@@ -229,5 +229,9 @@
   "currentlyDisplayed": "Afișat în prezent",
   "@currentlyDisplayed": {
     "description": "画面上で現在表示されている項目やコンテンツを示すラベルです。ピルシートや履歴画面などで、表示中の内容を説明する際に使用されます。"
+  },
+  "allPillSheets": "Toate plăcile de pilule",
+  "@allPillSheets": {
+    "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
   }
 }
