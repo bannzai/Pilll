@@ -2188,5 +2188,9 @@
   "shareWithFriends": "Recomandă prietenilor",
   "@shareWithFriends": {
     "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
+  },
+  "termsOfService": "Termeni de utilizare",
+  "@termsOfService": {
+    "description": "アプリの設定画面や法的情報画面で表示される利用規約へのリンクテキストです。ユーザーがアプリの使用条件や規約を確認する際にタップする項目として使用されます。"
   }
 }
