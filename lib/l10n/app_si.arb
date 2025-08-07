@@ -1480,5 +1480,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "දැනට මිළදී ගැනීමට නොහැක. කරුණාකර ටික වේලාවකින් නැවත උත්සාහ කරන්න. ගැටලුව විසඳී නොමැති නම් සැකසීම් > අපගෙන් විමසන්න හරහා අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
