@@ -1953,5 +1953,9 @@
   "unknownErrorAndRetryAfter": "Vyskytla sa chyba. Skúste to znovu za chvíľu.",
   "@unknownErrorAndRetryAfter": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示されるメッセージです。サーバーエラーや処理失敗など、具体的な原因が不明な場合に再試行を促すために使用されます。"
+  },
+  "errorOccurred": "Došlo k chybe",
+  "@errorOccurred": {
+    "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示される基本的なエラーメッセージです。具体的な原因を伝えずに、シンプルにエラーの発生を通知する場合に使用されます。"
   }
 }
