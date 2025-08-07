@@ -1533,5 +1533,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidAppleSubscriptionKeyError": "Achiziția a eșuat. Vă rugăm să încercați din nou după un timp. Dacă problema persistă, vă rugăm să ne contactați prin Setări > Contactează-ne. Detalii: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidAppleSubscriptionKeyError": {
+    "description": "Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
