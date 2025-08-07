@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "ਇੱਕ ਅਣਜਾਣ ਗਲਤੀ ਹੋਈ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਨਵੇਂ ਵਰਜਨ ਵਿੱਚ ਅਪਡੇਟ ਕਰੋ ਅਤੇ ਮੁੜ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ, ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਸੰਪਰਕ ਕਰੋ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਕੋਡ: {errorCode} ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
