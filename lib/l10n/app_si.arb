@@ -752,5 +752,14 @@
   "menstruationScheduleDate": "ඔසප් නියමිත දිනය",
   "@menstruationScheduleDate": {
     "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
+  },
+  "menstruationScheduleDateWithNumber": "නියමිත ඔසප්: {diffPlusOne} වන දිනය",
+  "@menstruationScheduleDateWithNumber": {
+    "description": "生理管理機能で、アプリが予測した次回生理開始日までの残り日数を「生理予定：X日目」形式で表示する際に使用される文字列です。{diffPlusOne}には具体的な日数（1日目、2日目など）が入り、ユーザーのピル服用スケジュールと連動した生理周期予測を示します。",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
   }
 }
