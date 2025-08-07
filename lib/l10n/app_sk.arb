@@ -1353,5 +1353,9 @@
   "twentyOnePlusSevenPlacebo": "21 tabliet + 7 tabliet placebo",
   "@twentyOnePlusSevenPlacebo": {
     "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
+  },
+  "allActivePills": "Len aktívne tablety",
+  "@allActivePills": {
+    "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
   }
 }
