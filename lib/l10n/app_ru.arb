@@ -1215,5 +1215,9 @@
         "type": "int"
       }
     }
+  },
+  "receiveDailyNotificationAt9AM": "Уведомление в 9:00 в день приема",
+  "@receiveDailyNotificationAt9AM": {
+    "description": "ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。"
   }
 }
