@@ -1754,5 +1754,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "නොදන්නා දෝෂයකි. නවතම සංස්කරණයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. ගැටලුව විසඳුම් නොවන්නේ නම්, සැකසුම් > විමසීම් හරහා අප සමග සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
