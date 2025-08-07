@@ -270,5 +270,9 @@
         "type": "String"
       }
     }
+  },
+  "thankYouForCooperation": "ඔබගේ සහයෝගයට බොහොම ස්තූතියි",
+  "@thankYouForCooperation": {
+    "description": "ユーザーがアプリの改善やフィードバックに協力してくれた際に表示される感謝メッセージです。丁寧で感謝の気持ちが伝わるような表現にしてください。"
   }
 }
