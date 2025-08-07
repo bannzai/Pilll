@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "Načítanie zákazníckych informácií zlyhalo. Počkajte chvíľu a skúste to znovu. Ak sa problém nevyrieši, kontaktujte nás cez Nastavenia > Kontakt. Podrobnosti: Kód: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
