@@ -1908,5 +1908,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "දැනට භාවිත කරන පිල් ෂීට් සොයා ගත නොහැකි විය",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
