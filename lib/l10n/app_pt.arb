@@ -942,5 +942,9 @@
   "moreDetails": "Saiba mais",
   "@moreDetails": {
     "description": "詳細情報を表示するためのリンクやボタンに使用されるテキストです。ユーザーが追加の情報を確認したい時にタップ/クリックする要素の表示文言として使用されます。"
+  },
+  "restorePurchase": "As informações de compra foram restauradas",
+  "@restorePurchase": {
+    "description": "ピルアプリのプレミアムプラン（有料機能）を復元した際に表示される成功メッセージです。ユーザーが機種変更や再インストール後に、以前購入したプレミアム機能を復元完了したことを知らせる通知文言として使用されます。"
   }
 }
