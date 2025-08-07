@@ -1743,5 +1743,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "ਅਣਪਛਾਤੇ ਕਾਰਨ ਦੀ ਗਲਤੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਨਵੇਂ ਸੰਸਕਰਣ ਵਿੱਚ ਅੱਪਡੇਟ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਸੰਪਰਕ ਤੋਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਕੋਡ: {errorCode} ਵੇਰਵੇ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
