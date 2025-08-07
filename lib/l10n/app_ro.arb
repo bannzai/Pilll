@@ -1387,5 +1387,9 @@
   "requestForCancelSurvey": "Vă rugăm să ne ajutați cu chestionarul post-anulare",
   "@requestForCancelSurvey": {
     "description": "ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。"
+  },
+  "pilllDescription": "Pilll - Aplicație de memento pentru pilule",
+  "@pilllDescription": {
+    "description": "アプリストアなどで表示されるPilllアプリの短い説明文です。ピル（避妊薬）の服用管理に特化したリマインダーアプリであることを簡潔で魅力的に表現してください。"
   }
 }
