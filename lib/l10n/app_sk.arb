@@ -351,5 +351,9 @@
   "withdrawalMessage": "Vymazaním účtu budú všetky vaše údaje natrvalo odstránené a už sa nikdy nebudete môcť prihlásiť pomocou tohto účtu.",
   "@withdrawalMessage": {
     "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
+  },
+  "recordPage": "Záznamy",
+  "@recordPage": {
+    "description": "ピルの服用記録を確認・管理するページの名前です。ユーザーが過去の服用履歴を閲覧したり、服用状況を記録したりする機能を持つメインページの一つとして翻訳してください。"
   }
 }
