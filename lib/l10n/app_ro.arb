@@ -128,5 +128,9 @@
         "type": "String"
       }
     }
+  },
+  "currentTimeZone": "Fusul orar configurat în prezent",
+  "@currentTimeZone": {
+    "description": "設定画面等で表示される、ユーザーの端末で現在設定されているタイムゾーンを示すラベルです。ピルの服用リマインド機能で正確な時刻管理を行うため、タイムゾーン設定の確認に使用されます。"
   }
 }
