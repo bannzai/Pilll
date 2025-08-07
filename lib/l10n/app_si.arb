@@ -1517,5 +1517,17 @@
   "purchaseErrorOperationAlreadyInProgressError": "වෙනත් මිලදී ගැනීමේ ක්‍රියාවලියක් ප්‍රගතියේ ඇත. කරුණාකර ටික වේලාවකින් නැවත පරීක්ෂා කරන්න",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
+  },
+  "purchaseErrorUnknownBackendError": "දැනට මිලදී ගැනීම සිදු කළ නොහැක. ටික වේලාවකට පසු නැවත උත්සාහ කරන්න. ගැටලුව විසඳුනේ නැත්නම් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
