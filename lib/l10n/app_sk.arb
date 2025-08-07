@@ -399,5 +399,9 @@
   "medicationHistoryPremiumFeatureRestriction": "Ďalšie prezeranie je prémiová funkcia",
   "@medicationHistoryPremiumFeatureRestriction": {
     "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
+  },
+  "viewMoreDetails": "Zobraziť viac",
+  "@viewMoreDetails": {
+    "description": "詳細情報や追加の情報を表示するためのボタンやリンクのテキストです。「もっと見る」「詳細を見る」といった意味で、ユーザーがより詳しい情報にアクセスしたい時に表示されます。"
   }
 }
