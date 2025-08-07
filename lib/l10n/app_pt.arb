@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "Erro de origem desconhecida. Atualize para a versão mais recente e tente novamente. Se o problema persistir, acesse Configurações > Suporte para entrar em contato. Código: {errorCode} Detalhes: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
