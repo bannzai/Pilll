@@ -686,5 +686,17 @@
         "type": "String"
       }
     }
+  },
+  "restDurationDays": "{activePillSheetPillSheetTypeNotTakenWord}ziua {restDurationDays}",
+  "@restDurationDays": {
+    "description": "休薬期間（ピルを服用しない期間）の経過日数を表示する際に使用されます。{restDurationDays}には日数が入り、全体で「休薬〇日目」のような形で表示されます。",
+    "placeholders": {
+      "activePillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      },
+      "restDurationDays": {
+        "type": "int"
+      }
+    }
   }
 }
