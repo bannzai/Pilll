@@ -1341,5 +1341,9 @@
   "twentyFourPills": "24 tabliet",
   "@twentyFourPills": {
     "description": "ピルの種類選択時に表示される選択肢で、1シートに24錠入ったピルを表します。ユーザーが自分の使用しているピルの種類を選択する際の医療用語として正確に翻訳してください。"
+  },
+  "twentyOnePlusSevenDaysBreak": "21 tabletiek + 7-dňová prestávka",
+  "@twentyOnePlusSevenDaysBreak": {
+    "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   }
 }
