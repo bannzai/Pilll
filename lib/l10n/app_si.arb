@@ -1405,5 +1405,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "නොදන්නා හේතුවක් නිසා දෝෂයක් ඇතිවී ඇත. කරුණාකර මදක් වේලාවක් ගත වූ පසු නැවතත් උත්සාහ කරන්න. එය විසඳී නොගියහොත් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
