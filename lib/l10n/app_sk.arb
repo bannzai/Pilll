@@ -660,5 +660,9 @@
   "cannotTransferPremiumWithoutAccount": "Prémiové funkcie sa nedajú preniesť pri zmene telefónu alebo strate zariadenia",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
+  },
+  "reexperiencePremiumFeatures": "Môžete znovu vyskúšať prémiové funkcie na 14 dní! Ťuknite a zdieľajte na sociálnych sieťach!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   }
 }
