@@ -950,5 +950,9 @@
   "previouslyPurchased": "Pre existujúcich zákazníkov tu",
   "@previouslyPurchased": {
     "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
+  },
+  "noPreviousPurchaseInfo": "Predchádzajúce nákupy sa nenašli. Skontrolujte svoj účet a skúste to znovu.",
+  "@noPreviousPurchaseInfo": {
+    "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
   }
 }
