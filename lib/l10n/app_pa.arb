@@ -1521,5 +1521,17 @@
   "purchaseErrorOperationAlreadyInProgressError": "ਖਰੀਦ ਦੀ ਪ੍ਰਕਿਰਿਆ ਪਹਿਲਾਂ ਤੋਂ ਹੀ ਚੱਲ ਰਹੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਕੁਝ ਸਮਾਂ ਇੰਤਜ਼ਾਰ ਕਰਨ ਤੋਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
+  },
+  "purchaseErrorUnknownBackendError": "ਹਾਲੇ ਖਰੀਦਦਾਰੀ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕਦੀ। ਕੁਝ ਸਮੇਂ ਬਾਅਦ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇਕਰ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਸੰਪਰਕ ਤੋਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
