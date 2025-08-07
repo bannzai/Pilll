@@ -1637,5 +1637,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "නොදන්නා දෝෂයකි. නවතම අනුවාදයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. ගැටලුව විසඳුනේ නැත්නම් සැකසීම් > පිටපත හරහා අප සම්බන්ධ කරගන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
