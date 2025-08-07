@@ -1965,5 +1965,9 @@
   "unexpectedErrorOccurred": "ਇੱਕ ਅਚਾਨਕ ਗਲਤੀ ਹੋਈ ਹੈ",
   "@unexpectedErrorOccurred": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
+  },
+  "pressAndHoldNotificationToRecordPillTaking": "ਨੋਟੀਫਿਕੇਸ਼ਨ ਨੂੰ ਲੰਬੇ ਸਮੇਂ ਤੱਕ ਦਬਾਉਣ ਨਾਲ ਦਵਾਈ ਲੈਣ ਦਾ ਰਿਕਾਰਡ ਬਣਾਇਆ ਜਾ ਸਕਦਾ ਹੈ",
+  "@pressAndHoldNotificationToRecordPillTaking": {
+    "description": "ピル服用のリマインド通知を長押しすることで、アプリ内で服用記録を簡単に作成できる機能の説明です。ユーザーの利便性を伝える操作ガイダンス文です。"
   }
 }
