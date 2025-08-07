@@ -1574,5 +1574,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "මිලදී ගැනීම අසාර්ථක විය. කරුණාකර ටික වේලාවක් ගත වූ පසු නැවත උත්සාහ කරන්න. එය විසඳී නොගියහොත් සැකසීම් > විමසීම් හරහා අපව සම්බන්ධ කරන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
