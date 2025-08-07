@@ -1438,5 +1438,9 @@
   "purchaseErrorPurchaseInvalidError": "Plata a eșuat. Verificați dacă metoda de plată este validă și încercați din nou.",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "Planul selectat nu este disponibil în acest moment. Vă rugăm să reporniți aplicația și să încercați din nou.",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
