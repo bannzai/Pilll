@@ -2006,5 +2006,9 @@
   "failedToUpdate": "Aktualizácia zlyhala. Skontrolujte si prosím internetové pripojenie a skúste to znova.",
   "@failedToUpdate": {
     "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
+  },
+  "headache": "bolesť hlavy",
+  "@headache": {
+    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「頭痛」の適切な医療用語で翻訳してください。"
   }
 }
