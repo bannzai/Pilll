@@ -938,5 +938,9 @@
         "type": "String"
       }
     }
+  },
+  "moreDetails": "Vezi detalii",
+  "@moreDetails": {
+    "description": "詳細情報を表示するためのリンクやボタンに使用されるテキストです。ユーザーが追加の情報を確認したい時にタップ/クリックする要素の表示文言として使用されます。"
   }
 }
