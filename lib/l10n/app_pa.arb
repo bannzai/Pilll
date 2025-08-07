@@ -1912,5 +1912,9 @@
         "type": "String"
       }
     }
+  },
+  "currentPillSheetNotFound": "ਮੌਜੂਦਾ ਟੀਚੇ ਵਾਲੀ ਗੋਲੀ ਸ਼ੀਟ ਨਹੀਂ ਮਿਲੀ",
+  "@currentPillSheetNotFound": {
+    "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
   }
 }
