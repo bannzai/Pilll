@@ -1586,5 +1586,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "පරිශීලක තොරතුරු ලබා ගැනීමට අසමත් විය. කරුණාකර වේලාවක් යනතුරු බලා නැවත උත්සාහ කරන්න. ගැටලුව විසඳී නොගියහොත් සැකසුම් > අපගෙන් විමසීම හරහා අපගෙන් අමතන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
