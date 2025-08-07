@@ -1758,5 +1758,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "ਅਣਜਾਣ ਗਲਤੀ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਨਵੀਨਤਮ ਵਰਜ਼ਨ ਵਿੱਚ ਅੱਪਡੇਟ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇਕਰ ਸਮੱਸਿਆ ਹੱਲ ਨਹੀਂ ਹੁੰਦੀ, ਤਾਂ ਸੈਟਿੰਗਜ਼ > ਪੁੱਛਗਿੱਛ ਤੋਂ ਸੰਪਰਕ ਕਰੋ। ਕੋਡ: {errorCode} ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
