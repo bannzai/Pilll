@@ -1080,5 +1080,14 @@
   "startApp": "Começar",
   "@startApp": {
     "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
+  },
+  "loggedInWithProvider": "Login realizado com {accountTypeProviderName}",
+  "@loggedInWithProvider": {
+    "description": "ユーザーが外部認証プロバイダー（Google、Apple、Facebookなど）を使用してログインに成功した際に表示される確認メッセージです。{accountTypeProviderName}には使用したサービス名が入ります。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      }
+    }
   }
 }
