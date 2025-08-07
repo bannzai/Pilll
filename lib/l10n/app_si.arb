@@ -1598,5 +1598,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "මිලදී ගැනීමේ තොරතුරු ලබා ගැනීම අසාර්ථක විය. කරුණාකර මොහොතකට රැඳී නැවත උත්සාහ කරන්න. ගැටලුව විසඳුම් නොලැබේ නම් සැකසුම් > විමසීම් මගින් අප හා සම්බන්ධ වන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
