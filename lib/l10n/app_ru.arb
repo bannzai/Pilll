@@ -590,5 +590,14 @@
   "pauseTakingPeriodEnded": "Перерыв в приеме закончился",
   "@pauseTakingPeriodEnded": {
     "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "ピルシートの最後のピル番号を表示するテキストです。ピルシートUIで「何番目まで飲むか」を示す数値が入ります。",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
   }
 }
