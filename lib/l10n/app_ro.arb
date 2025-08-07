@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "S-a produs o eroare de cauză necunoscută. Vă rugăm să actualizați la cea mai recentă versiune și să încercați din nou. Dacă problema persistă, vă rugăm să ne contactați din Setări > Contact. Cod: {errorCode} Detalii: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
