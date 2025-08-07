@@ -799,5 +799,9 @@
   "menstruationHistory": "Istoric menstrual",
   "@menstruationHistory": {
     "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
+  },
+  "menstruationFromToday": "Menstruație de astăzi",
+  "@menstruationFromToday": {
+    "description": "生理記録機能で、ユーザーが今日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を今日として登録するための操作に使用されます。"
   }
 }
