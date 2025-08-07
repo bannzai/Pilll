@@ -379,5 +379,9 @@
   "settingsPage": "Setări",
   "@settingsPage": {
     "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
+  },
+  "menstruationDeleted": "Perioada menstruală a fost ștearsă",
+  "@menstruationDeleted": {
+    "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
   }
 }
