@@ -1027,5 +1027,9 @@
   "seeDetailsOfPremiumFeatures": "Vezi detaliile funcțiilor premium",
   "@seeDetailsOfPremiumFeatures": {
     "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
+  },
+  "popularFeatures": "Funcții\npopulare",
+  "@popularFeatures": {
+    "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
   }
 }
