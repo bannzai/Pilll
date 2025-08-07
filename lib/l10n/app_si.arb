@@ -828,5 +828,9 @@
   "beforePremiumRegistration": "ප්‍රිමියම් ලියාපදිංචි කිරීමට පෙර...",
   "@beforePremiumRegistration": {
     "description": "プレミアム機能の説明や紹介をする際の導入部分として表示されるテキストです。ユーザーが有料プランの詳細を確認する前に表示される前置きの文言として使用されます。"
+  },
+  "createNewAccountIfNotLoggedIn": "ඔබ තවම Pilll වෙත පිවිසී නොමැති නම් නව ගිණුමක් සාදනු ලැබේ",
+  "@createNewAccountIfNotLoggedIn": {
+    "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
   }
 }
