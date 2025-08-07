@@ -807,5 +807,9 @@
   "menstruationFromYesterday": "Menstruação desde ontem",
   "@menstruationFromYesterday": {
     "description": "生理記録機能で、ユーザーが昨日から生理が開始したことを記録する際に表示されるボタンやメニューのラベルです。生理周期の管理において、新しい生理期間の開始日を昨日として登録するための操作に使用されます。"
+  },
+  "selectMenstruationStartDate": "Selecionar data de início da menstruação",
+  "@selectMenstruationStartDate": {
+    "description": "生理記録機能で、ユーザーが新しい生理期間の開始日を設定する際に表示されるボタンやメニューのラベルです。生理周期の管理において、生理開始日を記録するための操作に使用されます。"
   }
 }
