@@ -176,5 +176,9 @@
   "autoAddNewSheetAfterCurrentEnds": "Keď sa skončí aktuálna skupina tabliet, automaticky sa pridá nové balenie",
   "@autoAddNewSheetAfterCurrentEnds": {
     "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
+  },
+  "accountSettings": "Nastavenia účtu",
+  "@accountSettings": {
+    "description": "設定画面で表示される「アカウント設定」メニュー項目のラベルです。ユーザーの個人情報やアカウント関連の設定を管理する画面へのナビゲーションとして使用されます。"
   }
 }
