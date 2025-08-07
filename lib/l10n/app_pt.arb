@@ -1936,5 +1936,14 @@
   "previousPillSheetGroupNotFound": "O grupo da cartela de pílulas anterior ainda não existe",
   "@previousPillSheetGroupNotFound": {
     "description": "アプリでピルシートの履歴を確認する際、前回使用していたピルシートのグループデータが見つからない場合に表示されるエラーメッセージです。"
+  },
+  "withPillSheetCount": "{number} cartelas",
+  "@withPillSheetCount": {
+    "description": "ピルシートの枚数を表示する際に使用される文字列で、数値の後に枚数を表す単位語が続きます。ピルの在庫管理や履歴表示などで「3枚」「5枚」のように表示されます。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
