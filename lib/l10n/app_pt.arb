@@ -391,5 +391,9 @@
   "menstruationEdited": "Período menstrual editado com sucesso",
   "@menstruationEdited": {
     "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を編集完了した後に表示される確認メッセージです。生理管理機能での編集操作の完了を知らせる文言として翻訳してください。"
+  },
+  "physicalConditionDetail": "Detalhes da Saúde",
+  "@physicalConditionDetail": {
+    "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
   }
 }
