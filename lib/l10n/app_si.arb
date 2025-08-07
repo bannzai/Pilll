@@ -979,5 +979,9 @@
   "lifetimePlanStandardPrice": "සාමාන්‍ය මිල",
   "@lifetimePlanStandardPrice": {
     "description": "買い切り型プレミアムプランの通常価格を表示するラベルテキストです。課金画面で特別価格オファーと対比して表示される際に使用されます。"
+  },
+  "youArePremiumMember": "ඔබ\nප්‍රිමියම් සාමාජිකයෙකි",
+  "@youArePremiumMember": {
+    "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
   }
 }
