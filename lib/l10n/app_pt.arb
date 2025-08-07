@@ -1656,5 +1656,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "Erro de causa desconhecida. Atualize para a versão mais recente e tente novamente. Se o problema persistir, entre em contato através de Configurações > Contato. Código: {errorCode} Detalhes: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
