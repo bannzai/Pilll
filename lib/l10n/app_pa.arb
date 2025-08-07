@@ -1345,5 +1345,9 @@
   "twentyOnePlusSevenDaysBreak": "੨੧ ਗੋਲੀਆਂ + ੭ ਦਿਨ ਬਿਨਾਂ ਗੋਲੀ",
   "@twentyOnePlusSevenDaysBreak": {
     "description": "ピルの種類選択時に表示される選択肢で、21日間連続でピルを服用した後、7日間休薬する服用スケジュールを表します。医療用語として正確に翻訳してください。"
+  },
+  "twentyFourPlusFourPlacebo": "24 ਗੋਲੀਆਂ + 4 ਪਲੇਸੀਬੋ ਗੋਲੀਆਂ",
+  "@twentyFourPlusFourPlacebo": {
+    "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
   }
 }
