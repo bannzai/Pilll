@@ -1093,5 +1093,9 @@
   "tellAboutPrescribedSheet": "Despre blisterul prescris\nvă rugăm să ne spuneți",
   "@tellAboutPrescribedSheet": {
     "description": "医師から処方されたピルのシート（薬のパッケージ）に関する情報を入力してもらう際のメッセージです。ユーザーが使用しているピルの種類や詳細について教えてもらうための画面で表示されます。"
+  },
+  "existingAccountUsers": "Aveți deja un cont? Conectați-vă aici",
+  "@existingAccountUsers": {
+    "description": "アカウント作成や初回設定画面で、すでにアプリにアカウントを持っているユーザーがログイン画面に移動するためのリンクテキストです。新規ユーザー向けの画面で、既存ユーザーを適切な画面に誘導する役割を持ちます。"
   }
 }
