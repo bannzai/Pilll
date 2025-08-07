@@ -43,5 +43,9 @@
   "userAlreadyExists": "Usuário já existe",
   "@userAlreadyExists": {
     "description": "アカウント作成やユーザー登録時に、入力されたメールアドレスや電話番号が既に他のアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーに対して既存のアカウントでログインするか、別の認証情報を使用するよう促す文脈で使用されます。"
+  },
+  "medicationHistory": "Histórico de Tomadas",
+  "@medicationHistory": {
+    "description": "ピルアプリ内で、過去に服用したピルの記録を確認できる画面やメニューのタイトルとして使用されます。ユーザーがいつピルを飲んだかの履歴を表示する機能の名称です。"
   }
 }
