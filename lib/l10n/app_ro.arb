@@ -1517,5 +1517,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOperationAlreadyInProgressError": "O achiziție este deja în curs de procesare. Vă rugăm să așteptați un moment și să verificați din nou.",
+  "@purchaseErrorOperationAlreadyInProgressError": {
+    "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
   }
 }
