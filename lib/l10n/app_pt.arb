@@ -1035,5 +1035,9 @@
   "viewPremiumFeatures": "Ver recursos premium",
   "@viewPremiumFeatures": {
     "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
+  },
+  "seeDetails": "Ver detalhes",
+  "@seeDetails": {
+    "description": "ボタンやリンクテキストとして使用され、ピルの服用履歴や生理記録、プレミアム機能などの詳細情報を表示する画面に遷移する際の行動を促すテキストです。"
   }
 }
