@@ -1769,5 +1769,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "සන්නිවේදන දෝෂයකි. ඔබේ සන්නිවේදන පරිසරය පරීක්ෂා කර නැවත උත්සාහ කරන්න. නොපිළිසදර නම් සැකසීම් > විමසීම් හරහා අපව සම්බන්ධ කරගන්න. විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
