@@ -1063,5 +1063,14 @@
   "next": "Ďalej",
   "@next": {
     "description": "画面やフォームで次のステップに進むためのボタンラベルです。初回設定、チュートリアル、各種設定画面などで使用されます。"
+  },
+  "notificationIndex": "Oznámenie {number}",
+  "@notificationIndex": {
+    "description": "複数のピル服用リマインダー通知がある場合に、各通知を番号で区別するためのラベルです。通知設定画面や通知一覧で「通知1」「通知2」のように表示されます。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
