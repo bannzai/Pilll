@@ -1716,5 +1716,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "د پیسو بیرته ورکولو پروسه پیل شوې ده. تایید یې کړئ او بیا هڅه وکړئ. که دا حل نشي، تنظیمات > پوښتنې څخه موږ سره اړیکه ونیسئ. کوډ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
