@@ -55,5 +55,9 @@
   "account": "Cont",
   "@account": {
     "description": "ピルアプリの設定画面で表示されるメニュー項目で、ユーザーのログイン情報や個人プロフィール、アカウント設定などを管理する機能にアクセスするためのラベルです。"
+  },
+  "dataTransferRequiresAccount": "Înregistrarea unui cont este necesară pentru transferul și restaurarea datelor în cazul schimbării dispozitivului sau pierderii smartphone-ului.",
+  "@dataTransferRequiresAccount": {
+    "description": "機種変更や端末紛失時に、ピルの服用記録や生理記録などのデータを新しい端末に引き継ぐには、アカウント登録が必要であることをユーザーに説明する文章です。"
   }
 }
