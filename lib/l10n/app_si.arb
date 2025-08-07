@@ -1802,5 +1802,9 @@
   "receiveNotificationAt9AM": "එදිනම 9:00ට දැනුම්දීම ලබාගන්න",
   "@receiveNotificationAt9AM": {
     "description": "ピル服用のリマインダー通知を当日の朝9:00に受け取る設定項目です。"
+  },
+  "deletedScheduleCannotBeRestored": "ඉවත් කරන ලද කාර්ය සැලසුම් ප්‍රතිස්ථාපනය කළ නොහැක",
+  "@deletedScheduleCannotBeRestored": {
+    "description": "通院予定や服用スケジュールなどの予定を削除する際に表示される警告メッセージです。一度削除した予定は元に戻せないことをユーザーに注意喚起しています。"
   }
 }
