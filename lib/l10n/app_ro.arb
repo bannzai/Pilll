@@ -1973,5 +1973,14 @@
   "letsTryIt": "Încercați-o acum!",
   "@letsTryIt": {
     "description": "機能説明の後でユーザーに実際にその機能を使ってみることを勧める行動促進メッセージです。親しみやすく前向きな表現で翻訳してください。"
+  },
+  "trialDeadlineDateOffsetDay": "Poți folosi toate funcțiile timp de {number} zile!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
