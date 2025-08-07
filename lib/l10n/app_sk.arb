@@ -1239,5 +1239,9 @@
   "previousPillSheetGroup": "Predchádzajúca skupina piluliek",
   "@previousPillSheetGroup": {
     "description": "ピル服用管理において、複数のピルシート（薬のパッケージ）をグループとして管理する際の、時系列的に一つ前に使用していたピルシートのまとまりを指します。服用履歴や切り替えの管理画面で表示される項目として使用されます。"
+  },
+  "noPreviousPillSheetGroup": "Predchádzajúca skupina tabliet ešte neexistuje",
+  "@noPreviousPillSheetGroup": {
+    "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
   }
 }
