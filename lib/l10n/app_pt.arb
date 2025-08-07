@@ -245,5 +245,9 @@
   "pillSheetDiscarded": "A cartela de pílulas foi descartada",
   "@pillSheetDiscarded": {
     "description": "ユーザーがピルシート（避妊薬のパッケージ）を物理的に破棄・処分した際に表示される確認メッセージです。アプリ内でピルシートの管理状態を更新した後に、ユーザーに対して破棄完了を知らせるために使用されます。"
+  },
+  "aboutMenstruation": "Sobre a menstruação",
+  "@aboutMenstruation": {
+    "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
   }
 }
