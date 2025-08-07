@@ -257,5 +257,9 @@
   "customizeMedicationNotifications": "Personalização de notificações de tomada",
   "@customizeMedicationNotifications": {
     "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
+  },
+  "medicationNotification": "Notificação de tomada",
+  "@medicationNotification": {
+    "description": "ピルの服用時刻を知らせるプッシュ通知やリマインダー機能の名称です。設定画面や通知関連の項目で表示されます。"
   }
 }
