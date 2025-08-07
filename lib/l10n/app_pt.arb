@@ -1019,5 +1019,9 @@
   "customizeHealthTags": "🏷 Personalizar tags de saúde",
   "@customizeHealthTags": {
     "description": "プレミアム機能の一覧で表示される機能名です。ユーザーが日記機能で体調を記録する際に使用するタグ（頭痛、吐き気、気分など）を自分好みにカスタマイズできる機能を表しています。"
+  },
+  "hideAds": "🚫 Sem anúncios",
+  "@hideAds": {
+    "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
   }
 }
