@@ -367,5 +367,9 @@
   "updateAuthenticationAfterReLogin": "Vă rugăm să vă conectați din nou pentru a actualiza informațiile de autentificare",
   "@updateAuthenticationAfterReLogin": {
     "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
+  },
+  "menstruationPage": "Menstruație",
+  "@menstruationPage": {
+    "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   }
 }
