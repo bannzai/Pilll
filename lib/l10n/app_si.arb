@@ -1562,5 +1562,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorPaymentPendingError": "ගෙවීම අවසන් නොවී නතර වී ඇත. ලොගින් වී ඇති {accountName} සමඟ {storeName} තුළ පරීක්ෂා කරන්න",
+  "@purchaseErrorPaymentPendingError": {
+    "description": "アプリ内課金の支払い処理が中断された際に表示されるエラーメッセージです。ユーザーにストア（App Store/Google Play）で支払い状況を確認するよう案内します。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      },
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
