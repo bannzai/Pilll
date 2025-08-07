@@ -363,5 +363,9 @@
   "reLoginMessage": "Vă rugăm să vă reconectați pentru verificarea identității înainte de ștergerea contului. După reconectare, procesul de ștergere a contului va începe automat.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
+  },
+  "updateAuthenticationAfterReLogin": "Vă rugăm să vă conectați din nou pentru a actualiza informațiile de autentificare",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   }
 }
