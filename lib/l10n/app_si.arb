@@ -1194,5 +1194,9 @@
         "type": "int"
       }
     }
+  },
+  "enterAtLeastOneCharacter": "කරුණාකර ආදානය කරන්න",
+  "@enterAtLeastOneCharacter": {
+    "description": "フォーム入力時に最低文字数を満たしていない場合に表示されるバリデーションエラーメッセージです。日記や体調記録などの入力フィールドで使用されます。"
   }
 }
