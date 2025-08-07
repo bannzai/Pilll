@@ -363,5 +363,9 @@
   "reLoginMessage": "Por favor, faça login novamente para verificação de identidade antes de cancelar sua conta. O processo de cancelamento será iniciado automaticamente após o novo login.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
+  },
+  "updateAuthenticationAfterReLogin": "Entre novamente para atualizarmos suas informações de autenticação",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   }
 }
