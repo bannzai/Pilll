@@ -1697,5 +1697,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "උපාංගයේ සැකසීම්වල ගැටලුවක් ඇත. පරීක්ෂා කර නැවත උත්සාහ කරන්න. විසඳුම්ට පත් නොවන්නේ නම් සැකසීම් > විමසීම් හරහා අප සමඟ සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
