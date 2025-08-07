@@ -660,5 +660,9 @@
   "cannotTransferPremiumWithoutAccount": "As funcionalidades premium não poderão ser transferidas em caso de troca de dispositivo ou perda do smartphone",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
+  },
+  "reexperiencePremiumFeatures": "Experimente novamente os recursos premium por 14 dias!\nToque para compartilhar nas redes sociais!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   }
 }
