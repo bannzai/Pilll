@@ -1610,5 +1610,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "අනාමික දෝෂයකි. නවතම අනුවාදයට යාවත්කාලීන කර නැවත උත්සාහ කරන්න. ගැටළුව නිරාකරණය නොවන්නේ නම් සැකසීම් > විමසීම් හරහා අප වෙත සම්බන්ධ වන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
