@@ -144,5 +144,9 @@
   "unsubscribeInfo": "Sobre o cancelamento",
   "@unsubscribeInfo": {
     "description": "プレミアムプランの解約手続きや解約に関する情報へのリンク・ボタンのラベルです。ユーザーがサブスクリプションの解約方法を確認したい時に表示されます。"
+  },
+  "pillReminder": "Notificação da pílula",
+  "@pillReminder": {
+    "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
   }
 }
