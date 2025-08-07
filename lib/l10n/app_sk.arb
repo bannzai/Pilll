@@ -148,5 +148,9 @@
   "pillReminder": "Notifikácia užívania piluliek",
   "@pillReminder": {
     "description": "アプリがユーザーにピル（経口避妊薬）の服用時刻を知らせるリマインダー通知機能の名称です。設定画面や通知関連のメニューで表示されます。"
+  },
+  "takePillReminderChannelName": "Upozornenia na užívanie",
+  "@takePillReminderChannelName": {
+    "description": "ピルの服用リマインダー通知を分類するための通知チャンネル名です。ユーザーの端末の通知設定画面で表示され、この種類の通知のオン・オフを制御するために使われます。"
   }
 }
