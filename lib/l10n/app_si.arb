@@ -1357,5 +1357,9 @@
   "twentyFourPlusFourDaysBreak": "24 පෙති + 4 දින විවේකය",
   "@twentyFourPlusFourDaysBreak": {
     "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
+  },
+  "choosePillType": "ගෙඩිය වර්ගය තෝරන්න",
+  "@choosePillType": {
+    "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   }
 }
