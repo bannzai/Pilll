@@ -347,5 +347,9 @@
   "userInformationWillBeDeleted": "Datele utilizatorului vor fi șterse",
   "@userInformationWillBeDeleted": {
     "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
+  },
+  "withdrawalMessage": "Prin ștergerea contului, toate datele vor fi eliminate permanent și nu veți mai putea să vă autentificați cu același cont.",
+  "@withdrawalMessage": {
+    "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
   }
 }
