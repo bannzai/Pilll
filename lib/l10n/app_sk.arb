@@ -63,5 +63,9 @@
   "pillPremium": "Pilll Premium",
   "@pillPremium": {
     "description": "Pilllアプリの有料プラン（サブスクリプション）の名称です。アプリ名「Pilll」と「Premium」を組み合わせたブランド名として、設定画面や課金関連のUIで表示されます。"
+  },
+  "unlimitedFeatureDuration": "O období s neobmedzenými funkciami",
+  "@unlimitedFeatureDuration": {
+    "description": "プレミアムプラン加入者が利用できる機能無制限期間について説明するテキストです。設定画面や課金関連のUIで、ユーザーに有料プランの特典期間を案内する際に表示されます。"
   }
 }
