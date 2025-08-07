@@ -832,5 +832,9 @@
   "createNewAccountIfNotLoggedIn": "Ak sa do aplikácie Pilll prihlasujete prvýkrát, automaticky sa vytvorí nový účet.",
   "@createNewAccountIfNotLoggedIn": {
     "description": "ログイン画面や初回利用時に表示される、新規ユーザー向けの説明テキストです。初めてアプリを使用するユーザーに対して、自動的にアカウントが作成されることを知らせる案内文として使用されます。"
+  },
+  "registerAccountForDataTransfer": "Registráciou účtu môžete prenášať svoje dáta",
+  "@registerAccountForDataTransfer": {
+    "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
   }
 }
