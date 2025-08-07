@@ -1712,5 +1712,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "ආපසු ගෙවීමේ ක්‍රියාවලිය ආරම්භ වී ඇත. තහවුරු කර නැවත උත්සාහ කරන්න. විසඳෙන්නේ නැතිනම් සැකසීම් > විමසීම් හරහා අපට අමතන්න. කේතය: {errorCode} විස්තර: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
