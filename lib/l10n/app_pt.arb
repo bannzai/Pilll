@@ -351,5 +351,9 @@
   "withdrawalMessage": "Se você cancelar sua conta, todos os dados serão excluídos permanentemente e não será possível fazer login com a mesma conta novamente.",
   "@withdrawalMessage": {
     "description": "アカウント退会時に表示される最終確認メッセージです。全データが削除され、同じアカウントで再ログインできなくなることを強調する重要な警告として翻訳してください。"
+  },
+  "recordPage": "Registros",
+  "@recordPage": {
+    "description": "ピルの服用記録を確認・管理するページの名前です。ユーザーが過去の服用履歴を閲覧したり、服用状況を記録したりする機能を持つメインページの一つとして翻訳してください。"
   }
 }
