@@ -1059,5 +1059,9 @@
   "readAndStartUsing": "Citiți și începeți utilizarea",
   "@readAndStartUsing": {
     "description": "利用規約やプライバシーポリシー等の重要な情報を読んでから、アプリの使用を開始することを促すボタンまたは案内文です。ユーザーに対して情報の確認と利用開始の両方のアクションを促している表現です。"
+  },
+  "next": "Următorul",
+  "@next": {
+    "description": "画面やフォームで次のステップに進むためのボタンラベルです。初回設定、チュートリアル、各種設定画面などで使用されます。"
   }
 }
