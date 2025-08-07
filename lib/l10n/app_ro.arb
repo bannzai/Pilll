@@ -1288,5 +1288,9 @@
   "serviceImprovementSurvey": "Chestionar pentru îmbunătățirea serviciului",
   "@serviceImprovementSurvey": {
     "description": "アプリ内でユーザーのフィードバックを収集するためのアンケート機能のタイトルや見出しとして表示される文字列です。Pilllアプリのサービス向上を目的としたユーザー向けアンケートを指しています。"
+  },
+  "satisfied": "Mulțumit",
+  "@satisfied": {
+    "description": "アプリのサービス向上アンケートで使用される満足度評価の選択肢です。ユーザーがアプリに対して「満足している」という回答を選択する際に表示される文字列です。"
   }
 }
