@@ -1945,5 +1945,9 @@
         "type": "int"
       }
     }
+  },
+  "connectionError": "A conexão de rede parece instável. Aguarde um momento e tente novamente.",
+  "@connectionError": {
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   }
 }
