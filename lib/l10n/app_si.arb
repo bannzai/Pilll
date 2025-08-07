@@ -1785,5 +1785,14 @@
   "forceUpdateTitle": "කරුණාකර යෙදුම යාවත්කාලීන කරන්න",
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
+  },
+  "forceUpdateMessage": "ඔබේ යෙදුමේ අනුවාදය යාවත්කාලීන කරන ලෙස ඉල්ලා සිටිමු. කරුණාකර {storeName} වෙතින් නවතම අනුවාදයට යාවත්කාලීන කරන්න",
+  "@forceUpdateMessage": {
+    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
