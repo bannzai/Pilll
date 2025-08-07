@@ -795,5 +795,9 @@
   "recordMenstruation": "Registrar menstruação",
   "@recordMenstruation": {
     "description": "生理記録機能のラベルです。ユーザーが生理の開始や期間を入力・記録する際に表示されるテキストです。"
+  },
+  "menstruationHistory": "Histórico Menstrual",
+  "@menstruationHistory": {
+    "description": "これまでに記録された生理の履歴・データを表示する画面やメニューのラベルです。ユーザーが過去の生理周期や記録を確認するための機能名として使用されます。"
   }
 }
