@@ -1838,5 +1838,17 @@
         "type": "String"
       }
     }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "دا {accountTypeProviderName} حساب دمخه د نورو Pilll حساب سره تړلی دی، نو نوم لیکنه نشي کیدای. د ډېر پوښتنو ځوابونه هم وګورئ. تفصیلات: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
