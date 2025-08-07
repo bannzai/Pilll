@@ -200,5 +200,9 @@
   "healthCareIntegration": "සෞඛ්‍ය සම්බන්ධතාවය",
   "@healthCareIntegration": {
     "description": "設定画面等で表示される機能名で、iOSのヘルスケアアプリやその他の健康管理アプリとのデータ連携機能を指します。ピルの服用記録や生理データを外部の健康管理システムと同期する機能の名称として使用されます。"
+  },
+  "healthCareIntegrationDescription": "Pilll හි සටහන් කළ ඔසප් වාර්තා ස්වයංක්‍රීයව සෞඛ්‍ය යෙදුමට සටහන් කළ හැකිය",
+  "@healthCareIntegrationDescription": {
+    "description": "ピルの服用管理アプリPilllで記録した生理記録を、iOSの「ヘルスケア」アプリに自動的に同期する機能の説明文です。設定画面などでユーザーに機能の利便性を伝える際に表示されます。"
   }
 }
