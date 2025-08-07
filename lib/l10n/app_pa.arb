@@ -253,5 +253,9 @@
   "checkPillNumberForMenstruationStart": "ਕਿਰਪਾ ਕਰਕੇ ਮਾਸਿਕ ਧਰਮ ਸ਼ੁਰੂਆਤ ਦੀ ਮਿਤੀ ਦਾ ਗੋਲੀ ਨੰਬਰ ਚੈੱਕ ਕਰੋ। ਵਰਤਮਾਨ ਵਿੱਚ ਚੁਣੀ ਗਈ ਗੋਲੀ ਸ਼ੀਟ ਕਿਸਮ ਵਿੱਚ ਸੈਟ ਕੀਤਾ ਗਿਆ ਗੋਲੀ ਨੰਬਰ ਮੌਜੂਦ ਨਹੀਂ ਹੈ",
   "@checkPillNumberForMenstruationStart": {
     "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
+  },
+  "customizeMedicationNotifications": "ਦਵਾਈ ਸੂਚਨਾ ਕਸਟਮਾਈਜ਼ੇਸ਼ਨ",
+  "@customizeMedicationNotifications": {
+    "description": "ピル服用のリマインダー通知をユーザーが自分好みに設定できる機能の項目名です。通知時刻や通知方法などをカスタマイズする設定画面への入り口として表示されます。"
   }
 }
