@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "ਡਿਵਾਈਸ ਦੀਆਂ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸਮੱਸਿਆ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਜਾਂਚ ਕਰੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ। ਜੇ ਇਹ ਹੱਲ ਨਹੀਂ ਹੁੰਦਾ ਤਾਂ ਸੈਟਿੰਗਾਂ > ਸੰਪਰਕ ਰਾਹੀਂ ਸਾਡੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ। ਕੋਡ: {errorCode} ਵੇਰਵਾ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
