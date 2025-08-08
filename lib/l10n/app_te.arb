@@ -1409,5 +1409,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "అజ్ఞాత కారణంతో దోషం సంభవించింది. కొంత సమయం తర్వాత మళ్ళీ ప్రయత్నించండి. పరిష్కారం కాకపోతే సెట్టింగ్స్ > సంప్రదింపు ద్వారా సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
