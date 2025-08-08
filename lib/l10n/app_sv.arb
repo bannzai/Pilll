@@ -2230,5 +2230,14 @@
   "changeEndOfPillDays": "Ändra slutet av intagsperioden",
   "@changeEndOfPillDays": {
     "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
+  },
+  "cannotUpdateToReplacePillSheet": "Kunde inte uppdatera vid byte av p-pillerkort id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
   }
 }
