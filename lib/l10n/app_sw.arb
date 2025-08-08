@@ -870,5 +870,9 @@
   "standardMonthlyPlan": "Mpango wa Kawaida wa Kila Mwezi",
   "@standardMonthlyPlan": {
     "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
+  },
+  "annualPlan": "Mpango wa Mwaka",
+  "@annualPlan": {
+    "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
   }
 }
