@@ -1484,5 +1484,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "தற்போது வாங்க முடியவில்லை. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். இது தீர்க்கப்படவில்லை எனில் அமைப்புகள் > தொடர்பு கொள்ளுங்கள் மூலம் எங்களை தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
