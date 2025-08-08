@@ -343,5 +343,9 @@
   "calendar": "koledar",
   "@calendar": {
     "description": "アプリ内で生理記録、服用履歴、体調日記、予定管理などを表示・入力するためのカレンダー機能を指します。各言語で一般的に使用される「カレンダー」「暦」に相当する用語で翻訳してください。"
+  },
+  "userInformationWillBeDeleted": "Uporabniške informacije bodo izbrisane",
+  "@userInformationWillBeDeleted": {
+    "description": "アカウント削除やデータリセット時に表示される警告メッセージです。ユーザーの服用履歴、生理記録、体調日記などのすべての個人データが完全に削除されることを伝える重要な確認メッセージとして翻訳してください。"
   }
 }
