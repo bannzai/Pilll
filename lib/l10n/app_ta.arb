@@ -1602,5 +1602,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorConfigurationError": "வாங்குதல் தகவல் பெறுவதில் தோல்வி. சிறிது நேரம் கழித்து மீண்டும் முயற்சி செய்யுங்கள். சரி செய்யப்படாவிட்டால் அமைப்புகள் > தொடர்பு கொள்ளுங்கள் மூலம் தொடர்பு கொள்ளுங்கள். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorConfigurationError": {
+    "description": "アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
