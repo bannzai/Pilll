@@ -1047,5 +1047,9 @@
   "setMultipleReminders": "Kuweka vikumbusho vingi kunaweza kuzuia kusahau kunywa dawa",
   "@setMultipleReminders": {
     "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
+  },
+  "and": "na",
+  "@and": {
+    "description": "2つの項目や要素を並列に繋ぐ際に使用される接続詞です。アプリ内のテキストで「設定と履歴」「朝と夜」などの表現に使われます。"
   }
 }
