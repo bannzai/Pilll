@@ -1043,5 +1043,9 @@
   "stepThreeOfThree": "3/3",
   "@stepThreeOfThree": {
     "description": "アプリの初期設定やオンボーディングプロセスにおける3番目（最終）のステップを示すテキストで、「3/3」の形式で進捗を表示します。画面上部などに表示され、ユーザーに現在のステップ位置を分数形式で伝える役割があります。"
+  },
+  "missedPillNotification": "Påminnelse om glömd p-piller",
+  "@missedPillNotification": {
+    "description": "設定した服用時刻にピルを飲み忘れた際にユーザーに送信されるプッシュ通知のタイトルまたは内容として表示されるテキストです。アプリの主要機能である「飲み忘れ防止」のためのリマインド機能の一部として使用されます。"
   }
 }
