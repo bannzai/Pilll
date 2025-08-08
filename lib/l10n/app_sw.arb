@@ -359,5 +359,9 @@
   "doReLogin": "Ingia tena",
   "@doReLogin": {
     "description": "認証エラーや認証期限切れなどで、ユーザーに再度ログインを促すメッセージです。アプリのアカウント認証システムで使用されます。"
+  },
+  "reLoginMessage": "Tafadhali ingia tena ili kuthibitisha utambulisho wako kabla ya kufuta akaunti. Baada ya kuingia tena, mchakato wa kufuta akaunti utaanza kiotomatiki.",
+  "@reLoginMessage": {
+    "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
   }
 }
