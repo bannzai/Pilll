@@ -1895,5 +1895,9 @@
   "exampleRestDurationDate": "Kwa mfano \"kuanzia 1/12 kwa siku 3\" kuacha kunywa dawa",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
+  },
+  "exampleRestDurationNumber": "Kwa mfano ikiwa \"kutoka nambari 18 kwa siku 3\" umepumzisha kumeza vidonge",
+  "@exampleRestDurationNumber": {
+    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   }
 }
