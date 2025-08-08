@@ -1409,5 +1409,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "தெரியாத காரணத்தால் பிழை ஏற்பட்டது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். சரியாகவில்லை என்றால் அமைப்புகள் > தொடர்பு கொள்ளவும் மூலம் தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
