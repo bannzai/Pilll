@@ -987,5 +987,9 @@
   "youArePremiumMember": "Ste premium član.",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
+  },
+  "thankYouMessage": "Hvala vam za uporabo.\nZaradi vas lahko nadaljujemo z vodenjem aplikacije Pilll.",
+  "@thankYouMessage": {
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   }
 }
