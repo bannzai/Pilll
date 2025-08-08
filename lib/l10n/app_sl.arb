@@ -1148,5 +1148,9 @@
   "showsPillNumber": "Prikaz številk",
   "@showsPillNumber": {
     "description": "ピルシートの各薬に表示される順番の数字（1日目、2日目など）を表示するかどうかを切り替える設定項目のラベルです。ユーザーがピルシートUI上で薬の服用順序を数字で確認したい場合に使用されます。"
+  },
+  "showsDescription": "Prikaži opise",
+  "@showsDescription": {
+    "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
   }
 }
