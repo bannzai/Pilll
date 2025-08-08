@@ -1656,5 +1656,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "తెలియని లోపం జరిగింది. దయచేసి తాజా వెర్షన్‌కు అప్‌డేట్ చేసి మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కారం కాకపోతే సెట్టింగ్స్ > సంప్రదింపు ద్వారా సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
