@@ -870,5 +870,9 @@
   "limitedTimeDiscount": "Tani me çmim special - përdore përgjithmonë",
   "@limitedTimeDiscount": {
     "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
+  },
+  "standardMonthlyPlan": "Plan mujor standard",
+  "@standardMonthlyPlan": {
+    "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   }
 }
