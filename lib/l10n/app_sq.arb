@@ -383,5 +383,9 @@
   "menstruationDeleted": "Periudha menstruale u fshi",
   "@menstruationDeleted": {
     "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
+  },
+  "editMenstruationPeriod": "Redakto periudhën menstruale",
+  "@editMenstruationPeriod": {
+    "description": "ユーザーが過去に記録した生理期間のデータ（開始日・終了日など）を修正・編集する際に表示されるボタンやメニュー項目のテキストです。生理管理機能の編集操作を表す動作として翻訳してください。"
   }
 }
