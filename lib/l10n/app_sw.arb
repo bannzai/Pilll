@@ -1223,5 +1223,9 @@
   "physicalCondition": "Hali",
   "@physicalCondition": {
     "description": "日記機能において、ユーザーが体調や身体の状態を記録する際の項目名として表示されます。ピル服用による体調の変化や身体のコンディションを記録するために使用されます。"
+  },
+  "deletedDiaryCannotBeRecovered": "Kumbukumbu zilizofutwa haziwezi kurudishwa",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
   }
 }
