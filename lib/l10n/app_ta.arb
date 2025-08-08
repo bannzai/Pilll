@@ -2213,5 +2213,14 @@
   "notificationTime": "அறிவிப்பு நேரம்",
   "@notificationTime": {
     "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
+  },
+  "timeZoneChangedTo": "{tz}க்கு மாற்றப்பட்டது",
+  "@timeZoneChangedTo": {
+    "description": "ユーザーがアプリの設定でタイムゾーンを変更した際に表示される確認メッセージです。{tz}部分には具体的なタイムゾーン名（例：Asia/Tokyo）が入り、ピルの服用リマインダー時間に影響する重要な設定変更を知らせます。",
+    "placeholders": {
+      "tz": {
+        "type": "String"
+      }
+    }
   }
 }
