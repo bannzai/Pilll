@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "పరికరం సెట్టింగ్లలో సమస్య ఉంది. దయచేసి తనిఖీ చేసి మళ్లీ ప్రయత్నించండి. పరిష్కరించబడకపోతే సెట్టింగ్స్ > సంప్రదింపు నుండి మమ్మల్ని సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
