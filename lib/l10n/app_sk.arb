@@ -2306,5 +2306,9 @@
   "enableNotificationInSilentMode": "Upozorniť aj v tichom režime",
   "@enableNotificationInSilentMode": {
     "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
+  },
+  "enableNotificationInSilentModeSetting": "Oznámenia aj v tichom režime",
+  "@enableNotificationInSilentModeSetting": {
+    "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
   }
 }
