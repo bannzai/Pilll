@@ -416,5 +416,17 @@
         "type": "String"
       }
     }
+  },
+  "leftDashAfterLastTakenPillNumber": "{left}-{afterLastTakenPillNumber}నం",
+  "@leftDashAfterLastTakenPillNumber": {
+    "description": "ピルシートUIで表示される「残り服用数-最後に服用したピル番号」の形式です。例：「7-21番」は残り7錠で、21番目のピルまで服用済みを表します。",
+    "placeholders": {
+      "left": {
+        "type": "String"
+      },
+      "afterLastTakenPillNumber": {
+        "type": "String"
+      }
+    }
   }
 }
