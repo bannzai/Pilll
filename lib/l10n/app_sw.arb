@@ -168,5 +168,9 @@
   "signOut": "Ondoka",
   "@signOut": {
     "description": "ユーザーアカウントからサインアウト/ログアウトするためのボタンやメニュー項目のテキストです。各言語で一般的に使用される「ログアウト」の表現で翻訳してください。"
+  },
+  "autoAddPillSheetGroup": "Kuongeza Vikundi vya Karatasi za Dawa kwa Otomatiki",
+  "@autoAddPillSheetGroup": {
+    "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
   }
 }
