@@ -744,5 +744,9 @@
   "menstruationEndDate": "Tarehe ya mwisho wa hedhi",
   "@menstruationEndDate": {
     "description": "生理管理機能で、ユーザーが生理の終了日を記録する際に表示されるラベル・項目名です。生理開始日とペアで使用され、生理期間を管理するために重要な情報です。"
+  },
+  "menstruationScheduleDate": "Tarehe ya hedhi inayotarajiwa",
+  "@menstruationScheduleDate": {
+    "description": "生理管理機能で、アプリが計算・予測した次回生理開始予定日を表示する際のラベル・項目名です。ユーザーの生理周期から自動算出される予測日であり、カレンダーやスケジュール画面で「次の生理はいつ頃来るか」を示すために使用されます。"
   }
 }
