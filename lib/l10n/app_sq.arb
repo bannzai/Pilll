@@ -887,5 +887,14 @@
         "type": "String"
       }
     }
+  },
+  "monthlyPrice": "{monthlyPriceString}/muaj",
+  "@monthlyPrice": {
+    "description": "プレミアムプランの月額料金を表示する際の形式で、価格の後に「/月」を付けて表示します。",
+    "placeholders": {
+      "monthlyPriceString": {
+        "type": "String"
+      }
+    }
   }
 }
