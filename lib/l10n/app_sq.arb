@@ -87,5 +87,9 @@
   "faq": "Pyetje të Shpeshta",
   "@faq": {
     "description": "アプリ内のヘルプ・サポートセクションで表示される「よくある質問」を意味するラベルです。ユーザーがピルの服用方法や機能について疑問を持った際にアクセスするページのタイトルとして使用されます。"
+  },
+  "newFeaturesIntroduction": "Prezantimi i funksioneve të reja",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
   }
 }
