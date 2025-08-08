@@ -1438,5 +1438,9 @@
   "purchaseErrorProductNotAvailableForPurchaseError": "Mpango uliochagua haupatikani kwa sasa. Tafadhali zindua upya programu na ujaribu tena.",
   "@purchaseErrorProductNotAvailableForPurchaseError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
+  },
+  "purchaseErrorProductAlreadyPurchasedError": "Tayari umeshajinunua mpango. Ili kurejesha maelezo ya ununuzi katika kifaa hiki, bofya 'Wale walionunua awali bofya hapa'",
+  "@purchaseErrorProductAlreadyPurchasedError": {
+    "description": "すでにプレミアムプランを購入済みのユーザーが再度購入しようとした際に表示されるエラーメッセージです。購入情報の復元方法を案内する内容が含まれます。"
   }
 }
