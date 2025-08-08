@@ -2067,5 +2067,17 @@
   "changePillDays": "Spremeni število dni jemanja",
   "@changePillDays": {
     "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
+  },
+  "beginToEndNumbers": "{begin}–{end}",
+  "@beginToEndNumbers": {
+    "description": "ピルシートの番号範囲を表示する際に使用される文字列です。例えば「1番 ~ 21番」のように、連続する番号の開始と終了を示すフォーマットです。",
+    "placeholders": {
+      "begin": {
+        "type": "int"
+      },
+      "end": {
+        "type": "int"
+      }
+    }
   }
 }
