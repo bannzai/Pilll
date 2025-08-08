@@ -849,5 +849,14 @@
         "type": "String"
       }
     }
+  },
+  "registerWith": "Regjistrohu me {loginName}",
+  "@registerWith": {
+    "description": "アカウント新規登録時に、指定されたログイン方法（Google、Apple、メールアドレスなど）を使って登録することを示すボタンやメッセージ。{loginName}には具体的なサービス名が入ります。",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
   }
 }
