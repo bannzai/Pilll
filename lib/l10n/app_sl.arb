@@ -375,5 +375,9 @@
   "calendarPage": "Koledar",
   "@calendarPage": {
     "description": "ピルアプリ内で体調記録や通院予定などの将来の予定を管理するカレンダーページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
+  },
+  "settingsPage": "Nastavitve",
+  "@settingsPage": {
+    "description": "ピルアプリ内でアプリの各種設定を変更・管理する設定ページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   }
 }
