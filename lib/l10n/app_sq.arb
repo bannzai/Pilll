@@ -1870,5 +1870,9 @@
   "calendarSchedule": "Ngjarjet e kalendarit",
   "@calendarSchedule": {
     "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
+  },
+  "newPillSheetNotificationTitle": "Sot fillon fletë e re",
+  "@newPillSheetNotificationTitle": {
+    "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
   }
 }
