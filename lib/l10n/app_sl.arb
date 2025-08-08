@@ -1325,5 +1325,9 @@
   "newPillSheetStart": "Začni novo škatlico ▶︎",
   "@newPillSheetStart": {
     "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
+  },
+  "selectPillType": "Izberi vrsto pilule",
+  "@selectPillType": {
+    "description": "アプリの初期設定やピル変更時に、使用するピルの種類（21日タイプ、28日タイプなど）を選択するためのボタンやメニュー項目に表示されるテキストです。ユーザーが自分の服用しているピルに合わせて適切な種類を選択する際に使用されます。"
   }
 }
