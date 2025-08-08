@@ -315,5 +315,9 @@
   "withdraw": "Avregistrera",
   "@withdraw": {
     "description": "ユーザーがPilllアプリのサービスから完全に退会（アカウント削除）する際にボタンやメニューに表示されるテキストです。アプリの利用を停止し、すべてのデータを削除する最終的な操作を表します。"
+  },
+  "withdrawalCompleted": "Avregistrerad",
+  "@withdrawalCompleted": {
+    "description": "ユーザーがPilllアプリのアカウント削除（退会）処理を完了した後に表示される確認メッセージです。退会操作が正常に完了したことをユーザーに伝える重要な通知文言になります。"
   }
 }
