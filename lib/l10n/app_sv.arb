@@ -249,5 +249,9 @@
   "aboutMenstruation": "Om menstruation",
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
+  },
+  "checkPillNumberForMenstruationStart": "Vänligen kontrollera pillnumret för menstruationsstarten. Det inställda pillnumret existerar inte i den valda pillark-typen.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   }
 }
