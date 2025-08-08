@@ -2144,5 +2144,9 @@
         "type": "String"
       }
     }
+  },
+  "startFromNumber": "Od broja",
+  "@startFromNumber": {
+    "description": "ピルシートUIで表示する薬の番号の開始位置を設定する機能のテキストです。ユーザーが任意の番号からピルシートの表示をスタートできるようにする設定項目で使用されます。"
   }
 }
