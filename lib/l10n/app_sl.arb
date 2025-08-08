@@ -1905,5 +1905,9 @@
   "doNotRevertTakePillInPausePeriod": "Med placebo obdobjem ni mogoče preklicati jemanja tablet",
   "@doNotRevertTakePillInPausePeriod": {
     "description": "ユーザーがピルの服用記録を取り消そうとした際、休薬期間（プラセボ期間）中のため操作できないことを知らせるエラーメッセージです。ピル服薬管理における医学的な制約を説明する重要な通知です。"
+  },
+  "googleAccount": "Google račun",
+  "@googleAccount": {
+    "description": "アプリへのログインや設定画面で表示されるGoogleアカウントのラベルです。ユーザー認証やデータ同期に使用されます。"
   }
 }
