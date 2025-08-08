@@ -545,5 +545,9 @@
         "type": "String"
       }
     }
+  },
+  "taking": "kumeza",
+  "@taking": {
+    "description": "ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。"
   }
 }
