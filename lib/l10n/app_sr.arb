@@ -1743,5 +1743,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "Непозната грешка. Ажурирајте на најновију верзију и покушајте поново. Ако се проблем настави, контактирајте нас преко Подешавања > Контакт. Код: {errorCode} Детаљи: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
