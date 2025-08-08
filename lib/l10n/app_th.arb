@@ -1671,5 +1671,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดและลองใหม่อีกครั้ง หากปัญหายังไม่ได้รับการแก้ไข กรุณาติดต่อเราจาก การตั้งค่า > ติดต่อเรา รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
