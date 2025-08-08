@@ -1304,5 +1304,9 @@
   "howManyDaysDoesMenstruationLast": "Koliko dni traja menstruacija?",
   "@howManyDaysDoesMenstruationLast": {
     "description": "生理管理機能で、ユーザーの生理期間（日数）を入力してもらう際の質問文です。通常3-7日程度の期間を想定した設定画面で使用されます。"
+  },
+  "daysMenstruationLasts": "dni traja menstruacija",
+  "@daysMenstruationLasts": {
+    "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
   }
 }
