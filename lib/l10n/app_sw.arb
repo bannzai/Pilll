@@ -1637,5 +1637,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Hitilafu isiyojulikana. Tafadhali sasisha hadi toleo jipya na ujaribu tena. Ikiwa haijasuluhishwa, tafadhali wasiliana nasi kupitia Mipangilio > Maswali. Msimbo: {errorCode} Maelezo: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
