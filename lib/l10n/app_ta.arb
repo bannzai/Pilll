@@ -1459,5 +1459,14 @@
   "purchaseErrorInvalidReceiptError": "செல்லாத கொள்முதல் தகவல். கொள்முதல் தகவலை சரிபார்க்கவும்",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "வாங்குபவரின் தகவல் கிடைக்கவில்லை. {accountName} கணக்கில் உங்கள் சாதனத்தில் உள்நுழைந்து மீண்டும் முயற்சிக்கவும்",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
