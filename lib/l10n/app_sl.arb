@@ -2311,5 +2311,9 @@
   "deleteAccount": "Brisanje računa",
   "@deleteAccount": {
     "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
+  },
+  "specialDiscountPriceNow": "Pridobite premium načrt po posebni ceni!",
+  "@specialDiscountPriceNow": {
+    "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
   }
 }
