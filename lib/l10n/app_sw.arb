@@ -1185,5 +1185,14 @@
   "changeNotificationHeader": "Unaweza kubadilisha kichwa cha arifa",
   "@changeNotificationHeader": {
     "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
+  },
+  "notificationHeaderLength": "{wordValueCharactersLength}/8",
+  "@notificationHeaderLength": {
+    "description": "プッシュ通知のヘッダー（タイトル）をカスタマイズする際の文字数制限表示で、現在の入力文字数を8文字制限中の何文字目かを示すテキストです。数字の「8」は文字数制限のため変更せず、スラッシュ（/）も区切り文字として保持してください。",
+    "placeholders": {
+      "wordValueCharactersLength": {
+        "type": "int"
+      }
+    }
   }
 }
