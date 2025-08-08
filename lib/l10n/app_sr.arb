@@ -2256,5 +2256,9 @@
   "deletedDiaryCannotBeRestored": "Obrisani dnevnik se ne može vratiti",
   "@deletedDiaryCannotBeRestored": {
     "description": "アプリ内の日記機能（体調記録）で、ユーザーが日記を削除する際に表示される警告メッセージ。削除された記録は元に戻せないことを伝える重要な注意事項です。"
+  },
+  "editMenstruation": "Uredi menstrualni period",
+  "@editMenstruation": {
+    "description": "生理記録機能で、ユーザーが既に記録した生理期間の開始日や終了日などの情報を後から修正・編集する際に表示されるボタンやメニュー項目のテキストです。"
   }
 }
