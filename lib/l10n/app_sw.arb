@@ -1957,5 +1957,9 @@
   "unknownError": "Hitilafu isiyojulikana imetokea",
   "@unknownError": {
     "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
+  },
+  "unexpectedErrorOccurred": "Hitilafu isiyotarajiwa imetokea",
+  "@unexpectedErrorOccurred": {
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。ピルの服用管理という健康に関わる重要な機能で使用されるため、ユーザーに不安を与えすぎない、親しみやすく理解しやすい表現が求められます。"
   }
 }
