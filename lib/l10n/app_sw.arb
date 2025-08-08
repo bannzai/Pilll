@@ -1353,5 +1353,9 @@
   "allActivePills": "Dawa zote halisi",
   "@allActivePills": {
     "description": "ピルの種類選択で表示される、28日間すべてが有効成分入りの錠剤（プラセボなし）であることを表す医療用語です。"
+  },
+  "twentyFourPlusFourDaysBreak": "Vidonge 24 + Mapumziko 4",
+  "@twentyFourPlusFourDaysBreak": {
+    "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
   }
 }
