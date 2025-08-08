@@ -2152,5 +2152,9 @@
   "addPillSheet": "Ongeza Karatasi ya Vidonge",
   "@addPillSheet": {
     "description": "新しいピル（避妊薬・治療薬）のシート・パックを服用管理対象として追加する際のボタンやアクションのテキストです。ユーザーが新しい薬のパッケージを開始する時に表示されます。"
+  },
+  "duringPauseTaking": "Mapumziko wa dawa",
+  "@duringPauseTaking": {
+    "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
   }
 }
