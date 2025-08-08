@@ -1701,5 +1701,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "சாதனத்தின் அமைப்புகளில் சிக்கல் உள்ளது. சரிபார்த்து மீண்டும் முயற்சிக்கவும். இது தீர்க்கப்படவில்லை என்றால் அமைப்புகள் > தொடர்பு கொள்ளுங்கள் மூலம் தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
