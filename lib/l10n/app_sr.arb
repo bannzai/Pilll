@@ -2002,5 +2002,9 @@
   "memo": "бележка",
   "@memo": {
     "description": "日記機能で体調や症状と合わせて自由にメモを記録できる入力欄のラベルです。短い単語で「メモ」や「記録」のような意味の翻訳が適切です。"
+  },
+  "failedToUpdate": "Ažuriranje nije uspelo. Molimo proverite internetsku konekciju i pokušajte ponovo.",
+  "@failedToUpdate": {
+    "description": "ピルの服用記録や生理記録などのデータをサーバーに保存・更新する際にネットワークエラーが発生した時に表示されるエラーメッセージです。ユーザーに通信状況の確認と再操作を促す丁寧な表現で翻訳してください。"
   }
 }
