@@ -1260,5 +1260,9 @@
   "reloadScreen": "Rifresko ekranin",
   "@reloadScreen": {
     "description": "アプリでデータの読み込みエラーが発生した際に、画面を再読み込みするためのボタンやリンクのテキストです。服用記録や生理記録などの情報を再取得して画面を更新する機能に使用されます。"
+  },
+  "contactIfNotResolved": "Nëse nuk zgjidhet, klikoni këtu",
+  "@contactIfNotResolved": {
+    "description": "アプリで技術的な問題やエラーが発生し、ユーザー自身では解決できない場合に、サポートチームに連絡するためのリンクやボタンのテキストです。トラブルシューティング画面で「お問い合わせ」や「サポートに連絡」の意味で使用されます。"
   }
 }
