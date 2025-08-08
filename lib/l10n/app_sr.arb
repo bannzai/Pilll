@@ -2058,5 +2058,9 @@
   "insomnia": "несанице",
   "@insomnia": {
     "description": "女性の健康管理アプリにおいて、ユーザーが体調記録や日記機能で体調の変化や不調として記録する際に選択できる症状項目の一つです。各言語において医学的に正確で、一般ユーザーにも理解しやすい「不眠・睡眠障害」の適切な表現で翻訳してください。"
+  },
+  "pauseStartingOtherDaysInstructions": "Molimo vas da prekinete sa uzimanjem. Ako želite da prekinete uzimanje počevši od drugog dana, molimo pogledajte sledeće.",
+  "@pauseStartingOtherDaysInstructions": {
+    "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
   }
 }
