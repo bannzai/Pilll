@@ -39,5 +39,9 @@
   "userNotFound": "Mtumiaji hajapatikana",
   "@userNotFound": {
     "description": "ログインやアカウント検索時に、指定されたユーザーが存在しない場合に表示されるエラーメッセージです。アプリ内でユーザーアカウントが見つからない状況で使用されます。"
+  },
+  "userAlreadyExists": "Mtumiaji tayari yupo",
+  "@userAlreadyExists": {
+    "description": "アカウント作成やユーザー登録時に、入力されたメールアドレスや電話番号が既に他のアカウントで使用されている場合に表示されるエラーメッセージです。ユーザーに対して既存のアカウントでログインするか、別の認証情報を使用するよう促す文脈で使用されます。"
   }
 }
