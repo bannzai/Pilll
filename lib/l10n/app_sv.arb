@@ -188,5 +188,9 @@
   "unregistered": "Ej registrerad",
   "@unregistered": {
     "description": "外部サービスやアカウントとの連携がまだ完了していない状態を表すステータス表示です。設定画面などで「未登録」や「未連携」として表示され、ユーザーがまだ登録手続きを行っていないことを示します。"
+  },
+  "quickRecord": "Snabbregistrering",
+  "@quickRecord": {
+    "description": "ピルの服用を素早く記録するための機能名です。ワンタップで簡単に服用記録を付けられる機能を表します。"
   }
 }
