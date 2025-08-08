@@ -668,5 +668,14 @@
   "whereToShare": "Ku dëshironi të ndani?",
   "@whereToShare": {
     "description": "シェア機能でユーザーがシェア先（SNSなど）を選択する際に表示される選択画面のタイトルテキストです。プレミアム機能の再体験キャンペーンなどの情報をシェアする場面で使用されます。"
+  },
+  "pauseTakingDay": "🌙 Pushim nga marrja dita {day}",
+  "@pauseTakingDay": {
+    "description": "ピルの服用サイクルにおいて、休薬期間（通常7日間）の何日目かを表示するテキストです。{day}には「1」「2」「3」などの数字が入り、「🌙 服用お休み 3日目」のように表示されます。",
+    "placeholders": {
+      "day": {
+        "type": "int"
+      }
+    }
   }
 }
