@@ -2306,5 +2306,9 @@
   "enableNotificationInSilentModeSetting": "Arifa hata katika hali ya kimya",
   "@enableNotificationInSilentModeSetting": {
     "description": "設定画面でマナーモード時でもピル服用の重要な通知を確実に受け取れるようにする機能の設定項目名です。服用忘れを防ぐための重要な通知機能として各言語で適切に表現してください。"
+  },
+  "criticalAlertVolume": "sauti",
+  "@criticalAlertVolume": {
+    "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
   }
 }
