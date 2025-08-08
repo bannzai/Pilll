@@ -2299,5 +2299,9 @@
   "criticalAlertVolume": "Glasnost",
   "@criticalAlertVolume": {
     "description": "マナーモード時でも鳴らすことができるピル服用リマインダーの重要なアラート音量を設定する項目名です。服用忘れを防ぐための重要な通知音の音量レベルとして各言語で適切に表現してください。"
+  },
+  "logout": "Odjava",
+  "@logout": {
+    "description": "アプリのユーザーアカウントからログアウトする機能のボタンやメニュー項目です。設定画面等で使用されます。"
   }
 }
