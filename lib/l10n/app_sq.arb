@@ -1986,5 +1986,9 @@
   "inputAndAdd": "Fut dhe shto",
   "@inputAndAdd": {
     "description": "何かの情報を手動で入力・追加する際のボタンやラベルのテキストです。服用記録や予定などをユーザーが自分で入力して追加する場面で使用されます。"
+  },
+  "averagePeriod": "Ciklë mesatare",
+  "@averagePeriod": {
+    "description": "ユーザーの生理の平均周期（日数）を表示するラベルです。生理管理機能で使用され、過去のデータから算出された平均的な生理周期の長さを示します。"
   }
 }
