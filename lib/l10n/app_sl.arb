@@ -2274,5 +2274,14 @@
         "type": "int"
       }
     }
+  },
+  "pillReminderChanged": "Opomnik za jemanje tablet je nastavljen na {value}",
+  "@pillReminderChanged": {
+    "description": "ユーザーがピルの服用リマインダー時刻を変更した際に表示される確認メッセージです。{value}には変更後の時刻が入ります。",
+    "placeholders": {
+      "value": {
+        "type": "String"
+      }
+    }
   }
 }
