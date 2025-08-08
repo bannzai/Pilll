@@ -648,5 +648,9 @@
   "pillSheetEnded": "Kifurushi cha dawa kimeisha",
   "@pillSheetEnded": {
     "description": "1つのピルシート（通常21日分のピルが入った包装シート）を全て服用し終えた時に表示されるメッセージです。ユーザーにピルシートの終了を通知し、次のシートの準備や休薬期間への移行を促します。"
+  },
+  "checkLastTakenDate": "Thibitisha siku ya mwisho ya kunywa vidonge",
+  "@checkLastTakenDate": {
+    "description": "ユーザーが最後にピルを服用した日付を確認するためのボタンやリンクに表示されるテキストです。服用履歴の確認や飲み忘れ防止のために使用されます。"
   }
 }
