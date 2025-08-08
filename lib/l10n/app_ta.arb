@@ -1716,5 +1716,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "திரும்பக் கொடுப்பு செயல்முறை தொடங்கப்பட்டுள்ளது. தயவுசெய்து உறுதிப்படுத்திய பின் மீண்டும் முயற்சிசெய்யவும். சமாധானமாகாவிட்டால் அமைப்புகள் > விசாரணை மூலம் தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
