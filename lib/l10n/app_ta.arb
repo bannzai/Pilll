@@ -1731,5 +1731,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "நேரம் முடிந்துவிட்டது. தங்களின் இணைப்பு சூழலை சரிபார்த்து மீண்டும் முயற்சி செய்யவும். சரியாகவில்லை எனில் அமைப்புகள் > விசாரணை மூலம் தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
