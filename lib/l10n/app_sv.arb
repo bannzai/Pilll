@@ -1838,5 +1838,17 @@
         "type": "String"
       }
     }
+  },
+  "accountAlreadyLinkedWithOtherPilllAccount": "Detta {accountTypeProviderName}-konto är redan kopplat till ett annat Pilll-konto och kan därför inte registreras. Se även FAQ. Detaljer: {exceptionMessage}",
+  "@accountAlreadyLinkedWithOtherPilllAccount": {
+    "description": "アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
