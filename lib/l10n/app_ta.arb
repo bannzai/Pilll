@@ -1656,5 +1656,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "அறியப்படாத காரணத்தால் ஏற்பட்ட பிழை. சமீபத்திய பதிப்புக்கு புதுப்பித்து மீண்டும் முயற்சிக்கவும். தீர்க்கப்படாவிட்டால் அமைப்புகள் > விசாரணை மூலம் தொடர்பு கொள்ளுங்கள். குறியீடு: {errorCode} விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
