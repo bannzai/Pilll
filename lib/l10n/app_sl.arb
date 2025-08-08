@@ -1716,5 +1716,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductRequestTimeout": "Časovna omejitev je bila presežena. Preverite internetno povezavo in poskusite znova. Če se težava ne reši, se obrnite na nas prek Nastavitve > Poizvedba. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
