@@ -1472,5 +1472,17 @@
   "purchaseErrorNetworkError": "நெட்வர்க் இணைப்பு நிலையற்றது. இணைப்பு நிலையைச் சரிபார்த்து மீண்டும் முயற்சிக்கவும்.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "வாங்குதல் தோல்வியடைந்தது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். இது தீர்க்கப்படாவிட்டால், அமைப்புகள் > தொடர்பு மூலம் எங்களை தொடர்பு கொள்ளவும். விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
