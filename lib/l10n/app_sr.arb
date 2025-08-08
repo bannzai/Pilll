@@ -878,5 +878,14 @@
   "annualPlan": "Godišnji plan",
   "@annualPlan": {
     "description": "アプリのプレミアム機能に関する年額サブスクリプションプランの名称です。月額プランと区別するために表示されます。"
+  },
+  "annualPrice": "{annualPackageStoreProductPriceString}/годину",
+  "@annualPrice": {
+    "description": "年額プレミアムプランの価格表示で、placeholderに価格が入り「価格/年」の形式で表示されます。各言語で「年」を表す適切な単位を使用してください。",
+    "placeholders": {
+      "annualPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
   }
 }
