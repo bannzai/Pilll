@@ -2230,5 +2230,14 @@
   "changeEndOfPillDays": "உட்கொள்ளும் நாட்களின் முடிவை மாற்றவும்",
   "@changeEndOfPillDays": {
     "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
+  },
+  "cannotUpdateToReplacePillSheet": "மாத்திரை தாளின் மாற்று மூலம் புதுப்பிக்க முடியவில்லை id: {id}",
+  "@cannotUpdateToReplacePillSheet": {
+    "description": "ピルシートを新しいものに交換・切り替える際に、システム側で何らかの理由により処理が完了できない場合に表示されるエラーメッセージです。ユーザーに対して、該当するピルシートID付きで更新処理が失敗したことを通知します。",
+    "placeholders": {
+      "id": {
+        "type": "String"
+      }
+    }
   }
 }
