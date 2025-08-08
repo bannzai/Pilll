@@ -773,5 +773,14 @@
         "type": "String"
       }
     }
+  },
+  "menstruationRemainingDay": "še {diff} dni",
+  "@menstruationRemainingDay": {
+    "description": "次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
   }
 }
