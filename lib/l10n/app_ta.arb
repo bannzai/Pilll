@@ -1455,5 +1455,9 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidReceiptError": "செல்லாத கொள்முதல் தகவல். கொள்முதல் தகவலை சரிபார்க்கவும்",
+  "@purchaseErrorInvalidReceiptError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
   }
 }
