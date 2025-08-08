@@ -1438,5 +1438,9 @@
   "purchaseErrorPurchaseInvalidError": "చెల్లింపు విఫలమైంది. దయచేసి మీ చెల్లింపు పద్ధతి చెల్లుబాటు అవుతుందో తనిఖీ చేసి మళ్లీ ప్రయత్నించండి",
   "@purchaseErrorPurchaseInvalidError": {
     "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "ఎంపిక చేసిన ప్లాన్ ప్రస్తుతం అందుబాటులో లేదు. దయచేసి యాప్‌ను రీస్టార్ట్ చేసి మళ్లీ ప్రయత్నించండి",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
