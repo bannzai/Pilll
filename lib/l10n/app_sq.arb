@@ -2226,5 +2226,9 @@
   "changeStartOfPillDays": "Ndrysho datën e fillimit të marrjes",
   "@changeStartOfPillDays": {
     "description": "ピルシートの服用開始日や服用日数のカウント開始日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの基準日を調整するための機能です。"
+  },
+  "changeEndOfPillDays": "Ndrysho fundin e dozimit",
+  "@changeEndOfPillDays": {
+    "description": "ピルシートの服用終了日や服用日数のカウント終了日を変更する設定画面で使用されます。ユーザーがピルの服用スケジュールの終了タイミングを調整するための機能です。"
   }
 }
