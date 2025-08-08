@@ -1953,5 +1953,9 @@
   "errorOccurred": "Kosa limetokea",
   "@errorOccurred": {
     "description": "アプリ内で予期しない一般的なエラーが発生した際にユーザーに表示される基本的なエラーメッセージです。具体的な原因を伝えずに、シンプルにエラーの発生を通知する場合に使用されます。"
+  },
+  "unknownError": "Hitilafu isiyojulikana imetokea",
+  "@unknownError": {
+    "description": "アプリ内で予期しない技術的エラーが発生した際にユーザーに表示される汎用的なエラーメッセージです。具体的な原因を特定できない場合に使用され、ユーザーに対してシンプルで理解しやすい表現が求められます。"
   }
 }
