@@ -27,5 +27,9 @@
   "pillSheetType24WithRest4": "Tipi 24 tabletave",
   "@pillSheetType24WithRest4": {
     "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
+  },
+  "restPeriod": "pushim",
+  "@restPeriod": {
+    "description": "ピルの服用サイクル中の休薬期間を指す用語です。通常はプラセボ錠を服用するか薬を飲まない期間で、この期間中に生理が来ることが多いです。"
   }
 }
