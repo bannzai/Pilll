@@ -1773,5 +1773,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "నెట్‌వర్క్ కనెక్టివిటీ లోపం. మీ నెట్‌వర్క్ కనెక్షన్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి. సమస్య కొనసాగితే సెట్టింగ్స్ > సంప్రదింపులు ద్వారా మమ్మల్ని సంప్రదించండి. వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
