@@ -991,5 +991,9 @@
   "thankYouMessage": "Hvala vam za uporabo.\nZaradi vas lahko nadaljujemo z vodenjem aplikacije Pilll.",
   "@thankYouMessage": {
     "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
+  },
+  "premiumFeaturesList": "Seznam premium funkcij",
+  "@premiumFeaturesList": {
+    "description": "プレミアムプラン（有料プラン）で利用できる機能の一覧を表示する際の見出しまたはタイトルです。ユーザーがプレミアム機能を確認する画面で使用されます。"
   }
 }
