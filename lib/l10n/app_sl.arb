@@ -363,5 +363,9 @@
   "reLoginMessage": "Pred ukinitvijo računa se prosimo ponovno prijavite za preverjanje identitete. Po ponovni prijavi se bo samodejno začel postopek ukinitve računa.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
+  },
+  "updateAuthenticationAfterReLogin": "Ponovno se prijavite za posodobitev avtentikacijskih podatkov",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   }
 }
