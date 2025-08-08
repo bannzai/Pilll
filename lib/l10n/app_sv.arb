@@ -323,5 +323,9 @@
   "appExitMessage": "Appen kommer nu att stängas. För att börja om, starta om appen och genomför den inledande konfigurationen.",
   "@appExitMessage": {
     "description": "データリセットや初期化などの重要な操作の後に表示される確認メッセージです。ユーザーにアプリの再起動と初期設定のやり直しが必要であることを伝える重要な通知文言になります。"
+  },
+  "oK": "OK",
+  "@oK": {
+    "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
   }
 }
