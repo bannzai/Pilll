@@ -2277,5 +2277,17 @@
   "premiumIntroductionDiscountPriceDeadline": "Genom att registrera dig för premium kan du fortsätta att använda alla funktioner",
   "@premiumIntroductionDiscountPriceDeadline": {
     "description": "無料期間や割引期間が終了するユーザーに向けて表示されるメッセージです。プレミアムプランに登録することで、引き続きアプリの全機能（服用記録、生理管理、プレミアム限定機能など）が利用できることを案内しています。"
+  },
+  "countdownForDiscountPriceDeadline": "{offPercent}% rabatt vid köp inom {countdown}",
+  "@countdownForDiscountPriceDeadline": {
+    "description": "限定割引キャンペーンの締切時間を知らせるメッセージです。プレミアムプラン購入画面で、残り時間（countdown）内に購入すると指定された割引率（offPercent）が適用されることをユーザーに伝えます。",
+    "placeholders": {
+      "countdown": {
+        "type": "String"
+      },
+      "offPercent": {
+        "type": "int"
+      }
+    }
   }
 }
