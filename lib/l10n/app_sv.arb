@@ -1243,5 +1243,14 @@
   "noPreviousPillSheetGroup": "Det finns ingen tidigare p-pillerpaketsgrupp",
   "@noPreviousPillSheetGroup": {
     "description": "アプリ内で前回使用していたピルシートのグループが存在しない状況（初回使用時や履歴がない場合など）で表示される状態メッセージです。ユーザーが過去の服用履歴を確認しようとした際に、まだ前回のデータが登録されていないことを伝える文言として使用されます。"
+  },
+  "failedToFetchPillHistory": "Kunde inte hämta intag/doseringshistorik. {error}",
+  "@failedToFetchPillHistory": {
+    "description": "アプリ内でユーザーが過去のピル服用履歴を確認しようとした際に、システムエラーやネットワーク障害などでデータの取得に失敗した場合に表示されるエラーメッセージです。{error}部分には具体的なエラー内容が挿入されます。",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   }
 }
