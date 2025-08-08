@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "เกิดข้อผิดพลาดที่ไม่ทราบสาเหตุ กรุณาอัปเดตเป็นเวอร์ชันล่าสุดแล้วลองใหม่อีกครั้ง หากยังไม่ได้รับการแก้ไข กรุณาติดต่อเราผ่าน การตั้งค่า > ติดต่อเรา รหัส: {errorCode} รายละเอียด: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
