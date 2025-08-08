@@ -811,5 +811,14 @@
   "selectMenstruationStartDate": "மாதவிடாய் தொடக்க தேதியைத் தேர்ந்தெடுக்கவும்",
   "@selectMenstruationStartDate": {
     "description": "生理記録機能で、ユーザーが新しい生理期間の開始日を設定する際に表示されるボタンやメニューのラベルです。生理周期の管理において、生理開始日を記録するための操作に使用されます。"
+  },
+  "menstruationCycle": "{menstruationDuration} நாள் சுழற்சி",
+  "@menstruationCycle": {
+    "description": "生理周期の日数を表示する際に使用されるテキストです。{menstruationDuration}には28日、30日などの周期日数が入ります。",
+    "placeholders": {
+      "menstruationDuration": {
+        "type": "int"
+      }
+    }
   }
 }
