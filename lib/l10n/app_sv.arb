@@ -782,5 +782,14 @@
         "type": "int"
       }
     }
+  },
+  "menstruationProgressingDay": "dag {diffPlusOne}",
+  "@menstruationProgressingDay": {
+    "description": "生理開始から経過した日数を表示する際に使用されるテキストです。生理管理画面で「3日目」「5日目」のように現在の生理周期の進行状況を示します。",
+    "placeholders": {
+      "diffPlusOne": {
+        "type": "int"
+      }
+    }
   }
 }
