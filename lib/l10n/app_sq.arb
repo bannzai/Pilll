@@ -660,5 +660,9 @@
   "cannotTransferPremiumWithoutAccount": "Funksionet premium nuk mund të transferohen në rast të ndryshimit të pajisjes ose humbjes së telefonit",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
+  },
+  "reexperiencePremiumFeatures": "Mund të përjetoni përsëri veçoritë premium për 14 ditë!\nShtypni për të ndarë në rrjetet sociale!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   }
 }
