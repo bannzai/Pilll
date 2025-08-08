@@ -367,5 +367,9 @@
   "updateAuthenticationAfterReLogin": "మళ్లీ లాగిన్ చేసి ప్రమాణీకరణ సమాచారాన్ని నవీకరిస్తాము",
   "@updateAuthenticationAfterReLogin": {
     "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
+  },
+  "menstruationPage": "రుతుచక్ర నిర్వహణ",
+  "@menstruationPage": {
+    "description": "ピルアプリ内で生理記録や管理を行うページの名前です。アプリのナビゲーションやタイトルバーに表示されます。"
   }
 }
