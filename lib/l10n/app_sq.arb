@@ -1578,5 +1578,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidSubscriberAttributesError": "Blerja dështoi. Ju lutem, provoni përsëri pas pak kohësh. Nëse problemi vazhdon, na kontaktoni nga Parametrat > Kontakt. Detajet: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidSubscriberAttributesError": {
+    "description": "プレミアムプランなどの有料機能の購入処理でエラーが発生した際にユーザーに表示されるメッセージです。購入失敗の原因を説明し、再試行やサポートへの問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
