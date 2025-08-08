@@ -1361,5 +1361,9 @@
   "twentyFourPlusFourDaysBreak": "24 மாத்திரை + 4 நாள் இடைவெளி",
   "@twentyFourPlusFourDaysBreak": {
     "description": "24日間ピルを服用し4日間休薬する、28日周期のピル服用パターンを表す医療用語です。"
+  },
+  "choosePillType": "மாத்திரை வகையை தேர்ந்தெடுக்கவும்",
+  "@choosePillType": {
+    "description": "ピルの初期設定時に表示される、ユーザーが使用するピルの服用パターン（21日型、28日型など）を選択する画面で使用されるボタンやラベルのテキストです。"
   }
 }
