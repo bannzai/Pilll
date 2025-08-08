@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "அறியப்படாத பிழை ஏற்பட்டுள்ளது. சமீபத்திய பதிப்பிற்கு புதுப்பித்து மீண்டும் முயற்சி செய்யவும். பிரச்சனை தீரவில்லை எனில் அமைப்புகள் > தொடர்பு கொள்ளுதல் வழியாக எங்களை தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
