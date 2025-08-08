@@ -999,5 +999,9 @@
   "viewAndRecordTakingHistory": "🗂 Rekodi na Kuona Historia ya Kunywa Dawa",
   "@viewAndRecordTakingHistory": {
     "description": "ピルの服用記録を過去に遡って確認したり、新たな服用記録を登録したりできる機能の名称です。プレミアム機能の一覧で表示される項目として使用されます。"
+  },
+  "displayDateOnPillSheet": "📆 Kuonyesha tarehe kwenye jedwali la vidonge",
+  "@displayDateOnPillSheet": {
+    "description": "プレミアム機能の一覧で表示される機能名です。ピルシートのUI画面上に日付情報を表示する機能を指しており、ユーザーがピルの服用管理をしやすくするための視覚的サポート機能です。"
   }
 }
