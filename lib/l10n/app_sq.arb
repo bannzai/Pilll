@@ -2078,5 +2078,9 @@
   "editPausePeriod": "Ndrysho periudhën e pushimit të marrjes",
   "@editPausePeriod": {
     "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
+  },
+  "changePillDays": "Ndrysho ditët e marrjes",
+  "@changePillDays": {
+    "description": "ピルの1シートあたりの服用日数を変更する機能のラベルです。ユーザーが自分のピルの種類に合わせて服用期間（21日間、28日間など）を設定する際に表示されます。"
   }
 }
