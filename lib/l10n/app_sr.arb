@@ -363,5 +363,9 @@
   "reLoginMessage": "Молимо да се поново пријавите ради потврде идентитета пре повлачења налога. Након поновне пријаве, процес повлачења налога ће се аутоматски покренути.",
   "@reLoginMessage": {
     "description": "アカウント退会処理を開始する前に、セキュリティ確保のため本人確認として再ログインを促すメッセージです。ユーザーが退会手続きを選択した際に表示され、再ログイン完了後に自動的に退会処理が実行されることを説明しています。"
+  },
+  "updateAuthenticationAfterReLogin": "Ponovo se prijavite da biste ažurirali svoje podatke za autentifikaciju",
+  "@updateAuthenticationAfterReLogin": {
+    "description": "アカウント退会処理時に、セキュリティ確保のため再ログインを求める際に表示されるメッセージです。ユーザーに認証情報の更新が必要であることを説明します。"
   }
 }
