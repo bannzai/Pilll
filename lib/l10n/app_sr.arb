@@ -582,5 +582,9 @@
   "pauseTaking": "Pauza u uzimanju",
   "@pauseTaking": {
     "description": "ピルの服用を一時的に停止・休薬する際に表示されるボタンやメニュー項目のテキストです。ユーザーが意図的にピル服用をお休みする機能を表しています。"
+  },
+  "changePauseStartDate": "Promena datuma početka pauze uzimanja",
+  "@changePauseStartDate": {
+    "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
   }
 }
