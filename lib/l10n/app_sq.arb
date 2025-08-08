@@ -2164,5 +2164,9 @@
   "cannotPauseAlreadyTakenToday": "Kur pilula e sotme është marrë tashmë, \"Pushim në përdorim\" nuk është i mundur",
   "@cannotPauseAlreadyTakenToday": {
     "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
+  },
+  "pauseTakingStarted": "Filloi pushimi i pilulës",
+  "@pauseTakingStarted": {
+    "description": "ユーザーがピルの服用を一時的に休止する「服用お休み」機能を開始した際に表示される確認メッセージです。服用スケジュールが一時停止状態になったことをユーザーに通知しています。"
   }
 }
