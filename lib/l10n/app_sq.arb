@@ -946,5 +946,9 @@
   "restorePurchase": "Blerimet u rivendosën",
   "@restorePurchase": {
     "description": "ピルアプリのプレミアムプラン（有料機能）を復元した際に表示される成功メッセージです。ユーザーが機種変更や再インストール後に、以前購入したプレミアム機能を復元完了したことを知らせる通知文言として使用されます。"
+  },
+  "previouslyPurchased": "Për blerësit e mëparshëm",
+  "@previouslyPurchased": {
+    "description": "ピルアプリのプレミアムプラン購入画面で、既に購入済みのユーザーが機種変更や再インストール後に購入履歴を復元するためのリンクまたはボタンに表示されるテキストです。新規購入ではなく、過去の購入を復元したいユーザー向けの案内文言として使用されます。"
   }
 }
