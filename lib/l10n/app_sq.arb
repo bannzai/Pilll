@@ -562,5 +562,9 @@
   "addPillSheetButton": "Shto fletë pilule",
   "@addPillSheetButton": {
     "description": "新しいピル薬のパック（シート）をアプリに登録するためのボタンのテキストです。ユーザーが新しいピルを飲み始める際に使用される機能です。"
+  },
+  "taken": "Marrë",
+  "@taken": {
+    "description": "ピルを服用したことを示すステータス表示です。服用履歴画面などで、ユーザーが既にピルを飲み終えた状態を表現するために使用されます。"
   }
 }
