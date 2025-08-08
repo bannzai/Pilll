@@ -1011,5 +1011,9 @@
   "autoRefillNewPillSheet": "📦 Automatisk påfyllning av nya p-pillerkartor",
   "@autoRefillNewPillSheet": {
     "description": "プレミアム機能の一覧で表示される機能名です。現在使用中のピルシートが終了間近になった際に、自動的に新しいピルシートの設定を作成してくれる便利機能を表しています。"
+  },
+  "viewPastData": "👀 Tidigare register",
+  "@viewPastData": {
+    "description": "プレミアム機能の一覧で表示される機能名です。過去の服用記録、生理記録、体調記録などの履歴データを閲覧できる機能を表しています。"
   }
 }
