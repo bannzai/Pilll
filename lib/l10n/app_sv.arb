@@ -2106,5 +2106,14 @@
   "changedPausePeriod": "Pausperioden har ändrats",
   "@changedPausePeriod": {
     "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。"
+  },
+  "changedToDate": "Ändrat till {date}",
+  "@changedToDate": {
+    "description": "何かの日付設定を変更した後に表示される完了メッセージです。ユーザーに設定変更が正常に実行されたことを知らせるフィードバック文言として使用されます。",
+    "placeholders": {
+      "date": {
+        "type": "String"
+      }
+    }
   }
 }
