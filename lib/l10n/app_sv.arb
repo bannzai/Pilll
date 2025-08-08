@@ -1110,5 +1110,14 @@
   "notYetKnown": "Okänt ännu",
   "@notYetKnown": {
     "description": "ユーザーがまだ情報を入力していない、または設定していない状態を表示する際に使用されます。生理予定日や服用スケジュールなど、アプリの各機能でデータが未確定の場合に表示されるテキストです。"
+  },
+  "pillForToday": "Piller för {today}:",
+  "@pillForToday": {
+    "description": "特定の日付に服用予定のピルを表示する際のラベルテキストです。ピルシート画面やカレンダー表示で、その日に飲むべきピルの情報を示す前置きとして使用されます。",
+    "placeholders": {
+      "today": {
+        "type": "String"
+      }
+    }
   }
 }
