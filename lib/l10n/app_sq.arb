@@ -527,5 +527,14 @@
   "pauseTakingDoesNotAdvancePillNumber": "Kur ndaloni marrjen e pilulës, numri i pilulës nuk përparon",
   "@pauseTakingDoesNotAdvancePillNumber": {
     "description": "ピルシートUI上で表示される説明文で、ユーザーが服用を一時停止した場合にピルシート上の順序番号が進まないことを伝えるメッセージです。アプリの核心機能であるピルシート管理において、服用の順序性を正確に保つための重要な動作説明です。"
+  },
+  "pauseTakingFromNumber": "A dëshironi të pushoni marrjen duke filluar nga {number}?",
+  "@pauseTakingFromNumber": {
+    "description": "ピルシートUI上で、ユーザーが特定の番号（{number}）から薬の服用を一時停止することを確認するダイアログメッセージです。ピル管理アプリにおける重要な機能で、服用スケジュールの変更を行う際にユーザーの意思を確認するために表示されます。",
+    "placeholders": {
+      "number": {
+        "type": "String"
+      }
+    }
   }
 }
