@@ -1758,5 +1758,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "அறியப்படாத பிழை ஏற்பட்டுள்ளது. சமீபத்திய பதிப்பிற்கு புதுப்பித்து மீண்டும் முயற்சிக்கவும். தீர்வு கிடைக்காத பட்சத்தில் அமைப்புகள் > விசாரணை வழியாக தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
