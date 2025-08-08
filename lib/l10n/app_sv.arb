@@ -2119,5 +2119,9 @@
   "quickRecordTakePillFailed": "Registreringen av ditt medicintag kan ha misslyckats",
   "@quickRecordTakePillFailed": {
     "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
+  },
+  "quickRecordTakePillFailedMessage": "Vänligen öppna appen och kontrollera",
+  "@quickRecordTakePillFailedMessage": {
+    "description": "ピルの服用記録の保存に失敗した際に、ユーザーにアプリを開いて記録状況を確認してもらうためのメッセージです。記録処理エラー時の具体的な行動指示として表示されます。"
   }
 }
