@@ -1785,5 +1785,9 @@
         "type": "String"
       }
     }
+  },
+  "forceUpdateTitle": "Ju lutem përditësoni aplikacionin",
+  "@forceUpdateTitle": {
+    "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
   }
 }
