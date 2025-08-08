@@ -1882,5 +1882,14 @@
   "purchaseErrorPurchasePendingError": "Kuwezesha malipo hakujakamilika. Tafadhali subiri muda kidogo halafu jaribu tena.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "launchError": "Hii ni ujumbe wa hitilafu ambao unaonyeshwa kwa mtumiaji wakati hitilafu ya kiufundi yoyote inatokea wakati wa kuzindua programu (mara tu programu inapofunguliwa). Kwa kuwa inajumuisha maelezo ya kina kama vile hitilafu za muunganisho, tafsiri ili mtumiaji aweze kuelewa hali.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
