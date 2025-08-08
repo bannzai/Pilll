@@ -1023,5 +1023,9 @@
   "hideAds": "🚫 Brez oglasov",
   "@hideAds": {
     "description": "プレミアム機能の一覧で表示される機能名です。有料プランに加入することでアプリ内の広告（バナー広告など）を非表示にできる機能を表しています。"
+  },
+  "seeDetailsOfPremiumFeatures": "Prikaži podrobnosti premium funkcij",
+  "@seeDetailsOfPremiumFeatures": {
+    "description": "プレミアム機能の詳細画面に遷移するボタンやリンクのテキストです。ユーザーが有料プランの機能について詳しく知りたい時にタップする要素として使用されます。"
   }
 }
