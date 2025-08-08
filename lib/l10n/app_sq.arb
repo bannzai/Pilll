@@ -119,5 +119,14 @@
   "addNotificationTime": "Shto kohë njoftimi",
   "@addNotificationTime": {
     "description": "ピルの服用リマインダー機能で、ユーザーが新しい通知時間を追加する際に表示されるボタンやメニュー項目の文言です。簡潔で分かりやすい表現を使用してください。"
+  },
+  "syncWithDeviceTimeZone": "Doni të sinkronizoni me zonën kohore të pajisjes ({deviceTimezoneName})?",
+  "@syncWithDeviceTimeZone": {
+    "description": "ピル服用リマインダーの時刻設定で、ユーザーが設定した時間と端末のタイムゾーンが異なる場合に、端末のタイムゾーンに合わせて同期するかを確認するダイアログメッセージです。{deviceTimezoneName}には実際のタイムゾーン名（例：Asia/Tokyo）が表示されます。",
+    "placeholders": {
+      "deviceTimezoneName": {
+        "type": "String"
+      }
+    }
   }
 }
