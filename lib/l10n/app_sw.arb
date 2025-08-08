@@ -574,5 +574,9 @@
   "pillSheetSettings": "Mipangilio ya Uwanda wa Vidonge",
   "@pillSheetSettings": {
     "description": "ピルの服用管理アプリで、物理的なピルシート（薬のブリスターパック）をデジタル化したUI表示や服用スケジュールに関する設定画面のタイトル。ピルシートの種類選択、表示番号調整、服用パターンなどの設定項目を含む重要な機能設定です。"
+  },
+  "unmarkTodayPillAsTakenToPause": "Baada ya kurudisha vidonge vya leo katika hali ya kutojamezwa",
+  "@unmarkTodayPillAsTakenToPause": {
+    "description": "ユーザーがピルの服用を一時停止（休薬）する際に、今日予定されているピルを「未服用」状態にマークする機能に関するメッセージです。休薬期間を開始する前段階として、当日のピル服用状況をリセットする操作を説明しています。"
   }
 }
