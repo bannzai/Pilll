@@ -1866,5 +1866,9 @@
   "todaySchedule": "Dagens schema",
   "@todaySchedule": {
     "description": "カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。"
+  },
+  "calendarSchedule": "Kalenderhändelser",
+  "@calendarSchedule": {
+    "description": "カレンダー機能で表示される予定やスケジュールの総称です。ピルの服用予定、通院予定、生理予定などの健康管理に関する様々な予定を指します。"
   }
 }
