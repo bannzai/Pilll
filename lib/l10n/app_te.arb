@@ -958,5 +958,14 @@
   "monthlyPlan": "మాసిక ప్లాన్",
   "@monthlyPlan": {
     "description": "プレミアム機能を利用するための月額課金プラン名です。年額プランと対比して表示される課金オプションとして使用されます。"
+  },
+  "monthlyPlanPrice": "{monthlyPackageStoreProductPriceString}/నెల",
+  "@monthlyPlanPrice": {
+    "description": "プレミアム機能の月額課金プランの価格表示で、価格の後に続く「/月」部分です。年額プランと対比されるため、各言語で適切な月単位の表現を使用してください。",
+    "placeholders": {
+      "monthlyPackageStoreProductPriceString": {
+        "type": "String"
+      }
+    }
   }
 }
