@@ -950,5 +950,9 @@
   "noPreviousPurchaseInfo": "Taarifa za ununuzi wa awali hazijapatikana. Hakikisha akaunti yako na ujaribu tena",
   "@noPreviousPurchaseInfo": {
     "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
+  },
+  "monthlyPlan": "Mpango wa Mwezi",
+  "@monthlyPlan": {
+    "description": "プレミアム機能を利用するための月額課金プラン名です。年額プランと対比して表示される課金オプションとして使用されます。"
   }
 }
