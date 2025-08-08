@@ -840,5 +840,14 @@
   "registerAccountToKeepData": "Za varno shranjevanje vaših podatkov vas prosimo, da se registrirate",
   "@registerAccountToKeepData": {
     "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
+  },
+  "signInWith": "Prijavite se z {loginName}",
+  "@signInWith": {
+    "description": "外部サービス（Google、Apple等）を使用してアプリにサインインするためのボタンテキストです。{loginName}にはGoogleやAppleなどの認証サービス名が動的に挿入され、ユーザーの服用データや生理記録を安全に保管するためのアカウント作成・ログイン機能の一部として使用されます。",
+    "placeholders": {
+      "loginName": {
+        "type": "String"
+      }
+    }
   }
 }
