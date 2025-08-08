@@ -511,5 +511,9 @@
   "endPillSheet": "Blister avslutad",
   "@endPillSheet": {
     "description": "ピル（経口避妊薬）の一包装（通常シート状で28日分程度）がすべて服用完了した際に表示されるメッセージです。次のピルシートへの切り替えやタイミングを知らせる重要な通知として使用されます。"
+  },
+  "discardPillSheet": "Kassera blisterförpackning",
+  "@discardPillSheet": {
+    "description": "服用が完了した空のピルシート（ブリスターパック）を適切に廃棄・処分する際に表示されるアクションやメッセージです。環境に配慮した廃棄方法の案内や、次のシートへの切り替えを促す文脈で使用されます。"
   }
 }
