@@ -677,5 +677,14 @@
         "type": "int"
       }
     }
+  },
+  "withDay": "{word}వ రోజు",
+  "@withDay": {
+    "description": "ピルシートや服用履歴で「何日目」かを表示する際に使用されます。{word}には数字（1、2、3など）が入り、「1日目」「2日目」のように表示されます。",
+    "placeholders": {
+      "word": {
+        "type": "String"
+      }
+    }
   }
 }
