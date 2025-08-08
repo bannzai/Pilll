@@ -586,5 +586,9 @@
   "changePauseStartDate": "Spremeni datum začetka premora",
   "@changePauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間（休薬期間）の開始日を変更する機能のボタンやメニュー項目です。ユーザーが既に設定した休薬開始日を後から変更したい場合に使用されます。"
+  },
+  "pauseTakingPeriodEnded": "Premor pri jemanju se je končal",
+  "@pauseTakingPeriodEnded": {
+    "description": "ピルの服用を一時的に休止する休薬期間が終了したことをユーザーに通知するメッセージです。通知やダイアログなどで表示される短いテキストです。"
   }
 }
