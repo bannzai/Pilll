@@ -740,5 +740,9 @@
         "type": "String"
       }
     }
+  },
+  "menstruationStartDate": "மாதவிடாய் தொடக்க நாள்",
+  "@menstruationStartDate": {
+    "description": "生理管理機能で、ユーザーが生理の開始日を記録する際に表示されるラベルです。"
   }
 }
