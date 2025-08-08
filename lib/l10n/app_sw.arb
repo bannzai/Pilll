@@ -1268,5 +1268,9 @@
   "confirm": "Kubali",
   "@confirm": {
     "description": "アクションや選択内容を確定する際に使用される一般的な確認ボタンのラベルです。ダイアログボックスやフォームでユーザーの操作を最終確認する場面で表示されます。"
+  },
+  "surveyForServiceImprovement": "Ikiwa utapenda, tafadhali kushiriki katika utafiti wetu wa kuboresha huduma",
+  "@surveyForServiceImprovement": {
+    "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
   }
 }
