@@ -216,5 +216,14 @@
   "discardAllPillSheets": "Futa karatasi zote za vidonge",
   "@discardAllPillSheets": {
     "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
+  },
+  "areYouSureDoing": "Je, {doing}?",
+  "@areYouSureDoing": {
+    "description": "ユーザーが何らかの操作を実行する前の確認ダイアログで表示される汎用的な確認フレーズです。{doing}部分には具体的な操作内容（削除、変更など）が入り、「その操作を本当に実行しますか？」という意味で使用されます。",
+    "placeholders": {
+      "doing": {
+        "type": "String"
+      }
+    }
   }
 }
