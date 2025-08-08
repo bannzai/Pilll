@@ -2070,5 +2070,9 @@
   "startPauseTakingLabel": "Fillo pushimin e marrjes",
   "@startPauseTakingLabel": {
     "description": "ピルの服用を一時的に停止する「服用お休み機能」を開始する際に表示されるボタンまたはラベルのテキストです。ユーザーがピルの服用をお休みしたい時にタップする機能の開始を表します。"
+  },
+  "pauseTakingChanged": "Pushimi i marrjes së pilulës u ndryshua",
+  "@pauseTakingChanged": {
+    "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
   }
 }
