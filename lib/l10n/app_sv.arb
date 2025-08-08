@@ -2074,5 +2074,9 @@
   "pauseTakingChanged": "Medicinpausen har ändrats",
   "@pauseTakingChanged": {
     "description": "ユーザーがピルの服用お休み期間（服用を一時停止する期間）を変更した際に表示される確認メッセージです。設定変更が完了したことをユーザーに通知する目的で使用されます。"
+  },
+  "editPausePeriod": "Redigera pausperiod",
+  "@editPausePeriod": {
+    "description": "ピルの服用を一時的に停止する期間を設定・変更するためのボタンまたはリンクのテキストです。設定画面や編集画面で表示され、ユーザーが休薬期間を調整する際に使用されます。"
   }
 }
