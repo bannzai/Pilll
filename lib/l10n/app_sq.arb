@@ -1434,5 +1434,9 @@
   "purchaseErrorPurchaseNotAllowedError": "Blerjet nuk janë të lejuara në këtë pajisje",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorPurchaseInvalidError": "Pagesa dështoi. Ju lutemi kontrolloni nëse metoda e pagesës është e vlefshme dhe provoni sërish.",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   }
 }
