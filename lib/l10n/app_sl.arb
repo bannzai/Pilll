@@ -866,5 +866,9 @@
   "thankYouForRegistration": "Hvala za registracijo.\nSedaj so na voljo vse funkcije!",
   "@thankYouForRegistration": {
     "description": "ご登録ありがとうございます。\nすべての機能が使えるようになりました！"
+  },
+  "limitedTimeDiscount": "Zdaj po posebni ceni za vedno",
+  "@limitedTimeDiscount": {
+    "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
   }
 }
