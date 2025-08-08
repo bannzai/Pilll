@@ -632,5 +632,9 @@
   "displayMode": "Modi ya Onyesho",
   "@displayMode": {
     "description": "ピルシートや設定画面で表示形式を選択する機能のラベルです。ユーザーがアプリの表示方法を変更する際に使用されます。"
+  },
+  "dateDisplay": "Onyesho la Tarehe",
+  "@dateDisplay": {
+    "description": "設定画面で日付の表示形式を選択する機能のラベルです。ピルの服用記録や生理日などの日付情報をどのような形式で表示するかを設定する際に使用されます。"
   }
 }
