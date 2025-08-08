@@ -2322,5 +2322,9 @@
   "goToInitialSettingAndReloginIfNeededMessage": "Vrátime sa k počiatočnému nastaveniu. V prípade potreby sa prihláste v spodnej časti počiatočného nastavenia.",
   "@goToInitialSettingAndReloginIfNeededMessage": {
     "description": "何らかのエラーやリセット操作によってアプリが初期設定画面に戻る時に表示される案内メッセージです。ユーザーに対して再度ログインが必要な場合があることと、その方法を説明しています。"
+  },
+  "deleteAccount": "Vymazanie účtu",
+  "@deleteAccount": {
+    "description": "ユーザーアカウントとそれに紐づく服用履歴や個人データをすべて削除する機能のラベルです。設定画面などで表示される重要な操作項目として使用されます。"
   }
 }
