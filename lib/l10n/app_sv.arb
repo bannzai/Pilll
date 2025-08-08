@@ -2062,5 +2062,9 @@
   "pauseStartingOtherDaysInstructions": "Ta en paus från intaget. Om du vill pausa intaget från en annan dag än idag, se anvisningarna nedan.",
   "@pauseStartingOtherDaysInstructions": {
     "description": "ピルの服用管理アプリにおいて、ユーザーが今日以外の日から服用を一時停止（お休み）したい場合に表示される説明文です。この後に具体的な操作手順や注意事項が続くことを示唆する導入文として機能します。"
+  },
+  "seeHowToUsePauseTakingFeature": "Se guide för intagspausen",
+  "@seeHowToUsePauseTakingFeature": {
+    "description": "ピルの服用を一時的に停止する「服用お休み機能」の使用方法を説明するヘルプページへのリンクテキストです。ユーザーがこの機能の操作方法を学ぶためのガイドに誘導する際に表示されます。"
   }
 }
