@@ -2111,5 +2111,9 @@
         "type": "String"
       }
     }
+  },
+  "quickRecordTakePillFailed": "Inawezekana rekodi ya kumeza dawa haijahifadhiwa",
+  "@quickRecordTakePillFailed": {
+    "description": "ピルの服用記録をアプリに保存する際に、技術的な問題により記録処理が失敗した可能性があることをユーザーに伝えるエラーメッセージです。"
   }
 }
