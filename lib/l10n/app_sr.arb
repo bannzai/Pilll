@@ -1031,5 +1031,9 @@
   "popularFeatures": "Popularne\nfunkcije",
   "@popularFeatures": {
     "description": "アプリ内で人気の高い機能やおすすめ機能を紹介する見出しやタイトルとして使用されます。UI上で改行（\\n）が含まれる場合があり、レイアウトを考慮して翻訳してください。"
+  },
+  "viewPremiumFeatures": "Pogledaj premium funkcije",
+  "@viewPremiumFeatures": {
+    "description": "プレミアム機能（有料機能）の詳細や内容を確認するためのボタンやリンクテキストとして使用されます。ユーザーをプレミアム機能の紹介画面に誘導する際の行動を促すテキストです。"
   }
 }
