@@ -1172,5 +1172,9 @@
   "pilll": "Pilll",
   "@pilll": {
     "description": "ピルの服用管理アプリ「Pilll」のアプリ名です。基本的には「Pilll」のまま使用しますが、各言語の文字体系に合わせて表記を調整してください。"
+  },
+  "changeMissedNotificationMessage": "Можете прилагодити текст обавештења када заборавите пилуле",
+  "@changeMissedNotificationMessage": {
+    "description": "ピルの服用を忘れた際に表示される通知メッセージを、ユーザーが自分で編集・カスタマイズできる機能の説明文です。設定画面などで表示される機能説明として使用されます。"
   }
 }
