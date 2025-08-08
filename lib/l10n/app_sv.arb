@@ -1349,5 +1349,9 @@
   "twentyFourPlusFourPlacebo": "24 tabletter + 4 placebotabletter",
   "@twentyFourPlusFourPlacebo": {
     "description": "ピルの種類選択時に表示される選択肢で、28日間のピルシートのうち24日間は有効成分入りの錠剤、4日間は休薬期間用のプラセボ（偽薬）錠剤を服用する服用スケジュールを表します。医療用語として正確に翻訳してください。"
+  },
+  "twentyOnePlusSevenPlacebo": "21 tabletter + 7 placebotabletter",
+  "@twentyOnePlusSevenPlacebo": {
+    "description": "ピルの種類選択で表示される28日間の服用スケジュールで、21日間は有効成分入りの錠剤、7日間は休薬期間用のプラセボ（偽薬）を服用することを表します。医療用語として正確に翻訳してください。"
   }
 }
