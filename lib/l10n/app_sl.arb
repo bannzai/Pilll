@@ -1835,5 +1835,17 @@
         "type": "String"
       }
     }
+  },
+  "emailAlreadyInUse": "E-poštni naslov, ki ga že uporabljate z {accountTypeProviderName} računom, je že povezan z drugim Pilll računom, zato registracija ni možna. Oglejte si tudi FAQ. Podrobnosti: {exceptionMessage}",
+  "@emailAlreadyInUse": {
+    "description": "ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。",
+    "placeholders": {
+      "accountTypeProviderName": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      }
+    }
   }
 }
