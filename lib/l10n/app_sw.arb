@@ -1682,5 +1682,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "Kushindwa kupata taarifa za mteja. Tafadhali jaribu tena baada ya muda. Ikiwa tatizo halitasuluhishwa, tafadhali wasiliana nasi kupitia Mipangilio > Mawasiliano. Maelezo: Msimbo: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
