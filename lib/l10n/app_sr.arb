@@ -710,5 +710,14 @@
         "type": "String"
       }
     }
+  },
+  "remainingDaysAllFeatures": "Možete koristiti sve funkcije još {diff} dana",
+  "@remainingDaysAllFeatures": {
+    "description": "プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。",
+    "placeholders": {
+      "diff": {
+        "type": "int"
+      }
+    }
   }
 }
