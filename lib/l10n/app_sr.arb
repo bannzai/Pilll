@@ -2264,5 +2264,14 @@
   "changedPillNumber": "Promena broja pilule",
   "@changedPillNumber": {
     "description": "ピルシートの番号設定を変更した際の履歴表示で使用される文言です。カレンダー画面の履歴機能でユーザーの過去の操作を示します。"
+  },
+  "offPercentForMonthlyPremiumPackage": "{offPercent}% popusta u poređenju sa redovnom mesečnom pretplatom",
+  "@offPercentForMonthlyPremiumPackage": {
+    "description": "アプリのプレミアムプラン（有料機能）で、年額プランが通常の月額プランと比較して何パーセント安くなるかを示す割引表示メッセージです。課金画面やプラン選択画面で表示されます。",
+    "placeholders": {
+      "offPercent": {
+        "type": "int"
+      }
+    }
   }
 }
