@@ -2302,5 +2302,9 @@
   "silentModeNotificationDescription": "Aj keď je zapnutý režim sústredenosti alebo je zariadenie v tichom režime, oznámenia sa zobrazia na zamknutej obrazovke a prehrá sa zvuk.",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
+  },
+  "enableNotificationInSilentMode": "Upozorniť aj v tichom režime",
+  "@enableNotificationInSilentMode": {
+    "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
   }
 }
