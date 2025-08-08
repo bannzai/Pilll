@@ -1557,5 +1557,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInsufficientPermissionsError": "Naročnina na načrt z vašim {accountName} ni mogoča. Preverite podatke o plačilu in poskusite znova.",
+  "@purchaseErrorInsufficientPermissionsError": {
+    "description": "アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
