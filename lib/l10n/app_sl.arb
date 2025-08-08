@@ -1231,5 +1231,9 @@
   "deletedDiaryCannotBeRecovered": "Izbrisani dnevniški zapisi se ne morejo obnoviti",
   "@deletedDiaryCannotBeRecovered": {
     "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
+  },
+  "sex": "seks",
+  "@sex": {
+    "description": "日記機能において、体調記録の一項目として性的活動の有無を記録する際のラベルです。ピル服用管理との関連で重要な体調データとして使用されます。"
   }
 }
