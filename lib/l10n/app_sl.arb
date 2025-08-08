@@ -1374,5 +1374,14 @@
         "type": "String"
       }
     }
+  },
+  "autoRecordForNotTakenPeriodIfNotificationOff": "Če so obvestila izklopljena, se samodejno zabeleži tudi jemanje zdravila v {pillSheetPillSheetTypeNotTakenWord} obdobju",
+  "@autoRecordForNotTakenPeriodIfNotificationOff": {
+    "description": "プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。",
+    "placeholders": {
+      "pillSheetPillSheetTypeNotTakenWord": {
+        "type": "String"
+      }
+    }
   }
 }
