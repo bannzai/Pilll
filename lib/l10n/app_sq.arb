@@ -836,5 +836,9 @@
   "registerAccountForDataTransfer": "Regjistrimi i llogarisë mundëson transferimin e të dhënave",
   "@registerAccountForDataTransfer": {
     "description": "アカウント登録によりピルの服用履歴や生理記録などのデータをバックアップ・復元できることを伝えるメッセージです。デバイス変更や再インストール時のデータ移行機能について説明しています。"
+  },
+  "registerAccountToKeepData": "Ju lutem regjistrohuni për të ruajtur informacionin e llogarisë suaj",
+  "@registerAccountToKeepData": {
+    "description": "ユーザーの服用履歴や生理記録などの大切なデータを保持・維持するために、アカウント登録を促すメッセージです。データの永続化とバックアップのためのアカウント作成を案内しています。"
   }
 }
