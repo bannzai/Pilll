@@ -1312,5 +1312,14 @@
   "selectPillNumberForMenstruationStart": "Dodirnite broj pilule kada počinje menstruacija",
   "@selectPillNumberForMenstruationStart": {
     "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
+  },
+  "countOfSheet": "{number}. лист",
+  "@countOfSheet": {
+    "description": "ピルシートUI上で複数のシートがある場合に、現在表示しているピルシートが何枚目かを示す順序表示です。「1枚目」「2枚目」のように数値とともに使用されます。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
