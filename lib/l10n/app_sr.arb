@@ -1899,5 +1899,9 @@
   "exampleRestDurationDate": "На пример, ако прекинете узимање пилула „од 1/12 током 3 дана\"",
   "@exampleRestDurationDate": {
     "description": "ピルの服用を一時的に休止する期間の入力例を示すテキストです。具体的な日付（1/12）と日数（3日間）を使って、ユーザーがアプリでどう休薬期間を指定するかを説明しています。"
+  },
+  "exampleRestDurationNumber": "Na primer „od 18. tableta 3 dana\" pauza u uzimanju",
+  "@exampleRestDurationNumber": {
+    "description": "ピルシートの特定の錠剤番号（18番）から一定期間（3日間）服用を休止する場合の入力例を示すテキストです。ユーザーが休薬期間を記録する際の具体的な使用例として表示されます。"
   }
 }
