@@ -2160,5 +2160,9 @@
   "duringPauseTaking": "Na pauzi",
   "@duringPauseTaking": {
     "description": "ピルの服用を一時的に休止している状態（休薬期間や服用中断）を表すステータステキストです。ユーザーが現在ピルを飲んでいない期間であることを示します。"
+  },
+  "cannotPauseAlreadyTakenToday": "Kada je pilula za danas već uzeta\nNe možete koristiti „Pauzu u uzimanju\"",
+  "@cannotPauseAlreadyTakenToday": {
+    "description": "今日のピルを既に服用した後で「服用お休み」機能を使おうとした際に表示されるエラーメッセージです。「服用お休み」はピルの服用を一時的に休止する機能名で、既に服用済みの場合は使用できないことをユーザーに説明しています。"
   }
 }
