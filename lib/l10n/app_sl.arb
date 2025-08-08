@@ -1409,5 +1409,17 @@
         "type": "int"
       }
     }
+  },
+  "purchaseErrorUnknownError": "Prišlo je do neznane napake. Počakajte malo in poskusite znova. Če se težava ne reši, pojdite na Nastavitve > Kontakt in nas kontaktirajte. Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownError": {
+    "description": "アプリ内課金処理中に予期しないエラーが発生した際にユーザーに表示されるメッセージです。エラーの詳細情報と共に、再試行や問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
