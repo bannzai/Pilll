@@ -1590,5 +1590,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "Kunde inte hämta användarinformation. Vänta en stund och försök igen. Om problemet kvarstår, kontakta oss via Inställningar > Kontakt. Detaljer: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
