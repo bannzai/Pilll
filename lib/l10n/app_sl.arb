@@ -1047,5 +1047,9 @@
   "missedPillNotification": "Opomnik za pozabljeno tableto",
   "@missedPillNotification": {
     "description": "設定した服用時刻にピルを飲み忘れた際にユーザーに送信されるプッシュ通知のタイトルまたは内容として表示されるテキストです。アプリの主要機能である「飲み忘れ防止」のためのリマインド機能の一部として使用されます。"
+  },
+  "setMultipleReminders": "Z več opomniki lahko preprečite pozabljanje jemanja tablet",
+  "@setMultipleReminders": {
+    "description": "ピルの服用リマインダーを複数設定することで飲み忘れを防げることをユーザーに説明するメッセージです。リマインダー設定画面や説明画面で表示されます。"
   }
 }
