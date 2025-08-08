@@ -1610,5 +1610,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Hitilafu isiyojulikana imetokea. Tafadhali sasisha programu hadi toleo jipya na ujaribu tena. Ikiwa suala halitaluliwa, tafadhali wasiliana nasi kupitia Mipangilio > Mawasiliano. Msimbo: {errorCode} Maelezo: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
