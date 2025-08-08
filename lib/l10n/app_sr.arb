@@ -2184,5 +2184,9 @@
   "editPauseStartDate": "Uredi datum početka pauze",
   "@editPauseStartDate": {
     "description": "ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。"
+  },
+  "shareWithFriends": "Preporuči prijateljima",
+  "@shareWithFriends": {
+    "description": "アプリを友達に紹介・推薦する機能で使用されるテキストです。ユーザーがPilllアプリを他の人に勧める際のボタンやメニュー項目として表示されます。"
   }
 }
