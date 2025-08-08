@@ -395,5 +395,9 @@
   "physicalConditionDetail": "Detaje Shëndetësore",
   "@physicalConditionDetail": {
     "description": "ユーザーが日記機能で体調を記録する際の詳細情報を表示する画面やセクションのタイトルです。体調に関する具体的な症状や状況を詳しく入力・閲覧できる機能の見出しとして翻訳してください。"
+  },
+  "medicationHistoryPremiumFeatureRestriction": "Shikimi i mëtejshëm kërkon planin premium",
+  "@medicationHistoryPremiumFeatureRestriction": {
+    "description": "薬の服用履歴画面で、一定期間以上過去の履歴を閲覧しようとした際に無料ユーザーに表示される制限メッセージです。プレミアム機能への登録を促す内容として翻訳してください。"
   }
 }
