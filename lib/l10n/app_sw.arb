@@ -323,5 +323,9 @@
   "appExitMessage": "Programu itafungwa sasa. Ikiwa ungependa kuanza upya, tafadhali anzisha tena programu na ufanye usanidi wa mwanzo.",
   "@appExitMessage": {
     "description": "データリセットや初期化などの重要な操作の後に表示される確認メッセージです。ユーザーにアプリの再起動と初期設定のやり直しが必要であることを伝える重要な通知文言になります。"
+  },
+  "oK": "Sawa",
+  "@oK": {
+    "description": "ダイアログボックスや確認画面で使用される汎用的な「OK」ボタンのラベルです。ユーザーが操作を確認・承認する際に表示されます。"
   }
 }
