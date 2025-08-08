@@ -1492,5 +1492,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Taarifa za ununuzi tayari zinatumika na mtumiaji mwingine. Tafadhali hakiki {accountName} aliyeingia kwenye kifaa hiki.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
