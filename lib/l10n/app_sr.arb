@@ -1496,5 +1496,14 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorReceiptInUseByOtherSubscriberError": "Подаци о куповини се већ користе од стране другог корисника. Молимо проверите {accountName} који је пријављен на уређај.",
+  "@purchaseErrorReceiptInUseByOtherSubscriberError": {
+    "description": "アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
