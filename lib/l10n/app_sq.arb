@@ -503,5 +503,9 @@
   "pauseStartDate": "Data e fillimit të pushimit të marrjes",
   "@pauseStartDate": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+  },
+  "pauseEndDate": "Data e përfundimit të pushimit",
+  "@pauseEndDate": {
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の終了日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   }
 }
