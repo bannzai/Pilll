@@ -499,5 +499,9 @@
   "selectPausePeriod": "Välj pausperiod",
   "@selectPausePeriod": {
     "description": "ピルの休薬期間（服用を一時的に停止する期間）の長さを選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。"
+  },
+  "pauseStartDate": "Startdatum för intaguppehåll",
+  "@pauseStartDate": {
+    "description": "ピルの休薬期間（服用を一時的に停止する期間）の開始日を指定する際に表示されるラベルです。生理周期に合わせた服用スケジュール管理で使用されます。"
   }
 }
