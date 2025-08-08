@@ -1152,5 +1152,9 @@
   "showsDescription": "Visa beskrivningar",
   "@showsDescription": {
     "description": "アプリ内の設定画面で、説明文やヘルプテキストの表示・非表示を切り替えるオプションのラベルです。ユーザーがUIをシンプルにしたい場合に説明文を隠すことができる機能を指します。"
+  },
+  "title": "Titel",
+  "@title": {
+    "description": "予定やスケジュールの件名・タイトルを表します。通院予定や体調記録などの見出しとして使用されます。"
   }
 }
