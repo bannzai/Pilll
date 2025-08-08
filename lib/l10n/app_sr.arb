@@ -2131,5 +2131,9 @@
   "startPauseTaking": "Паузирај узимање",
   "@startPauseTaking": {
     "description": "ピルの服用管理において、定期的な休薬期間（プラセボ期間）を開始する際にユーザーが選択するボタンやメニュー項目の文言です。生理期間中や医師の指示による一時的な服用中断を意味します。"
+  },
+  "startedPauseTaking": "Započeta je pauza u uzimanju",
+  "@startedPauseTaking": {
+    "description": "ピルの服用を一時的に休止（休薬期間やプラセボ期間）することをユーザーが開始した際に表示される確認メッセージです。医師の指示による服用中断や生理期間中の服用停止を意味します。"
   }
 }
