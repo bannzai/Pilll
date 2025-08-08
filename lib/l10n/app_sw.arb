@@ -925,5 +925,14 @@
   "autoRenewNotice": "・Mkataba utajadiliwa kiotomatiki isipokuwa ukighairi zaidi ya masaa 24 kabla ya tarehe ya mwisho wa kipindi cha mkataba wa premium",
   "@autoRenewNotice": {
     "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
+  },
+  "cancelAutoRenewInfo": "・Baada ya ununuzi, kusitisha upyaji otomatiki kunaweza kufanywa katika mipangilio ya akaunti ya programu ya {storeName}. (Kusitisha upyaji otomatiki hakuwezi kufanywa ndani ya programu).",
+  "@cancelAutoRenewInfo": {
+    "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
