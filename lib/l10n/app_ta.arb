@@ -1686,5 +1686,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorCustomerInfoError": "வாடிக்கையாளர் தகவல் பெறுதல் தோல்வியடைந்தது. சிறிது நேரம் கழித்து மீண்டும் முயற்சிக்கவும். தீர்க்கப்படவில்லையென்றால் அமைப்புகள் > தொடர்பு வழியாக தொடர்பு கொள்ளவும். விபரம்: குறியீடு: {errorCode} {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorCustomerInfoError": {
+    "description": "プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
