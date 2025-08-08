@@ -1459,5 +1459,14 @@
   "purchaseErrorInvalidReceiptError": "Informacioni i blerjes është i pavlefshëm. Ju lutemi kontrolloni informacionin e blerjes.",
   "@purchaseErrorInvalidReceiptError": {
     "description": "アプリ内課金でプレミアムプラン購入時に、レシート情報が無効だった場合に表示されるエラーメッセージです。ユーザーに購入情報の確認を促す内容にしてください。"
+  },
+  "purchaseErrorMissingReceiptFileError": "Informacioni i blerësit nuk ekziston. Ju lutemi identifikohuni në pajisje me {accountName} dhe provoni përsëri.",
+  "@purchaseErrorMissingReceiptFileError": {
+    "description": "アプリ内課金でプレミアムプラン購入時に、デバイスにサインインしているアカウントと購入情報が一致しない場合に表示されるエラーメッセージです。ユーザーに正しいアカウントでのサインインを促す内容にしてください。",
+    "placeholders": {
+      "accountName": {
+        "type": "String"
+      }
+    }
   }
 }
