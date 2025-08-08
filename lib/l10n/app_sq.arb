@@ -1945,5 +1945,9 @@
         "type": "int"
       }
     }
+  },
+  "connectionError": "Lidhja e internetit duket të jetë e paqëndrueshme. Ju lutemi provoni përsëri pas pak kohësh.",
+  "@connectionError": {
+    "description": "ネットワーク通信に失敗した際にユーザーに表示されるエラーメッセージです。アプリの主要機能（服用記録の同期等）で通信エラーが発生した時に使用されます。"
   }
 }
