@@ -2098,5 +2098,9 @@
   "resumeTaking": "Återuppta intag",
   "@resumeTaking": {
     "description": "ピルの服用を一時的に中断していた状態から、再び服用を開始する際に使用されるボタンやラベルのテキストです。"
+  },
+  "changePausePeriod": "Ändra pausperiod",
+  "@changePausePeriod": {
+    "description": "ピルの服用サイクルにおける休薬期間（通常7日間）の日数を変更する機能です。設定画面やボタンのラベルとして使用されます。"
   }
 }
