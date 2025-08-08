@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "காரணம் தெரியாத பிழை. சமீபத்திய பதிப்பிற்கு புதுப்பித்து மீண்டும் முயற்சிக்கவும். தீர்க்கப்படாவிட்டால் அமைப்புகள் > தொடர்பு மூலம் தொடர்பு கொள்ளவும். குறியீடு: {errorCode} விவரங்கள்: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
