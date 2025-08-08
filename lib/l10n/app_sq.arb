@@ -1814,5 +1814,9 @@
   "deleteSchedule": "Fshij planifikimin",
   "@deleteSchedule": {
     "description": "通院予定や服用スケジュールなどの予定を削除する際のボタンやメニューのラベルです。ユーザーが予定を削除したいときに表示される操作名称として使用されます。"
+  },
+  "onlySupportiOS": "I disponueshëm vetëm për aplikacionin iOS",
+  "@onlySupportiOS": {
+    "description": "特定の機能がiOSアプリでのみ利用可能であることをユーザーに伝えるメッセージです。Androidユーザーがその機能にアクセスしようとした際などに表示される説明文として使用されます。"
   }
 }
