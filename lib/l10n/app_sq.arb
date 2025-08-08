@@ -290,5 +290,9 @@
   "reLogin": "Ri-identifikim",
   "@reLogin": {
     "description": "ログインセッションが切れた際やエラーが発生した際に、ユーザーがアプリに再度ログインするためのボタンや項目です。健康管理アプリの継続的な利用において、セキュリティやセッション管理の観点から再認証が必要になった場合に表示されます。"
+  },
+  "authenticationInfoUpdated": "Të dhënat e vërtetimit u përditësuan",
+  "@authenticationInfoUpdated": {
+    "description": "ユーザーのログイン認証情報（パスワードやアカウント設定など）の更新が正常に完了した際に表示される成功メッセージです。健康管理アプリのセキュリティ強化や問題解決後にユーザーに安心感を与える通知として使用されます。"
   }
 }
