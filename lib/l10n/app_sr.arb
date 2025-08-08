@@ -1308,5 +1308,9 @@
   "daysMenstruationLasts": "dana menstruacija traje",
   "@daysMenstruationLasts": {
     "description": "生理管理機能で、ユーザーが設定した生理期間の日数を表示する際のテキストです。数値の後に続けて「X日間生理が続く」のような形で使用されます。"
+  },
+  "selectPillNumberForMenstruationStart": "Dodirnite broj pilule kada počinje menstruacija",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
   }
 }
