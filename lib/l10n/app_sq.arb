@@ -1321,5 +1321,9 @@
         "type": "int"
       }
     }
+  },
+  "newPillSheetStart": "Fillo fletë të re pilulash ▶︎",
+  "@newPillSheetStart": {
+    "description": "新しいピルシート（1ヶ月分のピルパック）の服用を開始するためのボタンやメニュー項目に表示されるテキストです。ユーザーが前のシートを終了して新しいサイクルを始める際に使用します。"
   }
 }
