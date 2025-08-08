@@ -1076,5 +1076,9 @@
   "takingRecordFromNotification": "\\ Iz obvestil lahko beležite jemanje /",
   "@takingRecordFromNotification": {
     "description": "プッシュ通知から直接ピルの服用記録を行える機能を説明するユーザー向けの案内文です。リマインド通知を受け取ったユーザーが、アプリを開かなくても通知から服用記録できる便利さを伝える文言です。"
+  },
+  "startApp": "Začni z uporabo",
+  "@startApp": {
+    "description": "新規ユーザーがアプリの利用を開始する際に表示されるボタンやリンクのテキストです。オンボーディングやチュートリアル完了後に、実際にPilllアプリの機能を使い始めることを促す文言として使用されます。"
   }
 }
