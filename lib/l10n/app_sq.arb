@@ -249,5 +249,9 @@
   "aboutMenstruation": "Rreth menstruacionit",
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
+  },
+  "checkPillNumberForMenstruationStart": "Ju lutemi verifikoni numrin e pilulës për datën e fillimit të menstruacionit. Numri i pilulës i vendosur nuk ekziston në tipin e fletës së pilulës aktualisht të zgjedhur.",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   }
 }
