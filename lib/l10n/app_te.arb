@@ -1743,5 +1743,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "తెలియని దోషం ఏర్పడింది. తాజా వెర్షన్‌కు అప్‌డేట్ చేసి మళ్లీ ప్రయత్నించండి. సమస్య పరిష్కారం కాకపోతే సెట్టింగ్స్ > సంప్రదింపులు ద్వారా సంప్రదించండి. కోడ్: {errorCode} వివరాలు: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
