@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "یہ ایک نامعلوم خرابی ہے۔ براہ کرم تازہ ترین ورژن میں اپڈیٹ کریں اور دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو سیٹنگز > رابطہ کریں کے ذریعے ہم سے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
