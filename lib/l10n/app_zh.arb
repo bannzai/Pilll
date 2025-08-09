@@ -1185,5 +1185,9 @@
         "type": "int"
       }
     }
+  },
+  "changeNotificationHeader": "可以更改通知的开头部分",
+  "@changeNotificationHeader": {
+    "description": "プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。"
   }
 }
