@@ -1789,5 +1789,14 @@
   "forceUpdateTitle": "براہ کرم ایپ کو اپڈیٹ کریں",
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
+  },
+  "forceUpdateMessage": "آپ کی ایپ کے ورژن کو اپ ڈیٹ کرنے کی درخواست کی جا رہی ہے۔ برائے کرم {storeName} سے تازہ ترین ورژن میں اپ ڈیٹ کریں۔",
+  "@forceUpdateMessage": {
+    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
