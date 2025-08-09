@@ -1590,5 +1590,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorLogOutWithAnonymousUserError": "صارف کی معلومات حاصل کرنے میں ناکام رہے۔ کچھ وقت بعد دوبارہ کوشش کریں۔ اگر مسئلہ حل نہ ہو تو سیٹنگز > رابطہ سے رابطہ کریں۔ تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorLogOutWithAnonymousUserError": {
+    "description": "プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
