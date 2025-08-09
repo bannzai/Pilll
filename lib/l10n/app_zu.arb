@@ -709,5 +709,9 @@
   "todayPillToTake": "💊 Amaphilisi zanamuhla",
   "@todayPillToTake": {
     "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
+  },
+  "number": "Looking at this translation request, I need to translate the Japanese counter \"番\" used for indicating pill positions (like \"1番\", \"2番\") into Zulu.\n\nIn Zulu, position indicators in UI contexts typically don't use suffix classifiers like Japanese. The most natural and appropriate translation for this context would be to omit the suffix entirely, as Zulu speakers would simply use the number alone.\n\n(empty string)",
+  "@number": {
+    "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   }
 }
