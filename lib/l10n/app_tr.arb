@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Bilinmeyen bir hata oluştu. Lütfen en son sürüme güncelleyin ve tekrar deneyin. Sorun devam ederse Ayarlar > İletişim'den bizimle iletişime geçin. Kod: {errorCode} Detaylar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
