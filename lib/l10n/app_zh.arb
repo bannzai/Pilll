@@ -1874,5 +1874,9 @@
   "newPillSheetNotificationTitle": "从今天开始新药板",
   "@newPillSheetNotificationTitle": {
     "description": "新しいピルシート（薬のパッケージ）の服用が開始される際に表示されるプッシュ通知のタイトルです。ピルの新しい服用サイクルの開始を利用者に知らせる重要な通知メッセージです。"
+  },
+  "newPillSheetNotificationMessage": "🆕 今天开始新的服用周期\n请不要忘记服用👍",
+  "@newPillSheetNotificationMessage": {
+    "description": "新しいピルシート（薬のパッケージ）の服用サイクルが開始される際にユーザーに送信されるプッシュ通知のメッセージです。ピルの新しい服用周期の開始を知らせ、飲み忘れを防ぐための重要なリマインド通知として機能します。"
   }
 }
