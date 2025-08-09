@@ -870,5 +870,9 @@
   "limitedTimeDiscount": "Ngay bây giờ với giá ưu đãi đặc biệt, sử dụng vĩnh viễn",
   "@limitedTimeDiscount": {
     "description": "アプリのプレミアム機能に関する期間限定キャンペーンのメッセージです。特別価格でサブスクリプションに加入すれば、その価格でずっと使い続けられることを表現しています。"
+  },
+  "standardMonthlyPlan": "Gói Tháng Thông Thường",
+  "@standardMonthlyPlan": {
+    "description": "アプリのプレミアム機能に関する通常価格の月額サブスクリプションプランの名称です。割引プランと区別するために表示されます。"
   }
 }
