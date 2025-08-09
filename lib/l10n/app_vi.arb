@@ -660,5 +660,9 @@
   "cannotTransferPremiumWithoutAccount": "Không thể chuyển đổi tính năng premium khi thay đổi thiết bị hoặc mất điện thoại",
   "@cannotTransferPremiumWithoutAccount": {
     "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
+  },
+  "reexperiencePremiumFeatures": "Bạn có thể trải nghiệm lại các tính năng Premium trong 14 ngày!\nHãy nhấn để chia sẻ lên mạng xã hội!",
+  "@reexperiencePremiumFeatures": {
+    "description": "プレミアム機能の14日間無料再体験キャンペーンを告知し、ユーザーにSNSでのシェアを促すメッセージです。タップするとシェア機能が起動される想定のボタンテキストとして使用されます。"
   }
 }
