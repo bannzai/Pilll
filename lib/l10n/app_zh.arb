@@ -2302,5 +2302,9 @@
   "silentModeNotificationDescription": "即便开启专注模式或设备处于静音状态，通知仍会在锁屏界面显示并播放声音",
   "@silentModeNotificationDescription": {
     "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
+  },
+  "enableNotificationInSilentMode": "静音模式下也要通知",
+  "@enableNotificationInSilentMode": {
+    "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
   }
 }
