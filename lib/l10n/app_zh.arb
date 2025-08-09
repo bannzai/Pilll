@@ -1545,5 +1545,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "您的用户购买失败。请稍后重试。如果问题仍未解决，请通过 设置 > 联系我们 进行咨询。详细信息：{exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
