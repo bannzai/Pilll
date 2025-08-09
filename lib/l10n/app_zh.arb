@@ -172,5 +172,9 @@
   "autoAddPillSheetGroup": "避孕药板组自动添加",
   "@autoAddPillSheetGroup": {
     "description": "アプリが新しいピルの服用サイクルを開始する際に、ピルシートの管理グループを自動的に作成・追加する機能のタイトルです。ユーザーが手動で設定しなくても、システムが自動的にピルシートの管理単位を追加することを表しています。"
+  },
+  "autoAddNewSheetAfterCurrentEnds": "当前药片组完成后，将自动添加新的药片组",
+  "@autoAddNewSheetAfterCurrentEnds": {
+    "description": "現在服用中のピルシート（1パック分）が終了した際に、次のピルシートを自動的に追加する機能の説明文です。設定画面で表示される機能の説明として使用されます。"
   }
 }
