@@ -27,7 +27,7 @@ extension OfferingTypeFunction on OfferingType {
       case OfferingType.specialOffering:
         return 'Premium';
       case OfferingType.premium:
-        return 'Premium2';
+        return 'Premium3';
     }
   }
 }
