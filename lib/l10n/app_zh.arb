@@ -1434,5 +1434,9 @@
   "purchaseErrorPurchaseNotAllowedError": "此设备不允许购买",
   "@purchaseErrorPurchaseNotAllowedError": {
     "description": "アプリ内課金でプレミアムプランを購入しようとした際に、端末側の設定や制限により購入ができない場合に表示されるエラーメッセージです。"
+  },
+  "purchaseErrorPurchaseInvalidError": "支付失败。请确认支付方式是否有效，然后重试。",
+  "@purchaseErrorPurchaseInvalidError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際に、支払い方法が無効または支払い処理に失敗した場合に表示されるエラーメッセージです。"
   }
 }
