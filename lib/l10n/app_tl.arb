@@ -1472,5 +1472,17 @@
   "purchaseErrorNetworkError": "Hindi stable ang network connection. Pakisuri ang inyong connection at subukan ulit.",
   "@purchaseErrorNetworkError": {
     "description": "アプリ内課金（プレミアムプラン購入）時にネットワーク接続が不安定な場合に表示されるエラーメッセージです。ユーザーに接続状況の確認と再試行を促す内容で翻訳してください。"
+  },
+  "purchaseErrorInvalidCredentialsError": "Nabigo ang pagbili. Mangyaring subukan muli pagkatapos ng ilang sandali. Kung hindi nalulutas ang problema, makipag-ugnayan sa amin sa pamamagitan ng Settings > Makipag-ugnayan. Mga Detalye: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidCredentialsError": {
+    "description": "アプリ内課金（プレミアムプラン購入）時に無効な認証情報が原因で購入が失敗した場合に表示されるエラーメッセージです。ユーザーに時間をおいて再試行を促し、解決しない場合はサポートへの連絡を案内する内容で翻訳してください。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
