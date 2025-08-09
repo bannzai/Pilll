@@ -969,5 +969,9 @@
   "youArePremiumMember": "Uyilungu le-Premium",
   "@youArePremiumMember": {
     "description": "プレミアムプラン（有料プラン）に加入しているユーザーに表示される会員ステータスメッセージです。"
+  },
+  "thankYouMessage": "Siyabonga kakhulu ngokusisebenzisa.\nNgenxa yenu sikwazi ukuqhubeka nokusebenza kwe-Pilll.",
+  "@thankYouMessage": {
+    "description": "プレミアムプラン（有料プラン）のユーザーに向けて表示される感謝のメッセージです。アプリの利用とサポートに対する感謝を表現し、運営継続への貢献を認める内容にしてください。"
   }
 }
