@@ -705,5 +705,9 @@
   "todayIsTaking": "💊 Thatha namuhla",
   "@todayIsTaking": {
     "description": "ピルの服用管理画面で、今日がピル服用の予定日であることをユーザーに通知するメッセージです。カレンダーやホーム画面などで、今日が服用日であることを示すステータス表示として使用されます。"
+  },
+  "todayPillToTake": "💊 Amaphilisi zanamuhla",
+  "@todayPillToTake": {
+    "description": "ピル服用管理画面で、今日服用すべきピルを示すラベルです。ホーム画面やカレンダーなどで、今日飲む予定のピルがあることをユーザーに伝える際に使用されます。"
   }
 }
