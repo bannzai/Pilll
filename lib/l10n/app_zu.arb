@@ -1698,5 +1698,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorBeginRefundRequestError": "Inqubo yokubuyisela imali iqalisiwe. Sicela uhlole futhi uzame futhi. Uma le nkinga ingaxazululi, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorBeginRefundRequestError": {
+    "description": "アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
