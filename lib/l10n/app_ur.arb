@@ -1641,5 +1641,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "یہ ایک نامعلوم خرابی ہے۔ براہ کرم تازہ ترین ورژن میں اپڈیٹ کر کے دوبارہ کوشش کریں۔ اگر مسئلہ حل نہیں ہوتا تو سیٹنگز > رابطہ کے ذریعے ہم سے رابطہ کریں۔ کوڈ: {errorCode} تفصیلات: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
