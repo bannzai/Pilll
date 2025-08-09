@@ -638,5 +638,9 @@
   "pleaseRegisterAccount": "Ngicela ubhalisele i-akhawunti",
   "@pleaseRegisterAccount": {
     "description": "ユーザーがアカウント登録を求められる際に表示されるメッセージです。データの同期やバックアップのためにアカウント作成が必要な場面で使用されます。"
+  },
+  "cannotTransferPremiumWithoutAccount": "Awukwazi ukudlulisela izici ze-premium uma ushintsha ifoni noma ulahlekelwa yifoni yakho",
+  "@cannotTransferPremiumWithoutAccount": {
+    "description": "アカウント未登録のユーザーに対して、端末の機種変更や紛失時にプレミアム機能が引き継げないことを警告するメッセージです。アカウント登録を促すための注意喚起として表示されます。"
   }
 }
