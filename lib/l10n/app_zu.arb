@@ -1740,5 +1740,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorInvalidPromotionalOfferError": "Iphutha elingaziwa lenzekile. Sicela ubuyisele uhlelo-lwamanye esigabeni sakamuva bese uzama futhi. Uma inkinga ingaxazululeki, sicela uxhumane nathi ku Izimisakazo > Xhumana nathi. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorInvalidPromotionalOfferError": {
+    "description": "アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
