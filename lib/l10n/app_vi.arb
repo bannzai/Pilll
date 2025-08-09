@@ -1877,5 +1877,14 @@
   "purchaseErrorPurchasePendingError": "Việc kích hoạt thanh toán chưa hoàn thành. Vui lòng đợi một chút và kiểm tra lại sau.",
   "@purchaseErrorPurchasePendingError": {
     "description": "アプリ内でプレミアム機能を購入した際、決済処理がまだ完了していない（保留中）状態の時にユーザーに表示されるエラーメッセージです。ユーザーには購入手続きが進行中であることを伝え、しばらく待ってから再度確認するよう案内する文言として翻訳してください。"
+  },
+  "launchError": "実際に翻訳すべき具体的な日本語のエラーメッセージが提示されていないようです。アプリ起動時のエラーメッセージについての説明文のみが提供されています。\n\n翻訳対象となる具体的な日本語のエラーメッセージを教えてください。",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
