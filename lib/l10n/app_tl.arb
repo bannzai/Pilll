@@ -929,5 +929,14 @@
   "autoRenewNotice": "• Awtomatikong mare-renew ang premium subscription maliban kung ikansela mo ito nang hindi bababa sa 24 oras bago matapos ang kontrata.",
   "@autoRenewNotice": {
     "description": "プレミアムプランの自動更新に関する法的通知で、アプリストアの規約に準拠するために表示される重要な文言です。正確な法的意味を保持して翻訳してください。"
+  },
+  "cancelAutoRenewInfo": "・Pagkatapos ng pagbili, ang pagkansela ng awtomatikong pag-renew ay maaaring gawin sa account settings ng {storeName} app. (Hindi makakansela ang awtomatikong pag-renew mula sa loob ng app).",
+  "@cancelAutoRenewInfo": {
+    "description": "プレミアムプランの自動更新解約方法を説明する重要な文言で、App StoreやGoogle Play Storeでの解約手順とアプリ内では解約できないことを正確に伝える必要があります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
