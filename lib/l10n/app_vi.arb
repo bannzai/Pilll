@@ -1734,5 +1734,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorApiEndpointBlocked": "Đã xảy ra lỗi không xác định được nguyên nhân. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã lỗi: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorApiEndpointBlocked": {
+    "description": "アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
