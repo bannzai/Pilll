@@ -1614,5 +1614,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Noma'lum sabab bo'yicha xatolik yuz berdi. Eng so'nggi versiyaga yangilang va qaytadan urinib ko'ring. Agar muammo hal bo'lmasa, Sozlamalar > Murojaat orqali biz bilan bog'laning. Kod: {errorCode} Tafsilotlar: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
