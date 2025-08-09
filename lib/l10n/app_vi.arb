@@ -1475,5 +1475,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "Hiện tại không thể mua hàng. Vui lòng thử lại sau một thời gian. Nếu vấn đề không được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
