@@ -905,5 +905,9 @@
         "type": "String"
       }
     }
+  },
+  "premiumTermsNotice1": "• Premium abonelik süresi, başlangıç tarihinden itibaren 1 aylık veya 1 yıllık periyotlarla otomatik olarak yenilenir.",
+  "@premiumTermsNotice1": {
+    "description": "プレミアムプランの利用規約で表示される、サブスクリプションの自動更新に関する重要な契約条件です。法的文書として正確で分かりやすい翻訳が必要です。"
   }
 }
