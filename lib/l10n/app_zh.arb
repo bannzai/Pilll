@@ -1773,5 +1773,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "网络连接异常。请检查网络环境后重试。如问题仍未解决，请通过 设置 > 联系我们 进行咨询。详细信息: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
