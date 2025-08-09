@@ -1755,5 +1755,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorOfflineConnectionError": "Kunenkinga yokuxhumana. Sicela uhlole isimo sakho sokuxhumana bese uzama futhi. Uma inkinga ingaqhubeka, sicela uxhumane nathi ngokusebenzisa Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorOfflineConnectionError": {
+    "description": "アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
