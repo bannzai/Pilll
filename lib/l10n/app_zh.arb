@@ -87,5 +87,9 @@
   "faq": "常见问题",
   "@faq": {
     "description": "アプリ内のヘルプ・サポートセクションで表示される「よくある質問」を意味するラベルです。ユーザーがピルの服用方法や機能について疑問を持った際にアクセスするページのタイトルとして使用されます。"
+  },
+  "newFeaturesIntroduction": "新功能介绍",
+  "@newFeaturesIntroduction": {
+    "description": "新機能紹介"
   }
 }
