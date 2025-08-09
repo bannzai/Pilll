@@ -1692,5 +1692,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorSystemInfoError": "Có vấn đề với cài đặt thiết bị. Vui lòng kiểm tra và thử lại. Nếu vấn đề vẫn không được giải quyết, hãy liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
