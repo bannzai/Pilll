@@ -1789,5 +1789,14 @@
   "forceUpdateTitle": "请更新应用",
   "@forceUpdateTitle": {
     "description": "アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。"
+  },
+  "forceUpdateMessage": "请更新您的应用版本。请前往{storeName}下载最新版本",
+  "@forceUpdateMessage": {
+    "description": "アプリのバージョンが古いため、強制的にアップデートが必要な場合にユーザーに表示されるメッセージです。{storeName}にはApp StoreやGoogle Play Storeなどのストア名が入ります。",
+    "placeholders": {
+      "storeName": {
+        "type": "String"
+      }
+    }
   }
 }
