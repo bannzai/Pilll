@@ -1623,5 +1623,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorProductDiscountMissingIdentifierError": "Kuyiphutha elingaziwa. Sicela ubuyisele ku-veshini yakamuva bese uzama futhi. Uma lokhu kungaxazululi, sicela uxhumane nathi nge Izilungiselelo > Buza. Ikhodi: {errorCode} Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingIdentifierError": {
+    "description": "アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
