@@ -1527,5 +1527,17 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorIneligibleError": "Ukuthenga kwe-akhawunti yakho yemsebenzisi akuphumelelanga. Sicela uzame futhi ngemuva kwesikhathi. Uma le nkinga ingalungiseki, sicela uxhumane nathi ngokungena ku-Izilungiselelo > Buza. Imininingwane: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorIneligibleError": {
+    "description": "アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
