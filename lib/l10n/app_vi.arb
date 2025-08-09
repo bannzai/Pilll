@@ -249,5 +249,9 @@
   "aboutMenstruation": "Về kinh nguyệt",
   "@aboutMenstruation": {
     "description": "アプリ内で生理に関する情報や教育コンテンツを提供するセクション・メニューのタイトルです。ピルの服用管理と合わせて生理周期についての理解を深めるための情報ページへのリンクとして使用されます。"
+  },
+  "checkPillNumberForMenstruationStart": "Vui lòng kiểm tra số viên thuốc tại ngày bắt đầu kinh nguyệt. Số viên thuốc đã thiết lập không tồn tại trong loại vỉ thuốc hiện được chọn",
+  "@checkPillNumberForMenstruationStart": {
+    "description": "ピルシートタイプを変更した際に、以前設定した生理開始日のピル番号が新しいピルシートには存在しない場合に表示される警告メッセージです。ユーザーに設定の確認と修正を促すエラー通知として使用されます。"
   }
 }
