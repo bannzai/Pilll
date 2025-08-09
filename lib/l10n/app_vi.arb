@@ -1605,5 +1605,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnsupportedError": "Đã xảy ra lỗi không xác định. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnsupportedError": {
+    "description": "アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
