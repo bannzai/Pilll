@@ -1647,5 +1647,20 @@
         "type": "String"
       }
     }
+  },
+  "purchaseErrorUnknownNonNativeError": "Đây là lỗi không xác định được nguyên nhân. Vui lòng cập nhật lên phiên bản mới nhất và thử lại. Nếu vấn đề vẫn chưa được giải quyết, vui lòng liên hệ với chúng tôi qua Cài đặt > Liên hệ. Mã lỗi: {errorCode} Chi tiết: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownNonNativeError": {
+    "description": "プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
