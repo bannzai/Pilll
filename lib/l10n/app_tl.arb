@@ -1521,5 +1521,17 @@
   "purchaseErrorOperationAlreadyInProgressError": "May kasalukuyang proseso ng pagbili na nagaganap. Maghintay po ng ilang sandali at subukan muli.",
   "@purchaseErrorOperationAlreadyInProgressError": {
     "description": "アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。"
+  },
+  "purchaseErrorUnknownBackendError": "Hindi makakabili ngayon. Mangyaring maghintay ng kaunti at subukan ulit. Kung patuloy ang problema, makipag-ugnayan sa amin sa Settings > Contact. Detalye: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnknownBackendError": {
+    "description": "アプリ内課金処理で不明なバックエンドエラーが発生した際に表示されるエラーメッセージです。ユーザーに購入の一時的な失敗を伝え、再試行を促すとともに、問題が継続する場合のサポート連絡先を案内する内容として使用されます。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
