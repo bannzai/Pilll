@@ -2280,5 +2280,9 @@
         "type": "String"
       }
     }
+  },
+  "silentModeNotificationDescription": "Noma imodi yokugxila ivuliwe noma idivayisi ithulile, izaziso zizoboniswa kusikrini esivaliwe futhi umsindo uzodlalwa",
+  "@silentModeNotificationDescription": {
+    "description": "ピルの服用リマインダー通知が、端末の集中モードや消音設定に関係なく確実に届くことを説明する文章です。服用忘れを防ぐための重要な機能説明として表示されます。"
   }
 }
