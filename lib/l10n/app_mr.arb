@@ -1120,15 +1120,6 @@
       }
     }
   },
-  "todayPillNumber": "{आजची_गोळी_संख्या_गोळी_पत्रकातील_गोळी_संख्या}",
-  "@todayPillNumber": {
-    "description": "ピルシート上で今日服用すべきピルの番号（例：1錠目、15錠目など）を表示する際に使用されます。リマインダー通知やログ記録でも参照される重要な値です。",
-    "placeholders": {
-      "todayPillNumberPillNumberInPillSheet": {
-        "type": "String"
-      }
-    }
-  },
   "preview": "पूर्वावलोकन",
   "@preview": {
     "description": "設定や入力内容を事前に確認するためのプレビュー表示に使用される文字列です。ユーザーが何かを実行・保存する前の確認画面で表示されます。"
