@@ -21,6 +21,7 @@ part 'pill_sheet_group.codegen.freezed.dart';
 class PillSheetGroupFirestoreKeys {
   /// 作成日時フィールドキー
   static const createdAt = 'createdAt';
+
   /// 削除日時フィールドキー
   static const deletedAt = 'deletedAt';
 }
@@ -36,12 +37,15 @@ class PillSheetGroup with _$PillSheetGroup {
   factory PillSheetGroup({
     /// FirestoreドキュメントID（自動生成される場合はnull）
     @JsonKey(includeIfNull: false) String? id,
+
     /// このグループに含まれるピルシートのIDリスト
     /// pillSheetsプロパティと対応関係を持つ
     required List<String> pillSheetIDs,
+
     /// このグループに含まれる実際のピルシートデータ
     /// 服用状況や日程計算の基準となる
     required List<PillSheet> pillSheets,
+
     /// グループ作成日時（必須項目）
     /// Firestoreのタイムスタンプとして保存される
     @JsonKey(
@@ -49,6 +53,7 @@ class PillSheetGroup with _$PillSheetGroup {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime createdAt,
+
     /// 削除日時（論理削除で使用）
     /// nullの場合は削除されていない状態を表す
     @JsonKey(
@@ -60,6 +65,7 @@ class PillSheetGroup with _$PillSheetGroup {
     /// ピル番号の表示設定（カスタマイズ用）
     /// 開始番号・終了番号のユーザーカスタマイズを管理
     PillSheetGroupDisplayNumberSetting? displayNumberSetting,
+
     /// ピルシートの表示モード設定
     /// 番号表示、日付表示、連続番号表示の切り替えを制御
     @Default(PillSheetAppearanceMode.number) PillSheetAppearanceMode pillSheetAppearanceMode,
@@ -99,7 +105,7 @@ class PillSheetGroup with _$PillSheetGroup {
   /// 論理削除されているかどうかを判定
   /// deletedAtが設定されている場合はtrue
   bool get _isDeleted => deletedAt != null;
-  
+
   /// グループが非アクティブ状態かどうかを判定
   /// アクティブなピルシートがないか削除済みの場合はtrue
   bool get isDeactived => activePillSheet == null || _isDeleted;
@@ -115,6 +121,7 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.date:
         return 0;
       case PillSheetAppearanceMode.sequential:
+        return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
     }
@@ -134,6 +141,7 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.date:
         return 0;
       case PillSheetAppearanceMode.sequential:
+        return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
     }
@@ -203,7 +211,7 @@ class PillSheetGroup with _$PillSheetGroup {
   /// ピルシート内番号表示用のピルマーク値リスト（遅延初期化）
   /// number/dateモードで使用される基本的なピル番号情報
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersInPillSheet = _pillNumbersInPillSheet();
-  
+
   /// 連続番号表示用のピルマーク値リスト（遅延初期化）
   /// sequential/cyclicSequentialモードで使用される連続番号情報
   late final List<PillSheetGroupPillNumberDomainPillMarkValue> pillNumbersForCyclicSequential = _pillNumbersForCyclicSequential();
@@ -223,8 +231,10 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
     // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     /// 履歴データの表示モード（before/afterで異なる場合があるため）
     required PillSheetAppearanceMode pillSheetAppearanceMode,
+
     /// 番号を取得したい対象日付
     required DateTime targetDate,
+
     /// イベントが発生した推定日付
     required DateTime estimatedEventCausingDate,
   }) {
@@ -250,8 +260,10 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
     // 例えば履歴の表示の際にbeforePillSheetGroupとafterPillSheetGroupのpillSheetAppearanceModeが違う場合があるので、pillSheetAppearanceModeを引数にする
     /// 履歴データの表示モード
     required PillSheetAppearanceMode pillSheetAppearanceMode,
+
     /// ピルシートのページインデックス
     required int pageIndex,
+
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
   }) {
@@ -283,6 +295,7 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   String displayPillNumberWithoutDate({
     /// ピルシートのページインデックス
     required int pageIndex,
+
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
   }) {
@@ -298,8 +311,10 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   String displayPillNumberOrDate({
     /// プレミアムまたは試用状態かどうか
     required bool premiumOrTrial,
+
     /// ピルシートのページインデックス
     required int pageIndex,
+
     /// ピルシート内の番号
     required int pillNumberInPillSheet,
   }) {
@@ -369,8 +384,10 @@ class PillSheetGroupPillNumberDomainPillMarkValue with _$PillSheetGroupPillNumbe
   const factory PillSheetGroupPillNumberDomainPillMarkValue({
     /// 対象となるピルシート情報
     required PillSheet pillSheet,
+
     /// 対象となる日付
     required DateTime date,
+
     /// 表示番号
     required int number,
   }) = _PillSheetGroupPillNumberDomainPillMarkValue;
@@ -614,6 +631,7 @@ enum PillSheetAppearanceMode {
   /// 基本的な番号表示モード（1, 2, 3...）
   @JsonValue('number')
   number,
+
   /// 日付表示モード（月/日形式）
   /// プレミアム機能として提供される
   @JsonValue('date')
@@ -622,6 +640,7 @@ enum PillSheetAppearanceMode {
   /// 連続番号表示モード（旧形式、cyclicSequentialに移行）
   @JsonValue('sequential')
   sequential,
+
   /// 周期的連続番号表示モード
   /// 設定可能な開始・終了番号で番号をループさせる
   @JsonValue('cyclicSequential')
