@@ -21,39 +21,51 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
     /// ピルシート作成時の記録
     /// 新規ピルシートが作成された際の作成情報
     @Default(null) CreatedPillSheetValue? createdPillSheet,
+
     /// 自動記録された最終服用日の変更
     /// システムが自動的に最終服用日を更新した際の記録
     @Default(null) AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
+
     /// ピルシート削除時の記録
     /// ピルシートが削除された際の削除情報
     @Default(null) DeletedPillSheetValue? deletedPillSheet,
+
     /// ピル服用記録時の情報
     /// ユーザーがピルを服用したことを記録した際の情報
     @Default(null) TakenPillValue? takenPill,
+
     /// ピル服用記録の取り消し情報
     /// 誤って記録した服用を取り消した際の情報
     @Default(null) RevertTakenPillValue? revertTakenPill,
+
     /// ピル番号変更時の記録
     /// ピル番号の調整や修正が行われた際の変更情報
     @Default(null) ChangedPillNumberValue? changedPillNumber,
+
     /// ピルシート終了時の記録
     /// シートの服用完了や手動終了時の情報
     @Default(null) EndedPillSheetValue? endedPillSheet,
+
     /// 休薬期間開始時の記録
     /// ユーザーが服用を一時停止した際の開始情報
     @Default(null) BeganRestDurationValue? beganRestDurationValue,
+
     /// 休薬期間終了時の記録
     /// 休薬期間が終了し服用を再開した際の情報
     @Default(null) EndedRestDurationValue? endedRestDurationValue,
+
     /// 休薬期間開始日変更時の記録（v2から追加）
     /// 既存の休薬期間の開始日を変更した際の情報
     @Default(null) ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
+
     /// 休薬期間内容変更時の記録（v2から追加）
     /// 休薬期間の設定内容を変更した際の情報
     @Default(null) ChangedRestDurationValue? changedRestDurationValue,
+
     /// 表示開始番号変更時の記録
     /// ピルシートの表示番号の開始値を変更した際の情報
     @Default(null) ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+
     /// 表示終了番号変更時の記録
     /// ピルシートの表示番号の終了値を変更した際の情報
     @Default(null) ChangedEndDisplayNumberValue? changedEndDisplayNumber,
@@ -64,7 +76,6 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 
 /// ピルシート作成時の履歴情報を記録するクラス
 /// 新規ピルシートが作成された際の作成日時と対象シートIDを保存
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class CreatedPillSheetValue with _$CreatedPillSheetValue {
   const CreatedPillSheetValue._();
@@ -79,6 +90,7 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime pillSheetCreatedAt,
+
     /// 作成されたピルシートのIDリスト（非推奨）
     /// 複数シート同時作成に対応するためのIDリスト
     @Default([]) List<String> pillSheetIDs,
@@ -89,7 +101,6 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
 
 /// 最終服用日の自動記録時の履歴情報を記録するクラス
 /// システムが自動的に最終服用日を更新した際のbefore/after情報を保存
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTakenDateValue {
   const AutomaticallyRecordedLastTakenDateValue._();
@@ -104,6 +115,7 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? beforeLastTakenDate,
+
     /// 変更後の最終服用日（非推奨）
     /// 自動記録によって設定された新しい最終服用日
     @JsonKey(
@@ -111,9 +123,11 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime afterLastTakenDate,
+
     /// 変更前の最終服用ピル番号（非推奨）
     /// 自動記録前のピル番号
     required int beforeLastTakenPillNumber,
+
     /// 変更後の最終服用ピル番号（非推奨）
     /// 自動記録後のピル番号
     required int afterLastTakenPillNumber,
@@ -124,7 +138,6 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
 
 /// ピルシート削除時の履歴情報を記録するクラス
 /// ピルシートが削除された際の削除日時と対象シートIDを保存
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class DeletedPillSheetValue with _$DeletedPillSheetValue {
   const DeletedPillSheetValue._();
@@ -139,6 +152,7 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime pillSheetDeletedAt,
+
     /// 削除されたピルシートのIDリスト（非推奨）
     /// 複数シート同時削除に対応するためのIDリスト
     @Default([]) List<String> pillSheetIDs,
@@ -161,6 +175,7 @@ class TakenPillValue with _$TakenPillValue {
     /// nullは途中から追加されたプロパティのため判定不能を表す
     // null => 途中から追加したプロパティなので、どちらか不明
     bool? isQuickRecord,
+
     /// 服用記録の編集情報（v1追加）
     /// ユーザーが後から服用時刻を編集した場合の詳細情報
     TakenPillEditedValue? edited,
@@ -175,6 +190,7 @@ class TakenPillValue with _$TakenPillValue {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? beforeLastTakenDate,
+
     /// 変更後の最終服用日（非推奨）
     /// 服用記録によって設定された新しい最終服用日
     @JsonKey(
@@ -182,9 +198,11 @@ class TakenPillValue with _$TakenPillValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime afterLastTakenDate,
+
     /// 変更前の最終服用ピル番号（非推奨）
     /// 服用記録前のピル番号
     required int beforeLastTakenPillNumber,
+
     /// 変更後の最終服用ピル番号（非推奨）
     /// 服用記録後のピル番号
     required int afterLastTakenPillNumber,
@@ -210,6 +228,7 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime actualTakenDate,
+
     /// 元の履歴記録時刻（v1追加）
     /// 通常はユーザーが編集する前の服用時刻として記録される
     // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
@@ -218,6 +237,7 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime historyRecordedDate,
+
     /// 編集操作の作成日時（v1追加）
     /// この編集レコードがデータベースに作成された日時
     @JsonKey(
@@ -234,7 +254,6 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
 
 /// ピル服用記録の取り消し時の履歴情報を記録するクラス
 /// 誤って記録された服用を取り消した際の変更前後情報を保存
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class RevertTakenPillValue with _$RevertTakenPillValue {
   const RevertTakenPillValue._();
@@ -249,6 +268,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     DateTime? beforeLastTakenDate,
+
     /// 取り消し後の最終服用日（非推奨、nullable）
     /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
     @JsonKey(
@@ -256,9 +276,11 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
     required DateTime? afterLastTakenDate,
+
     /// 取り消し前の最終服用ピル番号（非推奨）
     /// 取り消し操作前のピル番号
     required int beforeLastTakenPillNumber,
+
     /// 取り消し後の最終服用ピル番号（非推奨）
     /// 取り消し操作後のピル番号
     required int afterLastTakenPillNumber,
@@ -270,7 +292,6 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
 /// ピル番号変更時の履歴情報を記録するクラス
 /// ピル服用スケジュールの調整や修正が行われた際の詳細な変更情報を保存
 /// 開始日、今日のピル番号、グループインデックスの変更前後を記録
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class ChangedPillNumberValue with _$ChangedPillNumberValue {
   const ChangedPillNumberValue._();
@@ -285,6 +306,7 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime beforeBeginingDate,
+
     /// 変更後の開始日（非推奨）
     /// ピル番号変更後のピルシート開始日
     @JsonKey(
@@ -292,15 +314,19 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime afterBeginingDate,
+
     /// 変更前の今日のピル番号（非推奨）
     /// 変更操作前の今日に対応するピル番号
     required int beforeTodayPillNumber,
+
     /// 変更後の今日のピル番号（非推奨）
     /// 変更操作後の今日に対応するピル番号
     required int afterTodayPillNumber,
+
     /// 変更前のグループインデックス（非推奨）
     /// ピルシートグループ内での順序番号（デフォルト：1）
     @Default(1) int beforeGroupIndex,
+
     /// 変更後のグループインデックス（非推奨）
     /// ピルシートグループ内での順序番号（デフォルト：1）
     @Default(1) int afterGroupIndex,
@@ -325,6 +351,7 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime endRecordDate,
+
     /// 終了時点での最終服用日（必須）
     /// シート終了時の最後に服用したピルの日付
     // 終了した時点での最終服用日
@@ -388,6 +415,7 @@ class ChangedRestDurationBeginDateValue with _$ChangedRestDurationBeginDateValue
     /// 変更前の休薬期間情報（v2追加）
     /// 開始日変更前の完全な休薬期間データ
     required RestDuration beforeRestDuration,
+
     /// 変更後の休薬期間情報（v2追加）
     /// 開始日変更後の完全な休薬期間データ
     required RestDuration afterRestDuration,
@@ -408,6 +436,7 @@ class ChangedRestDurationValue with _$ChangedRestDurationValue {
     /// 変更前の休薬期間情報（v2追加）
     /// 内容変更前の完全な休薬期間データ
     required RestDuration beforeRestDuration,
+
     /// 変更後の休薬期間情報（v2追加）
     /// 内容変更後の完全な休薬期間データ
     required RestDuration afterRestDuration,
@@ -419,7 +448,6 @@ class ChangedRestDurationValue with _$ChangedRestDurationValue {
 /// 表示開始番号変更時の履歴情報を記録するクラス
 /// ピルシートの表示番号の開始値を変更した際のbefore/after設定を保存
 /// カスタム表示機能で使用される表示番号設定の変更履歴を管理
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
   const ChangedBeginDisplayNumberValue._();
@@ -431,6 +459,7 @@ class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
     /// 番号を変更したことがない場合はnullとなる
     // 番号を変更した事が無い場合もあるのでnullable
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+
     /// 変更後の表示番号設定（非推奨）
     /// 変更操作後の新しい表示番号設定
     required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
@@ -442,7 +471,6 @@ class ChangedBeginDisplayNumberValue with _$ChangedBeginDisplayNumberValue {
 /// 表示終了番号変更時の履歴情報を記録するクラス
 /// ピルシートの表示番号の終了値を変更した際のbefore/after設定を保存
 /// カスタム表示機能で使用される表示番号設定の変更履歴を管理
-/// v1時代の構造で現在は非推奨プロパティとなっている
 @freezed
 class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
   const ChangedEndDisplayNumberValue._();
@@ -454,6 +482,7 @@ class ChangedEndDisplayNumberValue with _$ChangedEndDisplayNumberValue {
     /// 番号を変更したことがない場合はnullとなる
     // 番号を変更した事が無い場合もあるのでnullable
     required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
+
     /// 変更後の表示番号設定（非推奨）
     /// 変更操作後の新しい表示番号設定
     required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
