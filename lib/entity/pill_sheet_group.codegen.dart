@@ -156,6 +156,7 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.date:
         return 0;
       case PillSheetAppearanceMode.sequential:
+        return pillNumbersForCyclicSequential.last.number;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.last.number;
     }
