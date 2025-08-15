@@ -1,4 +1,3 @@
-```dart
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -180,4 +179,3 @@ class User with _$User {
   /// トライアル未開始かどうかを判定するgetter
   bool get isNotYetStartTrial => trialDeadlineDate == null;
 }
-```
