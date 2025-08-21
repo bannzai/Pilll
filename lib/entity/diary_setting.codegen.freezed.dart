@@ -20,7 +20,13 @@ DiarySetting _$DiarySettingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$DiarySetting {
+  /// 日記機能で選択可能な体調項目のリスト
+  /// デフォルトでは事前定義された14種類の体調項目が設定される
+  /// ユーザーによる項目のカスタマイズが可能
   List<String> get physicalConditions => throw _privateConstructorUsedError;
+
+  /// 設定が作成された日時
+  /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
 
@@ -121,7 +127,14 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
 
   factory _$DiarySettingImpl.fromJson(Map<String, dynamic> json) => _$$DiarySettingImplFromJson(json);
 
+  /// 日記機能で選択可能な体調項目のリスト
+  /// デフォルトでは事前定義された14種類の体調項目が設定される
+  /// ユーザーによる項目のカスタマイズが可能
   final List<String> _physicalConditions;
+
+  /// 日記機能で選択可能な体調項目のリスト
+  /// デフォルトでは事前定義された14種類の体調項目が設定される
+  /// ユーザーによる項目のカスタマイズが可能
   @override
   @JsonKey()
   List<String> get physicalConditions {
@@ -130,6 +143,8 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
     return EqualUnmodifiableListView(_physicalConditions);
   }
 
+  /// 設定が作成された日時
+  /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
@@ -185,8 +200,14 @@ abstract class _DiarySetting extends DiarySetting {
 
   factory _DiarySetting.fromJson(Map<String, dynamic> json) = _$DiarySettingImpl.fromJson;
 
+  /// 日記機能で選択可能な体調項目のリスト
+  /// デフォルトでは事前定義された14種類の体調項目が設定される
+  /// ユーザーによる項目のカスタマイズが可能
   @override
   List<String> get physicalConditions;
+
+  /// 設定が作成された日時
+  /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;

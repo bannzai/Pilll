@@ -20,16 +20,48 @@ RemoteConfigParameter _$RemoteConfigParameterFromJson(Map<String, dynamic> json)
 
 /// @nodoc
 mixin _$RemoteConfigParameter {
+  /// ペイウォール画面を最初に表示するかどうか
+  /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
   bool get isPaywallFirst => throw _privateConstructorUsedError;
+
+  /// 初期設定画面をスキップするかどうか
+  /// trueの場合、新規ユーザーでも初期設定をバイパスしてメイン画面へ遷移
   bool get skipInitialSetting => throw _privateConstructorUsedError;
+
+  /// トライアル期限日の基準日からのオフセット日数
+  /// ユーザー登録日からこの日数後にトライアル期限が設定される
   int get trialDeadlineDateOffsetDay => throw _privateConstructorUsedError;
+
+  /// 割引プラン権利付与の基準日からのオフセット日数
+  /// ユーザー登録日からこの日数後に割引プランの権利が付与される
   int get discountEntitlementOffsetDay => throw _privateConstructorUsedError;
+
+  /// 割引カウントダウン表示の境界時間（時間単位）
+  /// この時間以内になったら割引期限のカウントダウンを表示する
   int get discountCountdownBoundaryHour => throw _privateConstructorUsedError;
+
+  /// プレミアム機能紹介パターンの識別子
+  /// A/Bテスト用のパターン識別子（'default', 'A', 'B'等）
   String get premiumIntroductionPattern => throw _privateConstructorUsedError;
+
+  /// プレミアム紹介画面でApp Storeレビューカードを表示するか
+  /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
   bool get premiumIntroductionShowsAppStoreReviewCard => throw _privateConstructorUsedError;
+
+  /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
+  /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
   int get specialOfferingUserCreationDateTimeOffset => throw _privateConstructorUsedError;
+
+  /// 特別オファー開始の基準オフセット値（分単位）
+  /// 特別オファーの表示開始タイミングを制御する
   int get specialOfferingUserCreationDateTimeOffsetSince => throw _privateConstructorUsedError;
+
+  /// 特別オファー終了の基準オフセット値（分単位）
+  /// 特別オファーの表示終了タイミングを制御する
   int get specialOfferingUserCreationDateTimeOffsetUntil => throw _privateConstructorUsedError;
+
+  /// 特別オファー2で代替テキストを使用するかどうか
+  /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText => throw _privateConstructorUsedError;
 
   /// Serializes this RemoteConfigParameter to a JSON map.
@@ -246,36 +278,68 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
 
+  /// ペイウォール画面を最初に表示するかどうか
+  /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
   @override
   @JsonKey()
   final bool isPaywallFirst;
+
+  /// 初期設定画面をスキップするかどうか
+  /// trueの場合、新規ユーザーでも初期設定をバイパスしてメイン画面へ遷移
   @override
   @JsonKey()
   final bool skipInitialSetting;
+
+  /// トライアル期限日の基準日からのオフセット日数
+  /// ユーザー登録日からこの日数後にトライアル期限が設定される
   @override
   @JsonKey()
   final int trialDeadlineDateOffsetDay;
+
+  /// 割引プラン権利付与の基準日からのオフセット日数
+  /// ユーザー登録日からこの日数後に割引プランの権利が付与される
   @override
   @JsonKey()
   final int discountEntitlementOffsetDay;
+
+  /// 割引カウントダウン表示の境界時間（時間単位）
+  /// この時間以内になったら割引期限のカウントダウンを表示する
   @override
   @JsonKey()
   final int discountCountdownBoundaryHour;
+
+  /// プレミアム機能紹介パターンの識別子
+  /// A/Bテスト用のパターン識別子（'default', 'A', 'B'等）
   @override
   @JsonKey()
   final String premiumIntroductionPattern;
+
+  /// プレミアム紹介画面でApp Storeレビューカードを表示するか
+  /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
   @override
   @JsonKey()
   final bool premiumIntroductionShowsAppStoreReviewCard;
+
+  /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
+  /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
   @override
   @JsonKey()
   final int specialOfferingUserCreationDateTimeOffset;
+
+  /// 特別オファー開始の基準オフセット値（分単位）
+  /// 特別オファーの表示開始タイミングを制御する
   @override
   @JsonKey()
   final int specialOfferingUserCreationDateTimeOffsetSince;
+
+  /// 特別オファー終了の基準オフセット値（分単位）
+  /// 特別オファーの表示終了タイミングを制御する
   @override
   @JsonKey()
   final int specialOfferingUserCreationDateTimeOffsetUntil;
+
+  /// 特別オファー2で代替テキストを使用するかどうか
+  /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   @override
   @JsonKey()
   final bool specialOffering2UseAlternativeText;
@@ -361,26 +425,58 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
 
+  /// ペイウォール画面を最初に表示するかどうか
+  /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
   @override
   bool get isPaywallFirst;
+
+  /// 初期設定画面をスキップするかどうか
+  /// trueの場合、新規ユーザーでも初期設定をバイパスしてメイン画面へ遷移
   @override
   bool get skipInitialSetting;
+
+  /// トライアル期限日の基準日からのオフセット日数
+  /// ユーザー登録日からこの日数後にトライアル期限が設定される
   @override
   int get trialDeadlineDateOffsetDay;
+
+  /// 割引プラン権利付与の基準日からのオフセット日数
+  /// ユーザー登録日からこの日数後に割引プランの権利が付与される
   @override
   int get discountEntitlementOffsetDay;
+
+  /// 割引カウントダウン表示の境界時間（時間単位）
+  /// この時間以内になったら割引期限のカウントダウンを表示する
   @override
   int get discountCountdownBoundaryHour;
+
+  /// プレミアム機能紹介パターンの識別子
+  /// A/Bテスト用のパターン識別子（'default', 'A', 'B'等）
   @override
   String get premiumIntroductionPattern;
+
+  /// プレミアム紹介画面でApp Storeレビューカードを表示するか
+  /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
   @override
   bool get premiumIntroductionShowsAppStoreReviewCard;
+
+  /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
+  /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
   @override
   int get specialOfferingUserCreationDateTimeOffset;
+
+  /// 特別オファー開始の基準オフセット値（分単位）
+  /// 特別オファーの表示開始タイミングを制御する
   @override
   int get specialOfferingUserCreationDateTimeOffsetSince;
+
+  /// 特別オファー終了の基準オフセット値（分単位）
+  /// 特別オファーの表示終了タイミングを制御する
   @override
   int get specialOfferingUserCreationDateTimeOffsetUntil;
+
+  /// 特別オファー2で代替テキストを使用するかどうか
+  /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   @override
   bool get specialOffering2UseAlternativeText;
 

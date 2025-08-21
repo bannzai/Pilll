@@ -20,13 +20,43 @@ Diary _$DiaryFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Diary {
+  /// 日記の対象日付
+  ///
+  /// 日記エントリが作成された日付を表す
+  /// Firestoreとの変換時にTimestampConverterを使用
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get date => throw _privateConstructorUsedError; // NOTE: OLD data does't have createdAt
+  DateTime get date => throw _privateConstructorUsedError;
+
+  /// 日記の作成日時
+  ///
+  /// 日記が実際に作成された日時を記録
+  /// 古いデータでは存在しない可能性があるためnullable
+// NOTE: OLD data does't have createdAt
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt => throw _privateConstructorUsedError;
+
+  /// 体調状態の総合評価
+  ///
+  /// fine（良好）またはbad（不調）の2段階評価
+  /// 未選択の場合はnull
   PhysicalConditionStatus? get physicalConditionStatus => throw _privateConstructorUsedError;
+
+  /// 詳細な体調状態のリスト
+  ///
+  /// ユーザーが選択した具体的な体調症状を文字列で保存
+  /// 空のリストも許可される
   List<String> get physicalConditions => throw _privateConstructorUsedError;
+
+  /// 性行為の有無
+  ///
+  /// 妊娠リスクの管理のために記録される
+  /// trueの場合は性行為あり、falseの場合はなし
   bool get hasSex => throw _privateConstructorUsedError;
+
+  /// 自由記述のメモ
+  ///
+  /// ユーザーが自由にテキストを入力できるフィールド
+  /// 空文字列も許可される
   String get memo => throw _privateConstructorUsedError;
 
   /// Serializes this Diary to a JSON map.
@@ -176,16 +206,40 @@ class _$DiaryImpl extends _Diary {
 
   factory _$DiaryImpl.fromJson(Map<String, dynamic> json) => _$$DiaryImplFromJson(json);
 
+  /// 日記の対象日付
+  ///
+  /// 日記エントリが作成された日付を表す
+  /// Firestoreとの変換時にTimestampConverterを使用
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime date;
+
+  /// 日記の作成日時
+  ///
+  /// 日記が実際に作成された日時を記録
+  /// 古いデータでは存在しない可能性があるためnullable
 // NOTE: OLD data does't have createdAt
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? createdAt;
+
+  /// 体調状態の総合評価
+  ///
+  /// fine（良好）またはbad（不調）の2段階評価
+  /// 未選択の場合はnull
   @override
   final PhysicalConditionStatus? physicalConditionStatus;
+
+  /// 詳細な体調状態のリスト
+  ///
+  /// ユーザーが選択した具体的な体調症状を文字列で保存
+  /// 空のリストも許可される
   final List<String> _physicalConditions;
+
+  /// 詳細な体調状態のリスト
+  ///
+  /// ユーザーが選択した具体的な体調症状を文字列で保存
+  /// 空のリストも許可される
   @override
   List<String> get physicalConditions {
     if (_physicalConditions is EqualUnmodifiableListView) return _physicalConditions;
@@ -193,8 +247,17 @@ class _$DiaryImpl extends _Diary {
     return EqualUnmodifiableListView(_physicalConditions);
   }
 
+  /// 性行為の有無
+  ///
+  /// 妊娠リスクの管理のために記録される
+  /// trueの場合は性行為あり、falseの場合はなし
   @override
   final bool hasSex;
+
+  /// 自由記述のメモ
+  ///
+  /// ユーザーが自由にテキストを入力できるフィールド
+  /// 空文字列も許可される
   @override
   final String memo;
 
@@ -249,18 +312,48 @@ abstract class _Diary extends Diary {
 
   factory _Diary.fromJson(Map<String, dynamic> json) = _$DiaryImpl.fromJson;
 
+  /// 日記の対象日付
+  ///
+  /// 日記エントリが作成された日付を表す
+  /// Firestoreとの変換時にTimestampConverterを使用
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get date; // NOTE: OLD data does't have createdAt
+  DateTime get date;
+
+  /// 日記の作成日時
+  ///
+  /// 日記が実際に作成された日時を記録
+  /// 古いデータでは存在しない可能性があるためnullable
+// NOTE: OLD data does't have createdAt
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt;
+
+  /// 体調状態の総合評価
+  ///
+  /// fine（良好）またはbad（不調）の2段階評価
+  /// 未選択の場合はnull
   @override
   PhysicalConditionStatus? get physicalConditionStatus;
+
+  /// 詳細な体調状態のリスト
+  ///
+  /// ユーザーが選択した具体的な体調症状を文字列で保存
+  /// 空のリストも許可される
   @override
   List<String> get physicalConditions;
+
+  /// 性行為の有無
+  ///
+  /// 妊娠リスクの管理のために記録される
+  /// trueの場合は性行為あり、falseの場合はなし
   @override
   bool get hasSex;
+
+  /// 自由記述のメモ
+  ///
+  /// ユーザーが自由にテキストを入力できるフィールド
+  /// 空文字列も許可される
   @override
   String get memo;
 

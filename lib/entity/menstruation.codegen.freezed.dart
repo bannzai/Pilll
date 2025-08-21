@@ -20,16 +20,33 @@ Menstruation _$MenstruationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Menstruation {
+  /// FirestoreドキュメントのID
+  /// 新規作成時はnullで、保存時に自動生成される
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
+
+  /// 生理開始日
+  /// 生理周期計算の基準となる重要な日付
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginDate => throw _privateConstructorUsedError;
+
+  /// 生理終了日
+  /// 生理期間の長さを決定する日付
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDate => throw _privateConstructorUsedError;
+
+  /// 論理削除日時
+  /// nullの場合は有効な記録、値がある場合は削除済み
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
+
+  /// 生理記録の作成日時
+  /// データの作成順序や履歴管理に使用される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
+
+  /// HealthKitサンプルデータのUUID
+  /// HealthKitから取得したデータとの紐付けに使用
   String? get healthKitSampleDataUUID => throw _privateConstructorUsedError;
 
   /// Serializes this Menstruation to a JSON map.
@@ -181,21 +198,38 @@ class _$MenstruationImpl extends _Menstruation {
 
   factory _$MenstruationImpl.fromJson(Map<String, dynamic> json) => _$$MenstruationImplFromJson(json);
 
+  /// FirestoreドキュメントのID
+  /// 新規作成時はnullで、保存時に自動生成される
   @override
   @JsonKey(includeIfNull: false)
   final String? id;
+
+  /// 生理開始日
+  /// 生理周期計算の基準となる重要な日付
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime beginDate;
+
+  /// 生理終了日
+  /// 生理期間の長さを決定する日付
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endDate;
+
+  /// 論理削除日時
+  /// nullの場合は有効な記録、値がある場合は削除済み
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
+
+  /// 生理記録の作成日時
+  /// データの作成順序や履歴管理に使用される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
+
+  /// HealthKitサンプルデータのUUID
+  /// HealthKitから取得したデータとの紐付けに使用
   @override
   final String? healthKitSampleDataUUID;
 
@@ -251,21 +285,38 @@ abstract class _Menstruation extends Menstruation {
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) = _$MenstruationImpl.fromJson;
 
+  /// FirestoreドキュメントのID
+  /// 新規作成時はnullで、保存時に自動生成される
   @override
   @JsonKey(includeIfNull: false)
   String? get id;
+
+  /// 生理開始日
+  /// 生理周期計算の基準となる重要な日付
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginDate;
+
+  /// 生理終了日
+  /// 生理期間の長さを決定する日付
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDate;
+
+  /// 論理削除日時
+  /// nullの場合は有効な記録、値がある場合は削除済み
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
+
+  /// 生理記録の作成日時
+  /// データの作成順序や履歴管理に使用される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+
+  /// HealthKitサンプルデータのUUID
+  /// HealthKitから取得したデータとの紐付けに使用
   @override
   String? get healthKitSampleDataUUID;
 

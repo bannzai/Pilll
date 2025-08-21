@@ -20,6 +20,9 @@ Config _$ConfigFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Config {
+  /// 最小サポートバージョンを表すバージョン文字列。
+  /// このバージョンより古いアプリは強制アップデートが必要となる。
+  /// バージョン形式は`Version.parse()`で解析可能な文字列（例: "1.0.0"）。
   String get minimumSupportedAppVersion => throw _privateConstructorUsedError;
 
   /// Serializes this Config to a JSON map.
@@ -98,6 +101,9 @@ class _$ConfigImpl extends _Config {
 
   factory _$ConfigImpl.fromJson(Map<String, dynamic> json) => _$$ConfigImplFromJson(json);
 
+  /// 最小サポートバージョンを表すバージョン文字列。
+  /// このバージョンより古いアプリは強制アップデートが必要となる。
+  /// バージョン形式は`Version.parse()`で解析可能な文字列（例: "1.0.0"）。
   @override
   final String minimumSupportedAppVersion;
 
@@ -140,6 +146,9 @@ abstract class _Config extends Config {
 
   factory _Config.fromJson(Map<String, dynamic> json) = _$ConfigImpl.fromJson;
 
+  /// 最小サポートバージョンを表すバージョン文字列。
+  /// このバージョンより古いアプリは強制アップデートが必要となる。
+  /// バージョン形式は`Version.parse()`で解析可能な文字列（例: "1.0.0"）。
   @override
   String get minimumSupportedAppVersion;
 

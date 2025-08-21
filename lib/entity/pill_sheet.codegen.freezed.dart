@@ -20,9 +20,20 @@ PillSheetTypeInfo _$PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PillSheetTypeInfo {
+  /// ピルシート種類の参照パス（Firestore参照）
+  /// 具体的なピルシート設定情報への参照を保持
   String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
+
+  /// ピルシート名（例：「マーベロン28」）
+  /// ユーザーに表示される商品名
   String get name => throw _privateConstructorUsedError;
+
+  /// ピルシート内の総ピル数
+  /// 21錠、28錠など、シートに含まれる全てのピル数
   int get totalCount => throw _privateConstructorUsedError;
+
+  /// 服用期間（実薬期間）の日数
+  /// 偽薬を除いた実際に効果のあるピルの服用日数
   int get dosingPeriod => throw _privateConstructorUsedError;
 
   /// Serializes this PillSheetTypeInfo to a JSON map.
@@ -135,12 +146,23 @@ class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
 
   factory _$PillSheetTypeInfoImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetTypeInfoImplFromJson(json);
 
+  /// ピルシート種類の参照パス（Firestore参照）
+  /// 具体的なピルシート設定情報への参照を保持
   @override
   final String pillSheetTypeReferencePath;
+
+  /// ピルシート名（例：「マーベロン28」）
+  /// ユーザーに表示される商品名
   @override
   final String name;
+
+  /// ピルシート内の総ピル数
+  /// 21錠、28錠など、シートに含まれる全てのピル数
   @override
   final int totalCount;
+
+  /// 服用期間（実薬期間）の日数
+  /// 偽薬を除いた実際に効果のあるピルの服用日数
   @override
   final int dosingPeriod;
 
@@ -190,12 +212,23 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
 
   factory _PillSheetTypeInfo.fromJson(Map<String, dynamic> json) = _$PillSheetTypeInfoImpl.fromJson;
 
+  /// ピルシート種類の参照パス（Firestore参照）
+  /// 具体的なピルシート設定情報への参照を保持
   @override
   String get pillSheetTypeReferencePath;
+
+  /// ピルシート名（例：「マーベロン28」）
+  /// ユーザーに表示される商品名
   @override
   String get name;
+
+  /// ピルシート内の総ピル数
+  /// 21錠、28錠など、シートに含まれる全てのピル数
   @override
   int get totalCount;
+
+  /// 服用期間（実薬期間）の日数
+  /// 偽薬を除いた実際に効果のあるピルの服用日数
   @override
   int get dosingPeriod;
 
@@ -213,6 +246,8 @@ RestDuration _$RestDurationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$RestDuration {
 // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  /// 休薬期間の一意識別子
+  /// デバッグや調査時の追跡のためのUUID
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginDate => throw _privateConstructorUsedError;
@@ -345,6 +380,8 @@ class _$RestDurationImpl extends _RestDuration {
   factory _$RestDurationImpl.fromJson(Map<String, dynamic> json) => _$$RestDurationImplFromJson(json);
 
 // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  /// 休薬期間の一意識別子
+  /// デバッグや調査時の追跡のためのUUID
   @override
   final String? id;
   @override
@@ -405,6 +442,8 @@ abstract class _RestDuration extends RestDuration {
   factory _RestDuration.fromJson(Map<String, dynamic> json) = _$RestDurationImpl.fromJson;
 
 // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  /// 休薬期間の一意識別子
+  /// デバッグや調査時の追跡のためのUUID
   @override
   String? get id;
   @override
@@ -430,8 +469,13 @@ PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PillSheet {
+  /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
+
+  /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -442,7 +486,13 @@ mixin _$PillSheet {
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
+
+  /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   int get groupIndex => throw _privateConstructorUsedError;
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
   /// Serializes this PillSheet to a JSON map.
@@ -634,9 +684,14 @@ class _$PillSheetImpl extends _PillSheet {
 
   factory _$PillSheetImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetImplFromJson(json);
 
+  /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @override
   @JsonKey(includeIfNull: false)
   final String? id;
+
+  /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
@@ -653,10 +708,19 @@ class _$PillSheetImpl extends _PillSheet {
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
+
+  /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   @override
   @JsonKey()
   final int groupIndex;
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   final List<RestDuration> _restDurations;
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   @override
   @JsonKey()
   List<RestDuration> get restDurations {
@@ -721,9 +785,14 @@ abstract class _PillSheet extends PillSheet {
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) = _$PillSheetImpl.fromJson;
 
+  /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @override
   @JsonKey(includeIfNull: false)
   String? get id;
+
+  /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @override
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
@@ -739,8 +808,14 @@ abstract class _PillSheet extends PillSheet {
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
+
+  /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   @override
   int get groupIndex;
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   @override
   List<RestDuration> get restDurations;
 
