@@ -20,18 +20,56 @@ PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(Map<String
 
 /// @nodoc
 mixin _$PillSheetModifiedHistoryValue {
+  /// ピルシート作成時の記録
+  /// 新規ピルシートが作成された際の作成情報
   CreatedPillSheetValue? get createdPillSheet => throw _privateConstructorUsedError;
+
+  /// 自動記録された最終服用日の変更
+  /// システムが自動的に最終服用日を更新した際の記録
   AutomaticallyRecordedLastTakenDateValue? get automaticallyRecordedLastTakenDate => throw _privateConstructorUsedError;
+
+  /// ピルシート削除時の記録
+  /// ピルシートが削除された際の削除情報
   DeletedPillSheetValue? get deletedPillSheet => throw _privateConstructorUsedError;
+
+  /// ピル服用記録時の情報
+  /// ユーザーがピルを服用したことを記録した際の情報
   TakenPillValue? get takenPill => throw _privateConstructorUsedError;
+
+  /// ピル服用記録の取り消し情報
+  /// 誤って記録した服用を取り消した際の情報
   RevertTakenPillValue? get revertTakenPill => throw _privateConstructorUsedError;
+
+  /// ピル番号変更時の記録
+  /// ピル番号の調整や修正が行われた際の変更情報
   ChangedPillNumberValue? get changedPillNumber => throw _privateConstructorUsedError;
+
+  /// ピルシート終了時の記録
+  /// シートの服用完了や手動終了時の情報
   EndedPillSheetValue? get endedPillSheet => throw _privateConstructorUsedError;
+
+  /// 休薬期間開始時の記録
+  /// ユーザーが服用を一時停止した際の開始情報
   BeganRestDurationValue? get beganRestDurationValue => throw _privateConstructorUsedError;
+
+  /// 休薬期間終了時の記録
+  /// 休薬期間が終了し服用を再開した際の情報
   EndedRestDurationValue? get endedRestDurationValue => throw _privateConstructorUsedError;
+
+  /// 休薬期間開始日変更時の記録（v2から追加）
+  /// 既存の休薬期間の開始日を変更した際の情報
   ChangedRestDurationBeginDateValue? get changedRestDurationBeginDateValue => throw _privateConstructorUsedError;
+
+  /// 休薬期間内容変更時の記録（v2から追加）
+  /// 休薬期間の設定内容を変更した際の情報
   ChangedRestDurationValue? get changedRestDurationValue => throw _privateConstructorUsedError;
+
+  /// 表示開始番号変更時の記録
+  /// ピルシートの表示番号の開始値を変更した際の情報
   ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber => throw _privateConstructorUsedError;
+
+  /// 表示終了番号変更時の記録
+  /// ピルシートの表示番号の終了値を変更した際の情報
   ChangedEndDisplayNumberValue? get changedEndDisplayNumber => throw _privateConstructorUsedError;
 
   /// Serializes this PillSheetModifiedHistoryValue to a JSON map.
@@ -502,42 +540,80 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
 
   factory _$PillSheetModifiedHistoryValueImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetModifiedHistoryValueImplFromJson(json);
 
+  /// ピルシート作成時の記録
+  /// 新規ピルシートが作成された際の作成情報
   @override
   @JsonKey()
   final CreatedPillSheetValue? createdPillSheet;
+
+  /// 自動記録された最終服用日の変更
+  /// システムが自動的に最終服用日を更新した際の記録
   @override
   @JsonKey()
   final AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate;
+
+  /// ピルシート削除時の記録
+  /// ピルシートが削除された際の削除情報
   @override
   @JsonKey()
   final DeletedPillSheetValue? deletedPillSheet;
+
+  /// ピル服用記録時の情報
+  /// ユーザーがピルを服用したことを記録した際の情報
   @override
   @JsonKey()
   final TakenPillValue? takenPill;
+
+  /// ピル服用記録の取り消し情報
+  /// 誤って記録した服用を取り消した際の情報
   @override
   @JsonKey()
   final RevertTakenPillValue? revertTakenPill;
+
+  /// ピル番号変更時の記録
+  /// ピル番号の調整や修正が行われた際の変更情報
   @override
   @JsonKey()
   final ChangedPillNumberValue? changedPillNumber;
+
+  /// ピルシート終了時の記録
+  /// シートの服用完了や手動終了時の情報
   @override
   @JsonKey()
   final EndedPillSheetValue? endedPillSheet;
+
+  /// 休薬期間開始時の記録
+  /// ユーザーが服用を一時停止した際の開始情報
   @override
   @JsonKey()
   final BeganRestDurationValue? beganRestDurationValue;
+
+  /// 休薬期間終了時の記録
+  /// 休薬期間が終了し服用を再開した際の情報
   @override
   @JsonKey()
   final EndedRestDurationValue? endedRestDurationValue;
+
+  /// 休薬期間開始日変更時の記録（v2から追加）
+  /// 既存の休薬期間の開始日を変更した際の情報
   @override
   @JsonKey()
   final ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue;
+
+  /// 休薬期間内容変更時の記録（v2から追加）
+  /// 休薬期間の設定内容を変更した際の情報
   @override
   @JsonKey()
   final ChangedRestDurationValue? changedRestDurationValue;
+
+  /// 表示開始番号変更時の記録
+  /// ピルシートの表示番号の開始値を変更した際の情報
   @override
   @JsonKey()
   final ChangedBeginDisplayNumberValue? changedBeginDisplayNumber;
+
+  /// 表示終了番号変更時の記録
+  /// ピルシートの表示番号の終了値を変更した際の情報
   @override
   @JsonKey()
   final ChangedEndDisplayNumberValue? changedEndDisplayNumber;
@@ -622,30 +698,68 @@ abstract class _PillSheetModifiedHistoryValue extends PillSheetModifiedHistoryVa
 
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) = _$PillSheetModifiedHistoryValueImpl.fromJson;
 
+  /// ピルシート作成時の記録
+  /// 新規ピルシートが作成された際の作成情報
   @override
   CreatedPillSheetValue? get createdPillSheet;
+
+  /// 自動記録された最終服用日の変更
+  /// システムが自動的に最終服用日を更新した際の記録
   @override
   AutomaticallyRecordedLastTakenDateValue? get automaticallyRecordedLastTakenDate;
+
+  /// ピルシート削除時の記録
+  /// ピルシートが削除された際の削除情報
   @override
   DeletedPillSheetValue? get deletedPillSheet;
+
+  /// ピル服用記録時の情報
+  /// ユーザーがピルを服用したことを記録した際の情報
   @override
   TakenPillValue? get takenPill;
+
+  /// ピル服用記録の取り消し情報
+  /// 誤って記録した服用を取り消した際の情報
   @override
   RevertTakenPillValue? get revertTakenPill;
+
+  /// ピル番号変更時の記録
+  /// ピル番号の調整や修正が行われた際の変更情報
   @override
   ChangedPillNumberValue? get changedPillNumber;
+
+  /// ピルシート終了時の記録
+  /// シートの服用完了や手動終了時の情報
   @override
   EndedPillSheetValue? get endedPillSheet;
+
+  /// 休薬期間開始時の記録
+  /// ユーザーが服用を一時停止した際の開始情報
   @override
   BeganRestDurationValue? get beganRestDurationValue;
+
+  /// 休薬期間終了時の記録
+  /// 休薬期間が終了し服用を再開した際の情報
   @override
   EndedRestDurationValue? get endedRestDurationValue;
+
+  /// 休薬期間開始日変更時の記録（v2から追加）
+  /// 既存の休薬期間の開始日を変更した際の情報
   @override
   ChangedRestDurationBeginDateValue? get changedRestDurationBeginDateValue;
+
+  /// 休薬期間内容変更時の記録（v2から追加）
+  /// 休薬期間の設定内容を変更した際の情報
   @override
   ChangedRestDurationValue? get changedRestDurationValue;
+
+  /// 表示開始番号変更時の記録
+  /// ピルシートの表示番号の開始値を変更した際の情報
   @override
   ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber;
+
+  /// 表示終了番号変更時の記録
+  /// ピルシートの表示番号の終了値を変更した際の情報
   @override
   ChangedEndDisplayNumberValue? get changedEndDisplayNumber;
 
@@ -664,8 +778,13 @@ CreatedPillSheetValue _$CreatedPillSheetValueFromJson(Map<String, dynamic> json)
 mixin _$CreatedPillSheetValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// ピルシート作成日時（非推奨）
+  /// Firestoreタイムスタンプから自動変換される作成日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetCreatedAt => throw _privateConstructorUsedError;
+
+  /// 作成されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時作成に対応するためのIDリスト
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
 
   /// Serializes this CreatedPillSheetValue to a JSON map.
@@ -772,10 +891,18 @@ class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// ピルシート作成日時（非推奨）
+  /// Firestoreタイムスタンプから自動変換される作成日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime pillSheetCreatedAt;
+
+  /// 作成されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時作成に対応するためのIDリスト
   final List<String> _pillSheetIDs;
+
+  /// 作成されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時作成に対応するためのIDリスト
   @override
   @JsonKey()
   List<String> get pillSheetIDs {
@@ -829,9 +956,14 @@ abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// ピルシート作成日時（非推奨）
+  /// Firestoreタイムスタンプから自動変換される作成日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetCreatedAt;
+
+  /// 作成されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時作成に対応するためのIDリスト
   @override
   List<String> get pillSheetIDs;
 
@@ -850,11 +982,22 @@ AutomaticallyRecordedLastTakenDateValue _$AutomaticallyRecordedLastTakenDateValu
 mixin _$AutomaticallyRecordedLastTakenDateValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の最終服用日（非推奨、nullable）
+  /// 初回服用の場合はnullとなる
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
+
+  /// 変更後の最終服用日（非推奨）
+  /// 自動記録によって設定された新しい最終服用日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
+
+  /// 変更前の最終服用ピル番号（非推奨）
+  /// 自動記録前のピル番号
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+
+  /// 変更後の最終服用ピル番号（非推奨）
+  /// 自動記録後のピル番号
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
   /// Serializes this AutomaticallyRecordedLastTakenDateValue to a JSON map.
@@ -992,14 +1135,25 @@ class _$AutomaticallyRecordedLastTakenDateValueImpl extends _AutomaticallyRecord
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の最終服用日（非推奨、nullable）
+  /// 初回服用の場合はnullとなる
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beforeLastTakenDate;
+
+  /// 変更後の最終服用日（非推奨）
+  /// 自動記録によって設定された新しい最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime afterLastTakenDate;
+
+  /// 変更前の最終服用ピル番号（非推奨）
+  /// 自動記録前のピル番号
   @override
   final int beforeLastTakenPillNumber;
+
+  /// 変更後の最終服用ピル番号（非推奨）
+  /// 自動記録後のピル番号
   @override
   final int afterLastTakenPillNumber;
 
@@ -1052,14 +1206,25 @@ abstract class _AutomaticallyRecordedLastTakenDateValue extends AutomaticallyRec
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の最終服用日（非推奨、nullable）
+  /// 初回服用の場合はnullとなる
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
+
+  /// 変更後の最終服用日（非推奨）
+  /// 自動記録によって設定された新しい最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate;
+
+  /// 変更前の最終服用ピル番号（非推奨）
+  /// 自動記録前のピル番号
   @override
   int get beforeLastTakenPillNumber;
+
+  /// 変更後の最終服用ピル番号（非推奨）
+  /// 自動記録後のピル番号
   @override
   int get afterLastTakenPillNumber;
 
@@ -1079,8 +1244,13 @@ DeletedPillSheetValue _$DeletedPillSheetValueFromJson(Map<String, dynamic> json)
 mixin _$DeletedPillSheetValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// ピルシート削除日時（非推奨）
+  /// Firestoreタイムスタンプから自動変換される削除日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetDeletedAt => throw _privateConstructorUsedError;
+
+  /// 削除されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時削除に対応するためのIDリスト
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
 
   /// Serializes this DeletedPillSheetValue to a JSON map.
@@ -1187,10 +1357,18 @@ class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// ピルシート削除日時（非推奨）
+  /// Firestoreタイムスタンプから自動変換される削除日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime pillSheetDeletedAt;
+
+  /// 削除されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時削除に対応するためのIDリスト
   final List<String> _pillSheetIDs;
+
+  /// 削除されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時削除に対応するためのIDリスト
   @override
   @JsonKey()
   List<String> get pillSheetIDs {
@@ -1244,9 +1422,14 @@ abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// ピルシート削除日時（非推奨）
+  /// Firestoreタイムスタンプから自動変換される削除日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetDeletedAt;
+
+  /// 削除されたピルシートのIDリスト（非推奨）
+  /// 複数シート同時削除に対応するためのIDリスト
   @override
   List<String> get pillSheetIDs;
 
@@ -1264,16 +1447,32 @@ TakenPillValue _$TakenPillValueFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TakenPillValue {
 // ============ BEGIN: Added since v1 ============
+  /// クイック記録かどうかのフラグ（v1追加）
+  /// nullは途中から追加されたプロパティのため判定不能を表す
 // null => 途中から追加したプロパティなので、どちらか不明
   bool? get isQuickRecord => throw _privateConstructorUsedError;
+
+  /// 服用記録の編集情報（v1追加）
+  /// ユーザーが後から服用時刻を編集した場合の詳細情報
   TakenPillEditedValue? get edited => throw _privateConstructorUsedError; // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の最終服用日（非推奨、nullable）
+  /// 初回服用の場合はnullとなる
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
+
+  /// 変更後の最終服用日（非推奨）
+  /// 服用記録によって設定された新しい最終服用日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
+
+  /// 変更前の最終服用ピル番号（非推奨）
+  /// 服用記録前のピル番号
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+
+  /// 変更後の最終服用ピル番号（非推奨）
+  /// 服用記録後のピル番号
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
   /// Serializes this TakenPillValue to a JSON map.
@@ -1447,22 +1646,38 @@ class _$TakenPillValueImpl extends _TakenPillValue {
   factory _$TakenPillValueImpl.fromJson(Map<String, dynamic> json) => _$$TakenPillValueImplFromJson(json);
 
 // ============ BEGIN: Added since v1 ============
+  /// クイック記録かどうかのフラグ（v1追加）
+  /// nullは途中から追加されたプロパティのため判定不能を表す
 // null => 途中から追加したプロパティなので、どちらか不明
   @override
   final bool? isQuickRecord;
+
+  /// 服用記録の編集情報（v1追加）
+  /// ユーザーが後から服用時刻を編集した場合の詳細情報
   @override
   final TakenPillEditedValue? edited;
 // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の最終服用日（非推奨、nullable）
+  /// 初回服用の場合はnullとなる
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beforeLastTakenDate;
+
+  /// 変更後の最終服用日（非推奨）
+  /// 服用記録によって設定された新しい最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime afterLastTakenDate;
+
+  /// 変更前の最終服用ピル番号（非推奨）
+  /// 服用記録前のピル番号
   @override
   final int beforeLastTakenPillNumber;
+
+  /// 変更後の最終服用ピル番号（非推奨）
+  /// 服用記録後のピル番号
   @override
   final int afterLastTakenPillNumber;
 
@@ -1518,21 +1733,37 @@ abstract class _TakenPillValue extends TakenPillValue {
   factory _TakenPillValue.fromJson(Map<String, dynamic> json) = _$TakenPillValueImpl.fromJson;
 
 // ============ BEGIN: Added since v1 ============
+  /// クイック記録かどうかのフラグ（v1追加）
+  /// nullは途中から追加されたプロパティのため判定不能を表す
 // null => 途中から追加したプロパティなので、どちらか不明
   @override
   bool? get isQuickRecord;
+
+  /// 服用記録の編集情報（v1追加）
+  /// ユーザーが後から服用時刻を編集した場合の詳細情報
   @override
   TakenPillEditedValue? get edited; // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の最終服用日（非推奨、nullable）
+  /// 初回服用の場合はnullとなる
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
+
+  /// 変更後の最終服用日（非推奨）
+  /// 服用記録によって設定された新しい最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate;
+
+  /// 変更前の最終服用ピル番号（非推奨）
+  /// 服用記録前のピル番号
   @override
   int get beforeLastTakenPillNumber;
+
+  /// 変更後の最終服用ピル番号（非推奨）
+  /// 服用記録後のピル番号
   @override
   int get afterLastTakenPillNumber;
 
@@ -1550,11 +1781,20 @@ TakenPillEditedValue _$TakenPillEditedValueFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$TakenPillEditedValue {
 // ============ BEGIN: Added since v1 ============
+  /// 実際の服用時刻（v1追加）
+  /// ユーザーが編集した後の正確な服用時刻
 // 実際の服用時刻。ユーザーが編集した後の服用時刻
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get actualTakenDate => throw _privateConstructorUsedError; // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
+  DateTime get actualTakenDate => throw _privateConstructorUsedError;
+
+  /// 元の履歴記録時刻（v1追加）
+  /// 通常はユーザーが編集する前の服用時刻として記録される
+// 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get historyRecordedDate => throw _privateConstructorUsedError;
+
+  /// 編集操作の作成日時（v1追加）
+  /// この編集レコードがデータベースに作成された日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate => throw _privateConstructorUsedError;
 
@@ -1676,14 +1916,22 @@ class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
   factory _$TakenPillEditedValueImpl.fromJson(Map<String, dynamic> json) => _$$TakenPillEditedValueImplFromJson(json);
 
 // ============ BEGIN: Added since v1 ============
+  /// 実際の服用時刻（v1追加）
+  /// ユーザーが編集した後の正確な服用時刻
 // 実際の服用時刻。ユーザーが編集した後の服用時刻
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime actualTakenDate;
+
+  /// 元の履歴記録時刻（v1追加）
+  /// 通常はユーザーが編集する前の服用時刻として記録される
 // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime historyRecordedDate;
+
+  /// 編集操作の作成日時（v1追加）
+  /// この編集レコードがデータベースに作成された日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdDate;
@@ -1736,13 +1984,22 @@ abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) = _$TakenPillEditedValueImpl.fromJson;
 
 // ============ BEGIN: Added since v1 ============
+  /// 実際の服用時刻（v1追加）
+  /// ユーザーが編集した後の正確な服用時刻
 // 実際の服用時刻。ユーザーが編集した後の服用時刻
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get actualTakenDate; // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
+  DateTime get actualTakenDate;
+
+  /// 元の履歴記録時刻（v1追加）
+  /// 通常はユーザーが編集する前の服用時刻として記録される
+// 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get historyRecordedDate;
+
+  /// 編集操作の作成日時（v1追加）
+  /// この編集レコードがデータベースに作成された日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate;
@@ -1762,11 +2019,22 @@ RevertTakenPillValue _$RevertTakenPillValueFromJson(Map<String, dynamic> json) {
 mixin _$RevertTakenPillValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 取り消し前の最終服用日（非推奨、nullable）
+  /// 取り消し操作前の最終服用日
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
+
+  /// 取り消し後の最終服用日（非推奨、nullable）
+  /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get afterLastTakenDate => throw _privateConstructorUsedError;
+
+  /// 取り消し前の最終服用ピル番号（非推奨）
+  /// 取り消し操作前のピル番号
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+
+  /// 取り消し後の最終服用ピル番号（非推奨）
+  /// 取り消し操作後のピル番号
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
   /// Serializes this RevertTakenPillValue to a JSON map.
@@ -1894,14 +2162,25 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 取り消し前の最終服用日（非推奨、nullable）
+  /// 取り消し操作前の最終服用日
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beforeLastTakenDate;
+
+  /// 取り消し後の最終服用日（非推奨、nullable）
+  /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? afterLastTakenDate;
+
+  /// 取り消し前の最終服用ピル番号（非推奨）
+  /// 取り消し操作前のピル番号
   @override
   final int beforeLastTakenPillNumber;
+
+  /// 取り消し後の最終服用ピル番号（非推奨）
+  /// 取り消し操作後のピル番号
   @override
   final int afterLastTakenPillNumber;
 
@@ -1954,14 +2233,25 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 取り消し前の最終服用日（非推奨、nullable）
+  /// 取り消し操作前の最終服用日
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
+
+  /// 取り消し後の最終服用日（非推奨、nullable）
+  /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get afterLastTakenDate;
+
+  /// 取り消し前の最終服用ピル番号（非推奨）
+  /// 取り消し操作前のピル番号
   @override
   int get beforeLastTakenPillNumber;
+
+  /// 取り消し後の最終服用ピル番号（非推奨）
+  /// 取り消し操作後のピル番号
   @override
   int get afterLastTakenPillNumber;
 
@@ -1980,13 +2270,30 @@ ChangedPillNumberValue _$ChangedPillNumberValueFromJson(Map<String, dynamic> jso
 mixin _$ChangedPillNumberValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の開始日（非推奨）
+  /// ピル番号変更前のピルシート開始日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beforeBeginingDate => throw _privateConstructorUsedError;
+
+  /// 変更後の開始日（非推奨）
+  /// ピル番号変更後のピルシート開始日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterBeginingDate => throw _privateConstructorUsedError;
+
+  /// 変更前の今日のピル番号（非推奨）
+  /// 変更操作前の今日に対応するピル番号
   int get beforeTodayPillNumber => throw _privateConstructorUsedError;
+
+  /// 変更後の今日のピル番号（非推奨）
+  /// 変更操作後の今日に対応するピル番号
   int get afterTodayPillNumber => throw _privateConstructorUsedError;
+
+  /// 変更前のグループインデックス（非推奨）
+  /// ピルシートグループ内での順序番号（デフォルト：1）
   int get beforeGroupIndex => throw _privateConstructorUsedError;
+
+  /// 変更後のグループインデックス（非推奨）
+  /// ピルシートグループ内での順序番号（デフォルト：1）
   int get afterGroupIndex => throw _privateConstructorUsedError;
 
   /// Serializes this ChangedPillNumberValue to a JSON map.
@@ -2147,19 +2454,36 @@ class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の開始日（非推奨）
+  /// ピル番号変更前のピルシート開始日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime beforeBeginingDate;
+
+  /// 変更後の開始日（非推奨）
+  /// ピル番号変更後のピルシート開始日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime afterBeginingDate;
+
+  /// 変更前の今日のピル番号（非推奨）
+  /// 変更操作前の今日に対応するピル番号
   @override
   final int beforeTodayPillNumber;
+
+  /// 変更後の今日のピル番号（非推奨）
+  /// 変更操作後の今日に対応するピル番号
   @override
   final int afterTodayPillNumber;
+
+  /// 変更前のグループインデックス（非推奨）
+  /// ピルシートグループ内での順序番号（デフォルト：1）
   @override
   @JsonKey()
   final int beforeGroupIndex;
+
+  /// 変更後のグループインデックス（非推奨）
+  /// ピルシートグループ内での順序番号（デフォルト：1）
   @override
   @JsonKey()
   final int afterGroupIndex;
@@ -2219,18 +2543,35 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の開始日（非推奨）
+  /// ピル番号変更前のピルシート開始日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beforeBeginingDate;
+
+  /// 変更後の開始日（非推奨）
+  /// ピル番号変更後のピルシート開始日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterBeginingDate;
+
+  /// 変更前の今日のピル番号（非推奨）
+  /// 変更操作前の今日に対応するピル番号
   @override
   int get beforeTodayPillNumber;
+
+  /// 変更後の今日のピル番号（非推奨）
+  /// 変更操作後の今日に対応するピル番号
   @override
   int get afterTodayPillNumber;
+
+  /// 変更前のグループインデックス（非推奨）
+  /// ピルシートグループ内での順序番号（デフォルト：1）
   @override
   int get beforeGroupIndex;
+
+  /// 変更後のグループインデックス（非推奨）
+  /// ピルシートグループ内での順序番号（デフォルト：1）
   @override
   int get afterGroupIndex;
 
@@ -2247,9 +2588,15 @@ EndedPillSheetValue _$EndedPillSheetValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$EndedPillSheetValue {
+  /// 終了記録日（必須）
+  /// サーバーで書き込まれるピルシート終了の公式記録日時
 // 終了した日付。サーバーで書き込まれる
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get endRecordDate => throw _privateConstructorUsedError; // 終了した時点での最終服用日
+  DateTime get endRecordDate => throw _privateConstructorUsedError;
+
+  /// 終了時点での最終服用日（必須）
+  /// シート終了時の最後に服用したピルの日付
+// 終了した時点での最終服用日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate => throw _privateConstructorUsedError;
 
@@ -2356,10 +2703,15 @@ class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
 
   factory _$EndedPillSheetValueImpl.fromJson(Map<String, dynamic> json) => _$$EndedPillSheetValueImplFromJson(json);
 
+  /// 終了記録日（必須）
+  /// サーバーで書き込まれるピルシート終了の公式記録日時
 // 終了した日付。サーバーで書き込まれる
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endRecordDate;
+
+  /// 終了時点での最終服用日（必須）
+  /// シート終了時の最後に服用したピルの日付
 // 終了した時点での最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2409,10 +2761,16 @@ abstract class _EndedPillSheetValue extends EndedPillSheetValue {
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) = _$EndedPillSheetValueImpl.fromJson;
 
+  /// 終了記録日（必須）
+  /// サーバーで書き込まれるピルシート終了の公式記録日時
 // 終了した日付。サーバーで書き込まれる
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get endRecordDate; // 終了した時点での最終服用日
+  DateTime get endRecordDate;
+
+  /// 終了時点での最終服用日（必須）
+  /// シート終了時の最後に服用したピルの日付
+// 終了した時点での最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate;
@@ -2431,6 +2789,8 @@ BeganRestDurationValue _$BeganRestDurationValueFromJson(Map<String, dynamic> jso
 /// @nodoc
 mixin _$BeganRestDurationValue {
 // ============ BEGIN: Added since v1 ============
+  /// 開始された休薬期間の詳細情報（v1追加）
+  /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
@@ -2531,6 +2891,8 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
   factory _$BeganRestDurationValueImpl.fromJson(Map<String, dynamic> json) => _$$BeganRestDurationValueImplFromJson(json);
 
 // ============ BEGIN: Added since v1 ============
+  /// 開始された休薬期間の詳細情報（v1追加）
+  /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   final RestDuration restDuration;
@@ -2575,6 +2937,8 @@ abstract class _BeganRestDurationValue extends BeganRestDurationValue {
   factory _BeganRestDurationValue.fromJson(Map<String, dynamic> json) = _$BeganRestDurationValueImpl.fromJson;
 
 // ============ BEGIN: Added since v1 ============
+  /// 開始された休薬期間の詳細情報（v1追加）
+  /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   RestDuration get restDuration;
@@ -2593,6 +2957,8 @@ EndedRestDurationValue _$EndedRestDurationValueFromJson(Map<String, dynamic> jso
 /// @nodoc
 mixin _$EndedRestDurationValue {
 // ============ BEGIN: Added since v1 ============
+  /// 終了された休薬期間の詳細情報（v1追加）
+  /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
@@ -2693,6 +3059,8 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
   factory _$EndedRestDurationValueImpl.fromJson(Map<String, dynamic> json) => _$$EndedRestDurationValueImplFromJson(json);
 
 // ============ BEGIN: Added since v1 ============
+  /// 終了された休薬期間の詳細情報（v1追加）
+  /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   final RestDuration restDuration;
@@ -2737,6 +3105,8 @@ abstract class _EndedRestDurationValue extends EndedRestDurationValue {
   factory _EndedRestDurationValue.fromJson(Map<String, dynamic> json) = _$EndedRestDurationValueImpl.fromJson;
 
 // ============ BEGIN: Added since v1 ============
+  /// 終了された休薬期間の詳細情報（v1追加）
+  /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   RestDuration get restDuration;
@@ -2754,7 +3124,12 @@ ChangedRestDurationBeginDateValue _$ChangedRestDurationBeginDateValueFromJson(Ma
 
 /// @nodoc
 mixin _$ChangedRestDurationBeginDateValue {
+  /// 変更前の休薬期間情報（v2追加）
+  /// 開始日変更前の完全な休薬期間データ
   RestDuration get beforeRestDuration => throw _privateConstructorUsedError;
+
+  /// 変更後の休薬期間情報（v2追加）
+  /// 開始日変更後の完全な休薬期間データ
   RestDuration get afterRestDuration => throw _privateConstructorUsedError;
 
   /// Serializes this ChangedRestDurationBeginDateValue to a JSON map.
@@ -2880,8 +3255,13 @@ class _$ChangedRestDurationBeginDateValueImpl extends _ChangedRestDurationBeginD
 
   factory _$ChangedRestDurationBeginDateValueImpl.fromJson(Map<String, dynamic> json) => _$$ChangedRestDurationBeginDateValueImplFromJson(json);
 
+  /// 変更前の休薬期間情報（v2追加）
+  /// 開始日変更前の完全な休薬期間データ
   @override
   final RestDuration beforeRestDuration;
+
+  /// 変更後の休薬期間情報（v2追加）
+  /// 開始日変更後の完全な休薬期間データ
   @override
   final RestDuration afterRestDuration;
 
@@ -2926,8 +3306,13 @@ abstract class _ChangedRestDurationBeginDateValue extends ChangedRestDurationBeg
 
   factory _ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationBeginDateValueImpl.fromJson;
 
+  /// 変更前の休薬期間情報（v2追加）
+  /// 開始日変更前の完全な休薬期間データ
   @override
   RestDuration get beforeRestDuration;
+
+  /// 変更後の休薬期間情報（v2追加）
+  /// 開始日変更後の完全な休薬期間データ
   @override
   RestDuration get afterRestDuration;
 
@@ -2944,7 +3329,12 @@ ChangedRestDurationValue _$ChangedRestDurationValueFromJson(Map<String, dynamic>
 
 /// @nodoc
 mixin _$ChangedRestDurationValue {
+  /// 変更前の休薬期間情報（v2追加）
+  /// 内容変更前の完全な休薬期間データ
   RestDuration get beforeRestDuration => throw _privateConstructorUsedError;
+
+  /// 変更後の休薬期間情報（v2追加）
+  /// 内容変更後の完全な休薬期間データ
   RestDuration get afterRestDuration => throw _privateConstructorUsedError;
 
   /// Serializes this ChangedRestDurationValue to a JSON map.
@@ -3066,8 +3456,13 @@ class _$ChangedRestDurationValueImpl extends _ChangedRestDurationValue {
 
   factory _$ChangedRestDurationValueImpl.fromJson(Map<String, dynamic> json) => _$$ChangedRestDurationValueImplFromJson(json);
 
+  /// 変更前の休薬期間情報（v2追加）
+  /// 内容変更前の完全な休薬期間データ
   @override
   final RestDuration beforeRestDuration;
+
+  /// 変更後の休薬期間情報（v2追加）
+  /// 内容変更後の完全な休薬期間データ
   @override
   final RestDuration afterRestDuration;
 
@@ -3112,8 +3507,13 @@ abstract class _ChangedRestDurationValue extends ChangedRestDurationValue {
 
   factory _ChangedRestDurationValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationValueImpl.fromJson;
 
+  /// 変更前の休薬期間情報（v2追加）
+  /// 内容変更前の完全な休薬期間データ
   @override
   RestDuration get beforeRestDuration;
+
+  /// 変更後の休薬期間情報（v2追加）
+  /// 内容変更後の完全な休薬期間データ
   @override
   RestDuration get afterRestDuration;
 
@@ -3132,8 +3532,13 @@ ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(Map<Stri
 mixin _$ChangedBeginDisplayNumberValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の表示番号設定（非推奨、nullable）
+  /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting => throw _privateConstructorUsedError;
+
+  /// 変更後の表示番号設定（非推奨）
+  /// 変更操作後の新しい表示番号設定
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting => throw _privateConstructorUsedError;
 
   /// Serializes this ChangedBeginDisplayNumberValue to a JSON map.
@@ -3265,9 +3670,14 @@ class _$ChangedBeginDisplayNumberValueImpl extends _ChangedBeginDisplayNumberVal
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の表示番号設定（非推奨、nullable）
+  /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
   @override
   final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
+
+  /// 変更後の表示番号設定（非推奨）
+  /// 変更操作後の新しい表示番号設定
   @override
   final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting;
 
@@ -3316,9 +3726,14 @@ abstract class _ChangedBeginDisplayNumberValue extends ChangedBeginDisplayNumber
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の表示番号設定（非推奨、nullable）
+  /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
   @override
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
+
+  /// 変更後の表示番号設定（非推奨）
+  /// 変更操作後の新しい表示番号設定
   @override
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
 
@@ -3337,8 +3752,13 @@ ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(Map<String, 
 mixin _$ChangedEndDisplayNumberValue {
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の表示番号設定（非推奨、nullable）
+  /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting => throw _privateConstructorUsedError;
+
+  /// 変更後の表示番号設定（非推奨）
+  /// 変更操作後の新しい表示番号設定
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting => throw _privateConstructorUsedError;
 
   /// Serializes this ChangedEndDisplayNumberValue to a JSON map.
@@ -3469,9 +3889,14 @@ class _$ChangedEndDisplayNumberValueImpl extends _ChangedEndDisplayNumberValue {
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の表示番号設定（非推奨、nullable）
+  /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
   @override
   final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
+
+  /// 変更後の表示番号設定（非推奨）
+  /// 変更操作後の新しい表示番号設定
   @override
   final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting;
 
@@ -3520,9 +3945,14 @@ abstract class _ChangedEndDisplayNumberValue extends ChangedEndDisplayNumberValu
 
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  /// 変更前の表示番号設定（非推奨、nullable）
+  /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
   @override
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
+
+  /// 変更後の表示番号設定（非推奨）
+  /// 変更操作後の新しい表示番号設定
   @override
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
 

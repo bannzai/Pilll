@@ -18,12 +18,16 @@ part 'pill_sheet.codegen.freezed.dart';
 class PillSheetFirestoreKey {
   /// ピルシートの種類情報フィールドキー
   static const String typeInfo = 'typeInfo';
+
   /// 作成日時フィールドキー
   static const String createdAt = 'createdAt';
+
   /// 削除日時フィールドキー
   static const String deletedAt = 'deletedAt';
+
   /// 最終服用日フィールドキー
   static const String lastTakenDate = 'lastTakenDate';
+
   /// 開始日フィールドキー
   static const String beginingDate = 'beginingDate';
 }
@@ -38,12 +42,15 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
     /// ピルシート種類の参照パス（Firestore参照）
     /// 具体的なピルシート設定情報への参照を保持
     required String pillSheetTypeReferencePath,
+
     /// ピルシート名（例：「マーベロン28」）
     /// ユーザーに表示される商品名
     required String name,
+
     /// ピルシート内の総ピル数
     /// 21錠、28錠など、シートに含まれる全てのピル数
     required int totalCount,
+
     /// 服用期間（実薬期間）の日数
     /// 偽薬を除いた実際に効果のあるピルの服用日数
     required int dosingPeriod,
@@ -67,6 +74,7 @@ class RestDuration with _$RestDuration {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
+
     /// 休薬開始日
     /// ユーザーがピル服用を停止した日付
     required DateTime beginDate,
@@ -74,6 +82,7 @@ class RestDuration with _$RestDuration {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
+
     /// 休薬終了日（継続中の場合はnull）
     /// 服用を再開した日付、まだ再開していない場合はnull
     DateTime? endDate,
@@ -81,6 +90,7 @@ class RestDuration with _$RestDuration {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
+
     /// 休薬期間レコードの作成日時
     /// このデータが作成された日時（ユーザーが休薬を開始した日とは異なる場合がある）
     required DateTime createdDate,
@@ -114,6 +124,7 @@ class PillSheet with _$PillSheet {
     /// FirestoreドキュメントID
     /// データベース保存時に自動生成される一意識別子
     @JsonKey(includeIfNull: false) required String? id,
+
     /// ピルシートの種類情報
     /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
@@ -121,6 +132,7 @@ class PillSheet with _$PillSheet {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
+
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
     required DateTime beginingDate,
@@ -129,6 +141,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
+
     /// 最後にピルを服用した日付
     /// まだ一度も服用していない場合はnull
     required DateTime? lastTakenDate,
@@ -136,6 +149,7 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
+
     /// ピルシートの作成日時
     /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
@@ -143,12 +157,15 @@ class PillSheet with _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
+
     /// ピルシートの削除日時
     /// 削除されていない場合はnull
     DateTime? deletedAt,
+
     /// グループインデックス
     /// 複数のピルシートをグループ化する際の順序番号
     @Default(0) int groupIndex,
+
     /// 休薬期間のリスト
     /// このピルシート期間中の全ての休薬期間記録
     @Default([]) List<RestDuration> restDurations,
@@ -237,15 +254,19 @@ class PillSheet with _$PillSheet {
   /// ピルシートの全てのピルを服用完了したかどうか
   /// 総ピル数と最終服用ピル番号を比較して判定
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
+
   /// ピルシートの服用が開始されているかどうか
   /// 開始日が現在時刻より前の場合にtrueを返す
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
+
   /// 現在が休薬期間中かどうか
   /// 今日のピル番号が服用期間を超えている場合にtrueを返す
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
+
   /// ピルシートが休薬期間または偽薬期間を持つかどうか
   /// 28日型シート（偽薬7日）などの場合にtrueを返す
   bool get pillSheetHasRestOrFakeDuration => pillSheetType.hasRestOrFakeDuration;
+
   /// ピルシートが現在アクティブ（有効）かどうか
   /// 現在日付がピルシートの有効期間内の場合にtrueを返す
   bool get isActive => isActiveFor(now());

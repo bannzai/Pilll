@@ -20,15 +20,38 @@ PilllAds _$PilllAdsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PilllAds {
+  /// 広告の表示開始日時
+  /// この時刻以降に広告が表示される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get startDateTime => throw _privateConstructorUsedError;
+
+  /// 広告の表示終了日時
+  /// この時刻以降は広告が表示されなくなる
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDateTime => throw _privateConstructorUsedError;
+
+  /// 広告のテキスト説明
+  /// バナーに表示される広告文言
   String get description => throw _privateConstructorUsedError;
+
+  /// 広告画像のURL
+  /// nullの場合はテキストのみの広告として表示される
   String? get imageURL => throw _privateConstructorUsedError;
+
+  /// 広告タップ時の遷移先URL
+  /// WebViewまたは外部ブラウザで開かれる
   String get destinationURL => throw _privateConstructorUsedError;
+
+  /// 広告バナーの背景色
+  /// 16進数カラーコード（例: "FF0000"）
   String get hexColor => throw _privateConstructorUsedError;
+
+  /// 閉じるボタンの色
+  /// 16進数カラーコード、デフォルトは白色
   String get closeButtonColor => throw _privateConstructorUsedError;
+
+  /// 右向き矢印アイコンの色
+  /// 16進数カラーコード、デフォルトは白色
   String get chevronRightColor => throw _privateConstructorUsedError;
 
   /// Serializes this PilllAds to a JSON map.
@@ -207,23 +230,46 @@ class _$PilllAdsImpl extends _PilllAds {
 
   factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) => _$$PilllAdsImplFromJson(json);
 
+  /// 広告の表示開始日時
+  /// この時刻以降に広告が表示される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime startDateTime;
+
+  /// 広告の表示終了日時
+  /// この時刻以降は広告が表示されなくなる
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endDateTime;
+
+  /// 広告のテキスト説明
+  /// バナーに表示される広告文言
   @override
   final String description;
+
+  /// 広告画像のURL
+  /// nullの場合はテキストのみの広告として表示される
   @override
   final String? imageURL;
+
+  /// 広告タップ時の遷移先URL
+  /// WebViewまたは外部ブラウザで開かれる
   @override
   final String destinationURL;
+
+  /// 広告バナーの背景色
+  /// 16進数カラーコード（例: "FF0000"）
   @override
   final String hexColor;
+
+  /// 閉じるボタンの色
+  /// 16進数カラーコード、デフォルトは白色
   @override
   @JsonKey()
   final String closeButtonColor;
+
+  /// 右向き矢印アイコンの色
+  /// 16進数カラーコード、デフォルトは白色
   @override
   @JsonKey()
   final String chevronRightColor;
@@ -284,22 +330,45 @@ abstract class _PilllAds extends PilllAds {
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$PilllAdsImpl.fromJson;
 
+  /// 広告の表示開始日時
+  /// この時刻以降に広告が表示される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get startDateTime;
+
+  /// 広告の表示終了日時
+  /// この時刻以降は広告が表示されなくなる
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDateTime;
+
+  /// 広告のテキスト説明
+  /// バナーに表示される広告文言
   @override
   String get description;
+
+  /// 広告画像のURL
+  /// nullの場合はテキストのみの広告として表示される
   @override
   String? get imageURL;
+
+  /// 広告タップ時の遷移先URL
+  /// WebViewまたは外部ブラウザで開かれる
   @override
   String get destinationURL;
+
+  /// 広告バナーの背景色
+  /// 16進数カラーコード（例: "FF0000"）
   @override
   String get hexColor;
+
+  /// 閉じるボタンの色
+  /// 16進数カラーコード、デフォルトは白色
   @override
   String get closeButtonColor;
+
+  /// 右向き矢印アイコンの色
+  /// 16進数カラーコード、デフォルトは白色
   @override
   String get chevronRightColor;
 

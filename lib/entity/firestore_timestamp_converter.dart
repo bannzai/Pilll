@@ -9,7 +9,7 @@ class TimestampConverter {
   /// [dateTime] が null の場合は null を返します。
   /// 日時データをFirestoreに保存する際に使用されます。
   static Timestamp? dateTimeToTimestamp(DateTime? dateTime) => dateTime == null ? null : Timestamp.fromDate(dateTime);
-  
+
   /// nullable な Firestore の Timestamp を DateTime に変換します。
   /// [timestamp] が null の場合は null を返します。
   /// Firestoreから取得した日時データをDartで扱う際に使用されます。
@@ -24,7 +24,7 @@ class NonNullTimestampConverter {
   /// 必ず有効な [dateTime] を受け取り、対応するTimestampを返します。
   /// 必須の日時データをFirestoreに保存する際に使用されます。
   static Timestamp dateTimeToTimestamp(DateTime dateTime) => Timestamp.fromDate(dateTime);
-  
+
   /// non-nullable な Firestore の Timestamp を DateTime に変換します。
   /// 必ず有効な [timestamp] を受け取り、対応するDateTimeを返します。
   /// Firestoreから取得した必須日時データをDartで扱う際に使用されます。

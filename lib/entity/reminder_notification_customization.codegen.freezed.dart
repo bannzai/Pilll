@@ -20,12 +20,45 @@ ReminderNotificationCustomization _$ReminderNotificationCustomizationFromJson(Ma
 
 /// @nodoc
 mixin _$ReminderNotificationCustomization {
+  /// 設定のバージョン番号
+  ///
+  /// 新機能追加時の後方互換性を保つためのバージョン管理に使用されます。
+  /// 現在の最新バージョンは'v2'です。
   String get version => throw _privateConstructorUsedError;
+
+  /// 通知タイトルの冒頭に表示される文字
+  ///
+  /// 通知のタイトル部分に表示される絵文字や文字を設定します。
+  /// デフォルトは💊絵文字が設定されています。
   String get word => throw _privateConstructorUsedError;
+
+  /// 通知に日付表示を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知タイトルに日付（例: 8/14 (水)）を表示しません。
+  /// falseの場合、通知タイトルに日付を表示します。
   bool get isInVisibleReminderDate => throw _privateConstructorUsedError;
+
+  /// 通知にピル番号表示を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知タイトルにピル番号（例: 15番目）を表示しません。
+  /// falseの場合、通知タイトルにピル番号を表示します。
   bool get isInVisiblePillNumber => throw _privateConstructorUsedError;
+
+  /// 通知に説明文を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知の説明文（メッセージ本文）を表示しません。
+  /// falseの場合、dailyTakenMessageまたはmissedTakenMessageが表示されます。
   bool get isInVisibleDescription => throw _privateConstructorUsedError; // BEGIN: From v2
+  /// 日々の服用時に表示するメッセージ
+  ///
+  /// v2で追加された機能です。通常の服用リマインダー時に表示される
+  /// カスタマイズ可能なメッセージです。
   String get dailyTakenMessage => throw _privateConstructorUsedError; // TODO: [Localizations]
+  /// 飲み忘れ時に表示するメッセージ
+  ///
+  /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
+  /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
+  /// 日本語メッセージが設定されています。
   String get missedTakenMessage => throw _privateConstructorUsedError;
 
   /// Serializes this ReminderNotificationCustomization to a JSON map.
@@ -195,26 +228,59 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
 
   factory _$ReminderNotificationCustomizationImpl.fromJson(Map<String, dynamic> json) => _$$ReminderNotificationCustomizationImplFromJson(json);
 
+  /// 設定のバージョン番号
+  ///
+  /// 新機能追加時の後方互換性を保つためのバージョン管理に使用されます。
+  /// 現在の最新バージョンは'v2'です。
   @override
   @JsonKey()
   final String version;
+
+  /// 通知タイトルの冒頭に表示される文字
+  ///
+  /// 通知のタイトル部分に表示される絵文字や文字を設定します。
+  /// デフォルトは💊絵文字が設定されています。
   @override
   @JsonKey()
   final String word;
+
+  /// 通知に日付表示を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知タイトルに日付（例: 8/14 (水)）を表示しません。
+  /// falseの場合、通知タイトルに日付を表示します。
   @override
   @JsonKey()
   final bool isInVisibleReminderDate;
+
+  /// 通知にピル番号表示を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知タイトルにピル番号（例: 15番目）を表示しません。
+  /// falseの場合、通知タイトルにピル番号を表示します。
   @override
   @JsonKey()
   final bool isInVisiblePillNumber;
+
+  /// 通知に説明文を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知の説明文（メッセージ本文）を表示しません。
+  /// falseの場合、dailyTakenMessageまたはmissedTakenMessageが表示されます。
   @override
   @JsonKey()
   final bool isInVisibleDescription;
 // BEGIN: From v2
+  /// 日々の服用時に表示するメッセージ
+  ///
+  /// v2で追加された機能です。通常の服用リマインダー時に表示される
+  /// カスタマイズ可能なメッセージです。
   @override
   @JsonKey()
   final String dailyTakenMessage;
 // TODO: [Localizations]
+  /// 飲み忘れ時に表示するメッセージ
+  ///
+  /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
+  /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
+  /// 日本語メッセージが設定されています。
   @override
   @JsonKey()
   final String missedTakenMessage;
@@ -272,18 +338,51 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
 
   factory _ReminderNotificationCustomization.fromJson(Map<String, dynamic> json) = _$ReminderNotificationCustomizationImpl.fromJson;
 
+  /// 設定のバージョン番号
+  ///
+  /// 新機能追加時の後方互換性を保つためのバージョン管理に使用されます。
+  /// 現在の最新バージョンは'v2'です。
   @override
   String get version;
+
+  /// 通知タイトルの冒頭に表示される文字
+  ///
+  /// 通知のタイトル部分に表示される絵文字や文字を設定します。
+  /// デフォルトは💊絵文字が設定されています。
   @override
   String get word;
+
+  /// 通知に日付表示を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知タイトルに日付（例: 8/14 (水)）を表示しません。
+  /// falseの場合、通知タイトルに日付を表示します。
   @override
   bool get isInVisibleReminderDate;
+
+  /// 通知にピル番号表示を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知タイトルにピル番号（例: 15番目）を表示しません。
+  /// falseの場合、通知タイトルにピル番号を表示します。
   @override
   bool get isInVisiblePillNumber;
+
+  /// 通知に説明文を含めるかどうかの制御フラグ
+  ///
+  /// trueの場合、通知の説明文（メッセージ本文）を表示しません。
+  /// falseの場合、dailyTakenMessageまたはmissedTakenMessageが表示されます。
   @override
   bool get isInVisibleDescription; // BEGIN: From v2
+  /// 日々の服用時に表示するメッセージ
+  ///
+  /// v2で追加された機能です。通常の服用リマインダー時に表示される
+  /// カスタマイズ可能なメッセージです。
   @override
   String get dailyTakenMessage; // TODO: [Localizations]
+  /// 飲み忘れ時に表示するメッセージ
+  ///
+  /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
+  /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
+  /// 日本語メッセージが設定されています。
   @override
   String get missedTakenMessage;
 

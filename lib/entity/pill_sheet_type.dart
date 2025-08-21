@@ -12,21 +12,27 @@ enum PillSheetType {
   /// 21錠の実薬と7日間の休薬期間を持つピルシートタイプ
   // "21錠+休薬7日";
   pillsheet_21,
+
   /// 24錠の実薬と4錠の偽薬を持つ28錠ピルシートタイプ
   // "24錠+4日偽薬";
   pillsheet_28_4,
+
   /// 21錠の実薬と7錠の偽薬を持つ28錠ピルシートタイプ
   // "21錠+7日偽薬";
   pillsheet_28_7,
+
   /// 28錠すべてが実薬のピルシートタイプ
   // "28錠タイプ(すべて実薬)";
   pillsheet_28_0,
+
   /// 24錠すべてが実薬のピルシートタイプ
   // "24錠タイプ(すべて実薬)";
   pillsheet_24_0,
+
   /// 21錠すべてが実薬のピルシートタイプ
   // "21錠タイプ(すべて実薬)";
   pillsheet_21_0,
+
   /// 24錠の実薬と4日間の休薬期間を持つピルシートタイプ
   // "24錠+4日休薬";
   // ignore: constant_identifier_names
@@ -39,7 +45,7 @@ enum PillSheetType {
 extension PillSheetTypeFunctions on PillSheetType {
   /// Firestoreの'pill_sheet_types'コレクションのパス定数
   static const String firestoreCollectionPath = 'pill_sheet_types';
-  
+
   /// 文字列のパスからPillSheetTypeのenumを生成する。
   /// Firestoreのドキュメント識別子から対応するenumを取得する際に使用。
   /// 不正な値の場合はArgumentErrorを投げる。

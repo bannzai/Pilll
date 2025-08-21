@@ -20,15 +20,33 @@ PillSheetGroup _$PillSheetGroupFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$PillSheetGroup {
+  /// FirestoreドキュメントID（自動生成される場合はnull）
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
+
+  /// このグループに含まれるピルシートのIDリスト
+  /// pillSheetsプロパティと対応関係を持つ
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
+
+  /// このグループに含まれる実際のピルシートデータ
+  /// 服用状況や日程計算の基準となる
   List<PillSheet> get pillSheets => throw _privateConstructorUsedError;
+
+  /// グループ作成日時（必須項目）
+  /// Firestoreのタイムスタンプとして保存される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
+
+  /// 削除日時（論理削除で使用）
+  /// nullの場合は削除されていない状態を表す
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  /// ピル番号の表示設定（カスタマイズ用）
+  /// 開始番号・終了番号のユーザーカスタマイズを管理
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting => throw _privateConstructorUsedError;
+
+  /// ピルシートの表示モード設定
+  /// 番号表示、日付表示、連続番号表示の切り替えを制御
   PillSheetAppearanceMode get pillSheetAppearanceMode => throw _privateConstructorUsedError;
 
   /// Serializes this PillSheetGroup to a JSON map.
@@ -214,10 +232,17 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
 
   factory _$PillSheetGroupImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetGroupImplFromJson(json);
 
+  /// FirestoreドキュメントID（自動生成される場合はnull）
   @override
   @JsonKey(includeIfNull: false)
   final String? id;
+
+  /// このグループに含まれるピルシートのIDリスト
+  /// pillSheetsプロパティと対応関係を持つ
   final List<String> _pillSheetIDs;
+
+  /// このグループに含まれるピルシートのIDリスト
+  /// pillSheetsプロパティと対応関係を持つ
   @override
   List<String> get pillSheetIDs {
     if (_pillSheetIDs is EqualUnmodifiableListView) return _pillSheetIDs;
@@ -225,7 +250,12 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
     return EqualUnmodifiableListView(_pillSheetIDs);
   }
 
+  /// このグループに含まれる実際のピルシートデータ
+  /// 服用状況や日程計算の基準となる
   final List<PillSheet> _pillSheets;
+
+  /// このグループに含まれる実際のピルシートデータ
+  /// 服用状況や日程計算の基準となる
   @override
   List<PillSheet> get pillSheets {
     if (_pillSheets is EqualUnmodifiableListView) return _pillSheets;
@@ -233,15 +263,25 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
     return EqualUnmodifiableListView(_pillSheets);
   }
 
+  /// グループ作成日時（必須項目）
+  /// Firestoreのタイムスタンプとして保存される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
+
+  /// 削除日時（論理削除で使用）
+  /// nullの場合は削除されていない状態を表す
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  /// ピル番号の表示設定（カスタマイズ用）
+  /// 開始番号・終了番号のユーザーカスタマイズを管理
   @override
   final PillSheetGroupDisplayNumberSetting? displayNumberSetting;
+
+  /// ピルシートの表示モード設定
+  /// 番号表示、日付表示、連続番号表示の切り替えを制御
   @override
   @JsonKey()
   final PillSheetAppearanceMode pillSheetAppearanceMode;
@@ -299,21 +339,39 @@ abstract class _PillSheetGroup extends PillSheetGroup {
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) = _$PillSheetGroupImpl.fromJson;
 
+  /// FirestoreドキュメントID（自動生成される場合はnull）
   @override
   @JsonKey(includeIfNull: false)
   String? get id;
+
+  /// このグループに含まれるピルシートのIDリスト
+  /// pillSheetsプロパティと対応関係を持つ
   @override
   List<String> get pillSheetIDs;
+
+  /// このグループに含まれる実際のピルシートデータ
+  /// 服用状況や日程計算の基準となる
   @override
   List<PillSheet> get pillSheets;
+
+  /// グループ作成日時（必須項目）
+  /// Firestoreのタイムスタンプとして保存される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+
+  /// 削除日時（論理削除で使用）
+  /// nullの場合は削除されていない状態を表す
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  /// ピル番号の表示設定（カスタマイズ用）
+  /// 開始番号・終了番号のユーザーカスタマイズを管理
   @override
   PillSheetGroupDisplayNumberSetting? get displayNumberSetting;
+
+  /// ピルシートの表示モード設定
+  /// 番号表示、日付表示、連続番号表示の切り替えを制御
   @override
   PillSheetAppearanceMode get pillSheetAppearanceMode;
 
@@ -326,8 +384,13 @@ abstract class _PillSheetGroup extends PillSheetGroup {
 
 /// @nodoc
 mixin _$PillSheetGroupPillNumberDomainPillMarkValue {
+  /// 対象となるピルシート情報
   PillSheet get pillSheet => throw _privateConstructorUsedError;
+
+  /// 対象となる日付
   DateTime get date => throw _privateConstructorUsedError;
+
+  /// 表示番号
   int get number => throw _privateConstructorUsedError;
 
   /// Create a copy of PillSheetGroupPillNumberDomainPillMarkValue
@@ -447,10 +510,15 @@ class __$$PillSheetGroupPillNumberDomainPillMarkValueImplCopyWithImpl<$Res>
 class _$PillSheetGroupPillNumberDomainPillMarkValueImpl implements _PillSheetGroupPillNumberDomainPillMarkValue {
   const _$PillSheetGroupPillNumberDomainPillMarkValueImpl({required this.pillSheet, required this.date, required this.number});
 
+  /// 対象となるピルシート情報
   @override
   final PillSheet pillSheet;
+
+  /// 対象となる日付
   @override
   final DateTime date;
+
+  /// 表示番号
   @override
   final int number;
 
@@ -487,10 +555,15 @@ abstract class _PillSheetGroupPillNumberDomainPillMarkValue implements PillSheet
       required final DateTime date,
       required final int number}) = _$PillSheetGroupPillNumberDomainPillMarkValueImpl;
 
+  /// 対象となるピルシート情報
   @override
   PillSheet get pillSheet;
+
+  /// 対象となる日付
   @override
   DateTime get date;
+
+  /// 表示番号
   @override
   int get number;
 
@@ -509,7 +582,11 @@ PillSheetGroupDisplayNumberSetting _$PillSheetGroupDisplayNumberSettingFromJson(
 /// @nodoc
 mixin _$PillSheetGroupDisplayNumberSetting {
 // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
+  /// グループ全体での開始番号設定
+  /// nullの場合は1から開始される
   int? get beginPillNumber => throw _privateConstructorUsedError; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
+  /// 周期の終了番号設定
+  /// nullの場合は終了番号制限なしで連続番号付けされる
   int? get endPillNumber => throw _privateConstructorUsedError;
 
   /// Serializes this PillSheetGroupDisplayNumberSetting to a JSON map.
@@ -609,9 +686,13 @@ class _$PillSheetGroupDisplayNumberSettingImpl implements _PillSheetGroupDisplay
   factory _$PillSheetGroupDisplayNumberSettingImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetGroupDisplayNumberSettingImplFromJson(json);
 
 // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
+  /// グループ全体での開始番号設定
+  /// nullの場合は1から開始される
   @override
   final int? beginPillNumber;
 // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
+  /// 周期の終了番号設定
+  /// nullの場合は終了番号制限なしで連続番号付けされる
   @override
   final int? endPillNumber;
 
@@ -656,8 +737,12 @@ abstract class _PillSheetGroupDisplayNumberSetting implements PillSheetGroupDisp
   factory _PillSheetGroupDisplayNumberSetting.fromJson(Map<String, dynamic> json) = _$PillSheetGroupDisplayNumberSettingImpl.fromJson;
 
 // 開始番号はピルシートグループの開始の番号。周期ではない。終了の番号に到達・もしくは服用お休み期間あとは1番から始まる
+  /// グループ全体での開始番号設定
+  /// nullの場合は1から開始される
   @override
   int? get beginPillNumber; // 開始番号は周期の終了番号。周期の終了した数・服用お休みの有無に関わらずこの番号が最終番号となる
+  /// 周期の終了番号設定
+  /// nullの場合は終了番号制限なしで連続番号付けされる
   @override
   int? get endPillNumber;
 

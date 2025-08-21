@@ -20,21 +20,47 @@ User _$UserFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$User {
+  /// ユーザーID（FirebaseのUID）
   String? get id => throw _privateConstructorUsedError;
+
+  /// ユーザー設定情報（Settingエンティティのネストオブジェクト）
   @JsonKey(name: 'settings')
   Setting? get setting => throw _privateConstructorUsedError;
+
+  /// ユーザー作成時のユーザーID（履歴管理・デバッグ用）
   String? get userIDWhenCreateUser => throw _privateConstructorUsedError;
+
+  /// 匿名ユーザーID（匿名ユーザー統合用）
   String? get anonymousUserID => throw _privateConstructorUsedError;
+
+  /// 統合されたユーザードキュメントIDのリスト
   List<String> get userDocumentIDSets => throw _privateConstructorUsedError;
+
+  /// 統合された匿名ユーザーIDのリスト
   List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
+
+  /// 統合されたFirebaseCurrentUserIDのリスト
   List<String> get firebaseCurrentUserIDSets => throw _privateConstructorUsedError;
+
+  /// プレミアム会員フラグ（サブスクリプション有効状態）
   bool get isPremium => throw _privateConstructorUsedError;
+
+  /// 解約理由を聞くかどうかのフラグ
   bool get shouldAskCancelReason => throw _privateConstructorUsedError;
+
+  /// アナリティクスのデバッグ機能有効フラグ
   bool get analyticsDebugIsEnabled => throw _privateConstructorUsedError;
+
+  /// トライアル開始日（初回トライアル開始時にセット）
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+
+  /// トライアル期限日（トライアル期間の終了日時）
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+
+  /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
+  /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError;
 
@@ -300,16 +326,27 @@ class _$UserImpl extends _User {
 
   factory _$UserImpl.fromJson(Map<String, dynamic> json) => _$$UserImplFromJson(json);
 
+  /// ユーザーID（FirebaseのUID）
   @override
   final String? id;
+
+  /// ユーザー設定情報（Settingエンティティのネストオブジェクト）
   @override
   @JsonKey(name: 'settings')
   final Setting? setting;
+
+  /// ユーザー作成時のユーザーID（履歴管理・デバッグ用）
   @override
   final String? userIDWhenCreateUser;
+
+  /// 匿名ユーザーID（匿名ユーザー統合用）
   @override
   final String? anonymousUserID;
+
+  /// 統合されたユーザードキュメントIDのリスト
   final List<String> _userDocumentIDSets;
+
+  /// 統合されたユーザードキュメントIDのリスト
   @override
   @JsonKey()
   List<String> get userDocumentIDSets {
@@ -318,7 +355,10 @@ class _$UserImpl extends _User {
     return EqualUnmodifiableListView(_userDocumentIDSets);
   }
 
+  /// 統合された匿名ユーザーIDのリスト
   final List<String> _anonymousUserIDSets;
+
+  /// 統合された匿名ユーザーIDのリスト
   @override
   @JsonKey()
   List<String> get anonymousUserIDSets {
@@ -327,7 +367,10 @@ class _$UserImpl extends _User {
     return EqualUnmodifiableListView(_anonymousUserIDSets);
   }
 
+  /// 統合されたFirebaseCurrentUserIDのリスト
   final List<String> _firebaseCurrentUserIDSets;
+
+  /// 統合されたFirebaseCurrentUserIDのリスト
   @override
   @JsonKey()
   List<String> get firebaseCurrentUserIDSets {
@@ -336,21 +379,33 @@ class _$UserImpl extends _User {
     return EqualUnmodifiableListView(_firebaseCurrentUserIDSets);
   }
 
+  /// プレミアム会員フラグ（サブスクリプション有効状態）
   @override
   @JsonKey()
   final bool isPremium;
+
+  /// 解約理由を聞くかどうかのフラグ
   @override
   @JsonKey()
   final bool shouldAskCancelReason;
+
+  /// アナリティクスのデバッグ機能有効フラグ
   @override
   @JsonKey()
   final bool analyticsDebugIsEnabled;
+
+  /// トライアル開始日（初回トライアル開始時にセット）
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beginTrialDate;
+
+  /// トライアル期限日（トライアル期間の終了日時）
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? trialDeadlineDate;
+
+  /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
+  /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? discountEntitlementDeadlineDate;
@@ -434,33 +489,59 @@ abstract class _User extends User {
 
   factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
 
+  /// ユーザーID（FirebaseのUID）
   @override
   String? get id;
+
+  /// ユーザー設定情報（Settingエンティティのネストオブジェクト）
   @override
   @JsonKey(name: 'settings')
   Setting? get setting;
+
+  /// ユーザー作成時のユーザーID（履歴管理・デバッグ用）
   @override
   String? get userIDWhenCreateUser;
+
+  /// 匿名ユーザーID（匿名ユーザー統合用）
   @override
   String? get anonymousUserID;
+
+  /// 統合されたユーザードキュメントIDのリスト
   @override
   List<String> get userDocumentIDSets;
+
+  /// 統合された匿名ユーザーIDのリスト
   @override
   List<String> get anonymousUserIDSets;
+
+  /// 統合されたFirebaseCurrentUserIDのリスト
   @override
   List<String> get firebaseCurrentUserIDSets;
+
+  /// プレミアム会員フラグ（サブスクリプション有効状態）
   @override
   bool get isPremium;
+
+  /// 解約理由を聞くかどうかのフラグ
   @override
   bool get shouldAskCancelReason;
+
+  /// アナリティクスのデバッグ機能有効フラグ
   @override
   bool get analyticsDebugIsEnabled;
+
+  /// トライアル開始日（初回トライアル開始時にセット）
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate;
+
+  /// トライアル期限日（トライアル期間の終了日時）
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get trialDeadlineDate;
+
+  /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
+  /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;

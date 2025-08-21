@@ -20,12 +20,26 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Schedule {
+  /// ドキュメントID。Firestore保存時に自動設定される
+  /// nullの場合は新規作成、値がある場合は既存ドキュメントの更新を示す
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
+
+  /// 予定のタイトル。ユーザーが入力する予定名
+  /// 例：「婦人科受診」「定期検診」など
   String get title => throw _privateConstructorUsedError;
+
+  /// 予定日時。ユーザーがカレンダーUIで選択した日付
+  /// Firestoreのタイムスタンプ形式で保存される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date => throw _privateConstructorUsedError;
+
+  /// ローカル通知の設定。nullの場合は通知なし
+  /// 予定前にリマインドを送るための設定
   LocalNotification? get localNotification => throw _privateConstructorUsedError;
+
+  /// 予定作成日時。レコード作成時の記録用
+  /// データの管理やソート処理で使用される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
 
@@ -184,16 +198,30 @@ class _$ScheduleImpl extends _Schedule {
 
   factory _$ScheduleImpl.fromJson(Map<String, dynamic> json) => _$$ScheduleImplFromJson(json);
 
+  /// ドキュメントID。Firestore保存時に自動設定される
+  /// nullの場合は新規作成、値がある場合は既存ドキュメントの更新を示す
   @override
   @JsonKey(includeIfNull: false)
   final String? id;
+
+  /// 予定のタイトル。ユーザーが入力する予定名
+  /// 例：「婦人科受診」「定期検診」など
   @override
   final String title;
+
+  /// 予定日時。ユーザーがカレンダーUIで選択した日付
+  /// Firestoreのタイムスタンプ形式で保存される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime date;
+
+  /// ローカル通知の設定。nullの場合は通知なし
+  /// 予定前にリマインドを送るための設定
   @override
   final LocalNotification? localNotification;
+
+  /// 予定作成日時。レコード作成時の記録用
+  /// データの管理やソート処理で使用される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdDateTime;
@@ -247,16 +275,30 @@ abstract class _Schedule extends Schedule {
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$ScheduleImpl.fromJson;
 
+  /// ドキュメントID。Firestore保存時に自動設定される
+  /// nullの場合は新規作成、値がある場合は既存ドキュメントの更新を示す
   @override
   @JsonKey(includeIfNull: false)
   String? get id;
+
+  /// 予定のタイトル。ユーザーが入力する予定名
+  /// 例：「婦人科受診」「定期検診」など
   @override
   String get title;
+
+  /// 予定日時。ユーザーがカレンダーUIで選択した日付
+  /// Firestoreのタイムスタンプ形式で保存される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date;
+
+  /// ローカル通知の設定。nullの場合は通知なし
+  /// 予定前にリマインドを送るための設定
   @override
   LocalNotification? get localNotification;
+
+  /// 予定作成日時。レコード作成時の記録用
+  /// データの管理やソート処理で使用される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime;
@@ -274,7 +316,12 @@ LocalNotification _$LocalNotificationFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$LocalNotification {
+  /// flutter_local_notificationsプラグインで使用する通知ID
+  /// 通知のキャンセルや更新時に必要な一意識別子
   int get localNotificationID => throw _privateConstructorUsedError;
+
+  /// 通知を送信する日時
+  /// ユーザーが設定したリマインド時刻に基づいて計算される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get remindDateTime => throw _privateConstructorUsedError;
 
@@ -378,8 +425,13 @@ class _$LocalNotificationImpl extends _LocalNotification {
 
   factory _$LocalNotificationImpl.fromJson(Map<String, dynamic> json) => _$$LocalNotificationImplFromJson(json);
 
+  /// flutter_local_notificationsプラグインで使用する通知ID
+  /// 通知のキャンセルや更新時に必要な一意識別子
   @override
   final int localNotificationID;
+
+  /// 通知を送信する日時
+  /// ユーザーが設定したリマインド時刻に基づいて計算される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime remindDateTime;
@@ -427,8 +479,13 @@ abstract class _LocalNotification extends LocalNotification {
 
   factory _LocalNotification.fromJson(Map<String, dynamic> json) = _$LocalNotificationImpl.fromJson;
 
+  /// flutter_local_notificationsプラグインで使用する通知ID
+  /// 通知のキャンセルや更新時に必要な一意識別子
   @override
   int get localNotificationID;
+
+  /// 通知を送信する日時
+  /// ユーザーが設定したリマインド時刻に基づいて計算される
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get remindDateTime;

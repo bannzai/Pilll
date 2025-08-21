@@ -20,9 +20,28 @@ Package _$PackageFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Package {
+  /// 端末の最新OS種別
+  ///
+  /// Platform.operatingSystemから取得される値（"android", "ios"など）
+  /// 端末のOS種別を識別するために使用される
   String get latestOS => throw _privateConstructorUsedError;
+
+  /// アプリケーション名
+  ///
+  /// PackageInfo.fromPlatform().appNameから取得される値
+  /// 通常は"Pilll"が設定される
   String get appName => throw _privateConstructorUsedError;
+
+  /// アプリケーションのバージョン番号
+  ///
+  /// PackageInfo.fromPlatform().versionから取得される値
+  /// アプリストアで公開されているバージョン番号（例: "2025.08.06"）
   String get appVersion => throw _privateConstructorUsedError;
+
+  /// アプリケーションのビルド番号
+  ///
+  /// PackageInfo.fromPlatform().buildNumberから取得される値
+  /// 開発時のビルド識別子として使用される
   String get buildNumber => throw _privateConstructorUsedError;
 
   /// Serializes this Package to a JSON map.
@@ -132,12 +151,31 @@ class _$PackageImpl implements _Package {
 
   factory _$PackageImpl.fromJson(Map<String, dynamic> json) => _$$PackageImplFromJson(json);
 
+  /// 端末の最新OS種別
+  ///
+  /// Platform.operatingSystemから取得される値（"android", "ios"など）
+  /// 端末のOS種別を識別するために使用される
   @override
   final String latestOS;
+
+  /// アプリケーション名
+  ///
+  /// PackageInfo.fromPlatform().appNameから取得される値
+  /// 通常は"Pilll"が設定される
   @override
   final String appName;
+
+  /// アプリケーションのバージョン番号
+  ///
+  /// PackageInfo.fromPlatform().versionから取得される値
+  /// アプリストアで公開されているバージョン番号（例: "2025.08.06"）
   @override
   final String appVersion;
+
+  /// アプリケーションのビルド番号
+  ///
+  /// PackageInfo.fromPlatform().buildNumberから取得される値
+  /// 開発時のビルド識別子として使用される
   @override
   final String buildNumber;
 
@@ -185,12 +223,31 @@ abstract class _Package implements Package {
 
   factory _Package.fromJson(Map<String, dynamic> json) = _$PackageImpl.fromJson;
 
+  /// 端末の最新OS種別
+  ///
+  /// Platform.operatingSystemから取得される値（"android", "ios"など）
+  /// 端末のOS種別を識別するために使用される
   @override
   String get latestOS;
+
+  /// アプリケーション名
+  ///
+  /// PackageInfo.fromPlatform().appNameから取得される値
+  /// 通常は"Pilll"が設定される
   @override
   String get appName;
+
+  /// アプリケーションのバージョン番号
+  ///
+  /// PackageInfo.fromPlatform().versionから取得される値
+  /// アプリストアで公開されているバージョン番号（例: "2025.08.06"）
   @override
   String get appVersion;
+
+  /// アプリケーションのビルド番号
+  ///
+  /// PackageInfo.fromPlatform().buildNumberから取得される値
+  /// 開発時のビルド識別子として使用される
   @override
   String get buildNumber;
 

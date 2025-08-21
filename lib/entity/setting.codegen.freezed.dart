@@ -20,7 +20,16 @@ ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ReminderTime {
+  /// 時刻の時（24時間形式）
+  ///
+  /// 0-23の範囲で指定します。
+  /// リマインダー通知の生成時刻として使用されます。
   int get hour => throw _privateConstructorUsedError;
+
+  /// 時刻の分
+  ///
+  /// 0-59の範囲で指定します。
+  /// リマインダー通知の生成時刻として使用されます。
   int get minute => throw _privateConstructorUsedError;
 
   /// Serializes this ReminderTime to a JSON map.
@@ -111,8 +120,17 @@ class _$ReminderTimeImpl extends _ReminderTime with DiagnosticableTreeMixin {
 
   factory _$ReminderTimeImpl.fromJson(Map<String, dynamic> json) => _$$ReminderTimeImplFromJson(json);
 
+  /// 時刻の時（24時間形式）
+  ///
+  /// 0-23の範囲で指定します。
+  /// リマインダー通知の生成時刻として使用されます。
   @override
   final int hour;
+
+  /// 時刻の分
+  ///
+  /// 0-59の範囲で指定します。
+  /// リマインダー通知の生成時刻として使用されます。
   @override
   final int minute;
 
@@ -164,8 +182,17 @@ abstract class _ReminderTime extends ReminderTime {
 
   factory _ReminderTime.fromJson(Map<String, dynamic> json) = _$ReminderTimeImpl.fromJson;
 
+  /// 時刻の時（24時間形式）
+  ///
+  /// 0-23の範囲で指定します。
+  /// リマインダー通知の生成時刻として使用されます。
   @override
   int get hour;
+
+  /// 時刻の分
+  ///
+  /// 0-59の範囲で指定します。
+  /// リマインダー通知の生成時刻として使用されます。
   @override
   int get minute;
 
@@ -182,16 +209,71 @@ Setting _$SettingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Setting {
+  /// ユーザーが使用するピルシートタイプのリスト
+  ///
+  /// 複数のピルシートを管理する場合に使用します。
+  /// PillSheetTypeのenumで定義された値を格納し、
+  /// ピルシートUI表示やサイクル計算に使用されます。
   List<PillSheetType?> get pillSheetTypes => throw _privateConstructorUsedError;
+
+  /// 生理開始からの日数設定
+  ///
+  /// 生理開始日から何日目でピル服用を開始するかを定義します。
+  /// 生理周期計算や次回生理日予測に使用される重要なパラメータです。
   int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+
+  /// 生理期間の日数
+  ///
+  /// ユーザーの平均的な生理期間を日数で定義します。
+  /// 生理日記機能や生理予測機能で使用されます。
   int get durationMenstruation => throw _privateConstructorUsedError;
+
+  /// 服用リマインダー時刻のリスト
+  ///
+  /// ReminderTimeオブジェクトのリストとして格納されます。
+  /// 最大3件まで設定可能で、通知スケジューリングに使用されます。
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
+
+  /// リマインダー通知の有効/無効フラグ
+  ///
+  /// trueの場合、設定されたreminderTimesに基づいて通知が送信されます。
+  /// falseの場合、リマインダー通知は送信されません。
   bool get isOnReminder => throw _privateConstructorUsedError;
+
+  /// 飲み忘れ期間中の通知有効フラグ
+  ///
+  /// trueの場合、飲み忘れが検出されたときに追加の通知を送信します。
+  /// デフォルトはtrueで有効化されています。
   bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
+
+  /// ピルシート自動作成機能の有効フラグ
+  ///
+  /// trueの場合、現在のピルシートが終了したときに
+  /// 新しいピルシートを自動的に作成します。デフォルトはfalseです。
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
-  ReminderNotificationCustomization get reminderNotificationCustomization => throw _privateConstructorUsedError; // 緊急アラート関連の設定
+
+  /// リマインダー通知のカスタマイゼーション設定
+  ///
+  /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
+  /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
+  ReminderNotificationCustomization get reminderNotificationCustomization => throw _privateConstructorUsedError;
+
+  /// 緊急アラート機能の有効フラグ
+  ///
+  /// trueの場合、重要な通知を緊急アラートとして送信します。
+  /// iOSのCritical Alertなど、端末の音量設定を無視した通知に使用されます。
   bool get useCriticalAlert => throw _privateConstructorUsedError;
+
+  /// 緊急アラートの音量レベル
+  ///
+  /// 0.0-1.0の範囲で緊急アラート時の音量を指定します。
+  /// デフォルトは0.5（50%）に設定されています。
   double get criticalAlertVolume => throw _privateConstructorUsedError;
+
+  /// ユーザーのタイムゾーンデータベース名
+  ///
+  /// timezone パッケージで使用されるタイムゾーン識別子です。
+  /// nullの場合は端末のローカルタイムゾーンが使用されます。
   String? get timezoneDatabaseName => throw _privateConstructorUsedError;
 
   /// Serializes this Setting to a JSON map.
@@ -422,7 +504,18 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
   factory _$SettingImpl.fromJson(Map<String, dynamic> json) => _$$SettingImplFromJson(json);
 
+  /// ユーザーが使用するピルシートタイプのリスト
+  ///
+  /// 複数のピルシートを管理する場合に使用します。
+  /// PillSheetTypeのenumで定義された値を格納し、
+  /// ピルシートUI表示やサイクル計算に使用されます。
   final List<PillSheetType?> _pillSheetTypes;
+
+  /// ユーザーが使用するピルシートタイプのリスト
+  ///
+  /// 複数のピルシートを管理する場合に使用します。
+  /// PillSheetTypeのenumで定義された値を格納し、
+  /// ピルシートUI表示やサイクル計算に使用されます。
   @override
   @JsonKey()
   List<PillSheetType?> get pillSheetTypes {
@@ -431,11 +524,30 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
     return EqualUnmodifiableListView(_pillSheetTypes);
   }
 
+  /// 生理開始からの日数設定
+  ///
+  /// 生理開始日から何日目でピル服用を開始するかを定義します。
+  /// 生理周期計算や次回生理日予測に使用される重要なパラメータです。
   @override
   final int pillNumberForFromMenstruation;
+
+  /// 生理期間の日数
+  ///
+  /// ユーザーの平均的な生理期間を日数で定義します。
+  /// 生理日記機能や生理予測機能で使用されます。
   @override
   final int durationMenstruation;
+
+  /// 服用リマインダー時刻のリスト
+  ///
+  /// ReminderTimeオブジェクトのリストとして格納されます。
+  /// 最大3件まで設定可能で、通知スケジューリングに使用されます。
   final List<ReminderTime> _reminderTimes;
+
+  /// 服用リマインダー時刻のリスト
+  ///
+  /// ReminderTimeオブジェクトのリストとして格納されます。
+  /// 最大3件まで設定可能で、通知スケジューリングに使用されます。
   @override
   @JsonKey()
   List<ReminderTime> get reminderTimes {
@@ -444,24 +556,57 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
     return EqualUnmodifiableListView(_reminderTimes);
   }
 
+  /// リマインダー通知の有効/無効フラグ
+  ///
+  /// trueの場合、設定されたreminderTimesに基づいて通知が送信されます。
+  /// falseの場合、リマインダー通知は送信されません。
   @override
   final bool isOnReminder;
+
+  /// 飲み忘れ期間中の通知有効フラグ
+  ///
+  /// trueの場合、飲み忘れが検出されたときに追加の通知を送信します。
+  /// デフォルトはtrueで有効化されています。
   @override
   @JsonKey()
   final bool isOnNotifyInNotTakenDuration;
+
+  /// ピルシート自動作成機能の有効フラグ
+  ///
+  /// trueの場合、現在のピルシートが終了したときに
+  /// 新しいピルシートを自動的に作成します。デフォルトはfalseです。
   @override
   @JsonKey()
   final bool isAutomaticallyCreatePillSheet;
+
+  /// リマインダー通知のカスタマイゼーション設定
+  ///
+  /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
+  /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
   @override
   @JsonKey()
   final ReminderNotificationCustomization reminderNotificationCustomization;
-// 緊急アラート関連の設定
+
+  /// 緊急アラート機能の有効フラグ
+  ///
+  /// trueの場合、重要な通知を緊急アラートとして送信します。
+  /// iOSのCritical Alertなど、端末の音量設定を無視した通知に使用されます。
   @override
   @JsonKey()
   final bool useCriticalAlert;
+
+  /// 緊急アラートの音量レベル
+  ///
+  /// 0.0-1.0の範囲で緊急アラート時の音量を指定します。
+  /// デフォルトは0.5（50%）に設定されています。
   @override
   @JsonKey()
   final double criticalAlertVolume;
+
+  /// ユーザーのタイムゾーンデータベース名
+  ///
+  /// timezone パッケージで使用されるタイムゾーン識別子です。
+  /// nullの場合は端末のローカルタイムゾーンが使用されます。
   @override
   final String? timezoneDatabaseName;
 
@@ -558,26 +703,81 @@ abstract class _Setting extends Setting {
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$SettingImpl.fromJson;
 
+  /// ユーザーが使用するピルシートタイプのリスト
+  ///
+  /// 複数のピルシートを管理する場合に使用します。
+  /// PillSheetTypeのenumで定義された値を格納し、
+  /// ピルシートUI表示やサイクル計算に使用されます。
   @override
   List<PillSheetType?> get pillSheetTypes;
+
+  /// 生理開始からの日数設定
+  ///
+  /// 生理開始日から何日目でピル服用を開始するかを定義します。
+  /// 生理周期計算や次回生理日予測に使用される重要なパラメータです。
   @override
   int get pillNumberForFromMenstruation;
+
+  /// 生理期間の日数
+  ///
+  /// ユーザーの平均的な生理期間を日数で定義します。
+  /// 生理日記機能や生理予測機能で使用されます。
   @override
   int get durationMenstruation;
+
+  /// 服用リマインダー時刻のリスト
+  ///
+  /// ReminderTimeオブジェクトのリストとして格納されます。
+  /// 最大3件まで設定可能で、通知スケジューリングに使用されます。
   @override
   List<ReminderTime> get reminderTimes;
+
+  /// リマインダー通知の有効/無効フラグ
+  ///
+  /// trueの場合、設定されたreminderTimesに基づいて通知が送信されます。
+  /// falseの場合、リマインダー通知は送信されません。
   @override
   bool get isOnReminder;
+
+  /// 飲み忘れ期間中の通知有効フラグ
+  ///
+  /// trueの場合、飲み忘れが検出されたときに追加の通知を送信します。
+  /// デフォルトはtrueで有効化されています。
   @override
   bool get isOnNotifyInNotTakenDuration;
+
+  /// ピルシート自動作成機能の有効フラグ
+  ///
+  /// trueの場合、現在のピルシートが終了したときに
+  /// 新しいピルシートを自動的に作成します。デフォルトはfalseです。
   @override
   bool get isAutomaticallyCreatePillSheet;
+
+  /// リマインダー通知のカスタマイゼーション設定
+  ///
+  /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
+  /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
   @override
-  ReminderNotificationCustomization get reminderNotificationCustomization; // 緊急アラート関連の設定
+  ReminderNotificationCustomization get reminderNotificationCustomization;
+
+  /// 緊急アラート機能の有効フラグ
+  ///
+  /// trueの場合、重要な通知を緊急アラートとして送信します。
+  /// iOSのCritical Alertなど、端末の音量設定を無視した通知に使用されます。
   @override
   bool get useCriticalAlert;
+
+  /// 緊急アラートの音量レベル
+  ///
+  /// 0.0-1.0の範囲で緊急アラート時の音量を指定します。
+  /// デフォルトは0.5（50%）に設定されています。
   @override
   double get criticalAlertVolume;
+
+  /// ユーザーのタイムゾーンデータベース名
+  ///
+  /// timezone パッケージで使用されるタイムゾーン識別子です。
+  /// nullの場合は端末のローカルタイムゾーンが使用されます。
   @override
   String? get timezoneDatabaseName;
 

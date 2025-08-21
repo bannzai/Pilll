@@ -55,6 +55,7 @@ class DiarySetting with _$DiarySetting {
     /// デフォルトでは事前定義された14種類の体調項目が設定される
     /// ユーザーによる項目のカスタマイズが可能
     @Default(defaultPhysicalConditions) List<String> physicalConditions,
+
     /// 設定が作成された日時
     /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
     @JsonKey(

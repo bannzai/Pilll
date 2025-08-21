@@ -21,11 +21,11 @@ class Schedule with _$Schedule {
     /// ドキュメントID。Firestore保存時に自動設定される
     /// nullの場合は新規作成、値がある場合は既存ドキュメントの更新を示す
     @JsonKey(includeIfNull: false) String? id,
-    
+
     /// 予定のタイトル。ユーザーが入力する予定名
     /// 例：「婦人科受診」「定期検診」など
     required String title,
-    
+
     /// 予定日時。ユーザーがカレンダーUIで選択した日付
     /// Firestoreのタイムスタンプ形式で保存される
     @JsonKey(
@@ -33,11 +33,11 @@ class Schedule with _$Schedule {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
     required DateTime date,
-    
+
     /// ローカル通知の設定。nullの場合は通知なし
     /// 予定前にリマインドを送るための設定
     LocalNotification? localNotification,
-    
+
     /// 予定作成日時。レコード作成時の記録用
     /// データの管理やソート処理で使用される
     @JsonKey(
@@ -60,7 +60,7 @@ class LocalNotification with _$LocalNotification {
     /// flutter_local_notificationsプラグインで使用する通知ID
     /// 通知のキャンセルや更新時に必要な一意識別子
     required int localNotificationID,
-    
+
     /// 通知を送信する日時
     /// ユーザーが設定したリマインド時刻に基づいて計算される
     @JsonKey(
