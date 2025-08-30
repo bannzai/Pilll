@@ -67,7 +67,7 @@ mixin _$RemoteConfigParameter {
   /// 割引期間ABテストが有効かどうか
   /// trueの場合、割引期間を設定しない（treatmentグループ）
   /// falseの場合、従来通り割引期間を設定（controlグループ）
-  bool get discountPeriodABTestDisabled => throw _privateConstructorUsedError;
+  bool get discountPeriodDisabled => throw _privateConstructorUsedError;
 
   /// Serializes this RemoteConfigParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -95,7 +95,7 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
       bool specialOffering2UseAlternativeText,
-      bool discountPeriodABTestDisabled});
+      bool discountPeriodDisabled});
 }
 
 /// @nodoc
@@ -123,7 +123,7 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
-    Object? discountPeriodABTestDisabled = null,
+    Object? discountPeriodDisabled = null,
   }) {
     return _then(_value.copyWith(
       isPaywallFirst: null == isPaywallFirst
@@ -170,9 +170,9 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
-      discountPeriodABTestDisabled: null == discountPeriodABTestDisabled
-          ? _value.discountPeriodABTestDisabled
-          : discountPeriodABTestDisabled // ignore: cast_nullable_to_non_nullable
+      discountPeriodDisabled: null == discountPeriodDisabled
+          ? _value.discountPeriodDisabled
+          : discountPeriodDisabled // ignore: cast_nullable_to_non_nullable
               as bool,
     ) as $Val);
   }
@@ -196,7 +196,7 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       int specialOfferingUserCreationDateTimeOffsetSince,
       int specialOfferingUserCreationDateTimeOffsetUntil,
       bool specialOffering2UseAlternativeText,
-      bool discountPeriodABTestDisabled});
+      bool discountPeriodDisabled});
 }
 
 /// @nodoc
@@ -221,7 +221,7 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? specialOfferingUserCreationDateTimeOffsetSince = null,
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
-    Object? discountPeriodABTestDisabled = null,
+    Object? discountPeriodDisabled = null,
   }) {
     return _then(_$RemoteConfigParameterImpl(
       isPaywallFirst: null == isPaywallFirst
@@ -268,9 +268,9 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
           ? _value.specialOffering2UseAlternativeText
           : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
               as bool,
-      discountPeriodABTestDisabled: null == discountPeriodABTestDisabled
-          ? _value.discountPeriodABTestDisabled
-          : discountPeriodABTestDisabled // ignore: cast_nullable_to_non_nullable
+      discountPeriodDisabled: null == discountPeriodDisabled
+          ? _value.discountPeriodDisabled
+          : discountPeriodDisabled // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -291,7 +291,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
       this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
       this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
-      this.discountPeriodABTestDisabled = RemoteConfigParameterDefaultValues.discountPeriodABTestDisabled})
+      this.discountPeriodDisabled = RemoteConfigParameterDefaultValues.discountPeriodDisabled})
       : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
@@ -367,11 +367,11 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   /// falseの場合、従来通り割引期間を設定（controlグループ）
   @override
   @JsonKey()
-  final bool discountPeriodABTestDisabled;
+  final bool discountPeriodDisabled;
 
   @override
   String toString() {
-    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, discountPeriodABTestDisabled: $discountPeriodABTestDisabled)';
+    return 'RemoteConfigParameter(isPaywallFirst: $isPaywallFirst, skipInitialSetting: $skipInitialSetting, trialDeadlineDateOffsetDay: $trialDeadlineDateOffsetDay, discountEntitlementOffsetDay: $discountEntitlementOffsetDay, discountCountdownBoundaryHour: $discountCountdownBoundaryHour, premiumIntroductionPattern: $premiumIntroductionPattern, premiumIntroductionShowsAppStoreReviewCard: $premiumIntroductionShowsAppStoreReviewCard, specialOfferingUserCreationDateTimeOffset: $specialOfferingUserCreationDateTimeOffset, specialOfferingUserCreationDateTimeOffsetSince: $specialOfferingUserCreationDateTimeOffsetSince, specialOfferingUserCreationDateTimeOffsetUntil: $specialOfferingUserCreationDateTimeOffsetUntil, specialOffering2UseAlternativeText: $specialOffering2UseAlternativeText, discountPeriodDisabled: $discountPeriodDisabled)';
   }
 
   @override
@@ -399,8 +399,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
                 other.specialOfferingUserCreationDateTimeOffsetUntil == specialOfferingUserCreationDateTimeOffsetUntil) &&
             (identical(other.specialOffering2UseAlternativeText, specialOffering2UseAlternativeText) ||
                 other.specialOffering2UseAlternativeText == specialOffering2UseAlternativeText) &&
-            (identical(other.discountPeriodABTestDisabled, discountPeriodABTestDisabled) ||
-                other.discountPeriodABTestDisabled == discountPeriodABTestDisabled));
+            (identical(other.discountPeriodDisabled, discountPeriodDisabled) || other.discountPeriodDisabled == discountPeriodDisabled));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
@@ -418,7 +417,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       specialOfferingUserCreationDateTimeOffsetSince,
       specialOfferingUserCreationDateTimeOffsetUntil,
       specialOffering2UseAlternativeText,
-      discountPeriodABTestDisabled);
+      discountPeriodDisabled);
 
   /// Create a copy of RemoteConfigParameter
   /// with the given fields replaced by the non-null parameter values.
@@ -449,7 +448,7 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
       final int specialOfferingUserCreationDateTimeOffsetSince,
       final int specialOfferingUserCreationDateTimeOffsetUntil,
       final bool specialOffering2UseAlternativeText,
-      final bool discountPeriodABTestDisabled}) = _$RemoteConfigParameterImpl;
+      final bool discountPeriodDisabled}) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
@@ -513,7 +512,7 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
   /// trueの場合、割引期間を設定しない（treatmentグループ）
   /// falseの場合、従来通り割引期間を設定（controlグループ）
   @override
-  bool get discountPeriodABTestDisabled;
+  bool get discountPeriodDisabled;
 
   /// Create a copy of RemoteConfigParameter
   /// with the given fields replaced by the non-null parameter values.
