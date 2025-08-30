@@ -45,7 +45,7 @@ abstract class RemoteConfigKeys {
   static const specialOffering2UseAlternativeText = 'specialOffering2UseAlternativeText';
 
   /// 割引期間ABテスト有効フラグキー
-  static const discountPeriodABTestDisabled = 'discountPeriodABTestDisabled';
+  static const discountPeriodDisabled = 'discountPeriodDisabled';
 }
 
 /// Remote Configパラメータのデフォルト値定義
@@ -91,7 +91,7 @@ abstract class RemoteConfigParameterDefaultValues {
   static const specialOffering2UseAlternativeText = true;
 
   /// 割引期間ABテストを無効にする（デフォルト）
-  static const discountPeriodABTestDisabled = false;
+  static const discountPeriodDisabled = true;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
@@ -150,7 +150,7 @@ class RemoteConfigParameter with _$RemoteConfigParameter {
     /// 割引期間ABテストが有効かどうか
     /// trueの場合、割引期間を設定しない（treatmentグループ）
     /// falseの場合、従来通り割引期間を設定（controlグループ）
-    @Default(RemoteConfigParameterDefaultValues.discountPeriodABTestDisabled) bool discountPeriodABTestDisabled,
+    @Default(RemoteConfigParameterDefaultValues.discountPeriodDisabled) bool discountPeriodDisabled,
   }) = _RemoteConfigParameter;
   RemoteConfigParameter._();
   factory RemoteConfigParameter.fromJson(Map<String, dynamic> json) => _$RemoteConfigParameterFromJson(json);

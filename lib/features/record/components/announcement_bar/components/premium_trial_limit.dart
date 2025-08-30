@@ -56,7 +56,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     );
   }
 
-  static String? premiumTrialLimitMessage(User user, bool discountPeriodABTestDisabled) {
+  static String? premiumTrialLimitMessage(User user, bool discountPeriodDisabled) {
     if (user.isPremium) {
       return null;
     }
@@ -72,7 +72,7 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
     // NOTE: L.specialDiscountPriceNow を追加してみて、割引時のプレミアム加入率に変化があるかウォッチしてみる
     // return '${L.remainingDaysAllFeatures(diff)}'
     final base = L.remainingDaysAllFeatures(diff);
-    if (discountPeriodABTestDisabled) {
+    if (discountPeriodDisabled) {
       return base;
     } else {
       return '$base\n${L.specialDiscountPriceNow}';
