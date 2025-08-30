@@ -249,7 +249,7 @@ class EndInitialSetting {
     };
 
     // ABテストが有効でない場合のみ割引期間を設定
-    if (!remoteConfigParameter.discountPeriodABTestEnabled) {
+    if (!remoteConfigParameter.discountPeriodABTestDisabled) {
       data[UserFirestoreFieldKeys.discountEntitlementDeadlineDate] =
           now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay();
     }

@@ -35,7 +35,7 @@ Future<void> setupRemoteConfig() async {
         RemoteConfigKeys.specialOfferingUserCreationDateTimeOffsetUntil:
             RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
         RemoteConfigKeys.specialOffering2UseAlternativeText: RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
-        RemoteConfigKeys.discountPeriodABTestEnabled: RemoteConfigParameterDefaultValues.discountPeriodABTestEnabled,
+        RemoteConfigKeys.discountPeriodABTestDisabled: RemoteConfigParameterDefaultValues.discountPeriodABTestDisabled,
       }),
     ).wait;
     // 項目が増えて来てfetchが重たくなっていてアプリが開かない説があるので非同期にする。計測はしてない。since: 2025-06-25
