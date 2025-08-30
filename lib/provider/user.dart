@@ -242,13 +242,19 @@ class EndInitialSetting {
   EndInitialSetting(this.databaseConnection);
 
   Future<void> call(RemoteConfigParameter remoteConfigParameter) {
-    return databaseConnection.userRawReference().set({
+    final Map<String, dynamic> data = {
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
-          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
-    }, SetOptions(merge: true));
+    };
+
+    // ABテストが有効でない場合のみ割引期間を設定
+    if (!remoteConfigParameter.discountPeriodABTestEnabled) {
+      data[UserFirestoreFieldKeys.discountEntitlementDeadlineDate] =
+          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay();
+    }
+
+    return databaseConnection.userRawReference().set(data, SetOptions(merge: true));
   }
 }
 
