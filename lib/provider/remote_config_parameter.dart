@@ -50,6 +50,10 @@ RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
       RemoteConfigKeys.specialOffering2UseAlternativeText,
       RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
     ),
+    discountPeriodDisabled: remoteConfig.getBoolOrDefault(
+      RemoteConfigKeys.discountPeriodDisabled,
+      RemoteConfigParameterDefaultValues.discountPeriodDisabled,
+    ),
   );
 }
 
