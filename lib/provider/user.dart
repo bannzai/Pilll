@@ -248,7 +248,7 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
     };
 
-    // ABテストが有効でない場合のみ割引期間を設定
+    // 割引価格が有効な場合のみ割引期間を設定
     if (!remoteConfigParameter.discountPeriodDisabled) {
       data[UserFirestoreFieldKeys.discountEntitlementDeadlineDate] =
           now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay();
