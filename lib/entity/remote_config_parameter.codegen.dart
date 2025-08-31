@@ -90,8 +90,8 @@ abstract class RemoteConfigParameterDefaultValues {
   /// 特別オファー2で代替テキストを使用する（デフォルト）
   static const specialOffering2UseAlternativeText = true;
 
-  /// 割引期間ABテストを無効にする（デフォルト）
-  static const discountPeriodDisabled = true;
+  /// 割引期間を有効にする（デフォルト）
+  static const discountPeriodDisabled = false;
 }
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
