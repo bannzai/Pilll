@@ -606,6 +606,12 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
       ) as double);
 
   @override
+  bool get useAlarmKit => (super.noSuchMethod(
+        Invocation.getter(#useAlarmKit),
+        returnValue: false,
+      ) as bool);
+
+  @override
   _i6.$SettingCopyWith<_i6.Setting> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),
         returnValue: _Fake$SettingCopyWith_5<_i6.Setting>(
