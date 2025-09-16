@@ -124,6 +124,131 @@ private var channel: FlutterMethodChannel?
           } else {
             completionHandler(["result": "failure", "message": "不明なエラーが発生しました"])
           }
+        case "isAlarmKitAvailable":
+          completionHandler([
+            "result": "success",
+            "isAlarmKitAvailable": AlarmKitManager.shared.isAvailableForCurrentOS()
+          ])
+        case "requestAlarmKitPermission":
+          if #available(iOS 26.0, *) {
+            Task {
+              let authorized = await AlarmKitManager.shared.requestPermission()
+              await MainActor.run {
+                completionHandler([
+                  "result": "success",
+                  "authorized": authorized
+                ])
+              }
+            }
+          } else {
+            completionHandler([
+              "result": "failure",
+              "message": "AlarmKit is not available on this OS version"
+            ])
+          }
+        case "scheduleAlarmKitReminder":
+          if let arguments = call.arguments as? [String: Any],
+             let id = arguments["id"] as? String,
+             let title = arguments["title"] as? String,
+             let scheduledTimeMs = arguments["scheduledTime"] as? Int64 {
+            
+            if #available(iOS 26.0, *) {
+              let scheduledTime = Date(timeIntervalSince1970: Double(scheduledTimeMs) / 1000.0)
+              Task {
+                do {
+                  try await AlarmKitManager.shared.scheduleMedicationAlarm(
+                    id: id,
+                    title: title,
+                    scheduledTime: scheduledTime
+                  )
+                  await MainActor.run {
+                    completionHandler(["result": "success"])
+                  }
+                } catch {
+                  await MainActor.run {
+                    completionHandler([
+                      "result": "failure",
+                      "message": error.localizedDescription
+                    ])
+                  }
+                }
+              }
+            } else {
+              completionHandler([
+                "result": "failure",
+                "message": "AlarmKit is not available on this OS version"
+              ])
+            }
+          } else {
+            completionHandler([
+              "result": "failure",
+              "message": "Invalid arguments for scheduleAlarmKitReminder"
+            ])
+          }
+        case "cancelAlarmKitReminder":
+          if let arguments = call.arguments as? [String: Any],
+             let id = arguments["id"] as? String {
+            
+            if #available(iOS 26.0, *) {
+              Task {
+                do {
+                  try await AlarmKitManager.shared.cancelMedicationAlarm(id: id)
+                  await MainActor.run {
+                    completionHandler(["result": "success"])
+                  }
+                } catch {
+                  await MainActor.run {
+                    completionHandler([
+                      "result": "failure",
+                      "message": error.localizedDescription
+                    ])
+                  }
+                }
+              }
+            } else {
+              completionHandler([
+                "result": "failure",
+                "message": "AlarmKit is not available on this OS version"
+              ])
+            }
+          } else {
+            completionHandler([
+              "result": "failure",
+              "message": "Invalid arguments for cancelAlarmKitReminder"
+            ])
+          }
+        case "stopAlarmKitAlarm":
+          if let arguments = call.arguments as? [String: Any],
+             let id = arguments["id"] as? String {
+            
+            if #available(iOS 26.0, *) {
+              Task {
+                do {
+                  try await AlarmKitManager.shared.stopAlarm(id: id)
+                  await MainActor.run {
+                    completionHandler(["result": "success"])
+                  }
+                } catch {
+                  await MainActor.run {
+                    completionHandler([
+                      "result": "failure",
+                      "message": error.localizedDescription
+                    ])
+                  }
+                }
+              }
+            } else {
+              completionHandler([
+                "result": "failure",
+                "message": "AlarmKit is not available on this OS version"
+              ])
+            }
+          } else {
+            completionHandler([
+              "result": "failure",
+              "message": "Invalid arguments for stopAlarmKitAlarm"
+            ])
+          }
         case _:
           return
         }
