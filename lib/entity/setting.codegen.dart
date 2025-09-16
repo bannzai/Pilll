@@ -142,6 +142,13 @@ class Setting with _$Setting {
     /// デフォルトは0.5（50%）に設定されています。
     @Default(0.5) double criticalAlertVolume,
 
+    /// AlarmKit機能の有効フラグ
+    ///
+    /// trueの場合、iOS 26+でAlarmKitを使用して服薬リマインダーを送信します。
+    /// サイレントモード・フォーカスモード時でも確実に通知が表示されます。
+    /// iOS 26未満やAndroidでは既存のlocal notificationが使用されます。
+    @Default(false) bool useAlarmKit,
+
     /// ユーザーのタイムゾーンデータベース名
     ///
     /// timezone パッケージで使用されるタイムゾーン識別子です。

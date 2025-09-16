@@ -29,6 +29,7 @@ _$SettingImpl _$$SettingImplFromJson(Map<String, dynamic> json) => _$SettingImpl
           : ReminderNotificationCustomization.fromJson(json['reminderNotificationCustomization'] as Map<String, dynamic>),
       useCriticalAlert: json['useCriticalAlert'] as bool? ?? false,
       criticalAlertVolume: (json['criticalAlertVolume'] as num?)?.toDouble() ?? 0.5,
+      useAlarmKit: json['useAlarmKit'] as bool? ?? false,
       timezoneDatabaseName: json['timezoneDatabaseName'] as String?,
     );
 
@@ -43,6 +44,7 @@ Map<String, dynamic> _$$SettingImplToJson(_$SettingImpl instance) => <String, dy
       'reminderNotificationCustomization': instance.reminderNotificationCustomization.toJson(),
       'useCriticalAlert': instance.useCriticalAlert,
       'criticalAlertVolume': instance.criticalAlertVolume,
+      'useAlarmKit': instance.useAlarmKit,
       'timezoneDatabaseName': instance.timezoneDatabaseName,
     };
 

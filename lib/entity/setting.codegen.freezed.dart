@@ -270,6 +270,13 @@ mixin _$Setting {
   /// デフォルトは0.5（50%）に設定されています。
   double get criticalAlertVolume => throw _privateConstructorUsedError;
 
+  /// AlarmKit機能の有効フラグ
+  ///
+  /// trueの場合、iOS 26+でAlarmKitを使用して服薬リマインダーを送信します。
+  /// サイレントモード・フォーカスモード時でも確実に通知が表示されます。
+  /// iOS 26未満やAndroidでは既存のlocal notificationが使用されます。
+  bool get useAlarmKit => throw _privateConstructorUsedError;
+
   /// ユーザーのタイムゾーンデータベース名
   ///
   /// timezone パッケージで使用されるタイムゾーン識別子です。
@@ -300,6 +307,7 @@ abstract class $SettingCopyWith<$Res> {
       ReminderNotificationCustomization reminderNotificationCustomization,
       bool useCriticalAlert,
       double criticalAlertVolume,
+      bool useAlarmKit,
       String? timezoneDatabaseName});
 
   $ReminderNotificationCustomizationCopyWith<$Res> get reminderNotificationCustomization;
@@ -329,6 +337,7 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
     Object? reminderNotificationCustomization = null,
     Object? useCriticalAlert = null,
     Object? criticalAlertVolume = null,
+    Object? useAlarmKit = null,
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_value.copyWith(
@@ -372,6 +381,10 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
           ? _value.criticalAlertVolume
           : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
               as double,
+      useAlarmKit: null == useAlarmKit
+          ? _value.useAlarmKit
+          : useAlarmKit // ignore: cast_nullable_to_non_nullable
+              as bool,
       timezoneDatabaseName: freezed == timezoneDatabaseName
           ? _value.timezoneDatabaseName
           : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
@@ -406,6 +419,7 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
       ReminderNotificationCustomization reminderNotificationCustomization,
       bool useCriticalAlert,
       double criticalAlertVolume,
+      bool useAlarmKit,
       String? timezoneDatabaseName});
 
   @override
@@ -431,6 +445,7 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
     Object? reminderNotificationCustomization = null,
     Object? useCriticalAlert = null,
     Object? criticalAlertVolume = null,
+    Object? useAlarmKit = null,
     Object? timezoneDatabaseName = freezed,
   }) {
     return _then(_$SettingImpl(
@@ -474,6 +489,10 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
           ? _value.criticalAlertVolume
           : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
               as double,
+      useAlarmKit: null == useAlarmKit
+          ? _value.useAlarmKit
+          : useAlarmKit // ignore: cast_nullable_to_non_nullable
+              as bool,
       timezoneDatabaseName: freezed == timezoneDatabaseName
           ? _value.timezoneDatabaseName
           : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
@@ -497,6 +516,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       this.reminderNotificationCustomization = const ReminderNotificationCustomization(),
       this.useCriticalAlert = false,
       this.criticalAlertVolume = 0.5,
+      this.useAlarmKit = false,
       required this.timezoneDatabaseName})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
@@ -603,6 +623,15 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   @JsonKey()
   final double criticalAlertVolume;
 
+  /// AlarmKit機能の有効フラグ
+  ///
+  /// trueの場合、iOS 26+でAlarmKitを使用して服薬リマインダーを送信します。
+  /// サイレントモード・フォーカスモード時でも確実に通知が表示されます。
+  /// iOS 26未満やAndroidでは既存のlocal notificationが使用されます。
+  @override
+  @JsonKey()
+  final bool useAlarmKit;
+
   /// ユーザーのタイムゾーンデータベース名
   ///
   /// timezone パッケージで使用されるタイムゾーン識別子です。
@@ -612,7 +641,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, useCriticalAlert: $useCriticalAlert, criticalAlertVolume: $criticalAlertVolume, timezoneDatabaseName: $timezoneDatabaseName)';
+    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization, useCriticalAlert: $useCriticalAlert, criticalAlertVolume: $criticalAlertVolume, useAlarmKit: $useAlarmKit, timezoneDatabaseName: $timezoneDatabaseName)';
   }
 
   @override
@@ -630,6 +659,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('reminderNotificationCustomization', reminderNotificationCustomization))
       ..add(DiagnosticsProperty('useCriticalAlert', useCriticalAlert))
       ..add(DiagnosticsProperty('criticalAlertVolume', criticalAlertVolume))
+      ..add(DiagnosticsProperty('useAlarmKit', useAlarmKit))
       ..add(DiagnosticsProperty('timezoneDatabaseName', timezoneDatabaseName));
   }
 
@@ -652,6 +682,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
                 other.reminderNotificationCustomization == reminderNotificationCustomization) &&
             (identical(other.useCriticalAlert, useCriticalAlert) || other.useCriticalAlert == useCriticalAlert) &&
             (identical(other.criticalAlertVolume, criticalAlertVolume) || other.criticalAlertVolume == criticalAlertVolume) &&
+            (identical(other.useAlarmKit, useAlarmKit) || other.useAlarmKit == useAlarmKit) &&
             (identical(other.timezoneDatabaseName, timezoneDatabaseName) || other.timezoneDatabaseName == timezoneDatabaseName));
   }
 
@@ -669,6 +700,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       reminderNotificationCustomization,
       useCriticalAlert,
       criticalAlertVolume,
+      useAlarmKit,
       timezoneDatabaseName);
 
   /// Create a copy of Setting
@@ -698,6 +730,7 @@ abstract class _Setting extends Setting {
       final ReminderNotificationCustomization reminderNotificationCustomization,
       final bool useCriticalAlert,
       final double criticalAlertVolume,
+      final bool useAlarmKit,
       required final String? timezoneDatabaseName}) = _$SettingImpl;
   const _Setting._() : super._();
 
@@ -773,6 +806,14 @@ abstract class _Setting extends Setting {
   /// デフォルトは0.5（50%）に設定されています。
   @override
   double get criticalAlertVolume;
+
+  /// AlarmKit機能の有効フラグ
+  ///
+  /// trueの場合、iOS 26+でAlarmKitを使用して服薬リマインダーを送信します。
+  /// サイレントモード・フォーカスモード時でも確実に通知が表示されます。
+  /// iOS 26未満やAndroidでは既存のlocal notificationが使用されます。
+  @override
+  bool get useAlarmKit;
 
   /// ユーザーのタイムゾーンデータベース名
   ///
