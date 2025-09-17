@@ -67,7 +67,7 @@ class AlarmKitService {
   static Future<void> scheduleMedicationReminder({
     required String localNotificationID,
     required String title,
-    required DateTime scheduledTimeMs,
+    required DateTime reminderDateTime,
   }) async {
     if (!Platform.isIOS) {
       throw Exception('AlarmKit is only available on iOS 26+');
@@ -77,7 +77,7 @@ class AlarmKitService {
       final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
         'localNotificationID': localNotificationID,
         'title': title,
-        'scheduledTimeMs': scheduledTimeMs.millisecondsSinceEpoch,
+        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
       });
 
       if (result?['result'] != 'success') {
@@ -87,14 +87,14 @@ class AlarmKitService {
       analytics.debug(name: 'alarm_kit_reminder_scheduled', parameters: {
         'localNotificationID': localNotificationID,
         'title': title,
-        'scheduledTimeMs': scheduledTimeMs.millisecondsSinceEpoch,
+        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
       });
     } catch (e) {
       analytics.debug(name: 'alarm_kit_schedule_error', parameters: {
         'error': e.toString(),
         'localNotificationID': localNotificationID,
         'title': title,
-        'scheduledTimeMs': scheduledTimeMs.millisecondsSinceEpoch,
+        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
       });
       rethrow;
     }
