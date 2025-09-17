@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/provider/user.dart';
@@ -14,8 +15,15 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
     await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
     await localNotificationService.requestiOSPermission();
     final apnsToken = await FirebaseMessaging.instance.getAPNSToken();
-    final fcmToken = await FirebaseMessaging.instance.getToken();
-    registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: apnsToken);
+    // SimulatorではFCMトークンが取得できないため、デバッグモードでは取得しない。次のリンクのやり方を参考。https://github.com/firebase/flutterfire/issues/13575
+    if (kDebugMode) {
+      // デバッグモードではFCMトークンを'debug_mode'として登録する
+      registerRemotePushNotificationToken(fcmToken: 'debug_mode', apnsToken: apnsToken);
+    } else {
+      // 本番モードではFCMトークンを取得する
+      final fcmToken = await FirebaseMessaging.instance.getToken();
+      registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: apnsToken);
+    }
   }
 
   if (Platform.isAndroid) {
