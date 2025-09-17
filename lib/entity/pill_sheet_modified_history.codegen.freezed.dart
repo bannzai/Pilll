@@ -63,12 +63,8 @@ mixin _$PillSheetModifiedHistory {
   PillSheet? get before => throw _privateConstructorUsedError;
   PillSheet? get after => throw _privateConstructorUsedError;
 
-  /// Serializes this PillSheetModifiedHistory to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PillSheetModifiedHistoryCopyWith<PillSheetModifiedHistory> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -113,8 +109,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res, $Val extends PillSheetModifie
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -208,8 +202,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res, $Val extends PillSheetModifie
     ) as $Val);
   }
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupCopyWith<$Res>? get beforePillSheetGroup {
@@ -222,8 +214,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res, $Val extends PillSheetModifie
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupCopyWith<$Res>? get afterPillSheetGroup {
@@ -236,8 +226,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res, $Val extends PillSheetModifie
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value {
@@ -246,8 +234,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res, $Val extends PillSheetModifie
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetCopyWith<$Res>? get before {
@@ -260,8 +246,6 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res, $Val extends PillSheetModifie
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetCopyWith<$Res>? get after {
@@ -319,8 +303,6 @@ class __$$PillSheetModifiedHistoryImplCopyWithImpl<$Res> extends _$PillSheetModi
   __$$PillSheetModifiedHistoryImplCopyWithImpl(_$PillSheetModifiedHistoryImpl _value, $Res Function(_$PillSheetModifiedHistoryImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -535,7 +517,7 @@ class _$PillSheetModifiedHistoryImpl extends _PillSheetModifiedHistory {
             (identical(other.after, after) || other.after == after));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -557,9 +539,7 @@ class _$PillSheetModifiedHistoryImpl extends _PillSheetModifiedHistory {
       before,
       after);
 
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetModifiedHistoryImplCopyWith<_$PillSheetModifiedHistoryImpl> get copyWith =>
@@ -598,10 +578,9 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
 
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) = _$PillSheetModifiedHistoryImpl.fromJson;
 
-// Added since 2023-08-01
-  @override
-  dynamic get version; // ============ BEGIN: Added since v1 ============
-  @override
+  @override // Added since 2023-08-01
+  dynamic get version;
+  @override // ============ BEGIN: Added since v1 ============
   @JsonKey(includeIfNull: false)
   String? get id;
   @override
@@ -611,53 +590,49 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   DateTime get estimatedEventCausingDate;
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt; // ============ END: Added since v1 ============
+  DateTime get createdAt;
+  @override // ============ END: Added since v1 ============
 // ============ BEGIN: Added since v2 ============
 // beforePillSheetGroup and afterPillSheetGroup is nullable
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-  @override
   PillSheetGroup? get beforePillSheetGroup;
   @override
   PillSheetGroup? get afterPillSheetGroup;
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get ttlExpiresDateTime; // TODO: [Archive-PillSheetModifiedHistory]: 2024-04以降に対応
+  DateTime? get ttlExpiresDateTime;
+  @override // TODO: [Archive-PillSheetModifiedHistory]: 2024-04以降に対応
 // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
 // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
 // バッチを書いても良いが件数が多いのでこの方法をとっている
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime?
-      get archivedDateTime; // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
+  DateTime? get archivedDateTime;
+  @override // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
 // You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
-  @override
-  bool get isArchived; // ============ END: Added since v2 ============
+  bool get isArchived;
+  @override // ============ END: Added since v2 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
 // Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
-  @override
-  PillSheetModifiedHistoryValue get value; // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  PillSheetModifiedHistoryValue get value;
+  @override // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
 // Instead of beforePillSheetID and afterPillSheetID
-  @override
-  String? get pillSheetID; // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  String? get pillSheetID;
+  @override // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
 // There are new properties for pill_sheet grouping. So it's all optional
-  @override
   String? get pillSheetGroupID;
   @override
   String? get beforePillSheetID;
   @override
-  String? get afterPillSheetID; // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
+  String? get afterPillSheetID;
+  @override // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
 // Instead of beforePillSheetGroup and afterPillSheetGroup
 // before and after is nullable
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-  @override
   PillSheet? get before;
   @override
   PillSheet? get after;
-
-  /// Create a copy of PillSheetModifiedHistory
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PillSheetModifiedHistoryImplCopyWith<_$PillSheetModifiedHistoryImpl> get copyWith => throw _privateConstructorUsedError;
 }

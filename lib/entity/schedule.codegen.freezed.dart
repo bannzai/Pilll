@@ -43,12 +43,8 @@ mixin _$Schedule {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
 
-  /// Serializes this Schedule to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Schedule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ScheduleCopyWith<Schedule> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -76,8 +72,6 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule> implements $ScheduleCo
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Schedule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -111,8 +105,6 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule> implements $ScheduleCo
     ) as $Val);
   }
 
-  /// Create a copy of Schedule
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $LocalNotificationCopyWith<$Res>? get localNotification {
@@ -147,8 +139,6 @@ abstract class _$$ScheduleImplCopyWith<$Res> implements $ScheduleCopyWith<$Res> 
 class __$$ScheduleImplCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res, _$ScheduleImpl> implements _$$ScheduleImplCopyWith<$Res> {
   __$$ScheduleImplCopyWithImpl(_$ScheduleImpl _value, $Res Function(_$ScheduleImpl) _then) : super(_value, _then);
 
-  /// Create a copy of Schedule
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,13 +233,11 @@ class _$ScheduleImpl extends _Schedule {
             (identical(other.createdDateTime, createdDateTime) || other.createdDateTime == createdDateTime));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, title, date, localNotification, createdDateTime);
 
-  /// Create a copy of Schedule
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ScheduleImplCopyWith<_$ScheduleImpl> get copyWith => __$$ScheduleImplCopyWithImpl<_$ScheduleImpl>(this, _$identity);
@@ -275,38 +263,36 @@ abstract class _Schedule extends Schedule {
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$ScheduleImpl.fromJson;
 
+  @override
+
   /// ドキュメントID。Firestore保存時に自動設定される
   /// nullの場合は新規作成、値がある場合は既存ドキュメントの更新を示す
-  @override
   @JsonKey(includeIfNull: false)
   String? get id;
+  @override
 
   /// 予定のタイトル。ユーザーが入力する予定名
   /// 例：「婦人科受診」「定期検診」など
-  @override
   String get title;
+  @override
 
   /// 予定日時。ユーザーがカレンダーUIで選択した日付
   /// Firestoreのタイムスタンプ形式で保存される
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date;
+  @override
 
   /// ローカル通知の設定。nullの場合は通知なし
   /// 予定前にリマインドを送るための設定
-  @override
   LocalNotification? get localNotification;
+  @override
 
   /// 予定作成日時。レコード作成時の記録用
   /// データの管理やソート処理で使用される
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime;
-
-  /// Create a copy of Schedule
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ScheduleImplCopyWith<_$ScheduleImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -325,12 +311,8 @@ mixin _$LocalNotification {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get remindDateTime => throw _privateConstructorUsedError;
 
-  /// Serializes this LocalNotification to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of LocalNotification
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $LocalNotificationCopyWith<LocalNotification> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -354,8 +336,6 @@ class _$LocalNotificationCopyWithImpl<$Res, $Val extends LocalNotification> impl
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of LocalNotification
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -392,8 +372,6 @@ class __$$LocalNotificationImplCopyWithImpl<$Res> extends _$LocalNotificationCop
     implements _$$LocalNotificationImplCopyWith<$Res> {
   __$$LocalNotificationImplCopyWithImpl(_$LocalNotificationImpl _value, $Res Function(_$LocalNotificationImpl) _then) : super(_value, _then);
 
-  /// Create a copy of LocalNotification
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -450,13 +428,11 @@ class _$LocalNotificationImpl extends _LocalNotification {
             (identical(other.remindDateTime, remindDateTime) || other.remindDateTime == remindDateTime));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, localNotificationID, remindDateTime);
 
-  /// Create a copy of LocalNotification
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LocalNotificationImplCopyWith<_$LocalNotificationImpl> get copyWith =>
@@ -479,20 +455,18 @@ abstract class _LocalNotification extends LocalNotification {
 
   factory _LocalNotification.fromJson(Map<String, dynamic> json) = _$LocalNotificationImpl.fromJson;
 
+  @override
+
   /// flutter_local_notificationsプラグインで使用する通知ID
   /// 通知のキャンセルや更新時に必要な一意識別子
-  @override
   int get localNotificationID;
+  @override
 
   /// 通知を送信する日時
   /// ユーザーが設定したリマインド時刻に基づいて計算される
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get remindDateTime;
-
-  /// Create a copy of LocalNotification
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$LocalNotificationImplCopyWith<_$LocalNotificationImpl> get copyWith => throw _privateConstructorUsedError;
 }

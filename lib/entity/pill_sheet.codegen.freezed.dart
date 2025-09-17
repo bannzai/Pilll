@@ -36,12 +36,8 @@ mixin _$PillSheetTypeInfo {
   /// 偽薬を除いた実際に効果のあるピルの服用日数
   int get dosingPeriod => throw _privateConstructorUsedError;
 
-  /// Serializes this PillSheetTypeInfo to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PillSheetTypeInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PillSheetTypeInfoCopyWith<PillSheetTypeInfo> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -62,8 +58,6 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res, $Val extends PillSheetTypeInfo> impl
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PillSheetTypeInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -107,8 +101,6 @@ class __$$PillSheetTypeInfoImplCopyWithImpl<$Res> extends _$PillSheetTypeInfoCop
     implements _$$PillSheetTypeInfoImplCopyWith<$Res> {
   __$$PillSheetTypeInfoImplCopyWithImpl(_$PillSheetTypeInfoImpl _value, $Res Function(_$PillSheetTypeInfoImpl) _then) : super(_value, _then);
 
-  /// Create a copy of PillSheetTypeInfo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -183,13 +175,11 @@ class _$PillSheetTypeInfoImpl implements _PillSheetTypeInfo {
             (identical(other.dosingPeriod, dosingPeriod) || other.dosingPeriod == dosingPeriod));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, pillSheetTypeReferencePath, name, totalCount, dosingPeriod);
 
-  /// Create a copy of PillSheetTypeInfo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetTypeInfoImplCopyWith<_$PillSheetTypeInfoImpl> get copyWith =>
@@ -212,30 +202,28 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
 
   factory _PillSheetTypeInfo.fromJson(Map<String, dynamic> json) = _$PillSheetTypeInfoImpl.fromJson;
 
+  @override
+
   /// ピルシート種類の参照パス（Firestore参照）
   /// 具体的なピルシート設定情報への参照を保持
-  @override
   String get pillSheetTypeReferencePath;
+  @override
 
   /// ピルシート名（例：「マーベロン28」）
   /// ユーザーに表示される商品名
-  @override
   String get name;
+  @override
 
   /// ピルシート内の総ピル数
   /// 21錠、28錠など、シートに含まれる全てのピル数
-  @override
   int get totalCount;
+  @override
 
   /// 服用期間（実薬期間）の日数
   /// 偽薬を除いた実際に効果のあるピルの服用日数
-  @override
   int get dosingPeriod;
-
-  /// Create a copy of PillSheetTypeInfo
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PillSheetTypeInfoImplCopyWith<_$PillSheetTypeInfoImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -256,12 +244,8 @@ mixin _$RestDuration {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate => throw _privateConstructorUsedError;
 
-  /// Serializes this RestDuration to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RestDuration
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RestDurationCopyWith<RestDuration> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -285,8 +269,6 @@ class _$RestDurationCopyWithImpl<$Res, $Val extends RestDuration> implements $Re
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RestDuration
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -333,8 +315,6 @@ class __$$RestDurationImplCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<
     implements _$$RestDurationImplCopyWith<$Res> {
   __$$RestDurationImplCopyWithImpl(_$RestDurationImpl _value, $Res Function(_$RestDurationImpl) _then) : super(_value, _then);
 
-  /// Create a copy of RestDuration
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -410,13 +390,11 @@ class _$RestDurationImpl extends _RestDuration {
             (identical(other.createdDate, createdDate) || other.createdDate == createdDate));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, beginDate, endDate, createdDate);
 
-  /// Create a copy of RestDuration
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RestDurationImplCopyWith<_$RestDurationImpl> get copyWith => __$$RestDurationImplCopyWithImpl<_$RestDurationImpl>(this, _$identity);
@@ -441,10 +419,9 @@ abstract class _RestDuration extends RestDuration {
 
   factory _RestDuration.fromJson(Map<String, dynamic> json) = _$RestDurationImpl.fromJson;
 
-// from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
+  @override // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
   /// 休薬期間の一意識別子
   /// デバッグや調査時の追跡のためのUUID
-  @override
   String? get id;
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -455,11 +432,8 @@ abstract class _RestDuration extends RestDuration {
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate;
-
-  /// Create a copy of RestDuration
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RestDurationImplCopyWith<_$RestDurationImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -495,12 +469,8 @@ mixin _$PillSheet {
   /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
-  /// Serializes this PillSheet to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PillSheet
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PillSheetCopyWith<PillSheet> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -530,8 +500,6 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PillSheet
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -580,8 +548,6 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
     ) as $Val);
   }
 
-  /// Create a copy of PillSheet
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo {
@@ -614,8 +580,6 @@ abstract class _$$PillSheetImplCopyWith<$Res> implements $PillSheetCopyWith<$Res
 class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, _$PillSheetImpl> implements _$$PillSheetImplCopyWith<$Res> {
   __$$PillSheetImplCopyWithImpl(_$PillSheetImpl _value, $Res Function(_$PillSheetImpl) _then) : super(_value, _then);
 
-  /// Create a copy of PillSheet
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -749,14 +713,12 @@ class _$PillSheetImpl extends _PillSheet {
             const DeepCollectionEquality().equals(other._restDurations, _restDurations));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, const DeepCollectionEquality().hash(_restDurations));
 
-  /// Create a copy of PillSheet
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith => __$$PillSheetImplCopyWithImpl<_$PillSheetImpl>(this, _$identity);
@@ -785,21 +747,22 @@ abstract class _PillSheet extends PillSheet {
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) = _$PillSheetImpl.fromJson;
 
+  @override
+
   /// FirestoreドキュメントID
   /// データベース保存時に自動生成される一意識別子
-  @override
   @JsonKey(includeIfNull: false)
   String? get id;
+  @override
 
   /// ピルシートの種類情報
   /// シート名、総数、服用期間などの基本設定
-  @override
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  @override
+  DateTime get beginingDate;
+  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get lastTakenDate;
   @override
@@ -808,20 +771,17 @@ abstract class _PillSheet extends PillSheet {
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
+  @override
 
   /// グループインデックス
   /// 複数のピルシートをグループ化する際の順序番号
-  @override
   int get groupIndex;
+  @override
 
   /// 休薬期間のリスト
   /// このピルシート期間中の全ての休薬期間記録
-  @override
   List<RestDuration> get restDurations;
-
-  /// Create a copy of PillSheet
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith => throw _privateConstructorUsedError;
 }

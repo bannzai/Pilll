@@ -44,12 +44,8 @@ mixin _$Package {
   /// 開発時のビルド識別子として使用される
   String get buildNumber => throw _privateConstructorUsedError;
 
-  /// Serializes this Package to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Package
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PackageCopyWith<Package> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -69,8 +65,6 @@ class _$PackageCopyWithImpl<$Res, $Val extends Package> implements $PackageCopyW
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Package
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -112,8 +106,6 @@ abstract class _$$PackageImplCopyWith<$Res> implements $PackageCopyWith<$Res> {
 class __$$PackageImplCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res, _$PackageImpl> implements _$$PackageImplCopyWith<$Res> {
   __$$PackageImplCopyWithImpl(_$PackageImpl _value, $Res Function(_$PackageImpl) _then) : super(_value, _then);
 
-  /// Create a copy of Package
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -195,13 +187,11 @@ class _$PackageImpl implements _Package {
             (identical(other.buildNumber, buildNumber) || other.buildNumber == buildNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, latestOS, appName, appVersion, buildNumber);
 
-  /// Create a copy of Package
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PackageImplCopyWith<_$PackageImpl> get copyWith => __$$PackageImplCopyWithImpl<_$PackageImpl>(this, _$identity);
@@ -223,37 +213,35 @@ abstract class _Package implements Package {
 
   factory _Package.fromJson(Map<String, dynamic> json) = _$PackageImpl.fromJson;
 
+  @override
+
   /// 端末の最新OS種別
   ///
   /// Platform.operatingSystemから取得される値（"android", "ios"など）
   /// 端末のOS種別を識別するために使用される
-  @override
   String get latestOS;
+  @override
 
   /// アプリケーション名
   ///
   /// PackageInfo.fromPlatform().appNameから取得される値
   /// 通常は"Pilll"が設定される
-  @override
   String get appName;
+  @override
 
   /// アプリケーションのバージョン番号
   ///
   /// PackageInfo.fromPlatform().versionから取得される値
   /// アプリストアで公開されているバージョン番号（例: "2025.08.06"）
-  @override
   String get appVersion;
+  @override
 
   /// アプリケーションのビルド番号
   ///
   /// PackageInfo.fromPlatform().buildNumberから取得される値
   /// 開発時のビルド識別子として使用される
-  @override
   String get buildNumber;
-
-  /// Create a copy of Package
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PackageImplCopyWith<_$PackageImpl> get copyWith => throw _privateConstructorUsedError;
 }
