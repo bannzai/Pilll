@@ -151,10 +151,10 @@ private var channel: FlutterMethodChannel?
           if let arguments = call.arguments as? [String: Any],
              let localNotificationID = arguments["localNotificationID"] as? String,
              let title = arguments["title"] as? String,
-             let scheduledTimeMs = arguments["scheduledTimeMs"] as? Int64 {
-            
+             let scheduledTimeMs = arguments["scheduledTimeMs"] as? NSNumber {
+
             if #available(iOS 26.0, *) {
-              let scheduledTime = Date(timeIntervalSince1970: Double(scheduledTimeMs) / 1000.0)
+              let scheduledTime = Date(timeIntervalSince1970: scheduledTimeMs.doubleValue / 1000.0)
               Task {
                 do {
                   try await AlarmKitManager.shared.scheduleMedicationAlarm(
