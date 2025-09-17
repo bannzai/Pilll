@@ -57,19 +57,20 @@ class AlarmKitManager {
   /// - Parameters:
   ///   - id: アラームの一意識別子（通知IDと同じ形式）
   ///   - title: アラームに表示するタイトル
-  ///   - scheduledTime: アラームを表示する日時
+  ///   - reminderTimeHour: アラームを表示する時間
+  ///   - reminderTimeMinute: アラームを表示する分
   ///
   /// - Throws: アラーム登録に失敗した場合Exception
   func scheduleMedicationAlarm(
     localNotificationID: String,
     title: String,
-    scheduledTime: Date
+    reminderTimeHour: Int,
+    reminderTimeMinute: Int
   ) async throws {
     guard #available(iOS 26.0, *) else {
       throw AlarmKitError.notAvailable
     }
 
-    
     let alarmID = UUID()
     let alertContent = AlarmPresentation.Alert(
       title: "Pilll:服薬時間です",
@@ -88,9 +89,9 @@ class AlarmKitManager {
     )
 
     let configuration = AlarmConfiguration.alarm(
-      schedule: .fixed(scheduledTime),
+      schedule: .fixed
       attributes: attributes,
-      stopIntent: MedicationReminderIntent(id: alarmID.uuidString, title: title),
+      stopIntent: MedicationReminderIntent(id: localNotificationID, title: title),
       secondaryIntent: nil,
       sound: .default
     )

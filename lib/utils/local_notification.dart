@@ -496,7 +496,7 @@ class RegisterReminderLocalNotification {
                   await AlarmKitService.scheduleMedicationReminder(
                     localNotificationID: notificationID.toString(),
                     title: title,
-                    scheduledTime: reminderDateTime.toUtc(),
+                    scheduledTimeMs: reminderDateTime.toUtc(),
                   );
 
                   analytics.debug(name: 'rrrn_premium_alarmkit', parameters: {

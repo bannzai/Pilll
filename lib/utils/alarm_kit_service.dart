@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/services.dart';
+import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/utils/analytics.dart';
 
 /// AlarmKit機能へのアクセスを提供するサービスクラス
@@ -61,13 +62,13 @@ class AlarmKitService {
   ///
   /// [id]: アラームの一意識別子（通知IDと同じ形式）
   /// [title]: アラームに表示するタイトル
-  /// [scheduledTime]: アラームを表示する日時
+  /// [reminderTime]: アラームを表示する時間
   ///
   /// Throws: アラーム登録に失敗した場合Exception
   static Future<void> scheduleMedicationReminder({
     required String localNotificationID,
     required String title,
-    required DateTime scheduledTime,
+    required ReminderTime reminderTime,
   }) async {
     if (!Platform.isIOS) {
       throw Exception('AlarmKit is only available on iOS 26+');
@@ -77,7 +78,8 @@ class AlarmKitService {
       final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
         'localNotificationID': localNotificationID,
         'title': title,
-        'scheduledTime': scheduledTime.millisecondsSinceEpoch,
+        'reminderTimeHour': reminderTime.hour,
+        'reminderTimeMinute': reminderTime.minute,
       });
 
       if (result?['result'] != 'success') {
@@ -87,13 +89,16 @@ class AlarmKitService {
       analytics.debug(name: 'alarm_kit_reminder_scheduled', parameters: {
         'localNotificationID': localNotificationID,
         'title': title,
-        'scheduledTime': scheduledTime.toIso8601String(),
+        'reminderTimeHour': reminderTime.hour,
+        'reminderTimeMinute': reminderTime.minute,
       });
     } catch (e) {
       analytics.debug(name: 'alarm_kit_schedule_error', parameters: {
         'error': e.toString(),
         'localNotificationID': localNotificationID,
         'title': title,
+        'reminderTimeHour': reminderTime.hour,
+        'reminderTimeMinute': reminderTime.minute,
       });
       rethrow;
     }
