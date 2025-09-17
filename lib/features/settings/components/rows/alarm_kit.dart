@@ -3,10 +3,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/setting.codegen.dart';
-import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/alarm_kit_service.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/local_notification.dart';
 
 class AlarmKitSetting extends HookConsumerWidget {
   final Setting setting;
@@ -35,17 +35,17 @@ class AlarmKitSetting extends HookConsumerWidget {
 
     return ListTile(
       minVerticalPadding: 9,
-      title: Text(
+      title: const Text(
         'アラーム機能',
-        style: const TextStyle(
+        style: TextStyle(
           fontFamily: FontFamily.roboto,
           fontWeight: FontWeight.w300,
           fontSize: 16,
         ),
       ),
-      subtitle: Text(
+      subtitle: const Text(
         'サイレントモードやフォーカスモード時でも確実に通知されます（iOS 26以降）',
-        style: const TextStyle(
+        style: TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w300,
           fontSize: 14,
@@ -74,11 +74,11 @@ class AlarmKitSetting extends HookConsumerWidget {
                     // AlarmKit有効時は権限リクエスト
                     final hasPermission = await AlarmKitService.requestPermission();
                     if (hasPermission) {
-                      await ref.read(settingNotifierProvider.notifier).updateSetting(
-                            setting.copyWith(useAlarmKit: true),
-                          );
+                      final setSetting = ref.read(setSettingProvider);
+                      await setSetting(setting.copyWith(useAlarmKit: true));
                       // 設定変更時に通知を再登録
-                      ref.read(registerReminderLocalNotificationProvider).call();
+                      final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
+                      await registerReminderLocalNotification();
                     } else {
                       // 権限が拒否された場合はエラーメッセージ表示
                       if (context.mounted) {
@@ -91,11 +91,11 @@ class AlarmKitSetting extends HookConsumerWidget {
                     }
                   } else {
                     // AlarmKit無効時
-                    await ref.read(settingNotifierProvider.notifier).updateSetting(
-                          setting.copyWith(useAlarmKit: false),
-                        );
+                    final setSetting = ref.read(setSettingProvider);
+                    await setSetting(setting.copyWith(useAlarmKit: false));
                     // 設定変更時に通知を再登録
-                    ref.read(registerReminderLocalNotificationProvider).call();
+                    final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
+                    await registerReminderLocalNotification();
                   }
                 } catch (e) {
                   analytics.debug(name: 'alarm_kit_setting_error', parameters: {'error': e.toString()});
