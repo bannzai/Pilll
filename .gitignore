@@ -56,3 +56,5 @@ android/app/src/main/res/values/values.xml
 android/app/src/prod/res/values/values.xml
 
 .claude/settings.local.json
+
+**/Flutter/ephemeral/

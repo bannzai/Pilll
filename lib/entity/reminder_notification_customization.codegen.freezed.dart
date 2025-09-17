@@ -61,12 +61,8 @@ mixin _$ReminderNotificationCustomization {
   /// 日本語メッセージが設定されています。
   String get missedTakenMessage => throw _privateConstructorUsedError;
 
-  /// Serializes this ReminderNotificationCustomization to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReminderNotificationCustomization
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReminderNotificationCustomizationCopyWith<ReminderNotificationCustomization> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -95,8 +91,6 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res, $Val extends Reminde
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReminderNotificationCustomization
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -166,8 +160,6 @@ class __$$ReminderNotificationCustomizationImplCopyWithImpl<$Res>
       _$ReminderNotificationCustomizationImpl _value, $Res Function(_$ReminderNotificationCustomizationImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ReminderNotificationCustomization
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -304,14 +296,12 @@ class _$ReminderNotificationCustomizationImpl extends _ReminderNotificationCusto
             (identical(other.missedTakenMessage, missedTakenMessage) || other.missedTakenMessage == missedTakenMessage));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType, version, word, isInVisibleReminderDate, isInVisiblePillNumber, isInVisibleDescription, dailyTakenMessage, missedTakenMessage);
 
-  /// Create a copy of ReminderNotificationCustomization
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReminderNotificationCustomizationImplCopyWith<_$ReminderNotificationCustomizationImpl> get copyWith =>
@@ -338,57 +328,55 @@ abstract class _ReminderNotificationCustomization extends ReminderNotificationCu
 
   factory _ReminderNotificationCustomization.fromJson(Map<String, dynamic> json) = _$ReminderNotificationCustomizationImpl.fromJson;
 
+  @override
+
   /// 設定のバージョン番号
   ///
   /// 新機能追加時の後方互換性を保つためのバージョン管理に使用されます。
   /// 現在の最新バージョンは'v2'です。
-  @override
   String get version;
+  @override
 
   /// 通知タイトルの冒頭に表示される文字
   ///
   /// 通知のタイトル部分に表示される絵文字や文字を設定します。
   /// デフォルトは💊絵文字が設定されています。
-  @override
   String get word;
+  @override
 
   /// 通知に日付表示を含めるかどうかの制御フラグ
   ///
   /// trueの場合、通知タイトルに日付（例: 8/14 (水)）を表示しません。
   /// falseの場合、通知タイトルに日付を表示します。
-  @override
   bool get isInVisibleReminderDate;
+  @override
 
   /// 通知にピル番号表示を含めるかどうかの制御フラグ
   ///
   /// trueの場合、通知タイトルにピル番号（例: 15番目）を表示しません。
   /// falseの場合、通知タイトルにピル番号を表示します。
-  @override
   bool get isInVisiblePillNumber;
+  @override
 
   /// 通知に説明文を含めるかどうかの制御フラグ
   ///
   /// trueの場合、通知の説明文（メッセージ本文）を表示しません。
   /// falseの場合、dailyTakenMessageまたはmissedTakenMessageが表示されます。
-  @override
-  bool get isInVisibleDescription; // BEGIN: From v2
+  bool get isInVisibleDescription;
+  @override // BEGIN: From v2
   /// 日々の服用時に表示するメッセージ
   ///
   /// v2で追加された機能です。通常の服用リマインダー時に表示される
   /// カスタマイズ可能なメッセージです。
-  @override
-  String get dailyTakenMessage; // TODO: [Localizations]
+  String get dailyTakenMessage;
+  @override // TODO: [Localizations]
   /// 飲み忘れ時に表示するメッセージ
   ///
   /// v2で追加された機能です。複数日の飲み忘れが検出された場合に
   /// 表示されるメッセージです。デフォルトでは🤔絵文字付きの
   /// 日本語メッセージが設定されています。
-  @override
   String get missedTakenMessage;
-
-  /// Create a copy of ReminderNotificationCustomization
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReminderNotificationCustomizationImplCopyWith<_$ReminderNotificationCustomizationImpl> get copyWith => throw _privateConstructorUsedError;
 }

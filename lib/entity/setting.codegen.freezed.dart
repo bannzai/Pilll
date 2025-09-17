@@ -32,12 +32,8 @@ mixin _$ReminderTime {
   /// リマインダー通知の生成時刻として使用されます。
   int get minute => throw _privateConstructorUsedError;
 
-  /// Serializes this ReminderTime to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ReminderTime
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ReminderTimeCopyWith<ReminderTime> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -57,8 +53,6 @@ class _$ReminderTimeCopyWithImpl<$Res, $Val extends ReminderTime> implements $Re
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ReminderTime
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,8 +85,6 @@ class __$$ReminderTimeImplCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<
     implements _$$ReminderTimeImplCopyWith<$Res> {
   __$$ReminderTimeImplCopyWithImpl(_$ReminderTimeImpl _value, $Res Function(_$ReminderTimeImpl) _then) : super(_value, _then);
 
-  /// Create a copy of ReminderTime
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -157,13 +149,11 @@ class _$ReminderTimeImpl extends _ReminderTime with DiagnosticableTreeMixin {
             (identical(other.minute, minute) || other.minute == minute));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, hour, minute);
 
-  /// Create a copy of ReminderTime
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ReminderTimeImplCopyWith<_$ReminderTimeImpl> get copyWith => __$$ReminderTimeImplCopyWithImpl<_$ReminderTimeImpl>(this, _$identity);
@@ -182,24 +172,22 @@ abstract class _ReminderTime extends ReminderTime {
 
   factory _ReminderTime.fromJson(Map<String, dynamic> json) = _$ReminderTimeImpl.fromJson;
 
+  @override
+
   /// 時刻の時（24時間形式）
   ///
   /// 0-23の範囲で指定します。
   /// リマインダー通知の生成時刻として使用されます。
-  @override
   int get hour;
+  @override
 
   /// 時刻の分
   ///
   /// 0-59の範囲で指定します。
   /// リマインダー通知の生成時刻として使用されます。
-  @override
   int get minute;
-
-  /// Create a copy of ReminderTime
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ReminderTimeImplCopyWith<_$ReminderTimeImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -283,12 +271,8 @@ mixin _$Setting {
   /// nullの場合は端末のローカルタイムゾーンが使用されます。
   String? get timezoneDatabaseName => throw _privateConstructorUsedError;
 
-  /// Serializes this Setting to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Setting
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $SettingCopyWith<Setting> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -322,8 +306,6 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Setting
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -392,8 +374,6 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
     ) as $Val);
   }
 
-  /// Create a copy of Setting
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReminderNotificationCustomizationCopyWith<$Res> get reminderNotificationCustomization {
@@ -430,8 +410,6 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
 class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$SettingImpl> implements _$$SettingImplCopyWith<$Res> {
   __$$SettingImplCopyWithImpl(_$SettingImpl _value, $Res Function(_$SettingImpl) _then) : super(_value, _then);
 
-  /// Create a copy of Setting
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -686,7 +664,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
             (identical(other.timezoneDatabaseName, timezoneDatabaseName) || other.timezoneDatabaseName == timezoneDatabaseName));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -703,9 +681,7 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
       useAlarmKit,
       timezoneDatabaseName);
 
-  /// Create a copy of Setting
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$SettingImplCopyWith<_$SettingImpl> get copyWith => __$$SettingImplCopyWithImpl<_$SettingImpl>(this, _$identity);
@@ -736,76 +712,78 @@ abstract class _Setting extends Setting {
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$SettingImpl.fromJson;
 
+  @override
+
   /// ユーザーが使用するピルシートタイプのリスト
   ///
   /// 複数のピルシートを管理する場合に使用します。
   /// PillSheetTypeのenumで定義された値を格納し、
   /// ピルシートUI表示やサイクル計算に使用されます。
-  @override
   List<PillSheetType?> get pillSheetTypes;
+  @override
 
   /// 生理開始からの日数設定
   ///
   /// 生理開始日から何日目でピル服用を開始するかを定義します。
   /// 生理周期計算や次回生理日予測に使用される重要なパラメータです。
-  @override
   int get pillNumberForFromMenstruation;
+  @override
 
   /// 生理期間の日数
   ///
   /// ユーザーの平均的な生理期間を日数で定義します。
   /// 生理日記機能や生理予測機能で使用されます。
-  @override
   int get durationMenstruation;
+  @override
 
   /// 服用リマインダー時刻のリスト
   ///
   /// ReminderTimeオブジェクトのリストとして格納されます。
   /// 最大3件まで設定可能で、通知スケジューリングに使用されます。
-  @override
   List<ReminderTime> get reminderTimes;
+  @override
 
   /// リマインダー通知の有効/無効フラグ
   ///
   /// trueの場合、設定されたreminderTimesに基づいて通知が送信されます。
   /// falseの場合、リマインダー通知は送信されません。
-  @override
   bool get isOnReminder;
+  @override
 
   /// 飲み忘れ期間中の通知有効フラグ
   ///
   /// trueの場合、飲み忘れが検出されたときに追加の通知を送信します。
   /// デフォルトはtrueで有効化されています。
-  @override
   bool get isOnNotifyInNotTakenDuration;
+  @override
 
   /// ピルシート自動作成機能の有効フラグ
   ///
   /// trueの場合、現在のピルシートが終了したときに
   /// 新しいピルシートを自動的に作成します。デフォルトはfalseです。
-  @override
   bool get isAutomaticallyCreatePillSheet;
+  @override
 
   /// リマインダー通知のカスタマイゼーション設定
   ///
   /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
   /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
-  @override
   ReminderNotificationCustomization get reminderNotificationCustomization;
+  @override
 
   /// 緊急アラート機能の有効フラグ
   ///
   /// trueの場合、重要な通知を緊急アラートとして送信します。
   /// iOSのCritical Alertなど、端末の音量設定を無視した通知に使用されます。
-  @override
   bool get useCriticalAlert;
+  @override
 
   /// 緊急アラートの音量レベル
   ///
   /// 0.0-1.0の範囲で緊急アラート時の音量を指定します。
   /// デフォルトは0.5（50%）に設定されています。
-  @override
   double get criticalAlertVolume;
+  @override
 
   /// AlarmKit機能の有効フラグ
   ///
@@ -819,12 +797,8 @@ abstract class _Setting extends Setting {
   ///
   /// timezone パッケージで使用されるタイムゾーン識別子です。
   /// nullの場合は端末のローカルタイムゾーンが使用されます。
-  @override
   String? get timezoneDatabaseName;
-
-  /// Create a copy of Setting
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$SettingImplCopyWith<_$SettingImpl> get copyWith => throw _privateConstructorUsedError;
 }

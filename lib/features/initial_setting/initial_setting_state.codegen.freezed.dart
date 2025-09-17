@@ -19,9 +19,7 @@ mixin _$InitialSettingTodayPillNumber {
   int get pageIndex => throw _privateConstructorUsedError;
   int get pillNumberInPillSheet => throw _privateConstructorUsedError;
 
-  /// Create a copy of InitialSettingTodayPillNumber
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $InitialSettingTodayPillNumberCopyWith<InitialSettingTodayPillNumber> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -43,8 +41,6 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res, $Val extends InitialSett
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of InitialSettingTodayPillNumber
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -82,8 +78,6 @@ class __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>
       _$InitialSettingTodayPillNumberImpl _value, $Res Function(_$InitialSettingTodayPillNumberImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of InitialSettingTodayPillNumber
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -132,9 +126,7 @@ class _$InitialSettingTodayPillNumberImpl implements _InitialSettingTodayPillNum
   @override
   int get hashCode => Object.hash(runtimeType, pageIndex, pillNumberInPillSheet);
 
-  /// Create a copy of InitialSettingTodayPillNumber
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$InitialSettingTodayPillNumberImplCopyWith<_$InitialSettingTodayPillNumberImpl> get copyWith =>
@@ -148,11 +140,8 @@ abstract class _InitialSettingTodayPillNumber implements InitialSettingTodayPill
   int get pageIndex;
   @override
   int get pillNumberInPillSheet;
-
-  /// Create a copy of InitialSettingTodayPillNumber
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$InitialSettingTodayPillNumberImplCopyWith<_$InitialSettingTodayPillNumberImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -166,9 +155,7 @@ mixin _$InitialSettingState {
   bool get settingIsExist => throw _privateConstructorUsedError;
   LinkAccountType? get accountType => throw _privateConstructorUsedError;
 
-  /// Create a copy of InitialSettingState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -198,8 +185,6 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of InitialSettingState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -243,8 +228,6 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
     ) as $Val);
   }
 
-  /// Create a copy of InitialSettingState
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber {
@@ -282,8 +265,6 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
     implements _$$InitialSettingStateImplCopyWith<$Res> {
   __$$InitialSettingStateImplCopyWithImpl(_$InitialSettingStateImpl _value, $Res Function(_$InitialSettingStateImpl) _then) : super(_value, _then);
 
-  /// Create a copy of InitialSettingState
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -397,9 +378,7 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_pillSheetTypes), todayPillNumber,
       const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType);
 
-  /// Create a copy of InitialSettingState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith =>
@@ -431,10 +410,7 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get settingIsExist;
   @override
   LinkAccountType? get accountType;
-
-  /// Create a copy of InitialSettingState
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith => throw _privateConstructorUsedError;
 }

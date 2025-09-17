@@ -69,12 +69,8 @@ mixin _$RemoteConfigParameter {
   /// falseの場合、従来通り割引期間を設定（controlグループ）
   bool get discountPeriodDisabled => throw _privateConstructorUsedError;
 
-  /// Serializes this RemoteConfigParameter to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RemoteConfigParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RemoteConfigParameterCopyWith<RemoteConfigParameter> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -107,8 +103,6 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RemoteConfigParameter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -205,8 +199,6 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
   __$$RemoteConfigParameterImplCopyWithImpl(_$RemoteConfigParameterImpl _value, $Res Function(_$RemoteConfigParameterImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of RemoteConfigParameter
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -402,7 +394,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
             (identical(other.discountPeriodDisabled, discountPeriodDisabled) || other.discountPeriodDisabled == discountPeriodDisabled));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -419,9 +411,7 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
       specialOffering2UseAlternativeText,
       discountPeriodDisabled);
 
-  /// Create a copy of RemoteConfigParameter
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith =>
@@ -453,70 +443,68 @@ abstract class _RemoteConfigParameter extends RemoteConfigParameter {
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
 
+  @override
+
   /// ペイウォール画面を最初に表示するかどうか
   /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
-  @override
   bool get isPaywallFirst;
+  @override
 
   /// 初期設定画面をスキップするかどうか
   /// trueの場合、新規ユーザーでも初期設定をバイパスしてメイン画面へ遷移
-  @override
   bool get skipInitialSetting;
+  @override
 
   /// トライアル期限日の基準日からのオフセット日数
   /// ユーザー登録日からこの日数後にトライアル期限が設定される
-  @override
   int get trialDeadlineDateOffsetDay;
+  @override
 
   /// 割引プラン権利付与の基準日からのオフセット日数
   /// ユーザー登録日からこの日数後に割引プランの権利が付与される
-  @override
   int get discountEntitlementOffsetDay;
+  @override
 
   /// 割引カウントダウン表示の境界時間（時間単位）
   /// この時間以内になったら割引期限のカウントダウンを表示する
-  @override
   int get discountCountdownBoundaryHour;
+  @override
 
   /// プレミアム機能紹介パターンの識別子
   /// A/Bテスト用のパターン識別子（'default', 'A', 'B'等）
-  @override
   String get premiumIntroductionPattern;
+  @override
 
   /// プレミアム紹介画面でApp Storeレビューカードを表示するか
   /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
-  @override
   bool get premiumIntroductionShowsAppStoreReviewCard;
+  @override
 
   /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
   /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
-  @override
   int get specialOfferingUserCreationDateTimeOffset;
+  @override
 
   /// 特別オファー開始の基準オフセット値（分単位）
   /// 特別オファーの表示開始タイミングを制御する
-  @override
   int get specialOfferingUserCreationDateTimeOffsetSince;
+  @override
 
   /// 特別オファー終了の基準オフセット値（分単位）
   /// 特別オファーの表示終了タイミングを制御する
-  @override
   int get specialOfferingUserCreationDateTimeOffsetUntil;
+  @override
 
   /// 特別オファー2で代替テキストを使用するかどうか
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
-  @override
   bool get specialOffering2UseAlternativeText;
+  @override
 
   /// 割引期間ABテストが有効かどうか
   /// trueの場合、割引期間を設定しない（treatmentグループ）
   /// falseの場合、従来通り割引期間を設定（controlグループ）
-  @override
   bool get discountPeriodDisabled;
-
-  /// Create a copy of RemoteConfigParameter
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RemoteConfigParameterImplCopyWith<_$RemoteConfigParameterImpl> get copyWith => throw _privateConstructorUsedError;
 }
