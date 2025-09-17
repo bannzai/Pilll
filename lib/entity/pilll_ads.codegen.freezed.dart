@@ -54,12 +54,8 @@ mixin _$PilllAds {
   /// 16進数カラーコード、デフォルトは白色
   String get chevronRightColor => throw _privateConstructorUsedError;
 
-  /// Serializes this PilllAds to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PilllAds
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PilllAdsCopyWith<PilllAds> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -88,8 +84,6 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds> implements $PilllAdsCo
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PilllAds
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -160,8 +154,6 @@ abstract class _$$PilllAdsImplCopyWith<$Res> implements $PilllAdsCopyWith<$Res> 
 class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$PilllAdsImpl> implements _$$PilllAdsImplCopyWith<$Res> {
   __$$PilllAdsImplCopyWithImpl(_$PilllAdsImpl _value, $Res Function(_$PilllAdsImpl) _then) : super(_value, _then);
 
-  /// Create a copy of PilllAds
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -294,14 +286,12 @@ class _$PilllAdsImpl extends _PilllAds {
             (identical(other.chevronRightColor, chevronRightColor) || other.chevronRightColor == chevronRightColor));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, startDateTime, endDateTime, description, imageURL, destinationURL, hexColor, closeButtonColor, chevronRightColor);
 
-  /// Create a copy of PilllAds
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith => __$$PilllAdsImplCopyWithImpl<_$PilllAdsImpl>(this, _$identity);
@@ -330,51 +320,49 @@ abstract class _PilllAds extends PilllAds {
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$PilllAdsImpl.fromJson;
 
+  @override
+
   /// 広告の表示開始日時
   /// この時刻以降に広告が表示される
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get startDateTime;
+  @override
 
   /// 広告の表示終了日時
   /// この時刻以降は広告が表示されなくなる
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDateTime;
+  @override
 
   /// 広告のテキスト説明
   /// バナーに表示される広告文言
-  @override
   String get description;
+  @override
 
   /// 広告画像のURL
   /// nullの場合はテキストのみの広告として表示される
-  @override
   String? get imageURL;
+  @override
 
   /// 広告タップ時の遷移先URL
   /// WebViewまたは外部ブラウザで開かれる
-  @override
   String get destinationURL;
+  @override
 
   /// 広告バナーの背景色
   /// 16進数カラーコード（例: "FF0000"）
-  @override
   String get hexColor;
+  @override
 
   /// 閉じるボタンの色
   /// 16進数カラーコード、デフォルトは白色
-  @override
   String get closeButtonColor;
+  @override
 
   /// 右向き矢印アイコンの色
   /// 16進数カラーコード、デフォルトは白色
-  @override
   String get chevronRightColor;
-
-  /// Create a copy of PilllAds
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PilllAdsImplCopyWith<_$PilllAdsImpl> get copyWith => throw _privateConstructorUsedError;
 }

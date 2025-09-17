@@ -64,12 +64,8 @@ mixin _$User {
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError;
 
-  /// Serializes this User to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -105,8 +101,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -180,8 +174,6 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
     ) as $Val);
   }
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $SettingCopyWith<$Res>? get setting {
@@ -224,8 +216,6 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
 class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl> implements _$$UserImplCopyWith<$Res> {
   __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then) : super(_value, _then);
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -436,7 +426,7 @@ class _$UserImpl extends _User {
                 other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -454,9 +444,7 @@ class _$UserImpl extends _User {
       trialDeadlineDate,
       discountEntitlementDeadlineDate);
 
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$UserImplCopyWith<_$UserImpl> get copyWith => __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
@@ -489,66 +477,64 @@ abstract class _User extends User {
 
   factory _User.fromJson(Map<String, dynamic> json) = _$UserImpl.fromJson;
 
-  /// ユーザーID（FirebaseのUID）
   @override
+
+  /// ユーザーID（FirebaseのUID）
   String? get id;
+  @override
 
   /// ユーザー設定情報（Settingエンティティのネストオブジェクト）
-  @override
   @JsonKey(name: 'settings')
   Setting? get setting;
+  @override
 
   /// ユーザー作成時のユーザーID（履歴管理・デバッグ用）
-  @override
   String? get userIDWhenCreateUser;
+  @override
 
   /// 匿名ユーザーID（匿名ユーザー統合用）
-  @override
   String? get anonymousUserID;
+  @override
 
   /// 統合されたユーザードキュメントIDのリスト
-  @override
   List<String> get userDocumentIDSets;
+  @override
 
   /// 統合された匿名ユーザーIDのリスト
-  @override
   List<String> get anonymousUserIDSets;
+  @override
 
   /// 統合されたFirebaseCurrentUserIDのリスト
-  @override
   List<String> get firebaseCurrentUserIDSets;
+  @override
 
   /// プレミアム会員フラグ（サブスクリプション有効状態）
-  @override
   bool get isPremium;
+  @override
 
   /// 解約理由を聞くかどうかのフラグ
-  @override
   bool get shouldAskCancelReason;
+  @override
 
   /// アナリティクスのデバッグ機能有効フラグ
-  @override
   bool get analyticsDebugIsEnabled;
+  @override
 
   /// トライアル開始日（初回トライアル開始時にセット）
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate;
+  @override
 
   /// トライアル期限日（トライアル期間の終了日時）
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get trialDeadlineDate;
+  @override
 
   /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;
-
-  /// Create a copy of User
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$UserImplCopyWith<_$UserImpl> get copyWith => throw _privateConstructorUsedError;
 }

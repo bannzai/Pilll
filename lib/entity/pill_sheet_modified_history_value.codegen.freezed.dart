@@ -72,12 +72,8 @@ mixin _$PillSheetModifiedHistoryValue {
   /// ピルシートの表示番号の終了値を変更した際の情報
   ChangedEndDisplayNumberValue? get changedEndDisplayNumber => throw _privateConstructorUsedError;
 
-  /// Serializes this PillSheetModifiedHistoryValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $PillSheetModifiedHistoryValueCopyWith<PillSheetModifiedHistoryValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -126,8 +122,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -201,8 +195,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     ) as $Val);
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet {
@@ -215,8 +207,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>? get automaticallyRecordedLastTakenDate {
@@ -229,8 +219,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheet {
@@ -243,8 +231,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TakenPillValueCopyWith<$Res>? get takenPill {
@@ -257,8 +243,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill {
@@ -271,8 +255,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChangedPillNumberValueCopyWith<$Res>? get changedPillNumber {
@@ -285,8 +267,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EndedPillSheetValueCopyWith<$Res>? get endedPillSheet {
@@ -299,8 +279,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $BeganRestDurationValueCopyWith<$Res>? get beganRestDurationValue {
@@ -313,8 +291,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $EndedRestDurationValueCopyWith<$Res>? get endedRestDurationValue {
@@ -327,8 +303,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChangedRestDurationBeginDateValueCopyWith<$Res>? get changedRestDurationBeginDateValue {
@@ -341,8 +315,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChangedRestDurationValueCopyWith<$Res>? get changedRestDurationValue {
@@ -355,8 +327,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChangedBeginDisplayNumberValueCopyWith<$Res>? get changedBeginDisplayNumber {
@@ -369,8 +339,6 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     });
   }
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ChangedEndDisplayNumberValueCopyWith<$Res>? get changedEndDisplayNumber {
@@ -442,8 +410,6 @@ class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
       _$PillSheetModifiedHistoryValueImpl _value, $Res Function(_$PillSheetModifiedHistoryValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -645,7 +611,7 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
             (identical(other.changedEndDisplayNumber, changedEndDisplayNumber) || other.changedEndDisplayNumber == changedEndDisplayNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -663,9 +629,7 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
       changedBeginDisplayNumber,
       changedEndDisplayNumber);
 
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$PillSheetModifiedHistoryValueImplCopyWith<_$PillSheetModifiedHistoryValueImpl> get copyWith =>
@@ -698,75 +662,73 @@ abstract class _PillSheetModifiedHistoryValue extends PillSheetModifiedHistoryVa
 
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) = _$PillSheetModifiedHistoryValueImpl.fromJson;
 
+  @override
+
   /// ピルシート作成時の記録
   /// 新規ピルシートが作成された際の作成情報
-  @override
   CreatedPillSheetValue? get createdPillSheet;
+  @override
 
   /// 自動記録された最終服用日の変更
   /// システムが自動的に最終服用日を更新した際の記録
-  @override
   AutomaticallyRecordedLastTakenDateValue? get automaticallyRecordedLastTakenDate;
+  @override
 
   /// ピルシート削除時の記録
   /// ピルシートが削除された際の削除情報
-  @override
   DeletedPillSheetValue? get deletedPillSheet;
+  @override
 
   /// ピル服用記録時の情報
   /// ユーザーがピルを服用したことを記録した際の情報
-  @override
   TakenPillValue? get takenPill;
+  @override
 
   /// ピル服用記録の取り消し情報
   /// 誤って記録した服用を取り消した際の情報
-  @override
   RevertTakenPillValue? get revertTakenPill;
+  @override
 
   /// ピル番号変更時の記録
   /// ピル番号の調整や修正が行われた際の変更情報
-  @override
   ChangedPillNumberValue? get changedPillNumber;
+  @override
 
   /// ピルシート終了時の記録
   /// シートの服用完了や手動終了時の情報
-  @override
   EndedPillSheetValue? get endedPillSheet;
+  @override
 
   /// 休薬期間開始時の記録
   /// ユーザーが服用を一時停止した際の開始情報
-  @override
   BeganRestDurationValue? get beganRestDurationValue;
+  @override
 
   /// 休薬期間終了時の記録
   /// 休薬期間が終了し服用を再開した際の情報
-  @override
   EndedRestDurationValue? get endedRestDurationValue;
+  @override
 
   /// 休薬期間開始日変更時の記録（v2から追加）
   /// 既存の休薬期間の開始日を変更した際の情報
-  @override
   ChangedRestDurationBeginDateValue? get changedRestDurationBeginDateValue;
+  @override
 
   /// 休薬期間内容変更時の記録（v2から追加）
   /// 休薬期間の設定内容を変更した際の情報
-  @override
   ChangedRestDurationValue? get changedRestDurationValue;
+  @override
 
   /// 表示開始番号変更時の記録
   /// ピルシートの表示番号の開始値を変更した際の情報
-  @override
   ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber;
+  @override
 
   /// 表示終了番号変更時の記録
   /// ピルシートの表示番号の終了値を変更した際の情報
-  @override
   ChangedEndDisplayNumberValue? get changedEndDisplayNumber;
-
-  /// Create a copy of PillSheetModifiedHistoryValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$PillSheetModifiedHistoryValueImplCopyWith<_$PillSheetModifiedHistoryValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -787,12 +749,8 @@ mixin _$CreatedPillSheetValue {
   /// 複数シート同時作成に対応するためのIDリスト
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
 
-  /// Serializes this CreatedPillSheetValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of CreatedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $CreatedPillSheetValueCopyWith<CreatedPillSheetValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -816,8 +774,6 @@ class _$CreatedPillSheetValueCopyWithImpl<$Res, $Val extends CreatedPillSheetVal
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of CreatedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -855,8 +811,6 @@ class __$$CreatedPillSheetValueImplCopyWithImpl<$Res> extends _$CreatedPillSheet
   __$$CreatedPillSheetValueImplCopyWithImpl(_$CreatedPillSheetValueImpl _value, $Res Function(_$CreatedPillSheetValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of CreatedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -925,13 +879,11 @@ class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
             const DeepCollectionEquality().equals(other._pillSheetIDs, _pillSheetIDs));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, pillSheetCreatedAt, const DeepCollectionEquality().hash(_pillSheetIDs));
 
-  /// Create a copy of CreatedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$CreatedPillSheetValueImplCopyWith<_$CreatedPillSheetValueImpl> get copyWith =>
@@ -954,23 +906,19 @@ abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
 
   factory _CreatedPillSheetValue.fromJson(Map<String, dynamic> json) = _$CreatedPillSheetValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// ピルシート作成日時（非推奨）
   /// Firestoreタイムスタンプから自動変換される作成日時
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetCreatedAt;
+  @override
 
   /// 作成されたピルシートのIDリスト（非推奨）
   /// 複数シート同時作成に対応するためのIDリスト
-  @override
   List<String> get pillSheetIDs;
-
-  /// Create a copy of CreatedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$CreatedPillSheetValueImplCopyWith<_$CreatedPillSheetValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1000,12 +948,8 @@ mixin _$AutomaticallyRecordedLastTakenDateValue {
   /// 自動記録後のピル番号
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
-  /// Serializes this AutomaticallyRecordedLastTakenDateValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of AutomaticallyRecordedLastTakenDateValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $AutomaticallyRecordedLastTakenDateValueCopyWith<AutomaticallyRecordedLastTakenDateValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1033,8 +977,6 @@ class _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, $Val extends A
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of AutomaticallyRecordedLastTakenDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1087,8 +1029,6 @@ class __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res>
       _$AutomaticallyRecordedLastTakenDateValueImpl _value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of AutomaticallyRecordedLastTakenDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1173,13 +1113,11 @@ class _$AutomaticallyRecordedLastTakenDateValueImpl extends _AutomaticallyRecord
             (identical(other.afterLastTakenPillNumber, afterLastTakenPillNumber) || other.afterLastTakenPillNumber == afterLastTakenPillNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
 
-  /// Create a copy of AutomaticallyRecordedLastTakenDateValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<_$AutomaticallyRecordedLastTakenDateValueImpl> get copyWith =>
@@ -1204,34 +1142,30 @@ abstract class _AutomaticallyRecordedLastTakenDateValue extends AutomaticallyRec
 
   factory _AutomaticallyRecordedLastTakenDateValue.fromJson(Map<String, dynamic> json) = _$AutomaticallyRecordedLastTakenDateValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// 変更前の最終服用日（非推奨、nullable）
   /// 初回服用の場合はnullとなる
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
+  @override
 
   /// 変更後の最終服用日（非推奨）
   /// 自動記録によって設定された新しい最終服用日
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate;
+  @override
 
   /// 変更前の最終服用ピル番号（非推奨）
   /// 自動記録前のピル番号
-  @override
   int get beforeLastTakenPillNumber;
+  @override
 
   /// 変更後の最終服用ピル番号（非推奨）
   /// 自動記録後のピル番号
-  @override
   int get afterLastTakenPillNumber;
-
-  /// Create a copy of AutomaticallyRecordedLastTakenDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<_$AutomaticallyRecordedLastTakenDateValueImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1253,12 +1187,8 @@ mixin _$DeletedPillSheetValue {
   /// 複数シート同時削除に対応するためのIDリスト
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
 
-  /// Serializes this DeletedPillSheetValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of DeletedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $DeletedPillSheetValueCopyWith<DeletedPillSheetValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1282,8 +1212,6 @@ class _$DeletedPillSheetValueCopyWithImpl<$Res, $Val extends DeletedPillSheetVal
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of DeletedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1321,8 +1249,6 @@ class __$$DeletedPillSheetValueImplCopyWithImpl<$Res> extends _$DeletedPillSheet
   __$$DeletedPillSheetValueImplCopyWithImpl(_$DeletedPillSheetValueImpl _value, $Res Function(_$DeletedPillSheetValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of DeletedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1391,13 +1317,11 @@ class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
             const DeepCollectionEquality().equals(other._pillSheetIDs, _pillSheetIDs));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, pillSheetDeletedAt, const DeepCollectionEquality().hash(_pillSheetIDs));
 
-  /// Create a copy of DeletedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$DeletedPillSheetValueImplCopyWith<_$DeletedPillSheetValueImpl> get copyWith =>
@@ -1420,23 +1344,19 @@ abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
 
   factory _DeletedPillSheetValue.fromJson(Map<String, dynamic> json) = _$DeletedPillSheetValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// ピルシート削除日時（非推奨）
   /// Firestoreタイムスタンプから自動変換される削除日時
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetDeletedAt;
+  @override
 
   /// 削除されたピルシートのIDリスト（非推奨）
   /// 複数シート同時削除に対応するためのIDリスト
-  @override
   List<String> get pillSheetIDs;
-
-  /// Create a copy of DeletedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$DeletedPillSheetValueImplCopyWith<_$DeletedPillSheetValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1475,12 +1395,8 @@ mixin _$TakenPillValue {
   /// 服用記録後のピル番号
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
-  /// Serializes this TakenPillValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TakenPillValueCopyWith<TakenPillValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1509,8 +1425,6 @@ class _$TakenPillValueCopyWithImpl<$Res, $Val extends TakenPillValue> implements
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1549,8 +1463,6 @@ class _$TakenPillValueCopyWithImpl<$Res, $Val extends TakenPillValue> implements
     ) as $Val);
   }
 
-  /// Create a copy of TakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TakenPillEditedValueCopyWith<$Res>? get edited {
@@ -1588,8 +1500,6 @@ class __$$TakenPillValueImplCopyWithImpl<$Res> extends _$TakenPillValueCopyWithI
     implements _$$TakenPillValueImplCopyWith<$Res> {
   __$$TakenPillValueImplCopyWithImpl(_$TakenPillValueImpl _value, $Res Function(_$TakenPillValueImpl) _then) : super(_value, _then);
 
-  /// Create a copy of TakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1699,14 +1609,12 @@ class _$TakenPillValueImpl extends _TakenPillValue {
             (identical(other.afterLastTakenPillNumber, afterLastTakenPillNumber) || other.afterLastTakenPillNumber == afterLastTakenPillNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, isQuickRecord, edited, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
 
-  /// Create a copy of TakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TakenPillValueImplCopyWith<_$TakenPillValueImpl> get copyWith => __$$TakenPillValueImplCopyWithImpl<_$TakenPillValueImpl>(this, _$identity);
@@ -1732,45 +1640,41 @@ abstract class _TakenPillValue extends TakenPillValue {
 
   factory _TakenPillValue.fromJson(Map<String, dynamic> json) = _$TakenPillValueImpl.fromJson;
 
-// ============ BEGIN: Added since v1 ============
+  @override // ============ BEGIN: Added since v1 ============
   /// クイック記録かどうかのフラグ（v1追加）
   /// nullは途中から追加されたプロパティのため判定不能を表す
 // null => 途中から追加したプロパティなので、どちらか不明
-  @override
   bool? get isQuickRecord;
+  @override
 
   /// 服用記録の編集情報（v1追加）
   /// ユーザーが後から服用時刻を編集した場合の詳細情報
-  @override
-  TakenPillEditedValue? get edited; // ============ END: Added since v1 ============
+  TakenPillEditedValue? get edited;
+  @override // ============ END: Added since v1 ============
 // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// 変更前の最終服用日（非推奨、nullable）
   /// 初回服用の場合はnullとなる
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
+  @override
 
   /// 変更後の最終服用日（非推奨）
   /// 服用記録によって設定された新しい最終服用日
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate;
+  @override
 
   /// 変更前の最終服用ピル番号（非推奨）
   /// 服用記録前のピル番号
-  @override
   int get beforeLastTakenPillNumber;
+  @override
 
   /// 変更後の最終服用ピル番号（非推奨）
   /// 服用記録後のピル番号
-  @override
   int get afterLastTakenPillNumber;
-
-  /// Create a copy of TakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TakenPillValueImplCopyWith<_$TakenPillValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1798,12 +1702,8 @@ mixin _$TakenPillEditedValue {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate => throw _privateConstructorUsedError;
 
-  /// Serializes this TakenPillEditedValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of TakenPillEditedValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $TakenPillEditedValueCopyWith<TakenPillEditedValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1829,8 +1729,6 @@ class _$TakenPillEditedValueCopyWithImpl<$Res, $Val extends TakenPillEditedValue
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of TakenPillEditedValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1874,8 +1772,6 @@ class __$$TakenPillEditedValueImplCopyWithImpl<$Res> extends _$TakenPillEditedVa
     implements _$$TakenPillEditedValueImplCopyWith<$Res> {
   __$$TakenPillEditedValueImplCopyWithImpl(_$TakenPillEditedValueImpl _value, $Res Function(_$TakenPillEditedValueImpl) _then) : super(_value, _then);
 
-  /// Create a copy of TakenPillEditedValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1951,13 +1847,11 @@ class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
             (identical(other.createdDate, createdDate) || other.createdDate == createdDate));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, actualTakenDate, historyRecordedDate, createdDate);
 
-  /// Create a copy of TakenPillEditedValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$TakenPillEditedValueImplCopyWith<_$TakenPillEditedValueImpl> get copyWith =>
@@ -1983,31 +1877,27 @@ abstract class _TakenPillEditedValue extends TakenPillEditedValue {
 
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) = _$TakenPillEditedValueImpl.fromJson;
 
-// ============ BEGIN: Added since v1 ============
+  @override // ============ BEGIN: Added since v1 ============
   /// 実際の服用時刻（v1追加）
   /// ユーザーが編集した後の正確な服用時刻
 // 実際の服用時刻。ユーザーが編集した後の服用時刻
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get actualTakenDate;
+  @override
 
   /// 元の履歴記録時刻（v1追加）
   /// 通常はユーザーが編集する前の服用時刻として記録される
 // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get historyRecordedDate;
+  @override
 
   /// 編集操作の作成日時（v1追加）
   /// この編集レコードがデータベースに作成された日時
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDate;
-
-  /// Create a copy of TakenPillEditedValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$TakenPillEditedValueImplCopyWith<_$TakenPillEditedValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2037,12 +1927,8 @@ mixin _$RevertTakenPillValue {
   /// 取り消し操作後のピル番号
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
-  /// Serializes this RevertTakenPillValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of RevertTakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $RevertTakenPillValueCopyWith<RevertTakenPillValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2067,8 +1953,6 @@ class _$RevertTakenPillValueCopyWithImpl<$Res, $Val extends RevertTakenPillValue
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of RevertTakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2116,8 +2000,6 @@ class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillVa
     implements _$$RevertTakenPillValueImplCopyWith<$Res> {
   __$$RevertTakenPillValueImplCopyWithImpl(_$RevertTakenPillValueImpl _value, $Res Function(_$RevertTakenPillValueImpl) _then) : super(_value, _then);
 
-  /// Create a copy of RevertTakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2200,13 +2082,11 @@ class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
             (identical(other.afterLastTakenPillNumber, afterLastTakenPillNumber) || other.afterLastTakenPillNumber == afterLastTakenPillNumber));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
 
-  /// Create a copy of RevertTakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$RevertTakenPillValueImplCopyWith<_$RevertTakenPillValueImpl> get copyWith =>
@@ -2231,34 +2111,30 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
 
   factory _RevertTakenPillValue.fromJson(Map<String, dynamic> json) = _$RevertTakenPillValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// 取り消し前の最終服用日（非推奨、nullable）
   /// 取り消し操作前の最終服用日
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beforeLastTakenDate;
+  @override
 
   /// 取り消し後の最終服用日（非推奨、nullable）
   /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get afterLastTakenDate;
+  @override
 
   /// 取り消し前の最終服用ピル番号（非推奨）
   /// 取り消し操作前のピル番号
-  @override
   int get beforeLastTakenPillNumber;
+  @override
 
   /// 取り消し後の最終服用ピル番号（非推奨）
   /// 取り消し操作後のピル番号
-  @override
   int get afterLastTakenPillNumber;
-
-  /// Create a copy of RevertTakenPillValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$RevertTakenPillValueImplCopyWith<_$RevertTakenPillValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2296,12 +2172,8 @@ mixin _$ChangedPillNumberValue {
   /// ピルシートグループ内での順序番号（デフォルト：1）
   int get afterGroupIndex => throw _privateConstructorUsedError;
 
-  /// Serializes this ChangedPillNumberValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ChangedPillNumberValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChangedPillNumberValueCopyWith<ChangedPillNumberValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2330,8 +2202,6 @@ class _$ChangedPillNumberValueCopyWithImpl<$Res, $Val extends ChangedPillNumberV
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ChangedPillNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2394,8 +2264,6 @@ class __$$ChangedPillNumberValueImplCopyWithImpl<$Res> extends _$ChangedPillNumb
   __$$ChangedPillNumberValueImplCopyWithImpl(_$ChangedPillNumberValueImpl _value, $Res Function(_$ChangedPillNumberValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ChangedPillNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2506,14 +2374,12 @@ class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
             (identical(other.afterGroupIndex, afterGroupIndex) || other.afterGroupIndex == afterGroupIndex));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode =>
       Object.hash(runtimeType, beforeBeginingDate, afterBeginingDate, beforeTodayPillNumber, afterTodayPillNumber, beforeGroupIndex, afterGroupIndex);
 
-  /// Create a copy of ChangedPillNumberValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangedPillNumberValueImplCopyWith<_$ChangedPillNumberValueImpl> get copyWith =>
@@ -2541,44 +2407,40 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
 
   factory _ChangedPillNumberValue.fromJson(Map<String, dynamic> json) = _$ChangedPillNumberValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// 変更前の開始日（非推奨）
   /// ピル番号変更前のピルシート開始日
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beforeBeginingDate;
+  @override
 
   /// 変更後の開始日（非推奨）
   /// ピル番号変更後のピルシート開始日
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterBeginingDate;
+  @override
 
   /// 変更前の今日のピル番号（非推奨）
   /// 変更操作前の今日に対応するピル番号
-  @override
   int get beforeTodayPillNumber;
+  @override
 
   /// 変更後の今日のピル番号（非推奨）
   /// 変更操作後の今日に対応するピル番号
-  @override
   int get afterTodayPillNumber;
+  @override
 
   /// 変更前のグループインデックス（非推奨）
   /// ピルシートグループ内での順序番号（デフォルト：1）
-  @override
   int get beforeGroupIndex;
+  @override
 
   /// 変更後のグループインデックス（非推奨）
   /// ピルシートグループ内での順序番号（デフォルト：1）
-  @override
   int get afterGroupIndex;
-
-  /// Create a copy of ChangedPillNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangedPillNumberValueImplCopyWith<_$ChangedPillNumberValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2600,12 +2462,8 @@ mixin _$EndedPillSheetValue {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate => throw _privateConstructorUsedError;
 
-  /// Serializes this EndedPillSheetValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of EndedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $EndedPillSheetValueCopyWith<EndedPillSheetValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2630,8 +2488,6 @@ class _$EndedPillSheetValueCopyWithImpl<$Res, $Val extends EndedPillSheetValue> 
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of EndedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2669,8 +2525,6 @@ class __$$EndedPillSheetValueImplCopyWithImpl<$Res> extends _$EndedPillSheetValu
     implements _$$EndedPillSheetValueImplCopyWith<$Res> {
   __$$EndedPillSheetValueImplCopyWithImpl(_$EndedPillSheetValueImpl _value, $Res Function(_$EndedPillSheetValueImpl) _then) : super(_value, _then);
 
-  /// Create a copy of EndedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2731,13 +2585,11 @@ class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
             (identical(other.lastTakenDate, lastTakenDate) || other.lastTakenDate == lastTakenDate));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, endRecordDate, lastTakenDate);
 
-  /// Create a copy of EndedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EndedPillSheetValueImplCopyWith<_$EndedPillSheetValueImpl> get copyWith =>
@@ -2761,24 +2613,22 @@ abstract class _EndedPillSheetValue extends EndedPillSheetValue {
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) = _$EndedPillSheetValueImpl.fromJson;
 
+  @override
+
   /// 終了記録日（必須）
   /// サーバーで書き込まれるピルシート終了の公式記録日時
 // 終了した日付。サーバーで書き込まれる
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endRecordDate;
+  @override
 
   /// 終了時点での最終服用日（必須）
   /// シート終了時の最後に服用したピルの日付
 // 終了した時点での最終服用日
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate;
-
-  /// Create a copy of EndedPillSheetValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EndedPillSheetValueImplCopyWith<_$EndedPillSheetValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2794,12 +2644,8 @@ mixin _$BeganRestDurationValue {
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
-  /// Serializes this BeganRestDurationValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of BeganRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $BeganRestDurationValueCopyWith<BeganRestDurationValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2822,8 +2668,6 @@ class _$BeganRestDurationValueCopyWithImpl<$Res, $Val extends BeganRestDurationV
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of BeganRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2837,8 +2681,6 @@ class _$BeganRestDurationValueCopyWithImpl<$Res, $Val extends BeganRestDurationV
     ) as $Val);
   }
 
-  /// Create a copy of BeganRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RestDurationCopyWith<$Res> get restDuration {
@@ -2866,8 +2708,6 @@ class __$$BeganRestDurationValueImplCopyWithImpl<$Res> extends _$BeganRestDurati
   __$$BeganRestDurationValueImplCopyWithImpl(_$BeganRestDurationValueImpl _value, $Res Function(_$BeganRestDurationValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of BeganRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2910,13 +2750,11 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
             (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, restDuration);
 
-  /// Create a copy of BeganRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$BeganRestDurationValueImplCopyWith<_$BeganRestDurationValueImpl> get copyWith =>
@@ -2936,17 +2774,13 @@ abstract class _BeganRestDurationValue extends BeganRestDurationValue {
 
   factory _BeganRestDurationValue.fromJson(Map<String, dynamic> json) = _$BeganRestDurationValueImpl.fromJson;
 
-// ============ BEGIN: Added since v1 ============
+  @override // ============ BEGIN: Added since v1 ============
   /// 開始された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
-  @override
   RestDuration get restDuration;
-
-  /// Create a copy of BeganRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$BeganRestDurationValueImplCopyWith<_$BeganRestDurationValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2962,12 +2796,8 @@ mixin _$EndedRestDurationValue {
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
-  /// Serializes this EndedRestDurationValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of EndedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $EndedRestDurationValueCopyWith<EndedRestDurationValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2990,8 +2820,6 @@ class _$EndedRestDurationValueCopyWithImpl<$Res, $Val extends EndedRestDurationV
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of EndedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3005,8 +2833,6 @@ class _$EndedRestDurationValueCopyWithImpl<$Res, $Val extends EndedRestDurationV
     ) as $Val);
   }
 
-  /// Create a copy of EndedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RestDurationCopyWith<$Res> get restDuration {
@@ -3034,8 +2860,6 @@ class __$$EndedRestDurationValueImplCopyWithImpl<$Res> extends _$EndedRestDurati
   __$$EndedRestDurationValueImplCopyWithImpl(_$EndedRestDurationValueImpl _value, $Res Function(_$EndedRestDurationValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of EndedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3078,13 +2902,11 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
             (identical(other.restDuration, restDuration) || other.restDuration == restDuration));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, restDuration);
 
-  /// Create a copy of EndedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$EndedRestDurationValueImplCopyWith<_$EndedRestDurationValueImpl> get copyWith =>
@@ -3104,17 +2926,13 @@ abstract class _EndedRestDurationValue extends EndedRestDurationValue {
 
   factory _EndedRestDurationValue.fromJson(Map<String, dynamic> json) = _$EndedRestDurationValueImpl.fromJson;
 
-// ============ BEGIN: Added since v1 ============
+  @override // ============ BEGIN: Added since v1 ============
   /// 終了された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
 // どの服用お休み期間か特定するのが大変なので記録したものを使用する
-  @override
   RestDuration get restDuration;
-
-  /// Create a copy of EndedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$EndedRestDurationValueImplCopyWith<_$EndedRestDurationValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3132,12 +2950,8 @@ mixin _$ChangedRestDurationBeginDateValue {
   /// 開始日変更後の完全な休薬期間データ
   RestDuration get afterRestDuration => throw _privateConstructorUsedError;
 
-  /// Serializes this ChangedRestDurationBeginDateValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChangedRestDurationBeginDateValueCopyWith<ChangedRestDurationBeginDateValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3162,8 +2976,6 @@ class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends Changed
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3182,8 +2994,6 @@ class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends Changed
     ) as $Val);
   }
 
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RestDurationCopyWith<$Res> get beforeRestDuration {
@@ -3192,8 +3002,6 @@ class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends Changed
     });
   }
 
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RestDurationCopyWith<$Res> get afterRestDuration {
@@ -3226,8 +3034,6 @@ class __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res>
       _$ChangedRestDurationBeginDateValueImpl _value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3279,13 +3085,11 @@ class _$ChangedRestDurationBeginDateValueImpl extends _ChangedRestDurationBeginD
             (identical(other.afterRestDuration, afterRestDuration) || other.afterRestDuration == afterRestDuration));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beforeRestDuration, afterRestDuration);
 
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangedRestDurationBeginDateValueImplCopyWith<_$ChangedRestDurationBeginDateValueImpl> get copyWith =>
@@ -3306,20 +3110,18 @@ abstract class _ChangedRestDurationBeginDateValue extends ChangedRestDurationBeg
 
   factory _ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationBeginDateValueImpl.fromJson;
 
+  @override
+
   /// 変更前の休薬期間情報（v2追加）
   /// 開始日変更前の完全な休薬期間データ
-  @override
   RestDuration get beforeRestDuration;
+  @override
 
   /// 変更後の休薬期間情報（v2追加）
   /// 開始日変更後の完全な休薬期間データ
-  @override
   RestDuration get afterRestDuration;
-
-  /// Create a copy of ChangedRestDurationBeginDateValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangedRestDurationBeginDateValueImplCopyWith<_$ChangedRestDurationBeginDateValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3337,12 +3139,8 @@ mixin _$ChangedRestDurationValue {
   /// 内容変更後の完全な休薬期間データ
   RestDuration get afterRestDuration => throw _privateConstructorUsedError;
 
-  /// Serializes this ChangedRestDurationValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChangedRestDurationValueCopyWith<ChangedRestDurationValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3366,8 +3164,6 @@ class _$ChangedRestDurationValueCopyWithImpl<$Res, $Val extends ChangedRestDurat
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3386,8 +3182,6 @@ class _$ChangedRestDurationValueCopyWithImpl<$Res, $Val extends ChangedRestDurat
     ) as $Val);
   }
 
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RestDurationCopyWith<$Res> get beforeRestDuration {
@@ -3396,8 +3190,6 @@ class _$ChangedRestDurationValueCopyWithImpl<$Res, $Val extends ChangedRestDurat
     });
   }
 
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $RestDurationCopyWith<$Res> get afterRestDuration {
@@ -3427,8 +3219,6 @@ class __$$ChangedRestDurationValueImplCopyWithImpl<$Res> extends _$ChangedRestDu
   __$$ChangedRestDurationValueImplCopyWithImpl(_$ChangedRestDurationValueImpl _value, $Res Function(_$ChangedRestDurationValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3480,13 +3270,11 @@ class _$ChangedRestDurationValueImpl extends _ChangedRestDurationValue {
             (identical(other.afterRestDuration, afterRestDuration) || other.afterRestDuration == afterRestDuration));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beforeRestDuration, afterRestDuration);
 
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangedRestDurationValueImplCopyWith<_$ChangedRestDurationValueImpl> get copyWith =>
@@ -3507,20 +3295,18 @@ abstract class _ChangedRestDurationValue extends ChangedRestDurationValue {
 
   factory _ChangedRestDurationValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationValueImpl.fromJson;
 
+  @override
+
   /// 変更前の休薬期間情報（v2追加）
   /// 内容変更前の完全な休薬期間データ
-  @override
   RestDuration get beforeRestDuration;
+  @override
 
   /// 変更後の休薬期間情報（v2追加）
   /// 内容変更後の完全な休薬期間データ
-  @override
   RestDuration get afterRestDuration;
-
-  /// Create a copy of ChangedRestDurationValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangedRestDurationValueImplCopyWith<_$ChangedRestDurationValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3541,12 +3327,8 @@ mixin _$ChangedBeginDisplayNumberValue {
   /// 変更操作後の新しい表示番号設定
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting => throw _privateConstructorUsedError;
 
-  /// Serializes this ChangedBeginDisplayNumberValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChangedBeginDisplayNumberValueCopyWith<ChangedBeginDisplayNumberValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3571,8 +3353,6 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeg
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3591,8 +3371,6 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeg
     ) as $Val);
   }
 
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
@@ -3605,8 +3383,6 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeg
     });
   }
 
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
@@ -3639,8 +3415,6 @@ class __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res>
       _$ChangedBeginDisplayNumberValueImpl _value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3696,13 +3470,11 @@ class _$ChangedBeginDisplayNumberValueImpl extends _ChangedBeginDisplayNumberVal
             (identical(other.afterDisplayNumberSetting, afterDisplayNumberSetting) || other.afterDisplayNumberSetting == afterDisplayNumberSetting));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beforeDisplayNumberSetting, afterDisplayNumberSetting);
 
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangedBeginDisplayNumberValueImplCopyWith<_$ChangedBeginDisplayNumberValueImpl> get copyWith =>
@@ -3724,23 +3496,19 @@ abstract class _ChangedBeginDisplayNumberValue extends ChangedBeginDisplayNumber
 
   factory _ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) = _$ChangedBeginDisplayNumberValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// 変更前の表示番号設定（非推奨、nullable）
   /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
-  @override
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
+  @override
 
   /// 変更後の表示番号設定（非推奨）
   /// 変更操作後の新しい表示番号設定
-  @override
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
-
-  /// Create a copy of ChangedBeginDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangedBeginDisplayNumberValueImplCopyWith<_$ChangedBeginDisplayNumberValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3761,12 +3529,8 @@ mixin _$ChangedEndDisplayNumberValue {
   /// 変更操作後の新しい表示番号設定
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting => throw _privateConstructorUsedError;
 
-  /// Serializes this ChangedEndDisplayNumberValue to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $ChangedEndDisplayNumberValueCopyWith<ChangedEndDisplayNumberValue> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3791,8 +3555,6 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDi
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3811,8 +3573,6 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDi
     ) as $Val);
   }
 
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
@@ -3825,8 +3585,6 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDi
     });
   }
 
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
@@ -3858,8 +3616,6 @@ class __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res>
   __$$ChangedEndDisplayNumberValueImplCopyWithImpl(_$ChangedEndDisplayNumberValueImpl _value, $Res Function(_$ChangedEndDisplayNumberValueImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3915,13 +3671,11 @@ class _$ChangedEndDisplayNumberValueImpl extends _ChangedEndDisplayNumberValue {
             (identical(other.afterDisplayNumberSetting, afterDisplayNumberSetting) || other.afterDisplayNumberSetting == afterDisplayNumberSetting));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, beforeDisplayNumberSetting, afterDisplayNumberSetting);
 
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$ChangedEndDisplayNumberValueImplCopyWith<_$ChangedEndDisplayNumberValueImpl> get copyWith =>
@@ -3943,22 +3697,18 @@ abstract class _ChangedEndDisplayNumberValue extends ChangedEndDisplayNumberValu
 
   factory _ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) = _$ChangedEndDisplayNumberValueImpl.fromJson;
 
-// The below properties are deprecated and added since v1.
+  @override // The below properties are deprecated and added since v1.
 // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
   /// 変更前の表示番号設定（非推奨、nullable）
   /// 番号を変更したことがない場合はnullとなる
 // 番号を変更した事が無い場合もあるのでnullable
-  @override
   PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
+  @override
 
   /// 変更後の表示番号設定（非推奨）
   /// 変更操作後の新しい表示番号設定
-  @override
   PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
-
-  /// Create a copy of ChangedEndDisplayNumberValue
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$ChangedEndDisplayNumberValueImplCopyWith<_$ChangedEndDisplayNumberValueImpl> get copyWith => throw _privateConstructorUsedError;
 }

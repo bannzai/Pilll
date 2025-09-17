@@ -49,12 +49,8 @@ mixin _$Menstruation {
   /// HealthKitから取得したデータとの紐付けに使用
   String? get healthKitSampleDataUUID => throw _privateConstructorUsedError;
 
-  /// Serializes this Menstruation to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-
-  /// Create a copy of Menstruation
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   $MenstruationCopyWith<Menstruation> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -80,8 +76,6 @@ class _$MenstruationCopyWithImpl<$Res, $Val extends Menstruation> implements $Me
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of Menstruation
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -140,8 +134,6 @@ class __$$MenstruationImplCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<
     implements _$$MenstruationImplCopyWith<$Res> {
   __$$MenstruationImplCopyWithImpl(_$MenstruationImpl _value, $Res Function(_$MenstruationImpl) _then) : super(_value, _then);
 
-  /// Create a copy of Menstruation
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -251,13 +243,11 @@ class _$MenstruationImpl extends _Menstruation {
             (identical(other.healthKitSampleDataUUID, healthKitSampleDataUUID) || other.healthKitSampleDataUUID == healthKitSampleDataUUID));
   }
 
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, beginDate, endDate, deletedAt, createdAt, healthKitSampleDataUUID);
 
-  /// Create a copy of Menstruation
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$MenstruationImplCopyWith<_$MenstruationImpl> get copyWith => __$$MenstruationImplCopyWithImpl<_$MenstruationImpl>(this, _$identity);
@@ -285,44 +275,42 @@ abstract class _Menstruation extends Menstruation {
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) = _$MenstruationImpl.fromJson;
 
+  @override
+
   /// FirestoreドキュメントのID
   /// 新規作成時はnullで、保存時に自動生成される
-  @override
   @JsonKey(includeIfNull: false)
   String? get id;
+  @override
 
   /// 生理開始日
   /// 生理周期計算の基準となる重要な日付
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginDate;
+  @override
 
   /// 生理終了日
   /// 生理期間の長さを決定する日付
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDate;
+  @override
 
   /// 論理削除日時
   /// nullの場合は有効な記録、値がある場合は削除済み
-  @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt;
+  @override
 
   /// 生理記録の作成日時
   /// データの作成順序や履歴管理に使用される
-  @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+  @override
 
   /// HealthKitサンプルデータのUUID
   /// HealthKitから取得したデータとの紐付けに使用
-  @override
   String? get healthKitSampleDataUUID;
-
-  /// Create a copy of Menstruation
-  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
+  @JsonKey(ignore: true)
   _$$MenstruationImplCopyWith<_$MenstruationImpl> get copyWith => throw _privateConstructorUsedError;
 }
