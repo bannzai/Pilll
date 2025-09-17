@@ -850,34 +850,33 @@ class CancelReminderLocalNotification {
     }
 
     try {
-      // RegisterReminderLocalNotificationと同じIDパターンでアラームを解除
-      // 10日間分 × リマインダー時刻数 × ピルシート分のアラームを想定して広めに解除
+      // SharedPreferencesからAlarmKitで登録したIDを取得
+      final savedAlarmIds = await AlarmKitService.getStoredAlarmKitIds();
+      
+      if (savedAlarmIds.isEmpty) {
+        analytics.debug(name: 'no_alarm_kit_ids_to_cancel');
+        return;
+      }
+
       final List<Future<void>> cancelFutures = [];
-
-      // 過去と未来を含めた幅広い範囲のIDを解除
-      // 実際には存在しないIDもあるが、AlarmKit側でエラーにならないため安全
-      for (int groupIndex = 0; groupIndex < 10; groupIndex++) {
-        // 最大10グループ想定
-        for (int hour = 0; hour < 24; hour++) {
-          for (int minute = 0; minute < 60; minute += 5) {
-            // 5分刻みで想定
-            for (int pillNumber = 1; pillNumber <= 30; pillNumber++) {
-              // 最大30錠想定
-              final notificationID = reminderNotificationIdentifierOffset + (groupIndex * 10000000) + (hour * 100000) + (minute * 1000) + pillNumber;
-
-              cancelFutures.add(AlarmKitService.cancelMedicationReminder(notificationID.toString()).catchError((e) {
-                // 個別のエラーは無視（存在しないIDの場合など）
-                analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
-                  'id': notificationID.toString(),
-                  'error': e.toString(),
-                });
-              }));
-            }
-          }
-        }
+      
+      for (final alarmId in savedAlarmIds) {
+        cancelFutures.add(
+          AlarmKitService.cancelMedicationReminder(alarmId).catchError((e) {
+            // 個別のエラーは無視（既に解除済みの場合など）
+            analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
+              'id': alarmId,
+              'error': e.toString(),
+            });
+          })
+        );
       }
 
       await Future.wait(cancelFutures);
+      
+      // 解除完了後、保存済みIDをクリア
+      await AlarmKitService.clearStoredAlarmKitIds();
+      
       analytics.debug(name: 'cancel_alarm_kit_reminders_completed', parameters: {
         'cancelAttempts': cancelFutures.length,
       });
