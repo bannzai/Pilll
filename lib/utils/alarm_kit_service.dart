@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:pilll/utils/analytics.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 /// AlarmKit機能へのアクセスを提供するサービスクラス
 ///
@@ -85,9 +84,6 @@ class AlarmKitService {
         throw Exception(result?['message'] ?? 'Failed to schedule alarm');
       }
 
-      // 成功時にIDを保存
-      await _storeAlarmKitId(id);
-
       analytics.debug(name: 'alarm_kit_reminder_scheduled', parameters: {
         'id': id,
         'title': title,
@@ -164,38 +160,4 @@ class AlarmKitService {
     }
   }
 
-  /// 登録したAlarmKitアラームIDをSharedPreferencesに保存する
-  static Future<void> _storeAlarmKitId(String id) async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final existingIds = prefs.getStringList('alarm_kit_ids') ?? [];
-      if (!existingIds.contains(id)) {
-        existingIds.add(id);
-        await prefs.setStringList('alarm_kit_ids', existingIds);
-      }
-    } catch (e) {
-      analytics.debug(name: 'store_alarm_kit_id_error', parameters: {'error': e.toString()});
-    }
-  }
-
-  /// 保存されたAlarmKitアラームIDを取得する
-  static Future<List<String>> getStoredAlarmKitIds() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      return prefs.getStringList('alarm_kit_ids') ?? [];
-    } catch (e) {
-      analytics.debug(name: 'get_stored_alarm_kit_ids_error', parameters: {'error': e.toString()});
-      return [];
-    }
-  }
-
-  /// 保存されたAlarmKitアラームIDをクリアする
-  static Future<void> clearStoredAlarmKitIds() async {
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      await prefs.remove('alarm_kit_ids');
-    } catch (e) {
-      analytics.debug(name: 'clear_stored_alarm_kit_ids_error', parameters: {'error': e.toString()});
-    }
-  }
 }

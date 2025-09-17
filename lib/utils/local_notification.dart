@@ -233,7 +233,7 @@ class RegisterReminderLocalNotification {
   //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.debug(name: 'call_register_reminder_notification');
-    final cancelReminderLocalNotification = CancelReminderLocalNotification();
+    final cancelReminderLocalNotification = CancelReminderLocalNotification(ref);
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
     // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
     await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
@@ -817,9 +817,13 @@ class RegisterReminderLocalNotification {
   }
 }
 
-final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotification());
+final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotification(ref));
 
 class CancelReminderLocalNotification {
+  final Ref? ref;
+
+  CancelReminderLocalNotification([this.ref]);
+
   // Usecase
   // - 服用お休み開始
   // - ピルシートグループを削除された時
@@ -849,33 +853,80 @@ class CancelReminderLocalNotification {
       return;
     }
 
+    // Refがnullの場合（Riverpodのcontainer外での実行）はAlarmKit解除をスキップ
+    if (ref == null) {
+      analytics.debug(name: 'cancel_alarm_kit_skipped_no_ref');
+      return;
+    }
+
     try {
-      // SharedPreferencesからAlarmKitで登録したIDを取得
-      final savedAlarmIds = await AlarmKitService.getStoredAlarmKitIds();
+      // 現在の設定から登録されているAlarmKitアラームIDを計算して解除
+      final pillSheetGroup = ref!.read(latestPillSheetGroupProvider).asData?.valueOrNull;
+      final activePillSheet = ref!.read(activePillSheetProvider).asData?.valueOrNull;
+      final premiumOrTrial = ref!.read(userProvider).asData?.valueOrNull?.premiumOrTrial;
+      final setting = ref!.read(settingProvider).asData?.valueOrNull;
       
-      if (savedAlarmIds.isEmpty) {
-        analytics.debug(name: 'no_alarm_kit_ids_to_cancel');
+      if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null) {
+        analytics.debug(name: 'cancel_alarm_kit_missing_data');
+        return;
+      }
+
+      if (!setting.isOnReminder || !setting.useAlarmKit) {
+        analytics.debug(name: 'cancel_alarm_kit_not_enabled');
         return;
       }
 
       final List<Future<void>> cancelFutures = [];
-      
-      for (final alarmId in savedAlarmIds) {
-        cancelFutures.add(
-          AlarmKitService.cancelMedicationReminder(alarmId).catchError((e) {
-            // 個別のエラーは無視（既に解除済みの場合など）
-            analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
-              'id': alarmId,
-              'error': e.toString(),
-            });
-          })
-        );
+
+      // runWithAlarmKitと同じロジックでIDを計算
+      for (final reminderTime in setting.reminderTimes) {
+        for (final dayOffset in List.generate(RegisterReminderLocalNotification.registerDays, (index) => index)) {
+          // 過去の時刻もスキップしない（登録されている可能性があるため）
+          final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
+          final pillNumberInPillSheet = isOverActivePillSheet
+              ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
+              : activePillSheet.todayPillNumber + dayOffset;
+
+          var pillSheetGroupIndex = activePillSheet.groupIndex;
+
+          // activePillSheetよりも未来のPillSheetの場合の処理
+          if (isOverActivePillSheet) {
+            final isLastPillSheet = (pillSheetGroup.pillSheets.length - 1) == activePillSheet.groupIndex;
+            
+            switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
+              case (true, true, true):
+                // 次のピルシートグループの処理
+                pillSheetGroupIndex = 0; // 新しいグループの最初のシート
+              case (false, _, _):
+                // 次のピルシートを使用する場合
+                final nextPillSheet = pillSheetGroup.pillSheets[activePillSheet.groupIndex + 1];
+                pillSheetGroupIndex = nextPillSheet.groupIndex;
+              case (_, _, _):
+                // 対象外の場合はスキップ
+                continue;
+            }
+          }
+
+          // IDを計算（runWithAlarmKitと同じロジック）
+          final notificationID = RegisterReminderLocalNotification._calcLocalNotificationID(
+            pillSheetGroupIndex: pillSheetGroupIndex,
+            reminderTime: reminderTime,
+            pillNumberInPillSheet: pillNumberInPillSheet,
+          );
+
+          cancelFutures.add(
+            AlarmKitService.cancelMedicationReminder(notificationID.toString()).catchError((e) {
+              // 個別のエラーは無視（既に解除済みの場合など）
+              analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
+                'id': notificationID.toString(),
+                'error': e.toString(),
+              });
+            })
+          );
+        }
       }
 
       await Future.wait(cancelFutures);
-      
-      // 解除完了後、保存済みIDをクリア
-      await AlarmKitService.clearStoredAlarmKitIds();
       
       analytics.debug(name: 'cancel_alarm_kit_reminders_completed', parameters: {
         'cancelAttempts': cancelFutures.length,
