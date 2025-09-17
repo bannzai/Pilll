@@ -154,7 +154,7 @@ private var channel: FlutterMethodChannel?
              let scheduledTimeMs = arguments["scheduledTimeMs"] as? NSNumber {
 
             if #available(iOS 26.0, *) {
-              let scheduledTime = Date(timeIntervalSince1970: scheduledTimeMs.doubleValue / 1000.0)
+              let scheduledTime = dartTypeDate(nsNumber: scheduledTimeMs)
               Task {
                 do {
                   try await AlarmKitManager.shared.scheduleMedicationAlarm(
