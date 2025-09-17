@@ -94,7 +94,7 @@ import 'app_localizations_zu.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'pilll/l10n/app_localizations.dart';
+/// import 'l10n/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
