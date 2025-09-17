@@ -1,3 +1,7 @@
 
 
+# 都度Generateされてインデントが代わり差分が出るので除外
+app_localizations.dart
+
+# 自動生成コードが多いので除外
 app_localizations_*.dart
