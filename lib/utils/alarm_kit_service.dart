@@ -65,7 +65,7 @@ class AlarmKitService {
   ///
   /// Throws: アラーム登録に失敗した場合Exception
   static Future<void> scheduleMedicationReminder({
-    required String id,
+    required String localNotificationID,
     required String title,
     required DateTime scheduledTime,
   }) async {
@@ -75,7 +75,7 @@ class AlarmKitService {
 
     try {
       final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('scheduleAlarmKitReminder', {
-        'id': id,
+        'localNotificationID': localNotificationID,
         'title': title,
         'scheduledTime': scheduledTime.millisecondsSinceEpoch,
       });
@@ -85,14 +85,14 @@ class AlarmKitService {
       }
 
       analytics.debug(name: 'alarm_kit_reminder_scheduled', parameters: {
-        'id': id,
+        'localNotificationID': localNotificationID,
         'title': title,
         'scheduledTime': scheduledTime.toIso8601String(),
       });
     } catch (e) {
       analytics.debug(name: 'alarm_kit_schedule_error', parameters: {
         'error': e.toString(),
-        'id': id,
+        'localNotificationID': localNotificationID,
         'title': title,
       });
       rethrow;

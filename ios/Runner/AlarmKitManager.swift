@@ -13,7 +13,7 @@ class AlarmKitManager {
 
   @available(iOS 26.0, *)
   struct AppAlarmMetadata: AlarmMetadata {
-    let locatlNotificationID: String
+    let localNotificationID: String
   }
   @available(iOS 26.0, *)
   typealias AlarmConfiguration = AlarmManager.AlarmConfiguration<AppAlarmMetadata>
@@ -61,7 +61,7 @@ class AlarmKitManager {
   ///
   /// - Throws: アラーム登録に失敗した場合Exception
   func scheduleMedicationAlarm(
-    locatlNotificationID: String,
+    localNotificationID: String,
     title: String,
     scheduledTime: Date
   ) async throws {
@@ -83,7 +83,7 @@ class AlarmKitManager {
 
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
-      metadata: AppAlarmMetadata(locatlNotificationID: locatlNotificationID),
+      metadata: AppAlarmMetadata(localNotificationID: localNotificationID),
       tintColor: Color.accentColor
     )
 

@@ -149,7 +149,7 @@ private var channel: FlutterMethodChannel?
           }
         case "scheduleAlarmKitReminder":
           if let arguments = call.arguments as? [String: Any],
-             let id = arguments["id"] as? String,
+             let localNotificationID = arguments["localNotificationID"] as? String,
              let title = arguments["title"] as? String,
              let scheduledTimeMs = arguments["scheduledTime"] as? Int64 {
             
@@ -158,7 +158,7 @@ private var channel: FlutterMethodChannel?
               Task {
                 do {
                   try await AlarmKitManager.shared.scheduleMedicationAlarm(
-                    id: id,
+                    localNotificationID: localNotificationID,
                     title: title,
                     scheduledTime: scheduledTime
                   )
