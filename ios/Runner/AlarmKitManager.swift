@@ -1,6 +1,7 @@
 import Foundation
 import AppIntents
 import AlarmKit
+import SwiftUI
 
 /// AlarmKit機能へのアクセスを提供するマネージャークラス
 ///
@@ -9,6 +10,13 @@ import AlarmKit
 class AlarmKitManager {
   static let shared = AlarmKitManager()
   private init() {}
+
+  @available(iOS 26.0, *)
+  struct AppAlarmMetadata: AlarmMetadata {
+    let locatlNotificationID: String
+  }
+  @available(iOS 26.0, *)
+  typealias AlarmConfiguration = AlarmManager.AlarmConfiguration<AppAlarmMetadata>
 
   /// AlarmKitが現在のOS版で利用可能かどうかを確認する
   ///
@@ -52,19 +60,42 @@ class AlarmKitManager {
   ///   - scheduledTime: アラームを表示する日時
   ///
   /// - Throws: アラーム登録に失敗した場合Exception
-  func scheduleMedicationAlarm(id: String, title: String, scheduledTime: Date) async throws {
+  func scheduleMedicationAlarm(
+    locatlNotificationID: String,
+    title: String,
+    scheduledTime: Date
+  ) async throws {
     guard #available(iOS 26.0, *) else {
       throw AlarmKitError.notAvailable
     }
 
-    let configuration = AlarmConfiguration(
-      id: id,
-      scheduledTime: scheduledTime,
-      title: title,
-      intent: MedicationReminderIntent(id: id, title: title)
+    
+    let alarmID = UUID()
+    let alertContent = AlarmPresentation.Alert(
+      title: "Pilll:服薬時間です",
+      stopButton: .stopButton,
+      secondaryButton: .repeatButton,
+      secondaryButtonBehavior: .custom
+    )
+    let countdownContent = AlarmPresentation.Countdown(title: "Pilll:服薬時間です", pauseButton: .pauseButton)
+    let pausedContent = AlarmPresentation.Paused(title: "一時停止中", resumeButton: .resumeButton)
+    let alarmPresentation = AlarmPresentation(alert: alertContent, countdown: countdownContent, paused: pausedContent)
+
+    let attributes = AlarmAttributes(
+      presentation: alarmPresentation,
+      metadata: AppAlarmMetadata(locatlNotificationID: locatlNotificationID),
+      tintColor: Color.accentColor
     )
 
-    try await AlarmManager.shared.schedule(configuration)
+    let configuration = AlarmConfiguration.alarm(
+      schedule: .fixed(scheduledTime),
+      attributes: attributes,
+      stopIntent: MedicationReminderIntent(id: alarmID.uuidString, title: title),
+      secondaryIntent: nil,
+      sound: .default
+    )
+
+    try await AlarmManager.shared.schedule(id: alarmID, configuration: configuration)
   }
 
   /// すべての服薬リマインダーアラームを解除する
@@ -78,7 +109,7 @@ class AlarmKitManager {
       throw AlarmKitError.notAvailable
     }
 
-    for alarm in try await AlarmManager.shared.alarms {
+    for alarm in try AlarmManager.shared.alarms {
       try AlarmManager.shared.cancel(id: alarm.id)
     }
   }
@@ -119,9 +150,32 @@ enum AlarmKitError: Error, LocalizedError {
   }
 }
 
+@available(iOS 26.0, *)
+extension AlarmButton {
+  static var openAppButton: Self {
+    AlarmButton(text: "開く", textColor: .black, systemImageName: "swift")
+  }
+
+  static var pauseButton: Self {
+    AlarmButton(text: "一時停止", textColor: .black, systemImageName: "pause.fill")
+  }
+
+  static var resumeButton: Self {
+    AlarmButton(text: "開始", textColor: .black, systemImageName: "play.fill")
+  }
+
+  static var repeatButton: Self {
+    AlarmButton(text: "繰り返し", textColor: .black, systemImageName: "repeat.circle")
+  }
+
+  static var stopButton: Self {
+    AlarmButton(text: "完了", textColor: .white, systemImageName: "stop.circle")
+  }
+}
+
 /// 服薬リマインダーのApp Intent
 @available(iOS 26.0, *)
-struct MedicationReminderIntent: AppIntent {
+struct MedicationReminderIntent: AppIntent, LiveActivityIntent {
   static var title: LocalizedStringResource = "Medication Reminder"
   static var description = IntentDescription("Reminds you to take your medication")
 
