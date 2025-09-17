@@ -125,35 +125,4 @@ class AlarmKitService {
       rethrow;
     }
   }
-
-  /// アラームを停止する
-  ///
-  /// 現在表示されているアラームを停止します。
-  /// アラーム画面の停止ボタンから呼び出される処理です。
-  ///
-  /// [id]: 停止するアラームの識別子
-  static Future<void> stopAlarm(String id) async {
-    if (!Platform.isIOS) {
-      return;
-    }
-
-    try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('stopAlarmKitAlarm', {
-        'id': id,
-      });
-
-      if (result?['result'] != 'success') {
-        throw Exception(result?['message'] ?? 'Failed to stop alarm');
-      }
-
-      analytics.debug(name: 'alarm_kit_alarm_stopped', parameters: {'id': id});
-    } catch (e) {
-      analytics.debug(name: 'alarm_kit_stop_error', parameters: {
-        'error': e.toString(),
-        'id': id,
-      });
-      // 停止処理の失敗はログ記録のみで例外は再スローしない
-    }
-  }
-
 }

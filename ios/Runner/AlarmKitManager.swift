@@ -113,20 +113,6 @@ class AlarmKitManager {
       try AlarmManager.shared.cancel(id: alarm.id)
     }
   }
-
-  /// アラームを停止する
-  ///
-  /// 現在表示されているアラームを停止します。
-  /// アラーム画面の停止ボタンから呼び出される処理です。
-  ///
-  /// - Parameter id: 停止するアラームの識別子
-  func stopAlarm(id: String) async throws {
-    guard #available(iOS 26.0, *) else {
-      throw AlarmKitError.notAvailable
-    }
-
-    try await AlarmManager.shared.stop(id: id)
-  }
 }
 
 /// AlarmKit関連のエラー
