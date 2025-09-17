@@ -77,9 +77,8 @@ class AlarmKitManager {
             throw AlarmKitError.notAvailable
         }
         
-        let alarms = await AlarmManager.shared.alarms
-        for alarm in alarms {
-            try await AlarmManager.shared.cancel(id: alarm.id)
+        for alarm in try await AlarmManager.shared.alarms {
+            try AlarmManager.shared.cancel(id: alarm.id)
         }
     }
     
