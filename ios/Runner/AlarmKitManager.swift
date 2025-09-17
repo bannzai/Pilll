@@ -77,9 +77,9 @@ class AlarmKitManager {
       secondaryButton: nil,
       secondaryButtonBehavior: nil,
     )
-    let countdownContent = AlarmPresentation.Countdown(title: "Pilll:服薬時間です", pauseButton: .pauseButton)
-    let pausedContent = AlarmPresentation.Paused(title: "一時停止中", resumeButton: .resumeButton)
-    let alarmPresentation = AlarmPresentation(alert: alertContent, countdown: countdownContent, paused: pausedContent)
+//    let countdownContent = AlarmPresentation.Countdown(title: "Pilll:服薬時間です", pauseButton: .pauseButton)
+//    let pausedContent = AlarmPresentation.Paused(title: "一時停止中", resumeButton: .resumeButton)
+    let alarmPresentation = AlarmPresentation(alert: alertContent)
 
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
@@ -89,10 +89,7 @@ class AlarmKitManager {
 
     let configuration = AlarmConfiguration.alarm(
       schedule: .fixed(scheduledTime),
-      attributes: attributes,
-      stopIntent: MedicationReminderIntent(id: alarmID.uuidString, title: title),
-      secondaryIntent: nil,
-      sound: .default
+      attributes: attributes
     )
 
     _ = try await AlarmManager.shared.schedule(id: alarmID, configuration: configuration)
