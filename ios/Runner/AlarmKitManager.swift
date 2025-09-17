@@ -5,7 +5,6 @@ import AlarmKit
 ///
 /// iOS 26+でのみ利用可能なAlarmKitの機能をネイティブ側で管理します。
 /// Pilllアプリの服薬リマインダーをサイレントモード・フォーカスモード時でも確実に表示するために使用します。
-@available(iOS 26.0, *)
 class AlarmKitManager {
     static let shared = AlarmKitManager()
     private init() {}
