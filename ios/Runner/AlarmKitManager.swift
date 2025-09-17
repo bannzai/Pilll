@@ -74,8 +74,8 @@ class AlarmKitManager {
     let alertContent = AlarmPresentation.Alert(
       title: "Pilll:服薬時間です",
       stopButton: .stopButton,
-      secondaryButton: .repeatButton,
-      secondaryButtonBehavior: .countdown
+      secondaryButton: nil,
+      secondaryButtonBehavior: nil,
     )
     let countdownContent = AlarmPresentation.Countdown(title: "Pilll:服薬時間です", pauseButton: .pauseButton)
     let pausedContent = AlarmPresentation.Paused(title: "一時停止中", resumeButton: .resumeButton)
