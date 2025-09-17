@@ -95,7 +95,7 @@ class AlarmKitManager {
       sound: .default
     )
 
-    try await AlarmManager.shared.schedule(id: alarmID, configuration: configuration)
+    _ = try await AlarmManager.shared.schedule(id: alarmID, configuration: configuration)
   }
 
   /// すべての服薬リマインダーアラームを解除する
