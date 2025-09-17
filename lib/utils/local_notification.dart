@@ -256,7 +256,6 @@ class RegisterReminderLocalNotification {
     );
   }
 
-
   static Future<void> run({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activePillSheet,
@@ -272,7 +271,7 @@ class RegisterReminderLocalNotification {
 
     // AlarmKit使用判定
     final useAlarmKit = setting.useAlarmKit && await AlarmKitService.isAvailable();
-    
+
     analytics.debug(name: 'run_register_reminder_notification', parameters: {
       'todayPillNumber': activePillSheet.todayPillNumber,
       'todayPillIsAlreadyTaken': activePillSheet.todayPillIsAlreadyTaken,
@@ -495,11 +494,11 @@ class RegisterReminderLocalNotification {
                 // useAlarmKit の場合は AlarmKit も追加で実行
                 if (useAlarmKit) {
                   await AlarmKitService.scheduleMedicationReminder(
-                    id: notificationID.toString(),
+                    localNotificationID: notificationID.toString(),
                     title: title,
                     scheduledTime: reminderDateTime.toUtc(),
                   );
-                  
+
                   analytics.debug(name: 'rrrn_premium_alarmkit', parameters: {
                     'dayOffset': dayOffset,
                     'notificationID': notificationID,
@@ -569,11 +568,11 @@ class RegisterReminderLocalNotification {
                 // useAlarmKit の場合は AlarmKit も追加で実行
                 if (useAlarmKit) {
                   await AlarmKitService.scheduleMedicationReminder(
-                    id: notificationID.toString(),
+                    localNotificationID: notificationID.toString(),
                     title: title,
                     scheduledTime: reminderDateTime.toUtc(),
                   );
-                  
+
                   analytics.debug(name: 'rrrn_non_premium_alarmkit', parameters: {
                     'dayOffset': dayOffset,
                     'notificationID': notificationID,
@@ -657,7 +656,7 @@ class CancelReminderLocalNotification {
     if (await AlarmKitService.isAvailable()) {
       try {
         await AlarmKitService.cancelAllMedicationReminders();
-        
+
         analytics.debug(name: 'cancel_alarm_kit_reminders_completed');
       } catch (e, st) {
         // AlarmKit解除でエラーが発生してもアプリの動作に影響しないようにログのみ記録
@@ -668,7 +667,6 @@ class CancelReminderLocalNotification {
       }
     }
   }
-
 }
 
 // Schedule
