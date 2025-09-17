@@ -492,6 +492,7 @@ class RegisterReminderLocalNotification {
                 });
 
                 // useAlarmKit の場合は AlarmKit も追加で実行
+                // AlarmKitでエラーが発生しても無視したいので、スケジュール登録の後に実行する
                 if (useAlarmKit) {
                   await AlarmKitService.scheduleMedicationReminder(
                     localNotificationID: notificationID.toString(),
@@ -566,6 +567,7 @@ class RegisterReminderLocalNotification {
                 });
 
                 // useAlarmKit の場合は AlarmKit も追加で実行
+                // AlarmKitでエラーが発生しても無視したいので、スケジュール登録の後に実行する
                 if (useAlarmKit) {
                   await AlarmKitService.scheduleMedicationReminder(
                     localNotificationID: notificationID.toString(),
