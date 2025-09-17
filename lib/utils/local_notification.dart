@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'dart:math';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -14,6 +15,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
+import 'package:pilll/provider/database.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
@@ -233,7 +235,7 @@ class RegisterReminderLocalNotification {
   //   * ref: https://pub.dev/packages/flutter_local_notifications#-caveats-and-limitations
   Future<void> call() async {
     analytics.debug(name: 'call_register_reminder_notification');
-    final cancelReminderLocalNotification = CancelReminderLocalNotification(ref);
+    final cancelReminderLocalNotification = CancelReminderLocalNotification();
     // エンティティの変更があった場合にref.readで最新の状態を取得するために、Future.microtaskで更新を待ってから処理を始める
     // hour,minute,番号を基準にIDを決定しているので、時間変更や番号変更時にそれまで登録されていたIDを特定するのが不可能なので全てキャンセルする
     await (Future.microtask(() => null), cancelReminderLocalNotification()).wait;
@@ -817,13 +819,9 @@ class RegisterReminderLocalNotification {
   }
 }
 
-final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotification(ref));
+final cancelReminderLocalNotificationProvider = Provider((ref) => CancelReminderLocalNotification());
 
 class CancelReminderLocalNotification {
-  final Ref? ref;
-
-  CancelReminderLocalNotification([this.ref]);
-
   // Usecase
   // - 服用お休み開始
   // - ピルシートグループを削除された時
@@ -845,43 +843,78 @@ class CancelReminderLocalNotification {
 
   /// AlarmKitアラームを解除する
   ///
-  /// 既存のlocal notificationと同じIDパターンでAlarmKitアラームが登録されているため、
-  /// 同様のロジックで解除処理を行います。
+  /// 現在の設定から可能性のあるAlarmKitアラームIDを計算して解除します。
   /// iOS 26+でのみ実行され、Android端末では何もしません。
   Future<void> _cancelAlarmKitReminders() async {
     if (!await AlarmKitService.isAvailable()) {
       return;
     }
 
-    // Refがnullの場合（Riverpodのcontainer外での実行）はAlarmKit解除をスキップ
-    if (ref == null) {
-      analytics.debug(name: 'cancel_alarm_kit_skipped_no_ref');
-      return;
-    }
-
     try {
-      // 現在の設定から登録されているAlarmKitアラームIDを計算して解除
-      final pillSheetGroup = ref!.read(latestPillSheetGroupProvider).asData?.valueOrNull;
-      final activePillSheet = ref!.read(activePillSheetProvider).asData?.valueOrNull;
-      final premiumOrTrial = ref!.read(userProvider).asData?.valueOrNull?.premiumOrTrial;
-      final setting = ref!.read(settingProvider).asData?.valueOrNull;
+      final alarmIds = await getPossibleAlarmKitIds();
       
-      if (pillSheetGroup == null || activePillSheet == null || premiumOrTrial == null || setting == null) {
-        analytics.debug(name: 'cancel_alarm_kit_missing_data');
-        return;
-      }
-
-      if (!setting.isOnReminder || !setting.useAlarmKit) {
-        analytics.debug(name: 'cancel_alarm_kit_not_enabled');
+      if (alarmIds.isEmpty) {
+        analytics.debug(name: 'no_alarm_kit_ids_to_cancel');
         return;
       }
 
       final List<Future<void>> cancelFutures = [];
+      
+      for (final alarmId in alarmIds) {
+        cancelFutures.add(
+          AlarmKitService.cancelMedicationReminder(alarmId).catchError((e) {
+            // 個別のエラーは無視（既に解除済みの場合など）
+            analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
+              'id': alarmId,
+              'error': e.toString(),
+            });
+          })
+        );
+      }
+
+      await Future.wait(cancelFutures);
+      
+      analytics.debug(name: 'cancel_alarm_kit_reminders_completed', parameters: {
+        'cancelAttempts': cancelFutures.length,
+      });
+    } catch (e, st) {
+      // AlarmKit解除でエラーが発生してもアプリの動作に影響しないようにログのみ記録
+      analytics.debug(name: 'cancel_alarm_kit_reminders_error', parameters: {
+        'error': e.toString(),
+      });
+      errorLogger.recordError(e, st);
+    }
+  }
+
+  /// 現在の設定から可能性のあるAlarmKitアラームIDを取得する
+  static Future<List<String>> getPossibleAlarmKitIds() async {
+    final firebaseUser = FirebaseAuth.instance.currentUser;
+    if (firebaseUser == null) {
+      return [];
+    }
+
+    try {
+      final database = DatabaseConnection(firebaseUser.uid);
+      final user = (await database.userReference().get()).data();
+      final setting = user?.setting;
+      
+      if (user == null || setting == null) {
+        return [];
+      }
+
+      final pillSheetGroup = await fetchLatestPillSheetGroup(database);
+      final activePillSheet = pillSheetGroup?.activePillSheet;
+      
+      if (pillSheetGroup == null || activePillSheet == null) {
+        return [];
+      }
+
+      final premiumOrTrial = user.isPremium || user.isTrial;
+      final List<String> alarmIds = [];
 
       // runWithAlarmKitと同じロジックでIDを計算
       for (final reminderTime in setting.reminderTimes) {
         for (final dayOffset in List.generate(RegisterReminderLocalNotification.registerDays, (index) => index)) {
-          // 過去の時刻もスキップしない（登録されている可能性があるため）
           final isOverActivePillSheet = activePillSheet.todayPillNumber + dayOffset > activePillSheet.typeInfo.totalCount;
           final pillNumberInPillSheet = isOverActivePillSheet
               ? activePillSheet.todayPillNumber + dayOffset - activePillSheet.typeInfo.totalCount
@@ -914,29 +947,16 @@ class CancelReminderLocalNotification {
             pillNumberInPillSheet: pillNumberInPillSheet,
           );
 
-          cancelFutures.add(
-            AlarmKitService.cancelMedicationReminder(notificationID.toString()).catchError((e) {
-              // 個別のエラーは無視（既に解除済みの場合など）
-              analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
-                'id': notificationID.toString(),
-                'error': e.toString(),
-              });
-            })
-          );
+          alarmIds.add(notificationID.toString());
         }
       }
 
-      await Future.wait(cancelFutures);
-      
-      analytics.debug(name: 'cancel_alarm_kit_reminders_completed', parameters: {
-        'cancelAttempts': cancelFutures.length,
-      });
-    } catch (e, st) {
-      // AlarmKit解除でエラーが発生してもアプリの動作に影響しないようにログのみ記録
-      analytics.debug(name: 'cancel_alarm_kit_reminders_error', parameters: {
+      return alarmIds;
+    } catch (e) {
+      analytics.debug(name: 'get_possible_alarm_kit_ids_error', parameters: {
         'error': e.toString(),
       });
-      errorLogger.recordError(e, st);
+      return [];
     }
   }
 }
