@@ -1,4 +1,5 @@
 import Foundation
+import AppIntents
 import AlarmKit
 
 /// AlarmKit機能へのアクセスを提供するマネージャークラス
