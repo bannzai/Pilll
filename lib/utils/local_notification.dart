@@ -273,7 +273,7 @@ class RegisterReminderLocalNotification {
     // AlarmKit使用判定
     final useAlarmKit = setting.useAlarmKit && await AlarmKitService.isAvailable();
     
-    analytics.debug(name: useAlarmKit ? 'run_register_reminder_alarmkit' : 'run_register_reminder_notification', parameters: {
+    analytics.debug(name: 'run_register_reminder_notification', parameters: {
       'todayPillNumber': activePillSheet.todayPillNumber,
       'todayPillIsAlreadyTaken': activePillSheet.todayPillIsAlreadyTaken,
       'lastTakenPillNumber': activePillSheet.lastTakenOrZeroPillNumber,
@@ -443,6 +443,56 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
+                // 常に Local Notification を実行
+                await localNotificationService.plugin.zonedSchedule(
+                  notificationID,
+                  title,
+                  message,
+                  reminderDateTime,
+                  NotificationDetails(
+                    android: AndroidNotificationDetails(
+                      androidReminderNotificationChannelID,
+                      L.takePillReminderChannelName,
+                      channelShowBadge: true,
+                      setAsGroupSummary: true,
+                      groupKey: androidReminderNotificationGroupKey,
+                      category: AndroidNotificationCategory.reminder,
+                      // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+                      importance: Importance.defaultImportance,
+                      priority: Priority.defaultPriority,
+                      actions: [
+                        AndroidNotificationAction(
+                          actionIdentifier,
+                          L.taken,
+                        )
+                      ],
+                    ),
+                    iOS: DarwinNotificationDetails(
+                      categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
+                      sound: setting.useCriticalAlert ? null : 'becho.caf',
+                      criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
+                      presentBadge: true,
+                      presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                      presentAlert: false,
+                      presentBanner: true,
+                      presentList: true,
+                      badgeNumber: badgeNumber + dayOffset,
+                      interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
+                    ),
+                  ),
+                  androidScheduleMode: AndroidScheduleMode.alarmClock,
+                );
+
+                analytics.debug(name: 'rrrn_premium', parameters: {
+                  'dayOffset': dayOffset,
+                  'notificationID': notificationID,
+                  'reminderTimeHour': reminderTime.hour,
+                  'reminderTimeMinute': reminderTime.minute,
+                });
+
+                // useAlarmKit の場合は AlarmKit も追加で実行
                 if (useAlarmKit) {
                   await AlarmKitService.scheduleMedicationReminder(
                     id: notificationID.toString(),
@@ -456,59 +506,11 @@ class RegisterReminderLocalNotification {
                     'reminderTimeHour': reminderTime.hour,
                     'reminderTimeMinute': reminderTime.minute,
                   });
-                } else {
-                  await localNotificationService.plugin.zonedSchedule(
-                    notificationID,
-                    title,
-                    message,
-                    reminderDateTime,
-                    NotificationDetails(
-                      android: AndroidNotificationDetails(
-                        androidReminderNotificationChannelID,
-                        L.takePillReminderChannelName,
-                        channelShowBadge: true,
-                        setAsGroupSummary: true,
-                        groupKey: androidReminderNotificationGroupKey,
-                        category: AndroidNotificationCategory.reminder,
-                        // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
-                        importance: Importance.defaultImportance,
-                        priority: Priority.defaultPriority,
-                        actions: [
-                          AndroidNotificationAction(
-                            actionIdentifier,
-                            L.taken,
-                          )
-                        ],
-                      ),
-                      iOS: DarwinNotificationDetails(
-                        categoryIdentifier: iOSQuickRecordPillCategoryIdentifier,
-                        sound: setting.useCriticalAlert ? null : 'becho.caf',
-                        criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
-                        presentBadge: true,
-                        presentSound: true,
-                        // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
-                        // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
-                        presentAlert: false,
-                        presentBanner: true,
-                        presentList: true,
-                        badgeNumber: badgeNumber + dayOffset,
-                        interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
-                      ),
-                    ),
-                    androidScheduleMode: AndroidScheduleMode.alarmClock,
-                  );
-
-                  analytics.debug(name: 'rrrn_premium', parameters: {
-                    'dayOffset': dayOffset,
-                    'notificationID': notificationID,
-                    'reminderTimeHour': reminderTime.hour,
-                    'reminderTimeMinute': reminderTime.minute,
-                  });
                 }
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 errorLogger.recordError(e, st);
-                analytics.debug(name: useAlarmKit ? 'rrrn_e_premium_alarmkit' : 'rrrn_e_premium', parameters: {
+                analytics.debug(name: 'rrrn_e_premium', parameters: {
                   'dayOffset': dayOffset,
                   'notificationID': notificationID,
                   'reminderTimeHour': reminderTime.hour,
@@ -522,6 +524,49 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
+                // 常に Local Notification を実行
+                await localNotificationService.plugin.zonedSchedule(
+                  notificationID,
+                  title,
+                  '',
+                  reminderDateTime,
+                  NotificationDetails(
+                    android: AndroidNotificationDetails(
+                      androidReminderNotificationChannelID,
+                      L.takePillReminderChannelName,
+                      channelShowBadge: true,
+                      setAsGroupSummary: true,
+                      groupKey: androidReminderNotificationGroupKey,
+                      category: AndroidNotificationCategory.reminder,
+                      // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
+                      importance: Importance.defaultImportance,
+                      priority: Priority.defaultPriority,
+                    ),
+                    iOS: DarwinNotificationDetails(
+                      sound: setting.useCriticalAlert ? null : 'becho.caf',
+                      criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
+                      presentBadge: true,
+                      presentSound: true,
+                      // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
+                      // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
+                      presentAlert: false,
+                      presentBanner: true,
+                      presentList: true,
+                      badgeNumber: badgeNumber + dayOffset,
+                      interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
+                    ),
+                  ),
+                  androidScheduleMode: AndroidScheduleMode.alarmClock,
+                );
+
+                analytics.debug(name: 'rrrn_non_premium', parameters: {
+                  'dayOffset': dayOffset,
+                  'notificationID': notificationID,
+                  'reminderTimeHour': reminderTime.hour,
+                  'reminderTimeMinute': reminderTime.minute,
+                });
+
+                // useAlarmKit の場合は AlarmKit も追加で実行
                 if (useAlarmKit) {
                   await AlarmKitService.scheduleMedicationReminder(
                     id: notificationID.toString(),
@@ -535,53 +580,12 @@ class RegisterReminderLocalNotification {
                     'reminderTimeHour': reminderTime.hour,
                     'reminderTimeMinute': reminderTime.minute,
                   });
-                } else {
-                  await localNotificationService.plugin.zonedSchedule(
-                    notificationID,
-                    title,
-                    '',
-                    reminderDateTime,
-                    NotificationDetails(
-                      android: AndroidNotificationDetails(
-                        androidReminderNotificationChannelID,
-                        L.takePillReminderChannelName,
-                        channelShowBadge: true,
-                        setAsGroupSummary: true,
-                        groupKey: androidReminderNotificationGroupKey,
-                        category: AndroidNotificationCategory.reminder,
-                        // NOTE: [Android:CriticalAlert] AndroidでもCriticalAlertを使用する場合は、Priority.highを使用すれば良さそう
-                        importance: Importance.defaultImportance,
-                        priority: Priority.defaultPriority,
-                      ),
-                      iOS: DarwinNotificationDetails(
-                        sound: setting.useCriticalAlert ? null : 'becho.caf',
-                        criticalSoundVolume: setting.useCriticalAlert ? setting.criticalAlertVolume : null,
-                        presentBadge: true,
-                        presentSound: true,
-                        // Alertはdeprecatedなので、banner,listをtrueにしておけばよい。
-                        // https://developer.apple.com/documentation/usernotifications/unnotificationpresentationoptions/unnotificationpresentationoptionalert
-                        presentAlert: false,
-                        presentBanner: true,
-                        presentList: true,
-                        badgeNumber: badgeNumber + dayOffset,
-                        interruptionLevel: setting.useCriticalAlert ? InterruptionLevel.critical : InterruptionLevel.active,
-                      ),
-                    ),
-                    androidScheduleMode: AndroidScheduleMode.alarmClock,
-                  );
-
-                  analytics.debug(name: 'rrrn_non_premium', parameters: {
-                    'dayOffset': dayOffset,
-                    'notificationID': notificationID,
-                    'reminderTimeHour': reminderTime.hour,
-                    'reminderTimeMinute': reminderTime.minute,
-                  });
                 }
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 errorLogger.recordError(e, st);
 
-                analytics.debug(name: useAlarmKit ? 'rrrn_e_non_premium_alarmkit' : 'rrrn_e_non_premium', parameters: {
+                analytics.debug(name: 'rrrn_e_non_premium', parameters: {
                   'dayOffset': dayOffset,
                   'notificationID': notificationID,
                   'reminderTimeHour': reminderTime.hour,
