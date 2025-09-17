@@ -656,25 +656,9 @@ class CancelReminderLocalNotification {
     // AlarmKit解除
     if (await AlarmKitService.isAvailable()) {
       try {
-        final List<Future<void>> cancelFutures = [];
+        await AlarmKitService.cancelAllMedicationReminders();
         
-        for (final notification in pendingNotifications) {
-          cancelFutures.add(
-            AlarmKitService.cancelMedicationReminder(notification.id.toString()).catchError((e) {
-              // 個別のエラーは無視（既に解除済みの場合など）
-              analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
-                'id': notification.id.toString(),
-                'error': e.toString(),
-              });
-            })
-          );
-        }
-
-        await Future.wait(cancelFutures);
-        
-        analytics.debug(name: 'cancel_alarm_kit_reminders_completed', parameters: {
-          'cancelAttempts': cancelFutures.length,
-        });
+        analytics.debug(name: 'cancel_alarm_kit_reminders_completed');
       } catch (e, st) {
         // AlarmKit解除でエラーが発生してもアプリの動作に影響しないようにログのみ記録
         analytics.debug(name: 'cancel_alarm_kit_reminders_error', parameters: {

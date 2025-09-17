@@ -99,32 +99,28 @@ class AlarmKitService {
     }
   }
 
-  /// 服薬リマインダーアラームを解除する
+  /// すべての服薬リマインダーアラームを解除する
   ///
-  /// 指定したIDのAlarmKitアラームを解除します。
-  ///
-  /// [id]: 解除するアラームの識別子
+  /// 現在登録されているすべてのAlarmKitアラームを解除します。
+  /// LocalNotificationと同様に全解除してから新規登録する方式で使用します。
   ///
   /// Throws: アラーム解除に失敗した場合Exception
-  static Future<void> cancelMedicationReminder(String id) async {
+  static Future<void> cancelAllMedicationReminders() async {
     if (!Platform.isIOS) {
       return; // Android端末では何もしない
     }
 
     try {
-      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('cancelAlarmKitReminder', {
-        'id': id,
-      });
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('cancelAllAlarmKitReminders');
 
       if (result?['result'] != 'success') {
-        throw Exception(result?['message'] ?? 'Failed to cancel alarm');
+        throw Exception(result?['message'] ?? 'Failed to cancel all alarms');
       }
 
-      analytics.debug(name: 'alarm_kit_reminder_cancelled', parameters: {'id': id});
+      analytics.debug(name: 'alarm_kit_all_reminders_cancelled');
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_cancel_error', parameters: {
+      analytics.debug(name: 'alarm_kit_cancel_all_error', parameters: {
         'error': e.toString(),
-        'id': id,
       });
       rethrow;
     }

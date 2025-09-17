@@ -186,36 +186,27 @@ private var channel: FlutterMethodChannel?
               "message": "Invalid arguments for scheduleAlarmKitReminder"
             ])
           }
-        case "cancelAlarmKitReminder":
-          if let arguments = call.arguments as? [String: Any],
-             let id = arguments["id"] as? String {
-            
-            if #available(iOS 26.0, *) {
-              Task {
-                do {
-                  try await AlarmKitManager.shared.cancelMedicationAlarm(id: id)
-                  await MainActor.run {
-                    completionHandler(["result": "success"])
-                  }
-                } catch {
-                  await MainActor.run {
-                    completionHandler([
-                      "result": "failure",
-                      "message": error.localizedDescription
-                    ])
-                  }
+        case "cancelAllAlarmKitReminders":
+          if #available(iOS 26.0, *) {
+            Task {
+              do {
+                try await AlarmKitManager.shared.cancelAllMedicationAlarms()
+                await MainActor.run {
+                  completionHandler(["result": "success"])
+                }
+              } catch {
+                await MainActor.run {
+                  completionHandler([
+                    "result": "failure",
+                    "message": error.localizedDescription
+                  ])
                 }
               }
-            } else {
-              completionHandler([
-                "result": "failure",
-                "message": "AlarmKit is not available on this OS version"
-              ])
             }
           } else {
             completionHandler([
               "result": "failure",
-              "message": "Invalid arguments for cancelAlarmKitReminder"
+              "message": "AlarmKit is not available on this OS version"
             ])
           }
         case "stopAlarmKitAlarm":

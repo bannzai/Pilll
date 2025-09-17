@@ -66,19 +66,21 @@ class AlarmKitManager {
         try await AlarmManager.shared.schedule(configuration)
     }
     
-    /// 服薬リマインダーアラームを解除する
+    /// すべての服薬リマインダーアラームを解除する
     ///
-    /// 指定したIDのAlarmKitアラームを解除します。
-    ///
-    /// - Parameter id: 解除するアラームの識別子
+    /// 現在登録されているすべてのAlarmKitアラームを解除します。
+    /// LocalNotificationと同様に全解除してから新規登録する方式で使用します。
     ///
     /// - Throws: アラーム解除に失敗した場合Exception
-    func cancelMedicationAlarm(id: String) async throws {
+    func cancelAllMedicationAlarms() async throws {
         guard #available(iOS 26.0, *) else {
             throw AlarmKitError.notAvailable
         }
         
-        try await AlarmManager.shared.cancel(id: id)
+        let alarms = await AlarmManager.shared.alarms
+        for alarm in alarms {
+            try await AlarmManager.shared.cancel(id: alarm.id)
+        }
     }
     
     /// アラームを停止する
