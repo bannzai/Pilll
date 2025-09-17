@@ -11,6 +11,7 @@
 		2002EF782CB3E1860076D2FB /* ShareToSNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002EF772CB3E1860076D2FB /* ShareToSNS.swift */; };
 		2006A7E328B0CE210066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		202E35922AB7AD9A00473C5D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E35902AB7AD9A00473C5D /* Secret.xcconfig */; };
+		20547DFB2E7A766700E9E046 /* AlarmKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */; };
 		205637412AF907B60082C189 /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205637402AF907B60082C189 /* Backport.swift */; };
 		207DA16628B1148700CD6C34 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		207DA16728B1148700CD6C34 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C628B0BB670066E4DD /* SwiftUI.framework */; };
@@ -92,6 +93,7 @@
 		2006A7E028B0CDC00066E4DD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		201B3C122BDF266B00A21274 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		202E35902AB7AD9A00473C5D /* Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Secret.xcconfig; path = Flutter/Secret.xcconfig; sourceTree = "<group>"; };
+		20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmKitManager.swift; sourceTree = "<group>"; };
 		205637402AF907B60082C189 /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
 		207DA16528B1148700CD6C34 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		207DA16928B1148700CD6C34 /* Widget.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; tabWidth = 2; };
@@ -249,6 +251,7 @@
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
+				20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */,
 				2002EF772CB3E1860076D2FB /* ShareToSNS.swift */,
 				208DC3A02BF1AF4300E7F7AF /* AppTrackingTransparency.swift */,
 				20DBB04527A88D1D0069A9A2 /* HealthKit.swift */,
@@ -445,9 +448,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -493,9 +500,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -550,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
+				20547DFB2E7A766700E9E046 /* AlarmKitManager.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				208DC3A12BF1AF4300E7F7AF /* AppTrackingTransparency.swift in Sources */,
 				2002EF782CB3E1860076D2FB /* ShareToSNS.swift in Sources */,
