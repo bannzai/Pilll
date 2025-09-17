@@ -840,7 +840,7 @@ class CancelReminderLocalNotification {
   }
 
   /// AlarmKitアラームを解除する
-  /// 
+  ///
   /// 既存のlocal notificationと同じIDパターンでAlarmKitアラームが登録されているため、
   /// 同様のロジックで解除処理を行います。
   /// iOS 26+でのみ実行され、Android端末では何もしません。
@@ -853,28 +853,25 @@ class CancelReminderLocalNotification {
       // RegisterReminderLocalNotificationと同じIDパターンでアラームを解除
       // 10日間分 × リマインダー時刻数 × ピルシート分のアラームを想定して広めに解除
       final List<Future<void>> cancelFutures = [];
-      
+
       // 過去と未来を含めた幅広い範囲のIDを解除
       // 実際には存在しないIDもあるが、AlarmKit側でエラーにならないため安全
-      for (int groupIndex = 0; groupIndex < 10; groupIndex++) { // 最大10グループ想定
+      for (int groupIndex = 0; groupIndex < 10; groupIndex++) {
+        // 最大10グループ想定
         for (int hour = 0; hour < 24; hour++) {
-          for (int minute = 0; minute < 60; minute += 5) { // 5分刻みで想定
-            for (int pillNumber = 1; pillNumber <= 30; pillNumber++) { // 最大30錠想定
-              final notificationID = reminderNotificationIdentifierOffset +
-                  (groupIndex * 10000000) +
-                  (hour * 100000) +
-                  (minute * 1000) +
-                  pillNumber;
+          for (int minute = 0; minute < 60; minute += 5) {
+            // 5分刻みで想定
+            for (int pillNumber = 1; pillNumber <= 30; pillNumber++) {
+              // 最大30錠想定
+              final notificationID = reminderNotificationIdentifierOffset + (groupIndex * 10000000) + (hour * 100000) + (minute * 1000) + pillNumber;
 
-              cancelFutures.add(
-                AlarmKitService.cancelMedicationReminder(notificationID.toString()).catchError((e) {
-                  // 個別のエラーは無視（存在しないIDの場合など）
-                  analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
-                    'id': notificationID.toString(),
-                    'error': e.toString(),
-                  });
-                })
-              );
+              cancelFutures.add(AlarmKitService.cancelMedicationReminder(notificationID.toString()).catchError((e) {
+                // 個別のエラーは無視（存在しないIDの場合など）
+                analytics.debug(name: 'cancel_alarm_kit_individual_error', parameters: {
+                  'id': notificationID.toString(),
+                  'error': e.toString(),
+                });
+              }));
             }
           }
         }
