@@ -94,7 +94,7 @@ import 'app_localizations_zu.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'l10n/app_localizations.dart';
+/// import 'pilll/l10n/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -138,8 +138,7 @@ import 'app_localizations_zu.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -147,8 +146,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -160,8 +158,7 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -842,8 +839,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{left}-{afterLastTakenPillNumber}番'**
-  String leftDashAfterLastTakenPillNumber(
-      String left, String afterLastTakenPillNumber);
+  String leftDashAfterLastTakenPillNumber(String left, String afterLastTakenPillNumber);
 
   /// 最後に服用したピルの1つ前の番号を表示します。ピルシートのUI上で服用履歴の範囲表示に使用される番号です。
   ///
@@ -855,37 +851,31 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{beforeLastTakenPillNumber}-{afterLastTakenPillNumberPlusOne}番'**
-  String beforeLastDashAfterLastTakenPlusOnePillNumber(
-      String beforeLastTakenPillNumber, String afterLastTakenPillNumberPlusOne);
+  String beforeLastDashAfterLastTakenPlusOnePillNumber(String beforeLastTakenPillNumber, String afterLastTakenPillNumberPlusOne);
 
   /// ピルシートの表示番号設定で、1番から設定した開始番号までの範囲を示すテキストです。ピルシート上での番号表示のカスタマイズ機能で使用されます。
   ///
   /// In ja, this message translates to:
   /// **'1→{afterDisplayNumberSettingBeginPillNumber}番'**
-  String oneToAfterDisplayNumberBeginPillNumber(
-      String afterDisplayNumberSettingBeginPillNumber);
+  String oneToAfterDisplayNumberBeginPillNumber(String afterDisplayNumberSettingBeginPillNumber);
 
   /// ピルシートの表示番号設定で、元の開始番号から変更後の開始番号への変更を示すテキストです。番号の変更前後を矢印で表現しています。
   ///
   /// In ja, this message translates to:
   /// **'{beforeBeginPillNumber}→{afterDisplayNumberSettingBeginPillNumber}番'**
-  String beforeBeginToAfterDisplayNumberBeginPillNumber(
-      String beforeBeginPillNumber,
-      String afterDisplayNumberSettingBeginPillNumber);
+  String beforeBeginToAfterDisplayNumberBeginPillNumber(String beforeBeginPillNumber, String afterDisplayNumberSettingBeginPillNumber);
 
   /// ピルシートUIでピルの番号表示範囲を示すテキストです。「1番目から設定された最後の番号まで」という意味で、ピルシートの表示範囲を表します。
   ///
   /// In ja, this message translates to:
   /// **'1→{afterDisplayNumberSettingEndPillNumber}番'**
-  String oneToAfterDisplayNumberEndPillNumber(
-      String afterDisplayNumberSettingEndPillNumber);
+  String oneToAfterDisplayNumberEndPillNumber(String afterDisplayNumberSettingEndPillNumber);
 
   /// ピルシートの最後の薬の表示番号を変更する際に使用されます。変更前の番号から変更後の番号への変更を矢印で示します。
   ///
   /// In ja, this message translates to:
   /// **'{beforeEndPillNumber}→{afterDisplayNumberSettingEndPillNumber}番'**
-  String beforeEndToAfterDisplayNumberEndPillNumber(String beforeEndPillNumber,
-      String afterDisplayNumberSettingEndPillNumber);
+  String beforeEndToAfterDisplayNumberEndPillNumber(String beforeEndPillNumber, String afterDisplayNumberSettingEndPillNumber);
 
   /// ピルの休薬期間（服用を一時的に停止する期間）の開始日をカレンダーから選択する際に表示される画面タイトルです。生理周期に合わせた服用スケジュール管理で使用されます。
   ///
@@ -951,9 +941,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}番'**
-  String lastTakenPlusOnePillNumber(
-      String
-          pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne);
+  String lastTakenPlusOnePillNumber(String pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne);
 
   /// ピルの服用を表す単語。服用記録や服用時刻などの機能で使用される。
   ///
@@ -1043,8 +1031,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'前回のシートの最後：{beforePillSheetGroupSequentialEstimatedEndPillNumber}日目'**
-  String beforePillSheetGroupSequentialEstimatedEndDay(
-      int beforePillSheetGroupSequentialEstimatedEndPillNumber);
+  String beforePillSheetGroupSequentialEstimatedEndDay(int beforePillSheetGroupSequentialEstimatedEndPillNumber);
 
   /// ピルシートの服用期間が完了したことをユーザーに知らせるメッセージです。次のサイクルに進む前の区切りを示します。
   ///
@@ -1134,15 +1121,13 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{activePillSheetPillSheetTypeNotTakenWord}{restDurationDays}日目'**
-  String restDurationDays(
-      String activePillSheetPillSheetTypeNotTakenWord, int restDurationDays);
+  String restDurationDays(String activePillSheetPillSheetTypeNotTakenWord, int restDurationDays);
 
   /// ピルの服用期間から休薬期間までの残り日数を知らせるメッセージです。{diffPlusOne}は日数、{activePillSheetPillSheetTypeNotTakenWord}は休薬期間等の用語が入ります。
   ///
   /// In ja, this message translates to:
   /// **'あと{diffPlusOne}日で{activePillSheetPillSheetTypeNotTakenWord}期間です'**
-  String daysUntilPausePeriod(
-      int diffPlusOne, String activePillSheetPillSheetTypeNotTakenWord);
+  String daysUntilPausePeriod(int diffPlusOne, String activePillSheetPillSheetTypeNotTakenWord);
 
   /// プレミアムプラン（有料機能）の無料試用期間や有料契約の残り日数を表示するメッセージです。ユーザーにあと何日間、アプリのすべての機能（広告非表示、詳細統計など）が利用できるかを伝えています。
   ///
@@ -1202,8 +1187,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'生理予定：{diffPlusOne}日目の{pillNumber}'**
-  String menstruationScheduleDateWithNumberAndPillNumber(
-      int diffPlusOne, String pillNumber);
+  String menstruationScheduleDateWithNumberAndPillNumber(int diffPlusOne, String pillNumber);
 
   /// 次回の生理予定日まであと何日かを示すメッセージです。{diff}に残り日数が入ります。
   ///
@@ -1711,8 +1695,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{missedTakenMessageValueCharactersLength}/100'**
-  String missedNotificationMessageLength(
-      int missedTakenMessageValueCharactersLength);
+  String missedNotificationMessageLength(int missedTakenMessageValueCharactersLength);
 
   /// プッシュ通知のタイトル部分をユーザーがカスタマイズできる機能について説明するテキストです。設定画面などで、服用リマインダー通知の冒頭メッセージを変更できることを伝えています。
   ///
@@ -1742,8 +1725,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{dailyTakenMessageValueCharactersLength}/100'**
-  String dailyNotificationMessageLength(
-      int dailyTakenMessageValueCharactersLength);
+  String dailyNotificationMessageLength(int dailyTakenMessageValueCharactersLength);
 
   /// ピルの服用リマインダー通知の設定項目で、当日の朝9:00に通知を受け取る機能を表します。通知時刻が固定で朝9:00となっているボタンやメニューのテキストです。
   ///
@@ -1959,15 +1941,13 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{pillSheetPillSheetTypeNotTakenWord}期間の通知'**
-  String notificationForNotTakenPeriod(
-      String pillSheetPillSheetTypeNotTakenWord);
+  String notificationForNotTakenPeriod(String pillSheetPillSheetTypeNotTakenWord);
 
   /// プッシュ通知機能がオフの状態でも、休薬期間（プラセボ期間）の服用記録が自動的に作成されることを説明するメッセージです。{pillSheetPillSheetTypeNotTakenWord}は「休薬期間」「プラセボ期間」などの期間名が入るプレースホルダーです。
   ///
   /// In ja, this message translates to:
   /// **'通知オフの場合は、{pillSheetPillSheetTypeNotTakenWord}期間の服用記録も自動で付けられます'**
-  String autoRecordForNotTakenPeriodIfNotificationOff(
-      String pillSheetPillSheetTypeNotTakenWord);
+  String autoRecordForNotTakenPeriodIfNotificationOff(String pillSheetPillSheetTypeNotTakenWord);
 
   /// ユーザーがプレミアムプランの解約手続きを完了した後に表示される、解約理由などを聞くアンケートへの協力をお願いするメッセージです。丁寧で協力的なトーンで翻訳してください。
   ///
@@ -1997,8 +1977,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorUnknownError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorUnknownError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金の購入時にApp StoreやGoogle Playなどのストアで問題が発生した際のエラーメッセージです。{storeName}には各プラットフォームのストア名が入ります。
   ///
@@ -2058,15 +2037,13 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorInvalidCredentialsError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorInvalidCredentialsError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。
   ///
   /// In ja, this message translates to:
   /// **'現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorUnexpectedBackendResponseError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorUnexpectedBackendResponseError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金（プレミアムプラン）で、同じ購入レシートが別のユーザーアカウントで既に使用されている場合に表示されるエラーメッセージです。ユーザーにデバイスにログインしているアカウント名を確認するよう促しています。
   ///
@@ -2078,8 +2055,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorInvalidAppUserIdError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorInvalidAppUserIdError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金処理中に別の購入操作が実行された際に表示されるエラーメッセージです。ユーザーに重複した購入処理を避けるよう促すメッセージとして使用されます。
   ///
@@ -2091,22 +2067,19 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorUnknownBackendError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorUnknownBackendError(String exceptionMessage, String exceptionDetails);
 
   /// Apple App Storeでのサブスクリプション購入失敗時に表示されるエラーメッセージです。ユーザーに再試行を促し、解決しない場合のサポート連絡方法と技術的な詳細情報を案内する内容です。
   ///
   /// In ja, this message translates to:
   /// **'購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorInvalidAppleSubscriptionKeyError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorInvalidAppleSubscriptionKeyError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金（プレミアムプラン購入）でユーザーが購入資格を満たしていない場合に表示されるエラーメッセージです。一時的な問題の可能性もあるため、再試行とサポート連絡を案内しています。
   ///
   /// In ja, this message translates to:
   /// **'お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorIneligibleError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorIneligibleError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金でプレミアムプランに加入しようとした際に、ユーザーのApple IDやGoogle アカウントに課金権限がない場合に表示されるエラーメッセージです。アカウント設定や支払い方法に問題があることをユーザーに伝える内容です。
   ///
@@ -2124,106 +2097,91 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorInvalidSubscriberAttributesError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorInvalidSubscriberAttributesError(String exceptionMessage, String exceptionDetails);
 
   /// プレミアムプラン購入時にユーザー情報の取得に失敗した際のエラーメッセージです。再試行とサポートへの問い合わせ方法を案内しています。
   ///
   /// In ja, this message translates to:
   /// **'ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorLogOutWithAnonymousUserError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorLogOutWithAnonymousUserError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金（プレミアムプラン）の設定情報取得に失敗した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合はサポートへの問い合わせを案内する内容です。
   ///
   /// In ja, this message translates to:
   /// **'購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorConfigurationError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorConfigurationError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金（プレミアムプラン購入）で未対応のエラーが発生した際にユーザーに表示されるエラーメッセージです。アップデートやサポート連絡を促す丁寧な案内文として翻訳してください。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorUnsupportedError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorUnsupportedError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金でプレミアムプラン購入時に、ユーザー情報の取得に失敗した場合に表示される技術的なエラーメッセージです。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。購入情報を事前に取得できませんでした。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorEmptySubscriberAttributesError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorEmptySubscriberAttributesError(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金でプレミアムプランを購入する際、商品の割引情報の識別子が見つからない場合に表示されるエラーメッセージです。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorProductDiscountMissingIdentifierError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorProductDiscountMissingIdentifierError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// プレミアムプラン購入時に発生する原因不明のエラーをユーザーに伝えるメッセージです。アプリの更新や問い合わせ方法を案内し、技術的なエラー情報（コード・詳細）も含まれます。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorUnknownNonNativeError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorUnknownNonNativeError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// プレミアムプランの購入処理で、課金システムから顧客情報を取得できない場合に表示されるエラーメッセージです。一時的なネットワークエラーやサーバー障害が原因で発生することが多いエラーです。
   ///
   /// In ja, this message translates to:
   /// **'顧客情報の取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: コード: {errorCode} {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorCustomerInfoError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorCustomerInfoError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。
   ///
   /// In ja, this message translates to:
   /// **'端末の設定に問題があります。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorSystemInfoError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorSystemInfoError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金のプレミアムプランで返金処理が開始された際に表示されるエラーメッセージです。ユーザーに状況確認と再試行を促し、解決しない場合のサポート連絡先も案内する内容です。
   ///
   /// In ja, this message translates to:
   /// **'返金処理が開始されています。確認して再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorBeginRefundRequestError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorBeginRefundRequestError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。
   ///
   /// In ja, this message translates to:
   /// **'タイムアウトしました。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorProductRequestTimeout(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorProductRequestTimeout(String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金（プレミアムプラン購入）時にAPIエンドポイントがブロックされた際に表示されるエラーメッセージです。ユーザーにアプリの更新と問い合わせ方法を案内する内容になります。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorApiEndpointBlocked(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorApiEndpointBlocked(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金でプロモーション・割引プランの購入に失敗した際に表示されるエラーメッセージです。ユーザーにアップデートと再試行、問い合わせを促す内容にしてください。
   ///
   /// In ja, this message translates to:
   /// **'原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。コード: {errorCode} 詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorInvalidPromotionalOfferError(
-      String errorCode, String exceptionMessage, String exceptionDetails);
+  String purchaseErrorInvalidPromotionalOfferError(String errorCode, String exceptionMessage, String exceptionDetails);
 
   /// アプリ内課金処理時にネットワーク接続エラーが発生した際に表示されるエラーメッセージです。ユーザーに通信環境の確認と再試行を促し、問題が続く場合のサポート連絡方法を案内しています。
   ///
   /// In ja, this message translates to:
   /// **'通信不良です。通信環境をお確かめの上再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: {exceptionMessage}:{exceptionDetails}'**
-  String purchaseErrorOfflineConnectionError(
-      String exceptionMessage, String exceptionDetails);
+  String purchaseErrorOfflineConnectionError(String exceptionMessage, String exceptionDetails);
 
   /// アプリの新しいバージョンが必要で、ユーザーが強制的にアップデートしなければならない状況で表示されるタイトルです。緊急性を伝えつつ、丁寧な表現で更新を促してください。
   ///
@@ -2283,22 +2241,19 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'この{accountTypeProviderName}アカウントはすでにお使いのPilllのアカウントに紐付いています。画面の更新をお試しください。FAQもご覧ください。詳細: {exceptionMessage}'**
-  String accountAlreadyLinked(
-      String accountTypeProviderName, String exceptionMessage);
+  String accountAlreadyLinked(String accountTypeProviderName, String exceptionMessage);
 
   /// アカウント登録時に、GoogleやAppleアカウントなど外部アカウントが既に他のPilllアカウントに連携済みで登録できない場合のエラーメッセージです。FAQへの誘導とエラー詳細の表示も含みます。
   ///
   /// In ja, this message translates to:
   /// **'この{accountTypeProviderName}アカウントはすでに他のPilllのアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}'**
-  String accountAlreadyLinkedWithOtherPilllAccount(
-      String accountTypeProviderName, String exceptionMessage);
+  String accountAlreadyLinkedWithOtherPilllAccount(String accountTypeProviderName, String exceptionMessage);
 
   /// ユーザーがGoogle/Appleアカウントなどで登録しようとした際、そのメールアドレスが既に別のPilllアカウントと紐付いているため新規登録できない旨を伝えるエラーメッセージです。アカウント重複を防ぐためのシステムメッセージなので、ユーザーが状況を理解し適切な対処法（FAQ参照）を取れるよう明確に翻訳してください。
   ///
   /// In ja, this message translates to:
   /// **'すでに{accountTypeProviderName}アカウントでお使いのメールアドレスが他のPilllアカウントに紐付いているため登録ができません。FAQもご覧ください。詳細: {exceptionMessage}'**
-  String emailAlreadyInUse(
-      String accountTypeProviderName, String exceptionMessage);
+  String emailAlreadyInUse(String accountTypeProviderName, String exceptionMessage);
 
   /// カレンダー機能で表示される「今日の予定・スケジュール」のタイトルです。ピルの服用予定や通院予定などの健康管理に関する今日の予定を指します。
   ///
@@ -2664,8 +2619,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{pillSheetGroupSequentialLastTakenPillNumber}番'**
-  String sequentialLastTakenPlusOnePillNumber(
-      String pillSheetGroupSequentialLastTakenPillNumber);
+  String sequentialLastTakenPlusOnePillNumber(String pillSheetGroupSequentialLastTakenPillNumber);
 
   /// ピルシートUIで表示する薬の番号の開始位置を設定する機能のテキストです。ユーザーが任意の番号からピルシートの表示をスタートできるようにする設定項目で使用されます。
   ///
@@ -2707,8 +2661,7 @@ abstract class AppLocalizations {
   ///
   /// In ja, this message translates to:
   /// **'{DateTimeFormatterMonthAndDay}({DateTimeFormatterWeekday})'**
-  String formattedDateAndWeekday(
-      String DateTimeFormatterMonthAndDay, String DateTimeFormatterWeekday);
+  String formattedDateAndWeekday(String DateTimeFormatterMonthAndDay, String DateTimeFormatterWeekday);
 
   /// ピルの服用を一時的に休止する期間の開始日を編集する画面やボタンで使用されるテキストです。ユーザーが体調や医師の指示により服用を中断したい場合に設定する機能です。
   ///
@@ -2885,8 +2838,7 @@ abstract class AppLocalizations {
   String get specialDiscountPriceNow;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -3141,8 +3093,7 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
       return AppLocalizationsZu();
   }
 
-  throw FlutterError(
-      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+  throw FlutterError('AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
       'an issue with the localizations generation tool. Please file an issue '
       'on GitHub with a reproducible sample app and the gen-l10n configuration '
       'that was used.');
