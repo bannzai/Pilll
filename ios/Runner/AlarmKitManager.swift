@@ -40,9 +40,7 @@ class AlarmKitManager {
       return "notAvailable"
     }
 
-    let authorizationStatus = AlarmManager.shared.authorizationStatus
-    
-    switch authorizationStatus {
+    switch AlarmManager.shared.authorizationState {
     case .authorized:
       return "authorized"
     case .denied:
