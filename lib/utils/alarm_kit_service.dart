@@ -3,6 +3,29 @@ import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:pilll/utils/analytics.dart';
 
+/// AlarmKitの認証状態
+enum AlarmKitAuthorizationStatus {
+  authorized,      // 許可済み
+  denied,         // 拒否
+  notDetermined,  // 未決定
+  notAvailable;   // iOS 26未満
+
+  static AlarmKitAuthorizationStatus fromString(String value) {
+    switch (value) {
+      case 'authorized':
+        return AlarmKitAuthorizationStatus.authorized;
+      case 'denied':
+        return AlarmKitAuthorizationStatus.denied;
+      case 'notDetermined':
+        return AlarmKitAuthorizationStatus.notDetermined;
+      case 'notAvailable':
+        return AlarmKitAuthorizationStatus.notAvailable;
+      default:
+        return AlarmKitAuthorizationStatus.notAvailable;
+    }
+  }
+}
+
 /// AlarmKit機能へのアクセスを提供するサービスクラス
 ///
 /// iOS 26+でのみ利用可能なAlarmKitの機能をFlutterから使用するためのラッパーです。
@@ -28,6 +51,31 @@ class AlarmKitService {
     } catch (e) {
       analytics.debug(name: 'alarm_kit_availability_check_error', parameters: {'error': e.toString()});
       return false;
+    }
+  }
+
+  /// AlarmKitの認証状態を取得する
+  ///
+  /// 現在のAlarmKitの認証状態を確認します。
+  /// UI表示に応じて適切な状態を返します。
+  /// iOS 26未満の場合はnotAvailableを返します。
+  ///
+  /// Returns: 現在の認証状態
+  static Future<AlarmKitAuthorizationStatus> getAuthorizationStatus() async {
+    if (!Platform.isIOS) {
+      return AlarmKitAuthorizationStatus.notAvailable;
+    }
+
+    try {
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('getAlarmKitAuthorizationStatus');
+      if (result?['result'] == 'success') {
+        final statusString = result?['authorizationStatus'] as String? ?? 'notAvailable';
+        return AlarmKitAuthorizationStatus.fromString(statusString);
+      }
+      return AlarmKitAuthorizationStatus.notAvailable;
+    } catch (e) {
+      analytics.debug(name: 'alarm_kit_authorization_status_check_error', parameters: {'error': e.toString()});
+      return AlarmKitAuthorizationStatus.notAvailable;
     }
   }
 

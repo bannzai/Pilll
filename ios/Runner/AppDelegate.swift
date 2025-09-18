@@ -130,6 +130,12 @@ private var channel: FlutterMethodChannel?
             "result": "success",
             "isAlarmKitAvailable": AlarmKitManager.shared.isAvailableForCurrentOS()
           ])
+        case "getAlarmKitAuthorizationStatus":
+          let authStatus = AlarmKitManager.shared.getAuthorizationStatus()
+          completionHandler([
+            "result": "success",
+            "authorizationStatus": authStatus
+          ])
         case "requestAlarmKitPermission":
           if #available(iOS 26.0, *) {
             Task {

@@ -29,6 +29,31 @@ class AlarmKitManager {
     }
   }
 
+  /// AlarmKitの認証状態を取得する
+  ///
+  /// 現在のAlarmKitの認証状態を確認します。
+  /// UI表示に応じて適切な状態を返します。
+  ///
+  /// Returns: 現在の認証状態（"authorized", "denied", "notDetermined", "notAvailable"）
+  func getAuthorizationStatus() -> String {
+    guard #available(iOS 26.0, *) else {
+      return "notAvailable"
+    }
+
+    let authorizationStatus = AlarmManager.shared.authorizationStatus
+    
+    switch authorizationStatus {
+    case .authorized:
+      return "authorized"
+    case .denied:
+      return "denied"
+    case .notDetermined:
+      return "notDetermined"
+    @unknown default:
+      return "notDetermined"
+    }
+  }
+
   /// AlarmKitの権限をリクエストする
   ///
   /// iOS 26+でAlarmKitの使用許可をユーザーに求めます。
