@@ -99,7 +99,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version20250418;
+  const String key = ReleaseNoteKey.version20250920;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -121,5 +121,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse('https://pilll.notion.site/1d929383171780a0af78c2a01f3b18ae'), mode: LaunchMode.inAppBrowserView);
+  launchUrl(Uri.parse('https://www.notion.so/pilll/202509-20-x-273293831717809790f9e6cbd8f948c2'), mode: LaunchMode.inAppBrowserView);
 }
