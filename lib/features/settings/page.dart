@@ -201,7 +201,7 @@ class SettingPageBody extends StatelessWidget {
                             isTrial: user.isTrial,
                           ),
                           _separator(),
-                          AlarmKitSetting(setting: setting),
+                          AlarmKitSetting(setting: setting, isPremium: user.isPremium, isTrial: user.isTrial),
                           _separator(),
                         ],
                         ReminderNotificationCustomizeWord(

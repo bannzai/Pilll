@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/alarm_kit_service.dart';
@@ -10,26 +11,23 @@ import 'package:pilll/utils/local_notification.dart';
 
 class AlarmKitSetting extends HookConsumerWidget {
   final Setting setting;
+  final bool isPremium;
+  final bool isTrial;
   const AlarmKitSetting({
     super.key,
     required this.setting,
+    required this.isPremium,
+    required this.isTrial,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final isAlarmKitAvailable = useState<bool?>(null);
+    final isAlarmKitAvailableFuture = useFuture(AlarmKitService.isAvailable());
+    final isAlarmKitAvailable = isAlarmKitAvailableFuture.data;
     final isLoading = useState(false);
 
-    useEffect(() {
-      // AlarmKitの利用可能性を確認
-      AlarmKitService.isAvailable().then((available) {
-        isAlarmKitAvailable.value = available;
-      });
-      return null;
-    }, []);
-
     // AlarmKitが利用できない場合は何も表示しない
-    if (isAlarmKitAvailable.value != true) {
+    if (isAlarmKitAvailable != true) {
       return const SizedBox.shrink();
     }
 
@@ -52,65 +50,70 @@ class AlarmKitSetting extends HookConsumerWidget {
         ),
       ),
       contentPadding: const EdgeInsets.fromLTRB(14, 4, 6, 0),
-      trailing: isLoading.value
-          ? const SizedBox(
-              width: 24,
-              height: 24,
-              child: CircularProgressIndicator(),
-            )
-          : Switch(
-              value: setting.useAlarmKit,
-              onChanged: (value) async {
-                if (isLoading.value) return;
+      trailing: Stack(
+        alignment: Alignment.center,
+        children: [
+          Switch(
+            value: setting.useAlarmKit,
+            onChanged: (value) async {
+              if (isLoading.value) return;
 
-                analytics.logEvent(
-                  name: 'did_toggle_alarm_kit_setting',
-                  parameters: {'enabled': value},
-                );
+              analytics.logEvent(
+                name: 'did_toggle_alarm_kit_setting',
+                parameters: {'enabled': value},
+              );
 
-                isLoading.value = true;
-                try {
-                  if (value) {
-                    // AlarmKit有効時は権限リクエスト
-                    final hasPermission = await AlarmKitService.requestPermission();
-                    if (hasPermission) {
-                      final setSetting = ref.read(setSettingProvider);
-                      await setSetting(setting.copyWith(useAlarmKit: true));
-                      // 設定変更時に通知を再登録
-                      final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
-                      await registerReminderLocalNotification();
-                    } else {
-                      // 権限が拒否された場合はエラーメッセージ表示
-                      if (context.mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('アラーム機能の権限が必要です。設定から許可してください。'),
-                          ),
-                        );
-                      }
-                    }
-                  } else {
-                    // AlarmKit無効時
+              isLoading.value = true;
+              try {
+                if (value) {
+                  // AlarmKit有効時は権限リクエスト
+                  final hasPermission = await AlarmKitService.requestPermission();
+                  if (hasPermission) {
                     final setSetting = ref.read(setSettingProvider);
-                    await setSetting(setting.copyWith(useAlarmKit: false));
+                    await setSetting(setting.copyWith(useAlarmKit: true));
                     // 設定変更時に通知を再登録
                     final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
                     await registerReminderLocalNotification();
+                  } else {
+                    // 権限が拒否された場合はエラーメッセージ表示
+                    if (context.mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('アラーム機能の権限が必要です。設定から許可してください。'),
+                        ),
+                      );
+                    }
                   }
-                } catch (e) {
-                  analytics.debug(name: 'alarm_kit_setting_error', parameters: {'error': e.toString()});
-                  if (context.mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                        content: Text('設定の変更に失敗しました。もう一度お試しください。'),
-                      ),
-                    );
-                  }
-                } finally {
-                  isLoading.value = false;
+                } else {
+                  // AlarmKit無効時
+                  final setSetting = ref.read(setSettingProvider);
+                  await setSetting(setting.copyWith(useAlarmKit: false));
+                  // 設定変更時に通知を再登録
+                  final registerReminderLocalNotification = ref.read(registerReminderLocalNotificationProvider);
+                  await registerReminderLocalNotification();
                 }
-              },
-            ),
+              } catch (e) {
+                analytics.debug(name: 'alarm_kit_setting_error', parameters: {'error': e.toString()});
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('設定の変更に失敗しました。もう一度お試しください。'),
+                    ),
+                  );
+                }
+              } finally {
+                isLoading.value = false;
+              }
+            },
+          ),
+          if (isLoading.value)
+            const SizedBox(
+              width: 40,
+              height: 40,
+              child: Indicator(),
+            )
+        ],
+      ),
     );
   }
 }
