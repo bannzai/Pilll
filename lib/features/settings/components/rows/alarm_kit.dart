@@ -44,7 +44,7 @@ class AlarmKitSetting extends HookConsumerWidget {
         ),
       ),
       subtitle: const Text(
-        'サイレントモードやフォーカスモード時でも確実に通知されます（iOS 26以降）',
+        '目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます',
         style: TextStyle(
           fontFamily: FontFamily.japanese,
           fontWeight: FontWeight.w300,
