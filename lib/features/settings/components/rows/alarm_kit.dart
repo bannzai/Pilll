@@ -65,7 +65,12 @@ class AlarmKitSetting extends HookConsumerWidget {
           Switch(
             value: setting.useAlarmKit,
             onChanged: (value) async {
-              if (isLoading.value) return;
+              if (isLoading.value) {
+                return;
+              }
+              if (!isPremium && !isTrial) {
+                return;
+              }
 
               analytics.logEvent(
                 name: 'did_toggle_alarm_kit_setting',
