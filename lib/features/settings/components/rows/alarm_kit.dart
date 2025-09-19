@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/utils/alarm_kit_service.dart';
@@ -33,13 +34,21 @@ class AlarmKitSetting extends HookConsumerWidget {
 
     return ListTile(
       minVerticalPadding: 9,
-      title: const Text(
-        'アラーム機能',
-        style: TextStyle(
-          fontFamily: FontFamily.roboto,
-          fontWeight: FontWeight.w300,
-          fontSize: 16,
-        ),
+      title: Row(
+        children: [
+          const Text(
+            'アラーム機能',
+            style: TextStyle(
+              fontFamily: FontFamily.roboto,
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+            ),
+          ),
+          if (!isPremium) ...[
+            const SizedBox(width: 8),
+            const PremiumBadge(),
+          ]
+        ],
       ),
       subtitle: const Text(
         '目覚まし同様の通知が鳴ります。サイレントモードや集中モード時でも確実に通知されます',
