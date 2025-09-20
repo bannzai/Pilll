@@ -9,7 +9,7 @@ struct AlarmLiveActivityWidget: Widget {
   var body: some WidgetConfiguration {
     ActivityConfiguration(for: AlarmAttributes<AppAlarmMetadata>.self) { context in
       // The Lock Screen presentation.
-      lockScreenView(attributes: context.attributes, state: context.state)
+      LockScreen(attributes: context.attributes, state: context.state)
     } dynamicIsland: { context in
       // The presentations that appear in the Dynamic Island.
       DynamicIsland {
@@ -34,7 +34,7 @@ struct AlarmLiveActivityWidget: Widget {
     }
   }
 
-  func lockScreenView(attributes: AlarmAttributes<AppAlarmMetadata>, state: AlarmPresentationState) -> some View {
+  func LockScreen(attributes: AlarmAttributes<AppAlarmMetadata>, state: AlarmPresentationState) -> some View {
     VStack(alignment: .leading) {
       HStack(alignment: .top) {
         Text(attributes.metadata?.title ?? "服薬時刻です")
