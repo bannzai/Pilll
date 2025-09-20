@@ -45,7 +45,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          'マナーモード中でも通知を送る設定を追加しました',
+                          '服薬時刻に目覚ましアラームが鳴るようにしました',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -65,7 +65,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます
+集中モードがONまたはデバイスが消音時でも、目覚ましのようにアラームが鳴らせるオプションを追加しました
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
