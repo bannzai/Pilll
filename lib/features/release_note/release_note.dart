@@ -121,5 +121,6 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse('https://www.notion.so/pilll/202509-20-x-273293831717809790f9e6cbd8f948c2'), mode: LaunchMode.inAppBrowserView);
+  // NOTE: www.notion.so から始まっている場合は間違い
+  launchUrl(Uri.parse('https://pilll.notion.site/202509-20-x-273293831717809790f9e6cbd8f948c2?pvs=74'), mode: LaunchMode.inAppBrowserView);
 }
