@@ -9,6 +9,7 @@ struct AlarmLiveActivityWidget: Widget {
   var body: some WidgetConfiguration {
     ActivityConfiguration(for: AlarmAttributes<AppAlarmMetadata>.self) { context in
       // The Lock Screen presentation.
+      // NOTE: 現在はロック画面にも出ない。また、DynamicIslandにもどのViewの定義も出ない。時間になったら表示されるのは、AlartPresentationで設定した内容を使用してでいているみたい
       LockScreen(attributes: context.attributes, state: context.state)
     } dynamicIsland: { context in
       // The presentations that appear in the Dynamic Island.
