@@ -96,7 +96,7 @@ class AlarmKitManager {
     let alarmID = UUID()
     let alertContent = AlarmPresentation.Alert(
       title: LocalizedStringResource(stringLiteral: title),
-      stopButton: .stopButton,
+      stopButton: .openAppButton,
       secondaryButton: nil,
       secondaryButtonBehavior: nil,
     )
@@ -107,12 +107,13 @@ class AlarmKitManager {
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
       metadata: AppAlarmMetadata(localNotificationID: localNotificationID),
-      tintColor: Color.accentColor
+      tintColor: Color.accentColor,
     )
 
     let configuration = AlarmConfiguration.alarm(
       schedule: .fixed(scheduledTime),
-      attributes: attributes
+      attributes: attributes,
+      stopIntent: OpenAlarmAppIntent(alarmID: alarmID),
     )
 
     _ = try await AlarmManager.shared.schedule(id: alarmID, configuration: configuration)
@@ -175,27 +176,10 @@ enum AlarmKitError: Error, LocalizedError {
 @available(iOS 26.0, *)
 extension AlarmButton {
   static var openAppButton: Self {
-    AlarmButton(text: "開く", textColor: .black, systemImageName: "swift")
-  }
-
-  static var pauseButton: Self {
-    AlarmButton(text: "一時停止", textColor: .black, systemImageName: "pause.fill")
-  }
-
-  static var resumeButton: Self {
-    AlarmButton(text: "開始", textColor: .black, systemImageName: "play.fill")
-  }
-
-  static var repeatButton: Self {
-    AlarmButton(text: "繰り返し", textColor: .black, systemImageName: "repeat.circle")
-  }
-
-  static var stopButton: Self {
-    AlarmButton(text: "完了", textColor: .white, systemImageName: "stop.circle")
+    AlarmButton(text: "Pilllを開く", textColor: .black, systemImageName: "swift")
   }
 }
 
-/// 服薬リマインダーのApp Intent
 @available(iOS 26.0, *)
 struct MedicationReminderIntent: AppIntent, LiveActivityIntent {
   static var title: LocalizedStringResource = "Medication Reminder"
@@ -221,5 +205,28 @@ struct MedicationReminderIntent: AppIntent, LiveActivityIntent {
     // アラームが鳴った時の処理
     // 必要に応じてアプリを開くなどの処理を追加
     return .result()
+  }
+}
+
+@available(iOS 26.0, *)
+struct OpenAlarmAppIntent: LiveActivityIntent {
+  func perform() throws -> some IntentResult {
+    try AlarmManager.shared.stop(id: UUID(uuidString: alarmID)!)
+    return .result()
+  }
+
+  static var title: LocalizedStringResource = "Open Pilll"
+  static var description = IntentDescription("Opens the Pilll")
+  static var openAppWhenRun = true
+
+  @Parameter(title: "alarmID")
+  var alarmID: String
+
+  init(alarmID: String) {
+    self.alarmID = alarmID
+  }
+
+  init() {
+    self.alarmID = ""
   }
 }
