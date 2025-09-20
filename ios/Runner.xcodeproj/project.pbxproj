@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,7 +16,6 @@
 		2057C1C42E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */; };
 		2057C1C52E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */; };
 		2057C1C72E7E891C00FDE215 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */; };
-		2057C1C82E7E891C00FDE215 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */; };
 		2057C1C92E7E89C100FDE215 /* AlarmKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */; };
 		2057C1CB2E7E8C5B00FDE215 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1CA2E7E8C5B00FDE215 /* AppColor.swift */; };
 		2057C1CC2E7E8C9300FDE215 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1CA2E7E8C5B00FDE215 /* AppColor.swift */; };
@@ -159,17 +158,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		20547E972E7B3E3100E9E046 /* Utils */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
-			explicitFileTypes = {
-			};
-			explicitFolders = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
+		20547E972E7B3E3100E9E046 /* Utils */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Utils; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -483,9 +472,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -531,9 +524,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -602,7 +599,6 @@
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,
 				2057C1CB2E7E8C5B00FDE215 /* AppColor.swift in Sources */,
-				2057C1C82E7E891C00FDE215 /* WidgetBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
