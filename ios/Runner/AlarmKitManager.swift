@@ -113,7 +113,7 @@ class AlarmKitManager {
     let configuration = AlarmConfiguration.alarm(
       schedule: .fixed(scheduledTime),
       attributes: attributes,
-      stopIntent: OpenAlarmAppIntent(alarmID: alarmID),
+      stopIntent: OpenAlarmAppIntent(alarmID: alarmID.uuidString),
     )
 
     _ = try await AlarmManager.shared.schedule(id: alarmID, configuration: configuration)
