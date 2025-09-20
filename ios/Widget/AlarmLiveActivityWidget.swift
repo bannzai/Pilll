@@ -14,14 +14,14 @@ struct AlarmLiveActivityWidget: Widget {
       // The presentations that appear in the Dynamic Island.
       DynamicIsland {
         // The expanded Dynamic Island presentation.
-        DynamicIslandExpandedRegion(.leading) {
-          EmptyView()
-        }
         DynamicIslandExpandedRegion(.trailing) {
-          EmptyView()
+          StopButton(state: context.state, attributes: context.attributes)
         }
-        DynamicIslandExpandedRegion(.bottom) {
-          EmptyView()
+        DynamicIslandExpandedRegion(.center) {
+          Text(context.attributes.metadata?.title ?? "服薬時刻です")
+            .font(.title3)
+            .fontWeight(.semibold)
+            .padding(.leading, 6)
         }
       } compactLeading: {
         EmptyView()
@@ -37,7 +37,7 @@ struct AlarmLiveActivityWidget: Widget {
   func LockScreen(attributes: AlarmAttributes<AppAlarmMetadata>, state: AlarmPresentationState) -> some View {
     VStack(alignment: .leading) {
       Text(attributes.metadata?.title ?? "服薬時刻です")
-        .font(.body)
+        .font(.title3)
         .fontWeight(.semibold)
         .padding(.leading, 6)
 
