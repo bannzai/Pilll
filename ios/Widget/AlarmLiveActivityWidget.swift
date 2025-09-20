@@ -84,7 +84,7 @@ struct StopButton: View {
       Label("服薬する", systemImage: "pill")
         .lineLimit(1)
     }
-    .tint(attributes.tintColor)
+    .tint(Color(.appPrimary))
     .buttonStyle(.borderedProminent)
     .frame(width: 96, height: 30)
   }
