@@ -790,8 +790,8 @@ abstract class _Setting extends Setting {
   /// trueの場合、iOS 26+でAlarmKitを使用して服薬リマインダーを送信します。
   /// サイレントモード・フォーカスモード時でも確実に通知が表示されます。
   /// iOS 26未満やAndroidでは既存のlocal notificationが使用されます。
-  @override
   bool get useAlarmKit;
+  @override
 
   /// ユーザーのタイムゾーンデータベース名
   ///

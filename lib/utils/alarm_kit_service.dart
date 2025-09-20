@@ -5,10 +5,10 @@ import 'package:pilll/utils/analytics.dart';
 
 /// AlarmKitの認証状態
 enum AlarmKitAuthorizationStatus {
-  authorized,      // 許可済み
-  denied,         // 拒否
-  notDetermined,  // 未決定
-  notAvailable;   // iOS 26未満
+  authorized, // 許可済み
+  denied, // 拒否
+  notDetermined, // 未決定
+  notAvailable; // iOS 26未満
 
   static AlarmKitAuthorizationStatus fromString(String value) {
     switch (value) {
