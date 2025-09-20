@@ -133,6 +133,22 @@ class AlarmKitManager {
       try AlarmManager.shared.cancel(id: alarm.id)
     }
   }
+
+  /// すべてのアラームを停止する
+  ///
+  /// 現在鳴っているすべてのAlarmKitアラームを停止します。
+  /// アラーム音を止めたい場合に使用します。
+  ///
+  /// - Throws: アラーム停止に失敗した場合Exception
+  func stopAllAlarms() async throws {
+    guard #available(iOS 26.0, *) else {
+      throw AlarmKitError.notAvailable
+    }
+
+    for alarm in try AlarmManager.shared.alarms {
+      try AlarmManager.shared.stop(id: alarm.id)
+    }
+  }
 }
 
 /// AlarmKit関連のエラー
