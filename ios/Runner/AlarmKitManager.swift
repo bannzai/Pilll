@@ -95,7 +95,7 @@ class AlarmKitManager {
     
     let alarmID = UUID()
     let alertContent = AlarmPresentation.Alert(
-      title: "Pilll:服薬時間です",
+      title: LocalizedStringResource(stringLiteral: title),
       stopButton: .stopButton,
       secondaryButton: nil,
       secondaryButtonBehavior: nil,
