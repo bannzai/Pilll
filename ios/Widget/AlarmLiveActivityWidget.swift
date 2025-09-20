@@ -36,13 +36,13 @@ struct AlarmLiveActivityWidget: Widget {
 
   func LockScreen(attributes: AlarmAttributes<AppAlarmMetadata>, state: AlarmPresentationState) -> some View {
     VStack(alignment: .leading) {
-      HStack(alignment: .top) {
-        Text(attributes.metadata?.title ?? "服薬時刻です")
-          .font(.title3)
-          .fontWeight(.semibold)
-          .lineLimit(1)
-          .padding(.leading, 6)
-      }
+      Text(attributes.metadata?.title ?? "服薬時刻です")
+        .font(.title3)
+        .fontWeight(.semibold)
+        .lineLimit(1)
+        .padding(.leading, 6)
+
+      Spacer()
 
       HStack {
         Countdown(state: state)

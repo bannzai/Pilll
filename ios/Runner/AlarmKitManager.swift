@@ -171,7 +171,7 @@ enum AlarmKitError: Error, LocalizedError {
 @available(iOS 26.0, *)
 extension AlarmButton {
   static var openAppButton: Self {
-    AlarmButton(text: "Pilllを開く", textColor: .black, systemImageName: "swift")
+    AlarmButton(text: "Pilllを開く", textColor: Color(.appSecondary), systemImageName: "pill")
   }
 }
 
