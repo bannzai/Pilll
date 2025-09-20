@@ -102,7 +102,7 @@ class AlarmKitManager {
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
       metadata: AppAlarmMetadata(localNotificationID: localNotificationID, title: title),
-      tintColor: Color.accentColor,
+      tintColor: Color(.appPrimary),
     )
 
     let configuration = AlarmConfiguration.alarm(
@@ -171,7 +171,7 @@ enum AlarmKitError: Error, LocalizedError {
 @available(iOS 26.0, *)
 extension AlarmButton {
   static var openAppButton: Self {
-    AlarmButton(text: "Pilllを開く", textColor: Color(.appSecondary), systemImageName: "pill")
+    AlarmButton(text: "Pilllを開く", textColor: Color(.appPrimary), systemImageName: "pill")
   }
 }
 
