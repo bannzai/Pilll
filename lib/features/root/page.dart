@@ -1,6 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/components/lifecycle/app_life_cycle_resolver.dart';
 import 'package:pilll/features/home/page.dart';
 import 'package:pilll/features/initial_setting/pill_sheet_group/page.dart';
 import 'package:pilll/features/localizations/resolver.dart';
@@ -35,7 +34,6 @@ class RootPage extends HookConsumerWidget {
                     children: [
                       UserStreamResolver(stream: (user) => analyticsDebugIsEnabled = user.analyticsDebugIsEnabled),
                       const SyncDataResolver(),
-                      const AppLifeCycleResolver(),
                       InitialSettingOrAppPage(
                         initialSettingPageBuilder: (_) => ShowPaywallOnAppLaunch(
                           builder: (_) => SkipInitialSetting(
