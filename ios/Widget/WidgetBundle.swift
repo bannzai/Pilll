@@ -5,6 +5,8 @@ import SwiftUI
 struct AlarmLiveActivityBundle: WidgetBundle {
   var body: some Widget {
     HomeWidget()
-    AlarmLiveActivityWidget()
+    if #available(iOS 26.0, *) {
+      AlarmLiveActivityWidget()
+    }
   }
 }
