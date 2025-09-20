@@ -4,9 +4,10 @@ import AppIntents
 import SwiftUI
 import WidgetKit
 
+@available(iOS 26.0, *)
 struct AlarmLiveActivityWidget: Widget {
   var body: some WidgetConfiguration {
-    ActivityConfiguration(for: AlarmAttributes<CookingData>.self) { context in
+    ActivityConfiguration(for: AlarmAttributes<AppAlarmMetadata>.self) { context in
       // The Lock Screen presentation.
       lockScreenView(attributes: context.attributes, state: context.state)
     } dynamicIsland: { context in
@@ -14,34 +15,26 @@ struct AlarmLiveActivityWidget: Widget {
       DynamicIsland {
         // The expanded Dynamic Island presentation.
         DynamicIslandExpandedRegion(.leading) {
-          alarmTitle(attributes: context.attributes, state: context.state)
+          EmptyView()
         }
         DynamicIslandExpandedRegion(.trailing) {
-          cookingMethod(metadata: context.attributes.metadata)
+          EmptyView()
         }
         DynamicIslandExpandedRegion(.bottom) {
-          bottomView(attributes: context.attributes, state: context.state)
+          EmptyView()
         }
       } compactLeading: {
-        // The compact leading presentation.
-        countdown(state: context.state, maxWidth: 44)
-          .foregroundStyle(context.attributes.tintColor)
+        EmptyView()
       } compactTrailing: {
-        // The compact trailing presentation.
-        AlarmProgressView(cookingMethod: context.attributes.metadata?.method,
-                          mode: context.state.mode,
-                          tint: context.attributes.tintColor)
+        EmptyView()
       } minimal: {
-        // The minimal presentation.
-        AlarmProgressView(cookingMethod: context.attributes.metadata?.method,
-                          mode: context.state.mode,
-                          tint: context.attributes.tintColor)
+        EmptyView()
       }
       .keylineTint(context.attributes.tintColor)
     }
   }
 
-  func lockScreenView(attributes: AlarmAttributes<CookingData>, state: AlarmPresentationState) -> some View {
+  func lockScreenView(attributes: AlarmAttributes<AppAlarmMetadata>, state: AlarmPresentationState) -> some View {
     VStack {
       HStack(alignment: .top) {
         alarmTitle(attributes: attributes, state: state)
@@ -53,70 +46,10 @@ struct AlarmLiveActivityWidget: Widget {
     }
     .padding(.all, 12)
   }
-
-  func bottomView(attributes: AlarmAttributes<CookingData>, state: AlarmPresentationState) -> some View {
-    HStack {
-      countdown(state: state, maxWidth: 150)
-        .font(.system(size: 40, design: .rounded))
-      Spacer()
-      AlarmControls(presentation: attributes.presentation, state: state)
-    }
-  }
-
-  func countdown(state: AlarmPresentationState, maxWidth: CGFloat = .infinity) -> some View {
-    Group {
-      switch state.mode {
-      case .countdown(let countdown):
-        Text(timerInterval: Date.now ... countdown.fireDate, countsDown: true)
-      case .paused(let state):
-        let remaining = Duration.seconds(state.totalCountdownDuration - state.previouslyElapsedDuration)
-        let pattern: Duration.TimeFormatStyle.Pattern = remaining > .seconds(60 * 60) ? .hourMinuteSecond : .minuteSecond
-        Text(remaining.formatted(.time(pattern: pattern)))
-      default:
-        EmptyView()
-      }
-    }
-    .monospacedDigit()
-    .lineLimit(1)
-    .minimumScaleFactor(0.6)
-    .frame(maxWidth: maxWidth, alignment: .leading)
-  }
-
-  @ViewBuilder func alarmTitle(attributes: AlarmAttributes<CookingData>, state: AlarmPresentationState) -> some View {
-    let title: LocalizedStringResource? = switch state.mode {
-    case .countdown:
-      attributes.presentation.countdown?.title
-    case .paused:
-      attributes.presentation.paused?.title
-    default:
-      nil
-    }
-
-    Text(title ?? "")
-      .font(.title3)
-      .fontWeight(.semibold)
-      .lineLimit(1)
-      .padding(.leading, 6)
-  }
-
-  @ViewBuilder func cookingMethod(metadata: CookingData?) -> some View {
-    if let method = metadata?.method {
-      HStack(spacing: 4) {
-        Text(method.rawValue.localizedCapitalized)
-        Image(systemName: method.icon)
-      }
-      .font(.body)
-      .fontWeight(.medium)
-      .lineLimit(1)
-      .padding(.trailing, 6)
-    } else {
-      EmptyView()
-    }
-  }
 }
 
+@available(iOS 26.0, *)
 struct AlarmProgressView: View {
-  var cookingMethod: CookingData.Method?
   var mode: AlarmPresentationState.Mode
   var tint: Color
 

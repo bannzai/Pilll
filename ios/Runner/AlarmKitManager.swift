@@ -12,10 +12,6 @@ class AlarmKitManager {
   private init() {}
 
   @available(iOS 26.0, *)
-  struct AppAlarmMetadata: AlarmMetadata {
-    let localNotificationID: String
-  }
-  @available(iOS 26.0, *)
   typealias AlarmConfiguration = AlarmManager.AlarmConfiguration<AppAlarmMetadata>
 
   /// AlarmKitが現在のOS版で利用可能かどうかを確認する
@@ -229,4 +225,9 @@ struct OpenAlarmAppIntent: LiveActivityIntent {
   init() {
     self.alarmID = ""
   }
+}
+
+@available(iOS 26.0, *)
+struct AppAlarmMetadata: AlarmMetadata {
+  let localNotificationID: String
 }

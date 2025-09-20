@@ -17,6 +17,7 @@
 		2057C1C52E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */; };
 		2057C1C72E7E891C00FDE215 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */; };
 		2057C1C82E7E891C00FDE215 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */; };
+		2057C1C92E7E89C100FDE215 /* AlarmKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */; };
 		207DA16628B1148700CD6C34 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		207DA16728B1148700CD6C34 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C628B0BB670066E4DD /* SwiftUI.framework */; };
 		207DA16A28B1148700CD6C34 /* HomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DA16928B1148700CD6C34 /* HomeWidget.swift */; };
@@ -566,6 +567,7 @@
 				2057C1C72E7E891C00FDE215 /* WidgetBundle.swift in Sources */,
 				20E4648728C340F000329A5E /* WidgetView.swift in Sources */,
 				20E4647428C3319600329A5E /* Provider.swift in Sources */,
+				2057C1C92E7E89C100FDE215 /* AlarmKitManager.swift in Sources */,
 				207DA16A28B1148700CD6C34 /* HomeWidget.swift in Sources */,
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
 				20E4647328C3319600329A5E /* Global.swift in Sources */,
