@@ -88,7 +88,6 @@ class AlarmKitManager {
       throw AlarmKitError.notAvailable
     }
 
-    
     let alarmID = UUID()
     let alertContent = AlarmPresentation.Alert(
       title: LocalizedStringResource(stringLiteral: title),
@@ -103,7 +102,7 @@ class AlarmKitManager {
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
       metadata: AppAlarmMetadata(localNotificationID: localNotificationID, title: title),
-      tintColor: Color.appPrimary,
+      tintColor: Color(.appPrimary)
     )
 
     let configuration = AlarmConfiguration.alarm(
