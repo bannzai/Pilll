@@ -215,6 +215,29 @@ private var channel: FlutterMethodChannel?
               "message": "AlarmKit is not available on this OS version"
             ])
           }
+        case "stopAllAlarmKitAlarms":
+          if #available(iOS 26.0, *) {
+            Task {
+              do {
+                try await AlarmKitManager.shared.stopAllAlarms()
+                await MainActor.run {
+                  completionHandler(["result": "success"])
+                }
+              } catch {
+                await MainActor.run {
+                  completionHandler([
+                    "result": "failure",
+                    "message": error.localizedDescription
+                  ])
+                }
+              }
+            }
+          } else {
+            completionHandler([
+              "result": "failure",
+              "message": "AlarmKit is not available on this OS version"
+            ])
+          }
         case _:
           return
         }

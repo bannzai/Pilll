@@ -174,4 +174,31 @@ class AlarmKitService {
       rethrow;
     }
   }
+
+  /// すべてのアラームを停止する
+  ///
+  /// 現在鳴っているすべてのAlarmKitアラームを停止します。
+  /// アラーム音を止めたい場合に使用します。
+  ///
+  /// Throws: アラーム停止に失敗した場合Exception
+  static Future<void> stopAllAlarms() async {
+    if (!Platform.isIOS) {
+      return; // Android端末では何もしない
+    }
+
+    try {
+      final result = await _channel.invokeMethod<Map<dynamic, dynamic>>('stopAllAlarmKitAlarms');
+
+      if (result?['result'] != 'success') {
+        throw Exception(result?['message'] ?? 'Failed to stop all alarms');
+      }
+
+      analytics.debug(name: 'alarm_kit_all_alarms_stopped');
+    } catch (e) {
+      analytics.debug(name: 'alarm_kit_stop_all_error', parameters: {
+        'error': e.toString(),
+      });
+      rethrow;
+    }
+  }
 }
