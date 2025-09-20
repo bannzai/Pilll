@@ -47,6 +47,7 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 - コンポーネント内で状態管理の完結を目指す。
 - 親からの状態共有は ValueNotifier を子コンポーネント間で共有する。コールバックは使わない。もし使用したい場合は理由をコメントに書く
 - ValueNotifierのaddListenerは基本的にわかりづらいのでやらない。許容するケースは SharedPreferences と同期をしたい時
+- StateNotifier,ChangeNotifierは使わない
 - 関数、メソッドの引数は、{required} をつけましょう。引数ラベルがないとわかりづらいです
 
 ### Lintルール (analysis_options.yaml)

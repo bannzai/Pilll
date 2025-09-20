@@ -45,7 +45,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: const EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: const Text(
-                          'マナーモード中でも通知を送る設定を追加しました',
+                          '服薬時刻に目覚ましアラームが鳴るようにしました',
                           style: TextStyle(
                             fontFamily: FontFamily.japanese,
                             fontWeight: FontWeight.w600,
@@ -65,7 +65,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-集中モードがONまたはデバイスが消音時でも、通知はロック画面に表示され、サウンドが再生されます
+集中モードがONまたはデバイスが消音時でも、目覚ましのようにアラームが鳴らせるオプションを追加しました
                         ''',
                         style: TextStyle(
                           fontFamily: FontFamily.japanese,
@@ -99,7 +99,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 void showReleaseNotePreDialog(BuildContext context) async {
-  const String key = ReleaseNoteKey.version20250418;
+  const String key = ReleaseNoteKey.version20250920;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -121,5 +121,5 @@ void showReleaseNotePreDialog(BuildContext context) async {
 }
 
 void openReleaseNote() async {
-  launchUrl(Uri.parse('https://pilll.notion.site/1d929383171780a0af78c2a01f3b18ae'), mode: LaunchMode.inAppBrowserView);
+  launchUrl(Uri.parse('https://www.notion.so/pilll/202509-20-x-273293831717809790f9e6cbd8f948c2'), mode: LaunchMode.inAppBrowserView);
 }

@@ -11,10 +11,17 @@
 		2002EF782CB3E1860076D2FB /* ShareToSNS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2002EF772CB3E1860076D2FB /* ShareToSNS.swift */; };
 		2006A7E328B0CE210066E4DD /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2006A7E028B0CDC00066E4DD /* Const.swift */; };
 		202E35922AB7AD9A00473C5D /* Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 202E35902AB7AD9A00473C5D /* Secret.xcconfig */; };
+		20547DFB2E7A766700E9E046 /* AlarmKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */; };
 		205637412AF907B60082C189 /* Backport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205637402AF907B60082C189 /* Backport.swift */; };
+		2057C1C42E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */; };
+		2057C1C52E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */; };
+		2057C1C72E7E891C00FDE215 /* WidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */; };
+		2057C1C92E7E89C100FDE215 /* AlarmKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */; };
+		2057C1CE2E7E8FA000FDE215 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1CD2E7E8FA000FDE215 /* AppIntent.swift */; };
+		2057C1CF2E7E902100FDE215 /* AppIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2057C1CD2E7E8FA000FDE215 /* AppIntent.swift */; };
 		207DA16628B1148700CD6C34 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C428B0BB670066E4DD /* WidgetKit.framework */; };
 		207DA16728B1148700CD6C34 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2006A7C628B0BB670066E4DD /* SwiftUI.framework */; };
-		207DA16A28B1148700CD6C34 /* Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DA16928B1148700CD6C34 /* Widget.swift */; };
+		207DA16A28B1148700CD6C34 /* HomeWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207DA16928B1148700CD6C34 /* HomeWidget.swift */; };
 		207DA16C28B1148800CD6C34 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207DA16B28B1148800CD6C34 /* Assets.xcassets */; };
 		207DA17028B1148800CD6C34 /* WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 207DA16528B1148700CD6C34 /* WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		208DC3A12BF1AF4300E7F7AF /* AppTrackingTransparency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 208DC3A02BF1AF4300E7F7AF /* AppTrackingTransparency.swift */; };
@@ -92,9 +99,13 @@
 		2006A7E028B0CDC00066E4DD /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		201B3C122BDF266B00A21274 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		202E35902AB7AD9A00473C5D /* Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Secret.xcconfig; path = Flutter/Secret.xcconfig; sourceTree = "<group>"; };
+		20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmKitManager.swift; sourceTree = "<group>"; };
 		205637402AF907B60082C189 /* Backport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backport.swift; sourceTree = "<group>"; };
+		2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmLiveActivityWidget.swift; sourceTree = "<group>"; };
+		2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetBundle.swift; sourceTree = "<group>"; };
+		2057C1CD2E7E8FA000FDE215 /* AppIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIntent.swift; sourceTree = "<group>"; };
 		207DA16528B1148700CD6C34 /* WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = WidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		207DA16928B1148700CD6C34 /* Widget.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; tabWidth = 2; };
+		207DA16928B1148700CD6C34 /* HomeWidget.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = HomeWidget.swift; sourceTree = "<group>"; tabWidth = 2; };
 		207DA16B28B1148800CD6C34 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		207DA16D28B1148800CD6C34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		208DC3A02BF1AF4300E7F7AF /* AppTrackingTransparency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTrackingTransparency.swift; sourceTree = "<group>"; };
@@ -143,6 +154,20 @@
 		E5FD0418046F96951CE63113 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		20547E972E7B3E3100E9E046 /* Utils */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			explicitFileTypes = {
+			};
+			explicitFolders = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		207DA16228B1148700CD6C34 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -178,7 +203,8 @@
 		207DA16828B1148700CD6C34 /* Widget */ = {
 			isa = PBXGroup;
 			children = (
-				207DA16928B1148700CD6C34 /* Widget.swift */,
+				207DA16928B1148700CD6C34 /* HomeWidget.swift */,
+				2057C1C62E7E891C00FDE215 /* WidgetBundle.swift */,
 				20E4647F28C3338600329A5E /* AccessoryCircularWidget.swift */,
 				20E4648528C340E900329A5E /* WidgetView.swift */,
 				205637402AF907B60082C189 /* Backport.swift */,
@@ -190,6 +216,7 @@
 				20E4646C28C3312F00329A5E /* Entry.swift */,
 				207DA16B28B1148800CD6C34 /* Assets.xcassets */,
 				207DA16D28B1148800CD6C34 /* Info.plist */,
+				2057C1C32E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift */,
 			);
 			indentWidth = 2;
 			path = Widget;
@@ -238,6 +265,7 @@
 		97C146F01CF9000F007C117D /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				20547E972E7B3E3100E9E046 /* Utils */,
 				BAE6D1E42552D54800516E8E /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
@@ -249,6 +277,8 @@
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
+				20547DFA2E7A766700E9E046 /* AlarmKitManager.swift */,
+				2057C1CD2E7E8FA000FDE215 /* AppIntent.swift */,
 				2002EF772CB3E1860076D2FB /* ShareToSNS.swift */,
 				208DC3A02BF1AF4300E7F7AF /* AppTrackingTransparency.swift */,
 				20DBB04527A88D1D0069A9A2 /* HealthKit.swift */,
@@ -345,6 +375,9 @@
 			);
 			dependencies = (
 				207DA16F28B1148800CD6C34 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				20547E972E7B3E3100E9E046 /* Utils */,
 			);
 			name = Runner;
 			productName = Runner;
@@ -531,15 +564,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2057C1C42E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */,
 				20E4647528C3319600329A5E /* Entry.swift in Sources */,
 				20E4648428C33DC400329A5E /* Status.swift in Sources */,
 				20E4647E28C3334200329A5E /* SmallWidget.swift in Sources */,
 				20E4647828C3320C00329A5E /* Style.swift in Sources */,
+				2057C1C72E7E891C00FDE215 /* WidgetBundle.swift in Sources */,
 				20E4648728C340F000329A5E /* WidgetView.swift in Sources */,
 				20E4647428C3319600329A5E /* Provider.swift in Sources */,
-				207DA16A28B1148700CD6C34 /* Widget.swift in Sources */,
+				2057C1C92E7E89C100FDE215 /* AlarmKitManager.swift in Sources */,
+				207DA16A28B1148700CD6C34 /* HomeWidget.swift in Sources */,
 				20BF942028B22626007A36C9 /* Const.swift in Sources */,
 				20E4647328C3319600329A5E /* Global.swift in Sources */,
+				2057C1CF2E7E902100FDE215 /* AppIntent.swift in Sources */,
 				205637412AF907B60082C189 /* Backport.swift in Sources */,
 				20E4648128C3339500329A5E /* AccessoryCircularWidget.swift in Sources */,
 			);
@@ -550,8 +587,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
+				20547DFB2E7A766700E9E046 /* AlarmKitManager.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
+				2057C1C52E7E88DE00FDE215 /* AlarmLiveActivityWidget.swift in Sources */,
 				208DC3A12BF1AF4300E7F7AF /* AppTrackingTransparency.swift in Sources */,
+				2057C1CE2E7E8FA000FDE215 /* AppIntent.swift in Sources */,
 				2002EF782CB3E1860076D2FB /* ShareToSNS.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 				2006A7E328B0CE210066E4DD /* Const.swift in Sources */,

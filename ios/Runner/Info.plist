@@ -52,6 +52,8 @@
 	<string>ヘルスケアアプリから生理情報の取得を許可してください</string>
 	<key>NSHealthUpdateUsageDescription</key>
 	<string>ヘルスケアアプリにPilllの生理情報の更新を許可してください</string>
+	<key>NSAlarmKitUsageDescription</key>
+	<string>服薬時刻にアラームを表示するために利用します</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>fetch</string>

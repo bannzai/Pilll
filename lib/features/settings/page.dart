@@ -4,6 +4,7 @@ import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
+import 'package:pilll/features/settings/components/rows/alarm_kit.dart';
 import 'package:pilll/features/settings/components/rows/critical_alert.dart';
 import 'package:pilll/features/settings/components/rows/debug_row.dart';
 import 'package:pilll/provider/user.dart';
@@ -199,6 +200,8 @@ class SettingPageBody extends StatelessWidget {
                             isPremium: user.isPremium,
                             isTrial: user.isTrial,
                           ),
+                          _separator(),
+                          AlarmKitSetting(setting: setting, isPremium: user.isPremium, isTrial: user.isTrial),
                           _separator(),
                         ],
                         ReminderNotificationCustomizeWord(

@@ -19,7 +19,9 @@ Future<void> main() async {
       throw AssertionError('This method should not call out of development');
     }
     (await SharedPreferences.getInstance()).setBool(BoolKey.didEndInitialSetting, false);
-    await CancelReminderLocalNotification().call();
+    // local notificationのみ解除（AlarmKit解除はRiverpodコンテナ内でのみ実行可能）
+    final pendingNotifications = await localNotificationService.pendingReminderNotifications();
+    await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
     await FirebaseAuth.instance.signOut();
   };
   await entrypoint();

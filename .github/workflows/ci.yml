@@ -15,7 +15,7 @@ on:
 
 jobs:
   lint:
-    runs-on: macos-14
+    runs-on: macos-15
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v1
@@ -27,7 +27,7 @@ jobs:
     - run: flutter pub get
     - run: flutter analyze --no-pub --no-fatal-infos --fatal-warnings
   build-ios-debug:
-    runs-on: macos-14
+    runs-on: macos-15
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
     steps:
     - uses: actions/checkout@v1

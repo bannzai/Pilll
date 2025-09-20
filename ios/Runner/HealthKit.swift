@@ -205,8 +205,8 @@ private func writeMenstrualFlowHealthKitData(
         return
     }
 
-    let begin = Date(timeIntervalSince1970: beginDate.doubleValue / 1000)
-    let end = Date(timeIntervalSince1970: endDate.doubleValue / 1000)
+    let begin = dartTypeDate(nsNumber: beginDate)
+    let end = dartTypeDate(nsNumber: endDate)
     let writeData = HKCategorySample(
         type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
         value: HKCategoryValueMenstrualFlow.unspecified.rawValue,

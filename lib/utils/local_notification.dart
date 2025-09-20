@@ -17,6 +17,7 @@ import 'package:pilll/features/record/components/add_pill_sheet_group/provider.d
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/provider/setting.dart';
+import 'package:pilll/utils/alarm_kit_service.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -267,11 +268,16 @@ class RegisterReminderLocalNotification {
     if (pillSheetGroup.lastActiveRestDuration != null) {
       return;
     }
+
+    // AlarmKit使用判定
+    final useAlarmKit = setting.useAlarmKit && await AlarmKitService.isAvailable();
+
     analytics.debug(name: 'run_register_reminder_notification', parameters: {
       'todayPillNumber': activePillSheet.todayPillNumber,
       'todayPillIsAlreadyTaken': activePillSheet.todayPillIsAlreadyTaken,
       'lastTakenPillNumber': activePillSheet.lastTakenOrZeroPillNumber,
       'reminderTimes': setting.reminderTimes.toString(),
+      'useAlarmKit': useAlarmKit,
     });
     final tzNow = tz.TZDateTime.now(tz.local);
     final List<Future<void>> futures = [];
@@ -436,6 +442,7 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
+                // 常に Local Notification を実行
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
@@ -483,6 +490,23 @@ class RegisterReminderLocalNotification {
                   'reminderTimeHour': reminderTime.hour,
                   'reminderTimeMinute': reminderTime.minute,
                 });
+
+                // useAlarmKit の場合は AlarmKit も追加で実行
+                // AlarmKitでエラーが発生しても無視したいので、スケジュール登録の後に実行する
+                if (useAlarmKit) {
+                  await AlarmKitService.scheduleMedicationReminder(
+                    localNotificationID: notificationID.toString(),
+                    title: title,
+                    reminderDateTime: reminderDateTime,
+                  );
+
+                  analytics.debug(name: 'rrrn_premium_alarmkit', parameters: {
+                    'dayOffset': dayOffset,
+                    'notificationID': notificationID,
+                    'reminderTimeHour': reminderTime.hour,
+                    'reminderTimeMinute': reminderTime.minute,
+                  });
+                }
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 errorLogger.recordError(e, st);
@@ -500,6 +524,7 @@ class RegisterReminderLocalNotification {
           futures.add(
             Future(() async {
               try {
+                // 常に Local Notification を実行
                 await localNotificationService.plugin.zonedSchedule(
                   notificationID,
                   title,
@@ -540,6 +565,23 @@ class RegisterReminderLocalNotification {
                   'reminderTimeHour': reminderTime.hour,
                   'reminderTimeMinute': reminderTime.minute,
                 });
+
+                // useAlarmKit の場合は AlarmKit も追加で実行
+                // AlarmKitでエラーが発生しても無視したいので、スケジュール登録の後に実行する
+                if (useAlarmKit) {
+                  await AlarmKitService.scheduleMedicationReminder(
+                    localNotificationID: notificationID.toString(),
+                    title: title,
+                    reminderDateTime: reminderDateTime,
+                  );
+
+                  analytics.debug(name: 'rrrn_non_premium_alarmkit', parameters: {
+                    'dayOffset': dayOffset,
+                    'notificationID': notificationID,
+                    'reminderTimeHour': reminderTime.hour,
+                    'reminderTimeMinute': reminderTime.minute,
+                  });
+                }
               } catch (e, st) {
                 // NOTE: エラーが発生しても他の通知のスケジュールを続ける
                 errorLogger.recordError(e, st);
@@ -604,12 +646,28 @@ class CancelReminderLocalNotification {
   // - 退会
   // これら以外はRegisterReminderLocalNotificationで登録し直す。なおRegisterReminderLocalNotification の内部でこの関数を読んでいる
   Future<void> call() async {
+    // Local Notification解除
     final pendingNotifications = await localNotificationService.pendingReminderNotifications();
     analytics.debug(name: 'cancel_reminder_local_notification', parameters: {
       'length': pendingNotifications.length,
       'ids': pendingNotifications.map((e) => e.id).toList().toString(),
     });
     await Future.wait(pendingNotifications.map((p) => localNotificationService.cancelNotification(localNotificationID: p.id)));
+
+    // AlarmKit解除
+    if (await AlarmKitService.isAvailable()) {
+      try {
+        await AlarmKitService.cancelAllMedicationReminders();
+
+        analytics.debug(name: 'cancel_alarm_kit_reminders_completed');
+      } catch (e, st) {
+        // AlarmKit解除でエラーが発生してもアプリの動作に影響しないようにログのみ記録
+        analytics.debug(name: 'cancel_alarm_kit_reminders_error', parameters: {
+          'error': e.toString(),
+        });
+        errorLogger.recordError(e, st);
+      }
+    }
   }
 }
 

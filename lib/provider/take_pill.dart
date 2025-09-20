@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/utils/alarm_kit_service.dart';
 import 'package:pilll/utils/error_log.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -36,6 +37,9 @@ class TakePill {
     required PillSheet activePillSheet,
     required bool isQuickRecord,
   }) async {
+    // アラームは先に解除しちゃう。条件に関わらず。音が大きいので
+    AlarmKitService.stopAllAlarms();
+
     if (activePillSheet.todayPillIsAlreadyTaken) {
       return null;
     }
