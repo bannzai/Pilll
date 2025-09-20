@@ -102,7 +102,7 @@ class AlarmKitManager {
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
       metadata: AppAlarmMetadata(localNotificationID: localNotificationID, title: title),
-      tintColor: Color(.appSecondary)
+      tintColor: Color.accentColor,
     )
 
     let configuration = AlarmConfiguration.alarm(
