@@ -102,8 +102,8 @@ class AlarmKitManager {
 
     let attributes = AlarmAttributes(
       presentation: alarmPresentation,
-      metadata: AppAlarmMetadata(localNotificationID: localNotificationID),
-      tintColor: Color.accentColor,
+      metadata: AppAlarmMetadata(localNotificationID: localNotificationID, title: title),
+      tintColor: Color.appPrimary,
     )
 
     let configuration = AlarmConfiguration.alarm(
@@ -230,4 +230,5 @@ struct OpenAlarmAppIntent: LiveActivityIntent {
 @available(iOS 26.0, *)
 struct AppAlarmMetadata: AlarmMetadata {
   let localNotificationID: String
+  let title: String
 }
