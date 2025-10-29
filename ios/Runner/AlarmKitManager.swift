@@ -1,8 +1,6 @@
 import Foundation
 import AppIntents
-#if canImport(AlarmKit)
 import AlarmKit
-#endif
 import SwiftUI
 
 /// AlarmKit機能へのアクセスを提供するマネージャークラス

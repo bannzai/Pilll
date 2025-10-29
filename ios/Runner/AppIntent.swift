@@ -1,6 +1,4 @@
-#if canImport(AlarmKit)
 import AlarmKit
-#endif
 import AppIntents
 
 @available(iOS 26.0, *)
