@@ -1,5 +1,7 @@
 import ActivityKit
+#if canImport(AlarmKit)
 import AlarmKit
+#endif
 import AppIntents
 import SwiftUI
 import WidgetKit
