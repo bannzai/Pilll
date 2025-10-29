@@ -4,7 +4,9 @@ import Flutter
 import HealthKit
 import WidgetKit
 import flutter_local_notifications
+#if canImport(AlarmKit)
 import AlarmKit
+#endif
 
 private var channel: FlutterMethodChannel?
 @main
