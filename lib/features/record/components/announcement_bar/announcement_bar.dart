@@ -133,7 +133,7 @@ class AnnouncementBar extends HookConsumerWidget {
       }
 
       if (user.isTrial) {
-        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user, remoteConfigParameter.discountPeriodDisabled);
+        final premiumTrialLimit = PremiumTrialLimitAnnouncementBar.premiumTrialLimitMessage(user);
         if (premiumTrialLimit != null) {
           return PremiumTrialLimitAnnouncementBar(premiumTrialLimit: premiumTrialLimit);
         }
