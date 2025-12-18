@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -11,15 +10,15 @@ import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/inquiry/components/inquiry_type_selector.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
-import 'package:pilll/provider/database.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/functions/firebase_functions.dart';
 import 'package:pilll/utils/validator.dart';
 
-class InquiryPage extends HookConsumerWidget {
+class InquiryPage extends HookWidget {
   const InquiryPage({super.key});
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     final selectedType = useState(InquiryType.bugReport);
     final otherTypeText = useState('');
     final emailController = useTextEditingController();
@@ -193,7 +192,6 @@ class InquiryPage extends HookConsumerWidget {
                     ? null
                     : () => _submitInquiry(
                           context: context,
-                          ref: ref,
                           selectedType: selectedType.value,
                           otherTypeText: otherTypeText.value,
                           email: emailController.text,
@@ -212,7 +210,6 @@ class InquiryPage extends HookConsumerWidget {
 
   Future<void> _submitInquiry({
     required BuildContext context,
-    required WidgetRef ref,
     required InquiryType selectedType,
     required String otherTypeText,
     required String email,
@@ -226,16 +223,13 @@ class InquiryPage extends HookConsumerWidget {
 
     isSending.value = true;
     try {
-      final inquiry = Inquiry(
+      await functions.createInquiry(
         inquiryType: selectedType,
         otherTypeText: selectedType == InquiryType.other ? otherTypeText : null,
         email: email,
         content: content,
         debugInfo: debugInfoText,
-        createdAt: DateTime.now(),
       );
-
-      await ref.read(databaseProvider).inquiriesReference().add(inquiry);
 
       messenger.showSnackBar(
         SnackBar(
