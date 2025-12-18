@@ -12,37 +12,38 @@ import 'package:mockito/mockito.dart' as _i1;
 import 'package:mockito/src/dummies.dart' as _i21;
 import 'package:pilll/entity/diary.codegen.dart' as _i23;
 import 'package:pilll/entity/diary_setting.codegen.dart' as _i22;
-import 'package:pilll/entity/firestore_id_generator.dart' as _i35;
+import 'package:pilll/entity/firestore_id_generator.dart' as _i36;
+import 'package:pilll/entity/inquiry.codegen.dart' as _i25;
 import 'package:pilll/entity/menstruation.codegen.dart' as _i8;
-import 'package:pilll/entity/pill_sheet.codegen.dart' as _i31;
+import 'package:pilll/entity/pill_sheet.codegen.dart' as _i32;
 import 'package:pilll/entity/pill_sheet_group.codegen.dart' as _i7;
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart' as _i18;
 import 'package:pilll/entity/pill_sheet_type.dart' as _i17;
-import 'package:pilll/entity/pilll_ads.codegen.dart' as _i25;
+import 'package:pilll/entity/pilll_ads.codegen.dart' as _i26;
 import 'package:pilll/entity/reminder_notification_customization.codegen.dart'
     as _i5;
-import 'package:pilll/entity/remote_config_parameter.codegen.dart' as _i27;
+import 'package:pilll/entity/remote_config_parameter.codegen.dart' as _i28;
 import 'package:pilll/entity/schedule.codegen.dart' as _i24;
 import 'package:pilll/entity/setting.codegen.dart' as _i6;
 import 'package:pilll/entity/user.codegen.dart' as _i4;
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart'
-    as _i37;
+    as _i38;
 import 'package:pilll/provider/batch.dart' as _i11;
 import 'package:pilll/provider/database.dart' as _i2;
-import 'package:pilll/provider/force_update.dart' as _i32;
+import 'package:pilll/provider/force_update.dart' as _i33;
 import 'package:pilll/provider/menstruation.dart' as _i20;
 import 'package:pilll/provider/pill_sheet_group.dart' as _i13;
 import 'package:pilll/provider/pill_sheet_modified_history.dart' as _i12;
-import 'package:pilll/provider/purchase.dart' as _i28;
-import 'package:pilll/provider/revert_take_pill.dart' as _i29;
-import 'package:pilll/provider/set_user_id.dart' as _i33;
+import 'package:pilll/provider/purchase.dart' as _i29;
+import 'package:pilll/provider/revert_take_pill.dart' as _i30;
+import 'package:pilll/provider/set_user_id.dart' as _i34;
 import 'package:pilll/provider/setting.dart' as _i19;
-import 'package:pilll/provider/take_pill.dart' as _i30;
-import 'package:pilll/provider/user.dart' as _i26;
+import 'package:pilll/provider/take_pill.dart' as _i31;
+import 'package:pilll/provider/user.dart' as _i27;
 import 'package:pilll/utils/analytics.dart' as _i16;
 import 'package:pilll/utils/datetime/day.dart' as _i15;
-import 'package:pilll/utils/error_log.dart' as _i34;
-import 'package:pilll/utils/local_notification.dart' as _i36;
+import 'package:pilll/utils/error_log.dart' as _i35;
+import 'package:pilll/utils/local_notification.dart' as _i37;
 import 'package:purchases_flutter/purchases_flutter.dart' as _i10;
 
 // ignore_for_file: type=lint
@@ -1153,19 +1154,35 @@ class MockDatabaseConnection extends _i1.Mock
       ) as _i3.DocumentReference<_i24.Schedule>);
 
   @override
-  _i3.DocumentReference<_i25.PilllAds?> pilllAds() => (super.noSuchMethod(
+  _i3.CollectionReference<_i25.Inquiry> inquiriesReference() =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #inquiriesReference,
+          [],
+        ),
+        returnValue: _FakeCollectionReference_9<_i25.Inquiry>(
+          this,
+          Invocation.method(
+            #inquiriesReference,
+            [],
+          ),
+        ),
+      ) as _i3.CollectionReference<_i25.Inquiry>);
+
+  @override
+  _i3.DocumentReference<_i26.PilllAds?> pilllAds() => (super.noSuchMethod(
         Invocation.method(
           #pilllAds,
           [],
         ),
-        returnValue: _FakeDocumentReference_8<_i25.PilllAds?>(
+        returnValue: _FakeDocumentReference_8<_i26.PilllAds?>(
           this,
           Invocation.method(
             #pilllAds,
             [],
           ),
         ),
-      ) as _i3.DocumentReference<_i25.PilllAds?>);
+      ) as _i3.DocumentReference<_i26.PilllAds?>);
 
   @override
   _i9.Future<T> transaction<T>(_i3.TransactionHandler<T>? transactionHandler) =>
@@ -1212,7 +1229,7 @@ class MockDatabaseConnection extends _i1.Mock
 /// A class which mocks [EndInitialSetting].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockEndInitialSetting extends _i1.Mock implements _i26.EndInitialSetting {
+class MockEndInitialSetting extends _i1.Mock implements _i27.EndInitialSetting {
   MockEndInitialSetting() {
     _i1.throwOnMissingStub(this);
   }
@@ -1227,7 +1244,7 @@ class MockEndInitialSetting extends _i1.Mock implements _i26.EndInitialSetting {
       ) as _i2.DatabaseConnection);
 
   @override
-  _i9.Future<void> call(_i27.RemoteConfigParameter? remoteConfigParameter) =>
+  _i9.Future<void> call(_i28.RemoteConfigParameter? remoteConfigParameter) =>
       (super.noSuchMethod(
         Invocation.method(
           #call,
@@ -1241,7 +1258,7 @@ class MockEndInitialSetting extends _i1.Mock implements _i26.EndInitialSetting {
 /// A class which mocks [PurchaseService].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockPurchaseService extends _i1.Mock implements _i28.PurchaseService {
+class MockPurchaseService extends _i1.Mock implements _i29.PurchaseService {
   MockPurchaseService() {
     _i1.throwOnMissingStub(this);
   }
@@ -1265,7 +1282,7 @@ class MockPurchaseService extends _i1.Mock implements _i28.PurchaseService {
 /// A class which mocks [RevertTakePill].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockRevertTakePill extends _i1.Mock implements _i29.RevertTakePill {
+class MockRevertTakePill extends _i1.Mock implements _i30.RevertTakePill {
   MockRevertTakePill() {
     _i1.throwOnMissingStub(this);
   }
@@ -1322,7 +1339,7 @@ class MockRevertTakePill extends _i1.Mock implements _i29.RevertTakePill {
 /// A class which mocks [TakePill].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockTakePill extends _i1.Mock implements _i30.TakePill {
+class MockTakePill extends _i1.Mock implements _i31.TakePill {
   MockTakePill() {
     _i1.throwOnMissingStub(this);
   }
@@ -1359,7 +1376,7 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
   _i9.Future<_i7.PillSheetGroup?> call({
     required DateTime? takenDate,
     required _i7.PillSheetGroup? pillSheetGroup,
-    required _i31.PillSheet? activePillSheet,
+    required _i32.PillSheet? activePillSheet,
     required bool? isQuickRecord,
   }) =>
       (super.noSuchMethod(
@@ -1380,7 +1397,7 @@ class MockTakePill extends _i1.Mock implements _i30.TakePill {
 /// A class which mocks [CheckForceUpdate].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockCheckForceUpdate extends _i1.Mock implements _i32.CheckForceUpdate {
+class MockCheckForceUpdate extends _i1.Mock implements _i33.CheckForceUpdate {
   MockCheckForceUpdate() {
     _i1.throwOnMissingStub(this);
   }
@@ -1398,7 +1415,7 @@ class MockCheckForceUpdate extends _i1.Mock implements _i32.CheckForceUpdate {
 /// A class which mocks [SetUserID].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSetUserID extends _i1.Mock implements _i33.SetUserID {
+class MockSetUserID extends _i1.Mock implements _i34.SetUserID {
   MockSetUserID() {
     _i1.throwOnMissingStub(this);
   }
@@ -1418,7 +1435,7 @@ class MockSetUserID extends _i1.Mock implements _i33.SetUserID {
 /// A class which mocks [FetchOrCreateUser].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockFetchOrCreateUser extends _i1.Mock implements _i26.FetchOrCreateUser {
+class MockFetchOrCreateUser extends _i1.Mock implements _i27.FetchOrCreateUser {
   MockFetchOrCreateUser() {
     _i1.throwOnMissingStub(this);
   }
@@ -1452,7 +1469,7 @@ class MockFetchOrCreateUser extends _i1.Mock implements _i26.FetchOrCreateUser {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockSaveUserLaunchInfo extends _i1.Mock
-    implements _i26.SaveUserLaunchInfo {
+    implements _i27.SaveUserLaunchInfo {
   MockSaveUserLaunchInfo() {
     _i1.throwOnMissingStub(this);
   }
@@ -1479,7 +1496,7 @@ class MockSaveUserLaunchInfo extends _i1.Mock
 /// A class which mocks [ErrorLogger].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockErrorLogger extends _i1.Mock implements _i34.ErrorLogger {
+class MockErrorLogger extends _i1.Mock implements _i35.ErrorLogger {
   MockErrorLogger() {
     _i1.throwOnMissingStub(this);
   }
@@ -1514,7 +1531,7 @@ class MockErrorLogger extends _i1.Mock implements _i34.ErrorLogger {
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockFirestoreIDGenerator extends _i1.Mock
-    implements _i35.FirestoreIDGenerator {
+    implements _i36.FirestoreIDGenerator {
   MockFirestoreIDGenerator() {
     _i1.throwOnMissingStub(this);
   }
@@ -1539,7 +1556,7 @@ class MockFirestoreIDGenerator extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockLocalNotificationService extends _i1.Mock
-    implements _i36.LocalNotificationService {
+    implements _i37.LocalNotificationService {
   MockLocalNotificationService() {
     _i1.throwOnMissingStub(this);
   }
@@ -1645,7 +1662,7 @@ class MockLocalNotificationService extends _i1.Mock
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
-    implements _i37.RegisterReminderLocalNotificationRunner {
+    implements _i38.RegisterReminderLocalNotificationRunner {
   MockRegisterReminderLocalNotificationRunner() {
     _i1.throwOnMissingStub(this);
   }
@@ -1653,7 +1670,7 @@ class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
   @override
   _i9.Future<void> call({
     required _i7.PillSheetGroup? createdPillSheetGroup,
-    required _i31.PillSheet? activePillSheet,
+    required _i32.PillSheet? activePillSheet,
     required bool? premiumOrTrial,
     required _i6.Setting? setting,
   }) =>
