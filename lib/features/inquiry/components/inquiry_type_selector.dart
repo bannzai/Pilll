@@ -19,6 +19,12 @@ class InquiryTypeSelector extends HookWidget {
   Widget build(BuildContext context) {
     final otherTextController = useTextEditingController(text: otherTypeText.value);
 
+    void onInquiryTypeChanged(InquiryType? value) {
+      if (value != null) {
+        selectedType.value = value;
+      }
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -42,11 +48,7 @@ class InquiryTypeSelector extends HookWidget {
           ),
           value: InquiryType.bugReport,
           groupValue: selectedType.value,
-          onChanged: (value) {
-            if (value != null) {
-              selectedType.value = value;
-            }
-          },
+          onChanged: onInquiryTypeChanged,
           activeColor: AppColors.primary,
           contentPadding: EdgeInsets.zero,
         ),
@@ -60,11 +62,7 @@ class InquiryTypeSelector extends HookWidget {
           ),
           value: InquiryType.featureRequest,
           groupValue: selectedType.value,
-          onChanged: (value) {
-            if (value != null) {
-              selectedType.value = value;
-            }
-          },
+          onChanged: onInquiryTypeChanged,
           activeColor: AppColors.primary,
           contentPadding: EdgeInsets.zero,
         ),
@@ -78,11 +76,7 @@ class InquiryTypeSelector extends HookWidget {
           ),
           value: InquiryType.other,
           groupValue: selectedType.value,
-          onChanged: (value) {
-            if (value != null) {
-              selectedType.value = value;
-            }
-          },
+          onChanged: onInquiryTypeChanged,
           activeColor: AppColors.primary,
           contentPadding: EdgeInsets.zero,
         ),
