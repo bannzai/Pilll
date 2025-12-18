@@ -4,7 +4,7 @@ import 'package:pilll/entity/inquiry.codegen.dart';
 final functions = FirebaseFunctions.instanceFor(region: 'asia-northeast1');
 
 extension FirebaseFunctionsExt on FirebaseFunctions {
-  Future<String> createInquiry({
+  Future<String> inquiry({
     required InquiryType inquiryType,
     String? otherTypeText,
     required String email,

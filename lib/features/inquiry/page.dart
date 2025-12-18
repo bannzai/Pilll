@@ -223,7 +223,7 @@ class InquiryPage extends HookWidget {
 
     isSending.value = true;
     try {
-      await functions.createInquiry(
+      await functions.inquiry(
         inquiryType: selectedType,
         otherTypeText: selectedType == InquiryType.other ? otherTypeText : null,
         email: email,
