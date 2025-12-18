@@ -356,7 +356,7 @@ Android: https://onl.sc/c9xnQUk''';
                                     TextButton(
                                       onPressed: () {
                                         Navigator.of(dialogContext).pop();
-                                        inquiry();
+                                        inquiry(context);
                                       },
                                       child: const Text(
                                         'お問い合わせを続ける',

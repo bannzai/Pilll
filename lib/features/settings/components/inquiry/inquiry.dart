@@ -1,25 +1,21 @@
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:flutter/material.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:pilll/features/inquiry/page.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../entity/user.codegen.dart';
 
-void inquiry() {
-  PackageInfo.fromPlatform().then((value) => debugInfo(', ')).then((info) {
-    launchUrl(
-        Uri.parse(Uri.encodeFull(
-            'https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info')),
-        mode: LaunchMode.inAppBrowserView);
-  });
+void inquiry(BuildContext context) {
+  Navigator.of(context).push(InquiryPageRoute.route());
 }
 
 Future<String> debugInfo(String separator) async {

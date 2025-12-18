@@ -132,7 +132,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                   ),
                   onPressed: () {
                     analytics.logEvent(name: 'problem_unresolved_button_pressed');
-                    inquiry();
+                    inquiry(context);
                   },
                 )
               ],
