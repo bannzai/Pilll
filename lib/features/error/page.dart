@@ -3,7 +3,7 @@ import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
+import 'package:pilll/features/inquiry/page.dart';
 import 'package:flutter/material.dart';
 
 class _InheritedWidget extends InheritedWidget {
@@ -132,7 +132,7 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                   ),
                   onPressed: () {
                     analytics.logEvent(name: 'problem_unresolved_button_pressed');
-                    inquiry(context);
+                    Navigator.of(context).push(InquiryPageRoute.route());
                   },
                 )
               ],

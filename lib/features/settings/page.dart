@@ -29,7 +29,7 @@ import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/features/error/page.dart';
-import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
+import 'package:pilll/features/inquiry/page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
@@ -356,7 +356,7 @@ Android: https://onl.sc/c9xnQUk''';
                                     TextButton(
                                       onPressed: () {
                                         Navigator.of(dialogContext).pop();
-                                        inquiry(context);
+                                        Navigator.of(context).push(InquiryPageRoute.route());
                                       },
                                       child: const Text(
                                         'お問い合わせを続ける',
