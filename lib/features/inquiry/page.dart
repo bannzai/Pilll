@@ -13,6 +13,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/validator.dart';
 
 class InquiryPage extends HookConsumerWidget {
   const InquiryPage({super.key});
@@ -29,11 +30,6 @@ class InquiryPage extends HookConsumerWidget {
     final debugInfoFuture = useMemoized(() => debugInfo('\n'));
     final debugInfoSnapshot = useFuture(debugInfoFuture);
     final isSending = useState(false);
-
-    bool isValidEmail(String email) {
-      final emailRegex = RegExp(r'^[^@]+@[^@]+\.[^@]+$');
-      return emailRegex.hasMatch(email);
-    }
 
     bool isInvalid() {
       if (!isValidEmail(emailController.text)) return true;
@@ -195,37 +191,16 @@ class InquiryPage extends HookConsumerWidget {
                 text: L.sendInquiry,
                 onPressed: isInvalid() || isSending.value
                     ? null
-                    : () async {
-                        analytics.logEvent(name: 'inquiry_submit_pressed');
-                        final navigator = Navigator.of(context);
-                        final messenger = ScaffoldMessenger.of(context);
-
-                        isSending.value = true;
-                        try {
-                          final inquiry = Inquiry(
-                            inquiryType: selectedType.value,
-                            otherTypeText: selectedType.value == InquiryType.other ? otherTypeText.value : null,
-                            email: emailController.text,
-                            content: contentController.text,
-                            debugInfo: debugInfoSnapshot.data ?? '',
-                            createdAt: DateTime.now(),
-                          );
-
-                          await ref.read(databaseProvider).inquiriesReference().add(inquiry);
-
-                          messenger.showSnackBar(
-                            SnackBar(
-                              duration: const Duration(seconds: 2),
-                              content: Text(L.inquirySent),
-                            ),
-                          );
-
-                          navigator.pop();
-                        } catch (error) {
-                          isSending.value = false;
-                          if (context.mounted) showErrorAlert(context, error);
-                        }
-                      },
+                    : () => _submitInquiry(
+                          context: context,
+                          ref: ref,
+                          selectedType: selectedType.value,
+                          otherTypeText: otherTypeText.value,
+                          email: emailController.text,
+                          content: contentController.text,
+                          debugInfoText: debugInfoSnapshot.data ?? '',
+                          isSending: isSending,
+                        ),
               ),
               const SizedBox(height: 20),
             ],
@@ -233,6 +208,47 @@ class InquiryPage extends HookConsumerWidget {
         ),
       ),
     );
+  }
+
+  Future<void> _submitInquiry({
+    required BuildContext context,
+    required WidgetRef ref,
+    required InquiryType selectedType,
+    required String otherTypeText,
+    required String email,
+    required String content,
+    required String debugInfoText,
+    required ValueNotifier<bool> isSending,
+  }) async {
+    analytics.logEvent(name: 'inquiry_submit_pressed');
+    final navigator = Navigator.of(context);
+    final messenger = ScaffoldMessenger.of(context);
+
+    isSending.value = true;
+    try {
+      final inquiry = Inquiry(
+        inquiryType: selectedType,
+        otherTypeText: selectedType == InquiryType.other ? otherTypeText : null,
+        email: email,
+        content: content,
+        debugInfo: debugInfoText,
+        createdAt: DateTime.now(),
+      );
+
+      await ref.read(databaseProvider).inquiriesReference().add(inquiry);
+
+      messenger.showSnackBar(
+        SnackBar(
+          duration: const Duration(seconds: 2),
+          content: Text(L.inquirySent),
+        ),
+      );
+
+      navigator.pop();
+    } catch (error) {
+      isSending.value = false;
+      if (context.mounted) showErrorAlert(context, error);
+    }
   }
 }
 
