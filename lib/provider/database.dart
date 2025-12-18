@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/diary.codegen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/diary_setting.codegen.dart';
+import 'package:pilll/entity/inquiry.codegen.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -35,6 +36,7 @@ abstract class _CollectionPath {
   static String pillSheetModifiedHistories(String userID) => '$users/$userID/pill_sheet_modified_histories';
   static String schedule({required String userID, required String scheduleID}) => '$users/$userID/schedules/$scheduleID';
   static String schedules({required String userID}) => '$users/$userID/schedules';
+  static String inquiries(String userID) => '$users/$userID/inquiries';
   static String pilllAds() => 'globals/pilll_ads';
 }
 
@@ -129,6 +131,14 @@ class DatabaseConnection {
             fromFirestore: _scheduleFromFirestore,
             toFirestore: _scheduleToFirestore,
           );
+
+  final FromFirestore<Inquiry> _inquiryFromFirestore =
+      (snapshot, options) => Inquiry.fromJson(snapshot.data()!..putIfAbsent('id', () => snapshot.id));
+  final ToFirestore<Inquiry> _inquiryToFirestore = (inquiry, options) => inquiry.toJson();
+  CollectionReference<Inquiry> inquiriesReference() => FirebaseFirestore.instance.collection(_CollectionPath.inquiries(userID)).withConverter(
+        fromFirestore: _inquiryFromFirestore,
+        toFirestore: _inquiryToFirestore,
+      );
 
   DocumentReference<PilllAds?> pilllAds() => FirebaseFirestore.instance.doc(_CollectionPath.pilllAds()).withConverter(
         fromFirestore: (snapshot, options) => snapshot.data() == null ? null : PilllAds.fromJson(snapshot.data()!),
