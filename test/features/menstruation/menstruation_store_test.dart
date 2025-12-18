@@ -21,6 +21,154 @@ void main() {
   });
 
   group("#cardState", () {
+    // 問い合わせ再現: ユーザーが「偽薬期間1日目（22日）に生理が来る」と期待しているが、
+    // アプリは12/17と表示している問題
+    // ピルシート構成: 24+24+28+24+24+28 = 152錠、pillNumberForFromMenstruation = 72
+    // 期待: 偽薬1日目（シート5の25番目=149番目）= 12/22
+    // 実際: 144番目（シート5の20番目）= 12/17
+    test(
+      "ユーザー問い合わせケース: 152錠サイクルで72番ごとに生理設定、2回目の生理予定日が偽薬期間ではなく実薬期間になる問題",
+      () async {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        final mockToday = DateTime(2025, 12, 17);
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
+        // シート5（最後のシート）の開始日: 2025-11-28
+        final sheet5BeginDate = DateTime(2025, 11, 28);
+
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1", "2", "3", "4", "5", "6"],
+          pillSheets: [
+            // シート0: 24錠（実薬のみ）- 1-24番
+            PillSheet(
+              id: "1",
+              typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
+              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24 - 23)),
+              createdAt: now(),
+              groupIndex: 0,
+            ),
+            // シート1: 24錠（実薬のみ）- 25-48番
+            PillSheet(
+              id: "2",
+              typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
+              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24 - 23)),
+              createdAt: now(),
+              groupIndex: 1,
+            ),
+            // シート2: 28錠（24実薬+4偽薬）- 49-76番（偽薬は73-76番）
+            PillSheet(
+              id: "3",
+              typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
+              beginingDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
+              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24 - 27)),
+              createdAt: now(),
+              groupIndex: 2,
+            ),
+            // シート3: 24錠（実薬のみ）- 77-100番
+            PillSheet(
+              id: "4",
+              typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
+              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 - 23)),
+              createdAt: now(),
+              groupIndex: 3,
+            ),
+            // シート4: 24錠（実薬のみ）- 101-124番
+            PillSheet(
+              id: "5",
+              typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24)),
+              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 - 23)),
+              createdAt: now(),
+              groupIndex: 4,
+            ),
+            // シート5: 28錠（24実薬+4偽薬）- 125-152番（偽薬は149-152番）
+            PillSheet(
+              id: "6",
+              typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
+              beginingDate: sheet5BeginDate,
+              lastTakenDate: DateTime(2025, 12, 16), // 12/17時点で19番目まで服用
+              createdAt: now(),
+              groupIndex: 5,
+            ),
+          ],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        const setting = Setting(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_24_0,
+            PillSheetType.pillsheet_24_0,
+            PillSheetType.pillsheet_28_4,
+            PillSheetType.pillsheet_24_0,
+            PillSheetType.pillsheet_24_0,
+            PillSheetType.pillsheet_28_4,
+          ],
+          pillNumberForFromMenstruation: 72, // 72番ごとに生理
+          durationMenstruation: 4,
+          reminderTimes: [],
+          timezoneDatabaseName: null,
+          isOnReminder: true,
+        );
+
+        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 12)
+            .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
+            .toList();
+
+        final actual = cardState(pillSheetGroup, null, setting, calendarScheduledMenstruationBandModels);
+
+        // 現在の実装の動作を確認:
+        // 72番ごとに生理 → fromMenstruations = [72, 144]
+        // 72番目 = シート2の24番目（実薬最後）= シート2開始日 + 23日
+        // 144番目 = シート5の20番目（実薬）= シート5開始日(11/28) + 19日 = 12/17
+        //
+        // ユーザーの期待:
+        // 偽薬1日目 = シート5の25番目 = 149番目 = 11/28 + 24日 = 12/22
+        //
+        // 問題: 現在の計算では144番目（12/17）が生理予定日になるが、
+        // ユーザーは偽薬1日目（12/22）を期待している
+
+        // 現在の実装では12/17が返される（これがバグの再現）
+        // 実際のユーザーの期待は12/22
+        expect(
+          actual,
+          MenstruationCardState(
+            title: "生理予定日",
+            scheduleDate: DateTime(2025, 12, 17), // 現在の実装の結果（144番目=シート5の20番目）
+            countdownString: "生理予定：1日目",
+          ),
+        );
+
+        // 計算の検証：
+        // 72番ごとに生理設定 → fromMenstruations = [72, 144]
+        // - 72番目: シート2(49-76)の24番目（72-48=24）= 実薬最後
+        // - 144番目: シート5(125-152)の20番目（144-124=20）= 実薬（偽薬ではない！）
+        //
+        // ユーザーの期待（偽薬1日目に生理）:
+        // - シート2の偽薬1日目: 73番目
+        // - シート5の偽薬1日目: 149番目
+        //
+        // 結論: これはバグではなく、「72番ごと」という設定と「偽薬期間に生理が来る」
+        // というユーザーの期待のミスマッチ。
+        // ユーザーが選択した72番は「シート2の実薬最後の日」であり、
+        // 72番ごとに加算すると144番目（シート5の実薬20番目）になる。
+        // 偽薬1日目（149番目）とは5日ずれる。
+
+        // NOTE: ユーザーが本来期待している動作:
+        // 偽薬1日目（12/22）に生理予定日が表示されることを期待
+        // これを実現するには pillNumberForFromMenstruation を 73 に設定すべきか、
+        // または実装を修正して偽薬期間を考慮する必要がある
+      },
+    );
+
     test(
       "if latestMenstruation is into mockToday, when return card state of begining about menstruation ",
       () async {
