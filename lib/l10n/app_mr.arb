@@ -2370,5 +2370,9 @@
   "inquiryContentPlaceholder": "कृपया तुमची चौकशी प्रविष्ट करा",
   "@inquiryContentPlaceholder": {
     "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "डीबग माहिती (स्वयंचलित भरलेली)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
   }
 }
