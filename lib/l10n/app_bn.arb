@@ -2386,5 +2386,9 @@
   "inquirySent": "অনুসন্ধান পাঠানো হয়েছে",
   "@inquirySent": {
     "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "পাঠান",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
   }
 }
