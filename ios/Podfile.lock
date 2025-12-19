@@ -3,6 +3,10 @@ PODS:
     - Firebase/Firestore (= 11.10.0)
     - firebase_core
     - Flutter
+  - cloud_functions (5.5.0):
+    - Firebase/Functions (= 11.10.0)
+    - firebase_core
+    - Flutter
   - Firebase/Analytics (11.10.0):
     - Firebase/Core
   - Firebase/Auth (11.10.0):
@@ -19,6 +23,9 @@ PODS:
   - Firebase/Firestore (11.10.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 11.10.0)
+  - Firebase/Functions (11.10.0):
+    - Firebase/CoreOnly
+    - FirebaseFunctions (~> 11.10.0)
   - Firebase/Messaging (11.10.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 11.10.0)
@@ -117,6 +124,14 @@ PODS:
     - FirebaseFirestoreGRPCCPPBinary (= 1.69.0)
     - leveldb-library (~> 1.22)
     - nanopb (~> 3.30910.0)
+  - FirebaseFunctions (11.10.0):
+    - FirebaseAppCheckInterop (~> 11.0)
+    - FirebaseAuthInterop (~> 11.0)
+    - FirebaseCore (~> 11.10.0)
+    - FirebaseCoreExtension (~> 11.10.0)
+    - FirebaseMessagingInterop (~> 11.0)
+    - FirebaseSharedSwift (~> 11.0)
+    - GTMSessionFetcher/Core (< 5.0, >= 3.4)
   - FirebaseInstallations (11.10.0):
     - FirebaseCore (~> 11.10.0)
     - GoogleUtilities/Environment (~> 8.0)
@@ -131,6 +146,7 @@ PODS:
     - GoogleUtilities/Reachability (~> 8.0)
     - GoogleUtilities/UserDefaults (~> 8.0)
     - nanopb (~> 3.30910.0)
+  - FirebaseMessagingInterop (11.15.0)
   - FirebaseRemoteConfig (11.10.0):
     - FirebaseABTesting (~> 11.0)
     - FirebaseCore (~> 11.10.0)
@@ -251,6 +267,7 @@ PODS:
 
 DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
+  - cloud_functions (from `.symlinks/plugins/cloud_functions/ios`)
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
@@ -290,8 +307,10 @@ SPEC REPOS:
     - FirebaseFirestoreGRPCCoreBinary
     - FirebaseFirestoreGRPCCPPBinary
     - FirebaseFirestoreInternalBinary
+    - FirebaseFunctions
     - FirebaseInstallations
     - FirebaseMessaging
+    - FirebaseMessagingInterop
     - FirebaseRemoteConfig
     - FirebaseRemoteConfigInterop
     - FirebaseSessions
@@ -313,6 +332,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
+  cloud_functions:
+    :path: ".symlinks/plugins/cloud_functions/ios"
   firebase_analytics:
     :path: ".symlinks/plugins/firebase_analytics/ios"
   firebase_auth:
@@ -361,14 +382,15 @@ CHECKOUT OPTIONS:
     :tag: 11.10.0
 
 SPEC CHECKSUMS:
-  cloud_firestore: aef3217af294cd35afda47e63112d306f4c9a2e2
+  cloud_firestore: 07742f115155e19201e77b4cafb155011892d7b7
+  cloud_functions: da1966dda871b6d4a8e9addcdec31ea540489715
   Firebase: 1fe1c0a7d9aaea32efe01fbea5f0ebd8d70e53a2
-  firebase_analytics: 4b8609ce8d2e0c8928472bec8d9753a8f1835eb6
-  firebase_auth: e37065f3f80ff90580c13ad0e5a48e3bb8d2ad77
-  firebase_core: 432718558359a8c08762151b5f49bb0f093eb6e0
-  firebase_crashlytics: f3b2649ae73f440895f285021bf70bdf4d36dec4
-  firebase_messaging: 3b99522baf7480dfb4b7683d2b34e842d577c362
-  firebase_remote_config: d7b5f27d1e69e000c6b044f9a6f9a48864a928ef
+  firebase_analytics: 1998960b8fa16fd0cd9e77a6f9fd35a2009ad65e
+  firebase_auth: 34c515a8fa76a4ef678ac5ad5cfa3bb3120f5ab5
+  firebase_core: 2d4534e7b489907dcede540c835b48981d890943
+  firebase_crashlytics: 961a0812ba79ed8f89a8d5d1e3763daa6267a87a
+  firebase_messaging: 75bc93a4df25faccad67f6662ae872ac9ae69b64
+  firebase_remote_config: c20b15c34b138104c1a971d83ea36bc3dd626ab8
   FirebaseABTesting: dfc10eb6cc08fe3b391ac9e5aa40396d43ea6675
   FirebaseAnalytics: 4e42333f02cf78ed93703a5c36f36dd518aebdef
   FirebaseAppCheckInterop: 06fe5a3799278ae4667e6c432edd86b1030fa3df
@@ -385,38 +407,40 @@ SPEC CHECKSUMS:
   FirebaseFirestoreGRPCCoreBinary: 565534e160a0415d12185f7f171c52a567382fbd
   FirebaseFirestoreGRPCCPPBinary: 6c0134e8d230ee58b9d51dec2a30a48efd6d5dc7
   FirebaseFirestoreInternalBinary: 96b309279c4efdf00b83ab80e8af4d0a73d30258
+  FirebaseFunctions: e89e0cf2091c9fb19aa58df270317c0a91963f4f
   FirebaseInstallations: 9980995bdd06ec8081dfb6ab364162bdd64245c3
   FirebaseMessaging: 2b9f56aa4ed286e1f0ce2ee1d413aabb8f9f5cb9
+  FirebaseMessagingInterop: 63e504b147a7206cfe64cbe2f40c2ddd009945bd
   FirebaseRemoteConfig: 10695bc0ce3b103e3706a5578c43f2a9f69d5aaa
   FirebaseRemoteConfigInterop: 1c6135e8a094cc6368949f5faeeca7ee8948b8aa
   FirebaseSessions: 9b3b30947b97a15370e0902ee7a90f50ef60ead6
   FirebaseSharedSwift: 1baacae75939499b5def867cbe34129464536a38
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
-  flutter_app_badger: b87fc231847b03b92ce1412aa351842e7e97932f
-  flutter_local_notifications: ff50f8405aaa0ccdc7dcfb9022ca192e8ad9688f
-  flutter_timezone: ac3da59ac941ff1c98a2e1f0293420e020120282
+  flutter_app_badger: 16b371e989d04cd265df85be2c3851b49cb68d18
+  flutter_local_notifications: a5a732f069baa862e728d839dd2ebb904737effb
+  flutter_timezone: 7c838e17ffd4645d261e87037e5bebf6d38fe544
   Google-Mobile-Ads-SDK: 14f57f2dc33532a24db288897e26494640810407
-  google_mobile_ads: fe0e2c1764ad95323dd0e3081d0bb2d58411f957
+  google_mobile_ads: 16ad301354fa6a7ea55770c6254bd4339bf8558b
   GoogleAppMeasurement: 36684bfb3ee034e2b42b4321eb19da3a1b81e65d
   GoogleDataTransport: aae35b7ea0c09004c3797d53c8c41f66f219d6a7
   GoogleUserMessagingPlatform: f8d0cdad3ca835406755d0a69aa634f00e76d576
   GoogleUtilities: 00c88b9a86066ef77f0da2fab05f65d7768ed8e1
   GTMSessionFetcher: fc75fc972958dceedee61cb662ae1da7a83a91cf
-  home_widget: 0434835a4c9a75704264feff6be17ea40e0f0d57
-  in_app_review: a31b5257259646ea78e0e35fc914979b0031d011
+  home_widget: f169fc41fd807b4d46ab6615dc44d62adbf9f64f
+  in_app_review: 5596fe56fab799e8edb3561c03d053363ab13457
   leveldb-library: cc8b8f8e013647a295ad3f8cd2ddf49a6f19be19
   nanopb: fad817b59e0457d11a5dfbde799381cd727c1275
-  package_info_plus: c0502532a26c7662a62a356cebe2692ec5fe4ec4
-  path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
+  package_info_plus: af8e2ca6888548050f16fa2f1938db7b5a5df499
+  path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564
   PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
   PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
-  purchases_flutter: 8abf2713ef15d22c85a2c3a8ffea30dafdceea2c
+  purchases_flutter: 60844032c222595e7647099ad8a90ca49c78527f
   PurchasesHybridCommon: bb4c1ddc8683a18859da35f45a0717379f889d94
   RecaptchaInterop: 11e0b637842dfb48308d242afc3f448062325aba
   RevenueCat: d8174cfd72fab33f3b877d38c9f033142dc87c60
-  shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
-  url_launcher_ios: 5334b05cef931de560670eeae103fd3e431ac3fe
-  webview_flutter_wkwebview: a4af96a051138e28e29f60101d094683b9f82188
+  shared_preferences_foundation: 9e1978ff2562383bd5676f64ec4e9aa8fa06a6f7
+  url_launcher_ios: 694010445543906933d732453a59da0a173ae33d
+  webview_flutter_wkwebview: 1821ceac936eba6f7984d89a9f3bcb4dea99ebb2
 
 PODFILE CHECKSUM: eda6f8b2f58b60af79d987d33c06a3c36d67f34f
 

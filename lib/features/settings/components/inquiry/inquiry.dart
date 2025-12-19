@@ -9,18 +9,8 @@ import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import '../../../../entity/user.codegen.dart';
-
-void inquiry() {
-  PackageInfo.fromPlatform().then((value) => debugInfo(', ')).then((info) {
-    launchUrl(
-        Uri.parse(Uri.encodeFull(
-            'https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info')),
-        mode: LaunchMode.inAppBrowserView);
-  });
-}
 
 Future<String> debugInfo(String separator) async {
   final userID = auth.FirebaseAuth.instance.currentUser?.uid;
