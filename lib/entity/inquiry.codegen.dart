@@ -39,9 +39,6 @@ class Inquiry with _$Inquiry {
     /// お問い合わせ内容（長文）
     required String content,
 
-    /// デバッグ情報（debugInfo関数から取得）
-    required String debugInfo,
-
     /// 作成日時
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

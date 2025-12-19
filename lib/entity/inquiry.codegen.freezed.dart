@@ -37,9 +37,6 @@ mixin _$Inquiry {
   /// お問い合わせ内容（長文）
   String get content => throw _privateConstructorUsedError;
 
-  /// デバッグ情報（debugInfo関数から取得）
-  String get debugInfo => throw _privateConstructorUsedError;
-
   /// 作成日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
@@ -59,7 +56,6 @@ abstract class $InquiryCopyWith<$Res> {
       String? otherTypeText,
       String email,
       String content,
-      String debugInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt});
 }
 
@@ -80,7 +76,6 @@ class _$InquiryCopyWithImpl<$Res, $Val extends Inquiry> implements $InquiryCopyW
     Object? otherTypeText = freezed,
     Object? email = null,
     Object? content = null,
-    Object? debugInfo = null,
     Object? createdAt = null,
   }) {
     return _then(_value.copyWith(
@@ -104,10 +99,6 @@ class _$InquiryCopyWithImpl<$Res, $Val extends Inquiry> implements $InquiryCopyW
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      debugInfo: null == debugInfo
-          ? _value.debugInfo
-          : debugInfo // ignore: cast_nullable_to_non_nullable
-              as String,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -127,7 +118,6 @@ abstract class _$$InquiryImplCopyWith<$Res> implements $InquiryCopyWith<$Res> {
       String? otherTypeText,
       String email,
       String content,
-      String debugInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt});
 }
 
@@ -143,7 +133,6 @@ class __$$InquiryImplCopyWithImpl<$Res> extends _$InquiryCopyWithImpl<$Res, _$In
     Object? otherTypeText = freezed,
     Object? email = null,
     Object? content = null,
-    Object? debugInfo = null,
     Object? createdAt = null,
   }) {
     return _then(_$InquiryImpl(
@@ -167,10 +156,6 @@ class __$$InquiryImplCopyWithImpl<$Res> extends _$InquiryCopyWithImpl<$Res, _$In
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
               as String,
-      debugInfo: null == debugInfo
-          ? _value.debugInfo
-          : debugInfo // ignore: cast_nullable_to_non_nullable
-              as String,
       createdAt: null == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -189,7 +174,6 @@ class _$InquiryImpl extends _Inquiry {
       this.otherTypeText,
       required this.email,
       required this.content,
-      required this.debugInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.createdAt})
       : super._();
@@ -218,10 +202,6 @@ class _$InquiryImpl extends _Inquiry {
   @override
   final String content;
 
-  /// デバッグ情報（debugInfo関数から取得）
-  @override
-  final String debugInfo;
-
   /// 作成日時
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -229,7 +209,7 @@ class _$InquiryImpl extends _Inquiry {
 
   @override
   String toString() {
-    return 'Inquiry(id: $id, inquiryType: $inquiryType, otherTypeText: $otherTypeText, email: $email, content: $content, debugInfo: $debugInfo, createdAt: $createdAt)';
+    return 'Inquiry(id: $id, inquiryType: $inquiryType, otherTypeText: $otherTypeText, email: $email, content: $content, createdAt: $createdAt)';
   }
 
   @override
@@ -242,13 +222,12 @@ class _$InquiryImpl extends _Inquiry {
             (identical(other.otherTypeText, otherTypeText) || other.otherTypeText == otherTypeText) &&
             (identical(other.email, email) || other.email == email) &&
             (identical(other.content, content) || other.content == content) &&
-            (identical(other.debugInfo, debugInfo) || other.debugInfo == debugInfo) &&
             (identical(other.createdAt, createdAt) || other.createdAt == createdAt));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, inquiryType, otherTypeText, email, content, debugInfo, createdAt);
+  int get hashCode => Object.hash(runtimeType, id, inquiryType, otherTypeText, email, content, createdAt);
 
   @JsonKey(ignore: true)
   @override
@@ -270,7 +249,6 @@ abstract class _Inquiry extends Inquiry {
       final String? otherTypeText,
       required final String email,
       required final String content,
-      required final String debugInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdAt}) = _$InquiryImpl;
   const _Inquiry._() : super._();
@@ -299,10 +277,6 @@ abstract class _Inquiry extends Inquiry {
 
   /// お問い合わせ内容（長文）
   String get content;
-  @override
-
-  /// デバッグ情報（debugInfo関数から取得）
-  String get debugInfo;
   @override
 
   /// 作成日時

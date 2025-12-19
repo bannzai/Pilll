@@ -12,7 +12,6 @@ _$InquiryImpl _$$InquiryImplFromJson(Map<String, dynamic> json) => _$InquiryImpl
       otherTypeText: json['otherTypeText'] as String?,
       email: json['email'] as String,
       content: json['content'] as String,
-      debugInfo: json['debugInfo'] as String,
       createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
     );
 
@@ -30,7 +29,6 @@ Map<String, dynamic> _$$InquiryImplToJson(_$InquiryImpl instance) {
   val['otherTypeText'] = instance.otherTypeText;
   val['email'] = instance.email;
   val['content'] = instance.content;
-  val['debugInfo'] = instance.debugInfo;
   val['createdAt'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
   return val;
 }
