@@ -2386,5 +2386,9 @@
   "emailCannotReceiveICloud": "※Tafadhali tumia anwani ya barua pepe isiyokuwa @icloud.com. Kuzuiwa kunasikika mara kwa mara",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Tafadhali hakikisha mipangilio yako inaruhusu kupokea barua pepe kutoka pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
