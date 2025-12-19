@@ -2325,5 +2325,14 @@
   "specialDiscountPriceNow": "Ստացիր պրեմիում ծրագիրը հատուկ գնով:",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "endValue": "{endValueOrPillSheetGroupSequentialEstimatedEndPillNumber}",
+  "@endValue": {
+    "description": "ピルシートの最後のピル番号を表示するテキストです。ピルシートUIで「何番目まで飲むか」を示す数値が入ります。",
+    "placeholders": {
+      "endValueOrPillSheetGroupSequentialEstimatedEndPillNumber": {
+        "type": "int"
+      }
+    }
   }
 }
