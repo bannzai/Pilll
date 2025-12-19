@@ -2316,5 +2316,14 @@
   "specialDiscountPriceNow": "Zuza uhlelo lwe-Premium ngentego ekhethekile!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "lastTakenPlusOnePillNumber": "Inombolo {pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne}",
+  "@lastTakenPlusOnePillNumber": {
+    "description": "次に服用すべきピルの番号を表示するためのテキストです。ピルシートUIで「◯番目のピルを飲む」という形で使用されます。",
+    "placeholders": {
+      "pillSheetGroupLastTakenPillSheetOrFirstPillSheetLastTakenPillNumberPlusOne": {
+        "type": "String"
+      }
+    }
   }
 }
