@@ -2354,5 +2354,9 @@
   "otherInquiryPlaceholder": "अन्य विवरणहरू प्रविष्ट गर्नुहोस्",
   "@otherInquiryPlaceholder": {
     "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "इमेल ठेगाना",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
   }
 }
