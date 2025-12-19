@@ -2394,5 +2394,9 @@
   "emailReceiveSettingNote": "※कृपया pilll.reminder.app@gmail.com पासून ईमेल प्राप्त करण्यासाठी सेटिंग्ज कॉन्फिगर करा",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "कृपया चौकशी विषय प्रविष्ट करा",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
