@@ -2258,5 +2258,17 @@
   "selectPillNumberForMenstruationStart": "ମାସିକ ଆରମ୍ଭ ହେଉଥିବା ବଟିକା ସଂଖ୍ୟା ଟ୍ୟାପ୍ କରନ୍ତୁ",
   "@selectPillNumberForMenstruationStart": {
     "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
+  },
+  "purchaseErrorUnexpectedBackendResponseError": "ବର୍ତ୍ତମାନ କ୍ରୟ କରିପାରିବେ ନାହିଁ। କିଛି ସମୟ ପରେ ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ। ଯଦି ସମାଧାନ ହୁଏ ନାହିଁ, ସେଟିଂସ୍ > ଯୋଗାଯୋଗ ରୁ ଆମକୁ ଯୋଗାଯୋଗ କରନ୍ତୁ। ବିବରଣୀ: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorUnexpectedBackendResponseError": {
+    "description": "アプリ内でプレミアムプラン購入時に予期しないサーバーエラーが発生した際に表示されるエラーメッセージです。ユーザーに再試行を促し、問題が解決しない場合のサポート連絡方法を案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
