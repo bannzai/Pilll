@@ -2382,5 +2382,9 @@
   "sendInquiry": "पठाउनुहोस्",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "कृपया मान्य इमेल ठेगाना प्रविष्ट गर्नुहोस्",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
