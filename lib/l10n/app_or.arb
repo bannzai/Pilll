@@ -2346,5 +2346,9 @@
   "otherInquiryPlaceholder": "ଅନ୍ୟାନ୍ୟ ବିଷୟବସ୍ତୁ ପ୍ରବେଶ କରନ୍ତୁ",
   "@otherInquiryPlaceholder": {
     "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "ଇମେଲ ଠିକଣା",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
   }
 }
