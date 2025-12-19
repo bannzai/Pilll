@@ -2386,5 +2386,9 @@
   "emailReceiveSettingNote": "※ଦୟାକରି pilll.reminder.app@gmail.com ରୁ ଇମେଲ୍ ଗ୍ରହଣ କରିବାକୁ ସେଟିଂସ୍ ବିନ୍ୟାସ କରନ୍ତୁ",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "ଦୟାକରି ଅନୁସନ୍ଧାନ ବିଷୟବସ୍ତୁ ପ୍ରବେଶ କରନ୍ତୁ",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
