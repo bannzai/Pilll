@@ -2330,5 +2330,9 @@
   "discardAllPillSheets": "Eyða öllum pilluborðum",
   "@discardAllPillSheets": {
     "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
+  },
+  "menstruationDeleted": "Tíðaskeið eytt",
+  "@menstruationDeleted": {
+    "description": "ユーザーが記録した生理期間のデータを削除した際に表示される確認・完了メッセージです。削除操作が正常に完了したことをユーザーに伝える文章として翻訳してください。"
   }
 }
