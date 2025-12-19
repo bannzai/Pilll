@@ -2394,5 +2394,9 @@
   "emailReceiveSettingNote": "※Mesedez, konfiguratu zure harpidetza pilll.reminder.app@gmail.com helbidetik datozen mezuak jaso ahal izateko",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Mesedez, sartu kontsultaren edukia",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
