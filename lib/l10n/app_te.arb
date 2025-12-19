@@ -2366,5 +2366,9 @@
   "inquiryContent": "విచారణ వివరాలు",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "దయచేసి మీ విచారణను నమోదు చేయండి",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
