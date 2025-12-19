@@ -164,7 +164,7 @@ class InquiryPage extends HookWidget {
               ],
               const SizedBox(height: 8),
               PrimaryButton(
-                text: '送信する',
+                text: L.sendInquiry,
                 onPressed: isInvalid() || isSending.value
                     ? null
                     : () => _submitInquiry(
