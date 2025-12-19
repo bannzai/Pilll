@@ -2390,5 +2390,9 @@
   "emailReceiveSettingNote": "※pilll.reminder.app@gmail.com မှ အီးမေးလ်များကို လက်ခံနိုင်ရန် သင့်အီးမေးလ် ဆက်တင်များကို ချိန်ညှိပေးပါရန် တောင်းဆိုအပ်ပါသည်",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "မေးမြန်းလိုသည့်အကြောင်းအရာ ထည့်သွင်းပေးပါ",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
