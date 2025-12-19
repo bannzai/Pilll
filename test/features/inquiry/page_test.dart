@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/features/inquiry/page.dart';
-import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -27,7 +26,7 @@ void main() {
         );
         await tester.pumpAndSettle();
 
-        expect(find.text(L.invalidEmailFormat), findsNothing);
+        expect(find.text('有効なメールアドレスを入力してください'), findsNothing);
       });
 
       testWidgets('メールアドレスが不正な形式の時はエラーを表示する', (WidgetTester tester) async {
@@ -43,7 +42,7 @@ void main() {
         await tester.enterText(find.byType(TextFormField).first, 'invalid-email');
         await tester.pumpAndSettle();
 
-        expect(find.text(L.invalidEmailFormat), findsOneWidget);
+        expect(find.text('有効なメールアドレスを入力してください'), findsOneWidget);
       });
 
       testWidgets('メールアドレスが正しい形式の時はエラーを表示しない', (WidgetTester tester) async {
@@ -59,7 +58,7 @@ void main() {
         await tester.enterText(find.byType(TextFormField).first, 'test@example.com');
         await tester.pumpAndSettle();
 
-        expect(find.text(L.invalidEmailFormat), findsNothing);
+        expect(find.text('有効なメールアドレスを入力してください'), findsNothing);
       });
     });
 
@@ -79,7 +78,7 @@ void main() {
         await tester.pumpAndSettle();
 
         // "お問い合わせ内容は必須です" というエラーメッセージ
-        expect(find.text(L.inquiryContentRequired), findsOneWidget);
+        expect(find.text('お問い合わせ内容は必須です'), findsOneWidget);
       });
 
       testWidgets('メールアドレスが不正な時はお問い合わせ内容のエラーを表示しない', (WidgetTester tester) async {
@@ -96,7 +95,7 @@ void main() {
         await tester.enterText(find.byType(TextFormField).first, 'invalid');
         await tester.pumpAndSettle();
 
-        expect(find.text(L.inquiryContentRequired), findsNothing);
+        expect(find.text('お問い合わせ内容は必須です'), findsNothing);
       });
 
       testWidgets('お問い合わせ内容が入力されている時はエラーを表示しない', (WidgetTester tester) async {
@@ -117,7 +116,7 @@ void main() {
         await tester.enterText(find.byType(TextFormField).at(1), 'テスト内容');
         await tester.pumpAndSettle();
 
-        expect(find.text(L.inquiryContentRequired), findsNothing);
+        expect(find.text('お問い合わせ内容は必須です'), findsNothing);
       });
     });
 
