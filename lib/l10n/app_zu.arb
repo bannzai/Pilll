@@ -2357,5 +2357,9 @@
   "inquiryContent": "Imininingwane yombuzo",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "Sicela ufake okuqukethwe kombuzo wakho",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
