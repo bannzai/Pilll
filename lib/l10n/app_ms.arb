@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※Sila gunakan alamat e-mel selain @icloud.com. E-mel balasan kerap disekat.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Sila pastikan tetapan e-mel anda membenarkan penerimaan daripada pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
