@@ -2362,5 +2362,9 @@
   "emailPlaceholder": "beispiel@beispiel.com",
   "@emailPlaceholder": {
     "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "Ihre Nachricht",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
   }
 }
