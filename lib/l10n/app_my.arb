@@ -2362,5 +2362,9 @@
   "emailPlaceholder": "example@example.com",
   "@emailPlaceholder": {
     "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContentPlaceholder": "ဆက်သွယ်လိုသည့် အကြောင်းအရာကို ရေးသွင်းပါ",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
