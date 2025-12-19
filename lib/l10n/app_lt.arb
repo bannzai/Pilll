@@ -2358,5 +2358,9 @@
   "emailAddress": "El. pašto adresas",
   "@emailAddress": {
     "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "pavyzdys@pavyzdys.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
   }
 }
