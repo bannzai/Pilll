@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※Vennligst bruk en annen e-postadresse enn @icloud.com. Blokkering forekommer ofte.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "Vennligst sørg for at du kan motta e-post fra pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
