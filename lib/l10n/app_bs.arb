@@ -2386,5 +2386,9 @@
   "inquirySent": "Vaš upit je poslan",
   "@inquirySent": {
     "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "Pošalji",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
   }
 }
