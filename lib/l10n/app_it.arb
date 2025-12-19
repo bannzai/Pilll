@@ -2317,5 +2317,9 @@
   "specialDiscountPriceNow": "Ottieni il piano premium con l'offerta speciale!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "pillSheetType24WithRest4": "Tipo da 24 compresse",
+  "@pillSheetType24WithRest4": {
+    "description": "ピルシートの種類で、24錠のうち20錠が薬効成分を含む実薬、4錠が休薬期間用のプラセボ錠（偽薬）で構成されるタイプです。アプリ内でユーザーがピルのタイプを選択する際に表示される選択肢として使用されます。"
   }
 }
