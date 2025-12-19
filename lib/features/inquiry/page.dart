@@ -26,9 +26,21 @@ class InquiryPage extends HookWidget {
     final contentFocusNode = useFocusNode();
     final scrollController = useScrollController();
     final isSending = useState(false);
+    final hasEditedContent = useState(false);
 
     useListenable(emailController);
     useListenable(contentController);
+
+    useEffect(() {
+      void listener() {
+        if (contentController.text.isNotEmpty) {
+          hasEditedContent.value = true;
+        }
+      }
+
+      contentController.addListener(listener);
+      return () => contentController.removeListener(listener);
+    }, [contentController]);
 
     bool isInvalid() {
       if (!isValidEmail(emailController.text)) return true;
@@ -106,6 +118,7 @@ class InquiryPage extends HookWidget {
                         decoration: InputDecoration(
                           hintText: L.emailPlaceholder,
                           border: const OutlineInputBorder(),
+                          errorText: emailController.text.isNotEmpty && !isValidEmail(emailController.text) ? L.invalidEmailFormat : null,
                         ),
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
@@ -136,6 +149,7 @@ class InquiryPage extends HookWidget {
                             hintText: L.inquiryContentPlaceholder,
                             border: const OutlineInputBorder(),
                             alignLabelWithHint: true,
+                            errorText: hasEditedContent.value && contentController.text.isEmpty ? L.inquiryContentRequired : null,
                           ),
                           maxLines: null,
                           minLines: 5,
@@ -160,7 +174,7 @@ class InquiryPage extends HookWidget {
               ],
               const SizedBox(height: 8),
               PrimaryButton(
-                text: L.sendInquiry,
+                text: '送信する',
                 onPressed: isInvalid() || isSending.value
                     ? null
                     : () => _submitInquiry(
