@@ -2354,5 +2354,9 @@
   "otherInquiryPlaceholder": "기타 내용을 입력해 주세요",
   "@otherInquiryPlaceholder": {
     "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "이메일 주소",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
   }
 }
