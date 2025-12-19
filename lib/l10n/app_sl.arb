@@ -2315,5 +2315,20 @@
   "specialDiscountPriceNow": "Pridobite premium načrt po posebni ceni!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "purchaseErrorSystemInfoError": "Prišlo je do težave z nastavitvami naprave. Preverite in poskusite znova. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Poizvedba. Koda: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
