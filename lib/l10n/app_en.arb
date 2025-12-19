@@ -2334,5 +2334,9 @@
   "number": "(空文字列)",
   "@number": {
     "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
+  },
+  "inquiryTypeLabel": "Inquiry Type",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
