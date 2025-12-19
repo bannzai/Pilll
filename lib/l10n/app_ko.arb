@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※@icloud.com 이외의 이메일 주소를 사용해 주세요. 차단이 자주 발생하고 있습니다",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※pilll.reminder.app@gmail.com에서 보낸 메일을 수신할 수 있도록 설정해 주시기 바랍니다",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
