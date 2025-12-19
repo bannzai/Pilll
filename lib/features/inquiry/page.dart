@@ -26,33 +26,9 @@ class InquiryPage extends HookWidget {
     final contentFocusNode = useFocusNode();
     final scrollController = useScrollController();
     final isSending = useState(false);
-    final hasEditedEmail = useState(false);
-    final hasEditedContent = useState(false);
 
     useListenable(emailController);
     useListenable(contentController);
-
-    useEffect(() {
-      void listener() {
-        if (emailController.text.isNotEmpty) {
-          hasEditedEmail.value = true;
-        }
-      }
-
-      emailController.addListener(listener);
-      return () => emailController.removeListener(listener);
-    }, [emailController]);
-
-    useEffect(() {
-      void listener() {
-        if (contentController.text.isNotEmpty) {
-          hasEditedContent.value = true;
-        }
-      }
-
-      contentController.addListener(listener);
-      return () => contentController.removeListener(listener);
-    }, [contentController]);
 
     bool isInvalid() {
       if (!isValidEmail(emailController.text)) return true;
@@ -130,7 +106,7 @@ class InquiryPage extends HookWidget {
                         decoration: InputDecoration(
                           hintText: L.emailPlaceholder,
                           border: const OutlineInputBorder(),
-                          errorText: hasEditedEmail.value && !isValidEmail(emailController.text) ? L.invalidEmailFormat : null,
+                          errorText: emailController.text.isNotEmpty && !isValidEmail(emailController.text) ? L.invalidEmailFormat : null,
                         ),
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
@@ -161,7 +137,9 @@ class InquiryPage extends HookWidget {
                             hintText: L.inquiryContentPlaceholder,
                             border: const OutlineInputBorder(),
                             alignLabelWithHint: true,
-                            errorText: hasEditedContent.value && contentController.text.isEmpty ? L.inquiryContentRequired : null,
+                            errorText: emailController.text.isNotEmpty && isValidEmail(emailController.text) && contentController.text.isEmpty
+                                ? L.inquiryContentRequired
+                                : null,
                           ),
                           maxLines: null,
                           minLines: 5,
