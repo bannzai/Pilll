@@ -2374,5 +2374,9 @@
   "inquiryContent": "সন্ধানৰ বিষয়বস্তু",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "আপোনাৰ সমস্যাৰ বিৱৰণ লিখক",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
