@@ -2382,5 +2382,9 @@
   "debugInfoLabel": "Debug informacije (automatski popunjeno)",
   "@debugInfoLabel": {
     "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "Vaš upit je poslan",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
   }
 }
