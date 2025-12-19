@@ -2334,5 +2334,9 @@
         "type": "String"
       }
     }
+  },
+  "inquiryTypeLabel": "문의 항목",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
