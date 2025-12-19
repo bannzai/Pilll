@@ -2366,5 +2366,9 @@
   "inquiryContent": "විමසීමේ අන්තර්ගතය",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "කරුණාකර ඔබගේ විචාරණ අන්තර්ගතය ඇතුළත් කරන්න",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
