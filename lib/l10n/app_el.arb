@@ -2366,5 +2366,9 @@
   "inquiryContent": "Περιεχόμενο επικοινωνίας",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "Εισάγετε το περιεχόμενο του ερωτήματός σας",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
