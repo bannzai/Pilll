@@ -2398,5 +2398,9 @@
   "emailCannotReceiveICloud": "※Gebruik asseblief 'n ander e-posadres as @icloud.com. E-posse word dikwels geblokkeer.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Stel asseblief jou instellings so in dat jy e-posse van pilll.reminder.app@gmail.com kan ontvang",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
