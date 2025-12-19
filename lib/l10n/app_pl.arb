@@ -2338,5 +2338,9 @@
   "inquiryTypeLabel": "Kategoria zapytania",
   "@inquiryTypeLabel": {
     "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "Zgłoszenie błędu",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
   }
 }
