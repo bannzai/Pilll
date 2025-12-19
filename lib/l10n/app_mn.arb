@@ -2382,5 +2382,9 @@
   "sendInquiry": "Илгээх",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Зөв имэйл хаяг оруулна уу",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
