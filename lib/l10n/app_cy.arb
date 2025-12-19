@@ -2382,5 +2382,9 @@
   "invalidEmailFormat": "Rhowch gyfeiriad e-bost dilys",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※ Defnyddiwch gyfeiriad e-bost heblaw @icloud.com. Mae e-byst ateb yn cael eu blocio'n aml",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
