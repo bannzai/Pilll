@@ -9,7 +9,6 @@ import 'package:pilll/entity/inquiry.codegen.dart';
 import 'package:pilll/features/error/error_alert.dart';
 import 'package:pilll/features/inquiry/components/inquiry_type_selector.dart';
 import 'package:pilll/features/localizations/l.dart';
-import 'package:pilll/features/settings/components/inquiry/inquiry.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/functions/firebase_functions.dart';
 import 'package:pilll/utils/validator.dart';
@@ -26,8 +25,6 @@ class InquiryPage extends HookWidget {
     final emailFocusNode = useFocusNode();
     final contentFocusNode = useFocusNode();
     final scrollController = useScrollController();
-    final debugInfoFuture = useMemoized(() => debugInfo('\n'));
-    final debugInfoSnapshot = useFuture(debugInfoFuture);
     final isSending = useState(false);
 
     bool isInvalid() {
@@ -143,33 +140,6 @@ class InquiryPage extends HookWidget {
                         ),
                       ),
                       const SizedBox(height: 24),
-                      Text(
-                        L.debugInfoLabel,
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14,
-                          color: Colors.black87,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.grey[200],
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Text(
-                          debugInfoSnapshot.data ?? 'Loading...',
-                          style: const TextStyle(
-                            fontFamily: FontFamily.roboto,
-                            fontSize: 12,
-                            color: Colors.black54,
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 24),
                     ],
                   ),
                 ),
@@ -196,7 +166,6 @@ class InquiryPage extends HookWidget {
                           otherTypeText: otherTypeText.value,
                           email: emailController.text,
                           content: contentController.text,
-                          debugInfoText: debugInfoSnapshot.data ?? '',
                           isSending: isSending,
                         ),
               ),
@@ -214,7 +183,6 @@ class InquiryPage extends HookWidget {
     required String otherTypeText,
     required String email,
     required String content,
-    required String debugInfoText,
     required ValueNotifier<bool> isSending,
   }) async {
     analytics.logEvent(name: 'inquiry_submit_pressed');
@@ -228,7 +196,6 @@ class InquiryPage extends HookWidget {
         otherTypeText: selectedType == InquiryType.other ? otherTypeText : null,
         email: email,
         content: content,
-        debugInfo: debugInfoText,
       );
 
       messenger.showSnackBar(

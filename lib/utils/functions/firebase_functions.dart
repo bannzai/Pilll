@@ -9,14 +9,12 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
     String? otherTypeText,
     required String email,
     required String content,
-    required String debugInfo,
   }) async {
     final result = await httpsCallable('inquiry').call({
       'inquiryType': inquiryType.name,
       if (otherTypeText != null) 'otherTypeText': otherTypeText,
       'email': email,
       'content': content,
-      'debugInfo': debugInfo,
     });
     final response = mapToJSON(result.data);
     return response['inquiryId'] as String;
