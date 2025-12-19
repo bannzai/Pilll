@@ -2390,5 +2390,9 @@
   "emailReceiveSettingNote": "※Sicrhewch eich bod yn gallu derbyn e-byst o pilll.reminder.app@gmail.com",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Nodwch gynnwys eich ymholiad",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
