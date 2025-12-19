@@ -2374,5 +2374,9 @@
   "debugInfoLabel": "调试信息（自动填写）",
   "@debugInfoLabel": {
     "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "咨询已发送",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
   }
 }
