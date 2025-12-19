@@ -2354,5 +2354,9 @@
   "otherInquiryPlaceholder": "Įveskite kitos užklausos turinį",
   "@otherInquiryPlaceholder": {
     "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "El. pašto adresas",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
   }
 }
