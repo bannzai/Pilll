@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "செல்லுபடியாகும் மின்னஞ்சல் முகவரியை உள்ளிடவும்",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※@icloud.com அல்லாத மின்னஞ்சல் முகவரியைப் பயன்படுத்தவும். பதில்கள் அடிக்கடி தடுக்கப்படுகின்றன",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
