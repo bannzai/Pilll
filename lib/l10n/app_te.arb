@@ -2382,5 +2382,9 @@
   "sendInquiry": "పంపించు",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "చెల్లుబాటు అయ్యే ఇమెయిల్ చిరునామాను నమోదు చేయండి",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
