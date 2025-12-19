@@ -2374,5 +2374,9 @@
   "inquiryContent": "জিজ্ঞাসার বিবরণ",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "আপনার জিজ্ঞাসার বিষয়বস্তু লিখুন",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
