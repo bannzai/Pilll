@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Lūdzu, ievadiet derīgu e-pasta adresi",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Lūdzu, izmantojiet e-pasta adresi, kas nav @icloud.com. Atbildes bieži tiek bloķētas",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
