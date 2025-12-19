@@ -2382,5 +2382,9 @@
   "sendInquiry": "Жөнөтүү",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Туура электрондук почта дарегин киргизиңиз",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
