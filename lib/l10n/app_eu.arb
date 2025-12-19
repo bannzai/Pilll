@@ -2330,5 +2330,9 @@
   "specialDiscountPriceNow": "Lortu premium plana prezio bereziarekin!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "nausea": "Goragalea",
+  "@nausea": {
+    "description": "女性の健康管理アプリにおいて、体調記録や日記機能でユーザーが症状として記録する際に使用される医学的な用語です。各言語で一般的に使われる「吐き気」の適切な医療用語で翻訳してください。"
   }
 }
