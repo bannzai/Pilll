@@ -2378,5 +2378,9 @@
   "inquirySent": "Naipadala na ang iyong inquiry",
   "@inquirySent": {
     "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "Ipadala",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
   }
 }
