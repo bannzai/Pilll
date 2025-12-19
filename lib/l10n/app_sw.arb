@@ -2358,5 +2358,9 @@
   "emailPlaceholder": "example@example.com",
   "@emailPlaceholder": {
     "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "Maudhui ya maswali",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
   }
 }
