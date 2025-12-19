@@ -2254,5 +2254,9 @@
   "surveyForServiceImprovement": "ଯଦି ସମ୍ଭବ ହୁଏ, ଦୟାକରି ସେବା ସୁଧାର ପାଇଁ ସର୍ଭେରେ ମଧ୍ୟ ସହଯୋଗ କରନ୍ତୁ",
   "@surveyForServiceImprovement": {
     "description": "アプリ利用者に対してサービス品質向上を目的としたアンケート調査への協力を任意でお願いする丁寧なメッセージです。ユーザーの負担感を軽減するため、協力は任意であることを示す敬語表現を含めてください。"
+  },
+  "selectPillNumberForMenstruationStart": "ମାସିକ ଆରମ୍ଭ ହେଉଥିବା ବଟିକା ସଂଖ୍ୟା ଟ୍ୟାପ୍ କରନ୍ତୁ",
+  "@selectPillNumberForMenstruationStart": {
+    "description": "ピルシートUI上で、ユーザーが生理開始時のピル番号を指定する際の操作指示です。生理周期を正確に管理するための重要な設定項目として使用されます。"
   }
 }
