@@ -2378,5 +2378,9 @@
   "inquirySent": "문의가 전송되었습니다",
   "@inquirySent": {
     "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "보내기",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
   }
 }
