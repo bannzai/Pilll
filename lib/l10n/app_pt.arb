@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Por favor, insira um endereço de e-mail válido",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Por favor, utilize um endereço de e-mail diferente de @icloud.com. Bloqueios frequentes têm sido reportados",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
