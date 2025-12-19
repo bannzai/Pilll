@@ -2370,5 +2370,9 @@
   "inquiryContentPlaceholder": "Voer de inhoud van uw bericht in",
   "@inquiryContentPlaceholder": {
     "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "Debug-informatie (automatisch ingevuld)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
   }
 }
