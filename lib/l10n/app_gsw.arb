@@ -2330,5 +2330,9 @@
   "specialDiscountPriceNow": "Hole dir de Premium-Plan zum Spezialpriis!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "notificationTime": "Benachrichtigungszeit",
+  "@notificationTime": {
+    "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
   }
 }
