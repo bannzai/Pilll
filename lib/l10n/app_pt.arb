@@ -2394,5 +2394,9 @@
   "emailReceiveSettingNote": "※Por favor, configure seu e-mail para receber mensagens de pilll.reminder.app@gmail.com",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Por favor, insira o conteúdo da sua consulta",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
