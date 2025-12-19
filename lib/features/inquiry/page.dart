@@ -27,6 +27,9 @@ class InquiryPage extends HookWidget {
     final scrollController = useScrollController();
     final isSending = useState(false);
 
+    useListenable(emailController);
+    useListenable(contentController);
+
     bool isInvalid() {
       if (!isValidEmail(emailController.text)) return true;
       if (contentController.text.isEmpty) return true;

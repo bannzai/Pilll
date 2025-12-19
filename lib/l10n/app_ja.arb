@@ -2379,7 +2379,7 @@
   "@inquirySent": {
     "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
   },
-  "sendInquiry": "送信",
+  "sendInquiry": "送信する",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
   },
