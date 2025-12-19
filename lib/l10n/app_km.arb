@@ -2366,5 +2366,9 @@
   "inquiryContent": "ខ្លឹមសារសំណួរ",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "សូមបញ្ចូលមាតិកាសំណួររបស់អ្នក",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
