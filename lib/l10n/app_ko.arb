@@ -2315,5 +2315,9 @@
   "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
   "@deletedDiaryCannotBeRecovered": {
     "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "해당 플랜은 현재 판매되지 않습니다. 앱을 재시작한 후 다시 시도해주세요",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
   }
 }
