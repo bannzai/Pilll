@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Zadajte platnú e-mailovú adresu",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Používajte prosím e-mailovú adresu inú ako @icloud.com. Odpovede sú často blokované.",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
