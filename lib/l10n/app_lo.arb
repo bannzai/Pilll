@@ -2382,5 +2382,9 @@
   "sendInquiry": "ສົ່ງ",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "ກະລຸນາໃສ່ທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
