@@ -2382,5 +2382,9 @@
   "sendInquiry": "Gönder",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Lütfen geçerli bir e-posta adresi girin",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
