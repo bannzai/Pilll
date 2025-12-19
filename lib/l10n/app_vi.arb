@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Vui lòng nhập địa chỉ email hợp lệ",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Vui lòng sử dụng địa chỉ email khác ngoài @icloud.com. Email thường xuyên bị chặn",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
