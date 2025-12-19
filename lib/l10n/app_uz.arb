@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Yaroqli elektron pochta manzilini kiriting",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Iltimos, @icloud.com dan boshqa elektron pochta manzilidan foydalaning. Xatlar tez-tez bloklanmoqda",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
