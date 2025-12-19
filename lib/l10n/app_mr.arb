@@ -2366,5 +2366,9 @@
   "inquiryContent": "चौकशीचा तपशील",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "कृपया तुमची चौकशी प्रविष्ट करा",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
