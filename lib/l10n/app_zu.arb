@@ -2385,5 +2385,9 @@
   "emailReceiveSettingNote": "※Sicela uhlele ukuze ukwazi ukwamukela ama-imeyili avela ku-pilll.reminder.app@gmail.com",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Sicela ufake okuqukethwe kombuzo",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
