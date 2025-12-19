@@ -2325,5 +2325,14 @@
   "specialDiscountPriceNow": "Makakuha ng Premium Plan sa espesyal na presyo!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "launchError": "Ito ay mensaheng error na ipinapakita sa user kapag may naganap na anumang teknikal na error habang nag-uumpisa ang app (sa sandaling binuksan ang app). Kasama rin ang detalyadong impormasyon tulad ng connection error upang maintindihan ng user ang sitwasyon.",
+  "@launchError": {
+    "description": "アプリの起動時（アプリを開いた瞬間）に何らかの技術的エラーが発生した場合にユーザーに表示されるエラーメッセージです。接続エラーなどの詳細情報も含まれるため、ユーザーが状況を理解できるよう翻訳してください。",
+    "placeholders": {
+      "ErrorMessagesConnection": {
+        "type": "String"
+      }
+    }
   }
 }
