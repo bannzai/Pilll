@@ -2394,5 +2394,9 @@
   "emailReceiveSettingNote": "※Bitte stell dini E-Mail-Iistellige so ii, dass du Nachrichete vo pilll.reminder.app@gmail.com empfange chasch",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Bitte gäbed Sie Ihri Aafrag ii",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
