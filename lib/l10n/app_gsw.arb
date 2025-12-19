@@ -2334,5 +2334,9 @@
   "notificationTime": "Benachrichtigungszeit",
   "@notificationTime": {
     "description": "ピルの服用リマインダーを受け取る時間を設定する際に表示されるラベルです。通知設定画面で「何時に通知を受け取るか」を指定する項目名として使用されます。"
+  },
+  "inquiryTypeLabel": "Afrogeart",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
