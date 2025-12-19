@@ -2394,5 +2394,9 @@
   "emailReceiveSettingNote": "※pilll.reminder.app@gmail.com ಇಂದ ಇಮೇಲ್‌ಗಳನ್ನು ಸ್ವೀಕರಿಸಲು ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸೆಟ್ಟಿಂಗ್‌ಗಳನ್ನು ಕಾನ್ಫಿಗರ್ ಮಾಡಿ",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "ದಯವಿಟ್ಟು ವಿಚಾರಣೆಯ ವಿಷಯವನ್ನು ನಮೂದಿಸಿ",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
