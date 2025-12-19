@@ -2325,5 +2325,9 @@
         "type": "String"
       }
     }
+  },
+  "inquiryTypeLabel": "Uhlobo lombuzo",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
