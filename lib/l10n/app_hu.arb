@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Kérjük, adjon meg érvényes e-mail címet",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Kérjük, ne használjon @icloud.com e-mail címet. A válaszlevelek gyakran blokkolásra kerülnek.",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
