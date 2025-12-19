@@ -2385,5 +2385,9 @@
   "emailReceiveSettingNote": "※لطفاً تنظیمات ایمیل خود را طوری تغییر دهید که بتوانید پیام‌های ارسالی از pilll.reminder.app@gmail.com را دریافت کنید",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "لطفاً محتوای درخواست خود را وارد کنید",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
