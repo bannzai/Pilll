@@ -2386,5 +2386,9 @@
   "emailCannotReceiveICloud": "※ @icloud.com မှအပ အခြားအီးမေးလ်လိပ်စာကို အသုံးပြုပေးပါ။ ပိတ်ဆို့ခံရမှုများ မကြာခဏဖြစ်ပေါ်နေပါသည်",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※pilll.reminder.app@gmail.com မှ အီးမေးလ်များကို လက်ခံနိုင်ရန် သင့်အီးမေးလ် ဆက်တင်များကို ချိန်ညှိပေးပါရန် တောင်းဆိုအပ်ပါသည်",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
