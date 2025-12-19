@@ -2241,5 +2241,14 @@
         "type": "String"
       }
     }
+  },
+  "failedToFetchPillHistory": "ସେବନ ଇତିହାସ ସୂଚନା ପ୍ରାପ୍ତ କରିବାରେ ବିଫଳ ହୋଇଛି। {error}",
+  "@failedToFetchPillHistory": {
+    "description": "アプリ内でユーザーが過去のピル服用履歴を確認しようとした際に、システムエラーやネットワーク障害などでデータの取得に失敗した場合に表示されるエラーメッセージです。{error}部分には具体的なエラー内容が挿入されます。",
+    "placeholders": {
+      "error": {
+        "type": "String"
+      }
+    }
   }
 }
