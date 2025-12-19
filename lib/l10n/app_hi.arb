@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※कृपया @icloud.com के अलावा अन्य ईमेल पते का उपयोग करें। इस पर ब्लॉकिंग अक्सर हो रही है।",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※कृपया सुनिश्चित करें कि आप pilll.reminder.app@gmail.com से ईमेल प्राप्त कर सकें",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
