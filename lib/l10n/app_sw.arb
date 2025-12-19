@@ -2362,5 +2362,9 @@
   "inquiryContent": "Maudhui ya maswali",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "Andika ujumbe wako hapa",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
