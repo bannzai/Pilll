@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Vinsamlegast sláðu inn gilt netfang",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Vinsamlegast notaðu annað netfang en @icloud.com. Svör eru oft lokuð.",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
