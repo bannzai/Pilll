@@ -2398,5 +2398,9 @@
   "emailCannotReceiveICloud": "※Si us plau, utilitzeu una adreça de correu electrònic diferent de @icloud.com. Es produeixen bloquejos amb freqüència",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Si us plau, configureu el vostre correu per poder rebre missatges de pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
