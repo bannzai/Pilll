@@ -32,7 +32,7 @@ class InquiryTypeSelector extends HookWidget {
           L.inquiryTypeLabel,
           style: const TextStyle(
             fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             fontSize: 14,
             color: Colors.black87,
           ),

@@ -74,7 +74,7 @@ class InquiryPage extends HookWidget {
                         L.emailAddress,
                         style: const TextStyle(
                           fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           fontSize: 14,
                           color: Colors.black87,
                         ),
@@ -115,7 +115,7 @@ class InquiryPage extends HookWidget {
                         L.inquiryContent,
                         style: const TextStyle(
                           fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w700,
                           fontSize: 14,
                           color: Colors.black87,
                         ),
