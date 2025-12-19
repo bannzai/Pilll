@@ -2366,5 +2366,9 @@
   "inquiryContent": "પૂછપરછની વિગતો",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "કૃપા કરીને તમારી પૂછપરછની વિગતો દાખલ કરો",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
