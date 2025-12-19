@@ -2358,5 +2358,9 @@
   "inquiryContent": "ପଚାରିବା ବିଷୟବସ୍ତୁ",
   "@inquiryContent": {
     "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "ଦୟାକରି ଆପଣଙ୍କର ଜିଜ୍ଞାସା ପ୍ରବେଶ କରନ୍ତୁ",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
   }
 }
