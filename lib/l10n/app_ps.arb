@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※ مهرباني وکړئ د @icloud.com پرته بل بریښنالیک پته وکاروئ. ډیری ځله بلاک کیږي",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※مهرباني وکړئ خپلې ترتیبات داسې تنظیم کړئ چې تاسو د pilll.reminder.app@gmail.com څخه بریښنالیکونه ترلاسه کړئ",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
