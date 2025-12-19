@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "કૃપા કરીને માન્ય ઈમેઇલ સરનામું દાખલ કરો",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※ કૃપા કરીને @icloud.com સિવાયના ઈમેઇલ સરનામાંનો ઉપયોગ કરો. બ્લોકિંગની ઘટનાઓ વારંવાર થઈ રહી છે",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
