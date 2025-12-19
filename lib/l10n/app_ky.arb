@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※@icloud.com дарегинен башка электрондук почта дарегин колдонуңуз. Блоктолуулар көп болуп жатат",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※pilll.reminder.app@gmail.com дарегинен келген катты кабыл алуу үчүн, жөндөөлөрдү текшериңиз",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
