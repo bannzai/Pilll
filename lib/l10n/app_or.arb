@@ -2362,5 +2362,9 @@
   "inquiryContentPlaceholder": "ଦୟାକରି ଆପଣଙ୍କର ଜିଜ୍ଞାସା ପ୍ରବେଶ କରନ୍ତୁ",
   "@inquiryContentPlaceholder": {
     "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "ଡିବଗ୍ ସୂଚନା (ସ୍ୱୟଂଚାଳିତ)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
   }
 }
