@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※Kérjük, ne használjon @icloud.com e-mail címet. A válaszlevelek gyakran blokkolásra kerülnek.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Kérjük, állítsa be postafiókját úgy, hogy fogadni tudja a pilll.reminder.app@gmail.com címről érkező e-maileket",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
