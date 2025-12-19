@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※ദയവായി @icloud.com ഒഴികെയുള്ള ഇമെയിൽ വിലാസം ഉപയോഗിക്കുക. മറുപടി മെയിലുകൾ പതിവായി തടയപ്പെടുന്നു",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※pilll.reminder.app@gmail.com എന്ന വിലാസത്തിൽ നിന്നുള്ള ഇമെയിലുകൾ സ്വീകരിക്കാൻ കഴിയുന്ന വിധം ക്രമീകരണങ്ങൾ നടത്തുക",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
