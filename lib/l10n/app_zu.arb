@@ -2361,5 +2361,9 @@
   "inquiryContentPlaceholder": "Sicela ufake okuqukethwe kombuzo wakho",
   "@inquiryContentPlaceholder": {
     "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "Ulwazi lwedibhagi (lugcwaliswe ngokuzenzakalelayo)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
   }
 }
