@@ -2377,5 +2377,9 @@
   "invalidEmailFormat": "لطفاً یک آدرس ایمیل معتبر وارد کنید",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※ لطفاً از آدرس ایمیلی به جز @icloud.com استفاده کنید. ایمیل‌های پاسخ اغلب مسدود می‌شوند",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
