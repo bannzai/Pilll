@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "Туура электрондук почта дарегин киргизиңиз",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※@icloud.com дарегинен башка электрондук почта дарегин колдонуңуз. Блоктолуулар көп болуп жатат",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
