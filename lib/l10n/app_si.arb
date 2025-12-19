@@ -2334,5 +2334,9 @@
   "enableNotificationInSilentMode": "නිහඬ මාදිලියේදී ද දැනුම් දෙන්න",
   "@enableNotificationInSilentMode": {
     "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
+  },
+  "inquiryTypeLabel": "විමසුම් වර්ගය",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
