@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※Молимо користите имејл адресу која није @icloud.com. Порuke се често блокирају.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Молимо вас да подесите поставке тако да можете примати е-поруке са адресе pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
