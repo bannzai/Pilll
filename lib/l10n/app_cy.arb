@@ -2314,5 +2314,17 @@
   "specialDiscountPriceNow": "Sicrhewch y cynllun premiwm am bris arbennig!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "purchaseErrorProductRequestTimeout": "Amser allan. Gwiriwch eich cysylltiad rhwydwaith a rhowch gynnig arall arni. Os nad yw hyn yn datrys y broblem, cysylltwch â ni trwy Gosodiadau > Ymholiad. Manylion: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductRequestTimeout": {
+    "description": "アプリ内課金のプロダクト情報取得時にネットワークタイムアウトが発生した際のエラーメッセージです。ユーザーに通信環境の確認と再試行、問題が解決しない場合のサポート問い合わせを案内します。",
+    "placeholders": {
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
   }
 }
