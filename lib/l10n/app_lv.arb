@@ -2382,5 +2382,9 @@
   "sendInquiry": "Nosūtīt",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Lūdzu, ievadiet derīgu e-pasta adresi",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
