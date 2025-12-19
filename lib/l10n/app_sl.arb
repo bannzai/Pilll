@@ -2334,5 +2334,9 @@
   "logoutCompleted": "Odjavljeni ste",
   "@logoutCompleted": {
     "description": "ユーザーがログアウト操作を完了した後に表示される確認メッセージです。アプリからサインアウトされ、認証状態が解除されたことをユーザーに伝えるために使用されます。"
+  },
+  "inquiryTypeLabel": "Kategorija poizvedbe",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
