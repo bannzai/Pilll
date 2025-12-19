@@ -2398,5 +2398,9 @@
   "emailCannotReceiveICloud": "※অনুগ্রহ করে @icloud.com ছাড়া অন্য ইমেল ঠিকানা ব্যবহার করুন। ব্লক হওয়ার সমস্যা ঘন ঘন ঘটছে",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※অনুগ্রহ করে pilll.reminder.app@gmail.com থেকে ইমেল গ্রহণ করার জন্য আপনার সেটিংস কনফিগার করুন",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
