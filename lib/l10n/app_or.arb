@@ -2293,5 +2293,14 @@
   "currentPillSheetNotFound": "ବର୍ତ୍ତମାନର ଲକ୍ଷ୍ୟ ବର୍ତ୍ତିକା ପତ୍ର ମିଳିଲା ନାହିଁ",
   "@currentPillSheetNotFound": {
     "description": "ユーザーが現在服用中のピルシートのデータがアプリ内で見つからない場合に表示されるエラーメッセージです。"
+  },
+  "trialDeadlineDateOffsetDay": "{number} ଦିନ ପାଇଁ ସମସ୍ତ ବୈଶିଷ୍ଟ୍ୟ ବ୍ୟବହାର କରିପାରିବେ!",
+  "@trialDeadlineDateOffsetDay": {
+    "description": "プレミアム機能の無料トライアル期間中にすべての機能が利用可能であることをユーザーに伝える励ましのメッセージです。ポジティブで親しみやすい表現で翻訳してください。",
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
   }
 }
