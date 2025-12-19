@@ -2370,5 +2370,9 @@
   "inquiryContentPlaceholder": "Ievadiet jautājuma saturu",
   "@inquiryContentPlaceholder": {
     "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "Atkļūdošanas informācija (aizpildīta automātiski)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
   }
 }
