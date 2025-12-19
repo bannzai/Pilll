@@ -2334,5 +2334,9 @@
         "type": "String"
       }
     }
+  },
+  "inquiryTypeLabel": "Chủ đề liên hệ",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
   }
 }
