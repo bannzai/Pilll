@@ -2390,5 +2390,9 @@
   "emailCannotReceiveICloud": "※ກະລຸນາໃຊ້ທີ່ຢູ່ອີເມລນອກເໜືອຈາກ @icloud.com ເນື່ອງຈາກມີການບລັອກເກີດຂຶ້ນເປັນປະຈໍາ",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※ກະລຸນາຕັ້ງຄ່າເພື່ອສາມາດຮັບອີເມວຈາກ pilll.reminder.app@gmail.com ໄດ້",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   }
 }
