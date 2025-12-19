@@ -37,17 +37,22 @@ extension FirebaseFunctionsExt on FirebaseFunctions {
 // Map<String, dynamic>.fromだけだとネストした子要素が_Map<Object? Object?>のままになる
 // 以下のエラーを回避する _TypeError (type '_Map<Object?, Object?>' is not a subtype of type 'Map<String, dynamic>' in type cast)
 Map<String, dynamic> mapToJSON(Map<dynamic, dynamic> map) {
-  for (var key in map.keys) {
-    if (map[key] is Map) {
-      map[key] = mapToJSON(map[key]);
-    } else if (map[key] is List) {
-      map[key] = map[key].map((e) {
+  final newMap = <String, dynamic>{};
+  for (final key in map.keys) {
+    final value = map[key];
+    final newKey = key.toString();
+    if (value is Map) {
+      newMap[newKey] = mapToJSON(value);
+    } else if (value is List) {
+      newMap[newKey] = value.map((e) {
         if (e is Map) {
           return mapToJSON(e);
         }
         return e;
       }).toList();
+    } else {
+      newMap[newKey] = value;
     }
   }
-  return Map<String, dynamic>.from(map);
+  return newMap;
 }
