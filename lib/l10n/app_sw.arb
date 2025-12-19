@@ -2382,5 +2382,9 @@
   "invalidEmailFormat": "Tafadhali weka anwani sahihi ya barua pepe",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Tafadhali tumia anwani ya barua pepe isiyokuwa @icloud.com. Kuzuiwa kunasikika mara kwa mara",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
