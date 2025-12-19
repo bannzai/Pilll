@@ -2382,5 +2382,9 @@
   "sendInquiry": "അയയ്ക്കുക",
   "@sendInquiry": {
     "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "ദയവായി സാധുവായ ഇമെയിൽ വിലാസം നൽകുക",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   }
 }
