@@ -2386,5 +2386,9 @@
   "invalidEmailFormat": "ദയവായി സാധുവായ ഇമെയിൽ വിലാസം നൽകുക",
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※ദയവായി @icloud.com ഒഴികെയുള്ള ഇമെയിൽ വിലാസം ഉപയോഗിക്കുക. മറുപടി മെയിലുകൾ പതിവായി തടയപ്പെടുന്നു",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   }
 }
