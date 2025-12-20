@@ -2334,5 +2334,69 @@
   "specialDiscountPriceNow": "خصوصی قیمت پر پریمیم پلان حاصل کریں!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "inquiryTypeLabel": "استفسار کی قسم",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "خرابی کی رپورٹ",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "رائے اور تجاویز",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "دیگر",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "دیگر تفصیلات درج کریں",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "ای میل ایڈریس",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "استفسار کی تفصیلات",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "براہ کرم اپنی انکوائری کی تفصیلات درج کریں",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "ڈیبگ کی معلومات (خودکار طور پر بھری گئی)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "استفسار بھیج دی گئی",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "بھیجیں",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "براہ کرم ایک درست ای میل ایڈریس درج کریں",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "براہ کرم @icloud.com کے علاوہ ای میل ایڈریس استعمال کریں۔ اس سے اکثر بلاک کیا جا رہا ہے",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "براہ کرم اس بات کو یقینی بنائیں کہ آپ pilll.reminder.app@gmail.com سے ای میلز وصول کر سکیں",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "براہ کرم استفسار کا مواد درج کریں",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }

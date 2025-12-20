@@ -2315,5 +2315,88 @@
   "specialDiscountPriceNow": "Pridobite premium načrt po posebni ceni!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "purchaseErrorSystemInfoError": "Prišlo je do težave z nastavitvami naprave. Preverite in poskusite znova. Če se težava ne reši, nas kontaktirajte preko Nastavitve > Poizvedba. Koda: {errorCode} Podrobnosti: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorSystemInfoError": {
+    "description": "プレミアム機能の購入時にデバイス設定の問題で決済に失敗した場合に表示されるエラーメッセージです。ユーザーに設定確認と問い合わせ方法を案内する内容です。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "logoutCompleted": "Odjavljeni ste",
+  "@logoutCompleted": {
+    "description": "ユーザーがログアウト操作を完了した後に表示される確認メッセージです。アプリからサインアウトされ、認証状態が解除されたことをユーザーに伝えるために使用されます。"
+  },
+  "inquiryTypeLabel": "Kategorija poizvedbe",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "Prijava napake",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "Mnenja in predlogi",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "Drugo",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "Prosimo, vnesite drugo vsebino",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "E-poštni naslov",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "primer@primer.si",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "Vsebina poizvedbe",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "Vnesite vsebino sporočila",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "Informacije za razhroščevanje (samodejno izpolnjeno)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "Vaša poizvedba je bila poslana",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "Pošlji",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Vnesite veljaven e-poštni naslov",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "Prosimo, ne uporabljajte e-poštnega naslova @icloud.com. Pogosto prihaja do blokiranja.",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "Prosimo, omogočite sprejem e-pošte z naslova pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Prosimo, vnesite vsebino poizvedbe",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }

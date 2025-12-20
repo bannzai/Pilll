@@ -2311,5 +2311,92 @@
   "specialDiscountPriceNow": "특가로 프리미엄 플랜을 만나보세요!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "deletedDiaryCannotBeRecovered": "삭제된 일기는 복원할 수 없습니다",
+  "@deletedDiaryCannotBeRecovered": {
+    "description": "日記機能において、日記を削除する際の確認画面や警告メッセージとして表示されます。削除操作が不可逆であることをユーザーに伝える重要な注意文です。"
+  },
+  "purchaseErrorProductNotAvailableForPurchaseError": "해당 플랜은 현재 판매되지 않습니다. 앱을 재시작한 후 다시 시도해주세요",
+  "@purchaseErrorProductNotAvailableForPurchaseError": {
+    "description": "アプリ内課金でプレミアムプランを購入しようとした際に、選択したプランが一時的に利用できない状態の場合に表示されるエラーメッセージです。ユーザーにアプリの再起動を促す内容が含まれます。"
+  },
+  "purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": "알 수 없는 오류가 발생했습니다. 최신 버전으로 업데이트한 후 다시 시도해 주세요. 문제가 해결되지 않으면 설정 > 문의하기로 문의해 주세요. 코드: {errorCode} 상세정보: {exceptionMessage}:{exceptionDetails}",
+  "@purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError": {
+    "description": "プレミアムプラン購入時に発生する技術的なエラーのメッセージです。ユーザーには原因不明として一般的な対処法（アップデート、問い合わせ）を案内します。",
+    "placeholders": {
+      "errorCode": {
+        "type": "String"
+      },
+      "exceptionMessage": {
+        "type": "String"
+      },
+      "exceptionDetails": {
+        "type": "String"
+      }
+    }
+  },
+  "inquiryTypeLabel": "문의 항목",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "버그 신고",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "의견·요청",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "기타",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "기타 내용을 입력해 주세요",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "이메일 주소",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "문의 내용",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "문의 내용을 입력해 주세요",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "디버그 정보(자동 입력)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "문의가 전송되었습니다",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "보내기",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "올바른 이메일 주소를 입력해 주세요",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "@icloud.com 이외의 이메일 주소를 사용해 주세요. 차단이 자주 발생하고 있습니다",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "pilll.reminder.app@gmail.com에서 보낸 메일을 수신할 수 있도록 설정해 주시기 바랍니다",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "문의 내용을 입력해 주세요",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
