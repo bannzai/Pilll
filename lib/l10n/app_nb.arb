@@ -2387,7 +2387,7 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※Vennligst bruk en annen e-postadresse enn @icloud.com. Blokkering forekommer ofte.",
+  "emailCannotReceiveICloud": "Vennligst bruk en annen e-postadresse enn @icloud.com. Blokkering forekommer ofte.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
