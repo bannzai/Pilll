@@ -2378,11 +2378,11 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※Sicela usebenzise ikheli le-imeyili ngaphandle kwe-@icloud.com. Ukuvinjelwa kuvame ukwenzeka.",
+  "emailCannotReceiveICloud": "Sicela usebenzise ikheli le-imeyili ngaphandle kwe-@icloud.com. Ukuvinjelwa kuvame ukwenzeka.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
-  "emailReceiveSettingNote": "※Sicela uhlele ukuze ukwazi ukwamukela ama-imeyili avela ku-pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Sicela uhlele ukuze ukwazi ukwamukela ama-imeyili avela ku-pilll.reminder.app@gmail.com",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   },
