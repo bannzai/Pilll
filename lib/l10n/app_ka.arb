@@ -2387,11 +2387,11 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※გთხოვთ, გამოიყენოთ ელფოსტის მისამართი @icloud.com-ის გარდა. ხშირად ხდება დაბლოკვა",
+  "emailCannotReceiveICloud": "გთხოვთ, გამოიყენოთ ელფოსტის მისამართი @icloud.com-ის გარდა. ხშირად ხდება დაბლოკვა",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
-  "emailReceiveSettingNote": "※ გთხოვთ, დააკონფიგურიროთ თქვენი პარამეტრები pilll.reminder.app@gmail.com-დან ელ. ფოსტის მისაღებად",
+  "emailReceiveSettingNote": "გთხოვთ, დააკონფიგურიროთ თქვენი პარამეტრები pilll.reminder.app@gmail.com-დან ელ. ფოსტის მისაღებად",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   },
