@@ -2326,5 +2326,77 @@
   "specialDiscountPriceNow": "විශේෂ මිලකට ප්‍රීමියම් සැලසුම ලබා ගන්න!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "noPreviousPurchaseInfo": "පෙර මිලදී ගැනීම් තොරතුරු හමු නොවිණි. කරුණාකර ඔබගේ ගිණුම පරීක්ෂා කර නැවත උත්සාහ කරන්න",
+  "@noPreviousPurchaseInfo": {
+    "description": "プレミアムプラン購入復元時に、以前の購入履歴が見つからない場合にユーザーに表示されるエラーメッセージです。機種変更や再インストール後に購入復元を試みたが失敗した際のメッセージとして使用されます。"
+  },
+  "enableNotificationInSilentMode": "නිහඬ මාදිලියේදී ද දැනුම් දෙන්න",
+  "@enableNotificationInSilentMode": {
+    "description": "ピル服用リマインダー通知の設定項目で、端末がマナーモードや消音設定になっていても確実に通知を届ける機能のオン/オフを切り替えるボタンのラベルです。服用忘れを防ぐための重要な機能として表示されます。"
+  },
+  "inquiryTypeLabel": "විමසුම් වර්ගය",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "දෝෂ වාර්තාව",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "අදහස් සහ යෝජනා",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "වෙනත්",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "කරුණාකර වෙනත් විස්තර ඇතුළත් කරන්න",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "ඊ-මේල් ලිපිනය",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "විමසීමේ අන්තර්ගතය",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "කරුණාකර ඔබගේ විචාරණ අන්තර්ගතය ඇතුළත් කරන්න",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "නිදොස්කරණ තොරතුරු (ස්වයංක්‍රීයව පුරවා ඇත)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "ඔබේ විමසීම යවන ලදී",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "යවන්න",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "වලංගු ඊමේල් ලිපිනයක් ඇතුළත් කරන්න",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "කරුණාකර @icloud.com හැර වෙනත් ඊමේල් ලිපිනයක් භාවිතා කරන්න. අවහිර කිරීම් නිතර සිදු වේ",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "කරුණාකර pilll.reminder.app@gmail.com වෙතින් ඊමේල් ලබා ගත හැකි වන පරිදි සැකසුම් සකස් කරන්න",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "කරුණාකර විමසීමේ අන්තර්ගතය ඇතුළත් කරන්න",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
