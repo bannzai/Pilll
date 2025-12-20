@@ -2387,11 +2387,11 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※Ju lutemi përdorni një adresë emaili përveç @icloud.com. Po ndodhin shumë raste bllokimi.",
+  "emailCannotReceiveICloud": "Ju lutemi përdorni një adresë emaili përveç @icloud.com. Po ndodhin shumë raste bllokimi.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
-  "emailReceiveSettingNote": "※Ju lutemi sigurohuni që të mund të merrni email-e nga pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Ju lutemi sigurohuni që të mund të merrni email-e nga pilll.reminder.app@gmail.com",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   },
