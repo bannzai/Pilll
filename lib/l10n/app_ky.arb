@@ -2322,5 +2322,81 @@
   "specialDiscountPriceNow": "Атайын баа менен премиум планды алыңыз!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "discardAllPillSheets": "Бардык таблетка барактарын өчүрүү",
+  "@discardAllPillSheets": {
+    "description": "アプリに登録されているすべてのピルシート情報を削除する機能のボタンテキストです。ユーザーがピル管理をリセットしたい場合や、すべてのデータを一括削除したい場合に使用される重要な操作です。"
+  },
+  "allPillSheets": "Бардык пили барактары",
+  "@allPillSheets": {
+    "description": "ユーザーが使用している過去・現在のピルシート一覧を表示する画面やセクションのタイトルです。複数のピルシートを管理・閲覧する際に表示されるラベルとして使用されます。"
+  },
+  "and": "жана",
+  "@and": {
+    "description": "2つの項目や要素を並列に繋ぐ際に使用される接続詞です。アプリ内のテキストで「設定と履歴」「朝と夜」などの表現に使われます。"
+  },
+  "inquiryTypeLabel": "Кайрылуу темасы",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "Мүчүлүштүк тууралуу билдирүү",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "Пикирлер жана сунуштар",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "Башка",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "Башка маалыматты киргизиңиз",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "Электрондук почта дареги",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "Кайрылуунун мазмуну",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "Кайрылуу мазмунун киргизиңиз",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "Отладка маалыматы (автоматтык толтуруу)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "Кайрылуу жөнөтүлдү",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "Жөнөтүү",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Туура электрондук почта дарегин киргизиңиз",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "@icloud.com дарегинен башка электрондук почта дарегин колдонуңуз. Блоктолуулар көп болуп жатат",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "pilll.reminder.app@gmail.com дарегинен келген катты кабыл алуу үчүн, жөндөөлөрдү текшериңиз",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Кайрылуу мазмунун киргизиңиз",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
