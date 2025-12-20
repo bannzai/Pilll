@@ -2387,11 +2387,11 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※ براہ کرم @icloud.com کے علاوہ ای میل ایڈریس استعمال کریں۔ اس سے اکثر بلاک کیا جا رہا ہے",
+  "emailCannotReceiveICloud": "براہ کرم @icloud.com کے علاوہ ای میل ایڈریس استعمال کریں۔ اس سے اکثر بلاک کیا جا رہا ہے",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
-  "emailReceiveSettingNote": "※براہ کرم اس بات کو یقینی بنائیں کہ آپ pilll.reminder.app@gmail.com سے ای میلز وصول کر سکیں",
+  "emailReceiveSettingNote": "براہ کرم اس بات کو یقینی بنائیں کہ آپ pilll.reminder.app@gmail.com سے ای میلز وصول کر سکیں",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   },
