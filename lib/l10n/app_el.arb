@@ -2334,5 +2334,69 @@
   "specialDiscountPriceNow": "Αποκτήστε το Premium πρόγραμμα σε ειδική τιμή!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "inquiryTypeLabel": "Θέμα επικοινωνίας",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "Αναφορά σφάλματος",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "Σχόλια και Προτάσεις",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "Άλλο",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "Παρακαλώ εισάγετε λεπτομέρειες",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "Διεύθυνση email",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "Περιεχόμενο επικοινωνίας",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "Εισάγετε το περιεχόμενο του ερωτήματός σας",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "Πληροφορίες αποσφαλμάτωσης (αυτόματη συμπλήρωση)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "Το αίτημά σας εστάλη",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "Αποστολή",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση email",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "※Παρακαλούμε χρησιμοποιήστε διεύθυνση email εκτός του @icloud.com. Παρατηρούνται συχνά αποκλεισμοί",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "※Παρακαλούμε βεβαιωθείτε ότι μπορείτε να λαμβάνετε email από το pilll.reminder.app@gmail.com",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "Παρακαλώ εισάγετε το περιεχόμενο του ερωτήματος",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
