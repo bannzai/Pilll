@@ -2334,5 +2334,65 @@
   "specialDiscountPriceNow": "အထူးလျှော့စျေးဖြင့် ပရီမီယံအစီအစဉ်ကို ရယူပါ！",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "inquiryTypeLabel": "စုံစမ်းမေးမြန်းမှုအမျိုးအစား",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "ချို့ယွင်းချက်တင်ပြခြင်း",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "အကြံပြုချက်နှင့် တောင်းဆိုချက်များ",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "အခြား",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "အခြားအကြောင်းအရာကို ထည့်သွင်းပါ",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "အီးမေးလ်လိပ်စာ",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContentPlaceholder": "ဆက်သွယ်လိုသည့် အကြောင်းအရာကို ရေးသွင်းပါ",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "ဒီဘာ့ဂ်အချက်အလက် (အလိုအလျောက်ဖြည့်သွင်းထားသည်)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "မေးမြန်းချက်ပေးပို့ပြီးပါပြီ",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "ပို့မည်",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "မှန်ကန်သောအီးမေးလ်လိပ်စာကို ထည့်သွင်းပါ",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "@icloud.com မှအပ အခြားအီးမေးလ်လိပ်စာကို အသုံးပြုပေးပါ။ ပိတ်ဆို့ခံရမှုများ မကြာခဏဖြစ်ပေါ်နေပါသည်",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "pilll.reminder.app@gmail.com မှ အီးမေးလ်များကို လက်ခံနိုင်ရန် သင့်အီးမေးလ် ဆက်တင်များကို ချိန်ညှိပေးပါရန် တောင်းဆိုအပ်ပါသည်",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "မေးမြန်းလိုသည့်အကြောင်းအရာ ထည့်သွင်းပေးပါ",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
