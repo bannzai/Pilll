@@ -2334,5 +2334,69 @@
   "specialDiscountPriceNow": "ਵਿਸ਼ੇਸ਼ ਕੀਮਤ ਵਿੱਚ ਪ੍ਰੀਮੀਅਮ ਪਲਾਨ ਲਓ!",
   "@specialDiscountPriceNow": {
     "description": "プレミアムプラン（有料機能）の特別割引キャンペーン時に表示される宣伝メッセージです。通常価格よりも安い価格でプレミアムプランを購入できることをユーザーに伝えるために使用されます。"
+  },
+  "inquiryTypeLabel": "ਪੁੱਛਗਿੱਛ ਸ਼੍ਰੇਣੀ",
+  "@inquiryTypeLabel": {
+    "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"
+  },
+  "bugReport": "ਬੱਗ ਰਿਪੋਰਟ",
+  "@bugReport": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、アプリの不具合やバグを報告する際に選択するオプションです。"
+  },
+  "featureRequest": "ਰਾਇ ਅਤੇ ਸੁਝਾਅ",
+  "@featureRequest": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、機能追加や改善の要望を送る際に選択するオプションです。"
+  },
+  "otherInquiry": "ਹੋਰ",
+  "@otherInquiry": {
+    "description": "お問い合わせフォームで選択できる問い合わせ種別の一つで、不具合報告や要望以外の内容を問い合わせる際に選択するオプションです。"
+  },
+  "otherInquiryPlaceholder": "ਕਿਰਪਾ ਕਰਕੇ ਹੋਰ ਵੇਰਵੇ ਦਰਜ ਕਰੋ",
+  "@otherInquiryPlaceholder": {
+    "description": "お問い合わせフォームで「その他」を選択した際に表示されるテキスト入力欄のプレースホルダーです。"
+  },
+  "emailAddress": "ਈਮੇਲ ਪਤਾ",
+  "@emailAddress": {
+    "description": "お問い合わせフォームでユーザーの連絡先メールアドレスを入力する欄のラベルです。"
+  },
+  "emailPlaceholder": "example@example.com",
+  "@emailPlaceholder": {
+    "description": "メールアドレス入力欄のプレースホルダーとして表示される例示用のメールアドレスです。"
+  },
+  "inquiryContent": "ਪੁੱਛਗਿੱਛ ਸਮੱਗਰੀ",
+  "@inquiryContent": {
+    "description": "お問い合わせフォームで問い合わせの詳細内容を入力するテキストエリアのラベルです。"
+  },
+  "inquiryContentPlaceholder": "ਕਿਰਪਾ ਕਰਕੇ ਪੁੱਛਗਿੱਛ ਦਾ ਵੇਰਵਾ ਦਰਜ ਕਰੋ",
+  "@inquiryContentPlaceholder": {
+    "description": "お問い合わせ内容入力欄のプレースホルダーです。"
+  },
+  "debugInfoLabel": "ਡੀਬੱਗ ਜਾਣਕਾਰੀ (ਸਵੈ-ਭਰੀ)",
+  "@debugInfoLabel": {
+    "description": "お問い合わせフォームでアプリの状態やデバイス情報などのデバッグ情報を表示するセクションのラベルです。ユーザーは編集できず、調査用に自動で入力されます。"
+  },
+  "inquirySent": "ਪੁੱਛਗਿੱਛ ਭੇਜੀ ਗਈ ਹੈ",
+  "@inquirySent": {
+    "description": "お問い合わせフォームの送信が完了した際にSnackbarで表示される確認メッセージです。"
+  },
+  "sendInquiry": "ਭੇਜੋ",
+  "@sendInquiry": {
+    "description": "お問い合わせフォームの送信ボタンのラベルです。"
+  },
+  "invalidEmailFormat": "ਕਿਰਪਾ ਕਰਕੇ ਇੱਕ ਵੈਧ ਈਮੇਲ ਐਡਰੈੱਸ ਦਾਖਲ ਕਰੋ",
+  "@invalidEmailFormat": {
+    "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "emailCannotReceiveICloud": "@icloud.com ਤੋਂ ਇਲਾਵਾ ਕੋਈ ਹੋਰ ਈਮੇਲ ਐਡਰੈੱਸ ਵਰਤੋਂ। ਬਲੌਕ ਹੋਣ ਦੀਆਂ ਘਟਨਾਵਾਂ ਅਕਸਰ ਹੋ ਰਹੀਆਂ ਹਨ",
+  "@emailCannotReceiveICloud": {
+    "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
+  },
+  "emailReceiveSettingNote": "ਕਿਰਪਾ ਕਰਕੇ pilll.reminder.app@gmail.com ਤੋਂ ਈਮੇਲਾਂ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਆਪਣੀਆਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਕੌਂਫਿਗਰ ਕਰੋ",
+  "@emailReceiveSettingNote": {
+    "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
+  },
+  "inquiryContentRequired": "ਕਿਰਪਾ ਕਰਕੇ ਪੁੱਛਗਿੱਛ ਦੀ ਸਮੱਗਰੀ ਦਰਜ ਕਰੋ",
+  "@inquiryContentRequired": {
+    "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   }
 }
