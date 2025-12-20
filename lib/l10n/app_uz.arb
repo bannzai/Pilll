@@ -2387,11 +2387,11 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※Iltimos, @icloud.com dan boshqa elektron pochta manzilidan foydalaning. Xatlar tez-tez bloklanmoqda",
+  "emailCannotReceiveICloud": "Iltimos, @icloud.com dan boshqa elektron pochta manzilidan foydalaning. Xatlar tez-tez bloklanmoqda",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
-  "emailReceiveSettingNote": "※ Iltimos, pilll.reminder.app@gmail.com dan xat qabul qilish uchun sozlamalarni o'rnating",
+  "emailReceiveSettingNote": "Iltimos, pilll.reminder.app@gmail.com dan xat qabul qilish uchun sozlamalarni o'rnating",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   },
