@@ -2387,11 +2387,11 @@
   "@invalidEmailFormat": {
     "description": "メールアドレスの形式が正しくない場合に表示されるバリデーションエラーメッセージです。"
   },
-  "emailCannotReceiveICloud": "※Mangyaring gumamit ng email address maliban sa @icloud.com. Maraming na-block na email mula dito.",
+  "emailCannotReceiveICloud": "Mangyaring gumamit ng email address maliban sa @icloud.com. Maraming na-block na email mula dito.",
   "@emailCannotReceiveICloud": {
     "description": "iCloudメールアドレスでは返信メールがブロックされることが多いため、他のメールアドレスの使用を推奨する警告メッセージです。"
   },
-  "emailReceiveSettingNote": "※Mangyaring i-configure ang inyong email settings upang makatanggap ng mga email mula sa pilll.reminder.app@gmail.com",
+  "emailReceiveSettingNote": "Mangyaring i-configure ang inyong email settings upang makatanggap ng mga email mula sa pilll.reminder.app@gmail.com",
   "@emailReceiveSettingNote": {
     "description": "返信メールを確実に受け取れるよう、送信元メールアドレスの受信設定を促す注意書きです。"
   },
