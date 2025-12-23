@@ -121,16 +121,22 @@ class TodayTakenPillNumber extends StatelessWidget {
                 color: TextColor.noshime,
               )),
         ],
-        if (_appearanceMode.isSequential)
-          Text(
-            L.withDay('${pillSheetGroup.sequentialTodayPillNumber}'),
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
-              fontSize: 24,
-              color: TextColor.main,
-            ),
-          ),
+        if (_appearanceMode.isSequential) ...[
+          Text('${pillSheetGroup.sequentialTodayPillNumber}',
+              style: const TextStyle(
+                fontFamily: FontFamily.number,
+                fontWeight: FontWeight.w500,
+                fontSize: 40,
+                color: TextColor.main,
+              )),
+          Text(L.dayNumber,
+              style: const TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                color: TextColor.noshime,
+              )),
+        ],
       ],
     );
   }
