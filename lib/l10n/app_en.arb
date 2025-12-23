@@ -2335,6 +2335,10 @@
   "@number": {
     "description": "ピルシートUI上でピルの位置・順番を示す番号のラベルです。「1番」「2番」のように表示される際の「番」部分に相当します。"
   },
+  "dayNumber": "th day",
+  "@dayNumber": {
+    "description": "服用日数モードで使用される単位です。「1日目」「2日目」のように表示される際の「日目」部分に相当します。"
+  },
   "inquiryTypeLabel": "Inquiry Type",
   "@inquiryTypeLabel": {
     "description": "お問い合わせフォームで、問い合わせの種類を選択するセクションのラベルです。"

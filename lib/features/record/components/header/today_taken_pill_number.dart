@@ -129,7 +129,7 @@ class TodayTakenPillNumber extends StatelessWidget {
                 fontSize: 40,
                 color: TextColor.main,
               )),
-          Text(L.number,
+          Text(L.dayNumber,
               style: const TextStyle(
                 fontFamily: FontFamily.japanese,
                 fontWeight: FontWeight.w600,
