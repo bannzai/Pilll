@@ -41,6 +41,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
           pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
         beforeTodayPillNumber: beforeTodayPillNumber,
         afterTodayPillNumber: afterTodayPillNumber,
+        pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
       )),
       detail: Text(
         L.changedPillNumber,

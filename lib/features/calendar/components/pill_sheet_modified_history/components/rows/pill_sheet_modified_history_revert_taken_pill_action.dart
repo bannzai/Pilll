@@ -46,6 +46,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
           pillNumber: PillSheetModifiedHistoryPillNumberOrDate.revert(
         beforeLastTakenPillNumber: beforeLastTakenPillNumber,
         afterLastTakenPillNumber: afterLastTakenPillNumber,
+        pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
       )),
       detail: Text(
         L.cancelTaking,

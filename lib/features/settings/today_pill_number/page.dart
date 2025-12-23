@@ -67,6 +67,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
                         pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                        pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
                         selectedTodayPillNumberIntoPillSheet: (pageIndex) {
                           if (pillSheetPageIndexState.value != pageIndex) {
                             return null;

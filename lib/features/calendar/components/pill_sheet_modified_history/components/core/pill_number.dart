@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
@@ -30,42 +31,68 @@ class PillNumber extends StatelessWidget {
 
 abstract class PillSheetModifiedHistoryPillNumberOrDate {
   static String hyphen() => '-';
-  static String taken({required int? beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
+
+  /// 表示モードに応じて「n番」または「n日目」形式で表示する
+  static String _formatPillNumber(String numberString, {required PillSheetAppearanceMode pillSheetAppearanceMode}) {
+    if (pillSheetAppearanceMode.isSequential) {
+      return L.withDay(numberString);
+    }
+    return L.withNumber(numberString);
+  }
+
+  static String taken({
+    required int? beforeLastTakenPillNumber,
+    required int afterLastTakenPillNumber,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  }) {
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
     // nullの場合は服用記録を取り消したり、服用日を移動した際にありえる
     // また、1つ前のピルシートの最後の番号の時もnullになる
     final left = (beforeLastTakenPillNumber ?? 0) + 1;
     // 1度飲みの時に本日分を服用した場合は1錠分の服用履歴を表示する
     if (left == afterLastTakenPillNumber) {
-      return L.withNumber('$afterLastTakenPillNumber');
+      return _formatPillNumber('$afterLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
     }
-    return L.withNumber('$left-$afterLastTakenPillNumber');
+    return _formatPillNumber('$left-$afterLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
   }
 
-  static String autoTaken({required int beforeLastTakenPillNumber, required int afterLastTakenPillNumber}) {
+  static String autoTaken({
+    required int beforeLastTakenPillNumber,
+    required int afterLastTakenPillNumber,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  }) {
     // beforePillSheetの最後に飲んだ番号+1から服用記録が始まる
     final left = beforeLastTakenPillNumber + 1;
     if (left == afterLastTakenPillNumber) {
-      return L.withNumber('$afterLastTakenPillNumber');
+      return _formatPillNumber('$afterLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
     }
-    return L.withNumber('$left-$afterLastTakenPillNumber');
+    return _formatPillNumber('$left-$afterLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
   }
 
-  static String revert({required int beforeLastTakenPillNumber, required int? afterLastTakenPillNumber}) {
+  static String revert({
+    required int beforeLastTakenPillNumber,
+    required int? afterLastTakenPillNumber,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  }) {
     if (afterLastTakenPillNumber == null) {
-      return L.withNumber('$beforeLastTakenPillNumber');
+      return _formatPillNumber('$beforeLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
     }
     // 1度飲みのrevertは1錠分の服用履歴を表示する
     if (beforeLastTakenPillNumber == (afterLastTakenPillNumber + 1)) {
-      return L.withNumber('$beforeLastTakenPillNumber');
+      return _formatPillNumber('$beforeLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
     }
-    return L.withNumber('$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}');
+    return _formatPillNumber('$beforeLastTakenPillNumber-${afterLastTakenPillNumber + 1}', pillSheetAppearanceMode: pillSheetAppearanceMode);
   }
 
-  static String changedPillNumber({required int beforeTodayPillNumber, required int afterTodayPillNumber}) =>
-      L.withNumber('$beforeTodayPillNumber→$afterTodayPillNumber');
+  static String changedPillNumber({
+    required int beforeTodayPillNumber,
+    required int afterTodayPillNumber,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
+  }) =>
+      _formatPillNumber('$beforeTodayPillNumber→$afterTodayPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
 
   static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
+    // 表示番号設定の変更履歴は常に「番」表記（これはピルシートの物理的な番号なため）
     final before = value.beforeDisplayNumberSetting;
     if (before == null || before.beginPillNumber == null) {
       return L.withNumber('1→${value.afterDisplayNumberSetting.beginPillNumber}');
@@ -74,6 +101,7 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
   }
 
   static String changedEndDisplayNumberSetting(ChangedEndDisplayNumberValue value) {
+    // 表示番号設定の変更履歴は常に「番」表記（これはピルシートの物理的な番号なため）
     final before = value.beforeDisplayNumberSetting;
     if (before == null || before.endPillNumber == null) {
       return L.withNumber('1→${value.afterDisplayNumberSetting.endPillNumber}');

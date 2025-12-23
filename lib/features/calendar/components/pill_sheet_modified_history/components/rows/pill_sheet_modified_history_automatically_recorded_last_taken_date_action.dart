@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/day.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/pill_number.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
@@ -9,12 +10,14 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
   final DateTime estimatedEventCausingDate;
   final int? beforeLastTakenPillNumber;
   final int? afterLastTakenPillNumber;
+  final PillSheetAppearanceMode pillSheetAppearanceMode;
 
   const PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction({
     super.key,
     required this.estimatedEventCausingDate,
     required this.beforeLastTakenPillNumber,
     required this.afterLastTakenPillNumber,
+    required this.pillSheetAppearanceMode,
   });
   @override
   Widget build(BuildContext context) {
@@ -30,6 +33,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
           pillNumber: PillSheetModifiedHistoryPillNumberOrDate.autoTaken(
         beforeLastTakenPillNumber: beforeLastTakenPillNumber,
         afterLastTakenPillNumber: afterLastTakenPillNumber,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
       )),
       detail: const Text(
         '-',
