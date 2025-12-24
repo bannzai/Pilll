@@ -102,6 +102,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
             pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
             pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
           ),
+          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
         )),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(

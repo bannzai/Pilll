@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_began_rest_duration.dart';
 import 'package:pilll/features/calendar/components/pill_sheet_modified_history/components/rows/pill_sheet_modified_history_begin_display_number_action.dart';
@@ -84,7 +85,8 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                     .findFirstDifferencePillSheet(
                       history.beforePillSheetGroup?.pillSheets.reversed,
                     )
-                    ?.lastTakenOrZeroPillNumber),
+                    ?.lastTakenOrZeroPillNumber,
+                pillSheetAppearanceMode: history.afterPillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number),
             PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
             PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
@@ -142,6 +144,8 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
                 estimatedEventCausingDate: history.estimatedEventCausingDate,
                 beforeLastTakenPillNumber: history.value.automaticallyRecordedLastTakenDate?.beforeLastTakenPillNumber,
                 afterLastTakenPillNumber: history.value.automaticallyRecordedLastTakenDate?.afterLastTakenPillNumber,
+                // v1 の履歴には pillSheetAppearanceMode がないためデフォルトで number を使用
+                pillSheetAppearanceMode: PillSheetAppearanceMode.number,
               ),
             PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
                 estimatedEventCausingDate: history.estimatedEventCausingDate,

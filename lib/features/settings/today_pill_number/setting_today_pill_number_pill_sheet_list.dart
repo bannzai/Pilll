@@ -12,12 +12,14 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
   final List<PillSheetType> pillSheetTypes;
   final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberInPillSheet) markSelected;
+  final PillSheetAppearanceMode pillSheetAppearanceMode;
 
   const SettingTodayPillNumberPillSheetList({
     super.key,
     required this.pillSheetTypes,
     required this.selectedTodayPillNumberIntoPillSheet,
     required this.markSelected,
+    required this.pillSheetAppearanceMode,
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -42,11 +44,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
-                      // SettingPillSheetView では displayNumberSetting を考慮してない
-                      // 理由はPillSheetを引数とする新しい設定用のPillSheetView を作る必要があるから
-                      // これはコストに見合うかわからないため、.numberで固定している
-                      // 設定で TodayPillNumber だけPillSheetに依存しており、そのためにコードを書くのはコスト高だと思いやめた
-                      appearanceMode: PillSheetAppearanceMode.number,
+                      appearanceMode: pillSheetAppearanceMode,
                       pillSheetTypes: pillSheetTypes,
                       selectedPillNumberIntoPillSheet: selectedTodayPillNumberIntoPillSheet(pageIndex),
                       markSelected: (pageIndex, number) {
