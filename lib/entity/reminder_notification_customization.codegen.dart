@@ -12,7 +12,7 @@ part 'reminder_notification_customization.codegen.freezed.dart';
 ///
 /// バージョン管理機能を持ち、機能追加時の後方互換性を保証します。
 @freezed
-class ReminderNotificationCustomization with _$ReminderNotificationCustomization {
+abstract class ReminderNotificationCustomization with _$ReminderNotificationCustomization {
   @JsonSerializable(explicitToJson: true)
   const factory ReminderNotificationCustomization({
     /// 設定のバージョン番号

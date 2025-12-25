@@ -36,7 +36,7 @@ class PillSheetFirestoreKey {
 /// 28日型、21日型など異なるピルシートの種類ごとの設定情報を保持
 /// Firestoreドキュメントとして保存される基本的なピル情報
 @freezed
-class PillSheetTypeInfo with _$PillSheetTypeInfo {
+abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetTypeInfo({
     /// ピルシート種類の参照パス（Firestore参照）
@@ -63,34 +63,22 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 /// ユーザーが一時的にピル服用を停止した期間の記録を管理
 /// 服用スケジュールの再計算に使用される
 @freezed
-class RestDuration with _$RestDuration {
+abstract class RestDuration with _$RestDuration {
   @JsonSerializable(explicitToJson: true)
   const factory RestDuration({
     // from: 2024-03-28の実装時に追加。調査しやすいようにuuidを入れておく
     /// 休薬期間の一意識別子
     /// デバッグや調査時の追跡のためのUUID
     required String? id,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     /// 休薬開始日
     /// ユーザーがピル服用を停止した日付
     required DateTime beginDate,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// 休薬終了日（継続中の場合はnull）
     /// 服用を再開した日付、まだ再開していない場合はnull
     DateTime? endDate,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     /// 休薬期間レコードの作成日時
     /// このデータが作成された日時（ユーザーが休薬を開始した日とは異なる場合がある）
     required DateTime createdDate,
@@ -109,7 +97,7 @@ class RestDuration with _$RestDuration {
 /// Firestoreのピルシートドキュメントと1対1で対応する
 /// ピル服用管理アプリの中核となるデータ構造
 @freezed
-class PillSheet with _$PillSheet {
+abstract class PillSheet with _$PillSheet {
   /// FirestoreドキュメントのID
   /// データベース内でのユニークな識別子
   String? get documentID => id;
@@ -128,36 +116,20 @@ class PillSheet with _$PillSheet {
     /// ピルシートの種類情報
     /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
     required DateTime beginingDate,
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// 最後にピルを服用した日付
     /// まだ一度も服用していない場合はnull
     required DateTime? lastTakenDate,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// ピルシートの作成日時
     /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// ピルシートの削除日時
     /// 削除されていない場合はnull
     DateTime? deletedAt,
@@ -175,19 +147,8 @@ class PillSheet with _$PillSheet {
   /// テスト用のピルシート作成ファクトリメソッド
   /// 基本的な情報のみでピルシートインスタンスを生成
   @visibleForTesting
-  factory PillSheet.create(
-    PillSheetType type, {
-    required DateTime beginDate,
-    required DateTime? lastTakenDate,
-    int? pillTakenCount,
-  }) =>
-      PillSheet(
-        id: firestoreIDGenerator(),
-        typeInfo: type.typeInfo,
-        beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        createdAt: now(),
-      );
+  factory PillSheet.create(PillSheetType type, {required DateTime beginDate, required DateTime? lastTakenDate, int? pillTakenCount}) =>
+      PillSheet(id: firestoreIDGenerator(), typeInfo: type.typeInfo, beginingDate: beginDate, lastTakenDate: lastTakenDate, createdAt: now());
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
 
@@ -355,24 +316,23 @@ class PillSheet with _$PillSheet {
 /// 指定日までの総休薬日数を計算
 /// lastTakenDateやtodayなどの基準日までの累積休薬期間を集計
 /// ピル番号計算時の日数調整に使用される
-int summarizedRestDuration({
-  required List<RestDuration> restDurations,
-  required DateTime upperDate,
-}) {
+int summarizedRestDuration({required List<RestDuration> restDurations, required DateTime upperDate}) {
   if (restDurations.isEmpty) {
     return 0;
   }
-  return restDurations.map((e) {
-    // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
-    if (!e.beginDate.isBefore(upperDate)) {
-      return 0;
-    }
+  return restDurations
+      .map((e) {
+        // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
+        if (!e.beginDate.isBefore(upperDate)) {
+          return 0;
+        }
 
-    final endDate = e.endDate;
-    if (endDate == null) {
-      return daysBetween(e.beginDate, upperDate);
-    }
+        final endDate = e.endDate;
+        if (endDate == null) {
+          return daysBetween(e.beginDate, upperDate);
+        }
 
-    return daysBetween(e.beginDate, endDate);
-  }).reduce((value, element) => value + element);
+        return daysBetween(e.beginDate, endDate);
+      })
+      .reduce((value, element) => value + element);
 }

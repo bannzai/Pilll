@@ -121,7 +121,7 @@ extension UserFirestoreFieldKeys on String {
 /// 複数デバイス間でのユーザー統合機能を提供
 /// Setting エンティティと1:1の関係でユーザー設定を保持
 @freezed
-class User with _$User {
+abstract class User with _$User {
   const User._();
   @JsonSerializable(explicitToJson: true)
   const factory User({
@@ -156,25 +156,14 @@ class User with _$User {
     @Default(false) bool analyticsDebugIsEnabled,
 
     /// トライアル開始日（初回トライアル開始時にセット）
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? beginTrialDate,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
 
     /// トライアル期限日（トライアル期間の終了日時）
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? trialDeadlineDate,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
 
     /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
     /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     // 初期設定が完了していない or 古いバージョンのアプリではトライアル終了後にバックエンドの定期実行でdiscountEntitlementDeadlineDateの値が入るがそれより前のデータ(=トライアル中) の場合はdiscountEntitlementDeadlineDateがnullになる
     DateTime? discountEntitlementDeadlineDate,
   }) = _User;

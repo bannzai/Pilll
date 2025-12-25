@@ -20,7 +20,7 @@ enum InquiryType {
 /// ユーザーからのお問い合わせを表すエンティティ
 /// Firestoreの /users/{userId}/inquiries コレクションに保存される
 @freezed
-class Inquiry with _$Inquiry {
+abstract class Inquiry with _$Inquiry {
   @JsonSerializable(explicitToJson: true)
   const factory Inquiry({
     /// ドキュメントID。Firestore保存時に自動設定される
@@ -40,10 +40,7 @@ class Inquiry with _$Inquiry {
     required String content,
 
     /// 作成日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdAt,
   }) = _Inquiry;
   const Inquiry._();

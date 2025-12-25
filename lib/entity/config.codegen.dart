@@ -8,7 +8,7 @@ part 'config.codegen.freezed.dart';
 /// アプリの強制アップデート判定などの設定値を提供する。
 /// 主にアプリケーションの動作制御に使用される。
 @freezed
-class Config with _$Config {
+abstract class Config with _$Config {
   factory Config({
     /// 最小サポートバージョンを表すバージョン文字列。
     /// このバージョンより古いアプリは強制アップデートが必要となる。

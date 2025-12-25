@@ -18,7 +18,7 @@ class PackageFirestoreKey {
 /// 端末のOS情報とアプリのバージョン情報を組み合わせて管理し、
 /// 統計分析やサポート業務で利用される
 @freezed
-class Package with _$Package {
+abstract class Package with _$Package {
   @JsonSerializable(explicitToJson: true)
   const factory Package({
     /// 端末の最新OS種別

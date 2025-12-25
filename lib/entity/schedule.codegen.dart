@@ -15,7 +15,7 @@ class ScheduleFirestoreKey {
 /// 通院予定や重要な日程などをカレンダーUIで管理するために使用
 /// Firestoreの schedules コレクションに保存される
 @freezed
-class Schedule with _$Schedule {
+abstract class Schedule with _$Schedule {
   @JsonSerializable(explicitToJson: true)
   const factory Schedule({
     /// ドキュメントID。Firestore保存時に自動設定される
@@ -28,11 +28,7 @@ class Schedule with _$Schedule {
 
     /// 予定日時。ユーザーがカレンダーUIで選択した日付
     /// Firestoreのタイムスタンプ形式で保存される
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime date,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required DateTime date,
 
     /// ローカル通知の設定。nullの場合は通知なし
     /// 予定前にリマインドを送るための設定
@@ -40,10 +36,7 @@ class Schedule with _$Schedule {
 
     /// 予定作成日時。レコード作成時の記録用
     /// データの管理やソート処理で使用される
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdDateTime,
   }) = _Schedule;
   const Schedule._();
@@ -54,7 +47,7 @@ class Schedule with _$Schedule {
 /// スケジュールに関連付けられるローカル通知の設定
 /// iOSとAndroidのローカル通知システムを通じて予定のリマインドを提供
 @freezed
-class LocalNotification with _$LocalNotification {
+abstract class LocalNotification with _$LocalNotification {
   @JsonSerializable(explicitToJson: true)
   const factory LocalNotification({
     /// flutter_local_notificationsプラグインで使用する通知ID
@@ -63,10 +56,7 @@ class LocalNotification with _$LocalNotification {
 
     /// 通知を送信する日時
     /// ユーザーが設定したリマインド時刻に基づいて計算される
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime remindDateTime,
   }) = _LocalNotification;
   const LocalNotification._();

@@ -13,7 +13,7 @@ part 'setting.codegen.freezed.dart';
 /// LocalNotificationServiceでリマインダー通知の生成に使用されます。
 /// 複数設定可能で、最大3件まで登録できます。
 @freezed
-class ReminderTime with _$ReminderTime {
+abstract class ReminderTime with _$ReminderTime {
   const ReminderTime._();
   @JsonSerializable(explicitToJson: true)
   const factory ReminderTime({
@@ -77,7 +77,7 @@ class SettingFirestoreFieldKeys {
 /// アプリの全体的な設定情報を一元管理します。
 /// Riverpodの状態管理と連携してアプリ全体で使用されます。
 @freezed
-class Setting with _$Setting {
+abstract class Setting with _$Setting {
   const Setting._();
   @JsonSerializable(explicitToJson: true)
   const factory Setting({

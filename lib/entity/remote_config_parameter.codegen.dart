@@ -95,7 +95,7 @@ abstract class RemoteConfigParameterDefaultValues {
 /// アプリの挙動を本番環境でリアルタイムに制御するためのエンティティ。
 /// 課金システム、UI表示パターン、特別オファーの表示制御などに使用される。
 @freezed
-class RemoteConfigParameter with _$RemoteConfigParameter {
+abstract class RemoteConfigParameter with _$RemoteConfigParameter {
   factory RemoteConfigParameter({
     /// ペイウォール画面を最初に表示するかどうか
     /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
