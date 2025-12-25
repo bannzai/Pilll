@@ -1,12 +1,13 @@
 import 'package:pilll/provider/tick.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'discount_deadline.g.dart';
 
 @Riverpod()
-bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
+bool isOverDiscountDeadline(Ref ref, {required DateTime? discountEntitlementDeadlineDate}) {
   if (discountEntitlementDeadlineDate == null) {
     // NOTE: discountEntitlementDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
     return false;
@@ -17,13 +18,13 @@ bool isOverDiscountDeadline(IsOverDiscountDeadlineRef ref, {required DateTime? d
 
 // NOTE: テスト用に用意しているprovider
 @Riverpod(dependencies: [])
-bool hiddenCountdownDiscountDeadline(HiddenCountdownDiscountDeadlineRef ref, {required DateTime? discountEntitlementDeadlineDate}) {
+bool hiddenCountdownDiscountDeadline(Ref ref, {required DateTime? discountEntitlementDeadlineDate}) {
   final user = ref.watch(userProvider);
-  return user.valueOrNull?.hasDiscountEntitlement != true;
+  return user.asData?.value.hasDiscountEntitlement != true;
 }
 
 @Riverpod()
-Duration durationToDiscountPriceDeadline(DurationToDiscountPriceDeadlineRef ref, {required DateTime discountEntitlementDeadlineDate}) {
+Duration durationToDiscountPriceDeadline(Ref ref, {required DateTime discountEntitlementDeadlineDate}) {
   final timerDate = ref.watch(tickProvider);
   return discountEntitlementDeadlineDate.difference(timerDate);
 }

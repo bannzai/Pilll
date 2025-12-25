@@ -94,7 +94,8 @@ Exception? mapToDisplayedException(PlatformException exception) {
       return FormatException(L.purchaseErrorUnknownNonNativeError(exception.code, exception.message ?? '', exception.details));
     case PurchasesErrorCode.productDiscountMissingSubscriptionGroupIdentifierError:
       return FormatException(
-          L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(exception.code, exception.message ?? '', exception.details));
+        L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(exception.code, exception.message ?? '', exception.details),
+      );
     case PurchasesErrorCode.customerInfoError:
       return FormatException(L.purchaseErrorCustomerInfoError(exception.code, exception.message ?? '', exception.details));
     case PurchasesErrorCode.systemInfoError:
@@ -109,5 +110,19 @@ Exception? mapToDisplayedException(PlatformException exception) {
       return FormatException(L.purchaseErrorInvalidPromotionalOfferError(exception.code, exception.message ?? '', exception.details));
     case PurchasesErrorCode.offlineConnectionError:
       return FormatException(L.purchaseErrorOfflineConnectionError(exception.message ?? '', exception.details));
+    case PurchasesErrorCode.featureNotAvailableInCustomEntitlementsComputationMode:
+      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
+    case PurchasesErrorCode.signatureVerificationFailed:
+      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
+    case PurchasesErrorCode.featureNotSupportedWithStoreKit1:
+      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
+    case PurchasesErrorCode.invalidWebPurchaseToken:
+      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
+    case PurchasesErrorCode.purchaseBelongsToOtherUser:
+      return AlertError(L.purchaseErrorReceiptInUseByOtherSubscriberError(accountName));
+    case PurchasesErrorCode.expiredWebPurchaseToken:
+      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
+    case PurchasesErrorCode.testStoreSimulatedPurchaseError:
+      return FormatException(L.purchaseErrorConfigurationError(exception.message ?? '', exception.details));
   }
 }
