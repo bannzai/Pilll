@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
@@ -21,7 +22,10 @@ class _FakeUser extends Fake implements User {
   Setting? get setting => fakeSetting;
 }
 
-class _FakeSetting extends Fake implements Setting {}
+class _FakeSetting extends Fake implements Setting {
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) => 'FakeSetting';
+}
 
 void main() {
   setUp(() {
