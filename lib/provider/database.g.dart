@@ -6,18 +6,43 @@ part of 'database.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$databaseHash() => r'28567367b7034c4ae52606373e30c94f89bacbd4';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [database].
 @ProviderFor(database)
-final databaseProvider = Provider<DatabaseConnection>.internal(
-  database,
-  name: r'databaseProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$databaseHash,
-  dependencies: <ProviderOrFamily>[firebaseUserStateProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{firebaseUserStateProvider, ...?firebaseUserStateProvider.allTransitiveDependencies},
-);
+const databaseProvider = DatabaseProvider._();
 
-typedef DatabaseRef = ProviderRef<DatabaseConnection>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class DatabaseProvider extends $FunctionalProvider<DatabaseConnection, DatabaseConnection, DatabaseConnection>
+    with $Provider<DatabaseConnection> {
+  const DatabaseProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'databaseProvider',
+        isAutoDispose: false,
+        dependencies: const <ProviderOrFamily>[firebaseUserStateProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[DatabaseProvider.$allTransitiveDependencies0],
+      );
+
+  static const $allTransitiveDependencies0 = firebaseUserStateProvider;
+
+  @override
+  String debugGetCreateSourceHash() => _$databaseHash();
+
+  @$internal
+  @override
+  $ProviderElement<DatabaseConnection> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  DatabaseConnection create(Ref ref) {
+    return database(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(DatabaseConnection value) {
+    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<DatabaseConnection>(value));
+  }
+}
+
+String _$databaseHash() => r'e09790f75507610ce1bc16e9194fbd76dc86a497';

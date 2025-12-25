@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'pill_sheet_group.g.dart';
@@ -16,21 +17,19 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
 
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
 Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseConnection) async {
-  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
-      .docs
-      .lastOrNull
+  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get()).docs.lastOrNull
       ?.data();
 }
 
 // 最新のピルシートグループの.activePillSheetを取得する。
 @Riverpod(dependencies: [latestPillSheetGroup])
-AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
+AsyncValue<PillSheet?> activePillSheet(Ref ref) {
   return ref.watch(latestPillSheetGroupProvider).whenData((value) => value?.activePillSheet);
 }
 
 @Riverpod(dependencies: [database])
-Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
-// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
+Stream<PillSheetGroup?> latestPillSheetGroup(Ref ref) {
+  // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
   return ref
       .watch(databaseProvider)
       .pillSheetGroupsReference()
@@ -45,7 +44,7 @@ Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
 
 // 一つ前のピルシートグループを取得する。破棄されたピルシートグループは現在含んでいるが含めないようにしても良い。インデックスを作成する必要があるので避けている
 @Riverpod(dependencies: [database])
-Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async {
+Future<PillSheetGroup?> beforePillSheetGroup(Ref ref) async {
   final database = ref.watch(databaseProvider);
   final snapshot = await database.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(2).get();
 
@@ -63,7 +62,7 @@ Future<PillSheetGroup?> beforePillSheetGroup(BeforePillSheetGroupRef ref) async 
 }
 
 @Riverpod(dependencies: [database])
-BatchSetPillSheetGroup batchSetPillSheetGroup(BatchSetPillSheetGroupRef ref) {
+BatchSetPillSheetGroup batchSetPillSheetGroup(Ref ref) {
   return BatchSetPillSheetGroup(ref.watch(databaseProvider));
 }
 
@@ -79,7 +78,7 @@ class BatchSetPillSheetGroup {
 }
 
 @Riverpod(dependencies: [database])
-SetPillSheetGroup setPillSheetGroup(SetPillSheetGroupRef ref) {
+SetPillSheetGroup setPillSheetGroup(Ref ref) {
   return SetPillSheetGroup(ref.watch(databaseProvider));
 }
 

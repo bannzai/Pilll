@@ -1,23 +1,18 @@
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/utils/remote_config.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'remote_config_parameter.g.dart';
 
 // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
 @Riverpod()
-RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
+RemoteConfigParameter remoteConfigParameter(Ref ref) {
   // fetchAndActiveをentrypointで完了しているので値が取れる想定
   return RemoteConfigParameter(
-    isPaywallFirst: remoteConfig.getBoolOrDefault(
-      RemoteConfigKeys.isPaywallFirst,
-      RemoteConfigParameterDefaultValues.isPaywallFirst,
-    ),
-    skipInitialSetting: remoteConfig.getBoolOrDefault(
-      RemoteConfigKeys.skipInitialSetting,
-      RemoteConfigParameterDefaultValues.skipInitialSetting,
-    ),
+    isPaywallFirst: remoteConfig.getBoolOrDefault(RemoteConfigKeys.isPaywallFirst, RemoteConfigParameterDefaultValues.isPaywallFirst),
+    skipInitialSetting: remoteConfig.getBoolOrDefault(RemoteConfigKeys.skipInitialSetting, RemoteConfigParameterDefaultValues.skipInitialSetting),
     trialDeadlineDateOffsetDay: remoteConfig.getIntOrDefault(
       RemoteConfigKeys.trialDeadlineDateOffsetDay,
       RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,

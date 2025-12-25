@@ -8,14 +8,16 @@ import 'package:pilll/native/health_care.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final allMenstruationProvider = StreamProvider<List<Menstruation>>((ref) => ref
-    .watch(databaseProvider)
-    .menstruationsReference()
-    .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
-    .orderBy(MenstruationFirestoreKey.beginDate, descending: true)
-    .snapshots()
-    .map((event) => event.docs.map((doc) => doc.data()).toList())
-    .map((value) => value.where((element) => element.deletedAt == null).toList()));
+final allMenstruationProvider = StreamProvider<List<Menstruation>>(
+  (ref) => ref
+      .watch(databaseProvider)
+      .menstruationsReference()
+      .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
+      .orderBy(MenstruationFirestoreKey.beginDate, descending: true)
+      .snapshots()
+      .map((event) => event.docs.map((doc) => doc.data()).toList())
+      .map((value) => value.where((element) => element.deletedAt == null).toList()),
+);
 final latestMenstruationProvider = Provider((ref) => ref.watch(allMenstruationProvider).whenData((menstruations) => menstruations.firstOrNull));
 
 final beginMenstruationProvider = Provider((ref) => BeginMenstruation(ref.watch(databaseProvider)));

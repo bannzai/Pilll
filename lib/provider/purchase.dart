@@ -47,7 +47,7 @@ final currentOfferingTypeProvider = Provider.family.autoDispose((ref, User user)
 });
 final currentOfferingPackagesProvider = Provider.family.autoDispose<List<Package>, User>((ref, User user) {
   final currentOfferingType = ref.watch(currentOfferingTypeProvider(user));
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[currentOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).asData?.value.all[currentOfferingType.identifier];
   if (offering != null) {
     return offering.availablePackages;
   }
@@ -67,7 +67,7 @@ final lifetimePackageProvider = Provider.family.autoDispose((ref, User user) {
 });
 final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).asData?.value.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
@@ -75,7 +75,7 @@ final monthlyPremiumPackageProvider = Provider.autoDispose((ref) {
 });
 final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   const specialOfferingPackageOfferingType = OfferingType.specialOffering;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).asData?.value.all[specialOfferingPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
@@ -83,7 +83,7 @@ final annualSpecialOfferingPackageProvider = Provider.autoDispose((ref) {
 });
 final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
   const specialOfferingPackageOfferingType = OfferingType.specialOffering;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[specialOfferingPackageOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).asData?.value.all[specialOfferingPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
@@ -91,7 +91,7 @@ final monthlySpecialOfferingPackageProvider = Provider.autoDispose((ref) {
 });
 final lifetimeDiscountPackageProvider = Provider.autoDispose((ref) {
   const limitedPackageOfferingType = OfferingType.discount;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[limitedPackageOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).asData?.value.all[limitedPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
@@ -99,14 +99,14 @@ final lifetimeDiscountPackageProvider = Provider.autoDispose((ref) {
 });
 final lifetimePremiumPackageProvider = Provider.autoDispose((ref) {
   const premiumPackageOfferingType = OfferingType.premium;
-  final offering = ref.watch(purchaseOfferingsProvider).valueOrNull?.all[premiumPackageOfferingType.identifier];
+  final offering = ref.watch(purchaseOfferingsProvider).asData?.value.all[premiumPackageOfferingType.identifier];
   if (offering == null) {
     return null;
   }
   return offering.availablePackages.firstWhereOrNull((element) => element.packageType == PackageType.lifetime);
 });
 final lifetimeDiscountRateProvider = Provider.autoDispose<double?>((ref) {
-  final appIsReleased = ref.watch(appIsReleasedProvider).valueOrNull ?? false;
+  final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value ?? false;
   if (!appIsReleased) {
     return null;
   }
@@ -137,20 +137,22 @@ class Purchase {
   /// Return value is used to display the completion page
   Future<bool> call(Package package) async {
     try {
-      final purchaserInfo = await Purchases.purchasePackage(package);
-      final premiumEntitlement = purchaserInfo.entitlements.all[premiumEntitlements];
+      final purchaseResult = await Purchases.purchasePackage(package);
+      final customerInfo = purchaseResult.customerInfo;
+      final premiumEntitlement = customerInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError(L.unexpectedPremiumEntitlementsIsNotExists);
       }
       if (!premiumEntitlement.isActive) {
         throw AlertError(L.purchaseErrorPurchasePendingError);
       }
-      await callUpdatePurchaseInfo(purchaserInfo);
+      await callUpdatePurchaseInfo(customerInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
-          name: 'catched_purchase_exception',
-          parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message});
+        name: 'catched_purchase_exception',
+        parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message},
+      );
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -158,9 +160,7 @@ class Purchase {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: 'catched_purchase_anonymous', parameters: {
-        'exception_type': exception.runtimeType.toString(),
-      });
+      analytics.logEvent(name: 'catched_purchase_anonymous', parameters: {'exception_type': exception.runtimeType.toString()});
       errorLogger.recordError(exception, stack);
       rethrow;
     }

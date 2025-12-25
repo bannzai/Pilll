@@ -24,11 +24,7 @@ class ChangePillNumber {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  ChangePillNumber({
-    required this.batchFactory,
-    required this.batchSetPillSheetModifiedHistory,
-    required this.batchSetPillSheetGroup,
-  });
+  ChangePillNumber({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
 
   Future<void> call({
     required PillSheetGroup pillSheetGroup,
@@ -39,11 +35,8 @@ class ChangePillNumber {
     final batch = batchFactory.batch();
 
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
-          pillSheetTypes: pillSheetTypes,
-          toIndex: pillSheetPageIndex,
-        ) +
-        pillNumberInPillSheet;
+    final nextSerializedPillNumber =
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheetPageIndex) + pillNumberInPillSheet;
     final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
     final List<PillSheet> updatedPillSheets = [];
@@ -74,11 +67,7 @@ class ChangePillNumber {
         lastTakenDate = null;
       }
 
-      final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        restDurations: [],
-      );
+      final updatedPillSheet = pillSheet.copyWith(beginingDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
       updatedPillSheets.add(updatedPillSheet);
     });
 
@@ -91,10 +80,7 @@ class ChangePillNumber {
       afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
-    batchSetPillSheetGroup(
-      batch,
-      updatedPillSheetGroup,
-    );
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     await batch.commit();
   }

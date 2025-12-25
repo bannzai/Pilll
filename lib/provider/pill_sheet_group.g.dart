@@ -6,70 +6,207 @@ part of 'pill_sheet_group.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$activePillSheetHash() => r'd97b98bec663ae25286aba1eed3305df7766dd7c';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [activePillSheet].
 @ProviderFor(activePillSheet)
-final activePillSheetProvider = AutoDisposeProvider<AsyncValue<PillSheet?>>.internal(
-  activePillSheet,
-  name: r'activePillSheetProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$activePillSheetHash,
-  dependencies: <ProviderOrFamily>[latestPillSheetGroupProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{latestPillSheetGroupProvider, ...?latestPillSheetGroupProvider.allTransitiveDependencies},
-);
+const activePillSheetProvider = ActivePillSheetProvider._();
 
-typedef ActivePillSheetRef = AutoDisposeProviderRef<AsyncValue<PillSheet?>>;
-String _$latestPillSheetGroupHash() => r'bced4a00aade49af9e4e89d670c97e3fe522a8ce';
+final class ActivePillSheetProvider extends $FunctionalProvider<AsyncValue<PillSheet?>, AsyncValue<PillSheet?>, AsyncValue<PillSheet?>>
+    with $Provider<AsyncValue<PillSheet?>> {
+  const ActivePillSheetProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'activePillSheetProvider',
+        isAutoDispose: true,
+        dependencies: const <ProviderOrFamily>[latestPillSheetGroupProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[
+          ActivePillSheetProvider.$allTransitiveDependencies0,
+          ActivePillSheetProvider.$allTransitiveDependencies1,
+          ActivePillSheetProvider.$allTransitiveDependencies2,
+        ],
+      );
 
-/// See also [latestPillSheetGroup].
+  static const $allTransitiveDependencies0 = latestPillSheetGroupProvider;
+  static const $allTransitiveDependencies1 = LatestPillSheetGroupProvider.$allTransitiveDependencies0;
+  static const $allTransitiveDependencies2 = LatestPillSheetGroupProvider.$allTransitiveDependencies1;
+
+  @override
+  String debugGetCreateSourceHash() => _$activePillSheetHash();
+
+  @$internal
+  @override
+  $ProviderElement<AsyncValue<PillSheet?>> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  AsyncValue<PillSheet?> create(Ref ref) {
+    return activePillSheet(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(AsyncValue<PillSheet?> value) {
+    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<AsyncValue<PillSheet?>>(value));
+  }
+}
+
+String _$activePillSheetHash() => r'6ec7ca5f1540651dbabc48d63ed16724b936e824';
+
 @ProviderFor(latestPillSheetGroup)
-final latestPillSheetGroupProvider = AutoDisposeStreamProvider<PillSheetGroup?>.internal(
-  latestPillSheetGroup,
-  name: r'latestPillSheetGroupProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$latestPillSheetGroupHash,
-  dependencies: <ProviderOrFamily>[databaseProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{databaseProvider, ...?databaseProvider.allTransitiveDependencies},
-);
+const latestPillSheetGroupProvider = LatestPillSheetGroupProvider._();
 
-typedef LatestPillSheetGroupRef = AutoDisposeStreamProviderRef<PillSheetGroup?>;
-String _$beforePillSheetGroupHash() => r'8cd3b068ebd5024ff92e229b4f1620a5a621d11f';
+final class LatestPillSheetGroupProvider extends $FunctionalProvider<AsyncValue<PillSheetGroup?>, PillSheetGroup?, Stream<PillSheetGroup?>>
+    with $FutureModifier<PillSheetGroup?>, $StreamProvider<PillSheetGroup?> {
+  const LatestPillSheetGroupProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'latestPillSheetGroupProvider',
+        isAutoDispose: true,
+        dependencies: const <ProviderOrFamily>[databaseProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[
+          LatestPillSheetGroupProvider.$allTransitiveDependencies0,
+          LatestPillSheetGroupProvider.$allTransitiveDependencies1,
+        ],
+      );
 
-/// See also [beforePillSheetGroup].
+  static const $allTransitiveDependencies0 = databaseProvider;
+  static const $allTransitiveDependencies1 = DatabaseProvider.$allTransitiveDependencies0;
+
+  @override
+  String debugGetCreateSourceHash() => _$latestPillSheetGroupHash();
+
+  @$internal
+  @override
+  $StreamProviderElement<PillSheetGroup?> $createElement($ProviderPointer pointer) => $StreamProviderElement(pointer);
+
+  @override
+  Stream<PillSheetGroup?> create(Ref ref) {
+    return latestPillSheetGroup(ref);
+  }
+}
+
+String _$latestPillSheetGroupHash() => r'09cb62d3e0d338fcf47639594584b973ce30224e';
+
 @ProviderFor(beforePillSheetGroup)
-final beforePillSheetGroupProvider = AutoDisposeFutureProvider<PillSheetGroup?>.internal(
-  beforePillSheetGroup,
-  name: r'beforePillSheetGroupProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$beforePillSheetGroupHash,
-  dependencies: <ProviderOrFamily>[databaseProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{databaseProvider, ...?databaseProvider.allTransitiveDependencies},
-);
+const beforePillSheetGroupProvider = BeforePillSheetGroupProvider._();
 
-typedef BeforePillSheetGroupRef = AutoDisposeFutureProviderRef<PillSheetGroup?>;
-String _$batchSetPillSheetGroupHash() => r'69769ffb3eb87ea3fe0d7b0eada4f447fa9fd0d4';
+final class BeforePillSheetGroupProvider extends $FunctionalProvider<AsyncValue<PillSheetGroup?>, PillSheetGroup?, FutureOr<PillSheetGroup?>>
+    with $FutureModifier<PillSheetGroup?>, $FutureProvider<PillSheetGroup?> {
+  const BeforePillSheetGroupProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'beforePillSheetGroupProvider',
+        isAutoDispose: true,
+        dependencies: const <ProviderOrFamily>[databaseProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[
+          BeforePillSheetGroupProvider.$allTransitiveDependencies0,
+          BeforePillSheetGroupProvider.$allTransitiveDependencies1,
+        ],
+      );
 
-/// See also [batchSetPillSheetGroup].
+  static const $allTransitiveDependencies0 = databaseProvider;
+  static const $allTransitiveDependencies1 = DatabaseProvider.$allTransitiveDependencies0;
+
+  @override
+  String debugGetCreateSourceHash() => _$beforePillSheetGroupHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<PillSheetGroup?> $createElement($ProviderPointer pointer) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<PillSheetGroup?> create(Ref ref) {
+    return beforePillSheetGroup(ref);
+  }
+}
+
+String _$beforePillSheetGroupHash() => r'9420bbf774e6ec2d8ac98972559c580e0295be03';
+
 @ProviderFor(batchSetPillSheetGroup)
-final batchSetPillSheetGroupProvider = AutoDisposeProvider<BatchSetPillSheetGroup>.internal(
-  batchSetPillSheetGroup,
-  name: r'batchSetPillSheetGroupProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$batchSetPillSheetGroupHash,
-  dependencies: <ProviderOrFamily>[databaseProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{databaseProvider, ...?databaseProvider.allTransitiveDependencies},
-);
+const batchSetPillSheetGroupProvider = BatchSetPillSheetGroupProvider._();
 
-typedef BatchSetPillSheetGroupRef = AutoDisposeProviderRef<BatchSetPillSheetGroup>;
-String _$setPillSheetGroupHash() => r'c8f16da419ae0bd4ad77f2d95070189c3a748f4c';
+final class BatchSetPillSheetGroupProvider extends $FunctionalProvider<BatchSetPillSheetGroup, BatchSetPillSheetGroup, BatchSetPillSheetGroup>
+    with $Provider<BatchSetPillSheetGroup> {
+  const BatchSetPillSheetGroupProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'batchSetPillSheetGroupProvider',
+        isAutoDispose: true,
+        dependencies: const <ProviderOrFamily>[databaseProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[
+          BatchSetPillSheetGroupProvider.$allTransitiveDependencies0,
+          BatchSetPillSheetGroupProvider.$allTransitiveDependencies1,
+        ],
+      );
 
-/// See also [setPillSheetGroup].
+  static const $allTransitiveDependencies0 = databaseProvider;
+  static const $allTransitiveDependencies1 = DatabaseProvider.$allTransitiveDependencies0;
+
+  @override
+  String debugGetCreateSourceHash() => _$batchSetPillSheetGroupHash();
+
+  @$internal
+  @override
+  $ProviderElement<BatchSetPillSheetGroup> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  BatchSetPillSheetGroup create(Ref ref) {
+    return batchSetPillSheetGroup(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(BatchSetPillSheetGroup value) {
+    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<BatchSetPillSheetGroup>(value));
+  }
+}
+
+String _$batchSetPillSheetGroupHash() => r'424cd09eeec8a29348601f2ab61910c70a74cbf8';
+
 @ProviderFor(setPillSheetGroup)
-final setPillSheetGroupProvider = AutoDisposeProvider<SetPillSheetGroup>.internal(
-  setPillSheetGroup,
-  name: r'setPillSheetGroupProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$setPillSheetGroupHash,
-  dependencies: <ProviderOrFamily>[databaseProvider],
-  allTransitiveDependencies: <ProviderOrFamily>{databaseProvider, ...?databaseProvider.allTransitiveDependencies},
-);
+const setPillSheetGroupProvider = SetPillSheetGroupProvider._();
 
-typedef SetPillSheetGroupRef = AutoDisposeProviderRef<SetPillSheetGroup>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class SetPillSheetGroupProvider extends $FunctionalProvider<SetPillSheetGroup, SetPillSheetGroup, SetPillSheetGroup>
+    with $Provider<SetPillSheetGroup> {
+  const SetPillSheetGroupProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'setPillSheetGroupProvider',
+        isAutoDispose: true,
+        dependencies: const <ProviderOrFamily>[databaseProvider],
+        $allTransitiveDependencies: const <ProviderOrFamily>[
+          SetPillSheetGroupProvider.$allTransitiveDependencies0,
+          SetPillSheetGroupProvider.$allTransitiveDependencies1,
+        ],
+      );
+
+  static const $allTransitiveDependencies0 = databaseProvider;
+  static const $allTransitiveDependencies1 = DatabaseProvider.$allTransitiveDependencies0;
+
+  @override
+  String debugGetCreateSourceHash() => _$setPillSheetGroupHash();
+
+  @$internal
+  @override
+  $ProviderElement<SetPillSheetGroup> $createElement($ProviderPointer pointer) => $ProviderElement(pointer);
+
+  @override
+  SetPillSheetGroup create(Ref ref) {
+    return setPillSheetGroup(ref);
+  }
+
+  /// {@macro riverpod.override_with_value}
+  Override overrideWithValue(SetPillSheetGroup value) {
+    return $ProviderOverride(origin: this, providerOverride: $SyncValueProvider<SetPillSheetGroup>(value));
+  }
+}
+
+String _$setPillSheetGroupHash() => r'3e500bf9b84626af97f57cce1b758c8e2c84a9c9';

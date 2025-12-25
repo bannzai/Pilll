@@ -5,7 +5,8 @@ import 'package:pilll/entity/user.codegen.dart';
 import 'package:riverpod/riverpod.dart';
 
 final settingProvider = StreamProvider<Setting>(
-    (ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()?.setting).where((data) => data != null).cast());
+  (ref) => ref.watch(databaseProvider).userReference().snapshots().map((event) => event.data()?.setting).where((data) => data != null).cast(),
+);
 
 final setSettingProvider = Provider((ref) => SetSetting(ref.watch(databaseProvider)));
 
@@ -25,10 +26,6 @@ class BatchSetSetting {
   BatchSetSetting(this.databaseConnection);
 
   void call(WriteBatch batch, Setting setting) {
-    batch.set(
-      databaseConnection.userRawReference(),
-      {UserFirestoreFieldKeys.settings: setting.toJson()},
-      SetOptions(merge: true),
-    );
+    batch.set(databaseConnection.userRawReference(), {UserFirestoreFieldKeys.settings: setting.toJson()}, SetOptions(merge: true));
   }
 }

@@ -9,8 +9,8 @@ import 'package:pilll/utils/version/version.dart';
 final checkForceUpdateProvider = Provider((ref) => CheckForceUpdate());
 
 class CheckForceUpdate {
-// Return false: should not force update
-// Return true: should force update
+  // Return false: should not force update
+  // Return true: should force update
   Future<bool> call() async {
     final doc = await FirebaseFirestore.instance.doc('/globals/config').get();
     final config = Config.fromJson(doc.data() as Map<String, dynamic>);
@@ -20,10 +20,7 @@ class CheckForceUpdate {
     if (forceUpdate) {
       analytics.logEvent(
         name: 'screen_type_force_update',
-        parameters: {
-          'package_version': packageVersion.toString(),
-          'minimum_app_version': config.minimumSupportedAppVersion,
-        },
+        parameters: {'package_version': packageVersion.toString(), 'minimum_app_version': config.minimumSupportedAppVersion},
       );
     }
     return forceUpdate;

@@ -25,11 +25,7 @@ class TakePill {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  TakePill({
-    required this.batchFactory,
-    required this.batchSetPillSheetModifiedHistory,
-    required this.batchSetPillSheetGroup,
-  });
+  TakePill({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
 
   Future<PillSheetGroup?> call({
     required DateTime takenDate,

@@ -4,12 +4,13 @@ import 'package:pilll/utils/auth/apple.dart';
 import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/utils/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'auth.g.dart';
 
 @Riverpod(keepAlive: true, dependencies: [])
-Stream<User?> firebaseUserState(FirebaseUserStateRef ref) {
+Stream<User?> firebaseUserState(Ref ref) {
   return FirebaseAuth.instance.userChanges();
 }
 
@@ -17,10 +18,7 @@ final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
   analytics.logEvent(name: 'current_user_provider');
   final currentUser = FirebaseAuth.instance.currentUser;
 
-  analytics.logEvent(
-    name: 'current_user_fetched',
-    parameters: _logginParameters(currentUser),
-  );
+  analytics.logEvent(name: 'current_user_fetched', parameters: _logginParameters(currentUser));
 
   if (currentUser != null) {
     analytics.logEvent(name: 'cached_current_user_exists', parameters: _logginParameters(currentUser));

@@ -2,12 +2,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/utils/datetime/day.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'pill_sheet_modified_history.g.dart';
 
 @Riverpod(dependencies: [database])
-Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillSheetModifiedHistoriesWithLimitRef ref, {required int limit}) {
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(Ref ref, {required int limit}) {
   return ref
       .watch(databaseProvider)
       .pillSheetModifiedHistoriesReference()
@@ -25,11 +26,7 @@ Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithLimit(PillS
 
 // 頻繁に切り替わることも予想されるので、keepAliveをtrueにしている
 @Riverpod(keepAlive: true, dependencies: [database])
-Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(
-  PillSheetModifiedHistoriesWithRangeRef ref, {
-  required DateTime begin,
-  required DateTime end,
-}) {
+Stream<List<PillSheetModifiedHistory>> pillSheetModifiedHistoriesWithRange(Ref ref, {required DateTime begin, required DateTime end}) {
   // TODO:  [PillSheetModifiedHistory-V2-BeforePillSheetGroupHistory] 2024-05-01
   // ピルシートグループIDを用いてフィルタリングできるようになるので、一つ前のピルシートグループの履歴を表示する機能を解放する
   // PillSheetModifiedHistoryFirestoreKeys.afterPillSheetGroupID を使用してDBから取得する

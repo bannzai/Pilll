@@ -6,18 +6,36 @@ part of 'auth.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$firebaseUserStateHash() => r'c50e10f43818ea992e82df756275ee8f6fcf5b73';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [firebaseUserState].
 @ProviderFor(firebaseUserState)
-final firebaseUserStateProvider = StreamProvider<User?>.internal(
-  firebaseUserState,
-  name: r'firebaseUserStateProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$firebaseUserStateHash,
-  dependencies: const <ProviderOrFamily>[],
-  allTransitiveDependencies: const <ProviderOrFamily>{},
-);
+const firebaseUserStateProvider = FirebaseUserStateProvider._();
 
-typedef FirebaseUserStateRef = StreamProviderRef<User?>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class FirebaseUserStateProvider extends $FunctionalProvider<AsyncValue<User?>, User?, Stream<User?>>
+    with $FutureModifier<User?>, $StreamProvider<User?> {
+  const FirebaseUserStateProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'firebaseUserStateProvider',
+        isAutoDispose: false,
+        dependencies: const <ProviderOrFamily>[],
+        $allTransitiveDependencies: const <ProviderOrFamily>[],
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$firebaseUserStateHash();
+
+  @$internal
+  @override
+  $StreamProviderElement<User?> $createElement($ProviderPointer pointer) => $StreamProviderElement(pointer);
+
+  @override
+  Stream<User?> create(Ref ref) {
+    return firebaseUserState(ref);
+  }
+}
+
+String _$firebaseUserStateHash() => r'8abe639366f8d64aa1d964e7608435f09139e245';

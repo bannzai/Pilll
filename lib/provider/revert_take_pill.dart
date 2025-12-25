@@ -22,11 +22,7 @@ class RevertTakePill {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  RevertTakePill({
-    required this.batchFactory,
-    required this.batchSetPillSheetModifiedHistory,
-    required this.batchSetPillSheetGroup,
-  });
+  RevertTakePill({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
 
   Future<PillSheetGroup?> call({
     required PillSheetGroup pillSheetGroup,
@@ -73,8 +69,8 @@ class RevertTakePill {
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
-          (index) => pillSheetGroup.pillSheets[index] != updatedPillSheetGroup.pillSheets[index],
-        );
+      (index) => pillSheetGroup.pillSheets[index] != updatedPillSheetGroup.pillSheets[index],
+    );
 
     if (updatedIndexses.isEmpty) {
       return null;

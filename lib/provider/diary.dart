@@ -9,11 +9,7 @@ final diaryForTodayProvider = StreamProvider((ref) {
   return ref
       .watch(databaseProvider)
       .diariesReference()
-      .where(
-        DiaryFirestoreKey.date,
-        isGreaterThanOrEqualTo: today(),
-        isLessThanOrEqualTo: today()..add(const Duration(days: 1)),
-      )
+      .where(DiaryFirestoreKey.date, isGreaterThanOrEqualTo: today(), isLessThanOrEqualTo: today()..add(const Duration(days: 1)))
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList().lastOrNull);
 });
@@ -22,11 +18,7 @@ final diariesForMonthProvider = StreamProvider.family((ref, DateTime dateForMont
   return ref
       .watch(databaseProvider)
       .diariesReference()
-      .where(
-        DiaryFirestoreKey.date,
-        isGreaterThanOrEqualTo: range.start,
-        isLessThanOrEqualTo: range.end,
-      )
+      .where(DiaryFirestoreKey.date, isGreaterThanOrEqualTo: range.start, isLessThanOrEqualTo: range.end)
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())
       .map((diaries) => _sortedDiaries(diaries));
@@ -36,8 +28,11 @@ final diariesFor90Days = StreamProvider.family((ref, DateTime base) {
   return ref
       .watch(databaseProvider)
       .diariesReference()
-      .where(DiaryFirestoreKey.date,
-          isLessThanOrEqualTo: DateTime(base.year, base.month, 90), isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
+      .where(
+        DiaryFirestoreKey.date,
+        isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
+        isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90),
+      )
       .orderBy(DiaryFirestoreKey.date)
       .snapshots()
       .map((event) => event.docs.map((e) => e.data()).toList())
