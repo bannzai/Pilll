@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:async_value_group/async_value_group.dart';
+import 'package:pilll/utils/async_value_group.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
