@@ -5,11 +5,7 @@ class WebViewPage extends StatefulWidget {
   final String title;
   final String url;
 
-  const WebViewPage({
-    super.key,
-    required this.title,
-    required this.url,
-  });
+  const WebViewPage({super.key, required this.title, required this.url});
 
   @override
   State<WebViewPage> createState() => _WebViewPageState();
@@ -33,25 +29,17 @@ class _WebViewPageState extends State<WebViewPage> {
         title: Text(widget.title, style: const TextStyle(color: Colors.black, fontSize: 14)),
         elevation: 2,
         leading: IconButton(
-          icon: const Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
+          icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
-      body: WebViewWidget(
-        controller: webViewController,
-      ),
+      body: WebViewWidget(controller: webViewController),
     );
   }
 }
 
 extension WebViewPageRoute on WebViewPage {
-  static Route<dynamic> route({
-    required String title,
-    required String url,
-  }) {
+  static Route<dynamic> route({required String title, required String url}) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'WebViewPage'),
       builder: (_) => WebViewPage(title: title, url: url),

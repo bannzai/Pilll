@@ -32,19 +32,13 @@ class SettingPillSheetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return PillSheetViewLayout(
       weekdayLines: null,
-      pillMarkLines: List.generate(
-        pillSheetType.numberOfLineInPillSheet,
-        (index) {
-          return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
-        },
-      ),
+      pillMarkLines: List.generate(pillSheetType.numberOfLineInPillSheet, (index) {
+        return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
+      }),
     );
   }
 
-  List<Widget> _pillMarks(
-    BuildContext context, {
-    required int lineIndex,
-  }) {
+  List<Widget> _pillMarks(BuildContext context, {required int lineIndex}) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
     if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
@@ -76,15 +70,10 @@ class SettingPillSheetView extends StatelessWidget {
           pillMark: PillMark(
             showsRippleAnimation: false,
             showsCheckmark: false,
-            pillMarkType: _pillMarkTypeFor(
-              pillNumberInPillSheet: pillNumberInPillSheet,
-            ),
+            pillMarkType: _pillMarkTypeFor(pillNumberInPillSheet: pillNumberInPillSheet),
           ),
           onTap: () {
-            analytics.logEvent(name: 'setting_pill_mark_tapped', parameters: {
-              'number': pillNumberInPillSheet,
-              'page': pageIndex,
-            });
+            analytics.logEvent(name: 'setting_pill_mark_tapped', parameters: {'number': pillNumberInPillSheet, 'page': pageIndex});
             markSelected(pageIndex, pillNumberInPillSheet);
           },
         ),
@@ -92,9 +81,7 @@ class SettingPillSheetView extends StatelessWidget {
     });
   }
 
-  PillMarkType _pillMarkTypeFor({
-    required int pillNumberInPillSheet,
-  }) {
+  PillMarkType _pillMarkTypeFor({required int pillNumberInPillSheet}) {
     if (selectedPillNumberIntoPillSheet == pillNumberInPillSheet) {
       return PillMarkType.selected;
     }

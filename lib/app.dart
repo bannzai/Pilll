@@ -29,31 +29,21 @@ class App extends StatelessWidget {
           elevation: 3,
           foregroundColor: TextColor.main,
         ),
-        textSelectionTheme: const TextSelectionThemeData(
-          cursorColor: AppColors.secondary,
-        ),
+        textSelectionTheme: const TextSelectionThemeData(cursorColor: AppColors.secondary),
         primaryColor: AppColors.secondary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-            textTheme: CupertinoTextThemeData(
-                textStyle: TextStyle(
-          fontFamily: FontFamily.number,
-          fontWeight: FontWeight.w500,
-          fontSize: 24,
-        ))),
+          textTheme: CupertinoTextThemeData(
+            textStyle: TextStyle(fontFamily: FontFamily.number, fontWeight: FontWeight.w500, fontSize: 24),
+          ),
+        ),
         buttonTheme: const ButtonThemeData(
           buttonColor: AppColors.primary,
           disabledColor: AppColors.disable,
           textTheme: ButtonTextTheme.primary,
-          colorScheme: ColorScheme.light(
-            primary: AppColors.secondary,
-            secondary: AppColors.accent,
-          ),
+          colorScheme: ColorScheme.light(primary: AppColors.secondary, secondary: AppColors.accent),
         ),
-        datePickerTheme: const DatePickerThemeData(
-          backgroundColor: Colors.white,
-          headerBackgroundColor: AppColors.primary,
-        ),
+        datePickerTheme: const DatePickerThemeData(backgroundColor: Colors.white, headerBackgroundColor: AppColors.primary),
         switchTheme: SwitchThemeData(
           thumbColor: WidgetStateProperty.resolveWith<Color?>((Set<WidgetState> states) {
             if (states.contains(WidgetState.disabled)) {
@@ -98,9 +88,7 @@ class App extends StatelessWidget {
           }),
         ),
       ),
-      home: const ProviderScope(
-        child: RootPage(),
-      ),
+      home: const ProviderScope(child: RootPage()),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
     );

@@ -12,10 +12,7 @@ class NormalPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.potti,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.potti, shape: BoxShape.circle),
     );
   }
 }
@@ -26,18 +23,11 @@ class RestPillMark extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DottedBorder(
-      borderType: BorderType.RRect,
-      radius: const Radius.circular(10),
-      padding: EdgeInsets.zero,
-      color: AppColors.gray,
-      strokeWidth: 1,
+      options: RoundedRectDottedBorderOptions(radius: const Radius.circular(10), padding: EdgeInsets.zero, color: AppColors.gray, strokeWidth: 1),
       child: Container(
         width: PillMarkConst.edge,
         height: PillMarkConst.edge,
-        decoration: const BoxDecoration(
-          color: AppColors.blank,
-          shape: BoxShape.circle,
-        ),
+        decoration: const BoxDecoration(color: AppColors.blank, shape: BoxShape.circle),
       ),
     );
   }
@@ -51,10 +41,7 @@ class FakePillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.blank,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.blank, shape: BoxShape.circle),
     );
   }
 }
@@ -67,10 +54,7 @@ class SelectedPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.enable,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.enable, shape: BoxShape.circle),
     );
   }
 }
@@ -83,10 +67,7 @@ class LightGrayPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.lightGray,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.lightGray, shape: BoxShape.circle),
     );
   }
 }

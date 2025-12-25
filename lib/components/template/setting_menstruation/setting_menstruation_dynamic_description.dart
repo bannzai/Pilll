@@ -42,57 +42,31 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
           children: <Widget>[
             Text(
               '${L.pillNumber} ',
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.main,
-              ),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
             ),
-            GestureDetector(
-              onTap: () => _showPicker(context),
-              child: _from(),
-            ),
+            GestureDetector(onTap: () => _showPicker(context), child: _from()),
             Text(
               ' ${L.perNumber}',
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.main,
-              ),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
             ),
           ],
         ),
         Text(
           L.howManyDaysDoesMenstruationLast,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w600,
-            fontSize: 14,
-            color: TextColor.main,
-          ),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.main),
         ),
         const SizedBox(height: 4),
         // TODO: [Localizations]
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            GestureDetector(
-              onTap: () => _showDurationModalSheet(context),
-              child: _duration(),
-            ),
+            GestureDetector(onTap: () => _showDurationModalSheet(context), child: _duration()),
             Text(
               ' ${L.daysMenstruationLasts}',
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.main,
-              ),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
             ),
           ],
-        )
+        ),
       ],
     );
   }
@@ -109,19 +83,13 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(4)),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Center(
-        child: Text(fromString,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              color: TextColor.gray,
-            )),
+        child: Text(
+          fromString,
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.gray),
+        ),
       ),
     );
   }
@@ -138,19 +106,13 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
       height: 48,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.all(Radius.circular(4)),
-        border: Border.all(
-          width: 1,
-          color: AppColors.border,
-        ),
+        border: Border.all(width: 1, color: AppColors.border),
       ),
       child: Center(
-        child: Text(durationString,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              color: TextColor.gray,
-            )),
+        child: Text(
+          durationString,
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.gray),
+        ),
       ),
     );
   }

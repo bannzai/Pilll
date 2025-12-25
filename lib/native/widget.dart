@@ -7,9 +7,7 @@ import 'package:home_widget/home_widget.dart';
 import 'package:pilll/native/channel.dart';
 
 // NOTE: [SyncData:Widget]
-Future<void> syncActivePillSheetValue({
-  required PillSheetGroup? pillSheetGroup,
-}) async {
+Future<void> syncActivePillSheetValue({required PillSheetGroup? pillSheetGroup}) async {
   try {
     final map = {
       'pillSheetLastTakenDate': pillSheetGroup?.activePillSheet?.lastTakenDate?.millisecondsSinceEpoch,
@@ -31,9 +29,7 @@ Future<void> syncActivePillSheetValue({
   }
 }
 
-Future<void> syncUserStatus({
-  required User? user,
-}) async {
+Future<void> syncUserStatus({required User? user}) async {
   try {
     await HomeWidget.saveWidgetData('userIsPremiumOrTrial', user?.premiumOrTrial);
     await updateWidget();

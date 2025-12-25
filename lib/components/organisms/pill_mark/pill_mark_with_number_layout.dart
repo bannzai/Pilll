@@ -6,23 +6,13 @@ class PillMarkWithNumberLayout extends StatelessWidget {
   final PillMark pillMark;
   final VoidCallback onTap;
 
-  const PillMarkWithNumberLayout({
-    super.key,
-    required this.pillMark,
-    required this.pillNumber,
-    required this.onTap,
-  });
+  const PillMarkWithNumberLayout({super.key, required this.pillMark, required this.pillNumber, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => onTap(),
-      child: Column(
-        children: <Widget>[
-          pillNumber,
-          pillMark,
-        ],
-      ),
+      child: Column(children: <Widget>[pillNumber, pillMark]),
     );
   }
 }

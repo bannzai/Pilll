@@ -6,11 +6,7 @@ class TimePicker extends StatelessWidget {
   final DateTime initialDateTime;
   final void Function(DateTime datetime) done;
 
-  const TimePicker({
-    super.key,
-    required this.initialDateTime,
-    required this.done,
-  });
+  const TimePicker({super.key, required this.initialDateTime, required this.done});
 
   @override
   Widget build(BuildContext context) {
@@ -33,18 +29,19 @@ class TimePicker extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height / 3,
           child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: CupertinoDatePicker(
+              use24hFormat: true,
+              minuteInterval: minimumInterval,
+              initialDateTime: selectedDateTime,
+              mode: CupertinoDatePickerMode.time,
+              onDateTimeChanged: (DateTime value) {
+                selectedDateTime = value;
               },
-              child: CupertinoDatePicker(
-                use24hFormat: true,
-                minuteInterval: minimumInterval,
-                initialDateTime: selectedDateTime,
-                mode: CupertinoDatePickerMode.time,
-                onDateTimeChanged: (DateTime value) {
-                  selectedDateTime = value;
-                },
-              )),
+            ),
+          ),
         ),
       ],
     );

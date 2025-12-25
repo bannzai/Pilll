@@ -55,7 +55,9 @@ class CalendarWeekLine extends HookConsumerWidget {
             return day(context, weekday, date);
           }).toList(),
         ),
-        ...calendarMenstruationBandModels.where(_contains).map(
+        ...calendarMenstruationBandModels
+            .where(_contains)
+            .map(
               (e) => _buildBand(
                 calendarBandModel: e,
                 bottomOffset: CalendarBandConst.height,
@@ -66,39 +68,29 @@ class CalendarWeekLine extends HookConsumerWidget {
                   onTap: (menstruation) async {
                     analytics.logEvent(name: 'tap_calendar_menstruation_band');
 
-                    showMenstruationEditSelectionSheet(
-                      context,
-                      MenstruationEditSelectionSheet(
-                        menstruation: e.menstruation,
-                      ),
-                    );
+                    showMenstruationEditSelectionSheet(context, MenstruationEditSelectionSheet(menstruation: e.menstruation));
                   },
                 ),
               ),
             ),
-        ...calendarScheduledMenstruationBandModels.where(_contains).map(
+        ...calendarScheduledMenstruationBandModels
+            .where(_contains)
+            .map(
               (e) => _buildBand(
                 calendarBandModel: e,
                 bottomOffset: CalendarBandConst.height,
                 tileWidth: tileWidth,
-                bandBuilder: (_, width) => CalendarScheduledMenstruationBand(
-                  begin: e.begin,
-                  end: e.end,
-                  width: width,
-                ),
+                bandBuilder: (_, width) => CalendarScheduledMenstruationBand(begin: e.begin, end: e.end, width: width),
               ),
             ),
-        ...calendarNextPillSheetBandModels.where(_contains).map(
+        ...calendarNextPillSheetBandModels
+            .where(_contains)
+            .map(
               (e) => _buildBand(
                 calendarBandModel: e,
                 bottomOffset: 0,
                 tileWidth: tileWidth,
-                bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(
-                  begin: e.begin,
-                  end: e.end,
-                  isLineBreak: isLineBreak,
-                  width: width,
-                ),
+                bandBuilder: (isLineBreak, width) => CalendarNextPillSheetBand(begin: e.begin, end: e.end, isLineBreak: isLineBreak, width: width),
               ),
             ),
       ],
@@ -108,7 +100,8 @@ class CalendarWeekLine extends HookConsumerWidget {
   bool _contains(CalendarBandModel calendarBandModel) {
     // 週の期間と生理期間が重なるかどうかを判定
     // 週の開始が生理期間の終了より前 かつ 週の終了が生理期間の開始より後
-    final isOverlapping = dateRange.begin.isBefore(calendarBandModel.end.add(const Duration(days: 1))) &&
+    final isOverlapping =
+        dateRange.begin.isBefore(calendarBandModel.end.add(const Duration(days: 1))) &&
         dateRange.end.isAfter(calendarBandModel.begin.subtract(const Duration(days: 1)));
     return isOverlapping;
   }
@@ -153,15 +146,17 @@ void transitionWhenCalendarDayTapped(
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
-            showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
-            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+          showDiary: () => Navigator.of(context).push(DiaryPostPageRoute.route(date, null)),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date)),
+        ),
       );
     } else {
       showModalBottomSheet(
         context: context,
         builder: (context) => DiaryOrScheduleSheet(
-            showDiary: () => _showConfirmDiarySheet(context, diary),
-            showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date))),
+          showDiary: () => _showConfirmDiarySheet(context, diary),
+          showSchedule: () => Navigator.of(context).push(SchedulePostPageRoute.route(date)),
+        ),
       );
     }
     return;

@@ -2,10 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 class Ripple extends CustomPainter {
-  Ripple(
-    this._animation, {
-    required this.color,
-  }) : super(repaint: _animation);
+  Ripple(this._animation, {required this.color}) : super(repaint: _animation);
 
   final Color color;
   final Animation<double>? _animation;
