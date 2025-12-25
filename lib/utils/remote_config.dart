@@ -6,6 +6,7 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/version/version.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'remote_config.g.dart';
@@ -15,10 +16,7 @@ final remoteConfig = FirebaseRemoteConfig.instance;
 Future<void> setupRemoteConfig() async {
   try {
     await (
-      remoteConfig.setConfigSettings(RemoteConfigSettings(
-        fetchTimeout: const Duration(minutes: 1),
-        minimumFetchInterval: const Duration(hours: 1),
-      )),
+      remoteConfig.setConfigSettings(RemoteConfigSettings(fetchTimeout: const Duration(minutes: 1), minimumFetchInterval: const Duration(hours: 1))),
       // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
       remoteConfig.setDefaults({
         RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,
@@ -61,7 +59,7 @@ Future<void> setupRemoteConfig() async {
 }
 
 @Riverpod()
-Future<bool> appIsReleased(AppIsReleasedRef ref) async {
+Future<bool> appIsReleased(Ref ref) async {
   if (kDebugMode) {
     return true;
   }

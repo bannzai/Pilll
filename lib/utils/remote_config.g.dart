@@ -6,18 +6,36 @@ part of 'remote_config.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$appIsReleasedHash() => r'396bc2feaeddd3811dfcefa91fe5734c221b6595';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [appIsReleased].
 @ProviderFor(appIsReleased)
-final appIsReleasedProvider = AutoDisposeFutureProvider<bool>.internal(
-  appIsReleased,
-  name: r'appIsReleasedProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$appIsReleasedHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+const appIsReleasedProvider = AppIsReleasedProvider._();
 
-typedef AppIsReleasedRef = AutoDisposeFutureProviderRef<bool>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
+final class AppIsReleasedProvider extends $FunctionalProvider<AsyncValue<bool>, bool, FutureOr<bool>>
+    with $FutureModifier<bool>, $FutureProvider<bool> {
+  const AppIsReleasedProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'appIsReleasedProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$appIsReleasedHash();
+
+  @$internal
+  @override
+  $FutureProviderElement<bool> $createElement($ProviderPointer pointer) => $FutureProviderElement(pointer);
+
+  @override
+  FutureOr<bool> create(Ref ref) {
+    return appIsReleased(ref);
+  }
+}
+
+String _$appIsReleasedHash() => r'a5a56ad848b6f86958c52b7bf8ef5d2f7808361a';

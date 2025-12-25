@@ -36,7 +36,7 @@ Future<UserCredential?> signInWithApple() async {
 
 final isAppleLinkedProvider = Provider((ref) {
   final user = ref.watch(firebaseUserStateProvider);
-  final userValue = user.valueOrNull;
+  final userValue = user.asData?.value;
   if (userValue == null) {
     return false;
   }
