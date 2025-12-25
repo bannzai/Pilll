@@ -13,15 +13,12 @@ import 'package:pilll/entity/setting.codegen.dart';
 part 'initial_setting_state.codegen.freezed.dart';
 
 @freezed
-class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
-  const factory InitialSettingTodayPillNumber({
-    @Default(0) int pageIndex,
-    @Default(0) int pillNumberInPillSheet,
-  }) = _InitialSettingTodayPillNumber;
+abstract class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
+  const factory InitialSettingTodayPillNumber({@Default(0) int pageIndex, @Default(0) int pillNumberInPillSheet}) = _InitialSettingTodayPillNumber;
 }
 
 @freezed
-class InitialSettingState with _$InitialSettingState {
+abstract class InitialSettingState with _$InitialSettingState {
   const InitialSettingState._();
   const factory InitialSettingState({
     @Default([]) List<PillSheetType> pillSheetTypes,
@@ -58,7 +55,7 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
-      timezoneDatabaseName: await FlutterTimezone.getLocalTimezone(),
+      timezoneDatabaseName: (await FlutterTimezone.getLocalTimezone()).identifier,
       // BEGIN: Release function for trial user
       isAutomaticallyCreatePillSheet: true,
       // END: Release function for trial user
@@ -72,16 +69,8 @@ class InitialSettingState with _$InitialSettingState {
     required List<PillSheetType> pillSheetTypes,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
-    final beginDate = _beginingDate(
-      pageIndex: pageIndex,
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-    );
-    final lastTakenDate = _lastTakenDate(
-      pageIndex: pageIndex,
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-    );
+    final beginDate = _beginingDate(pageIndex: pageIndex, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
+    final lastTakenDate = _lastTakenDate(pageIndex: pageIndex, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
 
     return PillSheet(
       id: firestoreIDGenerator(),
@@ -112,11 +101,7 @@ class InitialSettingState with _$InitialSettingState {
       return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
-      final beforePillSheetBeginingDate = _beginingDate(
-        pageIndex: pageIndex - 1,
-        todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
-      );
+      final beforePillSheetBeginingDate = _beginingDate(pageIndex: pageIndex - 1, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
       return beforePillSheetBeginingDate.addDays(beforePillSheetType.totalCount);
     }
