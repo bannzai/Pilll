@@ -30,30 +30,17 @@ class ReminderNotificationCustomizeWord extends HookConsumerWidget {
         children: [
           Text(
             L.customizeMedicationNotifications,
-            style: const TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
           ),
-          if (!isPremium) ...[
-            const SizedBox(width: 8),
-            const PremiumBadge(),
-          ]
+          if (!isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
         ],
       ),
       subtitle: Text(
         L.xCanBeCustomized(L.medicationNotification),
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w300,
-          fontSize: 14,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14),
       ),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_notification_customize_word',
-        );
+        analytics.logEvent(name: 'did_notification_customize_word');
         if (isTrial || isPremium) {
           Navigator.of(context).push(ReminderNotificationCustomizeWordPageRoutes.route());
         } else {

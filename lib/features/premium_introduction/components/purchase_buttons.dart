@@ -91,12 +91,15 @@ class PurchaseButtons extends HookConsumerWidget {
       if (shouldShowCompleteDialog) {
         // ignore: use_build_context_synchronously
         showDialog(
-            context: context,
-            builder: (_) {
-              return PremiumCompleteDialog(onClose: () {
+          context: context,
+          builder: (_) {
+            return PremiumCompleteDialog(
+              onClose: () {
                 Navigator.of(context).pop();
-              });
-            });
+              },
+            );
+          },
+        );
       }
     } catch (error) {
       debugPrint('caused purchase error for $error');

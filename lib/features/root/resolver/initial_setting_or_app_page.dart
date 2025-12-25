@@ -21,18 +21,14 @@ enum InitialSettingOrAppPageScreenType { initialSetting, app }
 class InitialSettingOrAppPage extends HookConsumerWidget {
   final Widget Function(BuildContext) initialSettingPageBuilder;
   final Widget Function(BuildContext) homePageBuilder;
-  const InitialSettingOrAppPage({
-    super.key,
-    required this.homePageBuilder,
-    required this.initialSettingPageBuilder,
-  });
+  const InitialSettingOrAppPage({super.key, required this.homePageBuilder, required this.initialSettingPageBuilder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final didEndInitialSetting = ref.watch(didEndInitialSettingProvider);
 
     // UserSetupPageでUserはできているのでfetchが終わり次第値は必ず入る。ここでwatchしないとInitialSetting -> Appへの遷移が成立しない
-    final user = ref.watch(userProvider).valueOrNull;
+    final user = ref.watch(userProvider).asData?.value;
     final error = useState<LaunchException?>(null);
     final screenType = retrieveScreenType(user: user, didEndInitialSetting: didEndInitialSetting.value);
 
@@ -64,10 +60,7 @@ class InitialSettingOrAppPage extends HookConsumerWidget {
   }
 }
 
-InitialSettingOrAppPageScreenType? retrieveScreenType({
-  required User? user,
-  required bool? didEndInitialSetting,
-}) {
+InitialSettingOrAppPageScreenType? retrieveScreenType({required User? user, required bool? didEndInitialSetting}) {
   if (user == null) {
     return null;
   }

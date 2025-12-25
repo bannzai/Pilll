@@ -11,11 +11,7 @@ class PillSheetModifiedHistoryChangedBeginDisplayNumberAction extends StatelessW
   final DateTime estimatedEventCausingDate;
   final ChangedBeginDisplayNumberValue? value;
 
-  const PillSheetModifiedHistoryChangedBeginDisplayNumberAction({
-    super.key,
-    required this.estimatedEventCausingDate,
-    required this.value,
-  });
+  const PillSheetModifiedHistoryChangedBeginDisplayNumberAction({super.key, required this.estimatedEventCausingDate, required this.value});
   @override
   Widget build(BuildContext context) {
     final value = this.value;
@@ -27,12 +23,7 @@ class PillSheetModifiedHistoryChangedBeginDisplayNumberAction extends StatelessW
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedBeginDisplayNumberSetting(value)),
       detail: Text(
         L.changeStartOfPillDays,
-        style: const TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.start,
       ),
     );

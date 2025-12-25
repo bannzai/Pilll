@@ -8,9 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/features/sign_in/sign_in_sheet.dart';
 
 class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
-  const RecommendSignupForPremiumAnnouncementBar({
-    super.key,
-  });
+  const RecommendSignupForPremiumAnnouncementBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -40,12 +38,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                       const SizedBox(width: 5),
                       Text(
                         L.pleaseRegisterAccount,
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 12,
-                          color: TextColor.white,
-                        ),
+                        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 12, color: TextColor.white),
                         textAlign: TextAlign.center,
                       ),
                     ],
@@ -53,12 +46,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(
                     L.cannotTransferPremiumWithoutAccount,
-                    style: const TextStyle(
-                      color: TextColor.white,
-                      fontFamily: FontFamily.japanese,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w700,
-                    ),
+                    style: const TextStyle(color: TextColor.white, fontFamily: FontFamily.japanese, fontSize: 10, fontWeight: FontWeight.w700),
                     textAlign: TextAlign.center,
                   ),
                 ],
@@ -67,10 +55,7 @@ class RecommendSignupForPremiumAnnouncementBar extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: IconButton(
-                icon: SvgPicture.asset(
-                  'images/arrow_right.svg',
-                  colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-                ),
+                icon: SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn)),
                 onPressed: () {},
                 iconSize: 24,
                 padding: const EdgeInsets.all(8),

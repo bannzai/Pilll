@@ -17,12 +17,7 @@ class RestDurationButton extends StatelessWidget {
         onPressed: null,
         child: Text(
           L.pauseTaking,
-          style: const TextStyle(
-            color: TextColor.lightGray,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-            fontSize: 16,
-          ),
+          style: const TextStyle(color: TextColor.lightGray, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16),
         ),
       ),
     );

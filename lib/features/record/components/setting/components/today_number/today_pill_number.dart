@@ -9,11 +9,7 @@ class TodayPillNumber extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
 
-  const TodayPillNumber({
-    super.key,
-    required this.pillSheetGroup,
-    required this.activePillSheet,
-  });
+  const TodayPillNumber({super.key, required this.pillSheetGroup, required this.activePillSheet});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -21,12 +17,7 @@ class TodayPillNumber extends HookConsumerWidget {
       leading: const Icon(Icons.today),
       title: Text(L.changePillNumberForToday),
       onTap: () async {
-        await Navigator.of(context).push(
-          SettingTodayPillNumberPageRoute.route(
-            pillSheetGroup: pillSheetGroup,
-            activePillSheet: activePillSheet,
-          ),
-        );
+        await Navigator.of(context).push(SettingTodayPillNumberPageRoute.route(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet));
         if (context.mounted) Navigator.of(context).pop();
       },
     );

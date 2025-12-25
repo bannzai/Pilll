@@ -41,10 +41,7 @@ class MenstruationCardList extends StatelessWidget {
           padding: const EdgeInsets.only(top: 16, left: 16, right: 16),
           scrollDirection: Axis.vertical,
           children: [
-            if (card != null) ...[
-              MenstruationCard(card),
-              const SizedBox(height: 24),
-            ],
+            if (card != null) ...[MenstruationCard(card), const SizedBox(height: 24)],
             if (historyCard != null) MenstruationHistoryCard(state: historyCard),
           ],
         ),
@@ -87,11 +84,7 @@ MenstruationCardState? cardState(
   return null;
 }
 
-MenstruationHistoryCardState? historyCardState(
-  Menstruation? menstruation,
-  List<Menstruation> allMenstruation,
-  User user,
-) {
+MenstruationHistoryCardState? historyCardState(Menstruation? menstruation, List<Menstruation> allMenstruation, User user) {
   if (menstruation == null) {
     return null;
   }

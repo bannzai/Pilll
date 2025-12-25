@@ -48,10 +48,7 @@ class AddPillSheetGroup {
       pillSheetTypes: pillSheetTypes,
       displayNumberSetting: displayNumberSetting,
     );
-    final createdPillSheetGroup = batchSetPillSheetGroup(
-      batch,
-      updatedPillSheetGroup,
-    );
+    final createdPillSheetGroup = batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
       beforePillSheetGroup: pillSheetGroup,
@@ -61,11 +58,7 @@ class AddPillSheetGroup {
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
-    batchSetSetting(
-        batch,
-        setting.copyWith(
-          pillSheetTypes: pillSheetTypes,
-        ));
+    batchSetSetting(batch, setting.copyWith(pillSheetTypes: pillSheetTypes));
 
     await batch.commit();
   }
@@ -84,9 +77,7 @@ PillSheetGroup buildPillSheetGroup({
     return PillSheet(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,
-      beginingDate: n.add(
-        Duration(days: offset),
-      ),
+      beginingDate: n.add(Duration(days: offset)),
       lastTakenDate: null,
       groupIndex: pageIndex,
       createdAt: now(),
@@ -104,9 +95,7 @@ PillSheetGroup buildPillSheetGroup({
           return displayNumberSetting;
         }
         if (pillSheetGroup != null) {
-          return PillSheetGroupDisplayNumberSetting(
-            beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
-          );
+          return PillSheetGroupDisplayNumberSetting(beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1);
         }
       }
       return null;

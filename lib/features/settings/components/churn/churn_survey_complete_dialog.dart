@@ -6,9 +6,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class ChurnSurveyCompleteDialog extends StatelessWidget {
-  const ChurnSurveyCompleteDialog({
-    super.key,
-  });
+  const ChurnSurveyCompleteDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +14,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(20.0))),
       title: Text(
         L.thankYouForCooperation,
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontSize: 17,
-          fontWeight: FontWeight.w600,
-          color: TextColor.main,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 17, fontWeight: FontWeight.w600, color: TextColor.main),
         textAlign: TextAlign.center,
       ),
       content: Column(
@@ -29,12 +22,7 @@ class ChurnSurveyCompleteDialog extends StatelessWidget {
         children: [
           Text(
             L.feedbackUsage,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontSize: 14,
-              fontWeight: FontWeight.w300,
-              color: TextColor.main,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w300, color: TextColor.main),
           ),
         ],
       ),

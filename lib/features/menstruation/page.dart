@@ -71,11 +71,7 @@ class MenstruationPage extends HookConsumerWidget {
           calendarNextPillSheetBandModels: data.$10,
         );
       },
-      error: (error, _) => UniversalErrorPage(
-        error: error,
-        child: null,
-        reload: () => ref.refresh(refreshAppProvider),
-      ),
+      error: (error, _) => UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(refreshAppProvider)),
       loading: () => const ScaffoldIndicator(),
     );
   }
@@ -155,10 +151,7 @@ class MenstruationPageBody extends HookConsumerWidget {
               alignment: Alignment.bottomCenter,
               child: Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
-                child: MenstruationRecordButton(
-                  latestMenstruation: latestMenstruation,
-                  setting: setting,
-                ),
+                child: MenstruationRecordButton(latestMenstruation: latestMenstruation, setting: setting),
               ),
             ),
           ],

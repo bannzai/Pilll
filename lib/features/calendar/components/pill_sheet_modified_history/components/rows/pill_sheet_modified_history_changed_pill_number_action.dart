@@ -12,11 +12,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final PillSheetModifiedHistory history;
 
-  const PillSheetModifiedHistoryChangedPillNumberAction({
-    super.key,
-    required this.estimatedEventCausingDate,
-    required this.history,
-  });
+  const PillSheetModifiedHistoryChangedPillNumberAction({super.key, required this.estimatedEventCausingDate, required this.history});
   @override
   Widget build(BuildContext context) {
     final beforePillSheetGroup = history.beforePillSheetGroup;
@@ -38,19 +34,15 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-        beforeTodayPillNumber: beforeTodayPillNumber,
-        afterTodayPillNumber: afterTodayPillNumber,
-        pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      )),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
+          beforeTodayPillNumber: beforeTodayPillNumber,
+          afterTodayPillNumber: afterTodayPillNumber,
+          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+        ),
+      ),
       detail: Text(
         L.changedPillNumber,
-        style: const TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.start,
       ),
     );

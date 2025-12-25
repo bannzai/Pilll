@@ -10,11 +10,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final List<String> pillSheetIDs;
 
-  const PillSheetModifiedHistoryCreatePillSheetAction({
-    super.key,
-    required this.estimatedEventCausingDate,
-    required this.pillSheetIDs,
-  });
+  const PillSheetModifiedHistoryCreatePillSheetAction({super.key, required this.estimatedEventCausingDate, required this.pillSheetIDs});
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +19,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(pillSheetIDs)),
       detail: Text(
         L.addPillSheet,
-        style: const TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.start,
       ),
     );

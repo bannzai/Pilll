@@ -17,6 +17,7 @@ import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/local_notification.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:riverpod/legacy.dart';
 
 final initialSettingStateNotifierProvider = StateNotifierProvider.autoDispose<InitialSettingStateNotifier, InitialSettingState>(
   (ref) => InitialSettingStateNotifier(
@@ -50,18 +51,16 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
-          InitialSettingState(reminderTimes: [
+        InitialSettingState(
+          reminderTimes: [
             ReminderTime(hour: _now.hour, minute: 0),
             ReminderTime(hour: _now.hour + 1, minute: 0),
-          ]),
-        );
+          ],
+        ),
+      );
 
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [
-      pillSheetType,
-      pillSheetType,
-      pillSheetType,
-    ]);
+    state = state.copyWith(pillSheetTypes: [pillSheetType, pillSheetType, pillSheetType]);
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
@@ -80,11 +79,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void setReminderTime({
-    required int index,
-    required int hour,
-    required int minute,
-  }) {
+  void setReminderTime({required int index, required int hour, required int minute}) {
     final copied = [...state.reminderTimes];
     if (index >= copied.length) {
       copied.add(ReminderTime(hour: hour, minute: minute));
@@ -94,15 +89,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(reminderTimes: copied);
   }
 
-  void setTodayPillNumber({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
+  void setTodayPillNumber({required int pageIndex, required int pillNumberInPillSheet}) {
     state = state.copyWith(
-      todayPillNumber: InitialSettingTodayPillNumber(
-        pageIndex: pageIndex,
-        pillNumberInPillSheet: pillNumberInPillSheet,
-      ),
+      todayPillNumber: InitialSettingTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     );
   }
 
@@ -117,11 +106,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     PillSheetGroup? createdPillSheetGroup;
     if (todayPillNumber != null) {
       final createdPillSheets = state.pillSheetTypes.asMap().keys.map((pageIndex) {
-        return InitialSettingState.buildPillSheet(
-          pageIndex: pageIndex,
-          todayPillNumber: todayPillNumber,
-          pillSheetTypes: state.pillSheetTypes,
-        );
+        return InitialSettingState.buildPillSheet(pageIndex: pageIndex, todayPillNumber: todayPillNumber, pillSheetTypes: state.pillSheetTypes);
       }).toList();
 
       final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();

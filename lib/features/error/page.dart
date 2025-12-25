@@ -7,10 +7,7 @@ import 'package:pilll/features/inquiry/page.dart';
 import 'package:flutter/material.dart';
 
 class _InheritedWidget extends InheritedWidget {
-  const _InheritedWidget({
-    required super.child,
-    required this.state,
-  });
+  const _InheritedWidget({required super.child, required this.state});
 
   final UniversalErrorPageState state;
 
@@ -25,12 +22,7 @@ class UniversalErrorPage extends StatefulWidget {
   final Widget? child;
   final VoidCallback? reload;
 
-  const UniversalErrorPage({
-    super.key,
-    required this.error,
-    required this.child,
-    required this.reload,
-  });
+  const UniversalErrorPage({super.key, required this.error, required this.child, required this.reload});
 
   @override
   UniversalErrorPageState createState() => UniversalErrorPageState();
@@ -77,33 +69,18 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  'images/universal_error.png',
-                  width: 200,
-                  height: 190,
+                Image.asset('images/universal_error.png', width: 200, height: 190),
+                const SizedBox(height: 25),
+                Text(
+                  message,
+                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
                 ),
                 const SizedBox(height: 25),
-                Text(message,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.main,
-                    )),
-                const SizedBox(height: 25),
                 TextButton.icon(
-                  icon: const Icon(
-                    Icons.refresh,
-                    size: 20,
-                  ),
+                  icon: const Icon(Icons.refresh, size: 20),
                   label: Text(
                     L.reloadScreen,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.black,
-                    ),
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.black),
                   ),
                   onPressed: () {
                     analytics.logEvent(name: 'reload_button_pressed');
@@ -117,24 +94,16 @@ class UniversalErrorPageState extends State<UniversalErrorPage> {
                   },
                 ),
                 TextButton.icon(
-                  icon: const Icon(
-                    Icons.mail,
-                    size: 20,
-                  ),
+                  icon: const Icon(Icons.mail, size: 20),
                   label: Text(
                     L.contactIfNotResolved,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.black,
-                    ),
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.black),
                   ),
                   onPressed: () {
                     analytics.logEvent(name: 'problem_unresolved_button_pressed');
                     Navigator.of(context).push(InquiryPageRoute.route());
                   },
-                )
+                ),
               ],
             ),
           ),

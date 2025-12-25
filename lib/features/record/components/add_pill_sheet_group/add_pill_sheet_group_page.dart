@@ -36,10 +36,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          L.addPillSheet,
-          style: const TextStyle(color: TextColor.black),
-        ),
+        title: Text(L.addPillSheet, style: const TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -49,9 +46,11 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
             children: [
               if (pillSheetTypes.value.isEmpty) ...[
                 const Spacer(),
-                AddPillSheetTypeEmpty(onSelect: (pillSheetType) {
-                  pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
-                }),
+                AddPillSheetTypeEmpty(
+                  onSelect: (pillSheetType) {
+                    pillSheetTypes.value = [...pillSheetTypes.value, pillSheetType];
+                  },
+                ),
                 const Spacer(flex: 3),
               ] else ...[
                 Expanded(
@@ -65,7 +64,9 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                         },
                         onChange: (index, pillSheetType) {
                           analytics.logEvent(
-                              name: 'setting_change_pill_sheet_group', parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName});
+                            name: 'setting_change_pill_sheet_group',
+                            parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName},
+                          );
                           final copied = [...pillSheetTypes.value];
                           copied[index] = pillSheetType;
                           pillSheetTypes.value = copied;
@@ -87,10 +88,11 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                       children: [
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
-                              pillSheetGroup: pillSheetGroup,
-                              onChanged: (value) {
-                                displayNumberSetting.value = value;
-                              }),
+                            pillSheetGroup: pillSheetGroup,
+                            onChanged: (value) {
+                              displayNumberSetting.value = value;
+                            },
+                          ),
                         const SizedBox(height: 24),
                         SizedBox(
                           width: 180,

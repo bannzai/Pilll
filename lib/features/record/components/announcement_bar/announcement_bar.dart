@@ -44,28 +44,23 @@ class AnnouncementBar extends HookConsumerWidget {
   Widget? _body(BuildContext context, WidgetRef ref) {
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
     final remoteConfigParameter = ref.watch(remoteConfigParameterProvider);
-    final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).valueOrNull;
-    final firebaseAuthUser = ref.watch(firebaseUserStateProvider).valueOrNull;
-    final user = ref.watch(userProvider).valueOrNull;
+    final latestPillSheetGroup = ref.watch(latestPillSheetGroupProvider).asData?.value;
+    final firebaseAuthUser = ref.watch(firebaseUserStateProvider).asData?.value;
+    final user = ref.watch(userProvider).asData?.value;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
-    final hiddenCountdownDiscountDeadline =
-        ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final hiddenCountdownDiscountDeadline = ref.watch(
+      hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate),
+    );
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
     final specialOfferingIsClosed = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed) ?? false);
     final specialOfferingIsClosed2 = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed2) ?? false);
 
-    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
-      begin: today().subtract(const Duration(days: 30)),
-      end: today(),
-    ));
+    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: today().subtract(const Duration(days: 30)), end: today()));
     final histories = historiesAsync.asData?.value ?? [];
-    final missedDays = missedPillDays(
-      histories: histories,
-      maxDate: today(),
-    );
+    final missedDays = missedPillDays(histories: histories, maxDate: today());
 
     useEffect(() {
       specialOfferingIsClosed.addListener(() {
@@ -113,12 +108,13 @@ class AnnouncementBar extends HookConsumerWidget {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
-                  user: user,
-                  discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
-                  onTap: () {
-                    analytics.logEvent(name: 'pressed_discount_announcement_bar');
-                    showPremiumIntroductionSheet(context);
-                  });
+                user: user,
+                discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+                onTap: () {
+                  analytics.logEvent(name: 'pressed_discount_announcement_bar');
+                  showPremiumIntroductionSheet(context);
+                },
+              );
             }
           }
         }
@@ -126,10 +122,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
       if (user.isTrial) {
@@ -147,9 +140,7 @@ class AnnouncementBar extends HookConsumerWidget {
         if (userBeginDate != null &&
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
             !specialOfferingIsClosed.value) {
-          return SpecialOfferingAnnouncementBar(
-            specialOfferingIsClosed: specialOfferingIsClosed,
-          );
+          return SpecialOfferingAnnouncementBar(specialOfferingIsClosed: specialOfferingIsClosed);
         }
 
         if (userBeginDate != null &&
@@ -179,10 +170,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
     }
 

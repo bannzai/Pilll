@@ -39,12 +39,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
           children: [
             Text(
               L.displayMode,
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
-              ),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese, color: TextColor.main),
             ),
             const SizedBox(height: 24),
             Column(
@@ -103,10 +98,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   }) {
     return GestureDetector(
       onTap: () async {
-        analytics.logEvent(
-          name: 'did_select_pill_sheet_appearance',
-          parameters: {'mode': mode.toString(), 'isPremiumFunction': isPremiumFunction},
-        );
+        analytics.logEvent(name: 'did_select_pill_sheet_appearance', parameters: {'mode': mode.toString(), 'isPremiumFunction': isPremiumFunction});
 
         if (user.isPremium || user.isTrial) {
           await setPillSheetGroup(pillSheetGroup.copyWith(pillSheetAppearanceMode: mode));
@@ -127,16 +119,9 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
             const SizedBox(width: 34),
             Text(
               text,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontWeight: FontWeight.w500,
-                fontSize: 14,
-              ),
+              style: const TextStyle(color: TextColor.main, fontWeight: FontWeight.w500, fontSize: 14),
             ),
-            if (isPremiumFunction) ...[
-              const SizedBox(width: 12),
-              const PremiumBadge(),
-            ]
+            if (isPremiumFunction) ...[const SizedBox(width: 12), const PremiumBadge()],
           ],
         ),
       ),
@@ -144,17 +129,11 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   }
 }
 
-void showSelectAppearanceModeModal(
-  BuildContext context, {
-  required User user,
-  required PillSheetGroup pillSheetGroup,
-}) {
+void showSelectAppearanceModeModal(BuildContext context, {required User user, required PillSheetGroup pillSheetGroup}) {
   analytics.setCurrentScreen(screenName: 'SelectAppearanceModeModal');
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(
-      user: user,
-    ),
+    builder: (context) => SelectAppearanceModeModal(user: user),
     backgroundColor: Colors.transparent,
   );
 }

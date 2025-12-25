@@ -21,11 +21,7 @@ class DiaryOrScheduleSheet extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 24),
-            _tile(
-              title: L.diaryRecord,
-              onTap: () => showDiary(),
-              leading: const Icon(Icons.note_alt),
-            ),
+            _tile(title: L.diaryRecord, onTap: () => showDiary(), leading: const Icon(Icons.note_alt)),
             _tile(title: L.scheduleRecord, onTap: () => showSchedule(), leading: const Icon(Icons.event)),
           ],
         ),
@@ -39,12 +35,7 @@ class DiaryOrScheduleSheet extends StatelessWidget {
       child: ListTile(
         title: Text(
           title,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.main,
-          ),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
         ),
         leading: leading,
         onTap: () => onTap(),

@@ -19,12 +19,7 @@ void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requ
         ),
       );
     } else {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          duration: const Duration(seconds: 2),
-          content: Text(L.menstruationEdited),
-        ),
-      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.menstruationEdited)));
 
       // 編集の場合はBottomSheet経由で開かれる
       Navigator.of(context).pop();
@@ -50,21 +45,14 @@ void _showMenstruationDateRangePicker(BuildContext context, WidgetRef ref, {requ
   }
 
   if (initialMenstruation == null) {
-    final menstruation = Menstruation(
-      beginDate: dateTimeRange.start,
-      endDate: dateTimeRange.end,
-      createdAt: now(),
-    );
+    final menstruation = Menstruation(beginDate: dateTimeRange.start, endDate: dateTimeRange.end, createdAt: now());
     try {
       onSaved(await ref.read(setMenstruationProvider).call(menstruation));
     } catch (e) {
       if (context.mounted) showErrorAlert(context, e);
     }
   } else {
-    final menstruation = initialMenstruation.copyWith(
-      beginDate: dateTimeRange.start,
-      endDate: dateTimeRange.end,
-    );
+    final menstruation = initialMenstruation.copyWith(beginDate: dateTimeRange.start, endDate: dateTimeRange.end);
     try {
       onSaved(await ref.read(setMenstruationProvider).call(menstruation));
     } catch (e) {

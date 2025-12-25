@@ -76,12 +76,7 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
                       takenPillValue: value,
                     );
                     final date = DateTimeFormatter.slashYearAndMonthAndDayAndTime(dateTime);
-                    messenger.showSnackBar(
-                      SnackBar(
-                        duration: const Duration(seconds: 2),
-                        content: Text(L.changedToDate(date)),
-                      ),
-                    );
+                    messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.changedToDate(date))));
                     navigator.pop();
                   } catch (error) {
                     if (context.mounted) showErrorAlert(context, L.failedToUpdate);
@@ -95,15 +90,16 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
-            pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
+          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
+            beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+            afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
+              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+              pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+              pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+            ),
             pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-            pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
           ),
-          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-        )),
+        ),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(
           value: value,
@@ -131,9 +127,7 @@ Future<void> updateTakenValue({
   );
   final editedHistory = history.copyWith(
     estimatedEventCausingDate: actualTakenDate,
-    value: value.copyWith(
-      takenPill: editedTakenPillValue,
-    ),
+    value: value.copyWith(takenPill: editedTakenPillValue),
   );
 
   await setPillSheetModifiedHistory(editedHistory);

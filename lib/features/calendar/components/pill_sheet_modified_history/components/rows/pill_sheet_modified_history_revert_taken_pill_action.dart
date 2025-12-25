@@ -13,11 +13,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final PillSheetModifiedHistory history;
 
-  const PillSheetModifiedHistoryRevertTakenPillAction({
-    super.key,
-    required this.estimatedEventCausingDate,
-    required this.history,
-  });
+  const PillSheetModifiedHistoryRevertTakenPillAction({super.key, required this.estimatedEventCausingDate, required this.history});
   @override
   Widget build(BuildContext context) {
     final beforePillSheetGroup = history.beforePillSheetGroup;
@@ -43,19 +39,15 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.revert(
-        beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-        afterLastTakenPillNumber: afterLastTakenPillNumber,
-        pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      )),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.revert(
+          beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+          afterLastTakenPillNumber: afterLastTakenPillNumber,
+          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+        ),
+      ),
       detail: Text(
         L.cancelTaking,
-        style: const TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.start,
       ),
     );

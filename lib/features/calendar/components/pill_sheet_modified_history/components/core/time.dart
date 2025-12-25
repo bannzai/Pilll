@@ -3,10 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class Time extends StatelessWidget {
-  const Time({
-    super.key,
-    required this.time,
-  });
+  const Time({super.key, required this.time});
 
   final String time;
 

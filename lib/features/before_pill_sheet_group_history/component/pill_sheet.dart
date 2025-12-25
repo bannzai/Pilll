@@ -26,12 +26,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
 
   List<PillSheetType> get pillSheetTypes => pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
 
-  const HistoricalPillsheetGroupPagePillSheet({
-    super.key,
-    required this.pillSheetGroup,
-    required this.pillSheet,
-    required this.setting,
-  });
+  const HistoricalPillsheetGroupPagePillSheet({super.key, required this.pillSheetGroup, required this.pillSheet, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -41,24 +36,19 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return PillSheetViewLayout(
-      weekdayLines: PillSheetViewWeekdayLine(
-        firstWeekday: WeekdayFunctions.weekdayFromDate(weekdayDate),
-      ),
-      pillMarkLines: List.generate(
-        pillSheet.pillSheetType.numberOfLineInPillSheet,
-        (index) {
-          return PillMarkLine(
-            pillMarks: _pillMarks(
-              context,
-              takePill: takePill,
-              revertTakePill: revertTakePill,
-              registerReminderLocalNotification: registerReminderLocalNotification,
-              lineIndex: index,
-              pageIndex: pillSheet.groupIndex,
-            ),
-          );
-        },
-      ),
+      weekdayLines: PillSheetViewWeekdayLine(firstWeekday: WeekdayFunctions.weekdayFromDate(weekdayDate)),
+      pillMarkLines: List.generate(pillSheet.pillSheetType.numberOfLineInPillSheet, (index) {
+        return PillMarkLine(
+          pillMarks: _pillMarks(
+            context,
+            takePill: takePill,
+            revertTakePill: revertTakePill,
+            registerReminderLocalNotification: registerReminderLocalNotification,
+            lineIndex: index,
+            pageIndex: pillSheet.groupIndex,
+          ),
+        );
+      }),
     );
   }
 
@@ -95,13 +85,8 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
           ),
           pillMark: PillMark(
             showsRippleAnimation: false,
-            showsCheckmark: _isDone(
-              pillNumberInPillSheet: pillNumberInPillSheet,
-            ),
-            pillMarkType: pillMarkFor(
-              pillNumberInPillSheet: pillNumberInPillSheet,
-              pillSheet: pillSheet,
-            ),
+            showsCheckmark: _isDone(pillNumberInPillSheet: pillNumberInPillSheet),
+            pillMarkType: pillMarkFor(pillNumberInPillSheet: pillNumberInPillSheet, pillSheet: pillSheet),
           ),
           onTap: () {},
         ),
@@ -109,9 +94,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     });
   }
 
-  bool _isDone({
-    required int pillNumberInPillSheet,
-  }) {
+  bool _isDone({required int pillNumberInPillSheet}) {
     final activePillSheet = pillSheetGroup.activePillSheet;
     if (activePillSheet == null) {
       throw const FormatException('pill sheet not found');
@@ -132,10 +115,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
   }
 }
 
-PillMarkType pillMarkFor({
-  required int pillNumberInPillSheet,
-  required PillSheet pillSheet,
-}) {
+PillMarkType pillMarkFor({required int pillNumberInPillSheet, required PillSheet pillSheet}) {
   if (pillNumberInPillSheet > pillSheet.typeInfo.dosingPeriod) {
     return (pillSheet.pillSheetType == PillSheetType.pillsheet_21 || pillSheet.pillSheetType == PillSheetType.pillsheet_24_rest_4)
         ? PillMarkType.rest
@@ -150,11 +130,7 @@ PillMarkType pillMarkFor({
   return PillMarkType.normal;
 }
 
-bool shouldPillMarkAnimation({
-  required int pillNumberInPillSheet,
-  required PillSheet pillSheet,
-  required PillSheetGroup pillSheetGroup,
-}) {
+bool shouldPillMarkAnimation({required int pillNumberInPillSheet, required PillSheet pillSheet, required PillSheetGroup pillSheetGroup}) {
   if (pillSheetGroup.lastActiveRestDuration != null) {
     return false;
   }
@@ -184,26 +160,24 @@ class PillNumber extends StatelessWidget {
   final int pageIndex;
   final int pillNumberInPillSheet;
 
-  const PillNumber(
-      {super.key,
-      required this.pillSheetGroup,
-      required this.pillSheet,
-      required this.setting,
-      required this.pageIndex,
-      required this.pillNumberInPillSheet});
+  const PillNumber({
+    super.key,
+    required this.pillSheetGroup,
+    required this.pillSheet,
+    required this.setting,
+    required this.pageIndex,
+    required this.pillNumberInPillSheet,
+  });
 
   @override
   Widget build(BuildContext context) {
     final menstruationDateRanges = pillSheetGroup.menstruationDateRanges(setting: setting);
 
-    final containedMenstruationDuration =
-        menstruationDateRanges.where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet))).isNotEmpty;
+    final containedMenstruationDuration = menstruationDateRanges
+        .where((e) => e.inRange(pillSheet.displayPillTakeDate(pillNumberInPillSheet)))
+        .isNotEmpty;
 
-    final text = pillSheetGroup.displayPillNumberOrDate(
-      premiumOrTrial: true,
-      pageIndex: pageIndex,
-      pillNumberInPillSheet: pillNumberInPillSheet,
-    );
+    final text = pillSheetGroup.displayPillNumberOrDate(premiumOrTrial: true, pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
 
     if (containedMenstruationDuration) {
       return MenstruationPillNumber(text: text);

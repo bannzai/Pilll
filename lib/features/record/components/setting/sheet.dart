@@ -21,13 +21,7 @@ class PillSheetSettingSheet extends HookConsumerWidget {
   final Setting setting;
   final User user;
 
-  const PillSheetSettingSheet({
-    super.key,
-    required this.pillSheetGroup,
-    required this.activePillSheet,
-    required this.setting,
-    required this.user,
-  });
+  const PillSheetSettingSheet({super.key, required this.pillSheetGroup, required this.activePillSheet, required this.setting, required this.user});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -38,12 +32,7 @@ class PillSheetSettingSheet extends HookConsumerWidget {
       data: themeData.copyWith(
         listTileTheme: themeData.listTileTheme.copyWith(
           iconColor: AppColors.primary,
-          titleTextStyle: const TextStyle(
-            color: TextColor.main,
-            fontSize: 14,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-          ),
+          titleTextStyle: const TextStyle(color: TextColor.main, fontSize: 14, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700),
         ),
       ),
       child: Container(
@@ -52,19 +41,9 @@ class PillSheetSettingSheet extends HookConsumerWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            TodayPillNumber(
-              pillSheetGroup: pillSheetGroup,
-              activePillSheet: activePillSheet,
-            ),
-            SwitchingAppearanceMode(
-              setting: setting,
-              user: user,
-              pillSheetGroup: pillSheetGroup,
-            ),
-            if (pillSheetGroup.pillSheetAppearanceMode.isSequential)
-              DisplayNumberSetting(
-                pillSheetGroup: pillSheetGroup,
-              ),
+            TodayPillNumber(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet),
+            SwitchingAppearanceMode(setting: setting, user: user, pillSheetGroup: pillSheetGroup),
+            if (pillSheetGroup.pillSheetAppearanceMode.isSequential) DisplayNumberSetting(pillSheetGroup: pillSheetGroup),
             if (restDuration == null)
               BeginManualRestDuration(
                 appearanceMode: pillSheetGroup.pillSheetAppearanceMode,
@@ -72,21 +51,10 @@ class PillSheetSettingSheet extends HookConsumerWidget {
                 pillSheetGroup: pillSheetGroup,
               )
             else
-              EndManualRestDuration(
-                restDuration: restDuration,
-                activePillSheet: activePillSheet,
-                pillSheetGroup: pillSheetGroup,
-                setting: setting,
-              ),
+              EndManualRestDuration(restDuration: restDuration, activePillSheet: activePillSheet, pillSheetGroup: pillSheetGroup, setting: setting),
             for (final restDuration in pillSheetGroup.restDurations)
-              ChangeManualRestDuration(
-                restDuration: restDuration,
-                pillSheetGroup: pillSheetGroup,
-              ),
-            PillSheetGroupDelete(
-              pillSheetGroup: pillSheetGroup,
-              activePillSheet: activePillSheet,
-            ),
+              ChangeManualRestDuration(restDuration: restDuration, pillSheetGroup: pillSheetGroup),
+            PillSheetGroupDelete(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet),
           ],
         ),
       ),
@@ -95,10 +63,5 @@ class PillSheetSettingSheet extends HookConsumerWidget {
 }
 
 void showPillSheetSettingSheet(BuildContext context, PillSheetSettingSheet sheet) {
-  showModalBottomSheet(
-    context: context,
-    backgroundColor: Colors.transparent,
-    isScrollControlled: true,
-    builder: (_) => sheet,
-  );
+  showModalBottomSheet(context: context, backgroundColor: Colors.transparent, isScrollControlled: true, builder: (_) => sheet);
 }

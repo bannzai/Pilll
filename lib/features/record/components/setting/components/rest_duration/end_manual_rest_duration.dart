@@ -29,21 +29,12 @@ class EndManualRestDuration extends HookConsumerWidget {
 
     void didEndRestDuration(PillSheetGroup endedRestDurationPillSheetGroup) {
       Navigator.of(context).popUntil((route) => route.isFirst);
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          duration: const Duration(
-            seconds: 2,
-          ),
-          content: Text(L.pauseTakingPeriodEnded),
-        ),
-      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.pauseTakingPeriodEnded)));
     }
 
     return ListTile(
       leading: const Icon(Icons.play_arrow),
-      title: Text(
-        L.resumeTaking,
-      ),
+      title: Text(L.resumeTaking),
       onTap: () async {
         analytics.logEvent(name: 'end_manual_rest_duration_pressed');
 

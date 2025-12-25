@@ -33,7 +33,11 @@ class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
     final width = MediaQuery.of(context).size.width;
     final height = width * adAspectRatioSmall;
     if (_nativeAdIsLoaded && _nativeAd != null) {
-      return SizedBox(height: height, width: width, child: AdWidget(ad: _nativeAd!));
+      return SizedBox(
+        height: height,
+        width: width,
+        child: AdWidget(ad: _nativeAd!),
+      );
     } else {
       return Container();
     }
@@ -46,36 +50,37 @@ class AdMobNativeAdvanceState extends State<AdMobNativeAdvance> {
     });
 
     _nativeAd = NativeAd(
-        adUnitId: _adUnitId,
-        listener: NativeAdListener(
-          onAdLoaded: (ad) {
-            // ignore: avoid_print
-            print('$NativeAd loaded.');
-            setState(() {
-              _nativeAdIsLoaded = true;
-            });
-          },
-          onAdFailedToLoad: (ad, error) {
-            // ignore: avoid_print
-            print('$NativeAd failedToLoad: $error');
-            ad.dispose();
-          },
-          onAdClicked: (ad) {},
-          onAdImpression: (ad) {},
-          onAdClosed: (ad) {},
-          onAdOpened: (ad) {},
-          onAdWillDismissScreen: (ad) {},
-          onPaidEvent: (ad, valueMicros, precision, currencyCode) {},
-        ),
-        request: const AdRequest(),
-        nativeTemplateStyle: NativeTemplateStyle(
-            templateType: TemplateType.small,
-            mainBackgroundColor: const Color(0xfffffbed),
-            callToActionTextStyle: NativeTemplateTextStyle(textColor: Colors.white, style: NativeTemplateFontStyle.monospace, size: 16.0),
-            primaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.bold, size: 16.0),
-            secondaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.italic, size: 16.0),
-            tertiaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.normal, size: 16.0)))
-      ..load();
+      adUnitId: _adUnitId,
+      listener: NativeAdListener(
+        onAdLoaded: (ad) {
+          // ignore: avoid_print
+          print('$NativeAd loaded.');
+          setState(() {
+            _nativeAdIsLoaded = true;
+          });
+        },
+        onAdFailedToLoad: (ad, error) {
+          // ignore: avoid_print
+          print('$NativeAd failedToLoad: $error');
+          ad.dispose();
+        },
+        onAdClicked: (ad) {},
+        onAdImpression: (ad) {},
+        onAdClosed: (ad) {},
+        onAdOpened: (ad) {},
+        onAdWillDismissScreen: (ad) {},
+        onPaidEvent: (ad, valueMicros, precision, currencyCode) {},
+      ),
+      request: const AdRequest(),
+      nativeTemplateStyle: NativeTemplateStyle(
+        templateType: TemplateType.small,
+        mainBackgroundColor: const Color(0xfffffbed),
+        callToActionTextStyle: NativeTemplateTextStyle(textColor: Colors.white, style: NativeTemplateFontStyle.monospace, size: 16.0),
+        primaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.bold, size: 16.0),
+        secondaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.italic, size: 16.0),
+        tertiaryTextStyle: NativeTemplateTextStyle(textColor: Colors.black, style: NativeTemplateFontStyle.normal, size: 16.0),
+      ),
+    )..load();
   }
 
   @override

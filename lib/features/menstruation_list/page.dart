@@ -17,7 +17,7 @@ class MenstruationListPage extends HookConsumerWidget {
     if (menstruationsAsyncValue.isLoading) {
       return const ScaffoldIndicator();
     }
-    final menstruations = menstruationsAsyncValue.valueOrNull ?? [];
+    final menstruations = menstruationsAsyncValue.asData?.value ?? [];
 
     return Scaffold(
       backgroundColor: AppColors.background,

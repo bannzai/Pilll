@@ -44,12 +44,7 @@ class InquiryPage extends HookWidget {
         elevation: 0.0,
         title: Text(
           L.contactUs,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w500,
-            fontSize: 20,
-            color: TextColor.main,
-          ),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
         ),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
@@ -68,36 +63,20 @@ class InquiryPage extends HookWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      InquiryTypeSelector(
-                        selectedType: selectedType,
-                        otherTypeText: otherTypeText,
-                      ),
+                      InquiryTypeSelector(selectedType: selectedType, otherTypeText: otherTypeText),
                       const SizedBox(height: 24),
                       Text(
                         L.emailAddress,
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 14,
-                          color: Colors.black87,
-                        ),
+                        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 14, color: Colors.black87),
                       ),
                       const SizedBox(height: 4),
                       Text(
                         L.emailReceiveSettingNote,
-                        style: TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 12,
-                          color: Colors.orange[700],
-                        ),
+                        style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, color: Colors.orange[700]),
                       ),
                       Text(
                         L.emailCannotReceiveICloud,
-                        style: TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontSize: 12,
-                          color: Colors.red[700],
-                        ),
+                        style: TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, color: Colors.red[700]),
                       ),
                       const SizedBox(height: 8),
                       TextFormField(
@@ -117,19 +96,11 @@ class InquiryPage extends HookWidget {
                       const SizedBox(height: 24),
                       Text(
                         L.inquiryContent,
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 14,
-                          color: Colors.black87,
-                        ),
+                        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 14, color: Colors.black87),
                       ),
                       const SizedBox(height: 8),
                       ConstrainedBox(
-                        constraints: const BoxConstraints(
-                          minHeight: 120,
-                          maxHeight: 200,
-                        ),
+                        constraints: const BoxConstraints(minHeight: 120, maxHeight: 200),
                         child: TextFormField(
                           controller: contentController,
                           focusNode: contentFocusNode,
@@ -168,13 +139,13 @@ class InquiryPage extends HookWidget {
                 onPressed: isInvalid() || isSending.value
                     ? null
                     : () => _submitInquiry(
-                          context: context,
-                          selectedType: selectedType.value,
-                          otherTypeText: otherTypeText.value,
-                          email: emailController.text,
-                          content: contentController.text,
-                          isSending: isSending,
-                        ),
+                        context: context,
+                        selectedType: selectedType.value,
+                        otherTypeText: otherTypeText.value,
+                        email: emailController.text,
+                        content: contentController.text,
+                        isSending: isSending,
+                      ),
               ),
               const SizedBox(height: 20),
             ],
@@ -205,12 +176,7 @@ class InquiryPage extends HookWidget {
         content: content,
       );
 
-      messenger.showSnackBar(
-        SnackBar(
-          duration: const Duration(seconds: 2),
-          content: Text(L.inquirySent),
-        ),
-      );
+      messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.inquirySent)));
 
       navigator.pop();
     } catch (error) {

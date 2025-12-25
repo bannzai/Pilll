@@ -25,23 +25,21 @@ class MenstruationCalendarHeader extends StatelessWidget {
   final List<Schedule> schedules;
   final PageController pageController;
 
-  const MenstruationCalendarHeader(
-      {super.key,
-      required this.calendarMenstruationBandModels,
-      required this.calendarScheduledMenstruationBandModels,
-      required this.calendarNextPillSheetBandModels,
-      required this.diaries,
-      required this.schedules,
-      required this.pageController});
+  const MenstruationCalendarHeader({
+    super.key,
+    required this.calendarMenstruationBandModels,
+    required this.calendarScheduledMenstruationBandModels,
+    required this.calendarNextPillSheetBandModels,
+    required this.diaries,
+    required this.schedules,
+    required this.pageController,
+  });
 
   @override
   Widget build(BuildContext context) {
     return ShadowContainer(
       child: Container(
-        padding: const EdgeInsets.only(
-          left: _horizontalPadding,
-          right: _horizontalPadding,
-        ),
+        padding: const EdgeInsets.only(left: _horizontalPadding, right: _horizontalPadding),
         width: MediaQuery.of(context).size.width,
         height: MenstruationPageConst.calendarHeaderHeight,
         child: Column(
@@ -63,14 +61,15 @@ class MenstruationCalendarHeader extends StatelessWidget {
                       horizontalPadding: _horizontalPadding,
                       day: (context, weekday, date) {
                         return CalendarDayTile(
-                            weekday: weekday,
-                            date: date,
-                            diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                            schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
-                            onTap: (date) {
-                              analytics.logEvent(name: 'did_select_day_tile_on_menstruation');
-                              transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
-                            });
+                          weekday: weekday,
+                          date: date,
+                          diary: diaries.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                          schedule: schedules.firstWhereOrNull((e) => isSameDay(e.date, date)),
+                          onTap: (date) {
+                            analytics.logEvent(name: 'did_select_day_tile_on_menstruation');
+                            transitionWhenCalendarDayTapped(context, date: date, diaries: diaries, schedules: schedules);
+                          },
+                        );
                       },
                       calendarMenstruationBandModels: calendarMenstruationBandModels,
                       calendarNextPillSheetBandModels: calendarNextPillSheetBandModels,

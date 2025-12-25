@@ -9,42 +9,32 @@ class DailyTakenMessageTextField extends StatelessWidget {
   final TextEditingController textFieldController;
   final FocusNode focusNode;
 
-  const DailyTakenMessageTextField({
-    super.key,
-    required this.dailyTakenMessage,
-    required this.textFieldController,
-    required this.focusNode,
-  });
+  const DailyTakenMessageTextField({super.key, required this.dailyTakenMessage, required this.textFieldController, required this.focusNode});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
       focusNode: focusNode,
       decoration: InputDecoration(
-        focusedBorder: const UnderlineInputBorder(
-          borderSide: BorderSide(color: AppColors.secondary),
-        ),
+        focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.secondary)),
         label: Text(
           L.normal,
-          style: const TextStyle(
-            color: TextColor.darkGray,
-            fontFamily: FontFamily.japanese,
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-          ),
+          style: const TextStyle(color: TextColor.darkGray, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
         ),
-        counter: Row(children: [
-          Text(
-            L.changeDailyNotificationMessage,
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
-          ),
-          const Spacer(),
-          if (dailyTakenMessage.value.characters.isNotEmpty)
+        counter: Row(
+          children: [
             Text(
-              '${dailyTakenMessage.value.characters.length}/100',
+              L.changeDailyNotificationMessage,
               style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
             ),
-        ]),
+            const Spacer(),
+            if (dailyTakenMessage.value.characters.isNotEmpty)
+              Text(
+                '${dailyTakenMessage.value.characters.length}/100',
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400, color: TextColor.darkGray),
+              ),
+          ],
+        ),
       ),
       onChanged: (value) {
         dailyTakenMessage.value = value;

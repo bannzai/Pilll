@@ -17,11 +17,7 @@ class MonthCalendar extends HookConsumerWidget {
   final DateTime dateForMonth;
   final Widget Function(BuildContext, List<Diary>, List<Schedule>, DateRange) weekCalendarBuilder;
 
-  const MonthCalendar({
-    super.key,
-    required this.dateForMonth,
-    required this.weekCalendarBuilder,
-  });
+  const MonthCalendar({super.key, required this.dateForMonth, required this.weekCalendarBuilder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -33,10 +29,7 @@ class MonthCalendar extends HookConsumerWidget {
       ref.read(schedulesForMonthProvider(DateTime(dateForMonth.year, dateForMonth.month - 1, 1)));
       return null;
     }, [dateForMonth]);
-    return AsyncValueGroup.group2(
-      ref.watch(diariesForMonthProvider(dateForMonth)),
-      ref.watch(schedulesForMonthProvider(dateForMonth)),
-    ).when(
+    return AsyncValueGroup.group2(ref.watch(diariesForMonthProvider(dateForMonth)), ref.watch(schedulesForMonthProvider(dateForMonth))).when(
       data: (data) {
         final diaries = data.$1;
         final schedules = data.$2;
@@ -46,14 +39,7 @@ class MonthCalendar extends HookConsumerWidget {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: List.generate(
-                Weekday.values.length,
-                (index) => Expanded(
-                  child: WeekdayBadge(
-                    weekday: Weekday.values[index],
-                  ),
-                ),
-              ),
+              children: List.generate(Weekday.values.length, (index) => Expanded(child: WeekdayBadge(weekday: Weekday.values[index]))),
             ),
             const Divider(height: 1),
             ...List.generate(CalendarConstants.maxLineCount, (offset) {
@@ -67,12 +53,7 @@ class MonthCalendar extends HookConsumerWidget {
               }
 
               final weekCalendar = weekCalendarBuilder(context, diaries, schedules, weeks[offset]);
-              return Column(
-                children: [
-                  weekCalendar,
-                  const Divider(height: 1),
-                ],
-              );
+              return Column(children: [weekCalendar, const Divider(height: 1)]);
             }),
           ],
         );

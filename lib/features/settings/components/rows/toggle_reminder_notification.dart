@@ -12,10 +12,7 @@ import 'package:pilll/utils/local_notification.dart';
 class ToggleReminderNotification extends HookConsumerWidget {
   final Setting setting;
 
-  const ToggleReminderNotification({
-    super.key,
-    required this.setting,
-  });
+  const ToggleReminderNotification({super.key, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,17 +23,11 @@ class ToggleReminderNotification extends HookConsumerWidget {
     return SwitchListTile(
       title: Text(
         L.pillReminder,
-        style: const TextStyle(
-          fontFamily: FontFamily.roboto,
-          fontWeight: FontWeight.w300,
-          fontSize: 16,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
       ),
       activeColor: AppColors.secondary,
       onChanged: (bool value) async {
-        analytics.logEvent(
-          name: 'did_select_toggle_reminder',
-        );
+        analytics.logEvent(name: 'did_select_toggle_reminder');
         final messenger = ScaffoldMessenger.of(context);
         messenger.hideCurrentSnackBar();
         try {
@@ -46,14 +37,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
           } else {
             await cancelReminderLocalNotification();
           }
-          messenger.showSnackBar(
-            SnackBar(
-              duration: const Duration(seconds: 2),
-              content: Text(
-                L.pillReminderChanged(value ? 'ON' : 'OFF'),
-              ),
-            ),
-          );
+          messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.pillReminderChanged(value ? 'ON' : 'OFF'))));
         } catch (error) {
           if (context.mounted) showErrorAlert(context, error);
         }

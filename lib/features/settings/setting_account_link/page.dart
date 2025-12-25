@@ -47,30 +47,21 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: Text(
                     L.registerAccount,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.primary,
-                    ),
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.primary),
                   ),
                 ),
                 SettingAccountCooperationRow(
                   accountType: LinkAccountType.apple,
                   isLinked: () => isAppleLinked,
                   onTap: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_apple_tapped',
-                    );
+                    analytics.logEvent(name: 'a_c_l_apple_tapped');
                     if (isAppleLinked) {
                       return;
                     }
                     _showSignInSheet(context);
                   },
                   onLongPress: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_apple_long_press',
-                    );
+                    analytics.logEvent(name: 'a_c_l_apple_long_press');
 
                     showDiscardDialog(
                       context,
@@ -93,12 +84,7 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
 
                               await appleReauthentification();
 
-                              messenger.showSnackBar(
-                                SnackBar(
-                                  duration: const Duration(seconds: 2),
-                                  content: Text(L.authenticationInfoUpdated),
-                                ),
-                              );
+                              messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.authenticationInfoUpdated)));
                               navigator.pop();
                             } catch (error) {
                               showErrorAlert(context, error);
@@ -114,18 +100,14 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   accountType: LinkAccountType.google,
                   isLinked: () => isGoogleLinked,
                   onTap: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_google_tapped',
-                    );
+                    analytics.logEvent(name: 'a_c_l_google_tapped');
                     if (isGoogleLinked) {
                       return;
                     }
                     _showSignInSheet(context);
                   },
                   onLongPress: () async {
-                    analytics.logEvent(
-                      name: 'a_c_l_google_long_press',
-                    );
+                    analytics.logEvent(name: 'a_c_l_google_long_press');
                     showDiscardDialog(
                       context,
                       title: L.updateAuthenticationInformation,
@@ -147,12 +129,7 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
 
                               await googleReauthentification();
 
-                              messenger.showSnackBar(
-                                SnackBar(
-                                  duration: const Duration(seconds: 2),
-                                  content: Text(L.authenticationInfoUpdated),
-                                ),
-                              );
+                              messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.authenticationInfoUpdated)));
                               navigator.pop();
                             } catch (error) {
                               showErrorAlert(context, error);
@@ -167,12 +144,7 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
                   padding: const EdgeInsets.only(top: 16, left: 15, right: 16),
                   child: Text(
                     L.deleteAccount,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.primary,
-                    ),
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.primary),
                   ),
                 ),
                 const Divider(indent: 16),
@@ -186,20 +158,13 @@ class SettingAccountCooperationLinkPage extends HookConsumerWidget {
   }
 
   void _showSignInSheet(BuildContext context) {
-    showSignInSheet(
-      context,
-      SignInSheetStateContext.setting,
-      (accountType) async {
-        const snackBarDuration = Duration(seconds: 1);
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            duration: snackBarDuration,
-            content: Text(L.registeredWithProvider(accountType.providerName)),
-          ),
-        );
-        await Future.delayed(snackBarDuration);
-      },
-    );
+    showSignInSheet(context, SignInSheetStateContext.setting, (accountType) async {
+      const snackBarDuration = Duration(seconds: 1);
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(duration: snackBarDuration, content: Text(L.registeredWithProvider(accountType.providerName))));
+      await Future.delayed(snackBarDuration);
+    });
   }
 }
 
@@ -218,23 +183,15 @@ class SettingAccountCooperationRow extends StatelessWidget {
   final Future<void> Function() onTap;
   final Future<void> Function() onLongPress;
 
-  const SettingAccountCooperationRow({
-    super.key,
-    required this.accountType,
-    required this.isLinked,
-    required this.onTap,
-    required this.onLongPress,
-  });
+  const SettingAccountCooperationRow({super.key, required this.accountType, required this.isLinked, required this.onTap, required this.onLongPress});
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(accountType.loginContentName,
-          style: const TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: Text(
+        accountType.loginContentName,
+        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+      ),
       trailing: _trailing(),
       horizontalTitleGap: 4,
       onTap: () async {
@@ -258,12 +215,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
           const SizedBox(width: 6),
           Text(
             L.linked,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w300,
-              fontSize: 14,
-              color: TextColor.darkGray,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.darkGray),
           ),
         ],
       );

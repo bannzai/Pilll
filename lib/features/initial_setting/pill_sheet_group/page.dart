@@ -45,12 +45,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       }();
       if (accountType != null) {
         Future.microtask(() {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              duration: const Duration(seconds: 2),
-              content: Text(L.loggedInWithProvider(accountType.providerName)),
-            ),
-          );
+          ScaffoldMessenger.of(
+            context,
+          ).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.loggedInWithProvider(accountType.providerName))));
         });
       }
 
@@ -62,10 +59,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
       child: Scaffold(
         backgroundColor: AppColors.background,
         appBar: AppBar(
-          title: const Text(
-            '1/3',
-            style: TextStyle(color: TextColor.black),
-          ),
+          title: const Text('1/3', style: TextStyle(color: TextColor.black)),
           backgroundColor: AppColors.white,
         ),
         body: SafeArea(
@@ -79,12 +73,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                       const SizedBox(height: 24),
                       Text(
                         L.tellAboutPrescribedSheet,
-                        style: const TextStyle(
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 20,
-                          color: TextColor.main,
-                        ),
+                        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
                         textAlign: TextAlign.center,
                       ),
                       InitialSettingPillSheetGroupPageBody(state: state, store: store),
@@ -116,13 +105,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                           text: L.existingAccountUsers,
                           onPressed: () async {
                             analytics.logEvent(name: 'pressed_initial_setting_signin');
-                            showSignInSheet(
-                              context,
-                              SignInSheetStateContext.initialSetting,
-                              (accountType) async {
-                                store.showHUD();
-                              },
-                            );
+                            showSignInSheet(context, SignInSheetStateContext.initialSetting, (accountType) async {
+                              store.showHUD();
+                            });
                           },
                         ),
                         const SizedBox(height: 35),
@@ -140,11 +125,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 }
 
 class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
-  const InitialSettingPillSheetGroupPageBody({
-    super.key,
-    required this.state,
-    required this.store,
-  });
+  const InitialSettingPillSheetGroupPageBody({super.key, required this.state, required this.store});
 
   final InitialSettingState state;
   final InitialSettingStateNotifier store;
@@ -158,20 +139,23 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
         children: [
           const SizedBox(height: 6),
           SettingPillSheetGroup(
-              pillSheetTypes: state.pillSheetTypes,
-              onAdd: (pillSheetType) {
-                analytics.logEvent(name: 'initial_setting_add_pill_sheet_group', parameters: {'pill_sheet_type': pillSheetType.fullName});
-                store.addPillSheetType(pillSheetType);
-              },
-              onChange: (index, pillSheetType) {
-                analytics.logEvent(
-                    name: 'initial_setting_change_pill_sheet_group', parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName});
-                store.changePillSheetType(index, pillSheetType);
-              },
-              onDelete: (index) {
-                analytics.logEvent(name: 'initial_setting_delete_pill_sheet_group', parameters: {'index': index});
-                store.removePillSheetType(index);
-              }),
+            pillSheetTypes: state.pillSheetTypes,
+            onAdd: (pillSheetType) {
+              analytics.logEvent(name: 'initial_setting_add_pill_sheet_group', parameters: {'pill_sheet_type': pillSheetType.fullName});
+              store.addPillSheetType(pillSheetType);
+            },
+            onChange: (index, pillSheetType) {
+              analytics.logEvent(
+                name: 'initial_setting_change_pill_sheet_group',
+                parameters: {'index': index, 'pill_sheet_type': pillSheetType.fullName},
+              );
+              store.changePillSheetType(index, pillSheetType);
+            },
+            onDelete: (index) {
+              analytics.logEvent(name: 'initial_setting_delete_pill_sheet_group', parameters: {'index': index});
+              store.removePillSheetType(index);
+            },
+          ),
         ],
       );
     }

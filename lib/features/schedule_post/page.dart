@@ -39,11 +39,7 @@ class SchedulePostPage extends HookConsumerWidget {
         user: data.$1,
         schedule: data.$2.firstOrNull ?? Schedule(title: '', localNotification: null, date: date, createdDateTime: DateTime.now()),
       ),
-      error: (error, _) => UniversalErrorPage(
-        error: error,
-        child: null,
-        reload: () => ref.refresh(refreshAppProvider),
-      ),
+      error: (error, _) => UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(refreshAppProvider)),
       loading: () => const ScaffoldIndicator(),
     );
   }
@@ -54,11 +50,7 @@ class _SchedulePostPage extends HookConsumerWidget {
   final Schedule schedule;
   final User user;
 
-  const _SchedulePostPage({
-    required this.date,
-    required this.schedule,
-    required this.user,
-  });
+  const _SchedulePostPage({required this.date, required this.schedule, required this.user});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -75,13 +67,10 @@ class _SchedulePostPage extends HookConsumerWidget {
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
-        title: Text(DateTimeFormatter.yearAndMonthAndDay(date),
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w500,
-              fontSize: 20,
-              color: TextColor.main,
-            )),
+        title: Text(
+          DateTimeFormatter.yearAndMonthAndDay(date),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+        ),
         leading: IconButton(
           icon: const Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
@@ -109,10 +98,7 @@ class _SchedulePostPage extends HookConsumerWidget {
                           onChanged: (text) {
                             title.value = text;
                           },
-                          decoration: InputDecoration(
-                            hintText: L.visitHospital,
-                            border: const OutlineInputBorder(),
-                          ),
+                          decoration: InputDecoration(hintText: L.visitHospital, border: const OutlineInputBorder()),
                           controller: textEditingController,
                           maxLines: null,
                           maxLength: 60,
@@ -123,17 +109,11 @@ class _SchedulePostPage extends HookConsumerWidget {
                       SwitchListTile(
                         title: Text(
                           L.receiveNotificationAt9AM,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.roboto,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 16,
-                          ),
+                          style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
                         ),
                         activeColor: AppColors.secondary,
                         onChanged: (bool value) {
-                          analytics.logEvent(
-                            name: 'schedule_post_remind_toggle',
-                          );
+                          analytics.logEvent(name: 'schedule_post_remind_toggle');
                           isOnRemind.value = value;
                         },
                         value: isOnRemind.value,
@@ -182,16 +162,10 @@ class _SchedulePostPage extends HookConsumerWidget {
                               );
                               await localNotificationService.scheduleCalendarScheduleNotification(schedule: newSchedule);
                             } else {
-                              newSchedule = schedule.copyWith(
-                                title: title.value,
-                                localNotification: null,
-                              );
+                              newSchedule = schedule.copyWith(title: title.value, localNotification: null);
                             }
 
-                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(
-                                  newSchedule,
-                                  SetOptions(merge: true),
-                                );
+                            await ref.read(databaseProvider).schedulesReference().doc(newSchedule.id).set(newSchedule, SetOptions(merge: true));
                             navigator.pop();
                           } catch (error) {
                             if (context.mounted) showErrorAlert(context, error);

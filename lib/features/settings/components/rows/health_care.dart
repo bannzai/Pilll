@@ -9,10 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 class HealthCareRow extends StatelessWidget {
   final DateTime? trialDeadlineDate;
 
-  const HealthCareRow({
-    super.key,
-    required this.trialDeadlineDate,
-  });
+  const HealthCareRow({super.key, required this.trialDeadlineDate});
 
   @override
   Widget build(BuildContext context) {
@@ -22,19 +19,13 @@ class HealthCareRow extends StatelessWidget {
         children: [
           Text(
             L.healthCareIntegration,
-            style: const TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
           ),
         ],
       ),
       subtitle: Text(L.healthCareIntegrationDescription),
       onTap: () async {
-        analytics.logEvent(
-          name: 'did_select_health_care_row',
-        );
+        analytics.logEvent(name: 'did_select_health_care_row');
 
         try {
           if (await healthKitRequestAuthorizationIsUnnecessary()) {

@@ -27,8 +27,10 @@ class AnnualPurchaseButton extends StatelessWidget {
     Locale locale = Localizations.localeOf(context);
     // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったらmonthlyPriceString を表示するように戻す
     // final monthlyPriceString = NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0).format(monthlyPrice);
-    final String dailyPriceString =
-        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 2).format(annualPackage.storeProduct.price / 365);
+    final String dailyPriceString = NumberFormat.simpleCurrency(
+      locale: locale.toString(),
+      decimalDigits: 2,
+    ).format(annualPackage.storeProduct.price / 365);
 
     return GestureDetector(
       onTap: () {
@@ -42,10 +44,7 @@ class AnnualPurchaseButton extends StatelessWidget {
             decoration: BoxDecoration(
               color: AppColors.blueBackground,
               borderRadius: const BorderRadius.all(Radius.circular(4)),
-              border: Border.all(
-                width: 2,
-                color: AppColors.primary,
-              ),
+              border: Border.all(width: 2, color: AppColors.primary),
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -53,32 +52,17 @@ class AnnualPurchaseButton extends StatelessWidget {
               children: [
                 Text(
                   L.annualPlan,
-                  style: const TextStyle(
-                    color: TextColor.main,
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w700,
-                  ),
+                  style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 16, fontWeight: FontWeight.w700),
                 ),
                 Text(
                   L.annualPrice(annualPackage.storeProduct.priceString),
-                  style: const TextStyle(
-                    color: TextColor.main,
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                  ),
+                  style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 16, fontWeight: FontWeight.w600),
                 ),
                 Text(
                   // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったらmonthlyPriceString を表示するように戻す
                   // '(${L.monthlyPrice(monthlyPriceString)})',
                   '(${L.dailyPrice(dailyPriceString)})',
-                  style: const TextStyle(
-                    color: TextColor.main,
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w400,
-                  ),
+                  style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400),
                 ),
               ],
             ),
@@ -105,36 +89,23 @@ class _DiscountBadge extends StatelessWidget {
   final Package annualPackage;
   final Package monthlyPremiumPackage;
 
-  const _DiscountBadge({
-    required this.offeringType,
-    required this.monthlyPackage,
-    required this.annualPackage,
-    required this.monthlyPremiumPackage,
-  });
+  const _DiscountBadge({required this.offeringType, required this.monthlyPackage, required this.annualPackage, required this.monthlyPremiumPackage});
 
   @override
   Widget build(BuildContext context) {
     // NOTE: [DiscountPercent]
-    final offPercentForMonthlyPremiumPackage =
-        ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100).toInt();
+    final offPercentForMonthlyPremiumPackage = ((1 - (annualPackage.storeProduct.price / (monthlyPremiumPackage.storeProduct.price * 12))) * 100)
+        .toInt();
     final offPercentForMonthlyPackage = ((1 - (annualPackage.storeProduct.price / (monthlyPackage.storeProduct.price * 12))) * 100).toInt();
 
     return Container(
       padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: AppColors.secondary,
-      ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: AppColors.secondary),
       child: Text(
         (offeringType == OfferingType.discount || offeringType == OfferingType.specialOffering)
             ? L.offPercentForMonthlyPremiumPackage(offPercentForMonthlyPremiumPackage)
             : '$offPercentForMonthlyPackage％OFF',
-        style: const TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 10,
-          fontFamily: FontFamily.japanese,
-          color: TextColor.white,
-        ),
+        style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.white),
       ),
     );
   }
