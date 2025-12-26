@@ -91,7 +91,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
 void showInvalidAlreadyTakenPillDialog(
   BuildContext context,
 ) {
-  analytics.setCurrentScreen(screenName: 'InvalidAlreadyTakenPillDialog');
+  analytics.logScreenView(screenName: 'InvalidAlreadyTakenPillDialog');
   showDialog(
     context: context,
     builder: (context) => const InvalidAlreadyTakenPillDialog(),

@@ -45,7 +45,7 @@ class FakeAnalytics extends Fake implements Analytics {
   void logEvent({required String name, Map<String, dynamic>? parameters}) {}
 
   @override
-  void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) {}
+  void logScreenView({required String screenName, String screenClass = 'Flutter'}) {}
 
   @override
   void setUserProperties(String name, value) {}

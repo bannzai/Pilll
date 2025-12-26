@@ -222,7 +222,7 @@ class HomePageBody extends HookConsumerWidget {
   }
 
   void _screenTracking(int index) {
-    analytics.setCurrentScreen(
+    analytics.logScreenView(
       screenName: HomePageTabType.values[index].screenName,
     );
   }
