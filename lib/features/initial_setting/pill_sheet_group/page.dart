@@ -180,7 +180,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
 
 extension InitialSettingPillSheetGroupPageRoute on InitialSettingPillSheetGroupPage {
   static InitialSettingPillSheetGroupPage screen() {
-    analytics.setCurrentScreen(screenName: 'InitialSettingPillSheetGroupPage');
+    analytics.logScreenView(screenName: 'InitialSettingPillSheetGroupPage');
     return const InitialSettingPillSheetGroupPage();
   }
 }

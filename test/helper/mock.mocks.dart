@@ -306,17 +306,17 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
       );
 
   @override
-  void setCurrentScreen({
+  void logScreenView({
     required String? screenName,
-    String? screenClassOverride = r'Flutter',
+    String? screenClass = r'Flutter',
   }) =>
       super.noSuchMethod(
         Invocation.method(
-          #setCurrentScreen,
+          #logScreenView,
           [],
           {
             #screenName: screenName,
-            #screenClassOverride: screenClassOverride,
+            #screenClass: screenClass,
           },
         ),
         returnValueForMissingStub: null,

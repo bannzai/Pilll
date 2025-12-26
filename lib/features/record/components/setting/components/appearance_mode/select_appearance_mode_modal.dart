@@ -149,7 +149,7 @@ void showSelectAppearanceModeModal(
   required User user,
   required PillSheetGroup pillSheetGroup,
 }) {
-  analytics.setCurrentScreen(screenName: 'SelectAppearanceModeModal');
+  analytics.logScreenView(screenName: 'SelectAppearanceModeModal');
   showModalBottomSheet(
     context: context,
     builder: (context) => SelectAppearanceModeModal(

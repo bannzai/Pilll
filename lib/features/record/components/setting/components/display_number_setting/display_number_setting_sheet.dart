@@ -331,7 +331,7 @@ void showDisplayNumberSettingSheet(
   BuildContext context, {
   required PillSheetGroup pillSheetGroup,
 }) {
-  analytics.setCurrentScreen(screenName: 'DisplayNumberSettingSheet');
+  analytics.logScreenView(screenName: 'DisplayNumberSettingSheet');
   showModalBottomSheet(
     context: context,
     builder: (context) => DisplayNumberSettingSheet(
