@@ -72,30 +72,31 @@ Breaking Changes:
 更新を続行しますか？
 ```
 
-### Step 5: pubspec.yamlの更新
+### Step 5: パッケージの更新
 
-承認後、pubspec.yamlを編集:
+承認後、`flutter pub upgrade`コマンドを使用:
 
-```yaml
-dependencies:
-  パッケージ名: ^新バージョン
-```
-
-バージョン指定の方針:
-- 通常は `^バージョン` (caret syntax) を使用
-- 既存の指定方法を維持（例: `>=1.0.0 <2.0.0` 形式なら同じ形式で）
-
-### Step 6: 依存関係の解決
-
+**指定パッケージの更新:**
 ```bash
-flutter pub get
+flutter pub upgrade パッケージ名
 ```
 
-エラーが発生した場合:
-1. 依存関係の競合を分析
-2. 解決策を提案（バージョン調整など）
+**メジャーバージョンを含む更新:**
+```bash
+flutter pub upgrade --major-versions パッケージ名
+```
 
-### Step 7: 更新結果の報告
+**全パッケージの更新:**
+```bash
+flutter pub upgrade
+```
+
+**全パッケージのメジャーバージョン更新:**
+```bash
+flutter pub upgrade --major-versions
+```
+
+### Step 6: 更新結果の報告
 
 更新完了後、以下を報告:
 
@@ -114,7 +115,4 @@ flutter pub get
 
 ## 注意事項
 
-- `flutter pub upgrade`は使用しない（意図しない更新を避けるため）
-- pubspec.yamlを直接編集してバージョンを指定
-- 更新後は`flutter pub get`で依存解決を確認
 - 自動生成ファイル（*.g.dart, *.freezed.dart）がある場合は`flutter pub run build_runner build --delete-conflicting-outputs`の実行を提案
