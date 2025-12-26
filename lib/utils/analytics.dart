@@ -47,7 +47,7 @@ class Analytics {
 
   void setCurrentScreen({required String screenName, String screenClassOverride = 'Flutter'}) async {
     unawaited(firebaseAnalytics.logEvent(name: 'screen_$screenName'));
-    return firebaseAnalytics.setCurrentScreen(screenName: screenName, screenClassOverride: screenClassOverride);
+    return firebaseAnalytics.logScreenView(screenName: screenName, screenClass: screenClassOverride);
   }
 
   /// Up to 25 user property names are supported.
