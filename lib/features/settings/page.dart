@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:pilll/utils/async_value_group.dart';
+import 'package:async_value_group/async_value_group.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
