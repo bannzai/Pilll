@@ -65,7 +65,7 @@ android {
     println "DEBUG NAMESPACE: com.mizuki.Ohashi.Pilll (fixed)"
     println "DEBUG APPLICATION_ID: ${dartDefines.ANDROID_APPLICATION_ID}"
 
-    compileSdkVersion 35
+    compileSdkVersion 36
 
     compileOptions {
         coreLibraryDesugaringEnabled true

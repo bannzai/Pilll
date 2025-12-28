@@ -72,7 +72,7 @@ void showSettingPillSheetGroupSelectPillSheetTypePage({
   required final PillSheetType? pillSheetType,
   required final Function(PillSheetType) onSelect,
 }) {
-  analytics.setCurrentScreen(screenName: 'PillSheetGroupSelectPillSheetTypePage');
+  analytics.logScreenView(screenName: 'PillSheetGroupSelectPillSheetTypePage');
   showModalBottomSheet(
     context: context,
     isScrollControlled: true,
