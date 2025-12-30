@@ -28,7 +28,7 @@ gh pr list --author "app/dependabot" --state open
 ```bash
 git checkout main
 git pull origin main
-git checkout -b fix/dependabot-updates-$(date +%Y%m%d)
+git checkout -b chore/dependabot-updates-$(date +%Y%m%d%H%M%S)
 ```
 
 ### 4. 各PRの変更を取り込む
@@ -38,6 +38,7 @@ git checkout -b fix/dependabot-updates-$(date +%Y%m%d)
 ```bash
 # 例: dependabot/npm_and_yarn/パッケージ名-バージョン のようなブランチ名
 git fetch origin <dependabotブランチ名>
+# コミットハッシュは `gh pr view <PR番号> --json commits --jq '.commits[0].oid'` で取得できます
 git cherry-pick <コミットハッシュ>
 # または
 git merge origin/<dependabotブランチ名> --no-edit
