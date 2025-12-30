@@ -1,7 +1,7 @@
 ---
 name: fix-dependabot-prs
 description: dependabotから上がってきた複数のPRを一括で解決し、まとめPRを作成する。dependabotのPR対応を依頼された時に使用。
-allowed-tools: Read, Bash(gh:*), Bash(git:*), Bash(flutter:*), Bash(dart:*), Bash(pod:*), Glob, Grep
+allowed-tools: Read, Bash(gh run:*), Bash(gh pr:*), Bash(git status:*), Bash(git push:*), Bash(git add:*), Bash(git commit:*), Bash(git cherry-pick:*), Bash(git merge:*), Bash(git fetch:*), Bash(git pull:*), Bash(git diff:*), Bash(git checkout:*), Bash(flutter:*), Bash(dart:*), Bash(pod:*), Glob, Grep, Write
 ---
 
 # Dependabot PRまとめ解決スキル
