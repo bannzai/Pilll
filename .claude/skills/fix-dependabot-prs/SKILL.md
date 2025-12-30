@@ -1,3 +1,9 @@
+---
+name: fix-dependabot-prs
+description: dependabotから上がってきた複数のPRを一括で解決し、まとめPRを作成する。dependabotのPR対応を依頼された時に使用。
+allowed-tools: Read, Bash(gh:*), Bash(git:*), Bash(flutter:*), Bash(dart:*), Bash(pod:*), Glob, Grep
+---
+
 # Dependabot PRまとめ解決スキル
 
 dependabotから上がってきた複数のPRを一括で解決し、まとめPRを作成します。
@@ -102,8 +108,6 @@ dependabotから上がってきた複数のPRをまとめて対応しました�
 
 ## 除外したPR（ある場合）
 - #PR番号: 除外理由
-
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
 EOF
 )"
 ```
