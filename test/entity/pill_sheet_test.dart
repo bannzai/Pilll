@@ -1253,16 +1253,12 @@ void main() {
       expect(model.lastTakenOrZeroPillNumber, 0);
     });
     test("境界値テスト：開始日と同日に服用した場合は1番を返す", () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
-
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-14"),
-        createdAt: now(),
+        createdAt: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -1273,16 +1269,12 @@ void main() {
       expect(model.lastTakenOrZeroPillNumber, 1);
     });
     test("境界値テスト：開始日の翌日に服用した場合は2番を返す", () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-15"));
-
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-15"),
-        createdAt: now(),
+        createdAt: DateTime.parse("2020-09-15"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -1416,10 +1408,6 @@ void main() {
       expect(model.lastTakenOrZeroPillNumber, 0);
     });
     test("境界値テスト：休薬期間開始日と同日が最終服用日の場合", () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
-
       const sheetType = PillSheetType.pillsheet_21;
       // 休薬期間開始日は2020-09-23、最終服用日も2020-09-23
       // 開始日から23日目まで服用しているので、23番を返すべき
@@ -1427,7 +1415,7 @@ void main() {
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-23"),
-        createdAt: now(),
+        createdAt: DateTime.parse("2020-09-28"),
         restDurations: [
           RestDuration(
             id: "rest_duration_id",
@@ -1445,12 +1433,8 @@ void main() {
       expect(model.lastTakenOrZeroPillNumber, 23);
     });
     test("境界値テスト：休薬期間終了日と同日が最終服用日の場合", () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
-
       const sheetType = PillSheetType.pillsheet_21;
-      // 休薬期間は2020-09-20から2020-09-22（3日間）
+      // 休薬期間は2020-09-20から2020-09-22（2日間）
       // 最終服用日は2020-09-22（休薬終了日と同日）
       // 休薬期間中は番号が進まないので、休薬開始前の最終服用番号のまま
       // beginingDate: 2020-09-01, lastTakenDate: 2020-09-22
@@ -1463,7 +1447,7 @@ void main() {
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-22"),
-        createdAt: now(),
+        createdAt: DateTime.parse("2020-09-28"),
         restDurations: [
           RestDuration(
             id: "rest_duration_id",
@@ -1482,10 +1466,6 @@ void main() {
       expect(model.lastTakenOrZeroPillNumber, 20);
     });
     test("境界値テスト：休薬期間終了日の翌日が最終服用日の場合", () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
-
       const sheetType = PillSheetType.pillsheet_21;
       // 休薬期間は2020-09-20から2020-09-22（2日間）
       // 最終服用日は2020-09-23（休薬終了日の翌日）
@@ -1495,7 +1475,7 @@ void main() {
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-23"),
-        createdAt: now(),
+        createdAt: DateTime.parse("2020-09-28"),
         restDurations: [
           RestDuration(
             id: "rest_duration_id",
