@@ -115,6 +115,26 @@ def run_command(cmd: list[str], check: bool = False) -> int:
     return result.returncode
 
 
+def has_git_changes() -> bool:
+    """git statusで変更があるかチェック（untracked含む）"""
+    result = subprocess.run(
+        ["git", "status", "--porcelain"],
+        capture_output=True,
+        text=True
+    )
+    return bool(result.stdout.strip())
+
+
+def has_unpushed_commits(base_branch: str) -> bool:
+    """ベースブランチと比較してコミットがあるかチェック"""
+    result = subprocess.run(
+        ["git", "log", f"{base_branch}..HEAD", "--oneline"],
+        capture_output=True,
+        text=True
+    )
+    return bool(result.stdout.strip())
+
+
 def get_all_targets() -> list[tuple[str, str]]:
     """全ての (Entity, method) ペアを順序通りに返す"""
     targets = []
@@ -208,8 +228,17 @@ def main():
             "--max-turns", "1000"
         ])
 
-        # 4. ベースブランチを更新（次のPR用）
-        base_branch = branch_name
+        # 4. 変更があるかチェック
+        if has_git_changes() or has_unpushed_commits(base_branch):
+            # 変更がある場合: ベースブランチを更新（次のPR用）
+            print(f"\n変更あり: {branch_name} を次のベースブランチとして使用")
+            base_branch = branch_name
+        else:
+            # 変更がない場合: ブランチを破棄して元のブランチに戻す
+            print(f"\n変更なし: {branch_name} を破棄して {base_branch} に戻ります")
+            run_command(["git", "checkout", base_branch])
+            run_command(["git", "branch", "-D", branch_name])
+            # base_branchは更新しない（次のイテレーションでも同じベースを使う）
 
     print("\n" + "=" * 60)
     print("全ての処理が完了しました")
