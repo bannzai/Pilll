@@ -3561,4 +3561,431 @@ void main() {
       });
     });
   });
+
+  group('#createDeletedPillSheetAction', () {
+    // テスト用ヘルパー: PillSheetを生成する
+    PillSheet createPillSheet({
+      required String id,
+      required PillSheetType type,
+      required DateTime beginingDate,
+      DateTime? lastTakenDate,
+      int groupIndex = 0,
+    }) {
+      return PillSheet(
+        id: id,
+        typeInfo: type.typeInfo,
+        beginingDate: beginingDate,
+        lastTakenDate: lastTakenDate,
+        createdAt: beginingDate,
+        groupIndex: groupIndex,
+      );
+    }
+
+    // テスト用ヘルパー: PillSheetGroupを生成する
+    PillSheetGroup createPillSheetGroup({
+      required String id,
+      required List<PillSheet> pillSheets,
+      DateTime? deletedAt,
+    }) {
+      return PillSheetGroup(
+        id: id,
+        pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
+        pillSheets: pillSheets,
+        createdAt: DateTime.parse('2020-09-01'),
+        deletedAt: deletedAt,
+      );
+    }
+
+    group('正常系', () {
+      test('単一のピルシートを削除した場合、DeletedPillSheetValueの各プロパティが正しく設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beginingDate.add(const Duration(days: 10)),
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final deletedPillSheet = pillSheet.copyWith(deletedAt: DateTime.now());
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [deletedPillSheet],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.enumActionType, PillSheetModifiedActionType.deletedPillSheet);
+        expect(history.value.deletedPillSheet, isNotNull);
+        expect(history.value.deletedPillSheet!.pillSheetIDs, ['sheet_1']);
+        expect(history.value.deletedPillSheet!.pillSheetDeletedAt, isNotNull);
+      });
+
+      test('複数のピルシートを同時に削除した場合、すべてのpillSheetIDsが正しく設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet1 = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          groupIndex: 0,
+        );
+
+        final pillSheet2 = createPillSheet(
+          id: 'sheet_2',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate.add(const Duration(days: 28)),
+          groupIndex: 1,
+        );
+
+        final pillSheet3 = createPillSheet(
+          id: 'sheet_3',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate.add(const Duration(days: 56)),
+          groupIndex: 2,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet1, pillSheet2, pillSheet3],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [
+            pillSheet1.copyWith(deletedAt: DateTime.now()),
+            pillSheet2.copyWith(deletedAt: DateTime.now()),
+            pillSheet3.copyWith(deletedAt: DateTime.now()),
+          ],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1', 'sheet_2', 'sheet_3'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.value.deletedPillSheet!.pillSheetIDs, ['sheet_1', 'sheet_2', 'sheet_3']);
+        expect(history.value.deletedPillSheet!.pillSheetIDs.length, 3);
+      });
+
+      test('pillSheetIDsが空の場合でも正常に履歴が作成される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: [],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.value.deletedPillSheet!.pillSheetIDs, isEmpty);
+      });
+
+      test('前後のPillSheetGroupが正しく設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beginingDate.add(const Duration(days: 10)),
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final deletedPillSheet = pillSheet.copyWith(deletedAt: DateTime.now());
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [deletedPillSheet],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.beforePillSheetGroup, beforePillSheetGroup);
+        expect(history.afterPillSheetGroup, updatedPillSheetGroup);
+        expect(history.pillSheetGroupID, 'group_1');
+      });
+
+      test('estimatedEventCausingDateとcreatedAtが設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.estimatedEventCausingDate, isNotNull);
+        expect(history.createdAt, isNotNull);
+        expect(history.value.deletedPillSheet!.pillSheetDeletedAt, isNotNull);
+      });
+
+      test('ttlExpiresDateTimeが設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.ttlExpiresDateTime, isNotNull);
+      });
+
+      test('versionがv2として設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.version, 'v2');
+      });
+
+      test('before, after, beforePillSheetID, afterPillSheetIDがnullとして設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.before, isNull);
+        expect(history.after, isNull);
+        expect(history.beforePillSheetID, isNull);
+        expect(history.afterPillSheetID, isNull);
+      });
+    });
+
+    group('PillSheetType別のテスト', () {
+      test('21錠+休薬7日タイプ（pillsheet_21）のピルシートを削除した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_21,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.enumActionType, PillSheetModifiedActionType.deletedPillSheet);
+        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.pillSheetTypeReferencePath,
+            PillSheetType.pillsheet_21.typeInfo.pillSheetTypeReferencePath);
+      });
+
+      test('24錠+4日偽薬タイプ（pillsheet_28_4）のピルシートを削除した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_4,
+          beginingDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet],
+        );
+
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [pillSheet.copyWith(deletedAt: DateTime.now())],
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.enumActionType, PillSheetModifiedActionType.deletedPillSheet);
+        expect(history.beforePillSheetGroup!.pillSheets.first.typeInfo.pillSheetTypeReferencePath,
+            PillSheetType.pillsheet_28_4.typeInfo.pillSheetTypeReferencePath);
+      });
+
+      test('異なるPillSheetTypeのピルシートを複数同時に削除した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final pillSheet1 = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          groupIndex: 0,
+        );
+
+        final pillSheet2 = createPillSheet(
+          id: 'sheet_2',
+          type: PillSheetType.pillsheet_21,
+          beginingDate: beginingDate.add(const Duration(days: 28)),
+          groupIndex: 1,
+        );
+
+        final beforePillSheetGroup = PillSheetGroup(
+          id: 'group_1',
+          pillSheetIDs: ['sheet_1', 'sheet_2'],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: DateTime.parse('2020-09-01'),
+        );
+
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: 'group_1',
+          pillSheetIDs: ['sheet_1', 'sheet_2'],
+          pillSheets: [
+            pillSheet1.copyWith(deletedAt: DateTime.now()),
+            pillSheet2.copyWith(deletedAt: DateTime.now()),
+          ],
+          createdAt: DateTime.parse('2020-09-01'),
+          deletedAt: DateTime.now(),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_1',
+          pillSheetIDs: ['sheet_1', 'sheet_2'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        expect(history.value.deletedPillSheet!.pillSheetIDs, ['sheet_1', 'sheet_2']);
+        expect(history.beforePillSheetGroup!.pillSheets.length, 2);
+        expect(history.beforePillSheetGroup!.pillSheets[0].typeInfo.pillSheetTypeReferencePath,
+            PillSheetType.pillsheet_28_0.typeInfo.pillSheetTypeReferencePath);
+        expect(history.beforePillSheetGroup!.pillSheets[1].typeInfo.pillSheetTypeReferencePath,
+            PillSheetType.pillsheet_21.typeInfo.pillSheetTypeReferencePath);
+      });
+    });
+  });
 }
