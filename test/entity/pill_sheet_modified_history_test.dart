@@ -1,6 +1,9 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
+import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 void main() {
   group('#enumActionType', () {
@@ -1115,6 +1118,635 @@ void main() {
       // restDurationDates = {9日前, 8日前}
       // allDates - takenDates - restDurationDates = 10 - 1 - 2 = 7
       expect(result, 7);
+    });
+  });
+
+  group('#createTakenPillAction', () {
+    // テスト用ヘルパー: PillSheetを生成する
+    PillSheet createPillSheet({
+      required String id,
+      required PillSheetType type,
+      required DateTime beginingDate,
+      DateTime? lastTakenDate,
+      int groupIndex = 0,
+    }) {
+      return PillSheet(
+        id: id,
+        typeInfo: type.typeInfo,
+        beginingDate: beginingDate,
+        lastTakenDate: lastTakenDate,
+        createdAt: beginingDate,
+        groupIndex: groupIndex,
+      );
+    }
+
+    // テスト用ヘルパー: PillSheetGroupを生成する
+    PillSheetGroup createPillSheetGroup({
+      required String id,
+      required List<PillSheet> pillSheets,
+    }) {
+      return PillSheetGroup(
+        id: id,
+        pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
+        pillSheets: pillSheets,
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+    }
+
+    group('正常系', () {
+      test('1錠目を服用した場合、TakenPillValueの各プロパティが正しく設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final takenDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: takenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
+        expect(history.value.takenPill, isNotNull);
+        expect(history.value.takenPill!.afterLastTakenDate, takenDate);
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 1);
+        expect(history.value.takenPill!.beforeLastTakenDate, isNull);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 0);
+        expect(history.value.takenPill!.isQuickRecord, false);
+      });
+
+      test('isQuickRecord が true の場合、TakenPillValue.isQuickRecord が true になる', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final takenDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: takenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: true,
+        );
+
+        expect(history.value.takenPill!.isQuickRecord, true);
+      });
+
+      test('10錠目から11錠目への服用の場合、beforeとafterのピル番号が正しく設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final beforeTakenDate = DateTime.parse('2020-09-10');
+        final afterTakenDate = DateTime.parse('2020-09-11');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beforeTakenDate,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: afterTakenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.value.takenPill!.afterLastTakenDate, afterTakenDate);
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 11);
+        expect(history.value.takenPill!.beforeLastTakenDate, beforeTakenDate);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 10);
+      });
+
+      test('28錠タイプの最後のピル（28錠目）を服用した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final beforeTakenDate = DateTime.parse('2020-09-27');
+        final afterTakenDate = DateTime.parse('2020-09-28');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beforeTakenDate,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: afterTakenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 28);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 27);
+      });
+
+      test('21錠+休薬7日タイプ（pillsheet_21）で21錠目を服用した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final beforeTakenDate = DateTime.parse('2020-09-20');
+        final afterTakenDate = DateTime.parse('2020-09-21');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_21,
+          beginingDate: beginingDate,
+          lastTakenDate: beforeTakenDate,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_21,
+          beginingDate: beginingDate,
+          lastTakenDate: afterTakenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 21);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 20);
+      });
+
+      test('actionType が takenPill として設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beginingDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.actionType, 'takenPill');
+        expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
+      });
+
+      test('複数のピルシートがあるグループで2枚目のシートのピルを服用した場合', () {
+        final beginingDate1 = DateTime.parse('2020-09-01');
+        final beginingDate2 = DateTime.parse('2020-09-29');
+        final afterTakenDate = DateTime.parse('2020-09-29');
+
+        final sheet1 = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate1,
+          lastTakenDate: DateTime.parse('2020-09-28'),
+          groupIndex: 0,
+        );
+
+        final beforeSheet2 = createPillSheet(
+          id: 'sheet_2',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate2,
+          lastTakenDate: null,
+          groupIndex: 1,
+        );
+
+        final afterSheet2 = createPillSheet(
+          id: 'sheet_2',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate2,
+          lastTakenDate: afterTakenDate,
+          groupIndex: 1,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [sheet1, beforeSheet2],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [sheet1, afterSheet2],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: beforeSheet2,
+          after: afterSheet2,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        // 2枚目のシートの1錠目
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 1);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 0);
+        expect(history.afterPillSheetID, 'sheet_2');
+        expect(history.beforePillSheetID, 'sheet_2');
+      });
+
+      test('before と after のPillSheetGroup が正しく設定される', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beginingDate,
+        );
+
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.beforePillSheetGroup, beforePillSheetGroup);
+        expect(history.afterPillSheetGroup, afterPillSheetGroup);
+        expect(history.before, before);
+        expect(history.after, after);
+        expect(history.pillSheetGroupID, 'group_1');
+      });
+    });
+
+    group('異常系', () {
+      test('after.id が null の場合、FormatException がスローされる', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        // id が null の PillSheet を作成
+        final after = PillSheet(
+          id: null,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: beginingDate,
+          lastTakenDate: beginingDate,
+          createdAt: beginingDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: 'group_1',
+            before: before,
+            after: after,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: pillSheetGroup,
+            isQuickRecord: false,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+
+      test('after.lastTakenDate が null の場合、FormatException がスローされる', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        // lastTakenDate が null の PillSheet
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        // after.lastTakenDateがnullのままcreateを呼ぶとFormatExceptionが発生する
+        // なぜなら、服用記録アクションでは服用後の日付が必須だから
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: 'group_1',
+            before: before,
+            after: after,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: pillSheetGroup,
+            isQuickRecord: false,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+
+      test('after.id と after.lastTakenDate の両方が null の場合、FormatException がスローされる', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_0,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+
+        // 両方 null
+        final after = PillSheet(
+          id: null,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+          createdAt: beginingDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: 'group_1',
+            before: before,
+            after: after,
+            beforePillSheetGroup: pillSheetGroup,
+            afterPillSheetGroup: pillSheetGroup,
+            isQuickRecord: false,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+    });
+
+    group('PillSheetType別のテスト', () {
+      test('24錠+4日偽薬タイプ（pillsheet_28_4）で24錠目を服用した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final beforeTakenDate = DateTime.parse('2020-09-23');
+        final afterTakenDate = DateTime.parse('2020-09-24');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_4,
+          beginingDate: beginingDate,
+          lastTakenDate: beforeTakenDate,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_28_4,
+          beginingDate: beginingDate,
+          lastTakenDate: afterTakenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 24);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 23);
+      });
+
+      test('24錠タイプ（pillsheet_24_0）で24錠目を服用した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final beforeTakenDate = DateTime.parse('2020-09-23');
+        final afterTakenDate = DateTime.parse('2020-09-24');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_24_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beforeTakenDate,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_24_0,
+          beginingDate: beginingDate,
+          lastTakenDate: afterTakenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 24);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 23);
+      });
+
+      test('21錠タイプ（pillsheet_21_0）で21錠目を服用した場合', () {
+        final beginingDate = DateTime.parse('2020-09-01');
+        final beforeTakenDate = DateTime.parse('2020-09-20');
+        final afterTakenDate = DateTime.parse('2020-09-21');
+
+        final before = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_21_0,
+          beginingDate: beginingDate,
+          lastTakenDate: beforeTakenDate,
+        );
+
+        final after = createPillSheet(
+          id: 'sheet_1',
+          type: PillSheetType.pillsheet_21_0,
+          beginingDate: beginingDate,
+          lastTakenDate: afterTakenDate,
+        );
+
+        final pillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [before],
+        );
+
+        final afterPillSheetGroup = createPillSheetGroup(
+          id: 'group_1',
+          pillSheets: [after],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_1',
+          before: before,
+          after: after,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.value.takenPill!.afterLastTakenPillNumber, 21);
+        expect(history.value.takenPill!.beforeLastTakenPillNumber, 20);
+      });
     });
   });
 }
