@@ -88,6 +88,7 @@ PROMPT_TEMPLATE = '''以下の指示に従って {entity} に関する {method} 
 
 #### Git操作
 テスト追加・修正が完了したら、以下のコマンドを実行してください:
+0. 変更点がない場合は何もしない
 1. git add -A
 2. git commit -m "test({entity}): add tests for {method}"
 3. git push -u origin HEAD
