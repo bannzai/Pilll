@@ -526,7 +526,7 @@ void main() {
     });
   });
   group("#isBegan", () {
-    test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14", () {
+    test("開始日より後の場合はtrueを返す", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
@@ -546,10 +546,31 @@ void main() {
       );
       expect(model.isBegan, true);
     });
-    test("it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01", () {
+    test("開始日と同日の場合はfalseを返す（境界値: beginingDate.date() < now() で等しい場合はfalse）", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+      // DateTime.parse は 00:00:00 を返すため、beginingDate.date() と now() が同じ値になる
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isBegan, false);
+    });
+    test("開始日の翌日の場合はtrueを返す（境界値）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-02"));
 
       const sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
@@ -566,27 +587,7 @@ void main() {
       );
       expect(model.isBegan, true);
     });
-    test("it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01", () {
-      final mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
-
-      const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
-        id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: null,
-        createdAt: now(),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
-      );
-      expect(model.isBegan, true);
-    });
-    test("it is out of range pattern. now: 2020-06-29, begin: 2020-09-01", () {
+    test("開始日より前の場合はfalseを返す（未来のピルシート）", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
