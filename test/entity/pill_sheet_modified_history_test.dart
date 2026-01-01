@@ -3,6 +3,99 @@ import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
 void main() {
+  group('#enumActionType', () {
+    // 各 PillSheetModifiedActionType に対して正しく変換されるかテスト
+    for (final actionType in PillSheetModifiedActionType.values) {
+      test('actionType が ${actionType.name} の場合は $actionType を返す', () {
+        final history = PillSheetModifiedHistory(
+          id: 'test_id',
+          actionType: actionType.name,
+          estimatedEventCausingDate: DateTime.parse('2020-09-28'),
+          createdAt: DateTime.parse('2020-09-28'),
+          value: const PillSheetModifiedHistoryValue(),
+          beforePillSheetGroup: null,
+          afterPillSheetGroup: null,
+          pillSheetID: null,
+          pillSheetGroupID: null,
+          beforePillSheetID: null,
+          afterPillSheetID: null,
+          before: null,
+          after: null,
+        );
+
+        // switch で網羅性を担保
+        switch (actionType) {
+          case PillSheetModifiedActionType.createdPillSheet:
+            expect(history.enumActionType, PillSheetModifiedActionType.createdPillSheet);
+          case PillSheetModifiedActionType.automaticallyRecordedLastTakenDate:
+            expect(history.enumActionType, PillSheetModifiedActionType.automaticallyRecordedLastTakenDate);
+          case PillSheetModifiedActionType.deletedPillSheet:
+            expect(history.enumActionType, PillSheetModifiedActionType.deletedPillSheet);
+          case PillSheetModifiedActionType.takenPill:
+            expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
+          case PillSheetModifiedActionType.revertTakenPill:
+            expect(history.enumActionType, PillSheetModifiedActionType.revertTakenPill);
+          case PillSheetModifiedActionType.changedPillNumber:
+            expect(history.enumActionType, PillSheetModifiedActionType.changedPillNumber);
+          case PillSheetModifiedActionType.endedPillSheet:
+            expect(history.enumActionType, PillSheetModifiedActionType.endedPillSheet);
+          case PillSheetModifiedActionType.beganRestDuration:
+            expect(history.enumActionType, PillSheetModifiedActionType.beganRestDuration);
+          case PillSheetModifiedActionType.endedRestDuration:
+            expect(history.enumActionType, PillSheetModifiedActionType.endedRestDuration);
+          case PillSheetModifiedActionType.changedRestDurationBeginDate:
+            expect(history.enumActionType, PillSheetModifiedActionType.changedRestDurationBeginDate);
+          case PillSheetModifiedActionType.changedRestDuration:
+            expect(history.enumActionType, PillSheetModifiedActionType.changedRestDuration);
+          case PillSheetModifiedActionType.changedBeginDisplayNumber:
+            expect(history.enumActionType, PillSheetModifiedActionType.changedBeginDisplayNumber);
+          case PillSheetModifiedActionType.changedEndDisplayNumber:
+            expect(history.enumActionType, PillSheetModifiedActionType.changedEndDisplayNumber);
+        }
+      });
+    }
+
+    test('actionType が存在しない文字列の場合は null を返す', () {
+      final history = PillSheetModifiedHistory(
+        id: 'test_id',
+        actionType: 'unknownActionType',
+        estimatedEventCausingDate: DateTime.parse('2020-09-28'),
+        createdAt: DateTime.parse('2020-09-28'),
+        value: const PillSheetModifiedHistoryValue(),
+        beforePillSheetGroup: null,
+        afterPillSheetGroup: null,
+        pillSheetID: null,
+        pillSheetGroupID: null,
+        beforePillSheetID: null,
+        afterPillSheetID: null,
+        before: null,
+        after: null,
+      );
+
+      expect(history.enumActionType, isNull);
+    });
+
+    test('actionType が空文字の場合は null を返す', () {
+      final history = PillSheetModifiedHistory(
+        id: 'test_id',
+        actionType: '',
+        estimatedEventCausingDate: DateTime.parse('2020-09-28'),
+        createdAt: DateTime.parse('2020-09-28'),
+        value: const PillSheetModifiedHistoryValue(),
+        beforePillSheetGroup: null,
+        afterPillSheetGroup: null,
+        pillSheetID: null,
+        pillSheetGroupID: null,
+        beforePillSheetID: null,
+        afterPillSheetID: null,
+        before: null,
+        after: null,
+      );
+
+      expect(history.enumActionType, isNull);
+    });
+  });
+
   group("#missedPillDays", () {
     test("履歴が空の場合は0を返す", () {
       final result = missedPillDays(
