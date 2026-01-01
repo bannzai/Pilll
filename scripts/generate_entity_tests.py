@@ -85,18 +85,6 @@ PROMPT_TEMPLATE = '''以下の指示に従って {entity} に関する {method} 
 4. PillSheetGroupDisplayNumberSetting の有無によりピルシート上に表示される開始と終了の番号が変化します
 5. PIllSheetGroupが保持しているPillSheet間の境界の値は優先度高くチェック(1枚目の最後の番号と2枚目の開始の番号のチェック,2枚目の終了の番号と3枚目の開始の番号のチェック...など。続く)
 6. now() によってPillSheetGroupが表現する「どこまで服用したか、今日服用するのはどれか」といった情報が変化されます。これを念頭にテストを書く。必要であればnowをモックしてテストケースを作成する
-
-#### Git操作
-テスト追加・修正が完了したら、以下のコマンドを実行してください:
-0. 変更点がない場合は何もしない
-1. git add -A
-2. git commit -m "test({entity}): add tests for {method}"
-3. git push -u origin HEAD
-4. gh pr create --base {base_branch} --title "test({entity}): add tests for {method}" --body "## Summary
-- {entity} の {method} に関するテストを追加/修正
-
-## Test plan
-- flutter test test/entity/{entity_file}_test.dart"
 '''
 
 
@@ -125,23 +113,13 @@ def has_git_changes() -> bool:
     return bool(result.stdout.strip())
 
 
-def has_unpushed_commits(base_branch: str) -> bool:
-    """ベースブランチと比較してコミットがあるかチェック"""
-    result = subprocess.run(
-        ["git", "log", f"{base_branch}..HEAD", "--oneline"],
-        capture_output=True,
-        text=True
-    )
-    return bool(result.stdout.strip())
-
-
 def get_all_targets() -> list[tuple[str, str]]:
     """全ての (Entity, method) ペアを順序通りに返す"""
-    targets = []
-    for entity, methods in ENTITY_METHODS.items():
-        for method in methods:
-            targets.append((entity, method))
-    return targets
+    return [
+        (entity, method)
+        for entity, methods in ENTITY_METHODS.items()
+        for method in methods
+    ]
 
 
 def find_start_index(targets: list[tuple[str, str]], start_from: str) -> int:
@@ -161,14 +139,54 @@ def get_previous_branch(targets: list[tuple[str, str]], index: int) -> str:
     return f"add/test/{prev_entity}-{sanitize_branch_name(prev_method)}"
 
 
-def generate_prompt(entity: str, method: str, entity_file: str, base_branch: str) -> str:
+def generate_prompt(entity: str, method: str) -> str:
     """プロンプトを生成"""
     return PROMPT_TEMPLATE.format(
         entity=entity,
         method=method,
-        entity_file=entity_file,
-        base_branch=base_branch,
     )
+
+
+def execute_git_operations(entity: str, method: str, entity_file: str, base_branch: str) -> bool:
+    """Git操作を実行する。成功した場合はTrueを返す"""
+    # git add
+    result = run_command(["git", "add", "-A"])
+    if result != 0:
+        print("git add に失敗しました")
+        return False
+
+    # git commit
+    commit_message = f"test({entity}): add tests for {method}"
+    result = run_command(["git", "commit", "-m", commit_message])
+    if result != 0:
+        print("git commit に失敗しました（変更がない可能性があります）")
+        return False
+
+    # git push
+    result = run_command(["git", "push", "-u", "origin", "HEAD"])
+    if result != 0:
+        print("git push に失敗しました")
+        return False
+
+    # gh pr create
+    pr_title = f"test({entity}): add tests for {method}"
+    pr_body = f"""## Summary
+- {entity} の {method} に関するテストを追加/修正
+
+## Test plan
+- flutter test test/entity/{entity_file}_test.dart"""
+
+    result = run_command([
+        "gh", "pr", "create",
+        "--base", base_branch,
+        "--title", pr_title,
+        "--body", pr_body
+    ])
+    if result != 0:
+        print("gh pr create に失敗しました")
+        return False
+
+    return True
 
 
 def main():
@@ -205,7 +223,7 @@ def main():
         print(f"ベース: {base_branch}")
         print(f"{'='*60}\n")
 
-        prompt = generate_prompt(entity, method, entity_file, base_branch)
+        prompt = generate_prompt(entity, method)
 
         if args.dry_run:
             print("--- プロンプト ---")
@@ -220,7 +238,7 @@ def main():
         # 2. 新しいブランチを作成
         run_command(["git", "switch", "-c", branch_name], check=True)
 
-        # 3. Claude Code 実行
+        # 3. Claude Code 実行（テストコードの追加・編集のみ）
         run_command([
             "claude", "-p", prompt,
             "--add-dir", ".",
@@ -229,10 +247,16 @@ def main():
         ])
 
         # 4. 変更があるかチェック
-        if has_git_changes() or has_unpushed_commits(base_branch):
-            # 変更がある場合: ベースブランチを更新（次のPR用）
-            print(f"\n変更あり: {branch_name} を次のベースブランチとして使用")
-            base_branch = branch_name
+        if has_git_changes():
+            # 変更がある場合: Git操作を実行
+            print(f"\n変更あり: Git操作を実行します")
+            if execute_git_operations(entity, method, entity_file, base_branch):
+                # 成功した場合: ベースブランチを更新（次のPR用）
+                base_branch = branch_name
+            else:
+                print(f"Git操作に失敗しました。ブランチ {branch_name} を破棄します")
+                run_command(["git", "checkout", base_branch])
+                run_command(["git", "branch", "-D", branch_name])
         else:
             # 変更がない場合: ブランチを破棄して元のブランチに戻す
             print(f"\n変更なし: {branch_name} を破棄して {base_branch} に戻ります")
