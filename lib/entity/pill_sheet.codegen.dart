@@ -110,10 +110,6 @@ class RestDuration with _$RestDuration {
 /// ピル服用管理アプリの中核となるデータ構造
 @freezed
 class PillSheet with _$PillSheet {
-  /// ピルシートの種類（28日型、21日型など）
-  /// typeInfoから実際のPillSheetTypeオブジェクトを取得
-  PillSheetType get sheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
-
   PillSheet._();
   @JsonSerializable(explicitToJson: true)
   factory PillSheet({
