@@ -285,5 +285,37 @@ void main() {
       // 1/10 から 3/10 は60日
       expect(menstruationsDiff(lhs, rhs), 60);
     });
+
+    test('うるう年の2月29日を跨ぐ場合でも正しく計算する', () {
+      final lhs = Menstruation(
+        beginDate: DateTime(2024, 3, 1),
+        endDate: DateTime(2024, 3, 5),
+        createdAt: DateTime(2024, 3, 1),
+      );
+      final rhs = Menstruation(
+        beginDate: DateTime(2024, 2, 1),
+        endDate: DateTime(2024, 2, 5),
+        createdAt: DateTime(2024, 2, 1),
+      );
+
+      // 2024年はうるう年なので、2/1 から 3/1 は29日
+      expect(menstruationsDiff(lhs, rhs), 29);
+    });
+
+    test('非うるう年の2月を跨ぐ場合は28日差になる', () {
+      final lhs = Menstruation(
+        beginDate: DateTime(2023, 3, 1),
+        endDate: DateTime(2023, 3, 5),
+        createdAt: DateTime(2023, 3, 1),
+      );
+      final rhs = Menstruation(
+        beginDate: DateTime(2023, 2, 1),
+        endDate: DateTime(2023, 2, 5),
+        createdAt: DateTime(2023, 2, 1),
+      );
+
+      // 2023年は非うるう年なので、2/1 から 3/1 は28日
+      expect(menstruationsDiff(lhs, rhs), 28);
+    });
   });
 }
