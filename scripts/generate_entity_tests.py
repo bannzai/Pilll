@@ -45,7 +45,7 @@ ENTITY_METHODS: dict[str, list[str]] = {
         "lastActiveRestDuration", "targetBeginRestDurationPillSheet", "availableRestDurationBeginDate",
     ],
     "Menstruation": [
-        "documentID", "dateRange", "dateTimeRange", "isActive", "menstruationsDiff",
+        "dateRange", "dateTimeRange", "isActive", "menstruationsDiff",
     ],
     "PillSheetModifiedHistory": [
         # Getters
