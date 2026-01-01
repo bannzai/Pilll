@@ -549,11 +549,14 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   /// 服用お休み開始の対象となるピルシートを取得
   /// 最後に服用したピルシートが完了済みなら次のシート、
   /// 未完了なら現在のシートを対象とする
+  /// Note: グループ内の全ピルシートが全服用済みの場合、次のシートが存在しないためRangeErrorがスローされる
+  /// このケースは通常のアプリフローでは発生しない（全服用済みの場合は新しいピルシートグループが作成されるため）
   PillSheet get targetBeginRestDurationPillSheet {
     final PillSheet targetPillSheet;
     if (lastTakenPillSheetOrFirstPillSheet.isTakenAll) {
       // 最後に飲んだピルシートのピルが全て服用済みの場合は、次のピルシートを対象としてrestDurationを設定する
       // すでに服用済みの場合は、次のピルの番号から服用お休みを開始する必要があるから
+      // Note: 次のシートが存在しない場合はRangeErrorがスローされる
       targetPillSheet = pillSheets[lastTakenPillSheetOrFirstPillSheet.groupIndex + 1];
     } else {
       targetPillSheet = lastTakenPillSheetOrFirstPillSheet;
