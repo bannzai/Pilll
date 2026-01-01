@@ -6,6 +6,7 @@ Entity テスト追加スクリプト
 使用方法:
   python3 scripts/generate_entity_tests.py
   python3 scripts/generate_entity_tests.py --start-from PillSheet:todayPillNumber
+  python3 scripts/generate_entity_tests.py -n 3  # 最初の3件のみ実行
   python3 scripts/generate_entity_tests.py --list  # 対象一覧を表示
 """
 
@@ -192,6 +193,7 @@ def execute_git_operations(entity: str, method: str, entity_file: str, base_bran
 def main():
     parser = argparse.ArgumentParser(description="Entity テスト追加スクリプト")
     parser.add_argument("--start-from", type=str, help="開始位置 (例: PillSheet:todayPillNumber)")
+    parser.add_argument("-n", "--num", type=int, help="実行する件数を制限 (例: -n 3)")
     parser.add_argument("--list", action="store_true", help="対象一覧を表示")
     parser.add_argument("--dry-run", action="store_true", help="実際のコマンドを実行せずにプロンプトを表示")
     args = parser.parse_args()
@@ -210,9 +212,15 @@ def main():
         start_index = find_start_index(targets, args.start_from)
         print(f"開始位置: {args.start_from} (インデックス: {start_index})")
 
+    # 終了インデックスを計算
+    end_index = len(targets)
+    if args.num:
+        end_index = min(start_index + args.num, len(targets))
+        print(f"実行件数: {args.num}件 (インデックス {start_index} から {end_index - 1} まで)")
+
     base_branch = get_previous_branch(targets, start_index)
 
-    for i in range(start_index, len(targets)):
+    for i in range(start_index, end_index):
         entity, method = targets[i]
         entity_file = ENTITY_FILE_MAP[entity]
         branch_name = f"add/test/{entity}-{sanitize_branch_name(method)}"
