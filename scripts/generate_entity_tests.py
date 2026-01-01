@@ -49,7 +49,7 @@ ENTITY_METHODS: dict[str, list[str]] = {
     ],
     "PillSheetModifiedHistory": [
         # Getters
-        "enumActionType", "beforeActivePillSheet", "afterActivePillSheet",
+        "enumActionType",
         # Functions
         "missedPillDays",
         # Factory methods
