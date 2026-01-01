@@ -326,6 +326,88 @@ void main() {
     });
   });
   group("#isActive", () {
+    group("開始日の境界値テスト", () {
+      test("開始日当日（00:00:00）はアクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isActive, true);
+      });
+      test("開始日当日の23:59:59はアクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 23, 59, 59));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isActive, true);
+      });
+      test("開始日前日は非アクティブ（境界値）", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-08-31"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isActive, false);
+      });
+      test("開始日前日の23:59:59は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime(2020, 8, 31, 23, 59, 59));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isActive, false);
+      });
+    });
     test("it is active pattern. today: 2020-09-19, begin: 2020-09-14", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -523,6 +605,83 @@ void main() {
         ],
       );
       expect(model.isActive, false);
+    });
+    group("複数の休薬期間がある場合", () {
+      test("複数の終了した休薬期間を含み、期間内でアクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 9/1開始、21錠 + 7休薬 = 28日 → 9/28が最終日
+        // 休薬1: 9/5-9/7 → daysBetween(9/5, 9/7) = 2日延長 → 9/30が最終日
+        // 休薬2: 9/15-9/17 → daysBetween(9/15, 9/17) = 2日延長 → 10/2が最終日
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-02"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id_1",
+              beginDate: DateTime.parse("2020-09-05"),
+              createdDate: DateTime.parse("2020-09-05"),
+              endDate: DateTime.parse("2020-09-07"),
+            ),
+            RestDuration(
+              id: "rest_duration_id_2",
+              beginDate: DateTime.parse("2020-09-15"),
+              createdDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-17"),
+            ),
+          ],
+        );
+        expect(model.isActive, true);
+      });
+      test("複数の終了した休薬期間を含み、延長された最終日の翌日で非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 9/1開始、21錠 + 7休薬 = 28日 → 9/28が最終日
+        // 休薬1: 9/5-9/7 → daysBetween(9/5, 9/7) = 2日延長 → 9/30が最終日
+        // 休薬2: 9/15-9/17 → daysBetween(9/15, 9/17) = 2日延長 → 10/2が最終日
+        // 10/3は期間外
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-03"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id_1",
+              beginDate: DateTime.parse("2020-09-05"),
+              createdDate: DateTime.parse("2020-09-05"),
+              endDate: DateTime.parse("2020-09-07"),
+            ),
+            RestDuration(
+              id: "rest_duration_id_2",
+              beginDate: DateTime.parse("2020-09-15"),
+              createdDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-17"),
+            ),
+          ],
+        );
+        expect(model.isActive, false);
+      });
     });
   });
   group("#isBegan", () {
