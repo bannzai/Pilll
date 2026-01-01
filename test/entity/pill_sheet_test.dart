@@ -1575,6 +1575,168 @@ void main() {
       expect(model.todayPillIsAlreadyTaken, true);
     });
   });
+  group("#isTakenAll", () {
+    group("lastTakenDate が null の場合", () {
+      test("28錠タイプ - isTakenAll は false を返す", () {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, false);
+      });
+    });
+
+    group("lastTakenDate が beginingDate より前の場合", () {
+      test("28錠タイプ - isTakenAll は false を返す", () {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-08-31"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, false);
+      });
+    });
+
+    group("途中のピル番号で服用が止まっている場合", () {
+      test("28錠タイプで10番目まで服用 - isTakenAll は false を返す", () {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-10"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, false);
+      });
+
+      test("24錠タイプで1番目まで服用 - isTakenAll は false を返す", () {
+        const sheetType = PillSheetType.pillsheet_24_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-01"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, false);
+      });
+
+      test("21錠タイプで20番目まで服用（境界値-1）- isTakenAll は false を返す", () {
+        const sheetType = PillSheetType.pillsheet_21_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-20"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, false);
+      });
+    });
+
+    group("最後のピルまで服用した場合", () {
+      test("28錠タイプで28番目まで服用 - isTakenAll は true を返す", () {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, true);
+      });
+
+      test("24錠タイプで24番目まで服用 - isTakenAll は true を返す", () {
+        const sheetType = PillSheetType.pillsheet_24_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-24"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, true);
+      });
+
+      test("21錠タイプで21番目まで服用 - isTakenAll は true を返す", () {
+        const sheetType = PillSheetType.pillsheet_21_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-21"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, true);
+      });
+
+      test("21錠+休薬7日タイプで28番目まで服用 - isTakenAll は true を返す", () {
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.isTakenAll, true);
+      });
+    });
+  });
   group("#estimatedEndTakenDate", () {
     test("spec", () {
       final mockTodayRepository = MockTodayService();
