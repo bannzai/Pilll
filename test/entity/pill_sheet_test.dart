@@ -6172,6 +6172,283 @@ void main() {
       // 28日目は3日ずれて05-31になる
       expect(actual[27], DateTime.parse("2022-05-31"));
     });
+    test("24日型ピルシート（pillsheet_24_0）の場合、24個の日付が返される", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
+
+      const sheetType = PillSheetType.pillsheet_24_0;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      // pillsheet_24_0はtotalCount=24なので24個の日付が返される
+      expect(actual.length, 24);
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[11], DateTime.parse("2022-05-12"));
+      expect(actual[23], DateTime.parse("2022-05-24"));
+    });
+    test("21日型ピルシート（pillsheet_21_0）の場合、21個の日付が返される", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
+
+      const sheetType = PillSheetType.pillsheet_21_0;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      // pillsheet_21_0はtotalCount=21なので21個の日付が返される
+      expect(actual.length, 21);
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[10], DateTime.parse("2022-05-11"));
+      expect(actual[20], DateTime.parse("2022-05-21"));
+    });
+    test("24錠+4日休薬（pillsheet_24_rest_4）の場合、28個の日付が返される", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
+
+      const sheetType = PillSheetType.pillsheet_24_rest_4;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      // pillsheet_24_rest_4はtotalCount=28なので28個の日付が返される
+      expect(actual.length, 28);
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[23], DateTime.parse("2022-05-24"));
+      expect(actual[27], DateTime.parse("2022-05-28"));
+    });
+    test("休薬期間がピルシート終了日付近にある場合（境界値テスト）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-15"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-25"), // ピルシート終盤
+            endDate: DateTime.parse("2022-05-28"), // 3日間
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      // 1日目〜24日目は通常通り
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[23], DateTime.parse("2022-05-24"));
+      // 25日目は休薬期間（3日間）の影響で05-28になる
+      expect(actual[24], DateTime.parse("2022-05-28"));
+      // 28日目は3日ずれて05-31になる
+      expect(actual[27], DateTime.parse("2022-05-31"));
+    });
+    test("estimatedEventCausingDateと複数の休薬期間がある場合", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-20"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-05"),
+            endDate: DateTime.parse("2022-05-07"), // 2日間
+            createdDate: now(),
+          ),
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-15"),
+            endDate: null, // 継続中
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      // estimatedEventCausingDateを2022-05-20に設定
+      // 1回目の休薬は終了済み（2日間）、2回目は05-15から05-20まで（5日間）として計算される
+      final actual = pillSheet.buildDates(estimatedEventCausingDate: DateTime.parse("2022-05-20"));
+
+      // 1日目〜4日目は通常通り
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[3], DateTime.parse("2022-05-04"));
+      // 5日目は1回目の休薬期間（2日間）の影響で05-07になる
+      expect(actual[4], DateTime.parse("2022-05-07"));
+      // 12日目は2回目の休薬期間の影響で、さらに5日ずれる
+      // 12日目: 本来05-12 + 1回目休薬2日 = 05-14、そこに2回目休薬開始後は05-20になる
+      expect(actual[11], DateTime.parse("2022-05-14"));
+      expect(actual[12], DateTime.parse("2022-05-20"));
+    });
+    test("estimatedEventCausingDateが休薬期間開始前の場合でも、終了済み休薬期間は計算に含まれる", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-15"),
+            endDate: DateTime.parse("2022-05-18"), // 3日間
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      // estimatedEventCausingDateを2022-05-10に設定（休薬期間開始前）
+      // ただし、終了済み休薬期間（endDateが設定されている）はestimatedEventCausingDateに関係なく影響する
+      final actual = pillSheet.buildDates(estimatedEventCausingDate: DateTime.parse("2022-05-10"));
+
+      // 1日目〜14日目は通常通り
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[9], DateTime.parse("2022-05-10"));
+      expect(actual[13], DateTime.parse("2022-05-14"));
+      // 15日目は終了済み休薬期間（3日間）の影響で05-18になる
+      expect(actual[14], DateTime.parse("2022-05-18"));
+    });
+    test("休薬期間の開始日と終了日が同じ日の場合（0日間の休薬）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-10"),
+            endDate: DateTime.parse("2022-05-10"), // 同じ日
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      // 開始日と終了日が同じなので、日付のシフトは発生しない
+      expect(actual.length, 28);
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[9], DateTime.parse("2022-05-10"));
+      expect(actual[27], DateTime.parse("2022-05-28"));
+    });
+    test("継続中の休薬期間がtodayで計算される確認", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-10"),
+            endDate: null, // 継続中
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+
+      final actual = pillSheet.buildDates();
+
+      // 1日目〜9日目は通常通り
+      expect(actual[0], DateTime.parse("2022-05-01"));
+      expect(actual[8], DateTime.parse("2022-05-09"));
+      // 10日目から休薬期間の影響で、today(05-15)まで5日間ずれる
+      expect(actual[9], DateTime.parse("2022-05-15"));
+      expect(actual[10], DateTime.parse("2022-05-16"));
+    });
   });
   group("#summarizedRestDuration", () {
     test("restDurations isEmpty", () {
