@@ -2775,7 +2775,7 @@ void main() {
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
       });
     });
-  });
+
     group("#dates", () {
       test("服用お休みが無いパターン", () {
         final mockTodayRepository = MockTodayService();
