@@ -87,6 +87,12 @@ PROMPT_TEMPLATE = '''以下の指示に従って {entity} に関する {method} 
 5. PIllSheetGroupが保持しているPillSheet間の境界の値は優先度高くチェック(1枚目の最後の番号と2枚目の開始の番号のチェック,2枚目の終了の番号と3枚目の開始の番号のチェック...など。続く)
 6. now() によってPillSheetGroupが表現する「どこまで服用したか、今日服用するのはどれか」といった情報が変化されます。これを念頭にテストを書く。必要であればnowをモックしてテストケースを作成する
 
+## 動作確認
+git操作・gh pr create を行うまえにフォーマットを整えて単体テストを実行してください
+
+- dart fix --apply lib && dart format lib -l 150
+- flutter test test/entity/{entity_file}_test.dart"
+
 #### Git操作
 テスト追加・修正が完了したら、以下のコマンドを実行してください:
 0. 変更点がない場合は何もしない
@@ -96,8 +102,6 @@ PROMPT_TEMPLATE = '''以下の指示に従って {entity} に関する {method} 
 4. gh pr create --base {base_branch} --title "test({entity}): add tests for {method}" --body "## Summary
 - {entity} の {method} に関するテストを追加/修正
 
-## Test plan
-- flutter test test/entity/{entity_file}_test.dart"
 '''
 
 
