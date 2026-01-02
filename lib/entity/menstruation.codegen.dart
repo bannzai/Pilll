@@ -25,10 +25,6 @@ class MenstruationFirestoreKey {
 /// HealthKitとの連携機能もサポートしている
 @freezed
 class Menstruation with _$Menstruation {
-  /// FirestoreドキュメントのIDを取得する
-  /// nullの場合は新規作成時を示す
-  String? get documentID => id;
-
   factory Menstruation.fromJson(Map<String, dynamic> json) => _$MenstruationFromJson(json);
   const Menstruation._();
 
