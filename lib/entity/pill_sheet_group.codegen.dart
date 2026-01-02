@@ -140,7 +140,7 @@ class PillSheetGroup with _$PillSheetGroup {
       case PillSheetAppearanceMode.date:
         return 0;
       case PillSheetAppearanceMode.sequential:
-        return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, today()))?.number ?? 0;
+        return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
       case PillSheetAppearanceMode.cyclicSequential:
         return pillNumbersForCyclicSequential.firstWhereOrNull((element) => isSameDay(element.date, activePillSheetLastTakenDate))?.number ?? 0;
     }

@@ -2548,10 +2548,8 @@ void main() {
         });
       });
 
-      // NOTE: sequentialモードはtoday()に対応する番号を返す（実装の仕様）
-      // cyclicSequentialモードはlastTakenDateに対応する番号を返す
       group("sequentialモードの場合", () {
-        test("today()に対応する連続番号を返す", () {
+        test("lastTakenDateに対応する連続番号を返す", () {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-10"));
@@ -2575,8 +2573,8 @@ void main() {
             createdAt: now(),
             pillSheetAppearanceMode: PillSheetAppearanceMode.sequential,
           );
-          // 今日は2020-09-10、beginingDateは2020-09-01なので10番目
-          expect(pillSheetGroup.sequentialLastTakenPillNumber, 10);
+          // lastTakenDateは2020-09-05、beginingDateは2020-09-01なので5番目
+          expect(pillSheetGroup.sequentialLastTakenPillNumber, 5);
         });
       });
 
