@@ -1523,6 +1523,169 @@ void main() {
         expect(model.isActive, false);
       });
     });
+    group("異なるPillSheetTypeの場合", () {
+      test("pillsheet_28_7（21錠実薬+7錠偽薬）: 28日目はアクティブ、29日目は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 28日目（2020-09-28）はアクティブ
+        expect(model.isActive, true);
+
+        // 29日目（2020-09-29）は非アクティブ
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
+        expect(model.isActive, false);
+      });
+
+      test("pillsheet_28_4（24錠実薬+4錠偽薬）: 28日目はアクティブ、29日目は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
+        const sheetType = PillSheetType.pillsheet_28_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 28日目（2020-09-28）はアクティブ
+        expect(model.isActive, true);
+
+        // 29日目（2020-09-29）は非アクティブ
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
+        expect(model.isActive, false);
+      });
+
+      test("pillsheet_24_rest_4（24錠+4日休薬）: 28日目はアクティブ、29日目は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
+        const sheetType = PillSheetType.pillsheet_24_rest_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 28日目（2020-09-28）はアクティブ
+        expect(model.isActive, true);
+
+        // 29日目（2020-09-29）は非アクティブ
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
+        expect(model.isActive, false);
+      });
+
+      test("pillsheet_21_0（21錠すべて実薬）: 21日目はアクティブ、22日目は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
+
+        const sheetType = PillSheetType.pillsheet_21_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 21日目（2020-09-21）はアクティブ
+        expect(model.isActive, true);
+
+        // 22日目（2020-09-22）は非アクティブ
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
+        expect(model.isActive, false);
+      });
+
+      test("pillsheet_24_0（24錠すべて実薬）: 24日目はアクティブ、25日目は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
+
+        const sheetType = PillSheetType.pillsheet_24_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 24日目（2020-09-24）はアクティブ
+        expect(model.isActive, true);
+
+        // 25日目（2020-09-25）は非アクティブ
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
+        expect(model.isActive, false);
+      });
+
+      test("pillsheet_28_0（28錠すべて実薬）: 28日目はアクティブ、29日目は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 28日目（2020-09-28）はアクティブ
+        expect(model.isActive, true);
+
+        // 29日目（2020-09-29）は非アクティブ
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
+        expect(model.isActive, false);
+      });
+    });
   });
   group("#isActiveFor", () {
     // isActiveFor(date) は beginingDate から estimatedEndTakenDate の範囲内に date が含まれるかを判定
