@@ -1111,16 +1111,16 @@ void main() {
       test("RestDuration が終了し、todayPillNumber が dosingPeriod を超えた場合は true を返す", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        // 開始日: 9/1、今日: 9/24、休薬期間: 9/5-9/6（9/5の1日間休薬、9/6に復帰）
-        // todayPillNumber = daysBetween(9/1, 9/24) - 1 + 1 = 23 - 1 + 1 = 23
-        // dosingPeriod = 21 なので、23 > 21 → true
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
+        // 開始日: 9/1、今日: 9/25、休薬期間: 9/5-9/6（2日間）
+        // todayPillNumber = daysBetween(9/1, 9/25) - 2 + 1 = 24 - 2 + 1 = 23
+        // しかし dosingPeriod = 21 なので、23 > 21 → true
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
-          lastTakenDate: DateTime.parse("2020-09-23"),
+          lastTakenDate: DateTime.parse("2020-09-24"),
           createdAt: now(),
           restDurations: [
             RestDuration(
@@ -1145,16 +1145,16 @@ void main() {
       test("境界値テスト：RestDuration により todayPillNumber が dosingPeriod と同じになる場合は false を返す", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        // 開始日: 9/1、今日: 9/22、休薬期間: 9/10-9/11（9/10の1日間休薬、9/11に復帰）
-        // todayPillNumber = daysBetween(9/1, 9/22) - 1 + 1 = 21 - 1 + 1 = 21
+        // 開始日: 9/1、今日: 9/23、休薬期間: 9/10-9/11（2日間）
+        // todayPillNumber = daysBetween(9/1, 9/23) - 2 + 1 = 22 - 2 + 1 = 21
         // dosingPeriod = 21 なので、21 > 21 → false
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-23"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
-          lastTakenDate: DateTime.parse("2020-09-21"),
+          lastTakenDate: DateTime.parse("2020-09-22"),
           createdAt: now(),
           restDurations: [
             RestDuration(
@@ -1179,16 +1179,16 @@ void main() {
       test("境界値テスト：RestDuration により todayPillNumber が dosingPeriod + 1 になる場合は true を返す", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        // 開始日: 9/1、今日: 9/23、休薬期間: 9/10-9/11（9/10の1日間休薬、9/11に復帰）
-        // todayPillNumber = daysBetween(9/1, 9/23) - 1 + 1 = 22 - 1 + 1 = 22
+        // 開始日: 9/1、今日: 9/24、休薬期間: 9/10-9/11（2日間）
+        // todayPillNumber = daysBetween(9/1, 9/24) - 2 + 1 = 23 - 2 + 1 = 22
         // dosingPeriod = 21 なので、22 > 21 → true
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-23"));
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
         const sheetType = PillSheetType.pillsheet_21;
         final model = PillSheet(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2020-09-01"),
-          lastTakenDate: DateTime.parse("2020-09-22"),
+          lastTakenDate: DateTime.parse("2020-09-23"),
           createdAt: now(),
           restDurations: [
             RestDuration(
