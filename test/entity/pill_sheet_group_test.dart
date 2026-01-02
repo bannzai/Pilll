@@ -7010,4 +7010,394 @@ void main() {
       });
     });
   });
+
+  group("#replaced", () {
+    group("例外がスローされるケース", () {
+      test("pillSheet.idがnullの場合はFormatExceptionをスローする", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+
+        // idがnullのピルシートで置き換えようとする
+        final newPillSheet = pillSheet.copyWith(id: null, lastTakenDate: DateTime.parse("2020-09-10"));
+
+        expect(
+          () => pillSheetGroup.replaced(newPillSheet),
+          throwsA(isA<FormatException>()),
+        );
+      });
+
+      test("pillSheet.idがpillSheetsに存在しない場合はFormatExceptionをスローする", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+
+        // 存在しないidのピルシートで置き換えようとする
+        final nonExistentPillSheet = pillSheet.copyWith(id: "non_existent_id", lastTakenDate: DateTime.parse("2020-09-10"));
+
+        expect(
+          () => pillSheetGroup.replaced(nonExistentPillSheet),
+          throwsA(isA<FormatException>()),
+        );
+      });
+    });
+
+    group("ピルシートが1枚の場合", () {
+      test("正常にピルシートを置き換えられる", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final sheetId = firestoreIDGenerator();
+        final pillSheet = PillSheet(
+          id: sheetId,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [sheetId],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
+        final updatedGroup = pillSheetGroup.replaced(updatedPillSheet);
+
+        expect(updatedGroup.pillSheets.length, 1);
+        expect(updatedGroup.pillSheets[0].id, sheetId);
+        expect(updatedGroup.pillSheets[0].lastTakenDate, DateTime.parse("2020-09-10"));
+      });
+
+      test("元のpillSheetGroupは変更されない（不変性の確認）", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final sheetId = firestoreIDGenerator();
+        final pillSheet = PillSheet(
+          id: sheetId,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [sheetId],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
+        pillSheetGroup.replaced(updatedPillSheet);
+
+        // 元のpillSheetGroupは変更されていないことを確認
+        expect(pillSheetGroup.pillSheets[0].lastTakenDate, isNull);
+      });
+    });
+
+    group("ピルシートが複数枚の場合", () {
+      test("1枚目のピルシートを置き換える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final sheetId1 = firestoreIDGenerator();
+        final sheetId2 = firestoreIDGenerator();
+        final sheetId3 = firestoreIDGenerator();
+
+        final pillSheet1 = PillSheet(
+          id: sheetId1,
+          groupIndex: 0,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: sheetId2,
+          groupIndex: 1,
+          beginingDate: DateTime.parse("2020-09-29"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: sheetId3,
+          groupIndex: 2,
+          beginingDate: DateTime.parse("2020-10-27"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [sheetId1, sheetId2, sheetId3],
+          pillSheets: [pillSheet1, pillSheet2, pillSheet3],
+          createdAt: now(),
+        );
+
+        final updatedPillSheet1 = pillSheet1.copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
+        final updatedGroup = pillSheetGroup.replaced(updatedPillSheet1);
+
+        expect(updatedGroup.pillSheets.length, 3);
+        expect(updatedGroup.pillSheets[0].id, sheetId1);
+        expect(updatedGroup.pillSheets[0].lastTakenDate, DateTime.parse("2020-09-10"));
+        // 他のピルシートは変更されていない
+        expect(updatedGroup.pillSheets[1].id, sheetId2);
+        expect(updatedGroup.pillSheets[1].lastTakenDate, isNull);
+        expect(updatedGroup.pillSheets[2].id, sheetId3);
+        expect(updatedGroup.pillSheets[2].lastTakenDate, isNull);
+      });
+
+      test("中間（2枚目）のピルシートを置き換える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-05"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final sheetId1 = firestoreIDGenerator();
+        final sheetId2 = firestoreIDGenerator();
+        final sheetId3 = firestoreIDGenerator();
+
+        final pillSheet1 = PillSheet(
+          id: sheetId1,
+          groupIndex: 0,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: sheetId2,
+          groupIndex: 1,
+          beginingDate: DateTime.parse("2020-09-29"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: sheetId3,
+          groupIndex: 2,
+          beginingDate: DateTime.parse("2020-10-27"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [sheetId1, sheetId2, sheetId3],
+          pillSheets: [pillSheet1, pillSheet2, pillSheet3],
+          createdAt: now(),
+        );
+
+        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: DateTime.parse("2020-10-05"));
+        final updatedGroup = pillSheetGroup.replaced(updatedPillSheet2);
+
+        expect(updatedGroup.pillSheets.length, 3);
+        // 1枚目は変更されていない
+        expect(updatedGroup.pillSheets[0].id, sheetId1);
+        expect(updatedGroup.pillSheets[0].lastTakenDate, DateTime.parse("2020-09-28"));
+        // 2枚目が更新されている
+        expect(updatedGroup.pillSheets[1].id, sheetId2);
+        expect(updatedGroup.pillSheets[1].lastTakenDate, DateTime.parse("2020-10-05"));
+        // 3枚目は変更されていない
+        expect(updatedGroup.pillSheets[2].id, sheetId3);
+        expect(updatedGroup.pillSheets[2].lastTakenDate, isNull);
+      });
+
+      test("最後（3枚目）のピルシートを置き換える", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-11-05"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final sheetId1 = firestoreIDGenerator();
+        final sheetId2 = firestoreIDGenerator();
+        final sheetId3 = firestoreIDGenerator();
+
+        final pillSheet1 = PillSheet(
+          id: sheetId1,
+          groupIndex: 0,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet2 = PillSheet(
+          id: sheetId2,
+          groupIndex: 1,
+          beginingDate: DateTime.parse("2020-09-29"),
+          lastTakenDate: DateTime.parse("2020-10-26"),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheet3 = PillSheet(
+          id: sheetId3,
+          groupIndex: 2,
+          beginingDate: DateTime.parse("2020-10-27"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [sheetId1, sheetId2, sheetId3],
+          pillSheets: [pillSheet1, pillSheet2, pillSheet3],
+          createdAt: now(),
+        );
+
+        final updatedPillSheet3 = pillSheet3.copyWith(lastTakenDate: DateTime.parse("2020-11-05"));
+        final updatedGroup = pillSheetGroup.replaced(updatedPillSheet3);
+
+        expect(updatedGroup.pillSheets.length, 3);
+        // 1枚目は変更されていない
+        expect(updatedGroup.pillSheets[0].id, sheetId1);
+        expect(updatedGroup.pillSheets[0].lastTakenDate, DateTime.parse("2020-09-28"));
+        // 2枚目は変更されていない
+        expect(updatedGroup.pillSheets[1].id, sheetId2);
+        expect(updatedGroup.pillSheets[1].lastTakenDate, DateTime.parse("2020-10-26"));
+        // 3枚目が更新されている
+        expect(updatedGroup.pillSheets[2].id, sheetId3);
+        expect(updatedGroup.pillSheets[2].lastTakenDate, DateTime.parse("2020-11-05"));
+      });
+    });
+
+    group("置き換えでピルシートの他のプロパティも更新される", () {
+      test("restDurationsが更新される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final sheetId = firestoreIDGenerator();
+        final pillSheet = PillSheet(
+          id: sheetId,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-10"),
+          createdAt: now(),
+          restDurations: [],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [sheetId],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+
+        final restDuration = RestDuration(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2020-09-11"),
+          createdDate: DateTime.parse("2020-09-11"),
+        );
+        final updatedPillSheet = pillSheet.copyWith(restDurations: [restDuration]);
+        final updatedGroup = pillSheetGroup.replaced(updatedPillSheet);
+
+        expect(updatedGroup.pillSheets[0].restDurations.length, 1);
+        expect(updatedGroup.pillSheets[0].restDurations[0].beginDate, DateTime.parse("2020-09-11"));
+      });
+    });
+  });
 }
