@@ -394,32 +394,8 @@ class PillSheetGroupPillNumberDomainPillMarkValue with _$PillSheetGroupPillNumbe
 }
 
 /// ピル番号計算に関するドメインロジックを提供するextension
-/// 各種表示モードでのピル番号マッピングと計算処理を管理
-/// number/date/sequential/cyclicSequentialの各モードに対応
+/// 履歴表示で使用するestimatedEventCausingDate付きの番号計算機能を提供
 extension PillSheetGroupPillNumberDomain on PillSheetGroup {
-  /// 指定されたピルシートのピルマーク情報を取得
-  /// 表示モードに応じた適切なマーク値を返す
-  PillSheetGroupPillNumberDomainPillMarkValue pillMark({
-    required PillSheet pillSheet,
-    required PillSheetAppearanceMode pillSheetAppearanceMode,
-  }) {
-    return pillMarks(pillSheetAppearanceMode: pillSheetAppearanceMode).firstWhere((e) => e.pillSheet.id == pillSheet.id);
-  }
-
-  /// 指定された表示モードでの全ピルマーク情報リストを取得
-  /// 各モードに応じた番号計算結果の配列を返す
-  List<PillSheetGroupPillNumberDomainPillMarkValue> pillMarks({required PillSheetAppearanceMode pillSheetAppearanceMode}) {
-    switch (pillSheetAppearanceMode) {
-      // NOTE: 日付のbegin,endも.numberと一緒な扱いにする
-      case PillSheetAppearanceMode.number:
-      case PillSheetAppearanceMode.date:
-        return pillNumbersInPillSheet;
-      case PillSheetAppearanceMode.sequential:
-      case PillSheetAppearanceMode.cyclicSequential:
-        return pillNumbersForCyclicSequential;
-    }
-  }
-
   /// ピルシート内番号計算の基礎データを生成
   /// 各ピルシートの日付と対応する番号のマッピングを作成
   /// estimatedEventCausingDateは履歴機能で使用される
