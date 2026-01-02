@@ -1135,4 +1135,338 @@ void main() {
       });
     });
   });
+
+  group('#createRevertTakenPillAction', () {
+    // テスト用のPillSheetGroupを作成するヘルパー関数
+    PillSheetGroup createPillSheetGroup({required List<PillSheet> pillSheets}) {
+      return PillSheetGroup(
+        id: 'group_id',
+        pillSheetIDs: pillSheets.map((e) => e.id ?? '').toList(),
+        pillSheets: pillSheets,
+        createdAt: DateTime(2020, 9, 1),
+      );
+    }
+
+    group('正常系', () {
+      test('正しいパラメータでPillSheetModifiedHistoryが生成される', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 11),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.actionType, PillSheetModifiedActionType.revertTakenPill.name);
+        expect(history.enumActionType, PillSheetModifiedActionType.revertTakenPill);
+        expect(history.pillSheetGroupID, 'group_id');
+        expect(history.beforePillSheetID, 'pill_sheet_id_1');
+        expect(history.afterPillSheetID, 'pill_sheet_id_1');
+        expect(history.before, beforePillSheet);
+        expect(history.after, afterPillSheet);
+        expect(history.beforePillSheetGroup, beforePillSheetGroup);
+        expect(history.afterPillSheetGroup, afterPillSheetGroup);
+
+        // RevertTakenPillValue の検証
+        final revertTakenPillValue = history.value.revertTakenPill;
+        expect(revertTakenPillValue, isNotNull);
+        expect(revertTakenPillValue!.beforeLastTakenDate, DateTime(2020, 9, 11));
+        expect(revertTakenPillValue.beforeLastTakenPillNumber, 11);
+        expect(revertTakenPillValue.afterLastTakenDate, DateTime(2020, 9, 10));
+        expect(revertTakenPillValue.afterLastTakenPillNumber, 10);
+      });
+
+      test('afterのlastTakenDateがnullの場合（ピルシートの最初まで取り消した場合）', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 1),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 1番目のピルを取り消すとlastTakenDateはnullになる
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: null,
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final revertTakenPillValue = history.value.revertTakenPill;
+        expect(revertTakenPillValue, isNotNull);
+        expect(revertTakenPillValue!.beforeLastTakenDate, DateTime(2020, 9, 1));
+        expect(revertTakenPillValue.beforeLastTakenPillNumber, 1);
+        expect(revertTakenPillValue.afterLastTakenDate, isNull);
+        expect(revertTakenPillValue.afterLastTakenPillNumber, 0);
+      });
+
+      test('複数ピルを一度に取り消した場合', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 13),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 3日分まとめて取り消し
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final revertTakenPillValue = history.value.revertTakenPill;
+        expect(revertTakenPillValue, isNotNull);
+        expect(revertTakenPillValue!.beforeLastTakenPillNumber, 13);
+        expect(revertTakenPillValue.afterLastTakenPillNumber, 10);
+      });
+
+      test('ピルシートの最後のピルを取り消した場合', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 28錠目（最後）を取り消し
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 27),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final revertTakenPillValue = history.value.revertTakenPill;
+        expect(revertTakenPillValue, isNotNull);
+        expect(revertTakenPillValue!.beforeLastTakenPillNumber, 28);
+        expect(revertTakenPillValue.afterLastTakenPillNumber, 27);
+      });
+
+      test('beforeとafterで異なるPillSheet IDの場合（シート境界での取り消し時）', () {
+        final firstPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+          createdAt: DateTime(2020, 9, 1),
+          groupIndex: 0,
+        );
+        final beforeSecondPillSheet = PillSheet(
+          id: 'pill_sheet_id_2',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 29),
+          lastTakenDate: DateTime(2020, 9, 29),
+          createdAt: DateTime(2020, 9, 29),
+          groupIndex: 1,
+        );
+        // 2枚目の最初のピルを取り消すと、afterは1枚目の最後の状態を参照
+        final afterSecondPillSheet = PillSheet(
+          id: 'pill_sheet_id_2',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 29),
+          lastTakenDate: null,
+          createdAt: DateTime(2020, 9, 29),
+          groupIndex: 1,
+        );
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, beforeSecondPillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, afterSecondPillSheet],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforeSecondPillSheet,
+          after: afterSecondPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.beforePillSheetID, 'pill_sheet_id_2');
+        expect(history.afterPillSheetID, 'pill_sheet_id_2');
+        expect(history.value.revertTakenPill?.beforeLastTakenPillNumber, 1);
+        expect(history.value.revertTakenPill?.afterLastTakenPillNumber, 0);
+        expect(history.value.revertTakenPill?.afterLastTakenDate, isNull);
+      });
+    });
+
+    group('異常系', () {
+      test('after.idがnullの場合、FormatExceptionがスローされる', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 11),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // idがnull
+        final afterPillSheet = PillSheet(
+          id: null,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+            pillSheetGroupID: 'group_id',
+            before: beforePillSheet,
+            after: afterPillSheet,
+            beforePillSheetGroup: beforePillSheetGroup,
+            afterPillSheetGroup: afterPillSheetGroup,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+
+      test('before.idがnullの場合、FormatExceptionがスローされる', () {
+        // idがnull
+        final beforePillSheet = PillSheet(
+          id: null,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 11),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+            pillSheetGroupID: 'group_id',
+            before: beforePillSheet,
+            after: afterPillSheet,
+            beforePillSheetGroup: beforePillSheetGroup,
+            afterPillSheetGroup: afterPillSheetGroup,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+
+      test('before.lastTakenDateがnullの場合、FormatExceptionがスローされる', () {
+        // lastTakenDateがnull - 取り消しアクションとしては不整合（取り消す対象がない）
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: null,
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: null,
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+            pillSheetGroupID: 'group_id',
+            before: beforePillSheet,
+            after: afterPillSheet,
+            beforePillSheetGroup: beforePillSheetGroup,
+            afterPillSheetGroup: afterPillSheetGroup,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+
+      test('before.idとbefore.lastTakenDateの両方がnullの場合、FormatExceptionがスローされる', () {
+        // idとlastTakenDateの両方がnull
+        final beforePillSheet = PillSheet(
+          id: null,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: null,
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: null,
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+            pillSheetGroupID: 'group_id',
+            before: beforePillSheet,
+            after: afterPillSheet,
+            beforePillSheetGroup: beforePillSheetGroup,
+            afterPillSheetGroup: afterPillSheetGroup,
+          ),
+          throwsA(isA<FormatException>()),
+        );
+      });
+    });
+  });
 }
