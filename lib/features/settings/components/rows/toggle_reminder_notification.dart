@@ -32,7 +32,7 @@ class ToggleReminderNotification extends HookConsumerWidget {
           fontSize: 16,
         ),
       ),
-      activeColor: AppColors.secondary,
+      activeThumbColor: AppColors.secondary,
       onChanged: (bool value) async {
         analytics.logEvent(
           name: 'did_select_toggle_reminder',
