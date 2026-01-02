@@ -288,11 +288,13 @@ class PillSheet with _$PillSheet {
 
   /// 現在アクティブな休薬期間
   /// 現在継続中（endDateがnull）かつ開始済みの休薬期間を返す
+  /// NOTE: beginDateは日付レベルで比較する。時刻を含めた比較だと、服用おやすみ開始日に
+  /// lastTakenDateの時刻を過ぎるまで表示されない問題が発生するため
   RestDuration? get activeRestDuration {
     if (restDurations.isEmpty) {
       return null;
     } else {
-      if (restDurations.last.endDate == null && restDurations.last.beginDate.isBefore(now())) {
+      if (restDurations.last.endDate == null && !restDurations.last.beginDate.date().isAfter(today())) {
         return restDurations.last;
       } else {
         return null;
