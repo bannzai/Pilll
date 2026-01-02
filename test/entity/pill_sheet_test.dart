@@ -608,6 +608,450 @@ void main() {
       expect(model.isBegan, false);
     });
   });
+  group("#inNotTakenDuration", () {
+    // inNotTakenDuration は todayPillNumber > typeInfo.dosingPeriod で判定される
+    // 休薬期間・偽薬期間に入っているかどうかを判定する
+
+    group("休薬期間/偽薬期間があるピルシートタイプ（pillsheet_21: 21錠+休薬7日）", () {
+      // pillsheet_21: totalCount=28, dosingPeriod=21
+      test("todayPillNumber が dosingPeriod より小さい場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から10日目 -> todayPillNumber = 10
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-10"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 10);
+        expect(model.inNotTakenDuration, false);
+      });
+
+      test("境界値テスト：todayPillNumber が dosingPeriod と同じ（21番）の場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から21日目 -> todayPillNumber = 21
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 21);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, false);
+      });
+
+      test("境界値テスト：todayPillNumber が dosingPeriod + 1（22番）の場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から22日目 -> todayPillNumber = 22
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 22);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, true);
+      });
+
+      test("todayPillNumber が totalCount（28番）の場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から28日目 -> todayPillNumber = 28
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 28);
+        expect(model.inNotTakenDuration, true);
+      });
+    });
+
+    group("偽薬期間があるピルシートタイプ（pillsheet_28_4: 24錠+4日偽薬）", () {
+      // pillsheet_28_4: totalCount=28, dosingPeriod=24
+      test("境界値テスト：todayPillNumber が dosingPeriod と同じ（24番）の場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から24日目 -> todayPillNumber = 24
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
+
+        const sheetType = PillSheetType.pillsheet_28_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 24);
+        expect(sheetType.dosingPeriod, 24);
+        expect(model.inNotTakenDuration, false);
+      });
+
+      test("境界値テスト：todayPillNumber が dosingPeriod + 1（25番）の場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から25日目 -> todayPillNumber = 25
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
+
+        const sheetType = PillSheetType.pillsheet_28_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 25);
+        expect(sheetType.dosingPeriod, 24);
+        expect(model.inNotTakenDuration, true);
+      });
+    });
+
+    group("偽薬期間があるピルシートタイプ（pillsheet_28_7: 21錠+7日偽薬）", () {
+      // pillsheet_28_7: totalCount=28, dosingPeriod=21
+      test("境界値テスト：todayPillNumber が dosingPeriod + 1（22番）の場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 22);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, true);
+      });
+    });
+
+    group("休薬期間があるピルシートタイプ（pillsheet_24_rest_4: 24錠+4日休薬）", () {
+      // pillsheet_24_rest_4: totalCount=28, dosingPeriod=24
+      test("境界値テスト：todayPillNumber が dosingPeriod + 1（25番）の場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
+
+        const sheetType = PillSheetType.pillsheet_24_rest_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 25);
+        expect(sheetType.dosingPeriod, 24);
+        expect(model.inNotTakenDuration, true);
+      });
+    });
+
+    group("全て実薬のピルシートタイプ（pillsheet_28_0: 28錠すべて実薬）", () {
+      // pillsheet_28_0: totalCount=28, dosingPeriod=28
+      // totalCount == dosingPeriod なので、inNotTakenDuration は常に false となるべき
+      test("todayPillNumber が 1番の場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 1);
+        expect(model.inNotTakenDuration, false);
+      });
+
+      test("境界値テスト：todayPillNumber が dosingPeriod と同じ（28番）の場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 28);
+        expect(sheetType.dosingPeriod, 28);
+        expect(model.inNotTakenDuration, false);
+      });
+    });
+
+    group("全て実薬のピルシートタイプ（pillsheet_24_0: 24錠すべて実薬）", () {
+      // pillsheet_24_0: totalCount=24, dosingPeriod=24
+      test("境界値テスト：todayPillNumber が dosingPeriod と同じ（24番）の場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
+
+        const sheetType = PillSheetType.pillsheet_24_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 24);
+        expect(sheetType.dosingPeriod, 24);
+        expect(model.inNotTakenDuration, false);
+      });
+    });
+
+    group("全て実薬のピルシートタイプ（pillsheet_21_0: 21錠すべて実薬）", () {
+      // pillsheet_21_0: totalCount=21, dosingPeriod=21
+      test("境界値テスト：todayPillNumber が dosingPeriod と同じ（21番）の場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
+
+        const sheetType = PillSheetType.pillsheet_21_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 21);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, false);
+      });
+    });
+
+    group("休薬期間（RestDuration）がある場合", () {
+      // RestDuration により todayPillNumber が遅延するため、inNotTakenDuration の判定に影響する
+      test("RestDuration により todayPillNumber が dosingPeriod 以下に留まっている場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日から25日目だが、3日間の休薬があるため todayPillNumber = 25 - 3 = 22
+        // しかし、休薬期間がまだ終わっていないため計算が異なる
+        // 休薬開始日: 9/20、今日: 9/25（休薬開始から6日目）
+        // todayPillNumber = daysBetween(9/1, 9/25) - summarizedRestDuration + 1
+        //                 = 24 - 5 + 1 = 20（休薬期間が継続中なので5日間がカウントされる）
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-19"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-20"),
+              createdDate: DateTime.parse("2020-09-20"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 20);
+        expect(model.inNotTakenDuration, false);
+      });
+
+      test("RestDuration が終了し、todayPillNumber が dosingPeriod を超えた場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日: 9/1、今日: 9/24、休薬期間: 9/5-9/6（9/5の1日間休薬、9/6に復帰）
+        // todayPillNumber = daysBetween(9/1, 9/24) - 1 + 1 = 23 - 1 + 1 = 23
+        // dosingPeriod = 21 なので、23 > 21 → true
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-23"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-05"),
+              createdDate: DateTime.parse("2020-09-05"),
+              endDate: DateTime.parse("2020-09-06"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 23);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, true);
+      });
+
+      test("境界値テスト：RestDuration により todayPillNumber が dosingPeriod と同じになる場合は false を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日: 9/1、今日: 9/22、休薬期間: 9/10-9/11（9/10の1日間休薬、9/11に復帰）
+        // todayPillNumber = daysBetween(9/1, 9/22) - 1 + 1 = 21 - 1 + 1 = 21
+        // dosingPeriod = 21 なので、21 > 21 → false
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-21"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-10"),
+              createdDate: DateTime.parse("2020-09-10"),
+              endDate: DateTime.parse("2020-09-11"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 21);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, false);
+      });
+
+      test("境界値テスト：RestDuration により todayPillNumber が dosingPeriod + 1 になる場合は true を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 開始日: 9/1、今日: 9/23、休薬期間: 9/10-9/11（9/10の1日間休薬、9/11に復帰）
+        // todayPillNumber = daysBetween(9/1, 9/23) - 1 + 1 = 22 - 1 + 1 = 22
+        // dosingPeriod = 21 なので、22 > 21 → true
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-23"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-22"),
+          createdAt: now(),
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-10"),
+              createdDate: DateTime.parse("2020-09-10"),
+              endDate: DateTime.parse("2020-09-11"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.todayPillNumber, 22);
+        expect(sheetType.dosingPeriod, 21);
+        expect(model.inNotTakenDuration, true);
+      });
+    });
+  });
   group("#lastTakenOrZeroPillNumber", () {
     test("未服用の場合は0になる", () {
       final mockTodayRepository = MockTodayService();
