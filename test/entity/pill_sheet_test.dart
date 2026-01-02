@@ -2152,6 +2152,92 @@ void main() {
         );
         expect(model.isActiveFor(DateTime(2020, 8, 31, 23, 59, 59)), false);
       });
+
+      test("終了日翌日の00:00:01は非アクティブ", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // pillsheet_21 は totalCount=28 なので、9/1開始で9/28が終了日
+        // 9/29 00:00:01 は非アクティブ
+        expect(model.isActiveFor(DateTime(2020, 9, 29, 0, 0, 1)), false);
+      });
+    });
+
+    group("beginingDateに時刻が含まれている場合", () {
+      test("beginingDateが12:30:00でも日付部分のみで判定される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          // beginingDateに時刻を含める
+          beginingDate: DateTime(2020, 9, 1, 12, 30, 0),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // 開始日の0時はアクティブ（時刻は無視される）
+        expect(model.isActiveFor(DateTime(2020, 9, 1, 0, 0, 0)), true);
+        // 開始日の12時より前もアクティブ
+        expect(model.isActiveFor(DateTime(2020, 9, 1, 6, 0, 0)), true);
+        // 開始日前日はやはり非アクティブ
+        expect(model.isActiveFor(DateTime(2020, 8, 31, 23, 59, 59)), false);
+      });
+    });
+
+    group("休薬期間が開始日と同日から始まる場合", () {
+      test("休薬期間が開始日と同日から始まる場合、終了日が延長される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          restDurations: [
+            // 開始日と同日から休薬開始
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2020-09-01"),
+              createdDate: DateTime.parse("2020-09-01"),
+              endDate: DateTime.parse("2020-09-03"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        // 元の終了日は9/28、2日間の休薬で9/30に延長
+        expect(model.isActiveFor(DateTime.parse("2020-09-30")), true);
+        expect(model.isActiveFor(DateTime.parse("2020-10-01")), false);
+      });
     });
   });
   group("#isBegan", () {
