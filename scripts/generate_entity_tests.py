@@ -200,7 +200,7 @@ def main():
         end_index = min(start_index + args.num, len(targets))
         print(f"実行件数: {args.num}件 (インデックス {start_index} から {end_index - 1} まで)")
 
-    base_branch = get_previous_branch(targets, start_index)
+    base_branch = "add/test-logic-2"
 
     for i in range(start_index, end_index):
         entity, method = targets[i]
