@@ -2805,8 +2805,9 @@ void main() {
 
         expect(history.ttlExpiresDateTime, isNotNull);
         // ttlExpiresDateTimeはcreatedAtからlimitDays日後に設定される
-        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
-        expect(history.ttlExpiresDateTime, expectedTtl);
+        // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
+        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
+        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
       });
     });
   });
@@ -3162,8 +3163,9 @@ void main() {
         );
 
         expect(history.ttlExpiresDateTime, isNotNull);
-        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
-        expect(history.ttlExpiresDateTime, expectedTtl);
+        // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
+        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
+        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
       });
     });
 
@@ -3739,8 +3741,9 @@ void main() {
         );
 
         expect(history.ttlExpiresDateTime, isNotNull);
-        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
-        expect(history.ttlExpiresDateTime, expectedTtl);
+        // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
+        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
+        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
       });
     });
 
@@ -4461,8 +4464,9 @@ void main() {
         );
 
         expect(history.ttlExpiresDateTime, isNotNull);
-        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
-        expect(history.ttlExpiresDateTime, expectedTtl);
+        // now()が2回別々に呼ばれるためマイクロ秒の差異が生じる可能性があるので、差分で検証する
+        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
+        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
       });
     });
 
