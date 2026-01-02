@@ -2,7 +2,54 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.codegen.dart';
 
+PillSheetModifiedHistory _createHistoryWithActionType(String actionType) {
+  return PillSheetModifiedHistory(
+    id: 'test_id',
+    actionType: actionType,
+    estimatedEventCausingDate: DateTime(2020, 9, 28),
+    createdAt: DateTime(2020, 9, 28),
+    value: const PillSheetModifiedHistoryValue(),
+    beforePillSheetGroup: null,
+    afterPillSheetGroup: null,
+    pillSheetID: null,
+    pillSheetGroupID: null,
+    beforePillSheetID: null,
+    afterPillSheetID: null,
+    before: null,
+    after: null,
+  );
+}
+
 void main() {
+  group('#enumActionType', () {
+    group('全てのPillSheetModifiedActionType値に対するテスト', () {
+      for (final actionType in PillSheetModifiedActionType.values) {
+        test('actionType="${actionType.name}"の場合、${actionType}を返す', () {
+          final history = _createHistoryWithActionType(actionType.name);
+          expect(history.enumActionType, actionType);
+        });
+      }
+    });
+
+    group('不正なactionTypeの場合', () {
+      test('存在しないactionTypeの場合、nullを返す', () {
+        final history = _createHistoryWithActionType('invalidActionType');
+        expect(history.enumActionType, isNull);
+      });
+
+      test('空文字の場合、nullを返す', () {
+        final history = _createHistoryWithActionType('');
+        expect(history.enumActionType, isNull);
+      });
+
+      test('大文字小文字が異なる場合、nullを返す（例: "CreatedPillSheet"）', () {
+        // actionTypeは大文字小文字を区別するため、異なる場合はnullを返す
+        final history = _createHistoryWithActionType('CreatedPillSheet');
+        expect(history.enumActionType, isNull);
+      });
+    });
+  });
+
   group("#missedPillDays", () {
     test("履歴が空の場合は0を返す", () {
       final result = missedPillDays(
