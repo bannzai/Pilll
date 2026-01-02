@@ -2775,275 +2775,515 @@ void main() {
         expect(pillSheet.estimatedEndTakenDate, DateTime.parse("2022-05-29").subtract(const Duration(seconds: 1)));
       });
     });
+  });
+  group("#activeRestDuration", () {
+    test("restDurationsが空の場合はnullを返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
-    group("#dates", () {
-      test("服用お休みが無いパターン", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
-
-        const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: null,
-          createdAt: now(),
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
-        );
-        final actual = pillSheet.dates;
-        final expected = [
-          DateTime.parse("2022-05-01"),
-          DateTime.parse("2022-05-02"),
-          DateTime.parse("2022-05-03"),
-          DateTime.parse("2022-05-04"),
-          DateTime.parse("2022-05-05"),
-          DateTime.parse("2022-05-06"),
-          DateTime.parse("2022-05-07"),
-          DateTime.parse("2022-05-08"),
-          DateTime.parse("2022-05-09"),
-          DateTime.parse("2022-05-10"),
-          DateTime.parse("2022-05-11"),
-          DateTime.parse("2022-05-12"),
-          DateTime.parse("2022-05-13"),
-          DateTime.parse("2022-05-14"),
-          DateTime.parse("2022-05-15"),
-          DateTime.parse("2022-05-16"),
-          DateTime.parse("2022-05-17"),
-          DateTime.parse("2022-05-18"),
-          DateTime.parse("2022-05-19"),
-          DateTime.parse("2022-05-20"),
-          DateTime.parse("2022-05-21"),
-          DateTime.parse("2022-05-22"),
-          DateTime.parse("2022-05-23"),
-          DateTime.parse("2022-05-24"),
-          DateTime.parse("2022-05-25"),
-          DateTime.parse("2022-05-26"),
-          DateTime.parse("2022-05-27"),
-          DateTime.parse("2022-05-28"),
-        ];
-        expect(actual, expected);
-      });
-      test("終わってない服用お休みが有るパターン", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
-
-        const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: null,
-          createdAt: now(),
-          restDurations: [
-            RestDuration(id: firestoreIDGenerator(), beginDate: DateTime.parse("2022-05-08"), createdDate: now()),
-          ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
-        );
-        final actual = pillSheet.dates;
-        final expected = [
-          DateTime.parse("2022-05-01"),
-          DateTime.parse("2022-05-02"),
-          DateTime.parse("2022-05-03"),
-          DateTime.parse("2022-05-04"),
-          DateTime.parse("2022-05-05"),
-          DateTime.parse("2022-05-06"),
-          DateTime.parse("2022-05-07"),
-          DateTime.parse("2022-05-10"),
-          DateTime.parse("2022-05-11"),
-          DateTime.parse("2022-05-12"),
-          DateTime.parse("2022-05-13"),
-          DateTime.parse("2022-05-14"),
-          DateTime.parse("2022-05-15"),
-          DateTime.parse("2022-05-16"),
-          DateTime.parse("2022-05-17"),
-          DateTime.parse("2022-05-18"),
-          DateTime.parse("2022-05-19"),
-          DateTime.parse("2022-05-20"),
-          DateTime.parse("2022-05-21"),
-          DateTime.parse("2022-05-22"),
-          DateTime.parse("2022-05-23"),
-          DateTime.parse("2022-05-24"),
-          DateTime.parse("2022-05-25"),
-          DateTime.parse("2022-05-26"),
-          DateTime.parse("2022-05-27"),
-          DateTime.parse("2022-05-28"),
-          DateTime.parse("2022-05-29"),
-          DateTime.parse("2022-05-30"),
-        ];
-        expect(actual, expected);
-      });
-      test("終わっている服用お休みが有るパターン", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
-
-        const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: null,
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              id: firestoreIDGenerator(),
-              beginDate: DateTime.parse("2022-05-08"),
-              endDate: DateTime.parse("2022-05-09"),
-              createdDate: now(),
-            ),
-          ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
-        );
-        final actual = pillSheet.dates;
-        final expected = [
-          DateTime.parse("2022-05-01"),
-          DateTime.parse("2022-05-02"),
-          DateTime.parse("2022-05-03"),
-          DateTime.parse("2022-05-04"),
-          DateTime.parse("2022-05-05"),
-          DateTime.parse("2022-05-06"),
-          DateTime.parse("2022-05-07"),
-          DateTime.parse("2022-05-09"),
-          DateTime.parse("2022-05-10"),
-          DateTime.parse("2022-05-11"),
-          DateTime.parse("2022-05-12"),
-          DateTime.parse("2022-05-13"),
-          DateTime.parse("2022-05-14"),
-          DateTime.parse("2022-05-15"),
-          DateTime.parse("2022-05-16"),
-          DateTime.parse("2022-05-17"),
-          DateTime.parse("2022-05-18"),
-          DateTime.parse("2022-05-19"),
-          DateTime.parse("2022-05-20"),
-          DateTime.parse("2022-05-21"),
-          DateTime.parse("2022-05-22"),
-          DateTime.parse("2022-05-23"),
-          DateTime.parse("2022-05-24"),
-          DateTime.parse("2022-05-25"),
-          DateTime.parse("2022-05-26"),
-          DateTime.parse("2022-05-27"),
-          DateTime.parse("2022-05-28"),
-          DateTime.parse("2022-05-29"),
-        ];
-        expect(actual, expected);
-      });
-      test("服用お休みが複数有るパターン", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
-
-        const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
-          id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: null,
-          createdAt: now(),
-          restDurations: [
-            RestDuration(
-              id: firestoreIDGenerator(),
-              beginDate: DateTime.parse("2022-05-08"),
-              endDate: DateTime.parse("2022-05-09"),
-              createdDate: now(),
-            ),
-            RestDuration(
-              id: firestoreIDGenerator(),
-              beginDate: DateTime.parse("2022-05-12"),
-              endDate: DateTime.parse("2022-05-14"),
-              createdDate: now(),
-            ),
-          ],
-          typeInfo: PillSheetTypeInfo(
-            dosingPeriod: sheetType.dosingPeriod,
-            name: sheetType.fullName,
-            totalCount: sheetType.totalCount,
-            pillSheetTypeReferencePath: sheetType.rawPath,
-          ),
-        );
-        final actual = pillSheet.dates;
-        final expected = [
-          DateTime.parse("2022-05-01"),
-          DateTime.parse("2022-05-02"),
-          DateTime.parse("2022-05-03"),
-          DateTime.parse("2022-05-04"),
-          DateTime.parse("2022-05-05"),
-          DateTime.parse("2022-05-06"),
-          DateTime.parse("2022-05-07"),
-          DateTime.parse("2022-05-09"),
-          DateTime.parse("2022-05-10"),
-          DateTime.parse("2022-05-11"),
-          DateTime.parse("2022-05-14"),
-          DateTime.parse("2022-05-15"),
-          DateTime.parse("2022-05-16"),
-          DateTime.parse("2022-05-17"),
-          DateTime.parse("2022-05-18"),
-          DateTime.parse("2022-05-19"),
-          DateTime.parse("2022-05-20"),
-          DateTime.parse("2022-05-21"),
-          DateTime.parse("2022-05-22"),
-          DateTime.parse("2022-05-23"),
-          DateTime.parse("2022-05-24"),
-          DateTime.parse("2022-05-25"),
-          DateTime.parse("2022-05-26"),
-          DateTime.parse("2022-05-27"),
-          DateTime.parse("2022-05-28"),
-          DateTime.parse("2022-05-29"),
-          DateTime.parse("2022-05-30"),
-          DateTime.parse("2022-05-31"),
-        ];
-        expect(actual, expected);
-      });
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, isNull);
     });
-    group("#summarizedRestDuration", () {
-      test("restDurations isEmpty", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
-        expect(summarizedRestDuration(restDurations: [], upperDate: today()), 0);
-      });
-      test("last restDuration is not ended", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+    test("最後のRestDurationのendDateがnullでbeginDateがnow()より前の場合はそのRestDurationを返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
-        final restDurations = [
+      const sheetType = PillSheetType.pillsheet_21;
+      final restDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: DateTime.parse("2022-05-08"),
+        createdDate: DateTime.parse("2022-05-08"),
+        endDate: null,
+      );
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [restDuration],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, restDuration);
+    });
+
+    test("境界値テスト：最後のRestDurationのbeginDateがnow()と同日の場合はnullを返す（isBeforeは同日を含まない）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
           RestDuration(
             id: "rest_duration_id",
-            beginDate: DateTime.parse("2022-05-07"),
-            createdDate: DateTime.parse("2022-05-07"),
+            beginDate: DateTime.parse("2022-05-10"),
+            createdDate: DateTime.parse("2022-05-10"),
+            endDate: null,
           ),
-        ];
-        expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 3);
-      });
-      test("last restDuration is ended", () {
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, isNull);
+    });
 
-        final restDurations = [
+    test("境界値テスト：最後のRestDurationのbeginDateがnow()の前日の場合はそのRestDurationを返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final restDuration = RestDuration(
+        id: "rest_duration_id",
+        beginDate: DateTime.parse("2022-05-09"),
+        createdDate: DateTime.parse("2022-05-09"),
+        endDate: null,
+      );
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [restDuration],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, restDuration);
+    });
+
+    test("最後のRestDurationのbeginDateがnow()より後の場合はnullを返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
           RestDuration(
             id: "rest_duration_id",
-            beginDate: DateTime.parse("2022-05-07"),
-            createdDate: DateTime.parse("2022-05-07"),
+            beginDate: DateTime.parse("2022-05-11"),
+            createdDate: DateTime.parse("2022-05-10"),
+            endDate: null,
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, isNull);
+    });
+
+    test("最後のRestDurationのendDateが設定されている場合はnullを返す（休薬期間が終了済み）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-05-05"),
+            createdDate: DateTime.parse("2022-05-05"),
             endDate: DateTime.parse("2022-05-08"),
           ),
-        ];
-        expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 1);
-      });
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, isNull);
+    });
+
+    test("複数のRestDurationがある場合、最後の要素のみを確認する（最後以外にendDateがnullのものがあっても無視）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          // 1つ目は終了済み
+          RestDuration(
+            id: "rest_duration_id_1",
+            beginDate: DateTime.parse("2022-05-05"),
+            createdDate: DateTime.parse("2022-05-05"),
+            endDate: DateTime.parse("2022-05-07"),
+          ),
+          // 2つ目（最後）も終了済み
+          RestDuration(
+            id: "rest_duration_id_2",
+            beginDate: DateTime.parse("2022-05-10"),
+            createdDate: DateTime.parse("2022-05-10"),
+            endDate: DateTime.parse("2022-05-12"),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, isNull);
+    });
+
+    test("複数のRestDurationがある場合、最後の要素がアクティブならそれを返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final activeRestDuration = RestDuration(
+        id: "rest_duration_id_2",
+        beginDate: DateTime.parse("2022-05-12"),
+        createdDate: DateTime.parse("2022-05-12"),
+        endDate: null,
+      );
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          // 1つ目は終了済み
+          RestDuration(
+            id: "rest_duration_id_1",
+            beginDate: DateTime.parse("2022-05-05"),
+            createdDate: DateTime.parse("2022-05-05"),
+            endDate: DateTime.parse("2022-05-07"),
+          ),
+          // 2つ目（最後）はアクティブ
+          activeRestDuration,
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.activeRestDuration, activeRestDuration);
+    });
+  });
+  group("#dates", () {
+    test("服用お休みが無いパターン", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      final actual = pillSheet.dates;
+      final expected = [
+        DateTime.parse("2022-05-01"),
+        DateTime.parse("2022-05-02"),
+        DateTime.parse("2022-05-03"),
+        DateTime.parse("2022-05-04"),
+        DateTime.parse("2022-05-05"),
+        DateTime.parse("2022-05-06"),
+        DateTime.parse("2022-05-07"),
+        DateTime.parse("2022-05-08"),
+        DateTime.parse("2022-05-09"),
+        DateTime.parse("2022-05-10"),
+        DateTime.parse("2022-05-11"),
+        DateTime.parse("2022-05-12"),
+        DateTime.parse("2022-05-13"),
+        DateTime.parse("2022-05-14"),
+        DateTime.parse("2022-05-15"),
+        DateTime.parse("2022-05-16"),
+        DateTime.parse("2022-05-17"),
+        DateTime.parse("2022-05-18"),
+        DateTime.parse("2022-05-19"),
+        DateTime.parse("2022-05-20"),
+        DateTime.parse("2022-05-21"),
+        DateTime.parse("2022-05-22"),
+        DateTime.parse("2022-05-23"),
+        DateTime.parse("2022-05-24"),
+        DateTime.parse("2022-05-25"),
+        DateTime.parse("2022-05-26"),
+        DateTime.parse("2022-05-27"),
+        DateTime.parse("2022-05-28"),
+      ];
+      expect(actual, expected);
+    });
+    test("終わってない服用お休みが有るパターン", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(id: firestoreIDGenerator(), beginDate: DateTime.parse("2022-05-08"), createdDate: now()),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      final actual = pillSheet.dates;
+      final expected = [
+        DateTime.parse("2022-05-01"),
+        DateTime.parse("2022-05-02"),
+        DateTime.parse("2022-05-03"),
+        DateTime.parse("2022-05-04"),
+        DateTime.parse("2022-05-05"),
+        DateTime.parse("2022-05-06"),
+        DateTime.parse("2022-05-07"),
+        DateTime.parse("2022-05-10"),
+        DateTime.parse("2022-05-11"),
+        DateTime.parse("2022-05-12"),
+        DateTime.parse("2022-05-13"),
+        DateTime.parse("2022-05-14"),
+        DateTime.parse("2022-05-15"),
+        DateTime.parse("2022-05-16"),
+        DateTime.parse("2022-05-17"),
+        DateTime.parse("2022-05-18"),
+        DateTime.parse("2022-05-19"),
+        DateTime.parse("2022-05-20"),
+        DateTime.parse("2022-05-21"),
+        DateTime.parse("2022-05-22"),
+        DateTime.parse("2022-05-23"),
+        DateTime.parse("2022-05-24"),
+        DateTime.parse("2022-05-25"),
+        DateTime.parse("2022-05-26"),
+        DateTime.parse("2022-05-27"),
+        DateTime.parse("2022-05-28"),
+        DateTime.parse("2022-05-29"),
+        DateTime.parse("2022-05-30"),
+      ];
+      expect(actual, expected);
+    });
+    test("終わっている服用お休みが有るパターン", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-08"),
+            endDate: DateTime.parse("2022-05-09"),
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      final actual = pillSheet.dates;
+      final expected = [
+        DateTime.parse("2022-05-01"),
+        DateTime.parse("2022-05-02"),
+        DateTime.parse("2022-05-03"),
+        DateTime.parse("2022-05-04"),
+        DateTime.parse("2022-05-05"),
+        DateTime.parse("2022-05-06"),
+        DateTime.parse("2022-05-07"),
+        DateTime.parse("2022-05-09"),
+        DateTime.parse("2022-05-10"),
+        DateTime.parse("2022-05-11"),
+        DateTime.parse("2022-05-12"),
+        DateTime.parse("2022-05-13"),
+        DateTime.parse("2022-05-14"),
+        DateTime.parse("2022-05-15"),
+        DateTime.parse("2022-05-16"),
+        DateTime.parse("2022-05-17"),
+        DateTime.parse("2022-05-18"),
+        DateTime.parse("2022-05-19"),
+        DateTime.parse("2022-05-20"),
+        DateTime.parse("2022-05-21"),
+        DateTime.parse("2022-05-22"),
+        DateTime.parse("2022-05-23"),
+        DateTime.parse("2022-05-24"),
+        DateTime.parse("2022-05-25"),
+        DateTime.parse("2022-05-26"),
+        DateTime.parse("2022-05-27"),
+        DateTime.parse("2022-05-28"),
+        DateTime.parse("2022-05-29"),
+      ];
+      expect(actual, expected);
+    });
+    test("服用お休みが複数有るパターン", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-05-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-08"),
+            endDate: DateTime.parse("2022-05-09"),
+            createdDate: now(),
+          ),
+          RestDuration(
+            id: firestoreIDGenerator(),
+            beginDate: DateTime.parse("2022-05-12"),
+            endDate: DateTime.parse("2022-05-14"),
+            createdDate: now(),
+          ),
+        ],
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      final actual = pillSheet.dates;
+      final expected = [
+        DateTime.parse("2022-05-01"),
+        DateTime.parse("2022-05-02"),
+        DateTime.parse("2022-05-03"),
+        DateTime.parse("2022-05-04"),
+        DateTime.parse("2022-05-05"),
+        DateTime.parse("2022-05-06"),
+        DateTime.parse("2022-05-07"),
+        DateTime.parse("2022-05-09"),
+        DateTime.parse("2022-05-10"),
+        DateTime.parse("2022-05-11"),
+        DateTime.parse("2022-05-14"),
+        DateTime.parse("2022-05-15"),
+        DateTime.parse("2022-05-16"),
+        DateTime.parse("2022-05-17"),
+        DateTime.parse("2022-05-18"),
+        DateTime.parse("2022-05-19"),
+        DateTime.parse("2022-05-20"),
+        DateTime.parse("2022-05-21"),
+        DateTime.parse("2022-05-22"),
+        DateTime.parse("2022-05-23"),
+        DateTime.parse("2022-05-24"),
+        DateTime.parse("2022-05-25"),
+        DateTime.parse("2022-05-26"),
+        DateTime.parse("2022-05-27"),
+        DateTime.parse("2022-05-28"),
+        DateTime.parse("2022-05-29"),
+        DateTime.parse("2022-05-30"),
+        DateTime.parse("2022-05-31"),
+      ];
+      expect(actual, expected);
+    });
+  });
+  group("#summarizedRestDuration", () {
+    test("restDurations isEmpty", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      expect(summarizedRestDuration(restDurations: [], upperDate: today()), 0);
+    });
+    test("last restDuration is not ended", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      final restDurations = [
+        RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-07"),
+          createdDate: DateTime.parse("2022-05-07"),
+        ),
+      ];
+      expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 3);
+    });
+    test("last restDuration is ended", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+      final restDurations = [
+        RestDuration(
+          id: "rest_duration_id",
+          beginDate: DateTime.parse("2022-05-07"),
+          createdDate: DateTime.parse("2022-05-07"),
+          endDate: DateTime.parse("2022-05-08"),
+        ),
+      ];
+      expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 1);
     });
   });
 }
