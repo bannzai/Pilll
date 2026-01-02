@@ -2870,6 +2870,97 @@ void main() {
         expect(model.lastTakenOrZeroPillNumber, 19);
       });
     });
+
+    group("異なるPillSheetTypeでの動作", () {
+      test("24錠型（pillsheet_24_0）で最後まで服用した場合は24番を返す", () {
+        const sheetType = PillSheetType.pillsheet_24_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-24"),
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenOrZeroPillNumber, 24);
+      });
+      test("28錠型（pillsheet_28_0）で最後まで服用した場合は28番を返す", () {
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenOrZeroPillNumber, 28);
+      });
+      test("24錠+4日偽薬型（pillsheet_28_4）で偽薬期間も含めて28番まで服用した場合", () {
+        // pillsheet_28_4はtotalCount=28, dosingPeriod=24
+        // 偽薬期間の4錠も含めて28番目を服用した場合
+        const sheetType = PillSheetType.pillsheet_28_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-28"),
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenOrZeroPillNumber, 28);
+      });
+    });
+
+    group("totalCountとの境界値", () {
+      test("totalCountと一致する番号まで服用した場合", () {
+        const sheetType = PillSheetType.pillsheet_21_0;
+        // pillsheet_21_0はtotalCount=21, dosingPeriod=21
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-21"),
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenOrZeroPillNumber, 21);
+      });
+      test("24錠+4日休薬型（pillsheet_24_rest_4）で24錠目（実薬最終日）を服用した場合", () {
+        // pillsheet_24_rest_4はtotalCount=28, dosingPeriod=24
+        // 実薬24錠を服用し、休薬期間に入る前の最終服用
+        const sheetType = PillSheetType.pillsheet_24_rest_4;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: DateTime.parse("2020-09-24"),
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenOrZeroPillNumber, 24);
+      });
+    });
   });
   group("#lastTakenPillNumber", () {
     test("未服用の場合はnullになる", () {
