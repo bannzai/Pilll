@@ -22,6 +22,23 @@ void main() {
   });
 
   group("#activePillSheet", () {
+    group("ピルシートが空の場合", () {
+      test("nullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: [],
+          pillSheets: [],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        expect(pillSheetGroup.activePillSheet, isNull);
+      });
+    });
+
     group("ピルシートが1つの場合", () {
       test("今日がピルシートの期間内の場合はそのピルシートを返す", () {
         final mockTodayRepository = MockTodayService();
