@@ -2073,6 +2073,67 @@ void main() {
       );
       expect(model.isBegan, false);
     });
+    test("開始日当日で時刻部分がある場合はtrueを返す（beginingDate.date()は00:00:00に正規化されるため）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      // now()に時刻部分があると、beginingDate.date() = 00:00:00 < now() = 12:00:00 となりtrue
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 12, 0, 0));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isBegan, true);
+    });
+    test("開始日当日の深夜0時1秒の場合はtrueを返す（境界値: 1秒でも経過すればtrue）", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 0, 0, 1));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isBegan, true);
+    });
+    test("開始日当日の23:59:59の場合はtrueを返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 23, 59, 59));
+
+      const sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: null,
+        createdAt: now(),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isBegan, true);
+    });
   });
   group("#inNotTakenDuration", () {
     // inNotTakenDuration は todayPillNumber > typeInfo.dosingPeriod で判定される
