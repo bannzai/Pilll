@@ -4632,4 +4632,556 @@ void main() {
       });
     });
   });
+
+  group('#createChangedRestDurationAction', () {
+    // テスト用のPillSheetGroupを作成するヘルパー関数
+    PillSheetGroup createPillSheetGroup({required List<PillSheet> pillSheets}) {
+      return PillSheetGroup(
+        id: 'group_id',
+        pillSheetIDs: pillSheets.map((e) => e.id ?? '').toList(),
+        pillSheets: pillSheets,
+        createdAt: DateTime(2020, 9, 1),
+      );
+    }
+
+    group('正常ケース', () {
+      test('actionType が changedRestDuration であること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.actionType, PillSheetModifiedActionType.changedRestDuration.name);
+      });
+
+      test('changedRestDurationValue に beforeRestDuration と afterRestDuration が正しく設定されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.value.changedRestDurationValue, isNotNull);
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.id, beforeRestDuration.id);
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.beginDate, beforeRestDuration.beginDate);
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, beforeRestDuration.endDate);
+        expect(history.value.changedRestDurationValue!.afterRestDuration.id, afterRestDuration.id);
+        expect(history.value.changedRestDurationValue!.afterRestDuration.beginDate, afterRestDuration.beginDate);
+        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, afterRestDuration.endDate);
+      });
+
+      test('before と after の PillSheet が正しく設定されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.before, beforePillSheet);
+        expect(history.after, afterPillSheet);
+        expect(history.beforePillSheetID, beforePillSheet.id);
+        expect(history.afterPillSheetID, afterPillSheet.id);
+      });
+
+      test('beforePillSheetGroup と afterPillSheetGroup が正しく設定されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.beforePillSheetGroup, beforePillSheetGroup);
+        expect(history.afterPillSheetGroup, afterPillSheetGroup);
+      });
+
+      test('pillSheetGroupID が正しく設定されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.pillSheetGroupID, 'group_id');
+      });
+
+      test('version が v2 であること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.version, 'v2');
+      });
+    });
+
+    group('休薬期間の終了日を変更するケース', () {
+      test('endDate を延長した場合に正しく記録されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 18),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 9, 14));
+        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 9, 18));
+      });
+
+      test('endDate を短縮した場合に正しく記録されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 18),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 14),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 9, 18));
+        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 9, 14));
+      });
+    });
+
+    group('複数のピルシートがあるケース', () {
+      test('2枚目のピルシートの休薬期間を変更した場合に正しく記録されること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 10, 5),
+          endDate: DateTime(2020, 10, 10),
+          createdDate: DateTime(2020, 10, 5),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 10, 12),
+        );
+        final firstPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+          restDurations: [],
+          createdAt: DateTime(2020, 9, 1),
+          groupIndex: 0,
+        );
+        final beforeSecondPillSheet = PillSheet(
+          id: 'pill_sheet_id_2',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 29),
+          lastTakenDate: DateTime(2020, 10, 4),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 29),
+          groupIndex: 1,
+        );
+        final afterSecondPillSheet = beforeSecondPillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [firstPillSheet, beforeSecondPillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [firstPillSheet, afterSecondPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforeSecondPillSheet,
+          after: afterSecondPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.beforePillSheetID, 'pill_sheet_id_2');
+        expect(history.afterPillSheetID, 'pill_sheet_id_2');
+        expect(history.before!.groupIndex, 1);
+        expect(history.after!.groupIndex, 1);
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.endDate, DateTime(2020, 10, 10));
+        expect(history.value.changedRestDurationValue!.afterRestDuration.endDate, DateTime(2020, 10, 12));
+      });
+    });
+
+    group('複数の休薬期間があるケース', () {
+      test('2つ目の休薬期間を変更した場合に before/after の PillSheet に正しく反映されること', () {
+        final existingRestDuration = RestDuration(
+          id: 'rest_duration_id_0',
+          beginDate: DateTime(2020, 9, 5),
+          endDate: DateTime(2020, 9, 7),
+          createdDate: DateTime(2020, 9, 5),
+        );
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 15),
+          endDate: DateTime(2020, 9, 18),
+          createdDate: DateTime(2020, 9, 15),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 20),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 14),
+          restDurations: [existingRestDuration, beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [existingRestDuration, afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.value.changedRestDurationValue!.beforeRestDuration.id, beforeRestDuration.id);
+        expect(history.value.changedRestDurationValue!.afterRestDuration.id, afterRestDuration.id);
+        expect(history.before!.restDurations.length, 2);
+        expect(history.after!.restDurations.length, 2);
+        expect(history.before!.restDurations[1].endDate, DateTime(2020, 9, 18));
+        expect(history.after!.restDurations[1].endDate, DateTime(2020, 9, 20));
+      });
+    });
+
+    group('異なるPillSheetTypeのケース', () {
+      test('21錠タイプ（pillsheet_21_0）のピルシートで休薬期間を変更した場合', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 15),
+          endDate: DateTime(2020, 9, 18),
+          createdDate: DateTime(2020, 9, 15),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 20),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 14),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.actionType, PillSheetModifiedActionType.changedRestDuration.name);
+        expect(history.before!.typeInfo.totalCount, 21);
+        expect(history.after!.typeInfo.totalCount, 21);
+      });
+
+      test('24錠+4偽薬タイプのピルシートで休薬期間を変更した場合', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 15),
+          endDate: DateTime(2020, 9, 18),
+          createdDate: DateTime(2020, 9, 15),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 20),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 14),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforeRestDuration: beforeRestDuration,
+          afterRestDuration: afterRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.actionType, PillSheetModifiedActionType.changedRestDuration.name);
+        expect(history.before!.typeInfo.totalCount, 28);
+        expect(history.before!.typeInfo.dosingPeriod, 24);
+        expect(history.after!.typeInfo.totalCount, 28);
+        expect(history.after!.typeInfo.dosingPeriod, 24);
+      });
+    });
+
+    group('異常ケース', () {
+      test('pillSheetGroupID が null の場合に assertion エラーが発生すること', () {
+        final beforeRestDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 11),
+          endDate: DateTime(2020, 9, 14),
+          createdDate: DateTime(2020, 9, 11),
+        );
+        final afterRestDuration = beforeRestDuration.copyWith(
+          endDate: DateTime(2020, 9, 16),
+        );
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [beforeRestDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = beforePillSheet.copyWith(
+          restDurations: [afterRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        // pillSheetGroupID が null の場合、assert エラーが発生する
+        // assert はデバッグモードでのみ有効なため、AssertionError をチェック
+        expect(
+          () => PillSheetModifiedHistoryServiceActionFactory.createChangedRestDurationAction(
+            pillSheetGroupID: null,
+            before: beforePillSheet,
+            after: afterPillSheet,
+            beforeRestDuration: beforeRestDuration,
+            afterRestDuration: afterRestDuration,
+            beforePillSheetGroup: beforePillSheetGroup,
+            afterPillSheetGroup: afterPillSheetGroup,
+          ),
+          throwsA(isA<AssertionError>()),
+        );
+      });
+    });
+  });
 }
