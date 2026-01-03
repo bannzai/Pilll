@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -83,13 +84,19 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
     );
 
-    return PillSheet(
+    return PillSheet.v2(
       id: firestoreIDGenerator(),
       groupIndex: pageIndex,
       beginingDate: beginDate,
       lastTakenDate: lastTakenDate,
       typeInfo: pillSheetType.typeInfo,
       createdAt: now(),
+      pills: Pill.generateAndFillTo(
+        pillSheetType: pillSheetType,
+        fromDate: beginDate,
+        lastTakenDate: lastTakenDate,
+        pillTakenCount: 1,
+      ),
     );
   }
 

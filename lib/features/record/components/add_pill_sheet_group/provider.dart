@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -81,15 +82,20 @@ PillSheetGroup buildPillSheetGroup({
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
     final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
-    return PillSheet(
+    final beginDate = n.add(Duration(days: offset));
+    return PillSheet.v2(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,
-      beginingDate: n.add(
-        Duration(days: offset),
-      ),
+      beginingDate: beginDate,
       lastTakenDate: null,
       groupIndex: pageIndex,
       createdAt: now(),
+      pills: Pill.generateAndFillTo(
+        pillSheetType: pillSheetType,
+        fromDate: beginDate,
+        lastTakenDate: null,
+        pillTakenCount: 1,
+      ),
     );
   }).toList();
 

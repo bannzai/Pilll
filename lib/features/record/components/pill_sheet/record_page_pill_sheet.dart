@@ -109,15 +109,21 @@ class RecordPagePillSheet extends HookConsumerWidget {
         if (pillSheet.pillTakenCount <= 1) {
           return null;
         }
-        if (pillSheet.pills.isEmpty) {
-          return null;
-        }
-        if (pillIndexIntoPillSheet < 0 || pillIndexIntoPillSheet >= pillSheet.pills.length) {
-          return null;
-        }
 
-        final diff = pillSheet.pillTakenCount - pillSheet.pills[pillIndexIntoPillSheet].pillTakens.length;
-        return diff == 0 ? null : diff;
+        // V1の場合はpillsがないのでnullを返す、V2の場合は残り服用回数を計算
+        return switch (pillSheet) {
+          PillSheetV1() => null,
+          PillSheetV2(:final pills) => () {
+              if (pills.isEmpty) {
+                return null;
+              }
+              if (pillIndexIntoPillSheet < 0 || pillIndexIntoPillSheet >= pills.length) {
+                return null;
+              }
+              final diff = pillSheet.pillTakenCount - pills[pillIndexIntoPillSheet].pillTakens.length;
+              return diff == 0 ? null : diff;
+            }(),
+        };
       }();
 
       return SizedBox(
