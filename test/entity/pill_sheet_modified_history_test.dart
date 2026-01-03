@@ -3072,6 +3072,354 @@ void main() {
         );
       });
     });
+
+    group('todayPillNumberの検証', () {
+      test('固定日付でtodayPillNumberが正しく記録される', () {
+        final mockNow = DateTime(2020, 9, 10);
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        // 9/1開始で、9/10が今日の場合、todayPillNumber = 10
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 9),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 開始日を9/3に変更すると、9/10が今日の場合、todayPillNumber = 8
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 3),
+          lastTakenDate: DateTime(2020, 9, 9),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeTodayPillNumber, 10);
+        expect(changedPillNumberValue.afterTodayPillNumber, 8);
+      });
+
+      test('月初日から月末日への変更でtodayPillNumberが正しく計算される', () {
+        final mockNow = DateTime(2020, 10, 1);
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        // 9/1開始で、10/1が今日の場合、todayPillNumber = 31
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 30),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 開始日を9/30に変更すると、10/1が今日の場合、todayPillNumber = 2
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 30),
+          lastTakenDate: DateTime(2020, 9, 30),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeTodayPillNumber, 31);
+        expect(changedPillNumberValue.afterTodayPillNumber, 2);
+      });
+    });
+
+    group('ttlExpiresDateTimeの検証', () {
+      test('ttlExpiresDateTimeがnow()から180日後に設定される', () {
+        final mockNow = DateTime(2020, 9, 10, 12, 0, 0);
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 9),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 3),
+          lastTakenDate: DateTime(2020, 9, 9),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        // limitDays = 180
+        final expectedTtl = mockNow.add(const Duration(days: 180));
+        expect(history.ttlExpiresDateTime, expectedTtl);
+      });
+    });
+
+    group('3枚のピルシートを持つPillSheetGroupでの操作', () {
+      test('3枚目のピルシートを変更した場合', () {
+        final firstPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+          createdAt: DateTime(2020, 9, 1),
+          groupIndex: 0,
+        );
+        final secondPillSheet = PillSheet(
+          id: 'pill_sheet_id_2',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 29),
+          lastTakenDate: DateTime(2020, 10, 26),
+          createdAt: DateTime(2020, 9, 29),
+          groupIndex: 1,
+        );
+        final beforeThirdPillSheet = PillSheet(
+          id: 'pill_sheet_id_3',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 10, 27),
+          lastTakenDate: DateTime(2020, 11, 5),
+          createdAt: DateTime(2020, 10, 27),
+          groupIndex: 2,
+        );
+        // 3枚目の開始日を変更
+        final afterThirdPillSheet = PillSheet(
+          id: 'pill_sheet_id_3',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 10, 29),
+          lastTakenDate: DateTime(2020, 11, 5),
+          createdAt: DateTime(2020, 10, 27),
+          groupIndex: 2,
+        );
+        final beforePillSheetGroup = PillSheetGroup(
+          id: 'group_id',
+          pillSheetIDs: ['pill_sheet_id_1', 'pill_sheet_id_2', 'pill_sheet_id_3'],
+          pillSheets: [firstPillSheet, secondPillSheet, beforeThirdPillSheet],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheetGroup = PillSheetGroup(
+          id: 'group_id',
+          pillSheetIDs: ['pill_sheet_id_1', 'pill_sheet_id_2', 'pill_sheet_id_3'],
+          pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
+          createdAt: DateTime(2020, 9, 1),
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforeThirdPillSheet,
+          after: afterThirdPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.beforePillSheetID, 'pill_sheet_id_3');
+        expect(history.afterPillSheetID, 'pill_sheet_id_3');
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeBeginingDate, DateTime(2020, 10, 27));
+        expect(changedPillNumberValue.afterBeginingDate, DateTime(2020, 10, 29));
+        expect(changedPillNumberValue.beforeGroupIndex, 2);
+        expect(changedPillNumberValue.afterGroupIndex, 2);
+      });
+    });
+
+    group('before.idがnullの場合', () {
+      test('before.idがnullでもエラーなく履歴が生成される', () {
+        // before.id は null でも許容される（コードにバリデーションがないため）
+        final beforePillSheet = PillSheet(
+          id: null,
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 3),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.beforePillSheetID, isNull);
+        expect(history.afterPillSheetID, 'pill_sheet_id_1');
+      });
+    });
+
+    group('境界値テスト', () {
+      test('月をまたぐ日付変更（9月末から10月初への変更）', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 15),
+          lastTakenDate: DateTime(2020, 9, 30),
+          createdAt: DateTime(2020, 9, 15),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 10, 1),
+          lastTakenDate: DateTime(2020, 9, 30),
+          createdAt: DateTime(2020, 9, 15),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeBeginingDate, DateTime(2020, 9, 15));
+        expect(changedPillNumberValue.afterBeginingDate, DateTime(2020, 10, 1));
+      });
+
+      test('年をまたぐ日付変更（12月末から1月初への変更）', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 12, 15),
+          lastTakenDate: DateTime(2020, 12, 31),
+          createdAt: DateTime(2020, 12, 15),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2021, 1, 1),
+          lastTakenDate: DateTime(2020, 12, 31),
+          createdAt: DateTime(2020, 12, 15),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeBeginingDate, DateTime(2020, 12, 15));
+        expect(changedPillNumberValue.afterBeginingDate, DateTime(2021, 1, 1));
+      });
+
+      test('うるう年の2月29日を含む変更', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 2, 1),
+          lastTakenDate: DateTime(2020, 2, 28),
+          createdAt: DateTime(2020, 2, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 2, 29),
+          lastTakenDate: DateTime(2020, 2, 28),
+          createdAt: DateTime(2020, 2, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeBeginingDate, DateTime(2020, 2, 1));
+        expect(changedPillNumberValue.afterBeginingDate, DateTime(2020, 2, 29));
+      });
+
+      test('開始日が同じ場合（変更なし）', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        final changedPillNumberValue = history.value.changedPillNumber;
+        expect(changedPillNumberValue, isNotNull);
+        expect(changedPillNumberValue!.beforeBeginingDate, changedPillNumberValue.afterBeginingDate);
+      });
+    });
   });
 
   group('#createDeletedPillSheetAction', () {
