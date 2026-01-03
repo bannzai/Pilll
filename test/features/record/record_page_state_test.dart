@@ -16,7 +16,6 @@ void main() {
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    analytics = MockAnalytics();
   });
   group("#markFor", () {
     test("it is alredy taken all", () async {

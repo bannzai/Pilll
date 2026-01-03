@@ -28,7 +28,6 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    analytics = FakeAnalytics();
     errorLogger = FakeErrorLogger();
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(

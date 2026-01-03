@@ -38,7 +38,6 @@ void main() {
     TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(timezoneChannel, (MethodCall methodCall) async {
       return 'Asia/Tokyo';
     });
-    analytics = MockAnalytics();
     errorLogger = MockErrorLogger();
 
     initializeDateFormatting('ja_JP');

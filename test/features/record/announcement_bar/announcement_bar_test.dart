@@ -50,7 +50,6 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    analytics = MockAnalytics();
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(
         view: WidgetsBinding.instance.platformDispatcher.views.single,
