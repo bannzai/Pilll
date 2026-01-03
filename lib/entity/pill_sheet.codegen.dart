@@ -1,7 +1,9 @@
 import 'dart:math';
 
+import 'package:collection/collection.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
@@ -161,6 +163,15 @@ class PillSheet with _$PillSheet {
     /// 休薬期間のリスト
     /// このピルシート期間中の全ての休薬期間記録
     @Default([]) List<RestDuration> restDurations,
+
+    /// 1回の服用で飲むピルの錠数（デフォルト: 1）
+    /// 2錠飲みの場合は2がセットされる
+    @Default(1) int pillTakenCount,
+
+    /// 各ピルの詳細情報リスト
+    /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+    /// TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。下位互換のためにpillsが無い場合を考慮する
+    @Default([]) List<Pill> pills,
   }) = _PillSheet;
 
   // NOTE: visibleForTestingを消すならpillTakenCountもrequiredにする
@@ -179,6 +190,13 @@ class PillSheet with _$PillSheet {
         beginingDate: beginDate,
         lastTakenDate: lastTakenDate,
         createdAt: now(),
+        pillTakenCount: pillTakenCount ?? 1,
+        pills: Pill.generateAndFillTo(
+          pillSheetType: type,
+          fromDate: beginDate,
+          lastTakenDate: lastTakenDate,
+          pillTakenCount: pillTakenCount ?? 1,
+        ),
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
@@ -192,6 +210,37 @@ class PillSheet with _$PillSheet {
   /// 1から始まる連番でピルシート内の位置を示す
   int get todayPillNumber {
     return pillNumberFor(targetDate: today());
+  }
+
+  /// 今日服用すべきピルのインデックス（0始まり）
+  int get todayPillIndex {
+    return todayPillNumber - 1;
+  }
+
+  // lastCompletedPillNumber は最後に服用完了したピルの番号を返す。lastTakenPillNumberとの違いは服用を完了しているかどうか
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
+  /// 最後に服用完了したピルの番号（0または1以上）
+  /// 2錠飲みの場合、pillTakenCount回すべて服用したピルの番号を返す
+  int get lastCompletedPillNumber {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (pills.isEmpty) {
+      final lastTakenDate = this.lastTakenDate;
+      if (lastTakenDate == null) {
+        return 0;
+      }
+
+      return pillNumberFor(targetDate: lastTakenDate);
+    }
+
+    // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
+    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    if (lastCompletedPill == null) {
+      return 0;
+    }
+
+    final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
+    return pillNumberFor(targetDate: estimatedLastTakenDate);
   }
 
   // lastTakenPillNumber は最後に服了したピルの番号を返す
@@ -235,6 +284,7 @@ class PillSheet with _$PillSheet {
   // 番号で比較しない(lastTakenPillNumber == todayPillNumber)理由は、各プロパティが上限値を超えないことを保証してないため。たとえばtodayPillNumberが30になることもありえる
   /// 今日のピルがすでに服用済みかどうか
   /// 最終服用日が今日以降の場合にtrueを返す
+  /// @deprecated 1錠飲みでのみ使用。2錠飲み対応後は todayPillsAreAlreadyTaken を使用
   bool get todayPillIsAlreadyTaken {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
@@ -243,9 +293,33 @@ class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
+  /// 今日のピルがすべて服用完了したかどうか（2錠飲み対応）
+  /// pillTakenCount回すべて服用した場合にtrueを返す
+  bool get todayPillsAreAlreadyTaken {
+    return lastCompletedPillNumber == todayPillNumber;
+  }
+
+  /// 今日のピルがいずれか服用済みかどうか（2錠飲み対応）
+  /// 1回でも服用した場合にtrueを返す
+  bool get anyTodayPillsAreAlreadyTaken {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (pills.isEmpty) {
+      return lastCompletedPillNumber == todayPillNumber;
+    }
+    if (todayPillIndex < 0 || todayPillIndex >= pills.length) {
+      return false;
+    }
+    return pills[todayPillIndex].pillTakens.isNotEmpty;
+  }
+
   /// ピルシートの全てのピルを服用完了したかどうか
   /// 総ピル数と最終服用ピル番号を比較して判定
+  /// @deprecated isEnded を使用してください
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
+
+  /// ピルシートの全てのピルを服用完了したかどうか（2錠飲み対応）
+  /// 総ピル数と最終服用完了ピル番号を比較して判定
+  bool get isEnded => typeInfo.totalCount == lastCompletedPillNumber;
 
   /// ピルシートの服用が開始されているかどうか
   /// 開始日が現在時刻より前の場合にtrueを返す
@@ -341,6 +415,19 @@ class PillSheet with _$PillSheet {
       dates.add(date);
     }
     return dates;
+  }
+
+  /// pillsリストの一部を置き換えたリストを返す
+  /// 服用記録の更新時に使用
+  List<Pill> replacedPills({required List<Pill> pills}) {
+    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    if (this.pills.isEmpty) {
+      return [];
+    }
+    if (pills.isEmpty) {
+      return this.pills;
+    }
+    return [...this.pills]..replaceRange(pills.first.index, pills.last.index + 1, pills);
   }
 }
 
