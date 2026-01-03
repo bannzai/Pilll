@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -107,7 +108,21 @@ extension RevertedPillSheet on PillSheet {
   /// 服用記録を取り消したPillSheetを返す
   /// toDateより後の全てのピルの服用記録をクリアする
   PillSheet revertedPillSheet(DateTime toDate) {
-    return copyWith(
+    return switch (this) {
+      PillSheetV1() => _v1RevertedPillSheet(toDate),
+      PillSheetV2(:final pills) => _v2RevertedPillSheet(toDate, pills),
+    };
+  }
+
+  /// V1形式: lastTakenDateのみ更新（従来動作）
+  PillSheet _v1RevertedPillSheet(DateTime toDate) {
+    return copyWith(lastTakenDate: toDate);
+  }
+
+  /// V2形式: pillsの服用記録もクリア
+  PillSheet _v2RevertedPillSheet(DateTime toDate, List<Pill> pills) {
+    final v2 = this as PillSheetV2;
+    return v2.copyWith(
       lastTakenDate: toDate,
       pills: pills.map((pill) {
         // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない

@@ -39,10 +39,35 @@ class ChangePillTakenCount {
         lastTakenDate: pillSheet.lastTakenDate,
         pillTakenCount: pillTakenCount,
       );
-      return pillSheet.copyWith(
-        pillTakenCount: pillTakenCount,
-        pills: updatedPills,
-      );
+      // V1の場合はV2に変換、V2の場合はpillsを更新
+      return switch (pillSheet) {
+        PillSheetV1(
+          :final id,
+          :final typeInfo,
+          :final beginingDate,
+          :final lastTakenDate,
+          :final createdAt,
+          :final deletedAt,
+          :final groupIndex,
+          :final restDurations
+        ) =>
+          PillSheet.v2(
+            id: id,
+            typeInfo: typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: lastTakenDate,
+            createdAt: createdAt,
+            deletedAt: deletedAt,
+            groupIndex: groupIndex,
+            restDurations: restDurations,
+            pillTakenCount: pillTakenCount,
+            pills: updatedPills,
+          ),
+        PillSheetV2() => pillSheet.copyWith(
+            pillTakenCount: pillTakenCount,
+            pills: updatedPills,
+          ),
+      };
     }).toList();
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);

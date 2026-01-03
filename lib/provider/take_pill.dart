@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
@@ -80,7 +81,9 @@ class TakePill {
       return true;
     }).toList();
 
+    debugPrint('[TakePill] updatedIndexses: $updatedIndexses');
     if (updatedIndexses.isEmpty) {
+      debugPrint('[TakePill] Early return: updatedIndexses.isEmpty');
       // NOTE: prevent error for unit test
       if (Firebase.apps.isNotEmpty) {
         errorLogger.recordError(const FormatException('unexpected updatedIndexes is empty'), StackTrace.current);
@@ -116,11 +119,25 @@ extension TakenPillSheet on PillSheet {
   /// 2錠飲みの場合は、最後のピル以外はpillTakenCount回の記録を追加し、
   /// 最後のピルは1回の記録を追加する
   PillSheet takenPillSheet(DateTime takenDate) {
+    return switch (this) {
+      PillSheetV1() => _v1TakenPillSheet(takenDate),
+      PillSheetV2(:final pills, :final pillTakenCount) => _v2TakenPillSheet(takenDate, pills, pillTakenCount),
+    };
+  }
+
+  /// V1形式: lastTakenDateのみ更新（従来動作）
+  PillSheet _v1TakenPillSheet(DateTime takenDate) {
+    return copyWith(lastTakenDate: takenDate);
+  }
+
+  /// V2形式: pillsの服用記録も更新
+  PillSheet _v2TakenPillSheet(DateTime takenDate, List<Pill> pills, int pillTakenCount) {
     // 一番最後の記録対象のピル。takenDateが今日の日付(クイックレコードや「飲んだ」を押した時)の場合は、takenDateは今日の日付になる。その場合はtodayPillIndexと等価の値になる
     // max(estimatedLastTakenPillIndex, finalTakenPillIndex)としないのは、下のpill.index > finalTakenPillIndexで早期リターンされるので書いていない。estimatedLastTakenPillIndex を新しく用意するほどでも無いと思ったので
     final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
+    final v2 = this as PillSheetV2;
 
-    return copyWith(
+    return v2.copyWith(
       lastTakenDate: takenDate,
       pills: pills.map((pill) {
         // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
