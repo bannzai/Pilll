@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -137,7 +135,8 @@ extension TakenPillSheet on PillSheet {
 
         if (pill.index != finalTakenPillIndex) {
           // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をpillTakenCountに達するまで追加する
-          for (var i = max(0, pill.pillTakens.length - 1); i < pillTakenCount; i++) {
+          // 既存の服用記録数から開始し、不足分のみ追加する
+          for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               recordedTakenDateTime: takenDate,
               createdDateTime: now(),

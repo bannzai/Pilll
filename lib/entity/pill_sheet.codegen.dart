@@ -303,8 +303,9 @@ class PillSheet with _$PillSheet {
   /// 1回でも服用した場合にtrueを返す
   bool get anyTodayPillsAreAlreadyTaken {
     // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
+    // 古いデータでは1錠飲みしか存在しないため、todayPillIsAlreadyTakenをそのまま返す
     if (pills.isEmpty) {
-      return lastCompletedPillNumber == todayPillNumber;
+      return todayPillIsAlreadyTaken;
     }
     if (todayPillIndex < 0 || todayPillIndex >= pills.length) {
       return false;

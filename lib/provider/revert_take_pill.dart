@@ -110,8 +110,9 @@ extension RevertedPillSheet on PillSheet {
     return copyWith(
       lastTakenDate: toDate,
       pills: pills.map((pill) {
-        // このpillの日付(begin + pill.index)が対象の日付よりも前の場合は何もしない
-        final dateOfPill = beginingDate.date().add(Duration(days: pill.index));
+        // このpillの日付が対象の日付よりも前の場合は何もしない
+        // 休薬期間を考慮したdatesプロパティを使用
+        final dateOfPill = dates[pill.index];
         if (dateOfPill.isBefore(toDate) || isSameDay(dateOfPill, toDate)) {
           debugPrint('early return pill: ${pill.index}');
           return pill;
