@@ -3803,6 +3803,129 @@ void main() {
         expect(model.isTakenAll, true);
       });
     });
+
+    group("RestDuration（休薬期間）がある場合", () {
+      group("終了済みのRestDuration", () {
+        test("28錠タイプで休薬期間中断後に全て服用完了 - isTakenAll は true を返す", () {
+          // 28錠シートで5日間の休薬期間がある場合
+          // 休薬期間分だけ日付がずれるので、最終服用日は開始日+27日+休薬5日=2020-10-03
+          const sheetType = PillSheetType.pillsheet_28_0;
+          final model = PillSheet(
+            id: firestoreIDGenerator(),
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-10-03"),
+            createdAt: now(),
+            restDurations: [
+              RestDuration(
+                id: "rest_duration_id",
+                beginDate: DateTime.parse("2020-09-10"),
+                endDate: DateTime.parse("2020-09-15"),
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          expect(model.isTakenAll, true);
+        });
+
+        test("28錠タイプで休薬期間中断後も途中まで服用 - isTakenAll は false を返す", () {
+          const sheetType = PillSheetType.pillsheet_28_0;
+          final model = PillSheet(
+            id: firestoreIDGenerator(),
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-20"),
+            createdAt: now(),
+            restDurations: [
+              RestDuration(
+                id: "rest_duration_id",
+                beginDate: DateTime.parse("2020-09-10"),
+                endDate: DateTime.parse("2020-09-15"),
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          expect(model.isTakenAll, false);
+        });
+
+        test("21錠タイプで複数回の休薬期間後に全て服用完了 - isTakenAll は true を返す", () {
+          // 21錠シートで合計7日間（3日+4日）の休薬期間がある場合
+          // 最終服用日は開始日+20日+休薬7日=2020-09-28
+          const sheetType = PillSheetType.pillsheet_21_0;
+          final model = PillSheet(
+            id: firestoreIDGenerator(),
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-28"),
+            createdAt: now(),
+            restDurations: [
+              RestDuration(
+                id: "rest_duration_id_1",
+                beginDate: DateTime.parse("2020-09-05"),
+                endDate: DateTime.parse("2020-09-08"),
+                createdDate: DateTime.parse("2020-09-05"),
+              ),
+              RestDuration(
+                id: "rest_duration_id_2",
+                beginDate: DateTime.parse("2020-09-15"),
+                endDate: DateTime.parse("2020-09-19"),
+                createdDate: DateTime.parse("2020-09-15"),
+              ),
+            ],
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          expect(model.isTakenAll, true);
+        });
+      });
+
+      group("継続中のRestDuration（endDateがnull）", () {
+        test("休薬期間継続中の場合 - 休薬期間開始前のピル番号で判定される", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
+
+          const sheetType = PillSheetType.pillsheet_28_0;
+          // 9日目まで服用して、10日目から休薬期間開始（継続中）
+          // lastTakenDate は休薬期間開始前の日付
+          final model = PillSheet(
+            id: firestoreIDGenerator(),
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-09"),
+            createdAt: now(),
+            restDurations: [
+              RestDuration(
+                id: "rest_duration_id",
+                beginDate: DateTime.parse("2020-09-10"),
+                endDate: null,
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          // 9番目のピルまでしか服用していないので false
+          expect(model.isTakenAll, false);
+        });
+      });
+    });
   });
   group("#estimatedEndTakenDate", () {
     test("spec", () {
