@@ -3713,6 +3713,50 @@ void main() {
         expect(history.afterPillSheetGroup!.deletedAt, deletedAt);
         expect(history.afterPillSheetGroup!.pillSheets[0].deletedAt, deletedAt);
       });
+
+      test('RestDurationを持つピルシートを削除する場合、RestDuration情報がbeforePillSheetGroupに保持される', () {
+        final restDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 9, 10),
+          endDate: DateTime(2020, 9, 12),
+          createdDate: DateTime(2020, 9, 10),
+        );
+        final pillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 15),
+          createdAt: DateTime(2020, 9, 1),
+          restDurations: [restDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(
+          id: 'group_id',
+          pillSheets: [pillSheet],
+        );
+        final deletedAt = DateTime(2020, 9, 20);
+        final updatedPillSheetGroup = createPillSheetGroup(
+          id: 'group_id',
+          pillSheets: [pillSheet.copyWith(deletedAt: deletedAt)],
+          deletedAt: deletedAt,
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
+          pillSheetGroupID: 'group_id',
+          pillSheetIDs: ['pill_sheet_id_1'],
+          beforePillSheetGroup: beforePillSheetGroup,
+          updatedPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        // beforePillSheetGroup の RestDuration が保持されている
+        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations.length, 1);
+        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[0].id, 'rest_duration_id_1');
+        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[0].beginDate, DateTime(2020, 9, 10));
+        expect(history.beforePillSheetGroup!.pillSheets[0].restDurations[0].endDate, DateTime(2020, 9, 12));
+
+        // afterPillSheetGroup にも RestDuration が保持されている
+        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations.length, 1);
+        expect(history.afterPillSheetGroup!.pillSheets[0].restDurations[0].id, 'rest_duration_id_1');
+      });
     });
 
     group('生成されるプロパティの検証', () {
