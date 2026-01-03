@@ -412,4 +412,112 @@ void main() {
       expect(menstruation.dateRange.days, 3);
     });
   });
+
+  group('#dateTimeRange', () {
+    test('beginDateとendDateから正しいDateTimeRangeが生成される', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-09-01'),
+        endDate: DateTime.parse('2020-09-05'),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      final dateTimeRange = menstruation.dateTimeRange;
+
+      expect(dateTimeRange.start, DateTime.parse('2020-09-01'));
+      expect(dateTimeRange.end, DateTime.parse('2020-09-05'));
+    });
+
+    test('時刻情報がそのまま保持される（beginDateに時刻が含まれる場合）', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime(2020, 9, 1, 23, 59, 59),
+        endDate: DateTime.parse('2020-09-05'),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      final dateTimeRange = menstruation.dateTimeRange;
+
+      // dateTimeRangeは時刻情報をそのまま保持する（dateRangeとの違い）
+      expect(dateTimeRange.start, DateTime(2020, 9, 1, 23, 59, 59));
+      expect(dateTimeRange.end, DateTime.parse('2020-09-05'));
+    });
+
+    test('時刻情報がそのまま保持される（endDateに時刻が含まれる場合）', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-09-01'),
+        endDate: DateTime(2020, 9, 5, 12, 30, 45),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      final dateTimeRange = menstruation.dateTimeRange;
+
+      expect(dateTimeRange.start, DateTime.parse('2020-09-01'));
+      expect(dateTimeRange.end, DateTime(2020, 9, 5, 12, 30, 45));
+    });
+
+    test('時刻情報がそのまま保持される（両方に時刻が含まれる場合）', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime(2020, 9, 1, 8, 0, 0),
+        endDate: DateTime(2020, 9, 5, 20, 0, 0),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      final dateTimeRange = menstruation.dateTimeRange;
+
+      expect(dateTimeRange.start, DateTime(2020, 9, 1, 8, 0, 0));
+      expect(dateTimeRange.end, DateTime(2020, 9, 5, 20, 0, 0));
+    });
+
+    test('beginDateとendDateが同じ日時の場合、durationは0になる', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-09-01'),
+        endDate: DateTime.parse('2020-09-01'),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      expect(menstruation.dateTimeRange.duration, Duration.zero);
+    });
+
+    test('5日間の生理期間の場合、durationは4日になる', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-09-01'),
+        endDate: DateTime.parse('2020-09-05'),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      expect(menstruation.dateTimeRange.duration, const Duration(days: 4));
+    });
+
+    test('時刻が含まれる場合のduration計算', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime(2020, 9, 1, 8, 0, 0),
+        endDate: DateTime(2020, 9, 5, 20, 0, 0),
+        createdAt: DateTime.parse('2020-09-01'),
+      );
+
+      // 9/1 8:00から9/5 20:00は4日12時間
+      expect(menstruation.dateTimeRange.duration, const Duration(days: 4, hours: 12));
+    });
+
+    test('月をまたぐ場合の日数計算', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-08-28'),
+        endDate: DateTime.parse('2020-09-03'),
+        createdAt: DateTime.parse('2020-08-28'),
+      );
+
+      // 8/28から9/3は6日間の差
+      expect(menstruation.dateTimeRange.duration, const Duration(days: 6));
+    });
+
+    test('年をまたぐ場合の日数計算', () {
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-12-29'),
+        endDate: DateTime.parse('2021-01-03'),
+        createdAt: DateTime.parse('2020-12-29'),
+      );
+
+      // 12/29から1/3は5日間の差
+      expect(menstruation.dateTimeRange.duration, const Duration(days: 5));
+    });
+  });
 }
