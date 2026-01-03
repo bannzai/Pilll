@@ -5,6 +5,7 @@ import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 abstract class PillMarkConst {
   static const double edge = 20;
@@ -16,16 +17,11 @@ class PillMark extends StatefulWidget {
   final bool showsCheckmark;
   final bool showsRippleAnimation;
 
-  /// 残り服用回数（2錠飲み対応）
-  /// nullの場合は表示しない、1以上の場合はピルマーク内に数字を表示
-  final int? remainingPillTakenCount;
-
   const PillMark({
     super.key,
     required this.pillMarkType,
     required this.showsCheckmark,
     required this.showsRippleAnimation,
-    this.remainingPillTakenCount,
   });
 
   @override
@@ -58,7 +54,6 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final remainingPillTakenCount = widget.remainingPillTakenCount;
     return Stack(
       clipBehavior: Clip.none,
       children: [
@@ -73,7 +68,6 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               PillMarkType.done => const LightGrayPillMark(),
             },
             if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
-            if (remainingPillTakenCount != null) Text('$remainingPillTakenCount', style: const TextStyle(color: Colors.white, fontSize: 10)),
           ],
         ),
         if (widget.showsRippleAnimation)

@@ -549,7 +549,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
   /// 未完了なら現在のシートを対象とする
   PillSheet get targetBeginRestDurationPillSheet {
     final PillSheet targetPillSheet;
-    if (lastTakenPillSheetOrFirstPillSheet.isEnded) {
+    if (lastTakenPillSheetOrFirstPillSheet.isTakenAll) {
       // 最後に飲んだピルシートのピルが全て服用済みの場合は、次のピルシートを対象としてrestDurationを設定する
       // すでに服用済みの場合は、次のピルの番号から服用お休みを開始する必要があるから
       targetPillSheet = pillSheets[lastTakenPillSheetOrFirstPillSheet.groupIndex + 1];
@@ -566,7 +566,7 @@ extension PillSheetGroupRestDurationDomain on PillSheetGroup {
     final lastTakenDate = targetBeginRestDurationPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
       // 上述のtargetBeginRestDurationPillSheetを決定するifにより以下の内容が考えられる
-      // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isEnded)
+      // if (pillSheetGroup.lastTakenPillSheetOrFirstPillSheet.isTakenAll)
       // true: 0番以外のピルシート
       // false: 0番のピルシート
 

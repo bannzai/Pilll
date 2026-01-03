@@ -18,7 +18,7 @@ Future<PillSheetGroup?> quickRecordTakePill(DatabaseConnection database) async {
   if (activePillSheet == null) {
     return pillSheetGroup;
   }
-  if (activePillSheet.todayPillsAreAlreadyTaken) {
+  if (activePillSheet.todayPillIsAlreadyTaken) {
     return pillSheetGroup;
   }
 
