@@ -4757,6 +4757,70 @@ void main() {
         expect(history.beforePillSheetID, beforeSecondPillSheet.id);
         expect(history.afterPillSheetID, afterSecondPillSheet.id);
       });
+
+      test('3枚目のピルシートで休薬期間を終了した場合、正しく設定されること', () {
+        final firstPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+          groupIndex: 0,
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final secondPillSheet = PillSheet(
+          id: 'pill_sheet_id_2',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 29),
+          lastTakenDate: DateTime(2020, 10, 26),
+          groupIndex: 1,
+          createdAt: DateTime(2020, 9, 29),
+        );
+        final restDuration = RestDuration(
+          id: 'rest_duration_id_1',
+          beginDate: DateTime(2020, 11, 11),
+          createdDate: DateTime(2020, 11, 11),
+        );
+        final beforeThirdPillSheet = PillSheet(
+          id: 'pill_sheet_id_3',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 10, 27),
+          lastTakenDate: DateTime(2020, 11, 10),
+          groupIndex: 2,
+          restDurations: [restDuration],
+          createdAt: DateTime(2020, 10, 27),
+        );
+        final endedRestDuration = restDuration.copyWith(
+          endDate: DateTime(2020, 11, 14),
+        );
+        final afterThirdPillSheet = beforeThirdPillSheet.copyWith(
+          restDurations: [endedRestDuration],
+        );
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, secondPillSheet, beforeThirdPillSheet],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, secondPillSheet, afterThirdPillSheet],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createEndedRestDurationAction(
+          pillSheetGroupID: 'group_id',
+          before: beforeThirdPillSheet,
+          after: afterThirdPillSheet,
+          restDuration: endedRestDuration,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.actionType, PillSheetModifiedActionType.endedRestDuration.name);
+        expect(history.before, beforeThirdPillSheet);
+        expect(history.after, afterThirdPillSheet);
+        expect(history.beforePillSheetID, beforeThirdPillSheet.id);
+        expect(history.afterPillSheetID, afterThirdPillSheet.id);
+        expect(history.before!.groupIndex, 2);
+        expect(history.after!.groupIndex, 2);
+        expect(history.beforePillSheetGroup!.pillSheets.length, 3);
+        expect(history.afterPillSheetGroup!.pillSheets.length, 3);
+      });
     });
 
     group('RestDuration のプロパティ', () {
