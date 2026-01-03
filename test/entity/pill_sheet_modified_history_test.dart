@@ -1262,6 +1262,159 @@ void main() {
         expect(history.value.takenPill?.beforeLastTakenPillNumber, 28);
         expect(history.value.takenPill?.afterLastTakenPillNumber, 1);
       });
+
+      test('21錠タイプで最後のピルを服用した場合（境界値確認）', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 20),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 21錠目（最後）を服用
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 21),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        final takenPillValue = history.value.takenPill;
+        expect(takenPillValue, isNotNull);
+        expect(takenPillValue!.beforeLastTakenPillNumber, 20);
+        expect(takenPillValue.afterLastTakenPillNumber, 21);
+      });
+
+      test('version と メタデータが正しく設定される', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 11),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.version, 'v2');
+        expect(history.id, isNull);
+        expect(history.estimatedEventCausingDate, isNotNull);
+        expect(history.createdAt, isNotNull);
+        expect(history.ttlExpiresDateTime, isNotNull);
+        // ttlExpiresDateTime は createdAt から 180日後
+        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
+        expect(history.ttlExpiresDateTime, expectedTtl);
+      });
+
+      test('3枚グループで2枚目から3枚目への切り替え時', () {
+        final firstPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 28),
+          createdAt: DateTime(2020, 9, 1),
+          groupIndex: 0,
+        );
+        final secondPillSheet = PillSheet(
+          id: 'pill_sheet_id_2',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 29),
+          lastTakenDate: DateTime(2020, 10, 26),
+          createdAt: DateTime(2020, 9, 29),
+          groupIndex: 1,
+        );
+        final thirdPillSheet = PillSheet(
+          id: 'pill_sheet_id_3',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 10, 27),
+          lastTakenDate: DateTime(2020, 10, 27),
+          createdAt: DateTime(2020, 10, 27),
+          groupIndex: 2,
+        );
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet.copyWith(lastTakenDate: null)],
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet],
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: secondPillSheet,
+          after: thirdPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        expect(history.beforePillSheetID, 'pill_sheet_id_2');
+        expect(history.afterPillSheetID, 'pill_sheet_id_3');
+        // 2枚目の最後は28番目、3枚目の最初は1番目
+        expect(history.value.takenPill?.beforeLastTakenPillNumber, 28);
+        expect(history.value.takenPill?.afterLastTakenPillNumber, 1);
+      });
+
+      test('24錠タイプで最後のピルを服用した場合（境界値確認）', () {
+        final beforePillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 23),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        // 24錠目（最後）を服用
+        final afterPillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 24),
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [beforePillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(pillSheets: [afterPillSheet]);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          pillSheetGroupID: 'group_id',
+          before: beforePillSheet,
+          after: afterPillSheet,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+          isQuickRecord: false,
+        );
+
+        final takenPillValue = history.value.takenPill;
+        expect(takenPillValue, isNotNull);
+        expect(takenPillValue!.beforeLastTakenPillNumber, 23);
+        expect(takenPillValue.afterLastTakenPillNumber, 24);
+      });
     });
 
     group('異常系', () {
