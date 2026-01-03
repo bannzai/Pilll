@@ -123,6 +123,10 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) => _$PillSheetModifiedHistoryFromJson(json);
 
   PillSheetModifiedActionType? get enumActionType => PillSheetModifiedActionType.values.firstWhereOrNull((element) => element.name == actionType);
+
+  /// 変更後のアクティブなピルシートを取得
+  /// afterPillSheetGroupが存在する場合、そのactivePillSheetを返す
+  PillSheet? get afterActivePillSheet => afterPillSheetGroup?.activePillSheet;
 }
 
 // Factories
