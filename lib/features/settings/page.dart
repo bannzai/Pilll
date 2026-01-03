@@ -24,6 +24,7 @@ import 'package:pilll/features/settings/components/rows/premium_introduction.dar
 import 'package:pilll/features/settings/components/rows/quick_record.dart';
 import 'package:pilll/features/settings/components/rows/toggle_reminder_notification.dart';
 import 'package:pilll/features/settings/components/rows/today_pill_number.dart';
+import 'package:pilll/features/settings/components/rows/pill_taken_count.dart';
 import 'package:pilll/features/settings/components/setting_section_title.dart';
 import 'package:pilll/features/settings/provider.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
@@ -156,6 +157,11 @@ class SettingPageBody extends StatelessWidget {
                         if (activePillSheet != null && pillSheetGroup != null && !pillSheetGroup.isDeactived) ...[
                           TodayPllNumberRow(
                             setting: setting,
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                          ),
+                          _separator(),
+                          PillTakenCountRow(
                             pillSheetGroup: pillSheetGroup,
                             activePillSheet: activePillSheet,
                           ),
