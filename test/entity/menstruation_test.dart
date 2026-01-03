@@ -152,6 +152,90 @@ void main() {
 
       expect(menstruation.isActive, true);
     });
+
+    test('月をまたぐ生理期間で期間内の日付ならtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-09-01'));
+
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-08-30'),
+        endDate: DateTime.parse('2020-09-03'),
+        createdAt: DateTime.parse('2020-08-30'),
+      );
+
+      expect(menstruation.isActive, true);
+    });
+
+    test('年をまたぐ生理期間で期間内の日付ならtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2021-01-01'));
+
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-12-30'),
+        endDate: DateTime.parse('2021-01-03'),
+        createdAt: DateTime.parse('2020-12-30'),
+      );
+
+      expect(menstruation.isActive, true);
+    });
+
+    test('年をまたぐ生理期間でbeginDate（前年）ならtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-12-30'));
+
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-12-30'),
+        endDate: DateTime.parse('2021-01-03'),
+        createdAt: DateTime.parse('2020-12-30'),
+      );
+
+      expect(menstruation.isActive, true);
+    });
+
+    test('年をまたぐ生理期間でendDate（翌年）ならtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2021-01-03'));
+
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-12-30'),
+        endDate: DateTime.parse('2021-01-03'),
+        createdAt: DateTime.parse('2020-12-30'),
+      );
+
+      expect(menstruation.isActive, true);
+    });
+
+    test('うるう年の2月29日を含む期間で2月29日ならtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-02-29'));
+
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-02-27'),
+        endDate: DateTime.parse('2020-03-02'),
+        createdAt: DateTime.parse('2020-02-27'),
+      );
+
+      expect(menstruation.isActive, true);
+    });
+
+    test('うるう年の2月29日を含む期間で3月1日ならtrue', () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse('2020-03-01'));
+
+      final menstruation = Menstruation(
+        beginDate: DateTime.parse('2020-02-27'),
+        endDate: DateTime.parse('2020-03-02'),
+        createdAt: DateTime.parse('2020-02-27'),
+      );
+
+      expect(menstruation.isActive, true);
+    });
   });
 
   group('#menstruationsDiff', () {
