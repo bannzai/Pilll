@@ -33,7 +33,7 @@
 - `pillsheet_28_4`: 28錠（24日実薬 + 4日偽薬）
 - `pillsheet_28_7`: 28錠（21日実薬 + 7日偽薬）
 
-**注意**: `for value in PillSheetType.values` のようなテストは避け、必要なものは個別で静的に group/test を作成する
+**注意**: PillSheetType に限っては `for value in PillSheetType.values` のようなテストは避け、必要なものは個別で静的に group/test を作成する（種類ごとに錠数や偽薬期間の有無が異なり、動的なループでは意図が不明確になるため）
 
 ### 3. RestDuration（服用お休み期間）の有無
 服用お休み期間によってピルシートの表示番号・日付が変化する:
