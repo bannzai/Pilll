@@ -161,9 +161,9 @@ def find_start_index(targets: list[tuple[str, str]], start_from: str) -> int:
 def get_previous_branch(targets: list[tuple[str, str]], index: int) -> str:
     """指定インデックスの1つ前のブランチ名を返す"""
     if index == 0:
-        return "add/test-logic-2"
+        return "add/test-logic-3"
     prev_entity, prev_method = targets[index - 1]
-    return f"add/test-2/{prev_entity}-{sanitize_branch_name(prev_method)}"
+    return f"add/test-3/{prev_entity}-{sanitize_branch_name(prev_method)}"
 
 
 def generate_prompt(entity: str, method: str, entity_file: str, base_branch: str) -> str:
@@ -205,12 +205,12 @@ def main():
         print(f"実行件数: {args.num}件 (インデックス {start_index} から {end_index - 1} まで)")
 
     base_branch = get_previous_branch(targets, start_index) 
-    # base_branch = "add/test-logic-2"
+    # base_branch = "add/test-logic-3"
 
     for i in range(start_index, end_index):
         entity, method = targets[i]
         entity_file = ENTITY_FILE_MAP[entity]
-        branch_name = f"add/test-2/{entity}-{sanitize_branch_name(method)}"
+        branch_name = f"add/test-3/{entity}-{sanitize_branch_name(method)}"
 
         print(f"\n{'='*60}")
         print(f"処理中: {entity}:{method} ({i+1}/{len(targets)})")

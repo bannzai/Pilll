@@ -3,7 +3,6 @@ import 'package:pilll/entity/remote_config_parameter.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/provider/locale.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/features/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/features/premium_introduction/premium_introduction_sheet.dart';
@@ -89,7 +88,6 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    analytics = MockAnalytics();
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(
         view: WidgetsBinding.instance.platformDispatcher.views.single,

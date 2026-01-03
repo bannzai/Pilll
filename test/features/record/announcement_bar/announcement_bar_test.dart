@@ -8,7 +8,6 @@ import 'package:pilll/features/record/components/announcement_bar/components/adm
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/shared_preferences.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
@@ -50,7 +49,6 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    analytics = MockAnalytics();
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(
         view: WidgetsBinding.instance.platformDispatcher.views.single,

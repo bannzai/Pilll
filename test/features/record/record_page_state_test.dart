@@ -1,4 +1,3 @@
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -16,7 +15,6 @@ void main() {
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    analytics = MockAnalytics();
   });
   group("#markFor", () {
     test("it is alredy taken all", () async {

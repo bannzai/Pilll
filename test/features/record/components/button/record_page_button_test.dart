@@ -8,7 +8,6 @@ import 'package:pilll/features/record/components/button/rest_duration_button.dar
 import 'package:pilll/features/record/components/button/taken_button.dart';
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +23,6 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    analytics = MockAnalytics();
     for (var element in RendererBinding.instance.renderViews) {
       element.configuration = TestViewConfiguration.fromView(
         view: WidgetsBinding.instance.platformDispatcher.views.single,
