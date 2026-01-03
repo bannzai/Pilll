@@ -2579,6 +2579,61 @@ void main() {
       });
     });
   });
+  group("#pillSheetHasRestOrFakeDuration", () {
+    // pillSheetHasRestOrFakeDuration は pillSheetType.hasRestOrFakeDuration を返す
+    // hasRestOrFakeDuration は totalCount != dosingPeriod で判定される
+    // すべてのPillSheetTypeをswitchで網羅してテストする
+    for (final sheetType in PillSheetType.values) {
+      group('PillSheetType.${sheetType.name}の場合', () {
+        test('期待値が正しい', () {
+          final model = PillSheet(
+            id: firestoreIDGenerator(),
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: null,
+            createdAt: DateTime.parse("2020-09-01"),
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          // hasRestOrFakeDuration は totalCount != dosingPeriod
+          final expectedValue = sheetType.totalCount != sheetType.dosingPeriod;
+          switch (sheetType) {
+            case PillSheetType.pillsheet_21:
+              // 28錠中21錠が実薬、7日間休薬 → true
+              expect(model.pillSheetHasRestOrFakeDuration, true);
+              expect(expectedValue, true);
+            case PillSheetType.pillsheet_28_4:
+              // 28錠中24錠が実薬、4錠が偽薬 → true
+              expect(model.pillSheetHasRestOrFakeDuration, true);
+              expect(expectedValue, true);
+            case PillSheetType.pillsheet_28_7:
+              // 28錠中21錠が実薬、7錠が偽薬 → true
+              expect(model.pillSheetHasRestOrFakeDuration, true);
+              expect(expectedValue, true);
+            case PillSheetType.pillsheet_28_0:
+              // 28錠すべてが実薬 → false
+              expect(model.pillSheetHasRestOrFakeDuration, false);
+              expect(expectedValue, false);
+            case PillSheetType.pillsheet_24_0:
+              // 24錠すべてが実薬 → false
+              expect(model.pillSheetHasRestOrFakeDuration, false);
+              expect(expectedValue, false);
+            case PillSheetType.pillsheet_21_0:
+              // 21錠すべてが実薬 → false
+              expect(model.pillSheetHasRestOrFakeDuration, false);
+              expect(expectedValue, false);
+            case PillSheetType.pillsheet_24_rest_4:
+              // 28錠中24錠が実薬、4日間休薬 → true
+              expect(model.pillSheetHasRestOrFakeDuration, true);
+              expect(expectedValue, true);
+          }
+        });
+      });
+    }
+  });
   group("#lastTakenOrZeroPillNumber", () {
     test("未服用の場合は0になる", () {
       final mockTodayRepository = MockTodayService();
