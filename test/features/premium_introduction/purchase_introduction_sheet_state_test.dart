@@ -31,7 +31,6 @@ void main() {
   setUp(() async {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    analytics = MockAnalytics();
   });
   group("#offeringType", () {
     test("when hasDiscountEntitlement = false should return premium", () async {
