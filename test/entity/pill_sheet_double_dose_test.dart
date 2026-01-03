@@ -64,7 +64,7 @@ void main() {
             pillTakenCount: 2,
           );
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -104,7 +104,7 @@ void main() {
             );
           });
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -126,7 +126,7 @@ void main() {
             pillTakenCount: 2,
           );
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -152,7 +152,7 @@ void main() {
             pillTakenCount: 2,
           );
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -190,7 +190,7 @@ void main() {
             );
           });
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -216,7 +216,7 @@ void main() {
             pillTakenCount: 2,
           );
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -238,7 +238,7 @@ void main() {
             pillTakenCount: 2,
           );
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -276,7 +276,7 @@ void main() {
             );
           });
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -302,7 +302,7 @@ void main() {
             pillTakenCount: 2,
           );
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -340,7 +340,7 @@ void main() {
             );
           });
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v2(
             id: 'test_id',
             groupIndex: 0,
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,

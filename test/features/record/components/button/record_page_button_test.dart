@@ -36,21 +36,21 @@ void main() {
       testWidgets('pill sheet has activeRestDuration', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
@@ -106,21 +106,21 @@ void main() {
       testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
@@ -177,21 +177,21 @@ void main() {
       testWidgets('show TakenButton', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
@@ -207,6 +207,8 @@ void main() {
         );
 
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
+        // lastTakenDateは休薬期間開始日より前に設定。そうしないとsummarizedRestDurationの計算で
+        // lastCompletedPillNumber == todayPillNumber になり、todayPillsAreAlreadyTaken が true になってしまう
         final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
@@ -215,7 +217,7 @@ void main() {
                 createdDate: now().subtract(const Duration(days: 1)),
                 endDate: now().subtract(const Duration(seconds: 1))),
           ],
-          lastTakenDate: yesterday(),
+          lastTakenDate: now().subtract(const Duration(days: 2)),
         );
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);

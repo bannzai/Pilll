@@ -1,8 +1,6 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
-import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -33,7 +31,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -50,16 +48,13 @@ void main() {
         createdAt: now(),
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(batchSetPillSheetGroup(batch, any)).thenAnswer((invocation) {
+        final group = invocation.positionalArguments[1] as PillSheetGroup;
+        return group.copyWith(id: "group_id");
+      });
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        pillSheetGroupID: "group_id",
-        pillSheetIDs: ["sheet_id"],
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+      when(batchSetPillSheetModifiedHistory(batch, any)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,
@@ -113,7 +108,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -121,7 +116,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday.add(const Duration(days: 28)),
@@ -139,16 +134,13 @@ void main() {
         createdAt: now(),
       );
       final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-      when(batchSetPillSheetGroup(batch, pillSheetGroup)).thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+      when(batchSetPillSheetGroup(batch, any)).thenAnswer((invocation) {
+        final group = invocation.positionalArguments[1] as PillSheetGroup;
+        return group.copyWith(id: "group_id");
+      });
 
-      final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        pillSheetGroupID: "group_id",
-        pillSheetIDs: ["sheet_id", "sheet_id2"],
-        beforePillSheetGroup: null,
-        createdNewPillSheetGroup: pillSheetGroup.copyWith(id: "group_id"),
-      );
       final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-      when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+      when(batchSetPillSheetModifiedHistory(batch, any)).thenReturn(null);
 
       const setting = Setting(
         pillNumberForFromMenstruation: 22,

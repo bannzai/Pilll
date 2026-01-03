@@ -48,7 +48,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: mockToday,
@@ -107,7 +107,7 @@ void main() {
           timezoneDatabaseName: null,
         );
 
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: mockToday,
@@ -165,7 +165,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: mockToday,
@@ -226,7 +226,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: mockToday,
@@ -284,7 +284,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: mockToday,
@@ -343,7 +343,7 @@ void main() {
           isOnReminder: true,
           timezoneDatabaseName: null,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: mockToday,
@@ -393,7 +393,7 @@ void main() {
         todayRepository = originalTodayRepository;
       });
 
-      final PillSheet pillSheet = PillSheet(
+      final PillSheet pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-09-01"),
@@ -425,7 +425,7 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          final PillSheet pillSheet = PillSheet(
+          final PillSheet pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
@@ -462,7 +462,7 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          final PillSheet pillSheet = PillSheet(
+          final PillSheet pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
@@ -501,7 +501,7 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          final PillSheet pillSheet = PillSheet(
+          final PillSheet pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
@@ -540,7 +540,7 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          final PillSheet pillSheet = PillSheet(
+          final PillSheet pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime.parse("2020-09-01"),
@@ -582,7 +582,7 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          final PillSheet pillSheet = PillSheet(
+          final PillSheet pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
             beginingDate: DateTime.parse("2021-12-17"),
@@ -625,7 +625,7 @@ void main() {
         todayRepository = originalTodayRepository;
       });
 
-      final PillSheet pillSheet = PillSheet(
+      final PillSheet pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
         beginingDate: DateTime.parse("2023-01-10"),

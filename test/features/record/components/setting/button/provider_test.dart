@@ -40,7 +40,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
@@ -109,7 +109,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now(),
@@ -172,7 +172,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet1 = PillSheet(
+      final pillSheet1 = PillSheet.v1(
         id: "pill_sheet_id_1",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -182,7 +182,7 @@ void main() {
       );
       expect(pillSheet1.isTakenAll, false);
 
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -255,7 +255,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet1 = PillSheet(
+      final pillSheet1 = PillSheet.v1(
         id: "pill_sheet_id_1",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -265,7 +265,7 @@ void main() {
       );
       expect(pillSheet1.isTakenAll, true);
 
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -346,7 +346,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: now(),
@@ -417,7 +417,7 @@ void main() {
 
       final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
       var pillSheets = [
-        PillSheet(
+        PillSheet.v1(
           id: "pill_sheet_id_1",
           groupIndex: 0,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -426,7 +426,7 @@ void main() {
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
         ),
-        PillSheet(
+        PillSheet.v1(
           id: "pill_sheet_id_2",
           groupIndex: 1,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -434,7 +434,7 @@ void main() {
           lastTakenDate: null,
           createdAt: now(),
         ),
-        PillSheet(
+        PillSheet.v1(
           id: "pill_sheet_id_3",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -522,7 +522,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
@@ -604,7 +604,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet1 = PillSheet(
+      final pillSheet1 = PillSheet.v1(
         id: "pill_sheet_id_1",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -613,7 +613,7 @@ void main() {
         createdAt: now(),
         restDurations: [],
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -622,7 +622,7 @@ void main() {
         createdAt: now(),
         restDurations: [beforeRestDuration],
       );
-      final pillSheet3 = PillSheet(
+      final pillSheet3 = PillSheet.v1(
         id: "pill_sheet_id_3",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -718,7 +718,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet1 = PillSheet(
+      final pillSheet1 = PillSheet.v1(
         id: "pill_sheet_id_1",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -727,7 +727,7 @@ void main() {
         createdAt: now(),
         restDurations: [],
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -736,7 +736,7 @@ void main() {
         createdAt: now(),
         restDurations: [notChangeRestDuration, beforeRestDuration],
       );
-      final pillSheet3 = PillSheet(
+      final pillSheet3 = PillSheet.v1(
         id: "pill_sheet_id_3",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -828,7 +828,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
@@ -917,7 +917,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet1 = PillSheet(
+      final pillSheet1 = PillSheet.v1(
         id: "pill_sheet_id_1",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -926,7 +926,7 @@ void main() {
         createdAt: now(),
         restDurations: [],
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -935,7 +935,7 @@ void main() {
         createdAt: now(),
         restDurations: [notChangeRestDuration, beforeRestDuration],
       );
-      final pillSheet3 = PillSheet(
+      final pillSheet3 = PillSheet.v1(
         id: "pill_sheet_id_3",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -1024,7 +1024,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet1 = PillSheet(
+      final pillSheet1 = PillSheet.v1(
         id: "pill_sheet_id_1",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -1033,7 +1033,7 @@ void main() {
         createdAt: now(),
         restDurations: [],
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "pill_sheet_id_2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -1042,7 +1042,7 @@ void main() {
         createdAt: now(),
         restDurations: [beforeRestDuration],
       );
-      final pillSheet3 = PillSheet(
+      final pillSheet3 = PillSheet.v1(
         id: "pill_sheet_id_3",
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
