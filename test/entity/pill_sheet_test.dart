@@ -3334,6 +3334,71 @@ void main() {
         expect(model.lastTakenPillNumber, 19);
       });
     });
+
+    group("時刻境界値テスト", () {
+      test("同日だがlastTakenDateの時刻がbeginingDateより前の場合はnullを返す", () {
+        // lastTakenPillNumber は lastTakenDate.isBefore(beginingDate) で時刻も含めて比較している
+        // 同日でも時刻が前であればnullを返す
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime(2020, 9, 14, 12, 0, 0),
+          lastTakenDate: DateTime(2020, 9, 14, 10, 0, 0),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenPillNumber, isNull);
+      });
+      test("同日でlastTakenDateの時刻がbeginingDateより後の場合は1を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime(2020, 9, 14, 10, 0, 0),
+          lastTakenDate: DateTime(2020, 9, 14, 12, 0, 0),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenPillNumber, 1);
+      });
+      test("同日で同時刻の場合は1を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime(2020, 9, 14, 12, 0, 0),
+          lastTakenDate: DateTime(2020, 9, 14, 12, 0, 0),
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenPillNumber, 1);
+      });
+    });
   });
   group("#todayPillIsAlreadyTaken", () {
     test("lastTakenDateがnullの場合はfalseを返す", () {
