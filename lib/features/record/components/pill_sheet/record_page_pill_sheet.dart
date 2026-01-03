@@ -95,6 +95,31 @@ class RecordPagePillSheet extends HookConsumerWidget {
       }
 
       final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
+
+      // 残り服用回数を計算（2錠飲み対応）
+      final remainingPillTakenCount = () {
+        if (pillSheet.todayPillsAreAlreadyTaken) {
+          return null;
+        }
+
+        final pillIndexIntoPillSheet = pillNumberInPillSheet - 1;
+        if (pillSheet.todayPillIndex < pillIndexIntoPillSheet) {
+          return null;
+        }
+        if (pillSheet.pillTakenCount <= 1) {
+          return null;
+        }
+        if (pillSheet.pills.isEmpty) {
+          return null;
+        }
+        if (pillIndexIntoPillSheet < 0 || pillIndexIntoPillSheet >= pillSheet.pills.length) {
+          return null;
+        }
+
+        final diff = pillSheet.pillTakenCount - pillSheet.pills[pillIndexIntoPillSheet].pillTakens.length;
+        return diff == 0 ? null : diff;
+      }();
+
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -119,6 +144,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
+            remainingPillTakenCount: remainingPillTakenCount,
           ),
           onTap: () async {
             try {
@@ -190,7 +216,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
       // User tapped future pill number
       return null;
     }
-    if (activePillSheet.todayPillIsAlreadyTaken) {
+    if (activePillSheet.todayPillsAreAlreadyTaken) {
       return null;
     }
 
