@@ -1242,6 +1242,312 @@ void main() {
         expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-27")), pillSheet3);
       });
     });
+
+    group("継続中の休薬期間（endDateがnull）がある場合", () {
+      test("今日までの休薬日数分だけ終了日が延長されてアクティブなピルシートを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 通常終了日: 2020-09-28
+        // 休薬開始: 2020-09-10, 今日: 2020-09-30 → 休薬20日
+        // 延長後終了日: 2020-09-28 + 20日 = 2020-10-18
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-30"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          // 継続中の休薬期間（endDateがnull）: 2020-09-10~
+          restDurations: [
+            RestDuration(
+              id: "rest_id",
+              beginDate: DateTime.parse("2020-09-10"),
+              endDate: null,
+              createdDate: DateTime.parse("2020-09-10"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: DateTime.parse("2020-09-01"),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 通常終了日より後でも継続中の休薬期間により期間内
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-30")), pillSheet);
+      });
+
+      test("今日が進むと終了日も延長される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 休薬開始: 2020-09-10, 今日: 2020-10-15 → 休薬35日
+        // 通常終了日: 2020-09-28
+        // 延長後終了日: 2020-09-28 + 35日 = 2020-11-02
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-15"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          restDurations: [
+            RestDuration(
+              id: "rest_id",
+              beginDate: DateTime.parse("2020-09-10"),
+              endDate: null,
+              createdDate: DateTime.parse("2020-09-10"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: DateTime.parse("2020-09-01"),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 10/15時点でもまだアクティブ
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-15")), pillSheet);
+      });
+    });
+
+    group("複数の休薬期間がある場合", () {
+      test("複数の終了済み休薬期間の合計日数分だけ終了日が延長される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 通常終了日: 2020-09-28
+        // 休薬1: 2020-09-05~2020-09-07 → daysBetween=2日
+        // 休薬2: 2020-09-15~2020-09-17 → daysBetween=2日
+        // 合計休薬: 4日間
+        // 延長後終了日: 2020-09-28 + 4日 = 2020-10-02
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          restDurations: [
+            RestDuration(
+              id: "rest_id_1",
+              beginDate: DateTime.parse("2020-09-05"),
+              endDate: DateTime.parse("2020-09-07"),
+              createdDate: DateTime.parse("2020-09-05"),
+            ),
+            RestDuration(
+              id: "rest_id_2",
+              beginDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-17"),
+              createdDate: DateTime.parse("2020-09-15"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: DateTime.parse("2020-09-01"),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 通常終了日より後でも複数休薬期間の合計分だけ延長されて期間内
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-01")), pillSheet);
+      });
+
+      test("複数の休薬期間の延長後終了日を超えた日付ではnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-03"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: DateTime.parse("2020-09-01"),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+          restDurations: [
+            RestDuration(
+              id: "rest_id_1",
+              beginDate: DateTime.parse("2020-09-05"),
+              endDate: DateTime.parse("2020-09-07"),
+              createdDate: DateTime.parse("2020-09-05"),
+            ),
+            RestDuration(
+              id: "rest_id_2",
+              beginDate: DateTime.parse("2020-09-15"),
+              endDate: DateTime.parse("2020-09-17"),
+              createdDate: DateTime.parse("2020-09-15"),
+            ),
+          ],
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: DateTime.parse("2020-09-01"),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 延長後終了日（2020-10-02）を超えた日付
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-03")), isNull);
+      });
+    });
+
+    group("異なるPillSheetType（錠数違い）の場合", () {
+      test("24錠+4日偽薬型（pillsheet_28_4）で終了日が正しく計算される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        // pillsheet_28_4はtotalCount=28、dosingPeriod=24
+        // 開始日: 2020-09-01から28日間 → 終了日: 2020-09-28
+        const sheetType = PillSheetType.pillsheet_28_4;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 開始日
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-01")), pillSheet);
+        // 終了日（28日後）
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-28")), pillSheet);
+        // 終了日の翌日
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-29")), isNull);
+      });
+
+      test("21錠型（pillsheet_21_0）で終了日が正しく計算される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        // pillsheet_21_0はtotalCount=21、dosingPeriod=21
+        // 開始日: 2020-09-01から21日間 → 終了日: 2020-09-21
+        const sheetType = PillSheetType.pillsheet_21_0;
+        final pillSheet = PillSheet(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 開始日
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-01")), pillSheet);
+        // 終了日（21日後）
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-21")), pillSheet);
+        // 終了日の翌日
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-22")), isNull);
+      });
+    });
+
+    group("異なるPillSheetTypeが混在する複数枚の場合", () {
+      test("異なるタイプのピルシート間で正しく切り替わる", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+
+        // 1枚目: pillsheet_21_0 (21錠) 2020-09-01~2020-09-21
+        const sheetType1 = PillSheetType.pillsheet_21_0;
+        final pillSheet1 = PillSheet(
+          id: firestoreIDGenerator(),
+          groupIndex: 0,
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType1.dosingPeriod,
+            name: sheetType1.fullName,
+            totalCount: sheetType1.totalCount,
+            pillSheetTypeReferencePath: sheetType1.rawPath,
+          ),
+        );
+        // 2枚目: pillsheet_21 (28錠) 2020-09-22~2020-10-19
+        const sheetType2 = PillSheetType.pillsheet_21;
+        final pillSheet2 = PillSheet(
+          id: firestoreIDGenerator(),
+          groupIndex: 1,
+          beginingDate: DateTime.parse("2020-09-22"),
+          lastTakenDate: null,
+          createdAt: now(),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType2.dosingPeriod,
+            name: sheetType2.fullName,
+            totalCount: sheetType2.totalCount,
+            pillSheetTypeReferencePath: sheetType2.rawPath,
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id_1", "sheet_id_2"],
+          pillSheets: [pillSheet1, pillSheet2],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+
+        // 1枚目の期間内
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-10")), pillSheet1);
+        // 1枚目の最終日（境界値）
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-21")), pillSheet1);
+        // 2枚目の開始日（境界値）
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-09-22")), pillSheet2);
+        // 2枚目の期間内
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-10")), pillSheet2);
+        // 2枚目の最終日（境界値）
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-19")), pillSheet2);
+        // 全期間外
+        expect(pillSheetGroup.activePillSheetWhen(DateTime.parse("2020-10-20")), isNull);
+      });
+    });
   });
 
   group("#lastTakenPillSheetOrFirstPillSheet", () {
