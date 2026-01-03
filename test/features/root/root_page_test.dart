@@ -2,7 +2,6 @@ import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/setting.codegen.dart';
 import 'package:pilll/entity/user.codegen.dart';
 import 'package:pilll/features/root/resolver/initial_setting_or_app_page.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';

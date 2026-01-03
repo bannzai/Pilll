@@ -18,7 +18,6 @@ import 'package:pilll/provider/pill_sheet_modified_history.dart';
 import 'package:pilll/provider/remote_config_parameter.dart';
 import 'package:pilll/provider/setting.dart';
 import 'package:pilll/provider/user.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';

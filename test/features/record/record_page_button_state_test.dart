@@ -1,6 +1,5 @@
 import 'package:flutter/rendering.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/provider/database.dart';
 import 'package:pilll/features/record/components/button/cancel_button.dart';
 import 'package:pilll/features/record/components/button/record_page_button.dart';

@@ -1,14 +1,11 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/user.codegen.dart';
-import 'package:pilll/utils/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../../helper/mock.mocks.dart';
 
 class _FakeOfferings extends Fake implements Offerings {}
 
