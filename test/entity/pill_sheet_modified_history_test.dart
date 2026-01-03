@@ -7137,6 +7137,152 @@ void main() {
         expect(history.actionType, PillSheetModifiedActionType.changedBeginDisplayNumber.name);
       });
     });
+
+    group('タイムスタンプ関連', () {
+      test('createdAt が設定されること', () {
+        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
+          beginPillNumber: 5,
+          endPillNumber: 28,
+        );
+        final pillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+          displayNumberSetting: afterDisplayNumberSetting,
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+          pillSheetGroupID: 'group_id',
+          beforeDisplayNumberSetting: null,
+          afterDisplayNumberSetting: afterDisplayNumberSetting,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.createdAt, isNotNull);
+      });
+
+      test('estimatedEventCausingDate が設定されること', () {
+        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
+          beginPillNumber: 5,
+          endPillNumber: 28,
+        );
+        final pillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+          displayNumberSetting: afterDisplayNumberSetting,
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+          pillSheetGroupID: 'group_id',
+          beforeDisplayNumberSetting: null,
+          afterDisplayNumberSetting: afterDisplayNumberSetting,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.estimatedEventCausingDate, isNotNull);
+      });
+
+      test('ttlExpiresDateTime が createdAt + limitDays で設定されること', () {
+        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
+          beginPillNumber: 5,
+          endPillNumber: 28,
+        );
+        final pillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(pillSheets: [pillSheet]);
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+          displayNumberSetting: afterDisplayNumberSetting,
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+          pillSheetGroupID: 'group_id',
+          beforeDisplayNumberSetting: null,
+          afterDisplayNumberSetting: afterDisplayNumberSetting,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        expect(history.ttlExpiresDateTime, isNotNull);
+        final difference = history.ttlExpiresDateTime!.difference(history.createdAt);
+        expect(difference.inDays, PillSheetModifiedHistoryServiceActionFactory.limitDays);
+      });
+    });
+
+    group('RestDurationを持つピルシートのケース', () {
+      test('RestDurationを持つピルシートで表示番号設定を変更した場合、RestDuration情報がbeforePillSheetGroupとafterPillSheetGroupに保持される', () {
+        final restDuration = RestDuration(
+          id: 'rest_duration_id',
+          beginDate: DateTime(2020, 9, 5),
+          createdDate: DateTime(2020, 9, 5),
+          endDate: DateTime(2020, 9, 8),
+        );
+        final beforeDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
+          beginPillNumber: 1,
+          endPillNumber: 28,
+        );
+        final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
+          beginPillNumber: 5,
+          endPillNumber: 28,
+        );
+        final pillSheet = PillSheet(
+          id: 'pill_sheet_id_1',
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: DateTime(2020, 9, 1),
+          lastTakenDate: DateTime(2020, 9, 10),
+          restDurations: [restDuration],
+          createdAt: DateTime(2020, 9, 1),
+        );
+        final beforePillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+          displayNumberSetting: beforeDisplayNumberSetting,
+        );
+        final afterPillSheetGroup = createPillSheetGroup(
+          pillSheets: [pillSheet],
+          displayNumberSetting: afterDisplayNumberSetting,
+        );
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
+          pillSheetGroupID: 'group_id',
+          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
+          afterDisplayNumberSetting: afterDisplayNumberSetting,
+          beforePillSheetGroup: beforePillSheetGroup,
+          afterPillSheetGroup: afterPillSheetGroup,
+        );
+
+        // beforePillSheetGroup の RestDuration が保持されている
+        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.length, 1);
+        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.first.beginDate, DateTime(2020, 9, 5));
+        expect(history.beforePillSheetGroup!.pillSheets.first.restDurations.first.endDate, DateTime(2020, 9, 8));
+        // afterPillSheetGroup にも RestDuration が保持されている
+        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.length, 1);
+        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.first.beginDate, DateTime(2020, 9, 5));
+        expect(history.afterPillSheetGroup!.pillSheets.first.restDurations.first.endDate, DateTime(2020, 9, 8));
+      });
+    });
   });
 
   group('#createChangedEndDisplayNumberAction', () {
