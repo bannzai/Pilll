@@ -294,10 +294,12 @@ sealed class PillSheet with _$PillSheet {
   }
 
   /// ピルシートの種類オブジェクト
+  /// typeInfoから変換されたPillSheetType列挙値
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  /// 今日服用すべきピルの番号（1始まり）
+  /// 今日服用すべきピルの番号
+  /// 1から始まる連番でピルシート内の位置を示す
   int get todayPillNumber {
     return pillNumberFor(targetDate: today());
   }
@@ -307,14 +309,19 @@ sealed class PillSheet with _$PillSheet {
     return todayPillNumber - 1;
   }
 
+  // lastTakenPillNumber は最後に服了したピルの番号を返す
+  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
+  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
   /// 最後に服用したピルの番号（0または1以上）
+  /// まだ服用していない場合は0、服用済みの場合は1以上の値を返す
+  /// null安全のため常に数値を返すバージョン
   int get lastTakenOrZeroPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
     }
 
-    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある
+    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
     if (lastTakenDate.date().isBefore(beginingDate.date())) {
       return 0;
     }
@@ -323,12 +330,15 @@ sealed class PillSheet with _$PillSheet {
   }
 
   /// 最後に服用したピルの番号（nullable）
+  /// まだ服用していない場合や開始日より前の場合はnull
+  /// 正確な服用状況を表現するnullableバージョン
   int? get lastTakenPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return null;
     }
 
+    // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
     if (lastTakenDate.isBefore(beginingDate)) {
       return null;
     }
@@ -336,7 +346,11 @@ sealed class PillSheet with _$PillSheet {
     return pillNumberFor(targetDate: lastTakenDate);
   }
 
-  /// 今日のピルがすでに服用済みかどうか（v1用）
+  // 今日のピルをすでに飲んでいるかを確認する
+  // 番号で比較しない(lastTakenPillNumber == todayPillNumber)理由は、各プロパティが上限値を超えないことを保証してないため。たとえばtodayPillNumberが30になることもありえる
+  /// 今日のピルがすでに服用済みかどうか
+  /// 最終服用日が今日以降の場合にtrueを返す
+  /// @deprecated 1錠飲みでのみ使用。2錠飲み対応後は todayPillsAreAlreadyTaken を使用
   bool get todayPillIsAlreadyTaken {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
@@ -346,26 +360,34 @@ sealed class PillSheet with _$PillSheet {
   }
 
   /// ピルシートの全てのピルを服用完了したかどうか
+  /// 総ピル数と最終服用ピル番号を比較して判定
+  /// @deprecated isEnded を使用してください
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
 
   /// ピルシートの服用が開始されているかどうか
+  /// 開始日が現在時刻より前の場合にtrueを返す
   bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
 
   /// 現在が休薬期間中かどうか
+  /// 今日のピル番号が服用期間を超えている場合にtrueを返す
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
 
   /// ピルシートが休薬期間または偽薬期間を持つかどうか
+  /// 28日型シート（偽薬7日）などの場合にtrueを返す
   bool get pillSheetHasRestOrFakeDuration => pillSheetType.hasRestOrFakeDuration;
 
   /// ピルシートが現在アクティブ（有効）かどうか
+  /// 現在日付がピルシートの有効期間内の場合にtrueを返す
   bool get isActive => isActiveFor(now());
 
   /// 指定した日付でピルシートがアクティブかどうかを判定
+  /// ピルシートの開始日から予想終了日までの範囲内かをチェック
   bool isActiveFor(DateTime date) {
     return DateRange(beginingDate.date(), estimatedEndTakenDate).inRange(date);
   }
 
   /// ピルシートの予想服用完了日
+  /// 開始日、総ピル数、休薬期間を考慮して計算される完了予定日
   DateTime get estimatedEndTakenDate => beginingDate
       .addDays(pillSheetType.totalCount - 1)
       .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
@@ -374,6 +396,9 @@ sealed class PillSheet with _$PillSheet {
       .subtract(const Duration(seconds: 1));
 
   /// 現在アクティブな休薬期間
+  /// 現在継続中（endDateがnull）かつ開始済みの休薬期間を返す
+  /// NOTE: beginDateは日付レベルで比較する。時刻を含めた比較だと、服用おやすみ開始日に
+  /// lastTakenDateの時刻を過ぎるまで表示されない問題が発生するため
   RestDuration? get activeRestDuration {
     if (restDurations.isEmpty) {
       return null;
@@ -386,20 +411,31 @@ sealed class PillSheet with _$PillSheet {
     }
   }
 
+  // PillSheetのbeginDateは服用お休み中にbackendで毎日1日ずれるようになっているので、
+  // ここで計算に考慮するのはこのPillSheetのrestDurationのみで良い
   /// 指定したピル番号の服用予定日を取得
+  /// 休薬期間を考慮した実際の服用日を返す
   DateTime displayPillTakeDate(int pillNumberInPillSheet) {
     return dates[pillNumberInPillSheet - 1];
   }
 
+  // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] beginDate > targetDate(lastTakenDate) の場合がある。「本日の服用日」を編集して1番目を未服用にした場合
+  // pillNumberは0は不自然なので、1番を返す
   /// 指定した日付に対応するピル番号を計算
+  /// 開始日からの経過日数と休薬期間を考慮してピル番号を算出
+  /// 最小値は1を保証
   int pillNumberFor({required DateTime targetDate}) {
     return max(daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
   }
 
   /// ピルシート内の各ピルの服用予定日リスト
+  /// 休薬期間を考慮した実際の服用日程が格納される
   late final List<DateTime> dates = buildDates();
 
+  // ピルシートのピルの日付を取得する
   /// ピルシートの各ピルの服用予定日を構築
+  /// 休薬期間による日付の調整を行い、実際の服用スケジュールを生成
+  /// estimatedEventCausingDateが指定された場合は過去の状態を再現
   List<DateTime> buildDates({DateTime? estimatedEventCausingDate}) {
     final List<DateTime> dates = [];
     var offset = 0;
