@@ -281,16 +281,16 @@ sealed class PillSheet with _$PillSheet {
   factory PillSheet.fromJson(Map<String, dynamic> json) {
     final version = json['version'] as String?;
     if (version == 'v2') {
-      return PillSheetV2.fromJson(json);
+      return _$$PillSheetV2ImplFromJson(json);
     }
-    return PillSheetV1.fromJson(json);
+    return _$$PillSheetV1ImplFromJson(json);
   }
 
   /// 各 variant の toJson を呼び出す
   Map<String, dynamic> toJson() {
     return map(
-      v1: (value) => _$PillSheetV1ImplToJson(value as _$PillSheetV1Impl),
-      v2: (value) => _$PillSheetV2ImplToJson(value as _$PillSheetV2Impl),
+      v1: (value) => _$$PillSheetV1ImplToJson(value as _$PillSheetV1Impl),
+      v2: (value) => _$$PillSheetV2ImplToJson(value as _$PillSheetV2Impl),
     );
   }
 
@@ -431,7 +431,7 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシート内の各ピルの服用予定日リスト
   /// 休薬期間を考慮した実際の服用日程が格納される
-  late final List<DateTime> dates = buildDates();
+  List<DateTime> get dates => buildDates();
 
   // ピルシートのピルの日付を取得する
   /// ピルシートの各ピルの服用予定日を構築
