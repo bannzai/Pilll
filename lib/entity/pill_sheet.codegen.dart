@@ -252,20 +252,19 @@ sealed class PillSheet with _$PillSheet {
     required DateTime? lastTakenDate,
     required int pillTakenCount,
   }) {
-    final count = pillTakenCount;
-    if (count > 1) {
+    if (pillTakenCount > 1) {
       return PillSheet.v2(
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
         beginingDate: beginDate,
         lastTakenDate: lastTakenDate,
         createdAt: now(),
-        pillTakenCount: count,
+        pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: type,
           fromDate: beginDate,
           lastTakenDate: lastTakenDate,
-          pillTakenCount: count,
+          pillTakenCount: pillTakenCount,
         ),
       );
     }
