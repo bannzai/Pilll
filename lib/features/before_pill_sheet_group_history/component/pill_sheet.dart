@@ -102,6 +102,10 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
+            remainingPillTakenCount: _remainingPillTakenCount(
+              pillNumberInPillSheet: pillNumberInPillSheet,
+              pillSheet: pillSheet,
+            ),
           ),
           onTap: () {},
         ),
@@ -121,14 +125,43 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     }
     if (activePillSheet.id != pillSheet.id) {
       if (pillSheet.isBegan) {
-        if (pillNumberInPillSheet > pillSheet.lastTakenOrZeroPillNumber) {
+        // v2の場合はlastCompletedPillNumberで判定
+        final lastCompleted = switch (pillSheet) {
+          PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber,
+          PillSheetV2 v2 => v2.lastCompletedPillNumber,
+        };
+        if (pillNumberInPillSheet > lastCompleted) {
           return false;
         }
       }
       return true;
     }
 
-    return pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber;
+    return switch (activePillSheet) {
+      PillSheetV1() => pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber,
+      PillSheetV2 v2 => pillNumberInPillSheet <= v2.lastCompletedPillNumber,
+    };
+  }
+
+  /// 残り服用数を計算する（2錠飲み対応）
+  /// v1の場合はnull（数字表示なし）
+  /// v2の場合は残り服用数を返す（全錠服用済みならnull）
+  int? _remainingPillTakenCount({
+    required int pillNumberInPillSheet,
+    required PillSheet pillSheet,
+  }) {
+    return switch (pillSheet) {
+      PillSheetV1() => null,
+      PillSheetV2 v2 => () {
+          final pillIndex = pillNumberInPillSheet - 1;
+          if (pillIndex < 0 || pillIndex >= v2.pills.length) {
+            return null;
+          }
+          final takenCount = v2.pills[pillIndex].pillTakens.length;
+          final remaining = v2.pillTakenCount - takenCount;
+          return remaining > 0 ? remaining : null;
+        }(),
+    };
   }
 }
 
@@ -141,7 +174,12 @@ PillMarkType pillMarkFor({
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
-  if (pillNumberInPillSheet <= pillSheet.lastTakenOrZeroPillNumber) {
+  // v2の場合はlastCompletedPillNumberで判定
+  final lastCompleted = switch (pillSheet) {
+    PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber,
+    PillSheetV2 v2 => v2.lastCompletedPillNumber,
+  };
+  if (pillNumberInPillSheet <= lastCompleted) {
     return PillMarkType.done;
   }
   if (pillNumberInPillSheet < pillSheet.todayPillNumber) {
@@ -167,14 +205,24 @@ bool shouldPillMarkAnimation({
   }
   if (activePillSheet.id != pillSheet.id) {
     if (pillSheet.isBegan) {
-      if (pillNumberInPillSheet > pillSheet.lastTakenOrZeroPillNumber) {
+      // v2の場合はlastCompletedPillNumberで判定
+      final lastCompleted = switch (pillSheet) {
+        PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2 v2 => v2.lastCompletedPillNumber,
+      };
+      if (pillNumberInPillSheet > lastCompleted) {
         return true;
       }
     }
     return false;
   }
 
-  return pillNumberInPillSheet > activePillSheet.lastTakenOrZeroPillNumber && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
+  // v2の場合はlastCompletedPillNumberで判定
+  final lastCompleted = switch (activePillSheet) {
+    PillSheetV1() => activePillSheet.lastTakenOrZeroPillNumber,
+    PillSheetV2 v2 => v2.lastCompletedPillNumber,
+  };
+  return pillNumberInPillSheet > lastCompleted && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
 }
 
 class PillNumber extends StatelessWidget {
