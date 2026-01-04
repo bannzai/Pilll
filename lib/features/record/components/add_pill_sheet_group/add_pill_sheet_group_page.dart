@@ -30,7 +30,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
-    final initialPillTakenCount = switch (pillSheetGroup?.firstOrNull) {
+    final initialPillTakenCount = switch (pillSheetGroup?.pillSheets.firstOrNull) {
       PillSheetV1() => 1,
       PillSheetV2 v2 => v2.pillTakenCount,
       null => 1,
