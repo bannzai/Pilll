@@ -511,6 +511,8 @@ extension PillSheetV2Extension on PillSheetV2 {
 }
 
 /// 指定日までの総休薬日数を計算
+/// lastTakenDateやtodayなどの基準日までの累積休薬期間を集計
+/// ピル番号計算時の日数調整に使用される
 int summarizedRestDuration({
   required List<RestDuration> restDurations,
   required DateTime upperDate,
