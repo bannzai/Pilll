@@ -40,6 +40,7 @@ void main() {
         pageIndex: 0,
         todayPillNumber: const InitialSettingTodayPillNumber(pageIndex: 0, pillNumberInPillSheet: 1),
         pillSheetTypes: [PillSheetType.pillsheet_21],
+        pillTakenCount: 1,
       );
 
       final expected = PillSheet.v1(
@@ -69,6 +70,7 @@ void main() {
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
         ],
+        pillTakenCount: 1,
       );
 
       final expected = PillSheet.v1(
@@ -100,6 +102,7 @@ void main() {
           PillSheetType.pillsheet_21,
           PillSheetType.pillsheet_24_0,
         ],
+        pillTakenCount: 1,
       );
 
       final expected = PillSheet.v1(
