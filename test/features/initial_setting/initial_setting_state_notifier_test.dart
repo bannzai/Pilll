@@ -291,7 +291,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
@@ -367,7 +367,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday.subtract(
@@ -377,7 +377,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday,
@@ -471,7 +471,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
         beginingDate: mockToday,

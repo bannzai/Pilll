@@ -45,7 +45,7 @@ void main() {
           pillSheetIDs: ["1", "2", "3", "4", "5", "6"],
           pillSheets: [
             // シート0: 24錠（実薬のみ）- 1-24番
-            PillSheet(
+            PillSheet.v1(
               id: "1",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
               beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
@@ -54,7 +54,7 @@ void main() {
               groupIndex: 0,
             ),
             // シート1: 24錠（実薬のみ）- 25-48番
-            PillSheet(
+            PillSheet.v1(
               id: "2",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
               beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
@@ -63,7 +63,7 @@ void main() {
               groupIndex: 1,
             ),
             // シート2: 28錠（24実薬+4偽薬）- 49-76番（偽薬は73-76番）
-            PillSheet(
+            PillSheet.v1(
               id: "3",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
               beginingDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
@@ -72,7 +72,7 @@ void main() {
               groupIndex: 2,
             ),
             // シート3: 24錠（実薬のみ）- 77-100番
-            PillSheet(
+            PillSheet.v1(
               id: "4",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
               beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
@@ -81,7 +81,7 @@ void main() {
               groupIndex: 3,
             ),
             // シート4: 24錠（実薬のみ）- 101-124番
-            PillSheet(
+            PillSheet.v1(
               id: "5",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
               beginingDate: sheet5BeginDate.subtract(const Duration(days: 24)),
@@ -90,7 +90,7 @@ void main() {
               groupIndex: 4,
             ),
             // シート5: 28錠（24実薬+4偽薬）- 125-152番（偽薬は149-152番）
-            PillSheet(
+            PillSheet.v1(
               id: "6",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
               beginingDate: sheet5BeginDate,
@@ -276,7 +276,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
           pillSheets: [
-            PillSheet(
+            PillSheet.v1(
               id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime(2021, 04, 22),
@@ -319,7 +319,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
           pillSheets: [
-            PillSheet(
+            PillSheet.v1(
               id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime(2021, 04, 07),
