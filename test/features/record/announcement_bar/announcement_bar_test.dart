@@ -73,6 +73,7 @@ void main() {
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
+          pillTakenCount: 1,
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
@@ -141,6 +142,7 @@ void main() {
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
+          pillTakenCount: 1,
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
@@ -203,6 +205,7 @@ void main() {
 // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),
+          pillTakenCount: 1,
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
@@ -258,6 +261,7 @@ void main() {
             beginDate: today().subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -312,6 +316,7 @@ void main() {
             beginDate: today().subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -372,6 +377,7 @@ void main() {
             beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -434,6 +440,7 @@ void main() {
             beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -503,6 +510,7 @@ void main() {
             beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -574,6 +582,7 @@ void main() {
             beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -645,6 +654,7 @@ void main() {
             beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -716,6 +726,7 @@ void main() {
             beginDate: mockToday.subtract(
               const Duration(days: 25),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -794,6 +805,7 @@ void main() {
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -867,6 +879,7 @@ void main() {
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -940,6 +953,7 @@ void main() {
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -1013,6 +1027,7 @@ void main() {
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -1086,6 +1101,7 @@ void main() {
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -1159,6 +1175,7 @@ void main() {
               // NOTE: Not into rest duration and notification duration
               const Duration(days: 10),
             ),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"],
@@ -1233,6 +1250,7 @@ void main() {
 // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
+          pillTakenCount: 1,
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
@@ -1295,6 +1313,7 @@ void main() {
 // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
+          pillTakenCount: 1,
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
@@ -1357,6 +1376,7 @@ void main() {
 // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),
+          pillTakenCount: 1,
         );
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],

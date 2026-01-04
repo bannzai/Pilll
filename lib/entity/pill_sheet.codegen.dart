@@ -250,9 +250,9 @@ sealed class PillSheet with _$PillSheet {
     PillSheetType type, {
     required DateTime beginDate,
     required DateTime? lastTakenDate,
-    int? pillTakenCount,
+    required int pillTakenCount,
   }) {
-    final count = pillTakenCount ?? 1;
+    final count = pillTakenCount;
     if (count > 1) {
       return PillSheet.v2(
         id: firestoreIDGenerator(),
@@ -502,6 +502,7 @@ extension PillSheetV2Extension on PillSheetV2 {
   }
 
   /// pillsリストの一部を置き換えたリストを返す
+  /// 服用記録の更新時に使用
   List<Pill> replacedPills({required List<Pill> newPills}) {
     if (newPills.isEmpty) {
       return pills;

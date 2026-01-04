@@ -28,6 +28,7 @@ void main() {
         PillSheetType.pillsheet_21,
         beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
+        pillTakenCount: 1,
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
@@ -50,6 +51,7 @@ void main() {
         PillSheetType.pillsheet_21,
         beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
+        pillTakenCount: 1,
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
@@ -73,6 +75,7 @@ void main() {
         PillSheetType.pillsheet_21,
         beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
+        pillTakenCount: 1,
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       await waitForResetStoreState();
@@ -98,6 +101,7 @@ void main() {
         PillSheetType.pillsheet_21,
         beginDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
+        pillTakenCount: 1,
       );
       final pillSheetGroup = PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
