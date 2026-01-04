@@ -40,7 +40,8 @@ mixin _$User {
   List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
 
   /// 統合されたFirebaseCurrentUserIDのリスト
-  List<String> get firebaseCurrentUserIDSets => throw _privateConstructorUsedError;
+  List<String> get firebaseCurrentUserIDSets =>
+      throw _privateConstructorUsedError;
 
   /// プレミアム会員フラグ（サブスクリプション有効状態）
   bool get isPremium => throw _privateConstructorUsedError;
@@ -52,17 +53,24 @@ mixin _$User {
   bool get analyticsDebugIsEnabled => throw _privateConstructorUsedError;
 
   /// トライアル開始日（初回トライアル開始時にセット）
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
 
   /// トライアル期限日（トライアル期間の終了日時）
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
   /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get discountEntitlementDeadlineDate =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -71,7 +79,8 @@ mixin _$User {
 
 /// @nodoc
 abstract class $UserCopyWith<$Res> {
-  factory $UserCopyWith(User value, $Res Function(User) then) = _$UserCopyWithImpl<$Res, User>;
+  factory $UserCopyWith(User value, $Res Function(User) then) =
+      _$UserCopyWithImpl<$Res, User>;
   @useResult
   $Res call(
       {String? id,
@@ -84,16 +93,25 @@ abstract class $UserCopyWith<$Res> {
       bool isPremium,
       bool shouldAskCancelReason,
       bool analyticsDebugIsEnabled,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? discountEntitlementDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
-class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res> {
+class _$UserCopyWithImpl<$Res, $Val extends User>
+    implements $UserCopyWith<$Res> {
   _$UserCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -167,7 +185,8 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      discountEntitlementDeadlineDate: freezed == discountEntitlementDeadlineDate
+      discountEntitlementDeadlineDate: freezed ==
+              discountEntitlementDeadlineDate
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -189,7 +208,9 @@ class _$UserCopyWithImpl<$Res, $Val extends User> implements $UserCopyWith<$Res>
 
 /// @nodoc
 abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
-  factory _$$UserImplCopyWith(_$UserImpl value, $Res Function(_$UserImpl) then) = __$$UserImplCopyWithImpl<$Res>;
+  factory _$$UserImplCopyWith(
+          _$UserImpl value, $Res Function(_$UserImpl) then) =
+      __$$UserImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -203,9 +224,17 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool isPremium,
       bool shouldAskCancelReason,
       bool analyticsDebugIsEnabled,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      DateTime? trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
       DateTime? discountEntitlementDeadlineDate});
 
   @override
@@ -213,8 +242,11 @@ abstract class _$$UserImplCopyWith<$Res> implements $UserCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl> implements _$$UserImplCopyWith<$Res> {
-  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then) : super(_value, _then);
+class __$$UserImplCopyWithImpl<$Res>
+    extends _$UserCopyWithImpl<$Res, _$UserImpl>
+    implements _$$UserImplCopyWith<$Res> {
+  __$$UserImplCopyWithImpl(_$UserImpl _value, $Res Function(_$UserImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -282,7 +314,8 @@ class __$$UserImplCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res, _$UserImpl
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      discountEntitlementDeadlineDate: freezed == discountEntitlementDeadlineDate
+      discountEntitlementDeadlineDate: freezed ==
+              discountEntitlementDeadlineDate
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
@@ -305,16 +338,25 @@ class _$UserImpl extends _User {
       this.isPremium = false,
       this.shouldAskCancelReason = false,
       this.analyticsDebugIsEnabled = false,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      this.trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
       this.discountEntitlementDeadlineDate})
       : _userDocumentIDSets = userDocumentIDSets,
         _anonymousUserIDSets = anonymousUserIDSets,
         _firebaseCurrentUserIDSets = firebaseCurrentUserIDSets,
         super._();
 
-  factory _$UserImpl.fromJson(Map<String, dynamic> json) => _$$UserImplFromJson(json);
+  factory _$UserImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UserImplFromJson(json);
 
   /// ユーザーID（FirebaseのUID）
   @override
@@ -340,7 +382,8 @@ class _$UserImpl extends _User {
   @override
   @JsonKey()
   List<String> get userDocumentIDSets {
-    if (_userDocumentIDSets is EqualUnmodifiableListView) return _userDocumentIDSets;
+    if (_userDocumentIDSets is EqualUnmodifiableListView)
+      return _userDocumentIDSets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_userDocumentIDSets);
   }
@@ -352,7 +395,8 @@ class _$UserImpl extends _User {
   @override
   @JsonKey()
   List<String> get anonymousUserIDSets {
-    if (_anonymousUserIDSets is EqualUnmodifiableListView) return _anonymousUserIDSets;
+    if (_anonymousUserIDSets is EqualUnmodifiableListView)
+      return _anonymousUserIDSets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_anonymousUserIDSets);
   }
@@ -364,7 +408,8 @@ class _$UserImpl extends _User {
   @override
   @JsonKey()
   List<String> get firebaseCurrentUserIDSets {
-    if (_firebaseCurrentUserIDSets is EqualUnmodifiableListView) return _firebaseCurrentUserIDSets;
+    if (_firebaseCurrentUserIDSets is EqualUnmodifiableListView)
+      return _firebaseCurrentUserIDSets;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_firebaseCurrentUserIDSets);
   }
@@ -386,18 +431,24 @@ class _$UserImpl extends _User {
 
   /// トライアル開始日（初回トライアル開始時にセット）
   @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beginTrialDate;
 
   /// トライアル期限日（トライアル期間の終了日時）
   @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? trialDeadlineDate;
 
   /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? discountEntitlementDeadlineDate;
 
   @override
@@ -412,18 +463,31 @@ class _$UserImpl extends _User {
             other is _$UserImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.setting, setting) || other.setting == setting) &&
-            (identical(other.userIDWhenCreateUser, userIDWhenCreateUser) || other.userIDWhenCreateUser == userIDWhenCreateUser) &&
-            (identical(other.anonymousUserID, anonymousUserID) || other.anonymousUserID == anonymousUserID) &&
-            const DeepCollectionEquality().equals(other._userDocumentIDSets, _userDocumentIDSets) &&
-            const DeepCollectionEquality().equals(other._anonymousUserIDSets, _anonymousUserIDSets) &&
-            const DeepCollectionEquality().equals(other._firebaseCurrentUserIDSets, _firebaseCurrentUserIDSets) &&
-            (identical(other.isPremium, isPremium) || other.isPremium == isPremium) &&
-            (identical(other.shouldAskCancelReason, shouldAskCancelReason) || other.shouldAskCancelReason == shouldAskCancelReason) &&
-            (identical(other.analyticsDebugIsEnabled, analyticsDebugIsEnabled) || other.analyticsDebugIsEnabled == analyticsDebugIsEnabled) &&
-            (identical(other.beginTrialDate, beginTrialDate) || other.beginTrialDate == beginTrialDate) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) || other.trialDeadlineDate == trialDeadlineDate) &&
-            (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) ||
-                other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate));
+            (identical(other.userIDWhenCreateUser, userIDWhenCreateUser) ||
+                other.userIDWhenCreateUser == userIDWhenCreateUser) &&
+            (identical(other.anonymousUserID, anonymousUserID) ||
+                other.anonymousUserID == anonymousUserID) &&
+            const DeepCollectionEquality()
+                .equals(other._userDocumentIDSets, _userDocumentIDSets) &&
+            const DeepCollectionEquality()
+                .equals(other._anonymousUserIDSets, _anonymousUserIDSets) &&
+            const DeepCollectionEquality().equals(
+                other._firebaseCurrentUserIDSets, _firebaseCurrentUserIDSets) &&
+            (identical(other.isPremium, isPremium) ||
+                other.isPremium == isPremium) &&
+            (identical(other.shouldAskCancelReason, shouldAskCancelReason) ||
+                other.shouldAskCancelReason == shouldAskCancelReason) &&
+            (identical(
+                    other.analyticsDebugIsEnabled, analyticsDebugIsEnabled) ||
+                other.analyticsDebugIsEnabled == analyticsDebugIsEnabled) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                other.beginTrialDate == beginTrialDate) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                other.trialDeadlineDate == trialDeadlineDate) &&
+            (identical(other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate) ||
+                other.discountEntitlementDeadlineDate ==
+                    discountEntitlementDeadlineDate));
   }
 
   @JsonKey(ignore: true)
@@ -447,7 +511,8 @@ class _$UserImpl extends _User {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$UserImplCopyWith<_$UserImpl> get copyWith => __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+      __$$UserImplCopyWithImpl<_$UserImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
@@ -469,9 +534,17 @@ abstract class _User extends User {
       final bool isPremium,
       final bool shouldAskCancelReason,
       final bool analyticsDebugIsEnabled,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beginTrialDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? trialDeadlineDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? beginTrialDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
+      final DateTime? trialDeadlineDate,
+      @JsonKey(
+          fromJson: TimestampConverter.timestampToDateTime,
+          toJson: TimestampConverter.dateTimeToTimestamp)
       final DateTime? discountEntitlementDeadlineDate}) = _$UserImpl;
   const _User._() : super._();
 
@@ -521,20 +594,27 @@ abstract class _User extends User {
   @override
 
   /// トライアル開始日（初回トライアル開始時にセット）
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate;
   @override
 
   /// トライアル期限日（トライアル期間の終了日時）
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get trialDeadlineDate;
   @override
 
   /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
-  _$$UserImplCopyWith<_$UserImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$UserImplCopyWith<_$UserImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
