@@ -440,10 +440,12 @@ abstract class _RestDuration extends RestDuration {
 /// @nodoc
 mixin _$PillSheet {
   /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
 
   /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -456,9 +458,11 @@ mixin _$PillSheet {
   DateTime? get deletedAt => throw _privateConstructorUsedError;
 
   /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   int get groupIndex => throw _privateConstructorUsedError;
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
   /// バージョン識別子
@@ -764,11 +768,13 @@ class _$PillSheetV1Impl extends PillSheetV1 {
         super._();
 
   /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @override
   @JsonKey(includeIfNull: false)
   final String? id;
 
   /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
@@ -787,14 +793,17 @@ class _$PillSheetV1Impl extends PillSheetV1 {
   final DateTime? deletedAt;
 
   /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   @override
   @JsonKey()
   final int groupIndex;
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   final List<RestDuration> _restDurations;
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   @override
   @JsonKey()
   List<RestDuration> get restDurations {
@@ -991,11 +1000,13 @@ abstract class PillSheetV1 extends PillSheet {
   @override
 
   /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @JsonKey(includeIfNull: false)
   String? get id;
   @override
 
   /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
@@ -1013,10 +1024,12 @@ abstract class PillSheetV1 extends PillSheet {
   @override
 
   /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   int get groupIndex;
   @override
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations;
   @override
 
@@ -1139,11 +1152,13 @@ class _$PillSheetV2Impl extends PillSheetV2 {
         super._();
 
   /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @override
   @JsonKey(includeIfNull: false)
   final String? id;
 
   /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
@@ -1162,14 +1177,17 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   final DateTime? deletedAt;
 
   /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   @override
   @JsonKey()
   final int groupIndex;
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   final List<RestDuration> _restDurations;
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   @override
   @JsonKey()
   List<RestDuration> get restDurations {
@@ -1179,13 +1197,16 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   }
 
   /// 1回の服用で飲むピルの錠数
+  /// 2錠飲みの場合は2がセットされる
   @override
   final int pillTakenCount;
 
   /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
   final List<Pill> _pills;
 
   /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
   @override
   List<Pill> get pills {
     if (_pills is EqualUnmodifiableListView) return _pills;
@@ -1385,11 +1406,13 @@ abstract class PillSheetV2 extends PillSheet {
   @override
 
   /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
   @JsonKey(includeIfNull: false)
   String? get id;
   @override
 
   /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
@@ -1407,16 +1430,20 @@ abstract class PillSheetV2 extends PillSheet {
   @override
 
   /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
   int get groupIndex;
   @override
 
   /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations;
 
   /// 1回の服用で飲むピルの錠数
+  /// 2錠飲みの場合は2がセットされる
   int get pillTakenCount;
 
   /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
   List<Pill> get pills;
   @override
 

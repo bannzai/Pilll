@@ -285,12 +285,10 @@ sealed class PillSheet with _$PillSheet {
 
   /// 各 variant の toJson を呼び出す
   Map<String, dynamic> toJson() {
-    switch (this) {
-      case PillSheetV1():
-        return (this as PillSheetV1).toJson();
-      case PillSheetV2():
-        return (this as PillSheetV2).toJson();
-    }
+    return map(
+      v1: (value) => _$PillSheetV1ImplToJson(value as _$PillSheetV1Impl),
+      v2: (value) => _$PillSheetV2ImplToJson(value as _$PillSheetV2Impl),
+    );
   }
 
   /// ピルシートの種類オブジェクト
@@ -466,14 +464,8 @@ sealed class PillSheet with _$PillSheet {
     switch (this) {
       case PillSheetV1():
         return typeInfo.totalCount == lastTakenOrZeroPillNumber;
-      case PillSheetV2(:final pills, :final pillTakenCount):
-        final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
-        if (lastCompletedPill == null) {
-          return false;
-        }
-        final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
-        final lastCompletedPillNumber = pillNumberFor(targetDate: estimatedLastTakenDate);
-        return typeInfo.totalCount == lastCompletedPillNumber;
+      case final PillSheetV2 v2:
+        return v2.typeInfo.totalCount == v2.lastCompletedPillNumber;
     }
   }
 }
