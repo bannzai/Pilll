@@ -331,11 +331,17 @@ class RegisterReminderLocalNotification {
           switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
             case (true, true, true):
               // 次のピルシートグループの処理。新しいシート自動作成の場合の先読み追加
+              // 現在のアクティブなピルシートからpillTakenCountを取得（v1の場合は1）
+              final currentPillTakenCount = switch (activePillSheet) {
+                PillSheetV1() => 1,
+                PillSheetV2 v2 => v2.pillTakenCount,
+              };
               final nextPillSheetGroup = buildPillSheetGroup(
                 setting: setting,
                 pillSheetGroup: pillSheetGroup,
                 pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 displayNumberSetting: null,
+                pillTakenCount: currentPillTakenCount,
               );
               pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumberWithoutDate(
                 pageIndex: 0,
