@@ -36,21 +36,21 @@ void main() {
       testWidgets('pill sheet has activeRestDuration', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
@@ -106,21 +106,21 @@ void main() {
       testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
@@ -177,21 +177,21 @@ void main() {
       testWidgets('show TakenButton', (WidgetTester tester) async {
         final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
         var pillSheets = [
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
-          PillSheet(
+          PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
             beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),

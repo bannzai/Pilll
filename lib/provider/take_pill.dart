@@ -146,7 +146,7 @@ extension TakenPillSheet on PillSheet {
     // 一番最後の記録対象のピル
     final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
 
-    return copyWith(
+    return v2.copyWith(
       lastTakenDate: takenDate,
       pills: pills.map((pill) {
         // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない

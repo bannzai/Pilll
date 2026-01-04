@@ -9,8 +9,6 @@ import 'package:pilll/utils/datetime/day.dart';
 
 import '../helper/mock.mocks.dart';
 
-class _FakePillSheet extends Fake implements PillSheet {}
-
 void main() {
   final mockNow = DateTime.parse("2022-07-24T19:02:00");
   late PillSheet previousPillSheet;
@@ -27,7 +25,7 @@ void main() {
   });
 
   void prepare({required DateTime activePillSheetBeginDate, required DateTime? activePillSheetLastTakenDate}) {
-    previousPillSheet = PillSheet(
+    previousPillSheet = PillSheet.v1(
       id: "previous_pill_sheet_id",
       groupIndex: 0,
       typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -35,7 +33,7 @@ void main() {
       lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
       createdAt: now(),
     );
-    activePillSheet = PillSheet(
+    activePillSheet = PillSheet.v1(
       id: "active_pill_sheet_id",
       groupIndex: 1,
       typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -43,7 +41,7 @@ void main() {
       lastTakenDate: activePillSheetLastTakenDate,
       createdAt: now(),
     );
-    nextPillSheet = PillSheet(
+    nextPillSheet = PillSheet.v1(
       id: "next_pill_sheet_id",
       groupIndex: 2,
       typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -70,8 +68,6 @@ void main() {
             pillSheets: [activePillSheet],
             createdAt: mockNow,
           );
-          previousPillSheet = _FakePillSheet();
-          nextPillSheet = _FakePillSheet();
         });
 
         test("take pill", () async {
@@ -626,7 +622,7 @@ void main() {
               createdDate: DateTime.parse("2022-08-07T10:48:22"),
               endDate: DateTime.parse("2022-08-08T19:47:49"))
         ]);
-        nextPillSheet = PillSheet(
+        nextPillSheet = PillSheet.v1(
           id: "next_pill_sheet_id",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,

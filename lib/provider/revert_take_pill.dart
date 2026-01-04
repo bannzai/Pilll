@@ -125,7 +125,7 @@ extension RevertedPillSheet on PillSheet {
     final v2 = this as PillSheetV2;
     final pills = v2.pills;
 
-    return copyWith(
+    return v2.copyWith(
       lastTakenDate: toDate,
       pills: pills.map((pill) {
         // このpillの日付が対象の日付よりも前の場合は何もしない
