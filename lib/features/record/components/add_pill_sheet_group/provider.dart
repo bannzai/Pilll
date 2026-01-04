@@ -1,5 +1,4 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -41,7 +40,6 @@ class AddPillSheetGroup {
     required PillSheetGroup? pillSheetGroup,
     required List<PillSheetType> pillSheetTypes,
     required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-    required int pillTakenCount,
   }) async {
     final batch = batchFactory.batch();
     final updatedPillSheetGroup = buildPillSheetGroup(
@@ -49,7 +47,6 @@ class AddPillSheetGroup {
       pillSheetGroup: pillSheetGroup,
       pillSheetTypes: pillSheetTypes,
       displayNumberSetting: displayNumberSetting,
-      pillTakenCount: pillTakenCount,
     );
     final createdPillSheetGroup = batchSetPillSheetGroup(
       batch,
@@ -79,36 +76,17 @@ PillSheetGroup buildPillSheetGroup({
   required PillSheetGroup? pillSheetGroup,
   required List<PillSheetType> pillSheetTypes,
   required PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-  required int pillTakenCount,
 }) {
   final n = now();
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
     final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
-    final beginingDate = n.add(Duration(days: offset));
-
-    if (pillTakenCount > 1) {
-      return PillSheet.v2(
-        id: firestoreIDGenerator(),
-        typeInfo: pillSheetType.typeInfo,
-        beginingDate: beginingDate,
-        lastTakenDate: null,
-        groupIndex: pageIndex,
-        createdAt: now(),
-        pillTakenCount: pillTakenCount,
-        pills: Pill.generateAndFillTo(
-          pillSheetType: pillSheetType,
-          fromDate: beginingDate,
-          lastTakenDate: null,
-          pillTakenCount: pillTakenCount,
-        ),
-      );
-    }
-
     return PillSheet.v1(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,
-      beginingDate: beginingDate,
+      beginingDate: n.add(
+        Duration(days: offset),
+      ),
       lastTakenDate: null,
       groupIndex: pageIndex,
       createdAt: now(),

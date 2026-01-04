@@ -5,7 +5,6 @@ import 'package:pilll/features/localizations/l.dart';
 
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
-import 'package:pilll/components/template/setting_pill_sheet_group/pill_taken_count_input.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -29,7 +28,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
-    final pillTakenCount = useState(1);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -87,8 +85,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        PillTakenCountInput(pillTakenCount: pillTakenCount),
-                        const SizedBox(height: 16),
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                               pillSheetGroup: pillSheetGroup,
@@ -110,7 +106,6 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                       pillSheetGroup: pillSheetGroup,
                                       pillSheetTypes: pillSheetTypes.value,
                                       displayNumberSetting: displayNumberSetting.value,
-                                      pillTakenCount: pillTakenCount.value,
                                     );
                                     await registerReminderLocalNotification();
                                     navigator.pop();
