@@ -519,6 +519,7 @@ int summarizedRestDuration({
     return 0;
   }
   return restDurations.map((e) {
+    // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
     if (!e.beginDate.isBefore(upperDate)) {
       return 0;
     }
