@@ -469,6 +469,15 @@ mixin _$PillSheet {
   /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
+  /// 1回の服用で飲むピルの錠数（デフォルト: 1）
+  /// 2錠飲みの場合は2がセットされる
+  int get pillTakenCount => throw _privateConstructorUsedError;
+
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  /// TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。下位互換のためにpillsが無い場合を考慮する
+  List<Pill> get pills => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PillSheetCopyWith<PillSheet> get copyWith => throw _privateConstructorUsedError;
@@ -486,7 +495,9 @@ abstract class $PillSheetCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations});
+      List<RestDuration> restDurations,
+      int pillTakenCount,
+      List<Pill> pills});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -511,6 +522,8 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
     Object? deletedAt = freezed,
     Object? groupIndex = null,
     Object? restDurations = null,
+    Object? pillTakenCount = null,
+    Object? pills = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -545,6 +558,14 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
           ? _value.restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      pills: null == pills
+          ? _value.pills
+          : pills // ignore: cast_nullable_to_non_nullable
+              as List<Pill>,
     ) as $Val);
   }
 
@@ -570,7 +591,9 @@ abstract class _$$PillSheetImplCopyWith<$Res> implements $PillSheetCopyWith<$Res
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations});
+      List<RestDuration> restDurations,
+      int pillTakenCount,
+      List<Pill> pills});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
@@ -591,6 +614,8 @@ class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, 
     Object? deletedAt = freezed,
     Object? groupIndex = null,
     Object? restDurations = null,
+    Object? pillTakenCount = null,
+    Object? pills = null,
   }) {
     return _then(_$PillSheetImpl(
       id: freezed == id
@@ -625,6 +650,14 @@ class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, 
           ? _value._restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      pills: null == pills
+          ? _value._pills
+          : pills // ignore: cast_nullable_to_non_nullable
+              as List<Pill>,
     ));
   }
 }
@@ -642,8 +675,11 @@ class _$PillSheetImpl extends _PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
       this.groupIndex = 0,
-      final List<RestDuration> restDurations = const []})
+      final List<RestDuration> restDurations = const [],
+      this.pillTakenCount = 1,
+      final List<Pill> pills = const []})
       : _restDurations = restDurations,
+        _pills = pills,
         super._();
 
   factory _$PillSheetImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetImplFromJson(json);
@@ -693,9 +729,31 @@ class _$PillSheetImpl extends _PillSheet {
     return EqualUnmodifiableListView(_restDurations);
   }
 
+  /// 1回の服用で飲むピルの錠数（デフォルト: 1）
+  /// 2錠飲みの場合は2がセットされる
+  @override
+  @JsonKey()
+  final int pillTakenCount;
+
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  /// TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。下位互換のためにpillsが無い場合を考慮する
+  final List<Pill> _pills;
+
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  /// TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。下位互換のためにpillsが無い場合を考慮する
+  @override
+  @JsonKey()
+  List<Pill> get pills {
+    if (_pills is EqualUnmodifiableListView) return _pills;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pills);
+  }
+
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
+    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pillTakenCount: $pillTakenCount, pills: $pills)';
   }
 
   @override
@@ -710,13 +768,15 @@ class _$PillSheetImpl extends _PillSheet {
             (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
             (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
             (identical(other.groupIndex, groupIndex) || other.groupIndex == groupIndex) &&
-            const DeepCollectionEquality().equals(other._restDurations, _restDurations));
+            const DeepCollectionEquality().equals(other._restDurations, _restDurations) &&
+            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount) &&
+            const DeepCollectionEquality().equals(other._pills, _pills));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, const DeepCollectionEquality().hash(_restDurations));
+  int get hashCode => Object.hash(runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex,
+      const DeepCollectionEquality().hash(_restDurations), pillTakenCount, const DeepCollectionEquality().hash(_pills));
 
   @JsonKey(ignore: true)
   @override
@@ -742,7 +802,9 @@ abstract class _PillSheet extends PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final int groupIndex,
-      final List<RestDuration> restDurations}) = _$PillSheetImpl;
+      final List<RestDuration> restDurations,
+      final int pillTakenCount,
+      final List<Pill> pills}) = _$PillSheetImpl;
   _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) = _$PillSheetImpl.fromJson;
@@ -781,6 +843,17 @@ abstract class _PillSheet extends PillSheet {
   /// 休薬期間のリスト
   /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations;
+  @override
+
+  /// 1回の服用で飲むピルの錠数（デフォルト: 1）
+  /// 2錠飲みの場合は2がセットされる
+  int get pillTakenCount;
+  @override
+
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  /// TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。下位互換のためにpillsが無い場合を考慮する
+  List<Pill> get pills;
   @override
   @JsonKey(ignore: true)
   _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith => throw _privateConstructorUsedError;

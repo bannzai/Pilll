@@ -43,6 +43,8 @@ _$PillSheetImpl _$$PillSheetImplFromJson(Map<String, dynamic> json) => _$PillShe
       deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
       groupIndex: (json['groupIndex'] as num?)?.toInt() ?? 0,
       restDurations: (json['restDurations'] as List<dynamic>?)?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
+      pillTakenCount: (json['pillTakenCount'] as num?)?.toInt() ?? 1,
+      pills: (json['pills'] as List<dynamic>?)?.map((e) => Pill.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
     );
 
 Map<String, dynamic> _$$PillSheetImplToJson(_$PillSheetImpl instance) {
@@ -62,5 +64,7 @@ Map<String, dynamic> _$$PillSheetImplToJson(_$PillSheetImpl instance) {
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['groupIndex'] = instance.groupIndex;
   val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
+  val['pillTakenCount'] = instance.pillTakenCount;
+  val['pills'] = instance.pills.map((e) => e.toJson()).toList();
   return val;
 }
