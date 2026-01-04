@@ -8,6 +8,7 @@ import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
+import 'package:pilll/components/template/setting_pill_sheet_group/pill_taken_count_input.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
@@ -29,6 +30,12 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final state = ref.watch(initialSettingStateNotifierProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+    final pillTakenCount = useState(state.pillTakenCount);
+
+    useEffect(() {
+      store.setPillTakenCount(pillTakenCount.value);
+      return null;
+    }, [pillTakenCount.value]);
 
     // For linked user
     useEffect(() {
@@ -88,6 +95,10 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         textAlign: TextAlign.center,
                       ),
                       InitialSettingPillSheetGroupPageBody(state: state, store: store),
+                      if (state.pillSheetTypes.isNotEmpty) ...[
+                        const SizedBox(height: 24),
+                        PillTakenCountInput(pillTakenCount: pillTakenCount),
+                      ],
                       const SizedBox(height: 100),
                     ],
                   ),
