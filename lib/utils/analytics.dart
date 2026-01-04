@@ -21,9 +21,20 @@ class Analytics {
       print('[INFO] logEvent name: $name, parameters: $parameters');
     }
 
+    // The dictionary of event parameters. Passing null indicates that the event has no parameters. Parameter names can be up to 40 characters long and must start with an alphabetic character and contain only alphanumeric characters and underscores.
+    // Only String, Int, and Double parameter types are supported.
+    // String parameter values can be up to 100 characters long for standard Google Analytics properties, and up to 500 characters long for Google Analytics 360 properties.
+    // The “firebase_”, “google_”, and “ga_” prefixes are reserved and should not be used for parameter names.
+    // ref: https://firebase.google.com/docs/reference/swift/firebaseanalytics/api/reference/Classes/Analytics#logevent_:parameters
+
     Map<String, Object>? params = parameters != null ? {} : null;
     if (parameters != null) {
       for (final key in parameters.keys) {
+        assert(key.length <= 40, 'firebase analytics log event parameter name limit length up to 40');
+        assert(!key.startsWith('firebase_'), 'firebase analytics log event parameter name must not start with "firebase_"');
+        assert(!key.startsWith('google_'), 'firebase analytics log event parameter name must not start with "google_"');
+        assert(!key.startsWith('ga_'), 'firebase analytics log event parameter name must not start with "ga_"');
+
         final param = parameters[key];
         if (param == null) {
           params?[key] = 'null';
