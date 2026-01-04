@@ -42,7 +42,7 @@ void main() {
         pillSheetTypes: [PillSheetType.pillsheet_21],
       );
 
-      final expected = PillSheet(
+      final expected = PillSheet.v1(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: DateTime.parse("2020-11-23"),
@@ -71,7 +71,7 @@ void main() {
         ],
       );
 
-      final expected = PillSheet(
+      final expected = PillSheet.v1(
         id: "sheet_id2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
@@ -102,7 +102,7 @@ void main() {
         ],
       );
 
-      final expected = PillSheet(
+      final expected = PillSheet.v1(
         id: "sheet_id",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_21.typeInfo,

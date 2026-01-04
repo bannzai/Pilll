@@ -105,9 +105,27 @@ class RevertTakePill {
 /// PillSheetから服用記録を取り消すためのextension
 extension RevertedPillSheet on PillSheet {
   /// 服用記録を取り消したPillSheetを返す
-  /// toDateより後の全てのピルの服用記録をクリアする
   PillSheet revertedPillSheet(DateTime toDate) {
-    return copyWith(
+    switch (this) {
+      case PillSheetV1():
+        return _revertedPillSheetV1(toDate);
+      case PillSheetV2():
+        return _revertedPillSheetV2(toDate);
+    }
+  }
+
+  /// v1: lastTakenDateのみを更新
+  PillSheet _revertedPillSheetV1(DateTime toDate) {
+    return copyWith(lastTakenDate: toDate);
+  }
+
+  /// v2: pills と lastTakenDate を更新
+  /// toDateより後の全てのピルの服用記録をクリアする
+  PillSheet _revertedPillSheetV2(DateTime toDate) {
+    final v2 = this as PillSheetV2;
+    final pills = v2.pills;
+
+    return v2.copyWith(
       lastTakenDate: toDate,
       pills: pills.map((pill) {
         // このpillの日付が対象の日付よりも前の場合は何もしない

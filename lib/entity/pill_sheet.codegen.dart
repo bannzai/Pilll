@@ -110,11 +110,20 @@ class RestDuration with _$RestDuration {
 /// 個々のピルシートの服用状況、開始日、休薬期間などの情報を管理
 /// Firestoreのピルシートドキュメントと1対1で対応する
 /// ピル服用管理アプリの中核となるデータ構造
+///
+/// v1: 従来の1錠飲みユーザー向け
+/// v2: 2錠飲み対応（pills, pillTakenCount フィールドを持つ）
+// [PillSheet:v2] from: 2026-01-04. すべてをv2に一括で移行すると既存ユーザーにも不具合が波及する。
+// なのでまずは2錠飲みユーザーに対してだけしばらく公開して様子を見ていく。
+// 次の段階としては1錠服用のユーザーに対しても公開をしていく。
+// ただし、2錠飲みのユーザーがどのくらいいるのかを把握して、明らかに少ない場合はこの限りではない。サポートをやめることも考慮する
 @freezed
-class PillSheet with _$PillSheet {
-  PillSheet._();
+sealed class PillSheet with _$PillSheet {
+  const PillSheet._();
+
+  /// v1: 従来の1錠飲みユーザー向け
   @JsonSerializable(explicitToJson: true)
-  factory PillSheet({
+  const factory PillSheet.v1({
     /// FirestoreドキュメントID
     /// データベース保存時に自動生成される一意識別子
     @JsonKey(includeIfNull: false) required String? id,
@@ -130,6 +139,7 @@ class PillSheet with _$PillSheet {
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
     required DateTime beginingDate,
+
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -164,42 +174,125 @@ class PillSheet with _$PillSheet {
     /// このピルシート期間中の全ての休薬期間記録
     @Default([]) List<RestDuration> restDurations,
 
-    /// 1回の服用で飲むピルの錠数（デフォルト: 1）
+    /// バージョン識別子
+    @Default('v1') String version,
+  }) = PillSheetV1;
+
+  /// v2: 2錠飲み対応
+  @JsonSerializable(explicitToJson: true)
+  const factory PillSheet.v2({
+    /// FirestoreドキュメントID
+    /// データベース保存時に自動生成される一意識別子
+    @JsonKey(includeIfNull: false) required String? id,
+
+    /// ピルシートの種類情報
+    /// シート名、総数、服用期間などの基本設定
+    @JsonKey() required PillSheetTypeInfo typeInfo,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+
+    /// ピルシート開始日
+    /// このシートでピル服用を開始した日付
+    required DateTime beginingDate,
+
+    // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+
+    /// 最後にピルを服用した日付
+    /// まだ一度も服用していない場合はnull
+    required DateTime? lastTakenDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+
+    /// ピルシートの作成日時
+    /// このデータがFirestoreに作成された日時
+    required DateTime? createdAt,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+
+    /// ピルシートの削除日時
+    /// 削除されていない場合はnull
+    DateTime? deletedAt,
+
+    /// グループインデックス
+    /// 複数のピルシートをグループ化する際の順序番号
+    @Default(0) int groupIndex,
+
+    /// 休薬期間のリスト
+    /// このピルシート期間中の全ての休薬期間記録
+    @Default([]) List<RestDuration> restDurations,
+
+    /// 1回の服用で飲むピルの錠数
     /// 2錠飲みの場合は2がセットされる
-    @Default(1) int pillTakenCount,
+    required int pillTakenCount,
 
     /// 各ピルの詳細情報リスト
     /// 2錠飲み対応のため、各ピルごとの服用記録を管理
-    /// TODO: [PillSheet.Pill] from: 2023-06-14 ある程度時間が経ったらrequiredにする。下位互換のためにpillsが無い場合を考慮する
-    @Default([]) List<Pill> pills,
-  }) = _PillSheet;
+    required List<Pill> pills,
 
-  // NOTE: visibleForTestingを消すならpillTakenCountもrequiredにする
+    /// バージョン識別子
+    @Default('v2') String version,
+  }) = PillSheetV2;
+
   /// テスト用のピルシート作成ファクトリメソッド
-  /// 基本的な情報のみでピルシートインスタンスを生成
+  /// pillTakenCount > 1 の場合は v2、それ以外は v1 を返す
   @visibleForTesting
   factory PillSheet.create(
     PillSheetType type, {
     required DateTime beginDate,
     required DateTime? lastTakenDate,
-    int? pillTakenCount,
-  }) =>
-      PillSheet(
+    required int pillTakenCount,
+  }) {
+    if (pillTakenCount > 1) {
+      return PillSheet.v2(
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
         beginingDate: beginDate,
         lastTakenDate: lastTakenDate,
         createdAt: now(),
-        pillTakenCount: pillTakenCount ?? 1,
+        pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: type,
           fromDate: beginDate,
           lastTakenDate: lastTakenDate,
-          pillTakenCount: pillTakenCount ?? 1,
+          pillTakenCount: pillTakenCount,
         ),
       );
+    }
+    return PillSheet.v1(
+      id: firestoreIDGenerator(),
+      typeInfo: type.typeInfo,
+      beginingDate: beginDate,
+      lastTakenDate: lastTakenDate,
+      createdAt: now(),
+    );
+  }
 
-  factory PillSheet.fromJson(Map<String, dynamic> json) => _$PillSheetFromJson(json);
+  /// カスタム fromJson で version フィールドを見て分岐
+  factory PillSheet.fromJson(Map<String, dynamic> json) {
+    final version = json['version'] as String?;
+    if (version == 'v2') {
+      return _$$PillSheetV2ImplFromJson(json);
+    }
+    return _$$PillSheetV1ImplFromJson(json);
+  }
+
+  /// 各 variant の toJson を呼び出す
+  Map<String, dynamic> toJson() {
+    return map(
+      v1: (value) => _$$PillSheetV1ImplToJson(value as _$PillSheetV1Impl),
+      v2: (value) => _$$PillSheetV2ImplToJson(value as _$PillSheetV2Impl),
+    );
+  }
 
   /// ピルシートの種類オブジェクト
   /// typeInfoから変換されたPillSheetType列挙値
@@ -215,32 +308,6 @@ class PillSheet with _$PillSheet {
   /// 今日服用すべきピルのインデックス（0始まり）
   int get todayPillIndex {
     return todayPillNumber - 1;
-  }
-
-  // lastCompletedPillNumber は最後に服用完了したピルの番号を返す。lastTakenPillNumberとの違いは服用を完了しているかどうか
-  // あえてnon nullにしている。なぜならよく比較するのでnullableだと不便だから
-  // まだpillを飲んでない場合は `0` が変える。飲んでいる場合は 1以上の値が入る
-  /// 最後に服用完了したピルの番号（0または1以上）
-  /// 2錠飲みの場合、pillTakenCount回すべて服用したピルの番号を返す
-  int get lastCompletedPillNumber {
-    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
-    if (pills.isEmpty) {
-      final lastTakenDate = this.lastTakenDate;
-      if (lastTakenDate == null) {
-        return 0;
-      }
-
-      return pillNumberFor(targetDate: lastTakenDate);
-    }
-
-    // lastTakenDate is not nullのチェックをしていてこの変数がnullのはずは無いが、将来的にlastTakenDateは消える可能性はあるのでこのロジックは真っ当なチェックになる
-    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
-    if (lastCompletedPill == null) {
-      return 0;
-    }
-
-    final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
-    return pillNumberFor(targetDate: estimatedLastTakenDate);
   }
 
   // lastTakenPillNumber は最後に服了したピルの番号を返す
@@ -293,34 +360,10 @@ class PillSheet with _$PillSheet {
     return lastTakenDate.isAfter(today()) || isSameDay(lastTakenDate, today());
   }
 
-  /// 今日のピルがすべて服用完了したかどうか（2錠飲み対応）
-  /// pillTakenCount回すべて服用した場合にtrueを返す
-  bool get todayPillsAreAlreadyTaken {
-    return lastCompletedPillNumber == todayPillNumber;
-  }
-
-  /// 今日のピルがいずれか服用済みかどうか（2錠飲み対応）
-  /// 1回でも服用した場合にtrueを返す
-  bool get anyTodayPillsAreAlreadyTaken {
-    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
-    // 古いデータでは1錠飲みしか存在しないため、todayPillIsAlreadyTakenをそのまま返す
-    if (pills.isEmpty) {
-      return todayPillIsAlreadyTaken;
-    }
-    if (todayPillIndex < 0 || todayPillIndex >= pills.length) {
-      return false;
-    }
-    return pills[todayPillIndex].pillTakens.isNotEmpty;
-  }
-
   /// ピルシートの全てのピルを服用完了したかどうか
   /// 総ピル数と最終服用ピル番号を比較して判定
   /// @deprecated isEnded を使用してください
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
-
-  /// ピルシートの全てのピルを服用完了したかどうか（2錠飲み対応）
-  /// 総ピル数と最終服用完了ピル番号を比較して判定
-  bool get isEnded => typeInfo.totalCount == lastCompletedPillNumber;
 
   /// ピルシートの服用が開始されているかどうか
   /// 開始日が現在時刻より前の場合にtrueを返す
@@ -388,7 +431,7 @@ class PillSheet with _$PillSheet {
 
   /// ピルシート内の各ピルの服用予定日リスト
   /// 休薬期間を考慮した実際の服用日程が格納される
-  late final List<DateTime> dates = buildDates();
+  List<DateTime> get dates => buildDates();
 
   // ピルシートのピルの日付を取得する
   /// ピルシートの各ピルの服用予定日を構築
@@ -402,7 +445,6 @@ class PillSheet with _$PillSheet {
 
       for (final restDuration in restDurations) {
         if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
-          // estimatedEventCausingDateに値がある場合は、服用履歴のスナップショットの日付を返したい。 estimatedEventCausingDate もしくは today をこのメソッドでの計算式の上限の日付とする
           final upperDate = estimatedEventCausingDate ?? today().date();
           final restDurationEndDateOrUpperDate = restDuration.endDate ?? upperDate;
           if (restDurationEndDateOrUpperDate.isAfter(date)) {
@@ -417,23 +459,45 @@ class PillSheet with _$PillSheet {
     }
     return dates;
   }
+}
+
+/// v2専用のプロパティ・メソッド
+extension PillSheetV2Extension on PillSheetV2 {
+  /// 最後に服用完了したピルの番号（0または1以上）
+  /// pillTakenCount回すべて服用したピルの番号を返す
+  int get lastCompletedPillNumber {
+    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    if (lastCompletedPill == null) {
+      return 0;
+    }
+
+    final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
+    return pillNumberFor(targetDate: estimatedLastTakenDate);
+  }
+
+  /// 今日のピルがすべて服用完了したかどうか
+  bool get todayPillsAreAlreadyTaken {
+    return lastCompletedPillNumber == todayPillNumber;
+  }
+
+  /// 今日のピルがいずれか服用済みかどうか
+  bool get anyTodayPillsAreAlreadyTaken {
+    if (todayPillIndex < 0 || todayPillIndex >= pills.length) {
+      return false;
+    }
+    return pills[todayPillIndex].pillTakens.isNotEmpty;
+  }
 
   /// pillsリストの一部を置き換えたリストを返す
   /// 服用記録の更新時に使用
-  List<Pill> replacedPills({required List<Pill> pills}) {
-    // TODO: [PillSheet.Pill] そのうち消す。古いPillSheetのPillsは[]になっている
-    if (this.pills.isEmpty) {
-      return [];
+  List<Pill> replacedPills({required List<Pill> newPills}) {
+    if (newPills.isEmpty) {
+      return pills;
     }
-    if (pills.isEmpty) {
-      return this.pills;
-    }
-    return [...this.pills]..replaceRange(pills.first.index, pills.last.index + 1, pills);
+    return [...pills]..replaceRange(newPills.first.index, newPills.last.index + 1, newPills);
   }
 }
 
-// upperDate までの休薬期間を集計する
-// upperDate にはlastTakenDate(lastTakenPillNumberを集計したい時)やtoday(todayPillNumberを集計したい時）が入る想定
 /// 指定日までの総休薬日数を計算
 /// lastTakenDateやtodayなどの基準日までの累積休薬期間を集計
 /// ピル番号計算時の日数調整に使用される

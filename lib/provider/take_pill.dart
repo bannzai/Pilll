@@ -41,7 +41,12 @@ class TakePill {
     // アラームは先に解除しちゃう。条件に関わらず。音が大きいので
     AlarmKitService.stopAllAlarms();
 
-    if (activePillSheet.todayPillsAreAlreadyTaken) {
+    // v1/v2で判定方法を分岐
+    final isAlreadyTaken = switch (activePillSheet) {
+      PillSheetV1() => activePillSheet.todayPillIsAlreadyTaken,
+      PillSheetV2() => activePillSheet.todayPillsAreAlreadyTaken,
+    };
+    if (isAlreadyTaken) {
       return null;
     }
 
@@ -50,7 +55,12 @@ class TakePill {
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
-      if (pillSheet.isEnded) {
+      // ピルシートが終了しているかどうかを判定
+      final isEnded = switch (pillSheet) {
+        PillSheetV1() => pillSheet.typeInfo.totalCount == pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2() => pillSheet.typeInfo.totalCount == pillSheet.lastCompletedPillNumber,
+      };
+      if (isEnded) {
         return pillSheet;
       }
 
@@ -110,20 +120,36 @@ class TakePill {
 /// PillSheetに服用記録を追加するためのextension
 extension TakenPillSheet on PillSheet {
   /// 服用記録を追加したPillSheetを返す
+  PillSheet takenPillSheet(DateTime takenDate) {
+    switch (this) {
+      case PillSheetV1():
+        return _takenPillSheetV1(takenDate);
+      case PillSheetV2():
+        return _takenPillSheetV2(takenDate);
+    }
+  }
+
+  /// v1: lastTakenDateのみを更新
+  PillSheet _takenPillSheetV1(DateTime takenDate) {
+    return copyWith(lastTakenDate: takenDate);
+  }
+
+  /// v2: pills と lastTakenDate を更新
   /// takenDateまでの全てのピルに対して服用記録を追加する
   /// 2錠飲みの場合は、最後のピル以外はpillTakenCount回の記録を追加し、
   /// 最後のピルは1回の記録を追加する
-  PillSheet takenPillSheet(DateTime takenDate) {
-    // 一番最後の記録対象のピル。takenDateが今日の日付(クイックレコードや「飲んだ」を押した時)の場合は、takenDateは今日の日付になる。その場合はtodayPillIndexと等価の値になる
-    // max(estimatedLastTakenPillIndex, finalTakenPillIndex)としないのは、下のpill.index > finalTakenPillIndexで早期リターンされるので書いていない。estimatedLastTakenPillIndex を新しく用意するほどでも無いと思ったので
+  PillSheet _takenPillSheetV2(DateTime takenDate) {
+    final v2 = this as PillSheetV2;
+    final pillTakenCount = v2.pillTakenCount;
+    final pills = v2.pills;
+
+    // 一番最後の記録対象のピル
     final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
 
-    return copyWith(
+    return v2.copyWith(
       lastTakenDate: takenDate,
       pills: pills.map((pill) {
         // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
-        // ユーザーがピルをタップした時等にtakenDateは今日以外の日付が入ってくる
-        // pill.index > todayPillIndexの役割も理論的には備えているので、この条件文だけで良い
         if (pill.index > finalTakenPillIndex) {
           return pill;
         }
@@ -135,7 +161,6 @@ extension TakenPillSheet on PillSheet {
 
         if (pill.index != finalTakenPillIndex) {
           // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をpillTakenCountに達するまで追加する
-          // 既存の服用記録数から開始し、不足分のみ追加する
           for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               recordedTakenDateTime: takenDate,
@@ -144,9 +169,7 @@ extension TakenPillSheet on PillSheet {
             ));
           }
         } else {
-          // pill == estimatedTakenPillIndex
-          // NOTE: 一番最後の記録対象のピルは、ピルの服用記録を追加する。
-          // 2回服用の場合で未服用の場合は残りの服用回数は1回になる。1回服用済みの場合は2回になる
+          // NOTE: 一番最後の記録対象のピルは、ピルの服用記録を1回追加する
           pillTakenDoneList.add(PillTaken(
             recordedTakenDateTime: takenDate,
             createdDateTime: now(),

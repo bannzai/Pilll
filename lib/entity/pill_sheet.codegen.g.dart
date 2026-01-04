@@ -34,7 +34,7 @@ Map<String, dynamic> _$$RestDurationImplToJson(_$RestDurationImpl instance) => <
       'createdDate': NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
     };
 
-_$PillSheetImpl _$$PillSheetImplFromJson(Map<String, dynamic> json) => _$PillSheetImpl(
+_$PillSheetV1Impl _$$PillSheetV1ImplFromJson(Map<String, dynamic> json) => _$PillSheetV1Impl(
       id: json['id'] as String?,
       typeInfo: PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
       beginingDate: NonNullTimestampConverter.timestampToDateTime(json['beginingDate'] as Timestamp),
@@ -43,11 +43,45 @@ _$PillSheetImpl _$$PillSheetImplFromJson(Map<String, dynamic> json) => _$PillShe
       deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
       groupIndex: (json['groupIndex'] as num?)?.toInt() ?? 0,
       restDurations: (json['restDurations'] as List<dynamic>?)?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
-      pillTakenCount: (json['pillTakenCount'] as num?)?.toInt() ?? 1,
-      pills: (json['pills'] as List<dynamic>?)?.map((e) => Pill.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
+      version: json['version'] as String? ?? 'v1',
     );
 
-Map<String, dynamic> _$$PillSheetImplToJson(_$PillSheetImpl instance) {
+Map<String, dynamic> _$$PillSheetV1ImplToJson(_$PillSheetV1Impl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  val['typeInfo'] = instance.typeInfo.toJson();
+  val['beginingDate'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.beginingDate);
+  val['lastTakenDate'] = TimestampConverter.dateTimeToTimestamp(instance.lastTakenDate);
+  val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
+  val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
+  val['groupIndex'] = instance.groupIndex;
+  val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
+  val['version'] = instance.version;
+  return val;
+}
+
+_$PillSheetV2Impl _$$PillSheetV2ImplFromJson(Map<String, dynamic> json) => _$PillSheetV2Impl(
+      id: json['id'] as String?,
+      typeInfo: PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
+      beginingDate: NonNullTimestampConverter.timestampToDateTime(json['beginingDate'] as Timestamp),
+      lastTakenDate: TimestampConverter.timestampToDateTime(json['lastTakenDate'] as Timestamp?),
+      createdAt: TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
+      deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
+      groupIndex: (json['groupIndex'] as num?)?.toInt() ?? 0,
+      restDurations: (json['restDurations'] as List<dynamic>?)?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>)).toList() ?? const [],
+      pillTakenCount: (json['pillTakenCount'] as num).toInt(),
+      pills: (json['pills'] as List<dynamic>).map((e) => Pill.fromJson(e as Map<String, dynamic>)).toList(),
+      version: json['version'] as String? ?? 'v2',
+    );
+
+Map<String, dynamic> _$$PillSheetV2ImplToJson(_$PillSheetV2Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -66,5 +100,6 @@ Map<String, dynamic> _$$PillSheetImplToJson(_$PillSheetImpl instance) {
   val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
   val['pillTakenCount'] = instance.pillTakenCount;
   val['pills'] = instance.pills.map((e) => e.toJson()).toList();
+  val['version'] = instance.version;
   return val;
 }

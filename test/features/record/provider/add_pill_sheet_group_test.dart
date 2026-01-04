@@ -33,7 +33,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -113,7 +113,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: mockToday,
@@ -121,7 +121,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: mockToday.add(const Duration(days: 28)),
