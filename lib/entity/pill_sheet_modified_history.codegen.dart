@@ -144,7 +144,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required PillSheetModifiedActionType actionType,
     required PillSheetModifiedHistoryValue value,
   }) {
-    final currentTime = now();
     return PillSheetModifiedHistory(
       id: null,
       version: 'v2',
@@ -158,9 +157,9 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
       after: after,
-      estimatedEventCausingDate: currentTime,
-      createdAt: currentTime,
-      ttlExpiresDateTime: currentTime.add(const Duration(days: limitDays)),
+      estimatedEventCausingDate: now(),
+      createdAt: now(),
+      ttlExpiresDateTime: now().add(const Duration(days: limitDays)),
     );
   }
 

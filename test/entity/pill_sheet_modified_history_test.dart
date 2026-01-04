@@ -1302,6 +1302,11 @@ void main() {
       });
 
       test('version と メタデータが正しく設定される', () {
+        final mockTodayService = MockTodayService();
+        todayRepository = mockTodayService;
+        final mockNow = DateTime(2020, 9, 11);
+        when(mockTodayService.now()).thenReturn(mockNow);
+
         final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
