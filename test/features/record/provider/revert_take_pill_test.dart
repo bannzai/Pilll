@@ -48,14 +48,13 @@ void main() {
           ],
           createdAt: now(),
         );
+        // revertDate = displayPillTakeDate(1).subtract(1day) = beginingDate - 1day = yesterday - 1day
+        final revertDate = yesterday.subtract(const Duration(days: 1));
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate, restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
-          pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: null,
-            ),
-          ],
+          pillSheets: [updatedPillSheet],
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -64,9 +63,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
-          after: pillSheet.copyWith(
-            lastTakenDate: yesterday.subtract(const Duration(days: 1)),
-          ),
+          after: updatedPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -203,15 +200,13 @@ void main() {
           ],
           createdAt: now(),
         );
+        // revertDate = displayPillTakeDate(1).subtract(1day) = beginDate - 1day
+        final revertDate = beginDate.subtract(const Duration(days: 1));
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate, restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
-          pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: null,
-              restDurations: [],
-            ),
-          ],
+          pillSheets: [updatedPillSheet],
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -220,10 +215,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
-          after: pillSheet.copyWith(
-            lastTakenDate: beginDate.subtract(const Duration(days: 1)),
-            restDurations: [],
-          ),
+          after: updatedPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -457,17 +449,16 @@ void main() {
           pillSheets: [pillSheet, pillSheet2],
           createdAt: now(),
         );
+        // revertDate = displayPillTakeDate(27).subtract(1day) = beginingDate + 26 - 1day = 2022-01-27
+        // pillSheet: revertDate > beginingDateなので lastTakenDate: revertDate
+        // pillSheet2: revertDate < beginingDateなので lastTakenDate: beginingDate - 1day = 2022-01-29
+        final revertDate = mockToday.subtract(const Duration(days: 4)); // 2022-01-27
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate);
+        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)), restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
-          pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-            ),
-            pillSheet2.copyWith(
-              lastTakenDate: null,
-            ),
-          ],
+          pillSheets: [updatedPillSheet, updatedPillSheet2],
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -476,7 +467,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet2,
-          after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4))),
+          after: updatedPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -544,18 +535,16 @@ void main() {
           pillSheets: [pillSheet, pillSheet2],
           createdAt: now(),
         );
+        // revertDate = displayPillTakeDate(27).subtract(1day) = beginingDate + 26 - 1day = 2022-01-27
+        // pillSheet: revertDate > beginingDateなので lastTakenDate: revertDate
+        // pillSheet2: revertDate < beginingDateなので lastTakenDate: beginingDate - 1day = 2022-01-29
+        final revertDate = mockToday.subtract(const Duration(days: 4)); // 2022-01-27
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate);
+        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)), restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
-          pillSheets: [
-            pillSheet.copyWith(
-              lastTakenDate: mockToday.subtract(const Duration(days: 4)),
-            ),
-            pillSheet2.copyWith(
-              lastTakenDate: null,
-              restDurations: [],
-            )
-          ],
+          pillSheets: [updatedPillSheet, updatedPillSheet2],
           createdAt: now(),
         );
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -564,7 +553,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet2,
-          after: pillSheet.copyWith(lastTakenDate: mockToday.subtract(const Duration(days: 4)), restDurations: []),
+          after: updatedPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
