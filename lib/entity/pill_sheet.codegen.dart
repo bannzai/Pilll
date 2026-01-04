@@ -121,9 +121,11 @@ sealed class PillSheet with _$PillSheet {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet.v1({
     /// FirestoreドキュメントID
+    /// データベース保存時に自動生成される一意識別子
     @JsonKey(includeIfNull: false) required String? id,
 
     /// ピルシートの種類情報
+    /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -131,6 +133,7 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// ピルシート開始日
+    /// このシートでピル服用を開始した日付
     required DateTime beginingDate,
 
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
@@ -140,6 +143,7 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// 最後にピルを服用した日付
+    /// まだ一度も服用していない場合はnull
     required DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -147,6 +151,7 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// ピルシートの作成日時
+    /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -154,12 +159,15 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// ピルシートの削除日時
+    /// 削除されていない場合はnull
     DateTime? deletedAt,
 
     /// グループインデックス
+    /// 複数のピルシートをグループ化する際の順序番号
     @Default(0) int groupIndex,
 
     /// 休薬期間のリスト
+    /// このピルシート期間中の全ての休薬期間記録
     @Default([]) List<RestDuration> restDurations,
 
     /// バージョン識別子
@@ -170,9 +178,11 @@ sealed class PillSheet with _$PillSheet {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheet.v2({
     /// FirestoreドキュメントID
+    /// データベース保存時に自動生成される一意識別子
     @JsonKey(includeIfNull: false) required String? id,
 
     /// ピルシートの種類情報
+    /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -180,6 +190,7 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// ピルシート開始日
+    /// このシートでピル服用を開始した日付
     required DateTime beginingDate,
 
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
@@ -189,6 +200,7 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// 最後にピルを服用した日付
+    /// まだ一度も服用していない場合はnull
     required DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -196,6 +208,7 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// ピルシートの作成日時
+    /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -203,18 +216,23 @@ sealed class PillSheet with _$PillSheet {
     )
 
     /// ピルシートの削除日時
+    /// 削除されていない場合はnull
     DateTime? deletedAt,
 
     /// グループインデックス
+    /// 複数のピルシートをグループ化する際の順序番号
     @Default(0) int groupIndex,
 
     /// 休薬期間のリスト
+    /// このピルシート期間中の全ての休薬期間記録
     @Default([]) List<RestDuration> restDurations,
 
     /// 1回の服用で飲むピルの錠数
+    /// 2錠飲みの場合は2がセットされる
     required int pillTakenCount,
 
     /// 各ピルの詳細情報リスト
+    /// 2錠飲み対応のため、各ピルごとの服用記録を管理
     required List<Pill> pills,
 
     /// バージョン識別子
