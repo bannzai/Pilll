@@ -113,6 +113,10 @@ class RestDuration with _$RestDuration {
 ///
 /// v1: 従来の1錠飲みユーザー向け
 /// v2: 2錠飲み対応（pills, pillTakenCount フィールドを持つ）
+// [PillSheet:v2] from: 2026-01-04. すべてをv2に一括で移行すると既存ユーザーにも不具合が波及する。
+// なのでまずは2錠飲みユーザーに対してだけしばらく公開して様子を見ていく。
+// 次の段階としては1錠服用のユーザーに対しても公開をしていく。
+// ただし、2錠飲みのユーザーがどのくらいいるのかを把握して、明らかに少ない場合はこの限りではない。サポートをやめることも考慮する
 @freezed
 sealed class PillSheet with _$PillSheet {
   const PillSheet._();
