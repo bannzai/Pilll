@@ -83,7 +83,7 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
     );
 
-    return PillSheet(
+    return PillSheet.v1(
       id: firestoreIDGenerator(),
       groupIndex: pageIndex,
       beginingDate: beginDate,
