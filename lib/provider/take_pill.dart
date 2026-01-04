@@ -55,7 +55,12 @@ class TakePill {
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
         return pillSheet;
       }
-      if (pillSheet.isEnded) {
+      // ピルシートが終了しているかどうかを判定
+      final isEnded = switch (pillSheet) {
+        PillSheetV1() => pillSheet.typeInfo.totalCount == pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2() => pillSheet.typeInfo.totalCount == pillSheet.lastCompletedPillNumber,
+      };
+      if (isEnded) {
         return pillSheet;
       }
 

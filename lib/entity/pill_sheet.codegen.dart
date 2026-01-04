@@ -459,18 +459,6 @@ sealed class PillSheet with _$PillSheet {
     }
     return dates;
   }
-
-  /// ピルシートが終了したかどうか
-  /// v1: lastTakenOrZeroPillNumber で判定
-  /// v2: lastCompletedPillNumber で判定
-  bool get isEnded {
-    switch (this) {
-      case PillSheetV1():
-        return typeInfo.totalCount == lastTakenOrZeroPillNumber;
-      case final PillSheetV2 v2:
-        return v2.typeInfo.totalCount == v2.lastCompletedPillNumber;
-    }
-  }
 }
 
 /// v2専用のプロパティ・メソッド
