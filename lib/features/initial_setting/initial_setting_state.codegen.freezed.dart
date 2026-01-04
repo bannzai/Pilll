@@ -154,6 +154,7 @@ mixin _$InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get settingIsExist => throw _privateConstructorUsedError;
   LinkAccountType? get accountType => throw _privateConstructorUsedError;
+  int get pillTakenCount => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith => throw _privateConstructorUsedError;
@@ -171,7 +172,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       bool isOnReminder,
       bool isLoading,
       bool settingIsExist,
-      LinkAccountType? accountType});
+      LinkAccountType? accountType,
+      int pillTakenCount});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
 }
@@ -195,6 +197,7 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
     Object? isLoading = null,
     Object? settingIsExist = null,
     Object? accountType = freezed,
+    Object? pillTakenCount = null,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: null == pillSheetTypes
@@ -225,6 +228,10 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
               as LinkAccountType?,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 
@@ -254,7 +261,8 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res> implements $InitialSetti
       bool isOnReminder,
       bool isLoading,
       bool settingIsExist,
-      LinkAccountType? accountType});
+      LinkAccountType? accountType,
+      int pillTakenCount});
 
   @override
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -275,6 +283,7 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
     Object? isLoading = null,
     Object? settingIsExist = null,
     Object? accountType = freezed,
+    Object? pillTakenCount = null,
   }) {
     return _then(_$InitialSettingStateImpl(
       pillSheetTypes: null == pillSheetTypes
@@ -305,6 +314,10 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
           ? _value.accountType
           : accountType // ignore: cast_nullable_to_non_nullable
               as LinkAccountType?,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -319,7 +332,8 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
       this.isOnReminder = true,
       this.isLoading = false,
       this.settingIsExist = false,
-      this.accountType})
+      this.accountType,
+      this.pillTakenCount = 1})
       : _pillSheetTypes = pillSheetTypes,
         _reminderTimes = reminderTimes,
         super._();
@@ -354,10 +368,13 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   final bool settingIsExist;
   @override
   final LinkAccountType? accountType;
+  @override
+  @JsonKey()
+  final int pillTakenCount;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, settingIsExist: $settingIsExist, accountType: $accountType, pillTakenCount: $pillTakenCount)';
   }
 
   @override
@@ -371,12 +388,13 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
             (identical(other.isOnReminder, isOnReminder) || other.isOnReminder == isOnReminder) &&
             (identical(other.isLoading, isLoading) || other.isLoading == isLoading) &&
             (identical(other.settingIsExist, settingIsExist) || other.settingIsExist == settingIsExist) &&
-            (identical(other.accountType, accountType) || other.accountType == accountType));
+            (identical(other.accountType, accountType) || other.accountType == accountType) &&
+            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_pillSheetTypes), todayPillNumber,
-      const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType);
+      const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType, pillTakenCount);
 
   @JsonKey(ignore: true)
   @override
@@ -393,7 +411,8 @@ abstract class _InitialSettingState extends InitialSettingState {
       final bool isOnReminder,
       final bool isLoading,
       final bool settingIsExist,
-      final LinkAccountType? accountType}) = _$InitialSettingStateImpl;
+      final LinkAccountType? accountType,
+      final int pillTakenCount}) = _$InitialSettingStateImpl;
   const _InitialSettingState._() : super._();
 
   @override
@@ -410,6 +429,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get settingIsExist;
   @override
   LinkAccountType? get accountType;
+  @override
+  int get pillTakenCount;
   @override
   @JsonKey(ignore: true)
   _$$InitialSettingStateImplCopyWith<_$InitialSettingStateImpl> get copyWith => throw _privateConstructorUsedError;
