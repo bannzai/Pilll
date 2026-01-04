@@ -30,7 +30,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final state = ref.watch(initialSettingStateNotifierProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
-    final pillTakenCount = useState<int>(state.pillTakenCount);
+    final pillTakenCount = useState(state.pillTakenCount);
 
     useEffect(() {
       store.setPillTakenCount(pillTakenCount.value);
