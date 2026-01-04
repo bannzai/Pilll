@@ -62,12 +62,10 @@ class PillTakenCountInput extends HookConsumerWidget {
               contentPadding: EdgeInsets.only(bottom: 8),
             ),
             onChanged: (text) {
-              try {
-                final value = int.parse(text);
-                if (value >= 1 && value <= 2) {
-                  pillTakenCount.value = value;
-                }
-              } catch (_) {}
+              final value = int.tryParse(text);
+              if (value != null) {
+                pillTakenCount.value = value;
+              }
             },
           ),
         ),

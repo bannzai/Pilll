@@ -12,6 +12,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/display_number_setting.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -29,7 +30,12 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
-    final pillTakenCount = useState(1);
+    final initialPillTakenCount = switch (pillSheetGroup?.activePillSheet) {
+      PillSheetV1() => 1,
+      PillSheetV2 v2 => v2.pillTakenCount,
+      null => 1,
+    };
+    final pillTakenCount = useState(initialPillTakenCount);
 
     return Scaffold(
       backgroundColor: AppColors.background,
