@@ -3,7 +3,6 @@ import 'dart:math';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -32,7 +31,6 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false) bool isLoading,
     @Default(false) bool settingIsExist,
     LinkAccountType? accountType,
-    @Default(1) int pillTakenCount,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrNull(int index) {
@@ -72,7 +70,6 @@ class InitialSettingState with _$InitialSettingState {
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
-    required int pillTakenCount,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
     final beginDate = _beginingDate(
@@ -85,24 +82,6 @@ class InitialSettingState with _$InitialSettingState {
       todayPillNumber: todayPillNumber,
       pillSheetTypes: pillSheetTypes,
     );
-
-    if (pillTakenCount > 1) {
-      return PillSheet.v2(
-        id: firestoreIDGenerator(),
-        groupIndex: pageIndex,
-        beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        typeInfo: pillSheetType.typeInfo,
-        createdAt: now(),
-        pillTakenCount: pillTakenCount,
-        pills: Pill.generateAndFillTo(
-          pillSheetType: pillSheetType,
-          fromDate: beginDate,
-          lastTakenDate: lastTakenDate,
-          pillTakenCount: pillTakenCount,
-        ),
-      );
-    }
 
     return PillSheet.v1(
       id: firestoreIDGenerator(),
