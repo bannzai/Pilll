@@ -110,6 +110,7 @@ class InquiryPage extends HookWidget {
                         ),
                         keyboardType: TextInputType.emailAddress,
                         textInputAction: TextInputAction.next,
+                        autofillHints: const [AutofillHints.email],
                         onFieldSubmitted: (_) {
                           FocusScope.of(context).requestFocus(contentFocusNode);
                         },
