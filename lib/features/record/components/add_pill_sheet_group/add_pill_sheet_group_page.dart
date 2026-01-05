@@ -5,12 +5,14 @@ import 'package:pilll/features/localizations/l.dart';
 
 import 'package:pilll/utils/analytics.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
+import 'package:pilll/components/template/setting_pill_sheet_group/pill_taken_count_input.dart';
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/display_number_setting.dart';
 import 'package:pilll/features/record/components/add_pill_sheet_group/provider.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
@@ -28,6 +30,12 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
+    final initialPillTakenCount = switch (pillSheetGroup?.pillSheets.firstOrNull) {
+      PillSheetV1() => 1,
+      PillSheetV2 v2 => v2.pillTakenCount,
+      null => 1,
+    };
+    final pillTakenCount = useState(initialPillTakenCount);
 
     return Scaffold(
       backgroundColor: AppColors.background,
@@ -85,6 +93,8 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        PillTakenCountInput(pillTakenCount: pillTakenCount),
+                        const SizedBox(height: 16),
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                               pillSheetGroup: pillSheetGroup,
@@ -106,6 +116,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                                       pillSheetGroup: pillSheetGroup,
                                       pillSheetTypes: pillSheetTypes.value,
                                       displayNumberSetting: displayNumberSetting.value,
+                                      pillTakenCount: pillTakenCount.value,
                                     );
                                     await registerReminderLocalNotification();
                                     navigator.pop();
