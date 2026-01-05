@@ -372,7 +372,7 @@ void main() {
         });
 
         test("過去のピルを一括服用: 対象より前は全錠、最後は1錠記録", () async {
-          // 3日目に服用 (1日目、2日目は未服用)
+          // 4日目に服用 (1,2,3日目は未服用)
           final mockNowDay3 = DateTime.parse("2022-07-27T19:02:00");
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
