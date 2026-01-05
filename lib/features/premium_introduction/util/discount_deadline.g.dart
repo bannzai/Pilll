@@ -6,8 +6,7 @@ part of 'discount_deadline.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$isOverDiscountDeadlineHash() =>
-    r'4336d52719c10c6d3e9acc171f33f9ebc744976b';
+String _$isOverDiscountDeadlineHash() => r'4336d52719c10c6d3e9acc171f33f9ebc744976b';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -65,8 +64,7 @@ class IsOverDiscountDeadlineFamily extends Family<bool> {
   static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
 
   @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
 
   @override
   String? get name => r'isOverDiscountDeadlineProvider';
@@ -84,13 +82,9 @@ class IsOverDiscountDeadlineProvider extends AutoDisposeProvider<bool> {
           ),
           from: isOverDiscountDeadlineProvider,
           name: r'isOverDiscountDeadlineProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$isOverDiscountDeadlineHash,
+          debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$isOverDiscountDeadlineHash,
           dependencies: IsOverDiscountDeadlineFamily._dependencies,
-          allTransitiveDependencies:
-              IsOverDiscountDeadlineFamily._allTransitiveDependencies,
+          allTransitiveDependencies: IsOverDiscountDeadlineFamily._allTransitiveDependencies,
           discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
@@ -131,9 +125,7 @@ class IsOverDiscountDeadlineProvider extends AutoDisposeProvider<bool> {
 
   @override
   bool operator ==(Object other) {
-    return other is IsOverDiscountDeadlineProvider &&
-        other.discountEntitlementDeadlineDate ==
-            discountEntitlementDeadlineDate;
+    return other is IsOverDiscountDeadlineProvider && other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate;
   }
 
   @override
@@ -150,23 +142,18 @@ mixin IsOverDiscountDeadlineRef on AutoDisposeProviderRef<bool> {
   DateTime? get discountEntitlementDeadlineDate;
 }
 
-class _IsOverDiscountDeadlineProviderElement
-    extends AutoDisposeProviderElement<bool> with IsOverDiscountDeadlineRef {
+class _IsOverDiscountDeadlineProviderElement extends AutoDisposeProviderElement<bool> with IsOverDiscountDeadlineRef {
   _IsOverDiscountDeadlineProviderElement(super.provider);
 
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      (origin as IsOverDiscountDeadlineProvider)
-          .discountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate => (origin as IsOverDiscountDeadlineProvider).discountEntitlementDeadlineDate;
 }
 
-String _$hiddenCountdownDiscountDeadlineHash() =>
-    r'd4bf0339b7bdcfdc41069db72d215f6b4ca09287';
+String _$hiddenCountdownDiscountDeadlineHash() => r'd4bf0339b7bdcfdc41069db72d215f6b4ca09287';
 
 /// See also [hiddenCountdownDiscountDeadline].
 @ProviderFor(hiddenCountdownDiscountDeadline)
-const hiddenCountdownDiscountDeadlineProvider =
-    HiddenCountdownDiscountDeadlineFamily();
+const hiddenCountdownDiscountDeadlineProvider = HiddenCountdownDiscountDeadlineFamily();
 
 /// See also [hiddenCountdownDiscountDeadline].
 class HiddenCountdownDiscountDeadlineFamily extends Family<bool> {
@@ -191,26 +178,22 @@ class HiddenCountdownDiscountDeadlineFamily extends Family<bool> {
     );
   }
 
-  static final Iterable<ProviderOrFamily> _dependencies =
-      const <ProviderOrFamily>[];
+  static final Iterable<ProviderOrFamily> _dependencies = const <ProviderOrFamily>[];
 
   @override
   Iterable<ProviderOrFamily>? get dependencies => _dependencies;
 
-  static final Iterable<ProviderOrFamily> _allTransitiveDependencies =
-      const <ProviderOrFamily>{};
+  static final Iterable<ProviderOrFamily> _allTransitiveDependencies = const <ProviderOrFamily>{};
 
   @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
 
   @override
   String? get name => r'hiddenCountdownDiscountDeadlineProvider';
 }
 
 /// See also [hiddenCountdownDiscountDeadline].
-class HiddenCountdownDiscountDeadlineProvider
-    extends AutoDisposeProvider<bool> {
+class HiddenCountdownDiscountDeadlineProvider extends AutoDisposeProvider<bool> {
   /// See also [hiddenCountdownDiscountDeadline].
   HiddenCountdownDiscountDeadlineProvider({
     required DateTime? discountEntitlementDeadlineDate,
@@ -221,13 +204,9 @@ class HiddenCountdownDiscountDeadlineProvider
           ),
           from: hiddenCountdownDiscountDeadlineProvider,
           name: r'hiddenCountdownDiscountDeadlineProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$hiddenCountdownDiscountDeadlineHash,
+          debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$hiddenCountdownDiscountDeadlineHash,
           dependencies: HiddenCountdownDiscountDeadlineFamily._dependencies,
-          allTransitiveDependencies:
-              HiddenCountdownDiscountDeadlineFamily._allTransitiveDependencies,
+          allTransitiveDependencies: HiddenCountdownDiscountDeadlineFamily._allTransitiveDependencies,
           discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
@@ -268,9 +247,7 @@ class HiddenCountdownDiscountDeadlineProvider
 
   @override
   bool operator ==(Object other) {
-    return other is HiddenCountdownDiscountDeadlineProvider &&
-        other.discountEntitlementDeadlineDate ==
-            discountEntitlementDeadlineDate;
+    return other is HiddenCountdownDiscountDeadlineProvider && other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate;
   }
 
   @override
@@ -287,24 +264,18 @@ mixin HiddenCountdownDiscountDeadlineRef on AutoDisposeProviderRef<bool> {
   DateTime? get discountEntitlementDeadlineDate;
 }
 
-class _HiddenCountdownDiscountDeadlineProviderElement
-    extends AutoDisposeProviderElement<bool>
-    with HiddenCountdownDiscountDeadlineRef {
+class _HiddenCountdownDiscountDeadlineProviderElement extends AutoDisposeProviderElement<bool> with HiddenCountdownDiscountDeadlineRef {
   _HiddenCountdownDiscountDeadlineProviderElement(super.provider);
 
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      (origin as HiddenCountdownDiscountDeadlineProvider)
-          .discountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate => (origin as HiddenCountdownDiscountDeadlineProvider).discountEntitlementDeadlineDate;
 }
 
-String _$durationToDiscountPriceDeadlineHash() =>
-    r'cf08e12e1dea3d5475632bc452d12a78aec274b7';
+String _$durationToDiscountPriceDeadlineHash() => r'cf08e12e1dea3d5475632bc452d12a78aec274b7';
 
 /// See also [durationToDiscountPriceDeadline].
 @ProviderFor(durationToDiscountPriceDeadline)
-const durationToDiscountPriceDeadlineProvider =
-    DurationToDiscountPriceDeadlineFamily();
+const durationToDiscountPriceDeadlineProvider = DurationToDiscountPriceDeadlineFamily();
 
 /// See also [durationToDiscountPriceDeadline].
 class DurationToDiscountPriceDeadlineFamily extends Family<Duration> {
@@ -337,16 +308,14 @@ class DurationToDiscountPriceDeadlineFamily extends Family<Duration> {
   static const Iterable<ProviderOrFamily>? _allTransitiveDependencies = null;
 
   @override
-  Iterable<ProviderOrFamily>? get allTransitiveDependencies =>
-      _allTransitiveDependencies;
+  Iterable<ProviderOrFamily>? get allTransitiveDependencies => _allTransitiveDependencies;
 
   @override
   String? get name => r'durationToDiscountPriceDeadlineProvider';
 }
 
 /// See also [durationToDiscountPriceDeadline].
-class DurationToDiscountPriceDeadlineProvider
-    extends AutoDisposeProvider<Duration> {
+class DurationToDiscountPriceDeadlineProvider extends AutoDisposeProvider<Duration> {
   /// See also [durationToDiscountPriceDeadline].
   DurationToDiscountPriceDeadlineProvider({
     required DateTime discountEntitlementDeadlineDate,
@@ -357,13 +326,9 @@ class DurationToDiscountPriceDeadlineProvider
           ),
           from: durationToDiscountPriceDeadlineProvider,
           name: r'durationToDiscountPriceDeadlineProvider',
-          debugGetCreateSourceHash:
-              const bool.fromEnvironment('dart.vm.product')
-                  ? null
-                  : _$durationToDiscountPriceDeadlineHash,
+          debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$durationToDiscountPriceDeadlineHash,
           dependencies: DurationToDiscountPriceDeadlineFamily._dependencies,
-          allTransitiveDependencies:
-              DurationToDiscountPriceDeadlineFamily._allTransitiveDependencies,
+          allTransitiveDependencies: DurationToDiscountPriceDeadlineFamily._allTransitiveDependencies,
           discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
@@ -404,9 +369,7 @@ class DurationToDiscountPriceDeadlineProvider
 
   @override
   bool operator ==(Object other) {
-    return other is DurationToDiscountPriceDeadlineProvider &&
-        other.discountEntitlementDeadlineDate ==
-            discountEntitlementDeadlineDate;
+    return other is DurationToDiscountPriceDeadlineProvider && other.discountEntitlementDeadlineDate == discountEntitlementDeadlineDate;
   }
 
   @override
@@ -423,15 +386,11 @@ mixin DurationToDiscountPriceDeadlineRef on AutoDisposeProviderRef<Duration> {
   DateTime get discountEntitlementDeadlineDate;
 }
 
-class _DurationToDiscountPriceDeadlineProviderElement
-    extends AutoDisposeProviderElement<Duration>
-    with DurationToDiscountPriceDeadlineRef {
+class _DurationToDiscountPriceDeadlineProviderElement extends AutoDisposeProviderElement<Duration> with DurationToDiscountPriceDeadlineRef {
   _DurationToDiscountPriceDeadlineProviderElement(super.provider);
 
   @override
-  DateTime get discountEntitlementDeadlineDate =>
-      (origin as DurationToDiscountPriceDeadlineProvider)
-          .discountEntitlementDeadlineDate;
+  DateTime get discountEntitlementDeadlineDate => (origin as DurationToDiscountPriceDeadlineProvider).discountEntitlementDeadlineDate;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
