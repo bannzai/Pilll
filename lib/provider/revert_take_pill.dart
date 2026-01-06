@@ -65,7 +65,8 @@ class RevertTakePill {
 
       if (revertDate.isBefore(pillSheet.beginingDate)) {
         // reset pill sheet when back to one before pill sheet
-        return pillSheet.revertedPillSheet(pillSheet.beginingDate.subtract(const Duration(days: 1)).date()).copyWith(restDurations: []);
+        // 全ピルをリセットするケースではlastTakenDateをnullに戻す
+        return pillSheet.revertedPillSheetToNull().copyWith(restDurations: []);
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(revertDate)).toList();
@@ -114,6 +115,20 @@ extension RevertedPillSheet on PillSheet {
     }
   }
 
+  /// 服用記録を全て取り消してlastTakenDateをnullにしたPillSheetを返す
+  PillSheet revertedPillSheetToNull() {
+    switch (this) {
+      case PillSheetV1():
+        return copyWith(lastTakenDate: null);
+      case PillSheetV2():
+        final v2 = this as PillSheetV2;
+        return v2.copyWith(
+          lastTakenDate: null,
+          pills: v2.pills.map((pill) => pill.copyWith(pillTakens: [])).toList(),
+        );
+    }
+  }
+
   /// v1: lastTakenDateのみを更新
   PillSheet _revertedPillSheetV1(DateTime toDate) {
     return copyWith(lastTakenDate: toDate);
@@ -128,16 +143,13 @@ extension RevertedPillSheet on PillSheet {
     return v2.copyWith(
       lastTakenDate: toDate,
       pills: pills.map((pill) {
-        // このpillの日付が対象の日付よりも前の場合は何もしない
-        // 休薬期間を考慮したdatesプロパティを使用
+        // toDateより後の日付のピルの服用記録をクリアする
         final dateOfPill = dates[pill.index];
         if (dateOfPill.isBefore(toDate) || isSameDay(dateOfPill, toDate)) {
           debugPrint('early return pill: ${pill.index}');
           return pill;
         }
 
-        // NOTE: !(isSameDay(date.date() ,today()) && pill.index == todayPillIndex)
-        // OR pill.index != todayPillIndex。これらの場合は全ての服用記録を消す
         debugPrint('clear pill: ${pill.index}');
         return pill.copyWith(pillTakens: []);
       }).toList(),
