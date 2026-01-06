@@ -33,7 +33,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final pillTakenCount = useState<int>(state.pillTakenCount);
 
     useEffect(() {
-      store.setPillTakenCount(pillTakenCount.value);
+      // ウィジェットのビルド中にStateNotifierの状態を変更するとRiverpodのエラーが発生するため、
+      // Future.microtask()で次のマイクロタスクまで遅延させる
+      Future.microtask(() {
+        store.setPillTakenCount(pillTakenCount.value);
+      });
       return null;
     }, [pillTakenCount.value]);
 
