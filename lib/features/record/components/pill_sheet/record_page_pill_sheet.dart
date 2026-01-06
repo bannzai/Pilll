@@ -136,17 +136,19 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 return;
               }
 
-              // v2の場合は全錠服用済みかどうかで判定
-              final isFullyTaken = switch (pillSheet) {
+              // 服用記録があるかどうかを判定
+              final hasPillTaken = switch (pillSheet) {
                 PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber >= pillNumberInPillSheet,
                 PillSheetV2 v2 => () {
                     final pillIndex = pillNumberInPillSheet - 1;
                     if (pillIndex < 0 || pillIndex >= v2.pills.length) return false;
-                    return v2.pills[pillIndex].pillTakens.length >= v2.pillTakenCount;
+                    return v2.pills[pillIndex].pillTakens.isNotEmpty;
                   }(),
               };
 
-              if (isFullyTaken) {
+              if (hasPillTaken) {
+                // 服用記録がある場合は取り消す
+                // V2の場合は1つだけ削除、V1の場合は従来通り
                 await revertTakePill(
                   pillSheetGroup: pillSheetGroup,
                   pageIndex: pageIndex,
