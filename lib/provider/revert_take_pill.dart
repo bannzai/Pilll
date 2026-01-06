@@ -1,5 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -45,17 +44,6 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-
-    // V2の場合は1つだけ削除する処理
-    if (targetPillSheet is PillSheetV2) {
-      return _removeOnePillTakenForV2(
-        pillSheetGroup: pillSheetGroup,
-        pageIndex: pageIndex,
-        pillNumberInPillSheet: targetRevertPillNumberIntoPillSheet,
-      );
-    }
-
-    // V1の場合は従来通りの処理
     final revertDate = targetPillSheet.displayPillTakeDate(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
     debugPrint('revertDate: $revertDate');
 
@@ -111,78 +99,6 @@ class RevertTakePill {
     await batch.commit();
 
     return updatedPillSheetGroup;
-  }
-
-  /// V2 PillSheet用: 指定したピルの服用記録を1つだけ削除する
-  Future<PillSheetGroup?> _removeOnePillTakenForV2({
-    required PillSheetGroup pillSheetGroup,
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) async {
-    final targetPillSheet = pillSheetGroup.pillSheets[pageIndex] as PillSheetV2;
-
-    final pillIndex = pillNumberInPillSheet - 1;
-    if (pillIndex < 0 || pillIndex >= targetPillSheet.pills.length) {
-      debugPrint('RevertTakePill: Invalid pill index');
-      return null;
-    }
-
-    final pill = targetPillSheet.pills[pillIndex];
-    if (pill.pillTakens.isEmpty) {
-      debugPrint('RevertTakePill: No pill taken to remove');
-      return null;
-    }
-
-    // pillTakensから最後の1つを削除
-    final updatedPillTakens = List<PillTaken>.from(pill.pillTakens)..removeLast();
-    final updatedPill = pill.copyWith(pillTakens: updatedPillTakens);
-
-    // pillsを更新
-    final updatedPills = List<Pill>.from(targetPillSheet.pills);
-    updatedPills[pillIndex] = updatedPill;
-
-    // lastTakenDateを再計算
-    final newLastTakenDate = _calculateLastTakenDate(targetPillSheet, updatedPills);
-
-    final updatedPillSheet = targetPillSheet.copyWith(
-      pills: updatedPills,
-      lastTakenDate: newLastTakenDate,
-    );
-
-    // pillSheetsを更新
-    final updatedPillSheets = List<PillSheet>.from(pillSheetGroup.pillSheets);
-    updatedPillSheets[pageIndex] = updatedPillSheet;
-
-    final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-
-    final batch = batchFactory.batch();
-    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
-
-    final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-      pillSheetGroupID: pillSheetGroup.id,
-      before: targetPillSheet,
-      after: updatedPillSheet,
-      beforePillSheetGroup: pillSheetGroup,
-      afterPillSheetGroup: updatedPillSheetGroup,
-    );
-    batchSetPillSheetModifiedHistory(batch, history);
-
-    await batch.commit();
-
-    return updatedPillSheetGroup;
-  }
-
-  /// 更新されたpillsからlastTakenDateを再計算する
-  DateTime? _calculateLastTakenDate(PillSheetV2 pillSheet, List<Pill> updatedPills) {
-    // 最後に服用記録があるピルを探す
-    for (int i = updatedPills.length - 1; i >= 0; i--) {
-      if (updatedPills[i].pillTakens.isNotEmpty) {
-        // そのピルの日付を返す
-        return pillSheet.dates[i];
-      }
-    }
-    // 服用記録がない場合はnull
-    return null;
   }
 }
 
