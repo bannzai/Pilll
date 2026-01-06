@@ -471,8 +471,9 @@ extension PillSheetV2Extension on PillSheetV2 {
       return 0;
     }
 
-    final estimatedLastTakenDate = beginingDate.add(Duration(days: lastCompletedPill.index)).date();
-    return pillNumberFor(targetDate: estimatedLastTakenDate);
+    // 休薬期間を考慮したdatesプロパティを使用してピルの正確な日付を取得
+    final dateOfLastCompletedPill = dates[lastCompletedPill.index];
+    return pillNumberFor(targetDate: dateOfLastCompletedPill);
   }
 
   /// 今日のピルがすべて服用完了したかどうか
