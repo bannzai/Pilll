@@ -443,7 +443,7 @@ void main() {
           verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
           expect(result, updatedPillSheetGroupV2);
 
-          // 1日目、2日目は全錠(2つ)、4日目は1錠
+          // 1日目、2日目、3日目は全錠(2つ)、4日目は1錠
           final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
           expect(updatedPillSheet.pills[0].pillTakens.length, 2);
           expect(updatedPillSheet.pills[1].pillTakens.length, 2);
