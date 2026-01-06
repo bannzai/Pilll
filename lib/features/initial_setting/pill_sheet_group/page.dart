@@ -99,11 +99,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                         textAlign: TextAlign.center,
                       ),
                       InitialSettingPillSheetGroupPageBody(state: state, store: store),
-                      if (state.pillSheetTypes.isNotEmpty) ...[
-                        const SizedBox(height: 24),
-                        PillTakenCountInput(pillTakenCount: pillTakenCount),
-                      ],
-                      const SizedBox(height: 100),
+                      const SizedBox(height: 200),
                     ],
                   ),
                 ),
@@ -115,7 +111,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        if (state.pillSheetTypes.isNotEmpty)
+                        if (state.pillSheetTypes.isNotEmpty) ...[
+                          PillTakenCountInput(pillTakenCount: pillTakenCount),
+                          const SizedBox(height: 16),
                           SizedBox(
                             width: 180,
                             child: PrimaryButton(
@@ -126,7 +124,8 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                               },
                             ),
                           ),
-                        const SizedBox(height: 20),
+                        ],
+                        const SizedBox(height: 16),
                         AlertButton(
                           text: L.existingAccountUsers,
                           onPressed: () async {
@@ -140,7 +139,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                             );
                           },
                         ),
-                        const SizedBox(height: 35),
                       ],
                     ),
                   ),
