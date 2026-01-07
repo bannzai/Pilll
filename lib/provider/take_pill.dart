@@ -140,28 +140,26 @@ extension TakenPillSheet on PillSheet {
   /// 最後のピルは1回の記録を追加する
   PillSheet _takenPillSheetV2(DateTime takenDate) {
     final v2 = this as PillSheetV2;
-    final pillTakenCount = v2.pillTakenCount;
-    final pills = v2.pills;
 
     // 一番最後の記録対象のピル
     final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
 
     return v2.copyWith(
       lastTakenDate: takenDate,
-      pills: pills.map((pill) {
+      pills: v2.pills.map((pill) {
         // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
         if (pill.index > finalTakenPillIndex) {
           return pill;
         }
-        if (pill.pillTakens.length == pillTakenCount) {
+        if (pill.pillTakens.length == v2.pillTakenCount) {
           return pill;
         }
 
         final pillTakenDoneList = [...pill.pillTakens];
 
         if (pill.index != finalTakenPillIndex) {
-          // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をpillTakenCountに達するまで追加する
-          for (var i = pill.pillTakens.length; i < pillTakenCount; i++) {
+          // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をv2.pillTakenCountに達するまで追加する
+          for (var i = pill.pillTakens.length; i < v2.pillTakenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               recordedTakenDateTime: takenDate,
               createdDateTime: now(),
