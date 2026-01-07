@@ -55,6 +55,10 @@ class Pill with _$Pill {
     /// ピルシート内のインデックス（0始まり）
     required int index,
 
+    /// このピルで服用すべき回数
+    /// 1日2錠の場合は2、1日1錠の場合は1
+    required int takenCount,
+
     /// レコード作成日時
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -88,6 +92,7 @@ class Pill with _$Pill {
       final date = fromDate.add(Duration(days: index));
       return Pill(
         index: index,
+        takenCount: pillTakenCount,
         createdDateTime: now(),
         updatedDateTime: now(),
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
@@ -120,6 +125,7 @@ class Pill with _$Pill {
       final date = fromDate.add(Duration(days: index));
       return Pill(
         index: index,
+        takenCount: pillTakenCount,
         createdDateTime: now(),
         updatedDateTime: now(),
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
@@ -138,4 +144,10 @@ class Pill with _$Pill {
       );
     });
   }
+
+  /// このピルの服用が完了しているかどうか
+  bool get isCompleted => pillTakens.length >= takenCount;
+
+  /// このピルの残り服用回数
+  int get remainingTakenCount => takenCount - pillTakens.length;
 }

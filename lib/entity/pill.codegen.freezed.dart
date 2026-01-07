@@ -256,6 +256,10 @@ mixin _$Pill {
   /// ピルシート内のインデックス（0始まり）
   int get index => throw _privateConstructorUsedError;
 
+  /// このピルで服用すべき回数
+  /// 1日2錠の場合は2、1日1錠の場合は1
+  int get takenCount => throw _privateConstructorUsedError;
+
   /// レコード作成日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime => throw _privateConstructorUsedError;
@@ -279,6 +283,7 @@ abstract class $PillCopyWith<$Res> {
   @useResult
   $Res call(
       {int index,
+      int takenCount,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -299,6 +304,7 @@ class _$PillCopyWithImpl<$Res, $Val extends Pill> implements $PillCopyWith<$Res>
   @override
   $Res call({
     Object? index = null,
+    Object? takenCount = null,
     Object? createdDateTime = null,
     Object? updatedDateTime = null,
     Object? pillTakens = null,
@@ -307,6 +313,10 @@ class _$PillCopyWithImpl<$Res, $Val extends Pill> implements $PillCopyWith<$Res>
       index: null == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      takenCount: null == takenCount
+          ? _value.takenCount
+          : takenCount // ignore: cast_nullable_to_non_nullable
               as int,
       createdDateTime: null == createdDateTime
           ? _value.createdDateTime
@@ -331,6 +341,7 @@ abstract class _$$PillImplCopyWith<$Res> implements $PillCopyWith<$Res> {
   @useResult
   $Res call(
       {int index,
+      int takenCount,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -346,6 +357,7 @@ class __$$PillImplCopyWithImpl<$Res> extends _$PillCopyWithImpl<$Res, _$PillImpl
   @override
   $Res call({
     Object? index = null,
+    Object? takenCount = null,
     Object? createdDateTime = null,
     Object? updatedDateTime = null,
     Object? pillTakens = null,
@@ -354,6 +366,10 @@ class __$$PillImplCopyWithImpl<$Res> extends _$PillCopyWithImpl<$Res, _$PillImpl
       index: null == index
           ? _value.index
           : index // ignore: cast_nullable_to_non_nullable
+              as int,
+      takenCount: null == takenCount
+          ? _value.takenCount
+          : takenCount // ignore: cast_nullable_to_non_nullable
               as int,
       createdDateTime: null == createdDateTime
           ? _value.createdDateTime
@@ -377,6 +393,7 @@ class __$$PillImplCopyWithImpl<$Res> extends _$PillCopyWithImpl<$Res, _$PillImpl
 class _$PillImpl extends _Pill {
   const _$PillImpl(
       {required this.index,
+      required this.takenCount,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -390,6 +407,11 @@ class _$PillImpl extends _Pill {
   /// ピルシート内のインデックス（0始まり）
   @override
   final int index;
+
+  /// このピルで服用すべき回数
+  /// 1日2錠の場合は2、1日1錠の場合は1
+  @override
+  final int takenCount;
 
   /// レコード作成日時
   @override
@@ -416,7 +438,7 @@ class _$PillImpl extends _Pill {
 
   @override
   String toString() {
-    return 'Pill(index: $index, createdDateTime: $createdDateTime, updatedDateTime: $updatedDateTime, pillTakens: $pillTakens)';
+    return 'Pill(index: $index, takenCount: $takenCount, createdDateTime: $createdDateTime, updatedDateTime: $updatedDateTime, pillTakens: $pillTakens)';
   }
 
   @override
@@ -425,6 +447,7 @@ class _$PillImpl extends _Pill {
         (other.runtimeType == runtimeType &&
             other is _$PillImpl &&
             (identical(other.index, index) || other.index == index) &&
+            (identical(other.takenCount, takenCount) || other.takenCount == takenCount) &&
             (identical(other.createdDateTime, createdDateTime) || other.createdDateTime == createdDateTime) &&
             (identical(other.updatedDateTime, updatedDateTime) || other.updatedDateTime == updatedDateTime) &&
             const DeepCollectionEquality().equals(other._pillTakens, _pillTakens));
@@ -432,7 +455,7 @@ class _$PillImpl extends _Pill {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, index, createdDateTime, updatedDateTime, const DeepCollectionEquality().hash(_pillTakens));
+  int get hashCode => Object.hash(runtimeType, index, takenCount, createdDateTime, updatedDateTime, const DeepCollectionEquality().hash(_pillTakens));
 
   @JsonKey(ignore: true)
   @override
@@ -450,6 +473,7 @@ class _$PillImpl extends _Pill {
 abstract class _Pill extends Pill {
   const factory _Pill(
       {required final int index,
+      required final int takenCount,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime createdDateTime,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -463,6 +487,11 @@ abstract class _Pill extends Pill {
 
   /// ピルシート内のインデックス（0始まり）
   int get index;
+  @override
+
+  /// このピルで服用すべき回数
+  /// 1日2錠の場合は2、1日1錠の場合は1
+  int get takenCount;
   @override
 
   /// レコード作成日時
