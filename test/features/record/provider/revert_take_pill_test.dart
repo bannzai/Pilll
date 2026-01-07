@@ -49,8 +49,8 @@ void main() {
           createdAt: now(),
         );
         // revertDate = displayPillTakeDate(1).subtract(1day) = beginingDate - 1day = yesterday - 1day
-        final revertDate = yesterday.subtract(const Duration(days: 1));
-        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate, restDurations: []);
+        // 全ピルをリセットするケースではlastTakenDateをnullに戻す
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: null, restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
@@ -201,8 +201,8 @@ void main() {
           createdAt: now(),
         );
         // revertDate = displayPillTakeDate(1).subtract(1day) = beginDate - 1day
-        final revertDate = beginDate.subtract(const Duration(days: 1));
-        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate, restDurations: []);
+        // 全ピルをリセットするケースではlastTakenDateをnullに戻す
+        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: null, restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["sheet_id"],
@@ -451,10 +451,10 @@ void main() {
         );
         // revertDate = displayPillTakeDate(27).subtract(1day) = beginingDate + 26 - 1day = 2022-01-27
         // pillSheet: revertDate > beginingDateなので lastTakenDate: revertDate
-        // pillSheet2: revertDate < beginingDateなので lastTakenDate: beginingDate - 1day = 2022-01-29
+        // pillSheet2: revertDate < beginingDateなので 全ピルリセット → lastTakenDate: null
         final revertDate = mockToday.subtract(const Duration(days: 4)); // 2022-01-27
         final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate);
-        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)), restDurations: []);
+        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: null, restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
@@ -537,10 +537,10 @@ void main() {
         );
         // revertDate = displayPillTakeDate(27).subtract(1day) = beginingDate + 26 - 1day = 2022-01-27
         // pillSheet: revertDate > beginingDateなので lastTakenDate: revertDate
-        // pillSheet2: revertDate < beginingDateなので lastTakenDate: beginingDate - 1day = 2022-01-29
+        // pillSheet2: revertDate < beginingDateなので 全ピルリセット → lastTakenDate: null
         final revertDate = mockToday.subtract(const Duration(days: 4)); // 2022-01-27
         final updatedPillSheet = pillSheet.copyWith(lastTakenDate: revertDate);
-        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: yesterday.subtract(const Duration(days: 1)), restDurations: []);
+        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: null, restDurations: []);
         final updatedPillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: ["1", "2"],
