@@ -2402,5 +2402,9 @@
   "inquiryContentRequired": "お問い合わせ内容を入力してください",
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
+  },
+  "lifetimeSubscriptionWarning": "買い切りプランをご購入いただきありがとうございます。以前サブスクリプションに登録されていた場合は、解約をお忘れなく。",
+  "@lifetimeSubscriptionWarning": {
+    "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   }
 }
