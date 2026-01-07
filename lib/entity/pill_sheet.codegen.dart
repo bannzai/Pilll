@@ -489,6 +489,26 @@ extension PillSheetV2Extension on PillSheetV2 {
     return pills[todayPillIndex].pillTakens.isNotEmpty;
   }
 
+  /// 指定したピル番号のピルが、前日のピルが未完了のため押せない状態かどうか
+  /// 前日のピルが未完了（0回でも）の場合はtrue
+  bool isPillDisabled({required int pillNumberInPillSheet}) {
+    final pillIndex = pillNumberInPillSheet - 1;
+    // 1番目のピルは前日がないのでdisabledにならない
+    if (pillIndex <= 0) {
+      return false;
+    }
+    // 既に完了済みのピルはdisabledにならない
+    if (pillIndex < pills.length && pills[pillIndex].isCompleted) {
+      return false;
+    }
+    // 前日のピルが未完了ならdisabled
+    final previousPillIndex = pillIndex - 1;
+    if (previousPillIndex >= 0 && previousPillIndex < pills.length) {
+      return !pills[previousPillIndex].isCompleted;
+    }
+    return false;
+  }
+
   /// pillsリストの一部を置き換えたリストを返す
   /// 服用記録の更新時に使用
   List<Pill> replacedPills({required List<Pill> newPills}) {
