@@ -233,6 +233,7 @@ sealed class PillSheet with _$PillSheet {
 
     /// 1回の服用で飲むピルの錠数
     /// 2錠飲みの場合は2がセットされる
+    /// @deprecated pill.takenCount を使用してください。各ピルごとに服用回数を管理するようになりました
     required int pillTakenCount,
 
     /// 各ピルの詳細情報リスト
@@ -463,9 +464,9 @@ sealed class PillSheet with _$PillSheet {
 /// v2専用のプロパティ・メソッド
 extension PillSheetV2Extension on PillSheetV2 {
   /// 最後に服用完了したピルの番号（0または1以上）
-  /// pillTakenCount回すべて服用したピルの番号を返す
+  /// 各ピルのtakenCount回すべて服用したピルの番号を返す
   int get lastCompletedPillNumber {
-    final lastCompletedPill = pills.lastWhereOrNull((element) => element.pillTakens.length == pillTakenCount);
+    final lastCompletedPill = pills.lastWhereOrNull((element) => element.isCompleted);
     if (lastCompletedPill == null) {
       return 0;
     }

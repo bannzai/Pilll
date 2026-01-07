@@ -1198,6 +1198,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
 
   /// 1回の服用で飲むピルの錠数
   /// 2錠飲みの場合は2がセットされる
+  /// @deprecated pill.takenCount を使用してください。各ピルごとに服用回数を管理するようになりました
   @override
   final int pillTakenCount;
 
@@ -1440,6 +1441,7 @@ abstract class PillSheetV2 extends PillSheet {
 
   /// 1回の服用で飲むピルの錠数
   /// 2錠飲みの場合は2がセットされる
+  /// @deprecated pill.takenCount を使用してください。各ピルごとに服用回数を管理するようになりました
   int get pillTakenCount;
 
   /// 各ピルの詳細情報リスト
