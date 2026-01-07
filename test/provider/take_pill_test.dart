@@ -157,6 +157,7 @@ void main() {
               sheetType.totalCount,
               (index) => Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -231,6 +232,7 @@ void main() {
                 if (index == 0) {
                   return Pill(
                     index: index,
+                    takenCount: 2,
                     createdDateTime: now(),
                     updatedDateTime: now(),
                     pillTakens: [
@@ -244,6 +246,7 @@ void main() {
                 }
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [],
@@ -319,6 +322,7 @@ void main() {
                 if (index == 0) {
                   return Pill(
                     index: index,
+                    takenCount: 2,
                     createdDateTime: now(),
                     updatedDateTime: now(),
                     pillTakens: [
@@ -337,6 +341,7 @@ void main() {
                 }
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [],
@@ -371,7 +376,7 @@ void main() {
           expect(result, null);
         });
 
-        test("過去のピルを一括服用: 対象より前は全錠、最後は1錠記録", () async {
+        test("前日が未服用なのに当日を記録しようとするとエラー", () async {
           // 4日目に服用 (1,2,3日目は未服用)
           final mockNowDay3 = DateTime.parse("2022-07-27T19:02:00");
           final mockTodayRepository = MockTodayService();
@@ -393,62 +398,19 @@ void main() {
               sheetType.totalCount,
               (index) => Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
               ),
             ),
           );
-          final pillSheetGroupV2 = PillSheetGroup(
-            id: "group_id",
-            pillSheetIDs: [activePillSheetV2.id!],
-            pillSheets: [activePillSheetV2],
-            createdAt: mockNow,
+
+          // 前日のピルが未完了なのでPreviousPillNotCompletedExceptionがthrowされる
+          expect(
+            () => activePillSheetV2.takenPillSheet(takenDate),
+            throwsA(isA<PreviousPillNotCompletedException>()),
           );
-
-          final batchFactory = MockBatchFactory();
-          final batch = MockWriteBatch();
-          when(batchFactory.batch()).thenReturn(batch);
-
-          final updatedActivePillSheetV2 = activePillSheetV2.takenPillSheet(takenDate);
-
-          final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-          final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
-          when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
-
-          final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
-          final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroupV2.id,
-            isQuickRecord: false,
-            before: activePillSheetV2,
-            after: updatedActivePillSheetV2,
-            beforePillSheetGroup: pillSheetGroupV2,
-            afterPillSheetGroup: updatedPillSheetGroupV2,
-          );
-          when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
-
-          final takePill = TakePill(
-            batchFactory: batchFactory,
-            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
-            batchSetPillSheetGroup: batchSetPillSheetGroup,
-          );
-          final result = await takePill(
-            takenDate: takenDate,
-            activePillSheet: activePillSheetV2,
-            pillSheetGroup: pillSheetGroupV2,
-            isQuickRecord: false,
-          );
-
-          verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-          verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
-          expect(result, updatedPillSheetGroupV2);
-
-          // 1日目、2日目、3日目は全錠(2つ)、4日目は1錠
-          final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
-          expect(updatedPillSheet.pills[0].pillTakens.length, 2);
-          expect(updatedPillSheet.pills[1].pillTakens.length, 2);
-          expect(updatedPillSheet.pills[2].pillTakens.length, 2);
-          expect(updatedPillSheet.pills[3].pillTakens.length, 1);
         });
       });
     });
@@ -1002,7 +964,7 @@ void main() {
 
   group("#TakenPillSheet extension", () {
     group("v2 前日のピルが未完了の場合のvalidation", () {
-      test("今日の1回目を服用済み→昨日分を後から記録しようとするとPreviousPillNotCompletedExceptionがthrowされる", () {
+      test("前日が部分的に服用済み（未完了）なのに今日を記録しようとするとPreviousPillNotCompletedExceptionがthrowされる", () {
         final mockTodayRepository = MockTodayService();
         final mockNow = DateTime.parse("2022-07-25");
         todayRepository = mockTodayRepository;
@@ -1010,11 +972,11 @@ void main() {
 
         const sheetType = PillSheetType.pillsheet_28_7;
         // 1日目(7/24): 1回のみ服用（未完了）
-        // 2日目(7/25): 今日
+        // 2日目(7/25): 今日、未服用
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-25"), // 今日の1回目を服用済み
+          lastTakenDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           pillTakenCount: 2,
@@ -1030,18 +992,6 @@ void main() {
                   updatedDateTime: now(),
                   pillTakens: [
                     PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
-                  ],
-                );
-              }
-              if (index == 1) {
-                // 2日目: 1回服用（今日の1回目）
-                return Pill(
-                  index: index,
-                  takenCount: 2,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-25"), createdDateTime: now(), updatedDateTime: now()),
                   ],
                 );
               }
@@ -1062,9 +1012,9 @@ void main() {
           ),
         );
 
-        // 昨日分（1日目）を後から記録しようとする
+        // 前日が未完了なのに今日（2日目）を記録しようとする
         expect(
-          () => pillSheet.takenPillSheet(DateTime.parse("2022-07-24")),
+          () => pillSheet.takenPillSheet(DateTime.parse("2022-07-25")),
           throwsA(isA<PreviousPillNotCompletedException>()),
         );
       });

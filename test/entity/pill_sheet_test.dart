@@ -6506,7 +6506,7 @@ void main() {
           pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
-            (index) => Pill(
+            (index) => Pill(takenCount: 2, 
               index: index,
               createdDateTime: now(),
               updatedDateTime: now(),
@@ -6540,7 +6540,7 @@ void main() {
             sheetType.totalCount,
             (index) {
               if (index == 0) {
-                return Pill(
+                return Pill(takenCount: 2, 
                   index: index,
                   createdDateTime: now(),
                   updatedDateTime: now(),
@@ -6553,7 +6553,7 @@ void main() {
                   ],
                 );
               }
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6588,7 +6588,7 @@ void main() {
             sheetType.totalCount,
             (index) {
               if (index == 0) {
-                return Pill(
+                return Pill(takenCount: 2, 
                   index: index,
                   createdDateTime: now(),
                   updatedDateTime: now(),
@@ -6606,7 +6606,7 @@ void main() {
                   ],
                 );
               }
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6641,7 +6641,7 @@ void main() {
             sheetType.totalCount,
             (index) {
               if (index <= 1) {
-                return Pill(
+                return Pill(takenCount: 2, 
                   index: index,
                   createdDateTime: now(),
                   updatedDateTime: now(),
@@ -6659,7 +6659,7 @@ void main() {
                   ],
                 );
               }
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6696,7 +6696,7 @@ void main() {
             sheetType.totalCount,
             (index) {
               if (index == 0) {
-                return Pill(
+                return Pill(takenCount: 2, 
                   index: index,
                   createdDateTime: now(),
                   updatedDateTime: now(),
@@ -6714,7 +6714,7 @@ void main() {
                   ],
                 );
               }
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6749,7 +6749,7 @@ void main() {
             sheetType.totalCount,
             (index) {
               if (index == 0) {
-                return Pill(
+                return Pill(takenCount: 2, 
                   index: index,
                   createdDateTime: now(),
                   updatedDateTime: now(),
@@ -6762,7 +6762,7 @@ void main() {
                   ],
                 );
               }
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6799,7 +6799,7 @@ void main() {
             sheetType.totalCount,
             (index) {
               if (index == 0) {
-                return Pill(
+                return Pill(takenCount: 2, 
                   index: index,
                   createdDateTime: now(),
                   updatedDateTime: now(),
@@ -6812,7 +6812,7 @@ void main() {
                   ],
                 );
               }
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6845,7 +6845,7 @@ void main() {
           pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
-            (index) => Pill(
+            (index) => Pill(takenCount: 2, 
               index: index,
               createdDateTime: now(),
               updatedDateTime: now(),
@@ -6881,7 +6881,7 @@ void main() {
         pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
-          (index) => Pill(
+          (index) => Pill(takenCount: 2, 
             index: index,
             createdDateTime: now(),
             updatedDateTime: now(),
@@ -6916,7 +6916,7 @@ void main() {
           sheetType.totalCount,
           (index) {
             if (index == 0) {
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6926,7 +6926,7 @@ void main() {
                 ],
               );
             }
-            return Pill(
+            return Pill(takenCount: 2, 
               index: index,
               createdDateTime: now(),
               updatedDateTime: now(),
@@ -6962,7 +6962,7 @@ void main() {
           sheetType.totalCount,
           (index) {
             if (index <= 2) {
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -6972,7 +6972,7 @@ void main() {
                 ],
               );
             }
-            return Pill(
+            return Pill(takenCount: 2, 
               index: index,
               createdDateTime: now(),
               updatedDateTime: now(),
@@ -7022,7 +7022,7 @@ void main() {
           sheetType.totalCount,
           (index) {
             if (index <= 3) {
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -7032,7 +7032,7 @@ void main() {
                 ],
               );
             }
-            return Pill(
+            return Pill(takenCount: 2, 
               index: index,
               createdDateTime: now(),
               updatedDateTime: now(),
@@ -7072,7 +7072,7 @@ void main() {
           sheetType.totalCount,
           (index) {
             if (index == 0) {
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -7084,7 +7084,7 @@ void main() {
             }
             if (index == 1) {
               // 2日目は1回のみ服用
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -7094,7 +7094,7 @@ void main() {
               );
             }
             if (index == 2) {
-              return Pill(
+              return Pill(takenCount: 2, 
                 index: index,
                 createdDateTime: now(),
                 updatedDateTime: now(),
@@ -7104,7 +7104,7 @@ void main() {
                 ],
               );
             }
-            return Pill(
+            return Pill(takenCount: 2, 
               index: index,
               createdDateTime: now(),
               updatedDateTime: now(),
