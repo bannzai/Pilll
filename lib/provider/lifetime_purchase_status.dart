@@ -1,6 +1,7 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/provider/purchase.dart';
+import 'package:pilll/utils/error_log.dart';
 
 /// RevenueCatのEntitlementInfo.productIdentifierに"lifetime"が含まれるかで判定するProvider
 final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((ref) async {
@@ -12,7 +13,8 @@ final isLifetimePurchasedProvider = FutureProvider.autoDispose<bool>((ref) async
     }
     final productIdentifier = premiumEntitlement.productIdentifier;
     return productIdentifier.toLowerCase().contains('lifetime');
-  } catch (e) {
+  } catch (e, stack) {
+    errorLogger.recordError(e, stack);
     return false;
   }
 });
