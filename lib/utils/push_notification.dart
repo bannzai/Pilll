@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/provider/user.dart';
@@ -18,9 +19,14 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
     String? apnsToken;
     try {
       apnsToken = await FirebaseMessaging.instance.getAPNSToken();
-    } catch (e, stack) {
-      debugPrint('[ERROR] requestNotificationPermissions for iOS: $e');
-      errorLogger.recordError(e, stack);
+    } on FirebaseException catch (e, stack) {
+      // apns-token-not-setエラーのみキャッチ。それ以外のFirebaseExceptionは再スロー
+      if (e.code == 'apns-token-not-set') {
+        debugPrint('[ERROR] FirebaseException on getAPNSToken: $e');
+        errorLogger.recordError(e, stack);
+      } else {
+        rethrow;
+      }
     }
     // SimulatorではFCMトークンが取得できないため、デバッグモードでは取得しない。次のリンクのやり方を参考。https://github.com/firebase/flutterfire/issues/13575
     if (kDebugMode) {
