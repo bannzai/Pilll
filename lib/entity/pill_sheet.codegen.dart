@@ -362,7 +362,6 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシートの全てのピルを服用完了したかどうか
   /// 総ピル数と最終服用ピル番号を比較して判定
-  /// @deprecated isEnded を使用してください
   bool get isTakenAll => typeInfo.totalCount == lastTakenOrZeroPillNumber;
 
   /// ピルシートの服用が開始されているかどうか
