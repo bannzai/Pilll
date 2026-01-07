@@ -94,10 +94,10 @@ class PremiumIntroductionFooter extends StatelessWidget {
             child: Text(
               L.lifetimePurchaseNotice,
               style: const TextStyle(
-                fontWeight: FontWeight.w700,
+                fontWeight: FontWeight.w400,
                 fontSize: 10,
                 fontFamily: FontFamily.japanese,
-                color: TextColor.danger,
+                color: TextColor.gray,
               ),
             ),
           ),
