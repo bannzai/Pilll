@@ -88,7 +88,6 @@ class PremiumIntroductionFooter extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 12),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: RichText(
