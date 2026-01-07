@@ -2403,7 +2403,7 @@
   "@inquiryContentRequired": {
     "description": "お問い合わせフォームで内容が未入力の場合に表示されるバリデーションエラーメッセージです。"
   },
-  "lifetimeSubscriptionWarning": "買い切りプランをご購入いただきありがとうございます。月額・年額プランに登録されている場合は、解約をお忘れなく。",
+  "lifetimeSubscriptionWarning": "買い切りプランのご購入ありがとうございます。月額・年額プランに加入されている方は、解約をお忘れないでください",
   "@lifetimeSubscriptionWarning": {
     "description": "買い切りプラン購入者向けに、以前のサブスクリプション解約を促すAnnouncementBarのメッセージです。"
   },
