@@ -8,6 +8,7 @@ extension BoolKey on String {
   static const migration20240819 = 'migration20240819';
   static const specialOfferingIsClosed = 'specialOfferingIsClosed';
   static const specialOfferingIsClosed2 = 'specialOfferingIsClosed2';
+  static const lifetimeSubscriptionWarningIsClosed = 'lifetimeSubscriptionWarningIsClosed';
 }
 
 extension StringKey on String {
