@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,6 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/analytics.dart';
+import 'package:pilll/utils/platform/platform.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
@@ -76,10 +75,6 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
   }
 
   void _openSubscriptionManagementPage() {
-    if (Platform.isIOS) {
-      launchUrl(Uri.parse('https://apps.apple.com/account/subscriptions'));
-    } else if (Platform.isAndroid) {
-      launchUrl(Uri.parse('https://play.google.com/store/account/subscriptions'));
-    }
+    launchUrl(Uri.parse(subscriptionManagementURL));
   }
 }
