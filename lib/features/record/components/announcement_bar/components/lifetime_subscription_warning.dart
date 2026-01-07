@@ -25,7 +25,7 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
     }, []);
 
     return Container(
-      color: AppColors.secondary,
+      color: AppColors.primary,
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
       child: GestureDetector(
         onTap: () {
@@ -65,8 +65,8 @@ class LifetimeSubscriptionWarningAnnouncementBar extends HookConsumerWidget {
             SvgPicture.asset(
               'images/arrow_right.svg',
               colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-              height: 20,
-              width: 20,
+              height: 16,
+              width: 16,
             ),
           ],
         ),
