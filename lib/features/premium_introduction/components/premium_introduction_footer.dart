@@ -88,6 +88,31 @@ class PremiumIntroductionFooter extends StatelessWidget {
               ),
             ),
           ),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: AppColors.secondary,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: RichText(
+              text: TextSpan(
+                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: Colors.white),
+                children: [
+                  TextSpan(text: L.lifetimePurchaseNotice1),
+                  TextSpan(
+                    text: L.lifetimePurchaseNotice2,
+                    style: const TextStyle(decoration: TextDecoration.underline),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launchUrl(Uri.parse(subscriptionManagementURL), mode: LaunchMode.inAppBrowserView);
+                      },
+                  ),
+                  TextSpan(text: L.lifetimePurchaseNotice3),
+                ],
+              ),
+            ),
+          ),
           const SizedBox(height: 24),
           GestureDetector(
             onTap: () async {
