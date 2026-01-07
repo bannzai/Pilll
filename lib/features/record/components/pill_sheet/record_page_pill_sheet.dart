@@ -148,7 +148,8 @@ class RecordPagePillSheet extends HookConsumerWidget {
                 PillSheetV2 v2 => () {
                     final pillIndex = pillNumberInPillSheet - 1;
                     if (pillIndex < 0 || pillIndex >= v2.pills.length) return false;
-                    return v2.pills[pillIndex].pillTakens.length >= v2.pillTakenCount;
+                    final pill = v2.pills[pillIndex];
+                    return pill.pillTakens.length >= pill.takenCount;
                   }(),
               };
 
