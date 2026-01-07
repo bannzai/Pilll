@@ -14,7 +14,9 @@ import 'package:pilll/features/premium_introduction/premium_introduction_sheet.d
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/lifetime_subscription_warning.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
@@ -56,6 +58,8 @@ class AnnouncementBar extends HookConsumerWidget {
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
     final specialOfferingIsClosed = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed) ?? false);
     final specialOfferingIsClosed2 = useState(sharedPreferences.getBool(BoolKey.specialOfferingIsClosed2) ?? false);
+    final lifetimeSubscriptionWarningIsClosed = useState(sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false);
+    final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
 
     final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
       begin: today().subtract(const Duration(days: 30)),
@@ -74,8 +78,11 @@ class AnnouncementBar extends HookConsumerWidget {
       specialOfferingIsClosed2.addListener(() {
         sharedPreferences.setBool(BoolKey.specialOfferingIsClosed2, specialOfferingIsClosed2.value);
       });
+      lifetimeSubscriptionWarningIsClosed.addListener(() {
+        sharedPreferences.setBool(BoolKey.lifetimeSubscriptionWarningIsClosed, lifetimeSubscriptionWarningIsClosed.value);
+      });
       return null;
-    }, [missedDays]);
+    }, []);
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
@@ -168,6 +175,16 @@ class AnnouncementBar extends HookConsumerWidget {
       }
     } else {
       // user.isPremium
+
+      // 1. lifetime購入者向けサブスク解約警告 (最優先)
+      final isLifetimePurchased = lifetimePurchaseStatus.asData?.value ?? false;
+      if (isLifetimePurchased && !lifetimeSubscriptionWarningIsClosed.value) {
+        return LifetimeSubscriptionWarningAnnouncementBar(
+          isClosed: lifetimeSubscriptionWarningIsClosed,
+        );
+      }
+
+      // 2. アカウント登録推奨
       if (!isLinkedLoginProvider) {
         return const RecommendSignupForPremiumAnnouncementBar();
       }

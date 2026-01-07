@@ -1302,6 +1302,12 @@ void main() {
       });
 
       test('version と メタデータが正しく設定される', () {
+        // now()をモックして、タイミングによるflaky testを防ぐ
+        final mockNow = DateTime(2020, 9, 11, 10, 0, 0);
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
         final beforePillSheet = PillSheet(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -1330,12 +1336,9 @@ void main() {
 
         expect(history.version, 'v2');
         expect(history.id, isNull);
-        expect(history.estimatedEventCausingDate, isNotNull);
-        expect(history.createdAt, isNotNull);
-        expect(history.ttlExpiresDateTime, isNotNull);
-        // ttlExpiresDateTime は createdAt から 180日後
-        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
-        expect(history.ttlExpiresDateTime, expectedTtl);
+        expect(history.estimatedEventCausingDate, mockNow);
+        expect(history.createdAt, mockNow);
+        expect(history.ttlExpiresDateTime, mockNow.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)));
       });
 
       test('3枚グループで2枚目から3枚目への切り替え時', () {

@@ -13,6 +13,7 @@ import 'package:pilll/provider/pilll_ads.dart';
 import 'package:pilll/features/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/discount_price_deadline.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/features/record/components/announcement_bar/components/lifetime_subscription_warning.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
 import 'package:pilll/features/record/components/announcement_bar/announcement_bar.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
@@ -778,6 +779,259 @@ void main() {
     });
 
     group('for it is premium user', () {
+      group('#LifetimeSubscriptionWarningAnnouncementBar', () {
+        testWidgets('lifetime購入者で閉じていない場合は表示される', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2021, 04, 29);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday,
+            beginDate: mockToday.subtract(const Duration(days: 10)),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ['1'],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.lifetimeSubscriptionWarningIsClosed: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
+                      isPremium: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(true),
+                isJaLocaleProvider.overrideWithValue(true),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                isLifetimePurchasedProvider.overrideWith((ref) => Future.value(true)),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            findsOneWidget,
+          );
+        });
+
+        testWidgets('lifetime購入者で閉じた場合は表示されない', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2021, 04, 29);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday,
+            beginDate: mockToday.subtract(const Duration(days: 10)),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ['1'],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.lifetimeSubscriptionWarningIsClosed: true,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
+                      isPremium: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(true),
+                isJaLocaleProvider.overrideWithValue(true),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                isLifetimePurchasedProvider.overrideWith((ref) => Future.value(true)),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            findsNothing,
+          );
+        });
+
+        testWidgets('lifetime購入者でない場合は表示されない', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2021, 04, 29);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday,
+            beginDate: mockToday.subtract(const Duration(days: 10)),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ['1'],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.lifetimeSubscriptionWarningIsClosed: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
+                      isPremium: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                isLifetimePurchasedProvider.overrideWith((ref) => Future.value(false)),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            findsNothing,
+          );
+          // lifetime購入者でない場合、isLinkedProvider=falseなのでRecommendSignupForPremiumAnnouncementBarが表示される
+          expect(
+            find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
+            findsOneWidget,
+          );
+        });
+
+        testWidgets('isLifetimePurchasedがloadingの場合は表示されない', (WidgetTester tester) async {
+          final mockTodayRepository = MockTodayService();
+          final mockToday = DateTime(2021, 04, 29);
+
+          when(mockTodayRepository.now()).thenReturn(mockToday);
+          todayRepository = mockTodayRepository;
+
+          var pillSheet = PillSheet.create(
+            PillSheetType.pillsheet_21,
+            lastTakenDate: mockToday,
+            beginDate: mockToday.subtract(const Duration(days: 10)),
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ['1'],
+            pillSheets: [pillSheet],
+            createdAt: now(),
+            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+          );
+
+          SharedPreferences.setMockInitialValues({
+            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            BoolKey.lifetimeSubscriptionWarningIsClosed: false,
+          });
+          final sharedPreferences = await SharedPreferences.getInstance();
+          await tester.pumpWidget(
+            ProviderScope(
+              overrides: [
+                appIsReleasedProvider.overrideWith((ref) => true),
+                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                userProvider.overrideWith(
+                  (ref) => Stream.value(
+                    const User(
+                      isPremium: true,
+                      trialDeadlineDate: null,
+                      beginTrialDate: null,
+                      discountEntitlementDeadlineDate: null,
+                    ),
+                  ),
+                ),
+                isLinkedProvider.overrideWithValue(false),
+                isJaLocaleProvider.overrideWithValue(true),
+                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
+                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                // 永遠にresolveしないFuture（loading状態）
+                isLifetimePurchasedProvider.overrideWith((ref) => Completer<bool>().future),
+              ],
+              child: const MaterialApp(
+                home: Material(child: AnnouncementBar()),
+              ),
+            ),
+          );
+          await tester.pump();
+
+          debugDefaultTargetPlatformOverride = null;
+
+          expect(
+            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            findsNothing,
+          );
+          // loading時はisLinkedProvider=falseなのでRecommendSignupForPremiumAnnouncementBarが表示される
+          expect(
+            find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
+            findsOneWidget,
+          );
+        });
+      });
+
       group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
