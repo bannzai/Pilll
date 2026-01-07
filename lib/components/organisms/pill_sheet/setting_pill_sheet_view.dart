@@ -80,6 +80,7 @@ class SettingPillSheetView extends StatelessWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
             ),
             remainingPillTakenCount: null,
+            isDisabled: false,
           ),
           onTap: () {
             analytics.logEvent(name: 'setting_pill_mark_tapped', parameters: {
