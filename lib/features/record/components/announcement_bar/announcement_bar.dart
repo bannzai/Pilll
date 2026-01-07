@@ -82,7 +82,7 @@ class AnnouncementBar extends HookConsumerWidget {
         sharedPreferences.setBool(BoolKey.lifetimeSubscriptionWarningIsClosed, lifetimeSubscriptionWarningIsClosed.value);
       });
       return null;
-    }, [missedDays]);
+    }, []);
 
     // Test code 安定したら消す
     // DateTime? userBeginDate;
