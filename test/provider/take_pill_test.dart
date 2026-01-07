@@ -999,4 +999,204 @@ void main() {
       });
     });
   });
+
+  group("#TakenPillSheet extension", () {
+    group("v2 前日のピルが未完了の場合のvalidation", () {
+      test("今日の1回目を服用済み→昨日分を後から記録しようとするとPreviousPillNotCompletedExceptionがthrowされる", () {
+        final mockTodayRepository = MockTodayService();
+        final mockNow = DateTime.parse("2022-07-25");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        // 1日目(7/24): 1回のみ服用（未完了）
+        // 2日目(7/25): 今日
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: DateTime.parse("2022-07-25"), // 今日の1回目を服用済み
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                // 1日目: 1回のみ服用（未完了）
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              if (index == 1) {
+                // 2日目: 1回服用（今日の1回目）
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-25"), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 昨日分（1日目）を後から記録しようとする
+        expect(
+          () => pillSheet.takenPillSheet(DateTime.parse("2022-07-24")),
+          throwsA(isA<PreviousPillNotCompletedException>()),
+        );
+      });
+
+      test("前日のピルが完了済みなら正常に服用記録を追加できる", () {
+        final mockTodayRepository = MockTodayService();
+        final mockNow = DateTime.parse("2022-07-25");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        // 1日目(7/24): 2回服用完了
+        // 2日目(7/25): 今日、未服用
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: DateTime.parse("2022-07-24"),
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                // 1日目: 2回服用完了
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 今日（2日目）の服用記録を追加
+        final result = pillSheet.takenPillSheet(DateTime.parse("2022-07-25"));
+
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.pills[1].pillTakens.length, 1);
+        expect(resultV2.lastTakenDate, DateTime.parse("2022-07-25"));
+      });
+
+      test("lastTakenDateが過去日で巻き戻らない", () {
+        final mockTodayRepository = MockTodayService();
+        final mockNow = DateTime.parse("2022-07-26");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        // 1日目(7/24): 2回服用完了
+        // 2日目(7/25): 2回服用完了
+        // 3日目(7/26): 1回服用済み（今日の1回目）
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: DateTime.parse("2022-07-26"), // 今日
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                // 1日目、2日目: 2回服用完了
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              if (index == 2) {
+                // 3日目: 1回服用済み
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-26"), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 2日目の2回目を後から記録（takenDateは昨日7/25）
+        final result = pillSheet.takenPillSheet(DateTime.parse("2022-07-25"));
+
+        final resultV2 = result as PillSheetV2;
+        // lastTakenDateは7/26のまま、7/25に巻き戻らない
+        expect(resultV2.lastTakenDate, DateTime.parse("2022-07-26"));
+        // 2日目の服用記録が追加されている
+        expect(resultV2.pills[1].pillTakens.length, 2);
+      });
+    });
+  });
 }
