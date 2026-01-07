@@ -16,7 +16,7 @@ import 'package:pilll/features/record/components/announcement_bar/components/dis
 import 'package:pilll/features/record/components/announcement_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/lifetime_subscription_warning.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/pilll_ads.dart';
-import 'package:pilll/provider/lifetime_purchase_status.dart';
+import 'package:pilll/provider/purchase.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/premium_trial_limit.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/recommend_signup_premium.dart';
 import 'package:pilll/features/record/components/announcement_bar/components/rest_duration.dart';
