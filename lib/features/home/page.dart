@@ -141,11 +141,6 @@ class HomePageBody extends HookConsumerWidget {
           await requestNotificationPermissions(registerRemotePushNotificationToken);
         } catch (e, stack) {
           errorLogger.recordError(e, stack);
-          // APNSトークンが未設定のエラーはユーザーが対処できないため、ユーザーには表示しない
-          // Crashlyticsへの記録のみ行う
-          if (e.toString().contains('apns-token-not-set')) {
-            return;
-          }
           error.value = e.toString();
         }
       }

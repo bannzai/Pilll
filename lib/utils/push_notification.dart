@@ -5,6 +5,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:pilll/provider/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:pilll/utils/error_log.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken registerRemotePushNotificationToken) async {
@@ -13,7 +14,13 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
     await FirebaseMessaging.instance.setForegroundNotificationPresentationOptions(alert: true, badge: true, sound: true);
     await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
     await localNotificationService.requestiOSPermission();
-    final apnsToken = await FirebaseMessaging.instance.getAPNSToken();
+    String? apnsToken;
+    try {
+      apnsToken = await FirebaseMessaging.instance.getAPNSToken();
+    } catch (e, stack) {
+      // APNSトークンが未設定のエラーはユーザーが対処できないため、Crashlyticsへの記録のみ行う
+      errorLogger.recordError(e, stack);
+    }
     // SimulatorではFCMトークンが取得できないため、デバッグモードでは取得しない。次のリンクのやり方を参考。https://github.com/firebase/flutterfire/issues/13575
     if (kDebugMode) {
       // デバッグモードではFCMトークンを'debug_mode'として登録する
