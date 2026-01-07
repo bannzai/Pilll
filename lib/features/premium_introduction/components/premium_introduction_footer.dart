@@ -88,11 +88,16 @@ class PremiumIntroductionFooter extends StatelessWidget {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 16),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            decoration: BoxDecoration(
+              color: AppColors.secondary,
+              borderRadius: BorderRadius.circular(8),
+            ),
             child: RichText(
               text: TextSpan(
-                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.gray),
+                style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: Colors.white),
                 children: [
                   TextSpan(text: L.lifetimePurchaseNotice1),
                   TextSpan(
