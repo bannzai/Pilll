@@ -50,6 +50,7 @@
   pills: [
     {
       index: number,
+      takenCount: number,  // このピルを完了するのに必要な服用回数
       createdDateTime: Timestamp,
       updatedDateTime: Timestamp,
       pillTakens: [
