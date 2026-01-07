@@ -467,7 +467,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet2,
-          after: updatedPillSheet,
+          after: updatedPillSheet2,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -553,7 +553,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet2,
-          after: updatedPillSheet,
+          after: updatedPillSheet2,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
