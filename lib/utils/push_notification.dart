@@ -33,11 +33,17 @@ Future<void> requestNotificationPermissions(RegisterRemotePushNotificationToken 
   }
 
   if (Platform.isAndroid) {
-    await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
+    try {
+      await FirebaseMessaging.instance.requestPermission(alert: true, badge: true, sound: true, announcement: true);
+      final fcmToken = await FirebaseMessaging.instance.getToken();
+      registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: null);
+    } catch (e, stack) {
+      // Androidの通知設定エラーはユーザーが対処できないため、Crashlyticsへの記録のみ行う
+      debugPrint('[ERROR] requestNotificationPermissions: $e');
+      errorLogger.recordError(e, stack);
+    }
 
-    final fcmToken = await FirebaseMessaging.instance.getToken();
-    registerRemotePushNotificationToken(fcmToken: fcmToken, apnsToken: null);
-
+    // 以下はユーザーが対処できるエラーなのでthrowする
     final androidNotificationGranded = await AndroidFlutterLocalNotificationsPlugin().requestNotificationsPermission();
     if (androidNotificationGranded != true) {
       throw Exception('通知権限が許可されていません。設定から許可してください。');
