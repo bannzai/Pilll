@@ -146,11 +146,9 @@ extension RevertedPillSheet on PillSheet {
         // toDateより後の日付のピルの服用記録をクリアする
         final dateOfPill = dates[pill.index];
         if (dateOfPill.isBefore(toDate) || isSameDay(dateOfPill, toDate)) {
-          debugPrint('early return pill: ${pill.index}');
           return pill;
         }
 
-        debugPrint('clear pill: ${pill.index}');
         return pill.copyWith(pillTakens: []);
       }).toList(),
     );
