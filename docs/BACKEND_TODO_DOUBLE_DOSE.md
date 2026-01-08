@@ -46,11 +46,12 @@
 ```typescript
 // 追加フィールド
 {
+  // NOTE: 記録用。実際の判定には pills[].takenCount を使用すること
   pillTakenCount: number,  // 1回に飲む錠数（デフォルト: 1）
   pills: [
     {
       index: number,
-      takenCount: number,  // このピルを完了するのに必要な服用回数
+      takenCount: number,  // このピルを完了するのに必要な服用回数（正の値）
       createdDateTime: Timestamp,
       updatedDateTime: Timestamp,
       pillTakens: [
