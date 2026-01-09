@@ -515,6 +515,11 @@ extension PillSheetV2Extension on PillSheetV2 {
     if (newPills.isEmpty) {
       return pills;
     }
+    assert(newPills.first.index >= 0 && newPills.last.index < pills.length, 'newPills indices are out of bounds');
+    // indexがはみ出た場合は早期リターン
+    if (newPills.first.index < 0 || newPills.last.index >= pills.length) {
+      return pills;
+    }
     return [...pills]..replaceRange(newPills.first.index, newPills.last.index + 1, newPills);
   }
 }
