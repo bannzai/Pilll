@@ -431,7 +431,7 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシート内の各ピルの服用予定日リスト
   /// 休薬期間を考慮した実際の服用日程が格納される
-  List<DateTime> get dates => buildDates();
+  late final List<DateTime> dates = buildDates();
 
   // ピルシートのピルの日付を取得する
   /// ピルシートの各ピルの服用予定日を構築
