@@ -1148,5 +1148,265 @@ void main() {
         expect(resultV2.pills[1].pillTakens.length, 2);
       });
     });
+
+    group("v2 各PillSheetTypeでの境界値テスト", () {
+      // 各PillSheetTypeでの境界値を検証するヘルパー
+      void testPillSheetTypeBoundary(PillSheetType sheetType) {
+        final mockTodayRepository = MockTodayService();
+        final beginDate = DateTime.parse("2022-07-24");
+        // estimatedEndTakenDate相当の日を今日としてセット
+        final mockNow = beginDate.add(Duration(days: sheetType.totalCount - 1));
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: beginDate.add(Duration(days: sheetType.totalCount - 2)),
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index < sheetType.totalCount - 1) {
+                // 最後のピル以外は完了済み
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: sheetType.typeInfo,
+        );
+
+        // pills.lengthとtypeInfo.totalCountの一致を検証
+        expect((pillSheet as PillSheetV2).pills.length, sheetType.totalCount);
+
+        // 最後のピル（estimatedEndTakenDate）の服用を記録
+        final result = pillSheet.takenPillSheet(mockNow);
+
+        final resultV2 = result as PillSheetV2;
+        // 最後のピルに服用記録が追加されている
+        expect(resultV2.pills[sheetType.totalCount - 1].pillTakens.length, 1);
+        // 配列範囲外アクセスが発生していないことを確認
+        expect(resultV2.pills.length, sheetType.totalCount);
+      }
+
+      test("pillsheet_21 (21錠+休薬7日) の境界値テスト", () {
+        testPillSheetTypeBoundary(PillSheetType.pillsheet_21);
+      });
+
+      test("pillsheet_28_4 (24錠+偽薬4日) の境界値テスト", () {
+        testPillSheetTypeBoundary(PillSheetType.pillsheet_28_4);
+      });
+
+      test("pillsheet_28_0 (全実薬28錠) の境界値テスト", () {
+        testPillSheetTypeBoundary(PillSheetType.pillsheet_28_0);
+      });
+
+      test("pillsheet_24_rest_4 (24錠+休薬4日) の境界値テスト", () {
+        testPillSheetTypeBoundary(PillSheetType.pillsheet_24_rest_4);
+      });
+
+      test("pillsheet_24_0 (全実薬24錠) の境界値テスト", () {
+        testPillSheetTypeBoundary(PillSheetType.pillsheet_24_0);
+      });
+
+      test("pillsheet_21_0 (全実薬21錠) の境界値テスト", () {
+        testPillSheetTypeBoundary(PillSheetType.pillsheet_21_0);
+      });
+    });
+
+    group("v2 RestDurationのケース別テスト", () {
+      test("RestDurationなしの場合のピル番号計算", () {
+        final mockTodayRepository = MockTodayService();
+        final mockNow = DateTime.parse("2022-07-27");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final beginDate = DateTime.parse("2022-07-24");
+        // 3日目(7/26)まで完了、今日4日目
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: DateTime.parse("2022-07-26"),
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 2) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: sheetType.typeInfo,
+        );
+
+        // todayPillNumberは4
+        expect(pillSheet.todayPillNumber, 4);
+
+        // 4日目を服用
+        final result = pillSheet.takenPillSheet(mockNow);
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.pills[3].pillTakens.length, 1);
+      });
+
+      test("RestDuration完了済みの場合のピル番号計算", () {
+        final mockTodayRepository = MockTodayService();
+        final mockNow = DateTime.parse("2022-07-30");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final beginDate = DateTime.parse("2022-07-24");
+        // 3日間の休薬期間あり (7/26-7/28)
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: DateTime.parse("2022-07-29"),
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          restDurations: [
+            RestDuration(
+              id: "rest_1",
+              beginDate: DateTime.parse("2022-07-26"),
+              endDate: DateTime.parse("2022-07-29"),
+              createdDate: DateTime.parse("2022-07-26"),
+            ),
+          ],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 2) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: sheetType.typeInfo,
+        );
+
+        // 休薬期間を考慮したピル番号
+        // 7/30 は beginDate(7/24) から6日経過、休薬3日なので 6 - 3 + 1 = 4番目
+        expect(pillSheet.todayPillNumber, 4);
+      });
+
+      test("複数のRestDurationがある場合のピル番号計算", () {
+        final mockTodayRepository = MockTodayService();
+        final mockNow = DateTime.parse("2022-08-05");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockNow);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final beginDate = DateTime.parse("2022-07-24");
+        // 複数の休薬期間: 7/26-7/27 (1日) と 7/30-8/01 (2日)
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: DateTime.parse("2022-08-04"),
+          createdAt: now(),
+          groupIndex: 0,
+          pillTakenCount: 2,
+          restDurations: [
+            RestDuration(
+              id: "rest_1",
+              beginDate: DateTime.parse("2022-07-26"),
+              endDate: DateTime.parse("2022-07-27"),
+              createdDate: DateTime.parse("2022-07-26"),
+            ),
+            RestDuration(
+              id: "rest_2",
+              beginDate: DateTime.parse("2022-07-30"),
+              endDate: DateTime.parse("2022-08-01"),
+              createdDate: DateTime.parse("2022-07-30"),
+            ),
+          ],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 8) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: now(), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: now(), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: sheetType.typeInfo,
+        );
+
+        // 8/5 は beginDate(7/24) から12日経過、休薬合計3日なので 12 - 3 + 1 = 10番目
+        expect(pillSheet.todayPillNumber, 10);
+
+        // 10日目を服用
+        final result = pillSheet.takenPillSheet(mockNow);
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.pills[9].pillTakens.length, 1);
+      });
+    });
   });
 }
