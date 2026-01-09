@@ -233,7 +233,7 @@ sealed class PillSheet with _$PillSheet {
 
     /// 1回の服用で飲むピルの錠数
     /// 2錠飲みの場合は2がセットされる
-    /// NOTE: Firestoreドキュメントからの参照確認用。実際の判定には pills[].takenCount を使用すること
+    /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
     required int pillTakenCount,
 
     /// 各ピルの詳細情報リスト
