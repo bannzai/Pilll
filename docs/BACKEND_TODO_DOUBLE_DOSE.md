@@ -46,7 +46,7 @@
 ```typescript
 // 追加フィールド
 {
-  // NOTE: 記録用。実際の判定には pills[].takenCount を使用すること
+  // NOTE: 1日の服用錠数は pills[].takenCount で判定すること
   pillTakenCount: number,  // 1回に飲む錠数（デフォルト: 1）
   pills: [
     {
