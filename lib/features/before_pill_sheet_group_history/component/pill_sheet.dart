@@ -159,7 +159,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
             return null;
           }
           final takenCount = v2.pills[pillIndex].pillTakens.length;
-          final remaining = v2.pillTakenCount - takenCount;
+          final remaining = v2.pills[pillIndex].takenCount - takenCount;
           return remaining > 0 ? remaining : null;
         }(),
     };
