@@ -46,7 +46,7 @@
 ```typescript
 // 追加フィールド
 {
-  // NOTE: 1日の服用錠数は pills[].takenCount で判定すること
+  // NOTE: 1日の服用錠数は pills 配列内の各要素の takenCount プロパティで判定すること
   pillTakenCount: number,  // 1回に飲む錠数（デフォルト: 1）
   pills: [
     {
