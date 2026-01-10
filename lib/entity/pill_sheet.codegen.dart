@@ -471,13 +471,25 @@ extension PillSheetV2Extension on PillSheetV2 {
       return 0;
     }
 
+    // データ不整合（pills.length > dates.length）の場合のガード
+    // マイグレーション途中や壊れたデータでRangeErrorを防ぐ
+    if (lastCompletedPill.index >= dates.length) {
+      return dates.length;
+    }
+
     // 休薬期間を考慮したdatesプロパティを使用してピルの正確な日付を取得
     final dateOfLastCompletedPill = dates[lastCompletedPill.index];
     return pillNumberFor(targetDate: dateOfLastCompletedPill);
   }
 
   /// 今日のピルがすべて服用完了したかどうか
+  /// ピルシートの終了日を過ぎている場合はfalseを返す
   bool get todayPillsAreAlreadyTaken {
+    // anyTodayPillsAreAlreadyTakenと同様に境界チェックを行う
+    // todayPillIndexがpills.lengthを超える場合（ピルシート終了後）はfalse
+    if (todayPillIndex < 0 || todayPillIndex >= pills.length) {
+      return false;
+    }
     return lastCompletedPillNumber == todayPillNumber;
   }
 

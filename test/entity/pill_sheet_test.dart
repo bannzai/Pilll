@@ -6791,6 +6791,51 @@ void main() {
 
         expect(pillSheet.todayPillsAreAlreadyTaken, false);
       });
+
+      test("ピルシートの終了日を過ぎた場合でもRangeErrorが発生しない", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 21日型ピルシートで開始日が2022-05-01の場合、終了日は2022-05-21
+        // 今日を2022-06-01に設定（ピルシート終了日を10日超過）
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        // 全てのピルを服用完了済みにする
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: DateTime.parse("2022-05-21"),
+          createdAt: now(),
+          groupIndex: 0,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+              ],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        // todayPillNumberはピルシート終了日を超えた日数も含めて計算される
+        // 2022-05-01から2022-06-01は32日目なのでtodayPillNumber = 32
+        // lastCompletedPillNumber = 21（最後の完了済みピル）
+        // 32 != 21 なので false を返す
+        expect(pillSheet.todayPillNumber, greaterThan(sheetType.totalCount));
+        expect(pillSheet.lastCompletedPillNumber, sheetType.totalCount);
+        expect(pillSheet.todayPillsAreAlreadyTaken, false);
+      });
     });
 
     group("#anyTodayPillsAreAlreadyTaken", () {
@@ -6874,6 +6919,48 @@ void main() {
           ),
         ) as PillSheetV2;
 
+        expect(pillSheet.anyTodayPillsAreAlreadyTaken, false);
+      });
+
+      test("ピルシートの終了日を過ぎた場合、todayPillIndexが範囲外になるためfalseを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 21日型ピルシートで開始日が2022-05-01の場合、終了日は2022-05-21
+        // 今日を2022-06-01に設定（ピルシート終了日を10日超過）
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        // 全てのピルを服用完了済みにする
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginingDate: DateTime.parse("2022-05-01"),
+          lastTakenDate: DateTime.parse("2022-05-21"),
+          createdAt: now(),
+          groupIndex: 0,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+              ],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        // todayPillIndexはtodayPillNumber - 1 = 31で、pills.length(21)を超える
+        // 境界チェックによりfalseを返す
+        expect(pillSheet.todayPillIndex, greaterThanOrEqualTo(sheetType.totalCount));
         expect(pillSheet.anyTodayPillsAreAlreadyTaken, false);
       });
     });
@@ -7149,6 +7236,112 @@ void main() {
 
       // lastWhereOrNullで最後の完了済みピルを探すので、3日目（index 2）が返される
       expect(pillSheet.lastCompletedPillNumber, 3);
+    });
+
+    test("pillsの長さがtypeInfo.totalCountより少ない場合でもRangeErrorが発生しない", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-27"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      // 通常28個のピルがあるべきところ、10個しかない（データ不整合のシミュレーション）
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-07-24"),
+        lastTakenDate: DateTime.parse("2022-07-26"),
+        createdAt: now(),
+        groupIndex: 0,
+        pills: List.generate(
+          10, // 本来は28個だが10個しかない
+          (index) {
+            if (index <= 2) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      // pills.length(10) < dates.length(28) の場合
+      // lastCompletedPill.index は最大9なので、dates[9]へのアクセスは安全
+      expect(pillSheet.lastCompletedPillNumber, 3);
+    });
+
+    test("pillsの長さがtypeInfo.totalCountより多い場合でもRangeErrorが発生しない", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-08-05"));
+
+      // 21日型シートだが35個のピルがある場合（データ不整合のシミュレーション）
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginingDate: DateTime.parse("2022-07-24"),
+        lastTakenDate: DateTime.parse("2022-08-05"),
+        createdAt: now(),
+        groupIndex: 0,
+        pills: List.generate(
+          35, // 本来は21個だが35個ある
+          (index) {
+            // 30番目のピルまで服用完了
+            if (index <= 29) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      // pills.length(35) > dates.length(21) の場合
+      // lastCompletedPill.index = 29 で dates.length = 21 なので
+      // ガードによりdates.length(21)が返される
+      expect(pillSheet.lastCompletedPillNumber, sheetType.totalCount);
     });
   });
 
