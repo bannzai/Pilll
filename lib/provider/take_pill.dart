@@ -159,7 +159,8 @@ extension TakenPillSheet on PillSheet {
     }
 
     // lastTakenDateは既存値より過去日に巻き戻さない（同日の場合も既存値を維持）
-    final newLastTakenDate = v2.lastTakenDate != null && (v2.lastTakenDate!.isAfter(takenDate) || isSameDay(v2.lastTakenDate!, takenDate)) ? v2.lastTakenDate : takenDate;
+    final newLastTakenDate =
+        v2.lastTakenDate != null && (v2.lastTakenDate!.isAfter(takenDate) || isSameDay(v2.lastTakenDate!, takenDate)) ? v2.lastTakenDate : takenDate;
 
     return v2.copyWith(
       lastTakenDate: newLastTakenDate,
