@@ -338,7 +338,7 @@ class RegisterReminderLocalNotification {
               // 現在のアクティブなピルシートからpillTakenCountを取得（v1の場合は1）
               final currentPillTakenCount = switch (activePillSheet) {
                 PillSheetV1() => 1,
-                PillSheetV2 v2 => v2.pillTakenCount,
+                PillSheetV2 v2 => v2.pills.first.takenCount,
               };
               final nextPillSheetGroup = buildPillSheetGroup(
                 setting: setting,
