@@ -38,7 +38,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -138,7 +138,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-26"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -307,7 +307,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -403,7 +403,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -499,7 +499,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -595,7 +595,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -694,7 +694,7 @@ void main() {
           beginingDate: DateTime.parse("2022-07-31"),
           lastTakenDate: DateTime.parse("2022-08-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -792,7 +792,7 @@ void main() {
           beginingDate: DateTime.parse("2022-12-31"),
           lastTakenDate: DateTime.parse("2023-01-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -890,7 +890,7 @@ void main() {
           beginingDate: DateTime.parse("2024-02-28"),
           lastTakenDate: DateTime.parse("2024-02-29"),
           createdAt: now(),
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -988,7 +988,7 @@ void main() {
           beginingDate: DateTime.parse("2023-02-28"),
           lastTakenDate: DateTime.parse("2023-03-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {

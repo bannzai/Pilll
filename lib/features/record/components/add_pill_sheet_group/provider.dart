@@ -95,7 +95,7 @@ PillSheetGroup buildPillSheetGroup({
         lastTakenDate: null,
         groupIndex: pageIndex,
         createdAt: now(),
-        pillTakenCount: pillTakenCount,
+        // pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: pillSheetType,
           fromDate: beginingDate,

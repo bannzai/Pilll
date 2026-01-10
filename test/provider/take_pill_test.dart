@@ -152,7 +152,7 @@ void main() {
             beginingDate: mockNow.date(),
             lastTakenDate: null,
             createdAt: now(),
-            pillTakenCount: 2,
+            //  pillTakenCount: 2,
             pills: List.generate(
               sheetType.totalCount,
               (index) => Pill(
@@ -225,7 +225,7 @@ void main() {
             beginingDate: mockNow.date(),
             lastTakenDate: mockNow,
             createdAt: now(),
-            pillTakenCount: 2,
+            //  pillTakenCount: 2,
             pills: List.generate(
               sheetType.totalCount,
               (index) {
@@ -315,7 +315,7 @@ void main() {
             beginingDate: mockNow.date(),
             lastTakenDate: mockNow,
             createdAt: now(),
-            pillTakenCount: 2,
+            //  pillTakenCount: 2,
             pills: List.generate(
               sheetType.totalCount,
               (index) {
@@ -393,7 +393,7 @@ void main() {
             beginingDate: DateTime.parse("2022-07-24"),
             lastTakenDate: null,
             createdAt: now(),
-            pillTakenCount: 2,
+            //  pillTakenCount: 2,
             pills: List.generate(
               sheetType.totalCount,
               (index) => Pill(
@@ -979,7 +979,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -1034,7 +1034,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -1092,7 +1092,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-26"), // 今日
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -1104,8 +1104,14 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
-                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(
+                        recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                        createdDateTime: now(),
+                        updatedDateTime: now()),
+                    PillTaken(
+                        recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                        createdDateTime: now(),
+                        updatedDateTime: now()),
                   ],
                 );
               }
@@ -1165,7 +1171,7 @@ void main() {
           lastTakenDate: beginDate.add(Duration(days: sheetType.totalCount - 2)),
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -1248,7 +1254,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-26"),
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           restDurations: [],
           pills: List.generate(
             sheetType.totalCount,
@@ -1301,7 +1307,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-29"),
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           restDurations: [
             RestDuration(
               id: "rest_1",
@@ -1357,7 +1363,7 @@ void main() {
           lastTakenDate: DateTime.parse("2022-08-04"),
           createdAt: now(),
           groupIndex: 0,
-          pillTakenCount: 2,
+          //  pillTakenCount: 2,
           restDurations: [
             RestDuration(
               id: "rest_1",

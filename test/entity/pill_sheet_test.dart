@@ -6503,7 +6503,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) => Pill(
@@ -6536,7 +6536,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -6586,7 +6586,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -6641,7 +6641,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime.parse("2022-05-02"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -6698,7 +6698,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -6753,7 +6753,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -6805,7 +6805,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -6855,7 +6855,7 @@ void main() {
           beginingDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
-          pillTakenCount: 2,
+          // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) => Pill(
@@ -6892,7 +6892,7 @@ void main() {
         lastTakenDate: null,
         createdAt: now(),
         groupIndex: 0,
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -6926,7 +6926,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {
@@ -6974,7 +6974,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-07-26"),
         createdAt: now(),
         groupIndex: 0,
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {
@@ -7030,7 +7030,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-07-29"),
         createdAt: now(),
         groupIndex: 0,
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         restDurations: [
           RestDuration(
             id: "rest_duration_id",
@@ -7090,7 +7090,7 @@ void main() {
         lastTakenDate: DateTime.parse("2022-07-26"),
         createdAt: now(),
         groupIndex: 0,
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {
@@ -7162,7 +7162,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: null,
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -7187,7 +7187,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {
@@ -7228,7 +7228,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: null,
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -7256,7 +7256,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {
@@ -7296,7 +7296,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: DateTime.parse("2022-07-25"),
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {
@@ -7338,7 +7338,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: null,
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -7364,7 +7364,7 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: DateTime.parse("2022-07-26"),
         createdAt: now(),
-        pillTakenCount: 2,
+        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) {

@@ -260,7 +260,7 @@ sealed class PillSheet with _$PillSheet {
         beginingDate: beginDate,
         lastTakenDate: lastTakenDate,
         createdAt: now(),
-        pillTakenCount: pillTakenCount,
+        // pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: type,
           fromDate: beginDate,
