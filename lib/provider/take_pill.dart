@@ -144,8 +144,15 @@ extension TakenPillSheet on PillSheet {
   PillSheet _takenPillSheetV2(DateTime takenDate) {
     final v2 = this as PillSheetV2;
 
+    // pillsが空の場合は何もせず元のシートを返す
+    if (v2.pills.isEmpty) {
+      return v2;
+    }
+
     // 一番最後の記録対象のピル
-    final finalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
+    final rawFinalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
+    // 範囲外のインデックスをクランプ
+    final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(0, v2.pills.length - 1);
 
     // 前日のピルが未完了の場合はエラーをthrow
     if (finalTakenPillIndex > 0) {

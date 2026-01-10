@@ -1414,5 +1414,261 @@ void main() {
         expect(resultV2.pills[9].pillTakens.length, 1);
       });
     });
+
+    group("v2 境界値テスト - finalTakenPillIndex の範囲チェック", () {
+      test("pillsが空リストの場合、RangeErrorが発生せず元のシートを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-25"));
+
+        final emptyPillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: null,
+          createdAt: now(),
+          groupIndex: 0,
+          typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+          pills: [], // 空リスト
+        );
+
+        // beginDate の日付で記録を試みる
+        final result = emptyPillSheet.takenPillSheet(DateTime.parse("2022-07-24"));
+
+        // 例外が発生せず、元のシートが返されることを確認
+        expect(result.lastTakenDate, isNull);
+        expect((result as PillSheetV2).pills, isEmpty);
+      });
+
+      test("takenDateがbeginingDateより前の日付の場合、finalTakenPillIndexが0以下になり適切に処理される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-22"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: DateTime.parse("2022-07-24"),
+          lastTakenDate: null,
+          createdAt: now(),
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              index: index,
+              takenCount: 2,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            ),
+          ),
+        );
+
+        // beginDate(7/24)より2日前の日付(7/22)で記録を試みる
+        // pillNumberForは最小で1を返すので、finalTakenPillIndex = 0
+        final result = pillSheet.takenPillSheet(DateTime.parse("2022-07-22"));
+
+        // RangeErrorが発生しないことを確認
+        // 1番目のピルに1回の服用記録が追加される
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.pills[0].pillTakens.length, 1);
+      });
+
+      test("takenDateがestimatedEndTakenDateより後の場合、finalTakenPillIndexがクランプされて最後のピルが記録される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-08-15"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        // 全てのピルを完了済みにする（最後のピル以外）
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: DateTime.parse("2022-07-01"),
+          lastTakenDate: DateTime.parse("2022-07-20"),
+          createdAt: now(),
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index < sheetType.totalCount - 1) {
+                // 最後のピル以外は完了済み
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+        );
+
+        // シート終了日(7/21)より遥か後の日付(8/15)で記録を試みる
+        // finalTakenPillIndexはクランプされて最後のピル(index 20)が対象になる
+        final farFutureDate = DateTime.parse("2022-08-15");
+        final result = pillSheet.takenPillSheet(farFutureDate);
+
+        // RangeErrorが発生せず、最後のピルに記録が追加されることを確認
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.pills.last.pillTakens.length, 1);
+      });
+
+      test("finalTakenPillIndexがpills.length - 1（最後のピル）の場合、正常に記録される", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        final beginDate = DateTime.parse("2022-07-01");
+
+        // pillsheet_21_0は21錠のみ（偽薬なし）
+        const sheetType = PillSheetType.pillsheet_21_0;
+        when(mockTodayRepository.now()).thenReturn(beginDate.add(Duration(days: sheetType.totalCount - 1)));
+
+        // すべての前日のピルを完了済みにする（最後のピル以外）
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: beginDate.add(Duration(days: sheetType.totalCount - 2)),
+          createdAt: now(),
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              // 最後のピル以外は完了済み
+              if (index < sheetType.totalCount - 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  ],
+                );
+              }
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+        );
+
+        // 最後のピルの日付
+        final lastPillDate = beginDate.add(Duration(days: sheetType.totalCount - 1));
+        final result = pillSheet.takenPillSheet(lastPillDate);
+
+        // 正常に記録され、RangeErrorが発生しないことを確認
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.lastTakenDate, equals(lastPillDate));
+        final lastPill = resultV2.pills.last;
+        expect(lastPill.pillTakens.length, 1); // 最後のピルなので1回のみ追加
+      });
+
+      test("finalTakenPillIndexが0（最初のピル）の場合、前日チェックがスキップされて正常に記録される", () {
+        final mockTodayRepository = MockTodayService();
+        final beginDate = DateTime.parse("2022-07-24");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(beginDate);
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: null,
+          createdAt: now(),
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              index: index,
+              takenCount: 2,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            ),
+          ),
+        );
+
+        // 最初のピルの日付
+        final result = pillSheet.takenPillSheet(beginDate);
+
+        // 前日のピルが存在しないため、前日チェックがスキップされ、正常に記録される
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.lastTakenDate, equals(beginDate));
+        expect(resultV2.pills[0].pillTakens.length, 1); // 最初のピルなので1回追加
+      });
+
+      test("pillsの長さがtypeInfo.totalCountより少ない場合、クランプされて最後のピルが対象になる", () {
+        final mockTodayRepository = MockTodayService();
+        final beginDate = DateTime.parse("2022-07-01");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(beginDate.add(const Duration(days: 14)));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        // 通常28個のピルがあるべきところ、10個しかない（データ不整合のシミュレーション）
+        // 最後のピル以外は完了済みにする
+        final incompletePills = List.generate(
+          10, // 本来は28個だが10個しかない
+          (index) {
+            if (index < 9) {
+              return Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(recordedTakenDateTime: beginDate.add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              index: index,
+              takenCount: 2,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        );
+
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          beginingDate: beginDate,
+          lastTakenDate: beginDate.add(const Duration(days: 8)),
+          createdAt: now(),
+          groupIndex: 0,
+          typeInfo: sheetType.typeInfo, // typeInfo は28日分だが pills は10個
+          pills: incompletePills,
+        );
+
+        // 15日目を記録しようとする（pillNumberFor は15を返すが、pills は10個しかない）
+        // クランプされて最後のピル(index 9)が対象になる
+        final targetDate = beginDate.add(const Duration(days: 14));
+        final result = pillSheet.takenPillSheet(targetDate);
+
+        // RangeErrorが発生せず、クランプされて処理されることを確認
+        final resultV2 = result as PillSheetV2;
+        expect(resultV2.pills.length, 10);
+        expect(resultV2.pills.last.pillTakens.length, 1);
+      });
+    });
   });
 }
