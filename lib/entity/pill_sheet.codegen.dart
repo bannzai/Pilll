@@ -119,11 +119,11 @@ class RestDuration with _$RestDuration {
 // ただし、2錠飲みのユーザーがどのくらいいるのかを把握して、明らかに少ない場合はこの限りではない。サポートをやめることも考慮する
 @freezed
 sealed class PillSheet with _$PillSheet {
-  const PillSheet._();
+  PillSheet._();
 
   /// v1: 従来の1錠飲みユーザー向け
   @JsonSerializable(explicitToJson: true)
-  const factory PillSheet.v1({
+  factory PillSheet.v1({
     /// FirestoreドキュメントID
     /// データベース保存時に自動生成される一意識別子
     @JsonKey(includeIfNull: false) required String? id,
@@ -180,7 +180,7 @@ sealed class PillSheet with _$PillSheet {
 
   /// v2: 2錠飲み対応
   @JsonSerializable(explicitToJson: true)
-  const factory PillSheet.v2({
+  factory PillSheet.v2({
     /// FirestoreドキュメントID
     /// データベース保存時に自動生成される一意識別子
     @JsonKey(includeIfNull: false) required String? id,

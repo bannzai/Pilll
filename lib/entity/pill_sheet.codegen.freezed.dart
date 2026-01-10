@@ -753,7 +753,7 @@ class __$$PillSheetV1ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res
 
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetV1Impl extends PillSheetV1 {
-  const _$PillSheetV1Impl(
+  _$PillSheetV1Impl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -983,7 +983,7 @@ class _$PillSheetV1Impl extends PillSheetV1 {
 }
 
 abstract class PillSheetV1 extends PillSheet {
-  const factory PillSheetV1(
+  factory PillSheetV1(
       {@JsonKey(includeIfNull: false) required final String? id,
       @JsonKey() required final PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -995,7 +995,7 @@ abstract class PillSheetV1 extends PillSheet {
       final int groupIndex,
       final List<RestDuration> restDurations,
       final String version}) = _$PillSheetV1Impl;
-  const PillSheetV1._() : super._();
+  PillSheetV1._() : super._();
 
   @override
 
@@ -1134,7 +1134,7 @@ class __$$PillSheetV2ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res
 
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetV2Impl extends PillSheetV2 {
-  const _$PillSheetV2Impl(
+  _$PillSheetV2Impl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1198,7 +1198,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
 
   /// 1回の服用で飲むピルの錠数
   /// 2錠飲みの場合は2がセットされる
-  /// @deprecated pill.takenCount を使用してください。各ピルごとに服用回数を管理するようになりました
+  /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
   @override
   final int pillTakenCount;
 
@@ -1388,7 +1388,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
 }
 
 abstract class PillSheetV2 extends PillSheet {
-  const factory PillSheetV2(
+  factory PillSheetV2(
       {@JsonKey(includeIfNull: false) required final String? id,
       @JsonKey() required final PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1402,7 +1402,7 @@ abstract class PillSheetV2 extends PillSheet {
       required final int pillTakenCount,
       required final List<Pill> pills,
       final String version}) = _$PillSheetV2Impl;
-  const PillSheetV2._() : super._();
+  PillSheetV2._() : super._();
 
   @override
 
@@ -1441,7 +1441,7 @@ abstract class PillSheetV2 extends PillSheet {
 
   /// 1回の服用で飲むピルの錠数
   /// 2錠飲みの場合は2がセットされる
-  /// @deprecated pill.takenCount を使用してください。各ピルごとに服用回数を管理するようになりました
+  /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
   int get pillTakenCount;
 
   /// 各ピルの詳細情報リスト
