@@ -45,6 +45,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -63,6 +64,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -143,6 +145,7 @@ void main() {
               if (index <= 2) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -161,6 +164,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -310,6 +314,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -328,6 +333,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -404,6 +410,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -422,6 +429,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -498,6 +506,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -516,6 +525,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -592,6 +602,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -610,6 +621,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -689,6 +701,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -707,6 +720,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -785,6 +799,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -803,6 +818,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -881,6 +897,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -899,6 +916,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],
@@ -977,6 +995,7 @@ void main() {
               if (index <= 1) {
                 return Pill(
                   index: index,
+                  takenCount: 2,
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
@@ -995,6 +1014,7 @@ void main() {
               }
               return Pill(
                 index: index,
+                takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
                 pillTakens: [],

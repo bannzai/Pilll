@@ -802,6 +802,7 @@ void main() {
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(const Duration(days: 10)),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ['1'],
@@ -862,6 +863,7 @@ void main() {
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(const Duration(days: 10)),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ['1'],
@@ -922,6 +924,7 @@ void main() {
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(const Duration(days: 10)),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ['1'],
@@ -987,6 +990,7 @@ void main() {
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday,
             beginDate: mockToday.subtract(const Duration(days: 10)),
+            pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ['1'],
