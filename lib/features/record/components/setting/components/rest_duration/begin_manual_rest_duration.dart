@@ -45,7 +45,11 @@ class BeginManualRestDuration extends HookConsumerWidget {
       onTap: () {
         analytics.logEvent(name: 'begin_manual_rest_duration_pressed', parameters: {'pill_sheet_id': activePillSheet.id});
 
-        if (activePillSheet.todayPillIsAlreadyTaken) {
+        final todayPillsAreAlreadyTaken = switch (activePillSheet) {
+          PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
+          PillSheetV2 v2 => v2.todayPillsAreAlreadyTaken,
+        };
+        if (todayPillsAreAlreadyTaken) {
           showInvalidAlreadyTakenPillDialog(context);
         } else {
           showRecordPageRestDurationDialog(
