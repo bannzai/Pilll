@@ -491,7 +491,6 @@ mixin _$PillSheet {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)
         v2,
@@ -521,7 +520,6 @@ mixin _$PillSheet {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)?
         v2,
@@ -551,7 +549,6 @@ mixin _$PillSheet {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)?
         v2,
@@ -872,7 +869,6 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)
         v2,
@@ -905,7 +901,6 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)?
         v2,
@@ -938,7 +933,6 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)?
         v2,
@@ -1054,7 +1048,6 @@ abstract class _$$PillSheetV2ImplCopyWith<$Res> implements $PillSheetCopyWith<$R
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
       List<RestDuration> restDurations,
-      int pillTakenCount,
       List<Pill> pills,
       String version});
 
@@ -1077,7 +1070,6 @@ class __$$PillSheetV2ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res
     Object? deletedAt = freezed,
     Object? groupIndex = null,
     Object? restDurations = null,
-    Object? pillTakenCount = null,
     Object? pills = null,
     Object? version = null,
   }) {
@@ -1114,10 +1106,6 @@ class __$$PillSheetV2ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res
           ? _value._restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
-      pillTakenCount: null == pillTakenCount
-          ? _value.pillTakenCount
-          : pillTakenCount // ignore: cast_nullable_to_non_nullable
-              as int,
       pills: null == pills
           ? _value._pills
           : pills // ignore: cast_nullable_to_non_nullable
@@ -1144,7 +1132,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
       this.groupIndex = 0,
       final List<RestDuration> restDurations = const [],
-      required this.pillTakenCount,
       required final List<Pill> pills,
       this.version = 'v2'})
       : _restDurations = restDurations,
@@ -1199,13 +1186,15 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   /// 1回の服用で飲むピルの錠数
   /// 2錠飲みの場合は2がセットされる
   /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
-  @override
-  final int pillTakenCount;
-
+// required int pillTakenCount,
   /// 各ピルの詳細情報リスト
   /// 2錠飲み対応のため、各ピルごとの服用記録を管理
   final List<Pill> _pills;
 
+  /// 1回の服用で飲むピルの錠数
+  /// 2錠飲みの場合は2がセットされる
+  /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
+// required int pillTakenCount,
   /// 各ピルの詳細情報リスト
   /// 2錠飲み対応のため、各ピルごとの服用記録を管理
   @override
@@ -1222,7 +1211,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
 
   @override
   String toString() {
-    return 'PillSheet.v2(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pillTakenCount: $pillTakenCount, pills: $pills, version: $version)';
+    return 'PillSheet.v2(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pills: $pills, version: $version)';
   }
 
   @override
@@ -1238,14 +1227,13 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
             (identical(other.groupIndex, groupIndex) || other.groupIndex == groupIndex) &&
             const DeepCollectionEquality().equals(other._restDurations, _restDurations) &&
-            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount) &&
             const DeepCollectionEquality().equals(other._pills, _pills) &&
             (identical(other.version, version) || other.version == version));
   }
 
   @override
   int get hashCode => Object.hash(runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex,
-      const DeepCollectionEquality().hash(_restDurations), pillTakenCount, const DeepCollectionEquality().hash(_pills), version);
+      const DeepCollectionEquality().hash(_restDurations), const DeepCollectionEquality().hash(_pills), version);
 
   @JsonKey(ignore: true)
   @override
@@ -1277,12 +1265,11 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)
         v2,
   }) {
-    return v2(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pillTakenCount, pills, version);
+    return v2(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
   }
 
   @override
@@ -1310,12 +1297,11 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)?
         v2,
   }) {
-    return v2?.call(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pillTakenCount, pills, version);
+    return v2?.call(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
   }
 
   @override
@@ -1343,14 +1329,13 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
             List<RestDuration> restDurations,
-            int pillTakenCount,
             List<Pill> pills,
             String version)?
         v2,
     required TResult orElse(),
   }) {
     if (v2 != null) {
-      return v2(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pillTakenCount, pills, version);
+      return v2(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
     }
     return orElse();
   }
@@ -1399,7 +1384,6 @@ abstract class PillSheetV2 extends PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final int groupIndex,
       final List<RestDuration> restDurations,
-      required final int pillTakenCount,
       required final List<Pill> pills,
       final String version}) = _$PillSheetV2Impl;
   PillSheetV2._() : super._();
@@ -1442,8 +1426,7 @@ abstract class PillSheetV2 extends PillSheet {
   /// 1回の服用で飲むピルの錠数
   /// 2錠飲みの場合は2がセットされる
   /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
-  int get pillTakenCount;
-
+// required int pillTakenCount,
   /// 各ピルの詳細情報リスト
   /// 2錠飲み対応のため、各ピルごとの服用記録を管理
   List<Pill> get pills;
