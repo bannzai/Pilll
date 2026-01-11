@@ -449,9 +449,7 @@ mixin _$PillSheet {
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate => throw _privateConstructorUsedError; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get lastTakenDate => throw _privateConstructorUsedError;
+  DateTime get beginingDate => throw _privateConstructorUsedError;
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -486,7 +484,6 @@ mixin _$PillSheet {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -515,7 +512,6 @@ mixin _$PillSheet {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -544,7 +540,6 @@ mixin _$PillSheet {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -587,7 +582,6 @@ abstract class $PillSheetCopyWith<$Res> {
       {@JsonKey(includeIfNull: false) String? id,
       @JsonKey() PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beginingDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
@@ -612,7 +606,6 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
     Object? id = freezed,
     Object? typeInfo = null,
     Object? beginingDate = null,
-    Object? lastTakenDate = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = null,
@@ -632,10 +625,6 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
           ? _value.beginingDate
           : beginingDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastTakenDate: freezed == lastTakenDate
-          ? _value.lastTakenDate
-          : lastTakenDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -864,7 +853,6 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -896,7 +884,6 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -928,7 +915,6 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -1005,8 +991,7 @@ abstract class PillSheetV1 extends PillSheet {
   PillSheetTypeInfo get typeInfo;
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate;
-  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  DateTime get beginingDate; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get lastTakenDate;
   @override
@@ -1043,7 +1028,6 @@ abstract class _$$PillSheetV2ImplCopyWith<$Res> implements $PillSheetCopyWith<$R
       {@JsonKey(includeIfNull: false) String? id,
       @JsonKey() PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beginingDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
@@ -1065,7 +1049,6 @@ class __$$PillSheetV2ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res
     Object? id = freezed,
     Object? typeInfo = null,
     Object? beginingDate = null,
-    Object? lastTakenDate = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = null,
@@ -1086,10 +1069,6 @@ class __$$PillSheetV2ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res
           ? _value.beginingDate
           : beginingDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastTakenDate: freezed == lastTakenDate
-          ? _value.lastTakenDate
-          : lastTakenDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -1127,7 +1106,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
       @JsonKey() required this.typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required this.beginingDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
       this.groupIndex = 0,
@@ -1152,10 +1130,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime beginingDate;
-// NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? lastTakenDate;
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? createdAt;
@@ -1211,7 +1185,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
 
   @override
   String toString() {
-    return 'PillSheet.v2(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pills: $pills, version: $version)';
+    return 'PillSheet.v2(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pills: $pills, version: $version)';
   }
 
   @override
@@ -1222,7 +1196,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.typeInfo, typeInfo) || other.typeInfo == typeInfo) &&
             (identical(other.beginingDate, beginingDate) || other.beginingDate == beginingDate) &&
-            (identical(other.lastTakenDate, lastTakenDate) || other.lastTakenDate == lastTakenDate) &&
             (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
             (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
             (identical(other.groupIndex, groupIndex) || other.groupIndex == groupIndex) &&
@@ -1232,7 +1205,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex,
+  int get hashCode => Object.hash(runtimeType, id, typeInfo, beginingDate, createdAt, deletedAt, groupIndex,
       const DeepCollectionEquality().hash(_restDurations), const DeepCollectionEquality().hash(_pills), version);
 
   @JsonKey(ignore: true)
@@ -1260,7 +1233,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -1269,7 +1241,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             String version)
         v2,
   }) {
-    return v2(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
+    return v2(id, typeInfo, beginingDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
   }
 
   @override
@@ -1292,7 +1264,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -1301,7 +1272,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             String version)?
         v2,
   }) {
-    return v2?.call(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
+    return v2?.call(id, typeInfo, beginingDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
   }
 
   @override
@@ -1324,7 +1295,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
             DateTime beginingDate,
-            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
             @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
             int groupIndex,
@@ -1335,7 +1305,7 @@ class _$PillSheetV2Impl extends PillSheetV2 {
     required TResult orElse(),
   }) {
     if (v2 != null) {
-      return v2(id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
+      return v2(id, typeInfo, beginingDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
     }
     return orElse();
   }
@@ -1378,8 +1348,6 @@ abstract class PillSheetV2 extends PillSheet {
       @JsonKey() required final PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
       required final DateTime beginingDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-      required final DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final int groupIndex,
@@ -1403,9 +1371,6 @@ abstract class PillSheetV2 extends PillSheet {
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginingDate;
-  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get lastTakenDate;
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt;
