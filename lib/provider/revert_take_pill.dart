@@ -119,11 +119,9 @@ extension RevertedPillSheet on PillSheet {
   /// v2の場合、lastTakenDateはpillsから導出されるため、pillTakensを空にするだけで良い
   PillSheet revertedPillSheetToNull() {
     switch (this) {
-      case PillSheetV1():
-        final v1 = this as PillSheetV1;
+      case PillSheetV1 v1:
         return v1.copyWith(lastTakenDate: null);
-      case PillSheetV2():
-        final v2 = this as PillSheetV2;
+      case PillSheetV2 v2:
         return v2.copyWith(
           pills: v2.pills.map((pill) => pill.copyWith(pillTakens: [])).toList(),
         );
