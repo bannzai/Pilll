@@ -49,8 +49,10 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     // nullの場合は服用記録を取り消したり、服用日を移動した際にありえる
     // また、1つ前のピルシートの最後の番号の時もnullになる
     final left = (beforeLastTakenPillNumber ?? 0) + 1;
-    // 1度飲みの時に本日分を服用した場合は1錠分の服用履歴を表示する
-    if (left == afterLastTakenPillNumber) {
+    // 1錠分の服用履歴を表示するケース:
+    // - 1度飲みの時に本日分を服用した場合
+    // - v2（2錠飲み）で同じピルを2回目服用した場合（before == after になる）
+    if (left == afterLastTakenPillNumber || beforeLastTakenPillNumber == afterLastTakenPillNumber) {
       return _formatPillNumber('$afterLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
     }
     return _formatPillNumber('$left-$afterLastTakenPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
