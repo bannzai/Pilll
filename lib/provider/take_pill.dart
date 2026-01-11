@@ -137,10 +137,7 @@ extension TakenPillSheet on PillSheet {
 
   /// v2: pills と lastTakenDate を更新
   /// takenDateまでの全てのピルに対して服用記録を追加する
-  /// 2錠飲みの場合は、最後のピル以外はtakenCount回の記録を追加し、
-  /// 最後のピルは1回の記録を追加する
-  ///
-  /// @throws PreviousPillNotCompletedException 前日のピルが未完了の場合
+  /// 途中に未完了のピルがあれば全て完了させ、最後のピルは1回の記録を追加する
   PillSheet _takenPillSheetV2(DateTime takenDate) {
     final v2 = this as PillSheetV2;
 
@@ -153,17 +150,6 @@ extension TakenPillSheet on PillSheet {
     final rawFinalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
     // 範囲外のインデックスをクランプ
     final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(0, v2.pills.length - 1);
-
-    // 前日のピルが未完了の場合はエラーをthrow
-    if (finalTakenPillIndex > 0) {
-      final previousPill = v2.pills[finalTakenPillIndex - 1];
-      if (!previousPill.isCompleted) {
-        throw PreviousPillNotCompletedException(
-          pillIndex: finalTakenPillIndex - 1,
-          remainingCount: previousPill.remainingTakenCount,
-        );
-      }
-    }
 
     // lastTakenDateは既存値より過去日に巻き戻さない（同日の場合も既存値を維持）
     final newLastTakenDate =
@@ -203,18 +189,4 @@ extension TakenPillSheet on PillSheet {
       }).toList(),
     );
   }
-}
-
-/// 前日のピルが未完了のため服用記録を追加できない場合の例外
-class PreviousPillNotCompletedException implements Exception {
-  final int pillIndex;
-  final int remainingCount;
-
-  PreviousPillNotCompletedException({
-    required this.pillIndex,
-    required this.remainingCount,
-  });
-
-  @override
-  String toString() => 'PreviousPillNotCompletedException: Pill at index $pillIndex has $remainingCount remaining takens';
 }
