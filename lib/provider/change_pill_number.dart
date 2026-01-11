@@ -74,11 +74,24 @@ class ChangePillNumber {
         lastTakenDate = null;
       }
 
-      final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
-        restDurations: [],
-      );
+      // v1/v2で分岐
+      // TODO: v2の場合、pillsも再構築する必要がある（別PR対応）
+      final PillSheet updatedPillSheet;
+      switch (pillSheet) {
+        case PillSheetV1():
+          updatedPillSheet = pillSheet.copyWith(
+            beginingDate: beginDate,
+            lastTakenDate: lastTakenDate,
+            restDurations: [],
+          );
+        case PillSheetV2():
+          // v2ではlastTakenDateはpillsから導出されるため、ここでは設定しない
+          // pillsの再構築は別PRで対応予定
+          updatedPillSheet = pillSheet.copyWith(
+            beginingDate: beginDate,
+            restDurations: [],
+          );
+      }
       updatedPillSheets.add(updatedPillSheet);
     });
 

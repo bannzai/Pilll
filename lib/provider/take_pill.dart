@@ -132,10 +132,11 @@ extension TakenPillSheet on PillSheet {
 
   /// v1: lastTakenDateのみを更新
   PillSheet _takenPillSheetV1(DateTime takenDate) {
-    return copyWith(lastTakenDate: takenDate);
+    final v1 = this as PillSheetV1;
+    return v1.copyWith(lastTakenDate: takenDate);
   }
 
-  /// v2: pills と lastTakenDate を更新
+  /// v2: pills を更新（lastTakenDateはpillsから導出されるため更新不要）
   /// takenDateまでの全てのピルに対して服用記録を追加する
   /// 途中に未完了のピルがあれば全て完了させ、最後のピルは1回の記録を追加する
   PillSheet _takenPillSheetV2(DateTime takenDate) {
@@ -151,12 +152,7 @@ extension TakenPillSheet on PillSheet {
     // 範囲外のインデックスをクランプ
     final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(0, v2.pills.length - 1);
 
-    // lastTakenDateは既存値より過去日に巻き戻さない（同日の場合も既存値を維持）
-    final newLastTakenDate =
-        v2.lastTakenDate != null && (v2.lastTakenDate!.isAfter(takenDate) || isSameDay(v2.lastTakenDate!, takenDate)) ? v2.lastTakenDate : takenDate;
-
     return v2.copyWith(
-      lastTakenDate: newLastTakenDate,
       pills: v2.pills.map((pill) {
         // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
         if (pill.index > finalTakenPillIndex) {
