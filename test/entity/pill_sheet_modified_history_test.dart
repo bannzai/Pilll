@@ -1245,7 +1245,7 @@ void main() {
         final beforePillSheetGroup = createPillSheetGroup(
           pillSheets: [
             beforePillSheet,
-            afterPillSheet.copyWith(lastTakenDate: null),
+            (afterPillSheet as PillSheetV1).copyWith(lastTakenDate: null),
           ],
         );
         final afterPillSheetGroup = createPillSheetGroup(
@@ -1369,7 +1369,7 @@ void main() {
           groupIndex: 2,
         );
         final beforePillSheetGroup = createPillSheetGroup(
-          pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet.copyWith(lastTakenDate: null)],
+          pillSheets: [firstPillSheet, secondPillSheet, (thirdPillSheet as PillSheetV1).copyWith(lastTakenDate: null)],
         );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet],

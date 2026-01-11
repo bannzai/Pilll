@@ -6501,7 +6501,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: null,
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6534,7 +6533,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6584,7 +6582,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6639,7 +6636,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-02"),
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6696,7 +6692,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6751,7 +6746,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6804,7 +6798,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-21"),
           createdAt: now(),
           groupIndex: 0,
           pills: List.generate(
@@ -6848,7 +6841,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6898,7 +6890,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: null,
           createdAt: now(),
           // pillTakenCount: 2,
           pills: List.generate(
@@ -6934,7 +6925,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: firestoreIDGenerator(),
           beginingDate: DateTime.parse("2022-05-01"),
-          lastTakenDate: DateTime.parse("2022-05-21"),
           createdAt: now(),
           groupIndex: 0,
           pills: List.generate(
@@ -6976,7 +6966,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: null,
         createdAt: now(),
         groupIndex: 0,
         // pillTakenCount: 2,
@@ -7010,7 +6999,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
         // pillTakenCount: 2,
@@ -7058,7 +7046,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-26"),
         createdAt: now(),
         groupIndex: 0,
         // pillTakenCount: 2,
@@ -7114,7 +7101,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-29"),
         createdAt: now(),
         groupIndex: 0,
         // pillTakenCount: 2,
@@ -7174,7 +7160,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-26"),
         createdAt: now(),
         groupIndex: 0,
         // pillTakenCount: 2,
@@ -7248,7 +7233,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-26"),
         createdAt: now(),
         groupIndex: 0,
         pills: List.generate(
@@ -7300,7 +7284,6 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-08-05"),
         createdAt: now(),
         groupIndex: 0,
         pills: List.generate(
@@ -7358,7 +7341,6 @@ void main() {
         groupIndex: 0,
         typeInfo: sheetType.typeInfo,
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: null,
         createdAt: now(),
         pills: List.generate(
           sheetType.totalCount,
@@ -7391,7 +7373,6 @@ void main() {
         groupIndex: 0,
         typeInfo: sheetType.typeInfo,
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: null,
         createdAt: now(),
         pills: List.generate(
           sheetType.totalCount,
@@ -7424,7 +7405,6 @@ void main() {
         groupIndex: 0,
         typeInfo: sheetType.typeInfo,
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: null,
         createdAt: now(),
         pills: List.generate(
           sheetType.totalCount,
@@ -7457,7 +7437,6 @@ void main() {
         groupIndex: 0,
         typeInfo: sheetType.typeInfo,
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: null,
         createdAt: now(),
         pills: List.generate(
           sheetType.totalCount,
