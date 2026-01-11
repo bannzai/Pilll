@@ -133,7 +133,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
-          after: (pillSheet as PillSheetV1).copyWith(
+          after: pillSheet.copyWith(
             lastTakenDate: yesterday,
           ),
           beforePillSheetGroup: pillSheetGroup,
@@ -297,7 +297,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet,
-          after: (pillSheet as PillSheetV1).copyWith(lastTakenDate: yesterday),
+          after: pillSheet.copyWith(lastTakenDate: yesterday),
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -381,7 +381,7 @@ void main() {
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
           pillSheetGroupID: "group_id",
           before: pillSheet2,
-          after: (pillSheet2 as PillSheetV1).copyWith(
+          after: pillSheet2.copyWith(
             lastTakenDate: yesterday,
           ),
           beforePillSheetGroup: pillSheetGroup,
