@@ -635,7 +635,7 @@ void main() {
         restDurations: [afterRestDuration],
       );
       // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginingDateが動く
-      final updatedPillSheet2 = pillSheet2.copyWith(
+      final updatedPillSheet2 = (pillSheet2 as PillSheetV1).copyWith(
         beginingDate: pillSheet2.beginingDate.addDays(3),
         lastTakenDate: null,
         restDurations: [],
@@ -1054,7 +1054,7 @@ void main() {
       final updatedPillSheet1 = pillSheet1.copyWith(
         restDurations: [afterRestDuration],
       );
-      final updatedPillSheet2 = pillSheet2.copyWith(
+      final updatedPillSheet2 = (pillSheet2 as PillSheetV1).copyWith(
         beginingDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
         lastTakenDate: null,
         restDurations: [],
