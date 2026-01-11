@@ -131,8 +131,7 @@ extension TakenPillSheet on PillSheet {
 
   /// v1: lastTakenDateのみを更新
   PillSheet _takenPillSheetV1(DateTime takenDate) {
-    final v1 = this as PillSheetV1;
-    return v1.copyWith(lastTakenDate: takenDate);
+    return (this as PillSheetV1).copyWith(lastTakenDate: takenDate);
   }
 
   /// v2: pills を更新（lastTakenDateはpillsから導出されるため更新不要）
