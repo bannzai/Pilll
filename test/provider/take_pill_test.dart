@@ -78,7 +78,7 @@ void main() {
           final batch = MockWriteBatch();
           when(batchFactory.batch()).thenReturn(batch);
 
-          final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+          final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
           final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
           final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
@@ -115,7 +115,7 @@ void main() {
 
         test("activePillSheet.todayPillIsAlreadyTaken", () async {
           final takenDate = mockNow.add(const Duration(seconds: 1));
-          activePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+          activePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
           final batchFactory = MockBatchFactory();
 
@@ -150,7 +150,6 @@ void main() {
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
             beginingDate: mockNow.date(),
-            lastTakenDate: null,
             createdAt: now(),
             //  pillTakenCount: 2,
             pills: List.generate(
@@ -223,7 +222,6 @@ void main() {
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
             beginingDate: mockNow.date(),
-            lastTakenDate: mockNow,
             createdAt: now(),
             //  pillTakenCount: 2,
             pills: List.generate(
@@ -313,7 +311,6 @@ void main() {
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
             beginingDate: mockNow.date(),
-            lastTakenDate: mockNow,
             createdAt: now(),
             //  pillTakenCount: 2,
             pills: List.generate(
@@ -391,7 +388,6 @@ void main() {
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
             beginingDate: DateTime.parse("2022-07-24"),
-            lastTakenDate: null,
             createdAt: now(),
             pills: List.generate(
               sheetType.totalCount,
@@ -436,7 +432,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -472,7 +468,7 @@ void main() {
 
       test("activePillSheet.todayPillIsAlreadyTaken", () async {
         final takenDate = mockNow.add(const Duration(seconds: 1));
-        activePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        activePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
@@ -513,7 +509,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -560,7 +556,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -600,7 +596,7 @@ void main() {
           () async {
         final takenDate = activePillSheet.estimatedEndTakenDate.add(const Duration(seconds: 1));
         final lastTakenDate = activePillSheet.estimatedEndTakenDate.subtract(const Duration(days: 10));
-        activePillSheet = activePillSheet.copyWith(
+        activePillSheet = (activePillSheet as PillSheetV1).copyWith(
           lastTakenDate: lastTakenDate,
         );
         pillSheetGroup = PillSheetGroup(
@@ -614,7 +610,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: activePillSheet.estimatedEndTakenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -650,7 +646,7 @@ void main() {
       test("when previous pill sheet is not taken all.", () async {
         final takenDate = mockNow.add(const Duration(seconds: 1));
         final lastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
-        previousPillSheet = previousPillSheet.copyWith(
+        previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
           lastTakenDate: lastTakenDate,
         );
         pillSheetGroup = PillSheetGroup(
@@ -664,8 +660,8 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedPreviousPillSheet = (previousPillSheet as PillSheetV1).copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -700,7 +696,7 @@ void main() {
       });
       test("when previous pill sheet is not taken all. and takenDate is previous pill sheet estimate last taken date", () async {
         final lastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
-        previousPillSheet = previousPillSheet.copyWith(
+        previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
           lastTakenDate: lastTakenDate,
         );
         pillSheetGroup = PillSheetGroup(
@@ -715,7 +711,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
+        final updatedPreviousPillSheet = (previousPillSheet as PillSheetV1).copyWith(lastTakenDate: previousPillSheet.estimatedEndTakenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, activePillSheet, nextPillSheet]);
@@ -754,11 +750,11 @@ void main() {
           "when previous pill sheet is not taken all. And active pill sheet lastTakenDate equal beginDate minus 1 that means reverted taken first pill. And record previous pill sheet last taken date",
           () async {
         final previousPillSheetLastTakenDate = previousPillSheet.lastTakenDate!.subtract(const Duration(days: 1));
-        previousPillSheet = previousPillSheet.copyWith(
+        previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
           lastTakenDate: previousPillSheetLastTakenDate,
         );
         final activePillSheetLastTakenDate = activePillSheet.beginingDate.subtract(const Duration(days: 1));
-        activePillSheet = activePillSheet.copyWith(
+        activePillSheet = (activePillSheet as PillSheetV1).copyWith(
           lastTakenDate: activePillSheetLastTakenDate,
         );
 
@@ -774,7 +770,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedPreviousPillSheet = previousPillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedPreviousPillSheet = (previousPillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPreviousPillSheet, activePillSheet, nextPillSheet]);
@@ -810,7 +806,7 @@ void main() {
       });
 
       test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest duration", () async {
-        previousPillSheet = previousPillSheet.copyWith(
+        previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
           beginingDate: DateTime.parse(
             "2022-06-22T19:02:21",
           ),
@@ -845,7 +841,7 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final takenDate = DateTime.parse("2022-07-24T19:02:00");
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [previousPillSheet, updatedActivePillSheet, nextPillSheet]);
@@ -884,11 +880,10 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(mockToday);
 
-        previousPillSheet = previousPillSheet
-            .copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00"))
+        previousPillSheet = (previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00")) as PillSheetV1)
             .copyWith(lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
-        activePillSheet =
-            activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00")).copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
+        activePillSheet = (activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00")) as PillSheetV1)
+            .copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
         activePillSheet = activePillSheet.copyWith(restDurations: [
           RestDuration(
               id: "rest_duration_id",
@@ -933,7 +928,7 @@ void main() {
         final batch = MockWriteBatch();
         when(batchFactory.batch()).thenReturn(batch);
 
-        final updatedActivePillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+        final updatedActivePillSheet = (activePillSheet as PillSheetV1).copyWith(lastTakenDate: takenDate);
 
         final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedActivePillSheet]);
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
@@ -983,7 +978,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           pills: List.generate(
@@ -1040,7 +1034,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1098,7 +1091,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-26"), // 今日
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1177,7 +1169,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: beginDate.add(Duration(days: sheetType.totalCount - 2)),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1260,7 +1251,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: DateTime.parse("2022-07-26"),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1313,7 +1303,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: DateTime.parse("2022-07-29"),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1369,7 +1358,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: DateTime.parse("2022-08-04"),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1433,7 +1421,6 @@ void main() {
         final emptyPillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: null,
           createdAt: now(),
           groupIndex: 0,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -1457,7 +1444,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: null,
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1493,7 +1479,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: DateTime.parse("2022-07-01"),
-          lastTakenDate: DateTime.parse("2022-07-20"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1547,7 +1532,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: beginDate.add(Duration(days: sheetType.totalCount - 2)),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1599,7 +1583,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: null,
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1661,7 +1644,6 @@ void main() {
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
           beginingDate: beginDate,
-          lastTakenDate: beginDate.add(const Duration(days: 8)),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo, // typeInfo は28日分だが pills は10個
