@@ -92,10 +92,8 @@ PillSheetGroup buildPillSheetGroup({
         id: firestoreIDGenerator(),
         typeInfo: pillSheetType.typeInfo,
         beginingDate: beginingDate,
-        lastTakenDate: null,
         groupIndex: pageIndex,
         createdAt: now(),
-        // pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: pillSheetType,
           fromDate: beginingDate,
