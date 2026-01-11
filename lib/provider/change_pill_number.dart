@@ -1,4 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/provider/batch.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
@@ -75,7 +76,6 @@ class ChangePillNumber {
       }
 
       // v1/v2で分岐
-      // TODO: v2の場合、pillsも再構築する必要がある（別PR対応）
       final PillSheet updatedPillSheet;
       switch (pillSheet) {
         case PillSheetV1():
@@ -85,11 +85,17 @@ class ChangePillNumber {
             restDurations: [],
           );
         case PillSheetV2():
-          // v2ではlastTakenDateはpillsから導出されるため、ここでは設定しない
-          // pillsの再構築は別PRで対応予定
+          // v2ではlastTakenDateはpillsから導出されるため、pillsを再構築する
+          final pills = Pill.generateAndFillTo(
+            pillSheetType: pillSheet.pillSheetType,
+            fromDate: beginDate,
+            lastTakenDate: lastTakenDate,
+            pillTakenCount: pillSheet.pills.first.takenCount,
+          );
           updatedPillSheet = pillSheet.copyWith(
             beginingDate: beginDate,
             restDurations: [],
+            pills: pills,
           );
       }
       updatedPillSheets.add(updatedPillSheet);
