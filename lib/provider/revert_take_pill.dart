@@ -130,8 +130,7 @@ extension RevertedPillSheet on PillSheet {
 
   /// v1: lastTakenDateのみを更新
   PillSheet _revertedPillSheetV1(DateTime toDate) {
-    final v1 = this as PillSheetV1;
-    return v1.copyWith(lastTakenDate: toDate);
+    return (this as PillSheetV1).copyWith(lastTakenDate: toDate);
   }
 
   /// v2: pills を更新（lastTakenDateはpillsから導出されるため更新不要）
