@@ -7346,7 +7346,12 @@ void main() {
   });
 
   group("#isPillDisabled", () {
-    test("1番目のピルはdisabledにならない", () {
+    test("今日以前のピルはdisabledにならない", () {
+      final mockTodayRepository = MockTodayService();
+      final mockNow = DateTime.parse("2022-07-27"); // 4日目
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockNow);
+
       const sheetType = PillSheetType.pillsheet_28_7;
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
@@ -7355,7 +7360,6 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: null,
         createdAt: now(),
-        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -7368,51 +7372,19 @@ void main() {
         ),
       ) as PillSheetV2;
 
+      // 1日目〜4日目（今日）はdisabledにならない
       expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 1), false);
-    });
-
-    test("前日のピルが完了済みなら次のピルはdisabledにならない", () {
-      const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet = PillSheet.v2(
-        id: firestoreIDGenerator(),
-        groupIndex: 0,
-        typeInfo: sheetType.typeInfo,
-        beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-24"),
-        createdAt: now(),
-        // pillTakenCount: 2,
-        pills: List.generate(
-          sheetType.totalCount,
-          (index) {
-            // 1日目（index 0）は2錠完了
-            if (index == 0) {
-              return Pill(
-                takenCount: 2,
-                index: index,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
-                ],
-              );
-            }
-            return Pill(
-              takenCount: 2,
-              index: index,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          },
-        ),
-      ) as PillSheetV2;
-
-      // 1日目は完了済みなので、2日目はdisabledにならない
       expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 2), false);
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 3), false);
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 4), false);
     });
 
-    test("前日のピルが未服用（0回）なら次のピルはdisabled", () {
+    test("明日以降のピルはdisabled", () {
+      final mockTodayRepository = MockTodayService();
+      final mockNow = DateTime.parse("2022-07-27"); // 4日目
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockNow);
+
       const sheetType = PillSheetType.pillsheet_28_7;
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
@@ -7421,7 +7393,6 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: null,
         createdAt: now(),
-        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -7434,95 +7405,52 @@ void main() {
         ),
       ) as PillSheetV2;
 
-      // 1日目が未服用なので、2日目はdisabled
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 2), true);
-      // 2日目も未服用なので、3日目もdisabled
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 3), true);
+      // 5日目以降（明日以降）はdisabled
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 5), true);
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 6), true);
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 10), true);
     });
 
-    test("前日のピルが部分服用（1回だけ、takenCount=2）なら次のピルはdisabled", () {
+    test("前日のピルが未完了でも今日以前のピルはタップ可能", () {
+      final mockTodayRepository = MockTodayService();
+      final mockNow = DateTime.parse("2022-07-27"); // 4日目
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockNow);
+
       const sheetType = PillSheetType.pillsheet_28_7;
+      // 全て未服用
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         groupIndex: 0,
         typeInfo: sheetType.typeInfo,
         beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-24"),
+        lastTakenDate: null,
         createdAt: now(),
-        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
-          (index) {
-            // 1日目（index 0）は1錠だけ服用（未完了）
-            if (index == 0) {
-              return Pill(
-                takenCount: 2,
-                index: index,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
-                ],
-              );
-            }
-            return Pill(
-              takenCount: 2,
-              index: index,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          },
+          (index) => Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          ),
         ),
       ) as PillSheetV2;
 
-      // 1日目が部分服用（未完了）なので、2日目はdisabled
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 2), true);
-    });
-
-    test("既に完了済みのピルはdisabledにならない（前日が未完了でも）", () {
-      const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet = PillSheet.v2(
-        id: firestoreIDGenerator(),
-        groupIndex: 0,
-        typeInfo: sheetType.typeInfo,
-        beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-25"),
-        createdAt: now(),
-        // pillTakenCount: 2,
-        pills: List.generate(
-          sheetType.totalCount,
-          (index) {
-            // 1日目（index 0）は未服用
-            // 2日目（index 1）は完了済み
-            if (index == 1) {
-              return Pill(
-                takenCount: 2,
-                index: index,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-25"), createdDateTime: now(), updatedDateTime: now()),
-                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-25"), createdDateTime: now(), updatedDateTime: now()),
-                ],
-              );
-            }
-            return Pill(
-              takenCount: 2,
-              index: index,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          },
-        ),
-      ) as PillSheetV2;
-
-      // 2日目は既に完了済みなので、前日（1日目）が未完了でもdisabledにならない
+      // 前日が未完了でも今日以前のピルはタップ可能
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 1), false);
       expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 2), false);
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 3), false);
+      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 4), false);
     });
 
     test("境界値テスト：pillNumberInPillSheet=0の場合（存在しない番号）はfalse", () {
+      final mockTodayRepository = MockTodayService();
+      final mockNow = DateTime.parse("2022-07-27");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(mockNow);
+
       const sheetType = PillSheetType.pillsheet_28_7;
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
@@ -7531,7 +7459,6 @@ void main() {
         beginingDate: DateTime.parse("2022-07-24"),
         lastTakenDate: null,
         createdAt: now(),
-        // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
           (index) => Pill(
@@ -7544,59 +7471,8 @@ void main() {
         ),
       ) as PillSheetV2;
 
-      // pillIndex = -1 になるので、最初のif文でfalseを返す
+      // 0はtodayPillNumber(4)以下なのでfalse
       expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 0), false);
-    });
-
-    test("連続した完了済みピルの次はdisabledにならない", () {
-      const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet = PillSheet.v2(
-        id: firestoreIDGenerator(),
-        groupIndex: 0,
-        typeInfo: sheetType.typeInfo,
-        beginingDate: DateTime.parse("2022-07-24"),
-        lastTakenDate: DateTime.parse("2022-07-26"),
-        createdAt: now(),
-        // pillTakenCount: 2,
-        pills: List.generate(
-          sheetType.totalCount,
-          (index) {
-            // 1〜3日目（index 0,1,2）は完了済み
-            if (index <= 2) {
-              return Pill(
-                takenCount: 2,
-                index: index,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
-                  PillTaken(
-                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
-                ],
-              );
-            }
-            return Pill(
-              takenCount: 2,
-              index: index,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          },
-        ),
-      ) as PillSheetV2;
-
-      // 1番目: 前日がないのでdisabledにならない
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 1), false);
-      // 2番目: 1番目が完了済みなのでdisabledにならない
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 2), false);
-      // 3番目: 2番目が完了済みなのでdisabledにならない
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 3), false);
-      // 4番目: 3番目が完了済みなのでdisabledにならない
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 4), false);
-      // 5番目: 4番目が未完了なのでdisabled
-      expect(pillSheet.isPillDisabled(pillNumberInPillSheet: 5), true);
     });
   });
 }

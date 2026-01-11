@@ -376,14 +376,14 @@ void main() {
           expect(result, null);
         });
 
-        test("前日が未服用なのに当日を記録しようとするとエラー", () async {
+        test("前日が未服用でも当日を記録すると前日までのピルも一括で記録される", () async {
           // 4日目に服用 (1,2,3日目は未服用)
-          final mockNowDay3 = DateTime.parse("2022-07-27T19:02:00");
+          final mockNowDay4 = DateTime.parse("2022-07-27T19:02:00");
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(mockNowDay3);
+          when(mockTodayRepository.now()).thenReturn(mockNowDay4);
 
-          final takenDate = mockNowDay3.add(const Duration(seconds: 1));
+          final takenDate = mockNowDay4.add(const Duration(seconds: 1));
 
           const sheetType = PillSheetType.pillsheet_28_7;
           final activePillSheetV2 = PillSheet.v2(
@@ -393,7 +393,6 @@ void main() {
             beginingDate: DateTime.parse("2022-07-24"),
             lastTakenDate: null,
             createdAt: now(),
-            //  pillTakenCount: 2,
             pills: List.generate(
               sheetType.totalCount,
               (index) => Pill(
@@ -406,11 +405,19 @@ void main() {
             ),
           );
 
-          // 前日のピルが未完了なのでPreviousPillNotCompletedExceptionがthrowされる
-          expect(
-            () => activePillSheetV2.takenPillSheet(takenDate),
-            throwsA(isA<PreviousPillNotCompletedException>()),
-          );
+          // 4日目をタップすると1-3日目は完了、4日目は1回記録される
+          final result = activePillSheetV2.takenPillSheet(takenDate) as PillSheetV2;
+
+          // 1日目(index=0): 2回完了
+          expect(result.pills[0].pillTakens.length, 2);
+          // 2日目(index=1): 2回完了
+          expect(result.pills[1].pillTakens.length, 2);
+          // 3日目(index=2): 2回完了
+          expect(result.pills[2].pillTakens.length, 2);
+          // 4日目(index=3): 1回記録
+          expect(result.pills[3].pillTakens.length, 1);
+          // 5日目以降: 未記録
+          expect(result.pills[4].pillTakens.length, 0);
         });
       });
     });
@@ -963,8 +970,8 @@ void main() {
   });
 
   group("#TakenPillSheet extension", () {
-    group("v2 前日のピルが未完了の場合のvalidation", () {
-      test("前日が部分的に服用済み（未完了）なのに今日を記録しようとするとPreviousPillNotCompletedExceptionがthrowされる", () {
+    group("v2 前日のピルが未完了の場合の挙動", () {
+      test("前日が部分的に服用済み（未完了）でも今日を記録すると前日も完了する", () {
         final mockTodayRepository = MockTodayService();
         final mockNow = DateTime.parse("2022-07-25");
         todayRepository = mockTodayRepository;
@@ -979,7 +986,6 @@ void main() {
           lastTakenDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
-          //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -1012,11 +1018,14 @@ void main() {
           ),
         );
 
-        // 前日が未完了なのに今日（2日目）を記録しようとする
-        expect(
-          () => pillSheet.takenPillSheet(DateTime.parse("2022-07-25")),
-          throwsA(isA<PreviousPillNotCompletedException>()),
-        );
+        // 今日（2日目）を記録すると、1日目も完了し、2日目は1回記録される
+        final result = pillSheet.takenPillSheet(DateTime.parse("2022-07-25")) as PillSheetV2;
+
+        // 1日目(index=0): 既存の1回 + 追加の1回 = 2回で完了
+        expect(result.pills[0].pillTakens.length, 2);
+        // 2日目(index=1): 1回記録
+        expect(result.pills[1].pillTakens.length, 1);
+        expect(result.lastTakenDate, DateTime.parse("2022-07-25"));
       });
 
       test("前日のピルが完了済みなら正常に服用記録を追加できる", () {
