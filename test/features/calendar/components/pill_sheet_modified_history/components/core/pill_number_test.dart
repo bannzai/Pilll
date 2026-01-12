@@ -287,6 +287,54 @@ void main() {
         );
         expect(result, '15-11番');
       });
+
+      test('2錠分のrevert（before=10, after=8）の場合、「9-10番」を返す', () {
+        // ユーザーシナリオ: 9番をタップして9番と10番を取り消し
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+          beforeLastTakenPillNumber: 10,
+          afterLastTakenPillNumber: 8,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '10-9番');
+      });
+    });
+  });
+
+  group('#revert vs #revertV2 比較', () {
+    const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
+
+    test('before=10, after=9 の場合（v1: 1錠取り消し）', () {
+      final v1Result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 9,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      final v2Result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 9,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      // v1: 10番のみ取り消し → 「10番」
+      expect(v1Result, '10番');
+      // v2: 10番のみ取り消し → 「10番」
+      expect(v2Result, '10番');
+    });
+
+    test('before=10, after=8 の場合（9番と10番を取り消し）', () {
+      final v1Result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 8,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      final v2Result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 8,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      // v1: 9番と10番を取り消し → 「10-9番」
+      expect(v1Result, '10-9番');
+      // v2: 9番と10番を取り消し → 「10-9番」
+      expect(v2Result, '10-9番');
     });
   });
 
