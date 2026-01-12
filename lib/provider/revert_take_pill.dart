@@ -107,41 +107,32 @@ class RevertTakePill {
 extension RevertedPillSheet on PillSheet {
   /// 服用記録を取り消したPillSheetを返す
   PillSheet revertedPillSheet(DateTime toDate) {
-    switch (this) {
-      case PillSheetV1():
-        return _revertedPillSheetV1(toDate);
-      case PillSheetV2():
-        return _revertedPillSheetV2(toDate);
-    }
+    return switch (this) {
+      PillSheetV1 v1 => v1.copyWith(lastTakenDate: toDate),
+      PillSheetV2 v2 => v2._revertedPillSheetV2(toDate),
+    };
   }
 
   /// 服用記録を全て取り消してlastTakenDateをnullにしたPillSheetを返す
+  /// v2の場合、lastTakenDateはpillsから導出されるため、pillTakensを空にするだけで良い
   PillSheet revertedPillSheetToNull() {
     switch (this) {
-      case PillSheetV1():
-        return copyWith(lastTakenDate: null);
-      case PillSheetV2():
-        final v2 = this as PillSheetV2;
+      case PillSheetV1 v1:
+        return v1.copyWith(lastTakenDate: null);
+      case PillSheetV2 v2:
         return v2.copyWith(
-          lastTakenDate: null,
           pills: v2.pills.map((pill) => pill.copyWith(pillTakens: [])).toList(),
         );
     }
   }
+}
 
-  /// v1: lastTakenDateのみを更新
-  PillSheet _revertedPillSheetV1(DateTime toDate) {
-    return copyWith(lastTakenDate: toDate);
-  }
-
-  /// v2: pills と lastTakenDate を更新
+/// PillSheetV2専用のextension（内部実装用）
+extension _RevertedPillSheetV2 on PillSheetV2 {
+  /// v2: pills を更新（lastTakenDateはpillsから導出されるため更新不要）
   /// toDateより後の全てのピルの服用記録をクリアする
   PillSheet _revertedPillSheetV2(DateTime toDate) {
-    final v2 = this as PillSheetV2;
-    final pills = v2.pills;
-
-    return v2.copyWith(
-      lastTakenDate: toDate,
+    return copyWith(
       pills: pills.map((pill) {
         // toDateより後の日付のピルの服用記録をクリアする
         final dateOfPill = dates[pill.index];

@@ -179,6 +179,8 @@ sealed class PillSheet with _$PillSheet {
   }) = PillSheetV1;
 
   /// v2: 2錠飲み対応
+  /// NOTE: v2ではlastTakenDateはpillsから導出されるため、コンストラクタには含まない
+  /// 代わりにPillSheetV2Extension.lastTakenDateを使用
   @JsonSerializable(explicitToJson: true)
   factory PillSheet.v2({
     /// FirestoreドキュメントID
@@ -196,16 +198,6 @@ sealed class PillSheet with _$PillSheet {
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
     required DateTime beginingDate,
-
-    // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
-    /// 最後にピルを服用した日付
-    /// まだ一度も服用していない場合はnull
-    required DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -258,9 +250,7 @@ sealed class PillSheet with _$PillSheet {
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
         beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
         createdAt: now(),
-        // pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: type,
           fromDate: beginDate,
@@ -298,6 +288,20 @@ sealed class PillSheet with _$PillSheet {
   /// ピルシートの種類オブジェクト
   /// typeInfoから変換されたPillSheetType列挙値
   PillSheetType get pillSheetType => PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+
+  // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+  /// 最後にピルを服用した日付
+  /// v1: コンストラクタ引数として保持（freezedが生成するgetterをオーバーライド）
+  /// v2: pillsから導出（ここで直接計算）
+  /// まだ一度も服用していない場合はnull
+  DateTime? get lastTakenDate {
+    return switch (this) {
+      // v1: freezed生成のlastTakenDateフィールドを参照
+      PillSheetV1(:final lastTakenDate) => lastTakenDate,
+      // v2: pillsから計算（extensionメソッドはPillSheet.lastTakenDateにシャドーされるため直接計算）
+      PillSheetV2(:final pills) => _v2lastTakenDate(pills),
+    };
+  }
 
   // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   /// 今日服用すべきピルの番号
@@ -461,8 +465,22 @@ sealed class PillSheet with _$PillSheet {
   }
 }
 
+/// v2のpillsから最後にピルを服用した日付を導出するヘルパー関数
+/// PillSheet.lastTakenDateとPillSheetV2Extension.lastTakenDateで共通利用
+DateTime? _v2lastTakenDate(List<Pill> pills) {
+  final lastTaken = pills.lastWhereOrNull((p) => p.pillTakens.isNotEmpty);
+  return lastTaken?.pillTakens.last.recordedTakenDateTime;
+}
+
 /// v2専用のプロパティ・メソッド
 extension PillSheetV2Extension on PillSheetV2 {
+  /// 最後にピルを服用した日付
+  /// pillsから導出されるcomputed property
+  /// まだ一度も服用していない場合はnull
+  DateTime? get lastTakenDate {
+    return _v2lastTakenDate(pills);
+  }
+
   /// 最後に服用完了したピルの番号（0または1以上）
   /// 各ピルのtakenCount回すべて服用したピルの番号を返す
   int get lastCompletedPillNumber {

@@ -91,10 +91,8 @@ class InitialSettingState with _$InitialSettingState {
         id: firestoreIDGenerator(),
         groupIndex: pageIndex,
         beginingDate: beginDate,
-        lastTakenDate: lastTakenDate,
         typeInfo: pillSheetType.typeInfo,
         createdAt: now(),
-        // pillTakenCount: pillTakenCount,
         pills: Pill.generateAndFillTo(
           pillSheetType: pillSheetType,
           fromDate: beginDate,

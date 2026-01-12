@@ -134,7 +134,7 @@ void main() {
           createdAt: now(),
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
-        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
+        final activePillSheet = (pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
               id: "rest_duration_id",
@@ -143,8 +143,8 @@ void main() {
               endDate: now(),
             ),
           ],
-          lastTakenDate: now(),
-        );
+        ) as PillSheetV1)
+            .copyWith(lastTakenDate: now());
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillIsAlreadyTaken, true);
@@ -207,7 +207,7 @@ void main() {
         );
 
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
-        final activePillSheet = pillSheetGroup.activePillSheet!.copyWith(
+        final activePillSheet = (pillSheetGroup.activePillSheet!.copyWith(
           restDurations: [
             RestDuration(
                 id: "rest_duration_id",
@@ -215,8 +215,8 @@ void main() {
                 createdDate: now().subtract(const Duration(days: 1)),
                 endDate: now().subtract(const Duration(seconds: 1))),
           ],
-          lastTakenDate: yesterday(),
-        );
+        ) as PillSheetV1)
+            .copyWith(lastTakenDate: yesterday());
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillIsAlreadyTaken, false);

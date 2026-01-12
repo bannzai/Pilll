@@ -9,7 +9,6 @@ import 'package:pilll/utils/error_log.dart';
 
 import 'package:pilll/provider/pill_sheet_group.dart';
 import 'package:pilll/provider/pill_sheet_modified_history.dart';
-import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -122,42 +121,31 @@ class TakePill {
 extension TakenPillSheet on PillSheet {
   /// 服用記録を追加したPillSheetを返す
   PillSheet takenPillSheet(DateTime takenDate) {
-    switch (this) {
-      case PillSheetV1():
-        return _takenPillSheetV1(takenDate);
-      case PillSheetV2():
-        return _takenPillSheetV2(takenDate);
-    }
+    return switch (this) {
+      PillSheetV1 v1 => v1.copyWith(lastTakenDate: takenDate),
+      PillSheetV2 v2 => v2._takenPillSheetV2(takenDate),
+    };
   }
+}
 
-  /// v1: lastTakenDateのみを更新
-  PillSheet _takenPillSheetV1(DateTime takenDate) {
-    return copyWith(lastTakenDate: takenDate);
-  }
-
-  /// v2: pills と lastTakenDate を更新
+/// PillSheetV2専用のextension（内部実装用）
+extension _TakenPillSheetV2 on PillSheetV2 {
+  /// v2: pills を更新（lastTakenDateはpillsから導出されるため更新不要）
   /// takenDateまでの全てのピルに対して服用記録を追加する
   /// 途中に未完了のピルがあれば全て完了させ、最後のピルは1回の記録を追加する
   PillSheet _takenPillSheetV2(DateTime takenDate) {
-    final v2 = this as PillSheetV2;
-
     // pillsが空の場合は何もせず元のシートを返す
-    if (v2.pills.isEmpty) {
-      return v2;
+    if (pills.isEmpty) {
+      return this;
     }
 
     // 一番最後の記録対象のピル
     final rawFinalTakenPillIndex = pillNumberFor(targetDate: takenDate) - 1;
     // 範囲外のインデックスをクランプ
-    final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(0, v2.pills.length - 1);
+    final finalTakenPillIndex = rawFinalTakenPillIndex.clamp(0, pills.length - 1);
 
-    // lastTakenDateは既存値より過去日に巻き戻さない（同日の場合も既存値を維持）
-    final newLastTakenDate =
-        v2.lastTakenDate != null && (v2.lastTakenDate!.isAfter(takenDate) || isSameDay(v2.lastTakenDate!, takenDate)) ? v2.lastTakenDate : takenDate;
-
-    return v2.copyWith(
-      lastTakenDate: newLastTakenDate,
-      pills: v2.pills.map((pill) {
+    return copyWith(
+      pills: pills.map((pill) {
         // takenDateから算出した記録されるピルのindexよりも大きい場合は何もしない
         if (pill.index > finalTakenPillIndex) {
           return pill;

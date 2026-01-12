@@ -36,7 +36,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -136,7 +135,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-26"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -256,7 +254,7 @@ void main() {
         // targetRevertPillNumberIntoPillSheet = 3 (3番目のピルをrevert)
         // revertDate = 2022-07-25 (3番目のピルの1日前)
         final revertDate = DateTime.parse("2022-07-25");
-        final updatedActivePillSheetV1 = activePillSheetV1.copyWith(lastTakenDate: revertDate, restDurations: []);
+        final updatedActivePillSheetV1 = (activePillSheetV1 as PillSheetV1).copyWith(lastTakenDate: revertDate, restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
         final updatedPillSheetGroupV1 = pillSheetGroupV1.copyWith(pillSheets: [updatedActivePillSheetV1]);
@@ -305,7 +303,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -401,7 +398,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -497,7 +493,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -593,7 +588,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-24"),
-          lastTakenDate: DateTime.parse("2022-07-25"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -692,7 +686,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-07-31"),
-          lastTakenDate: DateTime.parse("2022-08-01"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -790,7 +783,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2022-12-31"),
-          lastTakenDate: DateTime.parse("2023-01-01"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -888,7 +880,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2024-02-28"),
-          lastTakenDate: DateTime.parse("2024-02-29"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -986,7 +977,6 @@ void main() {
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
           beginingDate: DateTime.parse("2023-02-28"),
-          lastTakenDate: DateTime.parse("2023-03-01"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(

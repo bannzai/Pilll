@@ -10223,7 +10223,7 @@ void main() {
         );
 
         // idがnullのピルシートで置き換えようとする
-        final newPillSheet = pillSheet.copyWith(id: null, lastTakenDate: DateTime.parse("2020-09-10"));
+        final newPillSheet = (pillSheet as PillSheetV1).copyWith(id: null, lastTakenDate: DateTime.parse("2020-09-10"));
 
         expect(
           () => pillSheetGroup.replaced(newPillSheet),
@@ -10256,7 +10256,7 @@ void main() {
         );
 
         // 存在しないidのピルシートで置き換えようとする
-        final nonExistentPillSheet = pillSheet.copyWith(id: "non_existent_id", lastTakenDate: DateTime.parse("2020-09-10"));
+        final nonExistentPillSheet = (pillSheet as PillSheetV1).copyWith(id: "non_existent_id", lastTakenDate: DateTime.parse("2020-09-10"));
 
         expect(
           () => pillSheetGroup.replaced(nonExistentPillSheet),
@@ -10291,7 +10291,7 @@ void main() {
           createdAt: now(),
         );
 
-        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
+        final updatedPillSheet = (pillSheet as PillSheetV1).copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
         final updatedGroup = pillSheetGroup.replaced(updatedPillSheet);
 
         expect(updatedGroup.pillSheets.length, 1);
@@ -10324,7 +10324,7 @@ void main() {
           createdAt: now(),
         );
 
-        final updatedPillSheet = pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
+        final updatedPillSheet = (pillSheet as PillSheetV1).copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
         pillSheetGroup.replaced(updatedPillSheet);
 
         // 元のpillSheetGroupは変更されていないことを確認
@@ -10389,7 +10389,7 @@ void main() {
           createdAt: now(),
         );
 
-        final updatedPillSheet1 = pillSheet1.copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
+        final updatedPillSheet1 = (pillSheet1 as PillSheetV1).copyWith(lastTakenDate: DateTime.parse("2020-09-10"));
         final updatedGroup = pillSheetGroup.replaced(updatedPillSheet1);
 
         expect(updatedGroup.pillSheets.length, 3);
@@ -10458,7 +10458,7 @@ void main() {
           createdAt: now(),
         );
 
-        final updatedPillSheet2 = pillSheet2.copyWith(lastTakenDate: DateTime.parse("2020-10-05"));
+        final updatedPillSheet2 = (pillSheet2 as PillSheetV1).copyWith(lastTakenDate: DateTime.parse("2020-10-05"));
         final updatedGroup = pillSheetGroup.replaced(updatedPillSheet2);
 
         expect(updatedGroup.pillSheets.length, 3);
@@ -10529,7 +10529,7 @@ void main() {
           createdAt: now(),
         );
 
-        final updatedPillSheet3 = pillSheet3.copyWith(lastTakenDate: DateTime.parse("2020-11-05"));
+        final updatedPillSheet3 = (pillSheet3 as PillSheetV1).copyWith(lastTakenDate: DateTime.parse("2020-11-05"));
         final updatedGroup = pillSheetGroup.replaced(updatedPillSheet3);
 
         expect(updatedGroup.pillSheets.length, 3);

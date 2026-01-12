@@ -71,7 +71,6 @@ _$PillSheetV2Impl _$$PillSheetV2ImplFromJson(Map<String, dynamic> json) => _$Pil
       id: json['id'] as String?,
       typeInfo: PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
       beginingDate: NonNullTimestampConverter.timestampToDateTime(json['beginingDate'] as Timestamp),
-      lastTakenDate: TimestampConverter.timestampToDateTime(json['lastTakenDate'] as Timestamp?),
       createdAt: TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
       deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
       groupIndex: (json['groupIndex'] as num?)?.toInt() ?? 0,
@@ -92,7 +91,6 @@ Map<String, dynamic> _$$PillSheetV2ImplToJson(_$PillSheetV2Impl instance) {
   writeNotNull('id', instance.id);
   val['typeInfo'] = instance.typeInfo.toJson();
   val['beginingDate'] = NonNullTimestampConverter.dateTimeToTimestamp(instance.beginingDate);
-  val['lastTakenDate'] = TimestampConverter.dateTimeToTimestamp(instance.lastTakenDate);
   val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['groupIndex'] = instance.groupIndex;
