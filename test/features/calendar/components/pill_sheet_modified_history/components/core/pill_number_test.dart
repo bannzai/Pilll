@@ -46,47 +46,6 @@ void main() {
         });
       });
 
-      group('v2（2錠飲み）のケース', () {
-        test('1回目の服用（before=12, after=13）の場合、「13番」を返す', () {
-          // v2の1回目服用は通常のv1と同じ
-          final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-            beforeLastTakenPillNumber: 12,
-            afterLastTakenPillNumber: 13,
-            pillSheetAppearanceMode: pillSheetAppearanceMode,
-          );
-          expect(result, '13番');
-        });
-
-        test('2回目の服用（before=13, after=13）の場合、「13番」を返す', () {
-          // v2で同じピルを2回目服用した場合、before == after になる
-          // 修正前は「14-13番」と表示されていたバグを修正
-          final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-            beforeLastTakenPillNumber: 13,
-            afterLastTakenPillNumber: 13,
-            pillSheetAppearanceMode: pillSheetAppearanceMode,
-          );
-          expect(result, '13番');
-        });
-
-        test('ピルシート最初のピルの2回目服用（before=1, after=1）の場合、「1番」を返す', () {
-          final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-            beforeLastTakenPillNumber: 1,
-            afterLastTakenPillNumber: 1,
-            pillSheetAppearanceMode: pillSheetAppearanceMode,
-          );
-          expect(result, '1番');
-        });
-
-        test('ピルシート最後のピルの2回目服用（before=28, after=28）の場合、「28番」を返す', () {
-          final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-            beforeLastTakenPillNumber: 28,
-            afterLastTakenPillNumber: 28,
-            pillSheetAppearanceMode: pillSheetAppearanceMode,
-          );
-          expect(result, '28番');
-        });
-      });
-
       group('境界値テスト', () {
         test('before=0, after=1の場合、「1番」を返す', () {
           final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
@@ -137,15 +96,6 @@ void main() {
         );
         expect(result, '11-15日目');
       });
-
-      test('v2で2回目の服用（before=13, after=13）の場合、「13日目」を返す', () {
-        final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: 13,
-          afterLastTakenPillNumber: 13,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
-        );
-        expect(result, '13日目');
-      });
     });
 
     group('PillSheetAppearanceMode.cyclicSequential（周期的連番表示・日目表記）', () {
@@ -159,15 +109,6 @@ void main() {
         );
         expect(result, '13日目');
       });
-
-      test('v2で2回目の服用（before=13, after=13）の場合、「13日目」を返す', () {
-        final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: 13,
-          afterLastTakenPillNumber: 13,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
-        );
-        expect(result, '13日目');
-      });
     });
 
     group('PillSheetAppearanceMode.date（日付表示・番表記）', () {
@@ -176,15 +117,6 @@ void main() {
       test('1錠分の服用（before=12, after=13）の場合、「13番」を返す', () {
         final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
           beforeLastTakenPillNumber: 12,
-          afterLastTakenPillNumber: 13,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
-        );
-        expect(result, '13番');
-      });
-
-      test('v2で2回目の服用（before=13, after=13）の場合、「13番」を返す', () {
-        final result = PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: 13,
           afterLastTakenPillNumber: 13,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
@@ -247,6 +179,162 @@ void main() {
         );
         expect(result, '15-11番');
       });
+    });
+  });
+
+  group('#takenV2', () {
+    group('PillSheetAppearanceMode.number（番号表示）', () {
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
+
+      test('1回目の服用（before=12, after=13）の場合、「13番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+          beforeLastTakenPillNumber: 12,
+          afterLastTakenPillNumber: 13,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '13番');
+      });
+
+      test('2回目の服用（before=13, after=13）の場合、「13番」を返す', () {
+        // v2で同じピルを2回目服用した場合、before == after になる
+        final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+          beforeLastTakenPillNumber: 13,
+          afterLastTakenPillNumber: 13,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '13番');
+      });
+
+      test('ピルシート最初のピルの2回目服用（before=1, after=1）の場合、「1番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+          beforeLastTakenPillNumber: 1,
+          afterLastTakenPillNumber: 1,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '1番');
+      });
+
+      test('ピルシート最後のピルの2回目服用（before=28, after=28）の場合、「28番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+          beforeLastTakenPillNumber: 28,
+          afterLastTakenPillNumber: 28,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '28番');
+      });
+
+      test('初回服用（beforeがnull）の場合、「1番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+          beforeLastTakenPillNumber: null,
+          afterLastTakenPillNumber: 1,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '1番');
+      });
+    });
+
+    group('PillSheetAppearanceMode.sequential（連番表示・日目表記）', () {
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
+
+      test('2回目の服用（before=13, after=13）の場合、「13日目」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+          beforeLastTakenPillNumber: 13,
+          afterLastTakenPillNumber: 13,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '13日目');
+      });
+    });
+  });
+
+  group('#revertV2', () {
+    group('PillSheetAppearanceMode.number（番号表示）', () {
+      const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
+
+      test('afterがnullの場合（全ての服用を取り消し）、「before番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+          beforeLastTakenPillNumber: 5,
+          afterLastTakenPillNumber: null,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '5番');
+      });
+
+      test('2回目服用の取り消し（before=13, after=13）の場合、「13番」を返す', () {
+        // v2で同じピルの2回目服用を取り消した場合、before == after になる
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+          beforeLastTakenPillNumber: 13,
+          afterLastTakenPillNumber: 13,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '13番');
+      });
+
+      test('1錠分のrevert（before=13, after=12）の場合、「13番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+          beforeLastTakenPillNumber: 13,
+          afterLastTakenPillNumber: 12,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '13番');
+      });
+
+      test('複数錠のrevert（before=15, after=10）の場合、「15-11番」を返す', () {
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+          beforeLastTakenPillNumber: 15,
+          afterLastTakenPillNumber: 10,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '15-11番');
+      });
+
+      test('2錠分のrevert（before=10, after=8）の場合、「9-10番」を返す', () {
+        // ユーザーシナリオ: 9番をタップして9番と10番を取り消し
+        final result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+          beforeLastTakenPillNumber: 10,
+          afterLastTakenPillNumber: 8,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+        expect(result, '10-9番');
+      });
+    });
+  });
+
+  group('#revert vs #revertV2 比較', () {
+    const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
+
+    test('before=10, after=9 の場合（v1: 1錠取り消し）', () {
+      final v1Result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 9,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      final v2Result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 9,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      // v1: 10番のみ取り消し → 「10番」
+      expect(v1Result, '10番');
+      // v2: 10番のみ取り消し → 「10番」
+      expect(v2Result, '10番');
+    });
+
+    test('before=10, after=8 の場合（9番と10番を取り消し）', () {
+      final v1Result = PillSheetModifiedHistoryPillNumberOrDate.revert(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 8,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      final v2Result = PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+        beforeLastTakenPillNumber: 10,
+        afterLastTakenPillNumber: 8,
+        pillSheetAppearanceMode: pillSheetAppearanceMode,
+      );
+      // v1: 9番と10番を取り消し → 「10-9番」
+      expect(v1Result, '10-9番');
+      // v2: 9番と10番を取り消し → 「10-9番」
+      expect(v2Result, '10-9番');
     });
   });
 

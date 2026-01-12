@@ -49,6 +49,18 @@ mixin _$PillSheetGroup {
   /// 番号表示、日付表示、連続番号表示の切り替えを制御
   PillSheetAppearanceMode get pillSheetAppearanceMode => throw _privateConstructorUsedError;
 
+  /// ピルシートグループのバージョン（記録用）
+  /// "v1": 1錠飲みユーザー（デフォルト）
+  /// "v2": 2錠飲みユーザー
+  /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+  String get version => throw _privateConstructorUsedError;
+
+  /// 1回の服用で飲むピルの錠数（記録用）
+  /// 1: 1錠飲み（デフォルト）
+  /// 2: 2錠飲み
+  /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+  int get pillTakenCount => throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PillSheetGroupCopyWith<PillSheetGroup> get copyWith => throw _privateConstructorUsedError;
@@ -65,7 +77,9 @@ abstract class $PillSheetGroupCopyWith<$Res> {
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-      PillSheetAppearanceMode pillSheetAppearanceMode});
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      String version,
+      int pillTakenCount});
 
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
 }
@@ -89,6 +103,8 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup> implements
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
     Object? pillSheetAppearanceMode = null,
+    Object? version = null,
+    Object? pillTakenCount = null,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -119,6 +135,14 @@ class _$PillSheetGroupCopyWithImpl<$Res, $Val extends PillSheetGroup> implements
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ) as $Val);
   }
 
@@ -148,7 +172,9 @@ abstract class _$$PillSheetGroupImplCopyWith<$Res> implements $PillSheetGroupCop
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-      PillSheetAppearanceMode pillSheetAppearanceMode});
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      String version,
+      int pillTakenCount});
 
   @override
   $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get displayNumberSetting;
@@ -169,6 +195,8 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res> extends _$PillSheetGroupCopyWithI
     Object? deletedAt = freezed,
     Object? displayNumberSetting = freezed,
     Object? pillSheetAppearanceMode = null,
+    Object? version = null,
+    Object? pillTakenCount = null,
   }) {
     return _then(_$PillSheetGroupImpl(
       id: freezed == id
@@ -199,6 +227,14 @@ class __$$PillSheetGroupImplCopyWithImpl<$Res> extends _$PillSheetGroupCopyWithI
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+      pillTakenCount: null == pillTakenCount
+          ? _value.pillTakenCount
+          : pillTakenCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -215,7 +251,9 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
       required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
       this.displayNumberSetting,
-      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
+      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
+      this.version = 'v1',
+      this.pillTakenCount = 1})
       : _pillSheetIDs = pillSheetIDs,
         _pillSheets = pillSheets,
         super._();
@@ -276,9 +314,25 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
   @JsonKey()
   final PillSheetAppearanceMode pillSheetAppearanceMode;
 
+  /// ピルシートグループのバージョン（記録用）
+  /// "v1": 1錠飲みユーザー（デフォルト）
+  /// "v2": 2錠飲みユーザー
+  /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+  @override
+  @JsonKey()
+  final String version;
+
+  /// 1回の服用で飲むピルの錠数（記録用）
+  /// 1: 1錠飲み（デフォルト）
+  /// 2: 2錠飲み
+  /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+  @override
+  @JsonKey()
+  final int pillTakenCount;
+
   @override
   String toString() {
-    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, displayNumberSetting: $displayNumberSetting, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt, displayNumberSetting: $displayNumberSetting, pillSheetAppearanceMode: $pillSheetAppearanceMode, version: $version, pillTakenCount: $pillTakenCount)';
   }
 
   @override
@@ -292,13 +346,15 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
             (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
             (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
             (identical(other.displayNumberSetting, displayNumberSetting) || other.displayNumberSetting == displayNumberSetting) &&
-            (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode));
+            (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) || other.pillSheetAppearanceMode == pillSheetAppearanceMode) &&
+            (identical(other.version, version) || other.version == version) &&
+            (identical(other.pillTakenCount, pillTakenCount) || other.pillTakenCount == pillTakenCount));
   }
 
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType, id, const DeepCollectionEquality().hash(_pillSheetIDs),
-      const DeepCollectionEquality().hash(_pillSheets), createdAt, deletedAt, displayNumberSetting, pillSheetAppearanceMode);
+      const DeepCollectionEquality().hash(_pillSheets), createdAt, deletedAt, displayNumberSetting, pillSheetAppearanceMode, version, pillTakenCount);
 
   @JsonKey(ignore: true)
   @override
@@ -322,7 +378,9 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       required final DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
-      final PillSheetAppearanceMode pillSheetAppearanceMode}) = _$PillSheetGroupImpl;
+      final PillSheetAppearanceMode pillSheetAppearanceMode,
+      final String version,
+      final int pillTakenCount}) = _$PillSheetGroupImpl;
   _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) = _$PillSheetGroupImpl.fromJson;
@@ -363,6 +421,20 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   /// ピルシートの表示モード設定
   /// 番号表示、日付表示、連続番号表示の切り替えを制御
   PillSheetAppearanceMode get pillSheetAppearanceMode;
+  @override
+
+  /// ピルシートグループのバージョン（記録用）
+  /// "v1": 1錠飲みユーザー（デフォルト）
+  /// "v2": 2錠飲みユーザー
+  /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+  String get version;
+  @override
+
+  /// 1回の服用で飲むピルの錠数（記録用）
+  /// 1: 1錠飲み（デフォルト）
+  /// 2: 2錠飲み
+  /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+  int get pillTakenCount;
   @override
   @JsonKey(ignore: true)
   _$$PillSheetGroupImplCopyWith<_$PillSheetGroupImpl> get copyWith => throw _privateConstructorUsedError;

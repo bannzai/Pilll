@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -44,8 +43,8 @@ class RevertTakePill {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final revertDate = targetPillSheet.displayPillTakeDate(targetRevertPillNumberIntoPillSheet).subtract(const Duration(days: 1)).date();
-    debugPrint('revertDate: $revertDate');
+    final targetPillDate = targetPillSheet.displayPillTakeDate(targetRevertPillNumberIntoPillSheet);
+    final revertDate = targetPillDate.subtract(const Duration(days: 1)).date();
 
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
@@ -88,6 +87,7 @@ class RevertTakePill {
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.last];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
+
     final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: before,
