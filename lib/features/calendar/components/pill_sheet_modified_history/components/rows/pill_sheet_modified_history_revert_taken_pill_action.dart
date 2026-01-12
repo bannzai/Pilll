@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -43,11 +44,18 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.revert(
-        beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-        afterLastTakenPillNumber: afterLastTakenPillNumber,
-        pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-      )),
+          pillNumber: switch (afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet) {
+        PillSheetV1() => PillSheetModifiedHistoryPillNumberOrDate.revert(
+            beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+            afterLastTakenPillNumber: afterLastTakenPillNumber,
+            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+          ),
+        PillSheetV2() => PillSheetModifiedHistoryPillNumberOrDate.revertV2(
+            beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+            afterLastTakenPillNumber: afterLastTakenPillNumber,
+            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+          ),
+      }),
       detail: Text(
         L.cancelTaking,
         style: const TextStyle(
