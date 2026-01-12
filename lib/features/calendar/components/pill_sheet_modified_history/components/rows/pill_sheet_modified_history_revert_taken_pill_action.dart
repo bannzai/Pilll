@@ -41,6 +41,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     if (afterLastTakenPillNumber == afterPillSheetGroup.activePillSheetWhen(estimatedEventCausingDate)?.pillSheetType.totalCount) {
       afterLastTakenPillNumber = null;
     }
+
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
