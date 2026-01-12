@@ -321,7 +321,17 @@ sealed class PillSheet with _$PillSheet {
   /// 最後に服用したピルの番号（0または1以上）
   /// まだ服用していない場合は0、服用済みの場合は1以上の値を返す
   /// null安全のため常に数値を返すバージョン
+  /// v1: lastTakenDateからpillNumberForで計算
+  /// v2: pillTakensが空でない最後のピルのインデックス+1を返す
+  ///     (lastTakenDateは実際の服用日時であり、v2では同じピルを別日に飲むことがあるため)
   int get lastTakenOrZeroPillNumber {
+    return switch (this) {
+      PillSheetV1() => _lastTakenOrZeroPillNumberV1(),
+      PillSheetV2(:final pills) => _lastTakenOrZeroPillNumberV2(pills),
+    };
+  }
+
+  int _lastTakenOrZeroPillNumberV1() {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
       return 0;
@@ -333,6 +343,16 @@ sealed class PillSheet with _$PillSheet {
     }
 
     return pillNumberFor(targetDate: lastTakenDate);
+  }
+
+  int _lastTakenOrZeroPillNumberV2(List<Pill> pills) {
+    // v2: pillTakensが空でない最後のピルを探し、そのピル番号(index+1)を返す
+    // lastTakenDateから計算すると、同じピルを別日に服用した場合に間違ったピル番号になるため
+    final lastTaken = pills.lastWhereOrNull((p) => p.pillTakens.isNotEmpty);
+    if (lastTaken == null) {
+      return 0;
+    }
+    return lastTaken.index + 1; // ピル番号は1始まり
   }
 
   /// 最後に服用したピルの番号（nullable）
