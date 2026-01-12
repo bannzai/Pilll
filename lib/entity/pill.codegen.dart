@@ -88,13 +88,14 @@ class Pill with _$Pill {
     required DateTime? lastTakenDate,
     required int pillTakenCount,
   }) {
+    final currentDate = now();
     return List.generate(pillSheetType.totalCount, (index) {
       final date = fromDate.add(Duration(days: index));
       return Pill(
         index: index,
         takenCount: pillTakenCount,
-        createdDateTime: now(),
-        updatedDateTime: now(),
+        createdDateTime: currentDate,
+        updatedDateTime: currentDate,
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
             ? List.generate(
                 pillTakenCount,
@@ -102,8 +103,8 @@ class Pill with _$Pill {
                   // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
                   return PillTaken(
                     recordedTakenDateTime: lastTakenDate,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
+                    createdDateTime: currentDate,
+                    updatedDateTime: currentDate,
                   );
                 },
               )
