@@ -6682,7 +6682,7 @@ void main() {
       });
     });
 
-    group("#todayPillsAreAlreadyTaken", () {
+    group("#todayPillAllTaken", () {
       test("今日のピルを全錠飲んでいる場合はtrue", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
@@ -6734,7 +6734,7 @@ void main() {
           ),
         ) as PillSheetV2;
 
-        expect(pillSheet.todayPillsAreAlreadyTaken, true);
+        expect(pillSheet.todayPillAllTaken, true);
       });
 
       test("今日のピルを1錠だけ飲んでいる場合はfalse", () {
@@ -6783,7 +6783,7 @@ void main() {
           ),
         ) as PillSheetV2;
 
-        expect(pillSheet.todayPillsAreAlreadyTaken, false);
+        expect(pillSheet.todayPillAllTaken, false);
       });
 
       test("ピルシートの終了日を過ぎた場合でもRangeErrorが発生しない", () {
@@ -6827,7 +6827,7 @@ void main() {
         // 32 != 21 なので false を返す
         expect(pillSheet.todayPillNumber, greaterThan(sheetType.totalCount));
         expect(pillSheet.lastCompletedPillNumber, sheetType.totalCount);
-        expect(pillSheet.todayPillsAreAlreadyTaken, false);
+        expect(pillSheet.todayPillAllTaken, false);
       });
     });
 

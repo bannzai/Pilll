@@ -377,7 +377,7 @@ sealed class PillSheet with _$PillSheet {
   // 番号で比較しない(lastTakenPillNumber == todayPillNumber)理由は、各プロパティが上限値を超えないことを保証してないため。たとえばtodayPillNumberが30になることもありえる
   /// 今日のピルがすでに服用済みかどうか
   /// 最終服用日が今日以降の場合にtrueを返す
-  /// @deprecated 1錠飲みでのみ使用。2錠飲み対応後は todayPillsAreAlreadyTaken を使用
+  /// @deprecated 1錠飲みでのみ使用。2錠飲み対応後は todayPillAllTaken を使用
   bool get todayPillIsAlreadyTaken {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
@@ -524,7 +524,7 @@ extension PillSheetV2Extension on PillSheetV2 {
 
   /// 今日のピルがすべて服用完了したかどうか
   /// ピルシートの終了日を過ぎている場合はfalseを返す
-  bool get todayPillsAreAlreadyTaken {
+  bool get todayPillAllTaken {
     // anyTodayPillsAreAlreadyTakenと同様に境界チェックを行う
     // todayPillIndexがpills.lengthを超える場合（ピルシート終了後）はfalse
     if (todayPillIndex < 0 || todayPillIndex >= pills.length) {

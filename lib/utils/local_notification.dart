@@ -283,9 +283,9 @@ class RegisterReminderLocalNotification {
     final List<Future<void>> futures = [];
 
     final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber;
-    final todayPillsAreAlreadyTaken = switch (activePillSheet) {
+    final todayPillAllTaken = switch (activePillSheet) {
       PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
-      PillSheetV2 v2 => v2.todayPillsAreAlreadyTaken,
+      PillSheetV2 v2 => v2.todayPillAllTaken,
     };
 
     for (final reminderTime in setting.reminderTimes) {
@@ -293,10 +293,10 @@ class RegisterReminderLocalNotification {
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final dayOffset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
-        if (dayOffset == 0 && todayPillsAreAlreadyTaken) {
+        if (dayOffset == 0 && todayPillAllTaken) {
           analytics.debug(name: 'rrrn_skip_already_taken', parameters: {
             'dayOffset': dayOffset,
-            'todayPillsAreAlreadyTaken': todayPillsAreAlreadyTaken,
+            'todayPillAllTaken': todayPillAllTaken,
             'reminderTimeHour': reminderTime.hour,
             'reminderTimeMinute': reminderTime.minute,
           });
@@ -434,7 +434,7 @@ class RegisterReminderLocalNotification {
               return setting.reminderNotificationCustomization.missedTakenMessage;
             }
             // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
-            if (dayOffset == 0 && !todayPillsAreAlreadyTaken) {
+            if (dayOffset == 0 && !todayPillAllTaken) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
             // 本日分の服用記録がある場合で、次の日のループ(dayOffset==1)の時

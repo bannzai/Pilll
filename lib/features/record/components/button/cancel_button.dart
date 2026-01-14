@@ -43,11 +43,11 @@ class CancelButton extends HookConsumerWidget {
 
   Future<PillSheetGroup?> _cancelTaken(RevertTakePill revertTakePill) async {
     // 「飲んでない」ボタンを押したときは本日分の服用のundo機能になる。なので、すべて服用済みじゃない場合はreturnする
-    final todayPillsAreAlreadyTaken = switch (activePillSheet) {
+    final todayPillAllTaken = switch (activePillSheet) {
       PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
-      PillSheetV2 v2 => v2.todayPillsAreAlreadyTaken,
+      PillSheetV2 v2 => v2.todayPillAllTaken,
     };
-    if (!todayPillsAreAlreadyTaken) {
+    if (!todayPillAllTaken) {
       return null;
     }
 

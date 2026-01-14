@@ -219,10 +219,10 @@ class RecordPagePillSheet extends HookConsumerWidget {
       // User tapped future pill number
       return null;
     }
-    // v2の場合はtodayPillsAreAlreadyTakenで判定
+    // v2の場合はtodayPillAllTakenで判定
     final isAlreadyTaken = switch (activePillSheet) {
       PillSheetV1() => activePillSheet.todayPillIsAlreadyTaken,
-      PillSheetV2() => activePillSheet.todayPillsAreAlreadyTaken,
+      PillSheetV2() => activePillSheet.todayPillAllTaken,
     };
     if (isAlreadyTaken) {
       return null;

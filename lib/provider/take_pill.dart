@@ -44,7 +44,7 @@ class TakePill {
     // v1/v2で判定方法を分岐
     final isAlreadyTaken = switch (activePillSheet) {
       PillSheetV1() => activePillSheet.todayPillIsAlreadyTaken,
-      PillSheetV2() => activePillSheet.todayPillsAreAlreadyTaken,
+      PillSheetV2() => activePillSheet.todayPillAllTaken,
     };
     if (isAlreadyTaken) {
       return null;
