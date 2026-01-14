@@ -106,10 +106,8 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
-            isDisabled: false,
           ),
           onTap: () {},
-          isDisabled: false,
         ),
       );
     });

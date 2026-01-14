@@ -21,17 +21,12 @@ class PillMark extends StatefulWidget {
   /// 数字がある場合はピルマーク上に表示される
   final int? remainingPillTakenCount;
 
-  /// 前日のピルが未完了のため、このピルをタップできない状態かどうか
-  /// trueの場合、半透明表示になりタップ操作が無効になる
-  final bool isDisabled;
-
   const PillMark({
     super.key,
     required this.pillMarkType,
     required this.showsCheckmark,
     required this.showsRippleAnimation,
     required this.remainingPillTakenCount,
-    required this.isDisabled,
   });
 
   @override
@@ -64,42 +59,39 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return Opacity(
-      opacity: widget.isDisabled ? 0.4 : 1.0,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              switch (widget.pillMarkType) {
-                PillMarkType.normal => const NormalPillMark(),
-                PillMarkType.rest => const RestPillMark(),
-                PillMarkType.fake => const FakePillMark(),
-                PillMarkType.selected => const SelectedPillMark(),
-                PillMarkType.done => const LightGrayPillMark(),
-              },
-              if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
-              if (widget.remainingPillTakenCount != null)
-                Text('${widget.remainingPillTakenCount}', style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
-            ],
-          ),
-          if (widget.showsRippleAnimation && !widget.isDisabled)
-            // NOTE: pill mark size is 20px. Ripple view final size is 80px.
-            // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
-            Positioned(
-              left: -30,
-              top: -30,
-              child: CustomPaint(
-                size: const Size(PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
-                painter: Ripple(
-                  _controller,
-                  color: AppColors.secondary,
-                ),
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            switch (widget.pillMarkType) {
+              PillMarkType.normal => const NormalPillMark(),
+              PillMarkType.rest => const RestPillMark(),
+              PillMarkType.fake => const FakePillMark(),
+              PillMarkType.selected => const SelectedPillMark(),
+              PillMarkType.done => const LightGrayPillMark(),
+            },
+            if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+            if (widget.remainingPillTakenCount != null)
+              Text('${widget.remainingPillTakenCount}', style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
+          ],
+        ),
+        if (widget.showsRippleAnimation)
+          // NOTE: pill mark size is 20px. Ripple view final size is 80px.
+          // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
+          Positioned(
+            left: -30,
+            top: -30,
+            child: CustomPaint(
+              size: const Size(PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
+              painter: Ripple(
+                _controller,
+                color: AppColors.secondary,
               ),
             ),
-        ],
-      ),
+          ),
+      ],
     );
   }
 }

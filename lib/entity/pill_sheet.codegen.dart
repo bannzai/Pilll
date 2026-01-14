@@ -540,13 +540,6 @@ extension PillSheetV2Extension on PillSheetV2 {
     return pills[todayPillIndex].pillTakens.isNotEmpty;
   }
 
-  /// 指定したピル番号のピルがタップ不可かどうか
-  /// 明日以降（未来）のピルはタップ不可
-  bool isPillDisabled({required int pillNumberInPillSheet}) {
-    // 明日以降のピルはdisabled
-    return pillNumberInPillSheet > todayPillNumber;
-  }
-
   /// pillsリストの一部を置き換えたリストを返す
   /// 服用記録の更新時に使用
   List<Pill> replacedPills({required List<Pill> newPills}) {

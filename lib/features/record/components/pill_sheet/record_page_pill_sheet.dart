@@ -95,13 +95,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
       }
 
       final pillNumberInPillSheet = PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(columnIndex, lineIndex);
-      final activePillSheet = pillSheetGroup.activePillSheet;
-      // activePillSheetでないピルシートは全てdisabled
-      final isNotActive = activePillSheet == null || activePillSheet.groupIndex != pillSheet.groupIndex;
-      final isDisabled = switch (pillSheet) {
-        PillSheetV1() => isNotActive,
-        PillSheetV2 v2 => isNotActive || v2.isPillDisabled(pillNumberInPillSheet: pillNumberInPillSheet),
-      };
       return SizedBox(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -130,9 +123,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
-            isDisabled: isDisabled,
           ),
-          isDisabled: isDisabled,
           onTap: () async {
             try {
               analytics.logEvent(name: 'pill_mark_tapped', parameters: {
