@@ -284,8 +284,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       actionType: PillSheetModifiedActionType.changedPillNumber,
       value: PillSheetModifiedHistoryValue(
         changedPillNumber: ChangedPillNumberValue(
-          afterBeginingDate: after.beginingDate,
-          beforeBeginingDate: before.beginingDate,
+          afterBeginingDate: after.beginDate,
+          beforeBeginingDate: before.beginDate,
           afterTodayPillNumber: after.todayPillNumber,
           beforeTodayPillNumber: before.todayPillNumber,
           beforeGroupIndex: before.groupIndex,

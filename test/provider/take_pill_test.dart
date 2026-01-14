@@ -30,7 +30,7 @@ void main() {
       id: "previous_pill_sheet_id",
       groupIndex: 0,
       typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-      beginingDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
+      beginDate: activePillSheetBeginDate.subtract(const Duration(days: 28)),
       lastTakenDate: activePillSheetBeginDate.subtract(const Duration(days: 1)),
       createdAt: now(),
     );
@@ -38,7 +38,7 @@ void main() {
       id: "active_pill_sheet_id",
       groupIndex: 1,
       typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-      beginingDate: activePillSheetBeginDate,
+      beginDate: activePillSheetBeginDate,
       lastTakenDate: activePillSheetLastTakenDate,
       createdAt: now(),
     );
@@ -46,7 +46,7 @@ void main() {
       id: "next_pill_sheet_id",
       groupIndex: 2,
       typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-      beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+      beginDate: activePillSheetBeginDate.add(const Duration(days: 28)),
       lastTakenDate: null,
       createdAt: now(),
     );
@@ -149,7 +149,7 @@ void main() {
             id: "active_pill_sheet_id",
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
-            beginingDate: mockNow.date(),
+            beginDate: mockNow.date(),
             createdAt: now(),
             //  pillTakenCount: 2,
             pills: List.generate(
@@ -221,7 +221,7 @@ void main() {
             id: "active_pill_sheet_id",
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
-            beginingDate: mockNow.date(),
+            beginDate: mockNow.date(),
             createdAt: now(),
             //  pillTakenCount: 2,
             pills: List.generate(
@@ -310,7 +310,7 @@ void main() {
             id: "active_pill_sheet_id",
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
-            beginingDate: mockNow.date(),
+            beginDate: mockNow.date(),
             createdAt: now(),
             //  pillTakenCount: 2,
             pills: List.generate(
@@ -387,7 +387,7 @@ void main() {
             id: "active_pill_sheet_id",
             groupIndex: 0,
             typeInfo: sheetType.typeInfo,
-            beginingDate: DateTime.parse("2022-07-24"),
+            beginDate: DateTime.parse("2022-07-24"),
             createdAt: now(),
             pills: List.generate(
               sheetType.totalCount,
@@ -753,7 +753,7 @@ void main() {
         previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
           lastTakenDate: previousPillSheetLastTakenDate,
         );
-        final activePillSheetLastTakenDate = activePillSheet.beginingDate.subtract(const Duration(days: 1));
+        final activePillSheetLastTakenDate = activePillSheet.beginDate.subtract(const Duration(days: 1));
         activePillSheet = (activePillSheet as PillSheetV1).copyWith(
           lastTakenDate: activePillSheetLastTakenDate,
         );
@@ -805,9 +805,9 @@ void main() {
         expect(result, updatedPillSheetGroup);
       });
 
-      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginingDate(19:02:21)) and with rest duration", () async {
+      test("Real case 1. Timesensitive pattern(takenDate(19:02:00) < beginDate(19:02:21)) and with rest duration", () async {
         previousPillSheet = (previousPillSheet as PillSheetV1).copyWith(
-          beginingDate: DateTime.parse(
+          beginDate: DateTime.parse(
             "2022-06-22T19:02:21",
           ),
           lastTakenDate: DateTime.parse("2022-07-23T19:00:04"),
@@ -821,7 +821,7 @@ void main() {
           ],
         );
 
-        activePillSheet = activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-24T19:02:21"));
+        activePillSheet = activePillSheet.copyWith(beginDate: DateTime.parse("2022-07-24T19:02:21"));
         pillSheetGroup = PillSheetGroup(
           id: "group_id",
           pillSheetIDs: [previousPillSheet.id!, activePillSheet.id!, nextPillSheet.id!],
@@ -880,9 +880,9 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(mockToday);
 
-        previousPillSheet = (previousPillSheet.copyWith(beginingDate: DateTime.parse("2022-06-23T00:00:00")) as PillSheetV1)
+        previousPillSheet = (previousPillSheet.copyWith(beginDate: DateTime.parse("2022-06-23T00:00:00")) as PillSheetV1)
             .copyWith(lastTakenDate: DateTime.parse("2022-07-20T00:00:00"));
-        activePillSheet = (activePillSheet.copyWith(beginingDate: DateTime.parse("2022-07-21T00:00:00")) as PillSheetV1)
+        activePillSheet = (activePillSheet.copyWith(beginDate: DateTime.parse("2022-07-21T00:00:00")) as PillSheetV1)
             .copyWith(lastTakenDate: DateTime.parse("2022-08-11"));
         activePillSheet = activePillSheet.copyWith(restDurations: [
           RestDuration(
@@ -905,7 +905,7 @@ void main() {
           id: "next_pill_sheet_id",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-          beginingDate: activePillSheetBeginDate.add(const Duration(days: 28)),
+          beginDate: activePillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
           createdAt: now(),
         );
@@ -977,7 +977,7 @@ void main() {
         // 2日目(7/25): 今日、未服用
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           pills: List.generate(
@@ -1033,7 +1033,7 @@ void main() {
         // 2日目(7/25): 今日、未服用
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1090,7 +1090,7 @@ void main() {
         // 3日目(7/26): 1回服用済み（今日の1回目）
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1168,7 +1168,7 @@ void main() {
 
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1250,7 +1250,7 @@ void main() {
         // 3日目(7/26)まで完了、今日4日目
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1302,7 +1302,7 @@ void main() {
         // 3日間の休薬期間あり (7/26-7/28)
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1357,7 +1357,7 @@ void main() {
         // 複数の休薬期間: 7/26-7/27 (1日) と 7/30-8/01 (2日)
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           //  pillTakenCount: 2,
@@ -1420,7 +1420,7 @@ void main() {
 
         final emptyPillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
@@ -1435,7 +1435,7 @@ void main() {
         expect((result as PillSheetV2).pills, isEmpty);
       });
 
-      test("takenDateがbeginingDateより前の日付の場合、finalTakenPillIndexが0以下になり適切に処理される", () {
+      test("takenDateがbeginDateより前の日付の場合、finalTakenPillIndexが0以下になり適切に処理される", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-22"));
@@ -1443,7 +1443,7 @@ void main() {
         const sheetType = PillSheetType.pillsheet_28_7;
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1478,7 +1478,7 @@ void main() {
         // 全てのピルを完了済みにする（最後のピル以外）
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: DateTime.parse("2022-07-01"),
+          beginDate: DateTime.parse("2022-07-01"),
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1531,7 +1531,7 @@ void main() {
         // すべての前日のピルを完了済みにする（最後のピル以外）
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1582,7 +1582,7 @@ void main() {
         const sheetType = PillSheetType.pillsheet_28_7;
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
@@ -1643,7 +1643,7 @@ void main() {
 
         final pillSheet = PillSheet.v2(
           id: "sheet_id",
-          beginingDate: beginDate,
+          beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
           typeInfo: sheetType.typeInfo, // typeInfo は28日分だが pills は10個

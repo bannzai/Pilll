@@ -71,7 +71,7 @@ class TakePill {
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
       // 一つ前のピルシートのピルをタップした時など
-      if (takenDate.date().isBefore(pillSheet.beginingDate.date())) {
+      if (takenDate.date().isBefore(pillSheet.beginDate.date())) {
         return pillSheet;
       }
 

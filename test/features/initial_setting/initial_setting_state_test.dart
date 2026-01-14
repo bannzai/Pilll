@@ -46,7 +46,7 @@ void main() {
       final expected = PillSheet.v1(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: DateTime.parse("2020-11-23"),
+        beginDate: DateTime.parse("2020-11-23"),
         lastTakenDate: null,
         createdAt: now(),
       );
@@ -77,7 +77,7 @@ void main() {
         id: "sheet_id2",
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-        beginingDate: DateTime.parse("2020-12-21"),
+        beginDate: DateTime.parse("2020-12-21"),
         lastTakenDate: null,
         createdAt: now(),
       );
@@ -109,7 +109,7 @@ void main() {
         id: "sheet_id",
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: DateTime.parse("2020-10-26"),
+        beginDate: DateTime.parse("2020-10-26"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: now(),
       );

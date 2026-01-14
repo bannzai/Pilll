@@ -48,7 +48,7 @@ void main() {
             PillSheet.v1(
               id: "1",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24 - 23)),
               createdAt: now(),
               groupIndex: 0,
@@ -57,7 +57,7 @@ void main() {
             PillSheet.v1(
               id: "2",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24 - 23)),
               createdAt: now(),
               groupIndex: 1,
@@ -66,7 +66,7 @@ void main() {
             PillSheet.v1(
               id: "3",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24 - 27)),
               createdAt: now(),
               groupIndex: 2,
@@ -75,7 +75,7 @@ void main() {
             PillSheet.v1(
               id: "4",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 - 23)),
               createdAt: now(),
               groupIndex: 3,
@@ -84,7 +84,7 @@ void main() {
             PillSheet.v1(
               id: "5",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 - 23)),
               createdAt: now(),
               groupIndex: 4,
@@ -93,7 +93,7 @@ void main() {
             PillSheet.v1(
               id: "6",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-              beginingDate: sheet5BeginDate,
+              beginDate: sheet5BeginDate,
               lastTakenDate: DateTime(2025, 12, 16), // 12/17時点で19番目まで服用
               createdAt: now(),
               groupIndex: 5,
@@ -261,7 +261,7 @@ void main() {
     );
 
     test(
-      "if latest pillsheet.beginingDate + totalCount < mockToday, when return schedueld card state",
+      "if latest pillsheet.beginDate + totalCount < mockToday, when return schedueld card state",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -279,7 +279,7 @@ void main() {
             PillSheet.v1(
               id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 22),
+              beginDate: DateTime(2021, 04, 22),
               lastTakenDate: null,
               createdAt: now(),
             ),
@@ -322,7 +322,7 @@ void main() {
             PillSheet.v1(
               id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 07),
+              beginDate: DateTime(2021, 04, 07),
               lastTakenDate: null,
               createdAt: now(),
             ),

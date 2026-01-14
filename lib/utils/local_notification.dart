@@ -784,7 +784,7 @@ class NewPillSheetNotification {
     for (final pillSheet in pillSheetGroup.pillSheets) {
       // 次のピルシートが存在する場合
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
-        final nextBeginDate = tz.TZDateTime.from(pillSheet.beginingDate, tz.local);
+        final nextBeginDate = tz.TZDateTime.from(pillSheet.beginDate, tz.local);
         final reminderDateTime = nextBeginDate
             .date()
             .add(

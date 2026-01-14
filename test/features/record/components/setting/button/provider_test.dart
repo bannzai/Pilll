@@ -44,7 +44,7 @@ void main() {
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: now(),
+        beginDate: now(),
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
@@ -113,7 +113,7 @@ void main() {
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now(),
-        beginingDate: now(),
+        beginDate: now(),
         createdAt: now(),
       );
       final updatedPillSheet = pillSheet.copyWith(restDurations: [notYetEndRestDuration]);
@@ -177,7 +177,7 @@ void main() {
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now().addDays(-2),
-        beginingDate: now().addDays(-28),
+        beginDate: now().addDays(-28),
         createdAt: now(),
       );
       expect(pillSheet1.isTakenAll, false);
@@ -187,7 +187,7 @@ void main() {
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: now(),
+        beginDate: now(),
         createdAt: now(),
       );
       final notYetEndRestDuration = RestDuration(
@@ -260,7 +260,7 @@ void main() {
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now().addDays(-1),
-        beginingDate: now().addDays(-28),
+        beginDate: now().addDays(-28),
         createdAt: now(),
       );
       expect(pillSheet1.isTakenAll, true);
@@ -270,7 +270,7 @@ void main() {
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: now(),
+        beginDate: now(),
         createdAt: now(),
       );
       final notYetEndRestDuration = RestDuration(
@@ -349,7 +349,7 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: now(),
+        beginDate: now(),
         lastTakenDate: null,
         restDurations: [notYetEndRestDuration],
         createdAt: now(),
@@ -421,7 +421,7 @@ void main() {
           id: "pill_sheet_id_1",
           groupIndex: 0,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: firstPillSheetBeginDate,
+          beginDate: firstPillSheetBeginDate,
           lastTakenDate: null,
           restDurations: [notYetEndRestDuration],
           createdAt: now(),
@@ -430,7 +430,7 @@ void main() {
           id: "pill_sheet_id_2",
           groupIndex: 1,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+          beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
           lastTakenDate: null,
           createdAt: now(),
         ),
@@ -438,14 +438,14 @@ void main() {
           id: "pill_sheet_id_3",
           groupIndex: 2,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+          beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
           lastTakenDate: null,
           createdAt: now(),
         )
       ];
       final updatedPillShee$1 = pillSheets[0].copyWith(restDurations: [endedRestDuration]);
-      final updatedPillShee$2 = pillSheets[1].copyWith(beginingDate: updatedPillShee$1.estimatedEndTakenDate.add(const Duration(days: 1)));
-      final updatedPillShee$3 = pillSheets[2].copyWith(beginingDate: updatedPillShee$2.estimatedEndTakenDate.add(const Duration(days: 1)));
+      final updatedPillShee$2 = pillSheets[1].copyWith(beginDate: updatedPillShee$1.estimatedEndTakenDate.add(const Duration(days: 1)));
+      final updatedPillShee$3 = pillSheets[2].copyWith(beginDate: updatedPillShee$2.estimatedEndTakenDate.add(const Duration(days: 1)));
       final updatedPillSheets = [
         updatedPillShee$1,
         updatedPillShee$2,
@@ -453,15 +453,15 @@ void main() {
       ];
 
       expect(
-        isSameDay(pillSheets[0].beginingDate, updatedPillShee$1.beginingDate),
+        isSameDay(pillSheets[0].beginDate, updatedPillShee$1.beginDate),
         true,
       );
       expect(
-        isSameDay(pillSheets[1].beginingDate, updatedPillShee$2.beginingDate),
+        isSameDay(pillSheets[1].beginDate, updatedPillShee$2.beginDate),
         false,
       );
       expect(
-        isSameDay(pillSheets[2].beginingDate, updatedPillShee$3.beginingDate),
+        isSameDay(pillSheets[2].beginDate, updatedPillShee$3.beginDate),
         false,
       );
 
@@ -526,7 +526,7 @@ void main() {
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: now(),
+        beginDate: now(),
         createdAt: now(),
         restDurations: [beforeRestDuration],
       );
@@ -578,7 +578,7 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされる", () async {
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginDateも変更される & 2枚目以降のlastTakenDateはクリアされる", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -609,7 +609,7 @@ void main() {
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now().addDays(-4),
-        beginingDate: now().addDays(-30),
+        beginDate: now().addDays(-30),
         createdAt: now(),
         restDurations: [],
       );
@@ -618,7 +618,7 @@ void main() {
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now(),
-        beginingDate: now().addDays(-2),
+        beginDate: now().addDays(-2),
         createdAt: now(),
         restDurations: [beforeRestDuration],
       );
@@ -627,21 +627,21 @@ void main() {
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
         createdAt: now(),
         restDurations: [],
       );
       final updatedPillSheet1 = pillSheet1.copyWith(
         restDurations: [afterRestDuration],
       );
-      // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginingDateが動く
+      // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginDateが動く
       final updatedPillSheet2 = (pillSheet2 as PillSheetV1).copyWith(
-        beginingDate: pillSheet2.beginingDate.addDays(3),
+        beginDate: pillSheet2.beginDate.addDays(3),
         lastTakenDate: null,
         restDurations: [],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
-        beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -685,7 +685,7 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。変更後もrestDurationを1つ持っている。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされない", () async {
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。変更後もrestDurationを1つ持っている。2枚目以降のpillSheet.beginDateも変更される & 2枚目以降のlastTakenDateはクリアされない", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -723,7 +723,7 @@ void main() {
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now().addDays(-4),
-        beginingDate: now().addDays(-30),
+        beginDate: now().addDays(-30),
         createdAt: now(),
         restDurations: [],
       );
@@ -732,7 +732,7 @@ void main() {
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now(),
-        beginingDate: now().addDays(-2),
+        beginDate: now().addDays(-2),
         createdAt: now(),
         restDurations: [notChangeRestDuration, beforeRestDuration],
       );
@@ -741,22 +741,22 @@ void main() {
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
         createdAt: now(),
         restDurations: [],
       );
       final updatedPillSheet1 = pillSheet1.copyWith(
         restDurations: [afterRestDuration],
       );
-      // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginingDateが動く
+      // afterRestDuration.beginDateで生じた差(-3)の数だけ、pillSheet.beginDateが動く
       final updatedPillSheet2 = pillSheet2.copyWith(
-        beginingDate: pillSheet2.beginingDate.addDays(3),
+        beginDate: pillSheet2.beginDate.addDays(3),
         // 変更されない
         // lastTakenDate: null,
         restDurations: [notChangeRestDuration],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
-        beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -832,7 +832,7 @@ void main() {
         id: "pill_sheet_id_1",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: now(),
+        beginDate: now(),
         createdAt: now(),
         restDurations: [beforeRestDuration],
       );
@@ -884,7 +884,7 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされる", () async {
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。2枚目以降のpillSheet.beginDateも変更される & 2枚目以降のlastTakenDateはクリアされる", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -922,7 +922,7 @@ void main() {
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now().addDays(-4),
-        beginingDate: now().addDays(-30),
+        beginDate: now().addDays(-30),
         createdAt: now(),
         restDurations: [],
       );
@@ -931,7 +931,7 @@ void main() {
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now(),
-        beginingDate: now().addDays(-2),
+        beginDate: now().addDays(-2),
         createdAt: now(),
         restDurations: [notChangeRestDuration, beforeRestDuration],
       );
@@ -940,7 +940,7 @@ void main() {
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
         createdAt: now(),
         restDurations: [],
       );
@@ -948,13 +948,13 @@ void main() {
         restDurations: [afterRestDuration],
       );
       final updatedPillSheet2 = pillSheet2.copyWith(
-        beginingDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
+        beginDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
         // 変更されない
         // lastTakenDate: null,
         restDurations: [notChangeRestDuration],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
-        beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -998,7 +998,7 @@ void main() {
       verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
     });
 
-    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。変更後もrestDurationを1つ持っている。2枚目以降のpillSheet.beginingDateも変更される & 2枚目以降のlastTakenDateはクリアされない", () async {
+    test("ピルシートが複数枚。2枚目から1枚目に変更する場合。変更後もrestDurationを1つ持っている。2枚目以降のpillSheet.beginDateも変更される & 2枚目以降のlastTakenDateはクリアされない", () async {
       var mockTodayRepository = MockTodayService();
       final mockToday = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -1029,7 +1029,7 @@ void main() {
         groupIndex: 0,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now().addDays(-4),
-        beginingDate: now().addDays(-30),
+        beginDate: now().addDays(-30),
         createdAt: now(),
         restDurations: [],
       );
@@ -1038,7 +1038,7 @@ void main() {
         groupIndex: 1,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: now(),
-        beginingDate: now().addDays(-2),
+        beginDate: now().addDays(-2),
         createdAt: now(),
         restDurations: [beforeRestDuration],
       );
@@ -1047,7 +1047,7 @@ void main() {
         groupIndex: 2,
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         lastTakenDate: null,
-        beginingDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: pillSheet2.estimatedEndTakenDate.addDays(1).date(),
         createdAt: now(),
         restDurations: [],
       );
@@ -1055,12 +1055,12 @@ void main() {
         restDurations: [afterRestDuration],
       );
       final updatedPillSheet2 = (pillSheet2 as PillSheetV1).copyWith(
-        beginingDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
+        beginDate: updatedPillSheet1.estimatedEndTakenDate.date().addDays(1),
         lastTakenDate: null,
         restDurations: [],
       );
       final updatedPillSheet3 = pillSheet3.copyWith(
-        beginingDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
+        beginDate: updatedPillSheet2.estimatedEndTakenDate.addDays(1).date(),
       );
 
       final pillSheetGroup = PillSheetGroup(

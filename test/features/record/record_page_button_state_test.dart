@@ -35,7 +35,7 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: yesterday,
+        beginDate: yesterday,
         lastTakenDate: yesterday,
         createdAt: now(),
       );
@@ -63,7 +63,7 @@ void main() {
     final pillSheet = PillSheet.v1(
       id: firestoreIDGenerator(),
       typeInfo: PillSheetType.pillsheet_21.typeInfo,
-      beginingDate: today(),
+      beginDate: today(),
       lastTakenDate: today(),
       createdAt: now(),
     );

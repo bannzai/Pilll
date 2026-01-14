@@ -29,13 +29,13 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: mockToday,
+        beginDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
       );
       final updatedPillSheet = (pillSheet as PillSheetV1).copyWith(
-        beginingDate: mockToday.subtract(const Duration(days: 1)),
+        beginDate: mockToday.subtract(const Duration(days: 1)),
         lastTakenDate: mockToday.subtract(const Duration(days: 1)),
       );
 
@@ -90,13 +90,13 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: mockToday,
+        beginDate: mockToday,
         groupIndex: 0,
         lastTakenDate: mockToday,
         createdAt: now(),
       );
       final updatedPillSheet = (pillSheet as PillSheetV1).copyWith(
-        beginingDate: mockToday.subtract(
+        beginDate: mockToday.subtract(
           const Duration(days: 1),
         ),
         lastTakenDate: mockToday.subtract(
@@ -156,7 +156,7 @@ void main() {
       final left = PillSheet.v1(
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-04-03"),
+        beginDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
@@ -164,7 +164,7 @@ void main() {
       final middle = PillSheet.v1(
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
@@ -172,20 +172,20 @@ void main() {
       final right = PillSheet.v1(
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-29"),
+        beginDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
       );
       final updatedLeft = (left as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-04-04"),
+        beginDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-05-02"),
+        beginDate: DateTime.parse("2022-05-02"),
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-30"),
+        beginDate: DateTime.parse("2022-05-30"),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -245,7 +245,7 @@ void main() {
       final left = PillSheet.v1(
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-04-03"),
+        beginDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
@@ -253,7 +253,7 @@ void main() {
       final middle = PillSheet.v1(
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         groupIndex: 1,
         lastTakenDate: DateTime.parse("2022-05-01"),
         createdAt: now(),
@@ -261,21 +261,21 @@ void main() {
       final right = PillSheet.v1(
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-29"),
+        beginDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
       );
       final updatedLeft = (left as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-04-04"),
+        beginDate: DateTime.parse("2022-04-04"),
         lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
       );
       final updatedMiddle = (middle as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-05-02"),
+        beginDate: DateTime.parse("2022-05-02"),
         lastTakenDate: null,
       );
       final updatedRight = (right as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-05-30"),
+        beginDate: DateTime.parse("2022-05-30"),
         lastTakenDate: null,
       );
 
@@ -336,7 +336,7 @@ void main() {
       final left = PillSheet.v1(
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-04-03"),
+        beginDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
@@ -344,7 +344,7 @@ void main() {
       final middle = PillSheet.v1(
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
@@ -352,21 +352,21 @@ void main() {
       final right = PillSheet.v1(
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-29"),
+        beginDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
       );
       final updatedLeft = (left as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-03-06"),
+        beginDate: DateTime.parse("2022-03-06"),
         lastTakenDate: DateTime.parse("2022-04-02"),
       );
       final updatedMiddle = (middle as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-04-03"),
+        beginDate: DateTime.parse("2022-04-03"),
         lastTakenDate: DateTime.parse("2022-04-30"),
       );
       final updatedRight = (right as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
       );
 
@@ -429,7 +429,7 @@ void main() {
       final left = PillSheet.v1(
         id: "sheet_id_left",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-04-03"),
+        beginDate: DateTime.parse("2022-04-03"),
         groupIndex: 0,
         lastTakenDate: DateTime.parse("2022-04-30"),
         createdAt: now(),
@@ -445,7 +445,7 @@ void main() {
       final middle = PillSheet.v1(
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-02"),
+        beginDate: DateTime.parse("2022-05-02"),
         groupIndex: 1,
         lastTakenDate: null,
         createdAt: now(),
@@ -453,21 +453,21 @@ void main() {
       final right = PillSheet.v1(
         id: "sheet_id_right",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-29"),
+        beginDate: DateTime.parse("2022-05-29"),
         groupIndex: 2,
         lastTakenDate: null,
         createdAt: now(),
       );
       final updatedLeft = (left as PillSheetV1).copyWith(
-        beginingDate: DateTime.parse("2022-04-05"),
+        beginDate: DateTime.parse("2022-04-05"),
         lastTakenDate: DateTime.parse("2022-05-01"), // todayPillNumber - 1
         restDurations: [],
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-05-03"),
+        beginDate: DateTime.parse("2022-05-03"),
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-31"),
+        beginDate: DateTime.parse("2022-05-31"),
       );
 
       final pillSheetGroup = PillSheetGroup(

@@ -15,7 +15,7 @@ class BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList extends HookCo
   });
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final begin = pillSheet.beginingDate;
+    final begin = pillSheet.beginDate;
     final end = pillSheet.estimatedEndTakenDate;
 
     return ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: begin, end: end)).when(

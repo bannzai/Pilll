@@ -35,7 +35,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -134,7 +134,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -236,7 +236,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           lastTakenDate: DateTime.parse("2022-07-26"),
           createdAt: now(),
         );
@@ -302,7 +302,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -397,7 +397,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -492,7 +492,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
           pills: List.generate(
@@ -587,7 +587,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-24"),
+          beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -685,7 +685,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-07-31"),
+          beginDate: DateTime.parse("2022-07-31"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -782,7 +782,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2022-12-31"),
+          beginDate: DateTime.parse("2022-12-31"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -879,7 +879,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2024-02-28"),
+          beginDate: DateTime.parse("2024-02-28"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(
@@ -976,7 +976,7 @@ void main() {
           id: "active_pill_sheet_id",
           groupIndex: 0,
           typeInfo: sheetType.typeInfo,
-          beginingDate: DateTime.parse("2023-02-28"),
+          beginDate: DateTime.parse("2023-02-28"),
           createdAt: now(),
           //  pillTakenCount: 2,
           pills: List.generate(

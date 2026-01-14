@@ -85,18 +85,18 @@ PillSheetGroup buildPillSheetGroup({
   final createdPillSheets = pillSheetTypes.asMap().keys.map((pageIndex) {
     final pillSheetType = backportPillSheetTypes(pillSheetTypes)[pageIndex];
     final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pageIndex);
-    final beginingDate = n.add(Duration(days: offset));
+    final beginDate = n.add(Duration(days: offset));
 
     if (pillTakenCount > 1) {
       return PillSheet.v2(
         id: firestoreIDGenerator(),
         typeInfo: pillSheetType.typeInfo,
-        beginingDate: beginingDate,
+        beginDate: beginDate,
         groupIndex: pageIndex,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
           pillSheetType: pillSheetType,
-          fromDate: beginingDate,
+          fromDate: beginDate,
           lastTakenDate: null,
           pillTakenCount: pillTakenCount,
         ),
@@ -106,7 +106,7 @@ PillSheetGroup buildPillSheetGroup({
     return PillSheet.v1(
       id: firestoreIDGenerator(),
       typeInfo: pillSheetType.typeInfo,
-      beginingDate: beginingDate,
+      beginDate: beginDate,
       lastTakenDate: null,
       groupIndex: pageIndex,
       createdAt: now(),

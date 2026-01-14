@@ -39,21 +39,21 @@ void main() {
           PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate,
+            beginDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
           PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
           PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
           )
@@ -109,21 +109,21 @@ void main() {
           PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate,
+            beginDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
           PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
           PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
           )
@@ -180,21 +180,21 @@ void main() {
           PillSheet.v1(
             id: "pill_sheet_id_1",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate,
+            beginDate: firstPillSheetBeginDate,
             lastTakenDate: null,
             createdAt: now(),
           ),
           PillSheet.v1(
             id: "pill_sheet_id_2",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           ),
           PillSheet.v1(
             id: "pill_sheet_id_3",
             typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-            beginingDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
+            beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
           )

@@ -62,7 +62,7 @@ class RevertTakePill {
         return pillSheet;
       }
 
-      if (revertDate.isBefore(pillSheet.beginingDate)) {
+      if (revertDate.isBefore(pillSheet.beginDate)) {
         // reset pill sheet when back to one before pill sheet
         // 全ピルをリセットするケースではlastTakenDateをnullに戻す
         return pillSheet.revertedPillSheetToNull().copyWith(restDurations: []);

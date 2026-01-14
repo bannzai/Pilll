@@ -36,7 +36,7 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: mockToday,
+        beginDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
@@ -117,7 +117,7 @@ void main() {
       final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: mockToday,
+        beginDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
@@ -125,7 +125,7 @@ void main() {
       final pillSheet2 = PillSheet.v1(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: mockToday.add(const Duration(days: 28)),
+        beginDate: mockToday.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),

@@ -31,7 +31,7 @@ class PillSheetFirestoreKey {
   static const String lastTakenDate = 'lastTakenDate';
 
   /// 開始日フィールドキー
-  static const String beginingDate = 'beginingDate';
+  static const String beginDate = 'beginDate';
 }
 
 /// ピルシートの種類に関する情報を格納するクラス
@@ -138,7 +138,7 @@ sealed class PillSheet with _$PillSheet {
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    required DateTime beginingDate,
+    @JsonKey(name: 'beginingDate') required DateTime beginDate,
 
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
     @JsonKey(
@@ -191,13 +191,14 @@ sealed class PillSheet with _$PillSheet {
     /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
     @JsonKey(
+      name: 'beginingDate',
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    required DateTime beginingDate,
+    required DateTime beginDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -249,7 +250,7 @@ sealed class PillSheet with _$PillSheet {
       return PillSheet.v2(
         id: firestoreIDGenerator(),
         typeInfo: type.typeInfo,
-        beginingDate: beginDate,
+        beginDate: beginDate,
         createdAt: now(),
         pills: Pill.generateAndFillTo(
           pillSheetType: type,
@@ -262,7 +263,7 @@ sealed class PillSheet with _$PillSheet {
     return PillSheet.v1(
       id: firestoreIDGenerator(),
       typeInfo: type.typeInfo,
-      beginingDate: beginDate,
+      beginDate: beginDate,
       lastTakenDate: lastTakenDate,
       createdAt: now(),
     );
@@ -338,7 +339,7 @@ sealed class PillSheet with _$PillSheet {
     }
 
     // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
-    if (lastTakenDate.date().isBefore(beginingDate.date())) {
+    if (lastTakenDate.date().isBefore(beginDate.date())) {
       return 0;
     }
 
@@ -365,7 +366,7 @@ sealed class PillSheet with _$PillSheet {
     }
 
     // NOTE: [PillSheet:OLD_Calc_LastTakenPillNumber] 服用日が開始日より前の場合がある。服用日数を1つ目の1番目のピルシートに調整した時
-    if (lastTakenDate.isBefore(beginingDate)) {
+    if (lastTakenDate.isBefore(beginDate)) {
       return null;
     }
 
@@ -391,7 +392,7 @@ sealed class PillSheet with _$PillSheet {
 
   /// ピルシートの服用が開始されているかどうか
   /// 開始日が現在時刻より前の場合にtrueを返す
-  bool get isBegan => beginingDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
+  bool get isBegan => beginDate.date().toUtc().millisecondsSinceEpoch < now().toUtc().millisecondsSinceEpoch;
 
   /// 現在が休薬期間中かどうか
   /// 今日のピル番号が服用期間を超えている場合にtrueを返す
@@ -408,12 +409,12 @@ sealed class PillSheet with _$PillSheet {
   /// 指定した日付でピルシートがアクティブかどうかを判定
   /// ピルシートの開始日から予想終了日までの範囲内かをチェック
   bool isActiveFor(DateTime date) {
-    return DateRange(beginingDate.date(), estimatedEndTakenDate).inRange(date);
+    return DateRange(beginDate.date(), estimatedEndTakenDate).inRange(date);
   }
 
   /// ピルシートの予想服用完了日
   /// 開始日、総ピル数、休薬期間を考慮して計算される完了予定日
-  DateTime get estimatedEndTakenDate => beginingDate
+  DateTime get estimatedEndTakenDate => beginDate
       .addDays(pillSheetType.totalCount - 1)
       .addDays(summarizedRestDuration(restDurations: restDurations, upperDate: today()))
       .date()
@@ -450,7 +451,7 @@ sealed class PillSheet with _$PillSheet {
   /// 開始日からの経過日数と休薬期間を考慮してピル番号を算出
   /// 最小値は1を保証
   int pillNumberFor({required DateTime targetDate}) {
-    return max(daysBetween(beginingDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
+    return max(daysBetween(beginDate.date(), targetDate) - summarizedRestDuration(restDurations: restDurations, upperDate: targetDate) + 1, 1);
   }
 
   /// ピルシート内の各ピルの服用予定日リスト
@@ -465,7 +466,7 @@ sealed class PillSheet with _$PillSheet {
     final List<DateTime> dates = [];
     var offset = 0;
     for (int index = 0; index < typeInfo.totalCount; index++) {
-      var date = beginingDate.addDays(index + offset).date();
+      var date = beginDate.addDays(index + offset).date();
 
       for (final restDuration in restDurations) {
         if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
