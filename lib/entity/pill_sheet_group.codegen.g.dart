@@ -18,7 +18,7 @@ _$PillSheetGroupImpl _$$PillSheetGroupImplFromJson(Map<String, dynamic> json) =>
       pillSheetAppearanceMode:
           $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
       version: json['version'] as String? ?? 'v1',
-      pillTakenCount: (json['pillTakenCount'] as num?)?.toInt() ?? 1,
+      pillTakenCount: (json['pillTakenCount'] as num).toInt(),
     );
 
 Map<String, dynamic> _$$PillSheetGroupImplToJson(_$PillSheetGroupImpl instance) {
