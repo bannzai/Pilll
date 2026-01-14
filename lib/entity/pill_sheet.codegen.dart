@@ -69,13 +69,13 @@ class RestDuration with _$RestDuration {
     /// 休薬期間の一意識別子
     /// デバッグや調査時の追跡のためのUUID
     required String? id,
+
+    /// 休薬開始日
+    /// ユーザーがピル服用を停止した日付
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-
-    /// 休薬開始日
-    /// ユーザーがピル服用を停止した日付
     required DateTime beginDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -188,14 +188,13 @@ sealed class PillSheet with _$PillSheet {
     /// ピルシートの種類情報
     /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
-    @JsonKey(
-      name: 'beginingDate',
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
     required DateTime beginDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
