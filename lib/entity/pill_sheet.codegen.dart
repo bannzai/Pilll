@@ -219,11 +219,11 @@ sealed class PillSheet with _$PillSheet {
 
     /// グループインデックス
     /// 複数のピルシートをグループ化する際の順序番号
-    @Default(0) int groupIndex,
+    required int groupIndex,
 
     /// 休薬期間のリスト
     /// このピルシート期間中の全ての休薬期間記録
-    @Default([]) List<RestDuration> restDurations,
+    required List<RestDuration> restDurations,
 
     /// 1回の服用で飲むピルの錠数
     /// 2錠飲みの場合は2がセットされる
@@ -253,6 +253,8 @@ sealed class PillSheet with _$PillSheet {
         typeInfo: type.typeInfo,
         beginDate: beginDate,
         createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
         pills: Pill.generateAndFillTo(
           pillSheetType: type,
           fromDate: beginDate,

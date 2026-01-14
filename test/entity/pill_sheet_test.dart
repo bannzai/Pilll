@@ -6502,6 +6502,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6534,6 +6536,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6583,6 +6587,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6637,6 +6643,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6693,6 +6701,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6747,6 +6757,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6800,6 +6812,7 @@ void main() {
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           pills: List.generate(
             sheetType.totalCount,
             (index) => Pill(
@@ -6842,6 +6855,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6891,6 +6906,8 @@ void main() {
           id: firestoreIDGenerator(),
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
           // pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -6927,6 +6944,7 @@ void main() {
           beginDate: DateTime.parse("2022-05-01"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           pills: List.generate(
             sheetType.totalCount,
             (index) => Pill(
@@ -6968,6 +6986,7 @@ void main() {
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
+        restDurations: [],
         // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
@@ -7001,6 +7020,7 @@ void main() {
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
+        restDurations: [],
         // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
@@ -7048,6 +7068,7 @@ void main() {
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
+        restDurations: [],
         // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
@@ -7162,6 +7183,7 @@ void main() {
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
+        restDurations: [],
         // pillTakenCount: 2,
         pills: List.generate(
           sheetType.totalCount,
@@ -7235,6 +7257,7 @@ void main() {
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
+        restDurations: [],
         pills: List.generate(
           10, // 本来は28個だが10個しかない
           (index) {
@@ -7286,6 +7309,7 @@ void main() {
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
         groupIndex: 0,
+        restDurations: [],
         pills: List.generate(
           35, // 本来は21個だが35個ある
           (index) {
@@ -7339,6 +7363,7 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         groupIndex: 0,
+        restDurations: [],
         typeInfo: sheetType.typeInfo,
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
@@ -7371,6 +7396,7 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         groupIndex: 0,
+        restDurations: [],
         typeInfo: sheetType.typeInfo,
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
@@ -7403,6 +7429,7 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         groupIndex: 0,
+        restDurations: [],
         typeInfo: sheetType.typeInfo,
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),
@@ -7435,6 +7462,7 @@ void main() {
       final pillSheet = PillSheet.v2(
         id: firestoreIDGenerator(),
         groupIndex: 0,
+        restDurations: [],
         typeInfo: sheetType.typeInfo,
         beginDate: DateTime.parse("2022-07-24"),
         createdAt: now(),

@@ -60,12 +60,14 @@ mixin _$PillSheetGroup {
   /// "v1": 1錠飲みユーザー（デフォルト）
   /// "v2": 2錠飲みユーザー
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+  /// Added: 2026-01-12
   String get version => throw _privateConstructorUsedError;
 
   /// 1回の服用で飲むピルの錠数（記録用）
   /// 1: 1錠飲み（デフォルト）
   /// 2: 2錠飲み
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+  /// Added: 2026-01-12
   int get pillTakenCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -357,6 +359,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
   /// "v1": 1錠飲みユーザー（デフォルト）
   /// "v2": 2錠飲みユーザー
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+  /// Added: 2026-01-12
   @override
   @JsonKey()
   final String version;
@@ -365,6 +368,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
   /// 1: 1錠飲み（デフォルト）
   /// 2: 2錠飲み
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+  /// Added: 2026-01-12
   @override
   @JsonKey()
   final int pillTakenCount;
@@ -495,6 +499,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   /// "v1": 1錠飲みユーザー（デフォルト）
   /// "v2": 2錠飲みユーザー
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+  /// Added: 2026-01-12
   String get version;
   @override
 
@@ -502,6 +507,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   /// 1: 1錠飲み（デフォルト）
   /// 2: 2錠飲み
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+  /// Added: 2026-01-12
   int get pillTakenCount;
   @override
   @JsonKey(ignore: true)

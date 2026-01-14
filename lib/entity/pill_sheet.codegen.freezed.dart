@@ -544,10 +544,13 @@ mixin _$PillSheet {
   /// シート名、総数、服用期間などの基本設定
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
   @JsonKey(
+      name: 'beginingDate',
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  @JsonKey(name: 'beginingDate')
   DateTime get beginDate => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -574,9 +577,9 @@ mixin _$PillSheet {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -623,9 +626,9 @@ mixin _$PillSheet {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -672,9 +675,9 @@ mixin _$PillSheet {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -750,9 +753,9 @@ abstract class $PillSheetCopyWith<$Res> {
       {@JsonKey(includeIfNull: false) String id,
       @JsonKey() PillSheetTypeInfo typeInfo,
       @JsonKey(
+          name: 'beginingDate',
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      @JsonKey(name: 'beginingDate')
       DateTime beginDate,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
@@ -848,9 +851,9 @@ abstract class _$$PillSheetV1ImplCopyWith<$Res>
       {@JsonKey(includeIfNull: false) String? id,
       @JsonKey() PillSheetTypeInfo typeInfo,
       @JsonKey(
+          name: 'beginingDate',
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      @JsonKey(name: 'beginingDate')
       DateTime beginDate,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
@@ -942,9 +945,9 @@ class _$PillSheetV1Impl extends PillSheetV1 {
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
       @JsonKey(
+          name: 'beginingDate',
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      @JsonKey(name: 'beginingDate')
       required this.beginDate,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
@@ -975,11 +978,14 @@ class _$PillSheetV1Impl extends PillSheetV1 {
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
   @override
   @JsonKey(
+      name: 'beginingDate',
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  @JsonKey(name: 'beginingDate')
   final DateTime beginDate;
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @override
@@ -1077,9 +1083,9 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -1130,9 +1136,9 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -1183,9 +1189,9 @@ class _$PillSheetV1Impl extends PillSheetV1 {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -1270,9 +1276,9 @@ abstract class PillSheetV1 extends PillSheet {
       {@JsonKey(includeIfNull: false) required final String? id,
       @JsonKey() required final PillSheetTypeInfo typeInfo,
       @JsonKey(
+          name: 'beginingDate',
           fromJson: NonNullTimestampConverter.timestampToDateTime,
           toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      @JsonKey(name: 'beginingDate')
       required final DateTime beginDate,
       @JsonKey(
           fromJson: TimestampConverter.timestampToDateTime,
@@ -1304,10 +1310,13 @@ abstract class PillSheetV1 extends PillSheet {
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
   @JsonKey(
+      name: 'beginingDate',
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  @JsonKey(name: 'beginingDate')
   DateTime get beginDate; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -1458,8 +1467,8 @@ class _$PillSheetV2Impl extends PillSheetV2 {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       this.deletedAt,
-      this.groupIndex = 0,
-      final List<RestDuration> restDurations = const [],
+      required this.groupIndex,
+      required final List<RestDuration> restDurations,
       required final List<Pill> pills,
       this.version = 'v2'})
       : _restDurations = restDurations,
@@ -1496,7 +1505,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   /// グループインデックス
   /// 複数のピルシートをグループ化する際の順序番号
   @override
-  @JsonKey()
   final int groupIndex;
 
   /// 休薬期間のリスト
@@ -1506,7 +1514,6 @@ class _$PillSheetV2Impl extends PillSheetV2 {
   /// 休薬期間のリスト
   /// このピルシート期間中の全ての休薬期間記録
   @override
-  @JsonKey()
   List<RestDuration> get restDurations {
     if (_restDurations is EqualUnmodifiableListView) return _restDurations;
     // ignore: implicit_dynamic_type
@@ -1592,9 +1599,9 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -1645,9 +1652,9 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -1698,9 +1705,9 @@ class _$PillSheetV2Impl extends PillSheetV2 {
             @JsonKey(includeIfNull: false) String? id,
             @JsonKey() PillSheetTypeInfo typeInfo,
             @JsonKey(
+                name: 'beginingDate',
                 fromJson: NonNullTimestampConverter.timestampToDateTime,
                 toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-            @JsonKey(name: 'beginingDate')
             DateTime beginDate,
             @JsonKey(
                 fromJson: TimestampConverter.timestampToDateTime,
@@ -1797,8 +1804,8 @@ abstract class PillSheetV2 extends PillSheet {
           fromJson: TimestampConverter.timestampToDateTime,
           toJson: TimestampConverter.dateTimeToTimestamp)
       final DateTime? deletedAt,
-      final int groupIndex,
-      final List<RestDuration> restDurations,
+      required final int groupIndex,
+      required final List<RestDuration> restDurations,
       required final List<Pill> pills,
       final String version}) = _$PillSheetV2Impl;
   PillSheetV2._() : super._();

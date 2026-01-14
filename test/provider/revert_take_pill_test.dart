@@ -34,6 +34,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
@@ -133,6 +134,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
@@ -301,6 +303,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
@@ -396,6 +399,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
@@ -491,6 +495,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
@@ -586,6 +591,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
@@ -684,6 +690,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-07-31"),
           createdAt: now(),
@@ -781,6 +788,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2022-12-31"),
           createdAt: now(),
@@ -878,6 +886,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2024-02-28"),
           createdAt: now(),
@@ -975,6 +984,7 @@ void main() {
         final activePillSheetV2 = PillSheet.v2(
           id: "active_pill_sheet_id",
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           beginDate: DateTime.parse("2023-02-28"),
           createdAt: now(),

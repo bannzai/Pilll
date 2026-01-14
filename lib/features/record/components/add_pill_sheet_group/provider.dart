@@ -94,6 +94,7 @@ PillSheetGroup buildPillSheetGroup({
         beginDate: beginDate,
         groupIndex: pageIndex,
         createdAt: now(),
+        restDurations: [],
         pills: Pill.generateAndFillTo(
           pillSheetType: pillSheetType,
           fromDate: beginDate,

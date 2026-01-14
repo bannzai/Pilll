@@ -148,6 +148,7 @@ void main() {
           final activePillSheetV2 = PillSheet.v2(
             id: "active_pill_sheet_id",
             groupIndex: 0,
+            restDurations: [],
             typeInfo: sheetType.typeInfo,
             beginDate: mockNow.date(),
             createdAt: now(),
@@ -220,6 +221,7 @@ void main() {
           final activePillSheetV2 = PillSheet.v2(
             id: "active_pill_sheet_id",
             groupIndex: 0,
+            restDurations: [],
             typeInfo: sheetType.typeInfo,
             beginDate: mockNow.date(),
             createdAt: now(),
@@ -309,6 +311,7 @@ void main() {
           final activePillSheetV2 = PillSheet.v2(
             id: "active_pill_sheet_id",
             groupIndex: 0,
+            restDurations: [],
             typeInfo: sheetType.typeInfo,
             beginDate: mockNow.date(),
             createdAt: now(),
@@ -386,6 +389,7 @@ void main() {
           final activePillSheetV2 = PillSheet.v2(
             id: "active_pill_sheet_id",
             groupIndex: 0,
+            restDurations: [],
             typeInfo: sheetType.typeInfo,
             beginDate: DateTime.parse("2022-07-24"),
             createdAt: now(),
@@ -980,6 +984,7 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           pills: List.generate(
             sheetType.totalCount,
             (index) {
@@ -1036,6 +1041,7 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -1093,6 +1099,7 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -1171,6 +1178,7 @@ void main() {
           beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           //  pillTakenCount: 2,
           pills: List.generate(
             sheetType.totalCount,
@@ -1423,6 +1431,7 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
           pills: [], // 空リスト
         );
@@ -1446,6 +1455,7 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           pills: List.generate(
             sheetType.totalCount,
@@ -1481,6 +1491,7 @@ void main() {
           beginDate: DateTime.parse("2022-07-01"),
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           pills: List.generate(
             sheetType.totalCount,
@@ -1534,6 +1545,7 @@ void main() {
           beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           pills: List.generate(
             sheetType.totalCount,
@@ -1585,6 +1597,7 @@ void main() {
           beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo,
           pills: List.generate(
             sheetType.totalCount,
@@ -1646,6 +1659,7 @@ void main() {
           beginDate: beginDate,
           createdAt: now(),
           groupIndex: 0,
+          restDurations: [],
           typeInfo: sheetType.typeInfo, // typeInfo は28日分だが pills は10個
           pills: incompletePills,
         );
