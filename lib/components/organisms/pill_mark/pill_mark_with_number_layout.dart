@@ -6,22 +6,17 @@ class PillMarkWithNumberLayout extends StatelessWidget {
   final PillMark pillMark;
   final VoidCallback onTap;
 
-  /// タップを無効にするかどうか
-  /// trueの場合、onTapは呼び出されない
-  final bool isDisabled;
-
   const PillMarkWithNumberLayout({
     super.key,
     required this.pillMark,
     required this.pillNumber,
     required this.onTap,
-    required this.isDisabled,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: isDisabled ? null : () => onTap(),
+      onTap: () => onTap(),
       child: Column(
         children: <Widget>[
           pillNumber,
