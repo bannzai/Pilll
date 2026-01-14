@@ -185,7 +185,7 @@ sealed class PillSheet with _$PillSheet {
   factory PillSheet.v2({
     /// FirestoreドキュメントID
     /// データベース保存時に自動生成される一意識別子
-    @JsonKey(includeIfNull: false) required String? id,
+    required String id,
 
     /// ピルシートの種類情報
     /// シート名、総数、服用期間などの基本設定
