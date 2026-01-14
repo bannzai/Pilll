@@ -29,9 +29,6 @@ class PillSheetFirestoreKey {
 
   /// 最終服用日フィールドキー
   static const String lastTakenDate = 'lastTakenDate';
-
-  /// 開始日フィールドキー
-  static const String beginDate = 'beginDate';
 }
 
 /// ピルシートの種類に関する情報を格納するクラス
