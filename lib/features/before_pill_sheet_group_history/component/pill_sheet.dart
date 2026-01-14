@@ -109,6 +109,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
             isDisabled: false,
           ),
           onTap: () {},
+          isDisabled: false,
         ),
       );
     });

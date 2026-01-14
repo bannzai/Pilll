@@ -89,6 +89,7 @@ class SettingPillSheetView extends StatelessWidget {
             });
             markSelected(pageIndex, pillNumberInPillSheet);
           },
+          isDisabled: false,
         ),
       );
     });

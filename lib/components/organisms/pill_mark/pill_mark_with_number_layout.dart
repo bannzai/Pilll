@@ -15,7 +15,7 @@ class PillMarkWithNumberLayout extends StatelessWidget {
     required this.pillMark,
     required this.pillNumber,
     required this.onTap,
-    this.isDisabled = false,
+    required this.isDisabled,
   });
 
   @override
