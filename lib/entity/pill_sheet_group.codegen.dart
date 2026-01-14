@@ -81,7 +81,7 @@ class PillSheetGroup with _$PillSheetGroup {
     /// 2: 2錠飲み
     /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
     /// Added: 2026-01-12
-    required int pillTakenCount,
+    @Default(1) int pillTakenCount,
   }) = _PillSheetGroup;
   PillSheetGroup._();
 

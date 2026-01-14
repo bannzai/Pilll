@@ -255,7 +255,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
       this.displayNumberSetting,
       this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
       this.version = 'v1',
-      required this.pillTakenCount})
+      this.pillTakenCount = 1})
       : _pillSheetIDs = pillSheetIDs,
         _pillSheets = pillSheets,
         super._();
@@ -331,6 +331,7 @@ class _$PillSheetGroupImpl extends _PillSheetGroup {
   /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
   /// Added: 2026-01-12
   @override
+  @JsonKey()
   final int pillTakenCount;
 
   @override
@@ -383,7 +384,7 @@ abstract class _PillSheetGroup extends PillSheetGroup {
       final PillSheetGroupDisplayNumberSetting? displayNumberSetting,
       final PillSheetAppearanceMode pillSheetAppearanceMode,
       final String version,
-      required final int pillTakenCount}) = _$PillSheetGroupImpl;
+      final int pillTakenCount}) = _$PillSheetGroupImpl;
   _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) = _$PillSheetGroupImpl.fromJson;
