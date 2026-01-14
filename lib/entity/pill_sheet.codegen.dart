@@ -131,14 +131,15 @@ sealed class PillSheet with _$PillSheet {
     /// ピルシートの種類情報
     /// シート名、総数、服用期間などの基本設定
     @JsonKey() required PillSheetTypeInfo typeInfo,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    @JsonKey(name: 'beginingDate') required DateTime beginDate,
+    @JsonKey(
+      name: 'beginingDate',
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+    required DateTime beginDate,
 
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
     @JsonKey(
