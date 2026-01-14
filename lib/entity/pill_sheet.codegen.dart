@@ -470,6 +470,7 @@ sealed class PillSheet with _$PillSheet {
 
       for (final restDuration in restDurations) {
         if (restDuration.beginDate.isBefore(date) || isSameDay(restDuration.beginDate, date)) {
+          // estimatedEventCausingDateに値がある場合は、服用履歴のスナップショットの日付を返したい。 estimatedEventCausingDate もしくは today をこのメソッドでの計算式の上限の日付とする
           final upperDate = estimatedEventCausingDate ?? today().date();
           final restDurationEndDateOrUpperDate = restDuration.endDate ?? upperDate;
           if (restDurationEndDateOrUpperDate.isAfter(date)) {
