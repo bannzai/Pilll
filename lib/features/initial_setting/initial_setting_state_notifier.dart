@@ -133,6 +133,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       createdPillSheetGroup = batchSetPillSheetGroup(
         batch,
         PillSheetGroup(
+          pillTakenCount: state.pillTakenCount,
           pillSheetIDs: pillSheetIDs,
           pillSheets: createdPillSheets,
           createdAt: now(),
