@@ -108,7 +108,7 @@ class EndRestDuration {
         // activePillSheetよりも後のピルシートで、前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
         final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
         updatedPillSheets.add(pillSheet.copyWith(
-          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+          beginDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
         ));
       } else {
         updatedPillSheets.add(pillSheet);
@@ -239,7 +239,7 @@ class ChangeRestDuration {
       /// [updatedBeginingDatePillSheets] から取得する
       final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
       updatedBeginingDatePillSheets.add(pillSheet.copyWith(
-        beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+        beginDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
       ));
     }
 

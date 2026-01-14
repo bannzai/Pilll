@@ -80,7 +80,7 @@ class ChangePillNumber {
       switch (pillSheet) {
         case PillSheetV1():
           updatedPillSheet = pillSheet.copyWith(
-            beginingDate: beginDate,
+            beginDate: beginDate,
             lastTakenDate: lastTakenDate,
             restDurations: [],
           );
@@ -93,7 +93,7 @@ class ChangePillNumber {
             pillTakenCount: pillSheet.pills.first.takenCount,
           );
           updatedPillSheet = pillSheet.copyWith(
-            beginingDate: beginDate,
+            beginDate: beginDate,
             restDurations: [],
             pills: pills,
           );
