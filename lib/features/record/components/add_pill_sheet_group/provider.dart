@@ -132,6 +132,8 @@ PillSheetGroup buildPillSheetGroup({
       return null;
     }(),
     createdAt: now(),
+    version: pillTakenCount > 1 ? 'v2' : 'v1',
+    pillTakenCount: pillTakenCount,
   );
 
   return updatedPillSheetGroup;
