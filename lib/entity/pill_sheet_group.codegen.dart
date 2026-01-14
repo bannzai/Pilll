@@ -73,12 +73,14 @@ class PillSheetGroup with _$PillSheetGroup {
     /// "v1": 1錠飲みユーザー（デフォルト）
     /// "v2": 2錠飲みユーザー
     /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet の型を使用すること
+    /// Added: 2026-01-12
     @Default('v1') String version,
 
     /// 1回の服用で飲むピルの錠数（記録用）
     /// 1: 1錠飲み（デフォルト）
     /// 2: 2錠飲み
     /// NOTE: このフィールドは記録用途のみ。実際の判定には pillSheets 内の PillSheet.pills[].takenCount を使用すること
+    /// Added: 2026-01-12
     @Default(1) int pillTakenCount,
   }) = _PillSheetGroup;
   PillSheetGroup._();
