@@ -74,7 +74,14 @@ class PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             },
             if (widget.showsCheckmark) const Align(alignment: Alignment.center, child: PillMarkDoneMark()),
             if (widget.remainingPillTakenCount != null)
-              Text('${widget.remainingPillTakenCount}', style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
+              Text(
+                '${widget.remainingPillTakenCount}',
+                style: TextStyle(
+                  color: (widget.pillMarkType == PillMarkType.rest || widget.pillMarkType == PillMarkType.fake) ? AppColors.gray : Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
           ],
         ),
         if (widget.showsRippleAnimation)
