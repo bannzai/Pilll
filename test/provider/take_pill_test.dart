@@ -420,6 +420,146 @@ void main() {
           expect(result.pills[4].pillTakens.length, 0);
         });
       });
+
+      group("two pill sheets", () {
+        test("2枚目のピルシートをタップ時、1枚目の最終日に2錠分の飲み残しがあっても全て完了する", () async {
+          // 1枚目のピルシート: 最終日（28日目）に2錠分の飲み残しがある
+          // 2枚目のピルシート: 1日目をタップ
+          // 期待: 1枚目の最終日も全て完了（チェックマーク表示）
+
+          final mockNowDay1 = DateTime.parse("2022-08-21T19:02:00");
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now()).thenReturn(mockNowDay1);
+
+          const sheetType = PillSheetType.pillsheet_28_7;
+          final previousBeginDate = DateTime.parse("2022-07-24");
+          final activeBeginDate = DateTime.parse("2022-08-21");
+
+          // 1枚目のピルシート: 27日目まで完了、28日目（最終日）は未服用
+          final previousPillSheetV2 = PillSheet.v2(
+            id: "previous_pill_sheet_id",
+            groupIndex: 0,
+            restDurations: [],
+            typeInfo: sheetType.typeInfo,
+            beginDate: previousBeginDate,
+            createdAt: now(),
+            pills: List.generate(
+              sheetType.totalCount,
+              (index) {
+                if (index < 27) {
+                  // 27日目まで完了
+                  return Pill(
+                    index: index,
+                    takenCount: 2,
+                    createdDateTime: now(),
+                    updatedDateTime: now(),
+                    pillTakens: [
+                      PillTaken(
+                        recordedTakenDateTime: previousBeginDate.add(Duration(days: index)),
+                        createdDateTime: now(),
+                        updatedDateTime: now(),
+                      ),
+                      PillTaken(
+                        recordedTakenDateTime: previousBeginDate.add(Duration(days: index)),
+                        createdDateTime: now(),
+                        updatedDateTime: now(),
+                      ),
+                    ],
+                  );
+                }
+                // 28日目（index=27）は未服用
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [],
+                );
+              },
+            ),
+          );
+
+          // 2枚目のピルシート: 未服用
+          final activePillSheetV2 = PillSheet.v2(
+            id: "active_pill_sheet_id",
+            groupIndex: 1,
+            restDurations: [],
+            typeInfo: sheetType.typeInfo,
+            beginDate: activeBeginDate,
+            createdAt: now(),
+            pills: List.generate(
+              sheetType.totalCount,
+              (index) => Pill(
+                index: index,
+                takenCount: 2,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              ),
+            ),
+          );
+
+          final pillSheetGroupV2 = PillSheetGroup(
+            id: "group_id",
+            pillSheetIDs: [previousPillSheetV2.id!, activePillSheetV2.id!],
+            pillSheets: [previousPillSheetV2, activePillSheetV2],
+            createdAt: mockNowDay1,
+          );
+
+          final takenDate = mockNowDay1.add(const Duration(seconds: 1));
+
+          final batchFactory = MockBatchFactory();
+          final batch = MockWriteBatch();
+          when(batchFactory.batch()).thenReturn(batch);
+
+          // 1枚目は completeAllPills: true で全て完了
+          final updatedPreviousPillSheetV2 =
+              previousPillSheetV2.takenPillSheet(previousPillSheetV2.estimatedEndTakenDate, completeAllPills: true);
+          // 2枚目は通常の服用記録
+          final updatedActivePillSheetV2 = activePillSheetV2.takenPillSheet(takenDate);
+
+          final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+          final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedPreviousPillSheetV2, updatedActivePillSheetV2]);
+          when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
+
+          final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+          final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            pillSheetGroupID: pillSheetGroupV2.id,
+            isQuickRecord: false,
+            before: previousPillSheetV2,
+            after: updatedActivePillSheetV2,
+            beforePillSheetGroup: pillSheetGroupV2,
+            afterPillSheetGroup: updatedPillSheetGroupV2,
+          );
+          when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+          final takePill = TakePill(
+            batchFactory: batchFactory,
+            batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+            batchSetPillSheetGroup: batchSetPillSheetGroup,
+          );
+          final result = await takePill(
+            takenDate: takenDate,
+            activePillSheet: activePillSheetV2,
+            pillSheetGroup: pillSheetGroupV2,
+            isQuickRecord: false,
+          );
+
+          verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
+          verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
+          expect(result, updatedPillSheetGroupV2);
+
+          // 1枚目の最終日（28日目、index=27）が全て完了していることを確認
+          final updatedPreviousPillSheet = result!.pillSheets[0] as PillSheetV2;
+          expect(updatedPreviousPillSheet.pills[27].pillTakens.length, 2);
+          expect(updatedPreviousPillSheet.pills[27].isCompleted, true);
+
+          // 2枚目の1日目（index=0）に1回の記録があることを確認
+          final updatedActivePillSheet = result.pillSheets[1] as PillSheetV2;
+          expect(updatedActivePillSheet.pills[0].pillTakens.length, 1);
+        });
+      });
     });
 
     group("three pill sheet", () {

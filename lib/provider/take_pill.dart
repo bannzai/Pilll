@@ -65,8 +65,9 @@ class TakePill {
       }
 
       // takenDateよりも予測するピルシートの最終服用日よりも小さい場合は、そのピルシートの最終日で予測する最終服用日を記録する
+      // 前のピルシートなので、最終ピルも含めて全てのピルを完了させる
       if (takenDate.isAfter(pillSheet.estimatedEndTakenDate)) {
-        return pillSheet.takenPillSheet(pillSheet.estimatedEndTakenDate);
+        return pillSheet.takenPillSheet(pillSheet.estimatedEndTakenDate, completeAllPills: true);
       }
 
       // takenDateがピルシートの開始日に満たない場合は、記録の対象になっていないので早期リターン
@@ -120,10 +121,12 @@ class TakePill {
 /// PillSheetに服用記録を追加するためのextension
 extension TakenPillSheet on PillSheet {
   /// 服用記録を追加したPillSheetを返す
-  PillSheet takenPillSheet(DateTime takenDate) {
+  /// [completeAllPills] がtrueの場合、最後のピルも含めて全てのピルを完了させる
+  /// 前のピルシートを処理する場合など、全てのピルを完了させる必要がある場合にtrueを指定する
+  PillSheet takenPillSheet(DateTime takenDate, {bool completeAllPills = false}) {
     return switch (this) {
       PillSheetV1 v1 => v1.copyWith(lastTakenDate: takenDate),
-      PillSheetV2 v2 => v2._takenPillSheetV2(takenDate),
+      PillSheetV2 v2 => v2._takenPillSheetV2(takenDate, completeAllPills: completeAllPills),
     };
   }
 }
@@ -133,7 +136,8 @@ extension _TakenPillSheetV2 on PillSheetV2 {
   /// v2: pills を更新（lastTakenDateはpillsから導出されるため更新不要）
   /// takenDateまでの全てのピルに対して服用記録を追加する
   /// 途中に未完了のピルがあれば全て完了させ、最後のピルは1回の記録を追加する
-  PillSheet _takenPillSheetV2(DateTime takenDate) {
+  /// [completeAllPills] がtrueの場合、最後のピルも含めて全てのピルを完了させる
+  PillSheet _takenPillSheetV2(DateTime takenDate, {bool completeAllPills = false}) {
     // pillsが空の場合は何もせず元のシートを返す
     if (pills.isEmpty) {
       return this;
@@ -156,8 +160,9 @@ extension _TakenPillSheetV2 on PillSheetV2 {
 
         final pillTakenDoneList = [...pill.pillTakens];
 
-        if (pill.index != finalTakenPillIndex) {
+        if (pill.index != finalTakenPillIndex || completeAllPills) {
           // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をtakenCountに達するまで追加する
+          // completeAllPillsがtrueの場合は、最後のピルも含めて全てのピルを完了させる
           for (var i = pill.pillTakens.length; i < pill.takenCount; i++) {
             pillTakenDoneList.add(PillTaken(
               recordedTakenDateTime: takenDate,
