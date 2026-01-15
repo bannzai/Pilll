@@ -95,6 +95,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
+                        // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
                         if (user?.isTwoPillsTakenEnabled == true) ...[
                           PillTakenCountInput(pillTakenCount: pillTakenCount),
                           const SizedBox(height: 16),
