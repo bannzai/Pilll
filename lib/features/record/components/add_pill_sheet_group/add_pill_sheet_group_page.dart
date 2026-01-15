@@ -16,6 +16,7 @@ import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.codegen.dart';
+import 'package:pilll/provider/user.dart';
 import 'package:pilll/utils/local_notification.dart';
 
 class AddPillSheetGroupPage extends HookConsumerWidget {
@@ -28,6 +29,7 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final addPillSheetGroup = ref.watch(addPillSheetGroupProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
+    final user = ref.watch(userProvider).valueOrNull;
     final pillSheetTypes = useState(setting.pillSheetEnumTypes);
     final displayNumberSetting = useState<PillSheetGroupDisplayNumberSetting?>(null);
     final initialPillTakenCount = switch (pillSheetGroup?.pillSheets.firstOrNull) {
@@ -93,8 +95,10 @@ class AddPillSheetGroupPage extends HookConsumerWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        PillTakenCountInput(pillTakenCount: pillTakenCount),
-                        const SizedBox(height: 16),
+                        if (user?.isTwoPillsTakenEnabled == true) ...[
+                          PillTakenCountInput(pillTakenCount: pillTakenCount),
+                          const SizedBox(height: 16),
+                        ],
                         if (pillSheetGroup != null)
                           DisplayNumberSetting(
                               pillSheetGroup: pillSheetGroup,
