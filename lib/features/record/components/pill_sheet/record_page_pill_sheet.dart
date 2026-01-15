@@ -119,7 +119,7 @@ class RecordPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
-            remainingPillTakenCount: _remainingPillTakenCount(
+            remainingPillTakenCount: remainingPillTakenCountFor(
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
@@ -262,28 +262,6 @@ class RecordPagePillSheet extends HookConsumerWidget {
       PillSheetV2 v2 => pillNumberInPillSheet <= v2.lastCompletedPillNumber,
     };
   }
-
-  /// 残り服用数を計算する（2錠飲み対応）
-  /// v1の場合はnull（数字表示なし）
-  /// v2の場合は残り服用数を返す（全錠服用済みならnull）
-  int? _remainingPillTakenCount({
-    required int pillNumberInPillSheet,
-    required PillSheet pillSheet,
-  }) {
-    return switch (pillSheet) {
-      PillSheetV1() => null,
-      PillSheetV2 v2 => () {
-          final pillIndex = pillNumberInPillSheet - 1;
-          if (pillIndex < 0 || pillIndex >= v2.pills.length) {
-            return null;
-          }
-          final pill = v2.pills[pillIndex];
-          final takenCount = pill.pillTakens.length;
-          final remaining = pill.takenCount - takenCount;
-          return remaining > 0 ? remaining : null;
-        }(),
-    };
-  }
 }
 
 PillMarkType pillMarkFor({
@@ -344,6 +322,27 @@ bool shouldPillMarkAnimation({
     PillSheetV2 v2 => v2.lastCompletedPillNumber,
   };
   return pillNumberInPillSheet > lastCompleted && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
+}
+
+/// 残り服用数を計算する（2錠飲み対応）
+/// v1の場合はnull（数字表示なし）
+/// v2の場合は残り服用数を返す（全錠服用済みならnull）
+int? remainingPillTakenCountFor({
+  required int pillNumberInPillSheet,
+  required PillSheet pillSheet,
+}) {
+  return switch (pillSheet) {
+    PillSheetV1() => null,
+    PillSheetV2 v2 => () {
+        final pillIndex = pillNumberInPillSheet - 1;
+        if (pillIndex < 0 || pillIndex >= v2.pills.length) {
+          return null;
+        }
+        final pill = v2.pills[pillIndex];
+        final remaining = pill.takenCount - pill.pillTakens.length;
+        return remaining > 0 ? remaining : null;
+      }(),
+  };
 }
 
 class PillNumber extends StatelessWidget {
