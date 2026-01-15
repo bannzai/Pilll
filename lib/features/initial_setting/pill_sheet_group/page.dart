@@ -8,6 +8,8 @@ import 'package:pilll/utils/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
+// [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中。初期設定では非表示
+// import 'package:pilll/components/template/setting_pill_sheet_group/pill_taken_count_input.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state.codegen.dart';
 import 'package:pilll/features/initial_setting/today_pill_number/page.dart';
 import 'package:pilll/features/initial_setting/initial_setting_state_notifier.dart';
@@ -29,6 +31,17 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
     final state = ref.watch(initialSettingStateNotifierProvider);
     final isAppleLinked = ref.watch(isAppleLinkedProvider);
     final isGoogleLinked = ref.watch(isGoogleLinkedProvider);
+
+    // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中。初期設定では非表示
+    // final pillTakenCount = useState<int>(state.pillTakenCount);
+    // useEffect(() {
+    //   // ウィジェットのビルド中にStateNotifierの状態を変更するとRiverpodのエラーが発生するため、
+    //   // Future.microtask()で次のマイクロタスクまで遅延させる
+    //   Future.microtask(() {
+    //     store.setPillTakenCount(pillTakenCount.value);
+    //   });
+    //   return null;
+    // }, [pillTakenCount.value]);
 
     // For linked user
     useEffect(() {
@@ -101,6 +114,9 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         if (state.pillSheetTypes.isNotEmpty) ...[
+                          // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中。初期設定では非表示
+                          // PillTakenCountInput(pillTakenCount: pillTakenCount),
+                          // const SizedBox(height: 16),
                           SizedBox(
                             width: 180,
                             child: PrimaryButton(

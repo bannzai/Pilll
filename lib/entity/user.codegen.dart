@@ -114,6 +114,7 @@ extension UserFirestoreFieldKeys on String {
   /// トライアル中フラグ（バックエンドとの同期用）
   static const isTrial = 'isTrial';
 
+  // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
   /// 2錠飲み機能有効フラグ
   static const isTwoPillsTakenEnabled = 'isTwoPillsTakenEnabled';
 }
@@ -181,6 +182,7 @@ class User with _$User {
     // 初期設定が完了していない or 古いバージョンのアプリではトライアル終了後にバックエンドの定期実行でdiscountEntitlementDeadlineDateの値が入るがそれより前のデータ(=トライアル中) の場合はdiscountEntitlementDeadlineDateがnullになる
     DateTime? discountEntitlementDeadlineDate,
 
+    // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
     /// 2錠飲み機能が有効かどうか
     /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
     @Default(false) bool isTwoPillsTakenEnabled,
