@@ -65,6 +65,24 @@ todayRepository = mockTodayRepository;
 when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 ```
 
+### 7. PillSheet v1/v2 による変化
+PillSheet の v1/v2 でロジックが異なる場合がある:
+- v1: 従来の1錠飲みユーザー向け、`lastTakenDate` フィールドで服用状況を管理
+- v2: 2錠飲み対応、`pills: List<Pill>` で各ピルの服用記録を管理
+- v2 で `lastTakenDate` は `pills` から導出される
+- `lastTakenOrZeroPillNumber` は v1/v2 で実装が大きく異なる
+
+**v2 テスト用ヘルパー:**
+```dart
+// Pill.testGenerateAndIterateTo: 各ピルの服用予定日が recordedTakenDateTime にセットされる
+final pills = Pill.testGenerateAndIterateTo(
+  pillSheetType: sheetType,
+  fromDate: DateTime.parse("2022-05-01"),
+  lastTakenDate: DateTime.parse("2022-05-03"),  // 3日目まで服用
+  pillTakenCount: 2,  // 2錠飲み
+);
+```
+
 ---
 
 ## 日付に関する境界値テスト（優先度: 高）
@@ -244,6 +262,7 @@ flutter test
 - [ ] PillSheetGroupDisplayNumberSetting の有無による影響
 - [ ] 複数シートの境界値
 - [ ] now() のモックが必要か
+- [ ] PillSheet v1/v2 の両方でテストが必要か
 - [ ] 月をまたぐケース
 - [ ] 年をまたぐケース
 - [ ] うるう年のケース

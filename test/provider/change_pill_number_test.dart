@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.codegen.dart';
@@ -5,6 +6,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/provider/change_pill_number.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -413,6 +415,251 @@ void main() {
         pillSheetPageIndex: 2,
         pillNumberInPillSheet: 1,
       );
+    });
+
+    group("v2のピルシート", () {
+      test("未服用のv2ピルシートでピル番号を変更するとpillsが再構築される", () async {
+        var mockTodayRepository = MockTodayService();
+        final mockToday = DateTime.parse("2022-05-01");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          typeInfo: sheetType.typeInfo,
+          beginDate: mockToday,
+          groupIndex: 0,
+          createdAt: now(),
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: mockToday,
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+        );
+
+        // ピル番号2を選択した時の期待値
+        final expectedBeginDate = mockToday.subtract(const Duration(days: 1));
+        final expectedLastTakenDate = mockToday.subtract(const Duration(days: 1));
+        final updatedPillSheet = (pillSheet as PillSheetV2).copyWith(
+          beginDate: expectedBeginDate,
+          restDurations: [],
+          pills: Pill.generateAndFillTo(
+            pillSheetType: sheetType,
+            fromDate: expectedBeginDate,
+            lastTakenDate: expectedLastTakenDate,
+            pillTakenCount: 2,
+          ),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: updatedPillSheet,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final changePillNumber = ChangePillNumber(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+        );
+
+        expect(pillSheet.todayPillNumber, 1);
+
+        await changePillNumber(
+          pillSheetGroup: pillSheetGroup,
+          activePillSheet: pillSheetGroup.activePillSheet!,
+          pillSheetPageIndex: 0,
+          pillNumberInPillSheet: 2,
+        );
+      });
+
+      test("服用済みのv2ピルシートでピル番号を変更するとpillTakensが正しく埋まる", () async {
+        var mockTodayRepository = MockTodayService();
+        final mockToday = DateTime.parse("2022-05-05");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        // 3日目まで服用済み
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          typeInfo: sheetType.typeInfo,
+          beginDate: DateTime.parse("2022-05-01"),
+          groupIndex: 0,
+          createdAt: now(),
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-03"),
+            pillTakenCount: 2,
+          ),
+        );
+
+        // ピル番号10を選択：開始日を5日前に、5日目まで服用済みに
+        final expectedBeginDate = mockToday.subtract(const Duration(days: 9));
+        final expectedLastTakenDate = mockToday.subtract(const Duration(days: 1));
+        final updatedPillSheet = (pillSheet as PillSheetV2).copyWith(
+          beginDate: expectedBeginDate,
+          restDurations: [],
+          pills: Pill.generateAndFillTo(
+            pillSheetType: sheetType,
+            fromDate: expectedBeginDate,
+            lastTakenDate: expectedLastTakenDate,
+            pillTakenCount: 2,
+          ),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: updatedPillSheet,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final changePillNumber = ChangePillNumber(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+        );
+
+        expect(pillSheet.todayPillNumber, 5);
+
+        await changePillNumber(
+          pillSheetGroup: pillSheetGroup,
+          activePillSheet: pillSheetGroup.activePillSheet!,
+          pillSheetPageIndex: 0,
+          pillNumberInPillSheet: 10,
+        );
+      });
+
+      test("2錠飲み設定(takenCount=2)でピル番号を変更するとpillTakensが2つずつ生成される", () async {
+        var mockTodayRepository = MockTodayService();
+        final mockToday = DateTime.parse("2022-05-01");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(mockToday);
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+
+        const sheetType = PillSheetType.pillsheet_28_0;
+        final pillSheet = PillSheet.v2(
+          id: "sheet_id",
+          typeInfo: sheetType.typeInfo,
+          beginDate: mockToday,
+          groupIndex: 0,
+          createdAt: now(),
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: mockToday,
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+        );
+
+        // ピル番号5を選択した時
+        final expectedBeginDate = mockToday.subtract(const Duration(days: 4));
+        final expectedLastTakenDate = mockToday.subtract(const Duration(days: 1));
+        final updatedPillSheet = (pillSheet as PillSheetV2).copyWith(
+          beginDate: expectedBeginDate,
+          restDurations: [],
+          pills: Pill.generateAndFillTo(
+            pillSheetType: sheetType,
+            fromDate: expectedBeginDate,
+            lastTakenDate: expectedLastTakenDate,
+            pillTakenCount: 2,
+          ),
+        );
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [updatedPillSheet]);
+
+        final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: updatedPillSheet,
+          beforePillSheetGroup: pillSheetGroup,
+          afterPillSheetGroup: updatedPillSheetGroup,
+        );
+
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
+
+        final changePillNumber = ChangePillNumber(
+          batchFactory: batchFactory,
+          batchSetPillSheetModifiedHistory: batchSetPillSheetModifiedHistory,
+          batchSetPillSheetGroup: batchSetPillSheetGroup,
+        );
+
+        expect(pillSheet.todayPillNumber, 1);
+
+        await changePillNumber(
+          pillSheetGroup: pillSheetGroup,
+          activePillSheet: pillSheetGroup.activePillSheet!,
+          pillSheetPageIndex: 0,
+          pillNumberInPillSheet: 5,
+        );
+
+        // 更新後のピルシートでは1〜4番目のピルにそれぞれ2つのpillTakensがあることを確認
+        for (var i = 0; i < 4; i++) {
+          expect(updatedPillSheet.pills[i].pillTakens.length, 2);
+          // 各服用記録の日付が正しいことを確認
+          expect(isSameDay(updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime, expectedLastTakenDate), isTrue,
+              reason: 'Pill at index $i should have taken date $expectedLastTakenDate, but was ${updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime}');
+        }
+      });
     });
   });
   group("pill sheet has rest durations", () {
