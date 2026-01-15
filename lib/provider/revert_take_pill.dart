@@ -65,7 +65,14 @@ class RevertTakePill {
       if (revertDate.isBefore(pillSheet.beginDate)) {
         // reset pill sheet when back to one before pill sheet
         // 全ピルをリセットするケースではlastTakenDateをnullに戻す
-        return pillSheet.revertedPillSheetToNull().copyWith(restDurations: []);
+        // 服用記録を全て取り消してlastTakenDateをnullにしたPillSheetを返す
+        // v2の場合、lastTakenDateはpillsから導出されるため、pillTakensを空にするだけで良い
+        switch (pillSheet) {
+          case PillSheetV1():
+            return pillSheet.copyWith(lastTakenDate: null, restDurations: []);
+          case PillSheetV2():
+            return pillSheet.copyWith(pills: pillSheet.pills.map((pill) => pill.copyWith(pillTakens: [])).toList(), restDurations: []);
+        }
       } else {
         // Revert対象の日付よりも後ろにある休薬期間のデータは消す
         final remainingResetDurations = pillSheet.restDurations.where((restDuration) => restDuration.beginDate.date().isBefore(revertDate)).toList();
@@ -111,19 +118,6 @@ extension RevertedPillSheet on PillSheet {
       PillSheetV1 v1 => v1.copyWith(lastTakenDate: toDate),
       PillSheetV2 v2 => v2._revertedPillSheetV2(toDate),
     };
-  }
-
-  /// 服用記録を全て取り消してlastTakenDateをnullにしたPillSheetを返す
-  /// v2の場合、lastTakenDateはpillsから導出されるため、pillTakensを空にするだけで良い
-  PillSheet revertedPillSheetToNull() {
-    switch (this) {
-      case PillSheetV1 v1:
-        return v1.copyWith(lastTakenDate: null);
-      case PillSheetV2 v2:
-        return v2.copyWith(
-          pills: v2.pills.map((pill) => pill.copyWith(pillTakens: [])).toList(),
-        );
-    }
   }
 }
 
