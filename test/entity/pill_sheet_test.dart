@@ -4743,38 +4743,11 @@ void main() {
           createdAt: now(),
           groupIndex: 0,
           restDurations: [],
-          pills: List.generate(
-            sheetType.totalCount,
-            (index) {
-              if (index < 27) {
-                return Pill(
-                  takenCount: 2,
-                  index: index,
-                  createdDateTime: now(),
-                  updatedDateTime: now(),
-                  pillTakens: [
-                    PillTaken(
-                      recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)),
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                    ),
-                    PillTaken(
-                      recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)),
-                      createdDateTime: now(),
-                      updatedDateTime: now(),
-                    ),
-                  ],
-                );
-              }
-              // index >= 27 は未服用
-              return Pill(
-                takenCount: 2,
-                index: index,
-                createdDateTime: now(),
-                updatedDateTime: now(),
-                pillTakens: [],
-              );
-            },
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-27"),
+            pillTakenCount: 2,
           ),
           typeInfo: PillSheetTypeInfo(
             dosingPeriod: sheetType.dosingPeriod,
