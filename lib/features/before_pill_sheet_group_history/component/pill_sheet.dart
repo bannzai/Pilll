@@ -6,6 +6,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layou
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
+import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart' show remainingPillTakenCountFor;
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -102,7 +103,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
-            remainingPillTakenCount: _remainingPillTakenCount(
+            remainingPillTakenCount: remainingPillTakenCountFor(
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
@@ -140,27 +141,6 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     return switch (activePillSheet) {
       PillSheetV1() => pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber,
       PillSheetV2 v2 => pillNumberInPillSheet <= v2.lastCompletedPillNumber,
-    };
-  }
-
-  /// 残り服用数を計算する（2錠飲み対応）
-  /// v1の場合はnull（数字表示なし）
-  /// v2の場合は残り服用数を返す（全錠服用済みならnull）
-  int? _remainingPillTakenCount({
-    required int pillNumberInPillSheet,
-    required PillSheet pillSheet,
-  }) {
-    return switch (pillSheet) {
-      PillSheetV1() => null,
-      PillSheetV2 v2 => () {
-          final pillIndex = pillNumberInPillSheet - 1;
-          if (pillIndex < 0 || pillIndex >= v2.pills.length) {
-            return null;
-          }
-          final takenCount = v2.pills[pillIndex].pillTakens.length;
-          final remaining = v2.pills[pillIndex].takenCount - takenCount;
-          return remaining > 0 ? remaining : null;
-        }(),
     };
   }
 }
