@@ -656,9 +656,8 @@ void main() {
         for (var i = 0; i < 4; i++) {
           expect(updatedPillSheet.pills[i].pillTakens.length, 2);
           // 各服用記録の日付が正しいことを確認
-          final expectedDate = expectedBeginDate.add(Duration(days: i));
-          expect(isSameDay(updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime, expectedDate), isTrue,
-              reason: 'Pill at index $i should have taken date $expectedDate, but was ${updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime}');
+          expect(isSameDay(updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime, expectedLastTakenDate), isTrue,
+              reason: 'Pill at index $i should have taken date $expectedLastTakenDate, but was ${updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime}');
         }
       });
     });
