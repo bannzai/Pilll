@@ -62,8 +62,7 @@ mixin _$User {
   /// 割引プラン利用期限日（トライアル終了後の割引期間終了日時）
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError;
-
+  DateTime? get discountEntitlementDeadlineDate => throw _privateConstructorUsedError; // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
   /// 2錠飲み機能が有効かどうか
   /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
   bool get isTwoPillsTakenEnabled => throw _privateConstructorUsedError;
@@ -415,7 +414,7 @@ class _$UserImpl extends _User {
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? discountEntitlementDeadlineDate;
-
+// [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
   /// 2錠飲み機能が有効かどうか
   /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
   @override
@@ -559,8 +558,7 @@ abstract class _User extends User {
   /// 初期設定未完了または古いバージョンのアプリではnullの場合がある
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get discountEntitlementDeadlineDate;
-  @override
-
+  @override // [Pill:TwoTaken] 2錠飲み機能 - 現在一部ユーザーにテスト解放中
   /// 2錠飲み機能が有効かどうか
   /// 運営がFirestoreで直接trueに変更して特定ユーザーに解放
   bool get isTwoPillsTakenEnabled;
