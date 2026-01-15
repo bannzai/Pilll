@@ -6,6 +6,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/provider/change_pill_number.dart';
+import 'package:pilll/utils/datetime/date_compare.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -654,6 +655,10 @@ void main() {
         // 更新後のピルシートでは1〜4番目のピルにそれぞれ2つのpillTakensがあることを確認
         for (var i = 0; i < 4; i++) {
           expect(updatedPillSheet.pills[i].pillTakens.length, 2);
+          // 各服用記録の日付が正しいことを確認
+          final expectedDate = expectedBeginDate.add(Duration(days: i));
+          expect(isSameDay(updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime, expectedDate), isTrue,
+              reason: 'Pill at index $i should have taken date $expectedDate, but was ${updatedPillSheet.pills[i].pillTakens.first.recordedTakenDateTime}');
         }
       });
     });
