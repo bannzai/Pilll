@@ -3613,7 +3613,6 @@ void main() {
           ),
         );
 
-        // 10日目まで服用、休薬期間2日を考慮すると実質8日目
         expect(pillSheet.lastTakenOrZeroPillNumber, 10);
       });
     });
