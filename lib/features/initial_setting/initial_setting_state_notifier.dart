@@ -110,6 +110,10 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(todayPillNumber: null);
   }
 
+  void setPillTakenCount(int pillTakenCount) {
+    state = state.copyWith(pillTakenCount: pillTakenCount);
+  }
+
   Future<void> register() async {
     final batch = batchFactory.batch();
 
@@ -121,6 +125,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
           pillSheetTypes: state.pillSheetTypes,
+          pillTakenCount: state.pillTakenCount,
         );
       }).toList();
 
@@ -128,6 +133,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       createdPillSheetGroup = batchSetPillSheetGroup(
         batch,
         PillSheetGroup(
+          pillTakenCount: state.pillTakenCount,
           pillSheetIDs: pillSheetIDs,
           pillSheets: createdPillSheets,
           createdAt: now(),

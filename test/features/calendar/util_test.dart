@@ -21,7 +21,7 @@ void main() {
   group("#scheduledOrInTheMiddleMenstruationDateRanges", () {
     group("multiple pill sheet pattern", () {
       test(
-        "pillSheetType: [pillsheet_28_7, pillsheet_24_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
+        "pillSheetType: [pillsheet_28_7, pillsheet_24_0], beginDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -32,18 +32,18 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-            beginingDate: beginingDate.add(const Duration(days: 28)),
+            beginDate: beginDate.add(const Duration(days: 28)),
             createdAt: now(),
             lastTakenDate: null,
           );
@@ -77,7 +77,7 @@ void main() {
         },
       );
       test(
-        "it check to ignore date range for pillSheetType.totalCount > setting.pillNumberFromMenstruation. pillSheetType: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
+        "it check to ignore date range for pillSheetType.totalCount > setting.pillNumberFromMenstruation. pillSheetType: [pillsheet_28_7, pillsheet_21_0], beginDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -88,18 +88,18 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-            beginingDate: beginingDate.add(const Duration(days: 28)),
+            beginDate: beginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -144,18 +144,18 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-            beginingDate: beginingDate.add(const Duration(days: 28)),
+            beginDate: beginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -199,7 +199,7 @@ void main() {
     });
     group("only one pillSheet", () {
       test(
-        "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
+        "First page with pillSheetType: pillsheet_28_7, beginDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
         () {
           /*
         A = Start
@@ -227,13 +227,13 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
+          var beginDate = DateTime.parse("2020-09-01");
           var fromMenstruation = 23;
           var durationMenstruation = 3;
-          var pillSheet = PillSheet(
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -265,7 +265,7 @@ void main() {
         },
       );
       test(
-        "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
+        "Second page with pillSheetType: pillsheet_28_7, beginDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -277,13 +277,13 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
+          var beginDate = DateTime.parse("2020-09-01");
           var fromMenstruation = 23;
           var durationMenstruation = 3;
-          var pillSheet = PillSheet(
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -320,7 +320,7 @@ void main() {
         },
       );
       test(
-        "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
+        "Third page with pillSheetType: pillsheet_28_7, beginDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -332,13 +332,13 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
+          var beginDate = DateTime.parse("2020-09-01");
           var fromMenstruation = 23;
           var durationMenstruation = 3;
-          var pillSheet = PillSheet(
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -389,13 +389,13 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
+          var beginDate = DateTime.parse("2020-09-01");
           var fromMenstruation = 23;
           var durationMenstruation = 3;
-          var pillSheet = PillSheet(
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -452,7 +452,7 @@ void main() {
         },
       );
       test(
-        "First page with pillSheetType: pillsheet_28_0, beginingDate: 2021-01-18, fromMenstruation: 23, durationMenstruation: 3",
+        "First page with pillSheetType: pillsheet_28_0, beginDate: 2021-01-18, fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -464,13 +464,13 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_0;
-          var beginingDate = DateTime.parse("2021-01-18");
+          var beginDate = DateTime.parse("2021-01-18");
           var fromMenstruation = 23;
           var durationMenstruation = 3;
-          var pillSheet = PillSheet(
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -514,11 +514,11 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_0;
-          var beginingDate = DateTime.parse("2021-01-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2021-01-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -568,12 +568,12 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_0;
-          var beginingDate = DateTime.parse("2021-01-18");
+          var beginDate = DateTime.parse("2021-01-18");
           var durationMenstruation = 3;
-          var pillSheet = PillSheet(
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -604,7 +604,7 @@ void main() {
   group("#nextPillSheetDateRanges", () {
     group("multiple pillSheet pattern", () {
       test(
-        "First page with pillSheetTypes: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29]",
+        "First page with pillSheetTypes: [pillsheet_28_7, pillsheet_21_0], beginDate: [2020-09-01, 2020-09-29]",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -615,18 +615,18 @@ void main() {
             todayRepository = originalTodayRepository;
           });
 
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
-          var pillSheet2 = PillSheet(
+          var pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-            beginingDate: beginingDate.add(const Duration(days: 28)),
+            beginDate: beginDate.add(const Duration(days: 28)),
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -656,7 +656,7 @@ void main() {
     });
     group("only one pillSheet", () {
       test(
-        "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
+        "First page with pillSheetType: pillsheet_28_7, beginDate: 2020-09-01",
         () {
           /*
         A = Current Pill Sheett Start
@@ -686,11 +686,11 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -712,7 +712,7 @@ void main() {
         },
       );
       test(
-        "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
+        "Second page with pillSheetType: pillsheet_28_7, beginDate: 2020-09-01",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -724,11 +724,11 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -754,7 +754,7 @@ void main() {
         },
       );
       test(
-        "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
+        "Third page with pillSheetType: pillsheet_28_7, beginDate: 2020-09-01",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
@@ -766,11 +766,11 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -800,7 +800,7 @@ void main() {
         },
       );
       test(
-        "First page with pillSheetType: pillsheet_28_0(that means pill sheet is not exists not taken duration and totalCount == dosingPerod), beginingDate: 2020-09-01",
+        "First page with pillSheetType: pillsheet_28_0(that means pill sheet is not exists not taken duration and totalCount == dosingPerod), beginDate: 2020-09-01",
         () {
           /*
         A = Current Pill Sheett Start
@@ -829,11 +829,11 @@ void main() {
           });
 
           var pillSheetType = PillSheetType.pillsheet_28_0;
-          var beginingDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet(
+          var beginDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
           );
@@ -886,11 +886,11 @@ void main() {
         });
 
         var pillSheetType = PillSheetType.pillsheet_28_7;
-        var beginingDate = DateTime.parse("2020-09-01");
-        var pillSheet = PillSheet(
+        var beginDate = DateTime.parse("2020-09-01");
+        var pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
             typeInfo: pillSheetType.typeInfo,
-            beginingDate: beginingDate,
+            beginDate: beginDate,
             lastTakenDate: null,
             createdAt: now(),
             restDurations: [

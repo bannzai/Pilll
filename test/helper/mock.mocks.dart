@@ -509,6 +509,12 @@ class MockUser extends _i1.Mock implements _i4.User {
       ) as bool);
 
   @override
+  bool get isTwoPillsTakenEnabled => (super.noSuchMethod(
+        Invocation.getter(#isTwoPillsTakenEnabled),
+        returnValue: false,
+      ) as bool);
+
+  @override
   _i4.$UserCopyWith<_i4.User> get copyWith => (super.noSuchMethod(
         Invocation.getter(#copyWith),
         returnValue: _Fake$UserCopyWith_3<_i4.User>(

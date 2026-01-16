@@ -74,6 +74,7 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 
 ### Git管理
 - 自動生成ファイル（`*.g.dart`, `*.freezed.dart`）も commit 対象
+- `git commit --amend` は禁止。修正が必要な場合は新しいコミットを積み上げる
 
 ### その他の重要事項
 - **ライセンス**: 独自ライセンス（著作権保持、個人利用・PR許可）
@@ -109,3 +110,8 @@ iOS・Androidアプリ両方を提供しております。Flutter製のアプリ
 - ディレクトリ構成、ファイル構成は、lib/配下と一緒にする
 - ファイルの命名規則は {NAME}_test.dart
 - FirestoreのclassはMockしない。例えば、Query,QuerySnapshot,Document,DocumentRef,DocumentSnapshot,Collection,CollectionRef,CollectionSnapshot は Mock にしない。Mockがしづらい
+
+### PillSheet v1/v2 テスト
+- PillSheet.v1() と PillSheet.v2() の両方でテストが必要な場合がある
+- v2 特有のロジック（pills から lastTakenDate を導出など）は `#PillSheetV2` グループ内でテスト
+- 共通 getter/function で v1/v2 両方のテストが必要な場合は、各グループ内に `group("v2", ...)` を追加

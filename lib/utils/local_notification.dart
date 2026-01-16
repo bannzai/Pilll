@@ -283,16 +283,20 @@ class RegisterReminderLocalNotification {
     final List<Future<void>> futures = [];
 
     final badgeNumber = activePillSheet.todayPillNumber - activePillSheet.lastTakenOrZeroPillNumber;
+    final todayPillAllTaken = switch (activePillSheet) {
+      PillSheetV1 v1 => v1.todayPillIsAlreadyTaken,
+      PillSheetV2 v2 => v2.todayPillAllTaken,
+    };
 
     for (final reminderTime in setting.reminderTimes) {
       // 新規ピルシートグループの作成後に通知のスケジュールができないため、多めに通知をスケジュールする
       // ユーザーの何かしらのアクションでどこかでスケジュールされるだろう
       for (final dayOffset in List.generate(registerDays, (index) => index)) {
         // 本日服用済みの場合はスキップする
-        if (dayOffset == 0 && activePillSheet.todayPillIsAlreadyTaken) {
+        if (dayOffset == 0 && todayPillAllTaken) {
           analytics.debug(name: 'rrrn_skip_already_taken', parameters: {
             'dayOffset': dayOffset,
-            'todayPillIsAlreadyTaken': activePillSheet.todayPillIsAlreadyTaken,
+            'todayPillAllTaken': todayPillAllTaken,
             'reminderTimeHour': reminderTime.hour,
             'reminderTimeMinute': reminderTime.minute,
           });
@@ -331,11 +335,17 @@ class RegisterReminderLocalNotification {
           switch ((isLastPillSheet, premiumOrTrial, setting.isAutomaticallyCreatePillSheet)) {
             case (true, true, true):
               // 次のピルシートグループの処理。新しいシート自動作成の場合の先読み追加
+              // 現在のアクティブなピルシートからpillTakenCountを取得（v1の場合は1）
+              final currentPillTakenCount = switch (activePillSheet) {
+                PillSheetV1() => 1,
+                PillSheetV2 v2 => v2.pills.first.takenCount,
+              };
               final nextPillSheetGroup = buildPillSheetGroup(
                 setting: setting,
                 pillSheetGroup: pillSheetGroup,
                 pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
                 displayNumberSetting: null,
+                pillTakenCount: currentPillTakenCount,
               );
               pillSheetDisplayNumber = nextPillSheetGroup.displayPillNumberWithoutDate(
                 pageIndex: 0,
@@ -424,7 +434,7 @@ class RegisterReminderLocalNotification {
               return setting.reminderNotificationCustomization.missedTakenMessage;
             }
             // 本日分の服用記録がない場合で今日のループ(dayOffset==0)の時
-            if (dayOffset == 0 && !activePillSheet.todayPillIsAlreadyTaken) {
+            if (dayOffset == 0 && !todayPillAllTaken) {
               return setting.reminderNotificationCustomization.dailyTakenMessage;
             }
             // 本日分の服用記録がある場合で、次の日のループ(dayOffset==1)の時
@@ -774,7 +784,7 @@ class NewPillSheetNotification {
     for (final pillSheet in pillSheetGroup.pillSheets) {
       // 次のピルシートが存在する場合
       if (pillSheet.groupIndex > activePillSheet.groupIndex) {
-        final nextBeginDate = tz.TZDateTime.from(pillSheet.beginingDate, tz.local);
+        final nextBeginDate = tz.TZDateTime.from(pillSheet.beginDate, tz.local);
         final reminderDateTime = nextBeginDate
             .date()
             .add(

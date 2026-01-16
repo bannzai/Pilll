@@ -237,6 +237,9 @@ mixin _$RestDuration {
   /// 休薬期間の一意識別子
   /// デバッグや調査時の追跡のためのUUID
   String? get id => throw _privateConstructorUsedError;
+
+  /// 休薬開始日
+  /// ユーザーがピル服用を停止した日付
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginDate => throw _privateConstructorUsedError;
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -364,6 +367,9 @@ class _$RestDurationImpl extends _RestDuration {
   /// デバッグや調査時の追跡のためのUUID
   @override
   final String? id;
+
+  /// 休薬開始日
+  /// ユーザーがピル服用を停止した日付
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime beginDate;
@@ -424,6 +430,9 @@ abstract class _RestDuration extends RestDuration {
   /// デバッグや調査時の追跡のためのUUID
   String? get id;
   @override
+
+  /// 休薬開始日
+  /// ユーザーがピル服用を停止した日付
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get beginDate;
   @override
@@ -437,10 +446,6 @@ abstract class _RestDuration extends RestDuration {
   _$$RestDurationImplCopyWith<_$RestDurationImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
-PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
-  return _PillSheet.fromJson(json);
-}
-
 /// @nodoc
 mixin _$PillSheet {
   /// FirestoreドキュメントID
@@ -452,10 +457,11 @@ mixin _$PillSheet {
   /// シート名、総数、服用期間などの基本設定
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate => throw _privateConstructorUsedError; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get lastTakenDate => throw _privateConstructorUsedError;
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
+  @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate => throw _privateConstructorUsedError;
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt => throw _privateConstructorUsedError;
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -469,7 +475,116 @@ mixin _$PillSheet {
   /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  /// バージョン識別子
+  String get version => throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)
+        v1,
+    required TResult Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)
+        v2,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)?
+        v1,
+    TResult? Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)?
+        v2,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)?
+        v1,
+    TResult Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)?
+        v2,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PillSheetV1 value) v1,
+    required TResult Function(PillSheetV2 value) v2,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PillSheetV1 value)? v1,
+    TResult? Function(PillSheetV2 value)? v2,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PillSheetV1 value)? v1,
+    TResult Function(PillSheetV2 value)? v2,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
+
   @JsonKey(ignore: true)
   $PillSheetCopyWith<PillSheet> get copyWith => throw _privateConstructorUsedError;
 }
@@ -479,14 +594,15 @@ abstract class $PillSheetCopyWith<$Res> {
   factory $PillSheetCopyWith(PillSheet value, $Res Function(PillSheet) then) = _$PillSheetCopyWithImpl<$Res, PillSheet>;
   @useResult
   $Res call(
-      {@JsonKey(includeIfNull: false) String? id,
+      {@JsonKey(includeIfNull: false) String id,
       @JsonKey() PillSheetTypeInfo typeInfo,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beginingDate,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+      @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations});
+      List<RestDuration> restDurations,
+      String version});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -503,32 +619,28 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? typeInfo = null,
-    Object? beginingDate = null,
-    Object? lastTakenDate = freezed,
+    Object? beginDate = null,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = null,
     Object? restDurations = null,
+    Object? version = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
+      id: null == id
+          ? _value.id!
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       typeInfo: null == typeInfo
           ? _value.typeInfo
           : typeInfo // ignore: cast_nullable_to_non_nullable
               as PillSheetTypeInfo,
-      beginingDate: null == beginingDate
-          ? _value.beginingDate
-          : beginingDate // ignore: cast_nullable_to_non_nullable
+      beginDate: null == beginDate
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      lastTakenDate: freezed == lastTakenDate
-          ? _value.lastTakenDate
-          : lastTakenDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       createdAt: freezed == createdAt
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -545,6 +657,10 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
           ? _value.restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
     ) as $Val);
   }
 
@@ -558,41 +674,44 @@ class _$PillSheetCopyWithImpl<$Res, $Val extends PillSheet> implements $PillShee
 }
 
 /// @nodoc
-abstract class _$$PillSheetImplCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
-  factory _$$PillSheetImplCopyWith(_$PillSheetImpl value, $Res Function(_$PillSheetImpl) then) = __$$PillSheetImplCopyWithImpl<$Res>;
+abstract class _$$PillSheetV1ImplCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
+  factory _$$PillSheetV1ImplCopyWith(_$PillSheetV1Impl value, $Res Function(_$PillSheetV1Impl) then) = __$$PillSheetV1ImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {@JsonKey(includeIfNull: false) String? id,
       @JsonKey() PillSheetTypeInfo typeInfo,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beginingDate,
+      @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
       int groupIndex,
-      List<RestDuration> restDurations});
+      List<RestDuration> restDurations,
+      String version});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
 
 /// @nodoc
-class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, _$PillSheetImpl> implements _$$PillSheetImplCopyWith<$Res> {
-  __$$PillSheetImplCopyWithImpl(_$PillSheetImpl _value, $Res Function(_$PillSheetImpl) _then) : super(_value, _then);
+class __$$PillSheetV1ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, _$PillSheetV1Impl> implements _$$PillSheetV1ImplCopyWith<$Res> {
+  __$$PillSheetV1ImplCopyWithImpl(_$PillSheetV1Impl _value, $Res Function(_$PillSheetV1Impl) _then) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? id = freezed,
     Object? typeInfo = null,
-    Object? beginingDate = null,
+    Object? beginDate = null,
     Object? lastTakenDate = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = null,
     Object? restDurations = null,
+    Object? version = null,
   }) {
-    return _then(_$PillSheetImpl(
+    return _then(_$PillSheetV1Impl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -601,9 +720,9 @@ class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, 
           ? _value.typeInfo
           : typeInfo // ignore: cast_nullable_to_non_nullable
               as PillSheetTypeInfo,
-      beginingDate: null == beginingDate
-          ? _value.beginingDate
-          : beginingDate // ignore: cast_nullable_to_non_nullable
+      beginDate: null == beginDate
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
       lastTakenDate: freezed == lastTakenDate
           ? _value.lastTakenDate
@@ -625,6 +744,10 @@ class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, 
           ? _value._restDurations
           : restDurations // ignore: cast_nullable_to_non_nullable
               as List<RestDuration>,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -632,21 +755,20 @@ class __$$PillSheetImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$PillSheetImpl extends _PillSheet {
-  _$PillSheetImpl(
+class _$PillSheetV1Impl extends PillSheetV1 {
+  _$PillSheetV1Impl(
       {@JsonKey(includeIfNull: false) required this.id,
       @JsonKey() required this.typeInfo,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.beginingDate,
+      @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
       this.groupIndex = 0,
-      final List<RestDuration> restDurations = const []})
+      final List<RestDuration> restDurations = const [],
+      this.version = 'v1'})
       : _restDurations = restDurations,
         super._();
-
-  factory _$PillSheetImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetImplFromJson(json);
 
   /// FirestoreドキュメントID
   /// データベース保存時に自動生成される一意識別子
@@ -659,9 +781,12 @@ class _$PillSheetImpl extends _PillSheet {
   @override
   @JsonKey()
   final PillSheetTypeInfo typeInfo;
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
   @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime beginingDate;
+  @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime beginDate;
 // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -693,59 +818,187 @@ class _$PillSheetImpl extends _PillSheet {
     return EqualUnmodifiableListView(_restDurations);
   }
 
+  /// バージョン識別子
+  @override
+  @JsonKey()
+  final String version;
+
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
+    return 'PillSheet.v1(id: $id, typeInfo: $typeInfo, beginDate: $beginDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, version: $version)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PillSheetImpl &&
+            other is _$PillSheetV1Impl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.typeInfo, typeInfo) || other.typeInfo == typeInfo) &&
-            (identical(other.beginingDate, beginingDate) || other.beginingDate == beginingDate) &&
+            (identical(other.beginDate, beginDate) || other.beginDate == beginDate) &&
             (identical(other.lastTakenDate, lastTakenDate) || other.lastTakenDate == lastTakenDate) &&
             (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
             (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
             (identical(other.groupIndex, groupIndex) || other.groupIndex == groupIndex) &&
-            const DeepCollectionEquality().equals(other._restDurations, _restDurations));
+            const DeepCollectionEquality().equals(other._restDurations, _restDurations) &&
+            (identical(other.version, version) || other.version == version));
   }
 
-  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType, id, typeInfo, beginingDate, lastTakenDate, createdAt, deletedAt, groupIndex, const DeepCollectionEquality().hash(_restDurations));
+  int get hashCode => Object.hash(runtimeType, id, typeInfo, beginDate, lastTakenDate, createdAt, deletedAt, groupIndex,
+      const DeepCollectionEquality().hash(_restDurations), version);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith => __$$PillSheetImplCopyWithImpl<_$PillSheetImpl>(this, _$identity);
+  _$$PillSheetV1ImplCopyWith<_$PillSheetV1Impl> get copyWith => __$$PillSheetV1ImplCopyWithImpl<_$PillSheetV1Impl>(this, _$identity);
 
   @override
-  Map<String, dynamic> toJson() {
-    return _$$PillSheetImplToJson(
-      this,
-    );
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)
+        v1,
+    required TResult Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)
+        v2,
+  }) {
+    return v1(id, typeInfo, beginDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)?
+        v1,
+    TResult? Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)?
+        v2,
+  }) {
+    return v1?.call(id, typeInfo, beginDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)?
+        v1,
+    TResult Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)?
+        v2,
+    required TResult orElse(),
+  }) {
+    if (v1 != null) {
+      return v1(id, typeInfo, beginDate, lastTakenDate, createdAt, deletedAt, groupIndex, restDurations, version);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PillSheetV1 value) v1,
+    required TResult Function(PillSheetV2 value) v2,
+  }) {
+    return v1(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PillSheetV1 value)? v1,
+    TResult? Function(PillSheetV2 value)? v2,
+  }) {
+    return v1?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PillSheetV1 value)? v1,
+    TResult Function(PillSheetV2 value)? v2,
+    required TResult orElse(),
+  }) {
+    if (v1 != null) {
+      return v1(this);
+    }
+    return orElse();
   }
 }
 
-abstract class _PillSheet extends PillSheet {
-  factory _PillSheet(
+abstract class PillSheetV1 extends PillSheet {
+  factory PillSheetV1(
       {@JsonKey(includeIfNull: false) required final String? id,
       @JsonKey() required final PillSheetTypeInfo typeInfo,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime beginingDate,
+      @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
       required final DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
       final int groupIndex,
-      final List<RestDuration> restDurations}) = _$PillSheetImpl;
-  _PillSheet._() : super._();
-
-  factory _PillSheet.fromJson(Map<String, dynamic> json) = _$PillSheetImpl.fromJson;
+      final List<RestDuration> restDurations,
+      final String version}) = _$PillSheetV1Impl;
+  PillSheetV1._() : super._();
 
   @override
 
@@ -760,9 +1013,11 @@ abstract class _PillSheet extends PillSheet {
   @JsonKey()
   PillSheetTypeInfo get typeInfo;
   @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate;
-  @override // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
+  @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate; // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get lastTakenDate;
   @override
@@ -782,6 +1037,400 @@ abstract class _PillSheet extends PillSheet {
   /// このピルシート期間中の全ての休薬期間記録
   List<RestDuration> get restDurations;
   @override
+
+  /// バージョン識別子
+  String get version;
+  @override
   @JsonKey(ignore: true)
-  _$$PillSheetImplCopyWith<_$PillSheetImpl> get copyWith => throw _privateConstructorUsedError;
+  _$$PillSheetV1ImplCopyWith<_$PillSheetV1Impl> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$PillSheetV2ImplCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
+  factory _$$PillSheetV2ImplCopyWith(_$PillSheetV2Impl value, $Res Function(_$PillSheetV2Impl) then) = __$$PillSheetV2ImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {String id,
+      @JsonKey() PillSheetTypeInfo typeInfo,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+      int groupIndex,
+      List<RestDuration> restDurations,
+      List<Pill> pills,
+      String version});
+
+  @override
+  $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
+}
+
+/// @nodoc
+class __$$PillSheetV2ImplCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res, _$PillSheetV2Impl> implements _$$PillSheetV2ImplCopyWith<$Res> {
+  __$$PillSheetV2ImplCopyWithImpl(_$PillSheetV2Impl _value, $Res Function(_$PillSheetV2Impl) _then) : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? id = null,
+    Object? typeInfo = null,
+    Object? beginDate = null,
+    Object? createdAt = freezed,
+    Object? deletedAt = freezed,
+    Object? groupIndex = null,
+    Object? restDurations = null,
+    Object? pills = null,
+    Object? version = null,
+  }) {
+    return _then(_$PillSheetV2Impl(
+      id: null == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      typeInfo: null == typeInfo
+          ? _value.typeInfo
+          : typeInfo // ignore: cast_nullable_to_non_nullable
+              as PillSheetTypeInfo,
+      beginDate: null == beginDate
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deletedAt: freezed == deletedAt
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      groupIndex: null == groupIndex
+          ? _value.groupIndex
+          : groupIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      restDurations: null == restDurations
+          ? _value._restDurations
+          : restDurations // ignore: cast_nullable_to_non_nullable
+              as List<RestDuration>,
+      pills: null == pills
+          ? _value._pills
+          : pills // ignore: cast_nullable_to_non_nullable
+              as List<Pill>,
+      version: null == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$PillSheetV2Impl extends PillSheetV2 {
+  _$PillSheetV2Impl(
+      {required this.id,
+      @JsonKey() required this.typeInfo,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.deletedAt,
+      required this.groupIndex,
+      required final List<RestDuration> restDurations,
+      required final List<Pill> pills,
+      this.version = 'v2'})
+      : _restDurations = restDurations,
+        _pills = pills,
+        super._();
+
+  /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
+  @override
+  final String id;
+
+  /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
+  @override
+  @JsonKey()
+  final PillSheetTypeInfo typeInfo;
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
+  @override
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime beginDate;
+  @override
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? createdAt;
+  @override
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? deletedAt;
+
+  /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
+  @override
+  final int groupIndex;
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
+  final List<RestDuration> _restDurations;
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
+  @override
+  List<RestDuration> get restDurations {
+    if (_restDurations is EqualUnmodifiableListView) return _restDurations;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_restDurations);
+  }
+
+  /// 1回の服用で飲むピルの錠数
+  /// 2錠飲みの場合は2がセットされる
+  /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
+// required int pillTakenCount,
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  final List<Pill> _pills;
+
+  /// 1回の服用で飲むピルの錠数
+  /// 2錠飲みの場合は2がセットされる
+  /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
+// required int pillTakenCount,
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  @override
+  List<Pill> get pills {
+    if (_pills is EqualUnmodifiableListView) return _pills;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pills);
+  }
+
+  /// バージョン識別子
+  @override
+  @JsonKey()
+  final String version;
+
+  @override
+  String toString() {
+    return 'PillSheet.v2(id: $id, typeInfo: $typeInfo, beginDate: $beginDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations, pills: $pills, version: $version)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PillSheetV2Impl &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.typeInfo, typeInfo) || other.typeInfo == typeInfo) &&
+            (identical(other.beginDate, beginDate) || other.beginDate == beginDate) &&
+            (identical(other.createdAt, createdAt) || other.createdAt == createdAt) &&
+            (identical(other.deletedAt, deletedAt) || other.deletedAt == deletedAt) &&
+            (identical(other.groupIndex, groupIndex) || other.groupIndex == groupIndex) &&
+            const DeepCollectionEquality().equals(other._restDurations, _restDurations) &&
+            const DeepCollectionEquality().equals(other._pills, _pills) &&
+            (identical(other.version, version) || other.version == version));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, typeInfo, beginDate, createdAt, deletedAt, groupIndex,
+      const DeepCollectionEquality().hash(_restDurations), const DeepCollectionEquality().hash(_pills), version);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PillSheetV2ImplCopyWith<_$PillSheetV2Impl> get copyWith => __$$PillSheetV2ImplCopyWithImpl<_$PillSheetV2Impl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)
+        v1,
+    required TResult Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)
+        v2,
+  }) {
+    return v2(id, typeInfo, beginDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)?
+        v1,
+    TResult? Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)?
+        v2,
+  }) {
+    return v2?.call(id, typeInfo, beginDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            @JsonKey(includeIfNull: false) String? id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(
+                name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? lastTakenDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            String version)?
+        v1,
+    TResult Function(
+            String id,
+            @JsonKey() PillSheetTypeInfo typeInfo,
+            @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+            DateTime beginDate,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+            @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
+            int groupIndex,
+            List<RestDuration> restDurations,
+            List<Pill> pills,
+            String version)?
+        v2,
+    required TResult orElse(),
+  }) {
+    if (v2 != null) {
+      return v2(id, typeInfo, beginDate, createdAt, deletedAt, groupIndex, restDurations, pills, version);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(PillSheetV1 value) v1,
+    required TResult Function(PillSheetV2 value) v2,
+  }) {
+    return v2(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(PillSheetV1 value)? v1,
+    TResult? Function(PillSheetV2 value)? v2,
+  }) {
+    return v2?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(PillSheetV1 value)? v1,
+    TResult Function(PillSheetV2 value)? v2,
+    required TResult orElse(),
+  }) {
+    if (v2 != null) {
+      return v2(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class PillSheetV2 extends PillSheet {
+  factory PillSheetV2(
+      {required final String id,
+      @JsonKey() required final PillSheetTypeInfo typeInfo,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? deletedAt,
+      required final int groupIndex,
+      required final List<RestDuration> restDurations,
+      required final List<Pill> pills,
+      final String version}) = _$PillSheetV2Impl;
+  PillSheetV2._() : super._();
+
+  @override
+
+  /// FirestoreドキュメントID
+  /// データベース保存時に自動生成される一意識別子
+  String get id;
+  @override
+
+  /// ピルシートの種類情報
+  /// シート名、総数、服用期間などの基本設定
+  @JsonKey()
+  PillSheetTypeInfo get typeInfo;
+  @override
+
+  /// ピルシート開始日
+  /// このシートでピル服用を開始した日付
+  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate;
+  @override
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get createdAt;
+  @override
+  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get deletedAt;
+  @override
+
+  /// グループインデックス
+  /// 複数のピルシートをグループ化する際の順序番号
+  int get groupIndex;
+  @override
+
+  /// 休薬期間のリスト
+  /// このピルシート期間中の全ての休薬期間記録
+  List<RestDuration> get restDurations;
+
+  /// 1回の服用で飲むピルの錠数
+  /// 2錠飲みの場合は2がセットされる
+  /// NOTE: DBから簡単に確認するための記録用プロパティ。実際の判定には pills[].takenCount を使用すること
+// required int pillTakenCount,
+  /// 各ピルの詳細情報リスト
+  /// 2錠飲み対応のため、各ピルごとの服用記録を管理
+  List<Pill> get pills;
+  @override
+
+  /// バージョン識別子
+  String get version;
+  @override
+  @JsonKey(ignore: true)
+  _$$PillSheetV2ImplCopyWith<_$PillSheetV2Impl> get copyWith => throw _privateConstructorUsedError;
 }

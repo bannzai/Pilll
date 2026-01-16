@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_group.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/features/localizations/l.dart';
@@ -95,15 +96,26 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
         pillNumbersOrHyphenOrDate: PillNumber(
-            pillNumber: PillSheetModifiedHistoryPillNumberOrDate.taken(
-          beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-          afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
-            pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-            pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
-            pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
-          ),
-          pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
-        )),
+            pillNumber: switch (afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet) {
+          PillSheetV1() => PillSheetModifiedHistoryPillNumberOrDate.taken(
+              beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+              afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
+                pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+                pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+                pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+              ),
+              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            ),
+          PillSheetV2() => PillSheetModifiedHistoryPillNumberOrDate.takenV2(
+              beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+              afterLastTakenPillNumber: afterPillSheetGroup.pillNumberWithoutDateOrZero(
+                pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+                pageIndex: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.groupIndex,
+                pillNumberInPillSheet: afterPillSheetGroup.lastTakenPillSheetOrFirstPillSheet.lastTakenOrZeroPillNumber,
+              ),
+              pillSheetAppearanceMode: afterPillSheetGroup.pillSheetAppearanceMode,
+            ),
+        }),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(
           value: value,

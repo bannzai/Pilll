@@ -108,7 +108,7 @@ class EndRestDuration {
         // activePillSheetよりも後のピルシートで、前のピルシートのbeginDateが更新され、estimatedEndTakenDateが変わっている場合も考慮する必要があるのでupdatedPillSheetsから1つ前のピルシートにアクセスする
         final beforeUpdatedPillSheet = updatedPillSheets[pillSheet.groupIndex - 1];
         updatedPillSheets.add(pillSheet.copyWith(
-          beginingDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
+          beginDate: beforeUpdatedPillSheet.estimatedEndTakenDate.add(const Duration(days: 1)),
         ));
       } else {
         updatedPillSheets.add(pillSheet);
@@ -172,7 +172,7 @@ class ChangeRestDuration {
     if (pillSheet.restDurations.map((e) => e.id).where((e) => e != null).contains(restDuration.id)) {
       return true;
     }
-    return !restDuration.beginDate.isBefore(pillSheet.beginingDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
+    return !restDuration.beginDate.isBefore(pillSheet.beginDate) && !restDuration.beginDate.isAfter(pillSheet.estimatedEndTakenDate);
   }
 
   Future<void> call({
@@ -239,7 +239,7 @@ class ChangeRestDuration {
       /// [updatedBeginingDatePillSheets] から取得する
       final beforePillSheet = updatedBeginingDatePillSheets[pillSheet.groupIndex - 1];
       updatedBeginingDatePillSheets.add(pillSheet.copyWith(
-        beginingDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
+        beginDate: beforePillSheet.estimatedEndTakenDate.date().addDays(1),
       ));
     }
 
@@ -255,9 +255,18 @@ class ChangeRestDuration {
       // ピル番号の表示するロジックで、beginingDate > lastTakenDateのような状態になると困る
       // 対象のピルシートにrestDurationsが含まれていない場合にlastTakenDateをクリアする
       if (pillSheet.restDurations.isEmpty) {
-        updatedPillSheets.add(pillSheet.copyWith(
-          lastTakenDate: null,
-        ));
+        // v1/v2で分岐: v2ではlastTakenDateはpillsから導出されるため、pillsをクリアする必要がある
+        switch (pillSheet) {
+          case PillSheetV1():
+            updatedPillSheets.add(pillSheet.copyWith(
+              lastTakenDate: null,
+            ));
+          case PillSheetV2():
+            // v2ではpillTakensをクリアすることでlastTakenDateがnullになる
+            updatedPillSheets.add(pillSheet.copyWith(
+              pills: pillSheet.pills.map((p) => p.copyWith(pillTakens: [])).toList(),
+            ));
+        }
       } else {
         updatedPillSheets.add(pillSheet);
       }

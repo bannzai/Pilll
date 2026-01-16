@@ -6,6 +6,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layou
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/features/record/components/pill_sheet/components/pill_number.dart';
+import 'package:pilll/features/record/components/pill_sheet/record_page_pill_sheet.dart' show remainingPillTakenCountFor;
 import 'package:pilll/provider/revert_take_pill.dart';
 import 'package:pilll/provider/take_pill.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -35,7 +36,7 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final weekdayDate = pillSheet.beginingDate.addDays(summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today()));
+    final weekdayDate = pillSheet.beginDate.addDays(summarizedRestDuration(restDurations: pillSheet.restDurations, upperDate: today()));
     final takePill = ref.watch(takePillProvider);
     final revertTakePill = ref.watch(revertTakePillProvider);
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
@@ -102,6 +103,10 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
               pillNumberInPillSheet: pillNumberInPillSheet,
               pillSheet: pillSheet,
             ),
+            remainingPillTakenCount: remainingPillTakenCountFor(
+              pillNumberInPillSheet: pillNumberInPillSheet,
+              pillSheet: pillSheet,
+            ),
           ),
           onTap: () {},
         ),
@@ -121,14 +126,22 @@ class HistoricalPillsheetGroupPagePillSheet extends HookConsumerWidget {
     }
     if (activePillSheet.id != pillSheet.id) {
       if (pillSheet.isBegan) {
-        if (pillNumberInPillSheet > pillSheet.lastTakenOrZeroPillNumber) {
+        // v2の場合はlastCompletedPillNumberで判定
+        final lastCompleted = switch (pillSheet) {
+          PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber,
+          PillSheetV2 v2 => v2.lastCompletedPillNumber,
+        };
+        if (pillNumberInPillSheet > lastCompleted) {
           return false;
         }
       }
       return true;
     }
 
-    return pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber;
+    return switch (activePillSheet) {
+      PillSheetV1() => pillNumberInPillSheet <= activePillSheet.lastTakenOrZeroPillNumber,
+      PillSheetV2 v2 => pillNumberInPillSheet <= v2.lastCompletedPillNumber,
+    };
   }
 }
 
@@ -141,7 +154,12 @@ PillMarkType pillMarkFor({
         ? PillMarkType.rest
         : PillMarkType.fake;
   }
-  if (pillNumberInPillSheet <= pillSheet.lastTakenOrZeroPillNumber) {
+  // v2の場合はlastCompletedPillNumberで判定
+  final lastCompleted = switch (pillSheet) {
+    PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber,
+    PillSheetV2 v2 => v2.lastCompletedPillNumber,
+  };
+  if (pillNumberInPillSheet <= lastCompleted) {
     return PillMarkType.done;
   }
   if (pillNumberInPillSheet < pillSheet.todayPillNumber) {
@@ -167,14 +185,24 @@ bool shouldPillMarkAnimation({
   }
   if (activePillSheet.id != pillSheet.id) {
     if (pillSheet.isBegan) {
-      if (pillNumberInPillSheet > pillSheet.lastTakenOrZeroPillNumber) {
+      // v2の場合はlastCompletedPillNumberで判定
+      final lastCompleted = switch (pillSheet) {
+        PillSheetV1() => pillSheet.lastTakenOrZeroPillNumber,
+        PillSheetV2 v2 => v2.lastCompletedPillNumber,
+      };
+      if (pillNumberInPillSheet > lastCompleted) {
         return true;
       }
     }
     return false;
   }
 
-  return pillNumberInPillSheet > activePillSheet.lastTakenOrZeroPillNumber && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
+  // v2の場合はlastCompletedPillNumberで判定
+  final lastCompleted = switch (activePillSheet) {
+    PillSheetV1() => activePillSheet.lastTakenOrZeroPillNumber,
+    PillSheetV2 v2 => v2.lastCompletedPillNumber,
+  };
+  return pillNumberInPillSheet > lastCompleted && pillNumberInPillSheet <= activePillSheet.todayPillNumber;
 }
 
 class PillNumber extends StatelessWidget {

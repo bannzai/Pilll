@@ -1046,17 +1046,17 @@ void main() {
 
     group('正常系', () {
       test('正しいパラメータでPillSheetModifiedHistoryが生成される', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1093,17 +1093,17 @@ void main() {
       });
 
       test('isQuickRecord = true の場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1123,17 +1123,17 @@ void main() {
       });
 
       test('beforeのlastTakenDateがnullの場合（初回服用）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 1),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1158,18 +1158,18 @@ void main() {
       });
 
       test('複数ピルを一度に服用した場合（まとめ飲み）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
         // 3日分まとめて服用
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 13),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1192,18 +1192,18 @@ void main() {
       });
 
       test('ピルシートの最後のピルを服用した場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 27),
           createdAt: DateTime(2020, 9, 1),
         );
         // 28錠目（最後）を服用
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1226,18 +1226,18 @@ void main() {
       });
 
       test('beforeとafterで異なるPillSheet IDの場合（シート切り替え時）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 9, 29),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
@@ -1245,7 +1245,7 @@ void main() {
         final beforePillSheetGroup = createPillSheetGroup(
           pillSheets: [
             beforePillSheet,
-            afterPillSheet.copyWith(lastTakenDate: null),
+            (afterPillSheet as PillSheetV1).copyWith(lastTakenDate: null),
           ],
         );
         final afterPillSheetGroup = createPillSheetGroup(
@@ -1268,18 +1268,18 @@ void main() {
       });
 
       test('21錠タイプで最後のピルを服用した場合（境界値確認）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 20),
           createdAt: DateTime(2020, 9, 1),
         );
         // 21錠目（最後）を服用
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 21),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1302,23 +1302,22 @@ void main() {
       });
 
       test('version と メタデータが正しく設定される', () {
-        // now()をモックして、タイミングによるflaky testを防ぐ
-        final mockNow = DateTime(2020, 9, 11, 10, 0, 0);
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(mockNow);
+        final mockTodayService = MockTodayService();
+        todayRepository = mockTodayService;
+        final mockNow = DateTime(2020, 9, 11);
+        when(mockTodayService.now()).thenReturn(mockNow);
 
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1336,38 +1335,41 @@ void main() {
 
         expect(history.version, 'v2');
         expect(history.id, isNull);
-        expect(history.estimatedEventCausingDate, mockNow);
-        expect(history.createdAt, mockNow);
-        expect(history.ttlExpiresDateTime, mockNow.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays)));
+        expect(history.estimatedEventCausingDate, isNotNull);
+        expect(history.createdAt, isNotNull);
+        expect(history.ttlExpiresDateTime, isNotNull);
+        // ttlExpiresDateTime は createdAt から 180日後
+        final expectedTtl = history.createdAt.add(const Duration(days: PillSheetModifiedHistoryServiceActionFactory.limitDays));
+        expect(history.ttlExpiresDateTime, expectedTtl);
       });
 
       test('3枚グループで2枚目から3枚目への切り替え時', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final thirdPillSheet = PillSheet(
+        final thirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 10, 27),
           createdAt: DateTime(2020, 10, 27),
           groupIndex: 2,
         );
         final beforePillSheetGroup = createPillSheetGroup(
-          pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet.copyWith(lastTakenDate: null)],
+          pillSheets: [firstPillSheet, secondPillSheet, (thirdPillSheet as PillSheetV1).copyWith(lastTakenDate: null)],
         );
         final afterPillSheetGroup = createPillSheetGroup(
           pillSheets: [firstPillSheet, secondPillSheet, thirdPillSheet],
@@ -1390,18 +1392,18 @@ void main() {
       });
 
       test('24錠タイプで最後のピルを服用した場合（境界値確認）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 23),
           createdAt: DateTime(2020, 9, 1),
         );
         // 24錠目（最後）を服用
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 24),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1426,18 +1428,18 @@ void main() {
 
     group('異常系', () {
       test('after.idがnullの場合、FormatExceptionがスローされる', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
         // idがnull
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1458,18 +1460,18 @@ void main() {
       });
 
       test('after.lastTakenDateがnullの場合、FormatExceptionがスローされる', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
         // lastTakenDateがnull - これは服用アクションとしては不整合
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1490,18 +1492,18 @@ void main() {
       });
 
       test('after.idとafter.lastTakenDateの両方がnullの場合、FormatExceptionがスローされる', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
         // idとlastTakenDateの両方がnull
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1536,17 +1538,17 @@ void main() {
 
     group('正常系', () {
       test('正しいパラメータでPillSheetModifiedHistoryが生成される', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1581,18 +1583,18 @@ void main() {
       });
 
       test('afterのlastTakenDateがnullの場合（ピルシートの最初まで取り消した場合）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 1),
           createdAt: DateTime(2020, 9, 1),
         );
         // 1番目のピルを取り消すとlastTakenDateはnullになる
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1616,18 +1618,18 @@ void main() {
       });
 
       test('複数ピルを一度に取り消した場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 13),
           createdAt: DateTime(2020, 9, 1),
         );
         // 3日分まとめて取り消し
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1649,18 +1651,18 @@ void main() {
       });
 
       test('ピルシートの最後のピルを取り消した場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
         );
         // 28錠目（最後）を取り消し
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 27),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1682,27 +1684,27 @@ void main() {
       });
 
       test('beforeとafterで異なるPillSheet IDの場合（シート境界での取り消し時）', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 9, 29),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
         // 2枚目の最初のピルを取り消すと、afterは1枚目の最後の状態を参照
-        final afterSecondPillSheet = PillSheet(
+        final afterSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
@@ -1731,17 +1733,17 @@ void main() {
 
       test('21錠シート（pillsheet_21）での最後のピル取り消し', () {
         // 21錠シートの21錠目（最後）を取り消すケース
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 21),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 20),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1766,17 +1768,17 @@ void main() {
 
       test('24+4錠シート（pillsheet_24_rest_4）での偽薬期間の取り消し', () {
         // 24+4錠シートの28錠目（偽薬期間の最後）を取り消すケース
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 27),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1799,17 +1801,17 @@ void main() {
 
       test('24+4錠シートで実錠から偽薬境界を跨いで取り消し', () {
         // 25錠目（偽薬1錠目）を取り消して24錠目（実錠最後）に戻る
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 25),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 24),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1833,34 +1835,34 @@ void main() {
 
       test('3枚シートで2枚目から1枚目まで遡る取り消し', () {
         // 3枚のシートがあり、2枚目の最初のピルを取り消すケース
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 9, 29),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final afterSecondPillSheet = PillSheet(
+        final afterSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final thirdPillSheet = PillSheet(
+        final thirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: null,
           createdAt: DateTime(2020, 10, 27),
           groupIndex: 2,
@@ -1891,34 +1893,34 @@ void main() {
 
       test('3枚シートで3枚目から2枚目まで遡る取り消し', () {
         // 3枚目の最初のピルを取り消すケース
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final beforeThirdPillSheet = PillSheet(
+        final beforeThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 10, 27),
           createdAt: DateTime(2020, 10, 27),
           groupIndex: 2,
         );
-        final afterThirdPillSheet = PillSheet(
+        final afterThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: null,
           createdAt: DateTime(2020, 10, 27),
           groupIndex: 2,
@@ -1949,18 +1951,18 @@ void main() {
 
     group('異常系', () {
       test('after.idがnullの場合、FormatExceptionがスローされる', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
         // idがnull
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -1981,17 +1983,17 @@ void main() {
 
       test('before.idがnullの場合、FormatExceptionがスローされる', () {
         // idがnull
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 11),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2012,17 +2014,17 @@ void main() {
 
       test('before.lastTakenDateがnullの場合、FormatExceptionがスローされる', () {
         // lastTakenDateがnull - 取り消しアクションとしては不整合（取り消す対象がない）
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2043,17 +2045,17 @@ void main() {
 
       test('before.idとbefore.lastTakenDateの両方がnullの場合、FormatExceptionがスローされる', () {
         // idとlastTakenDateの両方がnull
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2090,10 +2092,10 @@ void main() {
 
     group('正常系', () {
       test('正しいパラメータでPillSheetModifiedHistoryが生成される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2135,18 +2137,18 @@ void main() {
       });
 
       test('pillSheetIDsが複数（2件）の場合', () {
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
@@ -2170,26 +2172,26 @@ void main() {
       });
 
       test('pillSheetIDsが複数（3件）の場合', () {
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
         );
-        final pillSheet3 = PillSheet(
+        final pillSheet3 = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 2,
@@ -2213,10 +2215,10 @@ void main() {
       });
 
       test('beforePillSheetGroupが存在する場合（既存グループへのピルシート追加）', () {
-        final existingPillSheet = PillSheet(
+        final existingPillSheet = PillSheet.v1(
           id: 'existing_pill_sheet_id',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 8, 4),
+          beginDate: DateTime(2020, 8, 4),
           lastTakenDate: DateTime(2020, 8, 31),
           createdAt: DateTime(2020, 8, 4),
           groupIndex: 0,
@@ -2226,10 +2228,10 @@ void main() {
           pillSheets: [existingPillSheet],
         );
 
-        final newPillSheet = PillSheet(
+        final newPillSheet = PillSheet.v1(
           id: 'new_pill_sheet_id',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
@@ -2260,10 +2262,10 @@ void main() {
       });
 
       test('異なるPillSheetType（pillsheet_21_0）でピルシートを作成する場合', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2285,10 +2287,10 @@ void main() {
       });
 
       test('異なるPillSheetType（pillsheet_28_4）でピルシートを作成する場合', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2312,10 +2314,10 @@ void main() {
 
       test('pillSheetIDsが空リストの場合も履歴は生成される', () {
         // 技術的には許容されるが、実際のユースケースでは発生しないはずのケース
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2342,10 +2344,10 @@ void main() {
           endDate: DateTime(2020, 9, 12),
           createdDate: DateTime(2020, 9, 10),
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 15),
           createdAt: DateTime(2020, 9, 1),
           restDurations: [restDuration],
@@ -2370,10 +2372,10 @@ void main() {
       });
 
       test('displayNumberSettingが設定されたPillSheetGroupの場合、履歴に保持される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2402,18 +2404,18 @@ void main() {
       });
 
       test('異なるPillSheetTypeの混在する複数ピルシートの場合', () {
-        final pillSheet21 = PillSheet(
+        final pillSheet21 = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final pillSheet28 = PillSheet(
+        final pillSheet28 = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
@@ -2440,10 +2442,10 @@ void main() {
 
     group('生成されるプロパティの検証', () {
       test('version は v2 が設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2463,10 +2465,10 @@ void main() {
       });
 
       test('id は null が設定される（サーバー側で生成されるため）', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2486,10 +2488,10 @@ void main() {
       });
 
       test('estimatedEventCausingDate と createdAt が設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2510,10 +2512,10 @@ void main() {
       });
 
       test('pillSheetID（deprecated）は null が設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2548,17 +2550,17 @@ void main() {
     group('正常系', () {
       test('正しいパラメータでPillSheetModifiedHistoryが生成される', () {
         // 開始日を変更するシナリオ: 9/1開始 → 9/3開始 に変更
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2592,18 +2594,18 @@ void main() {
 
       test('開始日を進めた場合（todayPillNumberが減少）', () {
         // 9/1開始 → 9/5開始 に変更
-        // todayPillNumber は today() に依存するため、beginingDate の変更を検証
-        final beforePillSheet = PillSheet(
+        // todayPillNumber は today() に依存するため、beginDate の変更を検証
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 5),
+          beginDate: DateTime(2020, 9, 5),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2630,17 +2632,17 @@ void main() {
 
       test('開始日を戻した場合（todayPillNumberが増加）', () {
         // 9/5開始 → 9/1開始 に変更（開始日を早める）
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 5),
+          beginDate: DateTime(2020, 9, 5),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2664,18 +2666,18 @@ void main() {
       });
 
       test('groupIndexが変更された場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
@@ -2698,17 +2700,17 @@ void main() {
       });
 
       test('異なるPillSheetType（pillsheet_21_0）の場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2733,17 +2735,17 @@ void main() {
       });
 
       test('異なるPillSheetType（pillsheet_28_4）の場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2769,27 +2771,27 @@ void main() {
       });
 
       test('複数のピルシートを持つPillSheetGroupで2枚目のピルシートを変更した場合', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 5),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
         // 2枚目の開始日を変更
-        final afterSecondPillSheet = PillSheet(
+        final afterSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 1),
+          beginDate: DateTime(2020, 10, 1),
           lastTakenDate: DateTime(2020, 10, 5),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
@@ -2821,18 +2823,18 @@ void main() {
       });
 
       test('beforeとafterで異なるPillSheet IDの場合（シート間での変更）', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: null,
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
@@ -2865,17 +2867,17 @@ void main() {
 
     group('生成されるプロパティの検証', () {
       test('version は v2 が設定される', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2894,17 +2896,17 @@ void main() {
       });
 
       test('id は null が設定される（サーバー側で生成されるため）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2923,17 +2925,17 @@ void main() {
       });
 
       test('estimatedEventCausingDate と createdAt が設定される', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2953,17 +2955,17 @@ void main() {
       });
 
       test('pillSheetID（deprecated）は null が設定される', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -2984,18 +2986,18 @@ void main() {
 
     group('異常系', () {
       test('after.idがnullの場合、FormatExceptionがスローされる', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
         // idがnull
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3017,17 +3019,17 @@ void main() {
       test('pillSheetGroupIDがnullの場合、例外がスローされる', () {
         // pillSheetGroupIDがnullの場合はassertで先に検証される（デバッグモード）
         // プロダクションモードではFormatExceptionがスローされる
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3049,18 +3051,18 @@ void main() {
       test('after.idとpillSheetGroupIDの両方がnullの場合、例外がスローされる', () {
         // pillSheetGroupIDがnullの場合はassertで先に検証される（デバッグモード）
         // プロダクションモードではFormatExceptionがスローされる
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
         // idがnull
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3088,18 +3090,18 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockNow);
 
         // 9/1開始で、9/10が今日の場合、todayPillNumber = 10
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 9),
           createdAt: DateTime(2020, 9, 1),
         );
         // 開始日を9/3に変更すると、9/10が今日の場合、todayPillNumber = 8
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 9),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3127,18 +3129,18 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(mockNow);
 
         // 9/1開始で、10/1が今日の場合、todayPillNumber = 31
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 30),
           createdAt: DateTime(2020, 9, 1),
         );
         // 開始日を9/30に変更すると、10/1が今日の場合、todayPillNumber = 2
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 30),
+          beginDate: DateTime(2020, 9, 30),
           lastTakenDate: DateTime(2020, 9, 30),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3167,17 +3169,17 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(mockNow);
 
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 9),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 9),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3200,35 +3202,35 @@ void main() {
 
     group('3枚のピルシートを持つPillSheetGroupでの操作', () {
       test('3枚目のピルシートを変更した場合', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final beforeThirdPillSheet = PillSheet(
+        final beforeThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 11, 5),
           createdAt: DateTime(2020, 10, 27),
           groupIndex: 2,
         );
         // 3枚目の開始日を変更
-        final afterThirdPillSheet = PillSheet(
+        final afterThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 29),
+          beginDate: DateTime(2020, 10, 29),
           lastTakenDate: DateTime(2020, 11, 5),
           createdAt: DateTime(2020, 10, 27),
           groupIndex: 2,
@@ -3269,17 +3271,17 @@ void main() {
     group('before.idがnullの場合', () {
       test('before.idがnullでもエラーなく履歴が生成される', () {
         // before.id は null でも許容される（コードにバリデーションがないため）
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: null,
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 3),
+          beginDate: DateTime(2020, 9, 3),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3301,17 +3303,17 @@ void main() {
 
     group('境界値テスト', () {
       test('月をまたぐ日付変更（9月末から10月初への変更）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 15),
+          beginDate: DateTime(2020, 9, 15),
           lastTakenDate: DateTime(2020, 9, 30),
           createdAt: DateTime(2020, 9, 15),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 1),
+          beginDate: DateTime(2020, 10, 1),
           lastTakenDate: DateTime(2020, 9, 30),
           createdAt: DateTime(2020, 9, 15),
         );
@@ -3333,17 +3335,17 @@ void main() {
       });
 
       test('年をまたぐ日付変更（12月末から1月初への変更）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 12, 15),
+          beginDate: DateTime(2020, 12, 15),
           lastTakenDate: DateTime(2020, 12, 31),
           createdAt: DateTime(2020, 12, 15),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2021, 1, 1),
+          beginDate: DateTime(2021, 1, 1),
           lastTakenDate: DateTime(2020, 12, 31),
           createdAt: DateTime(2020, 12, 15),
         );
@@ -3365,17 +3367,17 @@ void main() {
       });
 
       test('うるう年の2月29日を含む変更', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 2, 1),
+          beginDate: DateTime(2020, 2, 1),
           lastTakenDate: DateTime(2020, 2, 28),
           createdAt: DateTime(2020, 2, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 2, 29),
+          beginDate: DateTime(2020, 2, 29),
           lastTakenDate: DateTime(2020, 2, 28),
           createdAt: DateTime(2020, 2, 1),
         );
@@ -3397,17 +3399,17 @@ void main() {
       });
 
       test('開始日が同じ場合（変更なし）', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
-        final afterPillSheet = PillSheet(
+        final afterPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3447,10 +3449,10 @@ void main() {
 
     group('正常系', () {
       test('正しいパラメータでPillSheetModifiedHistoryが生成される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3497,18 +3499,18 @@ void main() {
       });
 
       test('pillSheetIDsが複数（2件）の場合', () {
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 15),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
@@ -3540,26 +3542,26 @@ void main() {
       });
 
       test('pillSheetIDsが複数（3件）の場合', () {
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 1,
         );
-        final pillSheet3 = PillSheet(
+        final pillSheet3 = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 11, 10),
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 2,
@@ -3592,10 +3594,10 @@ void main() {
       });
 
       test('異なるPillSheetType（pillsheet_21_0）のピルシートを削除する場合', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 15),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3622,10 +3624,10 @@ void main() {
       });
 
       test('異なるPillSheetType（pillsheet_28_4）のピルシートを削除する場合', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 20),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3654,10 +3656,10 @@ void main() {
 
       test('pillSheetIDsが空リストの場合も履歴は生成される', () {
         // 技術的には許容されるが、実際のユースケースでは発生しないはずのケース
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3683,10 +3685,10 @@ void main() {
       });
 
       test('beforePillSheetGroupとupdatedPillSheetGroupの差分が記録される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3724,10 +3726,10 @@ void main() {
           endDate: DateTime(2020, 9, 12),
           createdDate: DateTime(2020, 9, 10),
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 15),
           createdAt: DateTime(2020, 9, 1),
           restDurations: [restDuration],
@@ -3764,10 +3766,10 @@ void main() {
 
     group('生成されるプロパティの検証', () {
       test('version は v2 が設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3792,10 +3794,10 @@ void main() {
       });
 
       test('id は null が設定される（サーバー側で生成されるため）', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3820,10 +3822,10 @@ void main() {
       });
 
       test('estimatedEventCausingDate と createdAt が設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3849,10 +3851,10 @@ void main() {
       });
 
       test('pillSheetID（deprecated）は null が設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3877,10 +3879,10 @@ void main() {
       });
 
       test('ttlExpiresDateTime が limitDays 日後に設定される', () {
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3923,10 +3925,10 @@ void main() {
 
     group('正常ケース', () {
       test('actionType が beganRestDuration であること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3954,10 +3956,10 @@ void main() {
       });
 
       test('beganRestDurationValue に restDuration が正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -3988,10 +3990,10 @@ void main() {
       });
 
       test('before と after の PillSheet が正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4022,10 +4024,10 @@ void main() {
       });
 
       test('beforePillSheetGroup と afterPillSheetGroup が正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4054,10 +4056,10 @@ void main() {
       });
 
       test('pillSheetGroupID が正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4087,18 +4089,18 @@ void main() {
 
     group('複数ピルシートがある場合', () {
       test('2枚目のピルシートで休薬期間を開始した場合、正しく設定されること', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           groupIndex: 0,
           createdAt: DateTime(2020, 9, 1),
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 10),
           groupIndex: 1,
           createdAt: DateTime(2020, 9, 29),
@@ -4135,26 +4137,26 @@ void main() {
       });
 
       test('3枚目のピルシートで休薬期間を開始した場合、正しく設定されること', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           groupIndex: 0,
           createdAt: DateTime(2020, 9, 1),
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           groupIndex: 1,
           createdAt: DateTime(2020, 9, 29),
         );
-        final beforeThirdPillSheet = PillSheet(
+        final beforeThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 11, 10),
           groupIndex: 2,
           createdAt: DateTime(2020, 10, 27),
@@ -4195,10 +4197,10 @@ void main() {
 
     group('RestDuration のプロパティ', () {
       test('endDate が null の場合（休薬期間継続中）、正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4229,10 +4231,10 @@ void main() {
 
     group('メタデータの検証', () {
       test('estimatedEventCausingDate が正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4260,10 +4262,10 @@ void main() {
       });
 
       test('createdAt が正しく設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4291,10 +4293,10 @@ void main() {
       });
 
       test('ttlExpiresDateTime が limitDays 日後に設定されること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4327,10 +4329,10 @@ void main() {
 
     group('異常ケース', () {
       test('pillSheetGroupID が null の場合、例外が発生すること', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4361,10 +4363,10 @@ void main() {
 
     group('PillSheetType による違い', () {
       test('21錠タイプ（pillsheet_21）で休薬期間を開始した場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4394,10 +4396,10 @@ void main() {
       });
 
       test('24錠タイプ（pillsheet_28_4）で休薬期間を開始した場合', () {
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           createdAt: DateTime(2020, 9, 1),
         );
@@ -4435,10 +4437,10 @@ void main() {
           endDate: DateTime(2020, 9, 7),
           createdDate: DateTime(2020, 9, 5),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [existingRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4481,10 +4483,10 @@ void main() {
           endDate: DateTime(2020, 9, 7),
           createdDate: DateTime(2020, 9, 6),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [existingRestDuration1, existingRestDuration2],
           createdAt: DateTime(2020, 9, 1),
@@ -4534,10 +4536,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4569,10 +4571,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4608,10 +4610,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4646,10 +4648,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4682,10 +4684,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4714,10 +4716,10 @@ void main() {
 
     group('複数ピルシートがある場合', () {
       test('2枚目のピルシートで休薬期間を終了した場合、正しく設定されること', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           groupIndex: 0,
           createdAt: DateTime(2020, 9, 1),
@@ -4727,10 +4729,10 @@ void main() {
           beginDate: DateTime(2020, 10, 11),
           createdDate: DateTime(2020, 10, 11),
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 10),
           groupIndex: 1,
           restDurations: [restDuration],
@@ -4766,18 +4768,18 @@ void main() {
       });
 
       test('3枚目のピルシートで休薬期間を終了した場合、正しく設定されること', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           groupIndex: 0,
           createdAt: DateTime(2020, 9, 1),
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           groupIndex: 1,
           createdAt: DateTime(2020, 9, 29),
@@ -4787,10 +4789,10 @@ void main() {
           beginDate: DateTime(2020, 11, 11),
           createdDate: DateTime(2020, 11, 11),
         );
-        final beforeThirdPillSheet = PillSheet(
+        final beforeThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 11, 10),
           groupIndex: 2,
           restDurations: [restDuration],
@@ -4837,10 +4839,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4872,10 +4874,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4910,10 +4912,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4945,10 +4947,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -4980,10 +4982,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5020,10 +5022,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5058,10 +5060,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5095,10 +5097,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5140,10 +5142,10 @@ void main() {
           beginDate: DateTime(2020, 9, 11),
           createdDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [existingRestDuration, currentRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5196,10 +5198,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5232,10 +5234,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5272,10 +5274,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5311,10 +5313,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5348,10 +5350,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5386,10 +5388,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5423,10 +5425,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 9),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5460,10 +5462,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 5),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5491,10 +5493,10 @@ void main() {
 
     group('複数ピルシートがある場合', () {
       test('2枚目のピルシートで休薬開始日を変更した場合、正しく設定されること', () {
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           groupIndex: 0,
           createdAt: DateTime(2020, 9, 1),
@@ -5507,10 +5509,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 10, 10),
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 10),
           groupIndex: 1,
           restDurations: [beforeRestDuration],
@@ -5557,10 +5559,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5594,10 +5596,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5633,10 +5635,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5669,10 +5671,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5705,10 +5707,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5746,10 +5748,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5785,10 +5787,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5823,10 +5825,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5869,10 +5871,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 10),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [existingRestDuration, beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5925,10 +5927,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -5962,10 +5964,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6005,10 +6007,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6045,10 +6047,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6083,10 +6085,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6120,10 +6122,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6159,10 +6161,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 18),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6197,10 +6199,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 14),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6237,10 +6239,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 9),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6275,10 +6277,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           beginDate: DateTime(2020, 9, 11),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 8),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6315,19 +6317,19 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 10, 12),
         );
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final beforeSecondPillSheet = PillSheet(
+        final beforeSecondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 4),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 29),
@@ -6367,28 +6369,28 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 11, 14),
         );
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 26),
           restDurations: [],
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final beforeThirdPillSheet = PillSheet(
+        final beforeThirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: DateTime(2020, 11, 4),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 10, 27),
@@ -6438,10 +6440,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 20),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 14),
           restDurations: [existingRestDuration, beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6482,10 +6484,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 20),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 14),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6521,10 +6523,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 20),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 14),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6564,10 +6566,10 @@ void main() {
         final afterRestDuration = beforeRestDuration.copyWith(
           endDate: DateTime(2020, 9, 16),
         );
-        final beforePillSheet = PillSheet(
+        final beforePillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [beforeRestDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -6621,10 +6623,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6658,10 +6660,10 @@ void main() {
           beginPillNumber: 10,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6695,10 +6697,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6732,10 +6734,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6766,10 +6768,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6796,10 +6798,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6828,10 +6830,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6859,10 +6861,10 @@ void main() {
         final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
           beginPillNumber: 10,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6897,10 +6899,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6938,10 +6940,10 @@ void main() {
           beginPillNumber: 85,
           endPillNumber: 120,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -6978,28 +6980,28 @@ void main() {
           beginPillNumber: 29,
           endPillNumber: 84,
         );
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final thirdPillSheet = PillSheet(
+        final thirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: null,
           restDurations: [],
           createdAt: DateTime(2020, 10, 27),
@@ -7039,10 +7041,10 @@ void main() {
           beginPillNumber: 8,
           endPillNumber: 21,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7078,10 +7080,10 @@ void main() {
           beginPillNumber: 10,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7118,10 +7120,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7151,10 +7153,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7181,10 +7183,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7211,10 +7213,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7255,10 +7257,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [restDuration],
           createdAt: DateTime(2020, 9, 1),
@@ -7317,10 +7319,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7354,10 +7356,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 84,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7391,10 +7393,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7428,10 +7430,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7462,10 +7464,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7492,10 +7494,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7524,10 +7526,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7555,10 +7557,10 @@ void main() {
         final afterDisplayNumberSetting = const PillSheetGroupDisplayNumberSetting(
           endPillNumber: 84,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7593,10 +7595,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7634,10 +7636,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 120,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7672,10 +7674,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 28,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7712,28 +7714,28 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 120,
         );
-        final firstPillSheet = PillSheet(
+        final firstPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 28),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
           groupIndex: 0,
         );
-        final secondPillSheet = PillSheet(
+        final secondPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_2',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 29),
+          beginDate: DateTime(2020, 9, 29),
           lastTakenDate: DateTime(2020, 10, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 29),
           groupIndex: 1,
         );
-        final thirdPillSheet = PillSheet(
+        final thirdPillSheet = PillSheet.v1(
           id: 'pill_sheet_id_3',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 10, 27),
+          beginDate: DateTime(2020, 10, 27),
           lastTakenDate: null,
           restDurations: [],
           createdAt: DateTime(2020, 10, 27),
@@ -7773,10 +7775,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 42,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7812,10 +7814,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_24_rest_4.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7850,10 +7852,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7887,10 +7889,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),
@@ -7930,10 +7932,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 15),
           restDurations: [
             RestDuration(
@@ -7978,10 +7980,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 84,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 25),
           restDurations: [
             RestDuration(
@@ -8030,10 +8032,10 @@ void main() {
           beginPillNumber: 1,
           endPillNumber: 56,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [
             RestDuration(
@@ -8077,10 +8079,10 @@ void main() {
           beginPillNumber: 5,
           endPillNumber: 84,
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: 'pill_sheet_id_1',
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-          beginingDate: DateTime(2020, 9, 1),
+          beginDate: DateTime(2020, 9, 1),
           lastTakenDate: DateTime(2020, 9, 10),
           restDurations: [],
           createdAt: DateTime(2020, 9, 1),

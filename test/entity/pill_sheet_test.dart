@@ -1,4 +1,5 @@
 import 'package:pilll/entity/firestore_id_generator.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/entity/pill_sheet.codegen.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/utils/datetime/day.dart';
@@ -20,9 +21,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -40,9 +41,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -60,9 +61,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-13"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -80,9 +81,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -100,9 +101,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-15"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -121,9 +122,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           restDurations: [
@@ -149,9 +150,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           restDurations: [
@@ -177,9 +178,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: now(),
           restDurations: [
@@ -204,9 +205,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: now(),
           restDurations: [
@@ -232,9 +233,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-26"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: now(),
           restDurations: [
@@ -261,9 +262,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -294,9 +295,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -331,9 +332,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
 
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -351,9 +352,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-30"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -374,10 +375,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-06T23:59:59"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
           // 朝の時刻で開始
-          beginingDate: DateTime.parse("2020-09-01T08:00:00"),
+          beginDate: DateTime.parse("2020-09-01T08:00:00"),
           lastTakenDate: DateTime.parse("2020-09-05T20:00:00"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -396,10 +397,10 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01T06:00:00"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
           // 朝8時に開始
-          beginingDate: DateTime.parse("2020-09-01T08:00:00"),
+          beginDate: DateTime.parse("2020-09-01T08:00:00"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -419,9 +420,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-30"),
+          beginDate: DateTime.parse("2020-09-30"),
           lastTakenDate: DateTime.parse("2020-09-30"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -439,9 +440,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-15"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-15"),
+          beginDate: DateTime.parse("2020-09-15"),
           lastTakenDate: DateTime.parse("2020-10-14"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -461,9 +462,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-12-31"),
+          beginDate: DateTime.parse("2020-12-31"),
           lastTakenDate: DateTime.parse("2020-12-31"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -481,9 +482,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-15"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-12-15"),
+          beginDate: DateTime.parse("2020-12-15"),
           lastTakenDate: DateTime.parse("2021-01-14"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -503,9 +504,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-02-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-02-28"),
+          beginDate: DateTime.parse("2020-02-28"),
           lastTakenDate: DateTime.parse("2020-02-28"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -523,9 +524,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-03-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-02-28"),
+          beginDate: DateTime.parse("2020-02-28"),
           lastTakenDate: DateTime.parse("2020-02-29"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -545,9 +546,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-10"));
 
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-09"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -565,9 +566,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-15"));
 
         const sheetType = PillSheetType.pillsheet_28_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-14"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -585,9 +586,9 @@ void main() {
     group("基本的なケース（休薬期間なし）", () {
       test("targetDateが開始日と同日の場合は1番を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -602,9 +603,9 @@ void main() {
 
       test("targetDateが開始日の翌日の場合は2番を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -619,9 +620,9 @@ void main() {
 
       test("targetDateが開始日から6日目の場合は6番を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -636,9 +637,9 @@ void main() {
 
       test("targetDateが開始日より前の場合はmax関数により1を返す（下限保護）", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -653,9 +654,9 @@ void main() {
 
       test("targetDateが開始日の2日前の場合でも1を返す（下限保護）", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -670,9 +671,9 @@ void main() {
 
       test("境界値テスト：21日目の場合は21番を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -687,9 +688,9 @@ void main() {
 
       test("境界値テスト：28日目の場合は28番を返す", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -704,9 +705,9 @@ void main() {
 
       test("ピルシート範囲外の日付（29日目以降）でも計算結果を返す（上限制限なし）", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -724,9 +725,9 @@ void main() {
     group("時刻を含む境界値テスト", () {
       test("targetDateの00:00:00とtargetDateの23:59:59は同じピル番号を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -742,9 +743,9 @@ void main() {
 
       test("開始日に時刻が含まれていてもtargetDateの日付で正しく計算される", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime(2020, 9, 1, 10, 30, 0),
+          beginDate: DateTime(2020, 9, 1, 10, 30, 0),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -763,9 +764,9 @@ void main() {
     group("休薬期間がある場合", () {
       test("休薬期間が終了していない場合、targetDateが休薬開始後だと休薬日数分が差し引かれる", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -792,9 +793,9 @@ void main() {
 
       test("休薬期間が終了している場合、休薬期間の日数のみが差し引かれる", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -820,9 +821,9 @@ void main() {
 
       test("境界値テスト：targetDateが休薬期間開始日より前の場合は休薬期間の影響を受けない", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -845,9 +846,9 @@ void main() {
 
       test("境界値テスト：targetDateが休薬期間開始日と同日の場合、休薬期間の影響は0日", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -872,9 +873,9 @@ void main() {
 
       test("境界値テスト：targetDateが休薬期間開始日の翌日の場合は1日分差し引かれる", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -899,9 +900,9 @@ void main() {
 
       test("境界値テスト：targetDateが休薬期間終了日と同日の場合", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -927,9 +928,9 @@ void main() {
 
       test("境界値テスト：targetDateが休薬期間終了日の翌日の場合", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -957,9 +958,9 @@ void main() {
     group("複数の休薬期間がある場合", () {
       test("複数の休薬期間がすべて終了している場合、合計日数が差し引かれる", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -993,9 +994,9 @@ void main() {
 
       test("最初の休薬期間のみ終了していて、2番目の休薬期間が継続中の場合", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -1028,9 +1029,9 @@ void main() {
 
       test("境界値テスト：targetDateが最初の休薬期間と2番目の休薬期間の間の場合", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -1064,9 +1065,9 @@ void main() {
 
       test("境界値テスト：targetDateが最初の休薬期間より前の場合、休薬期間の影響を受けない", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -1098,9 +1099,9 @@ void main() {
     group("異なるPillSheetTypeの場合", () {
       test("pillsheet_28_0（28錠すべて実薬）の場合", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -1115,9 +1116,9 @@ void main() {
 
       test("pillsheet_24_0（24錠すべて実薬）の場合", () {
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -1132,9 +1133,9 @@ void main() {
 
       test("pillsheet_21_0（21錠すべて実薬）の場合", () {
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -1149,9 +1150,9 @@ void main() {
 
       test("pillsheet_28_4（24錠+4日偽薬）の場合", () {
         const sheetType = PillSheetType.pillsheet_28_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -1168,9 +1169,9 @@ void main() {
     group("エッジケース", () {
       test("休薬期間の開始日と終了日が同日（0日間）の場合は影響なし", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -1197,9 +1198,9 @@ void main() {
 
       test("3つの休薬期間がすべて終了している場合、合計日数が差し引かれる", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           restDurations: [
@@ -1240,9 +1241,9 @@ void main() {
 
       test("targetDateがかなり開始日より前（30日前）の場合でも1を返す（下限保護）", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -1260,9 +1261,9 @@ void main() {
 
       test("targetDateがピルシート期間を大幅に超えた場合でも計算結果を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -1287,9 +1288,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1307,9 +1308,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 23, 59, 59));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1327,9 +1328,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-08-31"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1347,9 +1348,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime(2020, 8, 31, 23, 59, 59));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1368,9 +1369,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1388,9 +1389,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1408,9 +1409,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1428,9 +1429,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 28, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1448,9 +1449,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1471,9 +1472,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1498,9 +1499,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1518,9 +1519,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1538,9 +1539,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 30, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -1570,9 +1571,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-02"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1608,9 +1609,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-03"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1644,9 +1645,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1671,9 +1672,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_28_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1698,9 +1699,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_24_rest_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1725,9 +1726,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
 
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1752,9 +1753,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1779,9 +1780,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1802,7 +1803,7 @@ void main() {
     });
   });
   group("#isActiveFor", () {
-    // isActiveFor(date) は beginingDate から estimatedEndTakenDate の範囲内に date が含まれるかを判定
+    // isActiveFor(date) は beginDate から estimatedEndTakenDate の範囲内に date が含まれるかを判定
     // isActive は isActiveFor(now()) を呼び出しているので、isActiveFor はより汎用的なメソッド
 
     group("基本的なアクティブ判定", () {
@@ -1812,9 +1813,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1834,9 +1835,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1858,9 +1859,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1879,9 +1880,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1900,9 +1901,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1923,9 +1924,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1945,9 +1946,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1966,9 +1967,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -1989,9 +1990,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2011,9 +2012,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
 
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2033,9 +2034,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2058,9 +2059,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -2090,9 +2091,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -2122,9 +2123,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-05"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -2154,9 +2155,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-02"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -2193,9 +2194,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-03"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -2231,9 +2232,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2252,9 +2253,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2273,9 +2274,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2291,17 +2292,17 @@ void main() {
       });
     });
 
-    group("beginingDateに時刻が含まれている場合", () {
-      test("beginingDateが12:30:00でも日付部分のみで判定される", () {
+    group("beginDateに時刻が含まれている場合", () {
+      test("beginDateが12:30:00でも日付部分のみで判定される", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          // beginingDateに時刻を含める
-          beginingDate: DateTime(2020, 9, 1, 12, 30, 0),
+          // beginDateに時刻を含める
+          beginDate: DateTime(2020, 9, 1, 12, 30, 0),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2327,9 +2328,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -2361,9 +2362,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2375,16 +2376,16 @@ void main() {
       );
       expect(model.isBegan, true);
     });
-    test("開始日と同日の場合はfalseを返す（境界値: beginingDate.date() < now() で等しい場合はfalse）", () {
+    test("開始日と同日の場合はfalseを返す（境界値: beginDate.date() < now() で等しい場合はfalse）", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      // DateTime.parse は 00:00:00 を返すため、beginingDate.date() と now() が同じ値になる
+      // DateTime.parse は 00:00:00 を返すため、beginDate.date() と now() が同じ値になる
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2402,9 +2403,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-02"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2422,9 +2423,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2436,16 +2437,16 @@ void main() {
       );
       expect(model.isBegan, false);
     });
-    test("開始日当日で時刻部分がある場合はtrueを返す（beginingDate.date()は00:00:00に正規化されるため）", () {
+    test("開始日当日で時刻部分がある場合はtrueを返す（beginDate.date()は00:00:00に正規化されるため）", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      // now()に時刻部分があると、beginingDate.date() = 00:00:00 < now() = 12:00:00 となりtrue
+      // now()に時刻部分があると、beginDate.date() = 00:00:00 < now() = 12:00:00 となりtrue
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 12, 0, 0));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2463,9 +2464,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 0, 0, 1));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2483,9 +2484,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 1, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -2511,9 +2512,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2534,9 +2535,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2558,9 +2559,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2582,9 +2583,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2608,9 +2609,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
         const sheetType = PillSheetType.pillsheet_28_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2632,9 +2633,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
 
         const sheetType = PillSheetType.pillsheet_28_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2658,9 +2659,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2684,9 +2685,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
 
         const sheetType = PillSheetType.pillsheet_24_rest_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2711,9 +2712,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2733,9 +2734,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2759,9 +2760,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2785,9 +2786,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-21"));
 
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -2816,9 +2817,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-19"),
           createdAt: now(),
           restDurations: [
@@ -2848,9 +2849,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-23"),
           createdAt: now(),
           restDurations: [
@@ -2882,9 +2883,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-22"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: now(),
           restDurations: [
@@ -2916,9 +2917,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-23"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
           createdAt: now(),
           restDurations: [
@@ -2949,9 +2950,9 @@ void main() {
     for (final sheetType in PillSheetType.values) {
       group('PillSheetType.${sheetType.name}の場合', () {
         test('期待値が正しい', () {
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: null,
             createdAt: DateTime.parse("2020-09-01"),
             typeInfo: PillSheetTypeInfo(
@@ -3004,9 +3005,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3018,15 +3019,15 @@ void main() {
       );
       expect(model.lastTakenOrZeroPillNumber, 0);
     });
-    test("beginingDate > lastTakenDateの場合は0になる。服用日が開始日より前になる。「今日飲むピル番号」の調整機能で1つ目のピルを選択した時", () {
+    test("beginDate > lastTakenDateの場合は0になる。服用日が開始日より前になる。「今日飲むピル番号」の調整機能で1つ目のピルを選択した時", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-13"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3040,9 +3041,9 @@ void main() {
     });
     test("境界値テスト：開始日と同日に服用した場合は1番を返す", () {
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-14"),
         createdAt: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
@@ -3056,9 +3057,9 @@ void main() {
     });
     test("境界値テスト：開始日の翌日に服用した場合は2番を返す", () {
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-15"),
         createdAt: DateTime.parse("2020-09-15"),
         typeInfo: PillSheetTypeInfo(
@@ -3076,9 +3077,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-17"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3096,9 +3097,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3116,9 +3117,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-22"),
         createdAt: now(),
         restDurations: [
@@ -3143,9 +3144,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-27"),
         createdAt: now(),
         restDurations: [
@@ -3171,9 +3172,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -3197,9 +3198,9 @@ void main() {
       const sheetType = PillSheetType.pillsheet_21;
       // 休薬期間開始日は2020-09-23、最終服用日も2020-09-23
       // 開始日から23日目まで服用しているので、23番を返すべき
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-23"),
         createdAt: DateTime.parse("2020-09-28"),
         restDurations: [
@@ -3223,15 +3224,15 @@ void main() {
       // 休薬期間は2020-09-20から2020-09-22（2日間）
       // 最終服用日は2020-09-22（休薬終了日と同日）
       // 休薬期間中は番号が進まないので、休薬開始前の最終服用番号のまま
-      // beginingDate: 2020-09-01, lastTakenDate: 2020-09-22
+      // beginDate: 2020-09-01, lastTakenDate: 2020-09-22
       // 休薬期間がlastTakenDate以前なので、20-1+1=20番...ではなく、
       // summarizedRestDurationがupperDate=lastTakenDateで計算される
       // 休薬期間開始日=9/20、休薬終了日=9/22、upperDate=9/22
       // 9/20は9/22より前なので休薬期間としてカウント、daysBetween(9/20, 9/22)=2日
       // pillNumber = daysBetween(9/1, 9/22) - 2 + 1 = 21 - 2 + 1 = 20
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-22"),
         createdAt: DateTime.parse("2020-09-28"),
         restDurations: [
@@ -3257,9 +3258,9 @@ void main() {
       // 最終服用日は2020-09-23（休薬終了日の翌日）
       // daysBetween(9/1, 9/23) = 22, 休薬期間2日
       // pillNumber = 22 - 2 + 1 = 21
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-23"),
         createdAt: DateTime.parse("2020-09-28"),
         restDurations: [
@@ -3287,9 +3288,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
           createdAt: now(),
           restDurations: [
@@ -3320,9 +3321,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
           createdAt: now(),
           restDurations: [
@@ -3353,9 +3354,9 @@ void main() {
     group("異なるPillSheetTypeでの動作", () {
       test("24錠型（pillsheet_24_0）で最後まで服用した場合は24番を返す", () {
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-24"),
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -3369,9 +3370,9 @@ void main() {
       });
       test("28錠型（pillsheet_28_0）で最後まで服用した場合は28番を返す", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -3387,9 +3388,9 @@ void main() {
         // pillsheet_28_4はtotalCount=28, dosingPeriod=24
         // 偽薬期間の4錠も含めて28番目を服用した場合
         const sheetType = PillSheetType.pillsheet_28_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -3407,9 +3408,9 @@ void main() {
       test("totalCountと一致する番号まで服用した場合", () {
         const sheetType = PillSheetType.pillsheet_21_0;
         // pillsheet_21_0はtotalCount=21, dosingPeriod=21
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -3425,9 +3426,9 @@ void main() {
         // pillsheet_24_rest_4はtotalCount=28, dosingPeriod=24
         // 実薬24錠を服用し、休薬期間に入る前の最終服用
         const sheetType = PillSheetType.pillsheet_24_rest_4;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-24"),
           createdAt: DateTime.parse("2020-09-01"),
           typeInfo: PillSheetTypeInfo(
@@ -3440,6 +3441,181 @@ void main() {
         expect(model.lastTakenOrZeroPillNumber, 24);
       });
     });
+
+    group("v2", () {
+      test("未服用の場合は0を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenOrZeroPillNumber, 0);
+      });
+
+      test("1錠だけ飲んでいる場合（takenCount=2、1錠服用）でもpillTakensがあるので該当番号を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenOrZeroPillNumber, 1);
+      });
+
+      test("3日目まで完全に服用している場合は3を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-04"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-03"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenOrZeroPillNumber, 3);
+      });
+
+      test("5日目まで完全に服用している場合は5を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-06"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-05"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenOrZeroPillNumber, 5);
+      });
+
+      test("休薬期間がある場合でも正しいピル番号を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [
+            RestDuration(
+              id: "rest_duration_id",
+              beginDate: DateTime.parse("2022-05-06"),
+              endDate: DateTime.parse("2022-05-08"),
+              createdDate: DateTime.parse("2022-05-06"),
+            ),
+          ],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-10"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenOrZeroPillNumber, 10);
+      });
+    });
   });
   group("#lastTakenPillNumber", () {
     test("未服用の場合はnullになる", () {
@@ -3448,9 +3624,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3462,15 +3638,15 @@ void main() {
       );
       expect(model.lastTakenPillNumber, isNull);
     });
-    test("beginingDate > lastTakenDateの場合はnullになる。服用日が開始日より前になる。「今日飲むピル番号」の調整機能で1つ目のピルを選択した時", () {
+    test("beginDate > lastTakenDateの場合はnullになる。服用日が開始日より前になる。「今日飲むピル番号」の調整機能で1つ目のピルを選択した時", () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-13"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3488,9 +3664,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-14"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3508,9 +3684,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-15"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-15"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3528,9 +3704,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-17"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3548,9 +3724,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3568,9 +3744,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-22"),
         createdAt: now(),
         restDurations: [
@@ -3595,9 +3771,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-27"),
         createdAt: now(),
         restDurations: [
@@ -3623,9 +3799,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -3653,9 +3829,9 @@ void main() {
       const sheetType = PillSheetType.pillsheet_21;
       // 休薬期間開始日は2020-09-23、最終服用日も2020-09-23
       // 開始日から23日目まで服用しているので、23番を返すべき
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-23"),
         createdAt: now(),
         restDurations: [
@@ -3683,15 +3859,15 @@ void main() {
       // 休薬期間は2020-09-20から2020-09-22（3日間）
       // 最終服用日は2020-09-22（休薬終了日と同日）
       // 休薬期間中は番号が進まないので、休薬開始前の最終服用番号のまま
-      // beginingDate: 2020-09-01, lastTakenDate: 2020-09-22
+      // beginDate: 2020-09-01, lastTakenDate: 2020-09-22
       // 休薬期間がlastTakenDate以前なので、20-1+1=20番...ではなく、
       // summarizedRestDurationがupperDate=lastTakenDateで計算される
       // 休薬期間開始日=9/20、休薬終了日=9/22、upperDate=9/22
       // 9/20は9/22より前なので休薬期間としてカウント、daysBetween(9/20, 9/22)=2日
       // pillNumber = daysBetween(9/1, 9/22) - 2 + 1 = 21 - 2 + 1 = 20
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-22"),
         createdAt: now(),
         restDurations: [
@@ -3721,9 +3897,9 @@ void main() {
       // 最終服用日は2020-09-23（休薬終了日の翌日）
       // daysBetween(9/1, 9/23) = 22, 休薬期間2日
       // pillNumber = 22 - 2 + 1 = 21
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-23"),
         createdAt: now(),
         restDurations: [
@@ -3751,9 +3927,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
           createdAt: now(),
           restDurations: [
@@ -3784,9 +3960,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-22"),
           createdAt: now(),
           restDurations: [
@@ -3815,17 +3991,17 @@ void main() {
     });
 
     group("時刻境界値テスト", () {
-      test("同日だがlastTakenDateの時刻がbeginingDateより前の場合はnullを返す", () {
-        // lastTakenPillNumber は lastTakenDate.isBefore(beginingDate) で時刻も含めて比較している
+      test("同日だがlastTakenDateの時刻がbeginDateより前の場合はnullを返す", () {
+        // lastTakenPillNumber は lastTakenDate.isBefore(beginDate) で時刻も含めて比較している
         // 同日でも時刻が前であればnullを返す
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime(2020, 9, 14, 12, 0, 0),
+          beginDate: DateTime(2020, 9, 14, 12, 0, 0),
           lastTakenDate: DateTime(2020, 9, 14, 10, 0, 0),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -3837,15 +4013,15 @@ void main() {
         );
         expect(model.lastTakenPillNumber, isNull);
       });
-      test("同日でlastTakenDateの時刻がbeginingDateより後の場合は1を返す", () {
+      test("同日でlastTakenDateの時刻がbeginDateより後の場合は1を返す", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime(2020, 9, 14, 10, 0, 0),
+          beginDate: DateTime(2020, 9, 14, 10, 0, 0),
           lastTakenDate: DateTime(2020, 9, 14, 12, 0, 0),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -3863,9 +4039,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime(2020, 9, 14, 12, 0, 0),
+          beginDate: DateTime(2020, 9, 14, 12, 0, 0),
           lastTakenDate: DateTime(2020, 9, 14, 12, 0, 0),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -3878,6 +4054,95 @@ void main() {
         expect(model.lastTakenPillNumber, 1);
       });
     });
+
+    group("v2", () {
+      test("未服用の場合はnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenPillNumber, null);
+      });
+
+      test("1日目を完全服用している場合は1を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-02"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-01"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenPillNumber, 1);
+      });
+
+      test("3日目まで完全に服用している場合は3を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-04"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-03"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.lastTakenPillNumber, 3);
+      });
+    });
   });
   group("#todayPillIsAlreadyTaken", () {
     test("lastTakenDateがnullの場合はfalseを返す", () {
@@ -3886,9 +4151,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3906,9 +4171,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-19"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3926,9 +4191,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 19, 12, 0, 0));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime(2020, 9, 19, 0, 0, 0),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3946,9 +4211,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 19, 8, 0, 0));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime(2020, 9, 19, 23, 59, 59),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3966,9 +4231,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -3986,9 +4251,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 19, 0, 0, 0));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime(2020, 9, 18, 23, 59, 59),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4006,9 +4271,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-20"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4026,9 +4291,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 19, 23, 59, 59));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime(2020, 9, 20, 0, 0, 0),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4046,9 +4311,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-17"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4066,9 +4331,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-22"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4086,9 +4351,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-14"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-14"),
+        beginDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-14"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4106,9 +4371,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       const sheetType = PillSheetType.pillsheet_28_7;
-      final model = PillSheet(
+      final model = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2020-09-01"),
+        beginDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4125,9 +4390,9 @@ void main() {
     group("lastTakenDate が null の場合", () {
       test("28錠タイプ - isTakenAll は false を返す", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4141,12 +4406,12 @@ void main() {
       });
     });
 
-    group("lastTakenDate が beginingDate より前の場合", () {
+    group("lastTakenDate が beginDate より前の場合", () {
       test("28錠タイプ - isTakenAll は false を返す", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-08-31"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4163,9 +4428,9 @@ void main() {
     group("途中のピル番号で服用が止まっている場合", () {
       test("28錠タイプで10番目まで服用 - isTakenAll は false を返す", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-10"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4180,9 +4445,9 @@ void main() {
 
       test("24錠タイプで1番目まで服用 - isTakenAll は false を返す", () {
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-01"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4197,9 +4462,9 @@ void main() {
 
       test("21錠タイプで20番目まで服用（境界値-1）- isTakenAll は false を返す", () {
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-20"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4216,9 +4481,9 @@ void main() {
     group("最後のピルまで服用した場合", () {
       test("28錠タイプで28番目まで服用 - isTakenAll は true を返す", () {
         const sheetType = PillSheetType.pillsheet_28_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4233,9 +4498,9 @@ void main() {
 
       test("24錠タイプで24番目まで服用 - isTakenAll は true を返す", () {
         const sheetType = PillSheetType.pillsheet_24_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-24"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4250,9 +4515,9 @@ void main() {
 
       test("21錠タイプで21番目まで服用 - isTakenAll は true を返す", () {
         const sheetType = PillSheetType.pillsheet_21_0;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-21"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4267,9 +4532,9 @@ void main() {
 
       test("21錠+休薬7日タイプで28番目まで服用 - isTakenAll は true を返す", () {
         const sheetType = PillSheetType.pillsheet_21;
-        final model = PillSheet(
+        final model = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4289,9 +4554,9 @@ void main() {
           // 28錠シートで5日間の休薬期間がある場合
           // 休薬期間分だけ日付がずれるので、最終服用日は開始日+27日+休薬5日=2020-10-03
           const sheetType = PillSheetType.pillsheet_28_0;
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-10-03"),
             createdAt: now(),
             restDurations: [
@@ -4314,9 +4579,9 @@ void main() {
 
         test("28錠タイプで休薬期間中断後も途中まで服用 - isTakenAll は false を返す", () {
           const sheetType = PillSheetType.pillsheet_28_0;
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-20"),
             createdAt: now(),
             restDurations: [
@@ -4341,9 +4606,9 @@ void main() {
           // 21錠シートで合計7日間（3日+4日）の休薬期間がある場合
           // 最終服用日は開始日+20日+休薬7日=2020-09-28
           const sheetType = PillSheetType.pillsheet_21_0;
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -4380,9 +4645,9 @@ void main() {
           const sheetType = PillSheetType.pillsheet_28_0;
           // 9日目まで服用して、10日目から休薬期間開始（継続中）
           // lastTakenDate は休薬期間開始前の日付
-          final model = PillSheet(
+          final model = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-09"),
             createdAt: now(),
             restDurations: [
@@ -4405,6 +4670,97 @@ void main() {
         });
       });
     });
+
+    group("v2", () {
+      test("全ピル完了の場合はtrueを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-29"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-28"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.isTakenAll, true);
+      });
+
+      test("途中までしか服用していない場合はfalseを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-10"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        expect(pillSheet.isTakenAll, false);
+      });
+
+      test("最終日（28日目）が未服用の場合はfalseを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-28"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        // 27日目まで完全服用、28日目は未服用
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: DateTime.parse("2022-05-27"),
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+
+        // 28日目が未完了なので false
+        expect(pillSheet.isTakenAll, false);
+      });
+    });
   });
   group("#estimatedEndTakenDate", () {
     test("spec", () {
@@ -4413,9 +4769,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -4435,9 +4791,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -4462,9 +4818,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -4492,9 +4848,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2022-05-01"),
+            beginDate: DateTime.parse("2022-05-01"),
             lastTakenDate: null,
             createdAt: now(),
             restDurations: [
@@ -4525,9 +4881,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2022-05-01"),
+            beginDate: DateTime.parse("2022-05-01"),
             lastTakenDate: null,
             createdAt: now(),
             restDurations: [
@@ -4563,9 +4919,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_24_0;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4585,9 +4941,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21_0;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4607,9 +4963,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_28_4;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4629,9 +4985,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_24_rest_4;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4651,9 +5007,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4673,9 +5029,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_28_0;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4697,9 +5053,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4719,9 +5075,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4741,9 +5097,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-29"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -4766,9 +5122,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-05"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -4797,9 +5153,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-13"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -4828,9 +5184,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -4860,9 +5216,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -4892,9 +5248,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [],
@@ -4920,9 +5276,9 @@ void main() {
         createdDate: DateTime.parse("2022-05-08"),
         endDate: null,
       );
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [restDuration],
@@ -4948,9 +5304,9 @@ void main() {
         createdDate: DateTime.parse("2022-05-10"),
         endDate: null,
       );
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [restDuration],
@@ -4977,9 +5333,9 @@ void main() {
         createdDate: DateTime.parse("2022-05-09"),
         endDate: null,
       );
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [restDuration],
@@ -4999,9 +5355,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5028,9 +5384,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5057,9 +5413,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5100,9 +5456,9 @@ void main() {
         createdDate: DateTime.parse("2022-05-12"),
         endDate: null,
       );
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5142,9 +5498,9 @@ void main() {
           beginDate: DateTime(2022, 5, 10, 22, 45, 27),
           createdDate: DateTime(2022, 5, 10, 8, 0, 0),
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: DateTime(2022, 5, 9, 22, 45, 27),
           createdAt: now(),
           restDurations: [restDuration],
@@ -5170,9 +5526,9 @@ void main() {
           beginDate: DateTime(2022, 5, 10, 8, 0, 0),
           createdDate: DateTime(2022, 5, 10, 8, 0, 0),
         );
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [restDuration],
@@ -5194,9 +5550,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -5245,9 +5601,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5299,9 +5655,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5358,9 +5714,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5423,9 +5779,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_24_0;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -5446,9 +5802,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21_0;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -5469,9 +5825,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5501,9 +5857,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5533,9 +5889,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_28_4;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -5556,9 +5912,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_28_0;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -5579,9 +5935,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_24_rest_4;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         typeInfo: PillSheetTypeInfo(
@@ -5603,9 +5959,9 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2022-05-01"),
+            beginDate: DateTime.parse("2022-05-01"),
             lastTakenDate: null,
             createdAt: now(),
             typeInfo: PillSheetTypeInfo(
@@ -5628,9 +5984,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -5649,9 +6005,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -5670,9 +6026,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-28"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -5691,9 +6047,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-21"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -5712,9 +6068,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-28"));
 
         const sheetType = PillSheetType.pillsheet_28_4;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -5735,9 +6091,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -5766,9 +6122,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -5802,9 +6158,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -5837,9 +6193,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-25"));
 
         const sheetType = PillSheetType.pillsheet_28_7;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2022-05-01"),
+          beginDate: DateTime.parse("2022-05-01"),
           lastTakenDate: null,
           createdAt: now(),
           restDurations: [
@@ -5885,9 +6241,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-20"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5923,9 +6279,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -5960,9 +6316,9 @@ void main() {
 
       // pillsheet_21 は 21錠+休薬7日 = 合計28日のサイクル
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [],
@@ -5991,9 +6347,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-25"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6029,9 +6385,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6077,9 +6433,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6111,9 +6467,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
 
       const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [],
@@ -6139,9 +6495,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-10"));
 
       const sheetType = PillSheetType.pillsheet_28_7;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6178,9 +6534,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
 
       const sheetType = PillSheetType.pillsheet_24_0;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [],
@@ -6206,9 +6562,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
 
       const sheetType = PillSheetType.pillsheet_21_0;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [],
@@ -6234,9 +6590,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
 
       const sheetType = PillSheetType.pillsheet_24_rest_4;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [],
@@ -6262,9 +6618,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-15"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6299,9 +6655,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-20"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6346,9 +6702,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6384,9 +6740,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-30"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6419,9 +6775,9 @@ void main() {
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-15"));
 
       const sheetType = PillSheetType.pillsheet_21;
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginDate: DateTime.parse("2022-05-01"),
         lastTakenDate: null,
         createdAt: now(),
         restDurations: [
@@ -6486,6 +6842,1227 @@ void main() {
         ),
       ];
       expect(summarizedRestDuration(restDurations: restDurations, upperDate: today()), 1);
+    });
+  });
+
+  group("#PillSheetV2", () {
+    group("#lastCompletedPillNumber", () {
+      test("pillsが空の場合は0を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastCompletedPillNumber, 0);
+      });
+
+      test("1錠だけ飲んでいる場合（pillTakenCount=2）は0を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastCompletedPillNumber, 0);
+      });
+
+      test("1番目のピルを2錠飲んでいる場合は1を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastCompletedPillNumber, 1);
+      });
+
+      test("2番目まで服用完了している場合は2を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-02"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastCompletedPillNumber, 2);
+      });
+    });
+
+    group("#todayPillAllTaken", () {
+      test("今日のピルを全錠飲んでいる場合はtrue", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.todayPillAllTaken, true);
+      });
+
+      test("今日のピルを1錠だけ飲んでいる場合はfalse", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.todayPillAllTaken, false);
+      });
+
+      test("ピルシートの終了日を過ぎた場合でもRangeErrorが発生しない", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 21日型ピルシートで開始日が2022-05-01の場合、終了日は2022-05-21
+        // 今日を2022-06-01に設定（ピルシート終了日を10日超過）
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        // 全てのピルを服用完了済みにする
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+              ],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        // todayPillNumberはピルシート終了日を超えた日数も含めて計算される
+        // 2022-05-01から2022-06-01は32日目なのでtodayPillNumber = 32
+        // lastCompletedPillNumber = 21（最後の完了済みピル）
+        // 32 != 21 なので false を返す
+        expect(pillSheet.todayPillNumber, greaterThan(sheetType.totalCount));
+        expect(pillSheet.lastCompletedPillNumber, sheetType.totalCount);
+        expect(pillSheet.todayPillAllTaken, false);
+      });
+    });
+
+    group("#anyTodayPillsAreAlreadyTaken", () {
+      test("今日のピルを1錠でも飲んでいればtrue", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.anyTodayPillsAreAlreadyTaken, true);
+      });
+
+      test("今日のピルを一度も飲んでいなければfalse", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          // pillTakenCount: 2,
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.anyTodayPillsAreAlreadyTaken, false);
+      });
+
+      test("ピルシートの終了日を過ぎた場合、todayPillIndexが範囲外になるためfalseを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        // 21日型ピルシートで開始日が2022-05-01の場合、終了日は2022-05-21
+        // 今日を2022-06-01に設定（ピルシート終了日を10日超過）
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-06-01"));
+
+        const sheetType = PillSheetType.pillsheet_21;
+        // 全てのピルを服用完了済みにする
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) => Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+              ],
+            ),
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        // todayPillIndexはtodayPillNumber - 1 = 31で、pills.length(21)を超える
+        // 境界チェックによりfalseを返す
+        expect(pillSheet.todayPillIndex, greaterThanOrEqualTo(sheetType.totalCount));
+        expect(pillSheet.anyTodayPillsAreAlreadyTaken, false);
+      });
+    });
+
+    group("#replacedPills", () {
+      test("newPillsが空の場合は元のpillsを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        final result = pillSheet.replacedPills(newPills: []);
+        expect(result, pillSheet.pills);
+      });
+
+      test("1番目のピルを更新した場合、1番目のみが置き換わる", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        final updatedPill = Pill(
+          index: 0,
+          takenCount: 2,
+          createdDateTime: now(),
+          updatedDateTime: now(),
+          pillTakens: [
+            PillTaken(
+              recordedTakenDateTime: DateTime.parse("2022-05-01"),
+              createdDateTime: now(),
+              updatedDateTime: now(),
+            ),
+          ],
+        );
+
+        final result = pillSheet.replacedPills(newPills: [updatedPill]);
+
+        expect(result[0].pillTakens.length, 1);
+        expect(result[1].pillTakens.length, 0);
+        expect(result.length, pillSheet.pills.length);
+      });
+
+      test("複数のピルを連続して更新した場合、該当範囲のみ置き換わる", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-03"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        final updatedPills = [
+          Pill(
+            index: 0,
+            takenCount: 2,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [
+              PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01"), createdDateTime: now(), updatedDateTime: now()),
+              PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01"), createdDateTime: now(), updatedDateTime: now()),
+            ],
+          ),
+          Pill(
+            index: 1,
+            takenCount: 2,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [
+              PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-02"), createdDateTime: now(), updatedDateTime: now()),
+              PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-02"), createdDateTime: now(), updatedDateTime: now()),
+            ],
+          ),
+        ];
+
+        final result = pillSheet.replacedPills(newPills: updatedPills);
+
+        expect(result[0].pillTakens.length, 2);
+        expect(result[1].pillTakens.length, 2);
+        expect(result[2].pillTakens.length, 0);
+        expect(result.length, pillSheet.pills.length);
+      });
+
+      test("indexが範囲外のピルはassertエラーが発生する", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        // index=100は範囲外（totalCount=28）なのでassertエラーが発生する
+        final outOfRangePill = Pill(
+          index: 100,
+          takenCount: 2,
+          createdDateTime: now(),
+          updatedDateTime: now(),
+          pillTakens: [],
+        );
+
+        expect(() => pillSheet.replacedPills(newPills: [outOfRangePill]), throwsA(isA<AssertionError>()));
+      });
+    });
+
+    group("#lastTakenDate", () {
+      test("未服用の場合はnullを返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: null,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastTakenDate, null);
+      });
+
+      test("1錠だけ服用している場合（takenCount=2）は服用日時を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-01"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final takenDateTime = DateTime.parse("2022-05-01");
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index == 0) {
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: takenDateTime,
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastTakenDate, takenDateTime);
+      });
+
+      test("3日目まで服用している場合は3日目の服用日時を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-04"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        final lastTakenDateTime = DateTime.parse("2022-05-03");
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: Pill.testGenerateAndIterateTo(
+            pillSheetType: sheetType,
+            fromDate: DateTime.parse("2022-05-01"),
+            lastTakenDate: lastTakenDateTime,
+            pillTakenCount: 2,
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        expect(pillSheet.lastTakenDate, lastTakenDateTime);
+      });
+
+      test("途中のピルに服用記録がある場合は最後の記録日時を返す", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
+        const sheetType = PillSheetType.pillsheet_28_7;
+        // 5日目まで服用、6日目は未服用、7日目に服用というケース
+        final pillSheet = PillSheet.v2(
+          id: firestoreIDGenerator(),
+          beginDate: DateTime.parse("2022-05-01"),
+          createdAt: now(),
+          groupIndex: 0,
+          restDurations: [],
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index < 5) {
+                // 1〜5日目まで完全服用
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              } else if (index == 6) {
+                // 7日目に1錠だけ服用
+                return Pill(
+                  takenCount: 2,
+                  index: index,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-05-07"),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [],
+              );
+            },
+          ),
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        ) as PillSheetV2;
+
+        // 最後に服用記録があるのは7日目
+        expect(pillSheet.lastTakenDate, DateTime.parse("2022-05-07"));
+      });
+    });
+  });
+
+  group("#lastCompletedPillNumber", () {
+    test("服用完了したピルがない場合は0を返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-25"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(
+          sheetType.totalCount,
+          (index) => Pill(
+            takenCount: 2,
+            index: index,
+            createdDateTime: now(),
+            updatedDateTime: now(),
+            pillTakens: [],
+          ),
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      expect(pillSheet.lastCompletedPillNumber, 0);
+    });
+
+    test("1日目のピルを2回服用完了した場合は1を返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-25"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(
+          sheetType.totalCount,
+          (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      expect(pillSheet.lastCompletedPillNumber, 1);
+    });
+
+    test("3日目までのピルを全て服用完了した場合は3を返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-27"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(
+          sheetType.totalCount,
+          (index) {
+            if (index <= 2) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      expect(pillSheet.lastCompletedPillNumber, 3);
+    });
+
+    test("休薬期間がある場合でも正しいピル番号を返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-30"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      // 休薬期間: 7/26-7/27 (2日間)
+      // 1日目: 7/24 (index 0)
+      // 2日目: 7/25 (index 1)
+      // 休薬期間: 7/26-7/27
+      // 3日目: 7/28 (index 2)
+      // 4日目: 7/29 (index 3)
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        // pillTakenCount: 2,
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2022-07-26"),
+            createdDate: DateTime.parse("2022-07-26"),
+            endDate: DateTime.parse("2022-07-28"),
+          ),
+        ],
+        pills: List.generate(
+          sheetType.totalCount,
+          (index) {
+            if (index <= 3) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: now(), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(recordedTakenDateTime: now(), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      // 休薬期間を考慮したピル番号は4（4日目まで服用完了）
+      expect(pillSheet.lastCompletedPillNumber, 4);
+    });
+
+    test("途中のピルが未完了の場合、その前の完了済みピル番号を返す", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-27"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      // 1日目: 2回服用完了
+      // 2日目: 1回のみ服用（未完了）
+      // 3日目: 2回服用完了
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        // pillTakenCount: 2,
+        pills: List.generate(
+          sheetType.totalCount,
+          (index) {
+            if (index == 0) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-24"), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            if (index == 1) {
+              // 2日目は1回のみ服用
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-25"), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            if (index == 2) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-26"), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-26"), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      // lastWhereOrNullで最後の完了済みピルを探すので、3日目（index 2）が返される
+      expect(pillSheet.lastCompletedPillNumber, 3);
+    });
+
+    test("pillsの長さがtypeInfo.totalCountより少ない場合でもRangeErrorが発生しない", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-07-27"));
+
+      const sheetType = PillSheetType.pillsheet_28_7;
+      // 通常28個のピルがあるべきところ、10個しかない（データ不整合のシミュレーション）
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        pills: List.generate(
+          10, // 本来は28個だが10個しかない
+          (index) {
+            if (index <= 2) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      // pills.length(10) < dates.length(28) の場合
+      // lastCompletedPill.index は最大9なので、dates[9]へのアクセスは安全
+      expect(pillSheet.lastCompletedPillNumber, 3);
+    });
+
+    test("pillsの長さがtypeInfo.totalCountより多い場合でもRangeErrorが発生しない", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-08-05"));
+
+      // 21日型シートだが35個のピルがある場合（データ不整合のシミュレーション）
+      const sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet.v2(
+        id: firestoreIDGenerator(),
+        beginDate: DateTime.parse("2022-07-24"),
+        createdAt: now(),
+        groupIndex: 0,
+        restDurations: [],
+        pills: List.generate(
+          35, // 本来は21個だが35個ある
+          (index) {
+            // 30番目のピルまで服用完了
+            if (index <= 29) {
+              return Pill(
+                takenCount: 2,
+                index: index,
+                createdDateTime: now(),
+                updatedDateTime: now(),
+                pillTakens: [
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                  PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                ],
+              );
+            }
+            return Pill(
+              takenCount: 2,
+              index: index,
+              createdDateTime: now(),
+              updatedDateTime: now(),
+              pillTakens: [],
+            );
+          },
+        ),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      ) as PillSheetV2;
+
+      // pills.length(35) > dates.length(21) の場合
+      // lastCompletedPill.index = 29 で dates.length = 21 なので
+      // ガードによりdates.length(21)が返される
+      expect(pillSheet.lastCompletedPillNumber, sheetType.totalCount);
     });
   });
 }

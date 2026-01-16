@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:pilll/entity/firestore_id_generator.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/pill.codegen.dart';
 import 'package:pilll/utils/datetime/date_add.dart';
 import 'package:pilll/utils/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -31,6 +32,7 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false) bool isLoading,
     @Default(false) bool settingIsExist,
     LinkAccountType? accountType,
+    @Default(1) int pillTakenCount,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrNull(int index) {
@@ -70,9 +72,10 @@ class InitialSettingState with _$InitialSettingState {
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
+    required int pillTakenCount,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
-    final beginDate = _beginingDate(
+    final beginDate = _beginDate(
       pageIndex: pageIndex,
       todayPillNumber: todayPillNumber,
       pillSheetTypes: pillSheetTypes,
@@ -83,17 +86,34 @@ class InitialSettingState with _$InitialSettingState {
       pillSheetTypes: pillSheetTypes,
     );
 
-    return PillSheet(
+    if (pillTakenCount > 1) {
+      return PillSheet.v2(
+        id: firestoreIDGenerator(),
+        groupIndex: pageIndex,
+        beginDate: beginDate,
+        typeInfo: pillSheetType.typeInfo,
+        createdAt: now(),
+        restDurations: [],
+        pills: Pill.generateAndFillTo(
+          pillSheetType: pillSheetType,
+          fromDate: beginDate,
+          lastTakenDate: lastTakenDate,
+          pillTakenCount: pillTakenCount,
+        ),
+      );
+    }
+
+    return PillSheet.v1(
       id: firestoreIDGenerator(),
       groupIndex: pageIndex,
-      beginingDate: beginDate,
+      beginDate: beginDate,
       lastTakenDate: lastTakenDate,
       typeInfo: pillSheetType.typeInfo,
       createdAt: now(),
     );
   }
 
-  static DateTime _beginingDate({
+  static DateTime _beginDate({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
@@ -112,13 +132,13 @@ class InitialSettingState with _$InitialSettingState {
       return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
-      final beforePillSheetBeginingDate = _beginingDate(
+      final beforePillSheetBeginDate = _beginDate(
         pageIndex: pageIndex - 1,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       );
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
-      return beforePillSheetBeginingDate.addDays(beforePillSheetType.totalCount);
+      return beforePillSheetBeginDate.addDays(beforePillSheetType.totalCount);
     }
   }
 
@@ -136,14 +156,14 @@ class InitialSettingState with _$InitialSettingState {
       return null;
     } else if (todayPillNumber.pageIndex > pageIndex) {
       // Left side PillSheet
-      return _beginingDate(
+      return _beginDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ).addDays(pillSheetType.totalCount - 1);
     } else {
       // Current PillSheet
-      return _beginingDate(
+      return _beginDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,

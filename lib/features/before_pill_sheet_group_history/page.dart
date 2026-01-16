@@ -84,7 +84,7 @@ class _Page extends HookConsumerWidget {
       final pillSheet = pillSheetGroup.pillSheets[page];
       currentPillSheet.value = pillSheet;
     });
-    final begin = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.beginingDate);
+    final begin = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.beginDate);
     final end = DateTimeFormatter.slashYearAndMonthAndDay(currentPillSheet.value.estimatedEndTakenDate);
 
     return Scaffold(

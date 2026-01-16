@@ -33,10 +33,10 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: mockToday,
+        beginDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
@@ -95,6 +95,7 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0],
         displayNumberSetting: null,
+        pillTakenCount: 1,
       );
     });
     test("group has two pill sheet", () async {
@@ -113,18 +114,18 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
 
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: mockToday,
+        beginDate: mockToday,
         groupIndex: 0,
         lastTakenDate: null,
         createdAt: now(),
       );
-      final pillSheet2 = PillSheet(
+      final pillSheet2 = PillSheet.v1(
         id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: mockToday.add(const Duration(days: 28)),
+        beginDate: mockToday.add(const Duration(days: 28)),
         lastTakenDate: null,
         groupIndex: 1,
         createdAt: now(),
@@ -183,6 +184,7 @@ void main() {
         pillSheetGroup: null,
         pillSheetTypes: [PillSheetType.pillsheet_28_0, PillSheetType.pillsheet_21],
         displayNumberSetting: null,
+        pillTakenCount: 1,
       );
     });
   });

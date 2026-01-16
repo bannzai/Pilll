@@ -45,55 +45,55 @@ void main() {
           pillSheetIDs: ["1", "2", "3", "4", "5", "6"],
           pillSheets: [
             // シート0: 24錠（実薬のみ）- 1-24番
-            PillSheet(
+            PillSheet.v1(
               id: "1",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24 - 23)),
               createdAt: now(),
               groupIndex: 0,
             ),
             // シート1: 24錠（実薬のみ）- 25-48番
-            PillSheet(
+            PillSheet.v1(
               id: "2",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24 - 23)),
               createdAt: now(),
               groupIndex: 1,
             ),
             // シート2: 28錠（24実薬+4偽薬）- 49-76番（偽薬は73-76番）
-            PillSheet(
+            PillSheet.v1(
               id: "3",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24 - 27)),
               createdAt: now(),
               groupIndex: 2,
             ),
             // シート3: 24錠（実薬のみ）- 77-100番
-            PillSheet(
+            PillSheet.v1(
               id: "4",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 - 23)),
               createdAt: now(),
               groupIndex: 3,
             ),
             // シート4: 24錠（実薬のみ）- 101-124番
-            PillSheet(
+            PillSheet.v1(
               id: "5",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginingDate: sheet5BeginDate.subtract(const Duration(days: 24)),
+              beginDate: sheet5BeginDate.subtract(const Duration(days: 24)),
               lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 - 23)),
               createdAt: now(),
               groupIndex: 4,
             ),
             // シート5: 28錠（24実薬+4偽薬）- 125-152番（偽薬は149-152番）
-            PillSheet(
+            PillSheet.v1(
               id: "6",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-              beginingDate: sheet5BeginDate,
+              beginDate: sheet5BeginDate,
               lastTakenDate: DateTime(2025, 12, 16), // 12/17時点で19番目まで服用
               createdAt: now(),
               groupIndex: 5,
@@ -261,7 +261,7 @@ void main() {
     );
 
     test(
-      "if latest pillsheet.beginingDate + totalCount < mockToday, when return schedueld card state",
+      "if latest pillsheet.beginDate + totalCount < mockToday, when return schedueld card state",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -276,10 +276,10 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
           pillSheets: [
-            PillSheet(
+            PillSheet.v1(
               id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 22),
+              beginDate: DateTime(2021, 04, 22),
               lastTakenDate: null,
               createdAt: now(),
             ),
@@ -319,10 +319,10 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"],
           pillSheets: [
-            PillSheet(
+            PillSheet.v1(
               id: firestoreIDGenerator(),
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 07),
+              beginDate: DateTime(2021, 04, 07),
               lastTakenDate: null,
               createdAt: now(),
             ),

@@ -32,10 +32,10 @@ void main() {
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
       final yesterday = today().subtract(const Duration(days: 1));
-      final pillSheet = PillSheet(
+      final pillSheet = PillSheet.v1(
         id: firestoreIDGenerator(),
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
-        beginingDate: yesterday,
+        beginDate: yesterday,
         lastTakenDate: yesterday,
         createdAt: now(),
       );
@@ -60,10 +60,10 @@ void main() {
     });
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
-    final pillSheet = PillSheet(
+    final pillSheet = PillSheet.v1(
       id: firestoreIDGenerator(),
       typeInfo: PillSheetType.pillsheet_21.typeInfo,
-      beginingDate: today(),
+      beginDate: today(),
       lastTakenDate: today(),
       createdAt: now(),
     );

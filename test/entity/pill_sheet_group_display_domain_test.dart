@@ -25,9 +25,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -56,9 +56,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -95,9 +95,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -135,9 +135,9 @@ void main() {
             when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
-            final pillSheet = PillSheet(
+            final pillSheet = PillSheet.v1(
               id: firestoreIDGenerator(),
-              beginingDate: DateTime.parse("2020-09-01"),
+              beginDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               createdAt: now(),
               restDurations: [
@@ -180,9 +180,9 @@ void main() {
 
             const sheetType = PillSheetType.pillsheet_21;
             // 服用お休みを考慮しない場合は28日間
-            final pillSheet = PillSheet(
+            final pillSheet = PillSheet.v1(
               id: firestoreIDGenerator(),
-              beginingDate: DateTime.parse("2020-09-01"),
+              beginDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               createdAt: now(),
               restDurations: [
@@ -231,9 +231,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -244,9 +244,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-29"),
+          beginDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -279,9 +279,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-15"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -292,9 +292,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-10"),
             groupIndex: 1,
             createdAt: now(),
@@ -338,9 +338,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -351,9 +351,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-20"),
             groupIndex: 1,
             createdAt: now(),
@@ -401,9 +401,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-11-01"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -414,9 +414,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-29"),
+          beginDate: DateTime.parse("2020-09-29"),
           lastTakenDate: DateTime.parse("2020-10-26"),
           groupIndex: 1,
           createdAt: now(),
@@ -427,9 +427,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet3 = PillSheet(
+        final pillSheet3 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-10-27"),
+          beginDate: DateTime.parse("2020-10-27"),
           lastTakenDate: null,
           groupIndex: 2,
           createdAt: now(),
@@ -468,9 +468,9 @@ void main() {
 
         const sheetType28 = PillSheetType.pillsheet_28_0;
         const sheetType21 = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -481,9 +481,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType28.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-29"),
+          beginDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -519,9 +519,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-12-20"),
+          beginDate: DateTime.parse("2020-12-20"),
           lastTakenDate: DateTime.parse("2021-01-10"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -553,9 +553,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-20"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-12-10"),
+          beginDate: DateTime.parse("2020-12-10"),
           lastTakenDate: DateTime.parse("2021-01-06"),
           createdAt: now(),
           groupIndex: 0,
@@ -566,9 +566,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2021-01-07"),
+          beginDate: DateTime.parse("2021-01-07"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -605,9 +605,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-15"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -626,9 +626,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-30"),
+          beginDate: DateTime.parse("2020-09-30"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -665,9 +665,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-25"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-20"),
           createdAt: now(),
           groupIndex: 0,
@@ -685,11 +685,11 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        // 2枚目のbeginingDateは、1枚目の服用お休み期間を考慮して設定される
+        // 2枚目のbeginDateは、1枚目の服用お休み期間を考慮して設定される
         // 1枚目の28番目が10/2なので、2枚目は10/3から開始
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-10-03"),
+          beginDate: DateTime.parse("2020-10-03"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -715,7 +715,7 @@ void main() {
         expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 21), "9/25");
         expect(pillSheetGroup.displayPillSheetDate(pageIndex: 0, pillNumberInPillSheet: 28), "10/2");
 
-        // 2枚目（各PillSheetのbeginingDateから計算されるため、1枚目の服用お休みの影響はbeginingDateに反映済み）
+        // 2枚目（各PillSheetのbeginDateから計算されるため、1枚目の服用お休みの影響はbeginDateに反映済み）
         expect(pillSheetGroup.displayPillSheetDate(pageIndex: 1, pillNumberInPillSheet: 1), "10/3");
         expect(pillSheetGroup.displayPillSheetDate(pageIndex: 1, pillNumberInPillSheet: 28), "10/30");
       });
@@ -728,9 +728,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -767,9 +767,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-18"),
           createdAt: now(),
           typeInfo: PillSheetTypeInfo(
@@ -798,9 +798,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -837,9 +837,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -877,9 +877,9 @@ void main() {
             when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
             const sheetType = PillSheetType.pillsheet_21;
-            final pillSheet = PillSheet(
+            final pillSheet = PillSheet.v1(
               id: firestoreIDGenerator(),
-              beginingDate: DateTime.parse("2020-09-01"),
+              beginDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               createdAt: now(),
               restDurations: [
@@ -922,9 +922,9 @@ void main() {
 
             const sheetType = PillSheetType.pillsheet_21;
             // 服用お休みを考慮しない場合は28日間
-            final pillSheet = PillSheet(
+            final pillSheet = PillSheet.v1(
               id: firestoreIDGenerator(),
-              beginingDate: DateTime.parse("2020-09-01"),
+              beginDate: DateTime.parse("2020-09-01"),
               lastTakenDate: DateTime.parse("2020-09-28"),
               createdAt: now(),
               restDurations: [
@@ -974,9 +974,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [],
@@ -1008,9 +1008,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-24"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             typeInfo: PillSheetTypeInfo(
@@ -1042,9 +1042,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             typeInfo: PillSheetTypeInfo(
@@ -1079,9 +1079,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -1121,9 +1121,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -1164,9 +1164,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             restDurations: [
@@ -1210,9 +1210,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet = PillSheet(
+        final pillSheet = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -1223,9 +1223,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-29"),
+          beginDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -1258,9 +1258,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1271,9 +1271,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
             groupIndex: 1,
             createdAt: now(),
@@ -1306,9 +1306,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1319,9 +1319,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
             groupIndex: 1,
             createdAt: now(),
@@ -1354,9 +1354,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet = PillSheet(
+          final pillSheet = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1367,9 +1367,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: null,
             groupIndex: 1,
             createdAt: now(),
@@ -1404,9 +1404,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1425,9 +1425,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-20"),
             groupIndex: 1,
             createdAt: now(),
@@ -1463,9 +1463,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1476,9 +1476,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-20"),
             groupIndex: 1,
             createdAt: now(),
@@ -1520,9 +1520,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1542,9 +1542,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-20"),
             groupIndex: 1,
             createdAt: now(),
@@ -1598,9 +1598,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1611,9 +1611,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-20"),
             groupIndex: 1,
             createdAt: now(),
@@ -1657,9 +1657,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1670,9 +1670,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-20"),
             groupIndex: 1,
             createdAt: now(),
@@ -1719,9 +1719,9 @@ void main() {
         when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-11-10"));
 
         const sheetType = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -1732,9 +1732,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-29"),
+          beginDate: DateTime.parse("2020-09-29"),
           lastTakenDate: DateTime.parse("2020-10-26"),
           groupIndex: 1,
           createdAt: now(),
@@ -1745,9 +1745,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        final pillSheet3 = PillSheet(
+        final pillSheet3 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-10-27"),
+          beginDate: DateTime.parse("2020-10-27"),
           lastTakenDate: null,
           groupIndex: 2,
           createdAt: now(),
@@ -1785,9 +1785,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-11-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1798,9 +1798,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-26"),
             groupIndex: 1,
             createdAt: now(),
@@ -1811,9 +1811,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet3 = PillSheet(
+          final pillSheet3 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-10-27"),
+            beginDate: DateTime.parse("2020-10-27"),
             lastTakenDate: null,
             groupIndex: 2,
             createdAt: now(),
@@ -1857,9 +1857,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-11-10"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1870,9 +1870,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-26"),
             groupIndex: 1,
             createdAt: now(),
@@ -1891,9 +1891,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet3 = PillSheet(
+          final pillSheet3 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-10-27"),
+            beginDate: DateTime.parse("2020-10-27"),
             lastTakenDate: null,
             groupIndex: 2,
             createdAt: now(),
@@ -1931,9 +1931,9 @@ void main() {
           when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-11-20"));
 
           const sheetType = PillSheetType.pillsheet_21;
-          final pillSheet1 = PillSheet(
+          final pillSheet1 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-01"),
+            beginDate: DateTime.parse("2020-09-01"),
             lastTakenDate: DateTime.parse("2020-09-28"),
             createdAt: now(),
             groupIndex: 0,
@@ -1944,9 +1944,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet2 = PillSheet(
+          final pillSheet2 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-09-29"),
+            beginDate: DateTime.parse("2020-09-29"),
             lastTakenDate: DateTime.parse("2020-10-26"),
             groupIndex: 1,
             createdAt: now(),
@@ -1957,9 +1957,9 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          final pillSheet3 = PillSheet(
+          final pillSheet3 = PillSheet.v1(
             id: firestoreIDGenerator(),
-            beginingDate: DateTime.parse("2020-10-27"),
+            beginDate: DateTime.parse("2020-10-27"),
             lastTakenDate: DateTime.parse("2020-11-20"),
             groupIndex: 2,
             createdAt: now(),
@@ -2010,9 +2010,9 @@ void main() {
 
         const sheetType21 = PillSheetType.pillsheet_21;
         const sheetType28_4 = PillSheetType.pillsheet_28_4;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-28"),
           createdAt: now(),
           groupIndex: 0,
@@ -2023,9 +2023,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType21.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-29"),
+          beginDate: DateTime.parse("2020-09-29"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
@@ -2059,9 +2059,9 @@ void main() {
 
         const sheetType24 = PillSheetType.pillsheet_24_0;
         const sheetType21 = PillSheetType.pillsheet_21;
-        final pillSheet1 = PillSheet(
+        final pillSheet1 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-01"),
+          beginDate: DateTime.parse("2020-09-01"),
           lastTakenDate: DateTime.parse("2020-09-24"),
           createdAt: now(),
           groupIndex: 0,
@@ -2072,9 +2072,9 @@ void main() {
             pillSheetTypeReferencePath: sheetType24.rawPath,
           ),
         );
-        final pillSheet2 = PillSheet(
+        final pillSheet2 = PillSheet.v1(
           id: firestoreIDGenerator(),
-          beginingDate: DateTime.parse("2020-09-25"),
+          beginDate: DateTime.parse("2020-09-25"),
           lastTakenDate: null,
           groupIndex: 1,
           createdAt: now(),
