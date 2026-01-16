@@ -44,8 +44,6 @@ class TakenButton extends HookConsumerWidget {
               'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber,
               'today_pill_number': activePillSheet.todayPillNumber,
             });
-            // NOTE: batch.commit でリモートのDBに書き込む時間がかかるので事前にバッジを0にする
-            FlutterAppBadger.removeBadge();
             requestInAppReview();
             showReleaseNotePreDialog(context);
             final updatedPillSheetGroup = await takePill(
@@ -59,6 +57,8 @@ class TakenButton extends HookConsumerWidget {
           } catch (exception, stack) {
             errorLogger.recordError(exception, stack);
             if (context.mounted) showErrorAlert(context, exception);
+          } finally {
+            FlutterAppBadger.removeBadge();
           }
         },
       ),
