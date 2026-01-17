@@ -25,7 +25,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "curl -fsSL https://gist.githubusercontent.com/bannzai/28441d7b101c49c2aa04ad1f5d580d4e/raw/install-gh.sh | bash"
+            "command": "[ \"$CLAUDE_CODE_REMOTE\" = \"true\" ] && curl -fsSL https://gist.githubusercontent.com/bannzai/28441d7b101c49c2aa04ad1f5d580d4e/raw/install-gh.sh | bash || true"
           }
         ]
       },
@@ -34,7 +34,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "curl -fsSL https://gist.githubusercontent.com/bannzai/0b762d81d9d115bb1aa3b81037322478/raw/ccweb-flutter-install.sh | bash"
+            "command": "[ \"$CLAUDE_CODE_REMOTE\" = \"true\" ] && curl -fsSL https://gist.githubusercontent.com/bannzai/0b762d81d9d115bb1aa3b81037322478/raw/ccweb-flutter-install.sh | bash || true"
           }
         ]
       }
