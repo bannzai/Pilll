@@ -29,13 +29,12 @@
           }
         ]
       },
-       {
-        "matcher": "startup",
+      {
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "\"$CLAUDE_PROJECT_DIR\"/scripts/claude_web_flutter_setup.sh",
-            "timeout": 1200
+            "command": "curl -fsSL https://gist.githubusercontent.com/bannzai/0b762d81d9d115bb1aa3b81037322478/raw/ccweb-flutter-install.sh | bash"
           }
         ]
       }
