@@ -514,8 +514,7 @@ void main() {
           when(batchFactory.batch()).thenReturn(batch);
 
           // 1枚目は completeAllPills: true で全て完了
-          final updatedPreviousPillSheetV2 =
-              previousPillSheetV2.takenPillSheet(previousPillSheetV2.estimatedEndTakenDate, completeAllPills: true);
+          final updatedPreviousPillSheetV2 = previousPillSheetV2.takenPillSheet(previousPillSheetV2.estimatedEndTakenDate, completeAllPills: true);
           // 2枚目は通常の服用記録
           final updatedActivePillSheetV2 = activePillSheetV2.takenPillSheet(takenDate);
 
@@ -1644,8 +1643,14 @@ void main() {
                   createdDateTime: now(),
                   updatedDateTime: now(),
                   pillTakens: [
-                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
-                    PillTaken(recordedTakenDateTime: DateTime.parse("2022-07-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                    PillTaken(
+                        recordedTakenDateTime: DateTime.parse("2022-07-01").add(Duration(days: index)),
+                        createdDateTime: now(),
+                        updatedDateTime: now()),
+                    PillTaken(
+                        recordedTakenDateTime: DateTime.parse("2022-07-01").add(Duration(days: index)),
+                        createdDateTime: now(),
+                        updatedDateTime: now()),
                   ],
                 );
               }

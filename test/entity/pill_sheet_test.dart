@@ -7176,8 +7176,10 @@ void main() {
               createdDateTime: now(),
               updatedDateTime: now(),
               pillTakens: [
-                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
-                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
               ],
             ),
           ),
@@ -7308,8 +7310,10 @@ void main() {
               createdDateTime: now(),
               updatedDateTime: now(),
               pillTakens: [
-                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
-                PillTaken(recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
+                PillTaken(
+                    recordedTakenDateTime: DateTime.parse("2022-05-01").add(Duration(days: index)), createdDateTime: now(), updatedDateTime: now()),
               ],
             ),
           ),
