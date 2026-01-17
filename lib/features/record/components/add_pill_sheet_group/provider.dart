@@ -60,7 +60,6 @@ class AddPillSheetGroup {
       beforePillSheetGroup: pillSheetGroup,
       createdNewPillSheetGroup: createdPillSheetGroup,
       pillSheetIDs: updatedPillSheetGroup.pillSheetIDs,
-      pillSheetGroupID: createdPillSheetGroup.id,
     );
     batchSetPillSheetModifiedHistory(batch, history);
 

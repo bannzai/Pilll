@@ -96,7 +96,6 @@ class RevertTakePill {
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-      pillSheetGroupID: pillSheetGroup.id,
       before: before,
       after: after,
       beforePillSheetGroup: pillSheetGroup,
