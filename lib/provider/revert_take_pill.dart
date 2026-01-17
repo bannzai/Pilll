@@ -92,12 +92,7 @@ class RevertTakePill {
     final batch = batchFactory.batch();
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
-    final before = pillSheetGroup.pillSheets[updatedIndexses.last];
-    final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
-
     final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-      before: before,
-      after: after,
       beforePillSheetGroup: pillSheetGroup,
       afterPillSheetGroup: updatedPillSheetGroup,
     );

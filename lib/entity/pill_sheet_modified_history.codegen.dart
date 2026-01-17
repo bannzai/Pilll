@@ -132,24 +132,14 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createTakenPillAction({
-    required PillSheet before,
-    required PillSheet after,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
     required bool isQuickRecord,
   }) {
-    final afterLastTakenDate = after.lastTakenDate;
-    if (afterLastTakenDate == null) {
-      throw FormatException('unexpected lastTakenDate:${after.lastTakenDate} is null for takenPill action');
-    }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
       value: PillSheetModifiedHistoryValue(
         takenPill: TakenPillValue(
-          afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenOrZeroPillNumber,
-          beforeLastTakenDate: before.lastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenOrZeroPillNumber,
           isQuickRecord: isQuickRecord,
         ),
       ),
@@ -159,24 +149,13 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createRevertTakenPillAction({
-    required PillSheet before,
-    required PillSheet after,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    final beforeLastTakenDate = before.lastTakenDate;
-    if (beforeLastTakenDate == null) {
-      throw FormatException('unexpected before pill sheet lastTakenDate is null: ${before.lastTakenDate} for revertTakenPill action');
-    }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
       value: PillSheetModifiedHistoryValue(
-        revertTakenPill: RevertTakenPillValue(
-          afterLastTakenDate: after.lastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenOrZeroPillNumber,
-          beforeLastTakenDate: beforeLastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenOrZeroPillNumber,
-        ),
+        revertTakenPill: RevertTakenPillValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
@@ -184,17 +163,13 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createCreatedPillSheetAction({
-    required List<String> pillSheetIDs,
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup createdNewPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
       value: PillSheetModifiedHistoryValue(
-        createdPillSheet: CreatedPillSheetValue(
-          pillSheetCreatedAt: now(),
-          pillSheetIDs: pillSheetIDs,
-        ),
+        createdPillSheet: CreatedPillSheetValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: createdNewPillSheetGroup,
@@ -202,22 +177,13 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createChangedPillNumberAction({
-    required PillSheet before,
-    required PillSheet after,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedPillNumber,
       value: PillSheetModifiedHistoryValue(
-        changedPillNumber: ChangedPillNumberValue(
-          afterBeginingDate: after.beginDate,
-          beforeBeginingDate: before.beginDate,
-          afterTodayPillNumber: after.todayPillNumber,
-          beforeTodayPillNumber: before.todayPillNumber,
-          beforeGroupIndex: before.groupIndex,
-          afterGroupIndex: after.groupIndex,
-        ),
+        changedPillNumber: ChangedPillNumberValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
@@ -227,15 +193,11 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   static PillSheetModifiedHistory createDeletedPillSheetAction({
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup updatedPillSheetGroup,
-    required List<String> pillSheetIDs,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.deletedPillSheet,
       value: PillSheetModifiedHistoryValue(
-        deletedPillSheet: DeletedPillSheetValue(
-          pillSheetDeletedAt: now(),
-          pillSheetIDs: pillSheetIDs,
-        ),
+        deletedPillSheet: DeletedPillSheetValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: updatedPillSheetGroup,
@@ -315,18 +277,13 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createChangedBeginDisplayNumberAction({
-    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
-    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedBeginDisplayNumber,
       value: PillSheetModifiedHistoryValue(
-        changedBeginDisplayNumber: ChangedBeginDisplayNumberValue(
-          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
-          afterDisplayNumberSetting: afterDisplayNumberSetting,
-        ),
+        changedBeginDisplayNumber: ChangedBeginDisplayNumberValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
@@ -334,18 +291,13 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createChangedEndDisplayNumberAction({
-    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
-    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedEndDisplayNumber,
       value: PillSheetModifiedHistoryValue(
-        changedEndDisplayNumber: ChangedEndDisplayNumberValue(
-          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
-          afterDisplayNumberSetting: afterDisplayNumberSetting,
-        ),
+        changedEndDisplayNumber: ChangedEndDisplayNumberValue(),
       ),
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,

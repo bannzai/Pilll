@@ -144,7 +144,6 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
       );
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
-        pillSheetIDs: pillSheetIDs,
         beforePillSheetGroup: null,
         createdNewPillSheetGroup: createdPillSheetGroup,
       );

@@ -54,9 +54,6 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-        pillSheetGroupID: "group_id",
-        before: pillSheet,
-        after: updatedPillSheet,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
       );
@@ -119,9 +116,6 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-        pillSheetGroupID: "group_id",
-        before: pillSheet,
-        after: updatedPillSheet,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
       );
@@ -209,9 +203,6 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-        pillSheetGroupID: "group_id",
-        before: middle,
-        after: updatedLeft,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
       );
@@ -300,9 +291,6 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-        pillSheetGroupID: "group_id",
-        before: middle,
-        after: updatedLeft,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
       );
@@ -391,9 +379,6 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-        pillSheetGroupID: "group_id",
-        before: middle,
-        after: updatedRight,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
       );
@@ -737,9 +722,6 @@ void main() {
       when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-        pillSheetGroupID: "group_id",
-        before: middle,
-        after: updatedLeft,
         beforePillSheetGroup: pillSheetGroup,
         afterPillSheetGroup: updatedPillSheetGroup,
       );

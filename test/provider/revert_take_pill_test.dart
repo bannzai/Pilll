@@ -94,9 +94,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -194,9 +191,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -264,9 +258,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV1.id,
-          before: activePillSheetV1,
-          after: updatedActivePillSheetV1,
           beforePillSheetGroup: pillSheetGroupV1,
           afterPillSheetGroup: updatedPillSheetGroupV1,
         );
@@ -361,9 +352,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -457,9 +445,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -553,9 +538,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -649,9 +631,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -749,9 +728,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -847,9 +823,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -945,9 +918,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
@@ -1043,9 +1013,6 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: pillSheetGroupV2.id,
-          before: activePillSheetV2,
-          after: updatedActivePillSheetV2,
           beforePillSheetGroup: pillSheetGroupV2,
           afterPillSheetGroup: updatedPillSheetGroupV2,
         );
