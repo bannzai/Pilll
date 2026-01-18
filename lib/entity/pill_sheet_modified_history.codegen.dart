@@ -58,7 +58,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
     // Added since 2023-08-01
-    @Default('v1') version,
+    @Default('v2') version,
 
     // ============ BEGIN: Added since v1 ============
     @JsonKey(includeIfNull: false) required String? id,
@@ -99,24 +99,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     @Default(false) bool isArchived,
     // ============ END: Added since v2 ============
 
-    // The below properties are deprecated and added since v1.
-    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-    // Instead of calculating from beforePillSheetGroup and afterPillSheetGroup
     required PillSheetModifiedHistoryValue value,
-    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-    // Instead of beforePillSheetID and afterPillSheetID
-    required String? pillSheetID,
-    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-    // There are new properties for pill_sheet grouping. So it's all optional
-    required String? pillSheetGroupID,
-    required String? beforePillSheetID,
-    required String? afterPillSheetID,
-    // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-    // Instead of beforePillSheetGroup and afterPillSheetGroup
-    // before and after is nullable
-    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-    required PillSheet? before,
-    required PillSheet? after,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
@@ -130,15 +113,6 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   static const limitDays = 180;
 
   static PillSheetModifiedHistory _create({
-    // ============ BEGIN: Added since v1 ============
-    // TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-    required PillSheet? before,
-    required PillSheet? after,
-    required String? pillSheetGroupID,
-    required String? beforePillSheetID,
-    required String? afterPillSheetID,
-    // ============ END: Added since v1 ============
-
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup? afterPillSheetGroup,
     required PillSheetModifiedActionType actionType,
@@ -149,14 +123,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
       version: 'v2',
       actionType: actionType.name,
       value: value,
-      pillSheetID: null,
-      pillSheetGroupID: pillSheetGroupID,
-      afterPillSheetID: afterPillSheetID,
-      beforePillSheetID: beforePillSheetID,
-      before: before,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
-      after: after,
       estimatedEventCausingDate: now(),
       createdAt: now(),
       ttlExpiresDateTime: now().add(const Duration(days: limitDays)),
@@ -164,139 +132,59 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   }
 
   static PillSheetModifiedHistory createTakenPillAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
     required bool isQuickRecord,
   }) {
-    assert(pillSheetGroupID != null);
-
-    final afterID = after.id;
-    final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
-      throw FormatException('unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action');
-    }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
       value: PillSheetModifiedHistoryValue(
         takenPill: TakenPillValue(
-          afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenOrZeroPillNumber,
-          beforeLastTakenDate: before.lastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenOrZeroPillNumber,
           isQuickRecord: isQuickRecord,
         ),
       ),
-      after: after,
-      beforePillSheetID: before.id,
-      afterPillSheetID: afterID,
-      pillSheetGroupID: pillSheetGroupID,
-      before: before,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createRevertTakenPillAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
-    final afterID = after.id;
-    final afterLastTakenDate = after.lastTakenDate;
-    // since: 2025-01-16 afterLastTakenDate は null許容になった。以前までは服用日の変更やrevert時に1番目のピルシートを指定した場合はbeginingDateの一つ前の日付を入れいたがやめた
-    if (afterID == null) {
-      throw FormatException('unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action');
-    }
-    final beforeID = before.id;
-    final beforeLastTakenDate = before.lastTakenDate;
-    if (beforeID == null || beforeLastTakenDate == null) {
-      throw FormatException(
-          'unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action');
-    }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
       value: PillSheetModifiedHistoryValue(
-        revertTakenPill: RevertTakenPillValue(
-          afterLastTakenDate: afterLastTakenDate,
-          afterLastTakenPillNumber: after.lastTakenOrZeroPillNumber,
-          beforeLastTakenDate: beforeLastTakenDate,
-          beforeLastTakenPillNumber: before.lastTakenOrZeroPillNumber,
-        ),
+        revertTakenPill: RevertTakenPillValue(),
       ),
-      after: after,
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: beforeID,
-      afterPillSheetID: afterID,
-      before: before,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createCreatedPillSheetAction({
-    required String? pillSheetGroupID,
-    required List<String> pillSheetIDs,
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup createdNewPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
       value: PillSheetModifiedHistoryValue(
-        createdPillSheet: CreatedPillSheetValue(
-          pillSheetCreatedAt: now(),
-          pillSheetIDs: pillSheetIDs,
-        ),
+        createdPillSheet: CreatedPillSheetValue(),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      before: null,
-      beforePillSheetID: null,
-      after: null,
-      afterPillSheetID: null,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: createdNewPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createChangedPillNumberAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
-    final afterID = after.id;
-    if (afterID == null || pillSheetGroupID == null) {
-      throw FormatException('unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for changePillNumber action');
-    }
-
     return _create(
       actionType: PillSheetModifiedActionType.changedPillNumber,
       value: PillSheetModifiedHistoryValue(
-        changedPillNumber: ChangedPillNumberValue(
-          afterBeginingDate: after.beginDate,
-          beforeBeginingDate: before.beginDate,
-          afterTodayPillNumber: after.todayPillNumber,
-          beforeTodayPillNumber: before.todayPillNumber,
-          beforeGroupIndex: before.groupIndex,
-          afterGroupIndex: after.groupIndex,
-        ),
+        changedPillNumber: ChangedPillNumberValue(),
       ),
-      after: after,
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: afterID,
-      before: before,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
@@ -305,39 +193,22 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
   static PillSheetModifiedHistory createDeletedPillSheetAction({
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup updatedPillSheetGroup,
-    required String? pillSheetGroupID,
-    required List<String> pillSheetIDs,
   }) {
-    assert(pillSheetGroupID != null);
-
     return _create(
       actionType: PillSheetModifiedActionType.deletedPillSheet,
       value: PillSheetModifiedHistoryValue(
-        deletedPillSheet: DeletedPillSheetValue(
-          pillSheetDeletedAt: now(),
-          pillSheetIDs: pillSheetIDs,
-        ),
+        deletedPillSheet: DeletedPillSheetValue(),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: null,
-      afterPillSheetID: null,
-      before: null,
-      after: null,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: updatedPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createBeganRestDurationAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required RestDuration restDuration,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
     return _create(
       actionType: PillSheetModifiedActionType.beganRestDuration,
       value: PillSheetModifiedHistoryValue(
@@ -345,26 +216,16 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
           restDuration: restDuration,
         ),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: after.id,
-      before: before,
-      after: after,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createEndedRestDurationAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required RestDuration restDuration,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
     return _create(
       actionType: PillSheetModifiedActionType.endedRestDuration,
       value: PillSheetModifiedHistoryValue(
@@ -372,27 +233,17 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
           restDuration: restDuration,
         ),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: after.id,
-      before: before,
-      after: after,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createChangedRestDurationBeginDateAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required RestDuration beforeRestDuration,
     required RestDuration afterRestDuration,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
     return _create(
       actionType: PillSheetModifiedActionType.changedRestDurationBeginDate,
       value: PillSheetModifiedHistoryValue(
@@ -401,27 +252,17 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
           afterRestDuration: afterRestDuration,
         ),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: after.id,
-      before: before,
-      after: after,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createChangedRestDurationAction({
-    required String? pillSheetGroupID,
-    required PillSheet before,
-    required PillSheet after,
     required RestDuration beforeRestDuration,
     required RestDuration afterRestDuration,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
-    assert(pillSheetGroupID != null);
-
     return _create(
       actionType: PillSheetModifiedActionType.changedRestDuration,
       value: PillSheetModifiedHistoryValue(
@@ -430,61 +271,34 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
           afterRestDuration: afterRestDuration,
         ),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: after.id,
-      before: before,
-      after: after,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createChangedBeginDisplayNumberAction({
-    required String? pillSheetGroupID,
-    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
-    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedBeginDisplayNumber,
       value: PillSheetModifiedHistoryValue(
-        changedBeginDisplayNumber: ChangedBeginDisplayNumberValue(
-          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
-          afterDisplayNumberSetting: afterDisplayNumberSetting,
-        ),
+        changedBeginDisplayNumber: ChangedBeginDisplayNumberValue(),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: null,
-      afterPillSheetID: null,
-      before: null,
-      after: null,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );
   }
 
   static PillSheetModifiedHistory createChangedEndDisplayNumberAction({
-    required String? pillSheetGroupID,
-    required PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
-    required PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
     required PillSheetGroup beforePillSheetGroup,
     required PillSheetGroup afterPillSheetGroup,
   }) {
     return _create(
       actionType: PillSheetModifiedActionType.changedEndDisplayNumber,
       value: PillSheetModifiedHistoryValue(
-        changedEndDisplayNumber: ChangedEndDisplayNumberValue(
-          beforeDisplayNumberSetting: beforeDisplayNumberSetting,
-          afterDisplayNumberSetting: afterDisplayNumberSetting,
-        ),
+        changedEndDisplayNumber: ChangedEndDisplayNumberValue(),
       ),
-      pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: null,
-      afterPillSheetID: null,
-      before: null,
-      after: null,
       beforePillSheetGroup: beforePillSheetGroup,
       afterPillSheetGroup: afterPillSheetGroup,
     );

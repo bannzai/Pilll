@@ -67,135 +67,73 @@ class PillSheetModifiedHistoryList extends HookConsumerWidget {
         }
 
         dirtyIndex += 1;
-        final Widget content;
-        if (history.version == 'v2') {
-          content = switch (history.enumActionType) {
-            PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs ?? [],
-              ),
-            PillSheetModifiedActionType.automaticallyRecordedLastTakenDate => PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets
-                    .findFirstDifferencePillSheet(
-                      history.afterPillSheetGroup?.pillSheets,
-                    )
-                    ?.lastTakenOrZeroPillNumber,
-                afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets.reversed
-                    .findFirstDifferencePillSheet(
-                      history.beforePillSheetGroup?.pillSheets.reversed,
-                    )
-                    ?.lastTakenOrZeroPillNumber,
-                pillSheetAppearanceMode: history.afterPillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number),
-            PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
-            PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
-                premiumOrTrial: premiumOrTrial,
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                history: history,
-                value: history.value.takenPill,
-              ),
-            // NOTE: revertTakenPill は findFirstDifferencePillSheetの向きはtakenPill等とは逆になる。なぜならbeforeの方がafterよりも後ろのピルシートの服用記録になるから、beforeの場合は後ろから(reversed)探索する
-            PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                history: history,
-              ),
-            PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                history: history,
-              ),
-            PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
-                value: history.value.endedPillSheet,
-              ),
-            PillSheetModifiedActionType.beganRestDuration => PillSheetModifiedHistoryBeganRestDuration(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.beganRestDurationValue,
-              ),
-            PillSheetModifiedActionType.endedRestDuration => PillSheetModifiedHistoryEndedRestDuration(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.endedRestDurationValue,
-              ),
-            PillSheetModifiedActionType.changedBeginDisplayNumber => PillSheetModifiedHistoryChangedBeginDisplayNumberAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedBeginDisplayNumber,
-              ),
-            PillSheetModifiedActionType.changedEndDisplayNumber => PillSheetModifiedHistoryChangedEndDisplayNumberAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedEndDisplayNumber,
-              ),
-            PillSheetModifiedActionType.changedRestDurationBeginDate => PillSheetModifiedHistoryChangedRestDurationBeginDate(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedRestDurationBeginDateValue,
-              ),
-            PillSheetModifiedActionType.changedRestDuration => PillSheetModifiedHistoryChangedRestDuration(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedRestDurationValue,
-              ),
-            // whereでフィルタリングしているのでありえないパターン
-            null => Container(),
-          };
-        } else {
-          content = switch (history.enumActionType) {
-            PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                pillSheetIDs: history.value.createdPillSheet?.pillSheetIDs ?? [],
-              ),
-            PillSheetModifiedActionType.automaticallyRecordedLastTakenDate => PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                beforeLastTakenPillNumber: history.value.automaticallyRecordedLastTakenDate?.beforeLastTakenPillNumber,
-                afterLastTakenPillNumber: history.value.automaticallyRecordedLastTakenDate?.afterLastTakenPillNumber,
-                // v1 の履歴には pillSheetAppearanceMode がないためデフォルトで number を使用
-                pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-              ),
-            PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                pillSheetIDs: history.value.deletedPillSheet?.pillSheetIDs,
-              ),
-            PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
-                premiumOrTrial: premiumOrTrial,
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                history: history,
-                value: history.value.takenPill,
-              ),
-            PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                history: history,
-              ),
-            PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                history: history,
-              ),
-            PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
-                value: history.value.endedPillSheet,
-              ),
-            PillSheetModifiedActionType.beganRestDuration => PillSheetModifiedHistoryBeganRestDuration(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.beganRestDurationValue,
-              ),
-            PillSheetModifiedActionType.endedRestDuration => PillSheetModifiedHistoryEndedRestDuration(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.endedRestDurationValue,
-              ),
-            PillSheetModifiedActionType.changedBeginDisplayNumber => PillSheetModifiedHistoryChangedBeginDisplayNumberAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedBeginDisplayNumber,
-              ),
-            PillSheetModifiedActionType.changedEndDisplayNumber => PillSheetModifiedHistoryChangedEndDisplayNumberAction(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedEndDisplayNumber,
-              ),
-            PillSheetModifiedActionType.changedRestDurationBeginDate => PillSheetModifiedHistoryChangedRestDurationBeginDate(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedRestDurationBeginDateValue,
-              ),
-            PillSheetModifiedActionType.changedRestDuration => PillSheetModifiedHistoryChangedRestDuration(
-                estimatedEventCausingDate: history.estimatedEventCausingDate,
-                value: history.value.changedRestDurationValue,
-              ),
-            // whereでフィルタリングしているのでありえないパターン
-            null => Container(),
-          };
-        }
+        final content = switch (history.enumActionType) {
+          PillSheetModifiedActionType.createdPillSheet => PillSheetModifiedHistoryCreatePillSheetAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs ?? [],
+            ),
+          PillSheetModifiedActionType.automaticallyRecordedLastTakenDate => PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              beforeLastTakenPillNumber: history.beforePillSheetGroup?.pillSheets
+                  .findFirstDifferencePillSheet(
+                    history.afterPillSheetGroup?.pillSheets,
+                  )
+                  ?.lastTakenOrZeroPillNumber,
+              afterLastTakenPillNumber: history.afterPillSheetGroup?.pillSheets.reversed
+                  .findFirstDifferencePillSheet(
+                    history.beforePillSheetGroup?.pillSheets.reversed,
+                  )
+                  ?.lastTakenOrZeroPillNumber,
+              pillSheetAppearanceMode: history.afterPillSheetGroup?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number),
+          PillSheetModifiedActionType.deletedPillSheet => PillSheetModifiedHistoryDeletedPillSheetAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate, pillSheetIDs: history.afterPillSheetGroup?.pillSheetIDs),
+          PillSheetModifiedActionType.takenPill => PillSheetModifiedHistoryTakenPillAction(
+              premiumOrTrial: premiumOrTrial,
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              history: history,
+              value: history.value.takenPill,
+            ),
+          // NOTE: revertTakenPill は findFirstDifferencePillSheetの向きはtakenPill等とは逆になる。なぜならbeforeの方がafterよりも後ろのピルシートの服用記録になるから、beforeの場合は後ろから(reversed)探索する
+          PillSheetModifiedActionType.revertTakenPill => PillSheetModifiedHistoryRevertTakenPillAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              history: history,
+            ),
+          PillSheetModifiedActionType.changedPillNumber => PillSheetModifiedHistoryChangedPillNumberAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              history: history,
+            ),
+          PillSheetModifiedActionType.endedPillSheet => PillSheetModifiedHistoryEndedPillSheetAction(
+              value: history.value.endedPillSheet,
+            ),
+          PillSheetModifiedActionType.beganRestDuration => PillSheetModifiedHistoryBeganRestDuration(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              value: history.value.beganRestDurationValue,
+            ),
+          PillSheetModifiedActionType.endedRestDuration => PillSheetModifiedHistoryEndedRestDuration(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              value: history.value.endedRestDurationValue,
+            ),
+          PillSheetModifiedActionType.changedBeginDisplayNumber => PillSheetModifiedHistoryChangedBeginDisplayNumberAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              beforePillSheetGroup: history.beforePillSheetGroup,
+              afterPillSheetGroup: history.afterPillSheetGroup,
+            ),
+          PillSheetModifiedActionType.changedEndDisplayNumber => PillSheetModifiedHistoryChangedEndDisplayNumberAction(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              beforePillSheetGroup: history.beforePillSheetGroup,
+              afterPillSheetGroup: history.afterPillSheetGroup,
+            ),
+          PillSheetModifiedActionType.changedRestDurationBeginDate => PillSheetModifiedHistoryChangedRestDurationBeginDate(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              value: history.value.changedRestDurationBeginDateValue,
+            ),
+          PillSheetModifiedActionType.changedRestDuration => PillSheetModifiedHistoryChangedRestDuration(
+              estimatedEventCausingDate: history.estimatedEventCausingDate,
+              value: history.value.changedRestDurationValue,
+            ),
+          // whereでフィルタリングしているのでありえないパターン
+          null => Container(),
+        };
 
         final withSpace = Column(
           children: [content, const SizedBox(height: 16)],

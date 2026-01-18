@@ -100,12 +100,7 @@ class TakePill {
     final batch = batchFactory.batch();
     batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
-    final before = pillSheetGroup.pillSheets[updatedIndexses.first];
-    final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
     final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-      pillSheetGroupID: pillSheetGroup.id,
-      before: before,
-      after: after,
       isQuickRecord: isQuickRecord,
       beforePillSheetGroup: pillSheetGroup,
       afterPillSheetGroup: updatedPillSheetGroup,

@@ -61,9 +61,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet,
-          after: updatedPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -131,11 +128,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet,
-          after: pillSheet.copyWith(
-            lastTakenDate: yesterday,
-          ),
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -213,9 +205,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet,
-          after: updatedPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -295,9 +284,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet,
-          after: pillSheet.copyWith(lastTakenDate: yesterday),
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -379,11 +365,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: pillSheet2.copyWith(
-            lastTakenDate: yesterday,
-          ),
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -465,9 +446,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: updatedPillSheet2,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -551,9 +529,6 @@ void main() {
         when(batchSetPillSheetGroup(batch, updatedPillSheetGroup)).thenReturn(updatedPillSheetGroup);
 
         final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-          pillSheetGroupID: "group_id",
-          before: pillSheet2,
-          after: updatedPillSheet2,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
