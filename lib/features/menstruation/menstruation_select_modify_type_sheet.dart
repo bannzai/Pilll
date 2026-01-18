@@ -55,12 +55,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
               padding: const EdgeInsets.only(top: 21, left: 16),
               child: Text(
                 L.recordMenstruation,
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w500,
-                  fontSize: 20,
-                  color: TextColor.main,
-                ),
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
               ),
             ),
             const SizedBox(height: 24),
@@ -68,11 +63,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
               height: _tileHeight * MenstruationSelectModifyType.values.length,
               child: ListView(
                 physics: const NeverScrollableScrollPhysics(),
-                children: MenstruationSelectModifyType.values
-                    .map(
-                      (e) => _tile(e),
-                    )
-                    .toList(),
+                children: MenstruationSelectModifyType.values.map((e) => _tile(e)).toList(),
               ),
             ),
           ],
@@ -87,12 +78,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
       child: ListTile(
         title: Text(
           type.title,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.main,
-          ),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
         ),
         leading: type.icon,
         onTap: () {

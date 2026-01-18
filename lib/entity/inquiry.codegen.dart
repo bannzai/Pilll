@@ -40,10 +40,7 @@ class Inquiry with _$Inquiry {
     required String content,
 
     /// 作成日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdAt,
   }) = _Inquiry;
   const Inquiry._();

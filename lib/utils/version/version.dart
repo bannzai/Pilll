@@ -6,11 +6,7 @@ class Version {
   final int minor;
   final int patch;
 
-  Version({
-    required this.major,
-    required this.minor,
-    required this.patch,
-  });
+  Version({required this.major, required this.minor, required this.patch});
 
   factory Version.parse(String str) {
     final splited = str.split('.');
@@ -25,11 +21,7 @@ class Version {
       }
       versions[i] = int.parse(splited[i]);
     }
-    return Version(
-      major: versions[0],
-      minor: versions[1],
-      patch: versions[2],
-    );
+    return Version(major: versions[0], minor: versions[1], patch: versions[2]);
   }
 
   static Future<Version> fromPackage() async {

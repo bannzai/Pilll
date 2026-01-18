@@ -14,11 +14,7 @@ abstract class PillSheetTypeColumnConstant {
 class PillSheetTypeColumn extends StatelessWidget {
   final PillSheetType pillSheetType;
   final bool selected;
-  const PillSheetTypeColumn({
-    super.key,
-    required this.pillSheetType,
-    required this.selected,
-  });
+  const PillSheetTypeColumn({super.key, required this.pillSheetType, required this.selected});
 
   static const boxConstraints = BoxConstraints(minWidth: 146, minHeight: 129);
 
@@ -28,38 +24,24 @@ class PillSheetTypeColumn extends StatelessWidget {
       constraints: PillSheetTypeColumn.boxConstraints,
       decoration: BoxDecoration(
         color: selected ? AppColors.primary.withOpacity(0.08) : AppColors.white,
-        border: Border.all(
-          width: selected ? 2 : 1,
-          color: selected ? AppColors.primary : AppColors.border,
-        ),
+        border: Border.all(width: selected ? 2 : 1, color: selected ? AppColors.primary : AppColors.border),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Container(
-        padding: EdgeInsets.only(
-          left: 16,
-          top: 10,
-          right: 25,
-          bottom: PillSheetType.pillsheet_21_0 == pillSheetType ? 30 : 10,
-        ),
+        padding: EdgeInsets.only(left: 16, top: 10, right: 25, bottom: PillSheetType.pillsheet_21_0 == pillSheetType ? 30 : 10),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(_title(pillSheetType),
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 16,
-                  color: TextColor.main,
-                )),
+            Text(
+              _title(pillSheetType),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 16, color: TextColor.main),
+            ),
             const SizedBox(height: 2),
-            Text(_subtitle(pillSheetType),
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.main,
-                )),
+            Text(
+              _subtitle(pillSheetType),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+            ),
             const SizedBox(height: 9),
             pillSheetType.image,
           ],

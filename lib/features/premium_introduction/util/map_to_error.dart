@@ -94,7 +94,8 @@ Exception? mapToDisplayedException(PlatformException exception) {
       return FormatException(L.purchaseErrorUnknownNonNativeError(exception.code, exception.message ?? '', exception.details));
     case PurchasesErrorCode.productDiscountMissingSubscriptionGroupIdentifierError:
       return FormatException(
-          L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(exception.code, exception.message ?? '', exception.details));
+        L.purchaseErrorProductDiscountMissingSubscriptionGroupIdentifierError(exception.code, exception.message ?? '', exception.details),
+      );
     case PurchasesErrorCode.customerInfoError:
       return FormatException(L.purchaseErrorCustomerInfoError(exception.code, exception.message ?? '', exception.details));
     case PurchasesErrorCode.systemInfoError:

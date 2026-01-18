@@ -132,18 +132,20 @@ class AlarmKitService {
         throw Exception(result?['message'] ?? 'Failed to schedule alarm');
       }
 
-      analytics.debug(name: 'alarm_kit_reminder_scheduled', parameters: {
-        'localNotificationID': localNotificationID,
-        'title': title,
-        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
-      });
+      analytics.debug(
+        name: 'alarm_kit_reminder_scheduled',
+        parameters: {'localNotificationID': localNotificationID, 'title': title, 'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch},
+      );
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_schedule_error', parameters: {
-        'error': e.toString(),
-        'localNotificationID': localNotificationID,
-        'title': title,
-        'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
-      });
+      analytics.debug(
+        name: 'alarm_kit_schedule_error',
+        parameters: {
+          'error': e.toString(),
+          'localNotificationID': localNotificationID,
+          'title': title,
+          'scheduledTimeMs': reminderDateTime.millisecondsSinceEpoch,
+        },
+      );
       rethrow;
     }
   }
@@ -168,9 +170,7 @@ class AlarmKitService {
 
       analytics.debug(name: 'alarm_kit_all_reminders_cancelled');
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_cancel_all_error', parameters: {
-        'error': e.toString(),
-      });
+      analytics.debug(name: 'alarm_kit_cancel_all_error', parameters: {'error': e.toString()});
       rethrow;
     }
   }
@@ -195,9 +195,7 @@ class AlarmKitService {
 
       analytics.debug(name: 'alarm_kit_all_alarms_stopped');
     } catch (e) {
-      analytics.debug(name: 'alarm_kit_stop_all_error', parameters: {
-        'error': e.toString(),
-      });
+      analytics.debug(name: 'alarm_kit_stop_all_error', parameters: {'error': e.toString()});
       rethrow;
     }
   }

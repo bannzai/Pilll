@@ -12,7 +12,8 @@ part of 'diary_setting.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 DiarySetting _$DiarySettingFromJson(Map<String, dynamic> json) {
   return _DiarySetting.fromJson(json);
@@ -39,9 +40,10 @@ mixin _$DiarySetting {
 abstract class $DiarySettingCopyWith<$Res> {
   factory $DiarySettingCopyWith(DiarySetting value, $Res Function(DiarySetting) then) = _$DiarySettingCopyWithImpl<$Res, DiarySetting>;
   @useResult
-  $Res call(
-      {List<String> physicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt});
+  $Res call({
+    List<String> physicalConditions,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+  });
 }
 
 /// @nodoc
@@ -55,20 +57,20 @@ class _$DiarySettingCopyWithImpl<$Res, $Val extends DiarySetting> implements $Di
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? physicalConditions = null,
-    Object? createdAt = null,
-  }) {
-    return _then(_value.copyWith(
-      physicalConditions: null == physicalConditions
-          ? _value.physicalConditions
-          : physicalConditions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ) as $Val);
+  $Res call({Object? physicalConditions = null, Object? createdAt = null}) {
+    return _then(
+      _value.copyWith(
+            physicalConditions: null == physicalConditions
+                ? _value.physicalConditions
+                : physicalConditions // ignore: cast_nullable_to_non_nullable
+                      as List<String>,
+            createdAt: null == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -77,9 +79,10 @@ abstract class _$$DiarySettingImplCopyWith<$Res> implements $DiarySettingCopyWit
   factory _$$DiarySettingImplCopyWith(_$DiarySettingImpl value, $Res Function(_$DiarySettingImpl) then) = __$$DiarySettingImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<String> physicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt});
+  $Res call({
+    List<String> physicalConditions,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdAt,
+  });
 }
 
 /// @nodoc
@@ -89,20 +92,19 @@ class __$$DiarySettingImplCopyWithImpl<$Res> extends _$DiarySettingCopyWithImpl<
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? physicalConditions = null,
-    Object? createdAt = null,
-  }) {
-    return _then(_$DiarySettingImpl(
-      physicalConditions: null == physicalConditions
-          ? _value._physicalConditions
-          : physicalConditions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      createdAt: null == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
+  $Res call({Object? physicalConditions = null, Object? createdAt = null}) {
+    return _then(
+      _$DiarySettingImpl(
+        physicalConditions: null == physicalConditions
+            ? _value._physicalConditions
+            : physicalConditions // ignore: cast_nullable_to_non_nullable
+                  as List<String>,
+        createdAt: null == createdAt
+            ? _value.createdAt
+            : createdAt // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+      ),
+    );
   }
 }
 
@@ -110,12 +112,11 @@ class __$$DiarySettingImplCopyWithImpl<$Res> extends _$DiarySettingCopyWithImpl<
 
 @JsonSerializable(explicitToJson: true)
 class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
-  const _$DiarySettingImpl(
-      {final List<String> physicalConditions = defaultPhysicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.createdAt})
-      : _physicalConditions = physicalConditions,
-        super._();
+  const _$DiarySettingImpl({
+    final List<String> physicalConditions = defaultPhysicalConditions,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.createdAt,
+  }) : _physicalConditions = physicalConditions,
+       super._();
 
   factory _$DiarySettingImpl.fromJson(Map<String, dynamic> json) => _$$DiarySettingImplFromJson(json);
 
@@ -175,29 +176,26 @@ class _$DiarySettingImpl extends _DiarySetting with DiagnosticableTreeMixin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DiarySettingImplToJson(
-      this,
-    );
+    return _$$DiarySettingImplToJson(this);
   }
 }
 
 abstract class _DiarySetting extends DiarySetting {
-  const factory _DiarySetting(
-      {final List<String> physicalConditions,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdAt}) = _$DiarySettingImpl;
+  const factory _DiarySetting({
+    final List<String> physicalConditions,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime createdAt,
+  }) = _$DiarySettingImpl;
   const _DiarySetting._() : super._();
 
   factory _DiarySetting.fromJson(Map<String, dynamic> json) = _$DiarySettingImpl.fromJson;
 
   @override
-
   /// 日記機能で選択可能な体調項目のリスト
   /// デフォルトでは事前定義された14種類の体調項目が設定される
   /// ユーザーによる項目のカスタマイズが可能
   List<String> get physicalConditions;
   @override
-
   /// 設定が作成された日時
   /// Firestoreのタイムスタンプ形式で保存され、読み書き時に自動変換される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)

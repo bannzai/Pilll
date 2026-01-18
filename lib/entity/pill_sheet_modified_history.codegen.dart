@@ -44,7 +44,7 @@ enum PillSheetModifiedActionType {
   @JsonValue('changedBeginDisplayNumber')
   changedBeginDisplayNumber,
   @JsonValue('changedEndDisplayNumber')
-  changedEndDisplayNumber
+  changedEndDisplayNumber,
 }
 
 extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
@@ -63,15 +63,9 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // ============ BEGIN: Added since v1 ============
     @JsonKey(includeIfNull: false) required String? id,
     required String actionType,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime estimatedEventCausingDate,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdAt,
     // ============ END: Added since v1 ============
 
@@ -80,20 +74,12 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup? afterPillSheetGroup,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? ttlExpiresDateTime,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? ttlExpiresDateTime,
     // TODO: [Archive-PillSheetModifiedHistory]: 2024-04以降に対応
     // 古いPillSheetModifiedHistoryのisArchivedにインデックスが貼られないため、TTLの期間内のデータが残っている間はこのフィールドが使えない
     // null含めて値を入れないとクエリの条件に合致しないので、2024-04まではarchivedDateTime,isArchivedのデータが必ず存在するPillSheetModifiedHistoryの準備機関とする
     // バッチを書いても良いが件数が多いのでこの方法をとっている
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? archivedDateTime,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? archivedDateTime,
     // archivedDateTime isNull: false の条件だと、下記のエラーの条件に引っ掛かるため、archivedDateTime以外にもisArchivedを用意している。isArchived == true | isArchived == false の用途で使う
     // You can combine constraints with a logical AND by chaining multiple equality operators (== or array-contains). However, you must create a composite index to combine equality operators with the inequality operators, <, <=, >, and !=.
     @Default(false) bool isArchived,
@@ -137,8 +123,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
-    // ============ END: Added since v1 ============
 
+    // ============ END: Added since v1 ============
     required PillSheetGroup? beforePillSheetGroup,
     required PillSheetGroup? afterPillSheetGroup,
     required PillSheetModifiedActionType actionType,
@@ -218,7 +204,8 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     final beforeLastTakenDate = before.lastTakenDate;
     if (beforeID == null || beforeLastTakenDate == null) {
       throw FormatException(
-          'unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action');
+        'unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action',
+      );
     }
     return _create(
       actionType: PillSheetModifiedActionType.revertTakenPill,
@@ -251,10 +238,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
       value: PillSheetModifiedHistoryValue(
-        createdPillSheet: CreatedPillSheetValue(
-          pillSheetCreatedAt: now(),
-          pillSheetIDs: pillSheetIDs,
-        ),
+        createdPillSheet: CreatedPillSheetValue(pillSheetCreatedAt: now(), pillSheetIDs: pillSheetIDs),
       ),
       pillSheetGroupID: pillSheetGroupID,
       before: null,
@@ -313,10 +297,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     return _create(
       actionType: PillSheetModifiedActionType.deletedPillSheet,
       value: PillSheetModifiedHistoryValue(
-        deletedPillSheet: DeletedPillSheetValue(
-          pillSheetDeletedAt: now(),
-          pillSheetIDs: pillSheetIDs,
-        ),
+        deletedPillSheet: DeletedPillSheetValue(pillSheetDeletedAt: now(), pillSheetIDs: pillSheetIDs),
       ),
       pillSheetGroupID: pillSheetGroupID,
       beforePillSheetID: null,
@@ -340,11 +321,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     return _create(
       actionType: PillSheetModifiedActionType.beganRestDuration,
-      value: PillSheetModifiedHistoryValue(
-        beganRestDurationValue: BeganRestDurationValue(
-          restDuration: restDuration,
-        ),
-      ),
+      value: PillSheetModifiedHistoryValue(beganRestDurationValue: BeganRestDurationValue(restDuration: restDuration)),
       pillSheetGroupID: pillSheetGroupID,
       beforePillSheetID: before.id,
       afterPillSheetID: after.id,
@@ -367,11 +344,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 
     return _create(
       actionType: PillSheetModifiedActionType.endedRestDuration,
-      value: PillSheetModifiedHistoryValue(
-        endedRestDurationValue: EndedRestDurationValue(
-          restDuration: restDuration,
-        ),
-      ),
+      value: PillSheetModifiedHistoryValue(endedRestDurationValue: EndedRestDurationValue(restDuration: restDuration)),
       pillSheetGroupID: pillSheetGroupID,
       beforePillSheetID: before.id,
       afterPillSheetID: after.id,
@@ -425,10 +398,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
     return _create(
       actionType: PillSheetModifiedActionType.changedRestDuration,
       value: PillSheetModifiedHistoryValue(
-        changedRestDurationValue: ChangedRestDurationValue(
-          beforeRestDuration: beforeRestDuration,
-          afterRestDuration: afterRestDuration,
-        ),
+        changedRestDurationValue: ChangedRestDurationValue(beforeRestDuration: beforeRestDuration, afterRestDuration: afterRestDuration),
       ),
       pillSheetGroupID: pillSheetGroupID,
       beforePillSheetID: before.id,
@@ -492,10 +462,7 @@ abstract class PillSheetModifiedHistoryServiceActionFactory {
 }
 
 /// 渡されたPillSheetModifiedHistory配列から飲み忘れ日数を計算する
-int missedPillDays({
-  required List<PillSheetModifiedHistory> histories,
-  required DateTime maxDate,
-}) {
+int missedPillDays({required List<PillSheetModifiedHistory> histories, required DateTime maxDate}) {
   if (histories.isEmpty) {
     return 0;
   }
@@ -519,11 +486,7 @@ int missedPillDays({
   DateTime? historyBeginRestDurationDate;
   for (final history in orderedHistories) {
     // estimatedEventCausingDateの日付部分のみを使用
-    final date = DateTime(
-      history.estimatedEventCausingDate.year,
-      history.estimatedEventCausingDate.month,
-      history.estimatedEventCausingDate.day,
-    );
+    final date = DateTime(history.estimatedEventCausingDate.year, history.estimatedEventCausingDate.month, history.estimatedEventCausingDate.day);
     if (history.actionType == PillSheetModifiedActionType.takenPill.name ||
         history.actionType == PillSheetModifiedActionType.automaticallyRecordedLastTakenDate.name) {
       takenDates.add(date);

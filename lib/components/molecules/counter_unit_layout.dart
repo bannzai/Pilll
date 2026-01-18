@@ -7,24 +7,14 @@ class CounterUnitLayout extends StatelessWidget {
   final String number;
   final String unit;
 
-  const CounterUnitLayout({
-    super.key,
-    required this.title,
-    required this.number,
-    required this.unit,
-  });
+  const CounterUnitLayout({super.key, required this.title, required this.number, required this.unit});
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Text(
           title,
-          style: const TextStyle(
-            color: TextColor.main,
-            fontFamily: FontFamily.japanese,
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-          ),
+          style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
         ),
         const SizedBox(height: 8),
         Row(
@@ -33,21 +23,11 @@ class CounterUnitLayout extends StatelessWidget {
           children: [
             Text(
               number,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.number,
-                fontSize: 24,
-                fontWeight: FontWeight.w600,
-              ),
+              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.number, fontSize: 24, fontWeight: FontWeight.w600),
             ),
             Text(
               unit,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
+              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
             ),
           ],
         ),

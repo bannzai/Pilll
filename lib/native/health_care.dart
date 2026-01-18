@@ -50,9 +50,7 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
     return false;
   }
 
-  dynamic response = await methodChannel.invokeMethod(
-    'shouldRequestForAccessToHealthKitData',
-  );
+  dynamic response = await methodChannel.invokeMethod('shouldRequestForAccessToHealthKitData');
 
   if (response['result'] == 'success') {
     return response['shouldRequestForAccessToHealthKitData'] == true;
@@ -71,9 +69,7 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
     return false;
   }
 
-  dynamic response = await methodChannel.invokeMethod(
-    'requestWriteMenstrualFlowHealthKitDataPermission',
-  );
+  dynamic response = await methodChannel.invokeMethod('requestWriteMenstrualFlowHealthKitDataPermission');
 
   if (response['result'] == 'success') {
     return response['isSuccess'] == true;
@@ -84,9 +80,7 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
   }
 }
 
-Future<String> addMenstruationFlowHealthKitData(
-  Menstruation menstruation,
-) async {
+Future<String> addMenstruationFlowHealthKitData(Menstruation menstruation) async {
   if (!Platform.isIOS) {
     throw FormatException(L.onlySupportiOS);
   }
@@ -97,8 +91,8 @@ Future<String> addMenstruationFlowHealthKitData(
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-// Avoid codec error
-// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  // Avoid codec error
+  // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
   var json = menstruation.toJson();
   for (final key in json.keys) {
     final value = json[key];
@@ -107,9 +101,7 @@ Future<String> addMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {
-    'menstruation': json,
-  });
+  dynamic response = await methodChannel.invokeMethod('addMenstruationFlowHealthKitData', {'menstruation': json});
 
   if (response['result'] == 'success') {
     return response['healthKitSampleDataUUID'] as String;
@@ -120,9 +112,7 @@ Future<String> addMenstruationFlowHealthKitData(
   }
 }
 
-Future<String> updateOrAddMenstruationFlowHealthKitData(
-  Menstruation menstruation,
-) async {
+Future<String> updateOrAddMenstruationFlowHealthKitData(Menstruation menstruation) async {
   if (!Platform.isIOS) {
     throw FormatException(L.onlySupportiOS);
   }
@@ -133,8 +123,8 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-// Avoid codec error
-// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  // Avoid codec error
+  // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
   var json = menstruation.toJson();
   for (final key in json.keys) {
     final value = json[key];
@@ -143,9 +133,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('updateOrAddMenstruationFlowHealthKitData', {
-    'menstruation': json,
-  });
+  dynamic response = await methodChannel.invokeMethod('updateOrAddMenstruationFlowHealthKitData', {'menstruation': json});
 
   if (response['result'] == 'success') {
     return response['healthKitSampleDataUUID'] as String;
@@ -156,9 +144,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   }
 }
 
-Future<void> deleteMenstruationFlowHealthKitData(
-  Menstruation menstruation,
-) async {
+Future<void> deleteMenstruationFlowHealthKitData(Menstruation menstruation) async {
   if (!Platform.isIOS) {
     throw FormatException(L.onlySupportiOS);
   }
@@ -169,8 +155,8 @@ Future<void> deleteMenstruationFlowHealthKitData(
     throw FormatException(L.enableHealthKitFromSettings);
   }
 
-// Avoid codec error
-// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  // Avoid codec error
+  // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
   var json = menstruation.toJson();
   for (final key in json.keys) {
     final value = json[key];
@@ -179,9 +165,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response = await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {
-    'menstruation': json,
-  });
+  dynamic response = await methodChannel.invokeMethod('deleteMenstrualFlowHealthKitData', {'menstruation': json});
 
   if (response['result'] == 'success') {
     return;

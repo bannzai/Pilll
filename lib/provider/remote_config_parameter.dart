@@ -10,14 +10,8 @@ part 'remote_config_parameter.g.dart';
 RemoteConfigParameter remoteConfigParameter(RemoteConfigParameterRef ref) {
   // fetchAndActiveをentrypointで完了しているので値が取れる想定
   return RemoteConfigParameter(
-    isPaywallFirst: remoteConfig.getBoolOrDefault(
-      RemoteConfigKeys.isPaywallFirst,
-      RemoteConfigParameterDefaultValues.isPaywallFirst,
-    ),
-    skipInitialSetting: remoteConfig.getBoolOrDefault(
-      RemoteConfigKeys.skipInitialSetting,
-      RemoteConfigParameterDefaultValues.skipInitialSetting,
-    ),
+    isPaywallFirst: remoteConfig.getBoolOrDefault(RemoteConfigKeys.isPaywallFirst, RemoteConfigParameterDefaultValues.isPaywallFirst),
+    skipInitialSetting: remoteConfig.getBoolOrDefault(RemoteConfigKeys.skipInitialSetting, RemoteConfigParameterDefaultValues.skipInitialSetting),
     trialDeadlineDateOffsetDay: remoteConfig.getIntOrDefault(
       RemoteConfigKeys.trialDeadlineDateOffsetDay,
       RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,

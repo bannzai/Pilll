@@ -12,7 +12,8 @@ part of 'config.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Config _$ConfigFromJson(Map<String, dynamic> json) {
   return _Config.fromJson(json);
@@ -48,15 +49,16 @@ class _$ConfigCopyWithImpl<$Res, $Val extends Config> implements $ConfigCopyWith
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? minimumSupportedAppVersion = null,
-  }) {
-    return _then(_value.copyWith(
-      minimumSupportedAppVersion: null == minimumSupportedAppVersion
-          ? _value.minimumSupportedAppVersion
-          : minimumSupportedAppVersion // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? minimumSupportedAppVersion = null}) {
+    return _then(
+      _value.copyWith(
+            minimumSupportedAppVersion: null == minimumSupportedAppVersion
+                ? _value.minimumSupportedAppVersion
+                : minimumSupportedAppVersion // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -74,15 +76,15 @@ class __$$ConfigImplCopyWithImpl<$Res> extends _$ConfigCopyWithImpl<$Res, _$Conf
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? minimumSupportedAppVersion = null,
-  }) {
-    return _then(_$ConfigImpl(
-      minimumSupportedAppVersion: null == minimumSupportedAppVersion
-          ? _value.minimumSupportedAppVersion
-          : minimumSupportedAppVersion // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? minimumSupportedAppVersion = null}) {
+    return _then(
+      _$ConfigImpl(
+        minimumSupportedAppVersion: null == minimumSupportedAppVersion
+            ? _value.minimumSupportedAppVersion
+            : minimumSupportedAppVersion // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -124,9 +126,7 @@ class _$ConfigImpl extends _Config {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ConfigImplToJson(
-      this,
-    );
+    return _$$ConfigImplToJson(this);
   }
 }
 
@@ -137,7 +137,6 @@ abstract class _Config extends Config {
   factory _Config.fromJson(Map<String, dynamic> json) = _$ConfigImpl.fromJson;
 
   @override
-
   /// 最小サポートバージョンを表すバージョン文字列。
   /// このバージョンより古いアプリは強制アップデートが必要となる。
   /// バージョン形式は`Version.parse()`で解析可能な文字列（例: "1.0.0"）。

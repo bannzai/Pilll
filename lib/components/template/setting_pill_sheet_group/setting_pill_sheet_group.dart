@@ -4,13 +4,7 @@ import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingPillSheetGroup extends StatelessWidget {
-  const SettingPillSheetGroup({
-    super.key,
-    required this.pillSheetTypes,
-    required this.onAdd,
-    required this.onChange,
-    required this.onDelete,
-  });
+  const SettingPillSheetGroup({super.key, required this.pillSheetTypes, required this.onAdd, required this.onChange, required this.onDelete});
 
   final List<PillSheetType> pillSheetTypes;
   final Function(PillSheetType) onAdd;
@@ -23,19 +17,11 @@ class SettingPillSheetGroup extends StatelessWidget {
       children: [
         for (var i = 0; i < pillSheetTypes.length; i++) ...[
           const SizedBox(height: 16),
-          SettingPillSheetGroupPillSheetTypeSelectRow(
-            index: i,
-            pillSheetType: pillSheetTypes[i],
-            onSelect: onChange,
-            onDelete: onDelete,
-          ),
+          SettingPillSheetGroupPillSheetTypeSelectRow(index: i, pillSheetType: pillSheetTypes[i], onSelect: onChange, onDelete: onDelete),
         ],
         if (pillSheetTypes.length < 7) ...[
           const SizedBox(height: 24),
-          PillSheetTypeAddButton(
-            pillSheetTypes: pillSheetTypes,
-            onAdd: (pillSheetType) => onAdd(pillSheetType),
-          ),
+          PillSheetTypeAddButton(pillSheetTypes: pillSheetTypes, onAdd: (pillSheetType) => onAdd(pillSheetType)),
         ],
         const SizedBox(height: 80),
       ],

@@ -11,11 +11,7 @@ class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidg
   final DateTime estimatedEventCausingDate;
   final ChangedRestDurationBeginDateValue? value;
 
-  const PillSheetModifiedHistoryChangedRestDurationBeginDate({
-    super.key,
-    required this.estimatedEventCausingDate,
-    required this.value,
-  });
+  const PillSheetModifiedHistoryChangedRestDurationBeginDate({super.key, required this.estimatedEventCausingDate, required this.value});
 
   @override
   Widget build(BuildContext context) {
@@ -28,12 +24,7 @@ class PillSheetModifiedHistoryChangedRestDurationBeginDate extends StatelessWidg
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedRestDurationBeginDate(value)),
       detail: Text(
         L.changePauseStartDate,
-        style: const TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.start,
       ),
     );

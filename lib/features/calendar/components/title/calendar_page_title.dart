@@ -10,12 +10,7 @@ class CalendarPageTitle extends StatelessWidget {
   final ValueNotifier<int> page;
   final PageController pageController;
 
-  const CalendarPageTitle({
-    super.key,
-    required this.displayedMonth,
-    required this.page,
-    required this.pageController,
-  });
+  const CalendarPageTitle({super.key, required this.displayedMonth, required this.page, required this.pageController});
 
   @override
   Widget build(BuildContext context) {
@@ -35,12 +30,7 @@ class CalendarPageTitle extends StatelessWidget {
         ),
         Text(
           _displayMonthString,
-          style: const TextStyle(
-            color: TextColor.main,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w600,
-            fontSize: 16,
-          ),
+          style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16),
         ),
         IconButton(
           icon: SvgPicture.asset('images/arrow_right.svg'),

@@ -12,7 +12,8 @@ part of 'diary.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Diary _$DiaryFromJson(Map<String, dynamic> json) {
   return _Diary.fromJson(json);
@@ -31,7 +32,7 @@ mixin _$Diary {
   ///
   /// 日記が実際に作成された日時を記録
   /// 古いデータでは存在しない可能性があるためnullable
-// NOTE: OLD data does't have createdAt
+  // NOTE: OLD data does't have createdAt
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt => throw _privateConstructorUsedError;
 
@@ -68,13 +69,14 @@ mixin _$Diary {
 abstract class $DiaryCopyWith<$Res> {
   factory $DiaryCopyWith(Diary value, $Res Function(Diary) then) = _$DiaryCopyWithImpl<$Res, Diary>;
   @useResult
-  $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
-      PhysicalConditionStatus? physicalConditionStatus,
-      List<String> physicalConditions,
-      bool hasSex,
-      String memo});
+  $Res call({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime date,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+    PhysicalConditionStatus? physicalConditionStatus,
+    List<String> physicalConditions,
+    bool hasSex,
+    String memo,
+  });
 }
 
 /// @nodoc
@@ -96,32 +98,35 @@ class _$DiaryCopyWithImpl<$Res, $Val extends Diary> implements $DiaryCopyWith<$R
     Object? hasSex = null,
     Object? memo = null,
   }) {
-    return _then(_value.copyWith(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      physicalConditionStatus: freezed == physicalConditionStatus
-          ? _value.physicalConditionStatus
-          : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
-              as PhysicalConditionStatus?,
-      physicalConditions: null == physicalConditions
-          ? _value.physicalConditions
-          : physicalConditions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      hasSex: null == hasSex
-          ? _value.hasSex
-          : hasSex // ignore: cast_nullable_to_non_nullable
-              as bool,
-      memo: null == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            date: null == date
+                ? _value.date
+                : date // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            createdAt: freezed == createdAt
+                ? _value.createdAt
+                : createdAt // ignore: cast_nullable_to_non_nullable
+                      as DateTime?,
+            physicalConditionStatus: freezed == physicalConditionStatus
+                ? _value.physicalConditionStatus
+                : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
+                      as PhysicalConditionStatus?,
+            physicalConditions: null == physicalConditions
+                ? _value.physicalConditions
+                : physicalConditions // ignore: cast_nullable_to_non_nullable
+                      as List<String>,
+            hasSex: null == hasSex
+                ? _value.hasSex
+                : hasSex // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            memo: null == memo
+                ? _value.memo
+                : memo // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -130,13 +135,14 @@ abstract class _$$DiaryImplCopyWith<$Res> implements $DiaryCopyWith<$Res> {
   factory _$$DiaryImplCopyWith(_$DiaryImpl value, $Res Function(_$DiaryImpl) then) = __$$DiaryImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
-      PhysicalConditionStatus? physicalConditionStatus,
-      List<String> physicalConditions,
-      bool hasSex,
-      String memo});
+  $Res call({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime date,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? createdAt,
+    PhysicalConditionStatus? physicalConditionStatus,
+    List<String> physicalConditions,
+    bool hasSex,
+    String memo,
+  });
 }
 
 /// @nodoc
@@ -153,32 +159,34 @@ class __$$DiaryImplCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res, _$DiaryI
     Object? hasSex = null,
     Object? memo = null,
   }) {
-    return _then(_$DiaryImpl(
-      date: null == date
-          ? _value.date
-          : date // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      physicalConditionStatus: freezed == physicalConditionStatus
-          ? _value.physicalConditionStatus
-          : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
-              as PhysicalConditionStatus?,
-      physicalConditions: null == physicalConditions
-          ? _value._physicalConditions
-          : physicalConditions // ignore: cast_nullable_to_non_nullable
-              as List<String>,
-      hasSex: null == hasSex
-          ? _value.hasSex
-          : hasSex // ignore: cast_nullable_to_non_nullable
-              as bool,
-      memo: null == memo
-          ? _value.memo
-          : memo // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$DiaryImpl(
+        date: null == date
+            ? _value.date
+            : date // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        createdAt: freezed == createdAt
+            ? _value.createdAt
+            : createdAt // ignore: cast_nullable_to_non_nullable
+                  as DateTime?,
+        physicalConditionStatus: freezed == physicalConditionStatus
+            ? _value.physicalConditionStatus
+            : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
+                  as PhysicalConditionStatus?,
+        physicalConditions: null == physicalConditions
+            ? _value._physicalConditions
+            : physicalConditions // ignore: cast_nullable_to_non_nullable
+                  as List<String>,
+        hasSex: null == hasSex
+            ? _value.hasSex
+            : hasSex // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        memo: null == memo
+            ? _value.memo
+            : memo // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -186,15 +194,15 @@ class __$$DiaryImplCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res, _$DiaryI
 
 @JsonSerializable(explicitToJson: true)
 class _$DiaryImpl extends _Diary {
-  const _$DiaryImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
-      this.physicalConditionStatus,
-      required final List<String> physicalConditions,
-      required this.hasSex,
-      required this.memo})
-      : _physicalConditions = physicalConditions,
-        super._();
+  const _$DiaryImpl({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required this.date,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.createdAt,
+    this.physicalConditionStatus,
+    required final List<String> physicalConditions,
+    required this.hasSex,
+    required this.memo,
+  }) : _physicalConditions = physicalConditions,
+       super._();
 
   factory _$DiaryImpl.fromJson(Map<String, dynamic> json) => _$$DiaryImplFromJson(json);
 
@@ -210,7 +218,7 @@ class _$DiaryImpl extends _Diary {
   ///
   /// 日記が実際に作成された日時を記録
   /// 古いデータでは存在しない可能性があるためnullable
-// NOTE: OLD data does't have createdAt
+  // NOTE: OLD data does't have createdAt
   @override
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? createdAt;
@@ -283,27 +291,25 @@ class _$DiaryImpl extends _Diary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DiaryImplToJson(
-      this,
-    );
+    return _$$DiaryImplToJson(this);
   }
 }
 
 abstract class _Diary extends Diary {
-  const factory _Diary(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime date,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
-      final PhysicalConditionStatus? physicalConditionStatus,
-      required final List<String> physicalConditions,
-      required final bool hasSex,
-      required final String memo}) = _$DiaryImpl;
+  const factory _Diary({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime date,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required final DateTime? createdAt,
+    final PhysicalConditionStatus? physicalConditionStatus,
+    required final List<String> physicalConditions,
+    required final bool hasSex,
+    required final String memo,
+  }) = _$DiaryImpl;
   const _Diary._() : super._();
 
   factory _Diary.fromJson(Map<String, dynamic> json) = _$DiaryImpl.fromJson;
 
   @override
-
   /// 日記の対象日付
   ///
   /// 日記エントリが作成された日付を表す
@@ -311,37 +317,32 @@ abstract class _Diary extends Diary {
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date;
   @override
-
   /// 日記の作成日時
   ///
   /// 日記が実際に作成された日時を記録
   /// 古いデータでは存在しない可能性があるためnullable
-// NOTE: OLD data does't have createdAt
+  // NOTE: OLD data does't have createdAt
   @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get createdAt;
   @override
-
   /// 体調状態の総合評価
   ///
   /// fine（良好）またはbad（不調）の2段階評価
   /// 未選択の場合はnull
   PhysicalConditionStatus? get physicalConditionStatus;
   @override
-
   /// 詳細な体調状態のリスト
   ///
   /// ユーザーが選択した具体的な体調症状を文字列で保存
   /// 空のリストも許可される
   List<String> get physicalConditions;
   @override
-
   /// 性行為の有無
   ///
   /// 妊娠リスクの管理のために記録される
   /// trueの場合は性行為あり、falseの場合はなし
   bool get hasSex;
   @override
-
   /// 自由記述のメモ
   ///
   /// ユーザーが自由にテキストを入力できるフィールド

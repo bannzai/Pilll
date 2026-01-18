@@ -30,10 +30,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '3/3',
-          style: TextStyle(color: TextColor.black),
-        ),
+        title: const Text('3/3', style: TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -43,12 +40,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
               const SizedBox(height: 24),
               Text(
                 L.missedPillNotification,
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 17,
-                  color: TextColor.main,
-                ),
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 17, color: TextColor.main),
                 textAlign: TextAlign.center,
               ),
               const Spacer(),
@@ -57,19 +49,15 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 36),
                     child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: List.generate(3, (index) {
-                          return _form(context, store, state, index);
-                        })),
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(3, (index) {
+                        return _form(context, store, state, index);
+                      }),
+                    ),
                   ),
                   Text(
                     L.setMultipleReminders,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.main,
-                    ),
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
                   ),
                 ],
               ),
@@ -83,12 +71,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         // TODO: [Localizations]
                         TextSpan(
                           text: L.privacyPolicy,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 10,
-                            color: TextColor.link,
-                          ),
+                          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 10, color: TextColor.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
@@ -96,21 +79,11 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         ),
                         TextSpan(
                           text: L.and,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 10,
-                            color: TextColor.gray,
-                          ),
+                          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 10, color: TextColor.gray),
                         ),
                         TextSpan(
                           text: L.termsOfService,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 10,
-                            color: TextColor.link,
-                          ),
+                          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 10, color: TextColor.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
@@ -118,12 +91,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
                         ),
                         TextSpan(
                           text: L.readAndStartUsing,
-                          style: const TextStyle(
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 10,
-                            color: TextColor.gray,
-                          ),
+                          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 10, color: TextColor.gray),
                         ),
                       ],
                     ),
@@ -149,12 +117,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  void _showTimePicker(
-    BuildContext context,
-    int index,
-    InitialSettingState state,
-    InitialSettingStateNotifier store,
-  ) {
+  void _showTimePicker(BuildContext context, int index, InitialSettingState state, InitialSettingStateNotifier store) {
     analytics.logEvent(name: 'show_initial_setting_reminder_picker');
     final reminderDateTime = state.reminderTimeOrNull(index);
     final n = now();
@@ -174,12 +137,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  Widget _form(
-    BuildContext context,
-    InitialSettingStateNotifier store,
-    InitialSettingState state,
-    int index,
-  ) {
+  Widget _form(BuildContext context, InitialSettingStateNotifier store, InitialSettingState state, int index) {
     final reminderTime = state.reminderTimeOrNull(index);
     final formValue = reminderTime == null ? '--:--' : DateTimeFormatter.militaryTime(reminderTime);
     return Padding(
@@ -192,13 +150,8 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
               SvgPicture.asset('images/alerm.svg'),
               Text(
                 L.notificationNumber(index + 1),
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w300,
-                  fontSize: 14,
-                  color: TextColor.main,
-                ),
-              )
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+              ),
             ],
           ),
           const SizedBox(height: 8),
@@ -209,22 +162,16 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
               height: 48,
               decoration: BoxDecoration(
                 borderRadius: const BorderRadius.all(Radius.circular(4)),
-                border: Border.all(
-                  width: 1,
-                  color: AppColors.border,
-                ),
+                border: Border.all(width: 1, color: AppColors.border),
               ),
               child: Center(
-                child: Text(formValue,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16,
-                      color: TextColor.gray,
-                    )),
+                child: Text(
+                  formValue,
+                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.gray),
+                ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

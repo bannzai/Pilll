@@ -50,18 +50,16 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     this.registerReminderLocalNotificationRunner,
     DateTime _now,
   ) : super(
-          InitialSettingState(reminderTimes: [
+        InitialSettingState(
+          reminderTimes: [
             ReminderTime(hour: _now.hour, minute: 0),
             ReminderTime(hour: _now.hour + 1, minute: 0),
-          ]),
-        );
+          ],
+        ),
+      );
 
   void selectedFirstPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetTypes: [
-      pillSheetType,
-      pillSheetType,
-      pillSheetType,
-    ]);
+    state = state.copyWith(pillSheetTypes: [pillSheetType, pillSheetType, pillSheetType]);
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
@@ -80,11 +78,7 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void setReminderTime({
-    required int index,
-    required int hour,
-    required int minute,
-  }) {
+  void setReminderTime({required int index, required int hour, required int minute}) {
     final copied = [...state.reminderTimes];
     if (index >= copied.length) {
       copied.add(ReminderTime(hour: hour, minute: minute));
@@ -94,15 +88,9 @@ class InitialSettingStateNotifier extends StateNotifier<InitialSettingState> {
     state = state.copyWith(reminderTimes: copied);
   }
 
-  void setTodayPillNumber({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
+  void setTodayPillNumber({required int pageIndex, required int pillNumberInPillSheet}) {
     state = state.copyWith(
-      todayPillNumber: InitialSettingTodayPillNumber(
-        pageIndex: pageIndex,
-        pillNumberInPillSheet: pillNumberInPillSheet,
-      ),
+      todayPillNumber: InitialSettingTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     );
   }
 

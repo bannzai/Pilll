@@ -24,19 +24,12 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         children: <Widget>[
           Text(
             L.cannotPauseAlreadyTakenToday,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-              color: TextColor.main,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: TextColor.main),
             textAlign: TextAlign.center,
           ),
           const SizedBox(height: 24),
           SvgPicture.asset('images/invalid_rest_duration.svg'),
-          const SizedBox(
-            height: 15,
-          ),
+          const SizedBox(height: 15),
           RichText(
             textAlign: TextAlign.center,
             text: TextSpan(
@@ -45,21 +38,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
                 // TODO: [Localizations]
                 TextSpan(
                   text: L.unmarkTodayPillAsTakenToPause,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ),
+                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 14, color: TextColor.main),
                 ),
                 TextSpan(
                   text: L.pauseStartingOtherDaysInstructions,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w300,
-                    fontSize: 14,
-                    color: TextColor.main,
-                  ),
+                  style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
                 ),
               ],
             ),
@@ -88,12 +71,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   }
 }
 
-void showInvalidAlreadyTakenPillDialog(
-  BuildContext context,
-) {
+void showInvalidAlreadyTakenPillDialog(BuildContext context) {
   analytics.logScreenView(screenName: 'InvalidAlreadyTakenPillDialog');
-  showDialog(
-    context: context,
-    builder: (context) => const InvalidAlreadyTakenPillDialog(),
-  );
+  showDialog(context: context, builder: (context) => const InvalidAlreadyTakenPillDialog());
 }

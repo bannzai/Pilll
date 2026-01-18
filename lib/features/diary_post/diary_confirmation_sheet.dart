@@ -16,10 +16,7 @@ import 'package:flutter_svg/svg.dart';
 class DiaryConfirmationSheet extends HookConsumerWidget {
   final DateTime date;
 
-  const DiaryConfirmationSheet({
-    super.key,
-    required this.date,
-  });
+  const DiaryConfirmationSheet({super.key, required this.date});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -31,38 +28,38 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
 
     return Container(
       decoration: const BoxDecoration(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(10),
-          topRight: Radius.circular(10),
-        ),
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(10), topRight: Radius.circular(10)),
         color: AppColors.white,
       ),
       padding: const EdgeInsets.fromLTRB(16, 20, 16, 20),
-      child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
-        _title(context, deleteDiary, diary),
-        ...[
-          if (diary.hasPhysicalConditionStatus) _physicalCondition(diary),
-          _physicalConditionDetails(diary),
-          if (diary.hasSex) _sex(diary),
-          _memo(diary),
-        ].map((e) => _withContentSpacer(e)),
-      ]),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _title(context, deleteDiary, diary),
+          ...[
+            if (diary.hasPhysicalConditionStatus) _physicalCondition(diary),
+            _physicalConditionDetails(diary),
+            if (diary.hasSex) _sex(diary),
+            _memo(diary),
+          ].map((e) => _withContentSpacer(e)),
+        ],
+      ),
     );
   }
 
   Widget _withContentSpacer(Widget content) {
-    return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 10),
-      child: content,
-    );
+    return Container(padding: const EdgeInsets.only(top: 10, bottom: 10), child: content);
   }
 
   Widget _title(BuildContext context, DeleteDiary deleteDiary, Diary diary) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
-            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main)),
+        Text(
+          DateTimeFormatter.yearAndMonthAndDay(diary.date),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
+        ),
         const Spacer(),
         IconButton(
           icon: SvgPicture.asset('images/edit.svg'),
@@ -75,36 +72,37 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
           icon: SvgPicture.asset('images/trash.svg'),
           onPressed: () {
             showDialog(
-                context: context,
-                builder: (context) {
-                  return DiscardDialog(
-                    title: L.deleteDiary,
-                    message: Text(
-                      L.deletedDiaryCannotBeRestored,
-                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+              context: context,
+              builder: (context) {
+                return DiscardDialog(
+                  title: L.deleteDiary,
+                  message: Text(
+                    L.deletedDiaryCannotBeRestored,
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+                  ),
+                  actions: [
+                    AlertButton(
+                      text: L.cancel,
+                      onPressed: () async {
+                        Navigator.of(context).pop();
+                      },
                     ),
-                    actions: [
-                      AlertButton(
-                        text: L.cancel,
-                        onPressed: () async {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                      AlertButton(
-                        text: L.doDelete,
-                        onPressed: () async {
-                          int counter = 0;
-                          final navigator = Navigator.of(context);
+                    AlertButton(
+                      text: L.doDelete,
+                      onPressed: () async {
+                        int counter = 0;
+                        final navigator = Navigator.of(context);
 
-                          await deleteDiary(diary);
+                        await deleteDiary(diary);
 
-                          navigator.popUntil((route) => counter++ >= 1);
-                          navigator.pop();
-                        },
-                      ),
-                    ],
-                  );
-                });
+                        navigator.popUntil((route) => counter++ >= 1);
+                        navigator.pop();
+                      },
+                    ),
+                  ],
+                );
+              },
+            );
           },
         ),
       ],
@@ -125,13 +123,10 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   Widget _physicalCondition(Diary diary) {
     return Row(
       children: [
-        Text(L.physicalCondition,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
-              color: TextColor.black,
-            )),
+        Text(
+          L.physicalCondition,
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 16, color: TextColor.black),
+        ),
         const SizedBox(width: 16),
         _physicalConditionImage(diary.physicalConditionStatus),
       ],
@@ -145,18 +140,15 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
         Wrap(
           spacing: 10,
           children: diary.physicalConditions
-              .map((e) => ChoiceChip(
-                    label: Text(e),
-                    labelStyle: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w300,
-                      fontSize: 14,
-                      color: TextColor.white,
-                    ),
-                    selectedColor: AppColors.primary,
-                    selected: true,
-                    onSelected: (selected) {},
-                  ))
+              .map(
+                (e) => ChoiceChip(
+                  label: Text(e),
+                  labelStyle: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.white),
+                  selectedColor: AppColors.primary,
+                  selected: true,
+                  onSelected: (selected) {},
+                ),
+              )
               .toList(),
         ),
       ],
@@ -174,9 +166,6 @@ class DiaryConfirmationSheet extends HookConsumerWidget {
   }
 
   Widget _memo(Diary diary) {
-    return Text(
-      diary.memo,
-      maxLines: 2,
-    );
+    return Text(diary.memo, maxLines: 2);
   }
 }

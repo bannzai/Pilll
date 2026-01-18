@@ -12,7 +12,8 @@ part of 'menstruation_card_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$MenstruationCardState {
@@ -43,25 +44,24 @@ class _$MenstruationCardStateCopyWithImpl<$Res, $Val extends MenstruationCardSta
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? title = null,
-    Object? scheduleDate = null,
-    Object? countdownString = null,
-  }) {
-    return _then(_value.copyWith(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      scheduleDate: null == scheduleDate
-          ? _value.scheduleDate
-          : scheduleDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      countdownString: null == countdownString
-          ? _value.countdownString
-          : countdownString // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? title = null, Object? scheduleDate = null, Object? countdownString = null}) {
+    return _then(
+      _value.copyWith(
+            title: null == title
+                ? _value.title
+                : title // ignore: cast_nullable_to_non_nullable
+                      as String,
+            scheduleDate: null == scheduleDate
+                ? _value.scheduleDate
+                : scheduleDate // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            countdownString: null == countdownString
+                ? _value.countdownString
+                : countdownString // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -78,29 +78,27 @@ abstract class _$$MenstruationCardStateImplCopyWith<$Res> implements $Menstruati
 class __$$MenstruationCardStateImplCopyWithImpl<$Res> extends _$MenstruationCardStateCopyWithImpl<$Res, _$MenstruationCardStateImpl>
     implements _$$MenstruationCardStateImplCopyWith<$Res> {
   __$$MenstruationCardStateImplCopyWithImpl(_$MenstruationCardStateImpl _value, $Res Function(_$MenstruationCardStateImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? title = null,
-    Object? scheduleDate = null,
-    Object? countdownString = null,
-  }) {
-    return _then(_$MenstruationCardStateImpl(
-      title: null == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
-      scheduleDate: null == scheduleDate
-          ? _value.scheduleDate
-          : scheduleDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      countdownString: null == countdownString
-          ? _value.countdownString
-          : countdownString // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? title = null, Object? scheduleDate = null, Object? countdownString = null}) {
+    return _then(
+      _$MenstruationCardStateImpl(
+        title: null == title
+            ? _value.title
+            : title // ignore: cast_nullable_to_non_nullable
+                  as String,
+        scheduleDate: null == scheduleDate
+            ? _value.scheduleDate
+            : scheduleDate // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        countdownString: null == countdownString
+            ? _value.countdownString
+            : countdownString // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 

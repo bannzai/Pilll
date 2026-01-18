@@ -53,24 +53,11 @@ class SpecialOfferingAnnouncementBar2 extends HookConsumerWidget {
 過去30日間で$missedDays日記録がなかったようです
 97.2%の人が「飲み忘れが減った」と回答！
 特別価格でプレミアムプランをゲット！''',
-                style: const TextStyle(
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14,
-                  color: TextColor.white,
-                ),
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
                 textAlign: TextAlign.center,
               ),
             ),
-            const Positioned(
-              right: 0,
-              top: 20,
-              child: Icon(
-                Icons.chevron_right,
-                color: Colors.white,
-                size: 24,
-              ),
-            ),
+            const Positioned(right: 0, top: 20, child: Icon(Icons.chevron_right, color: Colors.white, size: 24)),
           ],
         ),
       ),

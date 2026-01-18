@@ -18,20 +18,12 @@ class ErrorAlert extends StatelessWidget {
     return AlertDialog(
       title: Text(
         title ?? L.errorOccurred,
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w600,
-          fontSize: 16,
-          color: TextColor.black,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.black),
       ),
-      content: Text(errorMessage,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.black,
-          )),
+      content: Text(
+        errorMessage,
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.black),
+      ),
       actions: <Widget>[
         if (faq != null)
           AlertButton(
@@ -78,11 +70,7 @@ void showErrorAlert(BuildContext? context, Object error) {
   showDialog(
     context: context,
     builder: (_) {
-      return ErrorAlert(
-        title: title,
-        errorMessage: message,
-        faqLinkURL: faqLinkURL,
-      );
+      return ErrorAlert(title: title, errorMessage: message, faqLinkURL: faqLinkURL);
     },
   );
 }

@@ -18,11 +18,11 @@ _$ReminderNotificationCustomizationImpl _$$ReminderNotificationCustomizationImpl
     );
 
 Map<String, dynamic> _$$ReminderNotificationCustomizationImplToJson(_$ReminderNotificationCustomizationImpl instance) => <String, dynamic>{
-      'version': instance.version,
-      'word': instance.word,
-      'isInVisibleReminderDate': instance.isInVisibleReminderDate,
-      'isInVisiblePillNumber': instance.isInVisiblePillNumber,
-      'isInVisibleDescription': instance.isInVisibleDescription,
-      'dailyTakenMessage': instance.dailyTakenMessage,
-      'missedTakenMessage': instance.missedTakenMessage,
-    };
+  'version': instance.version,
+  'word': instance.word,
+  'isInVisibleReminderDate': instance.isInVisibleReminderDate,
+  'isInVisiblePillNumber': instance.isInVisiblePillNumber,
+  'isInVisibleDescription': instance.isInVisibleDescription,
+  'dailyTakenMessage': instance.dailyTakenMessage,
+  'missedTakenMessage': instance.missedTakenMessage,
+};

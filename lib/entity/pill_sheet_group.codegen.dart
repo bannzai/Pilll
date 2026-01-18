@@ -47,19 +47,12 @@ class PillSheetGroup with _$PillSheetGroup {
 
     /// グループ作成日時（必須項目）
     /// Firestoreのタイムスタンプとして保存される
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdAt,
 
     /// 削除日時（論理削除で使用）
     /// nullの場合は削除されていない状態を表す
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? deletedAt,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? deletedAt,
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
     /// ピル番号の表示設定（カスタマイズ用）
     /// 開始番号・終了番号のユーザーカスタマイズを管理
@@ -216,10 +209,7 @@ class PillSheetGroup with _$PillSheetGroup {
   /// グループに含まれる全ピルシートの服用お休み期間のリスト
   /// 各ピルシートの休薬期間を統合した配列を取得
   List<RestDuration> get restDurations {
-    return pillSheets.fold<List<RestDuration>>(
-      [],
-      (previousValue, element) => previousValue + element.restDurations,
-    );
+    return pillSheets.fold<List<RestDuration>>([], (previousValue, element) => previousValue + element.restDurations);
   }
 
   /// ピルシート内番号表示用のピルマーク値リスト（遅延初期化）
@@ -259,9 +249,9 @@ extension PillSheetGroupPillSheetModifiedHistoryDomain on PillSheetGroup {
         return _pillNumbersInPillSheet(estimatedEventCausingDate: estimatedEventCausingDate).firstWhere((e) => isSameDay(e.date, targetDate)).number;
       case PillSheetAppearanceMode.sequential:
       case PillSheetAppearanceMode.cyclicSequential:
-        return _pillNumbersForCyclicSequential(estimatedEventCausingDate: estimatedEventCausingDate)
-            .firstWhere((e) => isSameDay(e.date, targetDate))
-            .number;
+        return _pillNumbersForCyclicSequential(
+          estimatedEventCausingDate: estimatedEventCausingDate,
+        ).firstWhere((e) => isSameDay(e.date, targetDate)).number;
     }
   }
 
@@ -334,9 +324,10 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
   }) {
     final pillNumber = switch (pillSheetAppearanceMode) {
       PillSheetAppearanceMode.number => _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
-      PillSheetAppearanceMode.date => premiumOrTrial
-          ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
-          : _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
+      PillSheetAppearanceMode.date =>
+        premiumOrTrial
+            ? _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet)
+            : _pillNumberInPillSheet(pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.sequential => _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
       PillSheetAppearanceMode.cyclicSequential => _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet),
     };
@@ -345,47 +336,33 @@ extension PillSheetGroupDisplayDomain on PillSheetGroup {
 
   /// ピルシート内番号をそのまま返す
   /// number/dateモード用の基本的な番号取得
-  int _pillNumberInPillSheet({
-    required int pillNumberInPillSheet,
-  }) {
+  int _pillNumberInPillSheet({required int pillNumberInPillSheet}) {
     return pillNumberInPillSheet;
   }
 
   /// ピルシートの日付表示文字列を取得（テスト用）
   /// dateモード用の日付フォーマット処理
   @visibleForTesting
-  String displayPillSheetDate({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
+  String displayPillSheetDate({required int pageIndex, required int pillNumberInPillSheet}) {
     return _displayPillSheetDate(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
   /// ピルシートの日付表示文字列を内部生成
   /// 月日形式でフォーマットされた文字列を返す
-  String _displayPillSheetDate({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
+  String _displayPillSheetDate({required int pageIndex, required int pillNumberInPillSheet}) {
     return DateTimeFormatter.monthAndDay(pillSheets[pageIndex].displayPillTakeDate(pillNumberInPillSheet));
   }
 
   /// 連続番号を取得（テスト用）
   /// sequential/cyclicSequentialモード用の番号計算
   @visibleForTesting
-  int cycleSequentialPillSheetNumber({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
+  int cycleSequentialPillSheetNumber({required int pageIndex, required int pillNumberInPillSheet}) {
     return _cycleSequentialPillSheetNumber(pageIndex: pageIndex, pillNumberInPillSheet: pillNumberInPillSheet);
   }
 
   /// 連続番号を内部計算
   /// 指定されたページとピル番号に対応する連続番号を算出
-  int _cycleSequentialPillSheetNumber({
-    required int pageIndex,
-    required int pillNumberInPillSheet,
-  }) {
+  int _cycleSequentialPillSheetNumber({required int pageIndex, required int pillNumberInPillSheet}) {
     return pillNumbersForCyclicSequential.where((e) => e.pillSheet.groupIndex == pageIndex).toList()[pillNumberInPillSheet - 1].number;
   }
 }
@@ -415,11 +392,13 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
   /// estimatedEventCausingDateは履歴機能で使用される
   List<PillSheetGroupPillNumberDomainPillMarkValue> _pillNumbersInPillSheet({DateTime? estimatedEventCausingDate}) {
     return pillSheets
-        .map((pillSheet) => pillSheet
-            .buildDates(estimatedEventCausingDate: estimatedEventCausingDate)
-            .indexed
-            .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1 + 1))
-            .toList())
+        .map(
+          (pillSheet) => pillSheet
+              .buildDates(estimatedEventCausingDate: estimatedEventCausingDate)
+              .indexed
+              .map((e) => PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: e.$2, number: e.$1 + 1))
+              .toList(),
+        )
         .flattened
         .toList();
   }
@@ -435,13 +414,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
       for (final date in pillSheet.buildDates(estimatedEventCausingDate: estimatedEventCausingDate)) {
         // 1つ目はbeginNumber or 1が設定される。2つ目以降は前のピル番号+1を基本的に設定していく
         if (pillMarks.isEmpty) {
-          pillMarks.add(
-            PillSheetGroupPillNumberDomainPillMarkValue(
-              pillSheet: pillSheet,
-              date: date,
-              number: beginPillNumber,
-            ),
-          );
+          pillMarks.add(PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: date, number: beginPillNumber));
         } else {
           var number = pillMarks.last.number + 1;
           for (final restDuration in restDurations) {
@@ -462,13 +435,7 @@ extension PillSheetGroupPillNumberDomain on PillSheetGroup {
             // 終了番号が設定されてない場合にピルシートのピルの数をendPillNumberの代わりとして使用してはいけない。開始番号が10で、19番目のピルシートは29と表記すべきだから
             number = 1;
           }
-          pillMarks.add(
-            PillSheetGroupPillNumberDomainPillMarkValue(
-              pillSheet: pillSheet,
-              date: date,
-              number: number,
-            ),
-          );
+          pillMarks.add(PillSheetGroupPillNumberDomainPillMarkValue(pillSheet: pillSheet, date: date, number: number));
         }
       }
     }
@@ -518,10 +485,7 @@ extension PillSheetGroupMenstruationDomain on PillSheetGroup {
         final right = left.addDays(setting.durationMenstruation - 1);
         menstruationDateRanges.add(DateRange(left, right));
       } else {
-        final summarizedPillCount = pillSheets.fold<int>(
-          0,
-          (previousValue, element) => previousValue + element.typeInfo.totalCount,
-        );
+        final summarizedPillCount = pillSheets.fold<int>(0, (previousValue, element) => previousValue + element.typeInfo.totalCount);
 
         // ピルシートグループの中に何度pillNumberForFromMenstruation が出てくるか算出
         final numberOfMenstruationSettingInPillSheetGroup = summarizedPillCount ~/ setting.pillNumberForFromMenstruation;

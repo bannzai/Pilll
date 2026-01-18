@@ -11,16 +11,12 @@ class AboutChurn extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
-      title: Text(L.unsubscribeInfo,
-          style: const TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: Text(
+        L.unsubscribeInfo,
+        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+      ),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_about_churn',
-        );
+        analytics.logEvent(name: 'did_select_about_churn');
 
         launchUrl(Uri.parse('https://pilll.notion.site/b10fd76f1d2246d286ad5cff03f22940'), mode: LaunchMode.inAppBrowserView);
       },

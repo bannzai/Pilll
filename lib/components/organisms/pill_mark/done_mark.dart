@@ -4,20 +4,10 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PillMarkDoneMark extends StatelessWidget {
-  const PillMarkDoneMark({
-    super.key,
-  });
+  const PillMarkDoneMark({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      'images/checkmark.svg',
-      colorFilter: const ColorFilter.mode(
-        AppColors.potti,
-        BlendMode.srcIn,
-      ),
-      width: 11,
-      height: 8.5,
-    );
+    return SvgPicture.asset('images/checkmark.svg', colorFilter: const ColorFilter.mode(AppColors.potti, BlendMode.srcIn), width: 11, height: 8.5);
   }
 }

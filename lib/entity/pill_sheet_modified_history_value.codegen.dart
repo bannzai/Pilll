@@ -85,10 +85,7 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
     // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
     /// ピルシート作成日時（非推奨）
     /// Firestoreタイムスタンプから自動変換される作成日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime pillSheetCreatedAt,
 
     /// 作成されたピルシートのIDリスト（非推奨）
@@ -110,18 +107,11 @@ class AutomaticallyRecordedLastTakenDateValue with _$AutomaticallyRecordedLastTa
     // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
     /// 変更前の最終服用日（非推奨、nullable）
     /// 初回服用の場合はnullとなる
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? beforeLastTakenDate,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
 
     /// 変更後の最終服用日（非推奨）
     /// 自動記録によって設定された新しい最終服用日
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime afterLastTakenDate,
 
     /// 変更前の最終服用ピル番号（非推奨）
@@ -147,10 +137,7 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
     // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
     /// ピルシート削除日時（非推奨）
     /// Firestoreタイムスタンプから自動変換される削除日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime pillSheetDeletedAt,
 
     /// 削除されたピルシートのIDリスト（非推奨）
@@ -185,18 +172,11 @@ class TakenPillValue with _$TakenPillValue {
     // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
     /// 変更前の最終服用日（非推奨、nullable）
     /// 初回服用の場合はnullとなる
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? beforeLastTakenDate,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
 
     /// 変更後の最終服用日（非推奨）
     /// 服用記録によって設定された新しい最終服用日
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime afterLastTakenDate,
 
     /// 変更前の最終服用ピル番号（非推奨）
@@ -223,27 +203,18 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
     /// 実際の服用時刻（v1追加）
     /// ユーザーが編集した後の正確な服用時刻
     // 実際の服用時刻。ユーザーが編集した後の服用時刻
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime actualTakenDate,
 
     /// 元の履歴記録時刻（v1追加）
     /// 通常はユーザーが編集する前の服用時刻として記録される
     // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime historyRecordedDate,
 
     /// 編集操作の作成日時（v1追加）
     /// この編集レコードがデータベースに作成された日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdDate,
     // ============ END: Added since v1 ============
   }) = _TakenPillEditedValue;
@@ -263,19 +234,11 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
     // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
     /// 取り消し前の最終服用日（非推奨、nullable）
     /// 取り消し操作前の最終服用日
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    DateTime? beforeLastTakenDate,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
 
     /// 取り消し後の最終服用日（非推奨、nullable）
     /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime? afterLastTakenDate,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required DateTime? afterLastTakenDate,
 
     /// 取り消し前の最終服用ピル番号（非推奨）
     /// 取り消し操作前のピル番号
@@ -301,18 +264,12 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
     // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
     /// 変更前の開始日（非推奨）
     /// ピル番号変更前のピルシート開始日
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime beforeBeginingDate,
 
     /// 変更後の開始日（非推奨）
     /// ピル番号変更後のピルシート開始日
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime afterBeginingDate,
 
     /// 変更前の今日のピル番号（非推奨）
@@ -346,19 +303,13 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
     /// 終了記録日（必須）
     /// サーバーで書き込まれるピルシート終了の公式記録日時
     // 終了した日付。サーバーで書き込まれる
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime endRecordDate,
 
     /// 終了時点での最終服用日（必須）
     /// シート終了時の最後に服用したピルの日付
     // 終了した時点での最終服用日
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 

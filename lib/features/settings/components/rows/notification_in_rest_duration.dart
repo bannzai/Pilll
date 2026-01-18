@@ -14,11 +14,7 @@ class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
   final Setting setting;
 
-  const NotificationInRestDuration({
-    super.key,
-    required this.pillSheet,
-    required this.setting,
-  });
+  const NotificationInRestDuration({super.key, required this.pillSheet, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,36 +22,23 @@ class NotificationInRestDuration extends HookConsumerWidget {
     final registerReminderLocalNotification = ref.watch(registerReminderLocalNotificationProvider);
 
     return SwitchListTile(
-      title: Text('${pillSheet.pillSheetType.notTakenWord}期間の通知',
-          style: const TextStyle(
-            fontFamily: FontFamily.roboto,
-            fontWeight: FontWeight.w300,
-            fontSize: 16,
-          )),
+      title: Text(
+        '${pillSheet.pillSheetType.notTakenWord}期間の通知',
+        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
+      ),
       subtitle: Text(
         L.autoRecordForNotTakenPeriodIfNotificationOff(pillSheet.pillSheetType.notTakenWord),
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w300,
-          fontSize: 14,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14),
       ),
       activeThumbColor: AppColors.secondary,
       onChanged: (bool value) async {
-        analytics.logEvent(
-          name: 'toggle_notify_not_taken_duration',
-        );
+        analytics.logEvent(name: 'toggle_notify_not_taken_duration');
         final messenger = ScaffoldMessenger.of(context);
         messenger.hideCurrentSnackBar();
         await setSetting(setting.copyWith(isOnNotifyInNotTakenDuration: value));
         await registerReminderLocalNotification();
         messenger.showSnackBar(
-          SnackBar(
-            duration: const Duration(seconds: 2),
-            content: Text(
-              "${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました",
-            ),
-          ),
+          SnackBar(duration: const Duration(seconds: 2), content: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知を${value ? "ON" : "OFF"}にしました")),
         );
       },
       value: setting.isOnNotifyInNotTakenDuration,

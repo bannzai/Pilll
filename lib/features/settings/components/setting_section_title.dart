@@ -6,20 +6,10 @@ class SettingSectionTitle extends StatelessWidget {
   final String text;
   final List<Widget> children;
 
-  const SettingSectionTitle({
-    super.key,
-    required this.text,
-    required this.children,
-  });
+  const SettingSectionTitle({super.key, required this.text, required this.children});
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        _section(),
-        ...children,
-      ],
-    );
+    return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [_section(), ...children]);
   }
 
   Widget _section() {
@@ -27,12 +17,7 @@ class SettingSectionTitle extends StatelessWidget {
       padding: const EdgeInsets.only(top: 32, left: 15, right: 16),
       child: Text(
         text,
-        style: const TextStyle(
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w300,
-          fontSize: 14,
-          color: TextColor.main,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
       ),
     );
   }

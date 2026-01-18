@@ -40,10 +40,7 @@ class LifetimePurchaseButton extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: AppColors.blueBackground,
                   borderRadius: const BorderRadius.all(Radius.circular(4)),
-                  border: Border.all(
-                    width: 2,
-                    color: AppColors.primary,
-                  ),
+                  border: Border.all(width: 2, color: AppColors.primary),
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -51,30 +48,15 @@ class LifetimePurchaseButton extends StatelessWidget {
                   children: [
                     Text(
                       L.lifetimePlan,
-                      style: const TextStyle(
-                        color: TextColor.main,
-                        fontFamily: FontFamily.japanese,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                      ),
+                      style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 16, fontWeight: FontWeight.w700),
                     ),
                     Text(
                       lifetimePackage.storeProduct.priceString,
-                      style: const TextStyle(
-                        color: TextColor.main,
-                        fontFamily: FontFamily.japanese,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w600,
-                      ),
+                      style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 16, fontWeight: FontWeight.w600),
                     ),
                     Text(
                       L.lifetimePlanDescription,
-                      style: const TextStyle(
-                        color: TextColor.main,
-                        fontFamily: FontFamily.japanese,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                      ),
+                      style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 14, fontWeight: FontWeight.w400),
                     ),
                   ],
                 ),
@@ -84,10 +66,7 @@ class LifetimePurchaseButton extends StatelessWidget {
           if (discountRate != null && offeringType == OfferingType.discount)
             Positioned(
               top: -5,
-              child: _LifetimeDiscountBadge(
-                discountRate: discountRate!,
-                lifetimePremiumPackage: lifetimePremiumPackage,
-              ),
+              child: _LifetimeDiscountBadge(discountRate: discountRate!, lifetimePremiumPackage: lifetimePremiumPackage),
             ),
         ],
       ),
@@ -99,27 +78,16 @@ class _LifetimeDiscountBadge extends StatelessWidget {
   final double discountRate;
   final Package? lifetimePremiumPackage;
 
-  const _LifetimeDiscountBadge({
-    required this.discountRate,
-    required this.lifetimePremiumPackage,
-  });
+  const _LifetimeDiscountBadge({required this.discountRate, required this.lifetimePremiumPackage});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: AppColors.secondary,
-      ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: AppColors.secondary),
       child: Text(
         '通常買い切り価格の ${lifetimePremiumPackage?.storeProduct.priceString ?? "¥20,000"} よりも ${discountRate.toInt()}％OFF',
-        style: const TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 10,
-          fontFamily: FontFamily.japanese,
-          color: TextColor.white,
-        ),
+        style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 10, fontFamily: FontFamily.japanese, color: TextColor.white),
       ),
     );
   }

@@ -12,7 +12,8 @@ part of 'pill.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PillTaken _$PillTakenFromJson(Map<String, dynamic> json) {
   return _PillTaken.fromJson(json);
@@ -45,14 +46,13 @@ mixin _$PillTaken {
 abstract class $PillTakenCopyWith<$Res> {
   factory $PillTakenCopyWith(PillTaken value, $Res Function(PillTaken) then) = _$PillTakenCopyWithImpl<$Res, PillTaken>;
   @useResult
-  $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime recordedTakenDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime updatedDateTime,
-      bool isAutomaticallyRecorded});
+  $Res call({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    DateTime recordedTakenDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime updatedDateTime,
+    bool isAutomaticallyRecorded,
+  });
 }
 
 /// @nodoc
@@ -72,24 +72,27 @@ class _$PillTakenCopyWithImpl<$Res, $Val extends PillTaken> implements $PillTake
     Object? updatedDateTime = null,
     Object? isAutomaticallyRecorded = null,
   }) {
-    return _then(_value.copyWith(
-      recordedTakenDateTime: null == recordedTakenDateTime
-          ? _value.recordedTakenDateTime
-          : recordedTakenDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdDateTime: null == createdDateTime
-          ? _value.createdDateTime
-          : createdDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedDateTime: null == updatedDateTime
-          ? _value.updatedDateTime
-          : updatedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isAutomaticallyRecorded: null == isAutomaticallyRecorded
-          ? _value.isAutomaticallyRecorded
-          : isAutomaticallyRecorded // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            recordedTakenDateTime: null == recordedTakenDateTime
+                ? _value.recordedTakenDateTime
+                : recordedTakenDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            createdDateTime: null == createdDateTime
+                ? _value.createdDateTime
+                : createdDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            updatedDateTime: null == updatedDateTime
+                ? _value.updatedDateTime
+                : updatedDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            isAutomaticallyRecorded: null == isAutomaticallyRecorded
+                ? _value.isAutomaticallyRecorded
+                : isAutomaticallyRecorded // ignore: cast_nullable_to_non_nullable
+                      as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -98,14 +101,13 @@ abstract class _$$PillTakenImplCopyWith<$Res> implements $PillTakenCopyWith<$Res
   factory _$$PillTakenImplCopyWith(_$PillTakenImpl value, $Res Function(_$PillTakenImpl) then) = __$$PillTakenImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime recordedTakenDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime updatedDateTime,
-      bool isAutomaticallyRecorded});
+  $Res call({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    DateTime recordedTakenDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime updatedDateTime,
+    bool isAutomaticallyRecorded,
+  });
 }
 
 /// @nodoc
@@ -120,24 +122,26 @@ class __$$PillTakenImplCopyWithImpl<$Res> extends _$PillTakenCopyWithImpl<$Res, 
     Object? updatedDateTime = null,
     Object? isAutomaticallyRecorded = null,
   }) {
-    return _then(_$PillTakenImpl(
-      recordedTakenDateTime: null == recordedTakenDateTime
-          ? _value.recordedTakenDateTime
-          : recordedTakenDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      createdDateTime: null == createdDateTime
-          ? _value.createdDateTime
-          : createdDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedDateTime: null == updatedDateTime
-          ? _value.updatedDateTime
-          : updatedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      isAutomaticallyRecorded: null == isAutomaticallyRecorded
-          ? _value.isAutomaticallyRecorded
-          : isAutomaticallyRecorded // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$PillTakenImpl(
+        recordedTakenDateTime: null == recordedTakenDateTime
+            ? _value.recordedTakenDateTime
+            : recordedTakenDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        createdDateTime: null == createdDateTime
+            ? _value.createdDateTime
+            : createdDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        updatedDateTime: null == updatedDateTime
+            ? _value.updatedDateTime
+            : updatedDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        isAutomaticallyRecorded: null == isAutomaticallyRecorded
+            ? _value.isAutomaticallyRecorded
+            : isAutomaticallyRecorded // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      ),
+    );
   }
 }
 
@@ -145,14 +149,15 @@ class __$$PillTakenImplCopyWithImpl<$Res> extends _$PillTakenCopyWithImpl<$Res, 
 
 @JsonSerializable(explicitToJson: true)
 class _$PillTakenImpl implements _PillTaken {
-  const _$PillTakenImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.recordedTakenDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.updatedDateTime,
-      this.isAutomaticallyRecorded = false});
+  const _$PillTakenImpl({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.recordedTakenDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.updatedDateTime,
+    this.isAutomaticallyRecorded = false,
+  });
 
   factory _$PillTakenImpl.fromJson(Map<String, dynamic> json) => _$$PillTakenImplFromJson(json);
 
@@ -204,42 +209,37 @@ class _$PillTakenImpl implements _PillTaken {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PillTakenImplToJson(
-      this,
-    );
+    return _$$PillTakenImplToJson(this);
   }
 }
 
 abstract class _PillTaken implements PillTaken {
-  const factory _PillTaken(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime recordedTakenDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime updatedDateTime,
-      final bool isAutomaticallyRecorded}) = _$PillTakenImpl;
+  const factory _PillTaken({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime recordedTakenDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime updatedDateTime,
+    final bool isAutomaticallyRecorded,
+  }) = _$PillTakenImpl;
 
   factory _PillTaken.fromJson(Map<String, dynamic> json) = _$PillTakenImpl.fromJson;
 
   @override
-
   /// 服用記録日時
   /// 同時服用を行った場合は対象となるPillTakenのrecordedTakenDateTimeは同一にする
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get recordedTakenDateTime;
   @override
-
   /// レコード作成日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime;
   @override
-
   /// レコード更新日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get updatedDateTime;
   @override
-
   /// バックエンドで自動的に記録された場合にtrue
   bool get isAutomaticallyRecorded;
   @override
@@ -281,14 +281,13 @@ mixin _$Pill {
 abstract class $PillCopyWith<$Res> {
   factory $PillCopyWith(Pill value, $Res Function(Pill) then) = _$PillCopyWithImpl<$Res, Pill>;
   @useResult
-  $Res call(
-      {int index,
-      int takenCount,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime updatedDateTime,
-      List<PillTaken> pillTakens});
+  $Res call({
+    int index,
+    int takenCount,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime updatedDateTime,
+    List<PillTaken> pillTakens,
+  });
 }
 
 /// @nodoc
@@ -309,28 +308,31 @@ class _$PillCopyWithImpl<$Res, $Val extends Pill> implements $PillCopyWith<$Res>
     Object? updatedDateTime = null,
     Object? pillTakens = null,
   }) {
-    return _then(_value.copyWith(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      takenCount: null == takenCount
-          ? _value.takenCount
-          : takenCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDateTime: null == createdDateTime
-          ? _value.createdDateTime
-          : createdDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedDateTime: null == updatedDateTime
-          ? _value.updatedDateTime
-          : updatedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      pillTakens: null == pillTakens
-          ? _value.pillTakens
-          : pillTakens // ignore: cast_nullable_to_non_nullable
-              as List<PillTaken>,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            index: null == index
+                ? _value.index
+                : index // ignore: cast_nullable_to_non_nullable
+                      as int,
+            takenCount: null == takenCount
+                ? _value.takenCount
+                : takenCount // ignore: cast_nullable_to_non_nullable
+                      as int,
+            createdDateTime: null == createdDateTime
+                ? _value.createdDateTime
+                : createdDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            updatedDateTime: null == updatedDateTime
+                ? _value.updatedDateTime
+                : updatedDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            pillTakens: null == pillTakens
+                ? _value.pillTakens
+                : pillTakens // ignore: cast_nullable_to_non_nullable
+                      as List<PillTaken>,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -339,14 +341,13 @@ abstract class _$$PillImplCopyWith<$Res> implements $PillCopyWith<$Res> {
   factory _$$PillImplCopyWith(_$PillImpl value, $Res Function(_$PillImpl) then) = __$$PillImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int index,
-      int takenCount,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime updatedDateTime,
-      List<PillTaken> pillTakens});
+  $Res call({
+    int index,
+    int takenCount,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime updatedDateTime,
+    List<PillTaken> pillTakens,
+  });
 }
 
 /// @nodoc
@@ -362,28 +363,30 @@ class __$$PillImplCopyWithImpl<$Res> extends _$PillCopyWithImpl<$Res, _$PillImpl
     Object? updatedDateTime = null,
     Object? pillTakens = null,
   }) {
-    return _then(_$PillImpl(
-      index: null == index
-          ? _value.index
-          : index // ignore: cast_nullable_to_non_nullable
-              as int,
-      takenCount: null == takenCount
-          ? _value.takenCount
-          : takenCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      createdDateTime: null == createdDateTime
-          ? _value.createdDateTime
-          : createdDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      updatedDateTime: null == updatedDateTime
-          ? _value.updatedDateTime
-          : updatedDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      pillTakens: null == pillTakens
-          ? _value._pillTakens
-          : pillTakens // ignore: cast_nullable_to_non_nullable
-              as List<PillTaken>,
-    ));
+    return _then(
+      _$PillImpl(
+        index: null == index
+            ? _value.index
+            : index // ignore: cast_nullable_to_non_nullable
+                  as int,
+        takenCount: null == takenCount
+            ? _value.takenCount
+            : takenCount // ignore: cast_nullable_to_non_nullable
+                  as int,
+        createdDateTime: null == createdDateTime
+            ? _value.createdDateTime
+            : createdDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        updatedDateTime: null == updatedDateTime
+            ? _value.updatedDateTime
+            : updatedDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        pillTakens: null == pillTakens
+            ? _value._pillTakens
+            : pillTakens // ignore: cast_nullable_to_non_nullable
+                  as List<PillTaken>,
+      ),
+    );
   }
 }
 
@@ -391,16 +394,16 @@ class __$$PillImplCopyWithImpl<$Res> extends _$PillCopyWithImpl<$Res, _$PillImpl
 
 @JsonSerializable(explicitToJson: true)
 class _$PillImpl extends _Pill {
-  const _$PillImpl(
-      {required this.index,
-      required this.takenCount,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.updatedDateTime,
-      required final List<PillTaken> pillTakens})
-      : _pillTakens = pillTakens,
-        super._();
+  const _$PillImpl({
+    required this.index,
+    required this.takenCount,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.updatedDateTime,
+    required final List<PillTaken> pillTakens,
+  }) : _pillTakens = pillTakens,
+       super._();
 
   factory _$PillImpl.fromJson(Map<String, dynamic> json) => _$$PillImplFromJson(json);
 
@@ -464,46 +467,40 @@ class _$PillImpl extends _Pill {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PillImplToJson(
-      this,
-    );
+    return _$$PillImplToJson(this);
   }
 }
 
 abstract class _Pill extends Pill {
-  const factory _Pill(
-      {required final int index,
-      required final int takenCount,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime createdDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime updatedDateTime,
-      required final List<PillTaken> pillTakens}) = _$PillImpl;
+  const factory _Pill({
+    required final int index,
+    required final int takenCount,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime createdDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime updatedDateTime,
+    required final List<PillTaken> pillTakens,
+  }) = _$PillImpl;
   const _Pill._() : super._();
 
   factory _Pill.fromJson(Map<String, dynamic> json) = _$PillImpl.fromJson;
 
   @override
-
   /// ピルシート内のインデックス（0始まり）
   int get index;
   @override
-
   /// このピルで服用すべき回数
   /// 1日2錠の場合は2、1日1錠の場合は1
   int get takenCount;
   @override
-
   /// レコード作成日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdDateTime;
   @override
-
   /// レコード更新日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get updatedDateTime;
   @override
-
   /// 服用記録のリスト
   /// 2錠飲みの場合は2つのPillTakenが入る
   List<PillTaken> get pillTakens;

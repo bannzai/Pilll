@@ -7,12 +7,12 @@ part of 'schedule.codegen.dart';
 // **************************************************************************
 
 _$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) => _$ScheduleImpl(
-      id: json['id'] as String?,
-      title: json['title'] as String,
-      date: NonNullTimestampConverter.timestampToDateTime(json['date'] as Timestamp),
-      localNotification: json['localNotification'] == null ? null : LocalNotification.fromJson(json['localNotification'] as Map<String, dynamic>),
-      createdDateTime: NonNullTimestampConverter.timestampToDateTime(json['createdDateTime'] as Timestamp),
-    );
+  id: json['id'] as String?,
+  title: json['title'] as String,
+  date: NonNullTimestampConverter.timestampToDateTime(json['date'] as Timestamp),
+  localNotification: json['localNotification'] == null ? null : LocalNotification.fromJson(json['localNotification'] as Map<String, dynamic>),
+  createdDateTime: NonNullTimestampConverter.timestampToDateTime(json['createdDateTime'] as Timestamp),
+);
 
 Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   final val = <String, dynamic>{};
@@ -32,11 +32,11 @@ Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
 }
 
 _$LocalNotificationImpl _$$LocalNotificationImplFromJson(Map<String, dynamic> json) => _$LocalNotificationImpl(
-      localNotificationID: (json['localNotificationID'] as num).toInt(),
-      remindDateTime: NonNullTimestampConverter.timestampToDateTime(json['remindDateTime'] as Timestamp),
-    );
+  localNotificationID: (json['localNotificationID'] as num).toInt(),
+  remindDateTime: NonNullTimestampConverter.timestampToDateTime(json['remindDateTime'] as Timestamp),
+);
 
 Map<String, dynamic> _$$LocalNotificationImplToJson(_$LocalNotificationImpl instance) => <String, dynamic>{
-      'localNotificationID': instance.localNotificationID,
-      'remindDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.remindDateTime),
-    };
+  'localNotificationID': instance.localNotificationID,
+  'remindDateTime': NonNullTimestampConverter.dateTimeToTimestamp(instance.remindDateTime),
+};

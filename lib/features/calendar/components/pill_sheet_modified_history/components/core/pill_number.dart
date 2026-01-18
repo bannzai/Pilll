@@ -7,10 +7,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/formatter/date_time_formatter.dart';
 
 class PillNumber extends StatelessWidget {
-  const PillNumber({
-    super.key,
-    required this.pillNumber,
-  });
+  const PillNumber({super.key, required this.pillNumber});
 
   final String pillNumber;
 
@@ -18,12 +15,7 @@ class PillNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       pillNumber,
-      style: const TextStyle(
-        color: TextColor.main,
-        fontFamily: FontFamily.japanese,
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-      ),
+      style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
       textAlign: TextAlign.start,
     );
   }
@@ -128,8 +120,7 @@ abstract class PillSheetModifiedHistoryPillNumberOrDate {
     required int beforeTodayPillNumber,
     required int afterTodayPillNumber,
     required PillSheetAppearanceMode pillSheetAppearanceMode,
-  }) =>
-      _formatPillNumber('$beforeTodayPillNumber→$afterTodayPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
+  }) => _formatPillNumber('$beforeTodayPillNumber→$afterTodayPillNumber', pillSheetAppearanceMode: pillSheetAppearanceMode);
 
   static String changedBeginDisplayNumberSetting(ChangedBeginDisplayNumberValue value) {
     // 表示番号設定の変更履歴は常に「番」表記（これはピルシートの物理的な番号なため）

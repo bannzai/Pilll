@@ -9,10 +9,7 @@ abstract class WeekdayBadgeConst {
 
 class WeekdayBadge extends StatelessWidget {
   final Weekday weekday;
-  const WeekdayBadge({
-    super.key,
-    required this.weekday,
-  });
+  const WeekdayBadge({super.key, required this.weekday});
 
   @override
   Widget build(BuildContext context) {
@@ -21,13 +18,15 @@ class WeekdayBadge extends StatelessWidget {
       height: WeekdayBadgeConst.height,
       color: AppColors.white,
       child: Center(
-        child: Text(weekday.weekdayString(),
-            textAlign: TextAlign.end,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
-              fontSize: 9,
-            ).merge(TextStyle(color: weekday.weekdayColor()))),
+        child: Text(
+          weekday.weekdayString(),
+          textAlign: TextAlign.end,
+          style: const TextStyle(
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w600,
+            fontSize: 9,
+          ).merge(TextStyle(color: weekday.weekdayColor())),
+        ),
       ),
     );
   }

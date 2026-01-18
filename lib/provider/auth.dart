@@ -17,10 +17,7 @@ final firebaseSignInOrCurrentUserProvider = FutureProvider<User>((ref) async {
   analytics.logEvent(name: 'current_user_provider');
   final currentUser = FirebaseAuth.instance.currentUser;
 
-  analytics.logEvent(
-    name: 'current_user_fetched',
-    parameters: _logginParameters(currentUser),
-  );
+  analytics.logEvent(name: 'current_user_fetched', parameters: _logginParameters(currentUser));
 
   if (currentUser != null) {
     analytics.logEvent(name: 'cached_current_user_exists', parameters: _logginParameters(currentUser));

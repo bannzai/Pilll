@@ -17,24 +17,15 @@ class PillTaken with _$PillTaken {
   const factory PillTaken({
     /// 服用記録日時
     /// 同時服用を行った場合は対象となるPillTakenのrecordedTakenDateTimeは同一にする
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime recordedTakenDateTime,
 
     /// レコード作成日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdDateTime,
 
     /// レコード更新日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime updatedDateTime,
 
     /// バックエンドで自動的に記録された場合にtrue
@@ -60,17 +51,11 @@ class Pill with _$Pill {
     required int takenCount,
 
     /// レコード作成日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime createdDateTime,
 
     /// レコード更新日時
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime updatedDateTime,
 
     /// 服用記録のリスト
@@ -97,17 +82,10 @@ class Pill with _$Pill {
         createdDateTime: currentDate,
         updatedDateTime: currentDate,
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
-            ? List.generate(
-                pillTakenCount,
-                (i) {
-                  // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
-                  return PillTaken(
-                    recordedTakenDateTime: lastTakenDate,
-                    createdDateTime: currentDate,
-                    updatedDateTime: currentDate,
-                  );
-                },
-              )
+            ? List.generate(pillTakenCount, (i) {
+                // ピルは複数飲む場合もあるので、dateでtakenDateTimeを更新するのではなく、引数でもらったlastTakenDateを使って値を埋める
+                return PillTaken(recordedTakenDateTime: lastTakenDate, createdDateTime: currentDate, updatedDateTime: currentDate);
+              })
             : [],
       );
     });
@@ -130,17 +108,10 @@ class Pill with _$Pill {
         createdDateTime: now(),
         updatedDateTime: now(),
         pillTakens: lastTakenDate != null && (date.isBefore(lastTakenDate) || isSameDay(date, lastTakenDate))
-            ? List.generate(
-                pillTakenCount,
-                (i) {
-                  // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
-                  return PillTaken(
-                    recordedTakenDateTime: date,
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  );
-                },
-              )
+            ? List.generate(pillTakenCount, (i) {
+                // generateAndFillToとの違いはここになる。lastTakenDateではなく、そのピルが通常服用する予定だった服用日がtakenDateTimeにセットされる
+                return PillTaken(recordedTakenDateTime: date, createdDateTime: now(), updatedDateTime: now());
+              })
             : [],
       );
     });

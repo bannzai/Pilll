@@ -9,13 +9,7 @@ class DottedLine extends StatelessWidget {
   final double dashLength;
   final double dashGapLength;
 
-  const DottedLine({
-    super.key,
-    this.lineLength = double.infinity,
-    this.height = 1,
-    this.dashLength = 3,
-    this.dashGapLength = 3,
-  });
+  const DottedLine({super.key, this.lineLength = double.infinity, this.height = 1, this.dashLength = 3, this.dashGapLength = 3});
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +19,18 @@ class DottedLine extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: 1,
-      child: LayoutBuilder(builder: (context, constraints) {
-        final dashAndDashGapCount = _calculateDashAndDashGapCount(min(constraints.maxWidth, lineLength));
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final dashAndDashGapCount = _calculateDashAndDashGapCount(min(constraints.maxWidth, lineLength));
 
-        return Wrap(
-          direction: Axis.horizontal,
-          children: List.generate(dashAndDashGapCount, (index) {
-            return index % 2 == 0 ? dash : dashGap;
-          }).toList(growable: false),
-        );
-      }),
+          return Wrap(
+            direction: Axis.horizontal,
+            children: List.generate(dashAndDashGapCount, (index) {
+              return index % 2 == 0 ? dash : dashGap;
+            }).toList(growable: false),
+          );
+        },
+      ),
     );
   }
 
@@ -51,9 +47,7 @@ class DottedLine extends StatelessWidget {
 
   Widget _buildDash() {
     return Container(
-      decoration: const BoxDecoration(
-        color: AppColors.primary,
-      ),
+      decoration: const BoxDecoration(color: AppColors.primary),
       width: dashLength,
       height: height,
     );
@@ -61,9 +55,7 @@ class DottedLine extends StatelessWidget {
 
   Widget _buildDashGap() {
     return Container(
-      decoration: const BoxDecoration(
-        color: Colors.transparent,
-      ),
+      decoration: const BoxDecoration(color: Colors.transparent),
       width: dashGapLength,
       height: height,
     );

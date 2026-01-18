@@ -25,11 +25,7 @@ class ChangePillNumber {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  ChangePillNumber({
-    required this.batchFactory,
-    required this.batchSetPillSheetModifiedHistory,
-    required this.batchSetPillSheetGroup,
-  });
+  ChangePillNumber({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
 
   Future<void> call({
     required PillSheetGroup pillSheetGroup,
@@ -40,11 +36,8 @@ class ChangePillNumber {
     final batch = batchFactory.batch();
 
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillCountWithPillSheetTypesToIndex(
-          pillSheetTypes: pillSheetTypes,
-          toIndex: pillSheetPageIndex,
-        ) +
-        pillNumberInPillSheet;
+    final nextSerializedPillNumber =
+        summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: pillSheetPageIndex) + pillNumberInPillSheet;
     final firstPilSheetBeginDate = today().subtract(Duration(days: nextSerializedPillNumber - 1));
 
     final List<PillSheet> updatedPillSheets = [];
@@ -79,11 +72,7 @@ class ChangePillNumber {
       final PillSheet updatedPillSheet;
       switch (pillSheet) {
         case PillSheetV1():
-          updatedPillSheet = pillSheet.copyWith(
-            beginDate: beginDate,
-            lastTakenDate: lastTakenDate,
-            restDurations: [],
-          );
+          updatedPillSheet = pillSheet.copyWith(beginDate: beginDate, lastTakenDate: lastTakenDate, restDurations: []);
         case PillSheetV2():
           // v2ではlastTakenDateはpillsから導出されるため、pillsを再構築する
           final pills = Pill.generateAndFillTo(
@@ -92,11 +81,7 @@ class ChangePillNumber {
             lastTakenDate: lastTakenDate,
             pillTakenCount: pillSheet.pills.first.takenCount,
           );
-          updatedPillSheet = pillSheet.copyWith(
-            beginDate: beginDate,
-            restDurations: [],
-            pills: pills,
-          );
+          updatedPillSheet = pillSheet.copyWith(beginDate: beginDate, restDurations: [], pills: pills);
       }
       updatedPillSheets.add(updatedPillSheet);
     });
@@ -110,10 +95,7 @@ class ChangePillNumber {
       afterPillSheetGroup: updatedPillSheetGroup,
     );
     batchSetPillSheetModifiedHistory(batch, history);
-    batchSetPillSheetGroup(
-      batch,
-      updatedPillSheetGroup,
-    );
+    batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     await batch.commit();
   }

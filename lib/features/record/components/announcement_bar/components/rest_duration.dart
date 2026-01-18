@@ -8,10 +8,7 @@ import 'package:pilll/features/localizations/l.dart';
 import 'package:pilll/utils/datetime/day.dart';
 
 class RestDurationAnnouncementBar extends StatelessWidget {
-  const RestDurationAnnouncementBar({
-    super.key,
-    required this.restDurationNotification,
-  });
+  const RestDurationAnnouncementBar({super.key, required this.restDurationNotification});
 
   final String restDurationNotification;
 
@@ -21,13 +18,10 @@ class RestDurationAnnouncementBar extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
       color: AppColors.primary,
       child: Center(
-        child: Text(restDurationNotification,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w600,
-              fontSize: 14,
-              color: TextColor.white,
-            )),
+        child: Text(
+          restDurationNotification,
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
+        ),
       ),
     );
   }

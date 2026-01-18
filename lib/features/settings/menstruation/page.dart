@@ -34,10 +34,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
           return diff;
         },
         markSelected: (pageIndex, fromMenstruation) async {
-          analytics.logEvent(name: 'from_menstruation_setting', parameters: {
-            'number': fromMenstruation,
-            'page': pageIndex,
-          });
+          analytics.logEvent(name: 'from_menstruation_setting', parameters: {'number': fromMenstruation, 'page': pageIndex});
           final offset = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: setting.pillSheetEnumTypes, toIndex: pageIndex);
           final updated = setting.copyWith(pillNumberForFromMenstruation: fromMenstruation + offset);
           await setSetting(updated);

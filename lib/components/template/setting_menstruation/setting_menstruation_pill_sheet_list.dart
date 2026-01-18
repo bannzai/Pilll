@@ -28,10 +28,7 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
       children: [
         Container(
           constraints: BoxConstraints(
-            maxHeight: PillSheetViewLayout.calcHeight(
-              PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet,
-              true,
-            ),
+            maxHeight: PillSheetViewLayout.calcHeight(PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet, true),
           ),
           child: PageView(
             clipBehavior: Clip.none,
@@ -63,14 +60,10 @@ class SettingMenstruationPillSheetList extends HookConsumerWidget {
             controller: pageController,
             itemCount: pillSheetTypes.length,
             onDotTapped: (page) {
-              pageController.animateToPage(
-                page,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
+              pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
             },
-          )
-        ]
+          ),
+        ],
       ],
     );
   }

@@ -11,11 +11,7 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
   final DateTime estimatedEventCausingDate;
   final ChangedEndDisplayNumberValue? value;
 
-  const PillSheetModifiedHistoryChangedEndDisplayNumberAction({
-    super.key,
-    required this.estimatedEventCausingDate,
-    required this.value,
-  });
+  const PillSheetModifiedHistoryChangedEndDisplayNumberAction({super.key, required this.estimatedEventCausingDate, required this.value});
   @override
   Widget build(BuildContext context) {
     final value = this.value;
@@ -27,12 +23,7 @@ class PillSheetModifiedHistoryChangedEndDisplayNumberAction extends StatelessWid
       pillNumbersOrHyphenOrDate: PillNumber(pillNumber: PillSheetModifiedHistoryPillNumberOrDate.changedEndDisplayNumberSetting(value)),
       detail: Text(
         L.changeEndOfPillDays,
-        style: const TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: const TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.start,
       ),
     );

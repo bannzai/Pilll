@@ -26,22 +26,16 @@ class SpecialOfferingPage2 extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return ref.watch(userProvider).when(
+    return ref
+        .watch(userProvider)
+        .when(
           data: (user) {
-            return SpecialOfferingPageBody(
-              user: user,
-              specialOfferingIsClosed2: specialOfferingIsClosed2,
-            );
+            return SpecialOfferingPageBody(user: user, specialOfferingIsClosed2: specialOfferingIsClosed2);
           },
           error: (error, stack) => AlertDialog(
             title: const Text('エラー'),
             content: Text(error.toString()),
-            actions: [
-              TextButton(
-                onPressed: () => Navigator.of(context).pop(),
-                child: const Text('閉じる'),
-              ),
-            ],
+            actions: [TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('閉じる'))],
           ),
           loading: () => const Center(child: CircularProgressIndicator()),
         );
@@ -52,11 +46,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
   final User user;
   final ValueNotifier<bool> specialOfferingIsClosed2;
 
-  const SpecialOfferingPageBody({
-    super.key,
-    required this.user,
-    required this.specialOfferingIsClosed2,
-  });
+  const SpecialOfferingPageBody({super.key, required this.user, required this.specialOfferingIsClosed2});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -79,12 +69,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
           appBar: AppBar(
             title: const Text(
               '今回限りの特別オファー',
-              style: TextStyle(
-                color: TextColor.main,
-                fontSize: 20,
-                fontWeight: FontWeight.w600,
-                fontFamily: FontFamily.japanese,
-              ),
+              style: TextStyle(color: TextColor.main, fontSize: 20, fontWeight: FontWeight.w600, fontFamily: FontFamily.japanese),
             ),
             leading: IconButton(
               icon: const Icon(Icons.close),
@@ -99,19 +84,11 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                           return AlertDialog(
                             title: const Text(
                               '本当に閉じますか？',
-                              style: TextStyle(
-                                color: TextColor.main,
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 20,
-                              ),
+                              style: TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.bold, fontSize: 20),
                             ),
                             content: const Text(
                               'この特典は今回限りです。閉じると今後受け取ることができません。本当に閉じてもよろしいですか？',
-                              style: TextStyle(
-                                color: TextColor.main,
-                                fontSize: 16,
-                              ),
+                              style: TextStyle(color: TextColor.main, fontSize: 16),
                             ),
                             actions: [
                               AlertButton(
@@ -148,10 +125,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                 Container(
                   decoration: const BoxDecoration(
                     color: Colors.transparent,
-                    image: DecorationImage(
-                      image: AssetImage('images/premium_background.png'),
-                      fit: BoxFit.cover,
-                    ),
+                    image: DecorationImage(image: AssetImage('images/premium_background.png'), fit: BoxFit.cover),
                   ),
                   padding: const EdgeInsets.only(left: 40, right: 40, bottom: 40),
                   width: MediaQuery.of(context).size.width,
@@ -161,19 +135,13 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      PremiumIntroductionDiscountAppeal(
-                        monthlyPremiumPackage: monthlyPremiumPackage,
-                      ),
+                      PremiumIntroductionDiscountAppeal(monthlyPremiumPackage: monthlyPremiumPackage),
                       const SizedBox(height: 10),
                       SvgPicture.asset('images/arrow_down.svg'),
                       const SizedBox(height: 10),
                       const Text(
                         '今回だけの特別価格でプレミアム機能をゲット！',
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 16,
-                        ),
+                        style: TextStyle(color: TextColor.main, fontWeight: FontWeight.w600, fontSize: 16),
                       ),
                       const SizedBox(height: 20),
                       MonthlyPurchaseButton(
@@ -189,9 +157,11 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                                 showDialog(
                                   context: context,
                                   builder: (_) {
-                                    return PremiumCompleteDialog(onClose: () {
-                                      Navigator.of(context).pop();
-                                    });
+                                    return PremiumCompleteDialog(
+                                      onClose: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    );
                                   },
                                 );
                               }
@@ -217,9 +187,7 @@ class SpecialOfferingPageBody extends HookConsumerWidget {
                       const SizedBox(height: 20),
                       const AppStoreReviewCards(),
                       const SizedBox(height: 24),
-                      PremiumIntroductionFooter(
-                        isLoading: isLoading,
-                      ),
+                      PremiumIntroductionFooter(isLoading: isLoading),
                     ],
                   ),
                 ),

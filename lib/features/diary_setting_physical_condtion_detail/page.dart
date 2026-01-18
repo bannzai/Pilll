@@ -47,13 +47,10 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
         }
         return Scaffold(
           appBar: AppBar(
-            title: Text(L.physicalConditionDetail,
-                style: const TextStyle(
-                  fontSize: 17,
-                  fontFamily: FontFamily.japanese,
-                  color: TextColor.main,
-                  fontWeight: FontWeight.w600,
-                )),
+            title: Text(
+              L.physicalConditionDetail,
+              style: const TextStyle(fontSize: 17, fontFamily: FontFamily.japanese, color: TextColor.main, fontWeight: FontWeight.w600),
+            ),
             shadowColor: Colors.transparent,
           ),
           body: ListView(
@@ -64,9 +61,7 @@ class DiarySettingPhysicalConditionDetailPage extends HookConsumerWidget {
                 child: TextField(
                   controller: textFieldController,
                   decoration: InputDecoration(
-                    focusedBorder: const UnderlineInputBorder(
-                      borderSide: BorderSide(color: AppColors.secondary),
-                    ),
+                    focusedBorder: const UnderlineInputBorder(borderSide: BorderSide(color: AppColors.secondary)),
                     hintText: L.inputAndAdd,
                   ),
                   onSubmitted: (physicalConditionDetail) async {

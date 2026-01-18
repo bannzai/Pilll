@@ -7,13 +7,13 @@ part of 'inquiry.codegen.dart';
 // **************************************************************************
 
 _$InquiryImpl _$$InquiryImplFromJson(Map<String, dynamic> json) => _$InquiryImpl(
-      id: json['id'] as String?,
-      inquiryType: $enumDecode(_$InquiryTypeEnumMap, json['inquiryType']),
-      otherTypeText: json['otherTypeText'] as String?,
-      email: json['email'] as String,
-      content: json['content'] as String,
-      createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
-    );
+  id: json['id'] as String?,
+  inquiryType: $enumDecode(_$InquiryTypeEnumMap, json['inquiryType']),
+  otherTypeText: json['otherTypeText'] as String?,
+  email: json['email'] as String,
+  content: json['content'] as String,
+  createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
+);
 
 Map<String, dynamic> _$$InquiryImplToJson(_$InquiryImpl instance) {
   final val = <String, dynamic>{};
@@ -33,8 +33,4 @@ Map<String, dynamic> _$$InquiryImplToJson(_$InquiryImpl instance) {
   return val;
 }
 
-const _$InquiryTypeEnumMap = {
-  InquiryType.bugReport: 'bugReport',
-  InquiryType.featureRequest: 'featureRequest',
-  InquiryType.other: 'other',
-};
+const _$InquiryTypeEnumMap = {InquiryType.bugReport: 'bugReport', InquiryType.featureRequest: 'featureRequest', InquiryType.other: 'other'};
