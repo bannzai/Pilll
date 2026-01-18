@@ -33,8 +33,12 @@ void main() {
 
   group('#RecordPageButton', () {
     group('#RestDurationButton', () {
-      testWidgets('pill sheet has activeRestDuration', (WidgetTester tester) async {
-        final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
+      testWidgets('pill sheet has activeRestDuration', (
+        WidgetTester tester,
+      ) async {
+        final firstPillSheetBeginDate = now().subtract(
+          const Duration(days: 10),
+        );
         var pillSheets = [
           PillSheet.v1(
             id: "pill_sheet_id_1",
@@ -56,7 +60,7 @@ void main() {
             beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-          )
+          ),
         ];
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
@@ -103,8 +107,12 @@ void main() {
       });
     });
     group('#CancelButton', () {
-      testWidgets('activePillSheet.todayPillIsAlreadyTaken', (WidgetTester tester) async {
-        final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
+      testWidgets('activePillSheet.todayPillIsAlreadyTaken', (
+        WidgetTester tester,
+      ) async {
+        final firstPillSheetBeginDate = now().subtract(
+          const Duration(days: 10),
+        );
         var pillSheets = [
           PillSheet.v1(
             id: "pill_sheet_id_1",
@@ -126,7 +134,7 @@ void main() {
             beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-          )
+          ),
         ];
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
@@ -134,17 +142,19 @@ void main() {
           createdAt: now(),
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
-        final activePillSheet = (pillSheetGroup.activePillSheet!.copyWith(
-          restDurations: [
-            RestDuration(
-              id: "rest_duration_id",
-              beginDate: now().subtract(const Duration(days: 1)),
-              createdDate: now().subtract(const Duration(days: 1)),
-              endDate: now(),
-            ),
-          ],
-        ) as PillSheetV1)
-            .copyWith(lastTakenDate: now());
+        final activePillSheet =
+            (pillSheetGroup.activePillSheet!.copyWith(
+                      restDurations: [
+                        RestDuration(
+                          id: "rest_duration_id",
+                          beginDate: now().subtract(const Duration(days: 1)),
+                          createdDate: now().subtract(const Duration(days: 1)),
+                          endDate: now(),
+                        ),
+                      ],
+                    )
+                    as PillSheetV1)
+                .copyWith(lastTakenDate: now());
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillIsAlreadyTaken, true);
@@ -152,7 +162,11 @@ void main() {
 
         await tester.pumpWidget(
           ProviderScope(
-            overrides: [revertTakePillProvider.overrideWith((ref) => MockRevertTakePill())],
+            overrides: [
+              revertTakePillProvider.overrideWith(
+                (ref) => MockRevertTakePill(),
+              ),
+            ],
             child: MaterialApp(
               home: Material(
                 child: RecordPageButton(
@@ -175,7 +189,9 @@ void main() {
     });
     group('#TakenButton', () {
       testWidgets('show TakenButton', (WidgetTester tester) async {
-        final firstPillSheetBeginDate = now().subtract(const Duration(days: 10));
+        final firstPillSheetBeginDate = now().subtract(
+          const Duration(days: 10),
+        );
         var pillSheets = [
           PillSheet.v1(
             id: "pill_sheet_id_1",
@@ -197,7 +213,7 @@ void main() {
             beginDate: firstPillSheetBeginDate.add(const Duration(days: 56)),
             lastTakenDate: null,
             createdAt: now(),
-          )
+          ),
         ];
         final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: pillSheets.map((e) => e.id!).toList(),
@@ -207,16 +223,19 @@ void main() {
         );
 
         // Reason for subtract seconds: 1, pass condition of if (restDurations.last.endDate.isBefore(now()))
-        final activePillSheet = (pillSheetGroup.activePillSheet!.copyWith(
-          restDurations: [
-            RestDuration(
-                id: "rest_duration_id",
-                beginDate: now().subtract(const Duration(days: 1)),
-                createdDate: now().subtract(const Duration(days: 1)),
-                endDate: now().subtract(const Duration(seconds: 1))),
-          ],
-        ) as PillSheetV1)
-            .copyWith(lastTakenDate: yesterday());
+        final activePillSheet =
+            (pillSheetGroup.activePillSheet!.copyWith(
+                      restDurations: [
+                        RestDuration(
+                          id: "rest_duration_id",
+                          beginDate: now().subtract(const Duration(days: 1)),
+                          createdDate: now().subtract(const Duration(days: 1)),
+                          endDate: now().subtract(const Duration(seconds: 1)),
+                        ),
+                      ],
+                    )
+                    as PillSheetV1)
+                .copyWith(lastTakenDate: yesterday());
         pillSheets.replaceRange(0, 1, [activePillSheet]);
         expect(activePillSheet.activeRestDuration, isNull);
         expect(activePillSheet.todayPillIsAlreadyTaken, false);
@@ -224,9 +243,7 @@ void main() {
 
         await tester.pumpWidget(
           ProviderScope(
-            overrides: [
-              takePillProvider.overrideWith((ref) => MockTakePill()),
-            ],
+            overrides: [takePillProvider.overrideWith((ref) => MockTakePill())],
             child: MaterialApp(
               home: Material(
                 child: RecordPageButton(

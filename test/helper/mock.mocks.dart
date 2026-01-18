@@ -60,45 +60,25 @@ import 'package:purchases_flutter/purchases_flutter.dart' as _i10;
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeDateTime_0 extends _i1.SmartFake implements DateTime {
-  _FakeDateTime_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeDateTime_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeDatabaseConnection_1 extends _i1.SmartFake
     implements _i2.DatabaseConnection {
-  _FakeDatabaseConnection_1(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeDatabaseConnection_1(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeWriteBatch_2 extends _i1.SmartFake implements _i3.WriteBatch {
-  _FakeWriteBatch_2(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeWriteBatch_2(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _Fake$UserCopyWith_3<$Res> extends _i1.SmartFake
     implements _i4.$UserCopyWith<$Res> {
-  _Fake$UserCopyWith_3(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _Fake$UserCopyWith_3(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeReminderNotificationCustomization_4 extends _i1.SmartFake
@@ -106,94 +86,51 @@ class _FakeReminderNotificationCustomization_4 extends _i1.SmartFake
   _FakeReminderNotificationCustomization_4(
     Object parent,
     Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  ) : super(parent, parentInvocation);
 }
 
 class _Fake$SettingCopyWith_5<$Res> extends _i1.SmartFake
     implements _i6.$SettingCopyWith<$Res> {
-  _Fake$SettingCopyWith_5(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _Fake$SettingCopyWith_5(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakePillSheetGroup_6 extends _i1.SmartFake
     implements _i7.PillSheetGroup {
-  _FakePillSheetGroup_6(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakePillSheetGroup_6(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeMenstruation_7 extends _i1.SmartFake implements _i8.Menstruation {
-  _FakeMenstruation_7(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeMenstruation_7(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeDocumentReference_8<T extends Object?> extends _i1.SmartFake
     implements _i3.DocumentReference<T> {
-  _FakeDocumentReference_8(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeDocumentReference_8(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeCollectionReference_9<T extends Object?> extends _i1.SmartFake
     implements _i3.CollectionReference<T> {
-  _FakeCollectionReference_9(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeCollectionReference_9(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeFuture_10<T1> extends _i1.SmartFake implements _i9.Future<T1> {
-  _FakeFuture_10(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeFuture_10(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeOfferings_11 extends _i1.SmartFake implements _i10.Offerings {
-  _FakeOfferings_11(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeOfferings_11(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeBatchFactory_12 extends _i1.SmartFake implements _i11.BatchFactory {
-  _FakeBatchFactory_12(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeBatchFactory_12(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeBatchSetPillSheetModifiedHistory_13 extends _i1.SmartFake
@@ -201,31 +138,18 @@ class _FakeBatchSetPillSheetModifiedHistory_13 extends _i1.SmartFake
   _FakeBatchSetPillSheetModifiedHistory_13(
     Object parent,
     Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  ) : super(parent, parentInvocation);
 }
 
 class _FakeBatchSetPillSheetGroup_14 extends _i1.SmartFake
     implements _i13.BatchSetPillSheetGroup {
-  _FakeBatchSetPillSheetGroup_14(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeBatchSetPillSheetGroup_14(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeUser_15 extends _i1.SmartFake implements _i4.User {
-  _FakeUser_15(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeUser_15(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 class _FakeFlutterLocalNotificationsPlugin_16 extends _i1.SmartFake
@@ -233,10 +157,7 @@ class _FakeFlutterLocalNotificationsPlugin_16 extends _i1.SmartFake
   _FakeFlutterLocalNotificationsPlugin_16(
     Object parent,
     Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  ) : super(parent, parentInvocation);
 }
 
 /// A class which mocks [TodayService].
@@ -248,19 +169,12 @@ class MockTodayService extends _i1.Mock implements _i15.TodayService {
   }
 
   @override
-  DateTime now() => (super.noSuchMethod(
-        Invocation.method(
-          #now,
-          [],
-        ),
-        returnValue: _FakeDateTime_0(
-          this,
-          Invocation.method(
-            #now,
-            [],
-          ),
-        ),
-      ) as DateTime);
+  DateTime now() =>
+      (super.noSuchMethod(
+            Invocation.method(#now, []),
+            returnValue: _FakeDateTime_0(this, Invocation.method(#now, [])),
+          )
+          as DateTime);
 }
 
 /// A class which mocks [Analytics].
@@ -272,36 +186,19 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
   }
 
   @override
-  void debug({
-    required String? name,
-    Map<String, Object?>? parameters,
-  }) =>
+  void debug({required String? name, Map<String, Object?>? parameters}) =>
       super.noSuchMethod(
-        Invocation.method(
-          #debug,
-          [],
-          {
-            #name: name,
-            #parameters: parameters,
-          },
-        ),
+        Invocation.method(#debug, [], {#name: name, #parameters: parameters}),
         returnValueForMissingStub: null,
       );
 
   @override
-  void logEvent({
-    required String? name,
-    Map<String, Object?>? parameters,
-  }) =>
+  void logEvent({required String? name, Map<String, Object?>? parameters}) =>
       super.noSuchMethod(
-        Invocation.method(
-          #logEvent,
-          [],
-          {
-            #name: name,
-            #parameters: parameters,
-          },
-        ),
+        Invocation.method(#logEvent, [], {
+          #name: name,
+          #parameters: parameters,
+        }),
         returnValueForMissingStub: null,
       );
 
@@ -309,34 +206,19 @@ class MockAnalytics extends _i1.Mock implements _i16.Analytics {
   void logScreenView({
     required String? screenName,
     String? screenClass = r'Flutter',
-  }) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #logScreenView,
-          [],
-          {
-            #screenName: screenName,
-            #screenClass: screenClass,
-          },
-        ),
-        returnValueForMissingStub: null,
-      );
+  }) => super.noSuchMethod(
+    Invocation.method(#logScreenView, [], {
+      #screenName: screenName,
+      #screenClass: screenClass,
+    }),
+    returnValueForMissingStub: null,
+  );
 
   @override
-  void setUserProperties(
-    String? name,
-    dynamic value,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #setUserProperties,
-          [
-            name,
-            value,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void setUserProperties(String? name, dynamic value) => super.noSuchMethod(
+    Invocation.method(#setUserProperties, [name, value]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [BatchFactory].
@@ -348,28 +230,23 @@ class MockBatchFactory extends _i1.Mock implements _i11.BatchFactory {
   }
 
   @override
-  _i2.DatabaseConnection get database => (super.noSuchMethod(
-        Invocation.getter(#database),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#database),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get database =>
+      (super.noSuchMethod(
+            Invocation.getter(#database),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#database),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  _i3.WriteBatch batch() => (super.noSuchMethod(
-        Invocation.method(
-          #batch,
-          [],
-        ),
-        returnValue: _FakeWriteBatch_2(
-          this,
-          Invocation.method(
-            #batch,
-            [],
-          ),
-        ),
-      ) as _i3.WriteBatch);
+  _i3.WriteBatch batch() =>
+      (super.noSuchMethod(
+            Invocation.method(#batch, []),
+            returnValue: _FakeWriteBatch_2(this, Invocation.method(#batch, [])),
+          )
+          as _i3.WriteBatch);
 }
 
 /// A class which mocks [WriteBatch].
@@ -381,57 +258,38 @@ class MockWriteBatch extends _i1.Mock implements _i3.WriteBatch {
   }
 
   @override
-  _i9.Future<void> commit() => (super.noSuchMethod(
-        Invocation.method(
-          #commit,
-          [],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> commit() =>
+      (super.noSuchMethod(
+            Invocation.method(#commit, []),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 
   @override
   void delete(_i3.DocumentReference<Object?>? document) => super.noSuchMethod(
-        Invocation.method(
-          #delete,
-          [document],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#delete, [document]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void set<T>(
     _i3.DocumentReference<T>? document,
     T? data, [
     _i3.SetOptions? options,
-  ]) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #set,
-          [
-            document,
-            data,
-            options,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ]) => super.noSuchMethod(
+    Invocation.method(#set, [document, data, options]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void update(
     _i3.DocumentReference<Object?>? document,
     Map<String, dynamic>? data,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #update,
-          [
-            document,
-            data,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  ) => super.noSuchMethod(
+    Invocation.method(#update, [document, data]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [User].
@@ -443,94 +301,113 @@ class MockUser extends _i1.Mock implements _i4.User {
   }
 
   @override
-  bool get hasDiscountEntitlement => (super.noSuchMethod(
-        Invocation.getter(#hasDiscountEntitlement),
-        returnValue: false,
-      ) as bool);
+  bool get hasDiscountEntitlement =>
+      (super.noSuchMethod(
+            Invocation.getter(#hasDiscountEntitlement),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool get isTrial => (super.noSuchMethod(
-        Invocation.getter(#isTrial),
-        returnValue: false,
-      ) as bool);
+  bool get isTrial =>
+      (super.noSuchMethod(Invocation.getter(#isTrial), returnValue: false)
+          as bool);
 
   @override
-  bool get trialIsAlreadyBegin => (super.noSuchMethod(
-        Invocation.getter(#trialIsAlreadyBegin),
-        returnValue: false,
-      ) as bool);
+  bool get trialIsAlreadyBegin =>
+      (super.noSuchMethod(
+            Invocation.getter(#trialIsAlreadyBegin),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool get premiumOrTrial => (super.noSuchMethod(
-        Invocation.getter(#premiumOrTrial),
-        returnValue: false,
-      ) as bool);
+  bool get premiumOrTrial =>
+      (super.noSuchMethod(
+            Invocation.getter(#premiumOrTrial),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool get isNotYetStartTrial => (super.noSuchMethod(
-        Invocation.getter(#isNotYetStartTrial),
-        returnValue: false,
-      ) as bool);
+  bool get isNotYetStartTrial =>
+      (super.noSuchMethod(
+            Invocation.getter(#isNotYetStartTrial),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  List<String> get userDocumentIDSets => (super.noSuchMethod(
-        Invocation.getter(#userDocumentIDSets),
-        returnValue: <String>[],
-      ) as List<String>);
+  List<String> get userDocumentIDSets =>
+      (super.noSuchMethod(
+            Invocation.getter(#userDocumentIDSets),
+            returnValue: <String>[],
+          )
+          as List<String>);
 
   @override
-  List<String> get anonymousUserIDSets => (super.noSuchMethod(
-        Invocation.getter(#anonymousUserIDSets),
-        returnValue: <String>[],
-      ) as List<String>);
+  List<String> get anonymousUserIDSets =>
+      (super.noSuchMethod(
+            Invocation.getter(#anonymousUserIDSets),
+            returnValue: <String>[],
+          )
+          as List<String>);
 
   @override
-  List<String> get firebaseCurrentUserIDSets => (super.noSuchMethod(
-        Invocation.getter(#firebaseCurrentUserIDSets),
-        returnValue: <String>[],
-      ) as List<String>);
+  List<String> get firebaseCurrentUserIDSets =>
+      (super.noSuchMethod(
+            Invocation.getter(#firebaseCurrentUserIDSets),
+            returnValue: <String>[],
+          )
+          as List<String>);
 
   @override
-  bool get isPremium => (super.noSuchMethod(
-        Invocation.getter(#isPremium),
-        returnValue: false,
-      ) as bool);
+  bool get isPremium =>
+      (super.noSuchMethod(Invocation.getter(#isPremium), returnValue: false)
+          as bool);
 
   @override
-  bool get shouldAskCancelReason => (super.noSuchMethod(
-        Invocation.getter(#shouldAskCancelReason),
-        returnValue: false,
-      ) as bool);
+  bool get shouldAskCancelReason =>
+      (super.noSuchMethod(
+            Invocation.getter(#shouldAskCancelReason),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool get analyticsDebugIsEnabled => (super.noSuchMethod(
-        Invocation.getter(#analyticsDebugIsEnabled),
-        returnValue: false,
-      ) as bool);
+  bool get analyticsDebugIsEnabled =>
+      (super.noSuchMethod(
+            Invocation.getter(#analyticsDebugIsEnabled),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool get isTwoPillsTakenEnabled => (super.noSuchMethod(
-        Invocation.getter(#isTwoPillsTakenEnabled),
-        returnValue: false,
-      ) as bool);
+  bool get isTwoPillsTakenEnabled =>
+      (super.noSuchMethod(
+            Invocation.getter(#isTwoPillsTakenEnabled),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  _i4.$UserCopyWith<_i4.User> get copyWith => (super.noSuchMethod(
-        Invocation.getter(#copyWith),
-        returnValue: _Fake$UserCopyWith_3<_i4.User>(
-          this,
-          Invocation.getter(#copyWith),
-        ),
-      ) as _i4.$UserCopyWith<_i4.User>);
+  _i4.$UserCopyWith<_i4.User> get copyWith =>
+      (super.noSuchMethod(
+            Invocation.getter(#copyWith),
+            returnValue: _Fake$UserCopyWith_3<_i4.User>(
+              this,
+              Invocation.getter(#copyWith),
+            ),
+          )
+          as _i4.$UserCopyWith<_i4.User>);
 
   @override
-  Map<String, dynamic> toJson() => (super.noSuchMethod(
-        Invocation.method(
-          #toJson,
-          [],
-        ),
-        returnValue: <String, dynamic>{},
-      ) as Map<String, dynamic>);
+  Map<String, dynamic> toJson() =>
+      (super.noSuchMethod(
+            Invocation.method(#toJson, []),
+            returnValue: <String, dynamic>{},
+          )
+          as Map<String, dynamic>);
 }
 
 /// A class which mocks [Setting].
@@ -542,98 +419,116 @@ class MockSetting extends _i1.Mock implements _i6.Setting {
   }
 
   @override
-  List<_i17.PillSheetType> get pillSheetEnumTypes => (super.noSuchMethod(
-        Invocation.getter(#pillSheetEnumTypes),
-        returnValue: <_i17.PillSheetType>[],
-      ) as List<_i17.PillSheetType>);
+  List<_i17.PillSheetType> get pillSheetEnumTypes =>
+      (super.noSuchMethod(
+            Invocation.getter(#pillSheetEnumTypes),
+            returnValue: <_i17.PillSheetType>[],
+          )
+          as List<_i17.PillSheetType>);
 
   @override
-  List<_i17.PillSheetType?> get pillSheetTypes => (super.noSuchMethod(
-        Invocation.getter(#pillSheetTypes),
-        returnValue: <_i17.PillSheetType?>[],
-      ) as List<_i17.PillSheetType?>);
+  List<_i17.PillSheetType?> get pillSheetTypes =>
+      (super.noSuchMethod(
+            Invocation.getter(#pillSheetTypes),
+            returnValue: <_i17.PillSheetType?>[],
+          )
+          as List<_i17.PillSheetType?>);
 
   @override
-  int get pillNumberForFromMenstruation => (super.noSuchMethod(
-        Invocation.getter(#pillNumberForFromMenstruation),
-        returnValue: 0,
-      ) as int);
+  int get pillNumberForFromMenstruation =>
+      (super.noSuchMethod(
+            Invocation.getter(#pillNumberForFromMenstruation),
+            returnValue: 0,
+          )
+          as int);
 
   @override
-  int get durationMenstruation => (super.noSuchMethod(
-        Invocation.getter(#durationMenstruation),
-        returnValue: 0,
-      ) as int);
+  int get durationMenstruation =>
+      (super.noSuchMethod(
+            Invocation.getter(#durationMenstruation),
+            returnValue: 0,
+          )
+          as int);
 
   @override
-  List<_i6.ReminderTime> get reminderTimes => (super.noSuchMethod(
-        Invocation.getter(#reminderTimes),
-        returnValue: <_i6.ReminderTime>[],
-      ) as List<_i6.ReminderTime>);
+  List<_i6.ReminderTime> get reminderTimes =>
+      (super.noSuchMethod(
+            Invocation.getter(#reminderTimes),
+            returnValue: <_i6.ReminderTime>[],
+          )
+          as List<_i6.ReminderTime>);
 
   @override
-  bool get isOnReminder => (super.noSuchMethod(
-        Invocation.getter(#isOnReminder),
-        returnValue: false,
-      ) as bool);
+  bool get isOnReminder =>
+      (super.noSuchMethod(Invocation.getter(#isOnReminder), returnValue: false)
+          as bool);
 
   @override
-  bool get isOnNotifyInNotTakenDuration => (super.noSuchMethod(
-        Invocation.getter(#isOnNotifyInNotTakenDuration),
-        returnValue: false,
-      ) as bool);
+  bool get isOnNotifyInNotTakenDuration =>
+      (super.noSuchMethod(
+            Invocation.getter(#isOnNotifyInNotTakenDuration),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  bool get isAutomaticallyCreatePillSheet => (super.noSuchMethod(
-        Invocation.getter(#isAutomaticallyCreatePillSheet),
-        returnValue: false,
-      ) as bool);
+  bool get isAutomaticallyCreatePillSheet =>
+      (super.noSuchMethod(
+            Invocation.getter(#isAutomaticallyCreatePillSheet),
+            returnValue: false,
+          )
+          as bool);
 
   @override
   _i5.ReminderNotificationCustomization get reminderNotificationCustomization =>
       (super.noSuchMethod(
-        Invocation.getter(#reminderNotificationCustomization),
-        returnValue: _FakeReminderNotificationCustomization_4(
-          this,
-          Invocation.getter(#reminderNotificationCustomization),
-        ),
-      ) as _i5.ReminderNotificationCustomization);
+            Invocation.getter(#reminderNotificationCustomization),
+            returnValue: _FakeReminderNotificationCustomization_4(
+              this,
+              Invocation.getter(#reminderNotificationCustomization),
+            ),
+          )
+          as _i5.ReminderNotificationCustomization);
 
   @override
-  bool get useCriticalAlert => (super.noSuchMethod(
-        Invocation.getter(#useCriticalAlert),
-        returnValue: false,
-      ) as bool);
+  bool get useCriticalAlert =>
+      (super.noSuchMethod(
+            Invocation.getter(#useCriticalAlert),
+            returnValue: false,
+          )
+          as bool);
 
   @override
-  double get criticalAlertVolume => (super.noSuchMethod(
-        Invocation.getter(#criticalAlertVolume),
-        returnValue: 0.0,
-      ) as double);
+  double get criticalAlertVolume =>
+      (super.noSuchMethod(
+            Invocation.getter(#criticalAlertVolume),
+            returnValue: 0.0,
+          )
+          as double);
 
   @override
-  bool get useAlarmKit => (super.noSuchMethod(
-        Invocation.getter(#useAlarmKit),
-        returnValue: false,
-      ) as bool);
+  bool get useAlarmKit =>
+      (super.noSuchMethod(Invocation.getter(#useAlarmKit), returnValue: false)
+          as bool);
 
   @override
-  _i6.$SettingCopyWith<_i6.Setting> get copyWith => (super.noSuchMethod(
-        Invocation.getter(#copyWith),
-        returnValue: _Fake$SettingCopyWith_5<_i6.Setting>(
-          this,
-          Invocation.getter(#copyWith),
-        ),
-      ) as _i6.$SettingCopyWith<_i6.Setting>);
+  _i6.$SettingCopyWith<_i6.Setting> get copyWith =>
+      (super.noSuchMethod(
+            Invocation.getter(#copyWith),
+            returnValue: _Fake$SettingCopyWith_5<_i6.Setting>(
+              this,
+              Invocation.getter(#copyWith),
+            ),
+          )
+          as _i6.$SettingCopyWith<_i6.Setting>);
 
   @override
-  Map<String, dynamic> toJson() => (super.noSuchMethod(
-        Invocation.method(
-          #toJson,
-          [],
-        ),
-        returnValue: <String, dynamic>{},
-      ) as Map<String, dynamic>);
+  Map<String, dynamic> toJson() =>
+      (super.noSuchMethod(
+            Invocation.method(#toJson, []),
+            returnValue: <String, dynamic>{},
+          )
+          as Map<String, dynamic>);
 }
 
 /// A class which mocks [BatchSetPillSheetGroup].
@@ -646,13 +541,15 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
   _i7.PillSheetGroup call(
@@ -660,24 +557,13 @@ class MockBatchSetPillSheetGroup extends _i1.Mock
     _i7.PillSheetGroup? pillSheetGroup,
   ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [
-            batch,
-            pillSheetGroup,
-          ],
-        ),
-        returnValue: _FakePillSheetGroup_6(
-          this,
-          Invocation.method(
-            #call,
-            [
-              batch,
-              pillSheetGroup,
-            ],
-          ),
-        ),
-      ) as _i7.PillSheetGroup);
+            Invocation.method(#call, [batch, pillSheetGroup]),
+            returnValue: _FakePillSheetGroup_6(
+              this,
+              Invocation.method(#call, [batch, pillSheetGroup]),
+            ),
+          )
+          as _i7.PillSheetGroup);
 }
 
 /// A class which mocks [BatchSetPillSheetModifiedHistory].
@@ -690,27 +576,20 @@ class MockBatchSetPillSheetModifiedHistory extends _i1.Mock
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  void call(
-    _i3.WriteBatch? batch,
-    _i18.PillSheetModifiedHistory? history,
-  ) =>
+  void call(_i3.WriteBatch? batch, _i18.PillSheetModifiedHistory? history) =>
       super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [
-            batch,
-            history,
-          ],
-        ),
+        Invocation.method(#call, [batch, history]),
         returnValueForMissingStub: null,
       );
 }
@@ -724,29 +603,21 @@ class MockBatchSetSetting extends _i1.Mock implements _i19.BatchSetSetting {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  void call(
-    _i3.WriteBatch? batch,
-    _i6.Setting? setting,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [
-            batch,
-            setting,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void call(_i3.WriteBatch? batch, _i6.Setting? setting) => super.noSuchMethod(
+    Invocation.method(#call, [batch, setting]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [SetSetting].
@@ -758,23 +629,24 @@ class MockSetSetting extends _i1.Mock implements _i19.SetSetting {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  _i9.Future<void> call(_i6.Setting? setting) => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [setting],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> call(_i6.Setting? setting) =>
+      (super.noSuchMethod(
+            Invocation.method(#call, [setting]),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 }
 
 /// A class which mocks [SetPillSheetGroup].
@@ -786,24 +658,24 @@ class MockSetPillSheetGroup extends _i1.Mock implements _i13.SetPillSheetGroup {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
   _i9.Future<void> call(_i7.PillSheetGroup? pillSheetGroup) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [pillSheetGroup],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+            Invocation.method(#call, [pillSheetGroup]),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 }
 
 /// A class which mocks [DeleteMenstruation].
@@ -816,23 +688,24 @@ class MockDeleteMenstruation extends _i1.Mock
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  _i9.Future<void> call(_i8.Menstruation? menstruation) => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [menstruation],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> call(_i8.Menstruation? menstruation) =>
+      (super.noSuchMethod(
+            Invocation.method(#call, [menstruation]),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 }
 
 /// A class which mocks [SetMenstruation].
@@ -844,29 +717,28 @@ class MockSetMenstruation extends _i1.Mock implements _i20.SetMenstruation {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
   _i9.Future<_i8.Menstruation> call(_i8.Menstruation? menstruation) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [menstruation],
-        ),
-        returnValue: _i9.Future<_i8.Menstruation>.value(_FakeMenstruation_7(
-          this,
-          Invocation.method(
-            #call,
-            [menstruation],
-          ),
-        )),
-      ) as _i9.Future<_i8.Menstruation>);
+            Invocation.method(#call, [menstruation]),
+            returnValue: _i9.Future<_i8.Menstruation>.value(
+              _FakeMenstruation_7(
+                this,
+                Invocation.method(#call, [menstruation]),
+              ),
+            ),
+          )
+          as _i9.Future<_i8.Menstruation>);
 }
 
 /// A class which mocks [BeginMenstruation].
@@ -878,38 +750,25 @@ class MockBeginMenstruation extends _i1.Mock implements _i20.BeginMenstruation {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  _i9.Future<_i8.Menstruation> call(
-    DateTime? begin,
-    DateTime? end,
-  ) =>
+  _i9.Future<_i8.Menstruation> call(DateTime? begin, DateTime? end) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [
-            begin,
-            end,
-          ],
-        ),
-        returnValue: _i9.Future<_i8.Menstruation>.value(_FakeMenstruation_7(
-          this,
-          Invocation.method(
-            #call,
-            [
-              begin,
-              end,
-            ],
-          ),
-        )),
-      ) as _i9.Future<_i8.Menstruation>);
+            Invocation.method(#call, [begin, end]),
+            returnValue: _i9.Future<_i8.Menstruation>.value(
+              _FakeMenstruation_7(this, Invocation.method(#call, [begin, end])),
+            ),
+          )
+          as _i9.Future<_i8.Menstruation>);
 }
 
 /// A class which mocks [DatabaseConnection].
@@ -922,314 +781,232 @@ class MockDatabaseConnection extends _i1.Mock
   }
 
   @override
-  String get userID => (super.noSuchMethod(
-        Invocation.getter(#userID),
-        returnValue: _i21.dummyValue<String>(
-          this,
-          Invocation.getter(#userID),
-        ),
-      ) as String);
+  String get userID =>
+      (super.noSuchMethod(
+            Invocation.getter(#userID),
+            returnValue: _i21.dummyValue<String>(
+              this,
+              Invocation.getter(#userID),
+            ),
+          )
+          as String);
 
   @override
-  _i3.DocumentReference<_i4.User> userReference() => (super.noSuchMethod(
-        Invocation.method(
-          #userReference,
-          [],
-        ),
-        returnValue: _FakeDocumentReference_8<_i4.User>(
-          this,
-          Invocation.method(
-            #userReference,
-            [],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i4.User>);
+  _i3.DocumentReference<_i4.User> userReference() =>
+      (super.noSuchMethod(
+            Invocation.method(#userReference, []),
+            returnValue: _FakeDocumentReference_8<_i4.User>(
+              this,
+              Invocation.method(#userReference, []),
+            ),
+          )
+          as _i3.DocumentReference<_i4.User>);
 
   @override
-  _i3.DocumentReference<Object?> userRawReference() => (super.noSuchMethod(
-        Invocation.method(
-          #userRawReference,
-          [],
-        ),
-        returnValue: _FakeDocumentReference_8<Object?>(
-          this,
-          Invocation.method(
-            #userRawReference,
-            [],
-          ),
-        ),
-      ) as _i3.DocumentReference<Object?>);
+  _i3.DocumentReference<Object?> userRawReference() =>
+      (super.noSuchMethod(
+            Invocation.method(#userRawReference, []),
+            returnValue: _FakeDocumentReference_8<Object?>(
+              this,
+              Invocation.method(#userRawReference, []),
+            ),
+          )
+          as _i3.DocumentReference<Object?>);
 
   @override
   _i3.DocumentReference<_i22.DiarySetting> diarySettingReference() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #diarySettingReference,
-          [],
-        ),
-        returnValue: _FakeDocumentReference_8<_i22.DiarySetting>(
-          this,
-          Invocation.method(
-            #diarySettingReference,
-            [],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i22.DiarySetting>);
+            Invocation.method(#diarySettingReference, []),
+            returnValue: _FakeDocumentReference_8<_i22.DiarySetting>(
+              this,
+              Invocation.method(#diarySettingReference, []),
+            ),
+          )
+          as _i3.DocumentReference<_i22.DiarySetting>);
 
   @override
-  _i3.CollectionReference<_i23.Diary> diariesReference() => (super.noSuchMethod(
-        Invocation.method(
-          #diariesReference,
-          [],
-        ),
-        returnValue: _FakeCollectionReference_9<_i23.Diary>(
-          this,
-          Invocation.method(
-            #diariesReference,
-            [],
-          ),
-        ),
-      ) as _i3.CollectionReference<_i23.Diary>);
+  _i3.CollectionReference<_i23.Diary> diariesReference() =>
+      (super.noSuchMethod(
+            Invocation.method(#diariesReference, []),
+            returnValue: _FakeCollectionReference_9<_i23.Diary>(
+              this,
+              Invocation.method(#diariesReference, []),
+            ),
+          )
+          as _i3.CollectionReference<_i23.Diary>);
 
   @override
   _i3.DocumentReference<_i23.Diary> diaryReference(_i23.Diary? diary) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #diaryReference,
-          [diary],
-        ),
-        returnValue: _FakeDocumentReference_8<_i23.Diary>(
-          this,
-          Invocation.method(
-            #diaryReference,
-            [diary],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i23.Diary>);
+            Invocation.method(#diaryReference, [diary]),
+            returnValue: _FakeDocumentReference_8<_i23.Diary>(
+              this,
+              Invocation.method(#diaryReference, [diary]),
+            ),
+          )
+          as _i3.DocumentReference<_i23.Diary>);
 
   @override
   _i3.DocumentReference<Object?> userPrivateRawReference() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #userPrivateRawReference,
-          [],
-        ),
-        returnValue: _FakeDocumentReference_8<Object?>(
-          this,
-          Invocation.method(
-            #userPrivateRawReference,
-            [],
-          ),
-        ),
-      ) as _i3.DocumentReference<Object?>);
+            Invocation.method(#userPrivateRawReference, []),
+            returnValue: _FakeDocumentReference_8<Object?>(
+              this,
+              Invocation.method(#userPrivateRawReference, []),
+            ),
+          )
+          as _i3.DocumentReference<Object?>);
 
   @override
   _i3.CollectionReference<_i8.Menstruation> menstruationsReference() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #menstruationsReference,
-          [],
-        ),
-        returnValue: _FakeCollectionReference_9<_i8.Menstruation>(
-          this,
-          Invocation.method(
-            #menstruationsReference,
-            [],
-          ),
-        ),
-      ) as _i3.CollectionReference<_i8.Menstruation>);
+            Invocation.method(#menstruationsReference, []),
+            returnValue: _FakeCollectionReference_9<_i8.Menstruation>(
+              this,
+              Invocation.method(#menstruationsReference, []),
+            ),
+          )
+          as _i3.CollectionReference<_i8.Menstruation>);
 
   @override
   _i3.DocumentReference<_i8.Menstruation> menstruationReference(
-          String? menstruationID) =>
+    String? menstruationID,
+  ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #menstruationReference,
-          [menstruationID],
-        ),
-        returnValue: _FakeDocumentReference_8<_i8.Menstruation>(
-          this,
-          Invocation.method(
-            #menstruationReference,
-            [menstruationID],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i8.Menstruation>);
+            Invocation.method(#menstruationReference, [menstruationID]),
+            returnValue: _FakeDocumentReference_8<_i8.Menstruation>(
+              this,
+              Invocation.method(#menstruationReference, [menstruationID]),
+            ),
+          )
+          as _i3.DocumentReference<_i8.Menstruation>);
 
   @override
   _i3.CollectionReference<_i18.PillSheetModifiedHistory>
-      pillSheetModifiedHistoriesReference() => (super.noSuchMethod(
-            Invocation.method(
-              #pillSheetModifiedHistoriesReference,
-              [],
-            ),
+  pillSheetModifiedHistoriesReference() =>
+      (super.noSuchMethod(
+            Invocation.method(#pillSheetModifiedHistoriesReference, []),
             returnValue:
                 _FakeCollectionReference_9<_i18.PillSheetModifiedHistory>(
-              this,
-              Invocation.method(
-                #pillSheetModifiedHistoriesReference,
-                [],
-              ),
-            ),
-          ) as _i3.CollectionReference<_i18.PillSheetModifiedHistory>);
+                  this,
+                  Invocation.method(#pillSheetModifiedHistoriesReference, []),
+                ),
+          )
+          as _i3.CollectionReference<_i18.PillSheetModifiedHistory>);
 
   @override
   _i3.DocumentReference<_i18.PillSheetModifiedHistory>
-      pillSheetModifiedHistoryReference(
-              {required String? pillSheetModifiedHistoryID}) =>
-          (super.noSuchMethod(
-            Invocation.method(
-              #pillSheetModifiedHistoryReference,
-              [],
-              {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
-            ),
+  pillSheetModifiedHistoryReference({
+    required String? pillSheetModifiedHistoryID,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#pillSheetModifiedHistoryReference, [], {
+              #pillSheetModifiedHistoryID: pillSheetModifiedHistoryID,
+            }),
             returnValue:
                 _FakeDocumentReference_8<_i18.PillSheetModifiedHistory>(
-              this,
-              Invocation.method(
-                #pillSheetModifiedHistoryReference,
-                [],
-                {#pillSheetModifiedHistoryID: pillSheetModifiedHistoryID},
-              ),
-            ),
-          ) as _i3.DocumentReference<_i18.PillSheetModifiedHistory>);
+                  this,
+                  Invocation.method(#pillSheetModifiedHistoryReference, [], {
+                    #pillSheetModifiedHistoryID: pillSheetModifiedHistoryID,
+                  }),
+                ),
+          )
+          as _i3.DocumentReference<_i18.PillSheetModifiedHistory>);
 
   @override
   _i3.CollectionReference<_i7.PillSheetGroup> pillSheetGroupsReference() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #pillSheetGroupsReference,
-          [],
-        ),
-        returnValue: _FakeCollectionReference_9<_i7.PillSheetGroup>(
-          this,
-          Invocation.method(
-            #pillSheetGroupsReference,
-            [],
-          ),
-        ),
-      ) as _i3.CollectionReference<_i7.PillSheetGroup>);
+            Invocation.method(#pillSheetGroupsReference, []),
+            returnValue: _FakeCollectionReference_9<_i7.PillSheetGroup>(
+              this,
+              Invocation.method(#pillSheetGroupsReference, []),
+            ),
+          )
+          as _i3.CollectionReference<_i7.PillSheetGroup>);
 
   @override
   _i3.DocumentReference<_i7.PillSheetGroup> pillSheetGroupReference(
-          String? pillSheetGroupID) =>
+    String? pillSheetGroupID,
+  ) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #pillSheetGroupReference,
-          [pillSheetGroupID],
-        ),
-        returnValue: _FakeDocumentReference_8<_i7.PillSheetGroup>(
-          this,
-          Invocation.method(
-            #pillSheetGroupReference,
-            [pillSheetGroupID],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i7.PillSheetGroup>);
+            Invocation.method(#pillSheetGroupReference, [pillSheetGroupID]),
+            returnValue: _FakeDocumentReference_8<_i7.PillSheetGroup>(
+              this,
+              Invocation.method(#pillSheetGroupReference, [pillSheetGroupID]),
+            ),
+          )
+          as _i3.DocumentReference<_i7.PillSheetGroup>);
 
   @override
   _i3.CollectionReference<_i24.Schedule> schedulesReference() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #schedulesReference,
-          [],
-        ),
-        returnValue: _FakeCollectionReference_9<_i24.Schedule>(
-          this,
-          Invocation.method(
-            #schedulesReference,
-            [],
-          ),
-        ),
-      ) as _i3.CollectionReference<_i24.Schedule>);
+            Invocation.method(#schedulesReference, []),
+            returnValue: _FakeCollectionReference_9<_i24.Schedule>(
+              this,
+              Invocation.method(#schedulesReference, []),
+            ),
+          )
+          as _i3.CollectionReference<_i24.Schedule>);
 
   @override
   _i3.DocumentReference<_i24.Schedule> scheduleReference(String? scheduleID) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #scheduleReference,
-          [scheduleID],
-        ),
-        returnValue: _FakeDocumentReference_8<_i24.Schedule>(
-          this,
-          Invocation.method(
-            #scheduleReference,
-            [scheduleID],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i24.Schedule>);
+            Invocation.method(#scheduleReference, [scheduleID]),
+            returnValue: _FakeDocumentReference_8<_i24.Schedule>(
+              this,
+              Invocation.method(#scheduleReference, [scheduleID]),
+            ),
+          )
+          as _i3.DocumentReference<_i24.Schedule>);
 
   @override
   _i3.CollectionReference<_i25.Inquiry> inquiriesReference() =>
       (super.noSuchMethod(
-        Invocation.method(
-          #inquiriesReference,
-          [],
-        ),
-        returnValue: _FakeCollectionReference_9<_i25.Inquiry>(
-          this,
-          Invocation.method(
-            #inquiriesReference,
-            [],
-          ),
-        ),
-      ) as _i3.CollectionReference<_i25.Inquiry>);
+            Invocation.method(#inquiriesReference, []),
+            returnValue: _FakeCollectionReference_9<_i25.Inquiry>(
+              this,
+              Invocation.method(#inquiriesReference, []),
+            ),
+          )
+          as _i3.CollectionReference<_i25.Inquiry>);
 
   @override
-  _i3.DocumentReference<_i26.PilllAds?> pilllAds() => (super.noSuchMethod(
-        Invocation.method(
-          #pilllAds,
-          [],
-        ),
-        returnValue: _FakeDocumentReference_8<_i26.PilllAds?>(
-          this,
-          Invocation.method(
-            #pilllAds,
-            [],
-          ),
-        ),
-      ) as _i3.DocumentReference<_i26.PilllAds?>);
+  _i3.DocumentReference<_i26.PilllAds?> pilllAds() =>
+      (super.noSuchMethod(
+            Invocation.method(#pilllAds, []),
+            returnValue: _FakeDocumentReference_8<_i26.PilllAds?>(
+              this,
+              Invocation.method(#pilllAds, []),
+            ),
+          )
+          as _i3.DocumentReference<_i26.PilllAds?>);
 
   @override
   _i9.Future<T> transaction<T>(_i3.TransactionHandler<T>? transactionHandler) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #transaction,
-          [transactionHandler],
-        ),
-        returnValue: _i21.ifNotNull(
-              _i21.dummyValueOrNull<T>(
-                this,
-                Invocation.method(
-                  #transaction,
-                  [transactionHandler],
+            Invocation.method(#transaction, [transactionHandler]),
+            returnValue:
+                _i21.ifNotNull(
+                  _i21.dummyValueOrNull<T>(
+                    this,
+                    Invocation.method(#transaction, [transactionHandler]),
+                  ),
+                  (T v) => _i9.Future<T>.value(v),
+                ) ??
+                _FakeFuture_10<T>(
+                  this,
+                  Invocation.method(#transaction, [transactionHandler]),
                 ),
-              ),
-              (T v) => _i9.Future<T>.value(v),
-            ) ??
-            _FakeFuture_10<T>(
-              this,
-              Invocation.method(
-                #transaction,
-                [transactionHandler],
-              ),
-            ),
-      ) as _i9.Future<T>);
+          )
+          as _i9.Future<T>);
 
   @override
-  _i3.WriteBatch batch() => (super.noSuchMethod(
-        Invocation.method(
-          #batch,
-          [],
-        ),
-        returnValue: _FakeWriteBatch_2(
-          this,
-          Invocation.method(
-            #batch,
-            [],
-          ),
-        ),
-      ) as _i3.WriteBatch);
+  _i3.WriteBatch batch() =>
+      (super.noSuchMethod(
+            Invocation.method(#batch, []),
+            returnValue: _FakeWriteBatch_2(this, Invocation.method(#batch, [])),
+          )
+          as _i3.WriteBatch);
 }
 
 /// A class which mocks [EndInitialSetting].
@@ -1241,24 +1018,24 @@ class MockEndInitialSetting extends _i1.Mock implements _i27.EndInitialSetting {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
   _i9.Future<void> call(_i28.RemoteConfigParameter? remoteConfigParameter) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [remoteConfigParameter],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+            Invocation.method(#call, [remoteConfigParameter]),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 }
 
 /// A class which mocks [PurchaseService].
@@ -1270,19 +1047,14 @@ class MockPurchaseService extends _i1.Mock implements _i29.PurchaseService {
   }
 
   @override
-  _i9.Future<_i10.Offerings> fetchOfferings() => (super.noSuchMethod(
-        Invocation.method(
-          #fetchOfferings,
-          [],
-        ),
-        returnValue: _i9.Future<_i10.Offerings>.value(_FakeOfferings_11(
-          this,
-          Invocation.method(
-            #fetchOfferings,
-            [],
-          ),
-        )),
-      ) as _i9.Future<_i10.Offerings>);
+  _i9.Future<_i10.Offerings> fetchOfferings() =>
+      (super.noSuchMethod(
+            Invocation.method(#fetchOfferings, []),
+            returnValue: _i9.Future<_i10.Offerings>.value(
+              _FakeOfferings_11(this, Invocation.method(#fetchOfferings, [])),
+            ),
+          )
+          as _i9.Future<_i10.Offerings>);
 }
 
 /// A class which mocks [RevertTakePill].
@@ -1294,32 +1066,37 @@ class MockRevertTakePill extends _i1.Mock implements _i30.RevertTakePill {
   }
 
   @override
-  _i11.BatchFactory get batchFactory => (super.noSuchMethod(
-        Invocation.getter(#batchFactory),
-        returnValue: _FakeBatchFactory_12(
-          this,
-          Invocation.getter(#batchFactory),
-        ),
-      ) as _i11.BatchFactory);
+  _i11.BatchFactory get batchFactory =>
+      (super.noSuchMethod(
+            Invocation.getter(#batchFactory),
+            returnValue: _FakeBatchFactory_12(
+              this,
+              Invocation.getter(#batchFactory),
+            ),
+          )
+          as _i11.BatchFactory);
 
   @override
   _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
-        Invocation.getter(#batchSetPillSheetModifiedHistory),
-        returnValue: _FakeBatchSetPillSheetModifiedHistory_13(
-          this,
-          Invocation.getter(#batchSetPillSheetModifiedHistory),
-        ),
-      ) as _i12.BatchSetPillSheetModifiedHistory);
+            Invocation.getter(#batchSetPillSheetModifiedHistory),
+            returnValue: _FakeBatchSetPillSheetModifiedHistory_13(
+              this,
+              Invocation.getter(#batchSetPillSheetModifiedHistory),
+            ),
+          )
+          as _i12.BatchSetPillSheetModifiedHistory);
 
   @override
-  _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
-        Invocation.getter(#batchSetPillSheetGroup),
-        returnValue: _FakeBatchSetPillSheetGroup_14(
-          this,
-          Invocation.getter(#batchSetPillSheetGroup),
-        ),
-      ) as _i13.BatchSetPillSheetGroup);
+  _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup =>
+      (super.noSuchMethod(
+            Invocation.getter(#batchSetPillSheetGroup),
+            returnValue: _FakeBatchSetPillSheetGroup_14(
+              this,
+              Invocation.getter(#batchSetPillSheetGroup),
+            ),
+          )
+          as _i13.BatchSetPillSheetGroup);
 
   @override
   _i9.Future<_i7.PillSheetGroup?> call({
@@ -1328,18 +1105,15 @@ class MockRevertTakePill extends _i1.Mock implements _i30.RevertTakePill {
     required int? targetRevertPillNumberIntoPillSheet,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-          {
-            #pillSheetGroup: pillSheetGroup,
-            #pageIndex: pageIndex,
-            #targetRevertPillNumberIntoPillSheet:
-                targetRevertPillNumberIntoPillSheet,
-          },
-        ),
-        returnValue: _i9.Future<_i7.PillSheetGroup?>.value(),
-      ) as _i9.Future<_i7.PillSheetGroup?>);
+            Invocation.method(#call, [], {
+              #pillSheetGroup: pillSheetGroup,
+              #pageIndex: pageIndex,
+              #targetRevertPillNumberIntoPillSheet:
+                  targetRevertPillNumberIntoPillSheet,
+            }),
+            returnValue: _i9.Future<_i7.PillSheetGroup?>.value(),
+          )
+          as _i9.Future<_i7.PillSheetGroup?>);
 }
 
 /// A class which mocks [TakePill].
@@ -1351,32 +1125,37 @@ class MockTakePill extends _i1.Mock implements _i31.TakePill {
   }
 
   @override
-  _i11.BatchFactory get batchFactory => (super.noSuchMethod(
-        Invocation.getter(#batchFactory),
-        returnValue: _FakeBatchFactory_12(
-          this,
-          Invocation.getter(#batchFactory),
-        ),
-      ) as _i11.BatchFactory);
+  _i11.BatchFactory get batchFactory =>
+      (super.noSuchMethod(
+            Invocation.getter(#batchFactory),
+            returnValue: _FakeBatchFactory_12(
+              this,
+              Invocation.getter(#batchFactory),
+            ),
+          )
+          as _i11.BatchFactory);
 
   @override
   _i12.BatchSetPillSheetModifiedHistory get batchSetPillSheetModifiedHistory =>
       (super.noSuchMethod(
-        Invocation.getter(#batchSetPillSheetModifiedHistory),
-        returnValue: _FakeBatchSetPillSheetModifiedHistory_13(
-          this,
-          Invocation.getter(#batchSetPillSheetModifiedHistory),
-        ),
-      ) as _i12.BatchSetPillSheetModifiedHistory);
+            Invocation.getter(#batchSetPillSheetModifiedHistory),
+            returnValue: _FakeBatchSetPillSheetModifiedHistory_13(
+              this,
+              Invocation.getter(#batchSetPillSheetModifiedHistory),
+            ),
+          )
+          as _i12.BatchSetPillSheetModifiedHistory);
 
   @override
-  _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup => (super.noSuchMethod(
-        Invocation.getter(#batchSetPillSheetGroup),
-        returnValue: _FakeBatchSetPillSheetGroup_14(
-          this,
-          Invocation.getter(#batchSetPillSheetGroup),
-        ),
-      ) as _i13.BatchSetPillSheetGroup);
+  _i13.BatchSetPillSheetGroup get batchSetPillSheetGroup =>
+      (super.noSuchMethod(
+            Invocation.getter(#batchSetPillSheetGroup),
+            returnValue: _FakeBatchSetPillSheetGroup_14(
+              this,
+              Invocation.getter(#batchSetPillSheetGroup),
+            ),
+          )
+          as _i13.BatchSetPillSheetGroup);
 
   @override
   _i9.Future<_i7.PillSheetGroup?> call({
@@ -1386,18 +1165,15 @@ class MockTakePill extends _i1.Mock implements _i31.TakePill {
     required bool? isQuickRecord,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-          {
-            #takenDate: takenDate,
-            #pillSheetGroup: pillSheetGroup,
-            #activePillSheet: activePillSheet,
-            #isQuickRecord: isQuickRecord,
-          },
-        ),
-        returnValue: _i9.Future<_i7.PillSheetGroup?>.value(),
-      ) as _i9.Future<_i7.PillSheetGroup?>);
+            Invocation.method(#call, [], {
+              #takenDate: takenDate,
+              #pillSheetGroup: pillSheetGroup,
+              #activePillSheet: activePillSheet,
+              #isQuickRecord: isQuickRecord,
+            }),
+            returnValue: _i9.Future<_i7.PillSheetGroup?>.value(),
+          )
+          as _i9.Future<_i7.PillSheetGroup?>);
 }
 
 /// A class which mocks [CheckForceUpdate].
@@ -1409,13 +1185,12 @@ class MockCheckForceUpdate extends _i1.Mock implements _i33.CheckForceUpdate {
   }
 
   @override
-  _i9.Future<bool> call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i9.Future<bool>.value(false),
-      ) as _i9.Future<bool>);
+  _i9.Future<bool> call() =>
+      (super.noSuchMethod(
+            Invocation.method(#call, []),
+            returnValue: _i9.Future<bool>.value(false),
+          )
+          as _i9.Future<bool>);
 }
 
 /// A class which mocks [SetUserID].
@@ -1427,15 +1202,13 @@ class MockSetUserID extends _i1.Mock implements _i34.SetUserID {
   }
 
   @override
-  _i9.Future<void> call({required String? userID}) => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-          {#userID: userID},
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> call({required String? userID}) =>
+      (super.noSuchMethod(
+            Invocation.method(#call, [], {#userID: userID}),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 }
 
 /// A class which mocks [FetchOrCreateUser].
@@ -1447,28 +1220,25 @@ class MockFetchOrCreateUser extends _i1.Mock implements _i27.FetchOrCreateUser {
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
-  _i9.Future<_i4.User> call(String? uid) => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [uid],
-        ),
-        returnValue: _i9.Future<_i4.User>.value(_FakeUser_15(
-          this,
-          Invocation.method(
-            #call,
-            [uid],
-          ),
-        )),
-      ) as _i9.Future<_i4.User>);
+  _i9.Future<_i4.User> call(String? uid) =>
+      (super.noSuchMethod(
+            Invocation.method(#call, [uid]),
+            returnValue: _i9.Future<_i4.User>.value(
+              _FakeUser_15(this, Invocation.method(#call, [uid])),
+            ),
+          )
+          as _i9.Future<_i4.User>);
 }
 
 /// A class which mocks [SaveUserLaunchInfo].
@@ -1481,22 +1251,21 @@ class MockSaveUserLaunchInfo extends _i1.Mock
   }
 
   @override
-  _i2.DatabaseConnection get databaseConnection => (super.noSuchMethod(
-        Invocation.getter(#databaseConnection),
-        returnValue: _FakeDatabaseConnection_1(
-          this,
-          Invocation.getter(#databaseConnection),
-        ),
-      ) as _i2.DatabaseConnection);
+  _i2.DatabaseConnection get databaseConnection =>
+      (super.noSuchMethod(
+            Invocation.getter(#databaseConnection),
+            returnValue: _FakeDatabaseConnection_1(
+              this,
+              Invocation.getter(#databaseConnection),
+            ),
+          )
+          as _i2.DatabaseConnection);
 
   @override
   void call(_i4.User? user) => super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [user],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#call, [user]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [ErrorLogger].
@@ -1508,29 +1277,16 @@ class MockErrorLogger extends _i1.Mock implements _i35.ErrorLogger {
   }
 
   @override
-  void recordError(
-    dynamic exception,
-    StackTrace? stack,
-  ) =>
-      super.noSuchMethod(
-        Invocation.method(
-          #recordError,
-          [
-            exception,
-            stack,
-          ],
-        ),
-        returnValueForMissingStub: null,
-      );
+  void recordError(dynamic exception, StackTrace? stack) => super.noSuchMethod(
+    Invocation.method(#recordError, [exception, stack]),
+    returnValueForMissingStub: null,
+  );
 
   @override
   void log(String? message) => super.noSuchMethod(
-        Invocation.method(
-          #log,
-          [message],
-        ),
-        returnValueForMissingStub: null,
-      );
+    Invocation.method(#log, [message]),
+    returnValueForMissingStub: null,
+  );
 }
 
 /// A class which mocks [FirestoreIDGenerator].
@@ -1543,19 +1299,15 @@ class MockFirestoreIDGenerator extends _i1.Mock
   }
 
   @override
-  String call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i21.dummyValue<String>(
-          this,
-          Invocation.method(
-            #call,
-            [],
-          ),
-        ),
-      ) as String);
+  String call() =>
+      (super.noSuchMethod(
+            Invocation.method(#call, []),
+            returnValue: _i21.dummyValue<String>(
+              this,
+              Invocation.method(#call, []),
+            ),
+          )
+          as String);
 }
 
 /// A class which mocks [LocalNotificationService].
@@ -1568,100 +1320,94 @@ class MockLocalNotificationService extends _i1.Mock
   }
 
   @override
-  _i14.FlutterLocalNotificationsPlugin get plugin => (super.noSuchMethod(
-        Invocation.getter(#plugin),
-        returnValue: _FakeFlutterLocalNotificationsPlugin_16(
-          this,
-          Invocation.getter(#plugin),
-        ),
-      ) as _i14.FlutterLocalNotificationsPlugin);
+  _i14.FlutterLocalNotificationsPlugin get plugin =>
+      (super.noSuchMethod(
+            Invocation.getter(#plugin),
+            returnValue: _FakeFlutterLocalNotificationsPlugin_16(
+              this,
+              Invocation.getter(#plugin),
+            ),
+          )
+          as _i14.FlutterLocalNotificationsPlugin);
 
   @override
-  _i9.Future<void> initialize() => (super.noSuchMethod(
-        Invocation.method(
-          #initialize,
-          [],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> initialize() =>
+      (super.noSuchMethod(
+            Invocation.method(#initialize, []),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 
   @override
-  _i9.Future<void> requestiOSPermission() => (super.noSuchMethod(
-        Invocation.method(
-          #requestiOSPermission,
-          [],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> requestiOSPermission() =>
+      (super.noSuchMethod(
+            Invocation.method(#requestiOSPermission, []),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 
   @override
-  _i9.Future<bool?> requestPermissionWithCriticalAlert() => (super.noSuchMethod(
-        Invocation.method(
-          #requestPermissionWithCriticalAlert,
-          [],
-        ),
-        returnValue: _i9.Future<bool?>.value(),
-      ) as _i9.Future<bool?>);
+  _i9.Future<bool?> requestPermissionWithCriticalAlert() =>
+      (super.noSuchMethod(
+            Invocation.method(#requestPermissionWithCriticalAlert, []),
+            returnValue: _i9.Future<bool?>.value(),
+          )
+          as _i9.Future<bool?>);
 
   @override
   _i9.Future<void> cancelNotification({required int? localNotificationID}) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #cancelNotification,
-          [],
-          {#localNotificationID: localNotificationID},
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+            Invocation.method(#cancelNotification, [], {
+              #localNotificationID: localNotificationID,
+            }),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 
   @override
-  _i9.Future<void> test() => (super.noSuchMethod(
-        Invocation.method(
-          #test,
-          [],
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+  _i9.Future<void> test() =>
+      (super.noSuchMethod(
+            Invocation.method(#test, []),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 
   @override
   _i9.Future<void> testCriticalAlert({required double? volume}) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #testCriticalAlert,
-          [],
-          {#volume: volume},
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+            Invocation.method(#testCriticalAlert, [], {#volume: volume}),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 
   @override
   _i9.Future<List<_i14.PendingNotificationRequest>>
-      pendingReminderNotifications() => (super.noSuchMethod(
-            Invocation.method(
-              #pendingReminderNotifications,
-              [],
-            ),
+  pendingReminderNotifications() =>
+      (super.noSuchMethod(
+            Invocation.method(#pendingReminderNotifications, []),
             returnValue:
                 _i9.Future<List<_i14.PendingNotificationRequest>>.value(
-                    <_i14.PendingNotificationRequest>[]),
-          ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+                  <_i14.PendingNotificationRequest>[],
+                ),
+          )
+          as _i9.Future<List<_i14.PendingNotificationRequest>>);
 
   @override
   _i9.Future<List<_i14.PendingNotificationRequest>>
-      pendingNewPillSheetNotifications() => (super.noSuchMethod(
-            Invocation.method(
-              #pendingNewPillSheetNotifications,
-              [],
-            ),
+  pendingNewPillSheetNotifications() =>
+      (super.noSuchMethod(
+            Invocation.method(#pendingNewPillSheetNotifications, []),
             returnValue:
                 _i9.Future<List<_i14.PendingNotificationRequest>>.value(
-                    <_i14.PendingNotificationRequest>[]),
-          ) as _i9.Future<List<_i14.PendingNotificationRequest>>);
+                  <_i14.PendingNotificationRequest>[],
+                ),
+          )
+          as _i9.Future<List<_i14.PendingNotificationRequest>>);
 }
 
 /// A class which mocks [RegisterReminderLocalNotificationRunner].
@@ -1681,17 +1427,14 @@ class MockRegisterReminderLocalNotificationRunner extends _i1.Mock
     required _i6.Setting? setting,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-          {
-            #createdPillSheetGroup: createdPillSheetGroup,
-            #activePillSheet: activePillSheet,
-            #premiumOrTrial: premiumOrTrial,
-            #setting: setting,
-          },
-        ),
-        returnValue: _i9.Future<void>.value(),
-        returnValueForMissingStub: _i9.Future<void>.value(),
-      ) as _i9.Future<void>);
+            Invocation.method(#call, [], {
+              #createdPillSheetGroup: createdPillSheetGroup,
+              #activePillSheet: activePillSheet,
+              #premiumOrTrial: premiumOrTrial,
+              #setting: setting,
+            }),
+            returnValue: _i9.Future<void>.value(),
+            returnValueForMissingStub: _i9.Future<void>.value(),
+          )
+          as _i9.Future<void>);
 }

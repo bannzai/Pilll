@@ -14,7 +14,10 @@ void main() {
         createdAt: DateTime(2025, 1, 13),
       );
       final model = CalendarMenstruationBandModel(menstruation);
-      final weekRange = DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18)); // 日曜日から土曜日
+      final weekRange = DateRange(
+        DateTime(2025, 1, 12),
+        DateTime(2025, 1, 18),
+      ); // 日曜日から土曜日
 
       final length = bandLength(weekRange, model, false);
       expect(length, 3); // 13, 14, 15の3日間
@@ -35,13 +38,27 @@ void main() {
       expect(week1Length, 2); // 10, 11の2日間
 
       // 第2週: 1/12-1/18（この週が表示されない問題）
-      final week2Range = DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18));
-      final week2Length = bandLength(week2Range, model, true); // isLineBreak = true
+      final week2Range = DateRange(
+        DateTime(2025, 1, 12),
+        DateTime(2025, 1, 18),
+      );
+      final week2Length = bandLength(
+        week2Range,
+        model,
+        true,
+      ); // isLineBreak = true
       expect(week2Length, 7); // 12-18の7日間すべて
 
       // 第3週: 1/19-1/25
-      final week3Range = DateRange(DateTime(2025, 1, 19), DateTime(2025, 1, 25));
-      final week3Length = bandLength(week3Range, model, true); // isLineBreak = true
+      final week3Range = DateRange(
+        DateTime(2025, 1, 19),
+        DateTime(2025, 1, 25),
+      );
+      final week3Length = bandLength(
+        week3Range,
+        model,
+        true,
+      ); // isLineBreak = true
       expect(week3Length, 4); // 19-22の4日間
     });
   });
@@ -69,19 +86,28 @@ void main() {
   group('#offsetForStartPositionAtLine', () {
     test('週の開始日から始まる場合のoffset', () {
       final weekRange = DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18));
-      final offset = offsetForStartPositionAtLine(DateTime(2025, 1, 12), weekRange);
+      final offset = offsetForStartPositionAtLine(
+        DateTime(2025, 1, 12),
+        weekRange,
+      );
       expect(offset, 0);
     });
 
     test('週の途中から始まる場合のoffset', () {
       final weekRange = DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18));
-      final offset = offsetForStartPositionAtLine(DateTime(2025, 1, 14), weekRange);
+      final offset = offsetForStartPositionAtLine(
+        DateTime(2025, 1, 14),
+        weekRange,
+      );
       expect(offset, 2); // 12日から14日まで2日間
     });
 
     test('週の範囲外から始まる場合のoffset', () {
       final weekRange = DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18));
-      final offset = offsetForStartPositionAtLine(DateTime(2025, 1, 10), weekRange);
+      final offset = offsetForStartPositionAtLine(
+        DateTime(2025, 1, 10),
+        weekRange,
+      );
       expect(offset, 0); // lineBreakの場合は0
     });
   });

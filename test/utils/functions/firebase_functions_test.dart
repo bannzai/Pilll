@@ -22,9 +22,7 @@ void main() {
       final input = <dynamic, dynamic>{
         'user': <dynamic, dynamic>{
           'name': 'test',
-          'profile': <dynamic, dynamic>{
-            'bio': 'hello',
-          },
+          'profile': <dynamic, dynamic>{'bio': 'hello'},
         },
       };
 
@@ -66,9 +64,7 @@ void main() {
 
     test('元のMapを変更しない（純粋関数）', () {
       final input = <dynamic, dynamic>{
-        'nested': <dynamic, dynamic>{
-          'value': 'original',
-        },
+        'nested': <dynamic, dynamic>{'value': 'original'},
       };
       final originalNested = input['nested'];
 
@@ -88,10 +84,7 @@ void main() {
     });
 
     test('null値を含むMapを処理できる', () {
-      final input = <dynamic, dynamic>{
-        'name': 'test',
-        'value': null,
-      };
+      final input = <dynamic, dynamic>{'name': 'test', 'value': null};
 
       final result = mapToJSON(input);
 
@@ -100,10 +93,7 @@ void main() {
     });
 
     test('数値キーを文字列に変換する', () {
-      final input = <dynamic, dynamic>{
-        1: 'one',
-        2: 'two',
-      };
+      final input = <dynamic, dynamic>{1: 'one', 2: 'two'};
 
       final result = mapToJSON(input);
 

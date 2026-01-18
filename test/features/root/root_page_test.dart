@@ -37,25 +37,42 @@ void main() {
   });
 
   group('#retrieveScreenType', () {
-    testWidgets('didEndInitialSetting is not exist', (WidgetTester tester) async {
+    testWidgets('didEndInitialSetting is not exist', (
+      WidgetTester tester,
+    ) async {
       final fakeUser = _FakeUser(_FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: null);
+      final screenType = retrieveScreenType(
+        user: fakeUser,
+        didEndInitialSetting: null,
+      );
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('tidEndInitialSetting is false', (WidgetTester tester) async {
       final fakeUser = _FakeUser(_FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: false);
+      final screenType = retrieveScreenType(
+        user: fakeUser,
+        didEndInitialSetting: false,
+      );
       expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
     });
     testWidgets('didEndInitialSetting is true', (WidgetTester tester) async {
       final fakeUser = _FakeUser(_FakeSetting());
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
+      final screenType = retrieveScreenType(
+        user: fakeUser,
+        didEndInitialSetting: true,
+      );
       expect(screenType, InitialSettingOrAppPageScreenType.app);
     });
-    testWidgets('didEndInitialSetting is true and user.migratedFlutter is true but setting is null', (WidgetTester tester) async {
-      final fakeUser = _FakeUser(null);
-      final screenType = retrieveScreenType(user: fakeUser, didEndInitialSetting: true);
-      expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
-    });
+    testWidgets(
+      'didEndInitialSetting is true and user.migratedFlutter is true but setting is null',
+      (WidgetTester tester) async {
+        final fakeUser = _FakeUser(null);
+        final screenType = retrieveScreenType(
+          user: fakeUser,
+          didEndInitialSetting: true,
+        );
+        expect(screenType, InitialSettingOrAppPageScreenType.initialSetting);
+      },
+    );
   });
 }

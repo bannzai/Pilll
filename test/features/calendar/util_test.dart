@@ -26,8 +26,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -54,7 +58,10 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
           var setting = const Setting(
-            pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_24_0],
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_24_0,
+            ],
             pillNumberForFromMenstruation: 23,
             durationMenstruation: 3,
             isOnReminder: false,
@@ -71,7 +78,7 @@ void main() {
               DateRange(
                 DateTime.parse("2020-10-21"),
                 DateTime.parse("2020-10-23"),
-              )
+              ),
             ],
           );
         },
@@ -82,8 +89,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -110,7 +121,10 @@ void main() {
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
           var setting = const Setting(
-            pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_21_0],
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_21_0,
+            ],
             pillNumberForFromMenstruation: 23,
             durationMenstruation: 3,
             isOnReminder: false,
@@ -127,75 +141,79 @@ void main() {
               DateRange(
                 DateTime.parse("2020-11-11"),
                 DateTime.parse("2020-11-13"),
-              )
+              ),
             ],
           );
         },
       );
-      test(
-        "over 1 pill sheet group period",
-        () {
-          final originalTodayRepository = todayRepository;
-          final mockTodayRepository = MockTodayService();
-          todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          addTearDown(() {
-            todayRepository = originalTodayRepository;
-          });
+      test("over 1 pill sheet group period", () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-01"));
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-09-01"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
 
-          var beginDate = DateTime.parse("2020-09-01");
-          var pillSheet = PillSheet.v1(
-            id: firestoreIDGenerator(),
-            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
-            beginDate: beginDate,
-            lastTakenDate: null,
-            createdAt: now(),
-          );
-          var pillSheet2 = PillSheet.v1(
-            id: firestoreIDGenerator(),
-            typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-            beginDate: beginDate.add(const Duration(days: 28)),
-            lastTakenDate: null,
-            createdAt: now(),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1", "2"],
-            pillSheets: [pillSheet, pillSheet2],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-          var setting = const Setting(
-            pillSheetTypes: [PillSheetType.pillsheet_28_7, PillSheetType.pillsheet_24_0],
-            pillNumberForFromMenstruation: 23,
-            durationMenstruation: 3,
-            isOnReminder: false,
-            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
-            timezoneDatabaseName: null,
-          );
-          expect(
-            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 4),
-            [
-              DateRange(
-                DateTime.parse("2020-09-23"),
-                DateTime.parse("2020-09-25"),
-              ),
-              DateRange(
-                DateTime.parse("2020-10-21"),
-                DateTime.parse("2020-10-23"),
-              ),
-              DateRange(
-                DateTime.parse("2020-11-14"),
-                DateTime.parse("2020-11-16"),
-              ),
-              DateRange(
-                DateTime.parse("2020-12-12"),
-                DateTime.parse("2020-12-14"),
-              ),
-            ],
-          );
-        },
-      );
+        var beginDate = DateTime.parse("2020-09-01");
+        var pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+          beginDate: beginDate,
+          lastTakenDate: null,
+          createdAt: now(),
+        );
+        var pillSheet2 = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+          beginDate: beginDate.add(const Duration(days: 28)),
+          lastTakenDate: null,
+          createdAt: now(),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [pillSheet, pillSheet2],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+        var setting = const Setting(
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_7,
+            PillSheetType.pillsheet_24_0,
+          ],
+          pillNumberForFromMenstruation: 23,
+          durationMenstruation: 3,
+          isOnReminder: false,
+          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          timezoneDatabaseName: null,
+        );
+        expect(
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 4),
+          [
+            DateRange(
+              DateTime.parse("2020-09-23"),
+              DateTime.parse("2020-09-25"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-21"),
+              DateTime.parse("2020-10-23"),
+            ),
+            DateRange(
+              DateTime.parse("2020-11-14"),
+              DateTime.parse("2020-11-16"),
+            ),
+            DateRange(
+              DateTime.parse("2020-12-12"),
+              DateTime.parse("2020-12-14"),
+            ),
+          ],
+        );
+      });
     });
     group("only one pillSheet", () {
       test(
@@ -220,8 +238,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -251,15 +273,17 @@ void main() {
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
             timezoneDatabaseName: null,
           );
-          assert(pillSheetType.dosingPeriod == 21,
-              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          assert(
+            pillSheetType.dosingPeriod == 21,
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod",
+          );
           expect(
             scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [
               DateRange(
                 DateTime.parse("2020-09-23"),
                 DateTime.parse("2020-09-25"),
-              )
+              ),
             ],
           );
         },
@@ -270,8 +294,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -302,8 +330,10 @@ void main() {
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
             timezoneDatabaseName: null,
           );
-          assert(pillSheetType.dosingPeriod == 21,
-              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          assert(
+            pillSheetType.dosingPeriod == 21,
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod",
+          );
           expect(
             scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 2),
             [
@@ -325,8 +355,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -356,8 +390,10 @@ void main() {
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
             timezoneDatabaseName: null,
           );
-          assert(pillSheetType.dosingPeriod == 21,
-              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          assert(
+            pillSheetType.dosingPeriod == 21,
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod",
+          );
           expect(
             scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 3),
             [
@@ -372,93 +408,98 @@ void main() {
               DateRange(
                 DateTime.parse("2020-11-18"),
                 DateTime.parse("2020-11-20"),
-              )
+              ),
             ],
           );
         },
       );
-      test(
-        "3枚ピルシートがある。２枚目のピルシートの進行中で6個分=1シートグループ分先の未来のデータを出す",
-        () {
-          final originalTodayRepository = todayRepository;
-          final mockTodayRepository = MockTodayService();
-          todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-10-01"));
-          addTearDown(() {
-            todayRepository = originalTodayRepository;
-          });
+      test("3枚ピルシートがある。２枚目のピルシートの進行中で6個分=1シートグループ分先の未来のデータを出す", () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2020-10-01"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
 
-          var pillSheetType = PillSheetType.pillsheet_28_7;
-          var beginDate = DateTime.parse("2020-09-01");
-          var fromMenstruation = 23;
-          var durationMenstruation = 3;
-          var pillSheet = PillSheet.v1(
-            id: firestoreIDGenerator(),
-            typeInfo: pillSheetType.typeInfo,
-            beginDate: beginDate,
-            lastTakenDate: null,
-            createdAt: now(),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-          var setting = Setting(
-            pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: fromMenstruation,
-            durationMenstruation: durationMenstruation,
-            isOnReminder: false,
-            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
-            timezoneDatabaseName: null,
-          );
-          assert(pillSheetType.dosingPeriod == 21,
-              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
-          expect(
-            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 6),
-            [
-              // 1枚目の予定日だったものは除外
-              //   DateRange(
-              //     DateTime.parse("2020-09-23"),
-              //     DateTime.parse("2020-09-25"),
-              //   ),
-              DateRange(
-                DateTime.parse("2020-10-21"),
-                DateTime.parse("2020-10-23"),
-              ),
-              DateRange(
-                DateTime.parse("2020-11-18"),
-                DateTime.parse("2020-11-20"),
-              ),
-              DateRange(
-                DateTime.parse("2020-12-16"),
-                DateTime.parse("2020-12-18"),
-              ),
-              DateRange(
-                DateTime.parse("2021-01-13"),
-                DateTime.parse("2021-01-15"),
-              ),
-              DateRange(
-                DateTime.parse("2021-02-10"),
-                DateTime.parse("2021-02-12"),
-              ),
-              DateRange(
-                DateTime.parse("2021-03-10"),
-                DateTime.parse("2021-03-12"),
-              )
-            ],
-          );
-        },
-      );
+        var pillSheetType = PillSheetType.pillsheet_28_7;
+        var beginDate = DateTime.parse("2020-09-01");
+        var fromMenstruation = 23;
+        var durationMenstruation = 3;
+        var pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          typeInfo: pillSheetType.typeInfo,
+          beginDate: beginDate,
+          lastTakenDate: null,
+          createdAt: now(),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+        var setting = Setting(
+          pillSheetTypes: [pillSheetType],
+          pillNumberForFromMenstruation: fromMenstruation,
+          durationMenstruation: durationMenstruation,
+          isOnReminder: false,
+          reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+          timezoneDatabaseName: null,
+        );
+        assert(
+          pillSheetType.dosingPeriod == 21,
+          "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod",
+        );
+        expect(
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 6),
+          [
+            // 1枚目の予定日だったものは除外
+            //   DateRange(
+            //     DateTime.parse("2020-09-23"),
+            //     DateTime.parse("2020-09-25"),
+            //   ),
+            DateRange(
+              DateTime.parse("2020-10-21"),
+              DateTime.parse("2020-10-23"),
+            ),
+            DateRange(
+              DateTime.parse("2020-11-18"),
+              DateTime.parse("2020-11-20"),
+            ),
+            DateRange(
+              DateTime.parse("2020-12-16"),
+              DateTime.parse("2020-12-18"),
+            ),
+            DateRange(
+              DateTime.parse("2021-01-13"),
+              DateTime.parse("2021-01-15"),
+            ),
+            DateRange(
+              DateTime.parse("2021-02-10"),
+              DateTime.parse("2021-02-12"),
+            ),
+            DateRange(
+              DateTime.parse("2021-03-10"),
+              DateTime.parse("2021-03-12"),
+            ),
+          ],
+        );
+      });
       test(
         "First page with pillSheetType: pillsheet_28_0, beginDate: 2021-01-18, fromMenstruation: 23, durationMenstruation: 3",
         () {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2021-01-18"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2021-01-18"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -488,117 +529,123 @@ void main() {
             reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
             timezoneDatabaseName: null,
           );
-          assert(pillSheetType.dosingPeriod == 28,
-              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          assert(
+            pillSheetType.dosingPeriod == 28,
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod",
+          );
           expect(
             scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
             [
               DateRange(
                 DateTime.parse("2021-02-09"),
                 DateTime.parse("2021-02-11"),
-              )
-            ],
-          );
-        },
-      );
-      test(
-        "over 1 pill sheet gropu period",
-        () {
-          final originalTodayRepository = todayRepository;
-          final mockTodayRepository = MockTodayService();
-          todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-01"));
-          addTearDown(() {
-            todayRepository = originalTodayRepository;
-          });
-
-          var pillSheetType = PillSheetType.pillsheet_28_0;
-          var beginDate = DateTime.parse("2021-01-01");
-          var pillSheet = PillSheet.v1(
-            id: firestoreIDGenerator(),
-            typeInfo: pillSheetType.typeInfo,
-            beginDate: beginDate,
-            lastTakenDate: null,
-            createdAt: now(),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-          var setting = Setting(
-            pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: 23,
-            durationMenstruation: 3,
-            isOnReminder: false,
-            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
-            timezoneDatabaseName: null,
-          );
-          expect(
-            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 3),
-            [
-              DateRange(
-                DateTime.parse("2021-01-23"),
-                DateTime.parse("2021-01-25"),
-              ),
-              DateRange(
-                DateTime.parse("2021-02-20"),
-                DateTime.parse("2021-02-22"),
-              ),
-              DateRange(
-                DateTime.parse("2021-03-20"),
-                DateTime.parse("2021-03-22"),
               ),
             ],
           );
         },
       );
-      test(
-        "setting.pillNumberForFromMenstruation is zero",
-        () {
-          final originalTodayRepository = todayRepository;
-          final mockTodayRepository = MockTodayService();
-          todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2021-01-18"));
-          addTearDown(() {
-            todayRepository = originalTodayRepository;
-          });
+      test("over 1 pill sheet gropu period", () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2021-01-01"));
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2021-01-01"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
 
-          var pillSheetType = PillSheetType.pillsheet_28_0;
-          var beginDate = DateTime.parse("2021-01-18");
-          var durationMenstruation = 3;
-          var pillSheet = PillSheet.v1(
-            id: firestoreIDGenerator(),
-            typeInfo: pillSheetType.typeInfo,
-            beginDate: beginDate,
-            lastTakenDate: null,
-            createdAt: now(),
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-          var setting = Setting(
-            pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: 0,
-            durationMenstruation: durationMenstruation,
-            isOnReminder: false,
-            reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
-            timezoneDatabaseName: null,
-          );
-          assert(pillSheetType.dosingPeriod == 28,
-              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
-          expect(
-            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
-            [],
-          );
-        },
-      );
+        var pillSheetType = PillSheetType.pillsheet_28_0;
+        var beginDate = DateTime.parse("2021-01-01");
+        var pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          typeInfo: pillSheetType.typeInfo,
+          beginDate: beginDate,
+          lastTakenDate: null,
+          createdAt: now(),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+        var setting = Setting(
+          pillSheetTypes: [pillSheetType],
+          pillNumberForFromMenstruation: 23,
+          durationMenstruation: 3,
+          isOnReminder: false,
+          reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+          timezoneDatabaseName: null,
+        );
+        expect(
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 3),
+          [
+            DateRange(
+              DateTime.parse("2021-01-23"),
+              DateTime.parse("2021-01-25"),
+            ),
+            DateRange(
+              DateTime.parse("2021-02-20"),
+              DateTime.parse("2021-02-22"),
+            ),
+            DateRange(
+              DateTime.parse("2021-03-20"),
+              DateTime.parse("2021-03-22"),
+            ),
+          ],
+        );
+      });
+      test("setting.pillNumberForFromMenstruation is zero", () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2021-01-18"));
+        when(
+          mockTodayRepository.now(),
+        ).thenReturn(DateTime.parse("2021-01-18"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
+        var pillSheetType = PillSheetType.pillsheet_28_0;
+        var beginDate = DateTime.parse("2021-01-18");
+        var durationMenstruation = 3;
+        var pillSheet = PillSheet.v1(
+          id: firestoreIDGenerator(),
+          typeInfo: pillSheetType.typeInfo,
+          beginDate: beginDate,
+          lastTakenDate: null,
+          createdAt: now(),
+        );
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [pillSheet],
+          createdAt: now(),
+          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+        );
+        var setting = Setting(
+          pillSheetTypes: [pillSheetType],
+          pillNumberForFromMenstruation: 0,
+          durationMenstruation: durationMenstruation,
+          isOnReminder: false,
+          reminderTimes: [const ReminderTime(hour: 1, minute: 1)],
+          timezoneDatabaseName: null,
+        );
+        assert(
+          pillSheetType.dosingPeriod == 28,
+          "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod",
+        );
+        expect(
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
+          [],
+        );
+      });
     });
   });
   group("#nextPillSheetDateRanges", () {
@@ -609,8 +656,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -638,19 +689,16 @@ void main() {
           );
 
           // pillSheetGroup.pillSheets.length * 2個のDateRangeが返ってくる
-          expect(
-            nextPillSheetDateRanges(pillSheetGroup, 2),
-            [
-              DateRange(
-                DateTime.parse("2020-09-29"),
-                DateTime.parse("2020-10-05"),
-              ),
-              DateRange(
-                DateTime.parse("2020-10-20"),
-                DateTime.parse("2020-10-26"),
-              ),
-            ],
-          );
+          expect(nextPillSheetDateRanges(pillSheetGroup, 2), [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-20"),
+              DateTime.parse("2020-10-26"),
+            ),
+          ]);
         },
       );
     });
@@ -679,8 +727,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -700,15 +752,12 @@ void main() {
             createdAt: now(),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(
-            nextPillSheetDateRanges(pillSheetGroup, 1),
-            [
-              DateRange(
-                DateTime.parse("2020-09-29"),
-                DateTime.parse("2020-10-05"),
-              ),
-            ],
-          );
+          expect(nextPillSheetDateRanges(pillSheetGroup, 1), [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+          ]);
         },
       );
       test(
@@ -717,8 +766,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -738,19 +791,16 @@ void main() {
             createdAt: now(),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(
-            nextPillSheetDateRanges(pillSheetGroup, 2),
-            [
-              DateRange(
-                DateTime.parse("2020-09-29"),
-                DateTime.parse("2020-10-05"),
-              ),
-              DateRange(
-                DateTime.parse("2020-10-27"),
-                DateTime.parse("2020-11-02"),
-              ),
-            ],
-          );
+          expect(nextPillSheetDateRanges(pillSheetGroup, 2), [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-27"),
+              DateTime.parse("2020-11-02"),
+            ),
+          ]);
         },
       );
       test(
@@ -759,8 +809,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -780,23 +834,20 @@ void main() {
             createdAt: now(),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(
-            nextPillSheetDateRanges(pillSheetGroup, 3),
-            [
-              DateRange(
-                DateTime.parse("2020-09-29"),
-                DateTime.parse("2020-10-05"),
-              ),
-              DateRange(
-                DateTime.parse("2020-10-27"),
-                DateTime.parse("2020-11-02"),
-              ),
-              DateRange(
-                DateTime.parse("2020-11-24"),
-                DateTime.parse("2020-11-30"),
-              ),
-            ],
-          );
+          expect(nextPillSheetDateRanges(pillSheetGroup, 3), [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-27"),
+              DateTime.parse("2020-11-02"),
+            ),
+            DateRange(
+              DateTime.parse("2020-11-24"),
+              DateTime.parse("2020-11-30"),
+            ),
+          ]);
         },
       );
       test(
@@ -822,8 +873,12 @@ void main() {
           final originalTodayRepository = todayRepository;
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
-          when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
+          when(
+            mockTodayRepository.now(),
+          ).thenReturn(DateTime.parse("2020-09-01"));
           addTearDown(() {
             todayRepository = originalTodayRepository;
           });
@@ -843,23 +898,18 @@ void main() {
             createdAt: now(),
             pillSheetAppearanceMode: PillSheetAppearanceMode.number,
           );
-          expect(
-            nextPillSheetDateRanges(pillSheetGroup, 1),
-            [
-              DateRange(
-                DateTime.parse("2020-09-29"),
-                DateTime.parse("2020-10-05"),
-              )
-            ],
-          );
+          expect(nextPillSheetDateRanges(pillSheetGroup, 1), [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+          ]);
         },
       );
     });
 
-    test(
-      "with ended rest duration",
-      () {
-        /*
+    test("with ended rest duration", () {
+      /*
         A = Current Pill Sheett Start
         B = Next Pill Sheet Start
         C = End of Next Pill Sheet Band
@@ -877,83 +927,79 @@ void main() {
         C  
     */
 
-        final originalTodayRepository = todayRepository;
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
-        addTearDown(() {
-          todayRepository = originalTodayRepository;
-        });
+      final originalTodayRepository = todayRepository;
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-20"));
+      addTearDown(() {
+        todayRepository = originalTodayRepository;
+      });
 
-        var pillSheetType = PillSheetType.pillsheet_28_7;
-        var beginDate = DateTime.parse("2020-09-01");
-        var pillSheet = PillSheet.v1(
-            id: firestoreIDGenerator(),
-            typeInfo: pillSheetType.typeInfo,
-            beginDate: beginDate,
-            lastTakenDate: null,
-            createdAt: now(),
-            restDurations: [
-              RestDuration(
-                id: "rest_duration_id",
-                beginDate: DateTime.parse("2020-09-08"),
-                endDate: DateTime.parse("2020-09-10"),
-                createdDate: DateTime.parse("2020-09-08"),
-              ),
-            ]);
-        final pillSheetGroup = PillSheetGroup(
-          pillSheetIDs: ["1"],
-          pillSheets: [pillSheet],
-          createdAt: now(),
-          pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-        );
-        expect(
-          nextPillSheetDateRanges(pillSheetGroup, 1),
-          [
-            DateRange(
-              DateTime.parse("2020-10-01"),
-              DateTime.parse("2020-10-07"),
-            ),
-          ],
-        );
-      },
-    );
+      var pillSheetType = PillSheetType.pillsheet_28_7;
+      var beginDate = DateTime.parse("2020-09-01");
+      var pillSheet = PillSheet.v1(
+        id: firestoreIDGenerator(),
+        typeInfo: pillSheetType.typeInfo,
+        beginDate: beginDate,
+        lastTakenDate: null,
+        createdAt: now(),
+        restDurations: [
+          RestDuration(
+            id: "rest_duration_id",
+            beginDate: DateTime.parse("2020-09-08"),
+            endDate: DateTime.parse("2020-09-10"),
+            createdDate: DateTime.parse("2020-09-08"),
+          ),
+        ],
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["1"],
+        pillSheets: [pillSheet],
+        createdAt: now(),
+        pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+      );
+      expect(nextPillSheetDateRanges(pillSheetGroup, 1), [
+        DateRange(DateTime.parse("2020-10-01"), DateTime.parse("2020-10-07")),
+      ]);
+    });
   });
   group("#bandLength", () {
     test(
       "range: DateRange(2021-02-07, 2021-02-13), bandMode: (2021-02-10, 2021-02-13), isLineBreaked: false",
       () {
         expect(
-            bandLength(
-              DateRange(
-                DateTime.parse("2021-02-07"),
-                DateTime.parse("2021-02-13"),
-              ),
-              CalendarScheduledMenstruationBandModel(
-                DateTime.parse("2021-02-10"),
-                DateTime.parse("2021-02-13"),
-              ),
-              false,
+          bandLength(
+            DateRange(
+              DateTime.parse("2021-02-07"),
+              DateTime.parse("2021-02-13"),
             ),
-            4);
+            CalendarScheduledMenstruationBandModel(
+              DateTime.parse("2021-02-10"),
+              DateTime.parse("2021-02-13"),
+            ),
+            false,
+          ),
+          4,
+        );
       },
     );
     test(
       "range: DateRange(2021-02-14, 2021-02-20), bandMode: (2021-02-08, 2021-02-14), isLineBreaked: false",
       () {
         expect(
-            bandLength(
-              DateRange(
-                DateTime.parse("2021-02-14"),
-                DateTime.parse("2021-02-20"),
-              ),
-              CalendarScheduledMenstruationBandModel(
-                DateTime.parse("2021-02-08"),
-                DateTime.parse("2021-02-14"),
-              ),
-              true,
+          bandLength(
+            DateRange(
+              DateTime.parse("2021-02-14"),
+              DateTime.parse("2021-02-20"),
             ),
-            1);
+            CalendarScheduledMenstruationBandModel(
+              DateTime.parse("2021-02-08"),
+              DateTime.parse("2021-02-14"),
+            ),
+            true,
+          ),
+          1,
+        );
       },
     );
   });

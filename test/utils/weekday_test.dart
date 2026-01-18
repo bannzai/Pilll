@@ -13,18 +13,15 @@ void main() {
   });
   group("#weekdaysForFirstWeekday", () {
     test("pass Thursday", () {
-      expect(
-        WeekdayFunctions.weekdaysForFirstWeekday(Weekday.Thursday),
-        [
-          Weekday.Thursday,
-          Weekday.Friday,
-          Weekday.Saturday,
-          Weekday.Sunday,
-          Weekday.Monday,
-          Weekday.Tuesday,
-          Weekday.Wednesday,
-        ],
-      );
+      expect(WeekdayFunctions.weekdaysForFirstWeekday(Weekday.Thursday), [
+        Weekday.Thursday,
+        Weekday.Friday,
+        Weekday.Saturday,
+        Weekday.Sunday,
+        Weekday.Monday,
+        Weekday.Tuesday,
+        Weekday.Wednesday,
+      ]);
     });
   });
 }
