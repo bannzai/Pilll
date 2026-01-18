@@ -85,5 +85,5 @@ jobs:
         flutter-version: '3.35.7'
     - run: make secret
     - run: flutter pub get
-    - run: flutter pub run build_runner build --delete-conflicting-outputs && dart format lib -l 150
+    - run: flutter pub run build_runner build --delete-conflicting-outputs && dart format lib
     - run: git diff --quiet --exit-code
