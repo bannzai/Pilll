@@ -10,11 +10,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
   final Package monthlyPackage;
   final Function(Package) onTap;
 
-  const MonthlyPurchaseButton({
-    super.key,
-    required this.monthlyPackage,
-    required this.onTap,
-  });
+  const MonthlyPurchaseButton({super.key, required this.monthlyPackage, required this.onTap});
   @override
   Widget build(BuildContext context) {
     Locale locale = Localizations.localeOf(context);
@@ -30,10 +26,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
         decoration: BoxDecoration(
           color: AppColors.blueBackground,
           borderRadius: const BorderRadius.all(Radius.circular(4)),
-          border: Border.all(
-            width: 2,
-            color: AppColors.primary,
-          ),
+          border: Border.all(width: 2, color: AppColors.primary),
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -41,29 +34,14 @@ class MonthlyPurchaseButton extends StatelessWidget {
           children: [
             Text(
               L.monthlyPlan,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-              ),
+              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 16, fontWeight: FontWeight.w700),
             ),
             Text(
               L.monthlyPrice(monthlyPackage.storeProduct.priceString),
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-              ),
+              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 16, fontWeight: FontWeight.w400),
             ),
             // NOTE: [DailyPrice] 日額を表示してみる。since: 2025-05-21。効果がなかったら dailyPriceString を表示しないようにする(Widget削除)
-            Text(
-              L.dailyPrice(dailyPriceString),
-              style: const TextStyle(
-                color: TextColor.main,
-              ),
-            ),
+            Text(L.dailyPrice(dailyPriceString), style: const TextStyle(color: TextColor.main)),
           ],
         ),
       ),

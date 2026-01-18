@@ -8,15 +8,15 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class FakeUser extends Mock implements User {
   FakeUser({
-// ignore: unused_element
+    // ignore: unused_element
     this.fakeIsPremium = false,
-// ignore: unused_element
+    // ignore: unused_element
     this.fakeIsTrial = false,
-// ignore: unused_element
+    // ignore: unused_element
     this.fakeTrialDeadlineDate,
-// ignore: unused_element
+    // ignore: unused_element
     this.fakeDiscountEntitlementDeadlineDate,
-// ignore: unused_element
+    // ignore: unused_element
     this.fakeIsExpiredDiscountEntitlements = false,
   });
   final DateTime? fakeTrialDeadlineDate;
@@ -34,7 +34,8 @@ class FakeUser extends Mock implements User {
   @override
   DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
   @override
-  DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate =>
+      fakeDiscountEntitlementDeadlineDate;
 
   @override
   bool get premiumOrTrial => isPremium || isTrial;
@@ -45,7 +46,10 @@ class FakeAnalytics extends Fake implements Analytics {
   void logEvent({required String name, Map<String, dynamic>? parameters}) {}
 
   @override
-  void logScreenView({required String screenName, String screenClass = 'Flutter'}) {}
+  void logScreenView({
+    required String screenName,
+    String screenClass = 'Flutter',
+  }) {}
 
   @override
   void setUserProperties(String name, value) {}

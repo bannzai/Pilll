@@ -22,7 +22,44 @@ void main() {
     Environment.isTest = true;
   });
   group("appearance widgets dependend on reminderTimes", () {
-    testWidgets('when setting has one reminder times. one reminder times mean requires minimum count', (WidgetTester tester) async {
+    testWidgets(
+      'when setting has one reminder times. one reminder times mean requires minimum count',
+      (WidgetTester tester) async {
+        SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
+
+        const setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 2,
+          isOnReminder: false,
+          timezoneDatabaseName: null,
+          pillSheetTypes: [PillSheetType.pillsheet_21],
+          reminderTimes: [ReminderTime(hour: 10, minute: 0)],
+        );
+
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              settingProvider.overrideWith((ref) => Stream.value(setting)),
+              deviceTimezoneNameProvider.overrideWith(
+                (ref) => Future.value("Asia/Tokyo"),
+              ),
+              setSettingProvider.overrideWith((ref) => MockSetSetting()),
+            ],
+            child: const MaterialApp(home: ReminderTimesPage()),
+          ),
+        );
+        await tester.pumpAndSettle(const Duration(milliseconds: 500));
+
+        expect(find.text(L.addNotificationTime), findsOneWidget);
+        expect(
+          find.byWidgetPredicate((widget) => widget is Dismissible),
+          findsNothing,
+        );
+      },
+    );
+    testWidgets('when setting has maximum count reminder times︎', (
+      WidgetTester tester,
+    ) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
       const setting = Setting(
@@ -33,6 +70,8 @@ void main() {
         pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [
           ReminderTime(hour: 10, minute: 0),
+          ReminderTime(hour: 11, minute: 0),
+          ReminderTime(hour: 12, minute: 0),
         ],
       );
 
@@ -40,36 +79,9 @@ void main() {
         ProviderScope(
           overrides: [
             settingProvider.overrideWith((ref) => Stream.value(setting)),
-            deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
-            setSettingProvider.overrideWith((ref) => MockSetSetting()),
-          ],
-          child: const MaterialApp(
-            home: ReminderTimesPage(),
-          ),
-        ),
-      );
-      await tester.pumpAndSettle(const Duration(milliseconds: 500));
-
-      expect(find.text(L.addNotificationTime), findsOneWidget);
-      expect(find.byWidgetPredicate((widget) => widget is Dismissible), findsNothing);
-    });
-    testWidgets('when setting has maximum count reminder times︎', (WidgetTester tester) async {
-      SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
-
-      const setting = Setting(
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 2,
-        isOnReminder: false,
-        timezoneDatabaseName: null,
-        pillSheetTypes: [PillSheetType.pillsheet_21],
-        reminderTimes: [ReminderTime(hour: 10, minute: 0), ReminderTime(hour: 11, minute: 0), ReminderTime(hour: 12, minute: 0)],
-      );
-
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            settingProvider.overrideWith((ref) => Stream.value(setting)),
-            deviceTimezoneNameProvider.overrideWith((ref) => Future.value("Asia/Tokyo")),
+            deviceTimezoneNameProvider.overrideWith(
+              (ref) => Future.value("Asia/Tokyo"),
+            ),
             setSettingProvider.overrideWith((ref) => MockSetSetting()),
           ],
           child: const MaterialApp(home: ReminderTimesPage()),
@@ -79,7 +91,10 @@ void main() {
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
       expect(find.text(L.addNotificationTime), findsNothing);
-      expect(find.byWidgetPredicate((widget) => widget is Dismissible), findsNWidgets(3));
+      expect(
+        find.byWidgetPredicate((widget) => widget is Dismissible),
+        findsNWidgets(3),
+      );
     });
   });
 }

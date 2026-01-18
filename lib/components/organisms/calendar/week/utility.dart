@@ -22,10 +22,7 @@ class WeekCalendarDateRangeCalculator {
     }
     var beginDay = Weekday.values.length * (line - 1) - _previousMonthDayCount() + 1;
     var endDay = Weekday.values.length * line - _previousMonthDayCount();
-    return DateRange(
-      DateTime(dateForMonth.year, dateForMonth.month, beginDay),
-      DateTime(dateForMonth.year, dateForMonth.month, endDay),
-    );
+    return DateRange(DateTime(dateForMonth.year, dateForMonth.month, beginDay), DateTime(dateForMonth.year, dateForMonth.month, endDay));
   }
 
   int _lastDay() => DateTime(dateForMonth.year, dateForMonth.month + 1, 0).day;

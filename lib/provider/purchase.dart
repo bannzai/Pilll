@@ -149,8 +149,9 @@ class Purchase {
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
-          name: 'catched_purchase_exception',
-          parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message});
+        name: 'catched_purchase_exception',
+        parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message},
+      );
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -158,9 +159,7 @@ class Purchase {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: 'catched_purchase_anonymous', parameters: {
-        'exception_type': exception.runtimeType.toString(),
-      });
+      analytics.logEvent(name: 'catched_purchase_anonymous', parameters: {'exception_type': exception.runtimeType.toString()});
       errorLogger.recordError(exception, stack);
       rethrow;
     }

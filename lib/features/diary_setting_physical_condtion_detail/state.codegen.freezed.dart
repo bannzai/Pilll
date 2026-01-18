@@ -12,7 +12,8 @@ part of 'state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$DiarySettingPhysicalConditionDetailState {
@@ -25,8 +26,9 @@ mixin _$DiarySettingPhysicalConditionDetailState {
 /// @nodoc
 abstract class $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
   factory $DiarySettingPhysicalConditionDetailStateCopyWith(
-          DiarySettingPhysicalConditionDetailState value, $Res Function(DiarySettingPhysicalConditionDetailState) then) =
-      _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, DiarySettingPhysicalConditionDetailState>;
+    DiarySettingPhysicalConditionDetailState value,
+    $Res Function(DiarySettingPhysicalConditionDetailState) then,
+  ) = _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, DiarySettingPhysicalConditionDetailState>;
   @useResult
   $Res call({DiarySetting? diarySetting});
 
@@ -45,15 +47,16 @@ class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, $Val extends 
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? diarySetting = freezed,
-  }) {
-    return _then(_value.copyWith(
-      diarySetting: freezed == diarySetting
-          ? _value.diarySetting
-          : diarySetting // ignore: cast_nullable_to_non_nullable
-              as DiarySetting?,
-    ) as $Val);
+  $Res call({Object? diarySetting = freezed}) {
+    return _then(
+      _value.copyWith(
+            diarySetting: freezed == diarySetting
+                ? _value.diarySetting
+                : diarySetting // ignore: cast_nullable_to_non_nullable
+                      as DiarySetting?,
+          )
+          as $Val,
+    );
   }
 
   @override
@@ -72,8 +75,9 @@ class _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, $Val extends 
 /// @nodoc
 abstract class _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<$Res> implements $DiarySettingPhysicalConditionDetailStateCopyWith<$Res> {
   factory _$$DiarySettingPhysicalConditionDetailStateImplCopyWith(
-          _$DiarySettingPhysicalConditionDetailStateImpl value, $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) then) =
-      __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl<$Res>;
+    _$DiarySettingPhysicalConditionDetailStateImpl value,
+    $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) then,
+  ) = __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({DiarySetting? diarySetting});
@@ -87,20 +91,21 @@ class __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl<$Res>
     extends _$DiarySettingPhysicalConditionDetailStateCopyWithImpl<$Res, _$DiarySettingPhysicalConditionDetailStateImpl>
     implements _$$DiarySettingPhysicalConditionDetailStateImplCopyWith<$Res> {
   __$$DiarySettingPhysicalConditionDetailStateImplCopyWithImpl(
-      _$DiarySettingPhysicalConditionDetailStateImpl _value, $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) _then)
-      : super(_value, _then);
+    _$DiarySettingPhysicalConditionDetailStateImpl _value,
+    $Res Function(_$DiarySettingPhysicalConditionDetailStateImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? diarySetting = freezed,
-  }) {
-    return _then(_$DiarySettingPhysicalConditionDetailStateImpl(
-      diarySetting: freezed == diarySetting
-          ? _value.diarySetting
-          : diarySetting // ignore: cast_nullable_to_non_nullable
-              as DiarySetting?,
-    ));
+  $Res call({Object? diarySetting = freezed}) {
+    return _then(
+      _$DiarySettingPhysicalConditionDetailStateImpl(
+        diarySetting: freezed == diarySetting
+            ? _value.diarySetting
+            : diarySetting // ignore: cast_nullable_to_non_nullable
+                  as DiarySetting?,
+      ),
+    );
   }
 }
 

@@ -5,12 +5,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/entity/menstruation.codegen.dart';
 
 class CalendarMenstruationBand extends StatelessWidget {
-  const CalendarMenstruationBand({
-    super.key,
-    required this.menstruation,
-    required this.width,
-    required this.onTap,
-  });
+  const CalendarMenstruationBand({super.key, required this.menstruation, required this.width, required this.onTap});
 
   final Menstruation menstruation;
   final double width;
@@ -23,10 +18,7 @@ class CalendarMenstruationBand extends StatelessWidget {
       child: SizedBox(
         height: CalendarBandConst.height,
         child: CustomPaint(
-          painter: DiagonalStripedLine(
-            color: AppColors.menstruation.withOpacity(0.6),
-            isNecessaryBorder: false,
-          ),
+          painter: DiagonalStripedLine(color: AppColors.menstruation.withOpacity(0.6), isNecessaryBorder: false),
           size: Size(width, CalendarBandConst.height),
         ),
       ),

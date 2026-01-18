@@ -51,10 +51,7 @@ class AddPillSheetGroup {
       displayNumberSetting: displayNumberSetting,
       pillTakenCount: pillTakenCount,
     );
-    final createdPillSheetGroup = batchSetPillSheetGroup(
-      batch,
-      updatedPillSheetGroup,
-    );
+    final createdPillSheetGroup = batchSetPillSheetGroup(batch, updatedPillSheetGroup);
 
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
       beforePillSheetGroup: pillSheetGroup,
@@ -64,11 +61,7 @@ class AddPillSheetGroup {
     );
     batchSetPillSheetModifiedHistory(batch, history);
 
-    batchSetSetting(
-        batch,
-        setting.copyWith(
-          pillSheetTypes: pillSheetTypes,
-        ));
+    batchSetSetting(batch, setting.copyWith(pillSheetTypes: pillSheetTypes));
 
     await batch.commit();
   }
@@ -95,12 +88,7 @@ PillSheetGroup buildPillSheetGroup({
         groupIndex: pageIndex,
         createdAt: now(),
         restDurations: [],
-        pills: Pill.generateAndFillTo(
-          pillSheetType: pillSheetType,
-          fromDate: beginDate,
-          lastTakenDate: null,
-          pillTakenCount: pillTakenCount,
-        ),
+        pills: Pill.generateAndFillTo(pillSheetType: pillSheetType, fromDate: beginDate, lastTakenDate: null, pillTakenCount: pillTakenCount),
       );
     }
 
@@ -125,9 +113,7 @@ PillSheetGroup buildPillSheetGroup({
           return displayNumberSetting;
         }
         if (pillSheetGroup != null) {
-          return PillSheetGroupDisplayNumberSetting(
-            beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1,
-          );
+          return PillSheetGroupDisplayNumberSetting(beginPillNumber: pillSheetGroup.sequentialEstimatedEndPillNumber + 1);
         }
       }
       return null;

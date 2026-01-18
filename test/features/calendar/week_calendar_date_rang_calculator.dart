@@ -31,38 +31,23 @@ void main() {
     test("#dateRangeOfLine", () {
       expect(
         calculator.dateRangeOfLine(1),
-        DateRange(
-          DateTime.parse("2020-08-30"),
-          DateTime.parse("2020-09-05"),
-        ),
+        DateRange(DateTime.parse("2020-08-30"), DateTime.parse("2020-09-05")),
       );
       expect(
         calculator.dateRangeOfLine(2),
-        DateRange(
-          DateTime.parse("2020-09-06"),
-          DateTime.parse("2020-09-12"),
-        ),
+        DateRange(DateTime.parse("2020-09-06"), DateTime.parse("2020-09-12")),
       );
       expect(
         calculator.dateRangeOfLine(3),
-        DateRange(
-          DateTime.parse("2020-09-13"),
-          DateTime.parse("2020-09-19"),
-        ),
+        DateRange(DateTime.parse("2020-09-13"), DateTime.parse("2020-09-19")),
       );
       expect(
         calculator.dateRangeOfLine(4),
-        DateRange(
-          DateTime.parse("2020-09-20"),
-          DateTime.parse("2020-09-26"),
-        ),
+        DateRange(DateTime.parse("2020-09-20"), DateTime.parse("2020-09-26")),
       );
       expect(
         calculator.dateRangeOfLine(5),
-        DateRange(
-          DateTime.parse("2020-09-27"),
-          DateTime.parse("2020-09-30"),
-        ),
+        DateRange(DateTime.parse("2020-09-27"), DateTime.parse("2020-09-30")),
       );
     });
   });

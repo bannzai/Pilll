@@ -96,12 +96,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          L.customizeMedicationNotifications,
-          style: const TextStyle(
-            color: TextColor.black,
-          ),
-        ),
+        title: Text(L.customizeMedicationNotifications, style: const TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.background,
       ),
       body: SafeArea(
@@ -188,12 +183,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 color: TextColor.primary,
                               ),
                             ),
-                            WordTextField(
-                              word: word,
-                              textFieldController: wordTextFieldController,
-                              focusNode: wordFocusNode,
-                              submit: wordSubmit,
-                            ),
+                            WordTextField(word: word, textFieldController: wordTextFieldController, focusNode: wordFocusNode, submit: wordSubmit),
                           ],
                         ),
                         const SizedBox(height: 20),
@@ -236,62 +226,50 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                               ),
                             ),
                             const SizedBox(height: 4),
-                            _switchRow(
-                              L.showsDate,
-                              !isInVisibleReminderDate.value,
-                              (value) async {
-                                analytics.logEvent(name: 'change_reminder_notification_date');
-                                try {
-                                  await _setIsInVisibleReminderDate(
-                                    isInVisibleReminderDate: !value,
-                                    setting: setting,
-                                    setSetting: setSetting,
-                                    registerReminderLocalNotification: registerReminderLocalNotification,
-                                  );
-                                  isInVisibleReminderDate.value = !value;
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
-                            ),
+                            _switchRow(L.showsDate, !isInVisibleReminderDate.value, (value) async {
+                              analytics.logEvent(name: 'change_reminder_notification_date');
+                              try {
+                                await _setIsInVisibleReminderDate(
+                                  isInVisibleReminderDate: !value,
+                                  setting: setting,
+                                  setSetting: setSetting,
+                                  registerReminderLocalNotification: registerReminderLocalNotification,
+                                );
+                                isInVisibleReminderDate.value = !value;
+                              } catch (error) {
+                                if (context.mounted) showErrorAlert(context, error);
+                              }
+                            }),
                             const Divider(),
-                            _switchRow(
-                              L.showsPillNumber,
-                              !isInVisiblePillNumber.value,
-                              (value) async {
-                                analytics.logEvent(name: 'change_reminder_notification_number');
-                                try {
-                                  await _setIsInVisiblePillNumber(
-                                    isInVisiblePillNumber: !value,
-                                    setting: setting,
-                                    setSetting: setSetting,
-                                    registerReminderLocalNotification: registerReminderLocalNotification,
-                                  );
-                                  isInVisiblePillNumber.value = !value;
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
-                            ),
+                            _switchRow(L.showsPillNumber, !isInVisiblePillNumber.value, (value) async {
+                              analytics.logEvent(name: 'change_reminder_notification_number');
+                              try {
+                                await _setIsInVisiblePillNumber(
+                                  isInVisiblePillNumber: !value,
+                                  setting: setting,
+                                  setSetting: setSetting,
+                                  registerReminderLocalNotification: registerReminderLocalNotification,
+                                );
+                                isInVisiblePillNumber.value = !value;
+                              } catch (error) {
+                                if (context.mounted) showErrorAlert(context, error);
+                              }
+                            }),
                             const Divider(),
-                            _switchRow(
-                              L.showsDescription,
-                              !isInVisibleDescription.value,
-                              (value) async {
-                                analytics.logEvent(name: 'change_reminder_notification_desc');
-                                try {
-                                  await _setIsInVisibleDescription(
-                                    isInVisibleDescription: !value,
-                                    setting: setting,
-                                    setSetting: setSetting,
-                                    registerReminderLocalNotification: registerReminderLocalNotification,
-                                  );
-                                  isInVisibleDescription.value = !value;
-                                } catch (error) {
-                                  if (context.mounted) showErrorAlert(context, error);
-                                }
-                              },
-                            ),
+                            _switchRow(L.showsDescription, !isInVisibleDescription.value, (value) async {
+                              analytics.logEvent(name: 'change_reminder_notification_desc');
+                              try {
+                                await _setIsInVisibleDescription(
+                                  isInVisibleDescription: !value,
+                                  setting: setting,
+                                  setSetting: setSetting,
+                                  registerReminderLocalNotification: registerReminderLocalNotification,
+                                );
+                                isInVisibleDescription.value = !value;
+                              } catch (error) {
+                                if (context.mounted) showErrorAlert(context, error);
+                              }
+                            }),
                             const Divider(),
                           ],
                         ),
@@ -350,18 +328,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w400,
-              fontSize: 16,
-            ),
+            style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400, fontSize: 16),
           ),
           const Spacer(),
-          Switch(
-            value: initialValue,
-            onChanged: onChanged,
-          ),
+          Switch(value: initialValue, onChanged: onChanged),
         ],
       ),
     );

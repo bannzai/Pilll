@@ -21,7 +21,8 @@ class _FakeUser extends Fake implements User {
   bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
 
   @override
-  DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate =>
+      fakeDiscountEntitlementDeadlineDate;
 }
 
 void main() {
@@ -38,11 +39,15 @@ void main() {
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: n).overrideWithValue(false),
+          isOverDiscountDeadlineProvider(
+            discountEntitlementDeadlineDate: n,
+          ).overrideWithValue(false),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
+      final currentOfferingType = container.read(
+        currentOfferingTypeProvider(user),
+      );
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
@@ -53,11 +58,15 @@ void main() {
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: n).overrideWithValue(true),
+          isOverDiscountDeadlineProvider(
+            discountEntitlementDeadlineDate: n,
+          ).overrideWithValue(true),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
+      final currentOfferingType = container.read(
+        currentOfferingTypeProvider(user),
+      );
       expect(currentOfferingType, equals(OfferingType.premium));
     });
     test("should return limited", () async {
@@ -68,11 +77,15 @@ void main() {
       );
       final container = ProviderContainer(
         overrides: [
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: n).overrideWithValue(false),
+          isOverDiscountDeadlineProvider(
+            discountEntitlementDeadlineDate: n,
+          ).overrideWithValue(false),
           purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
         ],
       );
-      final currentOfferingType = container.read(currentOfferingTypeProvider(user));
+      final currentOfferingType = container.read(
+        currentOfferingTypeProvider(user),
+      );
       expect(currentOfferingType, equals(OfferingType.discount));
     });
   });

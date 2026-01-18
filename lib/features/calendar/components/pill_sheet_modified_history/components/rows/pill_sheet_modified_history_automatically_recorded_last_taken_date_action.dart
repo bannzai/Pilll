@@ -30,19 +30,15 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction extends S
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
       pillNumbersOrHyphenOrDate: PillNumber(
-          pillNumber: PillSheetModifiedHistoryPillNumberOrDate.autoTaken(
-        beforeLastTakenPillNumber: beforeLastTakenPillNumber,
-        afterLastTakenPillNumber: afterLastTakenPillNumber,
-        pillSheetAppearanceMode: pillSheetAppearanceMode,
-      )),
+        pillNumber: PillSheetModifiedHistoryPillNumberOrDate.autoTaken(
+          beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+          afterLastTakenPillNumber: afterLastTakenPillNumber,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        ),
+      ),
       detail: const Text(
         '-',
-        style: TextStyle(
-          color: TextColor.main,
-          fontSize: 12,
-          fontFamily: FontFamily.japanese,
-          fontWeight: FontWeight.w400,
-        ),
+        style: TextStyle(color: TextColor.main, fontSize: 12, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w400),
         textAlign: TextAlign.center,
       ),
     );

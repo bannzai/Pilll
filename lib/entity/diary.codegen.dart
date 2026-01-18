@@ -26,7 +26,7 @@ enum PhysicalConditionStatus {
   fine,
 
   /// 体調不良な状態
-  bad
+  bad,
 }
 
 /// ユーザーの日記エンティティクラス
@@ -48,22 +48,14 @@ class Diary with _$Diary {
     ///
     /// 日記エントリが作成された日付を表す
     /// Firestoreとの変換時にTimestampConverterを使用
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime date,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) required DateTime date,
 
     /// 日記の作成日時
     ///
     /// 日記が実際に作成された日時を記録
     /// 古いデータでは存在しない可能性があるためnullable
     // NOTE: OLD data does't have createdAt
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    required DateTime? createdAt,
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required DateTime? createdAt,
 
     /// 体調状態の総合評価
     ///

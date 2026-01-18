@@ -350,11 +350,12 @@ void main() {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.number;
 
       test('ピル番号変更（before=5, after=10）の場合、「5→10番」を返す', () {
-        final result = PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-          beforeTodayPillNumber: 5,
-          afterTodayPillNumber: 10,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
-        );
+        final result =
+            PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
+              beforeTodayPillNumber: 5,
+              afterTodayPillNumber: 10,
+              pillSheetAppearanceMode: pillSheetAppearanceMode,
+            );
         expect(result, '5→10番');
       });
     });
@@ -363,11 +364,12 @@ void main() {
       const pillSheetAppearanceMode = PillSheetAppearanceMode.sequential;
 
       test('ピル番号変更（before=5, after=10）の場合、「5→10日目」を返す', () {
-        final result = PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
-          beforeTodayPillNumber: 5,
-          afterTodayPillNumber: 10,
-          pillSheetAppearanceMode: pillSheetAppearanceMode,
-        );
+        final result =
+            PillSheetModifiedHistoryPillNumberOrDate.changedPillNumber(
+              beforeTodayPillNumber: 5,
+              afterTodayPillNumber: 10,
+              pillSheetAppearanceMode: pillSheetAppearanceMode,
+            );
         expect(result, '5→10日目');
       });
     });
@@ -375,17 +377,25 @@ void main() {
 
   group('#pillSheetCount', () {
     test('空のリストの場合、「-」を返す', () {
-      final result = PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount([]);
+      final result = PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(
+        [],
+      );
       expect(result, '-');
     });
 
     test('1枚のピルシートIDの場合、「1枚」を返す', () {
-      final result = PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(['id1']);
+      final result = PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount([
+        'id1',
+      ]);
       expect(result, '1枚');
     });
 
     test('3枚のピルシートIDの場合、「3枚」を返す', () {
-      final result = PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount(['id1', 'id2', 'id3']);
+      final result = PillSheetModifiedHistoryPillNumberOrDate.pillSheetCount([
+        'id1',
+        'id2',
+        'id3',
+      ]);
       expect(result, '3枚');
     });
   });

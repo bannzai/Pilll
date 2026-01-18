@@ -12,7 +12,8 @@ part of 'remote_config_parameter.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 RemoteConfigParameter _$RemoteConfigParameterFromJson(Map<String, dynamic> json) {
   return _RemoteConfigParameter.fromJson(json);
@@ -74,18 +75,19 @@ abstract class $RemoteConfigParameterCopyWith<$Res> {
   factory $RemoteConfigParameterCopyWith(RemoteConfigParameter value, $Res Function(RemoteConfigParameter) then) =
       _$RemoteConfigParameterCopyWithImpl<$Res, RemoteConfigParameter>;
   @useResult
-  $Res call(
-      {bool isPaywallFirst,
-      bool skipInitialSetting,
-      int trialDeadlineDateOffsetDay,
-      int discountEntitlementOffsetDay,
-      int discountCountdownBoundaryHour,
-      String premiumIntroductionPattern,
-      bool premiumIntroductionShowsAppStoreReviewCard,
-      int specialOfferingUserCreationDateTimeOffset,
-      int specialOfferingUserCreationDateTimeOffsetSince,
-      int specialOfferingUserCreationDateTimeOffsetUntil,
-      bool specialOffering2UseAlternativeText});
+  $Res call({
+    bool isPaywallFirst,
+    bool skipInitialSetting,
+    int trialDeadlineDateOffsetDay,
+    int discountEntitlementOffsetDay,
+    int discountCountdownBoundaryHour,
+    String premiumIntroductionPattern,
+    bool premiumIntroductionShowsAppStoreReviewCard,
+    int specialOfferingUserCreationDateTimeOffset,
+    int specialOfferingUserCreationDateTimeOffsetSince,
+    int specialOfferingUserCreationDateTimeOffsetUntil,
+    bool specialOffering2UseAlternativeText,
+  });
 }
 
 /// @nodoc
@@ -112,52 +114,55 @@ class _$RemoteConfigParameterCopyWithImpl<$Res, $Val extends RemoteConfigParamet
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
   }) {
-    return _then(_value.copyWith(
-      isPaywallFirst: null == isPaywallFirst
-          ? _value.isPaywallFirst
-          : isPaywallFirst // ignore: cast_nullable_to_non_nullable
-              as bool,
-      skipInitialSetting: null == skipInitialSetting
-          ? _value.skipInitialSetting
-          : skipInitialSetting // ignore: cast_nullable_to_non_nullable
-              as bool,
-      trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
-          ? _value.trialDeadlineDateOffsetDay
-          : trialDeadlineDateOffsetDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      discountEntitlementOffsetDay: null == discountEntitlementOffsetDay
-          ? _value.discountEntitlementOffsetDay
-          : discountEntitlementOffsetDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      discountCountdownBoundaryHour: null == discountCountdownBoundaryHour
-          ? _value.discountCountdownBoundaryHour
-          : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
-              as int,
-      premiumIntroductionPattern: null == premiumIntroductionPattern
-          ? _value.premiumIntroductionPattern
-          : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
-              as String,
-      premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
-          ? _value.premiumIntroductionShowsAppStoreReviewCard
-          : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
-              as bool,
-      specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
-          ? _value.specialOfferingUserCreationDateTimeOffset
-          : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
-              as int,
-      specialOfferingUserCreationDateTimeOffsetSince: null == specialOfferingUserCreationDateTimeOffsetSince
-          ? _value.specialOfferingUserCreationDateTimeOffsetSince
-          : specialOfferingUserCreationDateTimeOffsetSince // ignore: cast_nullable_to_non_nullable
-              as int,
-      specialOfferingUserCreationDateTimeOffsetUntil: null == specialOfferingUserCreationDateTimeOffsetUntil
-          ? _value.specialOfferingUserCreationDateTimeOffsetUntil
-          : specialOfferingUserCreationDateTimeOffsetUntil // ignore: cast_nullable_to_non_nullable
-              as int,
-      specialOffering2UseAlternativeText: null == specialOffering2UseAlternativeText
-          ? _value.specialOffering2UseAlternativeText
-          : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            isPaywallFirst: null == isPaywallFirst
+                ? _value.isPaywallFirst
+                : isPaywallFirst // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            skipInitialSetting: null == skipInitialSetting
+                ? _value.skipInitialSetting
+                : skipInitialSetting // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
+                ? _value.trialDeadlineDateOffsetDay
+                : trialDeadlineDateOffsetDay // ignore: cast_nullable_to_non_nullable
+                      as int,
+            discountEntitlementOffsetDay: null == discountEntitlementOffsetDay
+                ? _value.discountEntitlementOffsetDay
+                : discountEntitlementOffsetDay // ignore: cast_nullable_to_non_nullable
+                      as int,
+            discountCountdownBoundaryHour: null == discountCountdownBoundaryHour
+                ? _value.discountCountdownBoundaryHour
+                : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
+                      as int,
+            premiumIntroductionPattern: null == premiumIntroductionPattern
+                ? _value.premiumIntroductionPattern
+                : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
+                      as String,
+            premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
+                ? _value.premiumIntroductionShowsAppStoreReviewCard
+                : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
+                ? _value.specialOfferingUserCreationDateTimeOffset
+                : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
+                      as int,
+            specialOfferingUserCreationDateTimeOffsetSince: null == specialOfferingUserCreationDateTimeOffsetSince
+                ? _value.specialOfferingUserCreationDateTimeOffsetSince
+                : specialOfferingUserCreationDateTimeOffsetSince // ignore: cast_nullable_to_non_nullable
+                      as int,
+            specialOfferingUserCreationDateTimeOffsetUntil: null == specialOfferingUserCreationDateTimeOffsetUntil
+                ? _value.specialOfferingUserCreationDateTimeOffsetUntil
+                : specialOfferingUserCreationDateTimeOffsetUntil // ignore: cast_nullable_to_non_nullable
+                      as int,
+            specialOffering2UseAlternativeText: null == specialOffering2UseAlternativeText
+                ? _value.specialOffering2UseAlternativeText
+                : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
+                      as bool,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -167,25 +172,26 @@ abstract class _$$RemoteConfigParameterImplCopyWith<$Res> implements $RemoteConf
       __$$RemoteConfigParameterImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {bool isPaywallFirst,
-      bool skipInitialSetting,
-      int trialDeadlineDateOffsetDay,
-      int discountEntitlementOffsetDay,
-      int discountCountdownBoundaryHour,
-      String premiumIntroductionPattern,
-      bool premiumIntroductionShowsAppStoreReviewCard,
-      int specialOfferingUserCreationDateTimeOffset,
-      int specialOfferingUserCreationDateTimeOffsetSince,
-      int specialOfferingUserCreationDateTimeOffsetUntil,
-      bool specialOffering2UseAlternativeText});
+  $Res call({
+    bool isPaywallFirst,
+    bool skipInitialSetting,
+    int trialDeadlineDateOffsetDay,
+    int discountEntitlementOffsetDay,
+    int discountCountdownBoundaryHour,
+    String premiumIntroductionPattern,
+    bool premiumIntroductionShowsAppStoreReviewCard,
+    int specialOfferingUserCreationDateTimeOffset,
+    int specialOfferingUserCreationDateTimeOffsetSince,
+    int specialOfferingUserCreationDateTimeOffsetUntil,
+    bool specialOffering2UseAlternativeText,
+  });
 }
 
 /// @nodoc
 class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigParameterCopyWithImpl<$Res, _$RemoteConfigParameterImpl>
     implements _$$RemoteConfigParameterImplCopyWith<$Res> {
   __$$RemoteConfigParameterImplCopyWithImpl(_$RemoteConfigParameterImpl _value, $Res Function(_$RemoteConfigParameterImpl) _then)
-      : super(_value, _then);
+    : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -202,71 +208,73 @@ class __$$RemoteConfigParameterImplCopyWithImpl<$Res> extends _$RemoteConfigPara
     Object? specialOfferingUserCreationDateTimeOffsetUntil = null,
     Object? specialOffering2UseAlternativeText = null,
   }) {
-    return _then(_$RemoteConfigParameterImpl(
-      isPaywallFirst: null == isPaywallFirst
-          ? _value.isPaywallFirst
-          : isPaywallFirst // ignore: cast_nullable_to_non_nullable
-              as bool,
-      skipInitialSetting: null == skipInitialSetting
-          ? _value.skipInitialSetting
-          : skipInitialSetting // ignore: cast_nullable_to_non_nullable
-              as bool,
-      trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
-          ? _value.trialDeadlineDateOffsetDay
-          : trialDeadlineDateOffsetDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      discountEntitlementOffsetDay: null == discountEntitlementOffsetDay
-          ? _value.discountEntitlementOffsetDay
-          : discountEntitlementOffsetDay // ignore: cast_nullable_to_non_nullable
-              as int,
-      discountCountdownBoundaryHour: null == discountCountdownBoundaryHour
-          ? _value.discountCountdownBoundaryHour
-          : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
-              as int,
-      premiumIntroductionPattern: null == premiumIntroductionPattern
-          ? _value.premiumIntroductionPattern
-          : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
-              as String,
-      premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
-          ? _value.premiumIntroductionShowsAppStoreReviewCard
-          : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
-              as bool,
-      specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
-          ? _value.specialOfferingUserCreationDateTimeOffset
-          : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
-              as int,
-      specialOfferingUserCreationDateTimeOffsetSince: null == specialOfferingUserCreationDateTimeOffsetSince
-          ? _value.specialOfferingUserCreationDateTimeOffsetSince
-          : specialOfferingUserCreationDateTimeOffsetSince // ignore: cast_nullable_to_non_nullable
-              as int,
-      specialOfferingUserCreationDateTimeOffsetUntil: null == specialOfferingUserCreationDateTimeOffsetUntil
-          ? _value.specialOfferingUserCreationDateTimeOffsetUntil
-          : specialOfferingUserCreationDateTimeOffsetUntil // ignore: cast_nullable_to_non_nullable
-              as int,
-      specialOffering2UseAlternativeText: null == specialOffering2UseAlternativeText
-          ? _value.specialOffering2UseAlternativeText
-          : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
+    return _then(
+      _$RemoteConfigParameterImpl(
+        isPaywallFirst: null == isPaywallFirst
+            ? _value.isPaywallFirst
+            : isPaywallFirst // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        skipInitialSetting: null == skipInitialSetting
+            ? _value.skipInitialSetting
+            : skipInitialSetting // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        trialDeadlineDateOffsetDay: null == trialDeadlineDateOffsetDay
+            ? _value.trialDeadlineDateOffsetDay
+            : trialDeadlineDateOffsetDay // ignore: cast_nullable_to_non_nullable
+                  as int,
+        discountEntitlementOffsetDay: null == discountEntitlementOffsetDay
+            ? _value.discountEntitlementOffsetDay
+            : discountEntitlementOffsetDay // ignore: cast_nullable_to_non_nullable
+                  as int,
+        discountCountdownBoundaryHour: null == discountCountdownBoundaryHour
+            ? _value.discountCountdownBoundaryHour
+            : discountCountdownBoundaryHour // ignore: cast_nullable_to_non_nullable
+                  as int,
+        premiumIntroductionPattern: null == premiumIntroductionPattern
+            ? _value.premiumIntroductionPattern
+            : premiumIntroductionPattern // ignore: cast_nullable_to_non_nullable
+                  as String,
+        premiumIntroductionShowsAppStoreReviewCard: null == premiumIntroductionShowsAppStoreReviewCard
+            ? _value.premiumIntroductionShowsAppStoreReviewCard
+            : premiumIntroductionShowsAppStoreReviewCard // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        specialOfferingUserCreationDateTimeOffset: null == specialOfferingUserCreationDateTimeOffset
+            ? _value.specialOfferingUserCreationDateTimeOffset
+            : specialOfferingUserCreationDateTimeOffset // ignore: cast_nullable_to_non_nullable
+                  as int,
+        specialOfferingUserCreationDateTimeOffsetSince: null == specialOfferingUserCreationDateTimeOffsetSince
+            ? _value.specialOfferingUserCreationDateTimeOffsetSince
+            : specialOfferingUserCreationDateTimeOffsetSince // ignore: cast_nullable_to_non_nullable
+                  as int,
+        specialOfferingUserCreationDateTimeOffsetUntil: null == specialOfferingUserCreationDateTimeOffsetUntil
+            ? _value.specialOfferingUserCreationDateTimeOffsetUntil
+            : specialOfferingUserCreationDateTimeOffsetUntil // ignore: cast_nullable_to_non_nullable
+                  as int,
+        specialOffering2UseAlternativeText: null == specialOffering2UseAlternativeText
+            ? _value.specialOffering2UseAlternativeText
+            : specialOffering2UseAlternativeText // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      ),
+    );
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
-  _$RemoteConfigParameterImpl(
-      {this.isPaywallFirst = RemoteConfigParameterDefaultValues.isPaywallFirst,
-      this.skipInitialSetting = RemoteConfigParameterDefaultValues.skipInitialSetting,
-      this.trialDeadlineDateOffsetDay = RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
-      this.discountEntitlementOffsetDay = RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
-      this.discountCountdownBoundaryHour = RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
-      this.premiumIntroductionPattern = RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
-      this.premiumIntroductionShowsAppStoreReviewCard = RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
-      this.specialOfferingUserCreationDateTimeOffset = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
-      this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
-      this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
-      this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText})
-      : super._();
+  _$RemoteConfigParameterImpl({
+    this.isPaywallFirst = RemoteConfigParameterDefaultValues.isPaywallFirst,
+    this.skipInitialSetting = RemoteConfigParameterDefaultValues.skipInitialSetting,
+    this.trialDeadlineDateOffsetDay = RemoteConfigParameterDefaultValues.trialDeadlineDateOffsetDay,
+    this.discountEntitlementOffsetDay = RemoteConfigParameterDefaultValues.discountEntitlementOffsetDay,
+    this.discountCountdownBoundaryHour = RemoteConfigParameterDefaultValues.discountCountdownBoundaryHour,
+    this.premiumIntroductionPattern = RemoteConfigParameterDefaultValues.premiumIntroductionPattern,
+    this.premiumIntroductionShowsAppStoreReviewCard = RemoteConfigParameterDefaultValues.premiumIntroductionShowsAppStoreReviewCard,
+    this.specialOfferingUserCreationDateTimeOffset = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffset,
+    this.specialOfferingUserCreationDateTimeOffsetSince = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetSince,
+    this.specialOfferingUserCreationDateTimeOffsetUntil = RemoteConfigParameterDefaultValues.specialOfferingUserCreationDateTimeOffsetUntil,
+    this.specialOffering2UseAlternativeText = RemoteConfigParameterDefaultValues.specialOffering2UseAlternativeText,
+  }) : super._();
 
   factory _$RemoteConfigParameterImpl.fromJson(Map<String, dynamic> json) => _$$RemoteConfigParameterImplFromJson(json);
 
@@ -371,18 +379,19 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      isPaywallFirst,
-      skipInitialSetting,
-      trialDeadlineDateOffsetDay,
-      discountEntitlementOffsetDay,
-      discountCountdownBoundaryHour,
-      premiumIntroductionPattern,
-      premiumIntroductionShowsAppStoreReviewCard,
-      specialOfferingUserCreationDateTimeOffset,
-      specialOfferingUserCreationDateTimeOffsetSince,
-      specialOfferingUserCreationDateTimeOffsetUntil,
-      specialOffering2UseAlternativeText);
+    runtimeType,
+    isPaywallFirst,
+    skipInitialSetting,
+    trialDeadlineDateOffsetDay,
+    discountEntitlementOffsetDay,
+    discountCountdownBoundaryHour,
+    premiumIntroductionPattern,
+    premiumIntroductionShowsAppStoreReviewCard,
+    specialOfferingUserCreationDateTimeOffset,
+    specialOfferingUserCreationDateTimeOffsetSince,
+    specialOfferingUserCreationDateTimeOffsetUntil,
+    specialOffering2UseAlternativeText,
+  );
 
   @JsonKey(ignore: true)
   @override
@@ -392,81 +401,69 @@ class _$RemoteConfigParameterImpl extends _RemoteConfigParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RemoteConfigParameterImplToJson(
-      this,
-    );
+    return _$$RemoteConfigParameterImplToJson(this);
   }
 }
 
 abstract class _RemoteConfigParameter extends RemoteConfigParameter {
-  factory _RemoteConfigParameter(
-      {final bool isPaywallFirst,
-      final bool skipInitialSetting,
-      final int trialDeadlineDateOffsetDay,
-      final int discountEntitlementOffsetDay,
-      final int discountCountdownBoundaryHour,
-      final String premiumIntroductionPattern,
-      final bool premiumIntroductionShowsAppStoreReviewCard,
-      final int specialOfferingUserCreationDateTimeOffset,
-      final int specialOfferingUserCreationDateTimeOffsetSince,
-      final int specialOfferingUserCreationDateTimeOffsetUntil,
-      final bool specialOffering2UseAlternativeText}) = _$RemoteConfigParameterImpl;
+  factory _RemoteConfigParameter({
+    final bool isPaywallFirst,
+    final bool skipInitialSetting,
+    final int trialDeadlineDateOffsetDay,
+    final int discountEntitlementOffsetDay,
+    final int discountCountdownBoundaryHour,
+    final String premiumIntroductionPattern,
+    final bool premiumIntroductionShowsAppStoreReviewCard,
+    final int specialOfferingUserCreationDateTimeOffset,
+    final int specialOfferingUserCreationDateTimeOffsetSince,
+    final int specialOfferingUserCreationDateTimeOffsetUntil,
+    final bool specialOffering2UseAlternativeText,
+  }) = _$RemoteConfigParameterImpl;
   _RemoteConfigParameter._() : super._();
 
   factory _RemoteConfigParameter.fromJson(Map<String, dynamic> json) = _$RemoteConfigParameterImpl.fromJson;
 
   @override
-
   /// ペイウォール画面を最初に表示するかどうか
   /// trueの場合、アプリ起動時にプレミアム機能の課金画面を先に表示する
   bool get isPaywallFirst;
   @override
-
   /// 初期設定画面をスキップするかどうか
   /// trueの場合、新規ユーザーでも初期設定をバイパスしてメイン画面へ遷移
   bool get skipInitialSetting;
   @override
-
   /// トライアル期限日の基準日からのオフセット日数
   /// ユーザー登録日からこの日数後にトライアル期限が設定される
   int get trialDeadlineDateOffsetDay;
   @override
-
   /// 割引プラン権利付与の基準日からのオフセット日数
   /// ユーザー登録日からこの日数後に割引プランの権利が付与される
   int get discountEntitlementOffsetDay;
   @override
-
   /// 割引カウントダウン表示の境界時間（時間単位）
   /// この時間以内になったら割引期限のカウントダウンを表示する
   int get discountCountdownBoundaryHour;
   @override
-
   /// プレミアム機能紹介パターンの識別子
   /// A/Bテスト用のパターン識別子（'default', 'A', 'B'等）
   String get premiumIntroductionPattern;
   @override
-
   /// プレミアム紹介画面でApp Storeレビューカードを表示するか
   /// trueの場合、プレミアム機能紹介時にレビュー促進カードも表示
   bool get premiumIntroductionShowsAppStoreReviewCard;
   @override
-
   /// 特別オファー対象ユーザー作成日時の基準オフセット値（分単位）
   /// ユーザー登録からこの分数経過したユーザーが特別オファーの対象となる
   int get specialOfferingUserCreationDateTimeOffset;
   @override
-
   /// 特別オファー開始の基準オフセット値（分単位）
   /// 特別オファーの表示開始タイミングを制御する
   int get specialOfferingUserCreationDateTimeOffsetSince;
   @override
-
   /// 特別オファー終了の基準オフセット値（分単位）
   /// 特別オファーの表示終了タイミングを制御する
   int get specialOfferingUserCreationDateTimeOffsetUntil;
   @override
-
   /// 特別オファー2で代替テキストを使用するかどうか
   /// trueの場合、特別オファー2画面で異なるテキスト表現を使用する
   bool get specialOffering2UseAlternativeText;

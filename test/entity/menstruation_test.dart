@@ -142,7 +142,9 @@ void main() {
     test('時刻情報が異なっても日付のみで判定される（todayに時刻が含まれる場合）', () {
       final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.now()).thenReturn(DateTime(2020, 9, 3, 14, 30, 0));
+      when(
+        mockTodayRepository.now(),
+      ).thenReturn(DateTime(2020, 9, 3, 14, 30, 0));
 
       final menstruation = Menstruation(
         beginDate: DateTime.parse('2020-09-01'),
@@ -579,7 +581,10 @@ void main() {
       );
 
       // 9/1 8:00から9/5 20:00は4日12時間
-      expect(menstruation.dateTimeRange.duration, const Duration(days: 4, hours: 12));
+      expect(
+        menstruation.dateTimeRange.duration,
+        const Duration(days: 4, hours: 12),
+      );
     });
 
     test('月をまたぐ場合の日数計算', () {

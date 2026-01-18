@@ -19,38 +19,22 @@ class PickerToolbar extends StatelessWidget {
             onPressed: () {
               cancel();
             },
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 5.0,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
             child: Text(
               L.cancel,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.primary,
-              ),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.primary),
             ),
           ),
           CupertinoButton(
             onPressed: () {
               done();
             },
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 5.0,
-            ),
+            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 5.0),
             child: Text(
               L.completed,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
-                color: TextColor.primary,
-              ),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.primary),
             ),
-          )
+          ),
         ],
       ),
     );

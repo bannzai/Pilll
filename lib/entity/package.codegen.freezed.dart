@@ -12,7 +12,8 @@ part of 'package.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 Package _$PackageFromJson(Map<String, dynamic> json) {
   return _Package.fromJson(json);
@@ -67,30 +68,28 @@ class _$PackageCopyWithImpl<$Res, $Val extends Package> implements $PackageCopyW
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? latestOS = null,
-    Object? appName = null,
-    Object? appVersion = null,
-    Object? buildNumber = null,
-  }) {
-    return _then(_value.copyWith(
-      latestOS: null == latestOS
-          ? _value.latestOS
-          : latestOS // ignore: cast_nullable_to_non_nullable
-              as String,
-      appName: null == appName
-          ? _value.appName
-          : appName // ignore: cast_nullable_to_non_nullable
-              as String,
-      appVersion: null == appVersion
-          ? _value.appVersion
-          : appVersion // ignore: cast_nullable_to_non_nullable
-              as String,
-      buildNumber: null == buildNumber
-          ? _value.buildNumber
-          : buildNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  $Res call({Object? latestOS = null, Object? appName = null, Object? appVersion = null, Object? buildNumber = null}) {
+    return _then(
+      _value.copyWith(
+            latestOS: null == latestOS
+                ? _value.latestOS
+                : latestOS // ignore: cast_nullable_to_non_nullable
+                      as String,
+            appName: null == appName
+                ? _value.appName
+                : appName // ignore: cast_nullable_to_non_nullable
+                      as String,
+            appVersion: null == appVersion
+                ? _value.appVersion
+                : appVersion // ignore: cast_nullable_to_non_nullable
+                      as String,
+            buildNumber: null == buildNumber
+                ? _value.buildNumber
+                : buildNumber // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -108,30 +107,27 @@ class __$$PackageImplCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res, _$Pa
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? latestOS = null,
-    Object? appName = null,
-    Object? appVersion = null,
-    Object? buildNumber = null,
-  }) {
-    return _then(_$PackageImpl(
-      latestOS: null == latestOS
-          ? _value.latestOS
-          : latestOS // ignore: cast_nullable_to_non_nullable
-              as String,
-      appName: null == appName
-          ? _value.appName
-          : appName // ignore: cast_nullable_to_non_nullable
-              as String,
-      appVersion: null == appVersion
-          ? _value.appVersion
-          : appVersion // ignore: cast_nullable_to_non_nullable
-              as String,
-      buildNumber: null == buildNumber
-          ? _value.buildNumber
-          : buildNumber // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+  $Res call({Object? latestOS = null, Object? appName = null, Object? appVersion = null, Object? buildNumber = null}) {
+    return _then(
+      _$PackageImpl(
+        latestOS: null == latestOS
+            ? _value.latestOS
+            : latestOS // ignore: cast_nullable_to_non_nullable
+                  as String,
+        appName: null == appName
+            ? _value.appName
+            : appName // ignore: cast_nullable_to_non_nullable
+                  as String,
+        appVersion: null == appVersion
+            ? _value.appVersion
+            : appVersion // ignore: cast_nullable_to_non_nullable
+                  as String,
+        buildNumber: null == buildNumber
+            ? _value.buildNumber
+            : buildNumber // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -198,44 +194,39 @@ class _$PackageImpl implements _Package {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PackageImplToJson(
-      this,
-    );
+    return _$$PackageImplToJson(this);
   }
 }
 
 abstract class _Package implements Package {
-  const factory _Package(
-      {required final String latestOS,
-      required final String appName,
-      required final String appVersion,
-      required final String buildNumber}) = _$PackageImpl;
+  const factory _Package({
+    required final String latestOS,
+    required final String appName,
+    required final String appVersion,
+    required final String buildNumber,
+  }) = _$PackageImpl;
 
   factory _Package.fromJson(Map<String, dynamic> json) = _$PackageImpl.fromJson;
 
   @override
-
   /// 端末の最新OS種別
   ///
   /// Platform.operatingSystemから取得される値（"android", "ios"など）
   /// 端末のOS種別を識別するために使用される
   String get latestOS;
   @override
-
   /// アプリケーション名
   ///
   /// PackageInfo.fromPlatform().appNameから取得される値
   /// 通常は"Pilll"が設定される
   String get appName;
   @override
-
   /// アプリケーションのバージョン番号
   ///
   /// PackageInfo.fromPlatform().versionから取得される値
   /// アプリストアで公開されているバージョン番号（例: "2025.08.06"）
   String get appVersion;
   @override
-
   /// アプリケーションのビルド番号
   ///
   /// PackageInfo.fromPlatform().buildNumberから取得される値

@@ -72,24 +72,13 @@ class RestDuration with _$RestDuration {
 
     /// 休薬開始日
     /// ユーザーがピル服用を停止した日付
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime beginDate,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// 休薬終了日（継続中の場合はnull）
     /// 服用を再開した日付、まだ再開していない場合はnull
     DateTime? endDate,
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     /// 休薬期間レコードの作成日時
     /// このデータが作成された日時（ユーザーが休薬を開始した日とは異なる場合がある）
     required DateTime createdDate,
@@ -131,35 +120,19 @@ sealed class PillSheet with _$PillSheet {
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    @JsonKey(
-      name: 'beginingDate',
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(name: 'beginingDate', fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime beginDate,
 
     // NOTE: [SyncData:Widget] このプロパティはWidgetに同期されてる
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// 最後にピルを服用した日付
     /// まだ一度も服用していない場合はnull
     required DateTime? lastTakenDate,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// ピルシートの作成日時
     /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// ピルシートの削除日時
     /// 削除されていない場合はnull
     DateTime? deletedAt,
@@ -191,24 +164,13 @@ sealed class PillSheet with _$PillSheet {
 
     /// ピルシート開始日
     /// このシートでピル服用を開始した日付
-    @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
-    )
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
     required DateTime beginDate,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// ピルシートの作成日時
     /// このデータがFirestoreに作成された日時
     required DateTime? createdAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-
+    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
     /// ピルシートの削除日時
     /// 削除されていない場合はnull
     DateTime? deletedAt,
@@ -237,12 +199,7 @@ sealed class PillSheet with _$PillSheet {
   /// テスト用のピルシート作成ファクトリメソッド
   /// pillTakenCount > 1 の場合は v2、それ以外は v1 を返す
   @visibleForTesting
-  factory PillSheet.create(
-    PillSheetType type, {
-    required DateTime beginDate,
-    required DateTime? lastTakenDate,
-    required int pillTakenCount,
-  }) {
+  factory PillSheet.create(PillSheetType type, {required DateTime beginDate, required DateTime? lastTakenDate, required int pillTakenCount}) {
     if (pillTakenCount > 1) {
       return PillSheet.v2(
         id: firestoreIDGenerator(),
@@ -251,21 +208,10 @@ sealed class PillSheet with _$PillSheet {
         createdAt: now(),
         groupIndex: 0,
         restDurations: [],
-        pills: Pill.generateAndFillTo(
-          pillSheetType: type,
-          fromDate: beginDate,
-          lastTakenDate: lastTakenDate,
-          pillTakenCount: pillTakenCount,
-        ),
+        pills: Pill.generateAndFillTo(pillSheetType: type, fromDate: beginDate, lastTakenDate: lastTakenDate, pillTakenCount: pillTakenCount),
       );
     }
-    return PillSheet.v1(
-      id: firestoreIDGenerator(),
-      typeInfo: type.typeInfo,
-      beginDate: beginDate,
-      lastTakenDate: lastTakenDate,
-      createdAt: now(),
-    );
+    return PillSheet.v1(id: firestoreIDGenerator(), typeInfo: type.typeInfo, beginDate: beginDate, lastTakenDate: lastTakenDate, createdAt: now());
   }
 
   /// カスタム fromJson で version フィールドを見て分岐
@@ -558,24 +504,23 @@ extension PillSheetV2Extension on PillSheetV2 {
 /// 指定日までの総休薬日数を計算
 /// lastTakenDateやtodayなどの基準日までの累積休薬期間を集計
 /// ピル番号計算時の日数調整に使用される
-int summarizedRestDuration({
-  required List<RestDuration> restDurations,
-  required DateTime upperDate,
-}) {
+int summarizedRestDuration({required List<RestDuration> restDurations, required DateTime upperDate}) {
   if (restDurations.isEmpty) {
     return 0;
   }
-  return restDurations.map((e) {
-    // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
-    if (!e.beginDate.isBefore(upperDate)) {
-      return 0;
-    }
+  return restDurations
+      .map((e) {
+        // upperDate よりも後の休薬期間の場合は無視する。同一日は無視しないので、!upperDate.isAfter(e.beginDate)では無い
+        if (!e.beginDate.isBefore(upperDate)) {
+          return 0;
+        }
 
-    final endDate = e.endDate;
-    if (endDate == null) {
-      return daysBetween(e.beginDate, upperDate);
-    }
+        final endDate = e.endDate;
+        if (endDate == null) {
+          return daysBetween(e.beginDate, upperDate);
+        }
 
-    return daysBetween(e.beginDate, endDate);
-  }).reduce((value, element) => value + element);
+        return daysBetween(e.beginDate, endDate);
+      })
+      .reduce((value, element) => value + element);
 }

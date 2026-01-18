@@ -20,11 +20,7 @@ class MenstruationRow extends HookConsumerWidget {
         children: [
           Text(
             L.aboutMenstruation,
-            style: const TextStyle(
-              fontFamily: FontFamily.roboto,
-              fontWeight: FontWeight.w300,
-              fontSize: 16,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
           ),
           const SizedBox(width: 8),
           if (_hasError) SvgPicture.asset('images/alert_24.svg', width: 24, height: 24),
@@ -32,9 +28,7 @@ class MenstruationRow extends HookConsumerWidget {
       ),
       subtitle: _hasError ? Text(L.checkPillNumberForMenstruationStart) : null,
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_changing_about_menstruation',
-        );
+        analytics.logEvent(name: 'did_select_changing_about_menstruation');
         Navigator.of(context).push(SettingMenstruationPageRoute.route());
       },
     );

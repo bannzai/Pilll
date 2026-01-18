@@ -7,36 +7,19 @@ import 'package:pilll/features/localizations/l.dart';
 
 class PillSheetModifiedHistoryEndedPillSheetAction extends StatelessWidget {
   final EndedPillSheetValue? value;
-  const PillSheetModifiedHistoryEndedPillSheetAction({
-    super.key,
-    required this.value,
-  });
+  const PillSheetModifiedHistoryEndedPillSheetAction({super.key, required this.value});
 
-  TextStyle get _textStyle => const TextStyle(
-        color: TextColor.main,
-        fontFamily: FontFamily.japanese,
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-      );
+  TextStyle get _textStyle => const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400);
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        LimitedBox(
-          maxWidth: MediaQuery.of(context).size.width / 4 - 1,
-          child: const DottedLine(),
-        ),
+        LimitedBox(maxWidth: MediaQuery.of(context).size.width / 4 - 1, child: const DottedLine()),
         const SizedBox(width: 12),
-        Text(
-          L.endPillSheet,
-          style: _textStyle,
-        ),
+        Text(L.endPillSheet, style: _textStyle),
         const SizedBox(width: 12),
-        LimitedBox(
-          maxWidth: MediaQuery.of(context).size.width / 4 - 1,
-          child: const DottedLine(),
-        ),
+        LimitedBox(maxWidth: MediaQuery.of(context).size.width / 4 - 1, child: const DottedLine()),
       ],
     );
   }

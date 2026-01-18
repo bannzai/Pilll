@@ -48,8 +48,12 @@ void main() {
             PillSheet.v1(
               id: "1",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24)),
-              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 + 28 + 24 + 24 - 23)),
+              beginDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 + 24 + 28 + 24 + 24),
+              ),
+              lastTakenDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 + 24 + 28 + 24 + 24 - 23),
+              ),
               createdAt: now(),
               groupIndex: 0,
             ),
@@ -57,8 +61,12 @@ void main() {
             PillSheet.v1(
               id: "2",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24)),
-              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 28 + 24 + 24 - 23)),
+              beginDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 + 28 + 24 + 24),
+              ),
+              lastTakenDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 + 28 + 24 + 24 - 23),
+              ),
               createdAt: now(),
               groupIndex: 1,
             ),
@@ -66,8 +74,12 @@ void main() {
             PillSheet.v1(
               id: "3",
               typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
-              beginDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24)),
-              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 28 + 24 + 24 - 27)),
+              beginDate: sheet5BeginDate.subtract(
+                const Duration(days: 28 + 24 + 24),
+              ),
+              lastTakenDate: sheet5BeginDate.subtract(
+                const Duration(days: 28 + 24 + 24 - 27),
+              ),
               createdAt: now(),
               groupIndex: 2,
             ),
@@ -75,8 +87,12 @@ void main() {
             PillSheet.v1(
               id: "4",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
-              beginDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24)),
-              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 + 24 - 23)),
+              beginDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 + 24),
+              ),
+              lastTakenDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 + 24 - 23),
+              ),
               createdAt: now(),
               groupIndex: 3,
             ),
@@ -85,7 +101,9 @@ void main() {
               id: "5",
               typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
               beginDate: sheet5BeginDate.subtract(const Duration(days: 24)),
-              lastTakenDate: sheet5BeginDate.subtract(const Duration(days: 24 - 23)),
+              lastTakenDate: sheet5BeginDate.subtract(
+                const Duration(days: 24 - 23),
+              ),
               createdAt: now(),
               groupIndex: 4,
             ),
@@ -119,11 +137,19 @@ void main() {
           isOnReminder: true,
         );
 
-        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 12)
-            .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
-            .toList();
+        final calendarScheduledMenstruationBandModels =
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 12)
+                .map(
+                  (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
+                )
+                .toList();
 
-        final actual = cardState(pillSheetGroup, null, setting, calendarScheduledMenstruationBandModels);
+        final actual = cardState(
+          pillSheetGroup,
+          null,
+          setting,
+          calendarScheduledMenstruationBandModels,
+        );
 
         // 現在の実装の動作を確認:
         // 72番ごとに生理 → fromMenstruations = [72, 144]
@@ -208,13 +234,33 @@ void main() {
             createdAt: DateTime(2021, 03, 28),
           ),
         ];
-        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
-            .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
-            .toList();
+        final calendarScheduledMenstruationBandModels =
+            scheduledMenstruationDateRanges(
+                  pillSheetGroup,
+                  setting,
+                  menstruations,
+                  12,
+                )
+                .map(
+                  (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
+                )
+                .toList();
 
-        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
+        final actual = cardState(
+          pillSheetGroup,
+          menstruations.first,
+          setting,
+          calendarScheduledMenstruationBandModels,
+        );
 
-        expect(actual, MenstruationCardState(title: "生理開始日", scheduleDate: DateTime(2021, 04, 28), countdownString: "2日目"));
+        expect(
+          actual,
+          MenstruationCardState(
+            title: "生理開始日",
+            scheduleDate: DateTime(2021, 04, 28),
+            countdownString: "2日目",
+          ),
+        );
       },
     );
     test(
@@ -251,11 +297,24 @@ void main() {
             createdAt: DateTime(2021, 03, 28),
           ),
         ];
-        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
-            .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
-            .toList();
+        final calendarScheduledMenstruationBandModels =
+            scheduledMenstruationDateRanges(
+                  pillSheetGroup,
+                  setting,
+                  menstruations,
+                  12,
+                )
+                .map(
+                  (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
+                )
+                .toList();
 
-        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
+        final actual = cardState(
+          pillSheetGroup,
+          menstruations.first,
+          setting,
+          calendarScheduledMenstruationBandModels,
+        );
         expect(actual, null);
       },
     );
@@ -295,12 +354,27 @@ void main() {
           timezoneDatabaseName: null,
           isOnReminder: true,
         );
-        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 12)
-            .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
-            .toList();
+        final calendarScheduledMenstruationBandModels =
+            scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 12)
+                .map(
+                  (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
+                )
+                .toList();
 
-        final actual = cardState(pillSheetGroup, null, setting, calendarScheduledMenstruationBandModels);
-        expect(actual, MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 05, 13), countdownString: "あと14日"));
+        final actual = cardState(
+          pillSheetGroup,
+          null,
+          setting,
+          calendarScheduledMenstruationBandModels,
+        );
+        expect(
+          actual,
+          MenstruationCardState(
+            title: "生理予定日",
+            scheduleDate: DateTime(2021, 05, 13),
+            countdownString: "あと14日",
+          ),
+        );
       },
     );
     test(
@@ -345,13 +419,30 @@ void main() {
             createdAt: DateTime(2021, 03, 28),
           ),
         ];
-        final calendarScheduledMenstruationBandModels = scheduledMenstruationDateRanges(pillSheetGroup, setting, menstruations, 12)
-            .map((e) => CalendarScheduledMenstruationBandModel(e.begin, e.end))
-            .toList();
-        final actual = cardState(pillSheetGroup, menstruations.first, setting, calendarScheduledMenstruationBandModels);
+        final calendarScheduledMenstruationBandModels =
+            scheduledMenstruationDateRanges(
+                  pillSheetGroup,
+                  setting,
+                  menstruations,
+                  12,
+                )
+                .map(
+                  (e) => CalendarScheduledMenstruationBandModel(e.begin, e.end),
+                )
+                .toList();
+        final actual = cardState(
+          pillSheetGroup,
+          menstruations.first,
+          setting,
+          calendarScheduledMenstruationBandModels,
+        );
         expect(
           actual,
-          MenstruationCardState(title: "生理予定日", scheduleDate: DateTime(2021, 04, 28), countdownString: "生理予定：2日目"),
+          MenstruationCardState(
+            title: "生理予定日",
+            scheduleDate: DateTime(2021, 04, 28),
+            countdownString: "生理予定：2日目",
+          ),
         );
       },
     );

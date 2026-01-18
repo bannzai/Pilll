@@ -23,17 +23,18 @@ class AddPillSheetTypeEmpty extends HookConsumerWidget {
           SizedBox(
             width: 180,
             child: PrimaryButton(
-                onPressed: () async {
-                  analytics.logEvent(name: 'empty_pill_sheet_type');
-                  showSettingPillSheetGroupSelectPillSheetTypePage(
-                    context: context,
-                    pillSheetType: null,
-                    onSelect: (pillSheetType) {
-                      onSelect(pillSheetType);
-                    },
-                  );
-                },
-                text: L.selectPillType),
+              onPressed: () async {
+                analytics.logEvent(name: 'empty_pill_sheet_type');
+                showSettingPillSheetGroupSelectPillSheetTypePage(
+                  context: context,
+                  pillSheetType: null,
+                  onSelect: (pillSheetType) {
+                    onSelect(pillSheetType);
+                  },
+                );
+              },
+              text: L.selectPillType,
+            ),
           ),
         ],
       ),

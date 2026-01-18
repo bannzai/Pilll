@@ -39,22 +39,11 @@ class HomePage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final user = ref.watch(userProvider);
     final sharedPreferences = ref.watch(sharedPreferencesProvider);
-    return AsyncValueGroup.group2(
-      user,
-      ref.watch(latestPillSheetGroupProvider),
-    ).when(
+    return AsyncValueGroup.group2(user, ref.watch(latestPillSheetGroupProvider)).when(
       data: (data) {
-        return HomePageBody(
-          user: data.$1,
-          pillSheetGroup: data.$2,
-          sharedPreferences: sharedPreferences,
-        );
+        return HomePageBody(user: data.$1, pillSheetGroup: data.$2, sharedPreferences: sharedPreferences);
       },
-      error: (error, stackTrace) => UniversalErrorPage(
-        error: error,
-        reload: () => ref.refresh(latestPillSheetGroupProvider),
-        child: null,
-      ),
+      error: (error, stackTrace) => UniversalErrorPage(error: error, reload: () => ref.refresh(latestPillSheetGroupProvider), child: null),
       loading: () => const ScaffoldIndicator(),
     );
   }
@@ -65,12 +54,7 @@ class HomePageBody extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final SharedPreferences sharedPreferences;
 
-  const HomePageBody({
-    super.key,
-    required this.user,
-    required this.pillSheetGroup,
-    required this.sharedPreferences,
-  });
+  const HomePageBody({super.key, required this.user, required this.pillSheetGroup, required this.sharedPreferences});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -114,11 +98,7 @@ class HomePageBody extends HookConsumerWidget {
           // ignore: use_build_context_synchronously
           showDialog(context: context, builder: (_) => const ChurnSurveyCompleteDialog());
         } else if (!isAlreadyAnsweredPreStoreReviewModal && totalCountOfActionForTakenPill > 10 && isJaLocale) {
-          showModalBottomSheet(
-            context: context,
-            backgroundColor: Colors.transparent,
-            builder: (_) => const PreStoreReviewModal(),
-          );
+          showModalBottomSheet(context: context, backgroundColor: Colors.transparent, builder: (_) => const PreStoreReviewModal());
           sharedPreferences.setBool(BoolKey.isAlreadyAnsweredPreStoreReviewModal, true);
         } else if (isOneMonthPassedTrialDeadline && isOneMonthPassedSinceLastDisplayedMonthlyPremiumIntroductionSheet && !user.premiumOrTrial) {
           if (!user.premiumOrTrial) {
@@ -183,24 +163,28 @@ class HomePageBody extends HookConsumerWidget {
                   Tab(
                     text: L.pill,
                     icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg'),
+                      tabIndex.value == HomePageTabType.record.index ? 'images/tab_icon_pill_enable.svg' : 'images/tab_icon_pill_disable.svg',
+                    ),
                   ),
                   Tab(
                     text: L.menstruation,
                     icon: SvgPicture.asset(
-                        tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg'),
+                      tabIndex.value == HomePageTabType.menstruation.index ? 'images/menstruation.svg' : 'images/menstruation_disable.svg',
+                    ),
                   ),
                   Tab(
                     text: L.calendar,
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.calendar.index
-                        ? 'images/tab_icon_calendar_enable.svg'
-                        : 'images/tab_icon_calendar_disable.svg'),
+                    icon: SvgPicture.asset(
+                      tabIndex.value == HomePageTabType.calendar.index
+                          ? 'images/tab_icon_calendar_enable.svg'
+                          : 'images/tab_icon_calendar_disable.svg',
+                    ),
                   ),
                   Tab(
                     text: L.settings,
-                    icon: SvgPicture.asset(tabIndex.value == HomePageTabType.setting.index
-                        ? 'images/tab_icon_setting_enable.svg'
-                        : 'images/tab_icon_setting_disable.svg'),
+                    icon: SvgPicture.asset(
+                      tabIndex.value == HomePageTabType.setting.index ? 'images/tab_icon_setting_enable.svg' : 'images/tab_icon_setting_disable.svg',
+                    ),
                   ),
                 ],
               ),
@@ -210,21 +194,14 @@ class HomePageBody extends HookConsumerWidget {
         body: TabBarView(
           physics: const NeverScrollableScrollPhysics(),
           controller: tabController,
-          children: const <Widget>[
-            RecordPage(),
-            MenstruationPage(),
-            CalendarPage(),
-            SettingPage(),
-          ],
+          children: const <Widget>[RecordPage(), MenstruationPage(), CalendarPage(), SettingPage()],
         ),
       ),
     );
   }
 
   void _screenTracking(int index) {
-    analytics.logScreenView(
-      screenName: HomePageTabType.values[index].screenName,
-    );
+    analytics.logScreenView(screenName: HomePageTabType.values[index].screenName);
   }
 }
 

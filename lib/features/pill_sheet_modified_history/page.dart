@@ -29,12 +29,10 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
       return null;
     }, [historiesAsync.asData?.value]);
 
-    return ref.watch(userProvider).when(
-          error: (error, _) => UniversalErrorPage(
-            error: error,
-            child: null,
-            reload: () => ref.refresh(databaseProvider),
-          ),
+    return ref
+        .watch(userProvider)
+        .when(
+          error: (error, _) => UniversalErrorPage(error: error, child: null, reload: () => ref.refresh(databaseProvider)),
           loading: () => const ScaffoldIndicator(),
           data: (user) {
             return Scaffold(
@@ -44,10 +42,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                   icon: const Icon(Icons.arrow_back, color: Colors.black),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
-                title: Text(
-                  L.medicationHistory,
-                  style: const TextStyle(color: TextColor.main),
-                ),
+                title: Text(L.medicationHistory, style: const TextStyle(color: TextColor.main)),
                 centerTitle: false,
                 backgroundColor: AppColors.white,
               ),
@@ -73,10 +68,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                           child: SingleChildScrollView(
                             padding: const EdgeInsets.only(bottom: 20),
                             physics: const AlwaysScrollableScrollPhysics(),
-                            child: PillSheetModifiedHistoryList(
-                              pillSheetModifiedHistories: histories.value,
-                              premiumOrTrial: user.premiumOrTrial,
-                            ),
+                            child: PillSheetModifiedHistoryList(pillSheetModifiedHistories: histories.value, premiumOrTrial: user.premiumOrTrial),
                           ),
                         ),
                       ],

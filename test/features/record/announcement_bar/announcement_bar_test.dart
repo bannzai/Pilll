@@ -71,7 +71,7 @@ void main() {
           PillSheetType.pillsheet_21,
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
-// NOTE: Into rest duration and notification duration
+            // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
           pillTakenCount: 1,
@@ -83,38 +83,57 @@ void main() {
           pillSheetAppearanceMode: PillSheetAppearanceMode.number,
         );
         SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          IntKey.totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               appIsReleasedProvider.overrideWith((ref) => true),
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith(
+                (ref) => Stream.value(pillSheetGroup),
+              ),
               userProvider.overrideWith((ref) {
                 return Stream.value(
                   User(
                     isPremium: false,
-                    trialDeadlineDate: mockToday.subtract(const Duration(days: 1)),
+                    trialDeadlineDate: mockToday.subtract(
+                      const Duration(days: 1),
+                    ),
                     beginTrialDate: mockToday.subtract(const Duration(days: 2)),
-                    discountEntitlementDeadlineDate: mockToday.add(const Duration(days: 2)),
+                    discountEntitlementDeadlineDate: mockToday.add(
+                      const Duration(days: 2),
+                    ),
                   ),
                 );
               }),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)))
-                  .overrideWith((provider) => false),
-              durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)))
-                  .overrideWithValue(const Duration(seconds: 1000)),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-              annualPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
-              monthlyPackageProvider.overrideWith((ref, user) => FakeRevenueCatPackage()),
+              hiddenCountdownDiscountDeadlineProvider(
+                discountEntitlementDeadlineDate: mockToday.subtract(
+                  const Duration(days: 1),
+                ),
+              ).overrideWith((provider) => false),
+              durationToDiscountPriceDeadlineProvider(
+                discountEntitlementDeadlineDate: mockToday.subtract(
+                  const Duration(days: 1),
+                ),
+              ).overrideWithValue(const Duration(seconds: 1000)),
+              sharedPreferencesProvider.overrideWith(
+                (ref) => sharedPreferences,
+              ),
+              remoteConfigParameterProvider.overrideWithValue(
+                RemoteConfigParameter(),
+              ),
+              annualPackageProvider.overrideWith(
+                (ref, user) => FakeRevenueCatPackage(),
+              ),
+              monthlyPackageProvider.overrideWith(
+                (ref, user) => FakeRevenueCatPackage(),
+              ),
             ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
+            child: const MaterialApp(home: Material(child: AnnouncementBar())),
           ),
         );
         await tester.pump();
@@ -127,7 +146,9 @@ void main() {
         );
       });
 
-      testWidgets('#PremiumTrialLimitAnnouncementBar', (WidgetTester tester) async {
+      testWidgets('#PremiumTrialLimitAnnouncementBar', (
+        WidgetTester tester,
+      ) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
         final n = today();
@@ -140,7 +161,7 @@ void main() {
           PillSheetType.pillsheet_21,
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
-// NOTE: Not into rest duration and notification duration
+            // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
           pillTakenCount: 1,
@@ -153,14 +174,17 @@ void main() {
         );
 
         SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          IntKey.totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               appIsReleasedProvider.overrideWith((ref) => true),
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith(
+                (ref) => Stream.value(pillSheetGroup),
+              ),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   User(
@@ -173,12 +197,14 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+              sharedPreferencesProvider.overrideWith(
+                (ref) => sharedPreferences,
+              ),
+              remoteConfigParameterProvider.overrideWithValue(
+                RemoteConfigParameter(),
+              ),
             ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
+            child: const MaterialApp(home: Material(child: AnnouncementBar())),
           ),
         );
         await tester.pump();
@@ -186,7 +212,9 @@ void main() {
         debugDefaultTargetPlatformOverride = null;
 
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumTrialLimitAnnouncementBar),
+          find.byWidgetPredicate(
+            (widget) => widget is PremiumTrialLimitAnnouncementBar,
+          ),
           findsOneWidget,
         );
       });
@@ -203,7 +231,7 @@ void main() {
           PillSheetType.pillsheet_21,
           lastTakenDate: mockToday.subtract(const Duration(days: 1)),
           beginDate: mockToday.subtract(
-// NOTE: To deactive pill sheet
+            // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),
           pillTakenCount: 1,
@@ -216,14 +244,17 @@ void main() {
         );
 
         SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          IntKey.totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               appIsReleasedProvider.overrideWith((ref) => true),
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith(
+                (ref) => Stream.value(pillSheetGroup),
+              ),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
@@ -236,12 +267,14 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+              sharedPreferencesProvider.overrideWith(
+                (ref) => sharedPreferences,
+              ),
+              remoteConfigParameterProvider.overrideWithValue(
+                RemoteConfigParameter(),
+              ),
             ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
+            child: const MaterialApp(home: Material(child: AnnouncementBar())),
           ),
         );
         await tester.pumpAndSettle(const Duration(milliseconds: 400));
@@ -259,9 +292,7 @@ void main() {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
             lastTakenDate: today().subtract(const Duration(days: 1)),
-            beginDate: today().subtract(
-              const Duration(days: 25),
-            ),
+            beginDate: today().subtract(const Duration(days: 25)),
             pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -272,14 +303,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -293,8 +327,12 @@ void main() {
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -314,9 +352,7 @@ void main() {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
             lastTakenDate: today().subtract(const Duration(days: 1)),
-            beginDate: today().subtract(
-              const Duration(days: 25),
-            ),
+            beginDate: today().subtract(const Duration(days: 25)),
             pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -327,14 +363,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -348,8 +387,12 @@ void main() {
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -375,9 +418,7 @@ void main() {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
+            beginDate: mockToday.subtract(const Duration(days: 25)),
             pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -388,29 +429,40 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     User(
                       isPremium: false,
                       trialDeadlineDate: mockToday.add(const Duration(days: 1)),
-                      beginTrialDate: mockToday.subtract(const Duration(days: 2)),
-                      discountEntitlementDeadlineDate: mockToday.add(const Duration(days: 2)),
+                      beginTrialDate: mockToday.subtract(
+                        const Duration(days: 2),
+                      ),
+                      discountEntitlementDeadlineDate: mockToday.add(
+                        const Duration(days: 2),
+                      ),
                     ),
                   ),
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
                 pilllAdsProvider.overrideWith((ref) => Stream.value(null)),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -428,77 +480,95 @@ void main() {
         });
       });
       group("#PilllAdsAnnouncementBar", () {
-        testWidgets('today is before 2022-08-10, pilll-ads is start 2022-08-10', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+        testWidgets(
+          'today is before 2022-08-10, pilll-ads is start 2022-08-10',
+          (WidgetTester tester) async {
+            final mockTodayRepository = MockTodayService();
+            final mockToday = DateTime(
+              2022,
+              08,
+              10,
+            ).subtract(const Duration(seconds: 1));
 
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
+            when(mockTodayRepository.now()).thenReturn(mockToday);
+            todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-            pillTakenCount: 1,
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
+            var pillSheet = PillSheet.create(
+              PillSheetType.pillsheet_21,
+              lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+              beginDate: mockToday.subtract(const Duration(days: 25)),
+              pillTakenCount: 1,
+            );
+            final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"],
+              pillSheets: [pillSheet],
+              createdAt: now(),
+              pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+            );
 
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    const User(
-                      isPremium: false,
-                      trialDeadlineDate: null,
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
+            SharedPreferences.setMockInitialValues({
+              IntKey.totalCountOfActionForTakenPill:
+                  totalCountOfActionForTakenPillForLongTimeUser,
+            });
+            final sharedPreferences = await SharedPreferences.getInstance();
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  appIsReleasedProvider.overrideWith((ref) => true),
+                  latestPillSheetGroupProvider.overrideWith(
+                    (ref) => Stream.value(pillSheetGroup),
+                  ),
+                  userProvider.overrideWith(
+                    (ref) => Stream.value(
+                      const User(
+                        isPremium: false,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
                     ),
                   ),
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ),
+                  ),
+                  sharedPreferencesProvider.overrideWith(
+                    (ref) => sharedPreferences,
+                  ),
+                  remoteConfigParameterProvider.overrideWithValue(
+                    RemoteConfigParameter(),
+                  ),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
                 ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(PilllAds(
-                    description: 'これは広告用のテキスト',
-                    destinationURL: 'https://github.com/bannzai',
-                    endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                    startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                    hexColor: '#111111',
-                    imageURL: null,
-                  )),
-                ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
               ),
-            ),
-          );
-          await tester.pumpAndSettle(const Duration(milliseconds: 400));
+            );
+            await tester.pumpAndSettle(const Duration(milliseconds: 400));
 
-          debugDefaultTargetPlatformOverride = null;
+            debugDefaultTargetPlatformOverride = null;
 
-          expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
-            findsNothing,
-          );
-        });
-        testWidgets('today is 2022-08-10, pilll-ads is start 2022-08-10', (WidgetTester tester) async {
+            expect(
+              find.byWidgetPredicate(
+                (widget) => widget is PilllAdsAnnouncementBar,
+              ),
+              findsNothing,
+            );
+          },
+        );
+        testWidgets('today is 2022-08-10, pilll-ads is start 2022-08-10', (
+          WidgetTester tester,
+        ) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 10);
 
@@ -508,9 +578,7 @@ void main() {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
+            beginDate: mockToday.subtract(const Duration(days: 25)),
             pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -521,14 +589,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -553,8 +624,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -566,11 +641,15 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsOneWidget,
           );
         });
-        testWidgets('today is 2022-08-11, pilll-ads is start 2022-08-10', (WidgetTester tester) async {
+        testWidgets('today is 2022-08-11, pilll-ads is start 2022-08-10', (
+          WidgetTester tester,
+        ) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 11);
 
@@ -580,9 +659,7 @@ void main() {
           var pillSheet = PillSheet.create(
             PillSheetType.pillsheet_21,
             lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
+            beginDate: mockToday.subtract(const Duration(days: 25)),
             pillTakenCount: 1,
           );
           final pillSheetGroup = PillSheetGroup(
@@ -593,14 +670,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -625,8 +705,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -638,154 +722,176 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsOneWidget,
           );
         });
-        testWidgets('now is 2022-08-23T23:59:59, pilll-ads is end 2022-08-23T23:59:59', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
+        testWidgets(
+          'now is 2022-08-23T23:59:59, pilll-ads is end 2022-08-23T23:59:59',
+          (WidgetTester tester) async {
+            final mockTodayRepository = MockTodayService();
+            final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
 
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
+            when(mockTodayRepository.now()).thenReturn(mockToday);
+            todayRepository = mockTodayRepository;
 
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-            pillTakenCount: 1,
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
+            var pillSheet = PillSheet.create(
+              PillSheetType.pillsheet_21,
+              lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+              beginDate: mockToday.subtract(const Duration(days: 25)),
+              pillTakenCount: 1,
+            );
+            final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"],
+              pillSheets: [pillSheet],
+              createdAt: now(),
+              pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+            );
 
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    const User(
-                      isPremium: false,
-                      trialDeadlineDate: null,
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
+            SharedPreferences.setMockInitialValues({
+              IntKey.totalCountOfActionForTakenPill:
+                  totalCountOfActionForTakenPillForLongTimeUser,
+            });
+            final sharedPreferences = await SharedPreferences.getInstance();
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  appIsReleasedProvider.overrideWith((ref) => true),
+                  latestPillSheetGroupProvider.overrideWith(
+                    (ref) => Stream.value(pillSheetGroup),
+                  ),
+                  userProvider.overrideWith(
+                    (ref) => Stream.value(
+                      const User(
+                        isPremium: false,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
                     ),
                   ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
                     ),
                   ),
+                  sharedPreferencesProvider.overrideWith(
+                    (ref) => sharedPreferences,
+                  ),
+                  remoteConfigParameterProvider.overrideWithValue(
+                    RemoteConfigParameter(),
+                  ),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
               ),
-            ),
-          );
-          await tester.pump();
+            );
+            await tester.pump();
 
-          debugDefaultTargetPlatformOverride = null;
+            debugDefaultTargetPlatformOverride = null;
 
-          expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
-            findsOneWidget,
-          );
-        });
-        testWidgets('now is 2022-08-24T00:00:00, pilll-ads is end 2022-08-23T23:59:59', (WidgetTester tester) async {
-          final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 24);
-
-          when(mockTodayRepository.now()).thenReturn(mockToday);
-          todayRepository = mockTodayRepository;
-
-          var pillSheet = PillSheet.create(
-            PillSheetType.pillsheet_21,
-            lastTakenDate: mockToday.subtract(const Duration(days: 1)),
-            beginDate: mockToday.subtract(
-              const Duration(days: 25),
-            ),
-            pillTakenCount: 1,
-          );
-          final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"],
-            pillSheets: [pillSheet],
-            createdAt: now(),
-            pillSheetAppearanceMode: PillSheetAppearanceMode.number,
-          );
-
-          SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
-          });
-          final sharedPreferences = await SharedPreferences.getInstance();
-          await tester.pumpWidget(
-            ProviderScope(
-              overrides: [
-                appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
-                userProvider.overrideWith(
-                  (ref) => Stream.value(
-                    const User(
-                      isPremium: false,
-                      trialDeadlineDate: null,
-                      beginTrialDate: null,
-                      discountEntitlementDeadlineDate: null,
-                    ),
-                  ),
-                ),
-                isLinkedProvider.overrideWithValue(false),
-                isJaLocaleProvider.overrideWithValue(true),
-                pilllAdsProvider.overrideWith(
-                  (ref) => Stream.value(
-                    PilllAds(
-                      description: 'これは広告用のテキスト',
-                      destinationURL: 'https://github.com/bannzai',
-                      endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
-                      startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
-                      hexColor: '#111111',
-                      imageURL: null,
-                    ),
-                  ),
-                ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-              ],
-              child: const MaterialApp(
-                home: Material(child: AnnouncementBar()),
+            expect(
+              find.byWidgetPredicate(
+                (widget) => widget is PilllAdsAnnouncementBar,
               ),
-            ),
-          );
-          await tester.pump();
+              findsOneWidget,
+            );
+          },
+        );
+        testWidgets(
+          'now is 2022-08-24T00:00:00, pilll-ads is end 2022-08-23T23:59:59',
+          (WidgetTester tester) async {
+            final mockTodayRepository = MockTodayService();
+            final mockToday = DateTime(2022, 08, 24);
 
-          debugDefaultTargetPlatformOverride = null;
+            when(mockTodayRepository.now()).thenReturn(mockToday);
+            todayRepository = mockTodayRepository;
 
-          expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
-            findsNothing,
-          );
-        });
+            var pillSheet = PillSheet.create(
+              PillSheetType.pillsheet_21,
+              lastTakenDate: mockToday.subtract(const Duration(days: 1)),
+              beginDate: mockToday.subtract(const Duration(days: 25)),
+              pillTakenCount: 1,
+            );
+            final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"],
+              pillSheets: [pillSheet],
+              createdAt: now(),
+              pillSheetAppearanceMode: PillSheetAppearanceMode.number,
+            );
+
+            SharedPreferences.setMockInitialValues({
+              IntKey.totalCountOfActionForTakenPill:
+                  totalCountOfActionForTakenPillForLongTimeUser,
+            });
+            final sharedPreferences = await SharedPreferences.getInstance();
+            await tester.pumpWidget(
+              ProviderScope(
+                overrides: [
+                  appIsReleasedProvider.overrideWith((ref) => true),
+                  latestPillSheetGroupProvider.overrideWith(
+                    (ref) => Stream.value(pillSheetGroup),
+                  ),
+                  userProvider.overrideWith(
+                    (ref) => Stream.value(
+                      const User(
+                        isPremium: false,
+                        trialDeadlineDate: null,
+                        beginTrialDate: null,
+                        discountEntitlementDeadlineDate: null,
+                      ),
+                    ),
+                  ),
+                  isLinkedProvider.overrideWithValue(false),
+                  isJaLocaleProvider.overrideWithValue(true),
+                  pilllAdsProvider.overrideWith(
+                    (ref) => Stream.value(
+                      PilllAds(
+                        description: 'これは広告用のテキスト',
+                        destinationURL: 'https://github.com/bannzai',
+                        endDateTime: DateTime(2022, 8, 23, 23, 59, 59),
+                        startDateTime: DateTime(2022, 8, 10, 0, 0, 0),
+                        hexColor: '#111111',
+                        imageURL: null,
+                      ),
+                    ),
+                  ),
+                  sharedPreferencesProvider.overrideWith(
+                    (ref) => sharedPreferences,
+                  ),
+                  remoteConfigParameterProvider.overrideWithValue(
+                    RemoteConfigParameter(),
+                  ),
+                ],
+                child: const MaterialApp(
+                  home: Material(child: AnnouncementBar()),
+                ),
+              ),
+            );
+            await tester.pump();
+
+            debugDefaultTargetPlatformOverride = null;
+
+            expect(
+              find.byWidgetPredicate(
+                (widget) => widget is PilllAdsAnnouncementBar,
+              ),
+              findsNothing,
+            );
+          },
+        );
       });
     });
 
@@ -812,7 +918,8 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.lifetimeSubscriptionWarningIsClosed: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
@@ -820,7 +927,9 @@ void main() {
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -833,9 +942,15 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(true),
                 isJaLocaleProvider.overrideWithValue(true),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                isLifetimePurchasedProvider.overrideWith((ref) => Future.value(true)),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
+                isLifetimePurchasedProvider.overrideWith(
+                  (ref) => Future.value(true),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -847,7 +962,9 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is LifetimeSubscriptionWarningAnnouncementBar,
+            ),
             findsOneWidget,
           );
         });
@@ -873,7 +990,8 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.lifetimeSubscriptionWarningIsClosed: true,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
@@ -881,7 +999,9 @@ void main() {
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -894,9 +1014,15 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(true),
                 isJaLocaleProvider.overrideWithValue(true),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                isLifetimePurchasedProvider.overrideWith((ref) => Future.value(true)),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
+                isLifetimePurchasedProvider.overrideWith(
+                  (ref) => Future.value(true),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -908,7 +1034,9 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is LifetimeSubscriptionWarningAnnouncementBar,
+            ),
             findsNothing,
           );
         });
@@ -934,7 +1062,8 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.lifetimeSubscriptionWarningIsClosed: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
@@ -942,7 +1071,9 @@ void main() {
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -955,9 +1086,15 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-                isLifetimePurchasedProvider.overrideWith((ref) => Future.value(false)),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
+                isLifetimePurchasedProvider.overrideWith(
+                  (ref) => Future.value(false),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -969,17 +1106,23 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is LifetimeSubscriptionWarningAnnouncementBar,
+            ),
             findsNothing,
           );
           // lifetime購入者でない場合、isLinkedProvider=falseなのでRecommendSignupForPremiumAnnouncementBarが表示される
           expect(
-            find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is RecommendSignupForPremiumAnnouncementBar,
+            ),
             findsOneWidget,
           );
         });
 
-        testWidgets('isLifetimePurchasedがloadingの場合は表示されない', (WidgetTester tester) async {
+        testWidgets('isLifetimePurchasedがloadingの場合は表示されない', (
+          WidgetTester tester,
+        ) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2021, 04, 29);
 
@@ -1000,7 +1143,8 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
             BoolKey.lifetimeSubscriptionWarningIsClosed: false,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
@@ -1008,7 +1152,9 @@ void main() {
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1021,10 +1167,16 @@ void main() {
                 ),
                 isLinkedProvider.overrideWithValue(false),
                 isJaLocaleProvider.overrideWithValue(true),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
                 // 永遠にresolveしないFuture（loading状態）
-                isLifetimePurchasedProvider.overrideWith((ref) => Completer<bool>().future),
+                isLifetimePurchasedProvider.overrideWith(
+                  (ref) => Completer<bool>().future,
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1036,12 +1188,16 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is LifetimeSubscriptionWarningAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is LifetimeSubscriptionWarningAnnouncementBar,
+            ),
             findsNothing,
           );
           // loading時はisLinkedProvider=falseなのでRecommendSignupForPremiumAnnouncementBarが表示される
           expect(
-            find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is RecommendSignupForPremiumAnnouncementBar,
+            ),
             findsOneWidget,
           );
         });
@@ -1050,7 +1206,11 @@ void main() {
       group("#PilllAdsAnnouncementBar", () {
         testWidgets('today is before 2022-08-10', (WidgetTester tester) async {
           final mockTodayRepository = MockTodayService();
-          final mockToday = DateTime(2022, 08, 10).subtract(const Duration(seconds: 1));
+          final mockToday = DateTime(
+            2022,
+            08,
+            10,
+          ).subtract(const Duration(seconds: 1));
 
           when(mockTodayRepository.now()).thenReturn(mockToday);
           when(mockTodayRepository.now()).thenReturn(mockToday);
@@ -1073,14 +1233,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1105,8 +1268,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1118,7 +1285,9 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsNothing,
           );
         });
@@ -1147,14 +1316,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1179,8 +1351,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1192,7 +1368,9 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsNothing,
           );
         });
@@ -1221,14 +1399,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1253,8 +1434,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1266,7 +1451,9 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsNothing,
           );
         });
@@ -1295,14 +1482,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1327,8 +1517,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1340,11 +1534,15 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsNothing,
           );
         });
-        testWidgets('now is 2022-08-23T23:59:59 and already closed', (WidgetTester tester) async {
+        testWidgets('now is 2022-08-23T23:59:59 and already closed', (
+          WidgetTester tester,
+        ) async {
           final mockTodayRepository = MockTodayService();
           final mockToday = DateTime(2022, 08, 23, 23, 59, 59);
 
@@ -1369,14 +1567,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1401,8 +1602,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1414,7 +1619,9 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsNothing,
           );
         });
@@ -1443,14 +1650,17 @@ void main() {
           );
 
           SharedPreferences.setMockInitialValues({
-            IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+            IntKey.totalCountOfActionForTakenPill:
+                totalCountOfActionForTakenPillForLongTimeUser,
           });
           final sharedPreferences = await SharedPreferences.getInstance();
           await tester.pumpWidget(
             ProviderScope(
               overrides: [
                 appIsReleasedProvider.overrideWith((ref) => true),
-                latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+                latestPillSheetGroupProvider.overrideWith(
+                  (ref) => Stream.value(pillSheetGroup),
+                ),
                 userProvider.overrideWith(
                   (ref) => Stream.value(
                     const User(
@@ -1475,8 +1685,12 @@ void main() {
                     ),
                   ),
                 ),
-                sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                sharedPreferencesProvider.overrideWith(
+                  (ref) => sharedPreferences,
+                ),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
               child: const MaterialApp(
                 home: Material(child: AnnouncementBar()),
@@ -1488,12 +1702,16 @@ void main() {
           debugDefaultTargetPlatformOverride = null;
 
           expect(
-            find.byWidgetPredicate((widget) => widget is PilllAdsAnnouncementBar),
+            find.byWidgetPredicate(
+              (widget) => widget is PilllAdsAnnouncementBar,
+            ),
             findsNothing,
           );
         });
       });
-      testWidgets('#RecommendSignupForPremiumAnnouncementBar', (WidgetTester tester) async {
+      testWidgets('#RecommendSignupForPremiumAnnouncementBar', (
+        WidgetTester tester,
+      ) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
 
@@ -1505,7 +1723,7 @@ void main() {
           PillSheetType.pillsheet_21,
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
-// NOTE: Not into rest duration and notification duration
+            // NOTE: Not into rest duration and notification duration
             const Duration(days: 10),
           ),
           pillTakenCount: 1,
@@ -1518,14 +1736,17 @@ void main() {
         );
 
         SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          IntKey.totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               appIsReleasedProvider.overrideWith((ref) => true),
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith(
+                (ref) => Stream.value(pillSheetGroup),
+              ),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
@@ -1538,12 +1759,14 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(false),
               isJaLocaleProvider.overrideWithValue(true),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+              sharedPreferencesProvider.overrideWith(
+                (ref) => sharedPreferences,
+              ),
+              remoteConfigParameterProvider.overrideWithValue(
+                RemoteConfigParameter(),
+              ),
             ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
+            child: const MaterialApp(home: Material(child: AnnouncementBar())),
           ),
         );
         await tester.pump();
@@ -1551,7 +1774,9 @@ void main() {
         debugDefaultTargetPlatformOverride = null;
 
         expect(
-          find.byWidgetPredicate((widget) => widget is RecommendSignupForPremiumAnnouncementBar),
+          find.byWidgetPredicate(
+            (widget) => widget is RecommendSignupForPremiumAnnouncementBar,
+          ),
           findsOneWidget,
         );
       });
@@ -1568,7 +1793,7 @@ void main() {
           PillSheetType.pillsheet_21,
           lastTakenDate: mockToday,
           beginDate: mockToday.subtract(
-// NOTE: Into rest duration and notification duration
+            // NOTE: Into rest duration and notification duration
             const Duration(days: 25),
           ),
           pillTakenCount: 1,
@@ -1581,14 +1806,17 @@ void main() {
         );
 
         SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          IntKey.totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               appIsReleasedProvider.overrideWith((ref) => true),
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith(
+                (ref) => Stream.value(pillSheetGroup),
+              ),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
@@ -1601,12 +1829,14 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+              sharedPreferencesProvider.overrideWith(
+                (ref) => sharedPreferences,
+              ),
+              remoteConfigParameterProvider.overrideWithValue(
+                RemoteConfigParameter(),
+              ),
             ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
+            child: const MaterialApp(home: Material(child: AnnouncementBar())),
           ),
         );
         await tester.pump();
@@ -1614,7 +1844,9 @@ void main() {
         debugDefaultTargetPlatformOverride = null;
 
         expect(
-          find.byWidgetPredicate((widget) => widget is RestDurationAnnouncementBar),
+          find.byWidgetPredicate(
+            (widget) => widget is RestDurationAnnouncementBar,
+          ),
           findsOneWidget,
         );
       });
@@ -1631,7 +1863,7 @@ void main() {
           PillSheetType.pillsheet_21,
           lastTakenDate: mockToday.subtract(const Duration(days: 1)),
           beginDate: mockToday.subtract(
-// NOTE: To deactive pill sheet
+            // NOTE: To deactive pill sheet
             const Duration(days: 30),
           ),
           pillTakenCount: 1,
@@ -1644,14 +1876,17 @@ void main() {
         );
 
         SharedPreferences.setMockInitialValues({
-          IntKey.totalCountOfActionForTakenPill: totalCountOfActionForTakenPillForLongTimeUser,
+          IntKey.totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
         });
         final sharedPreferences = await SharedPreferences.getInstance();
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
               appIsReleasedProvider.overrideWith((ref) => true),
-              latestPillSheetGroupProvider.overrideWith((ref) => Stream.value(pillSheetGroup)),
+              latestPillSheetGroupProvider.overrideWith(
+                (ref) => Stream.value(pillSheetGroup),
+              ),
               userProvider.overrideWith(
                 (ref) => Stream.value(
                   const User(
@@ -1664,12 +1899,14 @@ void main() {
               ),
               isLinkedProvider.overrideWithValue(true),
               isJaLocaleProvider.overrideWithValue(true),
-              sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-              remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+              sharedPreferencesProvider.overrideWith(
+                (ref) => sharedPreferences,
+              ),
+              remoteConfigParameterProvider.overrideWithValue(
+                RemoteConfigParameter(),
+              ),
             ],
-            child: const MaterialApp(
-              home: Material(child: AnnouncementBar()),
-            ),
+            child: const MaterialApp(home: Material(child: AnnouncementBar())),
           ),
         );
         await tester.pump();

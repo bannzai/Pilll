@@ -6,10 +6,7 @@ import 'package:pilll/provider/user.dart';
 class UserStreamResolver extends HookConsumerWidget {
   final Function(User) stream;
 
-  const UserStreamResolver({
-    super.key,
-    required this.stream,
-  });
+  const UserStreamResolver({super.key, required this.stream});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

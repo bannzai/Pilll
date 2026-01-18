@@ -28,8 +28,12 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: Scaffold(
@@ -79,8 +83,12 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: Scaffold(
@@ -121,8 +129,12 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            diariesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
-            schedulesForMonthProvider.overrideWith((ref, arg) => Stream.value([])),
+            diariesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
+            schedulesForMonthProvider.overrideWith(
+              (ref, arg) => Stream.value([]),
+            ),
           ],
           child: MaterialApp(
             home: Scaffold(
@@ -130,11 +142,16 @@ void main() {
                 child: Column(
                   children: [
                     // 全ての週を表示して確認
-                    for (var weekStart = DateTime(2025, 1, 5);
-                        weekStart.isBefore(DateTime(2025, 1, 26));
-                        weekStart = weekStart.add(const Duration(days: 7)))
+                    for (
+                      var weekStart = DateTime(2025, 1, 5);
+                      weekStart.isBefore(DateTime(2025, 1, 26));
+                      weekStart = weekStart.add(const Duration(days: 7))
+                    )
                       _buildWeekWidget(
-                        DateRange(weekStart, weekStart.add(const Duration(days: 6))),
+                        DateRange(
+                          weekStart,
+                          weekStart.add(const Duration(days: 6)),
+                        ),
                         [model],
                       ),
                   ],
@@ -153,7 +170,10 @@ void main() {
   });
 }
 
-Widget _buildWeekWidget(DateRange dateRange, List<CalendarMenstruationBandModel> models) {
+Widget _buildWeekWidget(
+  DateRange dateRange,
+  List<CalendarMenstruationBandModel> models,
+) {
   return SizedBox(
     height: 60,
     child: CalendarWeekLine(
@@ -165,9 +185,7 @@ Widget _buildWeekWidget(DateRange dateRange, List<CalendarMenstruationBandModel>
       day: (context, weekday, date) => Container(
         width: 50,
         height: 50,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-        ),
+        decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
         child: Center(child: Text('${date.day}')),
       ),
     ),

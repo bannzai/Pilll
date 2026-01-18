@@ -12,10 +12,7 @@ class NormalPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.potti,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.potti, shape: BoxShape.circle),
     );
   }
 }
@@ -34,10 +31,7 @@ class RestPillMark extends StatelessWidget {
       child: Container(
         width: PillMarkConst.edge,
         height: PillMarkConst.edge,
-        decoration: const BoxDecoration(
-          color: AppColors.blank,
-          shape: BoxShape.circle,
-        ),
+        decoration: const BoxDecoration(color: AppColors.blank, shape: BoxShape.circle),
       ),
     );
   }
@@ -51,10 +45,7 @@ class FakePillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.blank,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.blank, shape: BoxShape.circle),
     );
   }
 }
@@ -67,10 +58,7 @@ class SelectedPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.enable,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.enable, shape: BoxShape.circle),
     );
   }
 }
@@ -83,10 +71,7 @@ class LightGrayPillMark extends StatelessWidget {
     return Container(
       width: PillMarkConst.edge,
       height: PillMarkConst.edge,
-      decoration: const BoxDecoration(
-        color: AppColors.lightGray,
-        shape: BoxShape.circle,
-      ),
+      decoration: const BoxDecoration(color: AppColors.lightGray, shape: BoxShape.circle),
     );
   }
 }

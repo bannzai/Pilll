@@ -51,8 +51,9 @@ class AnnouncementBar extends HookConsumerWidget {
     final user = ref.watch(userProvider).valueOrNull;
     final isLinkedLoginProvider = ref.watch(isLinkedProvider);
     final discountEntitlementDeadlineDate = user?.discountEntitlementDeadlineDate;
-    final hiddenCountdownDiscountDeadline =
-        ref.watch(hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate));
+    final hiddenCountdownDiscountDeadline = ref.watch(
+      hiddenCountdownDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate),
+    );
     final isJaLocale = ref.watch(isJaLocaleProvider);
     final pilllAds = ref.watch(pilllAdsProvider).asData?.value;
     final appIsReleased = ref.watch(appIsReleasedProvider).asData?.value == true;
@@ -61,15 +62,9 @@ class AnnouncementBar extends HookConsumerWidget {
     final lifetimeSubscriptionWarningIsClosed = useState(sharedPreferences.getBool(BoolKey.lifetimeSubscriptionWarningIsClosed) ?? false);
     final lifetimePurchaseStatus = ref.watch(isLifetimePurchasedProvider);
 
-    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(
-      begin: today().subtract(const Duration(days: 30)),
-      end: today(),
-    ));
+    final historiesAsync = ref.watch(pillSheetModifiedHistoriesWithRangeProvider(begin: today().subtract(const Duration(days: 30)), end: today()));
     final histories = historiesAsync.asData?.value ?? [];
-    final missedDays = missedPillDays(
-      histories: histories,
-      maxDate: today(),
-    );
+    final missedDays = missedPillDays(histories: histories, maxDate: today());
 
     useEffect(() {
       specialOfferingIsClosed.addListener(() {
@@ -120,12 +115,13 @@ class AnnouncementBar extends HookConsumerWidget {
           if (discountEntitlementDeadlineDate != null) {
             if (!hiddenCountdownDiscountDeadline) {
               return DiscountPriceDeadline(
-                  user: user,
-                  discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
-                  onTap: () {
-                    analytics.logEvent(name: 'pressed_discount_announcement_bar');
-                    showPremiumIntroductionSheet(context);
-                  });
+                user: user,
+                discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+                onTap: () {
+                  analytics.logEvent(name: 'pressed_discount_announcement_bar');
+                  showPremiumIntroductionSheet(context);
+                },
+              );
             }
           }
         }
@@ -133,10 +129,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
 
       if (user.isTrial) {
@@ -154,9 +147,7 @@ class AnnouncementBar extends HookConsumerWidget {
         if (userBeginDate != null &&
             daysBetween(userBeginDate, today()) >= remoteConfigParameter.specialOfferingUserCreationDateTimeOffset &&
             !specialOfferingIsClosed.value) {
-          return SpecialOfferingAnnouncementBar(
-            specialOfferingIsClosed: specialOfferingIsClosed,
-          );
+          return SpecialOfferingAnnouncementBar(specialOfferingIsClosed: specialOfferingIsClosed);
         }
 
         if (userBeginDate != null &&
@@ -179,9 +170,7 @@ class AnnouncementBar extends HookConsumerWidget {
       // 1. lifetime購入者向けサブスク解約警告 (最優先)
       final isLifetimePurchased = lifetimePurchaseStatus.asData?.value ?? false;
       if (isLifetimePurchased && !lifetimeSubscriptionWarningIsClosed.value) {
-        return LifetimeSubscriptionWarningAnnouncementBar(
-          isClosed: lifetimeSubscriptionWarningIsClosed,
-        );
+        return LifetimeSubscriptionWarningAnnouncementBar(isClosed: lifetimeSubscriptionWarningIsClosed);
       }
 
       // 2. アカウント登録推奨
@@ -196,10 +185,7 @@ class AnnouncementBar extends HookConsumerWidget {
 
       if (latestPillSheetGroup != null && latestPillSheetGroup.activePillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return EndedPillSheet(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-        );
+        return EndedPillSheet(isPremium: user.isPremium, isTrial: user.isTrial);
       }
     }
 

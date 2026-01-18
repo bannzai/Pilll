@@ -12,12 +12,7 @@ class PillSheetModifiedHistoryMonthlyHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       DateTimeFormatter.jaMonth(dateTimeOfMonth),
-      style: const TextStyle(
-        color: TextColor.main,
-        fontFamily: FontFamily.japanese,
-        fontSize: 12,
-        fontWeight: FontWeight.w400,
-      ),
+      style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontSize: 12, fontWeight: FontWeight.w400),
     );
   }
 }

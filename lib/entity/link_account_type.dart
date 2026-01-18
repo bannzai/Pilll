@@ -10,7 +10,7 @@ enum LinkAccountType {
   apple,
 
   /// Googleアカウント連携
-  google
+  google,
 }
 
 extension LinkAccountTypeExtension on LinkAccountType {

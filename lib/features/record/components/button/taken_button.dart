@@ -40,10 +40,10 @@ class TakenButton extends HookConsumerWidget {
         text: L.taken,
         onPressed: () async {
           try {
-            analytics.logEvent(name: 'taken_button_pressed', parameters: {
-              'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber,
-              'today_pill_number': activePillSheet.todayPillNumber,
-            });
+            analytics.logEvent(
+              name: 'taken_button_pressed',
+              parameters: {'last_taken_pill_number': activePillSheet.lastTakenOrZeroPillNumber, 'today_pill_number': activePillSheet.todayPillNumber},
+            );
             requestInAppReview();
             showReleaseNotePreDialog(context);
             final updatedPillSheetGroup = await takePill(

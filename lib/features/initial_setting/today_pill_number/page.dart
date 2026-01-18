@@ -31,10 +31,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: const Text(
-          '2/3',
-          style: TextStyle(color: TextColor.black),
-        ),
+        title: const Text('2/3', style: TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -47,20 +44,12 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     const SizedBox(height: 24),
                     Text(
                       L.selectTodayPillNumber(todayString()),
-                      style: const TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 20,
-                        color: TextColor.main,
-                      ),
+                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
                       textAlign: TextAlign.center,
                     ),
                     const SizedBox(height: 44),
                     Center(
-                      child: SelectTodayPillNumberPillSheetList(
-                        state: state,
-                        store: store,
-                      ),
+                      child: SelectTodayPillNumberPillSheetList(state: state, store: store),
                     ),
                     const SizedBox(height: 24),
                     ExplainPillNumber(today: todayString()),

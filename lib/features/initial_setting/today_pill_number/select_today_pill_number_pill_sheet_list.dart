@@ -14,11 +14,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   final InitialSettingState state;
   final InitialSettingStateNotifier store;
 
-  const SelectTodayPillNumberPillSheetList({
-    super.key,
-    required this.state,
-    required this.store,
-  });
+  const SelectTodayPillNumberPillSheetList({super.key, required this.state, required this.store});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -26,10 +22,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
     return Column(
       children: [
         SizedBox(
-          height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes).numberOfLineInPillSheet,
-            true,
-          ),
+          height: PillSheetViewLayout.calcHeight(PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes).numberOfLineInPillSheet, true),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
@@ -46,14 +39,8 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pillSheetTypes: state.pillSheetTypes,
                       selectedPillNumberIntoPillSheet: state.selectedTodayPillNumberIntoPillSheet(pageIndex: index),
                       markSelected: (pageIndex, number) {
-                        analytics.logEvent(name: 'selected_today_number_initial_setting', parameters: {
-                          'pill_number': number,
-                          'page': pageIndex,
-                        });
-                        store.setTodayPillNumber(
-                          pageIndex: pageIndex,
-                          pillNumberInPillSheet: number,
-                        );
+                        analytics.logEvent(name: 'selected_today_number_initial_setting', parameters: {'pill_number': number, 'page': pageIndex});
+                        store.setTodayPillNumber(pageIndex: pageIndex, pillNumberInPillSheet: number);
                       },
                     ),
                   ),
@@ -69,14 +56,10 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
             controller: pageController,
             itemCount: state.pillSheetTypes.length,
             onDotTapped: (page) {
-              pageController.animateToPage(
-                page,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
+              pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
             },
-          )
-        ]
+          ),
+        ],
       ],
     );
   }

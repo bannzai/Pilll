@@ -54,11 +54,7 @@ Future<void> entrypoint() async {
     }
 
     // ignore: prefer_typing_uninitialized_variables
-    final (_, sharedPreferences, _) = await (
-      LocalNotificationService.setupTimeZone(),
-      SharedPreferences.getInstance(),
-      setupRemoteConfig(),
-    ).wait;
+    final (_, sharedPreferences, _) = await (LocalNotificationService.setupTimeZone(), SharedPreferences.getInstance(), setupRemoteConfig()).wait;
 
     // AppLocalizationsの初期化を待つ
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
@@ -67,12 +63,7 @@ Future<void> entrypoint() async {
 
     // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
     FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-    runApp(ProviderScope(
-      overrides: [
-        sharedPreferencesProvider.overrideWith((ref) => sharedPreferences),
-      ],
-      child: const App(),
-    ));
+    runApp(ProviderScope(overrides: [sharedPreferencesProvider.overrideWith((ref) => sharedPreferences)], child: const App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 

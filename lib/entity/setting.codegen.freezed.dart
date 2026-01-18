@@ -12,7 +12,8 @@ part of 'setting.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
   return _ReminderTime.fromJson(json);
@@ -55,20 +56,20 @@ class _$ReminderTimeCopyWithImpl<$Res, $Val extends ReminderTime> implements $Re
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? hour = null,
-    Object? minute = null,
-  }) {
-    return _then(_value.copyWith(
-      hour: null == hour
-          ? _value.hour
-          : hour // ignore: cast_nullable_to_non_nullable
-              as int,
-      minute: null == minute
-          ? _value.minute
-          : minute // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? hour = null, Object? minute = null}) {
+    return _then(
+      _value.copyWith(
+            hour: null == hour
+                ? _value.hour
+                : hour // ignore: cast_nullable_to_non_nullable
+                      as int,
+            minute: null == minute
+                ? _value.minute
+                : minute // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -87,20 +88,19 @@ class __$$ReminderTimeImplCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? hour = null,
-    Object? minute = null,
-  }) {
-    return _then(_$ReminderTimeImpl(
-      hour: null == hour
-          ? _value.hour
-          : hour // ignore: cast_nullable_to_non_nullable
-              as int,
-      minute: null == minute
-          ? _value.minute
-          : minute // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? hour = null, Object? minute = null}) {
+    return _then(
+      _$ReminderTimeImpl(
+        hour: null == hour
+            ? _value.hour
+            : hour // ignore: cast_nullable_to_non_nullable
+                  as int,
+        minute: null == minute
+            ? _value.minute
+            : minute // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
@@ -160,9 +160,7 @@ class _$ReminderTimeImpl extends _ReminderTime with DiagnosticableTreeMixin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ReminderTimeImplToJson(
-      this,
-    );
+    return _$$ReminderTimeImplToJson(this);
   }
 }
 
@@ -173,14 +171,12 @@ abstract class _ReminderTime extends ReminderTime {
   factory _ReminderTime.fromJson(Map<String, dynamic> json) = _$ReminderTimeImpl.fromJson;
 
   @override
-
   /// 時刻の時（24時間形式）
   ///
   /// 0-23の範囲で指定します。
   /// リマインダー通知の生成時刻として使用されます。
   int get hour;
   @override
-
   /// 時刻の分
   ///
   /// 0-59の範囲で指定します。
@@ -280,19 +276,20 @@ mixin _$Setting {
 abstract class $SettingCopyWith<$Res> {
   factory $SettingCopyWith(Setting value, $Res Function(Setting) then) = _$SettingCopyWithImpl<$Res, Setting>;
   @useResult
-  $Res call(
-      {List<PillSheetType?> pillSheetTypes,
-      int pillNumberForFromMenstruation,
-      int durationMenstruation,
-      List<ReminderTime> reminderTimes,
-      bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration,
-      bool isAutomaticallyCreatePillSheet,
-      ReminderNotificationCustomization reminderNotificationCustomization,
-      bool useCriticalAlert,
-      double criticalAlertVolume,
-      bool useAlarmKit,
-      String? timezoneDatabaseName});
+  $Res call({
+    List<PillSheetType?> pillSheetTypes,
+    int pillNumberForFromMenstruation,
+    int durationMenstruation,
+    List<ReminderTime> reminderTimes,
+    bool isOnReminder,
+    bool isOnNotifyInNotTakenDuration,
+    bool isAutomaticallyCreatePillSheet,
+    ReminderNotificationCustomization reminderNotificationCustomization,
+    bool useCriticalAlert,
+    double criticalAlertVolume,
+    bool useAlarmKit,
+    String? timezoneDatabaseName,
+  });
 
   $ReminderNotificationCustomizationCopyWith<$Res> get reminderNotificationCustomization;
 }
@@ -322,56 +319,59 @@ class _$SettingCopyWithImpl<$Res, $Val extends Setting> implements $SettingCopyW
     Object? useAlarmKit = null,
     Object? timezoneDatabaseName = freezed,
   }) {
-    return _then(_value.copyWith(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value.pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType?>,
-      pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
-          ? _value.pillNumberForFromMenstruation
-          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
-      durationMenstruation: null == durationMenstruation
-          ? _value.durationMenstruation
-          : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
-      reminderTimes: null == reminderTimes
-          ? _value.reminderTimes
-          : reminderTimes // ignore: cast_nullable_to_non_nullable
-              as List<ReminderTime>,
-      isOnReminder: null == isOnReminder
-          ? _value.isOnReminder
-          : isOnReminder // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isOnNotifyInNotTakenDuration: null == isOnNotifyInNotTakenDuration
-          ? _value.isOnNotifyInNotTakenDuration
-          : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAutomaticallyCreatePillSheet: null == isAutomaticallyCreatePillSheet
-          ? _value.isAutomaticallyCreatePillSheet
-          : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
-              as bool,
-      reminderNotificationCustomization: null == reminderNotificationCustomization
-          ? _value.reminderNotificationCustomization
-          : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
-              as ReminderNotificationCustomization,
-      useCriticalAlert: null == useCriticalAlert
-          ? _value.useCriticalAlert
-          : useCriticalAlert // ignore: cast_nullable_to_non_nullable
-              as bool,
-      criticalAlertVolume: null == criticalAlertVolume
-          ? _value.criticalAlertVolume
-          : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
-              as double,
-      useAlarmKit: null == useAlarmKit
-          ? _value.useAlarmKit
-          : useAlarmKit // ignore: cast_nullable_to_non_nullable
-              as bool,
-      timezoneDatabaseName: freezed == timezoneDatabaseName
-          ? _value.timezoneDatabaseName
-          : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            pillSheetTypes: null == pillSheetTypes
+                ? _value.pillSheetTypes
+                : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+                      as List<PillSheetType?>,
+            pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
+                ? _value.pillNumberForFromMenstruation
+                : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
+                      as int,
+            durationMenstruation: null == durationMenstruation
+                ? _value.durationMenstruation
+                : durationMenstruation // ignore: cast_nullable_to_non_nullable
+                      as int,
+            reminderTimes: null == reminderTimes
+                ? _value.reminderTimes
+                : reminderTimes // ignore: cast_nullable_to_non_nullable
+                      as List<ReminderTime>,
+            isOnReminder: null == isOnReminder
+                ? _value.isOnReminder
+                : isOnReminder // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isOnNotifyInNotTakenDuration: null == isOnNotifyInNotTakenDuration
+                ? _value.isOnNotifyInNotTakenDuration
+                : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isAutomaticallyCreatePillSheet: null == isAutomaticallyCreatePillSheet
+                ? _value.isAutomaticallyCreatePillSheet
+                : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            reminderNotificationCustomization: null == reminderNotificationCustomization
+                ? _value.reminderNotificationCustomization
+                : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
+                      as ReminderNotificationCustomization,
+            useCriticalAlert: null == useCriticalAlert
+                ? _value.useCriticalAlert
+                : useCriticalAlert // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            criticalAlertVolume: null == criticalAlertVolume
+                ? _value.criticalAlertVolume
+                : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
+                      as double,
+            useAlarmKit: null == useAlarmKit
+                ? _value.useAlarmKit
+                : useAlarmKit // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            timezoneDatabaseName: freezed == timezoneDatabaseName
+                ? _value.timezoneDatabaseName
+                : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
+                      as String?,
+          )
+          as $Val,
+    );
   }
 
   @override
@@ -388,19 +388,20 @@ abstract class _$$SettingImplCopyWith<$Res> implements $SettingCopyWith<$Res> {
   factory _$$SettingImplCopyWith(_$SettingImpl value, $Res Function(_$SettingImpl) then) = __$$SettingImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<PillSheetType?> pillSheetTypes,
-      int pillNumberForFromMenstruation,
-      int durationMenstruation,
-      List<ReminderTime> reminderTimes,
-      bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration,
-      bool isAutomaticallyCreatePillSheet,
-      ReminderNotificationCustomization reminderNotificationCustomization,
-      bool useCriticalAlert,
-      double criticalAlertVolume,
-      bool useAlarmKit,
-      String? timezoneDatabaseName});
+  $Res call({
+    List<PillSheetType?> pillSheetTypes,
+    int pillNumberForFromMenstruation,
+    int durationMenstruation,
+    List<ReminderTime> reminderTimes,
+    bool isOnReminder,
+    bool isOnNotifyInNotTakenDuration,
+    bool isAutomaticallyCreatePillSheet,
+    ReminderNotificationCustomization reminderNotificationCustomization,
+    bool useCriticalAlert,
+    double criticalAlertVolume,
+    bool useAlarmKit,
+    String? timezoneDatabaseName,
+  });
 
   @override
   $ReminderNotificationCustomizationCopyWith<$Res> get reminderNotificationCustomization;
@@ -426,56 +427,58 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
     Object? useAlarmKit = null,
     Object? timezoneDatabaseName = freezed,
   }) {
-    return _then(_$SettingImpl(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value._pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType?>,
-      pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
-          ? _value.pillNumberForFromMenstruation
-          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
-      durationMenstruation: null == durationMenstruation
-          ? _value.durationMenstruation
-          : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
-      reminderTimes: null == reminderTimes
-          ? _value._reminderTimes
-          : reminderTimes // ignore: cast_nullable_to_non_nullable
-              as List<ReminderTime>,
-      isOnReminder: null == isOnReminder
-          ? _value.isOnReminder
-          : isOnReminder // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isOnNotifyInNotTakenDuration: null == isOnNotifyInNotTakenDuration
-          ? _value.isOnNotifyInNotTakenDuration
-          : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isAutomaticallyCreatePillSheet: null == isAutomaticallyCreatePillSheet
-          ? _value.isAutomaticallyCreatePillSheet
-          : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
-              as bool,
-      reminderNotificationCustomization: null == reminderNotificationCustomization
-          ? _value.reminderNotificationCustomization
-          : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
-              as ReminderNotificationCustomization,
-      useCriticalAlert: null == useCriticalAlert
-          ? _value.useCriticalAlert
-          : useCriticalAlert // ignore: cast_nullable_to_non_nullable
-              as bool,
-      criticalAlertVolume: null == criticalAlertVolume
-          ? _value.criticalAlertVolume
-          : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
-              as double,
-      useAlarmKit: null == useAlarmKit
-          ? _value.useAlarmKit
-          : useAlarmKit // ignore: cast_nullable_to_non_nullable
-              as bool,
-      timezoneDatabaseName: freezed == timezoneDatabaseName
-          ? _value.timezoneDatabaseName
-          : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
+    return _then(
+      _$SettingImpl(
+        pillSheetTypes: null == pillSheetTypes
+            ? _value._pillSheetTypes
+            : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+                  as List<PillSheetType?>,
+        pillNumberForFromMenstruation: null == pillNumberForFromMenstruation
+            ? _value.pillNumberForFromMenstruation
+            : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
+                  as int,
+        durationMenstruation: null == durationMenstruation
+            ? _value.durationMenstruation
+            : durationMenstruation // ignore: cast_nullable_to_non_nullable
+                  as int,
+        reminderTimes: null == reminderTimes
+            ? _value._reminderTimes
+            : reminderTimes // ignore: cast_nullable_to_non_nullable
+                  as List<ReminderTime>,
+        isOnReminder: null == isOnReminder
+            ? _value.isOnReminder
+            : isOnReminder // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isOnNotifyInNotTakenDuration: null == isOnNotifyInNotTakenDuration
+            ? _value.isOnNotifyInNotTakenDuration
+            : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isAutomaticallyCreatePillSheet: null == isAutomaticallyCreatePillSheet
+            ? _value.isAutomaticallyCreatePillSheet
+            : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        reminderNotificationCustomization: null == reminderNotificationCustomization
+            ? _value.reminderNotificationCustomization
+            : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
+                  as ReminderNotificationCustomization,
+        useCriticalAlert: null == useCriticalAlert
+            ? _value.useCriticalAlert
+            : useCriticalAlert // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        criticalAlertVolume: null == criticalAlertVolume
+            ? _value.criticalAlertVolume
+            : criticalAlertVolume // ignore: cast_nullable_to_non_nullable
+                  as double,
+        useAlarmKit: null == useAlarmKit
+            ? _value.useAlarmKit
+            : useAlarmKit // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        timezoneDatabaseName: freezed == timezoneDatabaseName
+            ? _value.timezoneDatabaseName
+            : timezoneDatabaseName // ignore: cast_nullable_to_non_nullable
+                  as String?,
+      ),
+    );
   }
 }
 
@@ -483,22 +486,22 @@ class __$$SettingImplCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res, _$Se
 
 @JsonSerializable(explicitToJson: true)
 class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
-  const _$SettingImpl(
-      {final List<PillSheetType?> pillSheetTypes = const [],
-      required this.pillNumberForFromMenstruation,
-      required this.durationMenstruation,
-      final List<ReminderTime> reminderTimes = const [],
-      required this.isOnReminder,
-      this.isOnNotifyInNotTakenDuration = true,
-      this.isAutomaticallyCreatePillSheet = false,
-      this.reminderNotificationCustomization = const ReminderNotificationCustomization(),
-      this.useCriticalAlert = false,
-      this.criticalAlertVolume = 0.5,
-      this.useAlarmKit = false,
-      required this.timezoneDatabaseName})
-      : _pillSheetTypes = pillSheetTypes,
-        _reminderTimes = reminderTimes,
-        super._();
+  const _$SettingImpl({
+    final List<PillSheetType?> pillSheetTypes = const [],
+    required this.pillNumberForFromMenstruation,
+    required this.durationMenstruation,
+    final List<ReminderTime> reminderTimes = const [],
+    required this.isOnReminder,
+    this.isOnNotifyInNotTakenDuration = true,
+    this.isAutomaticallyCreatePillSheet = false,
+    this.reminderNotificationCustomization = const ReminderNotificationCustomization(),
+    this.useCriticalAlert = false,
+    this.criticalAlertVolume = 0.5,
+    this.useAlarmKit = false,
+    required this.timezoneDatabaseName,
+  }) : _pillSheetTypes = pillSheetTypes,
+       _reminderTimes = reminderTimes,
+       super._();
 
   factory _$SettingImpl.fromJson(Map<String, dynamic> json) => _$$SettingImplFromJson(json);
 
@@ -667,19 +670,20 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_pillSheetTypes),
-      pillNumberForFromMenstruation,
-      durationMenstruation,
-      const DeepCollectionEquality().hash(_reminderTimes),
-      isOnReminder,
-      isOnNotifyInNotTakenDuration,
-      isAutomaticallyCreatePillSheet,
-      reminderNotificationCustomization,
-      useCriticalAlert,
-      criticalAlertVolume,
-      useAlarmKit,
-      timezoneDatabaseName);
+    runtimeType,
+    const DeepCollectionEquality().hash(_pillSheetTypes),
+    pillNumberForFromMenstruation,
+    durationMenstruation,
+    const DeepCollectionEquality().hash(_reminderTimes),
+    isOnReminder,
+    isOnNotifyInNotTakenDuration,
+    isAutomaticallyCreatePillSheet,
+    reminderNotificationCustomization,
+    useCriticalAlert,
+    criticalAlertVolume,
+    useAlarmKit,
+    timezoneDatabaseName,
+  );
 
   @JsonKey(ignore: true)
   @override
@@ -688,32 +692,30 @@ class _$SettingImpl extends _Setting with DiagnosticableTreeMixin {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$SettingImplToJson(
-      this,
-    );
+    return _$$SettingImplToJson(this);
   }
 }
 
 abstract class _Setting extends Setting {
-  const factory _Setting(
-      {final List<PillSheetType?> pillSheetTypes,
-      required final int pillNumberForFromMenstruation,
-      required final int durationMenstruation,
-      final List<ReminderTime> reminderTimes,
-      required final bool isOnReminder,
-      final bool isOnNotifyInNotTakenDuration,
-      final bool isAutomaticallyCreatePillSheet,
-      final ReminderNotificationCustomization reminderNotificationCustomization,
-      final bool useCriticalAlert,
-      final double criticalAlertVolume,
-      final bool useAlarmKit,
-      required final String? timezoneDatabaseName}) = _$SettingImpl;
+  const factory _Setting({
+    final List<PillSheetType?> pillSheetTypes,
+    required final int pillNumberForFromMenstruation,
+    required final int durationMenstruation,
+    final List<ReminderTime> reminderTimes,
+    required final bool isOnReminder,
+    final bool isOnNotifyInNotTakenDuration,
+    final bool isAutomaticallyCreatePillSheet,
+    final ReminderNotificationCustomization reminderNotificationCustomization,
+    final bool useCriticalAlert,
+    final double criticalAlertVolume,
+    final bool useAlarmKit,
+    required final String? timezoneDatabaseName,
+  }) = _$SettingImpl;
   const _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$SettingImpl.fromJson;
 
   @override
-
   /// ユーザーが使用するピルシートタイプのリスト
   ///
   /// 複数のピルシートを管理する場合に使用します。
@@ -721,70 +723,60 @@ abstract class _Setting extends Setting {
   /// ピルシートUI表示やサイクル計算に使用されます。
   List<PillSheetType?> get pillSheetTypes;
   @override
-
   /// 生理開始からの日数設定
   ///
   /// 生理開始日から何日目でピル服用を開始するかを定義します。
   /// 生理周期計算や次回生理日予測に使用される重要なパラメータです。
   int get pillNumberForFromMenstruation;
   @override
-
   /// 生理期間の日数
   ///
   /// ユーザーの平均的な生理期間を日数で定義します。
   /// 生理日記機能や生理予測機能で使用されます。
   int get durationMenstruation;
   @override
-
   /// 服用リマインダー時刻のリスト
   ///
   /// ReminderTimeオブジェクトのリストとして格納されます。
   /// 最大3件まで設定可能で、通知スケジューリングに使用されます。
   List<ReminderTime> get reminderTimes;
   @override
-
   /// リマインダー通知の有効/無効フラグ
   ///
   /// trueの場合、設定されたreminderTimesに基づいて通知が送信されます。
   /// falseの場合、リマインダー通知は送信されません。
   bool get isOnReminder;
   @override
-
   /// 飲み忘れ期間中の通知有効フラグ
   ///
   /// trueの場合、飲み忘れが検出されたときに追加の通知を送信します。
   /// デフォルトはtrueで有効化されています。
   bool get isOnNotifyInNotTakenDuration;
   @override
-
   /// ピルシート自動作成機能の有効フラグ
   ///
   /// trueの場合、現在のピルシートが終了したときに
   /// 新しいピルシートを自動的に作成します。デフォルトはfalseです。
   bool get isAutomaticallyCreatePillSheet;
   @override
-
   /// リマインダー通知のカスタマイゼーション設定
   ///
   /// 通知タイトル、メッセージ、表示項目などのカスタマイズ設定です。
   /// デフォルトでReminderNotificationCustomizationの初期値が設定されます。
   ReminderNotificationCustomization get reminderNotificationCustomization;
   @override
-
   /// 緊急アラート機能の有効フラグ
   ///
   /// trueの場合、重要な通知を緊急アラートとして送信します。
   /// iOSのCritical Alertなど、端末の音量設定を無視した通知に使用されます。
   bool get useCriticalAlert;
   @override
-
   /// 緊急アラートの音量レベル
   ///
   /// 0.0-1.0の範囲で緊急アラート時の音量を指定します。
   /// デフォルトは0.5（50%）に設定されています。
   double get criticalAlertVolume;
   @override
-
   /// AlarmKit機能の有効フラグ
   ///
   /// trueの場合、iOS 26+でAlarmKitを使用して服薬リマインダーを送信します。
@@ -792,7 +784,6 @@ abstract class _Setting extends Setting {
   /// iOS 26未満やAndroidでは既存のlocal notificationが使用されます。
   bool get useAlarmKit;
   @override
-
   /// ユーザーのタイムゾーンデータベース名
   ///
   /// timezone パッケージで使用されるタイムゾーン識別子です。

@@ -9,11 +9,7 @@ class InquiryTypeSelector extends HookWidget {
   final ValueNotifier<InquiryType> selectedType;
   final ValueNotifier<String> otherTypeText;
 
-  const InquiryTypeSelector({
-    super.key,
-    required this.selectedType,
-    required this.otherTypeText,
-  });
+  const InquiryTypeSelector({super.key, required this.selectedType, required this.otherTypeText});
 
   @override
   Widget build(BuildContext context) {
@@ -30,22 +26,11 @@ class InquiryTypeSelector extends HookWidget {
       children: [
         Text(
           L.inquiryTypeLabel,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w700,
-            fontSize: 14,
-            color: Colors.black87,
-          ),
+          style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 14, color: Colors.black87),
         ),
         const SizedBox(height: 8),
         RadioListTile<InquiryType>(
-          title: Text(
-            L.bugReport,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontSize: 16,
-            ),
-          ),
+          title: Text(L.bugReport, style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 16)),
           value: InquiryType.bugReport,
           groupValue: selectedType.value,
           onChanged: onInquiryTypeChanged,
@@ -53,13 +38,7 @@ class InquiryTypeSelector extends HookWidget {
           contentPadding: EdgeInsets.zero,
         ),
         RadioListTile<InquiryType>(
-          title: Text(
-            L.featureRequest,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontSize: 16,
-            ),
-          ),
+          title: Text(L.featureRequest, style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 16)),
           value: InquiryType.featureRequest,
           groupValue: selectedType.value,
           onChanged: onInquiryTypeChanged,
@@ -67,13 +46,7 @@ class InquiryTypeSelector extends HookWidget {
           contentPadding: EdgeInsets.zero,
         ),
         RadioListTile<InquiryType>(
-          title: Text(
-            L.otherInquiry,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontSize: 16,
-            ),
-          ),
+          title: Text(L.otherInquiry, style: const TextStyle(fontFamily: FontFamily.japanese, fontSize: 16)),
           value: InquiryType.other,
           groupValue: selectedType.value,
           onChanged: onInquiryTypeChanged,
@@ -88,10 +61,7 @@ class InquiryTypeSelector extends HookWidget {
               onChanged: (text) {
                 otherTypeText.value = text;
               },
-              decoration: InputDecoration(
-                hintText: L.otherInquiryPlaceholder,
-                border: const OutlineInputBorder(),
-              ),
+              decoration: InputDecoration(hintText: L.otherInquiryPlaceholder, border: const OutlineInputBorder()),
               maxLength: 100,
             ),
           ),

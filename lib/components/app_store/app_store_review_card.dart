@@ -2,13 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class AppStoreReviewCard extends HookWidget {
-  const AppStoreReviewCard({
-    super.key,
-    required this.rating,
-    required this.title,
-    required this.author,
-    required this.message,
-  });
+  const AppStoreReviewCard({super.key, required this.rating, required this.title, required this.author, required this.message});
 
   final double rating;
   final String title;
@@ -27,13 +21,7 @@ class AppStoreReviewCard extends HookWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(12)),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.1),
-              blurRadius: 8,
-              offset: const Offset(0, 2),
-            ),
-          ],
+          boxShadow: [BoxShadow(color: Colors.black.withOpacity(0.1), blurRadius: 8, offset: const Offset(0, 2))],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,10 +32,7 @@ class AppStoreReviewCard extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 8.0),
                 child: Text(
                   title,
-                  style: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -58,13 +43,7 @@ class AppStoreReviewCard extends HookWidget {
               children: [
                 _buildStarRating(),
                 const SizedBox(width: 8),
-                Text(
-                  rating.toString(),
-                  style: const TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Text(rating.toString(), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
               ],
             ),
 
@@ -74,10 +53,7 @@ class AppStoreReviewCard extends HookWidget {
                 padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
                   author,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey[600],
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                 ),
@@ -87,12 +63,7 @@ class AppStoreReviewCard extends HookWidget {
             if (message.isNotEmpty)
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
-                child: Text(
-                  message,
-                  style: const TextStyle(fontSize: 14),
-                  maxLines: 5,
-                  overflow: TextOverflow.ellipsis,
-                ),
+                child: Text(message, style: const TextStyle(fontSize: 14), maxLines: 5, overflow: TextOverflow.ellipsis),
               ),
 
             // 「もっと見る」ボタン
@@ -101,11 +72,7 @@ class AppStoreReviewCard extends HookWidget {
                 padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
                   'タップして続きを読む',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.blue[700],
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: TextStyle(fontSize: 12, color: Colors.blue[700], fontWeight: FontWeight.w500),
                 ),
               ),
           ],
@@ -129,13 +96,7 @@ class AppStoreReviewCard extends HookWidget {
                 children: [
                   _buildStarRating(),
                   const SizedBox(width: 8),
-                  Text(
-                    rating.toString(),
-                    style: const TextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  Text(rating.toString(), style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
                 ],
               ),
 
@@ -143,33 +104,19 @@ class AppStoreReviewCard extends HookWidget {
               if (author.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 8.0),
-                  child: Text(
-                    author,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey[600],
-                    ),
-                  ),
+                  child: Text(author, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
                 ),
 
               // メッセージ全文
               if (message.isNotEmpty)
                 Padding(
                   padding: const EdgeInsets.only(top: 16.0),
-                  child: Text(
-                    message,
-                    style: const TextStyle(fontSize: 14),
-                  ),
+                  child: Text(message, style: const TextStyle(fontSize: 14)),
                 ),
             ],
           ),
         ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(context).pop(),
-            child: const Text('閉じる'),
-          ),
-        ],
+        actions: [TextButton(onPressed: () => Navigator.of(context).pop(), child: const Text('閉じる'))],
       ),
     );
   }
@@ -186,8 +133,8 @@ class AppStoreReviewCard extends HookWidget {
           isFullStar
               ? Icons.star
               : isHalfStar
-                  ? Icons.star_half
-                  : Icons.star_border,
+              ? Icons.star_half
+              : Icons.star_border,
           color: Colors.amber,
           size: 20,
         );

@@ -7,13 +7,7 @@ class RowLayout extends StatelessWidget {
   final Widget detail;
   final Widget? takenPillActionOList;
 
-  const RowLayout({
-    super.key,
-    required this.day,
-    required this.pillNumbersOrHyphenOrDate,
-    required this.detail,
-    this.takenPillActionOList,
-  });
+  const RowLayout({super.key, required this.day, required this.pillNumbersOrHyphenOrDate, required this.detail, this.takenPillActionOList});
 
   @override
   Widget build(BuildContext context) {
@@ -25,29 +19,12 @@ class RowLayout extends StatelessWidget {
         children: [
           day,
           const SizedBox(width: 8),
-          const SizedBox(
-            height: 26,
-            child: VerticalDivider(
-              color: AppColors.divider,
-              width: 0.5,
-            ),
-          ),
+          const SizedBox(height: 26, child: VerticalDivider(color: AppColors.divider, width: 0.5)),
           const SizedBox(width: 8),
-          SizedBox(
-            width: 79,
-            child: pillNumbersOrHyphenOrDate,
-          ),
+          SizedBox(width: 79, child: pillNumbersOrHyphenOrDate),
           const SizedBox(width: 8),
-          Expanded(
-            child: detail,
-          ),
-          if (takenPillActionOList != null) ...[
-            const SizedBox(width: 8),
-            SizedBox(
-              width: 57,
-              child: takenPillActionOList,
-            ),
-          ],
+          Expanded(child: detail),
+          if (takenPillActionOList != null) ...[const SizedBox(width: 8), SizedBox(width: 57, child: takenPillActionOList)],
         ],
       ),
     );

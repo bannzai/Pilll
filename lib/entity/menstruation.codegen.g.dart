@@ -7,13 +7,13 @@ part of 'menstruation.codegen.dart';
 // **************************************************************************
 
 _$MenstruationImpl _$$MenstruationImplFromJson(Map<String, dynamic> json) => _$MenstruationImpl(
-      id: json['id'] as String?,
-      beginDate: NonNullTimestampConverter.timestampToDateTime(json['beginDate'] as Timestamp),
-      endDate: NonNullTimestampConverter.timestampToDateTime(json['endDate'] as Timestamp),
-      deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
-      createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
-      healthKitSampleDataUUID: json['healthKitSampleDataUUID'] as String?,
-    );
+  id: json['id'] as String?,
+  beginDate: NonNullTimestampConverter.timestampToDateTime(json['beginDate'] as Timestamp),
+  endDate: NonNullTimestampConverter.timestampToDateTime(json['endDate'] as Timestamp),
+  deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
+  createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
+  healthKitSampleDataUUID: json['healthKitSampleDataUUID'] as String?,
+);
 
 Map<String, dynamic> _$$MenstruationImplToJson(_$MenstruationImpl instance) {
   final val = <String, dynamic>{};

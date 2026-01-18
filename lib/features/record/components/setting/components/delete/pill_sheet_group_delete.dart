@@ -17,11 +17,7 @@ import 'package:pilll/utils/local_notification.dart';
 class PillSheetGroupDelete extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
-  const PillSheetGroupDelete({
-    super.key,
-    required this.pillSheetGroup,
-    required this.activePillSheet,
-  });
+  const PillSheetGroupDelete({super.key, required this.pillSheetGroup, required this.activePillSheet});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -29,14 +25,9 @@ class PillSheetGroupDelete extends HookConsumerWidget {
     final cancelReminderLocalNotification = ref.watch(cancelReminderLocalNotificationProvider);
     return ListTile(
       leading: const Icon(Icons.delete_outline, color: AppColors.red),
-      title: Text(
-        L.discardAllPillSheets,
-        style: const TextStyle(color: AppColors.red),
-      ),
+      title: Text(L.discardAllPillSheets, style: const TextStyle(color: AppColors.red)),
       onTap: () {
-        analytics.logEvent(
-          name: 'did_select_delete_pill_sheet',
-        );
+        analytics.logEvent(name: 'did_select_delete_pill_sheet');
         showDialog(
           context: context,
           builder: (_) {
@@ -48,31 +39,16 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                   children: [
                     TextSpan(
                       text: L.currentlyDisplayed,
-                      style: const TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.main,
-                      ),
+                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
                     ),
                     // TODO: [Localizations]
                     TextSpan(
                       text: L.allPillSheets,
-                      style: const TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w600,
-                        fontSize: 14,
-                        color: TextColor.main,
-                      ),
+                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.main),
                     ),
                     TextSpan(
                       text: L.willBeDiscarded,
-                      style: const TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.main,
-                      ),
+                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
                     ),
                   ],
                 ),
@@ -94,12 +70,9 @@ class PillSheetGroupDelete extends HookConsumerWidget {
                       await cancelReminderLocalNotification();
                       if (context.mounted) {
                         Navigator.of(context).popUntil((route) => route.isFirst);
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            duration: const Duration(seconds: 2),
-                            content: Text(L.pillSheetDiscarded),
-                          ),
-                        );
+                        ScaffoldMessenger.of(
+                          context,
+                        ).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.pillSheetDiscarded)));
                       }
                     } catch (error) {
                       if (context.mounted) {

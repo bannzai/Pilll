@@ -19,11 +19,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
   final Menstruation? latestMenstruation;
   final Setting setting;
 
-  const MenstruationRecordButton({
-    super.key,
-    required this.latestMenstruation,
-    required this.setting,
-  });
+  const MenstruationRecordButton({super.key, required this.latestMenstruation, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -47,12 +43,7 @@ class MenstruationRecordButton extends HookConsumerWidget {
           final latestMenstruation = this.latestMenstruation;
           if (latestMenstruation != null && latestMenstruation.dateRange.inRange(today())) {
             // 生理期間中は、生理期間を編集する
-            return showMenstruationEditSelectionSheet(
-              context,
-              MenstruationEditSelectionSheet(
-                menstruation: latestMenstruation,
-              ),
-            );
+            return showMenstruationEditSelectionSheet(context, MenstruationEditSelectionSheet(menstruation: latestMenstruation));
           }
           if (setting.durationMenstruation == 0) {
             // 生理期間を設定していないユーザーは、直接日付入力させる
@@ -61,69 +52,62 @@ class MenstruationRecordButton extends HookConsumerWidget {
 
           showModalBottomSheet(
             context: context,
-            builder: (_) => MenstruationSelectModifyTypeSheet(onTap: (type) async {
-              switch (type) {
-                case MenstruationSelectModifyType.today:
-                  analytics.logEvent(name: 'tapped_menstruation_record_today');
-                  final navigator = Navigator.of(context);
-                  try {
-                    final begin = today();
-                    final created = await beginMenstruation(
-                      begin,
-                      begin.addDays(setting.durationMenstruation - 1),
-                    );
-                    onRecord(created);
-                    navigator.pop();
+            builder: (_) => MenstruationSelectModifyTypeSheet(
+              onTap: (type) async {
+                switch (type) {
+                  case MenstruationSelectModifyType.today:
+                    analytics.logEvent(name: 'tapped_menstruation_record_today');
+                    final navigator = Navigator.of(context);
+                    try {
+                      final begin = today();
+                      final created = await beginMenstruation(begin, begin.addDays(setting.durationMenstruation - 1));
+                      onRecord(created);
+                      navigator.pop();
+                      return;
+                    } catch (error) {
+                      if (context.mounted) showErrorAlert(context, error);
+                    }
                     return;
-                  } catch (error) {
-                    if (context.mounted) showErrorAlert(context, error);
-                  }
-                  return;
-                case MenstruationSelectModifyType.yesterday:
-                  analytics.logEvent(name: 'tapped_menstruation_record_yesterday');
-                  try {
-                    final begin = yesterday();
-                    final created = await beginMenstruation(
-                      begin,
-                      begin.addDays(setting.durationMenstruation - 1),
-                    );
-                    onRecord(created);
-                    if (context.mounted) Navigator.of(context).pop();
-                  } catch (error) {
-                    if (context.mounted) showErrorAlert(context, error);
-                  }
-                  return;
-                case MenstruationSelectModifyType.begin:
-                  analytics.logEvent(name: 'tapped_menstruation_record_begin');
-                  final dateTime = await showDatePicker(
-                    context: context,
-                    initialEntryMode: DatePickerEntryMode.calendarOnly,
-                    initialDate: today(),
-                    firstDate: DateTime.parse('2020-01-01'),
-                    lastDate: today().addDays(30),
-                    helpText: L.selectMenstruationStartDate,
-                    fieldLabelText: L.menstruationStartDate,
-                    builder: (context, child) {
-                      return DateRangePickerTheme(child: child!);
-                    },
-                  );
-                  if (dateTime == null) {
+                  case MenstruationSelectModifyType.yesterday:
+                    analytics.logEvent(name: 'tapped_menstruation_record_yesterday');
+                    try {
+                      final begin = yesterday();
+                      final created = await beginMenstruation(begin, begin.addDays(setting.durationMenstruation - 1));
+                      onRecord(created);
+                      if (context.mounted) Navigator.of(context).pop();
+                    } catch (error) {
+                      if (context.mounted) showErrorAlert(context, error);
+                    }
                     return;
-                  }
+                  case MenstruationSelectModifyType.begin:
+                    analytics.logEvent(name: 'tapped_menstruation_record_begin');
+                    final dateTime = await showDatePicker(
+                      context: context,
+                      initialEntryMode: DatePickerEntryMode.calendarOnly,
+                      initialDate: today(),
+                      firstDate: DateTime.parse('2020-01-01'),
+                      lastDate: today().addDays(30),
+                      helpText: L.selectMenstruationStartDate,
+                      fieldLabelText: L.menstruationStartDate,
+                      builder: (context, child) {
+                        return DateRangePickerTheme(child: child!);
+                      },
+                    );
+                    if (dateTime == null) {
+                      return;
+                    }
 
-                  try {
-                    final begin = dateTime;
-                    final created = await beginMenstruation(
-                      begin,
-                      begin.addDays(setting.durationMenstruation - 1),
-                    );
-                    onRecord(created);
-                    if (context.mounted) Navigator.of(context).pop();
-                  } catch (error) {
-                    if (context.mounted) showErrorAlert(context, error);
-                  }
-              }
-            }),
+                    try {
+                      final begin = dateTime;
+                      final created = await beginMenstruation(begin, begin.addDays(setting.durationMenstruation - 1));
+                      onRecord(created);
+                      if (context.mounted) Navigator.of(context).pop();
+                    } catch (error) {
+                      if (context.mounted) showErrorAlert(context, error);
+                    }
+                }
+              },
+            ),
           );
         },
         text: _buttonString,

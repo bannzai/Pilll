@@ -16,11 +16,7 @@ import 'package:flutter/material.dart';
 class UserSetup extends HookConsumerWidget {
   final String userID;
   final Widget Function(BuildContext) builder;
-  const UserSetup({
-    super.key,
-    required this.userID,
-    required this.builder,
-  });
+  const UserSetup({super.key, required this.userID, required this.builder});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

@@ -25,21 +25,11 @@ class BeforePillSheetGroupHistoryPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return AsyncValueGroup.group2(
-      ref.watch(beforePillSheetGroupProvider),
-      ref.watch(settingProvider),
-    ).when(
+    return AsyncValueGroup.group2(ref.watch(beforePillSheetGroupProvider), ref.watch(settingProvider)).when(
       data: (data) {
-        return _Page(
-          pillSheetGroup: data.$1,
-          setting: data.$2,
-        );
+        return _Page(pillSheetGroup: data.$1, setting: data.$2);
       },
-      error: (error, stackTrace) => UniversalErrorPage(
-        error: error,
-        reload: () => ref.refresh(refreshAppProvider),
-        child: null,
-      ),
+      error: (error, stackTrace) => UniversalErrorPage(error: error, reload: () => ref.refresh(refreshAppProvider), child: null),
       loading: () => const Indicator(),
     );
   }
@@ -49,10 +39,7 @@ class _Page extends HookConsumerWidget {
   final PillSheetGroup? pillSheetGroup;
   final Setting setting;
 
-  const _Page({
-    required this.pillSheetGroup,
-    required this.setting,
-  });
+  const _Page({required this.pillSheetGroup, required this.setting});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -123,11 +110,7 @@ class _Page extends HookConsumerWidget {
                   for (final pillSheet in pillSheetGroup.pillSheets)
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
-                      child: HistoricalPillsheetGroupPagePillSheet(
-                        pillSheetGroup: pillSheetGroup,
-                        pillSheet: pillSheet,
-                        setting: setting,
-                      ),
+                      child: HistoricalPillsheetGroupPagePillSheet(pillSheetGroup: pillSheetGroup, pillSheet: pillSheet, setting: setting),
                     ),
                 ],
               ),
@@ -138,19 +121,13 @@ class _Page extends HookConsumerWidget {
                 controller: pageController,
                 itemCount: pillSheetGroup.pillSheets.length,
                 onDotTapped: (page) {
-                  pageController.animateToPage(
-                    page,
-                    duration: const Duration(milliseconds: 300),
-                    curve: Curves.easeInOut,
-                  );
+                  pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
                 },
               ),
             ],
             Padding(
               padding: const EdgeInsets.only(left: 24, right: 24),
-              child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(
-                pillSheet: currentPillSheet.value,
-              ),
+              child: BeforePillSheetGroupHistoryPagePillSheetModifiedHistoryList(pillSheet: currentPillSheet.value),
             ),
           ],
         ),

@@ -12,7 +12,8 @@ part of 'initial_setting_state.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 /// @nodoc
 mixin _$InitialSettingTodayPillNumber {
@@ -43,28 +44,29 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res, $Val extends InitialSett
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? pageIndex = null,
-    Object? pillNumberInPillSheet = null,
-  }) {
-    return _then(_value.copyWith(
-      pageIndex: null == pageIndex
-          ? _value.pageIndex
-          : pageIndex // ignore: cast_nullable_to_non_nullable
-              as int,
-      pillNumberInPillSheet: null == pillNumberInPillSheet
-          ? _value.pillNumberInPillSheet
-          : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  $Res call({Object? pageIndex = null, Object? pillNumberInPillSheet = null}) {
+    return _then(
+      _value.copyWith(
+            pageIndex: null == pageIndex
+                ? _value.pageIndex
+                : pageIndex // ignore: cast_nullable_to_non_nullable
+                      as int,
+            pillNumberInPillSheet: null == pillNumberInPillSheet
+                ? _value.pillNumberInPillSheet
+                : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 }
 
 /// @nodoc
 abstract class _$$InitialSettingTodayPillNumberImplCopyWith<$Res> implements $InitialSettingTodayPillNumberCopyWith<$Res> {
   factory _$$InitialSettingTodayPillNumberImplCopyWith(
-          _$InitialSettingTodayPillNumberImpl value, $Res Function(_$InitialSettingTodayPillNumberImpl) then) =
-      __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>;
+    _$InitialSettingTodayPillNumberImpl value,
+    $Res Function(_$InitialSettingTodayPillNumberImpl) then,
+  ) = __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({int pageIndex, int pillNumberInPillSheet});
@@ -75,25 +77,25 @@ class __$$InitialSettingTodayPillNumberImplCopyWithImpl<$Res>
     extends _$InitialSettingTodayPillNumberCopyWithImpl<$Res, _$InitialSettingTodayPillNumberImpl>
     implements _$$InitialSettingTodayPillNumberImplCopyWith<$Res> {
   __$$InitialSettingTodayPillNumberImplCopyWithImpl(
-      _$InitialSettingTodayPillNumberImpl _value, $Res Function(_$InitialSettingTodayPillNumberImpl) _then)
-      : super(_value, _then);
+    _$InitialSettingTodayPillNumberImpl _value,
+    $Res Function(_$InitialSettingTodayPillNumberImpl) _then,
+  ) : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({
-    Object? pageIndex = null,
-    Object? pillNumberInPillSheet = null,
-  }) {
-    return _then(_$InitialSettingTodayPillNumberImpl(
-      pageIndex: null == pageIndex
-          ? _value.pageIndex
-          : pageIndex // ignore: cast_nullable_to_non_nullable
-              as int,
-      pillNumberInPillSheet: null == pillNumberInPillSheet
-          ? _value.pillNumberInPillSheet
-          : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+  $Res call({Object? pageIndex = null, Object? pillNumberInPillSheet = null}) {
+    return _then(
+      _$InitialSettingTodayPillNumberImpl(
+        pageIndex: null == pageIndex
+            ? _value.pageIndex
+            : pageIndex // ignore: cast_nullable_to_non_nullable
+                  as int,
+        pillNumberInPillSheet: null == pillNumberInPillSheet
+            ? _value.pillNumberInPillSheet
+            : pillNumberInPillSheet // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
@@ -165,15 +167,16 @@ abstract class $InitialSettingStateCopyWith<$Res> {
   factory $InitialSettingStateCopyWith(InitialSettingState value, $Res Function(InitialSettingState) then) =
       _$InitialSettingStateCopyWithImpl<$Res, InitialSettingState>;
   @useResult
-  $Res call(
-      {List<PillSheetType> pillSheetTypes,
-      InitialSettingTodayPillNumber? todayPillNumber,
-      List<ReminderTime> reminderTimes,
-      bool isOnReminder,
-      bool isLoading,
-      bool settingIsExist,
-      LinkAccountType? accountType,
-      int pillTakenCount});
+  $Res call({
+    List<PillSheetType> pillSheetTypes,
+    InitialSettingTodayPillNumber? todayPillNumber,
+    List<ReminderTime> reminderTimes,
+    bool isOnReminder,
+    bool isLoading,
+    bool settingIsExist,
+    LinkAccountType? accountType,
+    int pillTakenCount,
+  });
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
 }
@@ -199,40 +202,43 @@ class _$InitialSettingStateCopyWithImpl<$Res, $Val extends InitialSettingState> 
     Object? accountType = freezed,
     Object? pillTakenCount = null,
   }) {
-    return _then(_value.copyWith(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value.pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType>,
-      todayPillNumber: freezed == todayPillNumber
-          ? _value.todayPillNumber
-          : todayPillNumber // ignore: cast_nullable_to_non_nullable
-              as InitialSettingTodayPillNumber?,
-      reminderTimes: null == reminderTimes
-          ? _value.reminderTimes
-          : reminderTimes // ignore: cast_nullable_to_non_nullable
-              as List<ReminderTime>,
-      isOnReminder: null == isOnReminder
-          ? _value.isOnReminder
-          : isOnReminder // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      settingIsExist: null == settingIsExist
-          ? _value.settingIsExist
-          : settingIsExist // ignore: cast_nullable_to_non_nullable
-              as bool,
-      accountType: freezed == accountType
-          ? _value.accountType
-          : accountType // ignore: cast_nullable_to_non_nullable
-              as LinkAccountType?,
-      pillTakenCount: null == pillTakenCount
-          ? _value.pillTakenCount
-          : pillTakenCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            pillSheetTypes: null == pillSheetTypes
+                ? _value.pillSheetTypes
+                : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+                      as List<PillSheetType>,
+            todayPillNumber: freezed == todayPillNumber
+                ? _value.todayPillNumber
+                : todayPillNumber // ignore: cast_nullable_to_non_nullable
+                      as InitialSettingTodayPillNumber?,
+            reminderTimes: null == reminderTimes
+                ? _value.reminderTimes
+                : reminderTimes // ignore: cast_nullable_to_non_nullable
+                      as List<ReminderTime>,
+            isOnReminder: null == isOnReminder
+                ? _value.isOnReminder
+                : isOnReminder // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            isLoading: null == isLoading
+                ? _value.isLoading
+                : isLoading // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            settingIsExist: null == settingIsExist
+                ? _value.settingIsExist
+                : settingIsExist // ignore: cast_nullable_to_non_nullable
+                      as bool,
+            accountType: freezed == accountType
+                ? _value.accountType
+                : accountType // ignore: cast_nullable_to_non_nullable
+                      as LinkAccountType?,
+            pillTakenCount: null == pillTakenCount
+                ? _value.pillTakenCount
+                : pillTakenCount // ignore: cast_nullable_to_non_nullable
+                      as int,
+          )
+          as $Val,
+    );
   }
 
   @override
@@ -254,15 +260,16 @@ abstract class _$$InitialSettingStateImplCopyWith<$Res> implements $InitialSetti
       __$$InitialSettingStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<PillSheetType> pillSheetTypes,
-      InitialSettingTodayPillNumber? todayPillNumber,
-      List<ReminderTime> reminderTimes,
-      bool isOnReminder,
-      bool isLoading,
-      bool settingIsExist,
-      LinkAccountType? accountType,
-      int pillTakenCount});
+  $Res call({
+    List<PillSheetType> pillSheetTypes,
+    InitialSettingTodayPillNumber? todayPillNumber,
+    List<ReminderTime> reminderTimes,
+    bool isOnReminder,
+    bool isLoading,
+    bool settingIsExist,
+    LinkAccountType? accountType,
+    int pillTakenCount,
+  });
 
   @override
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -285,58 +292,60 @@ class __$$InitialSettingStateImplCopyWithImpl<$Res> extends _$InitialSettingStat
     Object? accountType = freezed,
     Object? pillTakenCount = null,
   }) {
-    return _then(_$InitialSettingStateImpl(
-      pillSheetTypes: null == pillSheetTypes
-          ? _value._pillSheetTypes
-          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetType>,
-      todayPillNumber: freezed == todayPillNumber
-          ? _value.todayPillNumber
-          : todayPillNumber // ignore: cast_nullable_to_non_nullable
-              as InitialSettingTodayPillNumber?,
-      reminderTimes: null == reminderTimes
-          ? _value._reminderTimes
-          : reminderTimes // ignore: cast_nullable_to_non_nullable
-              as List<ReminderTime>,
-      isOnReminder: null == isOnReminder
-          ? _value.isOnReminder
-          : isOnReminder // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      settingIsExist: null == settingIsExist
-          ? _value.settingIsExist
-          : settingIsExist // ignore: cast_nullable_to_non_nullable
-              as bool,
-      accountType: freezed == accountType
-          ? _value.accountType
-          : accountType // ignore: cast_nullable_to_non_nullable
-              as LinkAccountType?,
-      pillTakenCount: null == pillTakenCount
-          ? _value.pillTakenCount
-          : pillTakenCount // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
+    return _then(
+      _$InitialSettingStateImpl(
+        pillSheetTypes: null == pillSheetTypes
+            ? _value._pillSheetTypes
+            : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+                  as List<PillSheetType>,
+        todayPillNumber: freezed == todayPillNumber
+            ? _value.todayPillNumber
+            : todayPillNumber // ignore: cast_nullable_to_non_nullable
+                  as InitialSettingTodayPillNumber?,
+        reminderTimes: null == reminderTimes
+            ? _value._reminderTimes
+            : reminderTimes // ignore: cast_nullable_to_non_nullable
+                  as List<ReminderTime>,
+        isOnReminder: null == isOnReminder
+            ? _value.isOnReminder
+            : isOnReminder // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        isLoading: null == isLoading
+            ? _value.isLoading
+            : isLoading // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        settingIsExist: null == settingIsExist
+            ? _value.settingIsExist
+            : settingIsExist // ignore: cast_nullable_to_non_nullable
+                  as bool,
+        accountType: freezed == accountType
+            ? _value.accountType
+            : accountType // ignore: cast_nullable_to_non_nullable
+                  as LinkAccountType?,
+        pillTakenCount: null == pillTakenCount
+            ? _value.pillTakenCount
+            : pillTakenCount // ignore: cast_nullable_to_non_nullable
+                  as int,
+      ),
+    );
   }
 }
 
 /// @nodoc
 
 class _$InitialSettingStateImpl extends _InitialSettingState {
-  const _$InitialSettingStateImpl(
-      {final List<PillSheetType> pillSheetTypes = const [],
-      this.todayPillNumber,
-      required final List<ReminderTime> reminderTimes,
-      this.isOnReminder = true,
-      this.isLoading = false,
-      this.settingIsExist = false,
-      this.accountType,
-      this.pillTakenCount = 1})
-      : _pillSheetTypes = pillSheetTypes,
-        _reminderTimes = reminderTimes,
-        super._();
+  const _$InitialSettingStateImpl({
+    final List<PillSheetType> pillSheetTypes = const [],
+    this.todayPillNumber,
+    required final List<ReminderTime> reminderTimes,
+    this.isOnReminder = true,
+    this.isLoading = false,
+    this.settingIsExist = false,
+    this.accountType,
+    this.pillTakenCount = 1,
+  }) : _pillSheetTypes = pillSheetTypes,
+       _reminderTimes = reminderTimes,
+       super._();
 
   final List<PillSheetType> _pillSheetTypes;
   @override
@@ -393,8 +402,17 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, const DeepCollectionEquality().hash(_pillSheetTypes), todayPillNumber,
-      const DeepCollectionEquality().hash(_reminderTimes), isOnReminder, isLoading, settingIsExist, accountType, pillTakenCount);
+  int get hashCode => Object.hash(
+    runtimeType,
+    const DeepCollectionEquality().hash(_pillSheetTypes),
+    todayPillNumber,
+    const DeepCollectionEquality().hash(_reminderTimes),
+    isOnReminder,
+    isLoading,
+    settingIsExist,
+    accountType,
+    pillTakenCount,
+  );
 
   @JsonKey(ignore: true)
   @override
@@ -404,15 +422,16 @@ class _$InitialSettingStateImpl extends _InitialSettingState {
 }
 
 abstract class _InitialSettingState extends InitialSettingState {
-  const factory _InitialSettingState(
-      {final List<PillSheetType> pillSheetTypes,
-      final InitialSettingTodayPillNumber? todayPillNumber,
-      required final List<ReminderTime> reminderTimes,
-      final bool isOnReminder,
-      final bool isLoading,
-      final bool settingIsExist,
-      final LinkAccountType? accountType,
-      final int pillTakenCount}) = _$InitialSettingStateImpl;
+  const factory _InitialSettingState({
+    final List<PillSheetType> pillSheetTypes,
+    final InitialSettingTodayPillNumber? todayPillNumber,
+    required final List<ReminderTime> reminderTimes,
+    final bool isOnReminder,
+    final bool isLoading,
+    final bool settingIsExist,
+    final LinkAccountType? accountType,
+    final int pillTakenCount,
+  }) = _$InitialSettingStateImpl;
   const _InitialSettingState._() : super._();
 
   @override

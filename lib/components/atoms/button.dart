@@ -8,11 +8,7 @@ class PrimaryButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
-  const PrimaryButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const PrimaryButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +18,14 @@ class PrimaryButton extends HookWidget {
       alignment: Alignment.center,
       children: [
         ElevatedButton(
-          style: ButtonStyle(backgroundColor: WidgetStateProperty.resolveWith((statuses) {
-            if (statuses.contains(WidgetState.disabled)) {
-              return AppColors.lightGray;
-            }
-            return AppColors.primary;
-          })),
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.resolveWith((statuses) {
+              if (statuses.contains(WidgetState.disabled)) {
+                return AppColors.lightGray;
+              }
+              return AppColors.primary;
+            }),
+          ),
           onPressed: isProcessing.value || onPressed == null
               ? null
               : () async {
@@ -47,13 +45,11 @@ class PrimaryButton extends HookWidget {
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
             child: Center(
-                child: Text(text,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16,
-                      color: AppColors.white,
-                    ))),
+              child: Text(
+                text,
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: AppColors.white),
+              ),
+            ),
           ),
         ),
         if (isProcessing.value) _Loading(),
@@ -66,11 +62,7 @@ class UndoButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
-  const UndoButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const UndoButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -80,12 +72,14 @@ class UndoButton extends HookWidget {
       alignment: Alignment.center,
       children: [
         ElevatedButton(
-          style: ButtonStyle(backgroundColor: WidgetStateProperty.resolveWith((statuses) {
-            if (statuses.contains(WidgetState.disabled)) {
-              return AppColors.lightGray;
-            }
-            return AppColors.gray;
-          })),
+          style: ButtonStyle(
+            backgroundColor: WidgetStateProperty.resolveWith((statuses) {
+              if (statuses.contains(WidgetState.disabled)) {
+                return AppColors.lightGray;
+              }
+              return AppColors.gray;
+            }),
+          ),
           onPressed: isProcessing.value || onPressed == null
               ? null
               : () async {
@@ -105,13 +99,11 @@ class UndoButton extends HookWidget {
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180, maxWidth: 180),
             child: Center(
-                child: Text(text,
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 16,
-                      color: AppColors.white,
-                    ))),
+              child: Text(
+                text,
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16, color: AppColors.white),
+              ),
+            ),
           ),
         ),
         if (isProcessing.value) _Loading(),
@@ -124,11 +116,7 @@ class RedTextButton extends HookWidget {
   final String text;
   final Future<void> Function() onPressed;
 
-  const RedTextButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const RedTextButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -157,12 +145,7 @@ class RedTextButton extends HookWidget {
         child: Stack(
           alignment: Alignment.center,
           children: [
-            Text(
-              text,
-              style: TextStyle(
-                color: isProcessing.value ? TextColor.gray : TextColor.primary,
-              ),
-            ),
+            Text(text, style: TextStyle(color: isProcessing.value ? TextColor.gray : TextColor.primary)),
             if (isProcessing.value) _Loading(),
           ],
         ),
@@ -175,11 +158,7 @@ class InconspicuousButton extends HookWidget {
   final String text;
   final Future<void> Function() onPressed;
 
-  const InconspicuousButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const InconspicuousButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -222,11 +201,7 @@ class SmallAppOutlinedButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
-  const SmallAppOutlinedButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const SmallAppOutlinedButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -235,9 +210,7 @@ class SmallAppOutlinedButton extends HookWidget {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
         foregroundColor: AppColors.primary,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(6),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
         side: const BorderSide(color: AppColors.primary),
       ),
       onPressed: onPressed == null
@@ -281,11 +254,7 @@ class AppOutlinedButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
-  const AppOutlinedButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const AppOutlinedButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -297,9 +266,7 @@ class AppOutlinedButton extends HookWidget {
         OutlinedButton(
           style: OutlinedButton.styleFrom(
             foregroundColor: AppColors.primary,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(6),
-            ),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
             side: const BorderSide(color: AppColors.primary),
           ),
           onPressed: onPressed == null
@@ -342,11 +309,7 @@ class AlertButton extends HookWidget {
   final String text;
   final Future<void> Function()? onPressed;
 
-  const AlertButton({
-    super.key,
-    required this.onPressed,
-    required this.text,
-  });
+  const AlertButton({super.key, required this.onPressed, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -374,10 +337,11 @@ class AlertButton extends HookWidget {
           Text(
             text,
             style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: (isProcessing.value || onPressed == null) ? TextColor.gray : TextColor.primary),
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w600,
+              fontSize: 14,
+              color: (isProcessing.value || onPressed == null) ? TextColor.gray : TextColor.primary,
+            ),
           ),
           if (isProcessing.value) _Loading(),
         ],
@@ -389,13 +353,6 @@ class AlertButton extends HookWidget {
 class _Loading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
-      width: 20,
-      height: 20,
-      child: CircularProgressIndicator(
-        strokeWidth: 1,
-        valueColor: AlwaysStoppedAnimation(Colors.grey),
-      ),
-    );
+    return const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 1, valueColor: AlwaysStoppedAnimation(Colors.grey)));
   }
 }

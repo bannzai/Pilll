@@ -15,10 +15,7 @@ final remoteConfig = FirebaseRemoteConfig.instance;
 Future<void> setupRemoteConfig() async {
   try {
     await (
-      remoteConfig.setConfigSettings(RemoteConfigSettings(
-        fetchTimeout: const Duration(minutes: 1),
-        minimumFetchInterval: const Duration(hours: 1),
-      )),
+      remoteConfig.setConfigSettings(RemoteConfigSettings(fetchTimeout: const Duration(minutes: 1), minimumFetchInterval: const Duration(hours: 1))),
       // [RemoteConfigDefaultValues] でgrepした場所に全て設定する
       remoteConfig.setDefaults({
         RemoteConfigKeys.isPaywallFirst: RemoteConfigParameterDefaultValues.isPaywallFirst,

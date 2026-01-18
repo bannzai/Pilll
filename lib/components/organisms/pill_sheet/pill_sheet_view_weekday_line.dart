@@ -4,32 +4,30 @@ import 'package:pilll/features/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 
 class PillSheetViewWeekdayLine extends StatelessWidget {
-  const PillSheetViewWeekdayLine({
-    super.key,
-    required this.firstWeekday,
-  });
+  const PillSheetViewWeekdayLine({super.key, required this.firstWeekday});
 
   final Weekday? firstWeekday;
 
   @override
   Widget build(BuildContext context) {
     return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: () {
-          final firstWeekday = this.firstWeekday;
-          if (firstWeekday == null) {
-            return <Widget>[];
-          }
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: () {
+        final firstWeekday = this.firstWeekday;
+        if (firstWeekday == null) {
+          return <Widget>[];
+        }
 
-          return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
-              .map(
-                (weekday) => Container(
-                  width: PillSheetViewLayout.componentWidth,
-                  color: Colors.transparent,
-                  child: Center(child: WeekdayBadge(weekday: weekday)),
-                ),
-              )
-              .toList();
-        }());
+        return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
+            .map(
+              (weekday) => Container(
+                width: PillSheetViewLayout.componentWidth,
+                color: Colors.transparent,
+                child: Center(child: WeekdayBadge(weekday: weekday)),
+              ),
+            )
+            .toList();
+      }(),
+    );
   }
 }

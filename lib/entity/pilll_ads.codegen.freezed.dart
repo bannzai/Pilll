@@ -12,7 +12,8 @@ part of 'pilll_ads.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
+  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
+);
 
 PilllAds _$PilllAdsFromJson(Map<String, dynamic> json) {
   return _PilllAds.fromJson(json);
@@ -63,16 +64,16 @@ mixin _$PilllAds {
 abstract class $PilllAdsCopyWith<$Res> {
   factory $PilllAdsCopyWith(PilllAds value, $Res Function(PilllAds) then) = _$PilllAdsCopyWithImpl<$Res, PilllAds>;
   @useResult
-  $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
-      String description,
-      String? imageURL,
-      String destinationURL,
-      String hexColor,
-      String closeButtonColor,
-      String chevronRightColor});
+  $Res call({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime startDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
+    String description,
+    String? imageURL,
+    String destinationURL,
+    String hexColor,
+    String closeButtonColor,
+    String chevronRightColor,
+  });
 }
 
 /// @nodoc
@@ -96,40 +97,43 @@ class _$PilllAdsCopyWithImpl<$Res, $Val extends PilllAds> implements $PilllAdsCo
     Object? closeButtonColor = null,
     Object? chevronRightColor = null,
   }) {
-    return _then(_value.copyWith(
-      startDateTime: null == startDateTime
-          ? _value.startDateTime
-          : startDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      endDateTime: null == endDateTime
-          ? _value.endDateTime
-          : endDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageURL: freezed == imageURL
-          ? _value.imageURL
-          : imageURL // ignore: cast_nullable_to_non_nullable
-              as String?,
-      destinationURL: null == destinationURL
-          ? _value.destinationURL
-          : destinationURL // ignore: cast_nullable_to_non_nullable
-              as String,
-      hexColor: null == hexColor
-          ? _value.hexColor
-          : hexColor // ignore: cast_nullable_to_non_nullable
-              as String,
-      closeButtonColor: null == closeButtonColor
-          ? _value.closeButtonColor
-          : closeButtonColor // ignore: cast_nullable_to_non_nullable
-              as String,
-      chevronRightColor: null == chevronRightColor
-          ? _value.chevronRightColor
-          : chevronRightColor // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+    return _then(
+      _value.copyWith(
+            startDateTime: null == startDateTime
+                ? _value.startDateTime
+                : startDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            endDateTime: null == endDateTime
+                ? _value.endDateTime
+                : endDateTime // ignore: cast_nullable_to_non_nullable
+                      as DateTime,
+            description: null == description
+                ? _value.description
+                : description // ignore: cast_nullable_to_non_nullable
+                      as String,
+            imageURL: freezed == imageURL
+                ? _value.imageURL
+                : imageURL // ignore: cast_nullable_to_non_nullable
+                      as String?,
+            destinationURL: null == destinationURL
+                ? _value.destinationURL
+                : destinationURL // ignore: cast_nullable_to_non_nullable
+                      as String,
+            hexColor: null == hexColor
+                ? _value.hexColor
+                : hexColor // ignore: cast_nullable_to_non_nullable
+                      as String,
+            closeButtonColor: null == closeButtonColor
+                ? _value.closeButtonColor
+                : closeButtonColor // ignore: cast_nullable_to_non_nullable
+                      as String,
+            chevronRightColor: null == chevronRightColor
+                ? _value.chevronRightColor
+                : chevronRightColor // ignore: cast_nullable_to_non_nullable
+                      as String,
+          )
+          as $Val,
+    );
   }
 }
 
@@ -138,16 +142,16 @@ abstract class _$$PilllAdsImplCopyWith<$Res> implements $PilllAdsCopyWith<$Res> 
   factory _$$PilllAdsImplCopyWith(_$PilllAdsImpl value, $Res Function(_$PilllAdsImpl) then) = __$$PilllAdsImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
-      String description,
-      String? imageURL,
-      String destinationURL,
-      String hexColor,
-      String closeButtonColor,
-      String chevronRightColor});
+  $Res call({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime startDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endDateTime,
+    String description,
+    String? imageURL,
+    String destinationURL,
+    String hexColor,
+    String closeButtonColor,
+    String chevronRightColor,
+  });
 }
 
 /// @nodoc
@@ -166,40 +170,42 @@ class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$
     Object? closeButtonColor = null,
     Object? chevronRightColor = null,
   }) {
-    return _then(_$PilllAdsImpl(
-      startDateTime: null == startDateTime
-          ? _value.startDateTime
-          : startDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      endDateTime: null == endDateTime
-          ? _value.endDateTime
-          : endDateTime // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-      description: null == description
-          ? _value.description
-          : description // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageURL: freezed == imageURL
-          ? _value.imageURL
-          : imageURL // ignore: cast_nullable_to_non_nullable
-              as String?,
-      destinationURL: null == destinationURL
-          ? _value.destinationURL
-          : destinationURL // ignore: cast_nullable_to_non_nullable
-              as String,
-      hexColor: null == hexColor
-          ? _value.hexColor
-          : hexColor // ignore: cast_nullable_to_non_nullable
-              as String,
-      closeButtonColor: null == closeButtonColor
-          ? _value.closeButtonColor
-          : closeButtonColor // ignore: cast_nullable_to_non_nullable
-              as String,
-      chevronRightColor: null == chevronRightColor
-          ? _value.chevronRightColor
-          : chevronRightColor // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
+    return _then(
+      _$PilllAdsImpl(
+        startDateTime: null == startDateTime
+            ? _value.startDateTime
+            : startDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        endDateTime: null == endDateTime
+            ? _value.endDateTime
+            : endDateTime // ignore: cast_nullable_to_non_nullable
+                  as DateTime,
+        description: null == description
+            ? _value.description
+            : description // ignore: cast_nullable_to_non_nullable
+                  as String,
+        imageURL: freezed == imageURL
+            ? _value.imageURL
+            : imageURL // ignore: cast_nullable_to_non_nullable
+                  as String?,
+        destinationURL: null == destinationURL
+            ? _value.destinationURL
+            : destinationURL // ignore: cast_nullable_to_non_nullable
+                  as String,
+        hexColor: null == hexColor
+            ? _value.hexColor
+            : hexColor // ignore: cast_nullable_to_non_nullable
+                  as String,
+        closeButtonColor: null == closeButtonColor
+            ? _value.closeButtonColor
+            : closeButtonColor // ignore: cast_nullable_to_non_nullable
+                  as String,
+        chevronRightColor: null == chevronRightColor
+            ? _value.chevronRightColor
+            : chevronRightColor // ignore: cast_nullable_to_non_nullable
+                  as String,
+      ),
+    );
   }
 }
 
@@ -207,18 +213,18 @@ class __$$PilllAdsImplCopyWithImpl<$Res> extends _$PilllAdsCopyWithImpl<$Res, _$
 
 @JsonSerializable(explicitToJson: true)
 class _$PilllAdsImpl extends _PilllAds {
-  _$PilllAdsImpl(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required this.endDateTime,
-      required this.description,
-      required this.imageURL,
-      required this.destinationURL,
-      required this.hexColor,
-      this.closeButtonColor = 'FFFFFF',
-      this.chevronRightColor = 'FFFFFF'})
-      : super._();
+  _$PilllAdsImpl({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.startDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required this.endDateTime,
+    required this.description,
+    required this.imageURL,
+    required this.destinationURL,
+    required this.hexColor,
+    this.closeButtonColor = 'FFFFFF',
+    this.chevronRightColor = 'FFFFFF',
+  }) : super._();
 
   factory _$PilllAdsImpl.fromJson(Map<String, dynamic> json) => _$$PilllAdsImplFromJson(json);
 
@@ -298,67 +304,58 @@ class _$PilllAdsImpl extends _PilllAds {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PilllAdsImplToJson(
-      this,
-    );
+    return _$$PilllAdsImplToJson(this);
   }
 }
 
 abstract class _PilllAds extends PilllAds {
-  factory _PilllAds(
-      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime startDateTime,
-      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-      required final DateTime endDateTime,
-      required final String description,
-      required final String? imageURL,
-      required final String destinationURL,
-      required final String hexColor,
-      final String closeButtonColor,
-      final String chevronRightColor}) = _$PilllAdsImpl;
+  factory _PilllAds({
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime startDateTime,
+    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+    required final DateTime endDateTime,
+    required final String description,
+    required final String? imageURL,
+    required final String destinationURL,
+    required final String hexColor,
+    final String closeButtonColor,
+    final String chevronRightColor,
+  }) = _$PilllAdsImpl;
   _PilllAds._() : super._();
 
   factory _PilllAds.fromJson(Map<String, dynamic> json) = _$PilllAdsImpl.fromJson;
 
   @override
-
   /// 広告の表示開始日時
   /// この時刻以降に広告が表示される
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get startDateTime;
   @override
-
   /// 広告の表示終了日時
   /// この時刻以降は広告が表示されなくなる
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDateTime;
   @override
-
   /// 広告のテキスト説明
   /// バナーに表示される広告文言
   String get description;
   @override
-
   /// 広告画像のURL
   /// nullの場合はテキストのみの広告として表示される
   String? get imageURL;
   @override
-
   /// 広告タップ時の遷移先URL
   /// WebViewまたは外部ブラウザで開かれる
   String get destinationURL;
   @override
-
   /// 広告バナーの背景色
   /// 16進数カラーコード（例: "FF0000"）
   String get hexColor;
   @override
-
   /// 閉じるボタンの色
   /// 16進数カラーコード、デフォルトは白色
   String get closeButtonColor;
   @override
-
   /// 右向き矢印アイコンの色
   /// 16進数カラーコード、デフォルトは白色
   String get chevronRightColor;

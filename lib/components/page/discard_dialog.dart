@@ -8,12 +8,7 @@ class DiscardDialog extends StatelessWidget {
   final Widget message;
   final List<Widget> actions;
 
-  const DiscardDialog({
-    super.key,
-    required this.title,
-    required this.message,
-    required this.actions,
-  });
+  const DiscardDialog({super.key, required this.title, required this.message, required this.actions});
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -28,9 +23,7 @@ class DiscardDialog extends StatelessWidget {
               style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 16, color: TextColor.main),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(
-              height: 15,
-            ),
+            const SizedBox(height: 15),
           ],
           message,
         ],
@@ -40,23 +33,15 @@ class DiscardDialog extends StatelessWidget {
   }
 }
 
-void showDiscardDialog(
-  BuildContext context, {
-  required String title,
-  required String message,
-  required List<Widget> actions,
-}) {
+void showDiscardDialog(BuildContext context, {required String title, required String message, required List<Widget> actions}) {
   showDialog(
     context: context,
     builder: (context) => DiscardDialog(
       title: title,
-      message: Text(message,
-          style: const TextStyle(
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w300,
-            fontSize: 14,
-            color: TextColor.main,
-          )),
+      message: Text(
+        message,
+        style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.main),
+      ),
       actions: actions,
     ),
   );

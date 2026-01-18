@@ -30,7 +30,10 @@ void main() {
             body: SizedBox(
               height: 100,
               child: CalendarWeekLine(
-                dateRange: DateRange(DateTime(2025, 1, 5), DateTime(2025, 1, 11)),
+                dateRange: DateRange(
+                  DateTime(2025, 1, 5),
+                  DateTime(2025, 1, 11),
+                ),
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
@@ -61,7 +64,10 @@ void main() {
             body: SizedBox(
               height: 100,
               child: CalendarWeekLine(
-                dateRange: DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18)),
+                dateRange: DateRange(
+                  DateTime(2025, 1, 12),
+                  DateTime(2025, 1, 18),
+                ),
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
@@ -92,7 +98,10 @@ void main() {
             body: SizedBox(
               height: 100,
               child: CalendarWeekLine(
-                dateRange: DateRange(DateTime(2025, 1, 19), DateTime(2025, 1, 25)),
+                dateRange: DateRange(
+                  DateTime(2025, 1, 19),
+                  DateTime(2025, 1, 25),
+                ),
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],
@@ -132,7 +141,10 @@ void main() {
             body: SizedBox(
               height: 100,
               child: CalendarWeekLine(
-                dateRange: DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18)),
+                dateRange: DateRange(
+                  DateTime(2025, 1, 12),
+                  DateTime(2025, 1, 18),
+                ),
                 calendarMenstruationBandModels: [model],
                 calendarScheduledMenstruationBandModels: const [],
                 calendarNextPillSheetBandModels: const [],

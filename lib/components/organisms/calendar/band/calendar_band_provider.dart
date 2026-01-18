@@ -14,20 +14,14 @@ final calendarMenstruationBandListProvider = Provider<AsyncValue<List<CalendarMe
   }
 
   try {
-    return AsyncValue.data(
-      allMenstruations.value!.map((menstruation) => CalendarMenstruationBandModel(menstruation)).toList(),
-    );
+    return AsyncValue.data(allMenstruations.value!.map((menstruation) => CalendarMenstruationBandModel(menstruation)).toList());
   } catch (error, stackTrace) {
     return AsyncValue.error(error, stackTrace);
   }
 });
 
 final calendarScheduledMenstruationBandListProvider = Provider.autoDispose<AsyncValue<List<CalendarScheduledMenstruationBandModel>>>((ref) {
-  return AsyncValueGroup.group3(
-    ref.watch(latestPillSheetGroupProvider),
-    ref.watch(settingProvider),
-    ref.watch(allMenstruationProvider),
-  ).whenData(
+  return AsyncValueGroup.group3(ref.watch(latestPillSheetGroupProvider), ref.watch(settingProvider), ref.watch(allMenstruationProvider)).whenData(
     (t) => scheduledMenstruationDateRanges(
       t.$1,
       t.$2,

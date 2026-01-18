@@ -4,28 +4,16 @@ import 'package:pilll/entity/inquiry.codegen.dart';
 final functions = FirebaseFunctions.instanceFor(region: 'asia-northeast1');
 
 extension FirebaseFunctionsExt on FirebaseFunctions {
-  Future<String> inquiry({
-    required InquiryType inquiryType,
-    String? otherTypeText,
-    required String email,
-    required String content,
-  }) async {
-    final result = await httpsCallable('inquiry').call({
-      'inquiryType': inquiryType.name,
-      if (otherTypeText != null) 'otherTypeText': otherTypeText,
-      'email': email,
-      'content': content,
-    });
+  Future<String> inquiry({required InquiryType inquiryType, String? otherTypeText, required String email, required String content}) async {
+    final result = await httpsCallable(
+      'inquiry',
+    ).call({'inquiryType': inquiryType.name, if (otherTypeText != null) 'otherTypeText': otherTypeText, 'email': email, 'content': content});
     final response = mapToJSON(result.data);
     return response['inquiryId'] as String;
   }
 
   Future<bool> startPromotion({required int promotionDayCount}) async {
-    final result = await httpsCallable('startPromotion').call(
-      {
-        'promotionDayCount': promotionDayCount,
-      },
-    );
+    final result = await httpsCallable('startPromotion').call({'promotionDayCount': promotionDayCount});
     final response = mapToJSON(result.data);
     if (response['result'] != 'OK') {
       throw Exception(response['error']['message']);

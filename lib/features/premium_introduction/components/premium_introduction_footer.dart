@@ -44,9 +44,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                         launchUrl(Uri.parse('https://bannzai.github.io/Pilll/PrivacyPolicy'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
-                  const TextSpan(
-                    text: ' / ',
-                  ),
+                  const TextSpan(text: ' / '),
                   TextSpan(
                     text: L.termsOfService,
                     style: const TextStyle(decoration: TextDecoration.underline),
@@ -55,9 +53,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                         launchUrl(Uri.parse('https://bannzai.github.io/Pilll/Terms'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
-                  const TextSpan(
-                    text: ' / ',
-                  ),
+                  const TextSpan(text: ' / '),
                   TextSpan(
                     text: L.premiumTermsNotice2,
                     style: const TextStyle(decoration: TextDecoration.underline),
@@ -66,22 +62,18 @@ class PremiumIntroductionFooter extends StatelessWidget {
                         launchUrl(Uri.parse('https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct'), mode: LaunchMode.inAppBrowserView);
                       },
                   ),
-                  TextSpan(
-                    text: L.premiumTermsNotice3,
-                  ),
-                  TextSpan(
-                    text: L.autoRenewNotice,
-                  ),
-                  TextSpan(
-                    text: L.cancelAutoRenewInfo(storeName),
-                  ),
+                  TextSpan(text: L.premiumTermsNotice3),
+                  TextSpan(text: L.autoRenewNotice),
+                  TextSpan(text: L.cancelAutoRenewInfo(storeName)),
                   TextSpan(
                     text: L.moreDetails,
                     style: const TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
-                        launchUrl(Uri.parse('https://pilll.notion.site/Pilll-b10fd76f1d2246d286ad5cff03f22940?pvs=25'),
-                            mode: LaunchMode.inAppBrowserView);
+                        launchUrl(
+                          Uri.parse('https://pilll.notion.site/Pilll-b10fd76f1d2246d286ad5cff03f22940?pvs=25'),
+                          mode: LaunchMode.inAppBrowserView,
+                        );
                       },
                   ),
                 ],
@@ -91,10 +83,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 16),
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-            decoration: BoxDecoration(
-              color: AppColors.secondary,
-              borderRadius: BorderRadius.circular(8),
-            ),
+            decoration: BoxDecoration(color: AppColors.secondary, borderRadius: BorderRadius.circular(8)),
             child: RichText(
               text: TextSpan(
                 style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 10, fontFamily: FontFamily.japanese, color: Colors.white),
@@ -121,14 +110,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
                 final messenger = ScaffoldMessenger.of(context);
                 final shouldShowSnackbar = await _restore();
                 if (shouldShowSnackbar) {
-                  messenger.showSnackBar(
-                    SnackBar(
-                      duration: const Duration(
-                        seconds: 2,
-                      ),
-                      content: Text(L.restorePurchase),
-                    ),
-                  );
+                  messenger.showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.restorePurchase)));
                 }
               } catch (error) {
                 if (context.mounted) showErrorAlert(context, error);
@@ -159,26 +141,25 @@ class PremiumIntroductionFooter extends StatelessWidget {
     try {
       final purchaserInfo = await Purchases.restorePurchases();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
-      analytics.logEvent(name: 'proceed_restore_purchase_info', parameters: {
-        'entitlements': entitlements?.identifier,
-        'isActivated': entitlements?.isActive,
-      });
+      analytics.logEvent(
+        name: 'proceed_restore_purchase_info',
+        parameters: {'entitlements': entitlements?.identifier, 'isActivated': entitlements?.isActive},
+      );
       if (entitlements != null && entitlements.isActive) {
-        analytics.logEvent(name: 'done_restore_purchase_info', parameters: {
-          'entitlements': entitlements.identifier,
-        });
+        analytics.logEvent(name: 'done_restore_purchase_info', parameters: {'entitlements': entitlements.identifier});
         await callUpdatePurchaseInfo(purchaserInfo);
         return Future.value(true);
       }
-      analytics.logEvent(name: 'undone_restore_purchase_info', parameters: {
-        'entitlements': entitlements?.identifier,
-        'isActivated': entitlements?.isActive,
-      });
+      analytics.logEvent(
+        name: 'undone_restore_purchase_info',
+        parameters: {'entitlements': entitlements?.identifier, 'isActivated': entitlements?.isActive},
+      );
       throw AlertError(L.noPreviousPurchaseInfo);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(
-          name: 'catched_restore_exception',
-          parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message});
+        name: 'catched_restore_exception',
+        parameters: {'code': exception.code, 'details': exception.details.toString(), 'message': exception.message},
+      );
       final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
@@ -186,9 +167,7 @@ class PremiumIntroductionFooter extends StatelessWidget {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
-      analytics.logEvent(name: 'catched_restore_anonymous_exception', parameters: {
-        'exception_type': exception.runtimeType.toString(),
-      });
+      analytics.logEvent(name: 'catched_restore_anonymous_exception', parameters: {'exception_type': exception.runtimeType.toString()});
       errorLogger.recordError(exception, stack);
       rethrow;
     }

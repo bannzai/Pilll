@@ -26,19 +26,10 @@ class MenstruationCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SvgPicture.asset(
-                      'images/menstruation.svg',
-                      width: 24,
-                      colorFilter: const ColorFilter.mode(AppColors.red, BlendMode.srcIn),
-                    ),
+                    SvgPicture.asset('images/menstruation.svg', width: 24, colorFilter: const ColorFilter.mode(AppColors.red, BlendMode.srcIn)),
                     Text(
                       state.title,
-                      style: const TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                        color: TextColor.noshime,
-                      ),
+                      style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.noshime),
                     ),
                   ],
                 ),
@@ -52,17 +43,11 @@ class MenstruationCard extends StatelessWidget {
             const SizedBox(height: 8),
             Container(
               padding: const EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
-              decoration: BoxDecoration(
-                color: AppColors.primary,
-                borderRadius: BorderRadius.circular(30),
+              decoration: BoxDecoration(color: AppColors.primary, borderRadius: BorderRadius.circular(30)),
+              child: Text(
+                state.countdownString,
+                style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
               ),
-              child: Text(state.countdownString,
-                  style: const TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 14,
-                    color: TextColor.white,
-                  )),
             ),
           ],
         ),

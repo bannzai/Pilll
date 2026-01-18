@@ -28,10 +28,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
     return Column(
       children: [
         SizedBox(
-          height: PillSheetViewLayout.calcHeight(
-            PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet,
-            true,
-          ),
+          height: PillSheetViewLayout.calcHeight(PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet, true),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
@@ -48,10 +45,7 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
                       pillSheetTypes: pillSheetTypes,
                       selectedPillNumberIntoPillSheet: selectedTodayPillNumberIntoPillSheet(pageIndex),
                       markSelected: (pageIndex, number) {
-                        analytics.logEvent(name: 'selected_today_number_setting', parameters: {
-                          'pill_number': number,
-                          'page': pageIndex,
-                        });
+                        analytics.logEvent(name: 'selected_today_number_setting', parameters: {'pill_number': number, 'page': pageIndex});
                         markSelected(pageIndex, number);
                       },
                     ),
@@ -68,14 +62,10 @@ class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
             controller: pageController,
             itemCount: pillSheetTypes.length,
             onDotTapped: (page) {
-              pageController.animateToPage(
-                page,
-                duration: const Duration(milliseconds: 300),
-                curve: Curves.easeInOut,
-              );
+              pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
             },
-          )
-        ]
+          ),
+        ],
       ],
     );
   }

@@ -26,11 +26,7 @@ class TakePill {
   final BatchSetPillSheetModifiedHistory batchSetPillSheetModifiedHistory;
   final BatchSetPillSheetGroup batchSetPillSheetGroup;
 
-  TakePill({
-    required this.batchFactory,
-    required this.batchSetPillSheetModifiedHistory,
-    required this.batchSetPillSheetGroup,
-  });
+  TakePill({required this.batchFactory, required this.batchSetPillSheetModifiedHistory, required this.batchSetPillSheetGroup});
 
   Future<PillSheetGroup?> call({
     required DateTime takenDate,
@@ -164,19 +160,11 @@ extension _TakenPillSheetV2 on PillSheetV2 {
           // NOTE: 一番最後の記録対象のピル以外は、ピルの服用記録をtakenCountに達するまで追加する
           // completeAllPillsがtrueの場合は、最後のピルも含めて全てのピルを完了させる
           for (var i = pill.pillTakens.length; i < pill.takenCount; i++) {
-            pillTakenDoneList.add(PillTaken(
-              recordedTakenDateTime: takenDate,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-            ));
+            pillTakenDoneList.add(PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now()));
           }
         } else {
           // NOTE: 一番最後の記録対象のピルは、ピルの服用記録を1回追加する
-          pillTakenDoneList.add(PillTaken(
-            recordedTakenDateTime: takenDate,
-            createdDateTime: now(),
-            updatedDateTime: now(),
-          ));
+          pillTakenDoneList.add(PillTaken(recordedTakenDateTime: takenDate, createdDateTime: now(), updatedDateTime: now()));
         }
         return pill.copyWith(pillTakens: pillTakenDoneList);
       }).toList(),

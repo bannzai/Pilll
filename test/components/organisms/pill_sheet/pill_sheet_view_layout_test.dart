@@ -25,10 +25,14 @@ void main() {
     Environment.isTest = true;
   });
   group("check count of pill mark line widget", () {
-    testWidgets('when selected 3 line pill sheet type', (WidgetTester tester) async {
+    testWidgets('when selected 3 line pill sheet type', (
+      WidgetTester tester,
+    ) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
-      const weekdayLines = PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
+      const weekdayLines = PillSheetViewWeekdayLine(
+        firstWeekday: Weekday.Sunday,
+      );
       const pillSheetType = PillSheetType.pillsheet_21_0;
       final widget = PillSheetViewLayout(
         weekdayLines: weekdayLines,
@@ -40,17 +44,25 @@ void main() {
       await tester.pumpWidget(
         MaterialApp(
           home: SizedBox(
-            height: PillSheetViewLayout.calcHeight(pillSheetType.numberOfLineInPillSheet, false),
+            height: PillSheetViewLayout.calcHeight(
+              pillSheetType.numberOfLineInPillSheet,
+              false,
+            ),
             child: widget,
           ),
         ),
       );
       await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-      expect(find.byWidgetPredicate((widget) => widget is _TestWidget), findsNWidgets(3));
+      expect(
+        find.byWidgetPredicate((widget) => widget is _TestWidget),
+        findsNWidgets(3),
+      );
     });
   });
-  testWidgets('when selected 4 line pill sheet type', (WidgetTester tester) async {
+  testWidgets('when selected 4 line pill sheet type', (
+    WidgetTester tester,
+  ) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.view);
 
     const weekdayLines = PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
@@ -65,13 +77,19 @@ void main() {
     await tester.pumpWidget(
       MaterialApp(
         home: SizedBox(
-          height: PillSheetViewLayout.calcHeight(pillSheetType.numberOfLineInPillSheet, false),
+          height: PillSheetViewLayout.calcHeight(
+            pillSheetType.numberOfLineInPillSheet,
+            false,
+          ),
           child: widget,
         ),
       ),
     );
     await tester.pumpAndSettle(const Duration(milliseconds: 500));
 
-    expect(find.byWidgetPredicate((widget) => widget is _TestWidget), findsNWidgets(4));
+    expect(
+      find.byWidgetPredicate((widget) => widget is _TestWidget),
+      findsNWidgets(4),
+    );
   });
 }

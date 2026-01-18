@@ -17,18 +17,14 @@ class RecordPagePillSheetList extends HookConsumerWidget {
   final Setting setting;
   final User user;
 
-  const RecordPagePillSheetList({
-    super.key,
-    required this.pillSheetGroup,
-    required this.activePillSheet,
-    required this.setting,
-    required this.user,
-  });
+  const RecordPagePillSheetList({super.key, required this.pillSheetGroup, required this.activePillSheet, required this.setting, required this.user});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
-        initialPage: activePillSheet.groupIndex, viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width);
+      initialPage: activePillSheet.groupIndex,
+      viewportFraction: (PillSheetViewLayout.width + 20) / MediaQuery.of(context).size.width,
+    );
     return Column(
       children: [
         SizedBox(
@@ -44,12 +40,7 @@ class RecordPagePillSheetList extends HookConsumerWidget {
               for (final pillSheet in pillSheetGroup.pillSheets)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: RecordPagePillSheet(
-                    pillSheetGroup: pillSheetGroup,
-                    pillSheet: pillSheet,
-                    setting: setting,
-                    user: user,
-                  ),
+                  child: RecordPagePillSheet(pillSheetGroup: pillSheetGroup, pillSheet: pillSheet, setting: setting, user: user),
                 ),
             ],
           ),
@@ -57,16 +48,13 @@ class RecordPagePillSheetList extends HookConsumerWidget {
         if (pillSheetGroup.pillSheets.length > 1) ...[
           const SizedBox(height: 16),
           DotsIndicator(
-              controller: pageController,
-              itemCount: pillSheetGroup.pillSheets.length,
-              onDotTapped: (page) {
-                pageController.animateToPage(
-                  page,
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.easeInOut,
-                );
-              })
-        ]
+            controller: pageController,
+            itemCount: pillSheetGroup.pillSheets.length,
+            onDotTapped: (page) {
+              pageController.animateToPage(page, duration: const Duration(milliseconds: 300), curve: Curves.easeInOut);
+            },
+          ),
+        ],
       ],
     );
   }

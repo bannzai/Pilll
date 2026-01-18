@@ -20,12 +20,7 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     void onDeleted() {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          duration: const Duration(seconds: 2),
-          content: Text(L.menstruationDeleted),
-        ),
-      );
+      ScaffoldMessenger.of(context).showSnackBar(SnackBar(duration: const Duration(seconds: 2), content: Text(L.menstruationDeleted)));
       Navigator.of(context).pop();
     }
 
@@ -39,38 +34,21 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
           children: [
             Text(
               '${DateTimeFormatter.yearAndMonthAndDay(menstruation.beginDate)} - ${DateTimeFormatter.yearAndMonthAndDay(menstruation.endDate)}',
-              style: const TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
-              ),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese, color: TextColor.main),
             ),
             const SizedBox(height: 16),
             TextButton(
               style: const ButtonStyle(alignment: Alignment.centerLeft),
               onPressed: () {
-                showEditMenstruationDateRangePicker(
-                  context,
-                  ref,
-                  initialMenstruation: menstruation,
-                );
+                showEditMenstruationDateRangePicker(context, ref, initialMenstruation: menstruation);
               },
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.edit,
-                    color: TextColor.main,
-                    size: 20,
-                  ),
+                  const Icon(Icons.edit, color: TextColor.main, size: 20),
                   const SizedBox(width: 16),
                   Text(
                     L.editMenstruation,
-                    style: const TextStyle(
-                      color: TextColor.main,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                    ),
+                    style: const TextStyle(color: TextColor.main, fontWeight: FontWeight.w400, fontSize: 14),
                     textAlign: TextAlign.start,
                   ),
                 ],
@@ -80,19 +58,11 @@ class MenstruationEditSelectionSheet extends HookConsumerWidget {
               style: const ButtonStyle(alignment: Alignment.centerLeft),
               child: Row(
                 children: [
-                  const Icon(
-                    Icons.delete,
-                    color: TextColor.danger,
-                    size: 20,
-                  ),
+                  const Icon(Icons.delete, color: TextColor.danger, size: 20),
                   const SizedBox(width: 16),
                   Text(
                     L.delete,
-                    style: const TextStyle(
-                      color: TextColor.danger,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 14,
-                    ),
+                    style: const TextStyle(color: TextColor.danger, fontWeight: FontWeight.w400, fontSize: 14),
                     textAlign: TextAlign.start,
                   ),
                 ],

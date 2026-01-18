@@ -32,9 +32,7 @@ class _SystemHash {
 abstract class _$BoolSharedPreferences extends BuildlessNotifier<SharedPreferencesState<bool?>> {
   late final String key;
 
-  SharedPreferencesState<bool?> build(
-    String key,
-  );
+  SharedPreferencesState<bool?> build(String key);
 }
 
 /// See also [BoolSharedPreferences].
@@ -47,21 +45,13 @@ class BoolSharedPreferencesFamily extends Family<SharedPreferencesState<bool?>> 
   const BoolSharedPreferencesFamily();
 
   /// See also [BoolSharedPreferences].
-  BoolSharedPreferencesProvider call(
-    String key,
-  ) {
-    return BoolSharedPreferencesProvider(
-      key,
-    );
+  BoolSharedPreferencesProvider call(String key) {
+    return BoolSharedPreferencesProvider(key);
   }
 
   @override
-  BoolSharedPreferencesProvider getProviderOverride(
-    covariant BoolSharedPreferencesProvider provider,
-  ) {
-    return call(
-      provider.key,
-    );
+  BoolSharedPreferencesProvider getProviderOverride(covariant BoolSharedPreferencesProvider provider) {
+    return call(provider.key);
   }
 
   static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[sharedPreferencesProvider];
@@ -71,7 +61,7 @@ class BoolSharedPreferencesFamily extends Family<SharedPreferencesState<bool?>> 
 
   static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
     sharedPreferencesProvider,
-    ...?sharedPreferencesProvider.allTransitiveDependencies
+    ...?sharedPreferencesProvider.allTransitiveDependencies,
   };
 
   @override
@@ -84,17 +74,16 @@ class BoolSharedPreferencesFamily extends Family<SharedPreferencesState<bool?>> 
 /// See also [BoolSharedPreferences].
 class BoolSharedPreferencesProvider extends NotifierProviderImpl<BoolSharedPreferences, SharedPreferencesState<bool?>> {
   /// See also [BoolSharedPreferences].
-  BoolSharedPreferencesProvider(
-    String key,
-  ) : this._internal(
-          () => BoolSharedPreferences()..key = key,
-          from: boolSharedPreferencesProvider,
-          name: r'boolSharedPreferencesProvider',
-          debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$boolSharedPreferencesHash,
-          dependencies: BoolSharedPreferencesFamily._dependencies,
-          allTransitiveDependencies: BoolSharedPreferencesFamily._allTransitiveDependencies,
-          key: key,
-        );
+  BoolSharedPreferencesProvider(String key)
+    : this._internal(
+        () => BoolSharedPreferences()..key = key,
+        from: boolSharedPreferencesProvider,
+        name: r'boolSharedPreferencesProvider',
+        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$boolSharedPreferencesHash,
+        dependencies: BoolSharedPreferencesFamily._dependencies,
+        allTransitiveDependencies: BoolSharedPreferencesFamily._allTransitiveDependencies,
+        key: key,
+      );
 
   BoolSharedPreferencesProvider._internal(
     super._createNotifier, {
@@ -109,12 +98,8 @@ class BoolSharedPreferencesProvider extends NotifierProviderImpl<BoolSharedPrefe
   final String key;
 
   @override
-  SharedPreferencesState<bool?> runNotifierBuild(
-    covariant BoolSharedPreferences notifier,
-  ) {
-    return notifier.build(
-      key,
-    );
+  SharedPreferencesState<bool?> runNotifierBuild(covariant BoolSharedPreferences notifier) {
+    return notifier.build(key);
   }
 
   @override
@@ -170,9 +155,7 @@ String _$intSharedPreferencesHash() => r'ae66140077df3922444c17579c2b5483ed6c21b
 abstract class _$IntSharedPreferences extends BuildlessNotifier<SharedPreferencesState<int?>> {
   late final String key;
 
-  SharedPreferencesState<int?> build(
-    String key,
-  );
+  SharedPreferencesState<int?> build(String key);
 }
 
 /// See also [IntSharedPreferences].
@@ -185,21 +168,13 @@ class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
   const IntSharedPreferencesFamily();
 
   /// See also [IntSharedPreferences].
-  IntSharedPreferencesProvider call(
-    String key,
-  ) {
-    return IntSharedPreferencesProvider(
-      key,
-    );
+  IntSharedPreferencesProvider call(String key) {
+    return IntSharedPreferencesProvider(key);
   }
 
   @override
-  IntSharedPreferencesProvider getProviderOverride(
-    covariant IntSharedPreferencesProvider provider,
-  ) {
-    return call(
-      provider.key,
-    );
+  IntSharedPreferencesProvider getProviderOverride(covariant IntSharedPreferencesProvider provider) {
+    return call(provider.key);
   }
 
   static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[sharedPreferencesProvider];
@@ -209,7 +184,7 @@ class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
 
   static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
     sharedPreferencesProvider,
-    ...?sharedPreferencesProvider.allTransitiveDependencies
+    ...?sharedPreferencesProvider.allTransitiveDependencies,
   };
 
   @override
@@ -222,17 +197,16 @@ class IntSharedPreferencesFamily extends Family<SharedPreferencesState<int?>> {
 /// See also [IntSharedPreferences].
 class IntSharedPreferencesProvider extends NotifierProviderImpl<IntSharedPreferences, SharedPreferencesState<int?>> {
   /// See also [IntSharedPreferences].
-  IntSharedPreferencesProvider(
-    String key,
-  ) : this._internal(
-          () => IntSharedPreferences()..key = key,
-          from: intSharedPreferencesProvider,
-          name: r'intSharedPreferencesProvider',
-          debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$intSharedPreferencesHash,
-          dependencies: IntSharedPreferencesFamily._dependencies,
-          allTransitiveDependencies: IntSharedPreferencesFamily._allTransitiveDependencies,
-          key: key,
-        );
+  IntSharedPreferencesProvider(String key)
+    : this._internal(
+        () => IntSharedPreferences()..key = key,
+        from: intSharedPreferencesProvider,
+        name: r'intSharedPreferencesProvider',
+        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$intSharedPreferencesHash,
+        dependencies: IntSharedPreferencesFamily._dependencies,
+        allTransitiveDependencies: IntSharedPreferencesFamily._allTransitiveDependencies,
+        key: key,
+      );
 
   IntSharedPreferencesProvider._internal(
     super._createNotifier, {
@@ -247,12 +221,8 @@ class IntSharedPreferencesProvider extends NotifierProviderImpl<IntSharedPrefere
   final String key;
 
   @override
-  SharedPreferencesState<int?> runNotifierBuild(
-    covariant IntSharedPreferences notifier,
-  ) {
-    return notifier.build(
-      key,
-    );
+  SharedPreferencesState<int?> runNotifierBuild(covariant IntSharedPreferences notifier) {
+    return notifier.build(key);
   }
 
   @override
@@ -308,9 +278,7 @@ String _$stringSharedPreferencesHash() => r'3dbe38b126b12544017f8538c33ea459704c
 abstract class _$StringSharedPreferences extends BuildlessNotifier<SharedPreferencesState<String?>> {
   late final String key;
 
-  SharedPreferencesState<String?> build(
-    String key,
-  );
+  SharedPreferencesState<String?> build(String key);
 }
 
 /// See also [StringSharedPreferences].
@@ -323,21 +291,13 @@ class StringSharedPreferencesFamily extends Family<SharedPreferencesState<String
   const StringSharedPreferencesFamily();
 
   /// See also [StringSharedPreferences].
-  StringSharedPreferencesProvider call(
-    String key,
-  ) {
-    return StringSharedPreferencesProvider(
-      key,
-    );
+  StringSharedPreferencesProvider call(String key) {
+    return StringSharedPreferencesProvider(key);
   }
 
   @override
-  StringSharedPreferencesProvider getProviderOverride(
-    covariant StringSharedPreferencesProvider provider,
-  ) {
-    return call(
-      provider.key,
-    );
+  StringSharedPreferencesProvider getProviderOverride(covariant StringSharedPreferencesProvider provider) {
+    return call(provider.key);
   }
 
   static final Iterable<ProviderOrFamily> _dependencies = <ProviderOrFamily>[sharedPreferencesProvider];
@@ -347,7 +307,7 @@ class StringSharedPreferencesFamily extends Family<SharedPreferencesState<String
 
   static final Iterable<ProviderOrFamily> _allTransitiveDependencies = <ProviderOrFamily>{
     sharedPreferencesProvider,
-    ...?sharedPreferencesProvider.allTransitiveDependencies
+    ...?sharedPreferencesProvider.allTransitiveDependencies,
   };
 
   @override
@@ -360,17 +320,16 @@ class StringSharedPreferencesFamily extends Family<SharedPreferencesState<String
 /// See also [StringSharedPreferences].
 class StringSharedPreferencesProvider extends NotifierProviderImpl<StringSharedPreferences, SharedPreferencesState<String?>> {
   /// See also [StringSharedPreferences].
-  StringSharedPreferencesProvider(
-    String key,
-  ) : this._internal(
-          () => StringSharedPreferences()..key = key,
-          from: stringSharedPreferencesProvider,
-          name: r'stringSharedPreferencesProvider',
-          debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$stringSharedPreferencesHash,
-          dependencies: StringSharedPreferencesFamily._dependencies,
-          allTransitiveDependencies: StringSharedPreferencesFamily._allTransitiveDependencies,
-          key: key,
-        );
+  StringSharedPreferencesProvider(String key)
+    : this._internal(
+        () => StringSharedPreferences()..key = key,
+        from: stringSharedPreferencesProvider,
+        name: r'stringSharedPreferencesProvider',
+        debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$stringSharedPreferencesHash,
+        dependencies: StringSharedPreferencesFamily._dependencies,
+        allTransitiveDependencies: StringSharedPreferencesFamily._allTransitiveDependencies,
+        key: key,
+      );
 
   StringSharedPreferencesProvider._internal(
     super._createNotifier, {
@@ -385,12 +344,8 @@ class StringSharedPreferencesProvider extends NotifierProviderImpl<StringSharedP
   final String key;
 
   @override
-  SharedPreferencesState<String?> runNotifierBuild(
-    covariant StringSharedPreferences notifier,
-  ) {
-    return notifier.build(
-      key,
-    );
+  SharedPreferencesState<String?> runNotifierBuild(covariant StringSharedPreferences notifier) {
+    return notifier.build(key);
   }
 
   @override
@@ -440,5 +395,6 @@ class _StringSharedPreferencesProviderElement extends NotifierProviderElement<St
   @override
   String get key => (origin as StringSharedPreferencesProvider).key;
 }
+
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

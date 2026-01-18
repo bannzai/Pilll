@@ -10,10 +10,7 @@ import 'package:pilll/utils/datetime/day.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
-  const PremiumTrialLimitAnnouncementBar({
-    super.key,
-    required this.premiumTrialLimit,
-  });
+  const PremiumTrialLimitAnnouncementBar({super.key, required this.premiumTrialLimit});
 
   final String premiumTrialLimit;
 
@@ -34,21 +31,11 @@ class PremiumTrialLimitAnnouncementBar extends StatelessWidget {
             const Spacer(),
             Text(
               premiumTrialLimit,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w600,
-                fontSize: 14,
-                color: TextColor.white,
-              ),
+              style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w600, fontSize: 14, color: TextColor.white),
               textAlign: TextAlign.center,
             ),
             const Spacer(),
-            SvgPicture.asset(
-              'images/arrow_right.svg',
-              colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn),
-              width: 16,
-              height: 16,
-            ),
+            SvgPicture.asset('images/arrow_right.svg', colorFilter: const ColorFilter.mode(Colors.white, BlendMode.srcIn), width: 16, height: 16),
             const SizedBox(width: 8),
           ],
         ),

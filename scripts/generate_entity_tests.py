@@ -90,7 +90,7 @@ PROMPT_TEMPLATE = '''以下の指示に従って {entity} に関する {method} 
 ## 動作確認
 git操作・gh pr create を行うまえにフォーマットを整えて単体テストを実行してください
 
-- dart fix --apply lib && dart format lib -l 150
+- dart fix --apply lib && dart format lib
 - flutter test test/entity/{entity_file}_test.dart"
 
 #### Git操作

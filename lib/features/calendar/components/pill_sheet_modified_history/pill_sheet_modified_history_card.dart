@@ -34,10 +34,7 @@ class CalendarPillSheetModifiedHistoryCardState {
   List<PillSheetModifiedHistory> get pillSheetModifiedHistories {
     if (_allPillSheetModifiedHistories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold) {
       final copied = [..._allPillSheetModifiedHistories];
-      copied.removeRange(
-        CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold - 1,
-        copied.length,
-      );
+      copied.removeRange(CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold - 1, copied.length);
       return copied;
     } else {
       return _allPillSheetModifiedHistories;
@@ -49,11 +46,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   final List<PillSheetModifiedHistory> histories;
   final User user;
 
-  const CalendarPillSheetModifiedHistoryCard({
-    super.key,
-    required this.histories,
-    required this.user,
-  });
+  const CalendarPillSheetModifiedHistoryCard({super.key, required this.histories, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -67,17 +60,9 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
               children: [
                 Text(
                   L.medicationHistory,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w500,
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 20,
-                    color: TextColor.main,
-                  ),
+                  style: const TextStyle(fontWeight: FontWeight.w500, fontFamily: FontFamily.japanese, fontSize: 20, color: TextColor.main),
                 ),
-                if (!user.isPremium) ...[
-                  const SizedBox(width: 8),
-                  const PremiumBadge(),
-                ],
+                if (!user.isPremium) ...[const SizedBox(width: 8), const PremiumBadge()],
               ],
             ),
             const SizedBox(height: 16),
@@ -88,10 +73,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 return [
                   SingleChildScrollView(
                     physics: const NeverScrollableScrollPhysics(),
-                    child: PillSheetModifiedHistoryList(
-                      pillSheetModifiedHistories: histories,
-                      premiumOrTrial: user.premiumOrTrial,
-                    ),
+                    child: PillSheetModifiedHistoryList(pillSheetModifiedHistories: histories, premiumOrTrial: user.premiumOrTrial),
                   ),
                   if (histories.length > CalendarPillSheetModifiedHistoryCardState.pillSheetModifiedHistoriesThreshold)
                     PillSheetModifiedHistoryMoreButton(user: user),
@@ -102,10 +84,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                     children: [
                       SingleChildScrollView(
                         physics: const NeverScrollableScrollPhysics(),
-                        child: PillSheetModifiedHistoryList(
-                          pillSheetModifiedHistories: histories,
-                          premiumOrTrial: user.premiumOrTrial,
-                        ),
+                        child: PillSheetModifiedHistoryList(pillSheetModifiedHistories: histories, premiumOrTrial: user.premiumOrTrial),
                       ),
                       Positioned.fill(
                         child: ClipRect(
@@ -113,9 +92,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                             children: [
                               BackdropFilter(
                                 filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-                                child: Container(
-                                  color: Colors.black.withOpacity(0),
-                                ),
+                                child: Container(color: Colors.black.withOpacity(0)),
                               ),
                               Center(
                                 child: Column(
@@ -138,9 +115,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                       child: AppOutlinedButton(
                                         text: L.viewMoreDetails,
                                         onPressed: () async {
-                                          analytics.logEvent(
-                                            name: 'pressed_show_detail_pill_sheet_history',
-                                          );
+                                          analytics.logEvent(name: 'pressed_show_detail_pill_sheet_history');
                                           showPremiumIntroductionSheet(context);
                                         },
                                       ),

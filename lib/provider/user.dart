@@ -30,9 +30,10 @@ class UpdatePurchaseInfo {
     required List<String> activeSubscriptions,
     required String? originalPurchaseDate,
   }) async {
-    await databaseConnection.userRawReference().set(
-        {if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated, UserFirestoreFieldKeys.purchaseAppID: purchaseAppID},
-        SetOptions(merge: true));
+    await databaseConnection.userRawReference().set({
+      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
+      UserFirestoreFieldKeys.purchaseAppID: purchaseAppID,
+    }, SetOptions(merge: true));
     final privates = {
       if (premiumPlanIdentifier != null) UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier: premiumPlanIdentifier,
       if (originalPurchaseDate != null) UserPrivateFirestoreFieldKeys.originalPurchaseDate: originalPurchaseDate,
@@ -49,12 +50,8 @@ class SyncPurchaseInfo {
   final DatabaseConnection databaseConnection;
   SyncPurchaseInfo(this.databaseConnection);
 
-  Future<void> call({
-    required bool isActivated,
-  }) async {
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isPremium: isActivated,
-    }, SetOptions(merge: true));
+  Future<void> call({required bool isActivated}) async {
+    await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.isPremium: isActivated}, SetOptions(merge: true));
   }
 }
 
@@ -94,13 +91,10 @@ class FetchOrCreateUser {
     debugPrint('#create $uid');
     final sharedPreferences = await SharedPreferences.getInstance();
     final anonymousUserID = sharedPreferences.getString(StringKey.lastSignInAnonymousUID);
-    return databaseConnection.userRawReference().set(
-      {
-        if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
-        UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
-      },
-      SetOptions(merge: true),
-    );
+    return databaseConnection.userRawReference().set({
+      if (anonymousUserID != null) UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+      UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
+    }, SetOptions(merge: true));
   }
 }
 
@@ -111,13 +105,9 @@ class LinkApple {
   LinkApple(this.databaseConnection);
 
   Future<void> call() async {
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isAnonymous: false,
-    }, SetOptions(merge: true));
+    await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.isAnonymous: false}, SetOptions(merge: true));
 
-    await databaseConnection.userPrivateRawReference().set({
-      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
-    }, SetOptions(merge: true));
+    await databaseConnection.userPrivateRawReference().set({UserPrivateFirestoreFieldKeys.isLinkedApple: true}, SetOptions(merge: true));
   }
 }
 
@@ -128,13 +118,9 @@ class LinkGoogle {
   LinkGoogle(this.databaseConnection);
 
   Future<void> call() async {
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.isAnonymous: false,
-    }, SetOptions(merge: true));
+    await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.isAnonymous: false}, SetOptions(merge: true));
 
-    await databaseConnection.userPrivateRawReference().set({
-      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
-    }, SetOptions(merge: true));
+    await databaseConnection.userPrivateRawReference().set({UserPrivateFirestoreFieldKeys.isLinkedGoogle: true}, SetOptions(merge: true));
   }
 }
 
@@ -147,13 +133,10 @@ class RegisterRemotePushNotificationToken {
   Future<void> call({required String? fcmToken, required String? apnsToken}) {
     debugPrint('fcmToken: $fcmToken');
     debugPrint('apnsToken: $apnsToken');
-    return databaseConnection.userPrivateRawReference().set(
-      {
-        UserPrivateFirestoreFieldKeys.fcmToken: fcmToken,
-        UserPrivateFirestoreFieldKeys.apnsToken: apnsToken,
-      },
-      SetOptions(merge: true),
-    );
+    return databaseConnection.userPrivateRawReference().set({
+      UserPrivateFirestoreFieldKeys.fcmToken: fcmToken,
+      UserPrivateFirestoreFieldKeys.apnsToken: apnsToken,
+    }, SetOptions(merge: true));
   }
 }
 
@@ -211,11 +194,7 @@ class SaveUserLaunchInfo {
       // Shortcut property for backend
       'lastLoginAt': now,
       // Stats
-      'stats': {
-        'lastLoginAt': now,
-        'beginVersion': beginVersion,
-        'lastLoginVersion': lastLoginVersion,
-      },
+      'stats': {'lastLoginAt': now, 'beginVersion': beginVersion, 'lastLoginVersion': lastLoginVersion},
       'timezone': {
         'name': timeZoneName,
         'databaseName': timeZoneDatabaseName,
@@ -246,8 +225,9 @@ class EndInitialSetting {
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay).endOfDay(),
-      UserFirestoreFieldKeys.discountEntitlementDeadlineDate:
-          now().addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay).endOfDay(),
+      UserFirestoreFieldKeys.discountEntitlementDeadlineDate: now()
+          .addDays(remoteConfigParameter.trialDeadlineDateOffsetDay + remoteConfigParameter.discountEntitlementOffsetDay)
+          .endOfDay(),
     }, SetOptions(merge: true));
   }
 }
@@ -259,8 +239,6 @@ class DisableShouldAskCancelReason {
   DisableShouldAskCancelReason(this.databaseConnection);
 
   Future<void> call() async {
-    await databaseConnection.userRawReference().set({
-      UserFirestoreFieldKeys.shouldAskCancelReason: false,
-    }, SetOptions(merge: true));
+    await databaseConnection.userRawReference().set({UserFirestoreFieldKeys.shouldAskCancelReason: false}, SetOptions(merge: true));
   }
 }

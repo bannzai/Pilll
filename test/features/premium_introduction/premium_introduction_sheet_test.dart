@@ -80,7 +80,8 @@ class _FakeUser extends Fake implements User {
   @override
   bool get hasDiscountEntitlement => fakeHasDiscountEntitlement;
   @override
-  DateTime? get discountEntitlementDeadlineDate => fakeDiscountEntitlementDeadlineDate;
+  DateTime? get discountEntitlementDeadlineDate =>
+      fakeDiscountEntitlementDeadlineDate;
 }
 
 void main() {
@@ -98,57 +99,79 @@ void main() {
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final mockToday = DateTime(2021, 04, 29);
-    final discountEntitlementDeadlineDate = mockToday.subtract(const Duration(days: 1));
+    final discountEntitlementDeadlineDate = mockToday.subtract(
+      const Duration(days: 1),
+    );
 
     when(mockTodayRepository.now()).thenReturn(mockToday);
     todayRepository = mockTodayRepository;
 
     group('user is premium', () {
-      testWidgets('#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found', (WidgetTester tester) async {
-        final user = _FakeUser(
-          fakeIsPremium: true,
-          fakeHasDiscountEntitlement: true, // NOTE: Nasty data
-          fakeDiscountEntitlementDeadlineDate: null,
-        );
+      testWidgets(
+        '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
+        (WidgetTester tester) async {
+          final user = _FakeUser(
+            fakeIsPremium: true,
+            fakeHasDiscountEntitlement: true, // NOTE: Nasty data
+            fakeDiscountEntitlementDeadlineDate: null,
+          );
 
-        const sheet = PremiumIntroductionSheet();
-        await tester.pumpWidget(
-          MaterialApp(
-            home: ProviderScope(
-              overrides: [
-                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
-                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
-                lifetimePremiumPackageProvider.overrideWith((ref) => _LifetimeFakePackage()),
-                userProvider.overrideWith((ref) => Stream.value(user)),
-                isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(true),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(const Duration(seconds: 1000)),
-                isJaLocaleProvider.overrideWithValue(false),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
-              ],
-              child: const MaterialApp(
-                home: sheet,
+          const sheet = PremiumIntroductionSheet();
+          await tester.pumpWidget(
+            MaterialApp(
+              home: ProviderScope(
+                overrides: [
+                  purchaseOfferingsProvider.overrideWith(
+                    (ref) => _FakeOfferings(),
+                  ),
+                  currentOfferingPackagesProvider.overrideWith(
+                    (ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()],
+                  ),
+                  monthlyPremiumPackageProvider.overrideWith(
+                    (ref) => _MonthlyFakePackage(),
+                  ),
+                  lifetimePremiumPackageProvider.overrideWith(
+                    (ref) => _LifetimeFakePackage(),
+                  ),
+                  userProvider.overrideWith((ref) => Stream.value(user)),
+                  isOverDiscountDeadlineProvider(
+                    discountEntitlementDeadlineDate:
+                        discountEntitlementDeadlineDate,
+                  ).overrideWithValue(true),
+                  durationToDiscountPriceDeadlineProvider(
+                    discountEntitlementDeadlineDate:
+                        discountEntitlementDeadlineDate,
+                  ).overrideWithValue(const Duration(seconds: 1000)),
+                  isJaLocaleProvider.overrideWithValue(false),
+                  remoteConfigParameterProvider.overrideWithValue(
+                    RemoteConfigParameter(),
+                  ),
+                ],
+                child: const MaterialApp(home: sheet),
               ),
             ),
-          ),
-        );
-        await tester.pump();
+          );
+          await tester.pump();
 
-        expect(
-          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
-          findsNothing,
-        );
-        expect(
-          find.byWidgetPredicate((widget) => widget is PremiumUserThanksRow),
-          findsOneWidget,
-        );
-      });
+          expect(
+            find.byWidgetPredicate(
+              (widget) => widget is PremiumIntroductionDiscountRow,
+            ),
+            findsNothing,
+          );
+          expect(
+            find.byWidgetPredicate((widget) => widget is PremiumUserThanksRow),
+            findsOneWidget,
+          );
+        },
+      );
     });
     group('user has discount entitlements', () {
       const hasDiscountEntitlement = true;
       const isOverDiscountDeadline = false;
-      testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is found', (
+        WidgetTester tester,
+      ) async {
         var user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
@@ -160,35 +183,51 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
-                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
-                lifetimePremiumPackageProvider.overrideWith((ref) => _LifetimeFakePackage()),
+                purchaseOfferingsProvider.overrideWith(
+                  (ref) => _FakeOfferings(),
+                ),
+                currentOfferingPackagesProvider.overrideWith(
+                  (ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()],
+                ),
+                monthlyPremiumPackageProvider.overrideWith(
+                  (ref) => _MonthlyFakePackage(),
+                ),
+                lifetimePremiumPackageProvider.overrideWith(
+                  (ref) => _LifetimeFakePackage(),
+                ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
-                isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(isOverDiscountDeadline),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(const Duration(seconds: 1000)),
+                isOverDiscountDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(isOverDiscountDeadline),
+                durationToDiscountPriceDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
-              child: const MaterialApp(
-                home: sheet,
-              ),
+              child: const MaterialApp(home: sheet),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate(
+            (widget) => widget is PremiumIntroductionDiscountRow,
+          ),
           findsOneWidget,
         );
       });
     });
     group('user does not has discount entitlements', () {
       const hasDiscountEntitlement = false;
-      testWidgets('#PremiumIntroductionDiscountRow is not found', (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is not found', (
+        WidgetTester tester,
+      ) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
 
@@ -198,7 +237,9 @@ void main() {
         final user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: hasDiscountEntitlement,
-          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
+          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(
+            const Duration(days: 1),
+          ),
         );
 
         const sheet = PremiumIntroductionSheet();
@@ -206,35 +247,52 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
-                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
-                lifetimePremiumPackageProvider.overrideWith((ref) => _LifetimeFakePackage()),
+                purchaseOfferingsProvider.overrideWith(
+                  (ref) => _FakeOfferings(),
+                ),
+                currentOfferingPackagesProvider.overrideWith(
+                  (ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()],
+                ),
+                monthlyPremiumPackageProvider.overrideWith(
+                  (ref) => _MonthlyFakePackage(),
+                ),
+                lifetimePremiumPackageProvider.overrideWith(
+                  (ref) => _LifetimeFakePackage(),
+                ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
-                isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(const Duration(seconds: 1000)),
+                isOverDiscountDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(false),
+                durationToDiscountPriceDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
                 appIsReleasedProvider.overrideWith((ref) => Future.value(true)),
               ],
-              child: const MaterialApp(
-                home: sheet,
-              ),
+              child: const MaterialApp(home: sheet),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate(
+            (widget) => widget is PremiumIntroductionDiscountRow,
+          ),
           findsNothing,
         );
       });
     });
     group('is over discount deadline ', () {
       const isOverDiscountDeadline = true;
-      testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is found', (
+        WidgetTester tester,
+      ) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
 
@@ -244,7 +302,9 @@ void main() {
         final user = _FakeUser(
           fakeIsPremium: false,
           fakeHasDiscountEntitlement: true,
-          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(const Duration(days: 1)),
+          fakeDiscountEntitlementDeadlineDate: mockToday.subtract(
+            const Duration(days: 1),
+          ),
         );
 
         const sheet = PremiumIntroductionSheet();
@@ -252,34 +312,50 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
-                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
-                lifetimePremiumPackageProvider.overrideWith((ref) => _LifetimeFakePackage()),
+                purchaseOfferingsProvider.overrideWith(
+                  (ref) => _FakeOfferings(),
+                ),
+                currentOfferingPackagesProvider.overrideWith(
+                  (ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()],
+                ),
+                monthlyPremiumPackageProvider.overrideWith(
+                  (ref) => _MonthlyFakePackage(),
+                ),
+                lifetimePremiumPackageProvider.overrideWith(
+                  (ref) => _LifetimeFakePackage(),
+                ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
-                isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(isOverDiscountDeadline),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(const Duration(seconds: 1000)),
+                isOverDiscountDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(isOverDiscountDeadline),
+                durationToDiscountPriceDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
-              child: const MaterialApp(
-                home: sheet,
-              ),
+              child: const MaterialApp(home: sheet),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate(
+            (widget) => widget is PremiumIntroductionDiscountRow,
+          ),
           findsOneWidget,
         );
       });
     });
     group('discount entitlemenet deadline date is null', () {
-      testWidgets('#PremiumIntroductionDiscountRow is found', (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionDiscountRow is found', (
+        WidgetTester tester,
+      ) async {
         final mockTodayRepository = MockTodayService();
         final mockToday = DateTime(2021, 04, 29);
 
@@ -297,27 +373,42 @@ void main() {
           MaterialApp(
             home: ProviderScope(
               overrides: [
-                purchaseOfferingsProvider.overrideWith((ref) => _FakeOfferings()),
-                currentOfferingPackagesProvider.overrideWith((ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()]),
-                monthlyPremiumPackageProvider.overrideWith((ref) => _MonthlyFakePackage()),
-                lifetimePremiumPackageProvider.overrideWith((ref) => _LifetimeFakePackage()),
+                purchaseOfferingsProvider.overrideWith(
+                  (ref) => _FakeOfferings(),
+                ),
+                currentOfferingPackagesProvider.overrideWith(
+                  (ref, arg) => [_MonthlyFakePackage(), _AnnualFakePackage()],
+                ),
+                monthlyPremiumPackageProvider.overrideWith(
+                  (ref) => _MonthlyFakePackage(),
+                ),
+                lifetimePremiumPackageProvider.overrideWith(
+                  (ref) => _LifetimeFakePackage(),
+                ),
                 userProvider.overrideWith((ref) => Stream.value(user)),
-                isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate).overrideWithValue(false),
-                durationToDiscountPriceDeadlineProvider(discountEntitlementDeadlineDate: discountEntitlementDeadlineDate)
-                    .overrideWithValue(const Duration(seconds: 1000)),
+                isOverDiscountDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(false),
+                durationToDiscountPriceDeadlineProvider(
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
+                ).overrideWithValue(const Duration(seconds: 1000)),
                 isJaLocaleProvider.overrideWithValue(false),
-                remoteConfigParameterProvider.overrideWithValue(RemoteConfigParameter()),
+                remoteConfigParameterProvider.overrideWithValue(
+                  RemoteConfigParameter(),
+                ),
               ],
-              child: const MaterialApp(
-                home: sheet,
-              ),
+              child: const MaterialApp(home: sheet),
             ),
           ),
         );
         await tester.pump();
 
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumIntroductionDiscountRow),
+          find.byWidgetPredicate(
+            (widget) => widget is PremiumIntroductionDiscountRow,
+          ),
           findsWidgets,
         );
       });

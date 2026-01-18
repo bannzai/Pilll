@@ -15,10 +15,7 @@ part 'initial_setting_state.codegen.freezed.dart';
 
 @freezed
 class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
-  const factory InitialSettingTodayPillNumber({
-    @Default(0) int pageIndex,
-    @Default(0) int pillNumberInPillSheet,
-  }) = _InitialSettingTodayPillNumber;
+  const factory InitialSettingTodayPillNumber({@Default(0) int pageIndex, @Default(0) int pillNumberInPillSheet}) = _InitialSettingTodayPillNumber;
 }
 
 @freezed
@@ -75,16 +72,8 @@ class InitialSettingState with _$InitialSettingState {
     required int pillTakenCount,
   }) {
     final pillSheetType = pillSheetTypes[pageIndex];
-    final beginDate = _beginDate(
-      pageIndex: pageIndex,
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-    );
-    final lastTakenDate = _lastTakenDate(
-      pageIndex: pageIndex,
-      todayPillNumber: todayPillNumber,
-      pillSheetTypes: pillSheetTypes,
-    );
+    final beginDate = _beginDate(pageIndex: pageIndex, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
+    final lastTakenDate = _lastTakenDate(pageIndex: pageIndex, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
 
     if (pillTakenCount > 1) {
       return PillSheet.v2(
@@ -132,11 +121,7 @@ class InitialSettingState with _$InitialSettingState {
       return today().subtract(Duration(days: passedTotalCount + (todayPillNumber.pillNumberInPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
-      final beforePillSheetBeginDate = _beginDate(
-        pageIndex: pageIndex - 1,
-        todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
-      );
+      final beforePillSheetBeginDate = _beginDate(pageIndex: pageIndex - 1, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes);
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
       return beforePillSheetBeginDate.addDays(beforePillSheetType.totalCount);
     }
@@ -156,11 +141,7 @@ class InitialSettingState with _$InitialSettingState {
       return null;
     } else if (todayPillNumber.pageIndex > pageIndex) {
       // Left side PillSheet
-      return _beginDate(
-        pageIndex: pageIndex,
-        todayPillNumber: todayPillNumber,
-        pillSheetTypes: pillSheetTypes,
-      ).addDays(pillSheetType.totalCount - 1);
+      return _beginDate(pageIndex: pageIndex, todayPillNumber: todayPillNumber, pillSheetTypes: pillSheetTypes).addDays(pillSheetType.totalCount - 1);
     } else {
       // Current PillSheet
       return _beginDate(

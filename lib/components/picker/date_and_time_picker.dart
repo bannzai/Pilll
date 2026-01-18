@@ -7,12 +7,7 @@ class DateAndTimePicker extends StatelessWidget {
   final DateTime? maximumDate;
   final void Function(DateTime datetime) done;
 
-  const DateAndTimePicker({
-    super.key,
-    required this.initialDateTime,
-    this.maximumDate,
-    required this.done,
-  });
+  const DateAndTimePicker({super.key, required this.initialDateTime, this.maximumDate, required this.done});
 
   @override
   Widget build(BuildContext context) {
@@ -30,18 +25,19 @@ class DateAndTimePicker extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height / 3,
           child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: CupertinoDatePicker(
+              use24hFormat: true,
+              initialDateTime: selectedDateTime,
+              maximumDate: maximumDate ?? now(),
+              mode: CupertinoDatePickerMode.dateAndTime,
+              onDateTimeChanged: (DateTime value) {
+                selectedDateTime = value;
               },
-              child: CupertinoDatePicker(
-                use24hFormat: true,
-                initialDateTime: selectedDateTime,
-                maximumDate: maximumDate ?? now(),
-                mode: CupertinoDatePickerMode.dateAndTime,
-                onDateTimeChanged: (DateTime value) {
-                  selectedDateTime = value;
-                },
-              )),
+            ),
+          ),
         ),
       ],
     );

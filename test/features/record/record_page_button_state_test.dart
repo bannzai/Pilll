@@ -47,7 +47,11 @@ void main() {
           ],
           child: MaterialApp(
             home: RecordPageButton(
-              pillSheetGroup: PillSheetGroup(pillSheets: [pillSheet], createdAt: now(), pillSheetIDs: ["id"]),
+              pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                createdAt: now(),
+                pillSheetIDs: ["id"],
+              ),
               currentPillSheet: pillSheet,
               userIsPremiumOtTrial: false,
               user: FakeUser(),
@@ -56,7 +60,10 @@ void main() {
         ),
       );
       await tester.pump();
-      expect(find.byWidgetPredicate((widget) => widget is TakenButton), findsOneWidget);
+      expect(
+        find.byWidgetPredicate((widget) => widget is TakenButton),
+        findsOneWidget,
+      );
     });
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
@@ -76,7 +83,11 @@ void main() {
         ],
         child: MaterialApp(
           home: RecordPageButton(
-            pillSheetGroup: PillSheetGroup(pillSheets: [pillSheet], createdAt: now(), pillSheetIDs: ["id"]),
+            pillSheetGroup: PillSheetGroup(
+              pillSheets: [pillSheet],
+              createdAt: now(),
+              pillSheetIDs: ["id"],
+            ),
             currentPillSheet: pillSheet,
             userIsPremiumOtTrial: false,
             user: FakeUser(),
@@ -85,6 +96,9 @@ void main() {
       ),
     );
     await tester.pump();
-    expect(find.byWidgetPredicate((widget) => widget is CancelButton), findsOneWidget);
+    expect(
+      find.byWidgetPredicate((widget) => widget is CancelButton),
+      findsOneWidget,
+    );
   });
 }

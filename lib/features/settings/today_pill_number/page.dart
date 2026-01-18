@@ -19,11 +19,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activePillSheet;
 
-  const SettingTodayPillNumberPage({
-    super.key,
-    required this.pillSheetGroup,
-    required this.activePillSheet,
-  });
+  const SettingTodayPillNumberPage({super.key, required this.pillSheetGroup, required this.activePillSheet});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -40,10 +36,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          L.changePillNumber,
-          style: const TextStyle(color: TextColor.black),
-        ),
+        title: Text(L.changePillNumber, style: const TextStyle(color: TextColor.black)),
         backgroundColor: AppColors.white,
       ),
       body: SafeArea(
@@ -55,29 +48,25 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                   const SizedBox(height: 20),
                   Text(
                     L.selectTodayPillNumber(_today()),
-                    style: const TextStyle(
-                      fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20,
-                      color: TextColor.main,
-                    ),
+                    style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w500, fontSize: 20, color: TextColor.main),
                     textAlign: TextAlign.center,
                   ),
                   const SizedBox(height: 56),
                   Center(
                     child: SettingTodayPillNumberPillSheetList(
-                        pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-                        pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
-                        selectedTodayPillNumberIntoPillSheet: (pageIndex) {
-                          if (pillSheetPageIndexState.value != pageIndex) {
-                            return null;
-                          }
-                          return pillNumberInPillSheetState.value;
-                        },
-                        markSelected: (pillSheetPageIndex, pillNumberInPillSheet) {
-                          pillSheetPageIndexState.value = pillSheetPageIndex;
-                          pillNumberInPillSheetState.value = pillNumberInPillSheet;
-                        }),
+                      pillSheetTypes: pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+                      pillSheetAppearanceMode: pillSheetGroup.pillSheetAppearanceMode,
+                      selectedTodayPillNumberIntoPillSheet: (pageIndex) {
+                        if (pillSheetPageIndexState.value != pageIndex) {
+                          return null;
+                        }
+                        return pillNumberInPillSheetState.value;
+                      },
+                      markSelected: (pillSheetPageIndex, pillNumberInPillSheet) {
+                        pillSheetPageIndexState.value = pillSheetPageIndex;
+                        pillNumberInPillSheetState.value = pillNumberInPillSheet;
+                      },
+                    ),
                   ),
                   const SizedBox(height: 20),
                 ],
@@ -92,10 +81,11 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                       child: PrimaryButton(
                         onPressed: () async {
                           await changePillNumber(
-                              pillSheetGroup: pillSheetGroup,
-                              activePillSheet: activePillSheet,
-                              pillSheetPageIndex: pillSheetPageIndexState.value,
-                              pillNumberInPillSheet: pillNumberInPillSheetState.value);
+                            pillSheetGroup: pillSheetGroup,
+                            activePillSheet: activePillSheet,
+                            pillSheetPageIndex: pillSheetPageIndexState.value,
+                            pillNumberInPillSheet: pillNumberInPillSheetState.value,
+                          );
                           await registerReminderLocalNotification();
 
                           navigator.pop();
@@ -106,7 +96,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                     const SizedBox(height: 35),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -118,10 +108,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
     return DateFormat.MEd().format(today());
   }
 
-  int _pillNumberInPillSheet({
-    required PillSheet activePillSheet,
-    required PillSheetGroup pillSheetGroup,
-  }) {
+  int _pillNumberInPillSheet({required PillSheet activePillSheet, required PillSheetGroup pillSheetGroup}) {
     final pillSheetTypes = pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
     final passedTotalCount = summarizedPillCountWithPillSheetTypesToIndex(pillSheetTypes: pillSheetTypes, toIndex: activePillSheet.groupIndex);
     if (passedTotalCount >= activePillSheet.todayPillNumber) {
@@ -132,16 +119,10 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
 }
 
 extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
-  static Route<dynamic> route({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet activePillSheet,
-  }) {
+  static Route<dynamic> route({required PillSheetGroup pillSheetGroup, required PillSheet activePillSheet}) {
     return MaterialPageRoute(
       settings: const RouteSettings(name: 'SettingTodayPillNumberPage'),
-      builder: (_) => SettingTodayPillNumberPage(
-        pillSheetGroup: pillSheetGroup,
-        activePillSheet: activePillSheet,
-      ),
+      builder: (_) => SettingTodayPillNumberPage(pillSheetGroup: pillSheetGroup, activePillSheet: activePillSheet),
     );
   }
 }

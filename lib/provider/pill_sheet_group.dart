@@ -16,9 +16,7 @@ PillSheetGroup? _filter(QuerySnapshot<PillSheetGroup> snapshot) {
 
 // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
 Future<PillSheetGroup?> fetchLatestPillSheetGroup(DatabaseConnection databaseConnection) async {
-  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get())
-      .docs
-      .lastOrNull
+  return (await databaseConnection.pillSheetGroupsReference().orderBy(PillSheetGroupFirestoreKeys.createdAt).limitToLast(1).get()).docs.lastOrNull
       ?.data();
 }
 
@@ -30,7 +28,7 @@ AsyncValue<PillSheet?> activePillSheet(ActivePillSheetRef ref) {
 
 @Riverpod(dependencies: [database])
 Stream<PillSheetGroup?> latestPillSheetGroup(LatestPillSheetGroupRef ref) {
-// 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
+  // 最新のピルシートグループを取得する。ピルシートグループが初期設定で作られないパターンもあるのでNullable
   return ref
       .watch(databaseProvider)
       .pillSheetGroupsReference()

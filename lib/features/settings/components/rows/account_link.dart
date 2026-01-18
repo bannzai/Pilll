@@ -19,11 +19,7 @@ class AccountLinkRow extends HookConsumerWidget {
     return ListTile(
       title: Text(
         L.accountSettings,
-        style: const TextStyle(
-          fontFamily: FontFamily.roboto,
-          fontWeight: FontWeight.w300,
-          fontSize: 16,
-        ),
+        style: const TextStyle(fontFamily: FontFamily.roboto, fontWeight: FontWeight.w300, fontSize: 16),
       ),
       trailing: _subtitle(isAppleLinked || isGoogleLinked),
       onTap: () {
@@ -40,13 +36,10 @@ class AccountLinkRow extends HookConsumerWidget {
         children: [
           SvgPicture.asset('images/checkmark_green.svg'),
           const SizedBox(width: 6),
-          Text(L.linked,
-              style: const TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-                color: TextColor.darkGray,
-              )),
+          Text(
+            L.linked,
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.darkGray),
+          ),
         ],
       );
     } else {
@@ -57,12 +50,7 @@ class AccountLinkRow extends HookConsumerWidget {
           const SizedBox(width: 6),
           Text(
             L.unregistered,
-            style: const TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w300,
-              fontSize: 14,
-              color: TextColor.darkGray,
-            ),
+            style: const TextStyle(fontFamily: FontFamily.japanese, fontWeight: FontWeight.w300, fontSize: 14, color: TextColor.darkGray),
           ),
         ],
       );

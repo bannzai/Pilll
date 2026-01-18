@@ -7,19 +7,18 @@ part of 'pill_sheet_group.codegen.dart';
 // **************************************************************************
 
 _$PillSheetGroupImpl _$$PillSheetGroupImplFromJson(Map<String, dynamic> json) => _$PillSheetGroupImpl(
-      id: json['id'] as String?,
-      pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>).map((e) => e as String).toList(),
-      pillSheets: (json['pillSheets'] as List<dynamic>).map((e) => PillSheet.fromJson(e as Map<String, dynamic>)).toList(),
-      createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
-      deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
-      displayNumberSetting: json['displayNumberSetting'] == null
-          ? null
-          : PillSheetGroupDisplayNumberSetting.fromJson(json['displayNumberSetting'] as Map<String, dynamic>),
-      pillSheetAppearanceMode:
-          $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
-      version: json['version'] as String? ?? 'v1',
-      pillTakenCount: (json['pillTakenCount'] as num?)?.toInt() ?? 1,
-    );
+  id: json['id'] as String?,
+  pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>).map((e) => e as String).toList(),
+  pillSheets: (json['pillSheets'] as List<dynamic>).map((e) => PillSheet.fromJson(e as Map<String, dynamic>)).toList(),
+  createdAt: NonNullTimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
+  deletedAt: TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
+  displayNumberSetting: json['displayNumberSetting'] == null
+      ? null
+      : PillSheetGroupDisplayNumberSetting.fromJson(json['displayNumberSetting'] as Map<String, dynamic>),
+  pillSheetAppearanceMode: $enumDecodeNullable(_$PillSheetAppearanceModeEnumMap, json['pillSheetAppearanceMode']) ?? PillSheetAppearanceMode.number,
+  version: json['version'] as String? ?? 'v1',
+  pillTakenCount: (json['pillTakenCount'] as num?)?.toInt() ?? 1,
+);
 
 Map<String, dynamic> _$$PillSheetGroupImplToJson(_$PillSheetGroupImpl instance) {
   final val = <String, dynamic>{};
@@ -56,6 +55,6 @@ _$PillSheetGroupDisplayNumberSettingImpl _$$PillSheetGroupDisplayNumberSettingIm
     );
 
 Map<String, dynamic> _$$PillSheetGroupDisplayNumberSettingImplToJson(_$PillSheetGroupDisplayNumberSettingImpl instance) => <String, dynamic>{
-      'beginPillNumber': instance.beginPillNumber,
-      'endPillNumber': instance.endPillNumber,
-    };
+  'beginPillNumber': instance.beginPillNumber,
+  'endPillNumber': instance.endPillNumber,
+};

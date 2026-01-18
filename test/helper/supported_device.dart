@@ -32,7 +32,8 @@ extension SupportedDeviceTypeExtension on SupportedDeviceType {
     return 0.8;
   }
 
-  Size get physicalSize => Size(size.width * devicePixelRatio, size.height * devicePixelRatio);
+  Size get physicalSize =>
+      Size(size.width * devicePixelRatio, size.height * devicePixelRatio);
 
   void binding(TestFlutterView view) {
     view.devicePixelRatio = devicePixelRatio;

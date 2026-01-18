@@ -13,11 +13,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
   final Package monthlyPremiumPackage;
   final DateTime? discountEntitlementDeadlineDate;
 
-  const PremiumIntroductionDiscountRow({
-    super.key,
-    required this.discountEntitlementDeadlineDate,
-    required this.monthlyPremiumPackage,
-  });
+  const PremiumIntroductionDiscountRow({super.key, required this.discountEntitlementDeadlineDate, required this.monthlyPremiumPackage});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -50,23 +46,13 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           Text(
             L.limitedTimeDiscount,
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontWeight: FontWeight.w700,
-              fontFamily: FontFamily.japanese,
-              fontSize: 20,
-              color: TextColor.main,
-            ),
+            style: const TextStyle(fontWeight: FontWeight.w700, fontFamily: FontFamily.japanese, fontSize: 20, color: TextColor.main),
           ),
           const SizedBox(height: 4),
           if (countdown != null)
             Text(
               countdown,
-              style: const TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
-                fontSize: 16,
-              ),
+              style: const TextStyle(color: TextColor.main, fontFamily: FontFamily.japanese, fontWeight: FontWeight.w700, fontSize: 16),
             ),
           const SizedBox(height: 20),
           PremiumIntroductionDiscountAppeal(monthlyPremiumPackage: monthlyPremiumPackage),
@@ -79,10 +65,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
 }
 
 class PremiumIntroductionDiscountAppeal extends StatelessWidget {
-  const PremiumIntroductionDiscountAppeal({
-    super.key,
-    required this.monthlyPremiumPackage,
-  });
+  const PremiumIntroductionDiscountAppeal({super.key, required this.monthlyPremiumPackage});
 
   final Package monthlyPremiumPackage;
 
@@ -94,12 +77,7 @@ class PremiumIntroductionDiscountAppeal extends StatelessWidget {
         Text(
           L.standardMonthlyPlan,
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            fontWeight: FontWeight.w400,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            color: TextColor.black,
-          ),
+          style: const TextStyle(fontWeight: FontWeight.w400, fontSize: 12, fontFamily: FontFamily.japanese, color: TextColor.black),
         ),
         const SizedBox(height: 4),
         Stack(
@@ -107,17 +85,9 @@ class PremiumIntroductionDiscountAppeal extends StatelessWidget {
             Text(
               monthlyPremiumPackage.storeProduct.priceString,
               textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontWeight: FontWeight.w700,
-                fontSize: 28,
-                fontFamily: FontFamily.japanese,
-                color: TextColor.main,
-              ),
+              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 28, fontFamily: FontFamily.japanese, color: TextColor.main),
             ),
-            Positioned(
-              left: 24,
-              child: SvgPicture.asset('images/strikethrough.svg'),
-            ),
+            Positioned(left: 24, child: SvgPicture.asset('images/strikethrough.svg')),
           ],
         ),
       ],

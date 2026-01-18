@@ -46,17 +46,20 @@ void main() {
       // _containsメソッドのロジック確認:
 
       // 第1週での判定
-      final week1Contains = week1.inRange(model.begin) || week1.inRange(model.end);
+      final week1Contains =
+          week1.inRange(model.begin) || week1.inRange(model.end);
       // 第1週contains: $week1Contains // true
       expect(week1Contains, true);
 
       // 第2週での判定（ここが問題！）
-      final week2Contains = week2.inRange(model.begin) || week2.inRange(model.end);
+      final week2Contains =
+          week2.inRange(model.begin) || week2.inRange(model.end);
       // 第2週contains: $week2Contains // false！
       expect(week2Contains, false); // これが問題の原因
 
       // 第3週での判定
-      final week3Contains = week3.inRange(model.begin) || week3.inRange(model.end);
+      final week3Contains =
+          week3.inRange(model.begin) || week3.inRange(model.end);
       // 第3週contains: $week3Contains // true
       expect(week3Contains, true);
     });
@@ -71,11 +74,15 @@ void main() {
       final week2 = DateRange(DateTime(2025, 1, 12), DateTime(2025, 1, 18));
 
       // 現在のロジック：生理期間の開始日または終了日が週に含まれるか
-      final currentLogic = week2.inRange(model.begin) || week2.inRange(model.end);
+      final currentLogic =
+          week2.inRange(model.begin) || week2.inRange(model.end);
       expect(currentLogic, false); // 問題：第2週は判定されない
 
       // 提案するロジック：週の期間と生理期間が重なるか
-      final proposedLogic = _periodsOverlap(week2, DateRange(model.begin, model.end));
+      final proposedLogic = _periodsOverlap(
+        week2,
+        DateRange(model.begin, model.end),
+      );
       expect(proposedLogic, true); // 正しく第2週も判定される
     });
   });
@@ -84,5 +91,6 @@ void main() {
 // 2つの期間が重なるかどうかを判定
 bool _periodsOverlap(DateRange range1, DateRange range2) {
   // range1の開始が range2の終了より前 かつ range1の終了が range2の開始より後
-  return range1.begin.isBefore(range2.end.add(const Duration(days: 1))) && range1.end.isAfter(range2.begin.subtract(const Duration(days: 1)));
+  return range1.begin.isBefore(range2.end.add(const Duration(days: 1))) &&
+      range1.end.isAfter(range2.begin.subtract(const Duration(days: 1)));
 }

@@ -5,10 +5,7 @@ import 'package:pilll/features/diary_post/util.dart';
 
 class DiaryPostSex extends StatelessWidget {
   final ValueNotifier<bool> sex;
-  const DiaryPostSex({
-    super.key,
-    required this.sex,
-  });
+  const DiaryPostSex({super.key, required this.sex});
 
   @override
   Widget build(BuildContext context) {

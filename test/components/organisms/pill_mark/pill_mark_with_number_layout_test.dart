@@ -8,32 +8,23 @@ void main() {
   });
 
   group("#PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet", () {
-    test(
-      "Left boundary pattern",
-      () {
-        expect(
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(0, 0),
-          1,
-        );
-      },
-    );
-    test(
-      "Any value. No boundary pattern",
-      () {
-        expect(
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(2, 2),
-          17,
-        );
-      },
-    );
-    test(
-      "Right boundary pattern",
-      () {
-        expect(
-          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(6, 3),
-          28,
-        );
-      },
-    );
+    test("Left boundary pattern", () {
+      expect(
+        PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(0, 0),
+        1,
+      );
+    });
+    test("Any value. No boundary pattern", () {
+      expect(
+        PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(2, 2),
+        17,
+      );
+    });
+    test("Right boundary pattern", () {
+      expect(
+        PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(6, 3),
+        28,
+      );
+    });
   });
 }
