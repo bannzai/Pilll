@@ -59,7 +59,6 @@ class AddPillSheetGroup {
     final history = PillSheetModifiedHistoryServiceActionFactory.createCreatedPillSheetAction(
       beforePillSheetGroup: pillSheetGroup,
       createdNewPillSheetGroup: createdPillSheetGroup,
-      pillSheetIDs: updatedPillSheetGroup.pillSheetIDs,
     );
     batchSetPillSheetModifiedHistory(batch, history);
 

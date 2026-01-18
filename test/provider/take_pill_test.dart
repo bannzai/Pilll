@@ -86,10 +86,7 @@ void main() {
 
           final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
           final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroup.id,
             isQuickRecord: false,
-            before: activePillSheet,
-            after: updatedActivePillSheet,
             beforePillSheetGroup: pillSheetGroup,
             afterPillSheetGroup: updatedPillSheetGroup,
           );
@@ -183,10 +180,7 @@ void main() {
 
           final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
           final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroupV2.id,
             isQuickRecord: false,
-            before: activePillSheetV2,
-            after: updatedActivePillSheetV2,
             beforePillSheetGroup: pillSheetGroupV2,
             afterPillSheetGroup: updatedPillSheetGroupV2,
           );
@@ -273,10 +267,7 @@ void main() {
 
           final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
           final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroupV2.id,
             isQuickRecord: false,
-            before: activePillSheetV2,
-            after: updatedActivePillSheetV2,
             beforePillSheetGroup: pillSheetGroupV2,
             afterPillSheetGroup: updatedPillSheetGroupV2,
           );
@@ -524,10 +515,7 @@ void main() {
 
           final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
           final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            pillSheetGroupID: pillSheetGroupV2.id,
             isQuickRecord: false,
-            before: previousPillSheetV2,
-            after: updatedActivePillSheetV2,
             beforePillSheetGroup: pillSheetGroupV2,
             afterPillSheetGroup: updatedPillSheetGroupV2,
           );
@@ -583,10 +571,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -660,10 +645,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -707,10 +689,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -761,10 +740,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -812,10 +788,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: previousPillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -862,10 +835,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: previousPillSheet,
-          after: updatedPreviousPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -921,10 +891,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: previousPillSheet,
-          after: updatedPreviousPillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -992,10 +959,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );
@@ -1079,10 +1043,7 @@ void main() {
 
         final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
         final history = PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          pillSheetGroupID: pillSheetGroup.id,
           isQuickRecord: false,
-          before: activePillSheet,
-          after: updatedActivePillSheet,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         );

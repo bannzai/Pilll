@@ -103,8 +103,6 @@ class ChangePillNumber {
 
     final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     final history = PillSheetModifiedHistoryServiceActionFactory.createChangedPillNumberAction(
-      before: activePillSheet,
-      after: updatedPillSheets[pillSheetPageIndex],
       beforePillSheetGroup: pillSheetGroup,
       afterPillSheetGroup: updatedPillSheetGroup,
     );
