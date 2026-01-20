@@ -39,39 +39,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -87,28 +86,17 @@ void main() {
         // targetRevertPillNumberIntoPillSheet = 2 (2番目のピルをrevert)
         // revertDate = 2022-07-24 (2番目のピルの1日前)
         final revertDate = DateTime.parse("2022-07-24");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -123,9 +111,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         // 1日目のpillTakensは維持され、2日目のpillTakensはクリアされる
@@ -150,39 +136,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 2) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 2) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -198,28 +183,17 @@ void main() {
         // targetRevertPillNumberIntoPillSheet = 3 (3番目のピルをrevert)
         // revertDate = 2022-07-25 (3番目のピルの1日前)
         final revertDate = DateTime.parse("2022-07-25");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -234,9 +208,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         // 1日目、2日目のpillTakensは維持され、3日目のpillTakensはクリアされる
@@ -278,27 +250,17 @@ void main() {
         // targetRevertPillNumberIntoPillSheet = 3 (3番目のピルをrevert)
         // revertDate = 2022-07-25 (3番目のピルの1日前)
         final revertDate = DateTime.parse("2022-07-25");
-        final updatedActivePillSheetV1 = (activePillSheetV1 as PillSheetV1)
-            .copyWith(lastTakenDate: revertDate, restDurations: []);
+        final updatedActivePillSheetV1 = (activePillSheetV1 as PillSheetV1).copyWith(lastTakenDate: revertDate, restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV1 = pillSheetGroupV1.copyWith(
-          pillSheets: [updatedActivePillSheetV1],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV1),
-        ).thenReturn(updatedPillSheetGroupV1);
+        final updatedPillSheetGroupV1 = pillSheetGroupV1.copyWith(pillSheets: [updatedActivePillSheetV1]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV1)).thenReturn(updatedPillSheetGroupV1);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV1.id,
-              before: activePillSheetV1,
-              after: updatedActivePillSheetV1,
-              beforePillSheetGroup: pillSheetGroupV1,
-              afterPillSheetGroup: updatedPillSheetGroupV1,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV1,
+          afterPillSheetGroup: updatedPillSheetGroupV1,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -313,9 +275,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV1),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV1)).called(1);
         expect(result, updatedPillSheetGroupV1);
 
         // V1ではlastTakenDateのみが更新される
@@ -339,39 +299,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -385,28 +344,17 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final revertDate = DateTime.parse("2022-07-24");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -421,9 +369,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -446,39 +392,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -492,28 +437,17 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final revertDate = DateTime.parse("2022-07-24");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -528,9 +462,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -553,39 +485,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           // //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -599,28 +530,17 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final revertDate = DateTime.parse("2022-07-24");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -635,9 +555,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -660,39 +578,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-24"),
           createdAt: now(),
           //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-24").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-24",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -706,28 +623,17 @@ void main() {
         when(batchFactory.batch()).thenReturn(batch);
 
         final revertDate = DateTime.parse("2022-07-24");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -742,9 +648,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -770,39 +674,38 @@ void main() {
           beginDate: DateTime.parse("2022-07-31"),
           createdAt: now(),
           //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-31").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-07-31").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-31",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-07-31",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -817,28 +720,17 @@ void main() {
 
         // 2日目（8/1）をrevert → revertDate = 7/31
         final revertDate = DateTime.parse("2022-07-31");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -853,9 +745,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -879,39 +769,38 @@ void main() {
           beginDate: DateTime.parse("2022-12-31"),
           createdAt: now(),
           //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-12-31").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2022-12-31").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-12-31",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2022-12-31",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -926,28 +815,17 @@ void main() {
 
         // 2日目（1/1）をrevert → revertDate = 12/31
         final revertDate = DateTime.parse("2022-12-31");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -962,9 +840,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -988,39 +864,38 @@ void main() {
           beginDate: DateTime.parse("2024-02-28"),
           createdAt: now(),
           //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2024-02-28").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2024-02-28").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2024-02-28",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2024-02-28",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -1035,28 +910,17 @@ void main() {
 
         // 2日目（2/29）をrevert → revertDate = 2/28
         final revertDate = DateTime.parse("2024-02-28");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -1071,9 +935,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;
@@ -1097,39 +959,38 @@ void main() {
           beginDate: DateTime.parse("2023-02-28"),
           createdAt: now(),
           //  pillTakenCount: 2,
-          pills: List.generate(sheetType.totalCount, (index) {
-            if (index <= 1) {
+          pills: List.generate(
+            sheetType.totalCount,
+            (index) {
+              if (index <= 1) {
+                return Pill(
+                  index: index,
+                  takenCount: 2,
+                  createdDateTime: now(),
+                  updatedDateTime: now(),
+                  pillTakens: [
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2023-02-28").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                    PillTaken(
+                      recordedTakenDateTime: DateTime.parse("2023-02-28").add(Duration(days: index)),
+                      createdDateTime: now(),
+                      updatedDateTime: now(),
+                    ),
+                  ],
+                );
+              }
               return Pill(
                 index: index,
                 takenCount: 2,
                 createdDateTime: now(),
                 updatedDateTime: now(),
-                pillTakens: [
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2023-02-28",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                  PillTaken(
-                    recordedTakenDateTime: DateTime.parse(
-                      "2023-02-28",
-                    ).add(Duration(days: index)),
-                    createdDateTime: now(),
-                    updatedDateTime: now(),
-                  ),
-                ],
+                pillTakens: [],
               );
-            }
-            return Pill(
-              index: index,
-              takenCount: 2,
-              createdDateTime: now(),
-              updatedDateTime: now(),
-              pillTakens: [],
-            );
-          }),
+            },
+          ),
         );
         final pillSheetGroupV2 = PillSheetGroup(
           id: "group_id",
@@ -1144,28 +1005,17 @@ void main() {
 
         // 2日目（3/1）をrevert → revertDate = 2/28
         final revertDate = DateTime.parse("2023-02-28");
-        final updatedActivePillSheetV2 = activePillSheetV2
-            .revertedPillSheet(revertDate)
-            .copyWith(restDurations: []);
+        final updatedActivePillSheetV2 = activePillSheetV2.revertedPillSheet(revertDate).copyWith(restDurations: []);
 
         final batchSetPillSheetGroup = MockBatchSetPillSheetGroup();
-        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(
-          pillSheets: [updatedActivePillSheetV2],
-        );
-        when(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).thenReturn(updatedPillSheetGroupV2);
+        final updatedPillSheetGroupV2 = pillSheetGroupV2.copyWith(pillSheets: [updatedActivePillSheetV2]);
+        when(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).thenReturn(updatedPillSheetGroupV2);
 
-        final batchSetPillSheetModifiedHistory =
-            MockBatchSetPillSheetModifiedHistory();
-        final history =
-            PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
-              pillSheetGroupID: pillSheetGroupV2.id,
-              before: activePillSheetV2,
-              after: updatedActivePillSheetV2,
-              beforePillSheetGroup: pillSheetGroupV2,
-              afterPillSheetGroup: updatedPillSheetGroupV2,
-            );
+        final batchSetPillSheetModifiedHistory = MockBatchSetPillSheetModifiedHistory();
+        final history = PillSheetModifiedHistoryServiceActionFactory.createRevertTakenPillAction(
+          beforePillSheetGroup: pillSheetGroupV2,
+          afterPillSheetGroup: updatedPillSheetGroupV2,
+        );
         when(batchSetPillSheetModifiedHistory(batch, history)).thenReturn(null);
 
         final revertTakePill = RevertTakePill(
@@ -1180,9 +1030,7 @@ void main() {
         );
 
         verify(batchSetPillSheetModifiedHistory(batch, history)).called(1);
-        verify(
-          batchSetPillSheetGroup(batch, updatedPillSheetGroupV2),
-        ).called(1);
+        verify(batchSetPillSheetGroup(batch, updatedPillSheetGroupV2)).called(1);
         expect(result, updatedPillSheetGroupV2);
 
         final updatedPillSheet = result!.pillSheets[0] as PillSheetV2;

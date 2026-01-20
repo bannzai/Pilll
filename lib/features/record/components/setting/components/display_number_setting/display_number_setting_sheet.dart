@@ -239,9 +239,6 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       batchSetPillSheetModifiedHistory(
         batch,
         PillSheetModifiedHistoryServiceActionFactory.createChangedBeginDisplayNumberAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
-          afterDisplayNumberSetting: updatedDisplayNumberSetting,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         ),
@@ -252,9 +249,6 @@ class DisplayNumberSettingSheet extends HookConsumerWidget {
       batchSetPillSheetModifiedHistory(
         batch,
         PillSheetModifiedHistoryServiceActionFactory.createChangedEndDisplayNumberAction(
-          pillSheetGroupID: pillSheetGroup.id,
-          beforeDisplayNumberSetting: pillSheetGroup.displayNumberSetting,
-          afterDisplayNumberSetting: updatedDisplayNumberSetting,
           beforePillSheetGroup: pillSheetGroup,
           afterPillSheetGroup: updatedPillSheetGroup,
         ),

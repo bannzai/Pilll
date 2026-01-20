@@ -114,7 +114,6 @@ class PillSheetModifiedHistoryTakenPillAction extends HookConsumerWidget {
         ),
         detail: Time(time: time),
         takenPillActionOList: TakenPillActionOList(
-          value: value,
           beforePillSheetGroup: beforePillSheetGroup,
           afterPillSheetGroup: afterPillSheetGroup,
         ),

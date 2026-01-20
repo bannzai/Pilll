@@ -27,8 +27,6 @@ class DeletePillSheetGroup {
     final updatedPillSheet = activePillSheet.copyWith(deletedAt: DateTime.now());
     final updatedPillSheetGroup = latestPillSheetGroup.replaced(updatedPillSheet).copyWith(deletedAt: DateTime.now());
     final history = PillSheetModifiedHistoryServiceActionFactory.createDeletedPillSheetAction(
-      pillSheetGroupID: latestPillSheetGroup.id,
-      pillSheetIDs: latestPillSheetGroup.pillSheetIDs,
       beforePillSheetGroup: latestPillSheetGroup,
       updatedPillSheetGroup: updatedPillSheetGroup,
     );

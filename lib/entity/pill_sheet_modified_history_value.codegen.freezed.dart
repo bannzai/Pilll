@@ -12,8 +12,7 @@ part of 'pill_sheet_modified_history_value.codegen.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(Map<String, dynamic> json) {
   return _PillSheetModifiedHistoryValue.fromJson(json);
@@ -83,21 +82,20 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
   factory $PillSheetModifiedHistoryValueCopyWith(PillSheetModifiedHistoryValue value, $Res Function(PillSheetModifiedHistoryValue) then) =
       _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, PillSheetModifiedHistoryValue>;
   @useResult
-  $Res call({
-    CreatedPillSheetValue? createdPillSheet,
-    AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
-    DeletedPillSheetValue? deletedPillSheet,
-    TakenPillValue? takenPill,
-    RevertTakenPillValue? revertTakenPill,
-    ChangedPillNumberValue? changedPillNumber,
-    EndedPillSheetValue? endedPillSheet,
-    BeganRestDurationValue? beganRestDurationValue,
-    EndedRestDurationValue? endedRestDurationValue,
-    ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
-    ChangedRestDurationValue? changedRestDurationValue,
-    ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
-    ChangedEndDisplayNumberValue? changedEndDisplayNumber,
-  });
+  $Res call(
+      {CreatedPillSheetValue? createdPillSheet,
+      AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
+      DeletedPillSheetValue? deletedPillSheet,
+      TakenPillValue? takenPill,
+      RevertTakenPillValue? revertTakenPill,
+      ChangedPillNumberValue? changedPillNumber,
+      EndedPillSheetValue? endedPillSheet,
+      BeganRestDurationValue? beganRestDurationValue,
+      EndedRestDurationValue? endedRestDurationValue,
+      ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
+      ChangedRestDurationValue? changedRestDurationValue,
+      ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+      ChangedEndDisplayNumberValue? changedEndDisplayNumber});
 
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>? get automaticallyRecordedLastTakenDate;
@@ -141,63 +139,60 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
     Object? changedBeginDisplayNumber = freezed,
     Object? changedEndDisplayNumber = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            createdPillSheet: freezed == createdPillSheet
-                ? _value.createdPillSheet
-                : createdPillSheet // ignore: cast_nullable_to_non_nullable
-                      as CreatedPillSheetValue?,
-            automaticallyRecordedLastTakenDate: freezed == automaticallyRecordedLastTakenDate
-                ? _value.automaticallyRecordedLastTakenDate
-                : automaticallyRecordedLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as AutomaticallyRecordedLastTakenDateValue?,
-            deletedPillSheet: freezed == deletedPillSheet
-                ? _value.deletedPillSheet
-                : deletedPillSheet // ignore: cast_nullable_to_non_nullable
-                      as DeletedPillSheetValue?,
-            takenPill: freezed == takenPill
-                ? _value.takenPill
-                : takenPill // ignore: cast_nullable_to_non_nullable
-                      as TakenPillValue?,
-            revertTakenPill: freezed == revertTakenPill
-                ? _value.revertTakenPill
-                : revertTakenPill // ignore: cast_nullable_to_non_nullable
-                      as RevertTakenPillValue?,
-            changedPillNumber: freezed == changedPillNumber
-                ? _value.changedPillNumber
-                : changedPillNumber // ignore: cast_nullable_to_non_nullable
-                      as ChangedPillNumberValue?,
-            endedPillSheet: freezed == endedPillSheet
-                ? _value.endedPillSheet
-                : endedPillSheet // ignore: cast_nullable_to_non_nullable
-                      as EndedPillSheetValue?,
-            beganRestDurationValue: freezed == beganRestDurationValue
-                ? _value.beganRestDurationValue
-                : beganRestDurationValue // ignore: cast_nullable_to_non_nullable
-                      as BeganRestDurationValue?,
-            endedRestDurationValue: freezed == endedRestDurationValue
-                ? _value.endedRestDurationValue
-                : endedRestDurationValue // ignore: cast_nullable_to_non_nullable
-                      as EndedRestDurationValue?,
-            changedRestDurationBeginDateValue: freezed == changedRestDurationBeginDateValue
-                ? _value.changedRestDurationBeginDateValue
-                : changedRestDurationBeginDateValue // ignore: cast_nullable_to_non_nullable
-                      as ChangedRestDurationBeginDateValue?,
-            changedRestDurationValue: freezed == changedRestDurationValue
-                ? _value.changedRestDurationValue
-                : changedRestDurationValue // ignore: cast_nullable_to_non_nullable
-                      as ChangedRestDurationValue?,
-            changedBeginDisplayNumber: freezed == changedBeginDisplayNumber
-                ? _value.changedBeginDisplayNumber
-                : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
-                      as ChangedBeginDisplayNumberValue?,
-            changedEndDisplayNumber: freezed == changedEndDisplayNumber
-                ? _value.changedEndDisplayNumber
-                : changedEndDisplayNumber // ignore: cast_nullable_to_non_nullable
-                      as ChangedEndDisplayNumberValue?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      createdPillSheet: freezed == createdPillSheet
+          ? _value.createdPillSheet
+          : createdPillSheet // ignore: cast_nullable_to_non_nullable
+              as CreatedPillSheetValue?,
+      automaticallyRecordedLastTakenDate: freezed == automaticallyRecordedLastTakenDate
+          ? _value.automaticallyRecordedLastTakenDate
+          : automaticallyRecordedLastTakenDate // ignore: cast_nullable_to_non_nullable
+              as AutomaticallyRecordedLastTakenDateValue?,
+      deletedPillSheet: freezed == deletedPillSheet
+          ? _value.deletedPillSheet
+          : deletedPillSheet // ignore: cast_nullable_to_non_nullable
+              as DeletedPillSheetValue?,
+      takenPill: freezed == takenPill
+          ? _value.takenPill
+          : takenPill // ignore: cast_nullable_to_non_nullable
+              as TakenPillValue?,
+      revertTakenPill: freezed == revertTakenPill
+          ? _value.revertTakenPill
+          : revertTakenPill // ignore: cast_nullable_to_non_nullable
+              as RevertTakenPillValue?,
+      changedPillNumber: freezed == changedPillNumber
+          ? _value.changedPillNumber
+          : changedPillNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedPillNumberValue?,
+      endedPillSheet: freezed == endedPillSheet
+          ? _value.endedPillSheet
+          : endedPillSheet // ignore: cast_nullable_to_non_nullable
+              as EndedPillSheetValue?,
+      beganRestDurationValue: freezed == beganRestDurationValue
+          ? _value.beganRestDurationValue
+          : beganRestDurationValue // ignore: cast_nullable_to_non_nullable
+              as BeganRestDurationValue?,
+      endedRestDurationValue: freezed == endedRestDurationValue
+          ? _value.endedRestDurationValue
+          : endedRestDurationValue // ignore: cast_nullable_to_non_nullable
+              as EndedRestDurationValue?,
+      changedRestDurationBeginDateValue: freezed == changedRestDurationBeginDateValue
+          ? _value.changedRestDurationBeginDateValue
+          : changedRestDurationBeginDateValue // ignore: cast_nullable_to_non_nullable
+              as ChangedRestDurationBeginDateValue?,
+      changedRestDurationValue: freezed == changedRestDurationValue
+          ? _value.changedRestDurationValue
+          : changedRestDurationValue // ignore: cast_nullable_to_non_nullable
+              as ChangedRestDurationValue?,
+      changedBeginDisplayNumber: freezed == changedBeginDisplayNumber
+          ? _value.changedBeginDisplayNumber
+          : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedBeginDisplayNumberValue?,
+      changedEndDisplayNumber: freezed == changedEndDisplayNumber
+          ? _value.changedEndDisplayNumber
+          : changedEndDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedEndDisplayNumberValue?,
+    ) as $Val);
   }
 
   @override
@@ -360,26 +355,24 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, $Val extends PillSheetMo
 /// @nodoc
 abstract class _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> implements $PillSheetModifiedHistoryValueCopyWith<$Res> {
   factory _$$PillSheetModifiedHistoryValueImplCopyWith(
-    _$PillSheetModifiedHistoryValueImpl value,
-    $Res Function(_$PillSheetModifiedHistoryValueImpl) then,
-  ) = __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>;
+          _$PillSheetModifiedHistoryValueImpl value, $Res Function(_$PillSheetModifiedHistoryValueImpl) then) =
+      __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    CreatedPillSheetValue? createdPillSheet,
-    AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
-    DeletedPillSheetValue? deletedPillSheet,
-    TakenPillValue? takenPill,
-    RevertTakenPillValue? revertTakenPill,
-    ChangedPillNumberValue? changedPillNumber,
-    EndedPillSheetValue? endedPillSheet,
-    BeganRestDurationValue? beganRestDurationValue,
-    EndedRestDurationValue? endedRestDurationValue,
-    ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
-    ChangedRestDurationValue? changedRestDurationValue,
-    ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
-    ChangedEndDisplayNumberValue? changedEndDisplayNumber,
-  });
+  $Res call(
+      {CreatedPillSheetValue? createdPillSheet,
+      AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
+      DeletedPillSheetValue? deletedPillSheet,
+      TakenPillValue? takenPill,
+      RevertTakenPillValue? revertTakenPill,
+      ChangedPillNumberValue? changedPillNumber,
+      EndedPillSheetValue? endedPillSheet,
+      BeganRestDurationValue? beganRestDurationValue,
+      EndedRestDurationValue? endedRestDurationValue,
+      ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
+      ChangedRestDurationValue? changedRestDurationValue,
+      ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+      ChangedEndDisplayNumberValue? changedEndDisplayNumber});
 
   @override
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
@@ -414,9 +407,8 @@ class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
     extends _$PillSheetModifiedHistoryValueCopyWithImpl<$Res, _$PillSheetModifiedHistoryValueImpl>
     implements _$$PillSheetModifiedHistoryValueImplCopyWith<$Res> {
   __$$PillSheetModifiedHistoryValueImplCopyWithImpl(
-    _$PillSheetModifiedHistoryValueImpl _value,
-    $Res Function(_$PillSheetModifiedHistoryValueImpl) _then,
-  ) : super(_value, _then);
+      _$PillSheetModifiedHistoryValueImpl _value, $Res Function(_$PillSheetModifiedHistoryValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
@@ -435,62 +427,60 @@ class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
     Object? changedBeginDisplayNumber = freezed,
     Object? changedEndDisplayNumber = freezed,
   }) {
-    return _then(
-      _$PillSheetModifiedHistoryValueImpl(
-        createdPillSheet: freezed == createdPillSheet
-            ? _value.createdPillSheet
-            : createdPillSheet // ignore: cast_nullable_to_non_nullable
-                  as CreatedPillSheetValue?,
-        automaticallyRecordedLastTakenDate: freezed == automaticallyRecordedLastTakenDate
-            ? _value.automaticallyRecordedLastTakenDate
-            : automaticallyRecordedLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as AutomaticallyRecordedLastTakenDateValue?,
-        deletedPillSheet: freezed == deletedPillSheet
-            ? _value.deletedPillSheet
-            : deletedPillSheet // ignore: cast_nullable_to_non_nullable
-                  as DeletedPillSheetValue?,
-        takenPill: freezed == takenPill
-            ? _value.takenPill
-            : takenPill // ignore: cast_nullable_to_non_nullable
-                  as TakenPillValue?,
-        revertTakenPill: freezed == revertTakenPill
-            ? _value.revertTakenPill
-            : revertTakenPill // ignore: cast_nullable_to_non_nullable
-                  as RevertTakenPillValue?,
-        changedPillNumber: freezed == changedPillNumber
-            ? _value.changedPillNumber
-            : changedPillNumber // ignore: cast_nullable_to_non_nullable
-                  as ChangedPillNumberValue?,
-        endedPillSheet: freezed == endedPillSheet
-            ? _value.endedPillSheet
-            : endedPillSheet // ignore: cast_nullable_to_non_nullable
-                  as EndedPillSheetValue?,
-        beganRestDurationValue: freezed == beganRestDurationValue
-            ? _value.beganRestDurationValue
-            : beganRestDurationValue // ignore: cast_nullable_to_non_nullable
-                  as BeganRestDurationValue?,
-        endedRestDurationValue: freezed == endedRestDurationValue
-            ? _value.endedRestDurationValue
-            : endedRestDurationValue // ignore: cast_nullable_to_non_nullable
-                  as EndedRestDurationValue?,
-        changedRestDurationBeginDateValue: freezed == changedRestDurationBeginDateValue
-            ? _value.changedRestDurationBeginDateValue
-            : changedRestDurationBeginDateValue // ignore: cast_nullable_to_non_nullable
-                  as ChangedRestDurationBeginDateValue?,
-        changedRestDurationValue: freezed == changedRestDurationValue
-            ? _value.changedRestDurationValue
-            : changedRestDurationValue // ignore: cast_nullable_to_non_nullable
-                  as ChangedRestDurationValue?,
-        changedBeginDisplayNumber: freezed == changedBeginDisplayNumber
-            ? _value.changedBeginDisplayNumber
-            : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
-                  as ChangedBeginDisplayNumberValue?,
-        changedEndDisplayNumber: freezed == changedEndDisplayNumber
-            ? _value.changedEndDisplayNumber
-            : changedEndDisplayNumber // ignore: cast_nullable_to_non_nullable
-                  as ChangedEndDisplayNumberValue?,
-      ),
-    );
+    return _then(_$PillSheetModifiedHistoryValueImpl(
+      createdPillSheet: freezed == createdPillSheet
+          ? _value.createdPillSheet
+          : createdPillSheet // ignore: cast_nullable_to_non_nullable
+              as CreatedPillSheetValue?,
+      automaticallyRecordedLastTakenDate: freezed == automaticallyRecordedLastTakenDate
+          ? _value.automaticallyRecordedLastTakenDate
+          : automaticallyRecordedLastTakenDate // ignore: cast_nullable_to_non_nullable
+              as AutomaticallyRecordedLastTakenDateValue?,
+      deletedPillSheet: freezed == deletedPillSheet
+          ? _value.deletedPillSheet
+          : deletedPillSheet // ignore: cast_nullable_to_non_nullable
+              as DeletedPillSheetValue?,
+      takenPill: freezed == takenPill
+          ? _value.takenPill
+          : takenPill // ignore: cast_nullable_to_non_nullable
+              as TakenPillValue?,
+      revertTakenPill: freezed == revertTakenPill
+          ? _value.revertTakenPill
+          : revertTakenPill // ignore: cast_nullable_to_non_nullable
+              as RevertTakenPillValue?,
+      changedPillNumber: freezed == changedPillNumber
+          ? _value.changedPillNumber
+          : changedPillNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedPillNumberValue?,
+      endedPillSheet: freezed == endedPillSheet
+          ? _value.endedPillSheet
+          : endedPillSheet // ignore: cast_nullable_to_non_nullable
+              as EndedPillSheetValue?,
+      beganRestDurationValue: freezed == beganRestDurationValue
+          ? _value.beganRestDurationValue
+          : beganRestDurationValue // ignore: cast_nullable_to_non_nullable
+              as BeganRestDurationValue?,
+      endedRestDurationValue: freezed == endedRestDurationValue
+          ? _value.endedRestDurationValue
+          : endedRestDurationValue // ignore: cast_nullable_to_non_nullable
+              as EndedRestDurationValue?,
+      changedRestDurationBeginDateValue: freezed == changedRestDurationBeginDateValue
+          ? _value.changedRestDurationBeginDateValue
+          : changedRestDurationBeginDateValue // ignore: cast_nullable_to_non_nullable
+              as ChangedRestDurationBeginDateValue?,
+      changedRestDurationValue: freezed == changedRestDurationValue
+          ? _value.changedRestDurationValue
+          : changedRestDurationValue // ignore: cast_nullable_to_non_nullable
+              as ChangedRestDurationValue?,
+      changedBeginDisplayNumber: freezed == changedBeginDisplayNumber
+          ? _value.changedBeginDisplayNumber
+          : changedBeginDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedBeginDisplayNumberValue?,
+      changedEndDisplayNumber: freezed == changedEndDisplayNumber
+          ? _value.changedEndDisplayNumber
+          : changedEndDisplayNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedEndDisplayNumberValue?,
+    ));
   }
 }
 
@@ -498,21 +488,21 @@ class __$$PillSheetModifiedHistoryValueImplCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue {
-  const _$PillSheetModifiedHistoryValueImpl({
-    this.createdPillSheet = null,
-    this.automaticallyRecordedLastTakenDate = null,
-    this.deletedPillSheet = null,
-    this.takenPill = null,
-    this.revertTakenPill = null,
-    this.changedPillNumber = null,
-    this.endedPillSheet = null,
-    this.beganRestDurationValue = null,
-    this.endedRestDurationValue = null,
-    this.changedRestDurationBeginDateValue = null,
-    this.changedRestDurationValue = null,
-    this.changedBeginDisplayNumber = null,
-    this.changedEndDisplayNumber = null,
-  }) : super._();
+  const _$PillSheetModifiedHistoryValueImpl(
+      {this.createdPillSheet = null,
+      this.automaticallyRecordedLastTakenDate = null,
+      this.deletedPillSheet = null,
+      this.takenPill = null,
+      this.revertTakenPill = null,
+      this.changedPillNumber = null,
+      this.endedPillSheet = null,
+      this.beganRestDurationValue = null,
+      this.endedRestDurationValue = null,
+      this.changedRestDurationBeginDateValue = null,
+      this.changedRestDurationValue = null,
+      this.changedBeginDisplayNumber = null,
+      this.changedEndDisplayNumber = null})
+      : super._();
 
   factory _$PillSheetModifiedHistoryValueImpl.fromJson(Map<String, dynamic> json) => _$$PillSheetModifiedHistoryValueImplFromJson(json);
 
@@ -624,21 +614,20 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-    runtimeType,
-    createdPillSheet,
-    automaticallyRecordedLastTakenDate,
-    deletedPillSheet,
-    takenPill,
-    revertTakenPill,
-    changedPillNumber,
-    endedPillSheet,
-    beganRestDurationValue,
-    endedRestDurationValue,
-    changedRestDurationBeginDateValue,
-    changedRestDurationValue,
-    changedBeginDisplayNumber,
-    changedEndDisplayNumber,
-  );
+      runtimeType,
+      createdPillSheet,
+      automaticallyRecordedLastTakenDate,
+      deletedPillSheet,
+      takenPill,
+      revertTakenPill,
+      changedPillNumber,
+      endedPillSheet,
+      beganRestDurationValue,
+      endedRestDurationValue,
+      changedRestDurationBeginDateValue,
+      changedRestDurationValue,
+      changedBeginDisplayNumber,
+      changedEndDisplayNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -648,79 +637,93 @@ class _$PillSheetModifiedHistoryValueImpl extends _PillSheetModifiedHistoryValue
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PillSheetModifiedHistoryValueImplToJson(this);
+    return _$$PillSheetModifiedHistoryValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _PillSheetModifiedHistoryValue extends PillSheetModifiedHistoryValue {
-  const factory _PillSheetModifiedHistoryValue({
-    final CreatedPillSheetValue? createdPillSheet,
-    final AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
-    final DeletedPillSheetValue? deletedPillSheet,
-    final TakenPillValue? takenPill,
-    final RevertTakenPillValue? revertTakenPill,
-    final ChangedPillNumberValue? changedPillNumber,
-    final EndedPillSheetValue? endedPillSheet,
-    final BeganRestDurationValue? beganRestDurationValue,
-    final EndedRestDurationValue? endedRestDurationValue,
-    final ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
-    final ChangedRestDurationValue? changedRestDurationValue,
-    final ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
-    final ChangedEndDisplayNumberValue? changedEndDisplayNumber,
-  }) = _$PillSheetModifiedHistoryValueImpl;
+  const factory _PillSheetModifiedHistoryValue(
+      {final CreatedPillSheetValue? createdPillSheet,
+      final AutomaticallyRecordedLastTakenDateValue? automaticallyRecordedLastTakenDate,
+      final DeletedPillSheetValue? deletedPillSheet,
+      final TakenPillValue? takenPill,
+      final RevertTakenPillValue? revertTakenPill,
+      final ChangedPillNumberValue? changedPillNumber,
+      final EndedPillSheetValue? endedPillSheet,
+      final BeganRestDurationValue? beganRestDurationValue,
+      final EndedRestDurationValue? endedRestDurationValue,
+      final ChangedRestDurationBeginDateValue? changedRestDurationBeginDateValue,
+      final ChangedRestDurationValue? changedRestDurationValue,
+      final ChangedBeginDisplayNumberValue? changedBeginDisplayNumber,
+      final ChangedEndDisplayNumberValue? changedEndDisplayNumber}) = _$PillSheetModifiedHistoryValueImpl;
   const _PillSheetModifiedHistoryValue._() : super._();
 
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) = _$PillSheetModifiedHistoryValueImpl.fromJson;
 
   @override
+
   /// ピルシート作成時の記録
   /// 新規ピルシートが作成された際の作成情報
   CreatedPillSheetValue? get createdPillSheet;
   @override
+
   /// 自動記録された最終服用日の変更
   /// システムが自動的に最終服用日を更新した際の記録
   AutomaticallyRecordedLastTakenDateValue? get automaticallyRecordedLastTakenDate;
   @override
+
   /// ピルシート削除時の記録
   /// ピルシートが削除された際の削除情報
   DeletedPillSheetValue? get deletedPillSheet;
   @override
+
   /// ピル服用記録時の情報
   /// ユーザーがピルを服用したことを記録した際の情報
   TakenPillValue? get takenPill;
   @override
+
   /// ピル服用記録の取り消し情報
   /// 誤って記録した服用を取り消した際の情報
   RevertTakenPillValue? get revertTakenPill;
   @override
+
   /// ピル番号変更時の記録
   /// ピル番号の調整や修正が行われた際の変更情報
   ChangedPillNumberValue? get changedPillNumber;
   @override
+
   /// ピルシート終了時の記録
   /// シートの服用完了や手動終了時の情報
   EndedPillSheetValue? get endedPillSheet;
   @override
+
   /// 休薬期間開始時の記録
   /// ユーザーが服用を一時停止した際の開始情報
   BeganRestDurationValue? get beganRestDurationValue;
   @override
+
   /// 休薬期間終了時の記録
   /// 休薬期間が終了し服用を再開した際の情報
   EndedRestDurationValue? get endedRestDurationValue;
   @override
+
   /// 休薬期間開始日変更時の記録（v2から追加）
   /// 既存の休薬期間の開始日を変更した際の情報
   ChangedRestDurationBeginDateValue? get changedRestDurationBeginDateValue;
   @override
+
   /// 休薬期間内容変更時の記録（v2から追加）
   /// 休薬期間の設定内容を変更した際の情報
   ChangedRestDurationValue? get changedRestDurationValue;
   @override
+
   /// 表示開始番号変更時の記録
   /// ピルシートの表示番号の開始値を変更した際の情報
   ChangedBeginDisplayNumberValue? get changedBeginDisplayNumber;
   @override
+
   /// 表示終了番号変更時の記録
   /// ピルシートの表示番号の終了値を変更した際の情報
   ChangedEndDisplayNumberValue? get changedEndDisplayNumber;
@@ -735,32 +738,13 @@ CreatedPillSheetValue _$CreatedPillSheetValueFromJson(Map<String, dynamic> json)
 
 /// @nodoc
 mixin _$CreatedPillSheetValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// ピルシート作成日時（非推奨）
-  /// Firestoreタイムスタンプから自動変換される作成日時
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get pillSheetCreatedAt => throw _privateConstructorUsedError;
-
-  /// 作成されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時作成に対応するためのIDリスト
-  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $CreatedPillSheetValueCopyWith<CreatedPillSheetValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $CreatedPillSheetValueCopyWith<$Res> {
   factory $CreatedPillSheetValueCopyWith(CreatedPillSheetValue value, $Res Function(CreatedPillSheetValue) then) =
       _$CreatedPillSheetValueCopyWithImpl<$Res, CreatedPillSheetValue>;
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime pillSheetCreatedAt,
-    List<String> pillSheetIDs,
-  });
 }
 
 /// @nodoc
@@ -771,151 +755,56 @@ class _$CreatedPillSheetValueCopyWithImpl<$Res, $Val extends CreatedPillSheetVal
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? pillSheetCreatedAt = null, Object? pillSheetIDs = null}) {
-    return _then(
-      _value.copyWith(
-            pillSheetCreatedAt: null == pillSheetCreatedAt
-                ? _value.pillSheetCreatedAt
-                : pillSheetCreatedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            pillSheetIDs: null == pillSheetIDs
-                ? _value.pillSheetIDs
-                : pillSheetIDs // ignore: cast_nullable_to_non_nullable
-                      as List<String>,
-          )
-          as $Val,
-    );
-  }
 }
 
 /// @nodoc
-abstract class _$$CreatedPillSheetValueImplCopyWith<$Res> implements $CreatedPillSheetValueCopyWith<$Res> {
+abstract class _$$CreatedPillSheetValueImplCopyWith<$Res> {
   factory _$$CreatedPillSheetValueImplCopyWith(_$CreatedPillSheetValueImpl value, $Res Function(_$CreatedPillSheetValueImpl) then) =
       __$$CreatedPillSheetValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime pillSheetCreatedAt,
-    List<String> pillSheetIDs,
-  });
 }
 
 /// @nodoc
 class __$$CreatedPillSheetValueImplCopyWithImpl<$Res> extends _$CreatedPillSheetValueCopyWithImpl<$Res, _$CreatedPillSheetValueImpl>
     implements _$$CreatedPillSheetValueImplCopyWith<$Res> {
   __$$CreatedPillSheetValueImplCopyWithImpl(_$CreatedPillSheetValueImpl _value, $Res Function(_$CreatedPillSheetValueImpl) _then)
-    : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? pillSheetCreatedAt = null, Object? pillSheetIDs = null}) {
-    return _then(
-      _$CreatedPillSheetValueImpl(
-        pillSheetCreatedAt: null == pillSheetCreatedAt
-            ? _value.pillSheetCreatedAt
-            : pillSheetCreatedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        pillSheetIDs: null == pillSheetIDs
-            ? _value._pillSheetIDs
-            : pillSheetIDs // ignore: cast_nullable_to_non_nullable
-                  as List<String>,
-      ),
-    );
-  }
+      : super(_value, _then);
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$CreatedPillSheetValueImpl extends _CreatedPillSheetValue {
-  const _$CreatedPillSheetValueImpl({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.pillSheetCreatedAt,
-    final List<String> pillSheetIDs = const [],
-  }) : _pillSheetIDs = pillSheetIDs,
-       super._();
+  const _$CreatedPillSheetValueImpl() : super._();
 
   factory _$CreatedPillSheetValueImpl.fromJson(Map<String, dynamic> json) => _$$CreatedPillSheetValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// ピルシート作成日時（非推奨）
-  /// Firestoreタイムスタンプから自動変換される作成日時
-  @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime pillSheetCreatedAt;
-
-  /// 作成されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時作成に対応するためのIDリスト
-  final List<String> _pillSheetIDs;
-
-  /// 作成されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時作成に対応するためのIDリスト
-  @override
-  @JsonKey()
-  List<String> get pillSheetIDs {
-    if (_pillSheetIDs is EqualUnmodifiableListView) return _pillSheetIDs;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_pillSheetIDs);
-  }
-
   @override
   String toString() {
-    return 'CreatedPillSheetValue(pillSheetCreatedAt: $pillSheetCreatedAt, pillSheetIDs: $pillSheetIDs)';
+    return 'CreatedPillSheetValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CreatedPillSheetValueImpl &&
-            (identical(other.pillSheetCreatedAt, pillSheetCreatedAt) || other.pillSheetCreatedAt == pillSheetCreatedAt) &&
-            const DeepCollectionEquality().equals(other._pillSheetIDs, _pillSheetIDs));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$CreatedPillSheetValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, pillSheetCreatedAt, const DeepCollectionEquality().hash(_pillSheetIDs));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CreatedPillSheetValueImplCopyWith<_$CreatedPillSheetValueImpl> get copyWith =>
-      __$$CreatedPillSheetValueImplCopyWithImpl<_$CreatedPillSheetValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$CreatedPillSheetValueImplToJson(this);
+    return _$$CreatedPillSheetValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
-  const factory _CreatedPillSheetValue({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime pillSheetCreatedAt,
-    final List<String> pillSheetIDs,
-  }) = _$CreatedPillSheetValueImpl;
+  const factory _CreatedPillSheetValue() = _$CreatedPillSheetValueImpl;
   const _CreatedPillSheetValue._() : super._();
 
   factory _CreatedPillSheetValue.fromJson(Map<String, dynamic> json) = _$CreatedPillSheetValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// ピルシート作成日時（非推奨）
-  /// Firestoreタイムスタンプから自動変換される作成日時
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get pillSheetCreatedAt;
-  @override
-  /// 作成されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時作成に対応するためのIDリスト
-  List<String> get pillSheetIDs;
-  @override
-  @JsonKey(ignore: true)
-  _$$CreatedPillSheetValueImplCopyWith<_$CreatedPillSheetValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 AutomaticallyRecordedLastTakenDateValue _$AutomaticallyRecordedLastTakenDateValueFromJson(Map<String, dynamic> json) {
@@ -924,45 +813,14 @@ AutomaticallyRecordedLastTakenDateValue _$AutomaticallyRecordedLastTakenDateValu
 
 /// @nodoc
 mixin _$AutomaticallyRecordedLastTakenDateValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の最終服用日（非推奨、nullable）
-  /// 初回服用の場合はnullとなる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
-
-  /// 変更後の最終服用日（非推奨）
-  /// 自動記録によって設定された新しい最終服用日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
-
-  /// 変更前の最終服用ピル番号（非推奨）
-  /// 自動記録前のピル番号
-  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
-
-  /// 変更後の最終服用ピル番号（非推奨）
-  /// 自動記録後のピル番号
-  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $AutomaticallyRecordedLastTakenDateValueCopyWith<AutomaticallyRecordedLastTakenDateValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
   factory $AutomaticallyRecordedLastTakenDateValueCopyWith(
-    AutomaticallyRecordedLastTakenDateValue value,
-    $Res Function(AutomaticallyRecordedLastTakenDateValue) then,
-  ) = _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, AutomaticallyRecordedLastTakenDateValue>;
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime afterLastTakenDate,
-    int beforeLastTakenPillNumber,
-    int afterLastTakenPillNumber,
-  });
+          AutomaticallyRecordedLastTakenDateValue value, $Res Function(AutomaticallyRecordedLastTakenDateValue) then) =
+      _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, AutomaticallyRecordedLastTakenDateValue>;
 }
 
 /// @nodoc
@@ -974,54 +832,13 @@ class _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, $Val extends A
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = null,
-    Object? beforeLastTakenPillNumber = null,
-    Object? afterLastTakenPillNumber = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            beforeLastTakenDate: freezed == beforeLastTakenDate
-                ? _value.beforeLastTakenDate
-                : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            afterLastTakenDate: null == afterLastTakenDate
-                ? _value.afterLastTakenDate
-                : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
-                ? _value.beforeLastTakenPillNumber
-                : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-            afterLastTakenPillNumber: null == afterLastTakenPillNumber
-                ? _value.afterLastTakenPillNumber
-                : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
-  }
 }
 
 /// @nodoc
-abstract class _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<$Res> implements $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res> {
+abstract class _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<$Res> {
   factory _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith(
-    _$AutomaticallyRecordedLastTakenDateValueImpl value,
-    $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) then,
-  ) = __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime afterLastTakenDate,
-    int beforeLastTakenPillNumber,
-    int afterLastTakenPillNumber,
-  });
+          _$AutomaticallyRecordedLastTakenDateValueImpl value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) then) =
+      __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -1029,147 +846,46 @@ class __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<$Res>
     extends _$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res, _$AutomaticallyRecordedLastTakenDateValueImpl>
     implements _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<$Res> {
   __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl(
-    _$AutomaticallyRecordedLastTakenDateValueImpl _value,
-    $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) _then,
-  ) : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = null,
-    Object? beforeLastTakenPillNumber = null,
-    Object? afterLastTakenPillNumber = null,
-  }) {
-    return _then(
-      _$AutomaticallyRecordedLastTakenDateValueImpl(
-        beforeLastTakenDate: freezed == beforeLastTakenDate
-            ? _value.beforeLastTakenDate
-            : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        afterLastTakenDate: null == afterLastTakenDate
-            ? _value.afterLastTakenDate
-            : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
-            ? _value.beforeLastTakenPillNumber
-            : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-        afterLastTakenPillNumber: null == afterLastTakenPillNumber
-            ? _value.afterLastTakenPillNumber
-            : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
-  }
+      _$AutomaticallyRecordedLastTakenDateValueImpl _value, $Res Function(_$AutomaticallyRecordedLastTakenDateValueImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$AutomaticallyRecordedLastTakenDateValueImpl extends _AutomaticallyRecordedLastTakenDateValue {
-  const _$AutomaticallyRecordedLastTakenDateValueImpl({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.afterLastTakenDate,
-    required this.beforeLastTakenPillNumber,
-    required this.afterLastTakenPillNumber,
-  }) : super._();
+  const _$AutomaticallyRecordedLastTakenDateValueImpl() : super._();
 
   factory _$AutomaticallyRecordedLastTakenDateValueImpl.fromJson(Map<String, dynamic> json) =>
       _$$AutomaticallyRecordedLastTakenDateValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の最終服用日（非推奨、nullable）
-  /// 初回服用の場合はnullとなる
-  @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? beforeLastTakenDate;
-
-  /// 変更後の最終服用日（非推奨）
-  /// 自動記録によって設定された新しい最終服用日
-  @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime afterLastTakenDate;
-
-  /// 変更前の最終服用ピル番号（非推奨）
-  /// 自動記録前のピル番号
-  @override
-  final int beforeLastTakenPillNumber;
-
-  /// 変更後の最終服用ピル番号（非推奨）
-  /// 自動記録後のピル番号
-  @override
-  final int afterLastTakenPillNumber;
-
   @override
   String toString() {
-    return 'AutomaticallyRecordedLastTakenDateValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber)';
+    return 'AutomaticallyRecordedLastTakenDateValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AutomaticallyRecordedLastTakenDateValueImpl &&
-            (identical(other.beforeLastTakenDate, beforeLastTakenDate) || other.beforeLastTakenDate == beforeLastTakenDate) &&
-            (identical(other.afterLastTakenDate, afterLastTakenDate) || other.afterLastTakenDate == afterLastTakenDate) &&
-            (identical(other.beforeLastTakenPillNumber, beforeLastTakenPillNumber) || other.beforeLastTakenPillNumber == beforeLastTakenPillNumber) &&
-            (identical(other.afterLastTakenPillNumber, afterLastTakenPillNumber) || other.afterLastTakenPillNumber == afterLastTakenPillNumber));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$AutomaticallyRecordedLastTakenDateValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<_$AutomaticallyRecordedLastTakenDateValueImpl> get copyWith =>
-      __$$AutomaticallyRecordedLastTakenDateValueImplCopyWithImpl<_$AutomaticallyRecordedLastTakenDateValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$AutomaticallyRecordedLastTakenDateValueImplToJson(this);
+    return _$$AutomaticallyRecordedLastTakenDateValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _AutomaticallyRecordedLastTakenDateValue extends AutomaticallyRecordedLastTakenDateValue {
-  const factory _AutomaticallyRecordedLastTakenDateValue({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime afterLastTakenDate,
-    required final int beforeLastTakenPillNumber,
-    required final int afterLastTakenPillNumber,
-  }) = _$AutomaticallyRecordedLastTakenDateValueImpl;
+  const factory _AutomaticallyRecordedLastTakenDateValue() = _$AutomaticallyRecordedLastTakenDateValueImpl;
   const _AutomaticallyRecordedLastTakenDateValue._() : super._();
 
   factory _AutomaticallyRecordedLastTakenDateValue.fromJson(Map<String, dynamic> json) = _$AutomaticallyRecordedLastTakenDateValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の最終服用日（非推奨、nullable）
-  /// 初回服用の場合はnullとなる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beforeLastTakenDate;
-  @override
-  /// 変更後の最終服用日（非推奨）
-  /// 自動記録によって設定された新しい最終服用日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterLastTakenDate;
-  @override
-  /// 変更前の最終服用ピル番号（非推奨）
-  /// 自動記録前のピル番号
-  int get beforeLastTakenPillNumber;
-  @override
-  /// 変更後の最終服用ピル番号（非推奨）
-  /// 自動記録後のピル番号
-  int get afterLastTakenPillNumber;
-  @override
-  @JsonKey(ignore: true)
-  _$$AutomaticallyRecordedLastTakenDateValueImplCopyWith<_$AutomaticallyRecordedLastTakenDateValueImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 DeletedPillSheetValue _$DeletedPillSheetValueFromJson(Map<String, dynamic> json) {
@@ -1178,32 +894,13 @@ DeletedPillSheetValue _$DeletedPillSheetValueFromJson(Map<String, dynamic> json)
 
 /// @nodoc
 mixin _$DeletedPillSheetValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// ピルシート削除日時（非推奨）
-  /// Firestoreタイムスタンプから自動変換される削除日時
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get pillSheetDeletedAt => throw _privateConstructorUsedError;
-
-  /// 削除されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時削除に対応するためのIDリスト
-  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $DeletedPillSheetValueCopyWith<DeletedPillSheetValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $DeletedPillSheetValueCopyWith<$Res> {
   factory $DeletedPillSheetValueCopyWith(DeletedPillSheetValue value, $Res Function(DeletedPillSheetValue) then) =
       _$DeletedPillSheetValueCopyWithImpl<$Res, DeletedPillSheetValue>;
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime pillSheetDeletedAt,
-    List<String> pillSheetIDs,
-  });
 }
 
 /// @nodoc
@@ -1214,151 +911,56 @@ class _$DeletedPillSheetValueCopyWithImpl<$Res, $Val extends DeletedPillSheetVal
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? pillSheetDeletedAt = null, Object? pillSheetIDs = null}) {
-    return _then(
-      _value.copyWith(
-            pillSheetDeletedAt: null == pillSheetDeletedAt
-                ? _value.pillSheetDeletedAt
-                : pillSheetDeletedAt // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            pillSheetIDs: null == pillSheetIDs
-                ? _value.pillSheetIDs
-                : pillSheetIDs // ignore: cast_nullable_to_non_nullable
-                      as List<String>,
-          )
-          as $Val,
-    );
-  }
 }
 
 /// @nodoc
-abstract class _$$DeletedPillSheetValueImplCopyWith<$Res> implements $DeletedPillSheetValueCopyWith<$Res> {
+abstract class _$$DeletedPillSheetValueImplCopyWith<$Res> {
   factory _$$DeletedPillSheetValueImplCopyWith(_$DeletedPillSheetValueImpl value, $Res Function(_$DeletedPillSheetValueImpl) then) =
       __$$DeletedPillSheetValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime pillSheetDeletedAt,
-    List<String> pillSheetIDs,
-  });
 }
 
 /// @nodoc
 class __$$DeletedPillSheetValueImplCopyWithImpl<$Res> extends _$DeletedPillSheetValueCopyWithImpl<$Res, _$DeletedPillSheetValueImpl>
     implements _$$DeletedPillSheetValueImplCopyWith<$Res> {
   __$$DeletedPillSheetValueImplCopyWithImpl(_$DeletedPillSheetValueImpl _value, $Res Function(_$DeletedPillSheetValueImpl) _then)
-    : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? pillSheetDeletedAt = null, Object? pillSheetIDs = null}) {
-    return _then(
-      _$DeletedPillSheetValueImpl(
-        pillSheetDeletedAt: null == pillSheetDeletedAt
-            ? _value.pillSheetDeletedAt
-            : pillSheetDeletedAt // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        pillSheetIDs: null == pillSheetIDs
-            ? _value._pillSheetIDs
-            : pillSheetIDs // ignore: cast_nullable_to_non_nullable
-                  as List<String>,
-      ),
-    );
-  }
+      : super(_value, _then);
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$DeletedPillSheetValueImpl extends _DeletedPillSheetValue {
-  const _$DeletedPillSheetValueImpl({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.pillSheetDeletedAt,
-    final List<String> pillSheetIDs = const [],
-  }) : _pillSheetIDs = pillSheetIDs,
-       super._();
+  const _$DeletedPillSheetValueImpl() : super._();
 
   factory _$DeletedPillSheetValueImpl.fromJson(Map<String, dynamic> json) => _$$DeletedPillSheetValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// ピルシート削除日時（非推奨）
-  /// Firestoreタイムスタンプから自動変換される削除日時
-  @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime pillSheetDeletedAt;
-
-  /// 削除されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時削除に対応するためのIDリスト
-  final List<String> _pillSheetIDs;
-
-  /// 削除されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時削除に対応するためのIDリスト
-  @override
-  @JsonKey()
-  List<String> get pillSheetIDs {
-    if (_pillSheetIDs is EqualUnmodifiableListView) return _pillSheetIDs;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_pillSheetIDs);
-  }
-
   @override
   String toString() {
-    return 'DeletedPillSheetValue(pillSheetDeletedAt: $pillSheetDeletedAt, pillSheetIDs: $pillSheetIDs)';
+    return 'DeletedPillSheetValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DeletedPillSheetValueImpl &&
-            (identical(other.pillSheetDeletedAt, pillSheetDeletedAt) || other.pillSheetDeletedAt == pillSheetDeletedAt) &&
-            const DeepCollectionEquality().equals(other._pillSheetIDs, _pillSheetIDs));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$DeletedPillSheetValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, pillSheetDeletedAt, const DeepCollectionEquality().hash(_pillSheetIDs));
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DeletedPillSheetValueImplCopyWith<_$DeletedPillSheetValueImpl> get copyWith =>
-      __$$DeletedPillSheetValueImplCopyWithImpl<_$DeletedPillSheetValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$DeletedPillSheetValueImplToJson(this);
+    return _$$DeletedPillSheetValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
-  const factory _DeletedPillSheetValue({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime pillSheetDeletedAt,
-    final List<String> pillSheetIDs,
-  }) = _$DeletedPillSheetValueImpl;
+  const factory _DeletedPillSheetValue() = _$DeletedPillSheetValueImpl;
   const _DeletedPillSheetValue._() : super._();
 
   factory _DeletedPillSheetValue.fromJson(Map<String, dynamic> json) = _$DeletedPillSheetValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// ピルシート削除日時（非推奨）
-  /// Firestoreタイムスタンプから自動変換される削除日時
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get pillSheetDeletedAt;
-  @override
-  /// 削除されたピルシートのIDリスト（非推奨）
-  /// 複数シート同時削除に対応するためのIDリスト
-  List<String> get pillSheetIDs;
-  @override
-  @JsonKey(ignore: true)
-  _$$DeletedPillSheetValueImplCopyWith<_$DeletedPillSheetValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 TakenPillValue _$TakenPillValueFromJson(Map<String, dynamic> json) {
@@ -1367,34 +969,13 @@ TakenPillValue _$TakenPillValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TakenPillValue {
-  // ============ BEGIN: Added since v1 ============
-  /// クイック記録かどうかのフラグ（v1追加）
+  /// クイック記録かどうかのフラグ
   /// nullは途中から追加されたプロパティのため判定不能を表す
-  // null => 途中から追加したプロパティなので、どちらか不明
   bool? get isQuickRecord => throw _privateConstructorUsedError;
 
-  /// 服用記録の編集情報（v1追加）
+  /// 服用記録の編集情報
   /// ユーザーが後から服用時刻を編集した場合の詳細情報
-  TakenPillEditedValue? get edited => throw _privateConstructorUsedError; // ============ END: Added since v1 ============
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の最終服用日（非推奨、nullable）
-  /// 初回服用の場合はnullとなる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
-
-  /// 変更後の最終服用日（非推奨）
-  /// 服用記録によって設定された新しい最終服用日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
-
-  /// 変更前の最終服用ピル番号（非推奨）
-  /// 服用記録前のピル番号
-  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
-
-  /// 変更後の最終服用ピル番号（非推奨）
-  /// 服用記録後のピル番号
-  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
+  TakenPillEditedValue? get edited => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1405,15 +986,7 @@ mixin _$TakenPillValue {
 abstract class $TakenPillValueCopyWith<$Res> {
   factory $TakenPillValueCopyWith(TakenPillValue value, $Res Function(TakenPillValue) then) = _$TakenPillValueCopyWithImpl<$Res, TakenPillValue>;
   @useResult
-  $Res call({
-    bool? isQuickRecord,
-    TakenPillEditedValue? edited,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime afterLastTakenDate,
-    int beforeLastTakenPillNumber,
-    int afterLastTakenPillNumber,
-  });
+  $Res call({bool? isQuickRecord, TakenPillEditedValue? edited});
 
   $TakenPillEditedValueCopyWith<$Res>? get edited;
 }
@@ -1432,40 +1005,17 @@ class _$TakenPillValueCopyWithImpl<$Res, $Val extends TakenPillValue> implements
   $Res call({
     Object? isQuickRecord = freezed,
     Object? edited = freezed,
-    Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = null,
-    Object? beforeLastTakenPillNumber = null,
-    Object? afterLastTakenPillNumber = null,
   }) {
-    return _then(
-      _value.copyWith(
-            isQuickRecord: freezed == isQuickRecord
-                ? _value.isQuickRecord
-                : isQuickRecord // ignore: cast_nullable_to_non_nullable
-                      as bool?,
-            edited: freezed == edited
-                ? _value.edited
-                : edited // ignore: cast_nullable_to_non_nullable
-                      as TakenPillEditedValue?,
-            beforeLastTakenDate: freezed == beforeLastTakenDate
-                ? _value.beforeLastTakenDate
-                : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            afterLastTakenDate: null == afterLastTakenDate
-                ? _value.afterLastTakenDate
-                : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
-                ? _value.beforeLastTakenPillNumber
-                : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-            afterLastTakenPillNumber: null == afterLastTakenPillNumber
-                ? _value.afterLastTakenPillNumber
-                : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      isQuickRecord: freezed == isQuickRecord
+          ? _value.isQuickRecord
+          : isQuickRecord // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      edited: freezed == edited
+          ? _value.edited
+          : edited // ignore: cast_nullable_to_non_nullable
+              as TakenPillEditedValue?,
+    ) as $Val);
   }
 
   @override
@@ -1487,15 +1037,7 @@ abstract class _$$TakenPillValueImplCopyWith<$Res> implements $TakenPillValueCop
       __$$TakenPillValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    bool? isQuickRecord,
-    TakenPillEditedValue? edited,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime afterLastTakenDate,
-    int beforeLastTakenPillNumber,
-    int afterLastTakenPillNumber,
-  });
+  $Res call({bool? isQuickRecord, TakenPillEditedValue? edited});
 
   @override
   $TakenPillEditedValueCopyWith<$Res>? get edited;
@@ -1511,39 +1053,17 @@ class __$$TakenPillValueImplCopyWithImpl<$Res> extends _$TakenPillValueCopyWithI
   $Res call({
     Object? isQuickRecord = freezed,
     Object? edited = freezed,
-    Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = null,
-    Object? beforeLastTakenPillNumber = null,
-    Object? afterLastTakenPillNumber = null,
   }) {
-    return _then(
-      _$TakenPillValueImpl(
-        isQuickRecord: freezed == isQuickRecord
-            ? _value.isQuickRecord
-            : isQuickRecord // ignore: cast_nullable_to_non_nullable
-                  as bool?,
-        edited: freezed == edited
-            ? _value.edited
-            : edited // ignore: cast_nullable_to_non_nullable
-                  as TakenPillEditedValue?,
-        beforeLastTakenDate: freezed == beforeLastTakenDate
-            ? _value.beforeLastTakenDate
-            : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        afterLastTakenDate: null == afterLastTakenDate
-            ? _value.afterLastTakenDate
-            : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
-            ? _value.beforeLastTakenPillNumber
-            : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-        afterLastTakenPillNumber: null == afterLastTakenPillNumber
-            ? _value.afterLastTakenPillNumber
-            : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
+    return _then(_$TakenPillValueImpl(
+      isQuickRecord: freezed == isQuickRecord
+          ? _value.isQuickRecord
+          : isQuickRecord // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      edited: freezed == edited
+          ? _value.edited
+          : edited // ignore: cast_nullable_to_non_nullable
+              as TakenPillEditedValue?,
+    ));
   }
 }
 
@@ -1551,57 +1071,23 @@ class __$$TakenPillValueImplCopyWithImpl<$Res> extends _$TakenPillValueCopyWithI
 
 @JsonSerializable(explicitToJson: true)
 class _$TakenPillValueImpl extends _TakenPillValue {
-  const _$TakenPillValueImpl({
-    this.isQuickRecord,
-    this.edited,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.afterLastTakenDate,
-    required this.beforeLastTakenPillNumber,
-    required this.afterLastTakenPillNumber,
-  }) : super._();
+  const _$TakenPillValueImpl({this.isQuickRecord, this.edited}) : super._();
 
   factory _$TakenPillValueImpl.fromJson(Map<String, dynamic> json) => _$$TakenPillValueImplFromJson(json);
 
-  // ============ BEGIN: Added since v1 ============
-  /// クイック記録かどうかのフラグ（v1追加）
+  /// クイック記録かどうかのフラグ
   /// nullは途中から追加されたプロパティのため判定不能を表す
-  // null => 途中から追加したプロパティなので、どちらか不明
   @override
   final bool? isQuickRecord;
 
-  /// 服用記録の編集情報（v1追加）
+  /// 服用記録の編集情報
   /// ユーザーが後から服用時刻を編集した場合の詳細情報
   @override
   final TakenPillEditedValue? edited;
-  // ============ END: Added since v1 ============
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の最終服用日（非推奨、nullable）
-  /// 初回服用の場合はnullとなる
-  @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? beforeLastTakenDate;
-
-  /// 変更後の最終服用日（非推奨）
-  /// 服用記録によって設定された新しい最終服用日
-  @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime afterLastTakenDate;
-
-  /// 変更前の最終服用ピル番号（非推奨）
-  /// 服用記録前のピル番号
-  @override
-  final int beforeLastTakenPillNumber;
-
-  /// 変更後の最終服用ピル番号（非推奨）
-  /// 服用記録後のピル番号
-  @override
-  final int afterLastTakenPillNumber;
 
   @override
   String toString() {
-    return 'TakenPillValue(isQuickRecord: $isQuickRecord, edited: $edited, beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber)';
+    return 'TakenPillValue(isQuickRecord: $isQuickRecord, edited: $edited)';
   }
 
   @override
@@ -1610,17 +1096,12 @@ class _$TakenPillValueImpl extends _TakenPillValue {
         (other.runtimeType == runtimeType &&
             other is _$TakenPillValueImpl &&
             (identical(other.isQuickRecord, isQuickRecord) || other.isQuickRecord == isQuickRecord) &&
-            (identical(other.edited, edited) || other.edited == edited) &&
-            (identical(other.beforeLastTakenDate, beforeLastTakenDate) || other.beforeLastTakenDate == beforeLastTakenDate) &&
-            (identical(other.afterLastTakenDate, afterLastTakenDate) || other.afterLastTakenDate == afterLastTakenDate) &&
-            (identical(other.beforeLastTakenPillNumber, beforeLastTakenPillNumber) || other.beforeLastTakenPillNumber == beforeLastTakenPillNumber) &&
-            (identical(other.afterLastTakenPillNumber, afterLastTakenPillNumber) || other.afterLastTakenPillNumber == afterLastTakenPillNumber));
+            (identical(other.edited, edited) || other.edited == edited));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, isQuickRecord, edited, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
+  int get hashCode => Object.hash(runtimeType, isQuickRecord, edited);
 
   @JsonKey(ignore: true)
   @override
@@ -1629,53 +1110,28 @@ class _$TakenPillValueImpl extends _TakenPillValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TakenPillValueImplToJson(this);
+    return _$$TakenPillValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TakenPillValue extends TakenPillValue {
-  const factory _TakenPillValue({
-    final bool? isQuickRecord,
-    final TakenPillEditedValue? edited,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime afterLastTakenDate,
-    required final int beforeLastTakenPillNumber,
-    required final int afterLastTakenPillNumber,
-  }) = _$TakenPillValueImpl;
+  const factory _TakenPillValue({final bool? isQuickRecord, final TakenPillEditedValue? edited}) = _$TakenPillValueImpl;
   const _TakenPillValue._() : super._();
 
   factory _TakenPillValue.fromJson(Map<String, dynamic> json) = _$TakenPillValueImpl.fromJson;
 
-  @override // ============ BEGIN: Added since v1 ============
-  /// クイック記録かどうかのフラグ（v1追加）
+  @override
+
+  /// クイック記録かどうかのフラグ
   /// nullは途中から追加されたプロパティのため判定不能を表す
-  // null => 途中から追加したプロパティなので、どちらか不明
   bool? get isQuickRecord;
   @override
-  /// 服用記録の編集情報（v1追加）
+
+  /// 服用記録の編集情報
   /// ユーザーが後から服用時刻を編集した場合の詳細情報
   TakenPillEditedValue? get edited;
-  @override // ============ END: Added since v1 ============
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の最終服用日（非推奨、nullable）
-  /// 初回服用の場合はnullとなる
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beforeLastTakenDate;
-  @override
-  /// 変更後の最終服用日（非推奨）
-  /// 服用記録によって設定された新しい最終服用日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterLastTakenDate;
-  @override
-  /// 変更前の最終服用ピル番号（非推奨）
-  /// 服用記録前のピル番号
-  int get beforeLastTakenPillNumber;
-  @override
-  /// 変更後の最終服用ピル番号（非推奨）
-  /// 服用記録後のピル番号
-  int get afterLastTakenPillNumber;
   @override
   @JsonKey(ignore: true)
   _$$TakenPillValueImplCopyWith<_$TakenPillValueImpl> get copyWith => throw _privateConstructorUsedError;
@@ -1687,16 +1143,16 @@ TakenPillEditedValue _$TakenPillEditedValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$TakenPillEditedValue {
-  // ============ BEGIN: Added since v1 ============
+// ============ BEGIN: Added since v1 ============
   /// 実際の服用時刻（v1追加）
   /// ユーザーが編集した後の正確な服用時刻
-  // 実際の服用時刻。ユーザーが編集した後の服用時刻
+// 実際の服用時刻。ユーザーが編集した後の服用時刻
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get actualTakenDate => throw _privateConstructorUsedError;
 
   /// 元の履歴記録時刻（v1追加）
   /// 通常はユーザーが編集する前の服用時刻として記録される
-  // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
+// 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get historyRecordedDate => throw _privateConstructorUsedError;
 
@@ -1715,12 +1171,12 @@ abstract class $TakenPillEditedValueCopyWith<$Res> {
   factory $TakenPillEditedValueCopyWith(TakenPillEditedValue value, $Res Function(TakenPillEditedValue) then) =
       _$TakenPillEditedValueCopyWithImpl<$Res, TakenPillEditedValue>;
   @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime actualTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime historyRecordedDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDate,
-  });
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime historyRecordedDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDate});
 }
 
 /// @nodoc
@@ -1734,24 +1190,25 @@ class _$TakenPillEditedValueCopyWithImpl<$Res, $Val extends TakenPillEditedValue
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? actualTakenDate = null, Object? historyRecordedDate = null, Object? createdDate = null}) {
-    return _then(
-      _value.copyWith(
-            actualTakenDate: null == actualTakenDate
-                ? _value.actualTakenDate
-                : actualTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            historyRecordedDate: null == historyRecordedDate
-                ? _value.historyRecordedDate
-                : historyRecordedDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            createdDate: null == createdDate
-                ? _value.createdDate
-                : createdDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? actualTakenDate = null,
+    Object? historyRecordedDate = null,
+    Object? createdDate = null,
+  }) {
+    return _then(_value.copyWith(
+      actualTakenDate: null == actualTakenDate
+          ? _value.actualTakenDate
+          : actualTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      historyRecordedDate: null == historyRecordedDate
+          ? _value.historyRecordedDate
+          : historyRecordedDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      createdDate: null == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ) as $Val);
   }
 }
 
@@ -1761,12 +1218,12 @@ abstract class _$$TakenPillEditedValueImplCopyWith<$Res> implements $TakenPillEd
       __$$TakenPillEditedValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime actualTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime historyRecordedDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDate,
-  });
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime historyRecordedDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime createdDate});
 }
 
 /// @nodoc
@@ -1776,23 +1233,25 @@ class __$$TakenPillEditedValueImplCopyWithImpl<$Res> extends _$TakenPillEditedVa
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? actualTakenDate = null, Object? historyRecordedDate = null, Object? createdDate = null}) {
-    return _then(
-      _$TakenPillEditedValueImpl(
-        actualTakenDate: null == actualTakenDate
-            ? _value.actualTakenDate
-            : actualTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        historyRecordedDate: null == historyRecordedDate
-            ? _value.historyRecordedDate
-            : historyRecordedDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        createdDate: null == createdDate
-            ? _value.createdDate
-            : createdDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-      ),
-    );
+  $Res call({
+    Object? actualTakenDate = null,
+    Object? historyRecordedDate = null,
+    Object? createdDate = null,
+  }) {
+    return _then(_$TakenPillEditedValueImpl(
+      actualTakenDate: null == actualTakenDate
+          ? _value.actualTakenDate
+          : actualTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      historyRecordedDate: null == historyRecordedDate
+          ? _value.historyRecordedDate
+          : historyRecordedDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      createdDate: null == createdDate
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
   }
 }
 
@@ -1800,28 +1259,28 @@ class __$$TakenPillEditedValueImplCopyWithImpl<$Res> extends _$TakenPillEditedVa
 
 @JsonSerializable(explicitToJson: true)
 class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
-  const _$TakenPillEditedValueImpl({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.actualTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.historyRecordedDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.createdDate,
-  }) : super._();
+  const _$TakenPillEditedValueImpl(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.historyRecordedDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.createdDate})
+      : super._();
 
   factory _$TakenPillEditedValueImpl.fromJson(Map<String, dynamic> json) => _$$TakenPillEditedValueImplFromJson(json);
 
-  // ============ BEGIN: Added since v1 ============
+// ============ BEGIN: Added since v1 ============
   /// 実際の服用時刻（v1追加）
   /// ユーザーが編集した後の正確な服用時刻
-  // 実際の服用時刻。ユーザーが編集した後の服用時刻
+// 実際の服用時刻。ユーザーが編集した後の服用時刻
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime actualTakenDate;
 
   /// 元の履歴記録時刻（v1追加）
   /// 通常はユーザーが編集する前の服用時刻として記録される
-  // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
+// 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime historyRecordedDate;
@@ -1859,19 +1318,20 @@ class _$TakenPillEditedValueImpl extends _TakenPillEditedValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$TakenPillEditedValueImplToJson(this);
+    return _$$TakenPillEditedValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _TakenPillEditedValue extends TakenPillEditedValue {
-  const factory _TakenPillEditedValue({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime actualTakenDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime historyRecordedDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime createdDate,
-  }) = _$TakenPillEditedValueImpl;
+  const factory _TakenPillEditedValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime historyRecordedDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime createdDate}) = _$TakenPillEditedValueImpl;
   const _TakenPillEditedValue._() : super._();
 
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) = _$TakenPillEditedValueImpl.fromJson;
@@ -1879,16 +1339,18 @@ abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   @override // ============ BEGIN: Added since v1 ============
   /// 実際の服用時刻（v1追加）
   /// ユーザーが編集した後の正確な服用時刻
-  // 実際の服用時刻。ユーザーが編集した後の服用時刻
+// 実際の服用時刻。ユーザーが編集した後の服用時刻
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get actualTakenDate;
   @override
+
   /// 元の履歴記録時刻（v1追加）
   /// 通常はユーザーが編集する前の服用時刻として記録される
-  // 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
+// 元々の履歴がDBに書き込まれた時刻。通常はユーザーが編集する前の服用時刻
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get historyRecordedDate;
   @override
+
   /// 編集操作の作成日時（v1追加）
   /// この編集レコードがデータベースに作成された日時
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1904,42 +1366,13 @@ RevertTakenPillValue _$RevertTakenPillValueFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$RevertTakenPillValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 取り消し前の最終服用日（非推奨、nullable）
-  /// 取り消し操作前の最終服用日
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beforeLastTakenDate => throw _privateConstructorUsedError;
-
-  /// 取り消し後の最終服用日（非推奨、nullable）
-  /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get afterLastTakenDate => throw _privateConstructorUsedError;
-
-  /// 取り消し前の最終服用ピル番号（非推奨）
-  /// 取り消し操作前のピル番号
-  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
-
-  /// 取り消し後の最終服用ピル番号（非推奨）
-  /// 取り消し操作後のピル番号
-  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $RevertTakenPillValueCopyWith<RevertTakenPillValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $RevertTakenPillValueCopyWith<$Res> {
   factory $RevertTakenPillValueCopyWith(RevertTakenPillValue value, $Res Function(RevertTakenPillValue) then) =
       _$RevertTakenPillValueCopyWithImpl<$Res, RevertTakenPillValue>;
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? afterLastTakenDate,
-    int beforeLastTakenPillNumber,
-    int afterLastTakenPillNumber,
-  });
 }
 
 /// @nodoc
@@ -1950,192 +1383,55 @@ class _$RevertTakenPillValueCopyWithImpl<$Res, $Val extends RevertTakenPillValue
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = freezed,
-    Object? beforeLastTakenPillNumber = null,
-    Object? afterLastTakenPillNumber = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            beforeLastTakenDate: freezed == beforeLastTakenDate
-                ? _value.beforeLastTakenDate
-                : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            afterLastTakenDate: freezed == afterLastTakenDate
-                ? _value.afterLastTakenDate
-                : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime?,
-            beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
-                ? _value.beforeLastTakenPillNumber
-                : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-            afterLastTakenPillNumber: null == afterLastTakenPillNumber
-                ? _value.afterLastTakenPillNumber
-                : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
-  }
 }
 
 /// @nodoc
-abstract class _$$RevertTakenPillValueImplCopyWith<$Res> implements $RevertTakenPillValueCopyWith<$Res> {
+abstract class _$$RevertTakenPillValueImplCopyWith<$Res> {
   factory _$$RevertTakenPillValueImplCopyWith(_$RevertTakenPillValueImpl value, $Res Function(_$RevertTakenPillValueImpl) then) =
       __$$RevertTakenPillValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) DateTime? afterLastTakenDate,
-    int beforeLastTakenPillNumber,
-    int afterLastTakenPillNumber,
-  });
 }
 
 /// @nodoc
 class __$$RevertTakenPillValueImplCopyWithImpl<$Res> extends _$RevertTakenPillValueCopyWithImpl<$Res, _$RevertTakenPillValueImpl>
     implements _$$RevertTakenPillValueImplCopyWith<$Res> {
   __$$RevertTakenPillValueImplCopyWithImpl(_$RevertTakenPillValueImpl _value, $Res Function(_$RevertTakenPillValueImpl) _then) : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beforeLastTakenDate = freezed,
-    Object? afterLastTakenDate = freezed,
-    Object? beforeLastTakenPillNumber = null,
-    Object? afterLastTakenPillNumber = null,
-  }) {
-    return _then(
-      _$RevertTakenPillValueImpl(
-        beforeLastTakenDate: freezed == beforeLastTakenDate
-            ? _value.beforeLastTakenDate
-            : beforeLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        afterLastTakenDate: freezed == afterLastTakenDate
-            ? _value.afterLastTakenDate
-            : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime?,
-        beforeLastTakenPillNumber: null == beforeLastTakenPillNumber
-            ? _value.beforeLastTakenPillNumber
-            : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-        afterLastTakenPillNumber: null == afterLastTakenPillNumber
-            ? _value.afterLastTakenPillNumber
-            : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
-  }
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$RevertTakenPillValueImpl extends _RevertTakenPillValue {
-  const _$RevertTakenPillValueImpl({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) this.beforeLastTakenDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) required this.afterLastTakenDate,
-    required this.beforeLastTakenPillNumber,
-    required this.afterLastTakenPillNumber,
-  }) : super._();
+  const _$RevertTakenPillValueImpl() : super._();
 
   factory _$RevertTakenPillValueImpl.fromJson(Map<String, dynamic> json) => _$$RevertTakenPillValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 取り消し前の最終服用日（非推奨、nullable）
-  /// 取り消し操作前の最終服用日
-  @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? beforeLastTakenDate;
-
-  /// 取り消し後の最終服用日（非推奨、nullable）
-  /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
-  @override
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? afterLastTakenDate;
-
-  /// 取り消し前の最終服用ピル番号（非推奨）
-  /// 取り消し操作前のピル番号
-  @override
-  final int beforeLastTakenPillNumber;
-
-  /// 取り消し後の最終服用ピル番号（非推奨）
-  /// 取り消し操作後のピル番号
-  @override
-  final int afterLastTakenPillNumber;
-
   @override
   String toString() {
-    return 'RevertTakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber)';
+    return 'RevertTakenPillValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RevertTakenPillValueImpl &&
-            (identical(other.beforeLastTakenDate, beforeLastTakenDate) || other.beforeLastTakenDate == beforeLastTakenDate) &&
-            (identical(other.afterLastTakenDate, afterLastTakenDate) || other.afterLastTakenDate == afterLastTakenDate) &&
-            (identical(other.beforeLastTakenPillNumber, beforeLastTakenPillNumber) || other.beforeLastTakenPillNumber == beforeLastTakenPillNumber) &&
-            (identical(other.afterLastTakenPillNumber, afterLastTakenPillNumber) || other.afterLastTakenPillNumber == afterLastTakenPillNumber));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$RevertTakenPillValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, beforeLastTakenDate, afterLastTakenDate, beforeLastTakenPillNumber, afterLastTakenPillNumber);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RevertTakenPillValueImplCopyWith<_$RevertTakenPillValueImpl> get copyWith =>
-      __$$RevertTakenPillValueImplCopyWithImpl<_$RevertTakenPillValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$RevertTakenPillValueImplToJson(this);
+    return _$$RevertTakenPillValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _RevertTakenPillValue extends RevertTakenPillValue {
-  const factory _RevertTakenPillValue({
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp) final DateTime? beforeLastTakenDate,
-    @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-    required final DateTime? afterLastTakenDate,
-    required final int beforeLastTakenPillNumber,
-    required final int afterLastTakenPillNumber,
-  }) = _$RevertTakenPillValueImpl;
+  const factory _RevertTakenPillValue() = _$RevertTakenPillValueImpl;
   const _RevertTakenPillValue._() : super._();
 
   factory _RevertTakenPillValue.fromJson(Map<String, dynamic> json) = _$RevertTakenPillValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 取り消し前の最終服用日（非推奨、nullable）
-  /// 取り消し操作前の最終服用日
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beforeLastTakenDate;
-  @override
-  /// 取り消し後の最終服用日（非推奨、nullable）
-  /// 取り消し操作後の最終服用日、服用履歴がなくなった場合はnull
-  @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get afterLastTakenDate;
-  @override
-  /// 取り消し前の最終服用ピル番号（非推奨）
-  /// 取り消し操作前のピル番号
-  int get beforeLastTakenPillNumber;
-  @override
-  /// 取り消し後の最終服用ピル番号（非推奨）
-  /// 取り消し操作後のピル番号
-  int get afterLastTakenPillNumber;
-  @override
-  @JsonKey(ignore: true)
-  _$$RevertTakenPillValueImplCopyWith<_$RevertTakenPillValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ChangedPillNumberValue _$ChangedPillNumberValueFromJson(Map<String, dynamic> json) {
@@ -2144,54 +1440,13 @@ ChangedPillNumberValue _$ChangedPillNumberValueFromJson(Map<String, dynamic> jso
 
 /// @nodoc
 mixin _$ChangedPillNumberValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の開始日（非推奨）
-  /// ピル番号変更前のピルシート開始日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beforeBeginingDate => throw _privateConstructorUsedError;
-
-  /// 変更後の開始日（非推奨）
-  /// ピル番号変更後のピルシート開始日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterBeginingDate => throw _privateConstructorUsedError;
-
-  /// 変更前の今日のピル番号（非推奨）
-  /// 変更操作前の今日に対応するピル番号
-  int get beforeTodayPillNumber => throw _privateConstructorUsedError;
-
-  /// 変更後の今日のピル番号（非推奨）
-  /// 変更操作後の今日に対応するピル番号
-  int get afterTodayPillNumber => throw _privateConstructorUsedError;
-
-  /// 変更前のグループインデックス（非推奨）
-  /// ピルシートグループ内での順序番号（デフォルト：1）
-  int get beforeGroupIndex => throw _privateConstructorUsedError;
-
-  /// 変更後のグループインデックス（非推奨）
-  /// ピルシートグループ内での順序番号（デフォルト：1）
-  int get afterGroupIndex => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ChangedPillNumberValueCopyWith<ChangedPillNumberValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChangedPillNumberValueCopyWith<$Res> {
   factory $ChangedPillNumberValueCopyWith(ChangedPillNumberValue value, $Res Function(ChangedPillNumberValue) then) =
       _$ChangedPillNumberValueCopyWithImpl<$Res, ChangedPillNumberValue>;
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime beforeBeginingDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime afterBeginingDate,
-    int beforeTodayPillNumber,
-    int afterTodayPillNumber,
-    int beforeGroupIndex,
-    int afterGroupIndex,
-  });
 }
 
 /// @nodoc
@@ -2202,247 +1457,56 @@ class _$ChangedPillNumberValueCopyWithImpl<$Res, $Val extends ChangedPillNumberV
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beforeBeginingDate = null,
-    Object? afterBeginingDate = null,
-    Object? beforeTodayPillNumber = null,
-    Object? afterTodayPillNumber = null,
-    Object? beforeGroupIndex = null,
-    Object? afterGroupIndex = null,
-  }) {
-    return _then(
-      _value.copyWith(
-            beforeBeginingDate: null == beforeBeginingDate
-                ? _value.beforeBeginingDate
-                : beforeBeginingDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            afterBeginingDate: null == afterBeginingDate
-                ? _value.afterBeginingDate
-                : afterBeginingDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            beforeTodayPillNumber: null == beforeTodayPillNumber
-                ? _value.beforeTodayPillNumber
-                : beforeTodayPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-            afterTodayPillNumber: null == afterTodayPillNumber
-                ? _value.afterTodayPillNumber
-                : afterTodayPillNumber // ignore: cast_nullable_to_non_nullable
-                      as int,
-            beforeGroupIndex: null == beforeGroupIndex
-                ? _value.beforeGroupIndex
-                : beforeGroupIndex // ignore: cast_nullable_to_non_nullable
-                      as int,
-            afterGroupIndex: null == afterGroupIndex
-                ? _value.afterGroupIndex
-                : afterGroupIndex // ignore: cast_nullable_to_non_nullable
-                      as int,
-          )
-          as $Val,
-    );
-  }
 }
 
 /// @nodoc
-abstract class _$$ChangedPillNumberValueImplCopyWith<$Res> implements $ChangedPillNumberValueCopyWith<$Res> {
+abstract class _$$ChangedPillNumberValueImplCopyWith<$Res> {
   factory _$$ChangedPillNumberValueImplCopyWith(_$ChangedPillNumberValueImpl value, $Res Function(_$ChangedPillNumberValueImpl) then) =
       __$$ChangedPillNumberValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime beforeBeginingDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    DateTime afterBeginingDate,
-    int beforeTodayPillNumber,
-    int afterTodayPillNumber,
-    int beforeGroupIndex,
-    int afterGroupIndex,
-  });
 }
 
 /// @nodoc
 class __$$ChangedPillNumberValueImplCopyWithImpl<$Res> extends _$ChangedPillNumberValueCopyWithImpl<$Res, _$ChangedPillNumberValueImpl>
     implements _$$ChangedPillNumberValueImplCopyWith<$Res> {
   __$$ChangedPillNumberValueImplCopyWithImpl(_$ChangedPillNumberValueImpl _value, $Res Function(_$ChangedPillNumberValueImpl) _then)
-    : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? beforeBeginingDate = null,
-    Object? afterBeginingDate = null,
-    Object? beforeTodayPillNumber = null,
-    Object? afterTodayPillNumber = null,
-    Object? beforeGroupIndex = null,
-    Object? afterGroupIndex = null,
-  }) {
-    return _then(
-      _$ChangedPillNumberValueImpl(
-        beforeBeginingDate: null == beforeBeginingDate
-            ? _value.beforeBeginingDate
-            : beforeBeginingDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        afterBeginingDate: null == afterBeginingDate
-            ? _value.afterBeginingDate
-            : afterBeginingDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        beforeTodayPillNumber: null == beforeTodayPillNumber
-            ? _value.beforeTodayPillNumber
-            : beforeTodayPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-        afterTodayPillNumber: null == afterTodayPillNumber
-            ? _value.afterTodayPillNumber
-            : afterTodayPillNumber // ignore: cast_nullable_to_non_nullable
-                  as int,
-        beforeGroupIndex: null == beforeGroupIndex
-            ? _value.beforeGroupIndex
-            : beforeGroupIndex // ignore: cast_nullable_to_non_nullable
-                  as int,
-        afterGroupIndex: null == afterGroupIndex
-            ? _value.afterGroupIndex
-            : afterGroupIndex // ignore: cast_nullable_to_non_nullable
-                  as int,
-      ),
-    );
-  }
+      : super(_value, _then);
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$ChangedPillNumberValueImpl extends _ChangedPillNumberValue {
-  const _$ChangedPillNumberValueImpl({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.beforeBeginingDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.afterBeginingDate,
-    required this.beforeTodayPillNumber,
-    required this.afterTodayPillNumber,
-    this.beforeGroupIndex = 1,
-    this.afterGroupIndex = 1,
-  }) : super._();
+  const _$ChangedPillNumberValueImpl() : super._();
 
   factory _$ChangedPillNumberValueImpl.fromJson(Map<String, dynamic> json) => _$$ChangedPillNumberValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の開始日（非推奨）
-  /// ピル番号変更前のピルシート開始日
-  @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime beforeBeginingDate;
-
-  /// 変更後の開始日（非推奨）
-  /// ピル番号変更後のピルシート開始日
-  @override
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime afterBeginingDate;
-
-  /// 変更前の今日のピル番号（非推奨）
-  /// 変更操作前の今日に対応するピル番号
-  @override
-  final int beforeTodayPillNumber;
-
-  /// 変更後の今日のピル番号（非推奨）
-  /// 変更操作後の今日に対応するピル番号
-  @override
-  final int afterTodayPillNumber;
-
-  /// 変更前のグループインデックス（非推奨）
-  /// ピルシートグループ内での順序番号（デフォルト：1）
-  @override
-  @JsonKey()
-  final int beforeGroupIndex;
-
-  /// 変更後のグループインデックス（非推奨）
-  /// ピルシートグループ内での順序番号（デフォルト：1）
-  @override
-  @JsonKey()
-  final int afterGroupIndex;
-
   @override
   String toString() {
-    return 'ChangedPillNumberValue(beforeBeginingDate: $beforeBeginingDate, afterBeginingDate: $afterBeginingDate, beforeTodayPillNumber: $beforeTodayPillNumber, afterTodayPillNumber: $afterTodayPillNumber, beforeGroupIndex: $beforeGroupIndex, afterGroupIndex: $afterGroupIndex)';
+    return 'ChangedPillNumberValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangedPillNumberValueImpl &&
-            (identical(other.beforeBeginingDate, beforeBeginingDate) || other.beforeBeginingDate == beforeBeginingDate) &&
-            (identical(other.afterBeginingDate, afterBeginingDate) || other.afterBeginingDate == afterBeginingDate) &&
-            (identical(other.beforeTodayPillNumber, beforeTodayPillNumber) || other.beforeTodayPillNumber == beforeTodayPillNumber) &&
-            (identical(other.afterTodayPillNumber, afterTodayPillNumber) || other.afterTodayPillNumber == afterTodayPillNumber) &&
-            (identical(other.beforeGroupIndex, beforeGroupIndex) || other.beforeGroupIndex == beforeGroupIndex) &&
-            (identical(other.afterGroupIndex, afterGroupIndex) || other.afterGroupIndex == afterGroupIndex));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ChangedPillNumberValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, beforeBeginingDate, afterBeginingDate, beforeTodayPillNumber, afterTodayPillNumber, beforeGroupIndex, afterGroupIndex);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangedPillNumberValueImplCopyWith<_$ChangedPillNumberValueImpl> get copyWith =>
-      __$$ChangedPillNumberValueImplCopyWithImpl<_$ChangedPillNumberValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChangedPillNumberValueImplToJson(this);
+    return _$$ChangedPillNumberValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
-  const factory _ChangedPillNumberValue({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime beforeBeginingDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime afterBeginingDate,
-    required final int beforeTodayPillNumber,
-    required final int afterTodayPillNumber,
-    final int beforeGroupIndex,
-    final int afterGroupIndex,
-  }) = _$ChangedPillNumberValueImpl;
+  const factory _ChangedPillNumberValue() = _$ChangedPillNumberValueImpl;
   const _ChangedPillNumberValue._() : super._();
 
   factory _ChangedPillNumberValue.fromJson(Map<String, dynamic> json) = _$ChangedPillNumberValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の開始日（非推奨）
-  /// ピル番号変更前のピルシート開始日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beforeBeginingDate;
-  @override
-  /// 変更後の開始日（非推奨）
-  /// ピル番号変更後のピルシート開始日
-  @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterBeginingDate;
-  @override
-  /// 変更前の今日のピル番号（非推奨）
-  /// 変更操作前の今日に対応するピル番号
-  int get beforeTodayPillNumber;
-  @override
-  /// 変更後の今日のピル番号（非推奨）
-  /// 変更操作後の今日に対応するピル番号
-  int get afterTodayPillNumber;
-  @override
-  /// 変更前のグループインデックス（非推奨）
-  /// ピルシートグループ内での順序番号（デフォルト：1）
-  int get beforeGroupIndex;
-  @override
-  /// 変更後のグループインデックス（非推奨）
-  /// ピルシートグループ内での順序番号（デフォルト：1）
-  int get afterGroupIndex;
-  @override
-  @JsonKey(ignore: true)
-  _$$ChangedPillNumberValueImplCopyWith<_$ChangedPillNumberValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 EndedPillSheetValue _$EndedPillSheetValueFromJson(Map<String, dynamic> json) {
@@ -2453,13 +1517,13 @@ EndedPillSheetValue _$EndedPillSheetValueFromJson(Map<String, dynamic> json) {
 mixin _$EndedPillSheetValue {
   /// 終了記録日（必須）
   /// サーバーで書き込まれるピルシート終了の公式記録日時
-  // 終了した日付。サーバーで書き込まれる
+// 終了した日付。サーバーで書き込まれる
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endRecordDate => throw _privateConstructorUsedError;
 
   /// 終了時点での最終服用日（必須）
   /// シート終了時の最後に服用したピルの日付
-  // 終了した時点での最終服用日
+// 終了した時点での最終服用日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate => throw _privateConstructorUsedError;
 
@@ -2473,10 +1537,11 @@ abstract class $EndedPillSheetValueCopyWith<$Res> {
   factory $EndedPillSheetValueCopyWith(EndedPillSheetValue value, $Res Function(EndedPillSheetValue) then) =
       _$EndedPillSheetValueCopyWithImpl<$Res, EndedPillSheetValue>;
   @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endRecordDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime lastTakenDate,
-  });
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -2490,20 +1555,20 @@ class _$EndedPillSheetValueCopyWithImpl<$Res, $Val extends EndedPillSheetValue> 
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? endRecordDate = null, Object? lastTakenDate = null}) {
-    return _then(
-      _value.copyWith(
-            endRecordDate: null == endRecordDate
-                ? _value.endRecordDate
-                : endRecordDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-            lastTakenDate: null == lastTakenDate
-                ? _value.lastTakenDate
-                : lastTakenDate // ignore: cast_nullable_to_non_nullable
-                      as DateTime,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? endRecordDate = null,
+    Object? lastTakenDate = null,
+  }) {
+    return _then(_value.copyWith(
+      endRecordDate: null == endRecordDate
+          ? _value.endRecordDate
+          : endRecordDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      lastTakenDate: null == lastTakenDate
+          ? _value.lastTakenDate
+          : lastTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ) as $Val);
   }
 }
 
@@ -2513,10 +1578,11 @@ abstract class _$$EndedPillSheetValueImplCopyWith<$Res> implements $EndedPillShe
       __$$EndedPillSheetValueImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime endRecordDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp) DateTime lastTakenDate,
-  });
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -2526,19 +1592,20 @@ class __$$EndedPillSheetValueImplCopyWithImpl<$Res> extends _$EndedPillSheetValu
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? endRecordDate = null, Object? lastTakenDate = null}) {
-    return _then(
-      _$EndedPillSheetValueImpl(
-        endRecordDate: null == endRecordDate
-            ? _value.endRecordDate
-            : endRecordDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-        lastTakenDate: null == lastTakenDate
-            ? _value.lastTakenDate
-            : lastTakenDate // ignore: cast_nullable_to_non_nullable
-                  as DateTime,
-      ),
-    );
+  $Res call({
+    Object? endRecordDate = null,
+    Object? lastTakenDate = null,
+  }) {
+    return _then(_$EndedPillSheetValueImpl(
+      endRecordDate: null == endRecordDate
+          ? _value.endRecordDate
+          : endRecordDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      lastTakenDate: null == lastTakenDate
+          ? _value.lastTakenDate
+          : lastTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
   }
 }
 
@@ -2546,25 +1613,25 @@ class __$$EndedPillSheetValueImplCopyWithImpl<$Res> extends _$EndedPillSheetValu
 
 @JsonSerializable(explicitToJson: true)
 class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
-  const _$EndedPillSheetValueImpl({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.endRecordDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required this.lastTakenDate,
-  }) : super._();
+  const _$EndedPillSheetValueImpl(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required this.lastTakenDate})
+      : super._();
 
   factory _$EndedPillSheetValueImpl.fromJson(Map<String, dynamic> json) => _$$EndedPillSheetValueImplFromJson(json);
 
   /// 終了記録日（必須）
   /// サーバーで書き込まれるピルシート終了の公式記録日時
-  // 終了した日付。サーバーで書き込まれる
+// 終了した日付。サーバーで書き込まれる
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endRecordDate;
 
   /// 終了時点での最終服用日（必須）
   /// シート終了時の最後に服用したピルの日付
-  // 終了した時点での最終服用日
+// 終了した時点での最終服用日
   @override
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime lastTakenDate;
@@ -2595,31 +1662,34 @@ class _$EndedPillSheetValueImpl extends _EndedPillSheetValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EndedPillSheetValueImplToJson(this);
+    return _$$EndedPillSheetValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _EndedPillSheetValue extends EndedPillSheetValue {
-  const factory _EndedPillSheetValue({
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime endRecordDate,
-    @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-    required final DateTime lastTakenDate,
-  }) = _$EndedPillSheetValueImpl;
+  const factory _EndedPillSheetValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+      required final DateTime lastTakenDate}) = _$EndedPillSheetValueImpl;
   const _EndedPillSheetValue._() : super._();
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) = _$EndedPillSheetValueImpl.fromJson;
 
   @override
+
   /// 終了記録日（必須）
   /// サーバーで書き込まれるピルシート終了の公式記録日時
-  // 終了した日付。サーバーで書き込まれる
+// 終了した日付。サーバーで書き込まれる
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endRecordDate;
   @override
+
   /// 終了時点での最終服用日（必須）
   /// シート終了時の最後に服用したピルの日付
-  // 終了した時点での最終服用日
+// 終了した時点での最終服用日
   @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate;
   @override
@@ -2633,10 +1703,10 @@ BeganRestDurationValue _$BeganRestDurationValueFromJson(Map<String, dynamic> jso
 
 /// @nodoc
 mixin _$BeganRestDurationValue {
-  // ============ BEGIN: Added since v1 ============
+// ============ BEGIN: Added since v1 ============
   /// 開始された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
-  // どの服用お休み期間か特定するのが大変なので記録したものを使用する
+// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2665,16 +1735,15 @@ class _$BeganRestDurationValueCopyWithImpl<$Res, $Val extends BeganRestDurationV
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? restDuration = null}) {
-    return _then(
-      _value.copyWith(
-            restDuration: null == restDuration
-                ? _value.restDuration
-                : restDuration // ignore: cast_nullable_to_non_nullable
-                      as RestDuration,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? restDuration = null,
+  }) {
+    return _then(_value.copyWith(
+      restDuration: null == restDuration
+          ? _value.restDuration
+          : restDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ) as $Val);
   }
 
   @override
@@ -2702,19 +1771,19 @@ abstract class _$$BeganRestDurationValueImplCopyWith<$Res> implements $BeganRest
 class __$$BeganRestDurationValueImplCopyWithImpl<$Res> extends _$BeganRestDurationValueCopyWithImpl<$Res, _$BeganRestDurationValueImpl>
     implements _$$BeganRestDurationValueImplCopyWith<$Res> {
   __$$BeganRestDurationValueImplCopyWithImpl(_$BeganRestDurationValueImpl _value, $Res Function(_$BeganRestDurationValueImpl) _then)
-    : super(_value, _then);
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? restDuration = null}) {
-    return _then(
-      _$BeganRestDurationValueImpl(
-        restDuration: null == restDuration
-            ? _value.restDuration
-            : restDuration // ignore: cast_nullable_to_non_nullable
-                  as RestDuration,
-      ),
-    );
+  $Res call({
+    Object? restDuration = null,
+  }) {
+    return _then(_$BeganRestDurationValueImpl(
+      restDuration: null == restDuration
+          ? _value.restDuration
+          : restDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ));
   }
 }
 
@@ -2726,10 +1795,10 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
 
   factory _$BeganRestDurationValueImpl.fromJson(Map<String, dynamic> json) => _$$BeganRestDurationValueImplFromJson(json);
 
-  // ============ BEGIN: Added since v1 ============
+// ============ BEGIN: Added since v1 ============
   /// 開始された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
-  // どの服用お休み期間か特定するのが大変なので記録したものを使用する
+// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   final RestDuration restDuration;
 
@@ -2758,7 +1827,9 @@ class _$BeganRestDurationValueImpl extends _BeganRestDurationValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$BeganRestDurationValueImplToJson(this);
+    return _$$BeganRestDurationValueImplToJson(
+      this,
+    );
   }
 }
 
@@ -2771,7 +1842,7 @@ abstract class _BeganRestDurationValue extends BeganRestDurationValue {
   @override // ============ BEGIN: Added since v1 ============
   /// 開始された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
-  // どの服用お休み期間か特定するのが大変なので記録したものを使用する
+// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration;
   @override
   @JsonKey(ignore: true)
@@ -2784,10 +1855,10 @@ EndedRestDurationValue _$EndedRestDurationValueFromJson(Map<String, dynamic> jso
 
 /// @nodoc
 mixin _$EndedRestDurationValue {
-  // ============ BEGIN: Added since v1 ============
+// ============ BEGIN: Added since v1 ============
   /// 終了された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
-  // どの服用お休み期間か特定するのが大変なので記録したものを使用する
+// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -2816,16 +1887,15 @@ class _$EndedRestDurationValueCopyWithImpl<$Res, $Val extends EndedRestDurationV
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? restDuration = null}) {
-    return _then(
-      _value.copyWith(
-            restDuration: null == restDuration
-                ? _value.restDuration
-                : restDuration // ignore: cast_nullable_to_non_nullable
-                      as RestDuration,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? restDuration = null,
+  }) {
+    return _then(_value.copyWith(
+      restDuration: null == restDuration
+          ? _value.restDuration
+          : restDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ) as $Val);
   }
 
   @override
@@ -2853,19 +1923,19 @@ abstract class _$$EndedRestDurationValueImplCopyWith<$Res> implements $EndedRest
 class __$$EndedRestDurationValueImplCopyWithImpl<$Res> extends _$EndedRestDurationValueCopyWithImpl<$Res, _$EndedRestDurationValueImpl>
     implements _$$EndedRestDurationValueImplCopyWith<$Res> {
   __$$EndedRestDurationValueImplCopyWithImpl(_$EndedRestDurationValueImpl _value, $Res Function(_$EndedRestDurationValueImpl) _then)
-    : super(_value, _then);
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? restDuration = null}) {
-    return _then(
-      _$EndedRestDurationValueImpl(
-        restDuration: null == restDuration
-            ? _value.restDuration
-            : restDuration // ignore: cast_nullable_to_non_nullable
-                  as RestDuration,
-      ),
-    );
+  $Res call({
+    Object? restDuration = null,
+  }) {
+    return _then(_$EndedRestDurationValueImpl(
+      restDuration: null == restDuration
+          ? _value.restDuration
+          : restDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ));
   }
 }
 
@@ -2877,10 +1947,10 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
 
   factory _$EndedRestDurationValueImpl.fromJson(Map<String, dynamic> json) => _$$EndedRestDurationValueImplFromJson(json);
 
-  // ============ BEGIN: Added since v1 ============
+// ============ BEGIN: Added since v1 ============
   /// 終了された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
-  // どの服用お休み期間か特定するのが大変なので記録したものを使用する
+// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   @override
   final RestDuration restDuration;
 
@@ -2909,7 +1979,9 @@ class _$EndedRestDurationValueImpl extends _EndedRestDurationValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$EndedRestDurationValueImplToJson(this);
+    return _$$EndedRestDurationValueImplToJson(
+      this,
+    );
   }
 }
 
@@ -2922,7 +1994,7 @@ abstract class _EndedRestDurationValue extends EndedRestDurationValue {
   @override // ============ BEGIN: Added since v1 ============
   /// 終了された休薬期間の詳細情報（v1追加）
   /// どの服用お休み期間かを特定するため完全な休薬期間データを記録
-  // どの服用お休み期間か特定するのが大変なので記録したものを使用する
+// どの服用お休み期間か特定するのが大変なので記録したものを使用する
   RestDuration get restDuration;
   @override
   @JsonKey(ignore: true)
@@ -2971,20 +2043,20 @@ class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends Changed
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? beforeRestDuration = null, Object? afterRestDuration = null}) {
-    return _then(
-      _value.copyWith(
-            beforeRestDuration: null == beforeRestDuration
-                ? _value.beforeRestDuration
-                : beforeRestDuration // ignore: cast_nullable_to_non_nullable
-                      as RestDuration,
-            afterRestDuration: null == afterRestDuration
-                ? _value.afterRestDuration
-                : afterRestDuration // ignore: cast_nullable_to_non_nullable
-                      as RestDuration,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? beforeRestDuration = null,
+    Object? afterRestDuration = null,
+  }) {
+    return _then(_value.copyWith(
+      beforeRestDuration: null == beforeRestDuration
+          ? _value.beforeRestDuration
+          : beforeRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+      afterRestDuration: null == afterRestDuration
+          ? _value.afterRestDuration
+          : afterRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ) as $Val);
   }
 
   @override
@@ -3007,9 +2079,8 @@ class _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, $Val extends Changed
 /// @nodoc
 abstract class _$$ChangedRestDurationBeginDateValueImplCopyWith<$Res> implements $ChangedRestDurationBeginDateValueCopyWith<$Res> {
   factory _$$ChangedRestDurationBeginDateValueImplCopyWith(
-    _$ChangedRestDurationBeginDateValueImpl value,
-    $Res Function(_$ChangedRestDurationBeginDateValueImpl) then,
-  ) = __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res>;
+          _$ChangedRestDurationBeginDateValueImpl value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) then) =
+      __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({RestDuration beforeRestDuration, RestDuration afterRestDuration});
@@ -3025,25 +2096,25 @@ class __$$ChangedRestDurationBeginDateValueImplCopyWithImpl<$Res>
     extends _$ChangedRestDurationBeginDateValueCopyWithImpl<$Res, _$ChangedRestDurationBeginDateValueImpl>
     implements _$$ChangedRestDurationBeginDateValueImplCopyWith<$Res> {
   __$$ChangedRestDurationBeginDateValueImplCopyWithImpl(
-    _$ChangedRestDurationBeginDateValueImpl _value,
-    $Res Function(_$ChangedRestDurationBeginDateValueImpl) _then,
-  ) : super(_value, _then);
+      _$ChangedRestDurationBeginDateValueImpl _value, $Res Function(_$ChangedRestDurationBeginDateValueImpl) _then)
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? beforeRestDuration = null, Object? afterRestDuration = null}) {
-    return _then(
-      _$ChangedRestDurationBeginDateValueImpl(
-        beforeRestDuration: null == beforeRestDuration
-            ? _value.beforeRestDuration
-            : beforeRestDuration // ignore: cast_nullable_to_non_nullable
-                  as RestDuration,
-        afterRestDuration: null == afterRestDuration
-            ? _value.afterRestDuration
-            : afterRestDuration // ignore: cast_nullable_to_non_nullable
-                  as RestDuration,
-      ),
-    );
+  $Res call({
+    Object? beforeRestDuration = null,
+    Object? afterRestDuration = null,
+  }) {
+    return _then(_$ChangedRestDurationBeginDateValueImpl(
+      beforeRestDuration: null == beforeRestDuration
+          ? _value.beforeRestDuration
+          : beforeRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+      afterRestDuration: null == afterRestDuration
+          ? _value.afterRestDuration
+          : afterRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ));
   }
 }
 
@@ -3091,7 +2162,9 @@ class _$ChangedRestDurationBeginDateValueImpl extends _ChangedRestDurationBeginD
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChangedRestDurationBeginDateValueImplToJson(this);
+    return _$$ChangedRestDurationBeginDateValueImplToJson(
+      this,
+    );
   }
 }
 
@@ -3103,10 +2176,12 @@ abstract class _ChangedRestDurationBeginDateValue extends ChangedRestDurationBeg
   factory _ChangedRestDurationBeginDateValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationBeginDateValueImpl.fromJson;
 
   @override
+
   /// 変更前の休薬期間情報（v2追加）
   /// 開始日変更前の完全な休薬期間データ
   RestDuration get beforeRestDuration;
   @override
+
   /// 変更後の休薬期間情報（v2追加）
   /// 開始日変更後の完全な休薬期間データ
   RestDuration get afterRestDuration;
@@ -3156,20 +2231,20 @@ class _$ChangedRestDurationValueCopyWithImpl<$Res, $Val extends ChangedRestDurat
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? beforeRestDuration = null, Object? afterRestDuration = null}) {
-    return _then(
-      _value.copyWith(
-            beforeRestDuration: null == beforeRestDuration
-                ? _value.beforeRestDuration
-                : beforeRestDuration // ignore: cast_nullable_to_non_nullable
-                      as RestDuration,
-            afterRestDuration: null == afterRestDuration
-                ? _value.afterRestDuration
-                : afterRestDuration // ignore: cast_nullable_to_non_nullable
-                      as RestDuration,
-          )
-          as $Val,
-    );
+  $Res call({
+    Object? beforeRestDuration = null,
+    Object? afterRestDuration = null,
+  }) {
+    return _then(_value.copyWith(
+      beforeRestDuration: null == beforeRestDuration
+          ? _value.beforeRestDuration
+          : beforeRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+      afterRestDuration: null == afterRestDuration
+          ? _value.afterRestDuration
+          : afterRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ) as $Val);
   }
 
   @override
@@ -3207,23 +2282,24 @@ abstract class _$$ChangedRestDurationValueImplCopyWith<$Res> implements $Changed
 class __$$ChangedRestDurationValueImplCopyWithImpl<$Res> extends _$ChangedRestDurationValueCopyWithImpl<$Res, _$ChangedRestDurationValueImpl>
     implements _$$ChangedRestDurationValueImplCopyWith<$Res> {
   __$$ChangedRestDurationValueImplCopyWithImpl(_$ChangedRestDurationValueImpl _value, $Res Function(_$ChangedRestDurationValueImpl) _then)
-    : super(_value, _then);
+      : super(_value, _then);
 
   @pragma('vm:prefer-inline')
   @override
-  $Res call({Object? beforeRestDuration = null, Object? afterRestDuration = null}) {
-    return _then(
-      _$ChangedRestDurationValueImpl(
-        beforeRestDuration: null == beforeRestDuration
-            ? _value.beforeRestDuration
-            : beforeRestDuration // ignore: cast_nullable_to_non_nullable
-                  as RestDuration,
-        afterRestDuration: null == afterRestDuration
-            ? _value.afterRestDuration
-            : afterRestDuration // ignore: cast_nullable_to_non_nullable
-                  as RestDuration,
-      ),
-    );
+  $Res call({
+    Object? beforeRestDuration = null,
+    Object? afterRestDuration = null,
+  }) {
+    return _then(_$ChangedRestDurationValueImpl(
+      beforeRestDuration: null == beforeRestDuration
+          ? _value.beforeRestDuration
+          : beforeRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+      afterRestDuration: null == afterRestDuration
+          ? _value.afterRestDuration
+          : afterRestDuration // ignore: cast_nullable_to_non_nullable
+              as RestDuration,
+    ));
   }
 }
 
@@ -3271,7 +2347,9 @@ class _$ChangedRestDurationValueImpl extends _ChangedRestDurationValue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChangedRestDurationValueImplToJson(this);
+    return _$$ChangedRestDurationValueImplToJson(
+      this,
+    );
   }
 }
 
@@ -3283,10 +2361,12 @@ abstract class _ChangedRestDurationValue extends ChangedRestDurationValue {
   factory _ChangedRestDurationValue.fromJson(Map<String, dynamic> json) = _$ChangedRestDurationValueImpl.fromJson;
 
   @override
+
   /// 変更前の休薬期間情報（v2追加）
   /// 内容変更前の完全な休薬期間データ
   RestDuration get beforeRestDuration;
   @override
+
   /// 変更後の休薬期間情報（v2追加）
   /// 内容変更後の完全な休薬期間データ
   RestDuration get afterRestDuration;
@@ -3301,31 +2381,13 @@ ChangedBeginDisplayNumberValue _$ChangedBeginDisplayNumberValueFromJson(Map<Stri
 
 /// @nodoc
 mixin _$ChangedBeginDisplayNumberValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の表示番号設定（非推奨、nullable）
-  /// 番号を変更したことがない場合はnullとなる
-  // 番号を変更した事が無い場合もあるのでnullable
-  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting => throw _privateConstructorUsedError;
-
-  /// 変更後の表示番号設定（非推奨）
-  /// 変更操作後の新しい表示番号設定
-  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ChangedBeginDisplayNumberValueCopyWith<ChangedBeginDisplayNumberValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChangedBeginDisplayNumberValueCopyWith<$Res> {
   factory $ChangedBeginDisplayNumberValueCopyWith(ChangedBeginDisplayNumberValue value, $Res Function(ChangedBeginDisplayNumberValue) then) =
       _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, ChangedBeginDisplayNumberValue>;
-  @useResult
-  $Res call({PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting, PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
-
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
 }
 
 /// @nodoc
@@ -3337,60 +2399,13 @@ class _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedBeg
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? beforeDisplayNumberSetting = freezed, Object? afterDisplayNumberSetting = null}) {
-    return _then(
-      _value.copyWith(
-            beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
-                ? _value.beforeDisplayNumberSetting
-                : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                      as PillSheetGroupDisplayNumberSetting?,
-            afterDisplayNumberSetting: null == afterDisplayNumberSetting
-                ? _value.afterDisplayNumberSetting
-                : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                      as PillSheetGroupDisplayNumberSetting,
-          )
-          as $Val,
-    );
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
-    if (_value.beforeDisplayNumberSetting == null) {
-      return null;
-    }
-
-    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(_value.beforeDisplayNumberSetting!, (value) {
-      return _then(_value.copyWith(beforeDisplayNumberSetting: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
-    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(_value.afterDisplayNumberSetting, (value) {
-      return _then(_value.copyWith(afterDisplayNumberSetting: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
-abstract class _$$ChangedBeginDisplayNumberValueImplCopyWith<$Res> implements $ChangedBeginDisplayNumberValueCopyWith<$Res> {
+abstract class _$$ChangedBeginDisplayNumberValueImplCopyWith<$Res> {
   factory _$$ChangedBeginDisplayNumberValueImplCopyWith(
-    _$ChangedBeginDisplayNumberValueImpl value,
-    $Res Function(_$ChangedBeginDisplayNumberValueImpl) then,
-  ) = __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting, PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
-
-  @override
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
-  @override
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+          _$ChangedBeginDisplayNumberValueImpl value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) then) =
+      __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -3398,102 +2413,45 @@ class __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<$Res>
     extends _$ChangedBeginDisplayNumberValueCopyWithImpl<$Res, _$ChangedBeginDisplayNumberValueImpl>
     implements _$$ChangedBeginDisplayNumberValueImplCopyWith<$Res> {
   __$$ChangedBeginDisplayNumberValueImplCopyWithImpl(
-    _$ChangedBeginDisplayNumberValueImpl _value,
-    $Res Function(_$ChangedBeginDisplayNumberValueImpl) _then,
-  ) : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? beforeDisplayNumberSetting = freezed, Object? afterDisplayNumberSetting = null}) {
-    return _then(
-      _$ChangedBeginDisplayNumberValueImpl(
-        beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
-            ? _value.beforeDisplayNumberSetting
-            : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                  as PillSheetGroupDisplayNumberSetting?,
-        afterDisplayNumberSetting: null == afterDisplayNumberSetting
-            ? _value.afterDisplayNumberSetting
-            : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                  as PillSheetGroupDisplayNumberSetting,
-      ),
-    );
-  }
+      _$ChangedBeginDisplayNumberValueImpl _value, $Res Function(_$ChangedBeginDisplayNumberValueImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$ChangedBeginDisplayNumberValueImpl extends _ChangedBeginDisplayNumberValue {
-  const _$ChangedBeginDisplayNumberValueImpl({required this.beforeDisplayNumberSetting, required this.afterDisplayNumberSetting}) : super._();
+  const _$ChangedBeginDisplayNumberValueImpl() : super._();
 
   factory _$ChangedBeginDisplayNumberValueImpl.fromJson(Map<String, dynamic> json) => _$$ChangedBeginDisplayNumberValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の表示番号設定（非推奨、nullable）
-  /// 番号を変更したことがない場合はnullとなる
-  // 番号を変更した事が無い場合もあるのでnullable
-  @override
-  final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
-
-  /// 変更後の表示番号設定（非推奨）
-  /// 変更操作後の新しい表示番号設定
-  @override
-  final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting;
-
   @override
   String toString() {
-    return 'ChangedBeginDisplayNumberValue(beforeDisplayNumberSetting: $beforeDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
+    return 'ChangedBeginDisplayNumberValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangedBeginDisplayNumberValueImpl &&
-            (identical(other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) ||
-                other.beforeDisplayNumberSetting == beforeDisplayNumberSetting) &&
-            (identical(other.afterDisplayNumberSetting, afterDisplayNumberSetting) || other.afterDisplayNumberSetting == afterDisplayNumberSetting));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ChangedBeginDisplayNumberValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, beforeDisplayNumberSetting, afterDisplayNumberSetting);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangedBeginDisplayNumberValueImplCopyWith<_$ChangedBeginDisplayNumberValueImpl> get copyWith =>
-      __$$ChangedBeginDisplayNumberValueImplCopyWithImpl<_$ChangedBeginDisplayNumberValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChangedBeginDisplayNumberValueImplToJson(this);
+    return _$$ChangedBeginDisplayNumberValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ChangedBeginDisplayNumberValue extends ChangedBeginDisplayNumberValue {
-  const factory _ChangedBeginDisplayNumberValue({
-    required final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
-    required final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
-  }) = _$ChangedBeginDisplayNumberValueImpl;
+  const factory _ChangedBeginDisplayNumberValue() = _$ChangedBeginDisplayNumberValueImpl;
   const _ChangedBeginDisplayNumberValue._() : super._();
 
   factory _ChangedBeginDisplayNumberValue.fromJson(Map<String, dynamic> json) = _$ChangedBeginDisplayNumberValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の表示番号設定（非推奨、nullable）
-  /// 番号を変更したことがない場合はnullとなる
-  // 番号を変更した事が無い場合もあるのでnullable
-  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
-  @override
-  /// 変更後の表示番号設定（非推奨）
-  /// 変更操作後の新しい表示番号設定
-  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
-  @override
-  @JsonKey(ignore: true)
-  _$$ChangedBeginDisplayNumberValueImplCopyWith<_$ChangedBeginDisplayNumberValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
 
 ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(Map<String, dynamic> json) {
@@ -3502,31 +2460,13 @@ ChangedEndDisplayNumberValue _$ChangedEndDisplayNumberValueFromJson(Map<String, 
 
 /// @nodoc
 mixin _$ChangedEndDisplayNumberValue {
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の表示番号設定（非推奨、nullable）
-  /// 番号を変更したことがない場合はnullとなる
-  // 番号を変更した事が無い場合もあるのでnullable
-  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting => throw _privateConstructorUsedError;
-
-  /// 変更後の表示番号設定（非推奨）
-  /// 変更操作後の新しい表示番号設定
-  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting => throw _privateConstructorUsedError;
-
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $ChangedEndDisplayNumberValueCopyWith<ChangedEndDisplayNumberValue> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $ChangedEndDisplayNumberValueCopyWith<$Res> {
   factory $ChangedEndDisplayNumberValueCopyWith(ChangedEndDisplayNumberValue value, $Res Function(ChangedEndDisplayNumberValue) then) =
       _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, ChangedEndDisplayNumberValue>;
-  @useResult
-  $Res call({PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting, PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
-
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
 }
 
 /// @nodoc
@@ -3538,60 +2478,13 @@ class _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, $Val extends ChangedEndDi
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? beforeDisplayNumberSetting = freezed, Object? afterDisplayNumberSetting = null}) {
-    return _then(
-      _value.copyWith(
-            beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
-                ? _value.beforeDisplayNumberSetting
-                : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                      as PillSheetGroupDisplayNumberSetting?,
-            afterDisplayNumberSetting: null == afterDisplayNumberSetting
-                ? _value.afterDisplayNumberSetting
-                : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                      as PillSheetGroupDisplayNumberSetting,
-          )
-          as $Val,
-    );
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting {
-    if (_value.beforeDisplayNumberSetting == null) {
-      return null;
-    }
-
-    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(_value.beforeDisplayNumberSetting!, (value) {
-      return _then(_value.copyWith(beforeDisplayNumberSetting: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting {
-    return $PillSheetGroupDisplayNumberSettingCopyWith<$Res>(_value.afterDisplayNumberSetting, (value) {
-      return _then(_value.copyWith(afterDisplayNumberSetting: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
-abstract class _$$ChangedEndDisplayNumberValueImplCopyWith<$Res> implements $ChangedEndDisplayNumberValueCopyWith<$Res> {
+abstract class _$$ChangedEndDisplayNumberValueImplCopyWith<$Res> {
   factory _$$ChangedEndDisplayNumberValueImplCopyWith(
-    _$ChangedEndDisplayNumberValueImpl value,
-    $Res Function(_$ChangedEndDisplayNumberValueImpl) then,
-  ) = __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting, PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting});
-
-  @override
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res>? get beforeDisplayNumberSetting;
-  @override
-  $PillSheetGroupDisplayNumberSettingCopyWith<$Res> get afterDisplayNumberSetting;
+          _$ChangedEndDisplayNumberValueImpl value, $Res Function(_$ChangedEndDisplayNumberValueImpl) then) =
+      __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
@@ -3599,98 +2492,42 @@ class __$$ChangedEndDisplayNumberValueImplCopyWithImpl<$Res>
     extends _$ChangedEndDisplayNumberValueCopyWithImpl<$Res, _$ChangedEndDisplayNumberValueImpl>
     implements _$$ChangedEndDisplayNumberValueImplCopyWith<$Res> {
   __$$ChangedEndDisplayNumberValueImplCopyWithImpl(_$ChangedEndDisplayNumberValueImpl _value, $Res Function(_$ChangedEndDisplayNumberValueImpl) _then)
-    : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({Object? beforeDisplayNumberSetting = freezed, Object? afterDisplayNumberSetting = null}) {
-    return _then(
-      _$ChangedEndDisplayNumberValueImpl(
-        beforeDisplayNumberSetting: freezed == beforeDisplayNumberSetting
-            ? _value.beforeDisplayNumberSetting
-            : beforeDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                  as PillSheetGroupDisplayNumberSetting?,
-        afterDisplayNumberSetting: null == afterDisplayNumberSetting
-            ? _value.afterDisplayNumberSetting
-            : afterDisplayNumberSetting // ignore: cast_nullable_to_non_nullable
-                  as PillSheetGroupDisplayNumberSetting,
-      ),
-    );
-  }
+      : super(_value, _then);
 }
 
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
 class _$ChangedEndDisplayNumberValueImpl extends _ChangedEndDisplayNumberValue {
-  const _$ChangedEndDisplayNumberValueImpl({required this.beforeDisplayNumberSetting, required this.afterDisplayNumberSetting}) : super._();
+  const _$ChangedEndDisplayNumberValueImpl() : super._();
 
   factory _$ChangedEndDisplayNumberValueImpl.fromJson(Map<String, dynamic> json) => _$$ChangedEndDisplayNumberValueImplFromJson(json);
 
-  // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の表示番号設定（非推奨、nullable）
-  /// 番号を変更したことがない場合はnullとなる
-  // 番号を変更した事が無い場合もあるのでnullable
-  @override
-  final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting;
-
-  /// 変更後の表示番号設定（非推奨）
-  /// 変更操作後の新しい表示番号設定
-  @override
-  final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting;
-
   @override
   String toString() {
-    return 'ChangedEndDisplayNumberValue(beforeDisplayNumberSetting: $beforeDisplayNumberSetting, afterDisplayNumberSetting: $afterDisplayNumberSetting)';
+    return 'ChangedEndDisplayNumberValue()';
   }
 
   @override
   bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ChangedEndDisplayNumberValueImpl &&
-            (identical(other.beforeDisplayNumberSetting, beforeDisplayNumberSetting) ||
-                other.beforeDisplayNumberSetting == beforeDisplayNumberSetting) &&
-            (identical(other.afterDisplayNumberSetting, afterDisplayNumberSetting) || other.afterDisplayNumberSetting == afterDisplayNumberSetting));
+    return identical(this, other) || (other.runtimeType == runtimeType && other is _$ChangedEndDisplayNumberValueImpl);
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, beforeDisplayNumberSetting, afterDisplayNumberSetting);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ChangedEndDisplayNumberValueImplCopyWith<_$ChangedEndDisplayNumberValueImpl> get copyWith =>
-      __$$ChangedEndDisplayNumberValueImplCopyWithImpl<_$ChangedEndDisplayNumberValueImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ChangedEndDisplayNumberValueImplToJson(this);
+    return _$$ChangedEndDisplayNumberValueImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ChangedEndDisplayNumberValue extends ChangedEndDisplayNumberValue {
-  const factory _ChangedEndDisplayNumberValue({
-    required final PillSheetGroupDisplayNumberSetting? beforeDisplayNumberSetting,
-    required final PillSheetGroupDisplayNumberSetting afterDisplayNumberSetting,
-  }) = _$ChangedEndDisplayNumberValueImpl;
+  const factory _ChangedEndDisplayNumberValue() = _$ChangedEndDisplayNumberValueImpl;
   const _ChangedEndDisplayNumberValue._() : super._();
 
   factory _ChangedEndDisplayNumberValue.fromJson(Map<String, dynamic> json) = _$ChangedEndDisplayNumberValueImpl.fromJson;
-
-  @override // The below properties are deprecated and added since v1.
-  // This is deprecated property. TODO: [PillSheetModifiedHistory-V2] delete after 2024-05-01
-  /// 変更前の表示番号設定（非推奨、nullable）
-  /// 番号を変更したことがない場合はnullとなる
-  // 番号を変更した事が無い場合もあるのでnullable
-  PillSheetGroupDisplayNumberSetting? get beforeDisplayNumberSetting;
-  @override
-  /// 変更後の表示番号設定（非推奨）
-  /// 変更操作後の新しい表示番号設定
-  PillSheetGroupDisplayNumberSetting get afterDisplayNumberSetting;
-  @override
-  @JsonKey(ignore: true)
-  _$$ChangedEndDisplayNumberValueImplCopyWith<_$ChangedEndDisplayNumberValueImpl> get copyWith => throw _privateConstructorUsedError;
 }
